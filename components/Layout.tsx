@@ -165,6 +165,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           </p>
         </div>
       </footer>
+      {/* Global Context-Aware CTA */} 
+      <FloatingCTA {...ctaConfig} />
     </div>
   );
 };
