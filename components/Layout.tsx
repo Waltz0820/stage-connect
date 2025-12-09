@@ -167,7 +167,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         </div>
       </footer>
       {/* Global Context-Aware CTA */} 
-      <FloatingCTA {...ctaConfig} />
+     <FloatingCTA
+  url="https://example.com"        // ← 実際のDMMリンクに差し替え
+  label="人気の2.5次元舞台をチェック"
+  subText="POPULAR"
+  buttonText="チェック"
+/>
     </div>
   );
 };
