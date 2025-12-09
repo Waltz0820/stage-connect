@@ -10,13 +10,14 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showCTA, setShowCTA] = useState(false);
 
-  // Close menu when route changes
+  // ルート変更時にメニューを閉じる
   useEffect(() => {
     setIsMenuOpen(false);
   }, [location.pathname]);
 
-  // Lock body scroll when menu is open
+  // メニュー開閉時に body スクロールをロック
   useEffect(() => {
     if (isMenuOpen) {
       document.body.style.overflow = 'hidden';
@@ -24,6 +25,25 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       document.body.style.overflow = 'unset';
     }
   }, [isMenuOpen]);
+
+  // 1回目のスクロールを検知して CTA を表示
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowCTA(true);
+      window.removeEventListener('scroll', handleScroll);
+    };
+
+    // すでに少しスクロールされている状態で開いたときのケア
+    if (window.scrollY > 10) {
+      setShowCTA(true);
+    } else {
+      window.addEventListener('scroll', handleScroll);
+    }
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const isActive = (path: string) => {
     return location.pathname.startsWith(path) 
@@ -166,13 +186,16 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           </p>
         </div>
       </footer>
-      {/* Global Context-Aware CTA */} 
-     <FloatingCTA
-  url="https://example.com"        // ← 実際のDMMリンクに差し替え
-  label="人気の2.5次元舞台をチェック"
-  subText="POPULAR"
-  buttonText="チェック"
-/>
+
+      {/* Global Context-Aware CTA（スクロール開始後に表示） */}
+      {showCTA && (
+        <FloatingCTA
+          url="https://example.com"        // ← 実際のDMMリンクに差し替え
+          label="人気の2.5次元舞台をチェック"
+          subText="POPULAR"
+          buttonText="チェック"
+        />
+      )}
     </div>
   );
 };
