@@ -9,11 +9,15 @@ import PlayDetail from './components/PlayDetail';
 import SeriesList from './components/SeriesList';
 import SeriesDetail from './components/SeriesDetail';
 import Favorites from './components/Favorites';
+import { DebugSupabase } from './DebugSupabase'; // ← 追加
 
 const App: React.FC = () => {
   return (
     <BrowserRouter>
       <Layout>
+        {/* Supabase 接続テスト用（画面には何も出ない） */}
+        <DebugSupabase />
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/actors" element={<Actors />} />

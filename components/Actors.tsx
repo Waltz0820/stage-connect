@@ -1,16 +1,43 @@
-import React, { useState } from 'react';
-import { actors } from '../lib/data/actors';
-import { Gender } from '../lib/types';
+import React, { useState, useEffect } from 'react';
+import { supabase } from '../lib/supabase';
+import { Gender, Actor } from '../lib/types';
 import ActorCard from './ActorCard';
 import Breadcrumbs from './Breadcrumbs';
 
 const Actors: React.FC = () => {
+  const [allActors, setAllActors] = useState<Actor[]>([]);
   const [genderFilter, setGenderFilter] = useState<'all' | Gender>('all');
   const [currentPage, setCurrentPage] = useState(1);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
   const ITEMS_PER_PAGE = 10;
 
-  // 名前順にソート
-  const sortedActors = [...actors].sort((a, b) => {
+  // Supabase から俳優一覧を取得
+  useEffect(() => {
+    (async () => {
+      setLoading(true);
+      setError(null);
+
+      const { data, error } = await supabase
+        .from('actors')
+        .select('*')
+        .order('name', { ascending: true });
+
+      if (error) {
+        console.error('fetch actors error', error);
+        setError('キャスト一覧の取得に失敗しました。時間をおいて再度お試しください。');
+        setAllActors([]);
+      } else {
+        setAllActors((data ?? []) as Actor[]);
+      }
+
+      setLoading(false);
+    })();
+  }, []);
+
+  // 名前順にソート（かな優先）
+  const sortedActors = [...allActors].sort((a, b) => {
     const nameA = a.kana || a.name;
     const nameB = b.kana || b.name;
     return nameA.localeCompare(nameB, 'ja');
@@ -23,9 +50,14 @@ const Actors: React.FC = () => {
   });
 
   // ページネーション処理
-  const totalPages = Math.ceil(filteredActors.length / ITEMS_PER_PAGE);
+  const totalPages = Math.ceil(
+    filteredActors.length === 0 ? 1 : filteredActors.length / ITEMS_PER_PAGE
+  );
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-  const visibleActors = filteredActors.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+  const visibleActors = filteredActors.slice(
+    startIndex,
+    startIndex + ITEMS_PER_PAGE
+  );
 
   const handleFilterChange = (filter: 'all' | Gender) => {
     setGenderFilter(filter);
@@ -36,6 +68,27 @@ const Actors: React.FC = () => {
     setCurrentPage(newPage);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
+  // ローディング・エラー表示
+  if (loading) {
+    return (
+      <div className="container mx-auto px-6 pt-8 pb-16 lg:px-8 max-w-[1400px]">
+        <Breadcrumbs items={[{ label: 'キャスト一覧' }]} />
+        <p className="mt-10 text-center text-slate-400">読み込み中…</p>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="container mx-auto px-6 pt-8 pb-16 lg:px-8 max-w-[1400px]">
+        <Breadcrumbs items={[{ label: 'キャスト一覧' }]} />
+        <div className="mt-10 rounded-xl border border-red-500/40 bg-red-500/5 px-6 py-8 text-center">
+          <p className="text-sm text-red-300">{error}</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="container mx-auto px-6 pt-8 pb-16 lg:px-8 max-w-[1400px] animate-fade-in-up">
@@ -101,19 +154,27 @@ const Actors: React.FC = () => {
           {totalPages > 1 && (
             <div className="flex justify-center items-center gap-4 mt-16 pt-8 border-t border-white/5">
               <button
-                onClick={() => handlePageChange(Math.max(1, currentPage - 1))}
+                onClick={() =>
+                  handlePageChange(Math.max(1, currentPage - 1))
+                }
                 disabled={currentPage === 1}
                 className="px-6 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-bold text-slate-300 hover:bg-white/10 hover:border-white/20 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
               >
                 « 前へ
               </button>
-              
+
               <span className="text-sm font-mono text-slate-500">
-                Page <span className="text-white font-bold text-base mx-1">{currentPage}</span> / {totalPages}
+                Page{' '}
+                <span className="text-white font-bold text-base mx-1">
+                  {currentPage}
+                </span>{' '}
+                / {totalPages}
               </span>
-              
+
               <button
-                onClick={() => handlePageChange(Math.min(totalPages, currentPage + 1))}
+                onClick={() =>
+                  handlePageChange(Math.min(totalPages, currentPage + 1))
+                }
                 disabled={currentPage === totalPages}
                 className="px-6 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-bold text-slate-300 hover:bg-white/10 hover:border-white/20 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
               >
@@ -125,7 +186,7 @@ const Actors: React.FC = () => {
       ) : (
         <div className="py-20 text-center border border-dashed border-white/10 rounded-xl bg-white/5">
           <p className="text-slate-400 mb-2">該当するキャストはいません</p>
-          <button 
+          <button
             onClick={() => handleFilterChange('all')}
             className="text-neon-purple hover:underline text-sm"
           >

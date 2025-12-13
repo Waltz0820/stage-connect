@@ -1,42 +1,222 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { supabase } from '../lib/supabase';
+
 import { getPlayBySlug } from '../lib/utils/getPlayBySlug';
 import { getActorsByPlaySlug } from '../lib/utils/getActorsByPlaySlug';
+
 import ActorCard from './ActorCard';
 import TagBadge from './TagBadge';
 import FavoriteButton from './FavoriteButton';
 import ShareButton from './ShareButton';
 import Breadcrumbs from './Breadcrumbs';
 
+import type { Actor } from '../lib/types';
+
+type PlayRecord = {
+  id?: string;
+  slug: string;
+  title: string;
+  summary?: string | null;
+  period?: string | null;
+  venue?: string | null;
+  vod?: {
+    dmm?: string;
+    danime?: string;
+    unext?: string;
+    [key: string]: any;
+  } | null;
+  tags?: string[] | null;
+  franchise?: string | null;
+  franchise_id?: string | null;
+};
+
 const PlayDetail: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
-  const play = slug ? getPlayBySlug(slug) : undefined;
 
-  if (!play) {
+  const [play, setPlay] = useState<PlayRecord | null>(null);
+  const [cast, setCast] = useState<Actor[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [notFound, setNotFound] = useState(false);
+
+  useEffect(() => {
+    if (!slug) return;
+
+    const fetchPlay = async () => {
+      setLoading(true);
+      setNotFound(false);
+
+      try {
+        console.log('[PlayDetail] slug:', slug);
+
+        // =========================
+        // 1) plays をまず確実に取る（select('*')で 400 を回避）
+        // =========================
+        let dbPlay: any = null;
+
+        try {
+          const { data, error } = await supabase
+            .from('plays')
+            .select('*')
+            .eq('slug', slug)
+            .maybeSingle();
+
+          console.log('[PlayDetail] plays fetch:', { data, error });
+
+          if (!error && data) dbPlay = data;
+        } catch (err) {
+          console.warn('[PlayDetail] plays query failed:', err);
+        }
+
+        let mappedPlay: PlayRecord | null = null;
+        let castActors: Actor[] = [];
+
+        // =========================
+        // 2) DBから play が取れた場合
+        // =========================
+        if (dbPlay) {
+          mappedPlay = {
+            id: dbPlay.id,
+            slug: dbPlay.slug,
+            title: dbPlay.title,
+            summary: dbPlay.summary ?? null,
+            period: dbPlay.period ?? null,     // カラムが無い場合は undefined になる想定
+            venue: dbPlay.venue ?? null,
+            vod: dbPlay.vod ?? null,
+            tags: dbPlay.tags ?? null,
+            franchise_id: dbPlay.franchise_id ?? null,
+            franchise: null,
+          };
+
+          // ---- franchise 名は別クエリ（リレーション埋め込み不要）----
+          if (dbPlay.franchise_id) {
+            try {
+              const { data: fr, error: frErr } = await supabase
+                .from('franchises')
+                .select('name')
+                .eq('id', dbPlay.franchise_id)
+                .maybeSingle();
+
+              if (!frErr && fr?.name) {
+                mappedPlay.franchise = fr.name;
+              }
+            } catch (err) {
+              console.warn('[PlayDetail] franchises query failed:', err);
+            }
+          }
+
+          // =========================
+          // 3) casts → actors を取得（ここが作品側キャスト表示の本体）
+          // =========================
+          if (dbPlay.id) {
+            try {
+              const { data: castRows, error: castError } = await supabase
+                .from('casts')
+                .select(
+                  `
+                  is_starring,
+                  role_name,
+                  actor:actors (
+                    slug,
+                    name,
+                    kana,
+                    profile,
+                    image_url,
+                    gender,
+                    sns,
+                    tags,
+                    featured_play_slugs
+                  )
+                `
+                )
+                .eq('play_id', dbPlay.id)
+                .order('is_starring', { ascending: false })
+                .order('created_at', { ascending: true });
+
+              console.log('[PlayDetail] casts fetch:', { castRows, castError });
+
+              if (!castError && castRows && castRows.length > 0) {
+                castActors = castRows
+                  .map((row: any) => row.actor)
+                  .filter(Boolean) as Actor[];
+              }
+            } catch (err) {
+              console.warn('[PlayDetail] casts query failed:', err);
+            }
+          }
+        }
+
+        // =========================
+        // 4) DBが取れない/キャスト0ならローカルへフォールバック
+        // =========================
+        if (!dbPlay) {
+          const localPlay = getPlayBySlug(slug);
+          if (!localPlay) {
+            setNotFound(true);
+            setPlay(null);
+            setCast([]);
+            return;
+          }
+
+          mappedPlay = {
+            slug: localPlay.slug,
+            title: localPlay.title,
+            summary: localPlay.summary,
+            period: localPlay.period,
+            venue: localPlay.venue,
+            vod: localPlay.vod,
+            tags: localPlay.tags,
+            franchise: typeof localPlay.franchise === 'string' ? localPlay.franchise : null,
+          };
+
+          castActors = getActorsByPlaySlug(slug);
+        }
+
+        // DB play は取れたが casts が0だった場合もローカルで補完（任意）
+        if (dbPlay && castActors.length === 0) {
+          castActors = getActorsByPlaySlug(slug);
+        }
+
+        if (mappedPlay) setPlay(mappedPlay);
+        setCast(castActors);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPlay();
+  }, [slug]);
+
+  if (loading) {
     return (
-       <div className="flex flex-col items-center justify-center min-h-[60vh] text-center px-4 animate-fade-in-up">
+      <div className="flex flex-col items-center justify-center min-h-[60vh] text-center px-4 animate-fade-in-up">
+        <p className="text-slate-400 text-sm mb-2">作品情報を読み込み中...</p>
+        <div className="w-10 h-10 border-2 border-white/20 border-t-neon-purple rounded-full animate-spin" />
+      </div>
+    );
+  }
+
+  if (!play || notFound) {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-[60vh] text-center px-4 animate-fade-in-up">
         <h2 className="text-2xl font-bold text-white">作品が見つかりませんでした</h2>
         <p className="mt-2 text-slate-400">お探しの作品は見つかりませんでした。</p>
-        <Link to="/plays" className="mt-8 px-8 py-3 bg-white/5 border border-white/10 text-white rounded-full text-sm font-bold hover:bg-white/10 hover:border-neon-purple/50 transition-colors">
+        <Link
+          to="/plays"
+          className="mt-8 px-8 py-3 bg-white/5 border border-white/10 text-white rounded-full text-sm font-bold hover:bg-white/10 hover:border-neon-purple/50 transition-colors"
+        >
           一覧に戻る
         </Link>
       </div>
     );
   }
 
-  const cast = slug ? getActorsByPlaySlug(slug) : [];
   const hasVodLinks = play.vod && (play.vod.dmm || play.vod.danime || play.vod.unext);
 
   return (
     <div className="container mx-auto px-6 pt-8 pb-16 lg:px-8 max-w-5xl animate-fade-in-up">
-      <Breadcrumbs 
-        items={[
-          { label: '作品一覧', to: '/plays' },
-          { label: play.title }
-        ]} 
-      />
+      <Breadcrumbs items={[{ label: '作品一覧', to: '/plays' }, { label: play.title }]} />
 
-      {/* Header Section */}
       <div className="mb-16 border-b border-white/10 pb-8">
         <div className="flex flex-col gap-4">
           <div>
@@ -45,18 +225,22 @@ const PlayDetail: React.FC = () => {
                 {play.franchise}
               </span>
             )}
+
             <div className="flex items-start justify-between gap-4 mb-2">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-tight drop-shadow-md">
                 {play.title}
               </h1>
             </div>
-            
-            {/* Action Buttons */}
+
             <div className="flex items-center gap-3 mb-6">
               <FavoriteButton slug={play.slug} type="play" size="lg" className="shrink-0" />
-              <ShareButton title={play.title} text={`${play.title}の作品情報 | Stage Connect`} className="shrink-0" />
+              <ShareButton
+                title={play.title}
+                text={`${play.title}の作品情報 | Stage Connect`}
+                className="shrink-0"
+              />
             </div>
-            
+
             {play.tags && play.tags.length > 0 && (
               <div className="flex flex-wrap gap-2">
                 {play.tags.map((tag) => (
@@ -70,9 +254,8 @@ const PlayDetail: React.FC = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
         <div className="md:col-span-2 space-y-12">
-          {/* Summary */}
           <section>
-             <h2 className="text-lg font-bold text-white mb-4 flex items-center gap-2 tracking-wide">
+            <h2 className="text-lg font-bold text-white mb-4 flex items-center gap-2 tracking-wide">
               あらすじ
             </h2>
             <div className="prose prose-invert max-w-none text-slate-300 leading-8 font-light">
@@ -80,9 +263,8 @@ const PlayDetail: React.FC = () => {
             </div>
           </section>
 
-          {/* Info Box */}
-           <section className="bg-theater-surface rounded-xl border border-white/5 p-8 relative overflow-hidden">
-             <div className="absolute top-0 right-0 w-20 h-20 bg-white/5 blur-3xl rounded-full pointer-events-none"></div>
+          <section className="bg-theater-surface rounded-xl border border-white/5 p-8 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-20 h-20 bg-white/5 blur-3xl rounded-full pointer-events-none"></div>
             <h3 className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-6">
               公演情報
             </h3>
@@ -106,12 +288,13 @@ const PlayDetail: React.FC = () => {
             </div>
           </section>
 
-          {/* VOD Section */}
           {hasVodLinks && (
             <section className="pt-4">
               <h2 className="text-lg font-bold text-white mb-6 tracking-wide flex items-center gap-2">
                 配信で見る
-                <span className="text-[10px] font-normal text-slate-500 border border-slate-700 px-2 py-0.5 rounded ml-2">外部リンク</span>
+                <span className="text-[10px] font-normal text-slate-500 border border-slate-700 px-2 py-0.5 rounded ml-2">
+                  外部リンク
+                </span>
               </h2>
               <div className="flex flex-wrap gap-4">
                 {play.vod?.dmm && (
@@ -150,11 +333,11 @@ const PlayDetail: React.FC = () => {
         </div>
       </div>
 
-      {/* Cast Section */}
       <section className="pt-16 border-t border-white/10 mt-16">
         <h2 className="text-2xl font-bold text-white mb-8 tracking-wide">
           出演キャスト
         </h2>
+
         {cast.length > 0 ? (
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {cast.map((actor) => (
