@@ -28,12 +28,26 @@ type PlayLike = {
   genre?: string | null; // ✅ 追加
 };
 
+type CoStarItem = { actor: Actor; count: number };
+
 const normalizeActorRow = (data: any): Actor => ({
   slug: data.slug,
   name: data.name,
   kana: data.kana ?? '',
   profile: data.profile ?? '',
   imageUrl: data.image_url ?? '',
+  gender: (data.gender ?? 'male') as Gender,
+  sns: (data.sns as Actor['sns']) ?? {},
+  featuredPlaySlugs: (data.featured_play_slugs as string[] | undefined) ?? [],
+  tags: (data.tags as string[] | undefined) ?? [],
+});
+
+const normalizeActorNested = (data: any): Actor => ({
+  slug: data.slug,
+  name: data.name,
+  kana: data.kana ?? '',
+  profile: data.profile ?? '',
+  imageUrl: data.image_url ?? data.imageUrl ?? '',
   gender: (data.gender ?? 'male') as Gender,
   sns: (data.sns as Actor['sns']) ?? {},
   featuredPlaySlugs: (data.featured_play_slugs as string[] | undefined) ?? [],
@@ -48,6 +62,9 @@ const ActorDetail: React.FC = () => {
 
   const [playsDb, setPlaysDb] = useState<PlayLike[] | null>(null);
 
+  // ✅ 共演（DB優先）用
+  const [coStarsDb, setCoStarsDb] = useState<CoStarItem[] | null>(null);
+
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -55,12 +72,15 @@ const ActorDetail: React.FC = () => {
   useEffect(() => {
     if (!slug) return;
 
+    let cancelled = false;
+
     const run = async () => {
       setLoading(true);
       setError(null);
       setActor(null);
       setActorId(null);
       setPlaysDb(null);
+      setCoStarsDb(null); // ✅ slug切替時に共演もリセット
 
       try {
         // 1) actor
@@ -71,6 +91,8 @@ const ActorDetail: React.FC = () => {
           .maybeSingle();
 
         console.log('ActorDetail / actor:', data, error);
+
+        if (cancelled) return;
 
         if (error) {
           console.error('ActorDetail fetch error', error);
@@ -109,6 +131,8 @@ const ActorDetail: React.FC = () => {
 
           console.log('ActorDetail / casts->plays:', castRows, castErr);
 
+          if (cancelled) return;
+
           if (!castErr && castRows && castRows.length > 0) {
             const uniq = new Map<string, PlayLike>();
 
@@ -139,12 +163,110 @@ const ActorDetail: React.FC = () => {
           }
         }
       } finally {
-        setLoading(false);
+        if (!cancelled) setLoading(false);
       }
     };
 
     run();
+
+    return () => {
+      cancelled = true;
+    };
   }, [slug]);
+
+  // ✅ 共演ネットワーク（DB優先 → ローカルgetCoStarsフォールバック）
+  useEffect(() => {
+    if (!actorId) return;
+
+    let cancelled = false;
+
+    const run = async () => {
+      try {
+        // 1) 自分の出演 play_id 一覧
+        const { data: myCasts, error: myErr } = await supabase
+          .from('casts')
+          .select('play_id')
+          .eq('actor_id', actorId);
+
+        if (cancelled) return;
+
+        if (myErr || !myCasts || myCasts.length === 0) {
+          // DBで取れない → 空扱い（この場合は後段の fallback を使いたいなら null にしてもOK）
+          setCoStarsDb([]);
+          return;
+        }
+
+        const playIds = Array.from(
+          new Set((myCasts as any[]).map((r) => r.play_id).filter(Boolean))
+        );
+
+        if (playIds.length === 0) {
+          setCoStarsDb([]);
+          return;
+        }
+
+        // 2) 同一playのcastsを引いて、actorsをネスト取得（自分以外）
+        const { data: rows, error: rowsErr } = await supabase
+          .from('casts')
+          .select(
+            `
+            play_id,
+            actor_id,
+            actor:actors (
+              slug,
+              name,
+              kana,
+              profile,
+              image_url,
+              gender,
+              sns,
+              tags,
+              featured_play_slugs
+            )
+          `
+          )
+          .in('play_id', playIds)
+          .neq('actor_id', actorId);
+
+        if (cancelled) return;
+
+        if (rowsErr || !rows) {
+          setCoStarsDb([]);
+          return;
+        }
+
+        // 3) 集計（共演者ごとの作品数）
+        const map = new Map<string, { actor: Actor; playSet: Set<string> }>();
+
+        for (const row of rows as any[]) {
+          const a = row.actor;
+          const p = row.play_id as string | null;
+          if (!a?.slug || !p) continue;
+
+          const norm = normalizeActorNested(a);
+
+          if (!map.has(norm.slug)) map.set(norm.slug, { actor: norm, playSet: new Set() });
+          map.get(norm.slug)!.playSet.add(p);
+        }
+
+        const result: CoStarItem[] = Array.from(map.values())
+          .map((v) => ({ actor: v.actor, count: v.playSet.size }))
+          .sort((a, b) => b.count - a.count)
+          .slice(0, 20);
+
+        setCoStarsDb(result);
+      } catch (e) {
+        console.warn('ActorDetail coStarsDb error:', e);
+        if (!cancelled) setCoStarsDb([]);
+      }
+    };
+
+    run();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [actorId]);
 
   // ---- ローディング表示 ----
   if (loading) {
@@ -169,9 +291,7 @@ const ActorDetail: React.FC = () => {
   if (error || !actor) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[60vh] text-center px-4 animate-fade-in-up">
-        <h2 className="text-2xl font-bold text-white">
-          俳優が見つかりませんでした
-        </h2>
+        <h2 className="text-2xl font-bold text-white">俳優が見つかりませんでした</h2>
         <p className="mt-2 text-slate-400">
           {error ?? 'お探しの俳優は見つかりませんでした。'}
         </p>
@@ -195,8 +315,10 @@ const ActorDetail: React.FC = () => {
 
   const timelineGroups = groupPlaysByYear(plays as any);
 
-  // ---- 共演ネットワーク ----
-  const coStars = slug ? getCoStars(slug) : [];
+  // ---- 共演ネットワーク（DBが取れたらDB、取れない/未取得ならローカル）----
+  // coStarsDb: null = まだDB取得してない/初期, [] = DB上で共演がない(もしくは取得不可)
+  const coStars: CoStarItem[] =
+    coStarsDb !== null ? coStarsDb : slug ? (getCoStars(slug) as any) : [];
 
   return (
     <div className="container mx-auto px-6 pt-8 pb-16 lg:px-8 max-w-5xl animate-fade-in-up">
@@ -231,12 +353,7 @@ const ActorDetail: React.FC = () => {
             </div>
 
             <div className="flex items-center gap-3 mt-1 mb-2">
-              <FavoriteButton
-                slug={actor.slug}
-                type="actor"
-                size="lg"
-                className="shrink-0"
-              />
+              <FavoriteButton slug={actor.slug} type="actor" size="lg" className="shrink-0" />
               <ShareButton
                 title={actor.name}
                 text={`${actor.name}のプロフィール | Stage Connect`}
@@ -276,9 +393,7 @@ const ActorDetail: React.FC = () => {
             {plays.length > 0 ? (
               <TimelineSection groups={timelineGroups} />
             ) : (
-              <p className="text-slate-500 italic py-4">
-                登録されている出演作品はありません。
-              </p>
+              <p className="text-slate-500 italic py-4">登録されている出演作品はありません。</p>
             )}
           </section>
 
@@ -347,18 +462,8 @@ const ActorDetail: React.FC = () => {
                       className="flex items-center text-sm font-bold text-slate-300 hover:text-white transition-colors group"
                     >
                       <span className="w-10 h-10 rounded-full bg-black/40 border border-white/10 flex items-center justify-center mr-4 group-hover:border-neon-purple/50 group-hover:shadow-[0_0_10px_rgba(180,108,255,0.3)] transition-all">
-                        <svg
-                          className="w-4 h-4 text-slate-400 group-hover:text-neon-purple"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
-                          />
+                        <svg className="w-4 h-4 text-slate-400 group-hover:text-neon-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
                         </svg>
                       </span>
                       公式サイト
