@@ -24,6 +24,7 @@ type PlayLike = {
   vod?: any;
   tags?: string[] | null;
   franchise_id?: string | null;
+  created_at?: string | null; // ✅ 追加（任意：同年月のタイブレーク用）
 };
 
 type TopActor = { actor: Actor; count: number };
@@ -40,6 +41,38 @@ const normalizeActorRow = (row: any): Actor => {
     featuredPlaySlugs: (row.featured_play_slugs as string[] | undefined) ?? [],
     tags: (row.tags as string[] | undefined) ?? [],
   };
+};
+
+// ✅ period から YYYYMM のソートキーを作る（雑な表記揺れに対応）
+const periodSortKey = (period?: string | null) => {
+  if (!period) return -1;
+
+  // "2019年7月", "2017/12", "2017-12", "2017年12月〜" など
+  const m = period.match(/(\d{4})\D{0,2}(\d{1,2})/);
+  if (m) {
+    const y = Number(m[1]);
+    const mo = Number(m[2]);
+    return y * 100 + mo; // YYYYMM
+  }
+
+  // 年だけ拾える場合
+  const y = period.match(/(\d{4})/);
+  if (y) return Number(y[1]) * 100;
+
+  return -1;
+};
+
+const sortPlaysNewToOld = <T extends { period?: string | null; created_at?: string | null }>(list: T[]) => {
+  return [...list].sort((a, b) => {
+    const ak = periodSortKey(a.period);
+    const bk = periodSortKey(b.period);
+    if (bk !== ak) return bk - ak; // ✅ new -> old
+
+    // 同年月が複数ある場合の安定化（created_at があれば優先）
+    const ad = a.created_at ? Date.parse(a.created_at) : 0;
+    const bd = b.created_at ? Date.parse(b.created_at) : 0;
+    return bd - ad;
+  });
 };
 
 const SeriesDetail: React.FC = () => {
@@ -77,6 +110,7 @@ const SeriesDetail: React.FC = () => {
         setFranchise(fr);
 
         // 2) plays を franchise_id で取得
+        // ※ created_at が無い場合でもOK（あればタイブレークに使う）
         const { data: ps, error: psErr } = await supabase
           .from('plays')
           .select('*')
@@ -156,6 +190,9 @@ const SeriesDetail: React.FC = () => {
 
     run();
   }, [decodedName]);
+
+  // ✅ 表示順：new -> old（period から推定）
+  const sortedPlays = useMemo(() => sortPlaysNewToOld(plays), [plays]);
 
   const years = useMemo(() => {
     const ys = plays
@@ -242,9 +279,7 @@ const SeriesDetail: React.FC = () => {
                 </Link>
               ))}
 
-              {topActors.length === 0 && (
-                <p className="text-xs text-slate-500">レギュラー情報はまだありません</p>
-              )}
+              {topActors.length === 0 && <p className="text-xs text-slate-500">レギュラー情報はまだありません</p>}
             </div>
           </div>
         </div>
@@ -254,7 +289,7 @@ const SeriesDetail: React.FC = () => {
             <div className="absolute left-[19px] top-2 bottom-0 w-px bg-gradient-to-b from-neon-cyan/50 via-neon-cyan/20 to-transparent"></div>
 
             <div className="space-y-6">
-              {plays.map((play) => (
+              {sortedPlays.map((play) => (
                 <div key={play.slug} className="relative pl-12 flex flex-col">
                   <div className="absolute left-[15px] top-0 w-2.5 h-2.5 rounded-full bg-neon-cyan shadow-[0_0_10px_#00FFFF] ring-4 ring-theater-black"></div>
 
@@ -266,9 +301,7 @@ const SeriesDetail: React.FC = () => {
                 </div>
               ))}
 
-              {plays.length === 0 && (
-                <p className="text-slate-500 italic">登録されている作品はありません。</p>
-              )}
+              {sortedPlays.length === 0 && <p className="text-slate-500 italic">登録されている作品はありません。</p>}
             </div>
           </div>
         </div>
