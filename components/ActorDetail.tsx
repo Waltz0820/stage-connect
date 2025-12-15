@@ -42,7 +42,8 @@ const normalizeActorRow = (data: any): Actor => ({
   tags: (data.tags as string[] | undefined) ?? [],
 });
 
-const normalizeActorNested = (data: any): Actor => ({
+// RPC / ネスト取得どちらでも最低限Actor型に寄せる（共演カード表示用）
+const normalizeActorForCoStar = (data: any): Actor => ({
   slug: data.slug,
   name: data.name,
   kana: data.kana ?? '',
@@ -174,90 +175,43 @@ const ActorDetail: React.FC = () => {
     };
   }, [slug]);
 
-  // ✅ 共演ネットワーク（DB優先 → ローカルgetCoStarsフォールバック）
+  // ✅ 共演ネットワーク（DB RPC優先 → ローカルgetCoStarsフォールバック）
   useEffect(() => {
-    if (!actorId) return;
+    if (!actorId || !slug) return;
 
     let cancelled = false;
 
     const run = async () => {
       try {
-        // 1) 自分の出演 play_id 一覧
-        const { data: myCasts, error: myErr } = await supabase
-          .from('casts')
-          .select('play_id')
-          .eq('actor_id', actorId);
+        const { data, error } = await supabase.rpc('get_co_stars', {
+          p_actor_id: actorId,
+          p_limit: 20,
+        });
+
+        console.log('ActorDetail / coStars rpc:', data, error);
 
         if (cancelled) return;
 
-        if (myErr || !myCasts || myCasts.length === 0) {
-          // DBで取れない → 空扱い（この場合は後段の fallback を使いたいなら null にしてもOK）
-          setCoStarsDb([]);
+        // RPCが失敗 or 0件なら、いったんローカルfallbackに任せる（nullに戻す）
+        if (error || !data || (Array.isArray(data) && data.length === 0)) {
+          setCoStarsDb(null);
           return;
         }
 
-        const playIds = Array.from(
-          new Set((myCasts as any[]).map((r) => r.play_id).filter(Boolean))
-        );
-
-        if (playIds.length === 0) {
-          setCoStarsDb([]);
-          return;
-        }
-
-        // 2) 同一playのcastsを引いて、actorsをネスト取得（自分以外）
-        const { data: rows, error: rowsErr } = await supabase
-          .from('casts')
-          .select(
-            `
-            play_id,
-            actor_id,
-            actor:actors (
-              slug,
-              name,
-              kana,
-              profile,
-              image_url,
-              gender,
-              sns,
-              tags,
-              featured_play_slugs
-            )
-          `
-          )
-          .in('play_id', playIds)
-          .neq('actor_id', actorId);
-
-        if (cancelled) return;
-
-        if (rowsErr || !rows) {
-          setCoStarsDb([]);
-          return;
-        }
-
-        // 3) 集計（共演者ごとの作品数）
-        const map = new Map<string, { actor: Actor; playSet: Set<string> }>();
-
-        for (const row of rows as any[]) {
-          const a = row.actor;
-          const p = row.play_id as string | null;
-          if (!a?.slug || !p) continue;
-
-          const norm = normalizeActorNested(a);
-
-          if (!map.has(norm.slug)) map.set(norm.slug, { actor: norm, playSet: new Set() });
-          map.get(norm.slug)!.playSet.add(p);
-        }
-
-        const result: CoStarItem[] = Array.from(map.values())
-          .map((v) => ({ actor: v.actor, count: v.playSet.size }))
-          .sort((a, b) => b.count - a.count)
-          .slice(0, 20);
+        const result: CoStarItem[] = (data as any[]).map((r) => ({
+          actor: normalizeActorForCoStar({
+            slug: r.slug,
+            name: r.name,
+            image_url: r.image_url,
+            tags: r.tags,
+          }),
+          count: Number(r.common_plays ?? 0),
+        }));
 
         setCoStarsDb(result);
       } catch (e) {
-        console.warn('ActorDetail coStarsDb error:', e);
-        if (!cancelled) setCoStarsDb([]);
+        console.warn('ActorDetail coStarsDb rpc error:', e);
+        if (!cancelled) setCoStarsDb(null);
       }
     };
 
@@ -266,7 +220,7 @@ const ActorDetail: React.FC = () => {
     return () => {
       cancelled = true;
     };
-  }, [actorId]);
+  }, [actorId, slug]);
 
   // ---- ローディング表示 ----
   if (loading) {
@@ -316,7 +270,6 @@ const ActorDetail: React.FC = () => {
   const timelineGroups = groupPlaysByYear(plays as any);
 
   // ---- 共演ネットワーク（DBが取れたらDB、取れない/未取得ならローカル）----
-  // coStarsDb: null = まだDB取得してない/初期, [] = DB上で共演がない(もしくは取得不可)
   const coStars: CoStarItem[] =
     coStarsDb !== null ? coStarsDb : slug ? (getCoStars(slug) as any) : [];
 
