@@ -80,7 +80,7 @@ const PlayDetail: React.FC = () => {
             slug: dbPlay.slug,
             title: dbPlay.title,
             summary: dbPlay.summary ?? null,
-            period: dbPlay.period ?? null,     // カラムが無い場合は undefined になる想定
+            period: dbPlay.period ?? null,
             venue: dbPlay.venue ?? null,
             vod: dbPlay.vod ?? null,
             tags: dbPlay.tags ?? null,
@@ -211,10 +211,50 @@ const PlayDetail: React.FC = () => {
     );
   }
 
-  const hasVodLinks = play.vod && (play.vod.dmm || play.vod.danime || play.vod.unext);
+  const hasVodLinks = !!(play.vod && (play.vod.dmm || play.vod.danime || play.vod.unext));
+
+  // ✅ 自動生成テキスト用データ
+  const castTop = cast.slice(0, 3).map((a) => a.name).join('、');
+  const castNames = castTop ? `${castTop}ら` : '未定';
+
+  // ✅ JSON-LD（FAQPage）
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: `舞台『${play.title}』は動画配信されていますか？`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: hasVodLinks
+            ? 'はい、DMM TVやdアニメストア、U-NEXTなどで配信されている場合があります。詳細はページ内の「配信で見る」セクションをご確認ください。'
+            : '現在、主要なVODサービスでの定額見放題配信などは確認できていませんが、レンタル配信やディスク販売が行われている可能性があります。',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: '無料で視聴できる期間はありますか？',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'VODサービスによっては、初回登録時の無料トライアル期間を利用して視聴できる場合があります。各サービスの公式サイトで最新のキャンペーン情報をご確認ください。',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: '出演キャストは誰ですか？',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: `主な出演者は${castNames}です。ページ下部の「出演キャスト」セクションで全キャスト詳細を確認できます。`,
+        },
+      },
+    ],
+  };
 
   return (
-    <div className="container mx-auto px-6 pt-8 pb-16 lg:px-8 max-w-5xl animate-fade-in-up">
+    <div className="container mx-auto px-6 pt-8 pb-32 lg:px-8 max-w-5xl animate-fade-in-up">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+
       <Breadcrumbs items={[{ label: '作品一覧', to: '/plays' }, { label: play.title }]} />
 
       <div className="mb-16 border-b border-white/10 pb-8">
@@ -234,11 +274,7 @@ const PlayDetail: React.FC = () => {
 
             <div className="flex items-center gap-3 mb-6">
               <FavoriteButton slug={play.slug} type="play" size="lg" className="shrink-0" />
-              <ShareButton
-                title={play.title}
-                text={`${play.title}の作品情報 | Stage Connect`}
-                className="shrink-0"
-              />
+              <ShareButton title={play.title} text={`${play.title}の作品情報 | Stage Connect`} className="shrink-0" />
             </div>
 
             {play.tags && play.tags.length > 0 && (
@@ -254,10 +290,23 @@ const PlayDetail: React.FC = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
         <div className="md:col-span-2 space-y-12">
-          <section>
-            <h2 className="text-lg font-bold text-white mb-4 flex items-center gap-2 tracking-wide">
-              あらすじ
+          {/* ✅ Intro（自動生成） */}
+          <section className="bg-white/5 rounded-xl border border-white/10 p-6 backdrop-blur-sm">
+            <h2 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-3 flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-neon-pink"></span>
+              INTRODUCTION
             </h2>
+            <p className="text-slate-300 text-sm leading-relaxed font-light">
+              舞台『<span className="font-bold text-white">{play.title}</span>』の配信情報（VOD）と公演データをまとめました。
+              出演キャストは{castNames}。
+              {hasVodLinks
+                ? '視聴できるサービスがある場合は、下記リンクから詳細を確認できます（配信状況は変動する場合があります）。'
+                : '現在、主要な配信サービスでの取り扱い情報は確認中ですが、DVD/Blu-ray等で視聴可能な場合があります。'}
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-lg font-bold text-white mb-4 flex items-center gap-2 tracking-wide">あらすじ</h2>
             <div className="prose prose-invert max-w-none text-slate-300 leading-8 font-light">
               {play.summary || '概要情報はまだありません。'}
             </div>
@@ -265,25 +314,15 @@ const PlayDetail: React.FC = () => {
 
           <section className="bg-theater-surface rounded-xl border border-white/5 p-8 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-20 h-20 bg-white/5 blur-3xl rounded-full pointer-events-none"></div>
-            <h3 className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-6">
-              公演情報
-            </h3>
+            <h3 className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-6">公演情報</h3>
             <div className="space-y-6">
               <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-6 border-b border-white/5 pb-4 last:border-0 last:pb-0">
-                <span className="min-w-[4rem] text-sm font-bold text-neon-purple tracking-wider">
-                  期間
-                </span>
-                <span className="text-slate-200 text-sm font-medium">
-                  {play.period || '未定'}
-                </span>
+                <span className="min-w-[4rem] text-sm font-bold text-neon-purple tracking-wider">期間</span>
+                <span className="text-slate-200 text-sm font-medium">{play.period || '未定'}</span>
               </div>
               <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-6 border-b border-white/5 pb-4 last:border-0 last:pb-0">
-                <span className="min-w-[4rem] text-sm font-bold text-neon-purple tracking-wider">
-                  劇場
-                </span>
-                <span className="text-slate-200 text-sm font-medium">
-                  {play.venue || '未定'}
-                </span>
+                <span className="min-w-[4rem] text-sm font-bold text-neon-purple tracking-wider">劇場</span>
+                <span className="text-slate-200 text-sm font-medium">{play.venue || '未定'}</span>
               </div>
             </div>
           </section>
@@ -330,13 +369,53 @@ const PlayDetail: React.FC = () => {
               </div>
             </section>
           )}
+
+          {/* ✅ FAQ（表示） */}
+          <section className="pt-8 border-t border-white/5 mt-8">
+            <h2 className="text-xl font-bold text-white mb-6 flex items-center gap-3">
+              <span className="w-1 h-6 bg-slate-500 rounded-full"></span>
+              よくある質問 (FAQ)
+            </h2>
+
+            <div className="grid gap-4">
+              <div className="bg-theater-surface rounded-lg p-6 border border-white/5">
+                <h3 className="text-sm font-bold text-white mb-2 flex items-start gap-2">
+                  <span className="text-neon-pink">Q.</span>
+                  舞台『{play.title}』は動画配信されていますか？
+                </h3>
+                <p className="text-sm text-slate-400 leading-relaxed pl-5">
+                  {hasVodLinks
+                    ? 'はい、DMM TVやdアニメストア、U-NEXTなどで配信されている場合があります。詳細はページ内の「配信で見る」セクションをご確認ください。'
+                    : '現在、主要なVODサービスでの定額見放題配信などは確認できていませんが、レンタル配信やディスク販売が行われている可能性があります。'}
+                </p>
+              </div>
+
+              <div className="bg-theater-surface rounded-lg p-6 border border-white/5">
+                <h3 className="text-sm font-bold text-white mb-2 flex items-start gap-2">
+                  <span className="text-neon-pink">Q.</span>
+                  無料で視聴できる期間はありますか？
+                </h3>
+                <p className="text-sm text-slate-400 leading-relaxed pl-5">
+                  VODサービスによっては、初回登録時の無料トライアル期間を利用して視聴できる場合があります。各サービスの公式サイトで最新のキャンペーン情報をご確認ください。
+                </p>
+              </div>
+
+              <div className="bg-theater-surface rounded-lg p-6 border border-white/5">
+                <h3 className="text-sm font-bold text-white mb-2 flex items-start gap-2">
+                  <span className="text-neon-pink">Q.</span>
+                  出演キャストは誰ですか？
+                </h3>
+                <p className="text-sm text-slate-400 leading-relaxed pl-5">
+                  主な出演者は{castNames}です。ページ下部の「出演キャスト」セクションで全キャスト詳細を確認できます。
+                </p>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
 
       <section className="pt-16 border-t border-white/10 mt-16">
-        <h2 className="text-2xl font-bold text-white mb-8 tracking-wide">
-          出演キャスト
-        </h2>
+        <h2 className="text-2xl font-bold text-white mb-8 tracking-wide">出演キャスト</h2>
 
         {cast.length > 0 ? (
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">

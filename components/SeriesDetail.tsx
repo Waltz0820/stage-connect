@@ -111,10 +111,7 @@ const SeriesDetail: React.FC = () => {
 
         // 2) plays を franchise_id で取得
         // ※ created_at が無い場合でもOK（あればタイブレークに使う）
-        const { data: ps, error: psErr } = await supabase
-          .from('plays')
-          .select('*')
-          .eq('franchise_id', fr.id);
+        const { data: ps, error: psErr } = await supabase.from('plays').select('*').eq('franchise_id', fr.id);
 
         if (psErr || !ps) {
           console.warn('SeriesDetail: plays fetch error', psErr);
@@ -207,6 +204,50 @@ const SeriesDetail: React.FC = () => {
     return { start: Math.min(...ys), end: Math.max(...ys) };
   }, [plays]);
 
+  // ✅ Gemini互換：Intro/FAQ/JSON-LD用
+  const hasVod = useMemo(
+    () => plays.some((p) => p.vod?.dmm || p.vod?.danime || p.vod?.unext),
+    [plays]
+  );
+  const startYear = years.start || 0;
+  const endYear = years.end && years.end > 0 ? years.end : 0;
+  const endYearLabel = endYear > 0 ? `${endYear}` : '現在';
+
+  const jsonLd = franchise
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: `${franchise.name}シリーズの舞台作品は何作品ありますか？`,
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: `現在、${plays.length}作品が登録されています。`,
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'どの順番で見ればいいですか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: `基本的には公開年順（${startYear || '----'}年〜）に見ることをお勧めします。このページでは時系列順に作品を掲載しています。`,
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '配信（VOD）で見られる作品はありますか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: hasVod
+                ? 'はい、シリーズ作品の多くは動画配信サービスで視聴可能です。各作品カードに配信リンクがあるか確認してください。'
+                : '作品によっては配信が行われていないものもあります。詳細は各作品ページをご確認ください。',
+            },
+          },
+        ],
+      }
+    : null;
+
   if (loading) {
     return (
       <div className="container mx-auto px-6 pt-8 pb-16 lg:px-8 max-w-5xl animate-fade-in-up">
@@ -232,6 +273,8 @@ const SeriesDetail: React.FC = () => {
 
   return (
     <div className="container mx-auto px-6 pt-8 pb-16 lg:px-8 max-w-5xl animate-fade-in-up">
+      {jsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />}
+
       <Breadcrumbs items={[{ label: 'シリーズ一覧', to: '/series' }, { label: franchise.name }]} />
 
       <div className="mb-16 text-center">
@@ -242,11 +285,12 @@ const SeriesDetail: React.FC = () => {
           {franchise.name}
         </h1>
         <p className="text-slate-400 text-lg">
-          全{plays.length}作品 ({years.start || '----'} - {years.end || '現在'})
+          全{plays.length}作品 ({startYear || '----'} - {endYearLabel})
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+        {/* Sidebar */}
         <div className="lg:col-span-4 lg:order-2">
           <div className="bg-theater-surface/50 backdrop-blur-sm rounded-xl p-6 border border-white/10 sticky top-24">
             <h3 className="text-xs font-bold uppercase tracking-widest text-white mb-6 flex items-center gap-2">
@@ -284,7 +328,22 @@ const SeriesDetail: React.FC = () => {
           </div>
         </div>
 
+        {/* Main */}
         <div className="lg:col-span-8 lg:order-1 space-y-12">
+          {/* ✅ Intro（自動生成） */}
+          <section className="bg-white/5 rounded-xl border border-white/10 p-6 backdrop-blur-sm">
+            <h2 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-3 flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-neon-cyan"></span>
+              Series Info
+            </h2>
+            <p className="text-slate-300 text-sm leading-relaxed font-light">
+              <span className="font-bold text-white">{franchise.name}</span> シリーズの舞台作品を年表形式でまとめました。全
+              <span className="font-bold text-white">{plays.length}作品</span>（{startYear || '----'}-{endYearLabel}）を掲載しています。
+              {hasVod ? '配信（VOD）がある作品はカード内から確認できます。' : ''}
+            </p>
+          </section>
+
+          {/* Timeline */}
           <div className="relative">
             <div className="absolute left-[19px] top-2 bottom-0 w-px bg-gradient-to-b from-neon-cyan/50 via-neon-cyan/20 to-transparent"></div>
 
@@ -293,9 +352,7 @@ const SeriesDetail: React.FC = () => {
                 <div key={play.slug} className="relative pl-12 flex flex-col">
                   <div className="absolute left-[15px] top-0 w-2.5 h-2.5 rounded-full bg-neon-cyan shadow-[0_0_10px_#00FFFF] ring-4 ring-theater-black"></div>
 
-                  <div className="mb-1 text-xs font-mono text-neon-cyan/80 tracking-wider">
-                    {play.period || 'Year Unknown'}
-                  </div>
+                  <div className="mb-1 text-xs font-mono text-neon-cyan/80 tracking-wider">{play.period || 'Year Unknown'}</div>
 
                   <PlayCard play={play as any} className="h-auto w-full" />
                 </div>
@@ -304,6 +361,46 @@ const SeriesDetail: React.FC = () => {
               {sortedPlays.length === 0 && <p className="text-slate-500 italic">登録されている作品はありません。</p>}
             </div>
           </div>
+
+          {/* ✅ FAQ */}
+          <section className="pt-8 border-t border-white/5 mt-8">
+            <h2 className="text-xl font-bold text-white mb-6 flex items-center gap-3">
+              <span className="w-1 h-6 bg-slate-500 rounded-full"></span>
+              よくある質問 (FAQ)
+            </h2>
+
+            <div className="grid gap-4">
+              <div className="bg-theater-surface rounded-lg p-6 border border-white/5">
+                <h3 className="text-sm font-bold text-white mb-2 flex items-start gap-2">
+                  <span className="text-neon-cyan">Q.</span>
+                  {franchise.name}の舞台作品は何作品ありますか？
+                </h3>
+                <p className="text-sm text-slate-400 leading-relaxed pl-5">現在、{plays.length}作品が登録されています。</p>
+              </div>
+
+              <div className="bg-theater-surface rounded-lg p-6 border border-white/5">
+                <h3 className="text-sm font-bold text-white mb-2 flex items-start gap-2">
+                  <span className="text-neon-cyan">Q.</span>
+                  どの順番で見ればいいですか？
+                </h3>
+                <p className="text-sm text-slate-400 leading-relaxed pl-5">
+                  基本的には公開年順（{startYear || '----'}年〜）に見ることをお勧めします。このページでは時系列順に作品を掲載しています。
+                </p>
+              </div>
+
+              <div className="bg-theater-surface rounded-lg p-6 border border-white/5">
+                <h3 className="text-sm font-bold text-white mb-2 flex items-start gap-2">
+                  <span className="text-neon-cyan">Q.</span>
+                  配信（VOD）で見られる作品はありますか？
+                </h3>
+                <p className="text-sm text-slate-400 leading-relaxed pl-5">
+                  {hasVod
+                    ? 'はい、シリーズ作品の多くは動画配信サービスで視聴可能です。各作品カードに配信リンクがあるか確認してください。'
+                    : '作品によっては配信が行われていないものもあります。詳細は各作品ページをご確認ください。'}
+                </p>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
     </div>

@@ -25,7 +25,7 @@ type PlayLike = {
   vod?: any;
   tags?: string[] | null;
   franchise?: string | null;
-  genre?: string | null; // ✅ 追加
+  genre?: string | null;
 };
 
 type CoStarItem = { actor: Actor; count: number };
@@ -151,7 +151,7 @@ const ActorDetail: React.FC = () => {
                 vod: p.vod ?? null,
                 tags: p.tags ?? null,
                 franchise: p.franchise?.name ?? null,
-                genre: p.genre ?? null, // ✅ 追加
+                genre: p.genre ?? null,
               };
 
               uniq.set(mapped.slug, mapped);
@@ -226,12 +226,7 @@ const ActorDetail: React.FC = () => {
   if (loading) {
     return (
       <div className="container mx-auto px-6 pt-8 pb-16 lg:px-8 max-w-5xl">
-        <Breadcrumbs
-          items={[
-            { label: 'キャスト一覧', to: '/actors' },
-            { label: '読み込み中…' },
-          ]}
-        />
+        <Breadcrumbs items={[{ label: 'キャスト一覧', to: '/actors' }, { label: '読み込み中…' }]} />
         <div className="mt-10 rounded-2xl bg-theater-surface border border-white/10 p-8 animate-pulse">
           <div className="h-6 w-40 bg-white/10 rounded mb-4" />
           <div className="h-4 w-24 bg-white/10 rounded mb-6" />
@@ -246,9 +241,7 @@ const ActorDetail: React.FC = () => {
     return (
       <div className="flex flex-col items-center justify-center min-h-[60vh] text-center px-4 animate-fade-in-up">
         <h2 className="text-2xl font-bold text-white">俳優が見つかりませんでした</h2>
-        <p className="mt-2 text-slate-400">
-          {error ?? 'お探しの俳優は見つかりませんでした。'}
-        </p>
+        <p className="mt-2 text-slate-400">{error ?? 'お探しの俳優は見つかりませんでした。'}</p>
         <Link
           to="/actors"
           className="mt-8 px-8 py-3 bg-white/5 border border-white/10 text-white rounded-full text-sm font-bold hover:bg-white/10 hover:border-neon-purple/50 transition-colors"
@@ -260,27 +253,61 @@ const ActorDetail: React.FC = () => {
   }
 
   // ---- 出演作品（DB優先 → ダメならローカルフォールバック）----
-  const plays: any[] =
-    playsDb && playsDb.length > 0
-      ? (playsDb as any[])
-      : slug
-      ? (getPlaysByActorSlug(slug) as any[])
-      : [];
+  const plays: PlayLike[] =
+    playsDb && playsDb.length > 0 ? playsDb : slug ? (getPlaysByActorSlug(slug) as any) : [];
 
   const timelineGroups = groupPlaysByYear(plays as any);
 
   // ---- 共演ネットワーク（DBが取れたらDB、取れない/未取得ならローカル）----
-  const coStars: CoStarItem[] =
-    coStarsDb !== null ? coStarsDb : slug ? (getCoStars(slug) as any) : [];
+  const coStars: CoStarItem[] = coStarsDb !== null ? coStarsDb : slug ? (getCoStars(slug) as any) : [];
+
+  // ✅ 自動生成テキスト用
+  const workCount = plays.length;
+  const topWorks = plays
+    .slice(0, 3)
+    .map((p) => `『${p.title}』`)
+    .join('、');
+  const hasVod = plays.some((p) => p?.vod?.dmm || p?.vod?.danime || p?.vod?.unext);
+
+  // ✅ JSON-LD（FAQPage）
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: `${actor.name}の出演作はどこで見られますか？`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: `Stage Connectでは${actor.name}の出演情報を作品ごとにまとめています。各作品ページで公演データやあらすじを確認できます。`,
+        },
+      },
+      {
+        '@type': 'Question',
+        name: '配信（VOD）で視聴できる作品はありますか？',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: hasVod
+            ? 'はい、いくつかの作品は動画配信サービス（VOD）で視聴可能です。各作品カードにあるリンクをご確認ください。'
+            : '現在、当サイトに登録されている作品の中で、主要なVODサービスでの配信が確認されているものはありませんが、状況は変動する可能性があります。',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: '最新の出演情報はどこで確認できますか？',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: `${actor.name}の公式SNSやオフィシャルサイトで最新情報を確認することをお勧めします。このページでも随時情報を更新していきます。`,
+        },
+      },
+    ],
+  };
 
   return (
     <div className="container mx-auto px-6 pt-8 pb-16 lg:px-8 max-w-5xl animate-fade-in-up">
-      <Breadcrumbs
-        items={[
-          { label: 'キャスト一覧', to: '/actors' },
-          { label: actor.name },
-        ]}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+
+      <Breadcrumbs items={[{ label: 'キャスト一覧', to: '/actors' }, { label: actor.name }]} />
 
       {/* Header Card Section */}
       <div className="mb-12">
@@ -307,11 +334,7 @@ const ActorDetail: React.FC = () => {
 
             <div className="flex items-center gap-3 mt-1 mb-2">
               <FavoriteButton slug={actor.slug} type="actor" size="lg" className="shrink-0" />
-              <ShareButton
-                title={actor.name}
-                text={`${actor.name}のプロフィール | Stage Connect`}
-                className="shrink-0"
-              />
+              <ShareButton title={actor.name} text={`${actor.name}のプロフィール | Stage Connect`} className="shrink-0" />
             </div>
 
             {actor.tags && actor.tags.length > 0 && (
@@ -326,7 +349,32 @@ const ActorDetail: React.FC = () => {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+        {/* Main */}
         <div className="lg:col-span-8 space-y-16">
+          {/* ✅ Intro（自動生成） */}
+          <section className="bg-white/5 rounded-xl border border-white/10 p-6 backdrop-blur-sm">
+            <h2 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-3 flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-neon-purple"></span>
+              INTRODUCTION
+            </h2>
+
+            <p className="text-slate-300 text-sm leading-relaxed font-light">
+              <span className="font-bold text-white">{actor.name}</span> の出演する2.5次元舞台・ミュージカル作品をまとめました。
+              Stage Connectには現在、<span className="font-bold text-white">{workCount}作品</span>が登録されています。
+              {workCount > 0 ? (
+                <>
+                  代表作は{topWorks}
+                  {plays.length > 3 ? 'など' : ''}。
+                </>
+              ) : (
+                <>代表作は現在準備中です。</>
+              )}
+              {hasVod ? '配信（VOD）で視聴できる作品がある場合は、各作品カードのリンクから確認できます。' : ''}
+              最新の出演情報は随時更新します。
+            </p>
+          </section>
+
+          {/* Profile */}
           <section>
             <h2 className="text-xl font-bold text-white mb-6 flex items-center gap-3">
               <span className="w-1 h-6 bg-neon-purple rounded-full shadow-[0_0_10px_#B46CFF]"></span>
@@ -337,6 +385,7 @@ const ActorDetail: React.FC = () => {
             </div>
           </section>
 
+          {/* Timeline */}
           <section>
             <h2 className="text-xl font-bold text-white mb-8 flex items-center gap-3">
               <span className="w-1 h-6 bg-neon-pink rounded-full shadow-[0_0_10px_#E944A6]"></span>
@@ -350,6 +399,7 @@ const ActorDetail: React.FC = () => {
             )}
           </section>
 
+          {/* CoStars */}
           {coStars.length > 0 && (
             <section>
               <h2 className="text-xl font-bold text-white mb-8 flex items-center gap-3">
@@ -378,9 +428,7 @@ const ActorDetail: React.FC = () => {
                           ★ {count}作
                         </span>
                       </div>
-                      <p className="text-xs text-slate-500 line-clamp-1">
-                        {coStar.tags?.[0] || '俳優'}
-                      </p>
+                      <p className="text-xs text-slate-500 line-clamp-1">{coStar.tags?.[0] || '俳優'}</p>
                     </div>
 
                     <svg
@@ -396,13 +444,54 @@ const ActorDetail: React.FC = () => {
               </div>
             </section>
           )}
+
+          {/* ✅ FAQ（表示） */}
+          <section className="pt-8 border-t border-white/5">
+            <h2 className="text-xl font-bold text-white mb-6 flex items-center gap-3">
+              <span className="w-1 h-6 bg-slate-500 rounded-full"></span>
+              よくある質問 (FAQ)
+            </h2>
+
+            <div className="grid gap-4">
+              <div className="bg-theater-surface rounded-lg p-6 border border-white/5">
+                <h3 className="text-sm font-bold text-white mb-2 flex items-start gap-2">
+                  <span className="text-neon-purple">Q.</span>
+                  {actor.name}の出演作はどこで見られますか？
+                </h3>
+                <p className="text-sm text-slate-400 leading-relaxed pl-5">
+                  Stage Connectでは{actor.name}の出演情報を作品ごとにまとめています。各作品ページで公演データやあらすじを確認できます。
+                </p>
+              </div>
+
+              <div className="bg-theater-surface rounded-lg p-6 border border-white/5">
+                <h3 className="text-sm font-bold text-white mb-2 flex items-start gap-2">
+                  <span className="text-neon-purple">Q.</span>
+                  配信（VOD）で視聴できる作品はありますか？
+                </h3>
+                <p className="text-sm text-slate-400 leading-relaxed pl-5">
+                  {hasVod
+                    ? 'はい、いくつかの作品は動画配信サービス（VOD）で視聴可能です。各作品カードにある「詳細を見る」からリンクをご確認ください。'
+                    : '現在、当サイトに登録されている作品の中で、主要なVODサービスでの配信が確認されているものはありませんが、状況は変動する可能性があります。'}
+                </p>
+              </div>
+
+              <div className="bg-theater-surface rounded-lg p-6 border border-white/5">
+                <h3 className="text-sm font-bold text-white mb-2 flex items-start gap-2">
+                  <span className="text-neon-purple">Q.</span>
+                  最新の出演情報はどこで確認できますか？
+                </h3>
+                <p className="text-sm text-slate-400 leading-relaxed pl-5">
+                  {actor.name}の公式SNSやオフィシャルサイトで最新情報を確認することをお勧めします。このページでも随時情報を更新していきます。
+                </p>
+              </div>
+            </div>
+          </section>
         </div>
 
+        {/* Sidebar */}
         <div className="lg:col-span-4 space-y-8">
           <div className="bg-theater-surface/50 backdrop-blur-sm rounded-xl p-8 border border-white/10 sticky top-24">
-            <h3 className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-6">
-              公式リンク
-            </h3>
+            <h3 className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-6">公式リンク</h3>
 
             {actor.sns ? (
               <ul className="space-y-4">
@@ -416,7 +505,12 @@ const ActorDetail: React.FC = () => {
                     >
                       <span className="w-10 h-10 rounded-full bg-black/40 border border-white/10 flex items-center justify-center mr-4 group-hover:border-neon-purple/50 group-hover:shadow-[0_0_10px_rgba(180,108,255,0.3)] transition-all">
                         <svg className="w-4 h-4 text-slate-400 group-hover:text-neon-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
+                          />
                         </svg>
                       </span>
                       公式サイト
