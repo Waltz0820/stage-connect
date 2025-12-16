@@ -42,6 +42,10 @@ const AdminCastsEdit: React.FC = () => {
   // ★ 保存中表示（castId -> true/false）
   const [saving, setSaving] = useState<Record<string, boolean>>({});
 
+  // ★ フィルタ（作業モード）
+  const [onlyMissingRole, setOnlyMissingRole] = useState(false);
+  const [onlyStarring, setOnlyStarring] = useState(false);
+
   const load = async () => {
     setBusy(true);
     setMsg("");
@@ -72,6 +76,7 @@ const AdminCastsEdit: React.FC = () => {
       setPlay(p as any);
 
       // casts は actor:actors join 前提（casts.actor_id -> actors.id）
+      // ★ billing_order 昇順で取得（NULLは後ろ） → created_at で安定ソート
       const { data: cs, error: e2 } = await supabase
         .from("casts")
         .select(
@@ -82,10 +87,13 @@ const AdminCastsEdit: React.FC = () => {
           role_name,
           is_starring,
           billing_order,
+          created_at,
           actor:actors ( id, slug, name, kana, image_url )
         `
         )
-        .eq("play_id", (p as any).id);
+        .eq("play_id", (p as any).id)
+        .order("billing_order", { ascending: true, nullsFirst: false })
+        .order("created_at", { ascending: true });
 
       if (e2) throw e2;
 
@@ -275,6 +283,15 @@ const AdminCastsEdit: React.FC = () => {
     }
   };
 
+  // ★ 表示フィルタ（役名未登録だけ / 主演だけ）
+  const visibleCasts = useMemo(() => {
+    return casts.filter((c) => {
+      if (onlyStarring && !Boolean(starringDraft[c.id])) return false;
+      if (onlyMissingRole && (roleDraft[c.id] ?? "").trim() !== "") return false;
+      return true;
+    });
+  }, [casts, onlyMissingRole, onlyStarring, roleDraft, starringDraft]);
+
   return (
     <div className="space-y-4">
       <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
@@ -312,11 +329,46 @@ const AdminCastsEdit: React.FC = () => {
 
       <div className="bg-white/5 border border-white/10 rounded-2xl p-6 space-y-6">
         <Field label="現在の出演者" hint="役名 / 主演 / billing_order をこの場で詰めるとDBが一気に育つ">
+          {/* ★ 作業モードトグル */}
+          <div className="flex flex-wrap items-center gap-2 mb-3">
+            <button
+              type="button"
+              onClick={() => setOnlyMissingRole((v) => !v)}
+              className={`text-xs px-3 py-1.5 rounded-full border font-bold ${
+                onlyMissingRole
+                  ? "bg-white/10 border-white/20 text-white"
+                  : "bg-white/5 border-white/10 text-slate-300 hover:bg-white/10"
+              }`}
+            >
+              役名未登録だけ
+            </button>
+
+            <button
+              type="button"
+              onClick={() => setOnlyStarring((v) => !v)}
+              className={`text-xs px-3 py-1.5 rounded-full border font-bold ${
+                onlyStarring
+                  ? "bg-emerald-500/15 border-emerald-500/30 text-emerald-200"
+                  : "bg-white/5 border-white/10 text-slate-300 hover:bg-white/10"
+              }`}
+            >
+              主演だけ
+            </button>
+
+            <div className="ml-auto text-xs text-slate-500">
+              表示 {visibleCasts.length} / 全 {casts.length}
+            </div>
+          </div>
+
           <div className="space-y-2">
-            {casts.map((c) => (
+            {visibleCasts.map((c) => (
               <div
                 key={c.id}
-                className="flex items-center justify-between gap-3 px-4 py-3 rounded-xl bg-black/30 border border-white/10"
+                className={`flex items-center justify-between gap-3 px-4 py-3 rounded-xl border ${
+                  starringDraft[c.id]
+                    ? "bg-emerald-500/10 border-emerald-500/20"
+                    : "bg-black/30 border-white/10"
+                }`}
               >
                 <div className="flex items-center gap-3 min-w-0">
                   <div className="w-10 h-10 rounded-full bg-black/40 border border-white/10 overflow-hidden shrink-0">
@@ -395,6 +447,9 @@ const AdminCastsEdit: React.FC = () => {
             ))}
 
             {casts.length === 0 && <div className="text-sm text-slate-500">まだ出演者が登録されていません</div>}
+            {casts.length > 0 && visibleCasts.length === 0 && (
+              <div className="text-sm text-slate-500">フィルタ条件に一致する出演者がいません</div>
+            )}
           </div>
         </Field>
 
