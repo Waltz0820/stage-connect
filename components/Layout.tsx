@@ -95,6 +95,14 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               >
                 シリーズ
               </Link>
+
+              {/* ✅ 追加: Guide */}
+              <Link
+                to="/guide"
+                className={`text-sm tracking-wide transition-all duration-300 ${isActive('/guide')}`}
+              >
+                ガイド
+              </Link>
             </nav>
           </div>
           
@@ -160,6 +168,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <Link to="/series" className={mobileLinkStyle('/series')}>
               SERIES
             </Link>
+
+            {/* ✅ 追加: Guide */}
+            <Link to="/guide" className={mobileLinkStyle('/guide')}>
+              GUIDE
+            </Link>
+
             <Link to="/favorites" className={mobileLinkStyle('/favorites')}>
               FAVORITES
             </Link>

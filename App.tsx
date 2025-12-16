@@ -9,6 +9,8 @@ import PlayDetail from './components/PlayDetail';
 import SeriesList from './components/SeriesList';
 import SeriesDetail from './components/SeriesDetail';
 import Favorites from './components/Favorites';
+import GuideList from './components/GuideList';
+import GuideDetail from './components/GuideDetail';
 import { DebugSupabase } from './DebugSupabase'; // ← 追加
 
 const App: React.FC = () => {
@@ -27,6 +29,10 @@ const App: React.FC = () => {
           <Route path="/series" element={<SeriesList />} />
           <Route path="/series/:name" element={<SeriesDetail />} />
           <Route path="/favorites" element={<Favorites />} />
+
+          {/* Guide */}
+          <Route path="/guide" element={<GuideList />} />
+          <Route path="/guide/:slug" element={<GuideDetail />} />
         </Routes>
       </Layout>
     </BrowserRouter>
