@@ -101,6 +101,160 @@ const SafePortal: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return createPortal(children, document.body);
 };
 
+// ---------------------------
+// ✅ casts起点 共演集計（RPCに頼らない）
+// ---------------------------
+type CastAggRow = {
+  play_id: string;
+  actor_id: string;
+  is_starring?: boolean | null;
+  billing_order?: number | null;
+  actor?: {
+    id: string;
+    slug: string;
+    name: string;
+    kana?: string | null;
+    image_url?: string | null;
+    tags?: string[] | null;
+    gender?: string | null;
+    sns?: any;
+    featured_play_slugs?: string[] | null;
+    profile?: string | null;
+  } | null;
+};
+
+type CoStarScored = {
+  actor: Actor;
+  count: number;
+  score: number;
+};
+
+const clamp = (n: number, min: number, max: number) => Math.max(min, Math.min(max, n));
+
+/**
+ * casts を使って共演者を集計する。
+ * - count: 共演した作品数
+ * - score: 体験のための並び（主演/クレジット順を軽く反映）
+ */
+async function getCoStarsFromCasts(params: {
+  actorId: string;
+  limit: number;
+}): Promise<CoStarItem[] | null> {
+  const { actorId, limit } = params;
+
+  // 1) 対象俳優の出演 play_id を取得
+  const { data: myCasts, error: e1 } = await supabase
+    .from('casts')
+    .select('play_id, is_starring, billing_order')
+    .eq('actor_id', actorId);
+
+  if (e1) {
+    console.warn('getCoStarsFromCasts / myCasts error:', e1);
+    return null;
+  }
+
+  const playIds = Array.from(
+    new Set((myCasts ?? []).map((r: any) => r.play_id).filter(Boolean))
+  );
+
+  if (playIds.length === 0) return null;
+
+  // 2) 同じ play_id の casts を取得（自分以外） + actors join
+  // ※ in() は長すぎると死ぬので、今は上限を安全側に切る（必要なら後でchunk化）
+  const safePlayIds = playIds.slice(0, 200);
+
+  const { data: rows, error: e2 } = await supabase
+    .from('casts')
+    .select(
+      `
+      play_id,
+      actor_id,
+      is_starring,
+      billing_order,
+      actor:actors ( id, slug, name, kana, image_url, tags, gender, sns, featured_play_slugs, profile )
+    `
+    )
+    .in('play_id', safePlayIds)
+    .neq('actor_id', actorId);
+
+  if (e2) {
+    console.warn('getCoStarsFromCasts / rows error:', e2);
+    return null;
+  }
+
+  const list = (rows ?? []) as any as CastAggRow[];
+  if (list.length === 0) return null;
+
+  // 自分の出演情報を参照（スコアに使う）
+  const myByPlay = new Map<string, { is_starring: boolean; billing_order: number | null }>();
+  for (const r of (myCasts ?? []) as any[]) {
+    myByPlay.set(r.play_id, {
+      is_starring: Boolean(r.is_starring),
+      billing_order: r.billing_order ?? null,
+    });
+  }
+
+  // 3) 集計
+  const byActor = new Map<string, CoStarScored>();
+
+  for (const r of list) {
+    if (!r.actor_id || !r.play_id) continue;
+    if (!r.actor?.slug) continue;
+
+    const key = r.actor_id;
+
+    const my = myByPlay.get(r.play_id);
+    const myStar = my?.is_starring ?? false;
+    const myBill = my?.billing_order ?? null;
+
+    const coStarStar = Boolean(r.is_starring);
+    const coStarBill = r.billing_order ?? null;
+
+    // --- score設計（超軽量。後で自由に弄れる）
+    // base: 共演1作品 = 1pt
+    let score = 1;
+
+    // 主演同士の共演は少し重くする（体験的に“強い”）
+    if (myStar && coStarStar) score += 0.6;
+    else if (myStar || coStarStar) score += 0.25;
+
+    // billing_order が小さいほど上位 → 0〜0.5くらいのボーナス
+    const billBonus = (b: number | null) => {
+      if (b === null || b === undefined) return 0;
+      // 1位=最大、20位以降はほぼゼロ
+      const t = clamp(21 - b, 0, 20) / 20; // 0..1
+      return 0.5 * t;
+    };
+
+    score += billBonus(myBill);
+    score += billBonus(coStarBill);
+
+    const cur = byActor.get(key);
+    if (!cur) {
+      byActor.set(key, {
+        actor: normalizeActorForCoStar(r.actor),
+        count: 1,
+        score,
+      });
+    } else {
+      cur.count += 1;
+      cur.score += score;
+    }
+  }
+
+  const sorted = Array.from(byActor.values())
+    // まず score、同点なら count、さらに同点なら名前
+    .sort((a, b) => {
+      if (b.score !== a.score) return b.score - a.score;
+      if (b.count !== a.count) return b.count - a.count;
+      return a.actor.name.localeCompare(b.actor.name, 'ja');
+    })
+    .slice(0, limit)
+    .map((x) => ({ actor: x.actor, count: x.count }));
+
+  return sorted.length > 0 ? sorted : null;
+}
+
 const ActorDetail: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
 
@@ -234,7 +388,7 @@ const ActorDetail: React.FC = () => {
     };
   }, [slug]);
 
-  // ✅ 共演ネットワーク（DB RPC優先 → ローカルgetCoStarsフォールバック）
+  // ✅ 共演ネットワーク（casts集計優先 → ローカルgetCoStarsフォールバック）
   useEffect(() => {
     if (!actorId || !slug) return;
 
@@ -242,33 +396,20 @@ const ActorDetail: React.FC = () => {
 
     const run = async () => {
       try {
-        const { data, error } = await supabase.rpc('get_co_stars', {
-          p_actor_id: actorId,
-          p_limit: 20,
-        });
-
-        console.log('ActorDetail / coStars rpc:', data, error);
+        // 1) casts起点で集計（本番で一番堅い）
+        const agg = await getCoStarsFromCasts({ actorId, limit: 20 });
 
         if (cancelled) return;
 
-        if (error || !data || (Array.isArray(data) && data.length === 0)) {
+        if (!agg || agg.length === 0) {
+          // DBで取れない/薄い → fallback（ローカル）
           setCoStarsDb(null);
           return;
         }
 
-        const result: CoStarItem[] = (data as any[]).map((r) => ({
-          actor: normalizeActorForCoStar({
-            slug: r.slug,
-            name: r.name,
-            image_url: r.image_url,
-            tags: r.tags,
-          }),
-          count: Number(r.common_plays ?? 0),
-        }));
-
-        setCoStarsDb(result);
+        setCoStarsDb(agg);
       } catch (e) {
-        console.warn('ActorDetail coStarsDb rpc error:', e);
+        console.warn('ActorDetail coStarsDb casts-agg error:', e);
         if (!cancelled) setCoStarsDb(null);
       }
     };
