@@ -79,6 +79,42 @@ const sortPlaysNewToOld = <T extends { period?: string | null; created_at?: stri
   });
 };
 
+/**
+ * ✅ モーダル表示中の “めり込み/ズレ” を潰すためのスクロールロック
+ * - iOS Safari は overflow:hidden だけだとズレやすいので position:fixed 方式
+ */
+function useBodyScrollLock(locked: boolean) {
+  useEffect(() => {
+    if (!locked) return;
+
+    const scrollY = window.scrollY || window.pageYOffset;
+    const body = document.body;
+
+    const prevPosition = body.style.position;
+    const prevTop = body.style.top;
+    const prevLeft = body.style.left;
+    const prevRight = body.style.right;
+    const prevWidth = body.style.width;
+
+    body.style.position = 'fixed';
+    body.style.top = `-${scrollY}px`;
+    body.style.left = '0';
+    body.style.right = '0';
+    body.style.width = '100%';
+
+    return () => {
+      body.style.position = prevPosition;
+      body.style.top = prevTop;
+      body.style.left = prevLeft;
+      body.style.right = prevRight;
+      body.style.width = prevWidth;
+
+      // 復帰
+      window.scrollTo(0, scrollY);
+    };
+  }, [locked]);
+}
+
 const SeriesDetail: React.FC = () => {
   const { name } = useParams<{ name: string }>();
   const decodedName = useMemo(() => (name ? decodeURIComponent(name) : ''), [name]);
@@ -90,6 +126,22 @@ const SeriesDetail: React.FC = () => {
 
   // ✅ 長文折りたたみ（description用）
   const [isIntroOpen, setIsIntroOpen] = useState(false);
+
+  // ✅ モバイル用：全員を見る（モーダル）
+  const [isAllActorsOpen, setIsAllActorsOpen] = useState(false);
+
+  // ✅ モーダル中は背景スクロールを完全停止（めり込み対策）
+  useBodyScrollLock(isAllActorsOpen);
+
+  // ESCで閉じる（PCも快適）
+  useEffect(() => {
+    if (!isAllActorsOpen) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setIsAllActorsOpen(false);
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, [isAllActorsOpen]);
 
   useEffect(() => {
     if (!decodedName) return;
@@ -189,6 +241,9 @@ const SeriesDetail: React.FC = () => {
 
         // ✅ シリーズを変えたときは折りたたみを閉じる
         setIsIntroOpen(false);
+
+        // ✅ シリーズを変えたときはモーダルも閉じる
+        setIsAllActorsOpen(false);
       } finally {
         setLoading(false);
       }
@@ -321,32 +376,160 @@ const SeriesDetail: React.FC = () => {
               シリーズ・レギュラー
             </h3>
 
-            <div className="space-y-4">
-              {topActors.map(({ actor, count }, index) => (
-                <Link
-                  key={actor.slug}
-                  to={`/actors/${actor.slug}`}
-                  className="flex items-center gap-3 group p-2 rounded-lg hover:bg-white/5 transition-colors"
-                >
+            {/* ✅ Mobile: 先頭5件 横スライド + 全員を見る（モーダル） */}
+            <div className="lg:hidden">
+              {topActors.length === 0 ? (
+                <p className="text-xs text-slate-500">レギュラー情報はまだありません</p>
+              ) : (
+                <>
                   <div className="relative">
-                    <ActorAvatar imageUrl={actor.imageUrl} alt={actor.name} size="sm" />
-                    {index < 3 && (
-                      <div className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-neon-cyan text-black text-[10px] font-bold flex items-center justify-center border border-white">
-                        {index + 1}
+                    {/* うっすら左右フェード（“横に続いてる感”） */}
+                    <div className="pointer-events-none absolute inset-y-0 left-0 w-6 bg-gradient-to-r from-theater-black/80 to-transparent" />
+                    <div className="pointer-events-none absolute inset-y-0 right-0 w-6 bg-gradient-to-l from-theater-black/80 to-transparent" />
+
+                    <div className="-mx-2 px-2 flex gap-3 overflow-x-auto pb-2 snap-x snap-mandatory">
+                      {topActors.slice(0, 5).map(({ actor, count }, index) => (
+                        <Link
+                          key={actor.slug}
+                          to={`/actors/${actor.slug}`}
+                          className="snap-start shrink-0 w-[240px] flex items-center gap-3 group p-3 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 transition-colors"
+                        >
+                          <div className="relative">
+                            <ActorAvatar imageUrl={actor.imageUrl} alt={actor.name} size="sm" />
+                            {index < 3 && (
+                              <div className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-neon-cyan text-black text-[10px] font-bold flex items-center justify-center border border-white">
+                                {index + 1}
+                              </div>
+                            )}
+                          </div>
+
+                          <div className="flex-1 min-w-0">
+                            <p className="text-sm font-bold text-slate-200 group-hover:text-neon-cyan transition-colors truncate">
+                              {actor.name}
+                            </p>
+                            <p className="text-xs text-slate-500">{count}作品出演</p>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+
+                  {topActors.length > 5 && (
+                    <button
+                      type="button"
+                      onClick={() => setIsAllActorsOpen(true)}
+                      className="mt-4 w-full px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-slate-200 text-xs font-bold hover:bg-white/10 transition-colors"
+                    >
+                      全員を見る（{topActors.length}）
+                    </button>
+                  )}
+
+                  {/* ✅ 全員を見る：モーダル（めり込み対策済み） */}
+                  {isAllActorsOpen && (
+                    <div
+                      className="fixed inset-0 z-[9999] bg-black/70 backdrop-blur-sm"
+                      onMouseDown={(e) => {
+                        // 背景クリックで閉じる（外側だけ）
+                        if (e.target === e.currentTarget) setIsAllActorsOpen(false);
+                      }}
+                      style={{
+                        // ✅ iPhoneノッチ/ホームバー対策
+                        paddingTop: 'max(16px, env(safe-area-inset-top))',
+                        paddingBottom: 'max(16px, env(safe-area-inset-bottom))',
+                      }}
+                    >
+                      <div className="h-full w-full flex items-center justify-center px-4">
+                        <div
+                          className="
+                            w-full max-w-md
+                            rounded-2xl border border-white/10 bg-theater-black/90 shadow-xl
+                            flex flex-col
+                          "
+                          // ✅ 100dvh で “アドレスバー伸縮” の崩れを抑える
+                          style={{
+                            maxHeight: 'calc(100dvh - 32px - env(safe-area-inset-top) - env(safe-area-inset-bottom))',
+                          }}
+                        >
+                          <div className="flex items-center justify-between px-5 py-4 border-b border-white/10 shrink-0">
+                            <p className="text-sm font-bold text-white">シリーズ・レギュラー（全{topActors.length}）</p>
+                            <button
+                              type="button"
+                              onClick={() => setIsAllActorsOpen(false)}
+                              className="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs font-bold text-slate-200 hover:bg-white/10"
+                            >
+                              閉じる
+                            </button>
+                          </div>
+
+                          {/* ✅ ここだけスクロールさせる（背景はロック済み） */}
+                          <div className="p-4 overflow-y-auto overscroll-contain">
+                            <div className="space-y-2">
+                              {topActors.map(({ actor, count }, index) => (
+                                <Link
+                                  key={actor.slug}
+                                  to={`/actors/${actor.slug}`}
+                                  onClick={() => setIsAllActorsOpen(false)}
+                                  className="flex items-center gap-3 group p-2 rounded-lg hover:bg-white/5 transition-colors"
+                                >
+                                  <div className="relative">
+                                    <ActorAvatar imageUrl={actor.imageUrl} alt={actor.name} size="sm" />
+                                    {index < 3 && (
+                                      <div className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-neon-cyan text-black text-[10px] font-bold flex items-center justify-center border border-white">
+                                        {index + 1}
+                                      </div>
+                                    )}
+                                  </div>
+
+                                  <div className="flex-1 min-w-0">
+                                    <p className="text-sm font-bold text-slate-200 group-hover:text-neon-cyan transition-colors truncate">
+                                      {actor.name}
+                                    </p>
+                                    <p className="text-xs text-slate-500">{count}作品出演</p>
+                                  </div>
+                                </Link>
+                              ))}
+                            </div>
+                          </div>
+
+                          {/* 余白（固定CTAっぽいUIと視覚干渉しづらくする） */}
+                          <div className="h-2 shrink-0" />
+                        </div>
                       </div>
-                    )}
-                  </div>
+                    </div>
+                  )}
+                </>
+              )}
+            </div>
 
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm font-bold text-slate-200 group-hover:text-neon-cyan transition-colors truncate">
-                      {actor.name}
-                    </p>
-                    <p className="text-xs text-slate-500">{count}作品出演</p>
-                  </div>
-                </Link>
-              ))}
+            {/* ✅ Desktop: 従来の縦リスト */}
+            <div className="hidden lg:block">
+              <div className="space-y-4">
+                {topActors.map(({ actor, count }, index) => (
+                  <Link
+                    key={actor.slug}
+                    to={`/actors/${actor.slug}`}
+                    className="flex items-center gap-3 group p-2 rounded-lg hover:bg-white/5 transition-colors"
+                  >
+                    <div className="relative">
+                      <ActorAvatar imageUrl={actor.imageUrl} alt={actor.name} size="sm" />
+                      {index < 3 && (
+                        <div className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-neon-cyan text-black text-[10px] font-bold flex items-center justify-center border border-white">
+                          {index + 1}
+                        </div>
+                      )}
+                    </div>
 
-              {topActors.length === 0 && <p className="text-xs text-slate-500">レギュラー情報はまだありません</p>}
+                    <div className="flex-1 min-w-0">
+                      <p className="text-sm font-bold text-slate-200 group-hover:text-neon-cyan transition-colors truncate">
+                        {actor.name}
+                      </p>
+                      <p className="text-xs text-slate-500">{count}作品出演</p>
+                    </div>
+                  </Link>
+                ))}
+
+                {topActors.length === 0 && <p className="text-xs text-slate-500">レギュラー情報はまだありません</p>}
+              </div>
             </div>
           </div>
         </div>
