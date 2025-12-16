@@ -396,7 +396,11 @@ const ActorDetail: React.FC = () => {
 
             <div className="flex items-center gap-3 mt-1 mb-2">
               <FavoriteButton slug={actor.slug} type="actor" size="lg" className="shrink-0" />
-              <ShareButton title={actor.name} text={`${actor.name}のプロフィール | Stage Connect`} className="shrink-0" />
+              <ShareButton
+                title={actor.name}
+                text={`${actor.name}のプロフィール | Stage Connect`}
+                className="shrink-0"
+              />
             </div>
 
             {actor.tags && actor.tags.length > 0 && (
@@ -526,34 +530,40 @@ const ActorDetail: React.FC = () => {
                 {isAllCoStarsOpen && (
                   <SafePortal>
                     <div
-                      className="fixed inset-0 z-[9999] bg-black/70 backdrop-blur-sm"
+                      className="fixed inset-0 z-[9999] bg-black/70 backdrop-blur-sm pt-4 pb-4"
                       onMouseDown={(e) => {
                         if (e.target === e.currentTarget) setIsAllCoStarsOpen(false);
                       }}
                       style={{
-                        paddingTop: 'max(16px, env(safe-area-inset-top))',
-                        paddingBottom: 'max(16px, env(safe-area-inset-bottom))',
+                        // ✅ env() が効く端末では SafeArea を加算 / 効かない端末は pt-4/pb-4 が効く
+                        paddingTop: 'calc(16px + env(safe-area-inset-top))',
+                        paddingBottom: 'calc(16px + env(safe-area-inset-bottom))',
                       }}
                     >
                       <div className="h-full w-full flex items-center justify-center px-4">
                         <div
                           className="w-full max-w-md rounded-2xl border border-white/10 bg-theater-black/90 shadow-xl flex flex-col"
                           style={{
-                            maxHeight: 'calc(100vh - 32px - env(safe-area-inset-top) - env(safe-area-inset-bottom))',
+                            maxHeight: 'calc(100vh - 32px)',
                           }}
                         >
-                          <div className="flex items-center justify-between px-5 py-4 border-b border-white/10 shrink-0">
-                            <p className="text-sm font-bold text-white">共演ネットワーク（全{coStars.length}）</p>
+                          <div className="flex items-center justify-between gap-3 px-5 py-4 border-b border-white/10 shrink-0">
+                            <p className="text-sm font-bold text-white min-w-0 truncate">
+                              共演ネットワーク（全{coStars.length}）
+                            </p>
                             <button
                               type="button"
                               onClick={() => setIsAllCoStarsOpen(false)}
-                              className="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs font-bold text-slate-200 hover:bg-white/10"
+                              className="shrink-0 px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs font-bold text-slate-200 hover:bg-white/10"
                             >
                               閉じる
                             </button>
                           </div>
 
-                          <div className="p-4 overflow-y-auto overscroll-contain" style={{ WebkitOverflowScrolling: 'touch' as any }}>
+                          <div
+                            className="p-4 overflow-y-auto overscroll-contain"
+                            style={{ WebkitOverflowScrolling: 'touch' as any }}
+                          >
                             <div className="space-y-2">
                               {coStars.map(({ actor: coStar, count }) => (
                                 <Link
