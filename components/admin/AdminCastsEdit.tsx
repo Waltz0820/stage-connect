@@ -11,6 +11,8 @@ type CastRow = {
   play_id: string;
   actor_id: string;
   role_name?: string | null;
+  is_starring?: boolean | null;
+  billing_order?: number | null;
   actor?: ActorRow | null;
 };
 
@@ -23,13 +25,20 @@ const AdminCastsEdit: React.FC = () => {
   const [q, setQ] = useState("");
   const [found, setFound] = useState<ActorRow[]>([]);
   const [pick, setPick] = useState<ActorRow | null>(null);
+
+  // add用
   const [role, setRole] = useState("");
+  const [starringNew, setStarringNew] = useState(false);
+  const [billingNew, setBillingNew] = useState<string>("");
 
   const [busy, setBusy] = useState(false);
   const [msg, setMsg] = useState("");
 
-  // ★ 既存キャストの役名編集用 draft（castId -> role_name文字列）
+  // ★ 既存キャスト編集用 draft
   const [roleDraft, setRoleDraft] = useState<Record<string, string>>({});
+  const [starringDraft, setStarringDraft] = useState<Record<string, boolean>>({});
+  const [billingDraft, setBillingDraft] = useState<Record<string, string>>({});
+
   // ★ 保存中表示（castId -> true/false）
   const [saving, setSaving] = useState<Record<string, boolean>>({});
 
@@ -49,8 +58,12 @@ const AdminCastsEdit: React.FC = () => {
         setPlay(null);
         setCasts([]);
         setRoleDraft({});
+        setStarringDraft({});
+        setBillingDraft({});
         setPick(null);
         setRole("");
+        setStarringNew(false);
+        setBillingNew("");
         setFound([]);
         setQ("");
         return;
@@ -67,6 +80,8 @@ const AdminCastsEdit: React.FC = () => {
           play_id,
           actor_id,
           role_name,
+          is_starring,
+          billing_order,
           actor:actors ( id, slug, name, kana, image_url )
         `
         )
@@ -77,16 +92,25 @@ const AdminCastsEdit: React.FC = () => {
       const list = (cs ?? []) as any as CastRow[];
       setCasts(list);
 
-      // ★ draft初期化（DBがNULLなら空で）
-      const initial: Record<string, string> = {};
+      // ★ draft初期化（DBがNULLなら空/false）
+      const roleInit: Record<string, string> = {};
+      const starInit: Record<string, boolean> = {};
+      const billInit: Record<string, string> = {};
+
       for (const row of list) {
-        const v = row.role_name;
-        initial[row.id] = v ? String(v) : "";
+        roleInit[row.id] = row.role_name ? String(row.role_name) : "";
+        starInit[row.id] = Boolean(row.is_starring);
+        billInit[row.id] = row.billing_order === null || row.billing_order === undefined ? "" : String(row.billing_order);
       }
-      setRoleDraft(initial);
+
+      setRoleDraft(roleInit);
+      setStarringDraft(starInit);
+      setBillingDraft(billInit);
 
       setPick(null);
       setRole("");
+      setStarringNew(false);
+      setBillingNew("");
       setFound([]);
       setQ("");
     } catch (e: any) {
@@ -117,6 +141,16 @@ const AdminCastsEdit: React.FC = () => {
     if (!error) setFound((data ?? []) as any);
   };
 
+  const parseBilling = (v: string): number | null => {
+    const t = v.trim();
+    if (!t) return null;
+    // "01" も許容、整数化
+    const n = Number(t);
+    if (!Number.isFinite(n)) return null;
+    // billing_order は整数想定（必要なら小数も許容でOK）
+    return Math.trunc(n);
+  };
+
   const add = async () => {
     if (!play?.id || !pick?.id) return;
     setMsg("");
@@ -133,6 +167,8 @@ const AdminCastsEdit: React.FC = () => {
         play_id: play.id,
         actor_id: pick.id,
         role_name: role.trim() || null, // ★ 未入力はNULL（DBに未登録文字列を入れない）
+        is_starring: starringNew,
+        billing_order: parseBilling(billingNew),
       };
 
       const { error } = await supabase.from("casts").insert(payload);
@@ -140,8 +176,6 @@ const AdminCastsEdit: React.FC = () => {
 
       await load();
       setMsg("追加しました");
-      setRole(""); // ★ 追加後クリア（連続入力しやすく）
-      setPick(null);
     } catch (e: any) {
       setMsg(e?.message ?? "add error");
     } finally {
@@ -164,15 +198,17 @@ const AdminCastsEdit: React.FC = () => {
     }
   };
 
+  const markSaving = (castId: string, v: boolean) => {
+    setSaving((m) => ({ ...m, [castId]: v }));
+  };
+
   // ★ 既存キャストの role_name 更新（Enter or blur で保存）
   const updateRole = async (castId: string) => {
     const raw = roleDraft[castId] ?? "";
     const next = raw.trim();
 
-    // 連打防止
     if (saving[castId]) return;
-
-    setSaving((m) => ({ ...m, [castId]: true }));
+    markSaving(castId, true);
     setMsg("");
 
     try {
@@ -183,12 +219,59 @@ const AdminCastsEdit: React.FC = () => {
 
       if (error) throw error;
 
-      // ★ loadしない：画面上の casts を即更新（爆速）
       setCasts((prev) => prev.map((c) => (c.id === castId ? { ...c, role_name: next || null } : c)));
     } catch (e: any) {
-      setMsg(e?.message ?? "update error");
+      setMsg(e?.message ?? "update role error");
     } finally {
-      setSaving((m) => ({ ...m, [castId]: false }));
+      markSaving(castId, false);
+    }
+  };
+
+  // ★ 既存キャストの is_starring 更新（クリック即保存）
+  const updateStarring = async (castId: string, next: boolean) => {
+    if (saving[castId]) return;
+
+    // 先にUI反映（体感速い）
+    setStarringDraft((m) => ({ ...m, [castId]: next }));
+    setCasts((prev) => prev.map((c) => (c.id === castId ? { ...c, is_starring: next } : c)));
+
+    markSaving(castId, true);
+    setMsg("");
+
+    try {
+      const { error } = await supabase.from("casts").update({ is_starring: next }).eq("id", castId);
+      if (error) throw error;
+    } catch (e: any) {
+      // 失敗時は戻す（保険）
+      setStarringDraft((m) => ({ ...m, [castId]: !next }));
+      setCasts((prev) => prev.map((c) => (c.id === castId ? { ...c, is_starring: !next } : c)));
+      setMsg(e?.message ?? "update starring error");
+    } finally {
+      markSaving(castId, false);
+    }
+  };
+
+  // ★ 既存キャストの billing_order 更新（Enter or blur）
+  const updateBilling = async (castId: string) => {
+    const raw = billingDraft[castId] ?? "";
+    const next = parseBilling(raw);
+
+    if (saving[castId]) return;
+    markSaving(castId, true);
+    setMsg("");
+
+    try {
+      const { error } = await supabase.from("casts").update({ billing_order: next }).eq("id", castId);
+      if (error) throw error;
+
+      setCasts((prev) => prev.map((c) => (c.id === castId ? { ...c, billing_order: next } : c)));
+
+      // 見た目を整える（"01"→"1" 等）
+      setBillingDraft((m) => ({ ...m, [castId]: next === null ? "" : String(next) }));
+    } catch (e: any) {
+      setMsg(e?.message ?? "update billing error");
+    } finally {
+      markSaving(castId, false);
     }
   };
 
@@ -208,7 +291,10 @@ const AdminCastsEdit: React.FC = () => {
           </div>
 
           <div className="flex items-center gap-2">
-            <Link to="/admin/plays" className="text-xs px-3 py-2 rounded-full bg-white/5 border border-white/10 hover:bg-white/10">
+            <Link
+              to="/admin/plays"
+              className="text-xs px-3 py-2 rounded-full bg-white/5 border border-white/10 hover:bg-white/10"
+            >
               作品一覧へ
             </Link>
             <button
@@ -225,40 +311,75 @@ const AdminCastsEdit: React.FC = () => {
       </div>
 
       <div className="bg-white/5 border border-white/10 rounded-2xl p-6 space-y-6">
-        <Field label="現在の出演者">
+        <Field label="現在の出演者" hint="役名 / 主演 / billing_order をこの場で詰めるとDBが一気に育つ">
           <div className="space-y-2">
             {casts.map((c) => (
-              <div key={c.id} className="flex items-center justify-between gap-3 px-4 py-3 rounded-xl bg-black/30 border border-white/10">
+              <div
+                key={c.id}
+                className="flex items-center justify-between gap-3 px-4 py-3 rounded-xl bg-black/30 border border-white/10"
+              >
                 <div className="flex items-center gap-3 min-w-0">
                   <div className="w-10 h-10 rounded-full bg-black/40 border border-white/10 overflow-hidden shrink-0">
-                    {c.actor?.image_url ? <img src={c.actor.image_url} alt={c.actor.name} className="w-full h-full object-cover" /> : null}
+                    {c.actor?.image_url ? (
+                      <img src={c.actor.image_url} alt={c.actor.name} className="w-full h-full object-cover" />
+                    ) : null}
                   </div>
 
                   <div className="min-w-0">
                     <div className="text-white font-bold truncate">{c.actor?.name ?? "(unknown)"}</div>
 
-                    {/* ★ 役名インライン編集 */}
-                    <div className="text-xs text-slate-500 space-y-1">
+                    <div className="text-xs text-slate-500 space-y-2 mt-1">
                       <div className="truncate">{c.actor?.slug ?? ""}</div>
 
+                      {/* 1) 役名 */}
                       <div className="flex items-center gap-2">
                         <span className="shrink-0">役名：</span>
-
                         <input
                           className="flex-1 min-w-0 px-2 py-1 rounded-lg bg-black/30 border border-white/10 text-white outline-none"
                           value={roleDraft[c.id] ?? ""}
                           onChange={(e) => setRoleDraft((m) => ({ ...m, [c.id]: e.target.value }))}
                           onBlur={() => updateRole(c.id)}
                           onKeyDown={(e) => {
-                            if (e.key === "Enter") {
-                              (e.target as HTMLInputElement).blur(); // blurで保存
-                            }
+                            if (e.key === "Enter") (e.target as HTMLInputElement).blur();
                           }}
                           placeholder="（役名未登録）"
                           disabled={busy}
                         />
+                      </div>
 
-                        <span className="text-[10px] text-slate-500 shrink-0">{saving[c.id] ? "保存中..." : ""}</span>
+                      {/* 2) 主演トグル + billing_order */}
+                      <div className="flex items-center gap-3">
+                        <button
+                          type="button"
+                          onClick={() => updateStarring(c.id, !Boolean(starringDraft[c.id]))}
+                          disabled={busy}
+                          className={`text-xs px-3 py-1.5 rounded-full border font-bold transition-colors ${
+                            starringDraft[c.id]
+                              ? "bg-emerald-500/15 border-emerald-500/30 text-emerald-200"
+                              : "bg-white/5 border-white/10 text-slate-300 hover:bg-white/10"
+                          }`}
+                          title="主演/主要キャストとして扱う"
+                        >
+                          {starringDraft[c.id] ? "主演" : "脇"}
+                        </button>
+
+                        <div className="flex items-center gap-2">
+                          <span className="text-[11px] text-slate-400">billing：</span>
+                          <input
+                            className="w-20 px-2 py-1 rounded-lg bg-black/30 border border-white/10 text-white outline-none text-xs"
+                            value={billingDraft[c.id] ?? ""}
+                            onChange={(e) => setBillingDraft((m) => ({ ...m, [c.id]: e.target.value }))}
+                            onBlur={() => updateBilling(c.id)}
+                            onKeyDown={(e) => {
+                              if (e.key === "Enter") (e.target as HTMLInputElement).blur();
+                            }}
+                            placeholder="例: 1"
+                            inputMode="numeric"
+                            disabled={busy}
+                          />
+                        </div>
+
+                        <span className="text-[10px] text-slate-500">{saving[c.id] ? "保存中..." : ""}</span>
                       </div>
                     </div>
                   </div>
@@ -323,6 +444,32 @@ const AdminCastsEdit: React.FC = () => {
             />
           </Field>
 
+          <div className="grid sm:grid-cols-2 gap-3">
+            <Field label="主演（任意）" hint="主要キャストならON">
+              <button
+                type="button"
+                onClick={() => setStarringNew((v) => !v)}
+                className={`w-full px-4 py-3 rounded-xl border font-bold ${
+                  starringNew
+                    ? "bg-emerald-500/15 border-emerald-500/30 text-emerald-200"
+                    : "bg-black/40 border-white/10 text-slate-200 hover:bg-white/5"
+                }`}
+              >
+                {starringNew ? "主演：ON" : "主演：OFF"}
+              </button>
+            </Field>
+
+            <Field label="billing_order（任意）" hint="小さいほど上位">
+              <input
+                className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
+                value={billingNew}
+                onChange={(e) => setBillingNew(e.target.value)}
+                placeholder="例：1"
+                inputMode="numeric"
+              />
+            </Field>
+          </div>
+
           <button
             onClick={add}
             disabled={!pick || busy}
@@ -331,7 +478,9 @@ const AdminCastsEdit: React.FC = () => {
             選択した俳優を追加
           </button>
 
-          <p className="text-xs text-slate-500">※ この実装は casts.actor_id → actors.id の外部キー前提。もしスキーマが違うなら、ここだけ調整する。</p>
+          <p className="text-xs text-slate-500">
+            ※ この実装は casts.actor_id → actors.id の外部キー前提。もしスキーマが違うなら、ここだけ調整する。
+          </p>
         </div>
       </div>
     </div>
