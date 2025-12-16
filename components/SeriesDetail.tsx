@@ -12,6 +12,10 @@ type FranchiseRow = {
   id: string;
   name: string;
   slug?: string | null;
+
+  // ✅ 管理画面から入力する用
+  intro?: string | null;        // 短文（上部の追加説明）
+  description?: string | null;  // 長文（折りたたみ）
 };
 
 type PlayLike = {
@@ -84,6 +88,9 @@ const SeriesDetail: React.FC = () => {
   const [topActors, setTopActors] = useState<TopActor[]>([]);
   const [loading, setLoading] = useState(true);
 
+  // ✅ 長文折りたたみ（description用）
+  const [isIntroOpen, setIsIntroOpen] = useState(false);
+
   useEffect(() => {
     if (!decodedName) return;
 
@@ -94,7 +101,7 @@ const SeriesDetail: React.FC = () => {
         // 1) franchise を slug or name で拾う
         const { data: fr, error: frErr } = await supabase
           .from('franchises')
-          .select('id, name, slug')
+          .select('id, name, slug, intro, description')
           .or(`slug.eq.${decodedName},name.eq.${decodedName}`)
           .maybeSingle();
 
@@ -107,11 +114,10 @@ const SeriesDetail: React.FC = () => {
           return;
         }
 
-        setFranchise(fr);
+        setFranchise(fr as any);
 
         // 2) plays を franchise_id で取得
-        // ※ created_at が無い場合でもOK（あればタイブレークに使う）
-        const { data: ps, error: psErr } = await supabase.from('plays').select('*').eq('franchise_id', fr.id);
+        const { data: ps, error: psErr } = await supabase.from('plays').select('*').eq('franchise_id', (fr as any).id);
 
         if (psErr || !ps) {
           console.warn('SeriesDetail: plays fetch error', psErr);
@@ -180,6 +186,9 @@ const SeriesDetail: React.FC = () => {
           .slice(0, 30);
 
         setTopActors(tops);
+
+        // ✅ シリーズを変えたときは折りたたみを閉じる
+        setIsIntroOpen(false);
       } finally {
         setLoading(false);
       }
@@ -204,14 +213,31 @@ const SeriesDetail: React.FC = () => {
     return { start: Math.min(...ys), end: Math.max(...ys) };
   }, [plays]);
 
-  // ✅ Gemini互換：Intro/FAQ/JSON-LD用
-  const hasVod = useMemo(
-    () => plays.some((p) => p.vod?.dmm || p.vod?.danime || p.vod?.unext),
-    [plays]
-  );
+  const hasVod = useMemo(() => plays.some((p) => p.vod?.dmm || p.vod?.danime || p.vod?.unext), [plays]);
+
   const startYear = years.start || 0;
   const endYear = years.end && years.end > 0 ? years.end : 0;
   const endYearLabel = endYear > 0 ? `${endYear}` : '現在';
+
+  // ✅ 自動要約：常に表示する“固定パート”
+  const autoIntro = useMemo(() => {
+    const nm = franchise?.name ?? '';
+    return `${nm}シリーズの舞台作品を年表形式でまとめました。全${plays.length}作品（${startYear || '----'}-${endYearLabel}）を掲載しています。${
+      hasVod ? '配信（VOD）がある作品はカード内から確認できます。' : ''
+    }`;
+  }, [franchise?.name, plays.length, startYear, endYearLabel, hasVod]);
+
+  // ✅ 手動追加（短文）※自動要約の下に“積む”
+  const manualIntro = useMemo(() => {
+    const t = franchise?.intro?.trim();
+    return t ? t : '';
+  }, [franchise?.intro]);
+
+  // ✅ 長文（折りたたみ）
+  const longText = useMemo(() => {
+    const t = franchise?.description?.trim();
+    return t ? t : '';
+  }, [franchise?.description]);
 
   const jsonLd = franchise
     ? {
@@ -221,10 +247,7 @@ const SeriesDetail: React.FC = () => {
           {
             '@type': 'Question',
             name: `${franchise.name}シリーズの舞台作品は何作品ありますか？`,
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: `現在、${plays.length}作品が登録されています。`,
-            },
+            acceptedAnswer: { '@type': 'Answer', text: `現在、${plays.length}作品が登録されています。` },
           },
           {
             '@type': 'Question',
@@ -330,17 +353,49 @@ const SeriesDetail: React.FC = () => {
 
         {/* Main */}
         <div className="lg:col-span-8 lg:order-1 space-y-12">
-          {/* ✅ Intro（自動生成） */}
+          {/* ✅ Series Info：自動要約は固定 + 手動は追加で積む + 長文は折りたたみ */}
           <section className="bg-white/5 rounded-xl border border-white/10 p-6 backdrop-blur-sm">
             <h2 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-3 flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-neon-cyan"></span>
               Series Info
             </h2>
-            <p className="text-slate-300 text-sm leading-relaxed font-light">
-              <span className="font-bold text-white">{franchise.name}</span> シリーズの舞台作品を年表形式でまとめました。全
-              <span className="font-bold text-white">{plays.length}作品</span>（{startYear || '----'}-{endYearLabel}）を掲載しています。
-              {hasVod ? '配信（VOD）がある作品はカード内から確認できます。' : ''}
-            </p>
+
+            {/* 固定（自動挿入） */}
+            <p className="text-slate-300 text-sm leading-relaxed font-light whitespace-pre-wrap">{autoIntro}</p>
+
+            {/* 追加（手動 intro） */}
+            {manualIntro && (
+              <p className="mt-4 text-slate-300 text-sm leading-relaxed font-light whitespace-pre-wrap">{manualIntro}</p>
+            )}
+
+            {/* 追加（長文 description：折りたたみ） */}
+            {longText && (
+              <div className="mt-4">
+                <div
+                  className={`text-slate-400 text-sm leading-relaxed font-light whitespace-pre-wrap transition-all duration-300 ${
+                    isIntroOpen ? '' : 'line-clamp-3'
+                  }`}
+                >
+                  {longText}
+                </div>
+
+                <button
+                  type="button"
+                  onClick={() => setIsIntroOpen((v) => !v)}
+                  className="mt-3 inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-neon-cyan hover:text-white transition-colors"
+                >
+                  {isIntroOpen ? '閉じる' : '続きを読む'}
+                  <svg
+                    className={`w-4 h-4 transition-transform ${isIntroOpen ? 'rotate-180' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+              </div>
+            )}
           </section>
 
           {/* Timeline */}
@@ -352,7 +407,9 @@ const SeriesDetail: React.FC = () => {
                 <div key={play.slug} className="relative pl-12 flex flex-col">
                   <div className="absolute left-[15px] top-0 w-2.5 h-2.5 rounded-full bg-neon-cyan shadow-[0_0_10px_#00FFFF] ring-4 ring-theater-black"></div>
 
-                  <div className="mb-1 text-xs font-mono text-neon-cyan/80 tracking-wider">{play.period || 'Year Unknown'}</div>
+                  <div className="mb-1 text-xs font-mono text-neon-cyan/80 tracking-wider">
+                    {play.period || 'Year Unknown'}
+                  </div>
 
                   <PlayCard play={play as any} className="h-auto w-full" />
                 </div>
@@ -362,7 +419,7 @@ const SeriesDetail: React.FC = () => {
             </div>
           </div>
 
-          {/* ✅ FAQ */}
+          {/* FAQ */}
           <section className="pt-8 border-t border-white/5 mt-8">
             <h2 className="text-xl font-bold text-white mb-6 flex items-center gap-3">
               <span className="w-1 h-6 bg-slate-500 rounded-full"></span>
