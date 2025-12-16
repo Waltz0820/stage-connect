@@ -148,11 +148,7 @@ const ActorDetail: React.FC = () => {
 
       try {
         // 1) actor
-        const { data, error } = await supabase
-          .from('actors')
-          .select('*')
-          .eq('slug', slug)
-          .maybeSingle();
+        const { data, error } = await supabase.from('actors').select('*').eq('slug', slug).maybeSingle();
 
         console.log('ActorDetail / actor:', data, error);
 
@@ -315,8 +311,7 @@ const ActorDetail: React.FC = () => {
   }
 
   // ---- 出演作品（DB優先 → ダメならローカルフォールバック）----
-  const plays: PlayLike[] =
-    playsDb && playsDb.length > 0 ? playsDb : slug ? (getPlaysByActorSlug(slug) as any) : [];
+  const plays: PlayLike[] = playsDb && playsDb.length > 0 ? playsDb : slug ? (getPlaysByActorSlug(slug) as any) : [];
 
   const timelineGroups = groupPlaysByYear(plays as any);
 
@@ -396,11 +391,7 @@ const ActorDetail: React.FC = () => {
 
             <div className="flex items-center gap-3 mt-1 mb-2">
               <FavoriteButton slug={actor.slug} type="actor" size="lg" className="shrink-0" />
-              <ShareButton
-                title={actor.name}
-                text={`${actor.name}のプロフィール | Stage Connect`}
-                className="shrink-0"
-              />
+              <ShareButton title={actor.name} text={`${actor.name}のプロフィール | Stage Connect`} className="shrink-0" />
             </div>
 
             {actor.tags && actor.tags.length > 0 && (
@@ -468,7 +459,8 @@ const ActorDetail: React.FC = () => {
           {/* CoStars */}
           {coStars.length > 0 && (
             <section>
-              <h2 className="text-xl font-bold text-white mb-6 flex items-center gap-3">
+              {/* ✅ wrap させてスマホで見切れ防止 */}
+              <h2 className="text-xl font-bold text-white mb-6 flex flex-wrap items-center gap-3">
                 <span className="w-1 h-6 bg-neon-cyan rounded-full shadow-[0_0_10px_#00FFFF]"></span>
                 共演ネットワーク
                 <span className="text-xs font-normal text-slate-500 ml-2 border border-slate-700 px-2 py-0.5 rounded">
@@ -493,9 +485,7 @@ const ActorDetail: React.FC = () => {
 
                         <div className="flex-1 min-w-0">
                           <div className="flex justify-between items-center mb-1">
-                            <h3 className="font-bold text-white group-hover:text-neon-cyan transition-colors truncate">
-                              {coStar.name}
-                            </h3>
+                            <h3 className="font-bold text-white group-hover:text-neon-cyan transition-colors truncate">{coStar.name}</h3>
                             <span className="text-[10px] font-bold bg-neon-cyan/10 text-neon-cyan px-2 py-0.5 rounded-full border border-neon-cyan/20 whitespace-nowrap ml-2">
                               ★ {count}作
                             </span>
@@ -503,12 +493,7 @@ const ActorDetail: React.FC = () => {
                           <p className="text-xs text-slate-500 line-clamp-1">{coStar.tags?.[0] || '俳優'}</p>
                         </div>
 
-                        <svg
-                          className="w-4 h-4 text-slate-600 group-hover:text-neon-cyan transition-colors"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
+                        <svg className="w-4 h-4 text-slate-600 group-hover:text-neon-cyan transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
                       </Link>
@@ -530,27 +515,28 @@ const ActorDetail: React.FC = () => {
                 {isAllCoStarsOpen && (
                   <SafePortal>
                     <div
-                      className="fixed inset-0 z-[9999] bg-black/70 backdrop-blur-sm pt-4 pb-4"
+                      className="fixed inset-0 z-[9999] bg-black/70 backdrop-blur-sm overflow-y-auto overscroll-contain"
                       onMouseDown={(e) => {
                         if (e.target === e.currentTarget) setIsAllCoStarsOpen(false);
                       }}
                       style={{
-                        // ✅ env() が効く端末では SafeArea を加算 / 効かない端末は pt-4/pb-4 が効く
                         paddingTop: 'calc(16px + env(safe-area-inset-top))',
                         paddingBottom: 'calc(16px + env(safe-area-inset-bottom))',
+                        paddingLeft: 'calc(16px + env(safe-area-inset-left))',
+                        paddingRight: 'calc(16px + env(safe-area-inset-right))',
                       }}
                     >
-                      <div className="h-full w-full flex items-center justify-center px-4">
+                      {/* ✅ “中央寄せ”をやめて上寄せ。iOS Safari の vh ズレでもヘッダーが死なない */}
+                      <div className="w-full flex items-start justify-center">
                         <div
                           className="w-full max-w-md rounded-2xl border border-white/10 bg-theater-black/90 shadow-xl flex flex-col"
                           style={{
-                            maxHeight: 'calc(100vh - 32px)',
+                            // ✅ 100vhではなく “見えてる高さ” 寄りの svh を基準にする
+                            maxHeight: 'calc(100svh - 32px)',
                           }}
                         >
                           <div className="flex items-center justify-between gap-3 px-5 py-4 border-b border-white/10 shrink-0">
-                            <p className="text-sm font-bold text-white min-w-0 truncate">
-                              共演ネットワーク（全{coStars.length}）
-                            </p>
+                            <p className="text-sm font-bold text-white min-w-0 truncate">共演ネットワーク（全{coStars.length}）</p>
                             <button
                               type="button"
                               onClick={() => setIsAllCoStarsOpen(false)}
@@ -560,10 +546,7 @@ const ActorDetail: React.FC = () => {
                             </button>
                           </div>
 
-                          <div
-                            className="p-4 overflow-y-auto overscroll-contain"
-                            style={{ WebkitOverflowScrolling: 'touch' as any }}
-                          >
+                          <div className="p-4 overflow-y-auto overscroll-contain" style={{ WebkitOverflowScrolling: 'touch' as any }}>
                             <div className="space-y-2">
                               {coStars.map(({ actor: coStar, count }) => (
                                 <Link
@@ -576,9 +559,7 @@ const ActorDetail: React.FC = () => {
 
                                   <div className="flex-1 min-w-0">
                                     <div className="flex items-center justify-between gap-3">
-                                      <p className="text-sm font-bold text-slate-200 group-hover:text-neon-cyan transition-colors truncate">
-                                        {coStar.name}
-                                      </p>
+                                      <p className="text-sm font-bold text-slate-200 group-hover:text-neon-cyan transition-colors truncate">{coStar.name}</p>
                                       <span className="text-[10px] font-bold bg-neon-cyan/10 text-neon-cyan px-2 py-0.5 rounded-full border border-neon-cyan/20 whitespace-nowrap">
                                         ★ {count}作
                                       </span>
@@ -611,9 +592,7 @@ const ActorDetail: React.FC = () => {
 
                       <div className="flex-1 min-w-0">
                         <div className="flex justify-between items-center mb-1">
-                          <h3 className="font-bold text-white group-hover:text-neon-cyan transition-colors truncate">
-                            {coStar.name}
-                          </h3>
+                          <h3 className="font-bold text-white group-hover:text-neon-cyan transition-colors truncate">{coStar.name}</h3>
                           <span className="text-[10px] font-bold bg-neon-cyan/10 text-neon-cyan px-2 py-0.5 rounded-full border border-neon-cyan/20 whitespace-nowrap ml-2">
                             ★ {count}作
                           </span>
@@ -621,12 +600,7 @@ const ActorDetail: React.FC = () => {
                         <p className="text-xs text-slate-500 line-clamp-1">{coStar.tags?.[0] || '俳優'}</p>
                       </div>
 
-                      <svg
-                        className="w-4 h-4 text-slate-600 group-hover:text-neon-cyan transition-colors"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
+                      <svg className="w-4 h-4 text-slate-600 group-hover:text-neon-cyan transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
                     </Link>
