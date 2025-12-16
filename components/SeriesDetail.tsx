@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { createPortal } from 'react-dom';
 import { supabase } from '../lib/supabase';
 
 import PlayCard from './PlayCard';
@@ -114,6 +115,16 @@ function useBodyScrollLock(locked: boolean) {
     };
   }, [locked]);
 }
+
+/**
+ * ✅ Portal（document.body直下）に出す
+ * スタッキングコンテキストに閉じ込められて固定CTAに負ける問題を根本回避
+ */
+const ModalPortal: React.FC<{ open: boolean; children: React.ReactNode }> = ({ open, children }) => {
+  if (!open) return null;
+  if (typeof document === 'undefined') return null;
+  return createPortal(children, document.body);
+};
 
 const SeriesDetail: React.FC = () => {
   const { name } = useParams<{ name: string }>();
@@ -424,28 +435,22 @@ const SeriesDetail: React.FC = () => {
                     </button>
                   )}
 
-                  {/* ✅ 全員を見る：モーダル（めり込み対策済み） */}
-                  {isAllActorsOpen && (
+                  {/* ✅ 全員を見る：モーダル（Portalで最前面固定） */}
+                  <ModalPortal open={isAllActorsOpen}>
                     <div
-                      className="fixed inset-0 z-[9999] bg-black/70 backdrop-blur-sm"
+                      className="fixed inset-0 z-[2147483647] bg-black/70 backdrop-blur-sm"
                       onMouseDown={(e) => {
                         // 背景クリックで閉じる（外側だけ）
                         if (e.target === e.currentTarget) setIsAllActorsOpen(false);
                       }}
                       style={{
-                        // ✅ iPhoneノッチ/ホームバー対策
                         paddingTop: 'max(16px, env(safe-area-inset-top))',
                         paddingBottom: 'max(16px, env(safe-area-inset-bottom))',
                       }}
                     >
                       <div className="h-full w-full flex items-center justify-center px-4">
                         <div
-                          className="
-                            w-full max-w-md
-                            rounded-2xl border border-white/10 bg-theater-black/90 shadow-xl
-                            flex flex-col
-                          "
-                          // ✅ 100dvh で “アドレスバー伸縮” の崩れを抑える
+                          className="w-full max-w-md rounded-2xl border border-white/10 bg-theater-black/90 shadow-xl flex flex-col"
                           style={{
                             maxHeight: 'calc(100dvh - 32px - env(safe-area-inset-top) - env(safe-area-inset-bottom))',
                           }}
@@ -491,12 +496,11 @@ const SeriesDetail: React.FC = () => {
                             </div>
                           </div>
 
-                          {/* 余白（固定CTAっぽいUIと視覚干渉しづらくする） */}
                           <div className="h-2 shrink-0" />
                         </div>
                       </div>
                     </div>
-                  )}
+                  </ModalPortal>
                 </>
               )}
             </div>
