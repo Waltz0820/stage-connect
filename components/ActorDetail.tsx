@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { createPortal } from 'react-dom';
 import { supabase } from '../lib/supabase';
 import type { Actor, Gender } from '../lib/types';
 
@@ -55,6 +56,51 @@ const normalizeActorForCoStar = (data: any): Actor => ({
   tags: (data.tags as string[] | undefined) ?? [],
 });
 
+/**
+ * ✅ モーダル表示中の “めり込み/ズレ” を潰すためのスクロールロック
+ * - iOS Safari は overflow:hidden だけだとズレやすいので position:fixed 方式
+ */
+function useBodyScrollLock(locked: boolean) {
+  useEffect(() => {
+    if (!locked) return;
+
+    const scrollY = window.scrollY || window.pageYOffset;
+    const body = document.body;
+
+    const prevPosition = body.style.position;
+    const prevTop = body.style.top;
+    const prevLeft = body.style.left;
+    const prevRight = body.style.right;
+    const prevWidth = body.style.width;
+
+    body.style.position = 'fixed';
+    body.style.top = `-${scrollY}px`;
+    body.style.left = '0';
+    body.style.right = '0';
+    body.style.width = '100%';
+
+    return () => {
+      body.style.position = prevPosition;
+      body.style.top = prevTop;
+      body.style.left = prevLeft;
+      body.style.right = prevRight;
+      body.style.width = prevWidth;
+
+      window.scrollTo(0, scrollY);
+    };
+  }, [locked]);
+}
+
+/**
+ * ✅ “落ちないPortal”
+ * - document 未定義環境では描画しない
+ * - body 直下に出す（親の transform / filter / overflow の影響を受けない）
+ */
+const SafePortal: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  if (typeof document === 'undefined') return null;
+  return createPortal(children, document.body);
+};
+
 const ActorDetail: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
 
@@ -69,6 +115,22 @@ const ActorDetail: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
+  // ✅ モバイル用：共演を全員見る（モーダル）
+  const [isAllCoStarsOpen, setIsAllCoStarsOpen] = useState(false);
+
+  // ✅ モーダル中は背景スクロールを完全停止
+  useBodyScrollLock(isAllCoStarsOpen);
+
+  // ESCで閉じる（PCも快適）
+  useEffect(() => {
+    if (!isAllCoStarsOpen) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setIsAllCoStarsOpen(false);
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, [isAllCoStarsOpen]);
+
   // ---- Supabase から俳優1件＋出演作品を取得 ----
   useEffect(() => {
     if (!slug) return;
@@ -81,7 +143,8 @@ const ActorDetail: React.FC = () => {
       setActor(null);
       setActorId(null);
       setPlaysDb(null);
-      setCoStarsDb(null); // ✅ slug切替時に共演もリセット
+      setCoStarsDb(null);
+      setIsAllCoStarsOpen(false);
 
       try {
         // 1) actor
@@ -192,7 +255,6 @@ const ActorDetail: React.FC = () => {
 
         if (cancelled) return;
 
-        // RPCが失敗 or 0件なら、いったんローカルfallbackに任せる（nullに戻す）
         if (error || !data || (Array.isArray(data) && data.length === 0)) {
           setCoStarsDb(null);
           return;
@@ -402,7 +464,7 @@ const ActorDetail: React.FC = () => {
           {/* CoStars */}
           {coStars.length > 0 && (
             <section>
-              <h2 className="text-xl font-bold text-white mb-8 flex items-center gap-3">
+              <h2 className="text-xl font-bold text-white mb-6 flex items-center gap-3">
                 <span className="w-1 h-6 bg-neon-cyan rounded-full shadow-[0_0_10px_#00FFFF]"></span>
                 共演ネットワーク
                 <span className="text-xs font-normal text-slate-500 ml-2 border border-slate-700 px-2 py-0.5 rounded">
@@ -410,37 +472,156 @@ const ActorDetail: React.FC = () => {
                 </span>
               </h2>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {coStars.map(({ actor: coStar, count }) => (
-                  <Link
-                    key={coStar.slug}
-                    to={`/actors/${coStar.slug}`}
-                    className="flex items-center gap-4 bg-theater-surface p-4 rounded-xl border border-white/5 hover:border-neon-cyan/50 hover:bg-white/5 transition-all duration-300 group"
+              {/* ✅ Mobile: 横スライド + 全員を見る */}
+              <div className="lg:hidden">
+                <div className="relative">
+                  <div className="pointer-events-none absolute inset-y-0 left-0 w-6 bg-gradient-to-r from-theater-black/80 to-transparent" />
+                  <div className="pointer-events-none absolute inset-y-0 right-0 w-6 bg-gradient-to-l from-theater-black/80 to-transparent" />
+
+                  <div className="-mx-2 px-2 flex gap-3 overflow-x-auto pb-2 snap-x snap-mandatory">
+                    {coStars.slice(0, 5).map(({ actor: coStar, count }) => (
+                      <Link
+                        key={coStar.slug}
+                        to={`/actors/${coStar.slug}`}
+                        className="snap-start shrink-0 w-[280px] flex items-center gap-4 bg-theater-surface p-4 rounded-xl border border-white/5 hover:border-neon-cyan/50 hover:bg-white/5 transition-all duration-300 group"
+                      >
+                        <ActorAvatar imageUrl={coStar.imageUrl} alt={coStar.name} size="sm" />
+
+                        <div className="flex-1 min-w-0">
+                          <div className="flex justify-between items-center mb-1">
+                            <h3 className="font-bold text-white group-hover:text-neon-cyan transition-colors truncate">
+                              {coStar.name}
+                            </h3>
+                            <span className="text-[10px] font-bold bg-neon-cyan/10 text-neon-cyan px-2 py-0.5 rounded-full border border-neon-cyan/20 whitespace-nowrap ml-2">
+                              ★ {count}作
+                            </span>
+                          </div>
+                          <p className="text-xs text-slate-500 line-clamp-1">{coStar.tags?.[0] || '俳優'}</p>
+                        </div>
+
+                        <svg
+                          className="w-4 h-4 text-slate-600 group-hover:text-neon-cyan transition-colors"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+
+                {coStars.length > 5 && (
+                  <button
+                    type="button"
+                    onClick={() => setIsAllCoStarsOpen(true)}
+                    className="mt-4 w-full px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-slate-200 text-xs font-bold hover:bg-white/10 transition-colors"
                   >
-                    <ActorAvatar imageUrl={coStar.imageUrl} alt={coStar.name} size="sm" />
+                    全員を見る（{coStars.length}）
+                  </button>
+                )}
 
-                    <div className="flex-1 min-w-0">
-                      <div className="flex justify-between items-center mb-1">
-                        <h3 className="font-bold text-white group-hover:text-neon-cyan transition-colors truncate">
-                          {coStar.name}
-                        </h3>
-                        <span className="text-[10px] font-bold bg-neon-cyan/10 text-neon-cyan px-2 py-0.5 rounded-full border border-neon-cyan/20 whitespace-nowrap ml-2">
-                          ★ {count}作
-                        </span>
-                      </div>
-                      <p className="text-xs text-slate-500 line-clamp-1">{coStar.tags?.[0] || '俳優'}</p>
-                    </div>
-
-                    <svg
-                      className="w-4 h-4 text-slate-600 group-hover:text-neon-cyan transition-colors"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
+                {/* ✅ モーダル（Portal） */}
+                {isAllCoStarsOpen && (
+                  <SafePortal>
+                    <div
+                      className="fixed inset-0 z-[9999] bg-black/70 backdrop-blur-sm"
+                      onMouseDown={(e) => {
+                        if (e.target === e.currentTarget) setIsAllCoStarsOpen(false);
+                      }}
+                      style={{
+                        paddingTop: 'max(16px, env(safe-area-inset-top))',
+                        paddingBottom: 'max(16px, env(safe-area-inset-bottom))',
+                      }}
                     >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </Link>
-                ))}
+                      <div className="h-full w-full flex items-center justify-center px-4">
+                        <div
+                          className="w-full max-w-md rounded-2xl border border-white/10 bg-theater-black/90 shadow-xl flex flex-col"
+                          style={{
+                            maxHeight: 'calc(100vh - 32px - env(safe-area-inset-top) - env(safe-area-inset-bottom))',
+                          }}
+                        >
+                          <div className="flex items-center justify-between px-5 py-4 border-b border-white/10 shrink-0">
+                            <p className="text-sm font-bold text-white">共演ネットワーク（全{coStars.length}）</p>
+                            <button
+                              type="button"
+                              onClick={() => setIsAllCoStarsOpen(false)}
+                              className="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs font-bold text-slate-200 hover:bg-white/10"
+                            >
+                              閉じる
+                            </button>
+                          </div>
+
+                          <div className="p-4 overflow-y-auto overscroll-contain" style={{ WebkitOverflowScrolling: 'touch' as any }}>
+                            <div className="space-y-2">
+                              {coStars.map(({ actor: coStar, count }) => (
+                                <Link
+                                  key={coStar.slug}
+                                  to={`/actors/${coStar.slug}`}
+                                  onClick={() => setIsAllCoStarsOpen(false)}
+                                  className="flex items-center gap-3 group p-2 rounded-lg hover:bg-white/5 transition-colors"
+                                >
+                                  <ActorAvatar imageUrl={coStar.imageUrl} alt={coStar.name} size="sm" />
+
+                                  <div className="flex-1 min-w-0">
+                                    <div className="flex items-center justify-between gap-3">
+                                      <p className="text-sm font-bold text-slate-200 group-hover:text-neon-cyan transition-colors truncate">
+                                        {coStar.name}
+                                      </p>
+                                      <span className="text-[10px] font-bold bg-neon-cyan/10 text-neon-cyan px-2 py-0.5 rounded-full border border-neon-cyan/20 whitespace-nowrap">
+                                        ★ {count}作
+                                      </span>
+                                    </div>
+                                    <p className="text-xs text-slate-500 line-clamp-1">{coStar.tags?.[0] || '俳優'}</p>
+                                  </div>
+                                </Link>
+                              ))}
+                            </div>
+                          </div>
+
+                          <div className="h-2 shrink-0" />
+                        </div>
+                      </div>
+                    </div>
+                  </SafePortal>
+                )}
+              </div>
+
+              {/* ✅ Desktop: そのまま（従来のカードグリッド） */}
+              <div className="hidden lg:block">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {coStars.map(({ actor: coStar, count }) => (
+                    <Link
+                      key={coStar.slug}
+                      to={`/actors/${coStar.slug}`}
+                      className="flex items-center gap-4 bg-theater-surface p-4 rounded-xl border border-white/5 hover:border-neon-cyan/50 hover:bg-white/5 transition-all duration-300 group"
+                    >
+                      <ActorAvatar imageUrl={coStar.imageUrl} alt={coStar.name} size="sm" />
+
+                      <div className="flex-1 min-w-0">
+                        <div className="flex justify-between items-center mb-1">
+                          <h3 className="font-bold text-white group-hover:text-neon-cyan transition-colors truncate">
+                            {coStar.name}
+                          </h3>
+                          <span className="text-[10px] font-bold bg-neon-cyan/10 text-neon-cyan px-2 py-0.5 rounded-full border border-neon-cyan/20 whitespace-nowrap ml-2">
+                            ★ {count}作
+                          </span>
+                        </div>
+                        <p className="text-xs text-slate-500 line-clamp-1">{coStar.tags?.[0] || '俳優'}</p>
+                      </div>
+
+                      <svg
+                        className="w-4 h-4 text-slate-600 group-hover:text-neon-cyan transition-colors"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </Link>
+                  ))}
+                </div>
               </div>
             </section>
           )}
