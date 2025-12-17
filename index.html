@@ -6,6 +6,18 @@
     <title>Stage Connect｜2.5次元舞台とキャストのデータベース</title>
     <meta name="description" content="Stage Connect（stageconnect.jp）は、2.5次元舞台作品とキャストの出演情報を横断的に検索できるデジタル・アーカイブです。推し俳優の出演歴や作品情報をまとめてチェックできます。">
     
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=%VITE_GA_MEASUREMENT_ID%"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  // SPAなので、ここでは send_page_view を false にしておく
+  gtag('config', '%VITE_GA_MEASUREMENT_ID%', { send_page_view: false });
+</script>
+
+
     <!-- Open Graph / Facebook / LINE -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://stageconnect.jp/">

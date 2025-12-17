@@ -1,37 +1,52 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Layout from './components/Layout';
-import Home from './components/Home';
-import Actors from './components/Actors';
-import ActorDetail from './components/ActorDetail';
-import Plays from './components/Plays';
-import PlayDetail from './components/PlayDetail';
-import SeriesList from './components/SeriesList';
-import SeriesDetail from './components/SeriesDetail';
-import Favorites from './components/Favorites';
-import GuideList from './components/GuideList';
-import GuideDetail from './components/GuideDetail';
-import { DebugSupabase } from './DebugSupabase'; // ← 追加
+import React, { useEffect } from "react";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import Layout from "./components/Layout";
+import Home from "./components/Home";
+import Actors from "./components/Actors";
+import ActorDetail from "./components/ActorDetail";
+import Plays from "./components/Plays";
+import PlayDetail from "./components/PlayDetail";
+import SeriesList from "./components/SeriesList";
+import SeriesDetail from "./components/SeriesDetail";
+import Favorites from "./components/Favorites";
+import GuideList from "./components/GuideList";
+import GuideDetail from "./components/GuideDetail";
+import { DebugSupabase } from "./DebugSupabase";
+
+import { gaPageView } from "./lib/ga";
 
 // ===== Admin =====
-import AdminGuard from './components/admin/AdminGuard';
-import AdminLayout from './components/admin/AdminLayout';
-import AdminHome from './components/admin/AdminHome';
+import AdminGuard from "./components/admin/AdminGuard";
+import AdminLayout from "./components/admin/AdminLayout";
+import AdminHome from "./components/admin/AdminHome";
 
-import AdminSeries from './components/admin/AdminSeries';
-import AdminSeriesEdit from './components/admin/AdminSeriesEdit';
+import AdminSeries from "./components/admin/AdminSeries";
+import AdminSeriesEdit from "./components/admin/AdminSeriesEdit";
 
-import AdminPlays from './components/admin/AdminPlays';
-import AdminPlayEdit from './components/admin/AdminPlayEdit';
+import AdminPlays from "./components/admin/AdminPlays";
+import AdminPlayEdit from "./components/admin/AdminPlayEdit";
 
-import AdminActors from './components/admin/AdminActors';
-import AdminActorEdit from './components/admin/AdminActorEdit';
+import AdminActors from "./components/admin/AdminActors";
+import AdminActorEdit from "./components/admin/AdminActorEdit";
 
-import AdminCastsEdit from './components/admin/AdminCastsEdit';
+import AdminCastsEdit from "./components/admin/AdminCastsEdit";
+
+const RouteTracker: React.FC = () => {
+  const loc = useLocation();
+
+  useEffect(() => {
+    const path = loc.pathname + loc.search + loc.hash;
+    gaPageView(path);
+  }, [loc]);
+
+  return null;
+};
 
 const App: React.FC = () => {
   return (
     <BrowserRouter>
+      <RouteTracker />
+
       <Layout>
         {/* Supabase 接続テスト用（画面には何も出ない） */}
         <DebugSupabase />
