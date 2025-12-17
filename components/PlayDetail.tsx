@@ -404,7 +404,7 @@ const PlayDetail: React.FC = () => {
                     onClick={() => setIsCreditsOpen((v) => !v)}
                     className="text-[11px] px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-slate-200 hover:bg-white/10 transition-colors font-bold"
                   >
-                    {isCreditsOpen ? '閉じる' : `追加スタッフを見る（${creditsExtra.length}）`}
+                    {isCreditsOpen ? '閉じる' : `続きを読む（${creditsExtra.length}）`}
                   </button>
                 )}
               </div>
