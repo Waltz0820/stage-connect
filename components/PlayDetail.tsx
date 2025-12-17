@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 
@@ -12,6 +12,13 @@ import ShareButton from './ShareButton';
 import Breadcrumbs from './Breadcrumbs';
 
 import type { Actor } from '../lib/types';
+
+type CreditItem = {
+  role: string;
+  names: string[] | string;
+  is_core?: boolean;
+  sort_order?: number;
+};
 
 type PlayRecord = {
   id?: string;
@@ -29,6 +36,9 @@ type PlayRecord = {
   tags?: string[] | null;
   franchise?: string | null;
   franchise_id?: string | null;
+
+  // ✅ plays.credits(jsonb) をそのまま受ける
+  credits?: CreditItem[] | null;
 };
 
 const PlayDetail: React.FC = () => {
@@ -39,30 +49,128 @@ const PlayDetail: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [notFound, setNotFound] = useState(false);
 
+  // ✅ 任意スタッフの折りたたみ
+  const [isCreditsOpen, setIsCreditsOpen] = useState(false);
+
+  // -------------------------
+  // ✅ Hooksは「早期returnより上」に固定
+  // -------------------------
+  const normalizeNames = (names: any): string => {
+    if (!names) return '';
+    if (Array.isArray(names)) return names.filter(Boolean).join('　/　');
+    if (typeof names === 'string') return names.trim();
+    if (typeof names === 'object') {
+      const items = (names.items ?? names.names ?? null) as any;
+      if (Array.isArray(items)) return items.filter(Boolean).join('　/　');
+    }
+    return String(names);
+  };
+
+  // creditsを “表示用の共通形” に正規化
+  const creditsAll = useMemo(() => {
+    const list = (play?.credits ?? []) as CreditItem[];
+    return list
+      .map((c) => ({
+        role: String(c.role ?? '').trim(),
+        namesRaw: c.names,
+        namesText: normalizeNames(c.names),
+        is_core: Boolean((c as any).is_core),
+        sort_order: typeof (c as any).sort_order === 'number' ? (c as any).sort_order : 999,
+      }))
+      .filter((c) => c.role && c.namesText);
+  }, [play?.credits]);
+
+  // “コア扱い”：is_core true OR roleが演出/脚本/主催系
+  const isCoreRole = (role: string, is_core?: boolean) => {
+    if (is_core) return true;
+    const r = role.replace(/\s/g, '');
+    return r === '演出' || r === '脚本' || r === '脚本・作詞' || r === '主催';
+  };
+
+  const creditsCore = useMemo(() => {
+    const core = creditsAll.filter((c) => isCoreRole(c.role, c.is_core));
+    const order = ['演出', '脚本', '脚本・作詞', '主催'];
+    return core.sort((a, b) => {
+      const ai = order.indexOf(a.role);
+      const bi = order.indexOf(b.role);
+      const ax = ai === -1 ? 999 : ai;
+      const bx = bi === -1 ? 999 : bi;
+      if (ax !== bx) return ax - bx;
+      return a.sort_order - b.sort_order;
+    });
+  }, [creditsAll]);
+
+  const creditsExtra = useMemo(() => {
+    return creditsAll
+      .filter((c) => !isCoreRole(c.role, c.is_core))
+      .sort((a, b) => a.sort_order - b.sort_order);
+  }, [creditsAll]);
+
+  const hasAnyCredits = creditsAll.length > 0;
+
+  // castNames（表示用）
+  const castTop = useMemo(() => cast.slice(0, 3).map((a) => a.name).join('、'), [cast]);
+  const castNames = castTop ? `${castTop}ら` : '未定';
+
+  // hasVod
+  const hasVodLinks = useMemo(() => !!(play?.vod && (play.vod.dmm || play.vod.danime || play.vod.unext)), [play]);
+
+  // JSON-LD（FAQPage）
+  const jsonLd = useMemo(() => {
+    if (!play) return null;
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: `舞台『${play.title}』は動画配信されていますか？`,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: hasVodLinks
+              ? 'はい、DMM TVやdアニメストア、U-NEXTなどで配信されている場合があります。詳細はページ内の「配信で見る」セクションをご確認ください。'
+              : '現在、主要なVODサービスでの定額見放題配信などは確認できていませんが、レンタル配信やディスク販売が行われている可能性があります。',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '無料で視聴できる期間はありますか？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'VODサービスによっては、初回登録時の無料トライアル期間を利用して視聴できる場合があります。各サービスの公式サイトで最新のキャンペーン情報をご確認ください。',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '出演キャストは誰ですか？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: `主な出演者は${castNames}です。ページ下部の「出演キャスト」セクションで全キャスト詳細を確認できます。`,
+          },
+        },
+      ],
+    };
+  }, [play, hasVodLinks, castNames]);
+
+  // -------------------------
+  // ✅ Data fetch
+  // -------------------------
   useEffect(() => {
     if (!slug) return;
 
     const fetchPlay = async () => {
       setLoading(true);
       setNotFound(false);
+      setIsCreditsOpen(false);
 
       try {
         console.log('[PlayDetail] slug:', slug);
 
-        // =========================
-        // 1) plays をまず確実に取る（select('*')で 400 を回避）
-        // =========================
         let dbPlay: any = null;
 
         try {
-          const { data, error } = await supabase
-            .from('plays')
-            .select('*')
-            .eq('slug', slug)
-            .maybeSingle();
-
+          const { data, error } = await supabase.from('plays').select('*').eq('slug', slug).maybeSingle();
           console.log('[PlayDetail] plays fetch:', { data, error });
-
           if (!error && data) dbPlay = data;
         } catch (err) {
           console.warn('[PlayDetail] plays query failed:', err);
@@ -71,9 +179,7 @@ const PlayDetail: React.FC = () => {
         let mappedPlay: PlayRecord | null = null;
         let castActors: Actor[] = [];
 
-        // =========================
-        // 2) DBから play が取れた場合
-        // =========================
+        // 1) DBが取れた
         if (dbPlay) {
           mappedPlay = {
             id: dbPlay.id,
@@ -86,9 +192,10 @@ const PlayDetail: React.FC = () => {
             tags: dbPlay.tags ?? null,
             franchise_id: dbPlay.franchise_id ?? null,
             franchise: null,
+            credits: Array.isArray(dbPlay.credits) ? dbPlay.credits : null, // ✅ plays.credits
           };
 
-          // ---- franchise 名は別クエリ（リレーション埋め込み不要）----
+          // franchise名
           if (dbPlay.franchise_id) {
             try {
               const { data: fr, error: frErr } = await supabase
@@ -96,18 +203,13 @@ const PlayDetail: React.FC = () => {
                 .select('name')
                 .eq('id', dbPlay.franchise_id)
                 .maybeSingle();
-
-              if (!frErr && fr?.name) {
-                mappedPlay.franchise = fr.name;
-              }
+              if (!frErr && fr?.name) mappedPlay.franchise = fr.name;
             } catch (err) {
               console.warn('[PlayDetail] franchises query failed:', err);
             }
           }
 
-          // =========================
-          // 3) casts → actors を取得（ここが作品側キャスト表示の本体）
-          // =========================
+          // casts → actors
           if (dbPlay.id) {
             try {
               const { data: castRows, error: castError } = await supabase
@@ -136,9 +238,7 @@ const PlayDetail: React.FC = () => {
               console.log('[PlayDetail] casts fetch:', { castRows, castError });
 
               if (!castError && castRows && castRows.length > 0) {
-                castActors = castRows
-                  .map((row: any) => row.actor)
-                  .filter(Boolean) as Actor[];
+                castActors = castRows.map((row: any) => row.actor).filter(Boolean) as Actor[];
               }
             } catch (err) {
               console.warn('[PlayDetail] casts query failed:', err);
@@ -146,11 +246,9 @@ const PlayDetail: React.FC = () => {
           }
         }
 
-        // =========================
-        // 4) DBが取れない/キャスト0ならローカルへフォールバック
-        // =========================
+        // 2) DBが無い → ローカル
         if (!dbPlay) {
-          const localPlay = getPlayBySlug(slug);
+          const localPlay: any = getPlayBySlug(slug);
           if (!localPlay) {
             setNotFound(true);
             setPlay(null);
@@ -167,12 +265,13 @@ const PlayDetail: React.FC = () => {
             vod: localPlay.vod,
             tags: localPlay.tags,
             franchise: typeof localPlay.franchise === 'string' ? localPlay.franchise : null,
+            credits: Array.isArray(localPlay.credits) ? localPlay.credits : null,
           };
 
           castActors = getActorsByPlaySlug(slug);
         }
 
-        // DB play は取れたが casts が0だった場合もローカルで補完（任意）
+        // DB playは取れたが casts が0 → ローカル補完（任意）
         if (dbPlay && castActors.length === 0) {
           castActors = getActorsByPlaySlug(slug);
         }
@@ -187,6 +286,9 @@ const PlayDetail: React.FC = () => {
     fetchPlay();
   }, [slug]);
 
+  // -------------------------
+  // ✅ 早期return（ここでOK）
+  // -------------------------
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[60vh] text-center px-4 animate-fade-in-up">
@@ -211,49 +313,9 @@ const PlayDetail: React.FC = () => {
     );
   }
 
-  const hasVodLinks = !!(play.vod && (play.vod.dmm || play.vod.danime || play.vod.unext));
-
-  // ✅ 自動生成テキスト用データ
-  const castTop = cast.slice(0, 3).map((a) => a.name).join('、');
-  const castNames = castTop ? `${castTop}ら` : '未定';
-
-  // ✅ JSON-LD（FAQPage）
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: `舞台『${play.title}』は動画配信されていますか？`,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: hasVodLinks
-            ? 'はい、DMM TVやdアニメストア、U-NEXTなどで配信されている場合があります。詳細はページ内の「配信で見る」セクションをご確認ください。'
-            : '現在、主要なVODサービスでの定額見放題配信などは確認できていませんが、レンタル配信やディスク販売が行われている可能性があります。',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: '無料で視聴できる期間はありますか？',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'VODサービスによっては、初回登録時の無料トライアル期間を利用して視聴できる場合があります。各サービスの公式サイトで最新のキャンペーン情報をご確認ください。',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: '出演キャストは誰ですか？',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: `主な出演者は${castNames}です。ページ下部の「出演キャスト」セクションで全キャスト詳細を確認できます。`,
-        },
-      },
-    ],
-  };
-
   return (
     <div className="container mx-auto px-6 pt-8 pb-32 lg:px-8 max-w-5xl animate-fade-in-up">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      {jsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />}
 
       <Breadcrumbs items={[{ label: '作品一覧', to: '/plays' }, { label: play.title }]} />
 
@@ -290,7 +352,7 @@ const PlayDetail: React.FC = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
         <div className="md:col-span-2 space-y-12">
-          {/* ✅ Intro（自動生成） */}
+          {/* Intro */}
           <section className="bg-white/5 rounded-xl border border-white/10 p-6 backdrop-blur-sm">
             <h2 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-3 flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-neon-pink"></span>
@@ -312,6 +374,7 @@ const PlayDetail: React.FC = () => {
             </div>
           </section>
 
+          {/* 公演情報 */}
           <section className="bg-theater-surface rounded-xl border border-white/5 p-8 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-20 h-20 bg-white/5 blur-3xl rounded-full pointer-events-none"></div>
             <h3 className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-6">公演情報</h3>
@@ -327,6 +390,56 @@ const PlayDetail: React.FC = () => {
             </div>
           </section>
 
+          {/* ✅ スタッフ / クレジット */}
+          {hasAnyCredits && (
+            <section className="bg-theater-surface/70 rounded-xl border border-white/10 p-8 backdrop-blur-sm relative overflow-hidden">
+              <div className="absolute top-[-40%] left-[-10%] w-[260px] h-[260px] bg-neon-cyan/10 blur-[90px] rounded-full pointer-events-none" />
+
+              <div className="flex items-center justify-between gap-3 mb-6">
+                <h3 className="text-xs font-bold uppercase tracking-widest text-slate-500">スタッフ / クレジット</h3>
+
+                {creditsExtra.length > 0 && (
+                  <button
+                    type="button"
+                    onClick={() => setIsCreditsOpen((v) => !v)}
+                    className="text-[11px] px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-slate-200 hover:bg-white/10 transition-colors font-bold"
+                  >
+                    {isCreditsOpen ? '閉じる' : `追加スタッフを見る（${creditsExtra.length}）`}
+                  </button>
+                )}
+              </div>
+
+              <div className="space-y-5">
+                {creditsCore.map((c, idx) => (
+                  <div
+                    key={`${c.role}-${idx}`}
+                    className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-6 border-b border-white/5 pb-4 last:border-0 last:pb-0"
+                  >
+                    <span className="min-w-[6rem] text-sm font-bold text-neon-purple tracking-wider">{c.role}</span>
+                    <span className="text-slate-200 text-sm font-medium leading-relaxed whitespace-pre-wrap">{c.namesText}</span>
+                  </div>
+                ))}
+
+                {creditsExtra.length > 0 && isCreditsOpen && (
+                  <div className="pt-2 border-t border-white/10">
+                    <div className="space-y-5 mt-4">
+                      {creditsExtra.map((c, idx) => (
+                        <div
+                          key={`${c.role}-${idx}`}
+                          className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-6 border-b border-white/5 pb-4 last:border-0 last:pb-0"
+                        >
+                          <span className="min-w-[6rem] text-sm font-bold text-neon-cyan tracking-wider">{c.role}</span>
+                          <span className="text-slate-200 text-sm font-medium leading-relaxed whitespace-pre-wrap">{c.namesText}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </section>
+          )}
+
+          {/* VOD */}
           {hasVodLinks && (
             <section className="pt-4">
               <h2 className="text-lg font-bold text-white mb-6 tracking-wide flex items-center gap-2">
@@ -370,7 +483,7 @@ const PlayDetail: React.FC = () => {
             </section>
           )}
 
-          {/* ✅ FAQ（表示） */}
+          {/* FAQ */}
           <section className="pt-8 border-t border-white/5 mt-8">
             <h2 className="text-xl font-bold text-white mb-6 flex items-center gap-3">
               <span className="w-1 h-6 bg-slate-500 rounded-full"></span>
@@ -414,6 +527,7 @@ const PlayDetail: React.FC = () => {
         </div>
       </div>
 
+      {/* 出演キャスト */}
       <section className="pt-16 border-t border-white/10 mt-16">
         <h2 className="text-2xl font-bold text-white mb-8 tracking-wide">出演キャスト</h2>
 
