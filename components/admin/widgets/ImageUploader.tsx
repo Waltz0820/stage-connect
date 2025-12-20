@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { supabase } from "../../../lib/supabase";
 
 type Props = {
-  bucket?: string; // default: images
-  folder: string; // e.g. "actors"
-  keyName: string; // e.g. actor slug
+  bucket?: string;   // default: images
+  folder: string;    // e.g. "actors"
+  keyName: string;   // e.g. actor slug
   onUploaded: (publicUrl: string) => void;
 };
 
@@ -16,41 +16,53 @@ const ImageUploader: React.FC<Props> = ({
 }) => {
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState("");
+  const [localPreview, setLocalPreview] = useState<string>("");
 
   const onPick = async (file: File) => {
     setErr("");
     setBusy(true);
 
+    // ✅ ローカルプレビュー（アップ前でも表示）
     try {
-      // ✅ セッション確認（RLS原因の切り分け）
-      const { data: s, error: sErr } = await supabase.auth.getSession();
-      console.log("[ImageUploader] session?", {
-        hasSession: !!s?.session,
-        userId: s?.session?.user?.id ?? null,
-        email: (s?.session?.user as any)?.email ?? null,
-        authError: sErr?.message ?? null,
-      });
+      const u = URL.createObjectURL(file);
+      setLocalPreview(u);
+    } catch {}
 
-      const ext = file.name.split(".").pop() || "jpg";
-      const path = `${folder}/${keyName}/${Date.now()}.${ext}`;
+    try {
+      // ✅ ここでセッションが取れてるかログ
+      const { data: s } = await supabase.auth.getSession();
+      console.log("[ImageUploader] session?", !!s.session, s.session?.user?.id, s.session?.user?.role);
 
-      console.log("[ImageUploader] upload start:", { bucket, path, size: file.size, type: file.type });
+      // localStorage の token と一致してるか見る用（断片だけ）
+      const k = Object.keys(localStorage).find(
+        (kk) => kk.includes("sb-") && kk.endsWith("-auth-token")
+      );
+      const token = k ? JSON.parse(localStorage.getItem(k) || "null")?.access_token : null;
+      console.log("[ImageUploader] ls token head", token ? String(token).slice(0, 20) : null);
 
+      // ✅ パス生成
+      const ext = (file.name.split(".").pop() || "jpg").toLowerCase();
+      const safeKey = (keyName || "tmp").replace(/[^\w\-]/g, "_");
+      const path = `${folder}/${safeKey}/${Date.now()}.${ext}`;
+
+      console.log("[ImageUploader] upload to", bucket, path);
+
+      // ✅ まず upsert を切って試す（切り分け用）
       const { error: upErr } = await supabase.storage
         .from(bucket)
-        .upload(path, file, { upsert: true });
+        .upload(path, file, {
+          upsert: false,                 // ★ここ重要：まず false でテスト
+          contentType: file.type || undefined,
+        });
 
-      if (upErr) {
-        console.error("[ImageUploader] upload error:", upErr);
-        throw upErr;
-      }
+      if (upErr) throw upErr;
 
       const { data } = supabase.storage.from(bucket).getPublicUrl(path);
-      console.log("[ImageUploader] uploaded:", { publicUrl: data?.publicUrl, bucket, path });
+      console.log("[ImageUploader] publicUrl", data.publicUrl);
 
       onUploaded(data.publicUrl);
     } catch (e: any) {
-      console.error("[ImageUploader] failed:", e);
+      console.error("[ImageUploader] upload failed", e);
       setErr(e?.message ?? "upload failed");
     } finally {
       setBusy(false);
@@ -59,6 +71,12 @@ const ImageUploader: React.FC<Props> = ({
 
   return (
     <div className="space-y-2">
+      {localPreview ? (
+        <div className="w-40 h-40 rounded-2xl overflow-hidden border border-white/10 bg-black/40">
+          <img src={localPreview} alt="local preview" className="w-full h-full object-cover" />
+        </div>
+      ) : null}
+
       <input
         type="file"
         accept="image/*"
