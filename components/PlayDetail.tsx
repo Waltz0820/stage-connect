@@ -1,3 +1,5 @@
+// src/components/PlayDetail.tsx
+
 import React, { useEffect, useMemo, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
@@ -41,6 +43,24 @@ type PlayRecord = {
   credits?: CreditItem[] | null;
 };
 
+// ✅ DB actor row -> front Actor へ寄せる（ここが重要）
+const normalizeActorRow = (a: any): Actor => {
+  return {
+    slug: a.slug,
+    name: a.name,
+    kana: a.kana ?? '',
+    profile: a.profile ?? '',
+    // DB: image_url -> FE: imageUrl
+    imageUrl: a.image_url ?? a.imageUrl ?? '',
+    gender: (a.gender ?? 'male') as any,
+    // sns が null のことがあるので必ず object
+    sns: (a.sns ?? {}) as any,
+    tags: (a.tags ?? []) as any,
+    // DB: featured_play_slugs -> FE: featuredPlaySlugs
+    featuredPlaySlugs: (a.featured_play_slugs ?? a.featuredPlaySlugs ?? []) as any,
+  } as Actor;
+};
+
 const PlayDetail: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
 
@@ -53,7 +73,7 @@ const PlayDetail: React.FC = () => {
   const [isCreditsOpen, setIsCreditsOpen] = useState(false);
 
   // -------------------------
-  // ✅ Hooksは「早期returnより上」に固定
+  // ✅ Helpers
   // -------------------------
   const normalizeNames = (names: any): string => {
     if (!names) return '';
@@ -66,7 +86,28 @@ const PlayDetail: React.FC = () => {
     return String(names);
   };
 
-  // creditsを “表示用の共通形” に正規化
+  const toPlainText = (s: any) => {
+    const str = String(s ?? '');
+    return str
+      .replace(/<[^>]*>/g, ' ')
+      .replace(/\s+/g, ' ')
+      .replace(/[“”]/g, '"')
+      .replace(/[‘’]/g, "'")
+      .trim();
+  };
+
+  const truncate = (s: string, n: number) => (s.length <= n ? s : s.slice(0, n - 1) + '…');
+
+  const siteUrl = useMemo(() => {
+    const envUrl = (import.meta as any)?.env?.VITE_SITE_URL as string | undefined;
+    if (envUrl) return envUrl.replace(/\/$/, '');
+    if (typeof window !== 'undefined') return window.location.origin.replace(/\/$/, '');
+    return '';
+  }, []);
+
+  // -------------------------
+  // ✅ credits を表示用に正規化
+  // -------------------------
   const creditsAll = useMemo(() => {
     const list = (play?.credits ?? []) as CreditItem[];
     return list
@@ -80,7 +121,6 @@ const PlayDetail: React.FC = () => {
       .filter((c) => c.role && c.namesText);
   }, [play?.credits]);
 
-  // “コア扱い”：is_core true OR roleが演出/脚本/主催系
   const isCoreRole = (role: string, is_core?: boolean) => {
     if (is_core) return true;
     const r = role.replace(/\s/g, '');
@@ -101,9 +141,7 @@ const PlayDetail: React.FC = () => {
   }, [creditsAll]);
 
   const creditsExtra = useMemo(() => {
-    return creditsAll
-      .filter((c) => !isCoreRole(c.role, c.is_core))
-      .sort((a, b) => a.sort_order - b.sort_order);
+    return creditsAll.filter((c) => !isCoreRole(c.role, c.is_core)).sort((a, b) => a.sort_order - b.sort_order);
   }, [creditsAll]);
 
   const hasAnyCredits = creditsAll.length > 0;
@@ -114,6 +152,40 @@ const PlayDetail: React.FC = () => {
 
   // hasVod
   const hasVodLinks = useMemo(() => !!(play?.vod && (play.vod.dmm || play.vod.danime || play.vod.unext)), [play]);
+
+  // -------------------------
+  // ✅ SEO head (React 19 native)
+  // -------------------------
+  const canonicalUrl = useMemo(() => {
+    if (!play?.slug || !siteUrl) return '';
+    return `${siteUrl}/plays/${encodeURIComponent(play.slug)}`;
+  }, [play?.slug, siteUrl]);
+
+  const seoTitle = useMemo(() => {
+    if (!play) return 'Stage Connect';
+    return `${play.title} | Stage Connect`;
+  }, [play]);
+
+  const seoDescription = useMemo(() => {
+    if (!play) return '2.5次元舞台・ミュージカル作品のキャスト/配信(VOD)/公演情報をまとめるStage Connect。';
+    const base = play.summary ? toPlainText(play.summary) : '';
+    const period = play.period ? `期間：${toPlainText(play.period)}。` : '';
+    const venue = play.venue ? `劇場：${toPlainText(play.venue)}。` : '';
+    const castLine = castTop ? `出演：${castTop}。` : '';
+    const vodLine = hasVodLinks ? 'VOD配信情報あり。' : 'VOD配信情報は確認中。';
+
+    const composed = base
+      ? base
+      : `舞台『${play.title}』の公演データとキャスト、配信（VOD）情報をまとめました。${castLine}${period}${venue}${vodLine}`;
+
+    return truncate(composed, 155);
+  }, [play, castTop, hasVodLinks]);
+
+  const ogImage = useMemo(() => {
+    const envOg = (import.meta as any)?.env?.VITE_OG_IMAGE as string | undefined;
+    if (envOg) return envOg;
+    return '';
+  }, []);
 
   // JSON-LD（FAQPage）
   const jsonLd = useMemo(() => {
@@ -158,6 +230,8 @@ const PlayDetail: React.FC = () => {
   useEffect(() => {
     if (!slug) return;
 
+    let cancelled = false;
+
     const fetchPlay = async () => {
       setLoading(true);
       setNotFound(false);
@@ -192,7 +266,7 @@ const PlayDetail: React.FC = () => {
             tags: dbPlay.tags ?? null,
             franchise_id: dbPlay.franchise_id ?? null,
             franchise: null,
-            credits: Array.isArray(dbPlay.credits) ? dbPlay.credits : null, // ✅ plays.credits
+            credits: Array.isArray(dbPlay.credits) ? dbPlay.credits : null,
           };
 
           // franchise名
@@ -238,7 +312,10 @@ const PlayDetail: React.FC = () => {
               console.log('[PlayDetail] casts fetch:', { castRows, castError });
 
               if (!castError && castRows && castRows.length > 0) {
-                castActors = castRows.map((row: any) => row.actor).filter(Boolean) as Actor[];
+                castActors = (castRows as any[])
+                  .map((row) => row.actor)
+                  .filter(Boolean)
+                  .map(normalizeActorRow);
               }
             } catch (err) {
               console.warn('[PlayDetail] casts query failed:', err);
@@ -250,9 +327,11 @@ const PlayDetail: React.FC = () => {
         if (!dbPlay) {
           const localPlay: any = getPlayBySlug(slug);
           if (!localPlay) {
-            setNotFound(true);
-            setPlay(null);
-            setCast([]);
+            if (!cancelled) {
+              setNotFound(true);
+              setPlay(null);
+              setCast([]);
+            }
             return;
           }
 
@@ -276,22 +355,31 @@ const PlayDetail: React.FC = () => {
           castActors = getActorsByPlaySlug(slug);
         }
 
+        if (cancelled) return;
+
         if (mappedPlay) setPlay(mappedPlay);
         setCast(castActors);
       } finally {
-        setLoading(false);
+        if (!cancelled) setLoading(false);
       }
     };
 
     fetchPlay();
+
+    return () => {
+      cancelled = true;
+    };
   }, [slug]);
 
   // -------------------------
-  // ✅ 早期return（ここでOK）
+  // ✅ 早期return
   // -------------------------
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[60vh] text-center px-4 animate-fade-in-up">
+        <title>読み込み中... | Stage Connect</title>
+        <meta name="robots" content="noindex,nofollow" />
+
         <p className="text-slate-400 text-sm mb-2">作品情報を読み込み中...</p>
         <div className="w-10 h-10 border-2 border-white/20 border-t-neon-purple rounded-full animate-spin" />
       </div>
@@ -301,6 +389,9 @@ const PlayDetail: React.FC = () => {
   if (!play || notFound) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[60vh] text-center px-4 animate-fade-in-up">
+        <title>作品が見つかりません | Stage Connect</title>
+        <meta name="robots" content="noindex,nofollow" />
+
         <h2 className="text-2xl font-bold text-white">作品が見つかりませんでした</h2>
         <p className="mt-2 text-slate-400">お探しの作品は見つかりませんでした。</p>
         <Link
@@ -315,6 +406,25 @@ const PlayDetail: React.FC = () => {
 
   return (
     <div className="container mx-auto px-6 pt-8 pb-32 lg:px-8 max-w-5xl animate-fade-in-up">
+      {/* ✅ SEO head（React 19 native） */}
+      <title>{seoTitle}</title>
+      <meta name="description" content={seoDescription} />
+      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+
+      {/* OG / Twitter（最低限） */}
+      <meta property="og:type" content="article" />
+      <meta property="og:site_name" content="Stage Connect" />
+      <meta property="og:title" content={seoTitle} />
+      <meta property="og:description" content={seoDescription} />
+      {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
+      {ogImage && <meta property="og:image" content={ogImage} />}
+
+      <meta name="twitter:card" content={ogImage ? 'summary_large_image' : 'summary'} />
+      <meta name="twitter:title" content={seoTitle} />
+      <meta name="twitter:description" content={seoDescription} />
+      {ogImage && <meta name="twitter:image" content={ogImage} />}
+
+      {/* 構造化データ */}
       {jsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />}
 
       <Breadcrumbs items={[{ label: '作品一覧', to: '/plays' }, { label: play.title }]} />
@@ -359,8 +469,7 @@ const PlayDetail: React.FC = () => {
               INTRODUCTION
             </h2>
             <p className="text-slate-300 text-sm leading-relaxed font-light">
-              舞台『<span className="font-bold text-white">{play.title}</span>』の配信情報（VOD）と公演データをまとめました。
-              出演キャストは{castNames}。
+              舞台『<span className="font-bold text-white">{play.title}</span>』の配信情報（VOD）と公演データをまとめました。出演キャストは{castNames}。
               {hasVodLinks
                 ? '視聴できるサービスがある場合は、下記リンクから詳細を確認できます（配信状況は変動する場合があります）。'
                 : '現在、主要な配信サービスでの取り扱い情報は確認中ですが、DVD/Blu-ray等で視聴可能な場合があります。'}
@@ -444,9 +553,7 @@ const PlayDetail: React.FC = () => {
             <section className="pt-4">
               <h2 className="text-lg font-bold text-white mb-6 tracking-wide flex items-center gap-2">
                 配信で見る
-                <span className="text-[10px] font-normal text-slate-500 border border-slate-700 px-2 py-0.5 rounded ml-2">
-                  外部リンク
-                </span>
+                <span className="text-[10px] font-normal text-slate-500 border border-slate-700 px-2 py-0.5 rounded ml-2">外部リンク</span>
               </h2>
               <div className="flex flex-wrap gap-4">
                 {play.vod?.dmm && (

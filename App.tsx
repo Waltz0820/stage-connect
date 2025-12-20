@@ -37,15 +37,35 @@ const RouteTracker: React.FC = () => {
   useEffect(() => {
     const path = loc.pathname + loc.search + loc.hash;
     gaPageView(path);
-  }, [loc]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [loc.pathname, loc.search, loc.hash]);
 
   return null;
+};
+
+/**
+ * ✅ SEO事故防止：管理画面は noindex
+ * - SPAだと /admin もURLとして存在するので、サチコに拾われる前に塞ぐのが安全
+ */
+const AdminNoIndex: React.FC = () => {
+  const loc = useLocation();
+  const isAdmin = loc.pathname.startsWith("/admin");
+
+  if (!isAdmin) return null;
+
+  return (
+    <>
+      <title>Admin | Stage Connect</title>
+      <meta name="robots" content="noindex,nofollow,noarchive" />
+    </>
+  );
 };
 
 const App: React.FC = () => {
   return (
     <BrowserRouter>
       <RouteTracker />
+      <AdminNoIndex />
 
       <Layout>
         {/* Supabase 接続テスト用（画面には何も出ない） */}

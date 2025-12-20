@@ -31,6 +31,8 @@ type PlayLike = {
 
 type CoStarItem = { actor: Actor; count: number };
 
+const SITE_NAME = 'Stage Connect';
+
 const normalizeActorRow = (data: any): Actor => ({
   slug: data.slug,
   name: data.name,
@@ -136,27 +138,18 @@ const clamp = (n: number, min: number, max: number) => Math.max(min, Math.min(ma
  * - count: 共演した作品数
  * - score: 体験のための並び（主演/クレジット順を軽く反映）
  */
-async function getCoStarsFromCasts(params: {
-  actorId: string;
-  limit: number;
-}): Promise<CoStarItem[] | null> {
+async function getCoStarsFromCasts(params: { actorId: string; limit: number }): Promise<CoStarItem[] | null> {
   const { actorId, limit } = params;
 
   // 1) 対象俳優の出演 play_id を取得
-  const { data: myCasts, error: e1 } = await supabase
-    .from('casts')
-    .select('play_id, is_starring, billing_order')
-    .eq('actor_id', actorId);
+  const { data: myCasts, error: e1 } = await supabase.from('casts').select('play_id, is_starring, billing_order').eq('actor_id', actorId);
 
   if (e1) {
     console.warn('getCoStarsFromCasts / myCasts error:', e1);
     return null;
   }
 
-  const playIds = Array.from(
-    new Set((myCasts ?? []).map((r: any) => r.play_id).filter(Boolean))
-  );
-
+  const playIds = Array.from(new Set((myCasts ?? []).map((r: any) => r.play_id).filter(Boolean)));
   if (playIds.length === 0) return null;
 
   // 2) 同じ play_id の casts を取得（自分以外） + actors join
@@ -425,6 +418,8 @@ const ActorDetail: React.FC = () => {
   if (loading) {
     return (
       <div className="container mx-auto px-6 pt-8 pb-16 lg:px-8 max-w-5xl">
+        <title>読み込み中… - {SITE_NAME}</title>
+
         <Breadcrumbs items={[{ label: 'キャスト一覧', to: '/actors' }, { label: '読み込み中…' }]} />
         <div className="mt-10 rounded-2xl bg-theater-surface border border-white/10 p-8 animate-pulse">
           <div className="h-6 w-40 bg-white/10 rounded mb-4" />
@@ -439,6 +434,8 @@ const ActorDetail: React.FC = () => {
   if (error || !actor) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[60vh] text-center px-4 animate-fade-in-up">
+        <title>俳優が見つかりません - {SITE_NAME}</title>
+
         <h2 className="text-2xl font-bold text-white">俳優が見つかりませんでした</h2>
         <p className="mt-2 text-slate-400">{error ?? 'お探しの俳優は見つかりませんでした。'}</p>
         <Link
@@ -453,7 +450,6 @@ const ActorDetail: React.FC = () => {
 
   // ---- 出演作品（DB優先 → ダメならローカルフォールバック）----
   const plays: PlayLike[] = playsDb && playsDb.length > 0 ? playsDb : slug ? (getPlaysByActorSlug(slug) as any) : [];
-
   const timelineGroups = groupPlaysByYear(plays as any);
 
   // ---- 共演ネットワーク（DBが取れたらDB、取れない/未取得ならローカル）----
@@ -466,6 +462,39 @@ const ActorDetail: React.FC = () => {
     .map((p) => `『${p.title}』`)
     .join('、');
   const hasVod = plays.some((p) => p?.vod?.dmm || p?.vod?.danime || p?.vod?.unext);
+
+  // -------------------------
+  // ✅ SEO meta（React19 native head）
+  // -------------------------
+  const origin =
+    (import.meta as any)?.env?.VITE_SITE_URL?.replace(/\/$/, '') || (typeof window !== 'undefined' ? window.location.origin : '');
+
+  const canonical = origin && actor?.slug ? `${origin}/actors/${actor.slug}` : '';
+
+  const ogImage = (() => {
+    const img = actor?.imageUrl?.trim();
+    if (!img) return '';
+    if (/^https?:\/\//i.test(img)) return img;
+    if (!origin) return img;
+    return img.startsWith('/') ? `${origin}${img}` : `${origin}/${img}`;
+  })();
+
+  const pageTitle = actor?.name ? `${actor.name}｜出演作・配信（VOD）情報 - ${SITE_NAME}` : SITE_NAME;
+
+  const pageDescription = actor?.name
+    ? `${actor.name}の出演する2.5次元舞台・ミュージカル作品をまとめました。出演作品タイムライン、共演ネットワーク、配信（VOD）情報を掲載。登録作品数：${workCount}。`
+    : `${SITE_NAME}のキャスト情報ページです。`;
+
+  const jsonLdPerson = actor?.name
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        name: actor.name,
+        url: canonical || undefined,
+        image: actor.imageUrl || undefined,
+        sameAs: [actor.sns?.x, actor.sns?.instagram, actor.sns?.official].filter(Boolean),
+      }
+    : null;
 
   // ✅ JSON-LD（FAQPage）
   const jsonLd = {
@@ -503,6 +532,29 @@ const ActorDetail: React.FC = () => {
 
   return (
     <div className="container mx-auto px-6 pt-8 pb-16 lg:px-8 max-w-5xl animate-fade-in-up">
+      {/* ✅ React 19 native metadata（headへhoistされる想定） */}
+      <title>{pageTitle}</title>
+      <meta name="description" content={pageDescription} />
+      {canonical && <link rel="canonical" href={canonical} />}
+
+      {/* OG */}
+      <meta property="og:site_name" content={SITE_NAME} />
+      <meta property="og:type" content="profile" />
+      <meta property="og:title" content={pageTitle} />
+      <meta property="og:description" content={pageDescription} />
+      {canonical && <meta property="og:url" content={canonical} />}
+      {ogImage && <meta property="og:image" content={ogImage} />}
+
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={pageTitle} />
+      <meta name="twitter:description" content={pageDescription} />
+      {ogImage && <meta name="twitter:image" content={ogImage} />}
+
+      {/* ✅ Person JSON-LD（追加） */}
+      {jsonLdPerson && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdPerson) }} />}
+
+      {/* ✅ 既存FAQ JSON-LD */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <Breadcrumbs items={[{ label: 'キャスト一覧', to: '/actors' }, { label: actor.name }]} />
@@ -523,16 +575,14 @@ const ActorDetail: React.FC = () => {
                   {actor.name}
                 </h1>
                 {actor.kana && (
-                  <span className="text-sm md:text-base text-neon-purple font-bold tracking-widest uppercase block">
-                    {actor.kana}
-                  </span>
+                  <span className="text-sm md:text-base text-neon-purple font-bold tracking-widest uppercase block">{actor.kana}</span>
                 )}
               </div>
             </div>
 
             <div className="flex items-center gap-3 mt-1 mb-2">
               <FavoriteButton slug={actor.slug} type="actor" size="lg" className="shrink-0" />
-              <ShareButton title={actor.name} text={`${actor.name}のプロフィール | Stage Connect`} className="shrink-0" />
+              <ShareButton title={actor.name} text={`${actor.name}のプロフィール | ${SITE_NAME}`} className="shrink-0" />
             </div>
 
             {actor.tags && actor.tags.length > 0 && (
@@ -557,8 +607,8 @@ const ActorDetail: React.FC = () => {
             </h2>
 
             <p className="text-slate-300 text-sm leading-relaxed font-light">
-              <span className="font-bold text-white">{actor.name}</span> の出演する2.5次元舞台・ミュージカル作品をまとめました。
-              Stage Connectには現在、<span className="font-bold text-white">{workCount}作品</span>が登録されています。
+              <span className="font-bold text-white">{actor.name}</span> の出演する2.5次元舞台・ミュージカル作品をまとめました。 Stage
+              Connectには現在、<span className="font-bold text-white">{workCount}作品</span>が登録されています。
               {workCount > 0 ? (
                 <>
                   代表作は{topWorks}
@@ -590,11 +640,7 @@ const ActorDetail: React.FC = () => {
               出演作品タイムライン
             </h2>
 
-            {plays.length > 0 ? (
-              <TimelineSection groups={timelineGroups} />
-            ) : (
-              <p className="text-slate-500 italic py-4">登録されている出演作品はありません。</p>
-            )}
+            {plays.length > 0 ? <TimelineSection groups={timelineGroups} /> : <p className="text-slate-500 italic py-4">登録されている出演作品はありません。</p>}
           </section>
 
           {/* CoStars */}
@@ -604,9 +650,7 @@ const ActorDetail: React.FC = () => {
               <h2 className="text-xl font-bold text-white mb-6 flex flex-wrap items-center gap-3">
                 <span className="w-1 h-6 bg-neon-cyan rounded-full shadow-[0_0_10px_#00FFFF]"></span>
                 共演ネットワーク
-                <span className="text-xs font-normal text-slate-500 ml-2 border border-slate-700 px-2 py-0.5 rounded">
-                  共演数の多いキャスト
-                </span>
+                <span className="text-xs font-normal text-slate-500 ml-2 border border-slate-700 px-2 py-0.5 rounded">共演数の多いキャスト</span>
               </h2>
 
               {/* ✅ Mobile: 横スライド + 全員を見る */}
@@ -765,7 +809,7 @@ const ActorDetail: React.FC = () => {
                   {actor.name}の出演作はどこで見られますか？
                 </h3>
                 <p className="text-sm text-slate-400 leading-relaxed pl-5">
-                  Stage Connectでは{actor.name}の出演情報を作品ごとにまとめています。各作品ページで公演データやあらすじを確認できます。
+                  {SITE_NAME}では{actor.name}の出演情報を作品ごとにまとめています。各作品ページで公演データやあらすじを確認できます。
                 </p>
               </div>
 
