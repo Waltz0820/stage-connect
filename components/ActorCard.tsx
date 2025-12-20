@@ -16,6 +16,12 @@ const ActorCard: React.FC<ActorCardProps> = ({ actor }) => {
     return text.substring(0, maxLength) + '...';
   };
 
+  // ✅ DBは image_url、旧コードは imageUrl を見ていたので両対応しておく
+  const imageUrl =
+    (actor as any).image_url ||
+    (actor as any).imageUrl ||
+    undefined;
+
   return (
     <Link
       to={`/actors/${actor.slug}`}
@@ -30,17 +36,12 @@ const ActorCard: React.FC<ActorCardProps> = ({ actor }) => {
       <div className="absolute inset-0 bg-gradient-to-b from-neon-purple/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
 
       <div className="relative flex flex-col h-full z-10">
-        
         {/* Header with Avatar */}
         <div className="flex items-start gap-4 mb-4">
-          <ActorAvatar 
-            imageUrl={actor.imageUrl} 
-            alt={actor.name} 
-            size="sm" 
-          />
-          
+          <ActorAvatar imageUrl={imageUrl} alt={actor.name} size="sm" />
+
           <div className="flex-1 min-w-0">
-             {actor.kana && (
+            {actor.kana && (
               <span className="text-[10px] text-neon-purple font-medium tracking-wider opacity-80 block truncate">
                 {actor.kana}
               </span>
