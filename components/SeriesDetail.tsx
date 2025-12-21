@@ -1,3 +1,5 @@
+// src/components/SeriesDetail.tsx
+
 import React, { useEffect, useMemo, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { createPortal } from 'react-dom';
@@ -15,8 +17,8 @@ type FranchiseRow = {
   slug?: string | null;
 
   // ✅ 管理画面から入力する用
-  intro?: string | null;        // 短文（上部の追加説明）
-  description?: string | null;  // 長文（折りたたみ）
+  intro?: string | null; // 短文（上部の追加説明）
+  description?: string | null; // 長文（折りたたみ）
 };
 
 type PlayLike = {
@@ -34,6 +36,8 @@ type PlayLike = {
 
 type TopActor = { actor: Actor; count: number };
 
+const SITE_NAME = 'Stage Connect';
+
 const normalizeActorRow = (row: any): Actor => {
   return {
     slug: row.slug,
@@ -47,6 +51,21 @@ const normalizeActorRow = (row: any): Actor => {
     tags: (row.tags as string[] | undefined) ?? [],
   };
 };
+
+// -------------------------
+// ✅ Text helpers（SEO用）
+// -------------------------
+const toPlainText = (s: any) => {
+  const str = String(s ?? '');
+  return str
+    .replace(/<[^>]*>/g, ' ')
+    .replace(/\s+/g, ' ')
+    .replace(/[“”]/g, '"')
+    .replace(/[‘’]/g, "'")
+    .trim();
+};
+
+const truncate = (s: string, n: number) => (s.length <= n ? s : s.slice(0, Math.max(0, n - 1)) + '…');
 
 // ✅ period から YYYYMM のソートキーを作る（雑な表記揺れに対応）
 const periodSortKey = (period?: string | null) => {
@@ -143,6 +162,16 @@ const SeriesDetail: React.FC = () => {
 
   // ✅ モーダル中は背景スクロールを完全停止（めり込み対策）
   useBodyScrollLock(isAllActorsOpen);
+
+  // -------------------------
+  // ✅ Site URL（canonical / OG 用）
+  // -------------------------
+  const siteUrl = useMemo(() => {
+    const envUrl = (import.meta as any)?.env?.VITE_SITE_URL as string | undefined;
+    if (envUrl) return envUrl.replace(/\/$/, '');
+    if (typeof window !== 'undefined') return window.location.origin.replace(/\/$/, '');
+    return '';
+  }, []);
 
   // ESCで閉じる（PCも快適）
   useEffect(() => {
@@ -305,41 +334,107 @@ const SeriesDetail: React.FC = () => {
     return t ? t : '';
   }, [franchise?.description]);
 
-  const jsonLd = franchise
-    ? {
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: [
-          {
-            '@type': 'Question',
-            name: `${franchise.name}シリーズの舞台作品は何作品ありますか？`,
-            acceptedAnswer: { '@type': 'Answer', text: `現在、${plays.length}作品が登録されています。` },
-          },
-          {
-            '@type': 'Question',
-            name: 'どの順番で見ればいいですか？',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: `基本的には公開年順（${startYear || '----'}年〜）に見ることをお勧めします。このページでは時系列順に作品を掲載しています。`,
-            },
-          },
-          {
-            '@type': 'Question',
-            name: '配信（VOD）で見られる作品はありますか？',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: hasVod
-                ? 'はい、シリーズ作品の多くは動画配信サービスで視聴可能です。各作品カードに配信リンクがあるか確認してください。'
-                : '作品によっては配信が行われていないものもあります。詳細は各作品ページをご確認ください。',
-            },
-          },
-        ],
-      }
-    : null;
+  // -------------------------
+  // ✅ SEO
+  // -------------------------
+  const canonicalUrl = useMemo(() => {
+    if (!siteUrl || !franchise?.name) return '';
+    return `${siteUrl}/series/${encodeURIComponent(franchise.name)}`;
+  }, [siteUrl, franchise?.name]);
 
+  const seoTitle = useMemo(() => {
+    if (!franchise) return `${SITE_NAME}`;
+    return `${franchise.name}｜シリーズ作品一覧・年表 - ${SITE_NAME}`;
+  }, [franchise]);
+
+  const seoDescription = useMemo(() => {
+    if (!franchise) return '人気舞台シリーズの作品を年表形式でまとめるStage Connect。';
+    const nm = franchise.name;
+
+    const base = `${nm}シリーズの舞台作品一覧。全${plays.length}作品（${startYear || '----'}-${endYearLabel}）を年表形式で掲載。主要キャスト（シリーズ・レギュラー）や配信（VOD）情報も確認できます。`;
+
+    const extra = manualIntro ? ` ${toPlainText(manualIntro)}` : '';
+    const composed = `${base}${extra}`;
+
+    return truncate(toPlainText(composed), 155);
+  }, [franchise, plays.length, startYear, endYearLabel, manualIntro]);
+
+  const ogImage = useMemo(() => {
+    const envOg = (import.meta as any)?.env?.VITE_OG_IMAGE as string | undefined;
+    if (envOg) return envOg;
+    return '';
+  }, []);
+
+  // JSON-LD（FAQPage）
+  const jsonLdFaq = useMemo(() => {
+    if (!franchise) return null;
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: `${franchise.name}シリーズの舞台作品は何作品ありますか？`,
+          acceptedAnswer: { '@type': 'Answer', text: `現在、${plays.length}作品が登録されています。` },
+        },
+        {
+          '@type': 'Question',
+          name: 'どの順番で見ればいいですか？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: `基本的には公開年順（${startYear || '----'}年〜）に見ることをお勧めします。このページでは時系列順に作品を掲載しています。`,
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '配信（VOD）で見られる作品はありますか？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: hasVod
+              ? 'はい、シリーズ作品の多くは動画配信サービスで視聴可能です。各作品カードに配信リンクがあるか確認してください。'
+              : '作品によっては配信が行われていないものもあります。詳細は各作品ページをご確認ください。',
+          },
+        },
+      ],
+    };
+  }, [franchise, plays.length, startYear, hasVod]);
+
+  // JSON-LD（BreadcrumbList）
+  const jsonLdBreadcrumbs = useMemo(() => {
+    if (!canonicalUrl || !franchise?.name) return null;
+
+    const list = [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'シリーズ一覧',
+        item: `${siteUrl}/series`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: franchise.name,
+        item: canonicalUrl,
+      },
+    ];
+
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: list,
+    };
+  }, [canonicalUrl, franchise?.name, siteUrl]);
+
+  // -------------------------
+  // ✅ Early returns
+  // -------------------------
   if (loading) {
     return (
       <div className="container mx-auto px-6 pt-8 pb-16 lg:px-8 max-w-5xl animate-fade-in-up">
+        {/* ✅ SEO（loading時は noindex 推奨） */}
+        <title>読み込み中… | {SITE_NAME}</title>
+        <meta name="robots" content="noindex,nofollow" />
+
         <Breadcrumbs items={[{ label: 'シリーズ一覧', to: '/series' }, { label: '読み込み中…' }]} />
         <div className="mt-10 text-slate-400">読み込み中...</div>
       </div>
@@ -349,6 +444,10 @@ const SeriesDetail: React.FC = () => {
   if (!franchise) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[60vh] text-center px-4 animate-fade-in-up">
+        {/* ✅ SEO（404相当） */}
+        <title>シリーズが見つかりません | {SITE_NAME}</title>
+        <meta name="robots" content="noindex,nofollow" />
+
         <h2 className="text-2xl font-bold text-white">シリーズが見つかりませんでした</h2>
         <Link
           to="/series"
@@ -362,7 +461,31 @@ const SeriesDetail: React.FC = () => {
 
   return (
     <div className="container mx-auto px-6 pt-8 pb-16 lg:px-8 max-w-5xl animate-fade-in-up">
-      {jsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />}
+      {/* ✅ SEO head（React 19 native） */}
+      <title>{seoTitle}</title>
+      <meta name="description" content={seoDescription} />
+      <meta name="robots" content="index,follow" />
+      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+
+      {/* OG / Twitter */}
+      <meta property="og:locale" content="ja_JP" />
+      <meta property="og:type" content="article" />
+      <meta property="og:site_name" content={SITE_NAME} />
+      <meta property="og:title" content={seoTitle} />
+      <meta property="og:description" content={seoDescription} />
+      {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
+      {ogImage && <meta property="og:image" content={ogImage} />}
+
+      <meta name="twitter:card" content={ogImage ? 'summary_large_image' : 'summary'} />
+      <meta name="twitter:title" content={seoTitle} />
+      <meta name="twitter:description" content={seoDescription} />
+      {ogImage && <meta name="twitter:image" content={ogImage} />}
+
+      {/* 構造化データ */}
+      {jsonLdFaq && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }} />}
+      {jsonLdBreadcrumbs && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumbs) }} />
+      )}
 
       <Breadcrumbs items={[{ label: 'シリーズ一覧', to: '/series' }, { label: franchise.name }]} />
 
@@ -594,9 +717,7 @@ const SeriesDetail: React.FC = () => {
                 <div key={play.slug} className="relative pl-12 flex flex-col">
                   <div className="absolute left-[15px] top-0 w-2.5 h-2.5 rounded-full bg-neon-cyan shadow-[0_0_10px_#00FFFF] ring-4 ring-theater-black"></div>
 
-                  <div className="mb-1 text-xs font-mono text-neon-cyan/80 tracking-wider">
-                    {play.period || 'Year Unknown'}
-                  </div>
+                  <div className="mb-1 text-xs font-mono text-neon-cyan/80 tracking-wider">{play.period || 'Year Unknown'}</div>
 
                   <PlayCard play={play as any} className="h-auto w-full" />
                 </div>

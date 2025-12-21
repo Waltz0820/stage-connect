@@ -1,3 +1,4 @@
+// src/App.tsx
 import React, { useEffect } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Layout from "./components/Layout";
@@ -14,6 +15,7 @@ import GuideDetail from "./components/GuideDetail";
 import { DebugSupabase } from "./DebugSupabase";
 
 import { gaPageView } from "./lib/ga";
+import SeoHead from "./components/SeoHead";
 
 // ===== Admin =====
 import AdminGuard from "./components/admin/AdminGuard";
@@ -44,21 +46,15 @@ const RouteTracker: React.FC = () => {
 };
 
 /**
- * ✅ SEO事故防止：管理画面は noindex
- * - SPAだと /admin もURLとして存在するので、サチコに拾われる前に塞ぐのが安全
+ * ✅ SEO事故防止：管理画面は noindex（SPAでも確実に効かせる）
+ * - document.head を upsert する SeoHead を使う
  */
 const AdminNoIndex: React.FC = () => {
   const loc = useLocation();
   const isAdmin = loc.pathname.startsWith("/admin");
-
   if (!isAdmin) return null;
 
-  return (
-    <>
-      <title>Admin | Stage Connect</title>
-      <meta name="robots" content="noindex,nofollow,noarchive" />
-    </>
-  );
+  return <SeoHead title="Admin | Stage Connect" robots="noindex,nofollow,noarchive" />;
 };
 
 const App: React.FC = () => {

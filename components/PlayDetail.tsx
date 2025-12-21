@@ -43,23 +43,22 @@ type PlayRecord = {
   credits?: CreditItem[] | null;
 };
 
-// ✅ DB actor row -> front Actor へ寄せる（ここが重要）
+// ✅ DB actor row -> front Actor へ寄せる
 const normalizeActorRow = (a: any): Actor => {
   return {
     slug: a.slug,
     name: a.name,
     kana: a.kana ?? '',
     profile: a.profile ?? '',
-    // DB: image_url -> FE: imageUrl
     imageUrl: a.image_url ?? a.imageUrl ?? '',
     gender: (a.gender ?? 'male') as any,
-    // sns が null のことがあるので必ず object
     sns: (a.sns ?? {}) as any,
     tags: (a.tags ?? []) as any,
-    // DB: featured_play_slugs -> FE: featuredPlaySlugs
     featuredPlaySlugs: (a.featured_play_slugs ?? a.featuredPlaySlugs ?? []) as any,
   } as Actor;
 };
+
+const SITE_NAME = 'Stage Connect';
 
 const PlayDetail: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -96,7 +95,7 @@ const PlayDetail: React.FC = () => {
       .trim();
   };
 
-  const truncate = (s: string, n: number) => (s.length <= n ? s : s.slice(0, n - 1) + '…');
+  const truncate = (s: string, n: number) => (s.length <= n ? s : s.slice(0, Math.max(0, n - 1)) + '…');
 
   const siteUrl = useMemo(() => {
     const envUrl = (import.meta as any)?.env?.VITE_SITE_URL as string | undefined;
@@ -162,12 +161,13 @@ const PlayDetail: React.FC = () => {
   }, [play?.slug, siteUrl]);
 
   const seoTitle = useMemo(() => {
-    if (!play) return 'Stage Connect';
-    return `${play.title} | Stage Connect`;
+    if (!play) return SITE_NAME;
+    return `${play.title}｜キャスト・配信（VOD）・公演情報 - ${SITE_NAME}`;
   }, [play]);
 
   const seoDescription = useMemo(() => {
     if (!play) return '2.5次元舞台・ミュージカル作品のキャスト/配信(VOD)/公演情報をまとめるStage Connect。';
+
     const base = play.summary ? toPlainText(play.summary) : '';
     const period = play.period ? `期間：${toPlainText(play.period)}。` : '';
     const venue = play.venue ? `劇場：${toPlainText(play.venue)}。` : '';
@@ -187,8 +187,10 @@ const PlayDetail: React.FC = () => {
     return '';
   }, []);
 
-  // JSON-LD（FAQPage）
-  const jsonLd = useMemo(() => {
+  // -------------------------
+  // ✅ JSON-LD
+  // -------------------------
+  const jsonLdFaq = useMemo(() => {
     if (!play) return null;
     return {
       '@context': 'https://schema.org',
@@ -224,6 +226,55 @@ const PlayDetail: React.FC = () => {
     };
   }, [play, hasVodLinks, castNames]);
 
+  const jsonLdBreadcrumbs = useMemo(() => {
+    if (!play || !canonicalUrl) return null;
+
+    const itemList = [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: '作品一覧',
+        item: `${siteUrl}/plays`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: play.title,
+        item: canonicalUrl,
+      },
+    ];
+
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: itemList,
+    };
+  }, [play, canonicalUrl, siteUrl]);
+
+  const jsonLdCreativeWork = useMemo(() => {
+    if (!play || !canonicalUrl) return null;
+
+    const tags = (play.tags ?? []).filter(Boolean);
+    const genre = play.franchise ? String(play.franchise) : undefined;
+
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'CreativeWork',
+      name: play.title,
+      url: canonicalUrl,
+      description: seoDescription,
+      inLanguage: 'ja',
+      keywords: tags.length > 0 ? tags.join(',') : undefined,
+      genre,
+      isPartOf: play.franchise
+        ? {
+            '@type': 'CreativeWorkSeries',
+            name: play.franchise,
+          }
+        : undefined,
+    };
+  }, [play, canonicalUrl, seoDescription]);
+
   // -------------------------
   // ✅ Data fetch
   // -------------------------
@@ -238,13 +289,10 @@ const PlayDetail: React.FC = () => {
       setIsCreditsOpen(false);
 
       try {
-        console.log('[PlayDetail] slug:', slug);
-
         let dbPlay: any = null;
 
         try {
           const { data, error } = await supabase.from('plays').select('*').eq('slug', slug).maybeSingle();
-          console.log('[PlayDetail] plays fetch:', { data, error });
           if (!error && data) dbPlay = data;
         } catch (err) {
           console.warn('[PlayDetail] plays query failed:', err);
@@ -272,11 +320,7 @@ const PlayDetail: React.FC = () => {
           // franchise名
           if (dbPlay.franchise_id) {
             try {
-              const { data: fr, error: frErr } = await supabase
-                .from('franchises')
-                .select('name')
-                .eq('id', dbPlay.franchise_id)
-                .maybeSingle();
+              const { data: fr, error: frErr } = await supabase.from('franchises').select('name').eq('id', dbPlay.franchise_id).maybeSingle();
               if (!frErr && fr?.name) mappedPlay.franchise = fr.name;
             } catch (err) {
               console.warn('[PlayDetail] franchises query failed:', err);
@@ -308,8 +352,6 @@ const PlayDetail: React.FC = () => {
                 .eq('play_id', dbPlay.id)
                 .order('is_starring', { ascending: false })
                 .order('created_at', { ascending: true });
-
-              console.log('[PlayDetail] casts fetch:', { castRows, castError });
 
               if (!castError && castRows && castRows.length > 0) {
                 castActors = (castRows as any[])
@@ -377,10 +419,10 @@ const PlayDetail: React.FC = () => {
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[60vh] text-center px-4 animate-fade-in-up">
-        <title>読み込み中... | Stage Connect</title>
+        <title>読み込み中… - {SITE_NAME}</title>
         <meta name="robots" content="noindex,nofollow" />
 
-        <p className="text-slate-400 text-sm mb-2">作品情報を読み込み中...</p>
+        <p className="text-slate-400 text-sm mb-2">作品情報を読み込み中…</p>
         <div className="w-10 h-10 border-2 border-white/20 border-t-neon-purple rounded-full animate-spin" />
       </div>
     );
@@ -389,7 +431,7 @@ const PlayDetail: React.FC = () => {
   if (!play || notFound) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[60vh] text-center px-4 animate-fade-in-up">
-        <title>作品が見つかりません | Stage Connect</title>
+        <title>作品が見つかりません - {SITE_NAME}</title>
         <meta name="robots" content="noindex,nofollow" />
 
         <h2 className="text-2xl font-bold text-white">作品が見つかりませんでした</h2>
@@ -409,11 +451,13 @@ const PlayDetail: React.FC = () => {
       {/* ✅ SEO head（React 19 native） */}
       <title>{seoTitle}</title>
       <meta name="description" content={seoDescription} />
+      <meta name="robots" content="index,follow" />
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
 
-      {/* OG / Twitter（最低限） */}
+      {/* OG / Twitter */}
+      <meta property="og:locale" content="ja_JP" />
       <meta property="og:type" content="article" />
-      <meta property="og:site_name" content="Stage Connect" />
+      <meta property="og:site_name" content={SITE_NAME} />
       <meta property="og:title" content={seoTitle} />
       <meta property="og:description" content={seoDescription} />
       {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
@@ -425,7 +469,9 @@ const PlayDetail: React.FC = () => {
       {ogImage && <meta name="twitter:image" content={ogImage} />}
 
       {/* 構造化データ */}
-      {jsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />}
+      {jsonLdFaq && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }} />}
+      {jsonLdBreadcrumbs && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumbs) }} />}
+      {jsonLdCreativeWork && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdCreativeWork) }} />}
 
       <Breadcrumbs items={[{ label: '作品一覧', to: '/plays' }, { label: play.title }]} />
 
@@ -446,7 +492,7 @@ const PlayDetail: React.FC = () => {
 
             <div className="flex items-center gap-3 mb-6">
               <FavoriteButton slug={play.slug} type="play" size="lg" className="shrink-0" />
-              <ShareButton title={play.title} text={`${play.title}の作品情報 | Stage Connect`} className="shrink-0" />
+              <ShareButton title={play.title} text={`${play.title}の作品情報 | ${SITE_NAME}`} className="shrink-0" />
             </div>
 
             {play.tags && play.tags.length > 0 && (
@@ -590,7 +636,7 @@ const PlayDetail: React.FC = () => {
             </section>
           )}
 
-          {/* FAQ */}
+          {/* FAQ（表示） */}
           <section className="pt-8 border-t border-white/5 mt-8">
             <h2 className="text-xl font-bold text-white mb-6 flex items-center gap-3">
               <span className="w-1 h-6 bg-slate-500 rounded-full"></span>

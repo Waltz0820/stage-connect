@@ -1,9 +1,13 @@
+// src/components/SeriesList.tsx
+
 import React, { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Breadcrumbs from './Breadcrumbs';
 import { supabase } from '../lib/supabase';
 import { getAllFranchises, FranchiseStats } from '../lib/utils/getFranchises';
 import type { Actor, Gender } from '../lib/types';
+
+const SITE_NAME = 'Stage Connect';
 
 const normalizeActorRow = (row: any): Actor => ({
   slug: row.slug,
@@ -17,10 +21,35 @@ const normalizeActorRow = (row: any): Actor => ({
   tags: (row.tags as string[] | undefined) ?? [],
 });
 
+const toPlainText = (s: any) => {
+  const str = String(s ?? '');
+  return str
+    .replace(/<[^>]*>/g, ' ')
+    .replace(/\s+/g, ' ')
+    .replace(/[“”]/g, '"')
+    .replace(/[‘’]/g, "'")
+    .trim();
+};
+
+const truncate = (s: string, n: number) => (s.length <= n ? s : s.slice(0, Math.max(0, n - 1)) + '…');
+
 const SeriesList: React.FC = () => {
   const [actorsDb, setActorsDb] = useState<Actor[] | null>(null);
   const [loading, setLoading] = useState(true);
 
+  // -------------------------
+  // ✅ Site URL（canonical 用）
+  // -------------------------
+  const siteUrl = useMemo(() => {
+    const envUrl = (import.meta as any)?.env?.VITE_SITE_URL as string | undefined;
+    if (envUrl) return envUrl.replace(/\/$/, '');
+    if (typeof window !== 'undefined') return window.location.origin.replace(/\/$/, '');
+    return '';
+  }, []);
+
+  // -------------------------
+  // ✅ Data fetch（actors）
+  // -------------------------
   useEffect(() => {
     const fetchActors = async () => {
       setLoading(true);
@@ -43,27 +72,126 @@ const SeriesList: React.FC = () => {
     fetchActors();
   }, []);
 
+  // -------------------------
+  // ✅ Franchises（DB優先→ローカル）
+  // -------------------------
   const franchises: FranchiseStats[] = useMemo(() => {
-    // actorsDb が取れたらそれを使う。取れなければローカルにフォールバック。
     return actorsDb ? getAllFranchises(actorsDb) : getAllFranchises();
   }, [actorsDb]);
 
+  // -------------------------
+  // ✅ SEO
+  // -------------------------
+  const canonicalUrl = useMemo(() => {
+    if (!siteUrl) return '';
+    return `${siteUrl}/series`;
+  }, [siteUrl]);
+
+  const seoTitle = useMemo(() => {
+    return `シリーズ一覧｜人気舞台シリーズ・フランチャイズ - ${SITE_NAME}`;
+  }, []);
+
+  const seoDescription = useMemo(() => {
+    const base = '人気舞台シリーズ・フランチャイズを一覧で検索。代表作数や主要キャストから、気になるシリーズの詳細ページへ。';
+    // 動的な数字を軽く入れてもOK（検索スニペットに寄与）
+    const composed = franchises?.length
+      ? `${base}（登録シリーズ：${franchises.length}）`
+      : base;
+    return truncate(toPlainText(composed), 155);
+  }, [franchises]);
+
+  const ogImage = useMemo(() => {
+    const envOg = (import.meta as any)?.env?.VITE_OG_IMAGE as string | undefined;
+    if (envOg) return envOg;
+    return '';
+  }, []);
+
+  // JSON-LD: BreadcrumbList
+  const jsonLdBreadcrumbs = useMemo(() => {
+    if (!canonicalUrl) return null;
+
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'シリーズ一覧',
+          item: canonicalUrl,
+        },
+      ],
+    };
+  }, [canonicalUrl]);
+
+  // JSON-LD: CollectionPage
+  const jsonLdCollectionPage = useMemo(() => {
+    if (!canonicalUrl) return null;
+
+    // ここで items を全部突っ込むと重くなるので、上位だけ（構造化の“匂い”を出す）
+    const top = (franchises ?? []).slice(0, 12).map((f) => ({
+      '@type': 'CreativeWorkSeries',
+      name: f.name,
+      url: siteUrl ? `${siteUrl}/series/${encodeURIComponent(f.name)}` : undefined,
+    }));
+
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: 'シリーズ一覧',
+      url: canonicalUrl,
+      description: seoDescription,
+      inLanguage: 'ja',
+      isPartOf: {
+        '@type': 'WebSite',
+        name: SITE_NAME,
+        url: siteUrl || undefined,
+      },
+      mainEntity: {
+        '@type': 'ItemList',
+        itemListElement: top.map((item, idx) => ({
+          '@type': 'ListItem',
+          position: idx + 1,
+          item,
+        })),
+      },
+    };
+  }, [canonicalUrl, seoDescription, franchises, siteUrl]);
+
   return (
     <div className="container mx-auto px-6 pt-8 pb-16 lg:px-8 max-w-[1400px] animate-fade-in-up">
+      {/* ✅ SEO head（React 19 native） */}
+      <title>{seoTitle}</title>
+      <meta name="description" content={seoDescription} />
+      <meta name="robots" content="index,follow" />
+      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+
+      {/* OG / Twitter */}
+      <meta property="og:locale" content="ja_JP" />
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content={SITE_NAME} />
+      <meta property="og:title" content={seoTitle} />
+      <meta property="og:description" content={seoDescription} />
+      {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
+      {ogImage && <meta property="og:image" content={ogImage} />}
+
+      <meta name="twitter:card" content={ogImage ? 'summary_large_image' : 'summary'} />
+      <meta name="twitter:title" content={seoTitle} />
+      <meta name="twitter:description" content={seoDescription} />
+      {ogImage && <meta name="twitter:image" content={ogImage} />}
+
+      {/* 構造化データ */}
+      {jsonLdBreadcrumbs && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumbs) }} />}
+      {jsonLdCollectionPage && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdCollectionPage) }} />}
+
       <Breadcrumbs items={[{ label: 'シリーズ一覧' }]} />
 
       <div className="mb-12 border-b border-white/10 pb-6">
-        <h2 className="text-3xl font-bold tracking-wide text-white mb-2">
-          シリーズ一覧
-        </h2>
-        <p className="text-sm text-slate-400 font-light tracking-wider">
-          人気舞台シリーズ・フランチャイズ
-        </p>
+        <h2 className="text-3xl font-bold tracking-wide text-white mb-2">シリーズ一覧</h2>
+        <p className="text-sm text-slate-400 font-light tracking-wider">人気舞台シリーズ・フランチャイズ</p>
       </div>
 
-      {loading && (
-        <p className="text-slate-500 text-sm mb-6">キャスト画像を読み込み中…</p>
-      )}
+      {loading && <p className="text-slate-500 text-sm mb-6">キャスト画像を読み込み中…</p>}
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {franchises.map((franchise) => (
@@ -87,7 +215,12 @@ const SeriesList: React.FC = () => {
               <div className="flex items-center gap-4 text-sm text-slate-400 mb-6">
                 <span className="flex items-center gap-1">
                   <svg className="w-4 h-4 text-neon-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                    />
                   </svg>
                   {franchise.years.start} - {franchise.years.end > 0 ? franchise.years.end : ''}
                 </span>
