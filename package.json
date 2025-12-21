@@ -22,10 +22,3 @@
     "vite": "^6.2.0"
   }
 }
-{
-  "scripts": {
-    "generate:sitemap": "tsx scripts/generate-sitemap.ts",
-    "prebuild": "npm run generate:sitemap",
-    "build": "vite build"
-  }
-}
