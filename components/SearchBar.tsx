@@ -1,5 +1,5 @@
 // src/components/SearchBar.tsx
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { supabase } from "../lib/supabase";
 
@@ -79,20 +79,21 @@ const SearchBar: React.FC = () => {
         const term = escapeLike(sanitizeForOr(q));
         const like = `%${term}%`;
 
+        // ✅ .limit() ではなく .range() に統一（SearchPage と同じ動きに寄せる）
         const [aRes, pRes] = await Promise.all([
           supabase
             .from("actors")
             .select("id, slug, name, kana")
             .or(`name.ilike.${like},kana.ilike.${like}`)
             .order("name", { ascending: true })
-            .limit(ACTORS_LIMIT),
+            .range(0, ACTORS_LIMIT - 1),
 
           supabase
             .from("plays")
             .select("id, slug, title, franchise")
             .or(`title.ilike.${like},franchise.ilike.${like}`)
             .order("title", { ascending: true })
-            .limit(PLAYS_LIMIT),
+            .range(0, PLAYS_LIMIT - 1),
         ]);
 
         if (mySeq !== seqRef.current) return;
