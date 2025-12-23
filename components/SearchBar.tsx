@@ -14,7 +14,7 @@ type PlayRow = {
   id: string;
   slug: string;
   title: string;
-  franchise?: string | null;
+  franchise?: string | null; // 表示用（joinで埋める）
 };
 
 type SearchResults = {
@@ -22,39 +22,30 @@ type SearchResults = {
   plays: PlayRow[];
 };
 
-const DEBOUNCE_MS = 200;
+const DEBOUNCE_MS = 180;
 const ACTORS_LIMIT = 5;
 const PLAYS_LIMIT = 5;
 
-/** LIKE 用：% と _ をエスケープ（ilike で安全に扱う） */
-const escapeLike = (s: string) => s.replace(/[%_\\]/g, "\\$&").trim();
-
-function uniqById<T extends { id: string }>(items: T[]) {
-  const map = new Map<string, T>();
-  for (const it of items) map.set(it.id, it);
-  return Array.from(map.values());
-}
+// SearchPage と同じ
+const sanitizeForOr = (s: string) => s.replace(/,/g, " ").trim();
+const escapeLike = (s: string) => s.replace(/[%_]/g, "\\$&").trim();
 
 const SearchBar: React.FC = () => {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<SearchResults>({ actors: [], plays: [] });
   const [isOpen, setIsOpen] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
-  const [loading, setLoading] = useState(false);
-
   const containerRef = useRef<HTMLDivElement>(null);
-  const seqRef = useRef(0);
 
   const location = useLocation();
   const navigate = useNavigate();
 
-  // ページ遷移時に閉じる
+  // ページ遷移時に検索窓を閉じる
   useEffect(() => {
     setIsOpen(false);
     setIsMobileOpen(false);
     setQuery("");
     setResults({ actors: [], plays: [] });
-    setLoading(false);
   }, [location.pathname]);
 
   // クリックアウトで閉じる
@@ -71,85 +62,67 @@ const SearchBar: React.FC = () => {
 
   const hasResults = results.actors.length > 0 || results.plays.length > 0;
 
-  // 検索（debounce + 競合防止）
+  // plays を join して franchise 名を埋める（SearchPageと同じ）
+  const normalizePlays = (rows: any[]): PlayRow[] => {
+    return (rows ?? []).map((r: any) => ({
+      id: r.id,
+      slug: r.slug,
+      title: r.title,
+      franchise: r.franchises?.name ?? null,
+    }));
+  };
+
+  // debounce + 競合防止
+  const seqRef = useRef(0);
   useEffect(() => {
-    const qRaw = query.trim();
+    const q = query.trim();
     const mySeq = ++seqRef.current;
 
-    if (!qRaw) {
+    if (!q) {
       setResults({ actors: [], plays: [] });
       setIsOpen(false);
-      setLoading(false);
       return;
     }
 
-    setIsOpen(true);
-    setLoading(true);
-
     const t = window.setTimeout(async () => {
       try {
-        const term = escapeLike(qRaw);
-        const like = `%${term}%`;
+        const termForOr = escapeLike(sanitizeForOr(q));
+        const like = `%${termForOr}%`;
 
-        // ✅ or(...) を使わず、.ilike を2本叩いてマージ（安定版）
-        const [
-          actorsByName,
-          actorsByKana,
-          playsByTitle,
-          playsByFranchise,
-        ] = await Promise.all([
+        const [aRes, pRes] = await Promise.all([
+          // actors（name / kana）
           supabase
             .from("actors")
             .select("id, slug, name, kana")
-            .ilike("name", like)
+            .or(`name.ilike.${like},kana.ilike.${like}`)
             .order("name", { ascending: true })
             .limit(ACTORS_LIMIT),
 
-          supabase
-            .from("actors")
-            .select("id, slug, name, kana")
-            .ilike("kana", like)
-            .order("name", { ascending: true })
-            .limit(ACTORS_LIMIT),
-
+          // ✅ plays は franchise カラムではなく join で表示用を埋める
           supabase
             .from("plays")
-            .select("id, slug, title, franchise")
+            .select("id, slug, title, franchises(name)")
             .ilike("title", like)
-            .order("title", { ascending: true })
-            .limit(PLAYS_LIMIT),
-
-          supabase
-            .from("plays")
-            .select("id, slug, title, franchise")
-            .ilike("franchise", like)
             .order("title", { ascending: true })
             .limit(PLAYS_LIMIT),
         ]);
 
         if (mySeq !== seqRef.current) return;
 
-        if (actorsByName.error) console.warn("[searchbar actors name] error", actorsByName.error);
-        if (actorsByKana.error) console.warn("[searchbar actors kana] error", actorsByKana.error);
-        if (playsByTitle.error) console.warn("[searchbar plays title] error", playsByTitle.error);
-        if (playsByFranchise.error) console.warn("[searchbar plays franchise] error", playsByFranchise.error);
+        if (aRes.error) console.warn("[searchbar actors] error", aRes.error);
+        if (pRes.error) console.warn("[searchbar plays] error", pRes.error);
 
-        const mergedActors = uniqById<ActorRow>([
-          ...(((actorsByName.data as any) ?? []) as ActorRow[]),
-          ...(((actorsByKana.data as any) ?? []) as ActorRow[]),
-        ]).slice(0, ACTORS_LIMIT);
-
-        const mergedPlays = uniqById<PlayRow>([
-          ...(((playsByTitle.data as any) ?? []) as PlayRow[]),
-          ...(((playsByFranchise.data as any) ?? []) as PlayRow[]),
-        ]).slice(0, PLAYS_LIMIT);
-
-        setResults({ actors: mergedActors, plays: mergedPlays });
+        setResults({
+          actors: ((aRes.data as any) ?? []) as ActorRow[],
+          plays: normalizePlays((pRes.data as any) ?? []),
+        });
+        setIsOpen(true);
       } catch (e) {
         console.warn("[searchbar] error", e);
-        if (mySeq === seqRef.current) setResults({ actors: [], plays: [] });
-      } finally {
-        if (mySeq === seqRef.current) setLoading(false);
+        if (mySeq === seqRef.current) {
+          setResults({ actors: [], plays: [] });
+          setIsOpen(true);
+        }
       }
     }, DEBOUNCE_MS);
 
@@ -223,15 +196,7 @@ const SearchBar: React.FC = () => {
           {/* Suggestions Dropdown */}
           {isOpen && query.trim().length > 0 && (
             <div className="absolute right-0 top-full mt-3 w-full md:w-96 bg-[#11111A] border border-neon-purple/20 rounded-xl shadow-[0_10px_40px_rgba(0,0,0,0.8)] overflow-hidden backdrop-blur-xl animate-fade-in-up origin-top-right">
-              {/* Loading */}
-              {loading && (
-                <div className="px-4 py-4 text-center text-slate-500 text-sm">
-                  検索中...
-                </div>
-              )}
-
-              {/* No Results */}
-              {!loading && !hasResults && (
+              {!hasResults && (
                 <div className="p-8 text-center text-slate-500 text-sm">
                   該当するキャスト・作品が見つかりませんでした
                 </div>
@@ -276,7 +241,7 @@ const SearchBar: React.FC = () => {
 
               {/* Plays Section */}
               {results.plays.length > 0 && (
-                <div className={results.actors.length > 0 ? "" : ""}>
+                <div>
                   <div className="px-4 py-2 bg-white/[0.02] text-[10px] font-bold text-slate-500 uppercase tracking-widest">
                     作品
                   </div>
@@ -311,7 +276,6 @@ const SearchBar: React.FC = () => {
                 </div>
               )}
 
-              {/* Footer: go to search page */}
               <div className="px-4 py-3 border-t border-white/5 bg-black/20">
                 <button
                   onClick={goSearchPage}
