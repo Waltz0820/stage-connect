@@ -22,30 +22,39 @@ type SearchResults = {
   plays: PlayRow[];
 };
 
-const DEBOUNCE_MS = 180;
+const DEBOUNCE_MS = 200;
 const ACTORS_LIMIT = 5;
 const PLAYS_LIMIT = 5;
 
-// Supabase の or(...) 用に最低限安全にする（カンマは区切りとして致命的なので潰す）
-const sanitizeForOr = (s: string) => s.replace(/,/g, " ").trim();
-const escapeLike = (s: string) => s.replace(/[%_]/g, "\\$&"); // % _ をエスケープ
+/** LIKE 用：% と _ をエスケープ（ilike で安全に扱う） */
+const escapeLike = (s: string) => s.replace(/[%_\\]/g, "\\$&").trim();
+
+function uniqById<T extends { id: string }>(items: T[]) {
+  const map = new Map<string, T>();
+  for (const it of items) map.set(it.id, it);
+  return Array.from(map.values());
+}
 
 const SearchBar: React.FC = () => {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<SearchResults>({ actors: [], plays: [] });
   const [isOpen, setIsOpen] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const containerRef = useRef<HTMLDivElement>(null);
+  const seqRef = useRef(0);
+
   const location = useLocation();
   const navigate = useNavigate();
 
-  // ページ遷移時に検索窓を閉じる
+  // ページ遷移時に閉じる
   useEffect(() => {
     setIsOpen(false);
     setIsMobileOpen(false);
     setQuery("");
     setResults({ actors: [], plays: [] });
+    setLoading(false);
   }, [location.pathname]);
 
   // クリックアウトで閉じる
@@ -62,56 +71,85 @@ const SearchBar: React.FC = () => {
 
   const hasResults = results.actors.length > 0 || results.plays.length > 0;
 
-  // debounce + 競合防止
-  const seqRef = useRef(0);
+  // 検索（debounce + 競合防止）
   useEffect(() => {
-    const q = query.trim();
+    const qRaw = query.trim();
     const mySeq = ++seqRef.current;
 
-    if (!q) {
+    if (!qRaw) {
       setResults({ actors: [], plays: [] });
       setIsOpen(false);
+      setLoading(false);
       return;
     }
 
+    setIsOpen(true);
+    setLoading(true);
+
     const t = window.setTimeout(async () => {
       try {
-        const term = escapeLike(sanitizeForOr(q));
+        const term = escapeLike(qRaw);
         const like = `%${term}%`;
 
-        // ✅ .limit() ではなく .range() に統一（SearchPage と同じ動きに寄せる）
-        const [aRes, pRes] = await Promise.all([
+        // ✅ or(...) を使わず、.ilike を2本叩いてマージ（安定版）
+        const [
+          actorsByName,
+          actorsByKana,
+          playsByTitle,
+          playsByFranchise,
+        ] = await Promise.all([
           supabase
             .from("actors")
             .select("id, slug, name, kana")
-            .or(`name.ilike.${like},kana.ilike.${like}`)
+            .ilike("name", like)
             .order("name", { ascending: true })
-            .range(0, ACTORS_LIMIT - 1),
+            .limit(ACTORS_LIMIT),
+
+          supabase
+            .from("actors")
+            .select("id, slug, name, kana")
+            .ilike("kana", like)
+            .order("name", { ascending: true })
+            .limit(ACTORS_LIMIT),
 
           supabase
             .from("plays")
             .select("id, slug, title, franchise")
-            .or(`title.ilike.${like},franchise.ilike.${like}`)
+            .ilike("title", like)
             .order("title", { ascending: true })
-            .range(0, PLAYS_LIMIT - 1),
+            .limit(PLAYS_LIMIT),
+
+          supabase
+            .from("plays")
+            .select("id, slug, title, franchise")
+            .ilike("franchise", like)
+            .order("title", { ascending: true })
+            .limit(PLAYS_LIMIT),
         ]);
 
         if (mySeq !== seqRef.current) return;
 
-        if (aRes.error) console.warn("[searchbar actors] error", aRes.error);
-        if (pRes.error) console.warn("[searchbar plays] error", pRes.error);
+        if (actorsByName.error) console.warn("[searchbar actors name] error", actorsByName.error);
+        if (actorsByKana.error) console.warn("[searchbar actors kana] error", actorsByKana.error);
+        if (playsByTitle.error) console.warn("[searchbar plays title] error", playsByTitle.error);
+        if (playsByFranchise.error) console.warn("[searchbar plays franchise] error", playsByFranchise.error);
 
-        setResults({
-          actors: ((aRes.data as any) ?? []) as ActorRow[],
-          plays: ((pRes.data as any) ?? []) as PlayRow[],
-        });
-        setIsOpen(true);
+        const mergedActors = uniqById<ActorRow>([
+          ...(((actorsByName.data as any) ?? []) as ActorRow[]),
+          ...(((actorsByKana.data as any) ?? []) as ActorRow[]),
+        ]).slice(0, ACTORS_LIMIT);
+
+        const mergedPlays = uniqById<PlayRow>([
+          ...(((playsByTitle.data as any) ?? []) as PlayRow[]),
+          ...(((playsByFranchise.data as any) ?? []) as PlayRow[]),
+        ]).slice(0, PLAYS_LIMIT);
+
+        setResults({ actors: mergedActors, plays: mergedPlays });
       } catch (e) {
         console.warn("[searchbar] error", e);
-        if (mySeq === seqRef.current) {
-          setResults({ actors: [], plays: [] });
-          setIsOpen(true);
-        }
+        if (mySeq === seqRef.current) setResults({ actors: [], plays: [] });
+      } finally {
+        if (mySeq === seqRef.current) setLoading(false);
       }
     }, DEBOUNCE_MS);
 
@@ -173,9 +211,7 @@ const SearchBar: React.FC = () => {
                 e.preventDefault();
                 goSearchPage();
               }
-              if (e.key === "Escape") {
-                setIsOpen(false);
-              }
+              if (e.key === "Escape") setIsOpen(false);
             }}
             placeholder="キャスト・作品を検索..."
             className="block w-full pl-10 pr-3 py-2 border border-white/10 rounded-full leading-5 bg-black/50 text-slate-200 placeholder-slate-500 focus:outline-none focus:bg-theater-surface focus:ring-1 focus:ring-neon-purple focus:border-neon-purple/50 sm:text-sm transition-all shadow-[0_0_10px_rgba(0,0,0,0.2)] backdrop-blur-sm"
@@ -187,8 +223,15 @@ const SearchBar: React.FC = () => {
           {/* Suggestions Dropdown */}
           {isOpen && query.trim().length > 0 && (
             <div className="absolute right-0 top-full mt-3 w-full md:w-96 bg-[#11111A] border border-neon-purple/20 rounded-xl shadow-[0_10px_40px_rgba(0,0,0,0.8)] overflow-hidden backdrop-blur-xl animate-fade-in-up origin-top-right">
+              {/* Loading */}
+              {loading && (
+                <div className="px-4 py-4 text-center text-slate-500 text-sm">
+                  検索中...
+                </div>
+              )}
+
               {/* No Results */}
-              {!hasResults && (
+              {!loading && !hasResults && (
                 <div className="p-8 text-center text-slate-500 text-sm">
                   該当するキャスト・作品が見つかりませんでした
                 </div>
@@ -206,7 +249,10 @@ const SearchBar: React.FC = () => {
                         <Link
                           to={`/actors/${actor.slug}`}
                           className="block px-4 py-3 hover:bg-neon-purple/10 hover:text-white transition-colors group flex items-center justify-between"
-                          onClick={() => setIsOpen(false)}
+                          onClick={() => {
+                            setIsOpen(false);
+                            if (window.innerWidth < 768) setIsMobileOpen(false);
+                          }}
                         >
                           <div className="flex flex-col">
                             <span className="text-sm font-medium text-slate-200 group-hover:text-neon-purple transition-colors">
@@ -230,7 +276,7 @@ const SearchBar: React.FC = () => {
 
               {/* Plays Section */}
               {results.plays.length > 0 && (
-                <div>
+                <div className={results.actors.length > 0 ? "" : ""}>
                   <div className="px-4 py-2 bg-white/[0.02] text-[10px] font-bold text-slate-500 uppercase tracking-widest">
                     作品
                   </div>
@@ -240,7 +286,10 @@ const SearchBar: React.FC = () => {
                         <Link
                           to={`/plays/${play.slug}`}
                           className="block px-4 py-3 hover:bg-neon-pink/10 hover:text-white transition-colors group flex items-center justify-between"
-                          onClick={() => setIsOpen(false)}
+                          onClick={() => {
+                            setIsOpen(false);
+                            if (window.innerWidth < 768) setIsMobileOpen(false);
+                          }}
                         >
                           <div className="flex flex-col overflow-hidden">
                             <span className="text-sm font-medium text-slate-200 group-hover:text-neon-pink truncate transition-colors">
