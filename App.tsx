@@ -16,6 +16,7 @@ import { DebugSupabase } from "./DebugSupabase";
 
 import { gaPageView } from "./lib/ga";
 import SeoHead from "./components/SeoHead";
+import SearchPage from "./components/SearchPage";
 
 // ===== Admin =====
 import AdminGuard from "./components/admin/AdminGuard";
@@ -80,6 +81,7 @@ const App: React.FC = () => {
           {/* Guide */}
           <Route path="/guide" element={<GuideList />} />
           <Route path="/guide/:slug" element={<GuideDetail />} />
+          <Route path="/search" element={<SearchPage />} />
 
           {/* ===== Admin Routes ===== */}
           <Route
