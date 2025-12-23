@@ -16,7 +16,7 @@ type PlayRow = {
   id: string;
   slug: string;
   title: string;
-  franchise?: string | null;
+  franchise?: string | null; // 表示用（joinで埋める）
 };
 
 type FranchiseRow = {
@@ -30,7 +30,7 @@ const DEBOUNCE_MS = 200;
 
 // Supabase の or(...) 用に最低限安全にする（カンマは区切りとして致命的なので潰す）
 const sanitizeForOr = (s: string) => s.replace(/,/g, ' ').trim();
-const escapeLike = (s: string) => s.replace(/[%_]/g, '\\$&'); // % _ をエスケープ
+const escapeLike = (s: string) => s.replace(/[%_]/g, '\\$&'); // % _ をエスケープ（念のため）
 
 const SearchPage: React.FC = () => {
   const location = useLocation();
@@ -59,11 +59,9 @@ const SearchPage: React.FC = () => {
   const [seriesPage, setSeriesPage] = useState(0);
 
   const [loading, setLoading] = useState(false);
-  const [loadingMore, setLoadingMore] = useState<{ actors: boolean; plays: boolean; series: boolean }>({
-    actors: false,
-    plays: false,
-    series: false,
-  });
+  const [loadingMore, setLoadingMore] = useState<{ actors: boolean; plays: boolean; series: boolean }>(
+    { actors: false, plays: false, series: false }
+  );
 
   const query = qParam;
 
@@ -72,13 +70,22 @@ const SearchPage: React.FC = () => {
     setInput(qParam);
   }, [qParam]);
 
+  // SearchPage表示用：plays を join して franchise 名を埋める
+  const normalizePlays = (rows: any[]): PlayRow[] => {
+    return (rows ?? []).map((r: any) => ({
+      id: r.id,
+      slug: r.slug,
+      title: r.title,
+      franchise: r.franchises?.name ?? null,
+    }));
+  };
+
   // 検索実行（debounce + 競合防止）
   const seqRef = useRef(0);
   useEffect(() => {
     const q = query;
     const mySeq = ++seqRef.current;
 
-    // 空ならリセット
     if (!q) {
       setActors([]);
       setPlays([]);
@@ -97,11 +104,11 @@ const SearchPage: React.FC = () => {
 
     const t = window.setTimeout(async () => {
       try {
-        const term = escapeLike(sanitizeForOr(q));
-        const like = `%${term}%`;
+        const termForOr = escapeLike(sanitizeForOr(q));
+        const like = `%${termForOr}%`;
 
-        // 初回は全部 0ページで引き直す
         const [aRes, pRes, sRes] = await Promise.all([
+          // actors（name / kana）
           supabase
             .from('actors')
             .select('id, slug, name, kana', { count: 'estimated' })
@@ -109,13 +116,16 @@ const SearchPage: React.FC = () => {
             .order('name', { ascending: true })
             .range(0, PAGE_SIZE - 1),
 
+          // plays（titleのみ検索 + franchises(name) joinで表示）
+          // ※plays.franchise みたいな文字カラムが無い/使ってない前提
           supabase
             .from('plays')
-            .select('id, slug, title, franchise', { count: 'estimated' })
-            .or(`title.ilike.${like},franchise.ilike.${like}`)
+            .select('id, slug, title, franchises(name)', { count: 'estimated' })
+            .ilike('title', like)
             .order('title', { ascending: true })
             .range(0, PAGE_SIZE - 1),
 
+          // series（name / slug）
           supabase
             .from('franchises')
             .select('id, name, slug', { count: 'estimated' })
@@ -124,7 +134,6 @@ const SearchPage: React.FC = () => {
             .range(0, PAGE_SIZE - 1),
         ]);
 
-        // 競合防止：古い検索を捨てる
         if (mySeq !== seqRef.current) return;
 
         if (aRes.error) console.warn('[search actors] error', aRes.error);
@@ -132,7 +141,7 @@ const SearchPage: React.FC = () => {
         if (sRes.error) console.warn('[search series] error', sRes.error);
 
         setActors((aRes.data as any) ?? []);
-        setPlays((pRes.data as any) ?? []);
+        setPlays(normalizePlays((pRes.data as any) ?? []));
         setSeries((sRes.data as any) ?? []);
 
         setActorsCount(typeof aRes.count === 'number' ? aRes.count : null);
@@ -159,13 +168,15 @@ const SearchPage: React.FC = () => {
     navigate(`/search?q=${encodeURIComponent(q)}`);
   };
 
-  const canLoadMoreActors = actorsCount != null ? actors.length < actorsCount : actors.length === PAGE_SIZE * (actorsPage + 1);
-  const canLoadMorePlays = playsCount != null ? plays.length < playsCount : plays.length === PAGE_SIZE * (playsPage + 1);
-  const canLoadMoreSeries = seriesCount != null ? series.length < seriesCount : series.length === PAGE_SIZE * (seriesPage + 1);
+  const canLoadMoreActors =
+    actorsCount != null ? actors.length < actorsCount : actors.length === PAGE_SIZE * (actorsPage + 1);
+  const canLoadMorePlays =
+    playsCount != null ? plays.length < playsCount : plays.length === PAGE_SIZE * (playsPage + 1);
+  const canLoadMoreSeries =
+    seriesCount != null ? series.length < seriesCount : series.length === PAGE_SIZE * (seriesPage + 1);
 
   const loadMoreActors = async () => {
-    if (!query) return;
-    if (!canLoadMoreActors) return;
+    if (!query || !canLoadMoreActors) return;
 
     setLoadingMore((s) => ({ ...s, actors: true }));
     try {
@@ -195,8 +206,7 @@ const SearchPage: React.FC = () => {
   };
 
   const loadMorePlays = async () => {
-    if (!query) return;
-    if (!canLoadMorePlays) return;
+    if (!query || !canLoadMorePlays) return;
 
     setLoadingMore((s) => ({ ...s, plays: true }));
     try {
@@ -208,8 +218,8 @@ const SearchPage: React.FC = () => {
 
       const res = await supabase
         .from('plays')
-        .select('id, slug, title, franchise')
-        .or(`title.ilike.${like},franchise.ilike.${like}`)
+        .select('id, slug, title, franchises(name)')
+        .ilike('title', like)
         .order('title', { ascending: true })
         .range(from, to);
 
@@ -218,7 +228,7 @@ const SearchPage: React.FC = () => {
         return;
       }
 
-      setPlays((prev) => [...prev, ...(((res.data as any) ?? []) as PlayRow[])]);
+      setPlays((prev) => [...prev, ...normalizePlays((res.data as any) ?? [])]);
       setPlaysPage(nextPage);
     } finally {
       setLoadingMore((s) => ({ ...s, plays: false }));
@@ -226,8 +236,7 @@ const SearchPage: React.FC = () => {
   };
 
   const loadMoreSeries = async () => {
-    if (!query) return;
-    if (!canLoadMoreSeries) return;
+    if (!query || !canLoadMoreSeries) return;
 
     setLoadingMore((s) => ({ ...s, series: true }));
     try {
@@ -262,9 +271,7 @@ const SearchPage: React.FC = () => {
 
   return (
     <div className="container mx-auto px-6 pt-8 pb-16 lg:px-8 max-w-5xl animate-fade-in-up">
-      {/* 検索結果ページは noindex 推奨 */}
       <SeoHead title="検索 | Stage Connect" robots="noindex,follow" />
-
       <Breadcrumbs items={[{ label: '検索', to: '/search' }]} />
 
       <div className="mb-8 text-center">
@@ -342,9 +349,7 @@ const SearchPage: React.FC = () => {
           {/* Series */}
           <div className="bg-theater-surface/30 border border-white/10 rounded-xl overflow-hidden">
             <div className="px-4 py-3 border-b border-white/5 bg-black/20 flex items-center justify-between">
-              <div className="text-[10px] font-bold uppercase tracking-widest text-slate-500">
-                シリーズ
-              </div>
+              <div className="text-[10px] font-bold uppercase tracking-widest text-slate-500">シリーズ</div>
               <div className="text-[10px] text-slate-500">
                 {seriesCount != null ? `${series.length}/${seriesCount}` : series.length}
               </div>
@@ -365,9 +370,7 @@ const SearchPage: React.FC = () => {
                   </li>
                 );
               })}
-              {series.length === 0 && (
-                <li className="px-4 py-6 text-sm text-slate-500 italic">該当なし</li>
-              )}
+              {series.length === 0 && <li className="px-4 py-6 text-sm text-slate-500 italic">該当なし</li>}
             </ul>
 
             {canLoadMoreSeries && (
@@ -386,9 +389,7 @@ const SearchPage: React.FC = () => {
           {/* Actors */}
           <div className="bg-theater-surface/30 border border-white/10 rounded-xl overflow-hidden">
             <div className="px-4 py-3 border-b border-white/5 bg-black/20 flex items-center justify-between">
-              <div className="text-[10px] font-bold uppercase tracking-widest text-slate-500">
-                キャスト
-              </div>
+              <div className="text-[10px] font-bold uppercase tracking-widest text-slate-500">キャスト</div>
               <div className="text-[10px] text-slate-500">
                 {actorsCount != null ? `${actors.length}/${actorsCount}` : actors.length}
               </div>
@@ -397,18 +398,13 @@ const SearchPage: React.FC = () => {
             <ul className="divide-y divide-white/5">
               {actors.map((a) => (
                 <li key={a.id}>
-                  <Link
-                    to={`/actors/${a.slug}`}
-                    className="block px-4 py-3 hover:bg-neon-purple/10 transition-colors"
-                  >
+                  <Link to={`/actors/${a.slug}`} className="block px-4 py-3 hover:bg-neon-purple/10 transition-colors">
                     <div className="text-sm font-semibold text-white">{a.name}</div>
                     {a.kana && <div className="text-[10px] text-slate-500">{a.kana}</div>}
                   </Link>
                 </li>
               ))}
-              {actors.length === 0 && (
-                <li className="px-4 py-6 text-sm text-slate-500 italic">該当なし</li>
-              )}
+              {actors.length === 0 && <li className="px-4 py-6 text-sm text-slate-500 italic">該当なし</li>}
             </ul>
 
             {canLoadMoreActors && (
@@ -427,9 +423,7 @@ const SearchPage: React.FC = () => {
           {/* Plays */}
           <div className="bg-theater-surface/30 border border-white/10 rounded-xl overflow-hidden">
             <div className="px-4 py-3 border-b border-white/5 bg-black/20 flex items-center justify-between">
-              <div className="text-[10px] font-bold uppercase tracking-widest text-slate-500">
-                作品
-              </div>
+              <div className="text-[10px] font-bold uppercase tracking-widest text-slate-500">作品</div>
               <div className="text-[10px] text-slate-500">
                 {playsCount != null ? `${plays.length}/${playsCount}` : plays.length}
               </div>
@@ -438,18 +432,13 @@ const SearchPage: React.FC = () => {
             <ul className="divide-y divide-white/5">
               {plays.map((p) => (
                 <li key={p.id}>
-                  <Link
-                    to={`/plays/${p.slug}`}
-                    className="block px-4 py-3 hover:bg-neon-pink/10 transition-colors"
-                  >
+                  <Link to={`/plays/${p.slug}`} className="block px-4 py-3 hover:bg-neon-pink/10 transition-colors">
                     <div className="text-sm font-semibold text-white">{p.title}</div>
                     {p.franchise && <div className="text-[10px] text-slate-500">{p.franchise}</div>}
                   </Link>
                 </li>
               ))}
-              {plays.length === 0 && (
-                <li className="px-4 py-6 text-sm text-slate-500 italic">該当なし</li>
-              )}
+              {plays.length === 0 && <li className="px-4 py-6 text-sm text-slate-500 italic">該当なし</li>}
             </ul>
 
             {canLoadMorePlays && (
