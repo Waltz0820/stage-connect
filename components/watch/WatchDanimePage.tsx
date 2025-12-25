@@ -1,5 +1,6 @@
+// src/components/watch/WatchDanimePage.tsx
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { supabase } from "../../lib/supabase";
 import Breadcrumbs from "../Breadcrumbs";
 import SeoHead from "../SeoHead";
@@ -25,47 +26,20 @@ type PlayItem = {
 
 const PAGE_SIZE = 36;
 
-type ProviderConfig = {
-  providerParam: string;
-  title: string;
-  label: string;
-  // vod_links の key が揺れても拾えるように複数候補
-  vodKeys: string[];
-  accentHoverClass: string;
-  badgeClass: string;
-};
+// dアニメ: vod_links の key 揺れ対策
+const VOD_KEYS = [
+  "danime",
+  "d-anime",
+  "d_anime",
+  "danime_store",
+  "dアニメ",
+  "dアニメストア",
+] as const;
 
-const PROVIDERS: ProviderConfig[] = [
-  {
-    providerParam: "dmm",
-    title: "DMMで観られる2.5次元作品",
-    label: "DMM",
-    vodKeys: ["dmm", "dmm_tv", "dmm-tv", "dmmTV"],
-    accentHoverClass: "hover:bg-neon-pink/10",
-    badgeClass: "bg-neon-pink/10 border-neon-pink/30 text-neon-pink",
-  },
-  {
-    providerParam: "u-next",
-    title: "U-NEXTで観られる2.5次元作品",
-    label: "U-NEXT",
-    vodKeys: ["unext", "u-next", "u_next", "uNext"],
-    accentHoverClass: "hover:bg-neon-purple/10",
-    badgeClass: "bg-neon-purple/10 border-neon-purple/30 text-neon-purple",
-  },
-  {
-    providerParam: "danime",
-    title: "dアニメストアで観られる2.5次元作品",
-    label: "dアニメ",
-    vodKeys: ["danime", "d-anime", "d_anime", "danime_store", "dアニメ", "dアニメストア"],
-    accentHoverClass: "hover:bg-white/5",
-    badgeClass: "bg-white/5 border-white/10 text-slate-200",
-  },
-];
-
-function pickVodUrl(vodLinks: any, keys: string[]): string | null {
+function pickVodUrl(vodLinks: any, keys: readonly string[]): string | null {
   if (!vodLinks) return null;
 
-  // vod_links が object 形式想定
+  // object 形式想定
   if (typeof vodLinks === "object" && !Array.isArray(vodLinks)) {
     for (const k of keys) {
       const v = vodLinks?.[k];
@@ -74,12 +48,12 @@ function pickVodUrl(vodLinks: any, keys: string[]): string | null {
     return null;
   }
 
-  // もし配列で入ってる場合（保険）
+  // 配列形式の保険
   if (Array.isArray(vodLinks)) {
     for (const item of vodLinks) {
-      if (typeof item === "string") continue;
+      if (!item || typeof item !== "object") continue;
       for (const k of keys) {
-        const v = item?.[k];
+        const v = (item as any)?.[k];
         if (typeof v === "string" && v.trim()) return v.trim();
       }
     }
@@ -89,10 +63,7 @@ function pickVodUrl(vodLinks: any, keys: string[]): string | null {
   return null;
 }
 
-const WatchProvider: React.FC = () => {
-  const { provider } = useParams();
-  const config = useMemo(() => PROVIDERS.find((p) => p.providerParam === provider), [provider]);
-
+const WatchDanimePage: React.FC = () => {
   const [items, setItems] = useState<PlayItem[]>([]);
   const [loading, setLoading] = useState(false);
   const [loadingMore, setLoadingMore] = useState(false);
@@ -101,26 +72,22 @@ const WatchProvider: React.FC = () => {
 
   const seqRef = useRef(0);
 
-  // 不明providerは /watch に誘導（表示だけでもOK）
-  const safeTitle = config?.title ?? "配信で観る | Stage Connect";
-  const safeLabel = config?.label ?? "Watch";
+  const title = "dアニメストアで観られる2.5次元作品";
+  const label = "dアニメ";
 
-  const breadcrumbs = useMemo(() => {
-    return [
+  const breadcrumbs = useMemo(
+    () => [
       { label: "配信で観る", to: "/watch" },
-      { label: safeLabel, to: config ? `/watch/${config.providerParam}` : "/watch" },
-    ];
-  }, [config, safeLabel]);
+      { label, to: "/watch/danime" },
+    ],
+    []
+  );
 
   const fetchPage = async (nextPage: number) => {
-    if (!config) return;
-
     const mySeq = ++seqRef.current;
     const from = nextPage * PAGE_SIZE;
     const to = from + PAGE_SIZE - 1;
 
-    // まずは "vod_links が null じゃない作品" を取って、フロントで provider のURLを抽出する（最短で動く）
-    // 件数が増えたら、DB側に view / generated column で has_dmm 等を用意してサーバー側で絞るのが本命。
     const res = await supabase
       .from("plays")
       .select("id, slug, title, year, vod_links, franchises(name, slug)")
@@ -131,8 +98,7 @@ const WatchProvider: React.FC = () => {
     if (mySeq !== seqRef.current) return;
 
     if (res.error) {
-      console.warn("[watch] fetch error", res.error);
-      // これ以上は止める
+      console.warn("[watch danime] fetch error", res.error);
       setHasMore(false);
       return;
     }
@@ -140,8 +106,9 @@ const WatchProvider: React.FC = () => {
     const raw: PlayRowRaw[] = (res.data as any) ?? [];
     const normalized: PlayItem[] = raw
       .map((r) => {
-        const vodUrl = pickVodUrl(r.vod_links, config.vodKeys);
+        const vodUrl = pickVodUrl(r.vod_links, VOD_KEYS);
         if (!vodUrl) return null;
+
         return {
           id: r.id,
           slug: r.slug,
@@ -154,10 +121,7 @@ const WatchProvider: React.FC = () => {
       })
       .filter(Boolean) as PlayItem[];
 
-    // 取得件数が PAGE_SIZE 未満なら、これ以上は無い可能性が高い
-    // ただし provider 抽出で間引かれるので、厳密じゃない。まずはUX優先で「一定回数で止める」でもOK。
-    const serverReturnedLess = raw.length < PAGE_SIZE;
-    if (serverReturnedLess) setHasMore(false);
+    if (raw.length < PAGE_SIZE) setHasMore(false);
 
     if (nextPage === 0) setItems(normalized);
     else setItems((prev) => [...prev, ...normalized]);
@@ -170,17 +134,13 @@ const WatchProvider: React.FC = () => {
     setPage(0);
     setHasMore(true);
 
-    if (!config) return;
-
     setLoading(true);
     fetchPage(0).finally(() => setLoading(false));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [config?.providerParam]);
+  }, []);
 
   const loadMore = async () => {
-    if (!config) return;
     if (!hasMore) return;
-
     setLoadingMore(true);
     try {
       await fetchPage(page + 1);
@@ -191,20 +151,17 @@ const WatchProvider: React.FC = () => {
 
   return (
     <div className="container mx-auto px-6 pt-8 pb-16 lg:px-8 max-w-5xl animate-fade-in-up">
-      {/* watch は index 前提 */}
-      <SeoHead title={`${safeTitle} | Stage Connect`} robots="index,follow" />
+      <SeoHead title={`${title} | Stage Connect`} robots="index,follow" />
       <Breadcrumbs items={breadcrumbs} />
 
       {/* 上：コンテンツ */}
       <div className="mb-8 text-center">
-        <span
-          className={`inline-block px-3 py-1 mb-4 rounded-full border text-xs font-bold tracking-widest uppercase ${config?.badgeClass ?? "bg-white/5 border-white/10 text-slate-300"}`}
-        >
-          {safeLabel}
+        <span className="inline-block px-3 py-1 mb-4 rounded-full border text-xs font-bold tracking-widest uppercase bg-white/5 border-white/10 text-slate-200">
+          {label}
         </span>
-        <h1 className="text-3xl sm:text-4xl font-extrabold text-white mb-3">{safeTitle}</h1>
+        <h1 className="text-3xl sm:text-4xl font-extrabold text-white mb-3">{title}</h1>
         <p className="text-slate-400 text-sm">
-          「今すぐ観られる」から入る棚。気分で作品を探す日に使ってください。
+          配信で観られる作品をまとめた「入口の棚」です。気になる作品を見つけたら、作品詳細からシリーズや俳優へ。
         </p>
       </div>
 
@@ -213,7 +170,9 @@ const WatchProvider: React.FC = () => {
         <ul className="text-slate-300 text-sm space-y-2">
           <li>・作品カードの「作品詳細」は Stage Connect 内。</li>
           <li>・「視聴する」は外部サイトへ遷移（別タブ推奨）。</li>
-          <li className="text-slate-400">※配信状況は変わることがあります（登録リンクを元に整理しています）。</li>
+          <li className="text-slate-400">
+            ※配信状況は変わることがあります（登録リンクを元に整理しています）。
+          </li>
         </ul>
 
         <div className="mt-5 flex flex-wrap gap-2 justify-center">
@@ -247,9 +206,7 @@ const WatchProvider: React.FC = () => {
           <div className="text-[10px] text-slate-500">{loading ? "読み込み中..." : `${items.length} 件`}</div>
         </div>
 
-        {loading && (
-          <div className="p-10 text-center text-slate-500">読み込み中...</div>
-        )}
+        {loading && <div className="p-10 text-center text-slate-500">読み込み中...</div>}
 
         {!loading && items.length === 0 && (
           <div className="p-10 text-center text-slate-500">
@@ -262,7 +219,7 @@ const WatchProvider: React.FC = () => {
             {items.map((it) => (
               <div
                 key={it.id}
-                className={`rounded-xl border border-white/10 bg-black/30 p-4 transition-colors ${config?.accentHoverClass ?? "hover:bg-white/5"}`}
+                className="rounded-xl border border-white/10 bg-black/30 p-4 transition-colors hover:bg-white/5"
               >
                 <div className="flex items-start justify-between gap-3">
                   <div className="min-w-0">
@@ -278,7 +235,9 @@ const WatchProvider: React.FC = () => {
                         <span className="inline-flex items-center gap-1">
                           <span className="text-slate-600">シリーズ:</span>
                           <Link
-                            to={`/series/${encodeURIComponent(it.franchiseSlug?.trim() ? it.franchiseSlug!.trim() : it.franchiseName!)}`}
+                            to={`/series/${encodeURIComponent(
+                              it.franchiseSlug?.trim() ? it.franchiseSlug!.trim() : it.franchiseName!
+                            )}`}
                             className="text-slate-300 hover:underline"
                           >
                             {it.franchiseName}
@@ -333,9 +292,7 @@ const WatchProvider: React.FC = () => {
       <div className="mt-8 bg-theater-surface/30 border border-white/10 rounded-2xl p-6 sm:p-8">
         <h2 className="text-white font-bold text-lg mb-2">次に迷ったら</h2>
         <p className="text-slate-300 text-sm leading-relaxed">
-          配信で入口を作ったら、次は「シリーズ」か「俳優」へ寄るのが一番気持ちいい。
-          <br />
-          StageConnectは内部リンクがガチガチなので、棚 → 作品 → 俳優 → 共演 → 別作品 の回遊が勝ち筋。
+          配信棚はあくまで入口。作品詳細で「シリーズ」や「俳優」を辿ると、StageConnectの回遊が一番気持ちいい。
         </p>
 
         <div className="mt-4 flex flex-wrap gap-2">
@@ -363,4 +320,4 @@ const WatchProvider: React.FC = () => {
   );
 };
 
-export default WatchProvider;
+export default WatchDanimePage;

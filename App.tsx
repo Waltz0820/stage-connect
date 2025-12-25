@@ -14,7 +14,9 @@ import GuideList from "./components/GuideList";
 import GuideDetail from "./components/GuideDetail";
 import { DebugSupabase } from "./DebugSupabase";
 import WatchIndex from "./components/watch/WatchIndex";
-import WatchProvider from "./components/watch/WatchProvider";
+import WatchDmmPage from "./components/watch/WatchDmmPage";
+import WatchUNextPage from "./components/watch/WatchUNextPage";
+import WatchDanimePage from "./components/watch/WatchDanimePage";
 
 import { gaPageView } from "./lib/ga";
 import SeoHead from "./components/SeoHead";
@@ -79,8 +81,12 @@ const App: React.FC = () => {
           <Route path="/series" element={<SeriesList />} />
           <Route path="/series/:name" element={<SeriesDetail />} />
           <Route path="/favorites" element={<Favorites />} />
+
+          {/* Watch */}
           <Route path="/watch" element={<WatchIndex />} />
-          <Route path="/watch/:provider" element={<WatchProvider />} />
+          <Route path="/watch/dmm" element={<WatchDmmPage />} />
+          <Route path="/watch/u-next" element={<WatchUNextPage />} />
+          <Route path="/watch/danime" element={<WatchDanimePage />} />
 
           {/* Guide */}
           <Route path="/guide" element={<GuideList />} />
