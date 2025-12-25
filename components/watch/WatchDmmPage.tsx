@@ -38,14 +38,32 @@ const PAGE_SIZE = 36;
 // vod_links の key 揺れ吸収（フォールバック用）
 const DMM_KEYS = ["dmm", "dmm_tv", "dmm-tv", "dmmTV"];
 
+// ✅ string(JSON文字列)も拾う + 形式ゆれ保険
 function pickVodUrl(vodLinks: any, keys: string[]): string | null {
   if (!vodLinks) return null;
+
+  // ✅ jsonb string（"{"dmm":"..."}"）を object に戻す
+  if (typeof vodLinks === "string") {
+    try {
+      vodLinks = JSON.parse(vodLinks);
+    } catch {
+      return null;
+    }
+  }
 
   // object想定
   if (typeof vodLinks === "object" && !Array.isArray(vodLinks)) {
     for (const k of keys) {
       const v = vodLinks?.[k];
+
+      // string直
       if (typeof v === "string" && v.trim()) return v.trim();
+
+      // { url: "..." } みたいな形の保険
+      if (v && typeof v === "object") {
+        const u = (v as any)?.url ?? (v as any)?.href;
+        if (typeof u === "string" && u.trim()) return u.trim();
+      }
     }
     return null;
   }
@@ -53,10 +71,21 @@ function pickVodUrl(vodLinks: any, keys: string[]): string | null {
   // 配列で来た場合の保険
   if (Array.isArray(vodLinks)) {
     for (const item of vodLinks) {
-      if (!item || typeof item !== "object") continue;
-      for (const k of keys) {
-        const v = item?.[k];
-        if (typeof v === "string" && v.trim()) return v.trim();
+      if (!item) continue;
+
+      // { provider:"dmm", url:"..." } 形式
+      const prov = (item as any)?.provider;
+      const url = (item as any)?.url;
+      if (typeof prov === "string" && typeof url === "string") {
+        if (keys.includes(prov) && url.trim()) return url.trim();
+      }
+
+      // { dmm:"..." } 形式
+      if (typeof item === "object") {
+        for (const k of keys) {
+          const v = (item as any)?.[k];
+          if (typeof v === "string" && v.trim()) return v.trim();
+        }
       }
     }
   }
@@ -142,7 +171,6 @@ const WatchDmmPage: React.FC = () => {
         })
         .filter(Boolean) as PlayItem[];
 
-      // viewで絞れているので、PAGE_SIZE未満なら終端判定しやすい
       if (raw.length < PAGE_SIZE) setHasMore(false);
 
       if (nextPage === 0) setItems(normalized);
@@ -171,6 +199,7 @@ const WatchDmmPage: React.FC = () => {
     }
 
     const raw: PlayRowRaw[] = (res.data as any) ?? [];
+
     const normalized: PlayItem[] = raw
       .map((r) => {
         const vodUrl = pickVodUrl(r.vod_links, DMM_KEYS);
@@ -186,8 +215,6 @@ const WatchDmmPage: React.FC = () => {
       })
       .filter(Boolean) as PlayItem[];
 
-    // plays側は「抽出で間引かれる」ので厳密な終端判定は難しいが、
-    // サーバーからの返却自体が少ないなら終端っぽい、というUX優先の判定。
     if (raw.length < PAGE_SIZE) setHasMore(false);
 
     if (nextPage === 0) setItems(normalized);
@@ -222,11 +249,8 @@ const WatchDmmPage: React.FC = () => {
       <SeoHead title={`${TITLE} | Stage Connect`} robots="index,follow" />
       <Breadcrumbs items={breadcrumbs} />
 
-      {/* 上：コンテンツ（厚くする前提の骨格） */}
       <div className="mb-8 text-center">
-        <span
-          className={`inline-block px-3 py-1 mb-4 rounded-full border text-xs font-bold tracking-widest uppercase ${BADGE_CLASS}`}
-        >
+        <span className={`inline-block px-3 py-1 mb-4 rounded-full border text-xs font-bold tracking-widest uppercase ${BADGE_CLASS}`}>
           DMM
         </span>
         <h1 className="text-3xl sm:text-4xl font-extrabold text-white mb-3">{TITLE}</h1>
@@ -240,34 +264,22 @@ const WatchDmmPage: React.FC = () => {
         <ul className="text-slate-300 text-sm space-y-2">
           <li>・「作品詳細」は Stage Connect 内（キャスト・シリーズ・年表へ繋がります）。</li>
           <li>・「DMMで探す / 視聴する」は外部へ（別タブ推奨）。</li>
-          <li className="text-slate-400">
-            ※配信状況は変わることがあります（登録リンクを元に整理しています）。
-          </li>
+          <li className="text-slate-400">※配信状況は変わることがあります（登録リンクを元に整理しています）。</li>
         </ul>
 
         <div className="mt-5 flex flex-wrap gap-2 justify-center">
-          <Link
-            to="/watch"
-            className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-white/10 transition-colors"
-          >
+          <Link to="/watch" className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-white/10 transition-colors">
             /watch に戻る
           </Link>
-          <Link
-            to="/series"
-            className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-white/10 transition-colors"
-          >
+          <Link to="/series" className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-white/10 transition-colors">
             シリーズ一覧へ
           </Link>
-          <Link
-            to="/plays"
-            className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-white/10 transition-colors"
-          >
+          <Link to="/plays" className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-white/10 transition-colors">
             作品一覧へ
           </Link>
         </div>
       </div>
 
-      {/* 中：一覧 */}
       <div className="bg-theater-surface/30 border border-white/10 rounded-2xl overflow-hidden">
         <div className="px-5 py-4 border-b border-white/5 bg-black/20 flex items-center justify-between">
           <div className="text-[10px] font-bold uppercase tracking-widest text-slate-500">LIST</div>
@@ -285,16 +297,11 @@ const WatchDmmPage: React.FC = () => {
         {!loading && items.length > 0 && (
           <div className="p-4 sm:p-5 grid grid-cols-1 sm:grid-cols-2 gap-3">
             {items.map((it) => {
-              const seriesKey =
-                it.franchiseSlug?.trim() ? it.franchiseSlug.trim() : it.franchiseName ?? null;
-
-              const vodHref = (it.vodUrl && it.vodUrl.trim()) ? it.vodUrl.trim() : DMM_FALLBACK_URL;
+              const seriesKey = it.franchiseSlug?.trim() ? it.franchiseSlug.trim() : it.franchiseName ?? null;
+              const vodHref = it.vodUrl?.trim() ? it.vodUrl.trim() : DMM_FALLBACK_URL;
 
               return (
-                <div
-                  key={it.id}
-                  className={`rounded-xl border border-white/10 bg-black/30 p-4 transition-colors ${HOVER_CLASS}`}
-                >
+                <div key={it.id} className={`rounded-xl border border-white/10 bg-black/30 p-4 transition-colors ${HOVER_CLASS}`}>
                   <div className="flex items-start justify-between gap-3">
                     <div className="min-w-0">
                       <Link to={`/plays/${it.slug}`} className="block text-white font-semibold leading-snug hover:underline">
@@ -305,10 +312,7 @@ const WatchDmmPage: React.FC = () => {
                         {it.franchiseName && seriesKey && (
                           <span className="inline-flex items-center gap-1">
                             <span className="text-slate-600">シリーズ:</span>
-                            <Link
-                              to={`/series/${encodeURIComponent(seriesKey)}`}
-                              className="text-slate-300 hover:underline"
-                            >
+                            <Link to={`/series/${encodeURIComponent(seriesKey)}`} className="text-slate-300 hover:underline">
                               {it.franchiseName}
                             </Link>
                           </span>
@@ -358,7 +362,6 @@ const WatchDmmPage: React.FC = () => {
         )}
       </div>
 
-      {/* 下：コンテンツ（厚くする土台：FAQ/導線） */}
       <div className="mt-8 bg-theater-surface/30 border border-white/10 rounded-2xl p-6 sm:p-8">
         <h2 className="text-white font-bold text-lg mb-2">DMM棚の補足</h2>
         <p className="text-slate-300 text-sm leading-relaxed">
@@ -368,22 +371,13 @@ const WatchDmmPage: React.FC = () => {
         </p>
 
         <div className="mt-4 flex flex-wrap gap-2">
-          <Link
-            to="/series"
-            className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-white/10 transition-colors"
-          >
+          <Link to="/series" className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-white/10 transition-colors">
             シリーズ一覧へ
           </Link>
-          <Link
-            to="/actors"
-            className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-white/10 transition-colors"
-          >
+          <Link to="/actors" className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-white/10 transition-colors">
             俳優一覧へ
           </Link>
-          <Link
-            to="/search"
-            className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-white/10 transition-colors"
-          >
+          <Link to="/search" className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-white/10 transition-colors">
             検索へ
           </Link>
         </div>
