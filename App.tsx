@@ -13,6 +13,8 @@ import Favorites from "./components/Favorites";
 import GuideList from "./components/GuideList";
 import GuideDetail from "./components/GuideDetail";
 import { DebugSupabase } from "./DebugSupabase";
+import WatchIndex from "./components/watch/WatchIndex";
+import WatchProvider from "./components/watch/WatchProvider";
 
 import { gaPageView } from "./lib/ga";
 import SeoHead from "./components/SeoHead";
@@ -77,6 +79,8 @@ const App: React.FC = () => {
           <Route path="/series" element={<SeriesList />} />
           <Route path="/series/:name" element={<SeriesDetail />} />
           <Route path="/favorites" element={<Favorites />} />
+          <Route path="/watch" element={<WatchIndex />} />
+          <Route path="/watch/:provider" element={<WatchProvider />} />
 
           {/* Guide */}
           <Route path="/guide" element={<GuideList />} />
