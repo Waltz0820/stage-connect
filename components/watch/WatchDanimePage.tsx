@@ -5,20 +5,20 @@ import { supabase } from "../../lib/supabase";
 import Breadcrumbs from "../Breadcrumbs";
 import SeoHead from "../SeoHead";
 
+type FranchiseRow = { name?: string | null; slug?: string | null } | null;
+
 type PlayRowRaw = {
   id: string;
   slug: string;
   title: string;
-  year?: number | null;
-  vod_links?: any;
-  franchises?: { name?: string | null; slug?: string | null } | null;
+  vod?: any; // ✅ JSON: { dmm: "...", unext: "...", danime: "..." }
+  franchises?: FranchiseRow;
 };
 
 type PlayItem = {
   id: string;
   slug: string;
   title: string;
-  year?: number | null;
   franchiseName?: string | null;
   franchiseSlug?: string | null;
   vodUrl: string;
@@ -26,40 +26,23 @@ type PlayItem = {
 
 const PAGE_SIZE = 36;
 
-// dアニメ: vod_links の key 揺れ対策
-const VOD_KEYS = [
-  "danime",
-  "d-anime",
-  "d_anime",
-  "danime_store",
-  "dアニメ",
-  "dアニメストア",
-] as const;
+// key 揺れ吸収（dアニメ）
+const DANIME_KEYS = ["danime", "d-anime", "d_anime", "dAnime", "DANIME", "D-ANIME", "dアニメ"];
 
-function pickVodUrl(vodLinks: any, keys: readonly string[]): string | null {
-  if (!vodLinks) return null;
+function isValidVodUrl(url: string): boolean {
+  const s = (url ?? "").trim();
+  if (!s) return false;
+  return /^https?:\/\/.+/i.test(s);
+}
 
-  // object 形式想定
-  if (typeof vodLinks === "object" && !Array.isArray(vodLinks)) {
+function pickVodUrl(vodJson: any, keys: string[]): string | null {
+  if (!vodJson) return null;
+  if (typeof vodJson === "object" && !Array.isArray(vodJson)) {
     for (const k of keys) {
-      const v = vodLinks?.[k];
-      if (typeof v === "string" && v.trim()) return v.trim();
+      const v = vodJson?.[k];
+      if (typeof v === "string" && isValidVodUrl(v)) return v.trim();
     }
-    return null;
   }
-
-  // 配列形式の保険
-  if (Array.isArray(vodLinks)) {
-    for (const item of vodLinks) {
-      if (!item || typeof item !== "object") continue;
-      for (const k of keys) {
-        const v = (item as any)?.[k];
-        if (typeof v === "string" && v.trim()) return v.trim();
-      }
-    }
-    return null;
-  }
-
   return null;
 }
 
@@ -72,16 +55,19 @@ const WatchDanimePage: React.FC = () => {
 
   const seqRef = useRef(0);
 
-  const title = "dアニメストアで観られる2.5次元作品";
-  const label = "dアニメ";
-
   const breadcrumbs = useMemo(
     () => [
       { label: "配信で観る", to: "/watch" },
-      { label, to: "/watch/danime" },
+      { label: "dアニメストア", to: "/watch/danime" },
     ],
     []
   );
+
+  const TITLE = "dアニメストアで観られる2.5次元作品（参考）";
+  const BADGE_CLASS = "bg-white/5 border-white/10 text-slate-200";
+  const HOVER_CLASS = "hover:bg-white/5";
+
+  const DANIME_FALLBACK_URL = "https://animestore.docomo.ne.jp/";
 
   const fetchPage = async (nextPage: number) => {
     const mySeq = ++seqRef.current;
@@ -90,33 +76,32 @@ const WatchDanimePage: React.FC = () => {
 
     const res = await supabase
       .from("plays")
-      .select("id, slug, title, year, vod_links, franchises(name, slug)")
-      .not("vod_links", "is", null)
+      .select("id, slug, title, vod, franchises(name, slug)")
+      .not("vod", "is", null)
       .order("title", { ascending: true })
       .range(from, to);
 
     if (mySeq !== seqRef.current) return;
 
     if (res.error) {
-      console.warn("[watch danime] fetch error", res.error);
+      console.warn("[watch/danime] fetch error", res.error);
       setHasMore(false);
       return;
     }
 
     const raw: PlayRowRaw[] = (res.data as any) ?? [];
+
     const normalized: PlayItem[] = raw
       .map((r) => {
-        const vodUrl = pickVodUrl(r.vod_links, VOD_KEYS);
-        if (!vodUrl) return null;
-
+        const url = pickVodUrl(r.vod, DANIME_KEYS);
+        if (!url) return null;
         return {
           id: r.id,
           slug: r.slug,
           title: r.title,
-          year: r.year ?? null,
           franchiseName: r.franchises?.name ?? null,
           franchiseSlug: r.franchises?.slug ?? null,
-          vodUrl,
+          vodUrl: url,
         } as PlayItem;
       })
       .filter(Boolean) as PlayItem[];
@@ -151,28 +136,27 @@ const WatchDanimePage: React.FC = () => {
 
   return (
     <div className="container mx-auto px-6 pt-8 pb-16 lg:px-8 max-w-5xl animate-fade-in-up">
-      <SeoHead title={`${title} | Stage Connect`} robots="index,follow" />
+      <SeoHead title={`${TITLE} | Stage Connect`} robots="index,follow" />
       <Breadcrumbs items={breadcrumbs} />
 
-      {/* 上：コンテンツ */}
       <div className="mb-8 text-center">
-        <span className="inline-block px-3 py-1 mb-4 rounded-full border text-xs font-bold tracking-widest uppercase bg-white/5 border-white/10 text-slate-200">
-          {label}
+        <span
+          className={`inline-block px-3 py-1 mb-4 rounded-full border text-xs font-bold tracking-widest uppercase ${BADGE_CLASS}`}
+        >
+          dアニメ
         </span>
-        <h1 className="text-3xl sm:text-4xl font-extrabold text-white mb-3">{title}</h1>
+        <h1 className="text-3xl sm:text-4xl font-extrabold text-white mb-3">{TITLE}</h1>
         <p className="text-slate-400 text-sm">
-          配信で観られる作品をまとめた「入口の棚」です。気になる作品を見つけたら、作品詳細からシリーズや俳優へ。
+          ここは“参考棚”。まずは DMM / U-NEXT を厚くして、余力で埋めていく前提の枠です。
         </p>
       </div>
 
       <div className="bg-theater-surface/40 border border-white/10 rounded-2xl p-6 sm:p-8 mb-6">
         <h2 className="text-white font-bold text-lg mb-2">この棚の使い方</h2>
         <ul className="text-slate-300 text-sm space-y-2">
-          <li>・作品カードの「作品詳細」は Stage Connect 内。</li>
-          <li>・「視聴する」は外部サイトへ遷移（別タブ推奨）。</li>
-          <li className="text-slate-400">
-            ※配信状況は変わることがあります（登録リンクを元に整理しています）。
-          </li>
+          <li>・「作品詳細」は Stage Connect 内（キャスト・シリーズへ繋がります）。</li>
+          <li>・「視聴する」は外部へ（別タブ推奨）。</li>
+          <li className="text-slate-400">※配信状況は変わることがあります（登録リンクを元に整理しています）。</li>
         </ul>
 
         <div className="mt-5 flex flex-wrap gap-2 justify-center">
@@ -182,14 +166,12 @@ const WatchDanimePage: React.FC = () => {
           >
             /watch に戻る
           </Link>
-
           <Link
             to="/series"
             className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-white/10 transition-colors"
           >
             シリーズ一覧へ
           </Link>
-
           <Link
             to="/plays"
             className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-white/10 transition-colors"
@@ -199,7 +181,6 @@ const WatchDanimePage: React.FC = () => {
         </div>
       </div>
 
-      {/* 中：一覧 */}
       <div className="bg-theater-surface/30 border border-white/10 rounded-2xl overflow-hidden">
         <div className="px-5 py-4 border-b border-white/5 bg-black/20 flex items-center justify-between">
           <div className="text-[10px] font-bold uppercase tracking-widest text-slate-500">LIST</div>
@@ -209,69 +190,55 @@ const WatchDanimePage: React.FC = () => {
         {loading && <div className="p-10 text-center text-slate-500">読み込み中...</div>}
 
         {!loading && items.length === 0 && (
-          <div className="p-10 text-center text-slate-500">
-            まだこの棚に作品がありません（vod_links が未入力の可能性）。
-          </div>
+          <div className="p-10 text-center text-slate-500">まだこの棚に作品がありません（vod の dアニメリンクが未入力の可能性）。</div>
         )}
 
         {!loading && items.length > 0 && (
           <div className="p-4 sm:p-5 grid grid-cols-1 sm:grid-cols-2 gap-3">
-            {items.map((it) => (
-              <div
-                key={it.id}
-                className="rounded-xl border border-white/10 bg-black/30 p-4 transition-colors hover:bg-white/5"
-              >
-                <div className="flex items-start justify-between gap-3">
-                  <div className="min-w-0">
-                    <Link
-                      to={`/plays/${it.slug}`}
-                      className="block text-white font-semibold leading-snug hover:underline"
-                    >
-                      {it.title}
-                    </Link>
+            {items.map((it) => {
+              const seriesKey = it.franchiseSlug?.trim() ? it.franchiseSlug.trim() : it.franchiseName ?? null;
+              const vodHref = it.vodUrl?.trim() ? it.vodUrl.trim() : DANIME_FALLBACK_URL;
 
-                    <div className="mt-1 text-[11px] text-slate-500 flex flex-wrap gap-x-2 gap-y-1">
-                      {it.franchiseName && (
-                        <span className="inline-flex items-center gap-1">
-                          <span className="text-slate-600">シリーズ:</span>
-                          <Link
-                            to={`/series/${encodeURIComponent(
-                              it.franchiseSlug?.trim() ? it.franchiseSlug!.trim() : it.franchiseName!
-                            )}`}
-                            className="text-slate-300 hover:underline"
-                          >
-                            {it.franchiseName}
-                          </Link>
-                        </span>
-                      )}
-                      {typeof it.year === "number" && (
-                        <span className="inline-flex items-center gap-1">
-                          <span className="text-slate-600">年:</span>
-                          <span className="text-slate-300">{it.year}</span>
-                        </span>
-                      )}
+              return (
+                <div key={it.id} className={`rounded-xl border border-white/10 bg-black/30 p-4 transition-colors ${HOVER_CLASS}`}>
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="min-w-0">
+                      <Link to={`/plays/${it.slug}`} className="block text-white font-semibold leading-snug hover:underline">
+                        {it.title}
+                      </Link>
+
+                      <div className="mt-1 text-[11px] text-slate-500 flex flex-wrap gap-x-2 gap-y-1">
+                        {it.franchiseName && seriesKey && (
+                          <span className="inline-flex items-center gap-1">
+                            <span className="text-slate-600">シリーズ:</span>
+                            <Link to={`/series/${encodeURIComponent(seriesKey)}`} className="text-slate-300 hover:underline">
+                              {it.franchiseName}
+                            </Link>
+                          </span>
+                        )}
+                      </div>
+                    </div>
+
+                    <div className="flex flex-col gap-2 shrink-0">
+                      <a
+                        href={vodHref}
+                        target="_blank"
+                        rel="sponsored noopener noreferrer"
+                        className="px-3 py-2 rounded-full bg-white/5 border border-white/10 text-white text-[11px] font-bold hover:bg-white/10 transition-colors text-center"
+                      >
+                        視聴する ↗
+                      </a>
+                      <Link
+                        to={`/plays/${it.slug}`}
+                        className="px-3 py-2 rounded-full bg-white/5 border border-white/10 text-slate-200 text-[11px] font-bold hover:bg-white/10 transition-colors text-center"
+                      >
+                        作品詳細
+                      </Link>
                     </div>
                   </div>
-
-                  <div className="flex flex-col gap-2 shrink-0">
-                    <a
-                      href={it.vodUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="px-3 py-2 rounded-full bg-white/5 border border-white/10 text-white text-[11px] font-bold hover:bg-white/10 transition-colors text-center"
-                    >
-                      視聴する ↗
-                    </a>
-                    <Link
-                      to={`/plays/${it.slug}`}
-                      className="px-3 py-2 rounded-full bg-white/5 border border-white/10 text-slate-200 text-[11px] font-bold hover:bg-white/10 transition-colors text-center"
-                    >
-                      作品詳細
-                    </Link>
-                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         )}
 
@@ -286,35 +253,6 @@ const WatchDanimePage: React.FC = () => {
             </button>
           </div>
         )}
-      </div>
-
-      {/* 下：コンテンツ */}
-      <div className="mt-8 bg-theater-surface/30 border border-white/10 rounded-2xl p-6 sm:p-8">
-        <h2 className="text-white font-bold text-lg mb-2">次に迷ったら</h2>
-        <p className="text-slate-300 text-sm leading-relaxed">
-          配信棚はあくまで入口。作品詳細で「シリーズ」や「俳優」を辿ると、StageConnectの回遊が一番気持ちいい。
-        </p>
-
-        <div className="mt-4 flex flex-wrap gap-2">
-          <Link
-            to="/actors"
-            className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-white/10 transition-colors"
-          >
-            俳優一覧へ
-          </Link>
-          <Link
-            to="/series"
-            className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-white/10 transition-colors"
-          >
-            シリーズ一覧へ
-          </Link>
-          <Link
-            to="/search"
-            className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-white/10 transition-colors"
-          >
-            検索へ
-          </Link>
-        </div>
       </div>
     </div>
   );
