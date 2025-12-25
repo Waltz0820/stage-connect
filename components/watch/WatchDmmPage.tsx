@@ -19,7 +19,7 @@ type PlayRowRaw = {
   slug: string;
   title: string;
   year?: number | null;
-  vod_links?: any;
+  vod?: any; // ✅ plays.vod (jsonb)
   franchises?: { name?: string | null; slug?: string | null } | null;
 };
 
@@ -35,57 +35,28 @@ type PlayItem = {
 
 const PAGE_SIZE = 36;
 
-// vod_links の key 揺れ吸収（フォールバック用）
+// ✅ plays.vod の key 揺れ吸収
 const DMM_KEYS = ["dmm", "dmm_tv", "dmm-tv", "dmmTV"];
 
-// ✅ string(JSON文字列)も拾う + 形式ゆれ保険
-function pickVodUrl(vodLinks: any, keys: string[]): string | null {
-  if (!vodLinks) return null;
-
-  // ✅ jsonb string（"{"dmm":"..."}"）を object に戻す
-  if (typeof vodLinks === "string") {
-    try {
-      vodLinks = JSON.parse(vodLinks);
-    } catch {
-      return null;
-    }
-  }
+function pickVodUrl(vod: any, keys: string[]): string | null {
+  if (!vod) return null;
 
   // object想定
-  if (typeof vodLinks === "object" && !Array.isArray(vodLinks)) {
+  if (typeof vod === "object" && !Array.isArray(vod)) {
     for (const k of keys) {
-      const v = vodLinks?.[k];
-
-      // string直
+      const v = vod?.[k];
       if (typeof v === "string" && v.trim()) return v.trim();
-
-      // { url: "..." } みたいな形の保険
-      if (v && typeof v === "object") {
-        const u = (v as any)?.url ?? (v as any)?.href;
-        if (typeof u === "string" && u.trim()) return u.trim();
-      }
     }
     return null;
   }
 
   // 配列で来た場合の保険
-  if (Array.isArray(vodLinks)) {
-    for (const item of vodLinks) {
-      if (!item) continue;
-
-      // { provider:"dmm", url:"..." } 形式
-      const prov = (item as any)?.provider;
-      const url = (item as any)?.url;
-      if (typeof prov === "string" && typeof url === "string") {
-        if (keys.includes(prov) && url.trim()) return url.trim();
-      }
-
-      // { dmm:"..." } 形式
-      if (typeof item === "object") {
-        for (const k of keys) {
-          const v = (item as any)?.[k];
-          if (typeof v === "string" && v.trim()) return v.trim();
-        }
+  if (Array.isArray(vod)) {
+    for (const item of vod) {
+      if (!item || typeof item !== "object") continue;
+      for (const k of keys) {
+        const v = item?.[k];
+        if (typeof v === "string" && v.trim()) return v.trim();
       }
     }
   }
@@ -100,7 +71,6 @@ const WatchDmmPage: React.FC = () => {
   const [hasMore, setHasMore] = useState(true);
   const [page, setPage] = useState(0);
 
-  // 競合防止
   const seqRef = useRef(0);
 
   const breadcrumbs = useMemo(
@@ -142,8 +112,7 @@ const WatchDmmPage: React.FC = () => {
     const from = nextPage * PAGE_SIZE;
     const to = from + PAGE_SIZE - 1;
 
-    // まずは view（plays_vod）前提で綺麗に取る。
-    // まだ view を作ってない場合は、自動で plays + vod_links 方式にフォールバックする。
+    // view があるなら使う（無ければ fallback）
     const tryView = await supabase
       .from("plays_vod")
       .select("id, slug, title, year, dmm_url, franchises(name, slug)")
@@ -153,7 +122,6 @@ const WatchDmmPage: React.FC = () => {
 
     if (mySeq !== seqRef.current) return;
 
-    // ✅ view があるならそれを採用
     if (!tryView.error) {
       const raw = ((tryView.data as any) ?? []) as PlayRowFromView[];
       const normalized: PlayItem[] = raw
@@ -180,13 +148,13 @@ const WatchDmmPage: React.FC = () => {
       return;
     }
 
-    // ✅ view が無い/権限/スキーマ違い等 → フォールバック
     console.warn("[watch/dmm] plays_vod not available, fallback to plays", tryView.error);
 
+    // ✅ ここが本命：plays.vod を読む
     const res = await supabase
       .from("plays")
-      .select("id, slug, title, year, vod_links, franchises(name, slug)")
-      .not("vod_links", "is", null)
+      .select("id, slug, title, year, vod, franchises(name, slug)")
+      .not("vod", "is", null)
       .order("title", { ascending: true })
       .range(from, to);
 
@@ -199,10 +167,9 @@ const WatchDmmPage: React.FC = () => {
     }
 
     const raw: PlayRowRaw[] = (res.data as any) ?? [];
-
     const normalized: PlayItem[] = raw
       .map((r) => {
-        const vodUrl = pickVodUrl(r.vod_links, DMM_KEYS);
+        const vodUrl = pickVodUrl(r.vod, DMM_KEYS);
         if (!vodUrl) return null;
         return normalizeItem({
           id: r.id,
@@ -263,7 +230,7 @@ const WatchDmmPage: React.FC = () => {
         <h2 className="text-white font-bold text-lg mb-2">この棚の使い方</h2>
         <ul className="text-slate-300 text-sm space-y-2">
           <li>・「作品詳細」は Stage Connect 内（キャスト・シリーズ・年表へ繋がります）。</li>
-          <li>・「DMMで探す / 視聴する」は外部へ（別タブ推奨）。</li>
+          <li>・「視聴する」は外部へ（別タブ推奨）。</li>
           <li className="text-slate-400">※配信状況は変わることがあります（登録リンクを元に整理しています）。</li>
         </ul>
 
@@ -290,7 +257,7 @@ const WatchDmmPage: React.FC = () => {
 
         {!loading && items.length === 0 && (
           <div className="p-10 text-center text-slate-500">
-            まだこの棚に作品がありません（vod_links / dmm_url 未入力の可能性）。
+            まだこの棚に作品がありません（vod / dmm_url 未入力の可能性）。
           </div>
         )}
 
@@ -380,26 +347,6 @@ const WatchDmmPage: React.FC = () => {
           <Link to="/search" className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-white/10 transition-colors">
             検索へ
           </Link>
-        </div>
-
-        <div className="mt-6 border-t border-white/10 pt-6">
-          <h3 className="text-white font-bold text-sm mb-3">よくある質問（仮）</h3>
-          <ul className="text-slate-300 text-sm space-y-2">
-            <li>
-              <span className="text-slate-400">Q.</span> ここに載ってる作品は全部DMMで観られますか？
-              <br />
-              <span className="text-slate-500">
-                A. vod_links に登録されているリンクを元に整理しています。配信状況は変わるため、最終的には遷移先で確認してください。
-              </span>
-            </li>
-            <li>
-              <span className="text-slate-400">Q.</span> 作品詳細のリンクと、この棚のリンクは何が違う？
-              <br />
-              <span className="text-slate-500">
-                A. 作品詳細はStageConnect内の回遊（キャスト/シリーズ/年表）用。棚のボタンは外部で観るための入口です。
-              </span>
-            </li>
-          </ul>
         </div>
       </div>
     </div>
