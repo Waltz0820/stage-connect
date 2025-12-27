@@ -198,7 +198,7 @@ const PlayDetail: React.FC = () => {
       mainEntity: [
         {
           '@type': 'Question',
-          name: `舞台『${play.title}』は動画配信されていますか？`,
+          name: `『${play.title}』は動画配信されていますか？`,
           acceptedAnswer: {
             '@type': 'Answer',
             text: hasVodLinks
