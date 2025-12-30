@@ -20,6 +20,19 @@ type PlayLike = {
   genre?: PlayGenre | null;
 };
 
+// ✅ tags の正規化（play_tags → tags.name）
+const normalizeTagsFromJoin = (p: any): string[] | null => {
+  const arr = (p?.play_tags ?? []) as any[];
+  const names = arr
+    .map((x) => x?.tag?.name)
+    .filter((v) => typeof v === 'string' && v.trim().length > 0)
+    .map((v) => v.trim());
+
+  // 重複除去（念のため）
+  const uniq = Array.from(new Set(names));
+  return uniq.length > 0 ? uniq : null;
+};
+
 const normalizePlayRow = (p: any): PlayLike => ({
   id: p.id,
   slug: p.slug,
@@ -28,7 +41,10 @@ const normalizePlayRow = (p: any): PlayLike => ({
   period: p.period ?? null,
   venue: p.venue ?? null,
   vod: p.vod ?? null,
-  tags: (p.tags as string[] | null) ?? null,
+
+  // ✅ ここが肝：DBの join を正として tags を作る
+  tags: normalizeTagsFromJoin(p),
+
   franchise: p.franchise?.name ?? p.franchise ?? null,
   genre: (p.genre as PlayGenre | null) ?? null,
 });
@@ -65,9 +81,11 @@ const Plays: React.FC = () => {
             period,
             venue,
             vod,
-            tags,
             genre,
-            franchise:franchises ( name )
+            franchise:franchises ( name ),
+            play_tags:play_tags (
+              tag:tags ( name )
+            )
           `
           );
 

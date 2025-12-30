@@ -1,25 +1,29 @@
 // src/components/PlayDetail.tsx
 
-import React, { useEffect, useMemo, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { supabase } from '../lib/supabase';
+import React, { useEffect, useMemo, useState } from "react";
+import { useParams, Link } from "react-router-dom";
+import { supabase } from "../lib/supabase";
 
-import { getPlayBySlug } from '../lib/utils/getPlayBySlug';
-import { getActorsByPlaySlug } from '../lib/utils/getActorsByPlaySlug';
+import { getPlayBySlug } from "../lib/utils/getPlayBySlug";
+import { getActorsByPlaySlug } from "../lib/utils/getActorsByPlaySlug";
 
-import ActorCard from './ActorCard';
-import TagBadge from './TagBadge';
-import FavoriteButton from './FavoriteButton';
-import ShareButton from './ShareButton';
-import Breadcrumbs from './Breadcrumbs';
+import ActorCard from "./ActorCard";
+import TagBadge from "./TagBadge";
+import FavoriteButton from "./FavoriteButton";
+import ShareButton from "./ShareButton";
+import Breadcrumbs from "./Breadcrumbs";
 
-import type { Actor } from '../lib/types';
+import type { Actor } from "../lib/types";
 
 type CreditItem = {
   role: string;
   names: string[] | string;
   is_core?: boolean;
   sort_order?: number;
+};
+
+type CreditsObj = {
+  items?: CreditItem[];
 };
 
 type PlayRecord = {
@@ -35,12 +39,15 @@ type PlayRecord = {
     unext?: string;
     [key: string]: any;
   } | null;
+
+  // ✅ 表示用：最終的には string[] に寄せる（DB由来でもローカル由来でも）
   tags?: string[] | null;
+
   franchise?: string | null;
   franchise_id?: string | null;
 
-  // ✅ plays.credits(jsonb) をそのまま受ける
-  credits?: CreditItem[] | null;
+  // ✅ plays.credits(jsonb) は {items:[...]} or [...] の両対応で吸収する
+  credits?: CreditsObj | CreditItem[] | null;
 };
 
 // ✅ DB actor row -> front Actor へ寄せる
@@ -48,17 +55,17 @@ const normalizeActorRow = (a: any): Actor => {
   return {
     slug: a.slug,
     name: a.name,
-    kana: a.kana ?? '',
-    profile: a.profile ?? '',
-    imageUrl: a.image_url ?? a.imageUrl ?? '',
-    gender: (a.gender ?? 'male') as any,
+    kana: a.kana ?? "",
+    profile: a.profile ?? "",
+    imageUrl: a.image_url ?? a.imageUrl ?? "",
+    gender: (a.gender ?? "male") as any,
     sns: (a.sns ?? {}) as any,
     tags: (a.tags ?? []) as any,
     featuredPlaySlugs: (a.featured_play_slugs ?? a.featuredPlaySlugs ?? []) as any,
   } as Actor;
 };
 
-const SITE_NAME = 'Stage Connect';
+const SITE_NAME = "Stage Connect";
 
 const PlayDetail: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -75,60 +82,70 @@ const PlayDetail: React.FC = () => {
   // ✅ Helpers
   // -------------------------
   const normalizeNames = (names: any): string => {
-    if (!names) return '';
-    if (Array.isArray(names)) return names.filter(Boolean).join('　/　');
-    if (typeof names === 'string') return names.trim();
-    if (typeof names === 'object') {
+    if (!names) return "";
+    if (Array.isArray(names)) return names.filter(Boolean).join("　/　");
+    if (typeof names === "string") return names.trim();
+    if (typeof names === "object") {
       const items = (names.items ?? names.names ?? null) as any;
-      if (Array.isArray(items)) return items.filter(Boolean).join('　/　');
+      if (Array.isArray(items)) return items.filter(Boolean).join("　/　");
     }
     return String(names);
   };
 
   const toPlainText = (s: any) => {
-    const str = String(s ?? '');
+    const str = String(s ?? "");
     return str
-      .replace(/<[^>]*>/g, ' ')
-      .replace(/\s+/g, ' ')
+      .replace(/<[^>]*>/g, " ")
+      .replace(/\s+/g, " ")
       .replace(/[“”]/g, '"')
       .replace(/[‘’]/g, "'")
       .trim();
   };
 
-  const truncate = (s: string, n: number) => (s.length <= n ? s : s.slice(0, Math.max(0, n - 1)) + '…');
+  const truncate = (s: string, n: number) => (s.length <= n ? s : s.slice(0, Math.max(0, n - 1)) + "…");
 
   const siteUrl = useMemo(() => {
     const envUrl = (import.meta as any)?.env?.VITE_SITE_URL as string | undefined;
-    if (envUrl) return envUrl.replace(/\/$/, '');
-    if (typeof window !== 'undefined') return window.location.origin.replace(/\/$/, '');
-    return '';
+    if (envUrl) return envUrl.replace(/\/$/, "");
+    if (typeof window !== "undefined") return window.location.origin.replace(/\/$/, "");
+    return "";
   }, []);
+
+  // -------------------------
+  // ✅ credits：DBの形揺れを吸収して items[] を取り出す
+  // -------------------------
+  const extractCreditItems = (raw: any): CreditItem[] => {
+    if (!raw) return [];
+    if (Array.isArray(raw)) return raw as CreditItem[];
+    if (typeof raw === "object" && Array.isArray(raw.items)) return raw.items as CreditItem[];
+    return [];
+  };
 
   // -------------------------
   // ✅ credits を表示用に正規化
   // -------------------------
   const creditsAll = useMemo(() => {
-    const list = (play?.credits ?? []) as CreditItem[];
+    const list = extractCreditItems(play?.credits) as CreditItem[];
     return list
       .map((c) => ({
-        role: String(c.role ?? '').trim(),
+        role: String(c.role ?? "").trim(),
         namesRaw: c.names,
         namesText: normalizeNames(c.names),
         is_core: Boolean((c as any).is_core),
-        sort_order: typeof (c as any).sort_order === 'number' ? (c as any).sort_order : 999,
+        sort_order: typeof (c as any).sort_order === "number" ? (c as any).sort_order : 999,
       }))
       .filter((c) => c.role && c.namesText);
   }, [play?.credits]);
 
   const isCoreRole = (role: string, is_core?: boolean) => {
     if (is_core) return true;
-    const r = role.replace(/\s/g, '');
-    return r === '演出' || r === '脚本' || r === '脚本・作詞' || r === '主催';
+    const r = role.replace(/\s/g, "");
+    return r === "演出" || r === "脚本" || r === "脚本・作詞" || r === "主催";
   };
 
   const creditsCore = useMemo(() => {
     const core = creditsAll.filter((c) => isCoreRole(c.role, c.is_core));
-    const order = ['演出', '脚本', '脚本・作詞', '主催'];
+    const order = ["演出", "脚本", "脚本・作詞", "主催"];
     return core.sort((a, b) => {
       const ai = order.indexOf(a.role);
       const bi = order.indexOf(b.role);
@@ -146,8 +163,8 @@ const PlayDetail: React.FC = () => {
   const hasAnyCredits = creditsAll.length > 0;
 
   // castNames（表示用）
-  const castTop = useMemo(() => cast.slice(0, 3).map((a) => a.name).join('、'), [cast]);
-  const castNames = castTop ? `${castTop}ら` : '未定';
+  const castTop = useMemo(() => cast.slice(0, 3).map((a) => a.name).join("、"), [cast]);
+  const castNames = castTop ? `${castTop}ら` : "未定";
 
   // hasVod
   const hasVodLinks = useMemo(() => !!(play?.vod && (play.vod.dmm || play.vod.danime || play.vod.unext)), [play]);
@@ -156,7 +173,7 @@ const PlayDetail: React.FC = () => {
   // ✅ SEO head (React 19 native)
   // -------------------------
   const canonicalUrl = useMemo(() => {
-    if (!play?.slug || !siteUrl) return '';
+    if (!play?.slug || !siteUrl) return "";
     return `${siteUrl}/plays/${encodeURIComponent(play.slug)}`;
   }, [play?.slug, siteUrl]);
 
@@ -166,13 +183,13 @@ const PlayDetail: React.FC = () => {
   }, [play]);
 
   const seoDescription = useMemo(() => {
-    if (!play) return '2.5次元舞台・ミュージカル作品のキャスト/配信(VOD)/公演情報をまとめるStage Connect。';
+    if (!play) return "2.5次元舞台・ミュージカル作品のキャスト/配信(VOD)/公演情報をまとめるStage Connect。";
 
-    const base = play.summary ? toPlainText(play.summary) : '';
-    const period = play.period ? `期間：${toPlainText(play.period)}。` : '';
-    const venue = play.venue ? `劇場：${toPlainText(play.venue)}。` : '';
-    const castLine = castTop ? `出演：${castTop}。` : '';
-    const vodLine = hasVodLinks ? 'VOD配信情報あり。' : 'VOD配信情報は確認中。';
+    const base = play.summary ? toPlainText(play.summary) : "";
+    const period = play.period ? `期間：${toPlainText(play.period)}。` : "";
+    const venue = play.venue ? `劇場：${toPlainText(play.venue)}。` : "";
+    const castLine = castTop ? `出演：${castTop}。` : "";
+    const vodLine = hasVodLinks ? "VOD配信情報あり。" : "VOD配信情報は確認中。";
 
     const composed = base
       ? base
@@ -184,7 +201,7 @@ const PlayDetail: React.FC = () => {
   const ogImage = useMemo(() => {
     const envOg = (import.meta as any)?.env?.VITE_OG_IMAGE as string | undefined;
     if (envOg) return envOg;
-    return '';
+    return "";
   }, []);
 
   // -------------------------
@@ -193,32 +210,32 @@ const PlayDetail: React.FC = () => {
   const jsonLdFaq = useMemo(() => {
     if (!play) return null;
     return {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
       mainEntity: [
         {
-          '@type': 'Question',
+          "@type": "Question",
           name: `『${play.title}』は動画配信されていますか？`,
           acceptedAnswer: {
-            '@type': 'Answer',
+            "@type": "Answer",
             text: hasVodLinks
-              ? 'はい、DMM TVやdアニメストア、U-NEXTなどで配信されている場合があります。詳細はページ内の「配信で見る」セクションをご確認ください。'
-              : '現在、主要なVODサービスでの定額見放題配信などは確認できていませんが、レンタル配信やディスク販売が行われている可能性があります。',
+              ? "はい、DMM TVやdアニメストア、U-NEXTなどで配信されている場合があります。詳細はページ内の「配信で見る」セクションをご確認ください。"
+              : "現在、主要なVODサービスでの定額見放題配信などは確認できていませんが、レンタル配信やディスク販売が行われている可能性があります。",
           },
         },
         {
-          '@type': 'Question',
-          name: '無料で視聴できる期間はありますか？',
+          "@type": "Question",
+          name: "無料で視聴できる期間はありますか？",
           acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'VODサービスによっては、初回登録時の無料トライアル期間を利用して視聴できる場合があります。各サービスの公式サイトで最新のキャンペーン情報をご確認ください。',
+            "@type": "Answer",
+            text: "VODサービスによっては、初回登録時の無料トライアル期間を利用して視聴できる場合があります。各サービスの公式サイトで最新のキャンペーン情報をご確認ください。",
           },
         },
         {
-          '@type': 'Question',
-          name: '出演キャストは誰ですか？',
+          "@type": "Question",
+          name: "出演キャストは誰ですか？",
           acceptedAnswer: {
-            '@type': 'Answer',
+            "@type": "Answer",
             text: `主な出演者は${castNames}です。ページ下部の「出演キャスト」セクションで全キャスト詳細を確認できます。`,
           },
         },
@@ -230,25 +247,11 @@ const PlayDetail: React.FC = () => {
     if (!play || !canonicalUrl) return null;
 
     const itemList = [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: '作品一覧',
-        item: `${siteUrl}/plays`,
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: play.title,
-        item: canonicalUrl,
-      },
+      { "@type": "ListItem", position: 1, name: "作品一覧", item: `${siteUrl}/plays` },
+      { "@type": "ListItem", position: 2, name: play.title, item: canonicalUrl },
     ];
 
-    return {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: itemList,
-    };
+    return { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: itemList };
   }, [play, canonicalUrl, siteUrl]);
 
   const jsonLdCreativeWork = useMemo(() => {
@@ -258,20 +261,15 @@ const PlayDetail: React.FC = () => {
     const genre = play.franchise ? String(play.franchise) : undefined;
 
     return {
-      '@context': 'https://schema.org',
-      '@type': 'CreativeWork',
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
       name: play.title,
       url: canonicalUrl,
       description: seoDescription,
-      inLanguage: 'ja',
-      keywords: tags.length > 0 ? tags.join(',') : undefined,
+      inLanguage: "ja",
+      keywords: tags.length > 0 ? tags.join(",") : undefined,
       genre,
-      isPartOf: play.franchise
-        ? {
-            '@type': 'CreativeWorkSeries',
-            name: play.franchise,
-          }
-        : undefined,
+      isPartOf: play.franchise ? { "@type": "CreativeWorkSeries", name: play.franchise } : undefined,
     };
   }, [play, canonicalUrl, seoDescription]);
 
@@ -292,10 +290,16 @@ const PlayDetail: React.FC = () => {
         let dbPlay: any = null;
 
         try {
-          const { data, error } = await supabase.from('plays').select('*').eq('slug', slug).maybeSingle();
+          // ※ select * はやめて必要項目だけ（安全＆軽い）
+          const { data, error } = await supabase
+            .from("plays")
+            .select("id,slug,title,summary,period,venue,vod,franchise_id,credits")
+            .eq("slug", slug)
+            .maybeSingle();
+
           if (!error && data) dbPlay = data;
         } catch (err) {
-          console.warn('[PlayDetail] plays query failed:', err);
+          console.warn("[PlayDetail] plays query failed:", err);
         }
 
         let mappedPlay: PlayRecord | null = null;
@@ -303,6 +307,21 @@ const PlayDetail: React.FC = () => {
 
         // 1) DBが取れた
         if (dbPlay) {
+          // ✅ tags は play_tags を正として取る（plays.tags は使わない）
+          let resolvedTags: string[] = [];
+          try {
+            const { data: pt, error: ptErr } = await supabase
+              .from("play_tags")
+              .select("tag:tags(name)")
+              .eq("play_id", dbPlay.id);
+
+            if (!ptErr && pt) {
+              resolvedTags = pt.map((x: any) => x?.tag?.name).filter(Boolean);
+            }
+          } catch (err) {
+            console.warn("[PlayDetail] play_tags query failed:", err);
+          }
+
           mappedPlay = {
             id: dbPlay.id,
             slug: dbPlay.slug,
@@ -311,19 +330,23 @@ const PlayDetail: React.FC = () => {
             period: dbPlay.period ?? null,
             venue: dbPlay.venue ?? null,
             vod: dbPlay.vod ?? null,
-            tags: dbPlay.tags ?? null,
+            tags: resolvedTags.length ? resolvedTags : null, // ✅表示用
             franchise_id: dbPlay.franchise_id ?? null,
             franchise: null,
-            credits: Array.isArray(dbPlay.credits) ? dbPlay.credits : null,
+            credits: dbPlay.credits ?? null, // ✅ shapeは上で吸収する
           };
 
           // franchise名
           if (dbPlay.franchise_id) {
             try {
-              const { data: fr, error: frErr } = await supabase.from('franchises').select('name').eq('id', dbPlay.franchise_id).maybeSingle();
+              const { data: fr, error: frErr } = await supabase
+                .from("franchises")
+                .select("name")
+                .eq("id", dbPlay.franchise_id)
+                .maybeSingle();
               if (!frErr && fr?.name) mappedPlay.franchise = fr.name;
             } catch (err) {
-              console.warn('[PlayDetail] franchises query failed:', err);
+              console.warn("[PlayDetail] franchises query failed:", err);
             }
           }
 
@@ -331,7 +354,7 @@ const PlayDetail: React.FC = () => {
           if (dbPlay.id) {
             try {
               const { data: castRows, error: castError } = await supabase
-                .from('casts')
+                .from("casts")
                 .select(
                   `
                   is_starring,
@@ -349,9 +372,9 @@ const PlayDetail: React.FC = () => {
                   )
                 `
                 )
-                .eq('play_id', dbPlay.id)
-                .order('is_starring', { ascending: false })
-                .order('created_at', { ascending: true });
+                .eq("play_id", dbPlay.id)
+                .order("is_starring", { ascending: false })
+                .order("created_at", { ascending: true });
 
               if (!castError && castRows && castRows.length > 0) {
                 castActors = (castRows as any[])
@@ -360,7 +383,7 @@ const PlayDetail: React.FC = () => {
                   .map(normalizeActorRow);
               }
             } catch (err) {
-              console.warn('[PlayDetail] casts query failed:', err);
+              console.warn("[PlayDetail] casts query failed:", err);
             }
           }
         }
@@ -384,9 +407,9 @@ const PlayDetail: React.FC = () => {
             period: localPlay.period,
             venue: localPlay.venue,
             vod: localPlay.vod,
-            tags: localPlay.tags,
-            franchise: typeof localPlay.franchise === 'string' ? localPlay.franchise : null,
-            credits: Array.isArray(localPlay.credits) ? localPlay.credits : null,
+            tags: localPlay.tags ?? null,
+            franchise: typeof localPlay.franchise === "string" ? localPlay.franchise : null,
+            credits: localPlay.credits ?? null,
           };
 
           castActors = getActorsByPlaySlug(slug);
@@ -463,17 +486,21 @@ const PlayDetail: React.FC = () => {
       {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
       {ogImage && <meta property="og:image" content={ogImage} />}
 
-      <meta name="twitter:card" content={ogImage ? 'summary_large_image' : 'summary'} />
+      <meta name="twitter:card" content={ogImage ? "summary_large_image" : "summary"} />
       <meta name="twitter:title" content={seoTitle} />
       <meta name="twitter:description" content={seoDescription} />
       {ogImage && <meta name="twitter:image" content={ogImage} />}
 
       {/* 構造化データ */}
       {jsonLdFaq && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }} />}
-      {jsonLdBreadcrumbs && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumbs) }} />}
-      {jsonLdCreativeWork && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdCreativeWork) }} />}
+      {jsonLdBreadcrumbs && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumbs) }} />
+      )}
+      {jsonLdCreativeWork && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdCreativeWork) }} />
+      )}
 
-      <Breadcrumbs items={[{ label: '作品一覧', to: '/plays' }, { label: play.title }]} />
+      <Breadcrumbs items={[{ label: "作品一覧", to: "/plays" }, { label: play.title }]} />
 
       <div className="mb-16 border-b border-white/10 pb-8">
         <div className="flex flex-col gap-4">
@@ -495,6 +522,7 @@ const PlayDetail: React.FC = () => {
               <ShareButton title={play.title} text={`${play.title}の作品情報 | ${SITE_NAME}`} className="shrink-0" />
             </div>
 
+            {/* ✅ tags は play_tags 正で表示 */}
             {play.tags && play.tags.length > 0 && (
               <div className="flex flex-wrap gap-2">
                 {play.tags.map((tag) => (
@@ -517,15 +545,15 @@ const PlayDetail: React.FC = () => {
             <p className="text-slate-300 text-sm leading-relaxed font-light">
               舞台『<span className="font-bold text-white">{play.title}</span>』の配信情報（VOD）と公演データをまとめました。出演キャストは{castNames}。
               {hasVodLinks
-                ? '視聴できるサービスがある場合は、下記リンクから詳細を確認できます（配信状況は変動する場合があります）。'
-                : '現在、主要な配信サービスでの取り扱い情報は確認中ですが、DVD/Blu-ray等で視聴可能な場合があります。'}
+                ? "視聴できるサービスがある場合は、下記リンクから詳細を確認できます（配信状況は変動する場合があります）。"
+                : "現在、主要な配信サービスでの取り扱い情報は確認中ですが、DVD/Blu-ray等で視聴可能な場合があります。"}
             </p>
           </section>
 
           <section>
             <h2 className="text-lg font-bold text-white mb-4 flex items-center gap-2 tracking-wide">あらすじ</h2>
             <div className="prose prose-invert max-w-none text-slate-300 leading-8 font-light">
-              {play.summary || '概要情報はまだありません。'}
+              {play.summary || "概要情報はまだありません。"}
             </div>
           </section>
 
@@ -536,11 +564,11 @@ const PlayDetail: React.FC = () => {
             <div className="space-y-6">
               <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-6 border-b border-white/5 pb-4 last:border-0 last:pb-0">
                 <span className="min-w-[4rem] text-sm font-bold text-neon-purple tracking-wider">期間</span>
-                <span className="text-slate-200 text-sm font-medium">{play.period || '未定'}</span>
+                <span className="text-slate-200 text-sm font-medium">{play.period || "未定"}</span>
               </div>
               <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-6 border-b border-white/5 pb-4 last:border-0 last:pb-0">
                 <span className="min-w-[4rem] text-sm font-bold text-neon-purple tracking-wider">劇場</span>
-                <span className="text-slate-200 text-sm font-medium">{play.venue || '未定'}</span>
+                <span className="text-slate-200 text-sm font-medium">{play.venue || "未定"}</span>
               </div>
             </div>
           </section>
@@ -559,7 +587,7 @@ const PlayDetail: React.FC = () => {
                     onClick={() => setIsCreditsOpen((v) => !v)}
                     className="text-[11px] px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-slate-200 hover:bg-white/10 transition-colors font-bold"
                   >
-                    {isCreditsOpen ? '閉じる' : `続きを読む（${creditsExtra.length}）`}
+                    {isCreditsOpen ? "閉じる" : `続きを読む（${creditsExtra.length}）`}
                   </button>
                 )}
               </div>
@@ -651,8 +679,8 @@ const PlayDetail: React.FC = () => {
                 </h3>
                 <p className="text-sm text-slate-400 leading-relaxed pl-5">
                   {hasVodLinks
-                    ? 'はい、DMM TVやdアニメストア、U-NEXTなどで配信されている場合があります。詳細はページ内の「配信で見る」セクションをご確認ください。'
-                    : '現在、主要なVODサービスでの定額見放題配信などは確認できていませんが、レンタル配信やディスク販売が行われている可能性があります。'}
+                    ? "はい、DMM TVやdアニメストア、U-NEXTなどで配信されている場合があります。詳細はページ内の「配信で見る」セクションをご確認ください。"
+                    : "現在、主要なVODサービスでの定額見放題配信などは確認できていませんが、レンタル配信やディスク販売が行われている可能性があります。"}
                 </p>
               </div>
 
