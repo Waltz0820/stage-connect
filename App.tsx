@@ -38,6 +38,9 @@ import AdminActorEdit from "./components/admin/AdminActorEdit";
 
 import AdminCastsEdit from "./components/admin/AdminCastsEdit";
 
+import TagsIndexPage from "./components/tags/TagsIndexPage";
+import TagDetailPage from "./components/tags/TagDetailPage";
+
 const RouteTracker: React.FC = () => {
   const loc = useLocation();
 
@@ -92,6 +95,9 @@ const App: React.FC = () => {
           <Route path="/guide" element={<GuideList />} />
           <Route path="/guide/:slug" element={<GuideDetail />} />
           <Route path="/search" element={<SearchPage />} />
+
+          <Route path="/tags" element={<TagsIndexPage />} />
+          <Route path="/tags/:slug" element={<TagDetailPage />} />
 
           {/* ===== Admin Routes ===== */}
           <Route

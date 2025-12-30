@@ -3,11 +3,20 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { supabase } from "../../lib/supabase";
 import Field from "./widgets/Field";
 import JsonArea from "./widgets/JsonArea";
-import { parseCommaList, parseJsonOr, safeTrim, stringifyPretty, toSlug } from "./widgets/utils";
+import { parseJsonOr, safeTrim, stringifyPretty, toSlug } from "./widgets/utils";
 
 type Mode = "new" | "edit";
 
 type FranchiseRow = { id: string; name: string };
+
+type TagRow = {
+  id: string;
+  slug: string;
+  name: string;
+  type: string; // check制約に合わせてstringで受ける
+  description?: string | null;
+  is_active?: boolean | null; // 無い場合もあるので optional
+};
 
 type CreditItem = {
   role: string;
@@ -28,9 +37,8 @@ type PlayRow = {
   period?: string | null;
   venue?: string | null;
   vod?: any;
-  tags?: string[] | null;
   franchise_id?: string | null;
-  credits?: CreditsObj | null; // ★追加
+  credits?: CreditsObj | null;
 };
 
 // ===== credits helpers =====
@@ -100,7 +108,6 @@ const pasteToCreditsObj = (raw: string): CreditsObj => {
   for (const line of lines) {
     const m = line.match(ROLE_LINE_RE);
     if (m) {
-      // 新しい role 開始
       flush();
       currentRole = normalizeRole(m[1] || m[2] || m[3] || "");
       continue;
@@ -177,6 +184,8 @@ const creditsStats = (credits: CreditsObj | null | undefined) => {
 };
 // ===== /credits helpers =====
 
+const MAX_TAGS = 4;
+
 const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
   const nav = useNavigate();
   const { slug } = useParams<{ slug: string }>();
@@ -191,10 +200,14 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
   const [period, setPeriod] = useState("");
   const [venue, setVenue] = useState("");
   const [franchiseId, setFranchiseId] = useState<string>("");
-  const [tags, setTags] = useState("");
   const [vodText, setVodText] = useState("");
 
-  // ★追加：creditsは「貼り付けテキスト」だけを編集対象にする（ミスらない）
+  // ★ tags（公式）: tags/play_tags を正として運用。plays.tags は触らない。
+  const [allTags, setAllTags] = useState<TagRow[]>([]);
+  const [selectedTagIds, setSelectedTagIds] = useState<Set<string>>(new Set());
+  const [tagMsg, setTagMsg] = useState<string>("");
+
+  // ★ creditsは「貼り付けテキスト」だけを編集対象にする（ミスらない）
   const [creditsPaste, setCreditsPaste] = useState("");
   const [creditsPreview, setCreditsPreview] = useState<CreditsObj>({ items: [] });
   const [creditsErr, setCreditsErr] = useState<string>("");
@@ -210,6 +223,27 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
     loadFr();
   }, []);
 
+  useEffect(() => {
+    const loadTags = async () => {
+      const { data, error } = await supabase
+        .from("tags")
+        .select("id,slug,name,type,description,is_active")
+        .order("type", { ascending: true })
+        .order("name", { ascending: true });
+
+      if (error) {
+        console.warn("[admin plays] load tags error", error);
+        return;
+      }
+
+      const rows = ((data ?? []) as any) as TagRow[];
+      const active = rows.filter((t) => t.is_active !== false);
+      setAllTags(active);
+    };
+
+    loadTags();
+  }, []);
+
   // creditsプレビューはリアルタイム生成（保存前に気づける）
   useEffect(() => {
     try {
@@ -222,6 +256,23 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
     }
   }, [creditsPaste]);
 
+  const syncPlayTags = async (playId: string, ids: Set<string>) => {
+    const picked = Array.from(ids).slice(0, MAX_TAGS);
+
+    const delRes = await supabase.from("play_tags").delete().eq("play_id", playId);
+    if (delRes.error) throw delRes.error;
+
+    if (picked.length > 0) {
+      const insRes = await supabase.from("play_tags").insert(
+        picked.map((tagId) => ({
+          play_id: playId,
+          tag_id: tagId,
+        }))
+      );
+      if (insRes.error) throw insRes.error;
+    }
+  };
+
   useEffect(() => {
     if (mode === "new") {
       setRow(null);
@@ -231,8 +282,11 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
       setPeriod("");
       setVenue("");
       setFranchiseId("");
-      setTags("");
       setVodText(stringifyPretty({}));
+
+      // tags
+      setSelectedTagIds(new Set());
+      setTagMsg("");
 
       // credits
       setCreditsPaste("");
@@ -246,7 +300,7 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
       try {
         const { data, error } = await supabase
           .from("plays")
-          .select("id,slug,title,summary,period,venue,vod,tags,franchise_id,credits") // ★追加
+          .select("id,slug,title,summary,period,venue,vod,franchise_id,credits")
           .eq("slug", key)
           .maybeSingle();
         if (error) throw error;
@@ -260,8 +314,22 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         setPeriod(r.period ?? "");
         setVenue(r.venue ?? "");
         setFranchiseId(r.franchise_id ?? "");
-        setTags((r.tags ?? []).join(", "));
         setVodText(stringifyPretty(r.vod ?? {}));
+
+        // tags（play_tags）
+        const { data: pt, error: ptErr } = await supabase
+          .from("play_tags")
+          .select("tag_id")
+          .eq("play_id", r.id);
+
+        if (ptErr) {
+          console.warn("[admin plays] load play_tags error", ptErr);
+          setSelectedTagIds(new Set());
+        } else {
+          const s = new Set<string>((pt ?? []).map((x: any) => x.tag_id).filter(Boolean));
+          setSelectedTagIds(s);
+        }
+        setTagMsg("");
 
         // credits
         const paste = creditsObjToPaste(r.credits);
@@ -281,6 +349,7 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
   const save = async () => {
     setMsg("");
     setBusy(true);
+
     try {
       // credits：保存直前に確定パース（ここで落ちたら保存しない）
       let creditsObj: CreditsObj | null = null;
@@ -313,9 +382,8 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         period: safeTrim(period) || null,
         venue: safeTrim(venue) || null,
         franchise_id: franchiseId || null,
-        tags: parseCommaList(tags),
         vod: parseJsonOr<any>(vodText, {}),
-        credits: creditsObj, // ★追加
+        credits: creditsObj,
       };
 
       if (!payload.title) {
@@ -329,13 +397,25 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
       }
 
       if (mode === "new") {
-        const { error } = await supabase.from("plays").insert(payload);
+        const { data: created, error } = await supabase
+          .from("plays")
+          .insert(payload)
+          .select("id,slug")
+          .single();
+
         if (error) throw error;
-        nav(`/admin/plays/${encodeURIComponent(payload.slug)}`);
+
+        await syncPlayTags(created.id, selectedTagIds);
+
+        nav(`/admin/plays/${encodeURIComponent(created.slug)}`);
       } else {
         if (!row?.id) return;
+
         const { error } = await supabase.from("plays").update(payload).eq("id", row.id);
         if (error) throw error;
+
+        await syncPlayTags(row.id, selectedTagIds);
+
         setMsg("保存しました");
       }
     } catch (e: any) {
@@ -379,23 +459,25 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
 
   const stats = creditsStats(creditsPreview);
 
+  const groupedTags = useMemo(() => {
+    return allTags.reduce<Record<string, TagRow[]>>((acc, t) => {
+      const k = t.type || "other";
+      acc[k] = acc[k] ?? [];
+      acc[k].push(t);
+      return acc;
+    }, {});
+  }, [allTags]);
+
   return (
     <div className="space-y-4">
       <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
         <div className="flex items-start justify-between gap-3">
           <div>
-            <h1 className="text-xl font-extrabold text-white">
-              {mode === "new" ? "作品新規" : "作品編集"}
-            </h1>
-            <p className="text-xs text-slate-400 mt-1">
-              VOD は JSON でOK（dmm/danime/unext など）
-            </p>
+            <h1 className="text-xl font-extrabold text-white">{mode === "new" ? "作品新規" : "作品編集"}</h1>
+            <p className="text-xs text-slate-400 mt-1">VOD は JSON でOK（dmm/danime/unext など）</p>
           </div>
           <div className="flex items-center gap-2">
-            <Link
-              to="/admin/plays"
-              className="text-xs px-3 py-2 rounded-full bg-white/5 border border-white/10 hover:bg-white/10"
-            >
+            <Link to="/admin/plays" className="text-xs px-3 py-2 rounded-full bg-white/5 border border-white/10 hover:bg-white/10">
               戻る
             </Link>
             {mode === "edit" && row?.slug && (
@@ -480,14 +562,8 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
             </select>
           </Field>
 
-          <Field label="tags" hint="カンマ区切り">
-            <input
-              className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
-              value={tags}
-              onChange={(e) => setTags(e.target.value)}
-              placeholder="例：2.5次元,ミュージカル"
-            />
-          </Field>
+          {/* 右カラムの空きが不自然にならないようにダミー枠 */}
+          <div />
         </div>
 
         <Field label="summary">
@@ -500,7 +576,84 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
           />
         </Field>
 
-        {/* ★追加：credits（最小の事故率を狙う設計） */}
+        {/* tags（公式） */}
+        <Field label="tags（公式）" hint={`最大${MAX_TAGS}つ。横断テーマだけ（ジャンル/シリーズと被らせない）`}>
+          <div className="space-y-3">
+            <div className="text-xs text-slate-400">
+              選択：<b className="text-slate-200">{selectedTagIds.size}</b> / {MAX_TAGS}
+              {tagMsg && <span className="ml-2 text-slate-300">{tagMsg}</span>}
+            </div>
+
+            <div className="flex flex-wrap gap-2">
+              <button
+                type="button"
+                onClick={() => {
+                  setSelectedTagIds(new Set());
+                  setTagMsg("クリア（保存で確定）");
+                }}
+                className="text-xs px-3 py-2 rounded-full bg-white/5 border border-white/10 hover:bg-white/10"
+              >
+                クリア
+              </button>
+            </div>
+
+            <div className="space-y-4">
+              {Object.entries(groupedTags).map(([type, list]) => (
+                <div key={type} className="rounded-xl border border-white/10 bg-black/30 p-4">
+                  <div className="text-xs font-bold tracking-widest text-slate-400 mb-3">{type.toUpperCase()}</div>
+
+                  <div className="grid sm:grid-cols-2 gap-2">
+                    {list.map((t) => {
+                      const checked = selectedTagIds.has(t.id);
+                      const reached = selectedTagIds.size >= MAX_TAGS;
+
+                      return (
+                        <label
+                          key={t.id}
+                          className={`flex items-start gap-3 rounded-lg border border-white/10 px-3 py-2 cursor-pointer hover:bg-white/5 ${
+                            checked ? "bg-white/5" : "bg-transparent"
+                          }`}
+                        >
+                          <input
+                            type="checkbox"
+                            className="mt-1"
+                            checked={checked}
+                            disabled={!checked && reached}
+                            onChange={() => {
+                              setSelectedTagIds((prev) => {
+                                const next = new Set(prev);
+                                if (next.has(t.id)) next.delete(t.id);
+                                else {
+                                  if (next.size >= MAX_TAGS) {
+                                    setTagMsg(`最大${MAX_TAGS}つまで`);
+                                    return next;
+                                  }
+                                  next.add(t.id);
+                                }
+                                setTagMsg("");
+                                return next;
+                              });
+                            }}
+                          />
+                          <div className="min-w-0">
+                            <div className="text-sm text-white font-semibold truncate">{t.name}</div>
+                            {t.description && <div className="text-xs text-slate-400 mt-0.5">{t.description}</div>}
+                          </div>
+                        </label>
+                      );
+                    })}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="text-[11px] text-slate-500">
+              ※タグは「既存の縦軸（シリーズ/ジャンル/原作）」に干渉させない前提。薄いタグは後で整理すればOK。
+            </div>
+          </div>
+        </Field>
+
+        {/* credits */}
         <Field
           label="スタッフ / クレジット（貼り付け）"
           hint="公式サイトのスタッフ欄をそのままコピペでOK。見出しは【演出】の形式推奨。保存時にDB用JSONへ自動変換します。"
@@ -554,14 +707,9 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
                 <b className="text-slate-200">{stats.names}</b>
               </div>
 
-              {creditsErr && (
-                <div className="text-xs text-red-300">
-                  形式エラー：{creditsErr}
-                </div>
-              )}
+              {creditsErr && <div className="text-xs text-red-300">形式エラー：{creditsErr}</div>}
             </div>
 
-            {/* “ド素人運用”ではJSONを触らせないのが正解なので、あえて read-only preview だけ */}
             <div className="opacity-90">
               <div className="text-xs text-slate-400 mb-1">（保存されるJSONのプレビュー / 編集不可）</div>
               <JsonArea value={stringifyPretty(creditsPreview)} onChange={() => {}} rows={8} />
@@ -569,10 +717,7 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
           </div>
         </Field>
 
-        <Field
-          label="vod (json)"
-          hint='例：{ "dmm": "https://...", "danime": "...", "unext": "..." }'
-        >
+        <Field label="vod (json)" hint='例：{ "dmm": "https://...", "danime": "...", "unext": "..." }'>
           <JsonArea value={vodText} onChange={setVodText} rows={10} />
         </Field>
       </div>
