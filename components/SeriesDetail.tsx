@@ -32,6 +32,7 @@ type PlayLike = {
   tags?: string[] | null;
   franchise_id?: string | null;
   created_at?: string | null; // ✅ 追加（任意：同年月のタイブレーク用）
+  genre?: any | null; // PlayCard側のgenre表示が必要なら保持
 };
 
 type TopActor = { actor: Actor; count: number };
@@ -50,6 +51,20 @@ const normalizeActorRow = (row: any): Actor => {
     featuredPlaySlugs: (row.featured_play_slugs as string[] | undefined) ?? [],
     tags: (row.tags as string[] | undefined) ?? [],
   };
+};
+
+// -------------------------
+// ✅ tags の正規化（play_tags → tags.name）
+// -------------------------
+const normalizeTagsFromJoin = (p: any): string[] | null => {
+  const arr = (p?.play_tags ?? []) as any[];
+  const names = arr
+    .map((x) => x?.tag?.name)
+    .filter((v) => typeof v === 'string' && v.trim().length > 0)
+    .map((v) => v.trim());
+
+  const uniq = Array.from(new Set(names));
+  return uniq.length > 0 ? uniq : null;
 };
 
 // -------------------------
@@ -208,8 +223,27 @@ const SeriesDetail: React.FC = () => {
 
         setFranchise(fr as any);
 
-        // 2) plays を franchise_id で取得
-        const { data: ps, error: psErr } = await supabase.from('plays').select('*').eq('franchise_id', (fr as any).id);
+        // 2) plays を franchise_id で取得（✅ tags は join から作る）
+        const { data: ps, error: psErr } = await supabase
+          .from('plays')
+          .select(
+            `
+            id,
+            slug,
+            title,
+            summary,
+            period,
+            venue,
+            vod,
+            genre,
+            franchise_id,
+            created_at,
+            play_tags:play_tags (
+              tag:tags ( name )
+            )
+          `
+          )
+          .eq('franchise_id', (fr as any).id);
 
         if (psErr || !ps) {
           console.warn('SeriesDetail: plays fetch error', psErr);
@@ -219,10 +253,26 @@ const SeriesDetail: React.FC = () => {
           return;
         }
 
-        setPlays(ps as any);
+        const normalizedPlays: PlayLike[] = (ps as any[])
+          .filter((p: any) => p?.slug && p?.title)
+          .map((p: any) => ({
+            id: p.id,
+            slug: p.slug,
+            title: p.title,
+            summary: p.summary ?? null,
+            period: p.period ?? null,
+            venue: p.venue ?? null,
+            vod: p.vod ?? null,
+            genre: p.genre ?? null,
+            franchise_id: p.franchise_id ?? null,
+            created_at: p.created_at ?? null,
+            tags: normalizeTagsFromJoin(p),
+          }));
+
+        setPlays(normalizedPlays);
 
         // 3) topActors：このシリーズの play_ids から casts を集計
-        const playIds = (ps as any[]).map((p) => p.id).filter(Boolean);
+        const playIds = normalizedPlays.map((p) => p.id).filter(Boolean) as string[];
 
         if (playIds.length === 0) {
           setTopActors([]);

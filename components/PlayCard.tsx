@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Play, GENRE_LABELS } from '../lib/types';
 import TagBadge from './TagBadge';
@@ -7,9 +7,77 @@ import FavoriteButton from './FavoriteButton';
 interface PlayCardProps {
   play: Play;
   className?: string;
+
+  /**
+   * ✅ タグ表示モード
+   * - none: 出さない（年表/一覧向け）
+   * - plain: 表示だけ（リンクなし）
+   * - link: タグを押すとタグページへ（詳細向け）
+   */
+  tagMode?: 'none' | 'plain' | 'link';
+
+  /**
+   * ✅ タグの遷移先（link時）
+   * 例: (tag) => `/tags/${encodeURIComponent(tag)}`
+   */
+  tagTo?: (tag: string) => string;
 }
 
-const PlayCard: React.FC<PlayCardProps> = ({ play, className = '' }) => {
+/**
+ * ✅ tagsをどんな形で渡されても string[] に正規化する
+ * - string[]: そのまま
+ * - string: "A,B" / "A、B" / 改行区切り -> split
+ * - join形: play.play_tags[].tag.name を吸収
+ * - object[]: {name} などにも対応
+ */
+const normalizeTagNames = (play: any): string[] => {
+  // 1) string[]
+  if (Array.isArray(play?.tags) && play.tags.every((x: any) => typeof x === 'string')) {
+    return Array.from(
+      new Set(
+        play.tags
+          .map((s: string) => s.trim())
+          .filter((s: string) => s.length > 0)
+      )
+    );
+  }
+
+  // 2) "tag1,tag2" / "tag1、tag2"
+  if (typeof play?.tags === 'string') {
+    const parts = play.tags
+      .split(/[,\n、]/)
+      .map((s: string) => s.trim())
+      .filter((s: string) => s.length > 0);
+    return Array.from(new Set(parts));
+  }
+
+  // 3) object[] っぽい（{name} など）
+  if (Array.isArray(play?.tags) && play.tags.length > 0) {
+    const names = play.tags
+      .map((x: any) => (typeof x === 'string' ? x : x?.name))
+      .filter((v: any) => typeof v === 'string' && v.trim().length > 0)
+      .map((v: string) => v.trim());
+    return Array.from(new Set(names));
+  }
+
+  // 4) join形（play_tags -> tag -> name）
+  if (Array.isArray(play?.play_tags)) {
+    const names = play.play_tags
+      .map((x: any) => x?.tag?.name)
+      .filter((v: any) => typeof v === 'string' && v.trim().length > 0)
+      .map((v: string) => v.trim());
+    return Array.from(new Set(names));
+  }
+
+  return [];
+};
+
+const PlayCard: React.FC<PlayCardProps> = ({
+  play,
+  className = '',
+  tagMode = 'plain',
+  tagTo,
+}) => {
   const navigate = useNavigate();
 
   const genreKey = (play as any)?.genre as keyof typeof GENRE_LABELS | undefined;
@@ -32,6 +100,15 @@ const PlayCard: React.FC<PlayCardProps> = ({ play, className = '' }) => {
 
   const stop: React.MouseEventHandler = (e) => {
     e.stopPropagation();
+  };
+
+  // ✅ ここで必ず tags を正規化（年表だけ旧式問題をここで潰す）
+  const tags = useMemo(() => normalizeTagNames(play), [play]);
+
+  const onTagClick = (tag: string) => {
+    if (tagMode !== 'link') return;
+    const to = tagTo ? tagTo(tag) : `/tags/${encodeURIComponent(tag)}`;
+    navigate(to);
   };
 
   return (
@@ -139,7 +216,24 @@ const PlayCard: React.FC<PlayCardProps> = ({ play, className = '' }) => {
         {/* Footer */}
         <div className="pt-4 border-t border-white/5 flex items-center justify-between mt-auto">
           <div className="flex flex-wrap gap-2">
-            {play.tags && play.tags.slice(0, 2).map((tag) => <TagBadge key={tag}>{tag}</TagBadge>)}
+            {tagMode !== 'none' &&
+              tags.slice(0, 2).map((tag) =>
+                tagMode === 'link' ? (
+                  <button
+                    key={tag}
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      onTagClick(tag);
+                    }}
+                    className="outline-none"
+                  >
+                    <TagBadge>{tag}</TagBadge>
+                  </button>
+                ) : (
+                  <TagBadge key={tag}>{tag}</TagBadge>
+                )
+              )}
           </div>
 
           <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500 group-hover:text-white transition-colors flex items-center">

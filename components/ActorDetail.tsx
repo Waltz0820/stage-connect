@@ -35,6 +35,18 @@ type CoStarItem = { actor: Actor; count: number };
 
 const SITE_NAME = "Stage Connect";
 
+// ✅ play_tags join から tags を安定的に取り出す（ActorDetail でも SeriesDetail と同じルールに統一）
+const normalizeTagsFromJoin = (p: any): string[] | null => {
+  const arr = (p?.play_tags ?? []) as any[];
+  const names = arr
+    .map((x) => x?.tag?.name)
+    .filter((v) => typeof v === "string" && v.trim().length > 0)
+    .map((v) => v.trim());
+
+  const uniq = Array.from(new Set(names));
+  return uniq.length > 0 ? uniq : null;
+};
+
 const normalizeActorRow = (data: any): Actor => ({
   slug: data.slug,
   name: data.name,
@@ -341,9 +353,11 @@ const ActorDetail: React.FC = () => {
                 period,
                 venue,
                 vod,
-                tags,
                 genre,
-                franchise:franchises(name)
+                franchise:franchises(name),
+                play_tags:play_tags (
+                  tag:tags ( name )
+                )
               )
             `
             )
@@ -368,7 +382,8 @@ const ActorDetail: React.FC = () => {
                 period: p.period ?? null,
                 venue: p.venue ?? null,
                 vod: p.vod ?? null,
-                tags: p.tags ?? null,
+                // ✅ tags は play_tags join 由来に統一（旧tagsカラムは読まない）
+                tags: normalizeTagsFromJoin(p),
                 franchise: p.franchise?.name ?? null,
                 genre: p.genre ?? null,
               };
@@ -519,7 +534,6 @@ const ActorDetail: React.FC = () => {
   const seoMetas = useMemo(() => {
     const metas: Array<{ name?: string; property?: string; content?: string }> = [
       { property: "og:site_name", content: SITE_NAME },
-      // profile でもOKだが、Google側の扱いは website と大差ない。SNSでの見え方を優先するなら profile 維持。
       { property: "og:type", content: "profile" },
       { property: "og:title", content: pageTitle },
       { property: "og:description", content: pageDescription },
@@ -776,7 +790,10 @@ const ActorDetail: React.FC = () => {
                             </button>
                           </div>
 
-                          <div className="p-4 overflow-y-auto overscroll-contain" style={{ WebkitOverflowScrolling: "touch" as any }}>
+                          <div
+                            className="p-4 overflow-y-auto overscroll-contain"
+                            style={{ WebkitOverflowScrolling: "touch" as any }}
+                          >
                             <div className="space-y-2">
                               {coStars.map(({ actor: coStar, count }) => (
                                 <Link
