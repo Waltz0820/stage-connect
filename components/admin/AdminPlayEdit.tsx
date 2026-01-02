@@ -3,20 +3,12 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { supabase } from "../../lib/supabase";
 import Field from "./widgets/Field";
 import JsonArea from "./widgets/JsonArea";
+import TagMultiSelect, { TagRow } from "./widgets/TagMultiSelect";
 import { parseJsonOr, safeTrim, stringifyPretty, toSlug } from "./widgets/utils";
 
 type Mode = "new" | "edit";
 
 type FranchiseRow = { id: string; name: string };
-
-type TagRow = {
-  id: string;
-  slug: string;
-  name: string;
-  type: string; // check制約に合わせてstringで受ける
-  description?: string | null;
-  is_active?: boolean | null; // 無い場合もあるので optional
-};
 
 type CreditItem = {
   role: string;
@@ -205,7 +197,6 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
   // ★ tags（公式）: tags/play_tags を正として運用。plays.tags は触らない。
   const [allTags, setAllTags] = useState<TagRow[]>([]);
   const [selectedTagIds, setSelectedTagIds] = useState<Set<string>>(new Set());
-  const [tagMsg, setTagMsg] = useState<string>("");
 
   // ★ creditsは「貼り付けテキスト」だけを編集対象にする（ミスらない）
   const [creditsPaste, setCreditsPaste] = useState("");
@@ -286,7 +277,6 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
 
       // tags
       setSelectedTagIds(new Set());
-      setTagMsg("");
 
       // credits
       setCreditsPaste("");
@@ -317,11 +307,7 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         setVodText(stringifyPretty(r.vod ?? {}));
 
         // tags（play_tags）
-        const { data: pt, error: ptErr } = await supabase
-          .from("play_tags")
-          .select("tag_id")
-          .eq("play_id", r.id);
-
+        const { data: pt, error: ptErr } = await supabase.from("play_tags").select("tag_id").eq("play_id", r.id);
         if (ptErr) {
           console.warn("[admin plays] load play_tags error", ptErr);
           setSelectedTagIds(new Set());
@@ -329,7 +315,6 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
           const s = new Set<string>((pt ?? []).map((x: any) => x.tag_id).filter(Boolean));
           setSelectedTagIds(s);
         }
-        setTagMsg("");
 
         // credits
         const paste = creditsObjToPaste(r.credits);
@@ -397,16 +382,10 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
       }
 
       if (mode === "new") {
-        const { data: created, error } = await supabase
-          .from("plays")
-          .insert(payload)
-          .select("id,slug")
-          .single();
-
+        const { data: created, error } = await supabase.from("plays").insert(payload).select("id,slug").single();
         if (error) throw error;
 
         await syncPlayTags(created.id, selectedTagIds);
-
         nav(`/admin/plays/${encodeURIComponent(created.slug)}`);
       } else {
         if (!row?.id) return;
@@ -415,7 +394,6 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         if (error) throw error;
 
         await syncPlayTags(row.id, selectedTagIds);
-
         setMsg("保存しました");
       }
     } catch (e: any) {
@@ -459,15 +437,6 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
 
   const stats = creditsStats(creditsPreview);
 
-  const groupedTags = useMemo(() => {
-    return allTags.reduce<Record<string, TagRow[]>>((acc, t) => {
-      const k = t.type || "other";
-      acc[k] = acc[k] ?? [];
-      acc[k].push(t);
-      return acc;
-    }, {});
-  }, [allTags]);
-
   return (
     <div className="space-y-4">
       <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
@@ -477,7 +446,10 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
             <p className="text-xs text-slate-400 mt-1">VOD は JSON でOK（dmm/danime/unext など）</p>
           </div>
           <div className="flex items-center gap-2">
-            <Link to="/admin/plays" className="text-xs px-3 py-2 rounded-full bg-white/5 border border-white/10 hover:bg-white/10">
+            <Link
+              to="/admin/plays"
+              className="text-xs px-3 py-2 rounded-full bg-white/5 border border-white/10 hover:bg-white/10"
+            >
               戻る
             </Link>
             {mode === "edit" && row?.slug && (
@@ -562,7 +534,6 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
             </select>
           </Field>
 
-          {/* 右カラムの空きが不自然にならないようにダミー枠 */}
           <div />
         </div>
 
@@ -578,79 +549,13 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
 
         {/* tags（公式） */}
         <Field label="tags（公式）" hint={`最大${MAX_TAGS}つ。横断テーマだけ（ジャンル/シリーズと被らせない）`}>
-          <div className="space-y-3">
-            <div className="text-xs text-slate-400">
-              選択：<b className="text-slate-200">{selectedTagIds.size}</b> / {MAX_TAGS}
-              {tagMsg && <span className="ml-2 text-slate-300">{tagMsg}</span>}
-            </div>
-
-            <div className="flex flex-wrap gap-2">
-              <button
-                type="button"
-                onClick={() => {
-                  setSelectedTagIds(new Set());
-                  setTagMsg("クリア（保存で確定）");
-                }}
-                className="text-xs px-3 py-2 rounded-full bg-white/5 border border-white/10 hover:bg-white/10"
-              >
-                クリア
-              </button>
-            </div>
-
-            <div className="space-y-4">
-              {Object.entries(groupedTags).map(([type, list]) => (
-                <div key={type} className="rounded-xl border border-white/10 bg-black/30 p-4">
-                  <div className="text-xs font-bold tracking-widest text-slate-400 mb-3">{type.toUpperCase()}</div>
-
-                  <div className="grid sm:grid-cols-2 gap-2">
-                    {list.map((t) => {
-                      const checked = selectedTagIds.has(t.id);
-                      const reached = selectedTagIds.size >= MAX_TAGS;
-
-                      return (
-                        <label
-                          key={t.id}
-                          className={`flex items-start gap-3 rounded-lg border border-white/10 px-3 py-2 cursor-pointer hover:bg-white/5 ${
-                            checked ? "bg-white/5" : "bg-transparent"
-                          }`}
-                        >
-                          <input
-                            type="checkbox"
-                            className="mt-1"
-                            checked={checked}
-                            disabled={!checked && reached}
-                            onChange={() => {
-                              setSelectedTagIds((prev) => {
-                                const next = new Set(prev);
-                                if (next.has(t.id)) next.delete(t.id);
-                                else {
-                                  if (next.size >= MAX_TAGS) {
-                                    setTagMsg(`最大${MAX_TAGS}つまで`);
-                                    return next;
-                                  }
-                                  next.add(t.id);
-                                }
-                                setTagMsg("");
-                                return next;
-                              });
-                            }}
-                          />
-                          <div className="min-w-0">
-                            <div className="text-sm text-white font-semibold truncate">{t.name}</div>
-                            {t.description && <div className="text-xs text-slate-400 mt-0.5">{t.description}</div>}
-                          </div>
-                        </label>
-                      );
-                    })}
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="text-[11px] text-slate-500">
-              ※タグは「既存の縦軸（シリーズ/ジャンル/原作）」に干渉させない前提。薄いタグは後で整理すればOK。
-            </div>
-          </div>
+          <TagMultiSelect
+            allTags={allTags}
+            selectedIds={selectedTagIds}
+            onChange={(next) => setSelectedTagIds(new Set(next))}
+            max={MAX_TAGS}
+            hint="検索→クリックで追加。上のチップをクリックで解除。"
+          />
         </Field>
 
         {/* credits */}
