@@ -131,7 +131,10 @@ const pasteToCreditsObj = (raw: string): CreditsObj => {
     .sort((a, b) => roleRank(a.role) - roleRank(b.role) || a.role.localeCompare(b.role))
     .forEach((b) => {
       // 役割の中身は「行単位」を基本に、安全に扱う
-      const nameLines = b.text.split("\n").map((x) => x.trim()).filter((x) => x.length > 0);
+      const nameLines = b.text
+        .split("\n")
+        .map((x) => x.trim())
+        .filter((x) => x.length > 0);
 
       // 「本山新之助 DAZZLE」みたいなケースは同一行に保持したい
       const names = nameLines.flatMap(splitNamesSmart).filter(Boolean);
@@ -197,6 +200,7 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
   // ★ tags（公式）: tags/play_tags を正として運用。plays.tags は触らない。
   const [allTags, setAllTags] = useState<TagRow[]>([]);
   const [selectedTagIds, setSelectedTagIds] = useState<Set<string>>(new Set());
+  const [tagsErr, setTagsErr] = useState<string>("");
 
   // ★ creditsは「貼り付けテキスト」だけを編集対象にする（ミスらない）
   const [creditsPaste, setCreditsPaste] = useState("");
@@ -216,19 +220,35 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
 
   useEffect(() => {
     const loadTags = async () => {
-      const { data, error } = await supabase
+      setTagsErr("");
+
+      // ① is_active ありで試す
+      let res = await supabase
         .from("tags")
         .select("id,slug,name,type,description,is_active")
         .order("type", { ascending: true })
         .order("name", { ascending: true });
 
-      if (error) {
-        console.warn("[admin plays] load tags error", error);
+      // ② is_active が無い環境ならフォールバック
+      if (res.error && /is_active/i.test(res.error.message)) {
+        res = await supabase
+          .from("tags")
+          .select("id,slug,name,type,description")
+          .order("type", { ascending: true })
+          .order("name", { ascending: true });
+      }
+
+      if (res.error) {
+        console.warn("[admin plays] load tags error", res.error);
+        setTagsErr(res.error.message);
+        setAllTags([]);
         return;
       }
 
-      const rows = ((data ?? []) as any) as TagRow[];
-      const active = rows.filter((t) => t.is_active !== false);
+      const rows = ((res.data ?? []) as any) as TagRow[];
+
+      // is_active がある場合だけ効かせる（無い場合は全部OK）
+      const active = rows.filter((t) => (typeof (t as any).is_active === "boolean" ? (t as any).is_active !== false : true));
       setAllTags(active);
     };
 
@@ -549,13 +569,20 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
 
         {/* tags（公式） */}
         <Field label="tags（公式）" hint={`最大${MAX_TAGS}つ。横断テーマだけ（ジャンル/シリーズと被らせない）`}>
-          <TagMultiSelect
-            allTags={allTags}
-            selectedIds={selectedTagIds}
-            onChange={(next) => setSelectedTagIds(new Set(next))}
-            max={MAX_TAGS}
-            hint="検索→クリックで追加。上のチップをクリックで解除。"
-          />
+          <div className="space-y-2">
+            {tagsErr && (
+              <div className="text-xs text-red-300">
+                tags の読み込みに失敗：{tagsErr}
+              </div>
+            )}
+            <TagMultiSelect
+              allTags={allTags}
+              selectedIds={selectedTagIds}
+              onChange={(next) => setSelectedTagIds(new Set(next))}
+              max={MAX_TAGS}
+              hint="検索→クリックで追加。上のチップをクリックで解除。"
+            />
+          </div>
         </Field>
 
         {/* credits */}
