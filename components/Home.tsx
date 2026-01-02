@@ -1,13 +1,44 @@
 // src/components/Home.tsx
-import React, { useMemo } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { getTrendingTags } from "../lib/utils/getTrendingTags";
+import { getTrendingTags } from "../lib/utils/getTrendingTags"; // フォールバック（ローカル）
+import { getTrendingTagsDb, type TrendingTag } from "../lib/utils/getTrendingTagsDb";
 import SeoHead from "./SeoHead";
 
 // const heroImage = '/images/hero-silhouette.png';
 
 const Home: React.FC = () => {
-  const trendingTags = getTrendingTags(25);
+  const [trendingTags, setTrendingTags] = useState<TrendingTag[]>([]);
+  const [tagsLoading, setTagsLoading] = useState(true);
+
+  // ✅ DBからトレンドタグを取得（落ちたらローカルにフォールバック）
+  useEffect(() => {
+    let cancelled = false;
+
+    const run = async () => {
+      setTagsLoading(true);
+      try {
+        const db = await getTrendingTagsDb(25);
+        if (!cancelled) setTrendingTags(db);
+      } catch (e) {
+        console.warn("Home / getTrendingTagsDb failed -> fallback local:", e);
+        const local = getTrendingTags(25).map((t) => ({
+          tag: t.tag,
+          slug: t.tag, // ローカルは tag名をそのまま slug扱い
+          rank: t.rank,
+          count: 0,
+        }));
+        if (!cancelled) setTrendingTags(local);
+      } finally {
+        if (!cancelled) setTagsLoading(false);
+      }
+    };
+
+    run();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   // siteUrl（canonical/og:url 用）
   const siteUrl = useMemo(() => {
@@ -27,7 +58,6 @@ const Home: React.FC = () => {
     "2.5次元舞台・ミュージカルの作品とキャストをつなぐデジタルアーカイブ。出演者、配信（VOD）、公演情報、シリーズ情報をまとめて探せます。";
 
   const ogImage = useMemo(() => {
-    // 共通OG画像を用意しているなら env で固定（任意）
     const envOg = (import.meta as any)?.env?.VITE_OG_IMAGE as string | undefined;
     if (envOg) return envOg;
     return "";
@@ -43,6 +73,9 @@ const Home: React.FC = () => {
     return "text-base text-slate-400";
   };
 
+  // ✅ /tags/:slug 用（日本語も壊れないようにURLエンコード）
+  const toTagLink = (slugOrName: string) => `/tags/${encodeURIComponent(slugOrName)}`;
+
   return (
     <div className="relative flex flex-col items-center justify-center min-h-[85vh] px-6 py-20 text-center overflow-hidden">
       {/* ✅ SEO */}
@@ -57,7 +90,6 @@ const Home: React.FC = () => {
           { property: "og:description", content: description },
           ...(canonical ? [{ property: "og:url", content: canonical }] : []),
           ...(ogImage ? [{ property: "og:image", content: ogImage }] : []),
-
           { name: "twitter:card", content: ogImage ? "summary_large_image" : "summary" },
           { name: "twitter:title", content: title },
           { name: "twitter:description", content: description },
@@ -67,17 +99,6 @@ const Home: React.FC = () => {
 
       {/* Stage Spotlight Effect */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-neon-purple/20 via-theater-black/0 to-transparent blur-3xl pointer-events-none z-0"></div>
-
-      {/* Hero Silhouette Image - Commented out for now
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[1200px] h-[65vh] z-0 pointer-events-none select-none">
-        <img 
-          src={heroImage} 
-          alt="" 
-          className="w-full h-full object-contain object-bottom opacity-30"
-        />
-        <div className="absolute bottom-0 left-0 w-full h-2/3 bg-gradient-to-t from-theater-black via-theater-black/80 to-transparent"></div>
-      </div>
-      */}
 
       <div className="relative z-10 max-w-4xl space-y-12 animate-fade-in-up">
         <div className="space-y-6">
@@ -124,24 +145,41 @@ const Home: React.FC = () => {
 
         {/* Trending Tags Cloud */}
         <div className="pt-16 sm:pt-24 opacity-0 animate-fade-in-up" style={{ animationDelay: "0.5s" }}>
-          <h3 className="text-xs font-bold text-slate-500 tracking-[0.3em] uppercase mb-8 flex items-center justify-center gap-4">
+          <div className="flex items-center justify-center gap-4 mb-8">
             <span className="h-px w-8 bg-gradient-to-r from-transparent to-slate-500"></span>
-            TREND WORDS
+            <h3 className="text-xs font-bold text-slate-500 tracking-[0.3em] uppercase">TREND WORDS</h3>
             <span className="h-px w-8 bg-gradient-to-l from-transparent to-slate-500"></span>
-          </h3>
+          </div>
 
-          <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-4 max-w-3xl mx-auto">
-            {trendingTags.map((tag, index) => (
-              <span
-                key={tag.tag}
-                className={`cursor-default transition-all duration-300 hover:scale-110 ${getTagStyle(tag.rank)}`}
-                style={{
-                  animation: `pulse ${3 + index * 0.2}s infinite ease-in-out`,
-                }}
+          {/* ✅ ローディング中は薄く */}
+          <div className={`transition-opacity ${tagsLoading ? "opacity-40" : "opacity-100"}`}>
+            <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-4 max-w-3xl mx-auto">
+              {trendingTags.map((tag, index) => (
+                <Link
+                  key={`${tag.slug}-${tag.rank}`}
+                  to={toTagLink(tag.slug)}
+                  className={`transition-all duration-300 hover:scale-110 hover:opacity-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-neon-purple/60 rounded ${getTagStyle(
+                    tag.rank
+                  )}`}
+                  style={{
+                    animation: `pulse ${3 + index * 0.2}s infinite ease-in-out`,
+                  }}
+                  aria-label={`タグ「${tag.tag}」のページへ`}
+                  title={`#${tag.tag}`}
+                >
+                  #{tag.tag}
+                </Link>
+              ))}
+            </div>
+
+            <div className="mt-10">
+              <Link
+                to="/tags"
+                className="inline-flex items-center justify-center px-5 py-2 rounded-full bg-white/5 border border-white/10 text-slate-200 text-xs font-bold hover:bg-white/10 hover:border-neon-purple/40 transition-colors"
               >
-                #{tag.tag}
-              </span>
-            ))}
+                タグ一覧を見る
+              </Link>
+            </div>
           </div>
         </div>
       </div>

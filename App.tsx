@@ -1,6 +1,6 @@
 // src/App.tsx
 import React, { useEffect } from "react";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation, Link } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./components/Home";
 import Actors from "./components/Actors";
@@ -65,6 +65,35 @@ const AdminNoIndex: React.FC = () => {
   return <SeoHead title="Admin | Stage Connect" robots="noindex,nofollow,noarchive" />;
 };
 
+/**
+ * ✅ 404（NotFound）
+ * - SEO的にも noindex を付けて事故防止
+ */
+const NotFound: React.FC = () => {
+  return (
+    <div className="flex flex-col items-center justify-center min-h-[60vh] text-center px-4 animate-fade-in-up">
+      <SeoHead title={`ページが見つかりません - Stage Connect`} robots="noindex,nofollow" />
+      <h2 className="text-2xl font-bold text-white">ページが見つかりませんでした</h2>
+      <p className="mt-2 text-slate-400">URLが変更されたか、存在しないページの可能性があります。</p>
+
+      <div className="mt-8 flex flex-col sm:flex-row gap-3">
+        <Link
+          to="/"
+          className="px-8 py-3 bg-white/5 border border-white/10 text-white rounded-full text-sm font-bold hover:bg-white/10 hover:border-neon-purple/50 transition-colors"
+        >
+          トップに戻る
+        </Link>
+        <Link
+          to="/search"
+          className="px-8 py-3 bg-white/5 border border-white/10 text-white rounded-full text-sm font-bold hover:bg-white/10 hover:border-neon-purple/50 transition-colors"
+        >
+          検索する
+        </Link>
+      </div>
+    </div>
+  );
+};
+
 const App: React.FC = () => {
   return (
     <BrowserRouter>
@@ -96,6 +125,7 @@ const App: React.FC = () => {
           <Route path="/guide/:slug" element={<GuideDetail />} />
           <Route path="/search" element={<SearchPage />} />
 
+          {/* Tags */}
           <Route path="/tags" element={<TagsIndexPage />} />
           <Route path="/tags/:slug" element={<TagDetailPage />} />
 
@@ -216,6 +246,9 @@ const App: React.FC = () => {
               </AdminGuard>
             }
           />
+
+          {/* ✅ 404 */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>
     </BrowserRouter>
