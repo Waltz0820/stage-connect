@@ -1,44 +1,17 @@
 // src/components/Home.tsx
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useMemo } from "react";
 import { Link } from "react-router-dom";
-import { getTrendingTags } from "../lib/utils/getTrendingTags"; // フォールバック（ローカル）
-import { getTrendingTagsDb, type TrendingTag } from "../lib/utils/getTrendingTagsDb";
+import { getTrendingTags } from "../lib/utils/getTrendingTags";
 import SeoHead from "./SeoHead";
 
 // const heroImage = '/images/hero-silhouette.png';
 
+type CloudItem =
+  | { kind: "watch"; key: "vod" | "dmm" | "unext"; label: string; to: string }
+  | { kind: "tag"; tag: string; rank: number };
+
 const Home: React.FC = () => {
-  const [trendingTags, setTrendingTags] = useState<TrendingTag[]>([]);
-  const [tagsLoading, setTagsLoading] = useState(true);
-
-  // ✅ DBからトレンドタグを取得（落ちたらローカルにフォールバック）
-  useEffect(() => {
-    let cancelled = false;
-
-    const run = async () => {
-      setTagsLoading(true);
-      try {
-        const db = await getTrendingTagsDb(25);
-        if (!cancelled) setTrendingTags(db);
-      } catch (e) {
-        console.warn("Home / getTrendingTagsDb failed -> fallback local:", e);
-        const local = getTrendingTags(25).map((t) => ({
-          tag: t.tag,
-          slug: t.tag, // ローカルは tag名をそのまま slug扱い
-          rank: t.rank,
-          count: 0,
-        }));
-        if (!cancelled) setTrendingTags(local);
-      } finally {
-        if (!cancelled) setTagsLoading(false);
-      }
-    };
-
-    run();
-    return () => {
-      cancelled = true;
-    };
-  }, []);
+  const trendingTags = getTrendingTags(25);
 
   // siteUrl（canonical/og:url 用）
   const siteUrl = useMemo(() => {
@@ -58,12 +31,13 @@ const Home: React.FC = () => {
     "2.5次元舞台・ミュージカルの作品とキャストをつなぐデジタルアーカイブ。出演者、配信（VOD）、公演情報、シリーズ情報をまとめて探せます。";
 
   const ogImage = useMemo(() => {
+    // 共通OG画像を用意しているなら env で固定（任意）
     const envOg = (import.meta as any)?.env?.VITE_OG_IMAGE as string | undefined;
     if (envOg) return envOg;
     return "";
   }, []);
 
-  // ランキングに応じたスタイルを決定するヘルパー
+  // ランキングに応じたスタイルを決定するヘルパー（通常タグ用）
   const getTagStyle = (rank: number) => {
     if (rank <= 3)
       return "text-2xl md:text-3xl font-bold text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]";
@@ -73,8 +47,38 @@ const Home: React.FC = () => {
     return "text-base text-slate-400";
   };
 
-  // ✅ /tags/:slug 用（日本語も壊れないようにURLエンコード）
-  const toTagLink = (slugOrName: string) => `/tags/${encodeURIComponent(slugOrName)}`;
+  // 先頭に“混ぜる”内部導線（watch）
+  const watchLinks = useMemo<CloudItem[]>(() => {
+    return [
+      { kind: "watch", key: "vod", label: "VOD", to: "/watch" },
+      { kind: "watch", key: "dmm", label: "DMM", to: "/watch/dmm" },
+      { kind: "watch", key: "unext", label: "U-NEXT", to: "/watch/u-next" },
+    ];
+  }, []);
+
+  // 1つのクラウドに統合（watch→tagの順で混ぜる）
+  const cloudItems = useMemo<CloudItem[]>(() => {
+    const tagItems: CloudItem[] = trendingTags.map((t: any) => ({
+      kind: "tag",
+      tag: t.tag,
+      rank: t.rank,
+    }));
+    return [...watchLinks, ...tagItems];
+  }, [trendingTags, watchLinks]);
+
+  // watch用の見た目（“タグっぽく”混ぜつつ目立たせる）
+  const getWatchStyle = (key: "vod" | "dmm" | "unext") => {
+    switch (key) {
+      case "vod":
+        return "text-lg md:text-xl font-bold text-neon-purple drop-shadow-[0_0_8px_rgba(180,108,255,0.25)]";
+      case "dmm":
+        return "text-xl md:text-2xl font-bold text-neon-cyan drop-shadow-[0_0_8px_rgba(0,255,255,0.35)]";
+      case "unext":
+        return "text-xl md:text-2xl font-bold text-white/90 drop-shadow-[0_0_10px_rgba(255,255,255,0.18)]";
+      default:
+        return "text-lg md:text-xl font-bold text-slate-300";
+    }
+  };
 
   return (
     <div className="relative flex flex-col items-center justify-center min-h-[85vh] px-6 py-20 text-center overflow-hidden">
@@ -90,6 +94,7 @@ const Home: React.FC = () => {
           { property: "og:description", content: description },
           ...(canonical ? [{ property: "og:url", content: canonical }] : []),
           ...(ogImage ? [{ property: "og:image", content: ogImage }] : []),
+
           { name: "twitter:card", content: ogImage ? "summary_large_image" : "summary" },
           { name: "twitter:title", content: title },
           { name: "twitter:description", content: description },
@@ -99,6 +104,17 @@ const Home: React.FC = () => {
 
       {/* Stage Spotlight Effect */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-neon-purple/20 via-theater-black/0 to-transparent blur-3xl pointer-events-none z-0"></div>
+
+      {/* Hero Silhouette Image - Commented out for now
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[1200px] h-[65vh] z-0 pointer-events-none select-none">
+        <img 
+          src={heroImage} 
+          alt="" 
+          className="w-full h-full object-contain object-bottom opacity-30"
+        />
+        <div className="absolute bottom-0 left-0 w-full h-2/3 bg-gradient-to-t from-theater-black via-theater-black/80 to-transparent"></div>
+      </div>
+      */}
 
       <div className="relative z-10 max-w-4xl space-y-12 animate-fade-in-up">
         <div className="space-y-6">
@@ -145,41 +161,48 @@ const Home: React.FC = () => {
 
         {/* Trending Tags Cloud */}
         <div className="pt-16 sm:pt-24 opacity-0 animate-fade-in-up" style={{ animationDelay: "0.5s" }}>
-          <div className="flex items-center justify-center gap-4 mb-8">
+          <h3 className="text-xs font-bold text-slate-500 tracking-[0.3em] uppercase mb-8 flex items-center justify-center gap-4">
             <span className="h-px w-8 bg-gradient-to-r from-transparent to-slate-500"></span>
-            <h3 className="text-xs font-bold text-slate-500 tracking-[0.3em] uppercase">TREND WORDS</h3>
+            TREND WORDS
             <span className="h-px w-8 bg-gradient-to-l from-transparent to-slate-500"></span>
-          </div>
+          </h3>
 
-          {/* ✅ ローディング中は薄く */}
-          <div className={`transition-opacity ${tagsLoading ? "opacity-40" : "opacity-100"}`}>
-            <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-4 max-w-3xl mx-auto">
-              {trendingTags.map((tag, index) => (
+          <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-4 max-w-3xl mx-auto">
+            {cloudItems.map((item, index) => {
+              if (item.kind === "watch") {
+                return (
+                  <Link
+                    key={`watch-${item.key}`}
+                    to={item.to}
+                    className={`transition-all duration-300 hover:scale-110 hover:underline underline-offset-4 ${getWatchStyle(
+                      item.key
+                    )}`}
+                    style={{ animation: `pulse ${3 + index * 0.2}s infinite ease-in-out` }}
+                    aria-label={`${item.label}を観る`}
+                    title={item.label}
+                  >
+                    #{item.label}
+                    <span className="ml-1 text-[10px] align-super opacity-70">→</span>
+                  </Link>
+                );
+              }
+
+              const href = `/tags/${encodeURIComponent(item.tag)}`;
+              return (
                 <Link
-                  key={`${tag.slug}-${tag.rank}`}
-                  to={toTagLink(tag.slug)}
-                  className={`transition-all duration-300 hover:scale-110 hover:opacity-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-neon-purple/60 rounded ${getTagStyle(
-                    tag.rank
+                  key={`tag-${item.tag}`}
+                  to={href}
+                  className={`transition-all duration-300 hover:scale-110 hover:underline underline-offset-4 ${getTagStyle(
+                    item.rank
                   )}`}
-                  style={{
-                    animation: `pulse ${3 + index * 0.2}s infinite ease-in-out`,
-                  }}
-                  aria-label={`タグ「${tag.tag}」のページへ`}
-                  title={`#${tag.tag}`}
+                  style={{ animation: `pulse ${3 + index * 0.2}s infinite ease-in-out` }}
+                  aria-label={`タグ「${item.tag}」へ`}
+                  title={`タグ：${item.tag}`}
                 >
-                  #{tag.tag}
+                  #{item.tag}
                 </Link>
-              ))}
-            </div>
-
-            <div className="mt-10">
-              <Link
-                to="/tags"
-                className="inline-flex items-center justify-center px-5 py-2 rounded-full bg-white/5 border border-white/10 text-slate-200 text-xs font-bold hover:bg-white/10 hover:border-neon-purple/40 transition-colors"
-              >
-                タグ一覧を見る
-              </Link>
-            </div>
+              );
+            })}
           </div>
         </div>
       </div>
