@@ -170,29 +170,39 @@ async function getCoStarsFromCasts(params: { actorId: string; limit: number }): 
   if (playIds.length === 0) return null;
 
   // 2) 同じ play_id の casts を取得（自分以外） + actors join
-  // ※ in() は長すぎると死ぬので、今は上限を安全側に切る（必要なら後でchunk化）
-  const safePlayIds = playIds.slice(0, 200);
-
-  const { data: rows, error: e2 } = await supabase
-    .from("casts")
-    .select(
-      `
-      play_id,
-      actor_id,
-      is_starring,
-      billing_order,
-      actor:actors ( id, slug, name, kana, image_url, tags, gender, sns, featured_play_slugs, profile )
-    `
-    )
-    .in("play_id", safePlayIds)
-    .neq("actor_id", actorId);
-
-  if (e2) {
-    console.warn("getCoStarsFromCasts / rows error:", e2);
-    return null;
+  // ✅ in() が長すぎると死ぬ / 200件上限で“薄くなる”事故を避けるため chunk 化して取得
+  const CHUNK = 100;
+  const chunks: string[][] = [];
+  for (let i = 0; i < playIds.length; i += CHUNK) {
+    chunks.push(playIds.slice(i, i + CHUNK));
   }
 
-  const list = (rows ?? []) as any as CastAggRow[];
+  let rowsAll: CastAggRow[] = [];
+
+  for (const ids of chunks) {
+    const { data: rows, error: e2 } = await supabase
+      .from("casts")
+      .select(
+        `
+        play_id,
+        actor_id,
+        is_starring,
+        billing_order,
+        actor:actors ( id, slug, name, kana, image_url, tags, gender, sns, featured_play_slugs, profile )
+      `
+      )
+      .in("play_id", ids)
+      .neq("actor_id", actorId);
+
+    if (e2) {
+      console.warn("getCoStarsFromCasts / rows error:", e2);
+      return null;
+    }
+
+    rowsAll = rowsAll.concat((rows ?? []) as any);
+  }
+
+  const list = rowsAll as any as CastAggRow[];
   if (list.length === 0) return null;
 
   // 自分の出演情報を参照（スコアに使う）
@@ -442,9 +452,9 @@ const ActorDetail: React.FC = () => {
     };
   }, [actorId, slug]);
 
-  // ---- 出演作品（DB優先 → ダメならローカルフォールバック）----
-  const plays: PlayLike[] =
-    playsDb && playsDb.length > 0 ? playsDb : slug ? (getPlaysByActorSlug(slug) as any) : [];
+  // ---- 出演作品（DB優先 → 未取得ならローカルフォールバック）----
+  const plays: PlayLike[] = playsDb !== null ? playsDb : slug ? (getPlaysByActorSlug(slug) as any) : [];
+
   const timelineGroups = groupPlaysByYear(plays as any);
 
   // ---- 共演ネットワーク（DBが取れたらDB、取れない/未取得ならローカル）----
@@ -474,9 +484,7 @@ const ActorDetail: React.FC = () => {
     return img.startsWith("/") ? `${siteUrl}${img}` : `${siteUrl}/${img}`;
   }, [actor?.imageUrl, siteUrl]);
 
-  const pageTitle = actor?.name
-    ? `${actor.name}｜出演作・配信（VOD）情報 - ${SITE_NAME}`
-    : SITE_NAME;
+  const pageTitle = actor?.name ? `${actor.name}｜出演作・配信（VOD）情報 - ${SITE_NAME}` : SITE_NAME;
 
   const pageDescription = actor?.name
     ? `${actor.name}の出演する2.5次元舞台・ミュージカル作品をまとめました。出演作品タイムライン、共演ネットワーク、配信（VOD）情報を掲載。登録作品数：${workCount}。`
@@ -591,13 +599,7 @@ const ActorDetail: React.FC = () => {
   return (
     <div className="container mx-auto px-6 pt-8 pb-16 lg:px-8 max-w-5xl animate-fade-in-up">
       {/* ✅ SEO */}
-      <SeoHead
-        title={pageTitle}
-        description={pageDescription}
-        canonical={canonical}
-        metas={seoMetas}
-        jsonLd={seoJsonLd}
-      />
+      <SeoHead title={pageTitle} description={pageDescription} canonical={canonical} metas={seoMetas} jsonLd={seoJsonLd} />
 
       <Breadcrumbs items={[{ label: "キャスト一覧", to: "/actors" }, { label: actor.name }]} />
 
@@ -684,11 +686,7 @@ const ActorDetail: React.FC = () => {
               出演作品タイムライン
             </h2>
 
-            {plays.length > 0 ? (
-              <TimelineSection groups={timelineGroups} />
-            ) : (
-              <p className="text-slate-500 italic py-4">登録されている出演作品はありません。</p>
-            )}
+            {plays.length > 0 ? <TimelineSection groups={timelineGroups} /> : <p className="text-slate-500 italic py-4">登録されている出演作品はありません。</p>}
           </section>
 
           {/* CoStars */}
@@ -720,9 +718,7 @@ const ActorDetail: React.FC = () => {
 
                         <div className="flex-1 min-w-0">
                           <div className="flex justify-between items-center mb-1">
-                            <h3 className="font-bold text-white group-hover:text-neon-cyan transition-colors truncate">
-                              {coStar.name}
-                            </h3>
+                            <h3 className="font-bold text-white group-hover:text-neon-cyan transition-colors truncate">{coStar.name}</h3>
                             <span className="text-[10px] font-bold bg-neon-cyan/10 text-neon-cyan px-2 py-0.5 rounded-full border border-neon-cyan/20 whitespace-nowrap ml-2">
                               ★ {count}作
                             </span>
@@ -730,12 +726,7 @@ const ActorDetail: React.FC = () => {
                           <p className="text-xs text-slate-500 line-clamp-1">{coStar.tags?.[0] || "俳優"}</p>
                         </div>
 
-                        <svg
-                          className="w-4 h-4 text-slate-600 group-hover:text-neon-cyan transition-colors"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
+                        <svg className="w-4 h-4 text-slate-600 group-hover:text-neon-cyan transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
                       </Link>
@@ -778,9 +769,7 @@ const ActorDetail: React.FC = () => {
                           }}
                         >
                           <div className="flex items-center justify-between gap-3 px-5 py-4 border-b border-white/10 shrink-0">
-                            <p className="text-sm font-bold text-white min-w-0 truncate">
-                              共演ネットワーク（全{coStars.length}）
-                            </p>
+                            <p className="text-sm font-bold text-white min-w-0 truncate">共演ネットワーク（全{coStars.length}）</p>
                             <button
                               type="button"
                               onClick={() => setIsAllCoStarsOpen(false)}
@@ -790,10 +779,7 @@ const ActorDetail: React.FC = () => {
                             </button>
                           </div>
 
-                          <div
-                            className="p-4 overflow-y-auto overscroll-contain"
-                            style={{ WebkitOverflowScrolling: "touch" as any }}
-                          >
+                          <div className="p-4 overflow-y-auto overscroll-contain" style={{ WebkitOverflowScrolling: "touch" as any }}>
                             <div className="space-y-2">
                               {coStars.map(({ actor: coStar, count }) => (
                                 <Link
@@ -806,9 +792,7 @@ const ActorDetail: React.FC = () => {
 
                                   <div className="flex-1 min-w-0">
                                     <div className="flex items-center justify-between gap-3">
-                                      <p className="text-sm font-bold text-slate-200 group-hover:text-neon-cyan transition-colors truncate">
-                                        {coStar.name}
-                                      </p>
+                                      <p className="text-sm font-bold text-slate-200 group-hover:text-neon-cyan transition-colors truncate">{coStar.name}</p>
                                       <span className="text-[10px] font-bold bg-neon-cyan/10 text-neon-cyan px-2 py-0.5 rounded-full border border-neon-cyan/20 whitespace-nowrap">
                                         ★ {count}作
                                       </span>
@@ -841,9 +825,7 @@ const ActorDetail: React.FC = () => {
 
                       <div className="flex-1 min-w-0">
                         <div className="flex justify-between items-center mb-1">
-                          <h3 className="font-bold text-white group-hover:text-neon-cyan transition-colors truncate">
-                            {coStar.name}
-                          </h3>
+                          <h3 className="font-bold text-white group-hover:text-neon-cyan transition-colors truncate">{coStar.name}</h3>
                           <span className="text-[10px] font-bold bg-neon-cyan/10 text-neon-cyan px-2 py-0.5 rounded-full border border-neon-cyan/20 whitespace-nowrap ml-2">
                             ★ {count}作
                           </span>
@@ -851,12 +833,7 @@ const ActorDetail: React.FC = () => {
                         <p className="text-xs text-slate-500 line-clamp-1">{coStar.tags?.[0] || "俳優"}</p>
                       </div>
 
-                      <svg
-                        className="w-4 h-4 text-slate-600 group-hover:text-neon-cyan transition-colors"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
+                      <svg className="w-4 h-4 text-slate-600 group-hover:text-neon-cyan transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
                     </Link>
