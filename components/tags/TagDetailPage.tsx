@@ -22,13 +22,13 @@ type TagItem = {
   playsCount: number;
 };
 
+// ✅ plays 側は franchise_slug/name ではなく join で取る（ActorDetail と揃える）
 type PlayRow = {
   id: string;
   title: string | null;
   slug: string | null;
-  date: string | null; // あれば並びに使う
-  franchise_slug: string | null; // あればシリーズ導線に使う
-  franchise_name: string | null;
+  period: string | null; // date の代替（並びに使う）
+  franchise: { name: string | null } | null; // franchises(name)
 };
 
 type PlayItem = {
@@ -36,7 +36,6 @@ type PlayItem = {
   title: string;
   slugOrId: string;
   date?: string;
-  franchiseSlug?: string;
   franchiseName?: string;
 };
 
@@ -69,9 +68,8 @@ const normalizePlay = (r: PlayRow): PlayItem | null => {
     id,
     title,
     slugOrId,
-    date: (r.date ?? "").trim() || undefined,
-    franchiseSlug: (r.franchise_slug ?? "").trim() || undefined,
-    franchiseName: (r.franchise_name ?? "").trim() || undefined,
+    date: (r.period ?? "").trim() || undefined,
+    franchiseName: (r.franchise?.name ?? "").trim() || undefined,
   };
 };
 
@@ -118,6 +116,7 @@ const TagDetailPage: React.FC = () => {
       .maybeSingle()
       .then(async (res) => {
         if (res.error || !res.data) {
+          console.warn("[tags/:slug] tag fetch error", res.error);
           setTag(null);
           return;
         }
@@ -131,24 +130,24 @@ const TagDetailPage: React.FC = () => {
 
         setTag(t);
 
-        // タグに紐づく作品一覧（必要なら view を作るのがベスト）
-        // ここは supabase の関係設定がある前提で nested select を試し、
-        // ダメなら view 化して差し替えるのが最短。
+        // ✅ タグに紐づく作品一覧：play_tags 起点で plays を join（ActorDetail と同じ方式）
         const playsRes = await supabase
           .from("play_tags")
           .select(
             `
-            plays:plays (
+            play:plays (
               id,
               title,
               slug,
-              date,
-              franchise_slug,
-              franchise_name
+              period,
+              franchise:franchises ( name )
             )
           `
           )
           .eq("tag_id", t.id);
+
+        // ★ ここが落ちてると「0作品」になるのでログ必須
+        console.log("[tags/:slug] play_tags->play rows", playsRes.data, playsRes.error);
 
         if (playsRes.error) {
           console.warn("[tags/:slug] plays fetch error", playsRes.error);
@@ -156,18 +155,19 @@ const TagDetailPage: React.FC = () => {
           return;
         }
 
+        // rows -> play を抜く
         const rows = ((playsRes.data as any) ?? [])
-          .map((x: any) => x?.plays)
+          .map((x: any) => x?.play)
           .filter(Boolean) as PlayRow[];
 
         const normalized = rows.map(normalizePlay).filter(Boolean) as PlayItem[];
 
-        // date があるなら新しい順に寄せる（なければtitle順）
+        // period があるなら新しい順に寄せる（なければtitle順）
         normalized.sort((a, b) => {
           const ad = a.date ?? "";
           const bd = b.date ?? "";
           if (ad && bd) return bd.localeCompare(ad);
-          return a.title.localeCompare(b.title);
+          return a.title.localeCompare(b.title, "ja");
         });
 
         setPlays(normalized);
@@ -176,16 +176,10 @@ const TagDetailPage: React.FC = () => {
   }, [slug]);
 
   if (!slug) {
-    return (
-      <div className="container mx-auto px-6 pt-8 pb-16 max-w-5xl text-slate-500">
-        slug が不正です
-      </div>
-    );
+    return <div className="container mx-auto px-6 pt-8 pb-16 max-w-5xl text-slate-500">slug が不正です</div>;
   }
 
-  const SEO_TITLE = tag
-    ? `${tag.name}の2.5次元作品一覧 | Stage Connect`
-    : `タグが見つかりません | Stage Connect`;
+  const SEO_TITLE = tag ? `${tag.name}の2.5次元作品一覧 | Stage Connect` : `タグが見つかりません | Stage Connect`;
 
   return (
     <div className="container mx-auto px-6 pt-8 pb-16 lg:px-8 max-w-5xl animate-fade-in-up">
@@ -198,9 +192,7 @@ const TagDetailPage: React.FC = () => {
       {!loading && !tag && (
         <div className="bg-theater-surface/30 border border-white/10 rounded-2xl p-8 text-center">
           <div className="text-white font-bold text-lg">このタグは表示できません</div>
-          <div className="text-slate-500 text-sm mt-2">
-            ※作品が2件未満のタグは非公開です（品質維持のため）
-          </div>
+          <div className="text-slate-500 text-sm mt-2">※作品が2件未満のタグは非公開です（品質維持のため）</div>
           <div className="mt-6">
             <Link
               to="/tags"
@@ -215,17 +207,17 @@ const TagDetailPage: React.FC = () => {
       {!loading && tag && (
         <>
           <div className="mb-6 text-center">
-            <span className={`inline-block px-3 py-1 mb-4 rounded-full border text-xs font-bold tracking-widest uppercase ${badgeByType(tag.type)}`}>
+            <span
+              className={`inline-block px-3 py-1 mb-4 rounded-full border text-xs font-bold tracking-widest uppercase ${badgeByType(
+                tag.type
+              )}`}
+            >
               TAG
             </span>
-            <h1 className="text-3xl sm:text-4xl font-extrabold text-white mb-3">
-              {tag.name}
-            </h1>
+            <h1 className="text-3xl sm:text-4xl font-extrabold text-white mb-3">{tag.name}</h1>
 
             <p className="text-slate-400 text-sm leading-relaxed">
-              {tag.description
-                ? tag.description
-                : "このタグに該当する2.5次元作品をまとめています。"}
+              {tag.description ? tag.description : "このタグに該当する2.5次元作品をまとめています。"}
               <br />
               <span className="text-slate-500">（対象：{tag.playsCount.toLocaleString()} 作品）</span>
             </p>
@@ -257,10 +249,9 @@ const TagDetailPage: React.FC = () => {
             ) : (
               <div className="p-4 sm:p-5 grid grid-cols-1 gap-3">
                 {plays.map((p) => {
-                  // TODO: ここはあなたの「作品詳細ルート」に合わせて調整
-                  // 例: /plays/:slug ならこれでOK。別なら差し替え。
                   const playHref = `/plays/${encodeURIComponent(p.slugOrId)}`;
-                  const seriesHref = p.franchiseSlug ? `/series/${encodeURIComponent(p.franchiseSlug)}` : null;
+                  // ✅ SeriesDetail の route が /series/:name なので franchiseName を渡す（slugが必要なら後で変更）
+                  const seriesHref = p.franchiseName ? `/series/${encodeURIComponent(p.franchiseName)}` : null;
 
                   return (
                     <div
