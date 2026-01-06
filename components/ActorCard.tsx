@@ -1,9 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Actor } from '../lib/types';
-import TagBadge from './TagBadge';
-import ActorAvatar from './ActorAvatar';
-import FavoriteButton from './FavoriteButton';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Actor } from "../lib/types";
+import ActorAvatar from "./ActorAvatar";
+import FavoriteButton from "./FavoriteButton";
 
 interface ActorCardProps {
   actor: Actor;
@@ -11,16 +10,13 @@ interface ActorCardProps {
 
 const ActorCard: React.FC<ActorCardProps> = ({ actor }) => {
   const truncateProfile = (text?: string, maxLength: number = 70) => {
-    if (!text) return '';
+    if (!text) return "";
     if (text.length <= maxLength) return text;
-    return text.substring(0, maxLength) + '...';
+    return text.substring(0, maxLength) + "...";
   };
 
   // ✅ DBは image_url、旧コードは imageUrl を見ていたので両対応しておく
-  const imageUrl =
-    (actor as any).image_url ||
-    (actor as any).imageUrl ||
-    undefined;
+  const imageUrl = (actor as any).image_url || (actor as any).imageUrl || undefined;
 
   return (
     <Link
@@ -59,13 +55,7 @@ const ActorCard: React.FC<ActorCardProps> = ({ actor }) => {
           </p>
         </div>
 
-        {actor.tags && actor.tags.length > 0 && (
-          <div className="flex flex-wrap gap-2 mt-auto">
-            {actor.tags.slice(0, 3).map((tag) => (
-              <TagBadge key={tag}>{tag}</TagBadge>
-            ))}
-          </div>
-        )}
+        {/* ✅ 俳優タグは運用しない方針なので表示を削除 */}
       </div>
     </Link>
   );
