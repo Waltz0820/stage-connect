@@ -1,3 +1,4 @@
+// src/components/admin/AdminActorEdit.tsx
 import React, { useEffect, useMemo, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { supabase } from "../../lib/supabase";
@@ -17,7 +18,7 @@ type ActorRow = {
   image_url?: string | null;
   gender?: string | null;
   sns?: any;
-  tags?: string[] | null;
+  // tags?: string[] | null;  // ✅ 使わない（俳優タグ廃止）
   featured_play_slugs?: string[] | null;
 };
 
@@ -33,7 +34,6 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
   const [profile, setProfile] = useState("");
   const [gender, setGender] = useState("male");
   const [imageUrl, setImageUrl] = useState("");
-  const [tags, setTags] = useState("");
   const [featured, setFeatured] = useState("");
   const [snsText, setSnsText] = useState("");
 
@@ -49,7 +49,6 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
       setProfile("");
       setGender("male");
       setImageUrl("");
-      setTags("");
       setFeatured("");
       setSnsText(stringifyPretty({}));
       return;
@@ -60,9 +59,11 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
       try {
         const { data, error } = await supabase
           .from("actors")
-          .select("id,slug,name,kana,profile,image_url,gender,sns,tags,featured_play_slugs")
+          // ✅ tags は読まない（廃止）
+          .select("id,slug,name,kana,profile,image_url,gender,sns,featured_play_slugs")
           .eq("slug", key)
           .maybeSingle();
+
         if (error) throw error;
         if (!data) return;
 
@@ -74,7 +75,6 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         setProfile(r.profile ?? "");
         setGender((r.gender as any) ?? "male");
         setImageUrl(r.image_url ?? "");
-        setTags((r.tags ?? []).join(", "));
         setFeatured((r.featured_play_slugs ?? []).join(", "));
         setSnsText(stringifyPretty(r.sns ?? {}));
       } catch (e: any) {
@@ -98,7 +98,10 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         profile: safeTrim(profile) || null,
         gender: safeTrim(gender) || "male",
         image_url: safeTrim(imageUrl) || null,
-        tags: parseCommaList(tags),
+
+        // ✅ tags は送らない（俳優タグ廃止）
+        // tags: parseCommaList(tags),
+
         featured_play_slugs: parseCommaList(featured),
         sns: parseJsonOr<any>(snsText, {}),
       };
@@ -231,11 +234,7 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
               {imageUrl ? <img src={imageUrl} alt="preview" className="w-full h-full object-cover" /> : null}
             </div>
             <div className="space-y-3">
-              <ImageUploader
-                folder="actors"
-                keyName={uploadKey}
-                onUploaded={(url) => setImageUrl(url)}
-              />
+              <ImageUploader folder="actors" keyName={uploadKey} onUploaded={(url) => setImageUrl(url)} />
               <input
                 className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
                 value={imageUrl}
@@ -259,22 +258,13 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
           />
         </Field>
 
-        <div className="grid md:grid-cols-2 gap-6">
-          <Field label="tags" hint="カンマ区切り（例：2.5次元,ミュージカル）">
-            <input
-              className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
-              value={tags}
-              onChange={(e) => setTags(e.target.value)}
-            />
-          </Field>
-          <Field label="featured_play_slugs" hint="カンマ区切り（例：play-a,play-b）">
-            <input
-              className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
-              value={featured}
-              onChange={(e) => setFeatured(e.target.value)}
-            />
-          </Field>
-        </div>
+        <Field label="featured_play_slugs" hint="カンマ区切り（例：play-a,play-b）">
+          <input
+            className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
+            value={featured}
+            onChange={(e) => setFeatured(e.target.value)}
+          />
+        </Field>
 
         <Field label="sns (json)" hint='例：{ "x": "https://x.com/...", "instagram": "..." }'>
           <JsonArea value={snsText} onChange={setSnsText} rows={10} />
