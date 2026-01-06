@@ -175,13 +175,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               TOP
             </Link>
             <Link to="/actors" className={mobileLinkStyle('/actors')}>
-              CAST
+              俳優
             </Link>
             <Link to="/plays" className={mobileLinkStyle('/plays')}>
-              PLAYS
+              作品
             </Link>
             <Link to="/series" className={mobileLinkStyle('/series')}>
-              SERIES
+              シリーズ
             </Link>
 
             {/* ✅ 追加: Watch */}
@@ -191,11 +191,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
             {/* ✅ 追加: Guide */}
             <Link to="/guide" className={mobileLinkStyle('/guide')}>
-              GUIDE
+              ガイド
             </Link>
 
             <Link to="/favorites" className={mobileLinkStyle('/favorites')}>
-              FAVORITES
+              お気に入り
             </Link>
           </nav>
 
