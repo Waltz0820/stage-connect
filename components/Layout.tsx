@@ -46,8 +46,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   }, []);
 
   const isActive = (path: string) => {
-    return location.pathname.startsWith(path) 
-      ? "text-neon-purple drop-shadow-[0_0_8px_rgba(180,108,255,0.5)] font-bold" 
+    return location.pathname.startsWith(path)
+      ? "text-neon-purple drop-shadow-[0_0_8px_rgba(180,108,255,0.5)] font-bold"
       : "text-slate-400 hover:text-white hover:drop-shadow-[0_0_5px_rgba(255,255,255,0.5)]";
   };
 
@@ -59,11 +59,14 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   return (
     <div className="flex min-h-screen flex-col bg-theater-black text-slate-200 font-sans antialiased relative overflow-hidden">
-      
+
       {/* Background Lighting Effects */}
       <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-0 overflow-hidden">
         <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-neon-purple/5 rounded-full blur-[120px] mix-blend-screen animate-pulse-slow"></div>
-        <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-neon-pink/5 rounded-full blur-[120px] mix-blend-screen animate-pulse-slow" style={{animationDelay: '2s'}}></div>
+        <div
+          className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-neon-pink/5 rounded-full blur-[120px] mix-blend-screen animate-pulse-slow"
+          style={{ animationDelay: '2s' }}
+        ></div>
       </div>
 
       {/* Header Navigation */}
@@ -75,25 +78,33 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 Stage Connect
               </span>
             </Link>
-            
+
             <nav className="hidden md:flex items-center gap-6 lg:gap-8">
-              <Link 
-                to="/actors" 
+              <Link
+                to="/actors"
                 className={`text-sm tracking-wide transition-all duration-300 ${isActive('/actors')}`}
               >
                 キャスト
               </Link>
-              <Link 
-                to="/plays" 
+              <Link
+                to="/plays"
                 className={`text-sm tracking-wide transition-all duration-300 ${isActive('/plays')}`}
               >
                 作品一覧
               </Link>
-              <Link 
-                to="/series" 
+              <Link
+                to="/series"
                 className={`text-sm tracking-wide transition-all duration-300 ${isActive('/series')}`}
               >
                 シリーズ
+              </Link>
+
+              {/* ✅ 追加: Watch */}
+              <Link
+                to="/watch"
+                className={`text-sm tracking-wide transition-all duration-300 ${isActive('/watch')}`}
+              >
+                配信
               </Link>
 
               {/* ✅ 追加: Guide */}
@@ -105,45 +116,49 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               </Link>
             </nav>
           </div>
-          
+
           <div className="flex items-center gap-4">
-             {/* Search Bar */}
-             <SearchBar />
+            {/* Search Bar */}
+            <SearchBar />
 
-             {/* Favorites Link */}
-             <Link 
-                to="/favorites"
-                className={`relative p-2 transition-colors ${isActive('/favorites')}`}
-                aria-label="お気に入り"
-             >
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-                  <path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z" />
-                </svg>
-             </Link>
+            {/* Favorites Link */}
+            <Link
+              to="/favorites"
+              className={`relative p-2 transition-colors ${isActive('/favorites')}`}
+              aria-label="お気に入り"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                <path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z" />
+              </svg>
+            </Link>
 
-             {/* Hamburger Button (Mobile) */}
-             <button 
-               onClick={() => setIsMenuOpen(true)}
-               className="md:hidden p-2 text-slate-300 hover:text-white transition-colors"
-               aria-label="メニューを開く"
-             >
-               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                 <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-               </svg>
-             </button>
+            {/* Hamburger Button (Mobile) */}
+            <button
+              onClick={() => setIsMenuOpen(true)}
+              className="md:hidden p-2 text-slate-300 hover:text-white transition-colors"
+              aria-label="メニューを開く"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+            </button>
           </div>
         </div>
       </header>
 
       {/* Mobile Menu Overlay */}
-      <div className={`fixed inset-0 z-[100] bg-theater-black/95 backdrop-blur-xl transition-all duration-500 flex flex-col ${isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'}`}>
+      <div
+        className={`fixed inset-0 z-[100] bg-theater-black/95 backdrop-blur-xl transition-all duration-500 flex flex-col ${
+          isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
+        }`}
+      >
         <div className="container mx-auto px-6 h-full flex flex-col">
           {/* Menu Header */}
           <div className="h-14 md:h-16 flex items-center justify-between border-b border-white/10 shrink-0">
             <span className="text-xl font-extrabold tracking-tighter text-white">
               MENU
             </span>
-            <button 
+            <button
               onClick={() => setIsMenuOpen(false)}
               className="p-2 text-slate-300 hover:text-white transition-colors"
               aria-label="メニューを閉じる"
@@ -153,7 +168,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               </svg>
             </button>
           </div>
-          
+
           {/* Menu Links */}
           <nav className="flex-1 flex flex-col justify-center items-center gap-10">
             <Link to="/" className={mobileLinkStyle('/')}>
@@ -169,6 +184,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               SERIES
             </Link>
 
+            {/* ✅ 追加: Watch */}
+            <Link to="/watch" className={mobileLinkStyle('/watch')}>
+              配信
+            </Link>
+
             {/* ✅ 追加: Guide */}
             <Link to="/guide" className={mobileLinkStyle('/guide')}>
               GUIDE
@@ -178,11 +198,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               FAVORITES
             </Link>
           </nav>
-          
+
           <div className="pb-10 text-center shrink-0">
-             <p className="text-xs text-slate-600 font-medium tracking-widest uppercase">
-               Stage Connect
-             </p>
+            <p className="text-xs text-slate-600 font-medium tracking-widest uppercase">
+              Stage Connect
+            </p>
           </div>
         </div>
       </div>
