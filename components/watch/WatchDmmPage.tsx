@@ -1,4 +1,3 @@
-// src/components/watch/WatchDmmPage.tsx
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { supabase } from "../../lib/supabase";
@@ -15,11 +14,11 @@ type WatchFranchiseRow = {
 type FranchiseItem = {
   id: string;
   name: string;
-  key: string; // slug優先。なければname
+  key: string;
   playsCount: number;
 };
 
-const PAGE_SIZE = 10;
+const PAGE_SIZE = 12;
 
 const WatchDmmPage: React.FC = () => {
   const [items, setItems] = useState<FranchiseItem[]>([]);
@@ -30,16 +29,13 @@ const WatchDmmPage: React.FC = () => {
   const [hasMore, setHasMore] = useState(true);
   const [page, setPage] = useState(0);
 
-  // 検索（ロード済み分に対するフィルタ）
   const [q, setQ] = useState("");
-
-  // 競合防止
   const seqRef = useRef(0);
 
   const breadcrumbs = useMemo(
     () => [
       { label: "配信で観る", to: "/watch" },
-      { label: "DMM TV", to: "/watch/dmm" },
+      { label: "DMM TV" },
     ],
     []
   );
@@ -50,7 +46,7 @@ const WatchDmmPage: React.FC = () => {
   const INPUT_FOCUS =
     "focus:border-neon-pink/40 focus:ring-2 focus:ring-neon-pink/20";
 
-  const DMM_FALLBACK_URL = "https://tv.dmm.com/vod/";
+  const DMM_FALLBACK_URL = "https://tv.dmm.com/vod/genre/?genre=stage";
   const UPDATED = new Date().toLocaleDateString("ja-JP");
 
   const normalize = (r: WatchFranchiseRow): FranchiseItem | null => {
@@ -87,7 +83,6 @@ const WatchDmmPage: React.FC = () => {
     if (mySeq !== seqRef.current) return;
 
     if (res.error) {
-      console.warn("[watch/dmm] fetch error", res.error);
       setHasMore(false);
       return;
     }
@@ -104,11 +99,6 @@ const WatchDmmPage: React.FC = () => {
   };
 
   useEffect(() => {
-    setItems([]);
-    setPage(0);
-    setHasMore(true);
-    setQ("");
-
     setLoading(true);
     Promise.all([fetchTotal(), fetchPage(0)]).finally(() => setLoading(false));
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -131,217 +121,189 @@ const WatchDmmPage: React.FC = () => {
   }, [items, q]);
 
   const countLabel = (totalCount ?? filtered.length).toLocaleString();
-  const SEO_TITLE = `2.5次元舞台の配信が特に充実！DMM TVで見られるシリーズ一覧とおすすめ【現在${countLabel}シリーズ】`;
-  const LIST_TITLE = "DMM TVで観られる2.5次元作品（シリーズ一覧）";
+  const SEO_TITLE = `2.5次元の配信が強い。DMM TVで見られるシリーズまとめ【現在${countLabel}シリーズ】`;
 
   return (
-    <div className="container mx-auto px-6 pt-8 pb-16 lg:px-8 max-w-5xl animate-fade-in-up">
+    <div className="container mx-auto px-6 pt-8 pb-32 lg:px-8 max-w-5xl animate-fade-in-up">
       <SeoHead title={`${SEO_TITLE} | Stage Connect`} robots="index,follow" />
       <Breadcrumbs items={breadcrumbs} />
 
-      {/* Header */}
-      <div className="mb-6 text-center">
+      {/* --- HEADER SECTION --- */}
+      <div className="mb-12 text-center relative">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-neon-pink/10 blur-[120px] pointer-events-none" />
         <span
-          className={`inline-block px-3 py-1 mb-4 rounded-full border text-xs font-bold tracking-widest uppercase ${BADGE_CLASS}`}
+          className={`relative inline-block px-4 py-1.5 mb-6 rounded-full border text-[10px] font-black tracking-[0.3em] uppercase backdrop-blur-sm ${BADGE_CLASS}`}
         >
-          DMM TV
+          DMM TV Media Mix Archive
         </span>
-
-        <h1 className="text-3xl sm:text-4xl font-extrabold text-white mb-3">
-          {SEO_TITLE}
+        <h1 className="relative text-3xl sm:text-4xl md:text-5xl font-black text-white mb-6 tracking-tighter italic uppercase">
+          Watch on <span className="text-neon-pink">DMM TV</span>
         </h1>
-
-        <p className="text-slate-400 text-sm leading-relaxed">
+        <p className="relative max-w-2xl mx-auto text-slate-400 text-sm leading-relaxed font-light">
           DMM TVで視聴できる2.5次元舞台・ミュージカルを、
-          <span className="text-slate-300">シリーズ単位</span>で整理しました。
+          <span className="text-slate-200 font-semibold">シリーズ単位</span>
+          で整理しました。
           <br />
-          作品詳細からキャスト・共演・年表へつなげて、「次に観る一本」まで見つけやすくしています。
-          <br />
-          <span className="text-slate-500">最終更新：{UPDATED}</span>
+          「次に観る一本」に最短で辿り着くための、回遊入口です。
         </p>
       </div>
 
-      {/* Top SEO block */}
-      <div className="bg-theater-surface/40 border border-white/10 rounded-2xl p-6 sm:p-8 mb-6">
-        <h2 className="text-white font-bold text-lg mb-3">
+      {/* --- TOP SEO CONTENT BLOCK --- */}
+      <div className="bg-theater-surface/60 border border-white/5 rounded-2xl p-8 mb-12 backdrop-blur-md relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-32 h-32 bg-neon-pink/5 blur-3xl pointer-events-none" />
+        <h2 className="text-white font-bold text-xl mb-6 flex items-center gap-3">
+          <span className="w-1.5 h-1.5 rounded-full bg-neon-pink" />
           2.5次元の配信先で迷ったら、まずDMM TV
         </h2>
 
-        <div className="text-slate-300 text-sm space-y-3 leading-relaxed">
+        <div className="text-slate-300 text-sm space-y-5 leading-relaxed font-light">
           <p>
             「2.5次元 配信 どこ」「舞台 配信 見放題」「ミュージカル 映像 サブスク」。
             <br />
-            こういう探し方をしている人は、まず <span className="text-slate-200 font-semibold">DMM TV</span>{" "}
-            をチェックしておくと効率が良いです。2.5次元まわりの作品が見つけやすい導線が用意されていて、
-            “配信で観る”入口として選びやすいのが強みです。
+            こういう探し方をしている人は、まず{" "}
+            <span className="text-slate-100 font-bold border-b border-neon-pink/50">
+              DMM TV
+            </span>{" "}
+            をチェックしておくと効率が良いです。
           </p>
 
           <p>
-            このページは、Stage Connect に登録された配信リンク（DMM TV）を元に、
-            <span className="text-slate-200 font-semibold">シリーズごと</span>に集約して一覧化しています。
-            「気になっていたシリーズ」や「推しの出演作」から入って、作品詳細→俳優→共演へ回遊できます。
+            このページは、Stage Connectに登録された配信リンク（DMM TV）を元に、
+            <span className="text-slate-100 font-bold">シリーズごと</span>に集約して一覧化しています。
+            「気になっていたシリーズ」や「推しの出演作」から入って、作品詳細→俳優→共演へと芋づる式に回遊できます。
           </p>
 
-          <p className="text-slate-400">
+          <p className="text-xs text-slate-500 italic">
             ※配信状況・料金・無料体験の条件は変更される場合があります。最終確認は遷移先の公式ページをご確認ください。
           </p>
         </div>
 
-        {/* Search-intent chips */}
-        <div className="mt-5 flex flex-wrap gap-2 justify-center">
-          <span className="text-[10px] px-2 py-1 rounded-full bg-white/5 border border-white/10 text-slate-300">
-            2.5次元 配信 どこ
-          </span>
-          <span className="text-[10px] px-2 py-1 rounded-full bg-white/5 border border-white/10 text-slate-300">
-            舞台 配信 見放題
-          </span>
-          <span className="text-[10px] px-2 py-1 rounded-full bg-white/5 border border-white/10 text-slate-300">
-            ミュージカル 配信 一覧
-          </span>
-          <span className="text-[10px] px-2 py-1 rounded-full bg-white/5 border border-white/10 text-slate-300">
-            2.5次元 アーカイブ
-          </span>
-          <span className="text-[10px] px-2 py-1 rounded-full bg-white/5 border border-white/10 text-slate-300">
-            推し 出演作 配信
-          </span>
+        <div className="mt-8 flex flex-wrap gap-2 justify-center">
+          {[
+            "2.5次元 配信 どこ",
+            "舞台 配信 見放題",
+            "ミュージカル 配信 一覧",
+            "2.5次元 アーカイブ",
+            "推し 出演作 配信",
+          ].map((chip) => (
+            <span
+              key={chip}
+              className="text-[10px] px-3 py-1 rounded-full bg-white/5 border border-white/10 text-slate-400 font-mono tracking-wider"
+            >
+              {chip}
+            </span>
+          ))}
         </div>
 
-        {/* Use guide */}
-        <div className="mt-6 border-t border-white/10 pt-6">
-          <h3 className="text-white font-bold text-base mb-3">
-            {LIST_TITLE} の見方
-          </h3>
-
-          <div className="grid grid-cols-1 gap-3">
-            <div className="rounded-xl border border-white/10 bg-black/20 p-4">
-              <div className="text-[11px] font-bold uppercase tracking-widest text-neon-pink mb-1">
-                HOW 1
+        <div className="mt-10 pt-10 border-t border-white/5 grid grid-cols-1 md:grid-cols-3 gap-6">
+          {[
+            {
+              step: "01",
+              title: "シリーズから入る",
+              desc: "タイトルが多いほど、シリーズ単位の方が迷いにくい。当たりを付けるのが最短です。",
+            },
+            {
+              step: "02",
+              title: "作品詳細で深掘る",
+              desc: "キャスト・共演・年表へ。配信だけで終わらず「次に観る」が見つかる設計です。",
+            },
+            {
+              step: "03",
+              title: "名前が曖昧なら検索",
+              desc: "うろ覚えでもOK。検索からシリーズに寄ると回遊スピードが上がります。",
+            },
+          ].map((how) => (
+            <div key={how.step} className="group">
+              <div className="text-[10px] font-black text-neon-pink mb-1 tracking-widest uppercase">
+                Step {how.step}
               </div>
-              <div className="text-white font-semibold mb-1">シリーズから入る</div>
-              <div className="text-slate-300 text-sm leading-relaxed">
-                タイトルが多いほど、シリーズ単位の方が迷いにくい。まずはシリーズ一覧で当たりを付けるのが最短です。
+              <div className="text-white font-bold text-sm mb-2 group-hover:text-neon-pink transition-colors">
+                {how.title}
               </div>
-            </div>
-
-            <div className="rounded-xl border border-white/10 bg-black/20 p-4">
-              <div className="text-[11px] font-bold uppercase tracking-widest text-neon-pink mb-1">
-                HOW 2
-              </div>
-              <div className="text-white font-semibold mb-1">作品詳細で深掘る</div>
-              <div className="text-slate-300 text-sm leading-relaxed">
-                作品詳細からキャスト・共演・年表へ。配信だけで終わらず「次に観る一本」が見つかりやすい設計です。
-              </div>
-            </div>
-
-            <div className="rounded-xl border border-white/10 bg-black/20 p-4">
-              <div className="text-[11px] font-bold uppercase tracking-widest text-neon-pink mb-1">
-                HOW 3
-              </div>
-              <div className="text-white font-semibold mb-1">名前が曖昧なら検索</div>
-              <div className="text-slate-300 text-sm leading-relaxed">
-                うろ覚えでもOK。検索 → 作品詳細 → シリーズに寄ると回遊が速いです。
+              <div className="text-slate-400 text-xs leading-relaxed font-light">
+                {how.desc}
               </div>
             </div>
-          </div>
-
-          <div className="mt-6 flex flex-wrap gap-2 justify-center">
-            <Link
-              to="/watch"
-              className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-white/10 transition-colors"
-            >
-              /watch に戻る
-            </Link>
-            <Link
-              to="/search"
-              className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-white/10 transition-colors"
-            >
-              検索へ
-            </Link>
-            <Link
-              to="/series"
-              className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-white/10 transition-colors"
-            >
-              シリーズ一覧へ
-            </Link>
-            <a
-              href={DMM_FALLBACK_URL}
-              target="_blank"
-              rel="sponsored noopener noreferrer"
-              className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-white/10 transition-colors"
-            >
-              DMM TVを開く ↗
-            </a>
-          </div>
+          ))}
         </div>
       </div>
 
-      {/* List */}
-      <div className="bg-theater-surface/30 border border-white/10 rounded-2xl overflow-hidden">
-        <div className="px-5 py-4 border-b border-white/5 bg-black/20 flex items-center justify-between">
-          <div className="text-[10px] font-bold uppercase tracking-widest text-slate-500">
-            LIST
+      {/* --- DATA LIST SECTION --- */}
+      <div className="bg-theater-surface/40 border border-white/5 rounded-2xl overflow-hidden backdrop-blur-sm mb-12">
+        <div className="px-8 py-5 border-b border-white/5 bg-black/20 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="w-2 h-2 rounded-full bg-neon-pink animate-pulse" />
+            <div className="text-[10px] font-black tracking-[0.2em] text-slate-500 uppercase">
+              Series Library
+            </div>
           </div>
-          <div className="text-[10px] text-slate-500">
-            {loading
-              ? "読み込み中..."
-              : `${(totalCount ?? filtered.length).toLocaleString()} シリーズ`}
-          </div>
-        </div>
-
-        {/* Search */}
-        <div className="px-5 py-4 border-b border-white/5 bg-black/10">
-          <input
-            value={q}
-            onChange={(e) => setQ(e.target.value)}
-            placeholder="シリーズ名で絞り込み（例：刀剣乱舞 / テニミュ）"
-            className={`w-full rounded-xl bg-black/30 border border-white/10 px-4 py-3 text-sm text-white placeholder:text-slate-600 outline-none ${INPUT_FOCUS} transition`}
-          />
-          <div className="mt-2 text-[11px] text-slate-500">
-            ※DMM TVの配信リンクが登録されている作品があるシリーズのみ表示されます。
+          <div className="text-[10px] font-mono text-slate-500">
+            {loading ? "FETCHING..." : `${countLabel} FRANCHISES`}
           </div>
         </div>
 
-        {loading && <div className="p-10 text-center text-slate-500">読み込み中...</div>}
+        <div className="px-8 py-6 border-b border-white/5 bg-black/10">
+          <div className="relative group">
+            <input
+              value={q}
+              onChange={(e) => setQ(e.target.value)}
+              placeholder="シリーズ名で絞り込み（例：刀剣乱舞 / テニミュ）"
+              className={`w-full rounded-xl bg-black/30 border border-white/10 px-6 py-4 text-sm text-white placeholder:text-slate-600 outline-none transition duration-300 ${INPUT_FOCUS}`}
+            />
+            <div className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-700 group-focus-within:text-neon-pink transition-colors">
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </div>
+          </div>
+          <div className="mt-3 text-[10px] text-slate-500 flex items-center gap-2 italic">
+            ※DMM TVの配信リンクが登録されている作品を含むシリーズを表示しています。
+          </div>
+        </div>
+
+        {loading && (
+          <div className="p-32 text-center text-slate-600 font-mono text-xs tracking-[0.3em] animate-pulse">
+            ACCESSING DATABASE...
+          </div>
+        )}
 
         {!loading && filtered.length === 0 && (
-          <div className="p-10 text-center text-slate-500">
+          <div className="p-16 text-center text-slate-500 text-sm">
             該当するシリーズが見つかりませんでした。別のキーワードでお試しください。
           </div>
         )}
 
         {!loading && filtered.length > 0 && (
-          <div className="p-4 sm:p-5 grid grid-cols-1 gap-3">
+          <div className="p-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
             {filtered.map((it) => {
               const seriesHref = `/series/${encodeURIComponent(it.key)}`;
               return (
                 <div
                   key={it.id}
-                  className={`rounded-xl border border-white/10 bg-black/30 p-4 transition-all duration-300 ${CARD_HOVER}`}
+                  className={`group relative rounded-xl border border-white/5 bg-black/30 p-6 transition-all duration-300 ${CARD_HOVER}`}
                 >
-                  <div className="flex items-center justify-between gap-3">
+                  <div className="flex items-center justify-between gap-4">
                     <div className="min-w-0">
                       <Link
                         to={seriesHref}
-                        className="block text-white font-semibold leading-snug hover:underline truncate"
+                        className="block text-white font-bold text-lg group-hover:text-neon-pink transition-colors truncate mb-1"
                       >
                         {it.name}
                       </Link>
-
-                      <div className="mt-1 flex flex-wrap items-center gap-2 text-[11px] text-slate-500">
-                        <span>配信リンク登録作品：{it.playsCount} 件</span>
-                        <span className="text-slate-700">/</span>
-                        <span>シリーズ詳細から作品一覧へ</span>
+                      <div className="flex items-center gap-2 text-[10px] font-mono text-slate-500">
+                        <span className="text-neon-pink/60">COLLECTION:</span>
+                        <span>{it.playsCount} PLAYS</span>
                       </div>
                     </div>
-
-                    <div className="flex flex-col gap-2 shrink-0">
-                      <Link
-                        to={seriesHref}
-                        className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-[11px] font-bold hover:bg-white/10 transition-colors text-center"
-                      >
-                        シリーズ詳細 →
-                      </Link>
-                    </div>
+                    <Link
+                      to={seriesHref}
+                      className="shrink-0 w-10 h-10 rounded-full bg-white/5 border border-white/5 flex items-center justify-center text-white/20 group-hover:bg-neon-pink/20 group-hover:text-neon-pink group-hover:border-neon-pink/30 transition-all"
+                      aria-label="シリーズ詳細へ"
+                    >
+                      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </Link>
                   </div>
                 </div>
               );
@@ -350,92 +312,143 @@ const WatchDmmPage: React.FC = () => {
         )}
 
         {hasMore && !loading && (
-          <div className="p-4 border-t border-white/5 bg-black/20">
+          <div className="p-8 border-t border-white/5 bg-black/20 text-center">
             <button
               onClick={loadMore}
               disabled={loadingMore}
-              className="w-full px-4 py-3 rounded-full bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-white/10 disabled:opacity-50 transition-colors"
+              className="px-12 py-3 rounded-full bg-white/5 border border-white/10 text-white text-[10px] font-black tracking-[0.2em] hover:bg-white/10 hover:border-white/30 transition-all disabled:opacity-50 uppercase"
             >
-              {loadingMore ? "読み込み中..." : "もっと見る"}
+              {loadingMore ? "LOADING..." : "Discover More Series"}
             </button>
           </div>
         )}
       </div>
 
-      {/* Bottom: CV/SEO */}
-      <div className="mt-8 bg-theater-surface/30 border border-white/10 rounded-2xl p-6 sm:p-8">
-        <h2 className="text-white font-bold text-lg mb-2">
-          まず試しやすい価格帯。視聴環境も作りやすい
-        </h2>
+      {/* --- BOTTOM SEO / CV SECTION --- */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <div className="lg:col-span-7 space-y-12">
+          <section>
+            <h2 className="text-white font-bold text-xl mb-6 flex items-center gap-3">
+              <span className="w-1 h-6 bg-neon-pink rounded-full shadow-[0_0_10px_#E944A6]" />
+              まず試しやすい価格帯。視聴環境も作りやすい
+            </h2>
+            <div className="text-slate-400 text-sm leading-loose font-light space-y-4">
+              <p>
+                DMM TVは月額料金が比較的始めやすい価格帯で、2.5次元の配信を「まず体験してみる」入口として選びやすいのが特徴です。
+                週末にまとめて観る、遠征の移動時間に消化するなど、サブスクの使い方と非常に相性が良いサービスです。
+              </p>
+              <p>
+                作品詳細から「お気に入り」に入れて後でじっくり観るなど、ファン活動のインフラとしても重宝します。
+                このページを起点に、シリーズ→作品→キャストへ回遊して、次の一本を拾っていってください。
+              </p>
+            </div>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a
+                href={DMM_FALLBACK_URL}
+                target="_blank"
+                rel="sponsored noopener noreferrer"
+                className="px-6 py-2.5 rounded-full bg-neon-pink/20 border border-neon-pink/40 text-white text-xs font-bold hover:bg-neon-pink/40 transition-all"
+              >
+                DMM TVを開く ↗
+              </a>
+              <Link
+                to="/series"
+                className="px-6 py-2.5 rounded-full bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-white/10 transition-all"
+              >
+                シリーズ一覧へ
+              </Link>
+            </div>
+          </section>
 
-        <div className="text-slate-300 text-sm space-y-3 leading-relaxed">
-          <p>
-            DMM TVは月額料金が比較的始めやすい価格帯で、2.5次元の配信を「まず体験してみる」入口として選びやすいのが特徴です。
-            <br />
-            週末にまとめて観る、遠征の移動時間に消化するなど、サブスクの使い方と相性が良いサービスです。
-          </p>
-
-          <p>
-            また、スマホ視聴だけでなく、テレビの大画面で観たい派にも向いています。
-            対応機器や視聴方法は時期により更新されることがあるため、手元の端末で視聴できるかだけ事前に確認しておくと安心です。
-          </p>
-
-          <p className="text-slate-400">
-            ※無料体験の有無・期間・対象は時期により変動する場合があります。最新の条件は公式でご確認ください。
-          </p>
+          <section className="bg-theater-surface/30 border border-white/5 rounded-2xl p-8">
+            <h2 className="text-white font-bold text-lg mb-8 tracking-widest uppercase italic opacity-80">
+              Media Mix FAQ
+            </h2>
+            <ul className="space-y-8">
+              {[
+                {
+                  q: "ここに載っているシリーズは、必ずDMM TVで観られますか？",
+                  a: "Stage Connectに登録された配信リンクを元に整理しています。配信状況は日々変動するため、最終的には遷移先のDMM TV公式ページでご確認ください。",
+                },
+                {
+                  q: "シリーズ一覧に無い作品はどうすればいい？",
+                  a: "配信リンクが未登録、または配信が終了している可能性があります。サイト上部の検索から作品名で直接探してみるのもおすすめです。",
+                },
+                {
+                  q: "作品一覧ではなくシリーズ一覧なのはなぜ？",
+                  a: "2.5次元舞台はシリーズ単位で繋がりやすく、シリーズを起点にした方が「次に何を観ればいいか」を迷わず見つけられるからです。",
+                },
+              ].map((faq) => (
+                <li key={faq.q} className="group">
+                  <div className="text-white font-bold text-sm mb-3 flex gap-3">
+                    <span className="text-neon-pink font-black">Q.</span> {faq.q}
+                  </div>
+                  <div className="text-slate-400 text-xs leading-relaxed pl-6 border-l border-white/5 group-hover:border-neon-pink/30 transition-colors font-light">
+                    {faq.a}
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </section>
         </div>
 
-        <div className="mt-6 flex flex-wrap gap-2">
-          <a
-            href={DMM_FALLBACK_URL}
-            target="_blank"
-            rel="sponsored noopener noreferrer"
-            className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-white/10 transition-colors"
-          >
-            DMM TVを開く ↗
-          </a>
-          <Link
-            to="/search"
-            className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-white/10 transition-colors"
-          >
-            作品検索へ
-          </Link>
-          <Link
-            to="/plays"
-            className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-white/10 transition-colors"
-          >
-            作品一覧へ
-          </Link>
-        </div>
+        <div className="lg:col-span-5">
+          <div className="bg-theater-surface/50 border border-white/5 rounded-2xl p-8 sticky top-24 backdrop-blur-md">
+            <h3 className="text-[10px] font-black text-slate-500 tracking-[0.3em] uppercase mb-6">
+              Archive Stats
+            </h3>
 
-        <div className="mt-6 border-t border-white/10 pt-6">
-          <h3 className="text-white font-bold text-sm mb-3">よくある質問</h3>
-          <ul className="text-slate-300 text-sm space-y-3">
-            <li>
-              <span className="text-slate-400">Q.</span>{" "}
-              ここに載っているシリーズは、必ずDMM TVで観られますか？
-              <br />
-              <span className="text-slate-500">
-                A. 登録された配信リンクを元に整理しています。配信状況は変わるため、最終的には遷移先でご確認ください。
-              </span>
-            </li>
-            <li>
-              <span className="text-slate-400">Q.</span> シリーズ一覧に無い作品は？
-              <br />
-              <span className="text-slate-500">
-                A. 配信リンクが未登録、または配信が終了している可能性があります。作品検索から探すのもおすすめです。
-              </span>
-            </li>
-            <li>
-              <span className="text-slate-400">Q.</span> 作品一覧ではなくシリーズ一覧なのは？
-              <br />
-              <span className="text-slate-500">
-                A. 2.5次元はシリーズ単位で繋がりやすく、迷いにくいからです。シリーズ詳細から作品→俳優へ自然に回遊できます。
-              </span>
-            </li>
-          </ul>
+            <div className="grid grid-cols-2 gap-6 mb-8">
+              <div className="bg-black/30 rounded-xl p-4 border border-white/5">
+                <div className="text-[10px] text-slate-500 mb-1">DMM SERIES</div>
+                <div className="text-2xl font-black text-white">{countLabel}</div>
+              </div>
+              <div className="bg-black/30 rounded-xl p-4 border border-white/5">
+                <div className="text-[10px] text-slate-500 mb-1">LAST SYNC</div>
+                <div className="text-sm font-mono text-neon-pink">{UPDATED}</div>
+              </div>
+            </div>
+
+            <div className="space-y-3">
+              <Link
+                to="/search"
+                className="flex items-center justify-between w-full px-5 py-4 rounded-xl bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-neon-pink/10 hover:border-neon-pink/30 transition-all group"
+              >
+                作品名・俳優名で検索
+                <svg
+                  className="w-4 h-4 text-slate-600 group-hover:text-neon-pink transition-colors"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </Link>
+
+              <Link
+                to="/watch"
+                className="flex items-center justify-between w-full px-5 py-4 rounded-xl bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-white/10 transition-all group"
+              >
+                配信ガイドTOP
+                <svg
+                  className="w-4 h-4 text-slate-600 group-hover:text-white transition-colors"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
+
+      <p className="mt-20 text-[10px] text-slate-700 text-center font-light leading-loose tracking-widest uppercase">
+        ※Stage Connect Media Database | Optimized for Cross-Media Discovery
+        <br />
+        SYNC ID: DMM-ARCHIVE-V2
+      </p>
     </div>
   );
 };

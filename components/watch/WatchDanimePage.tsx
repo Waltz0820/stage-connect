@@ -1,4 +1,3 @@
-// src/components/watch/WatchDanimePage.tsx
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { supabase } from "../../lib/supabase";
@@ -19,34 +18,33 @@ type FranchiseItem = {
   playsCount: number;
 };
 
-const PAGE_SIZE = 10;
+const PAGE_SIZE = 12;
 
 const WatchDanimePage: React.FC = () => {
   const [items, setItems] = useState<FranchiseItem[]>([]);
   const [totalCount, setTotalCount] = useState<number | null>(null);
-
   const [loading, setLoading] = useState(false);
   const [loadingMore, setLoadingMore] = useState(false);
   const [hasMore, setHasMore] = useState(true);
   const [page, setPage] = useState(0);
-
   const [q, setQ] = useState("");
-
   const seqRef = useRef(0);
 
   const breadcrumbs = useMemo(
     () => [
       { label: "配信で観る", to: "/watch" },
-      { label: "dアニメストア", to: "/watch/danime" },
+      { label: "dアニメストア" },
     ],
     []
   );
 
-  const BADGE_CLASS = "bg-emerald-400/10 border-emerald-300/30 text-emerald-300";
+  const BADGE_CLASS = "bg-emerald-500/10 border-emerald-500/30 text-emerald-400";
   const CARD_HOVER =
-    "hover:border-emerald-300/40 hover:shadow-[0_0_20px_rgba(16,185,129,0.14)]";
+    "hover:border-emerald-500/40 hover:shadow-[0_0_20px_rgba(16,185,129,0.15)]";
+  const INPUT_FOCUS =
+    "focus:border-emerald-500/40 focus:ring-2 focus:ring-emerald-500/20";
 
-  const DANIME_FALLBACK_URL = "https://animestore.docomo.ne.jp/";
+  const DANIME_FALLBACK_URL = "https://animestore.docomo.ne.jp/animestore/tp/";
   const UPDATED = new Date().toLocaleDateString("ja-JP");
 
   const normalize = (r: WatchFranchiseRow): FranchiseItem | null => {
@@ -54,7 +52,6 @@ const WatchDanimePage: React.FC = () => {
     const slug = (r.slug ?? "").trim();
     const key = slug || name;
     if (!name || !key) return null;
-
     const playsCount = typeof r.plays_count === "number" ? r.plays_count : 0;
     return { id: r.franchise_id, name, key, playsCount };
   };
@@ -63,7 +60,8 @@ const WatchDanimePage: React.FC = () => {
     const res = await supabase
       .from("watch_danime_franchises")
       .select("franchise_id", { count: "exact", head: true });
-    if (!res.error && typeof res.count === "number") setTotalCount(res.count);
+    if (res.error) return;
+    if (typeof res.count === "number") setTotalCount(res.count);
   };
 
   const fetchPage = async (nextPage: number) => {
@@ -79,9 +77,7 @@ const WatchDanimePage: React.FC = () => {
       .range(from, to);
 
     if (mySeq !== seqRef.current) return;
-
     if (res.error) {
-      console.warn("[watch/danime] fetch error", res.error);
       setHasMore(false);
       return;
     }
@@ -98,11 +94,6 @@ const WatchDanimePage: React.FC = () => {
   };
 
   useEffect(() => {
-    setItems([]);
-    setPage(0);
-    setHasMore(true);
-    setQ("");
-
     setLoading(true);
     Promise.all([fetchTotal(), fetchPage(0)]).finally(() => setLoading(false));
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -125,187 +116,190 @@ const WatchDanimePage: React.FC = () => {
   }, [items, q]);
 
   const countLabel = (totalCount ?? filtered.length).toLocaleString();
-
-  const SEO_TITLE = `月額でアニメも2.5次元も。dアニメストアで見られる舞台シリーズ一覧【現在${countLabel}シリーズ】`;
+  const SEO_TITLE = `アニメの次は舞台へ。dアニメストアで見られる2.5次元シリーズまとめ【現在${countLabel}シリーズ】`;
 
   return (
-    <div className="container mx-auto px-6 pt-8 pb-16 lg:px-8 max-w-5xl animate-fade-in-up">
+    <div className="container mx-auto px-6 pt-8 pb-32 lg:px-8 max-w-5xl animate-fade-in-up">
       <SeoHead title={`${SEO_TITLE} | Stage Connect`} robots="index,follow" />
       <Breadcrumbs items={breadcrumbs} />
 
-      {/* Header */}
-      <div className="mb-6 text-center">
+      {/* --- HEADER SECTION --- */}
+      <div className="mb-12 text-center relative">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-emerald-500/10 blur-[120px] pointer-events-none" />
         <span
-          className={`inline-block px-3 py-1 mb-4 rounded-full border text-xs font-bold tracking-widest uppercase ${BADGE_CLASS}`}
+          className={`relative inline-block px-4 py-1.5 mb-6 rounded-full border text-[10px] font-black tracking-[0.3em] uppercase backdrop-blur-sm ${BADGE_CLASS}`}
         >
-          dアニメストア
+          dAnime Store Media Mix Archive
         </span>
-
-        <h1 className="text-3xl sm:text-4xl font-extrabold text-white mb-3">{SEO_TITLE}</h1>
-
-        <p className="text-slate-400 text-sm leading-relaxed">
-          Stage Connect に登録された配信リンク（dアニメストア）をもとに、
-          <span className="text-slate-300">シリーズ単位</span>で整理しています。
+        <h1 className="relative text-3xl sm:text-4xl md:text-5xl font-black text-white mb-6 tracking-tighter italic uppercase">
+          Watch on <span className="text-emerald-400">dアニメストア</span>
+        </h1>
+        <p className="relative max-w-2xl mx-auto text-slate-400 text-sm leading-relaxed font-light">
+          dアニメストアで視聴できる2.5次元舞台を、
+          <span className="text-slate-200 font-semibold">シリーズ単位</span>
+          で整理しました。
           <br />
-          視聴ボタンからは外部サイトへ遷移します（Stage Connect 内での再生はありません）。
-          <br />
-          （最終更新：{UPDATED}）
+          「アニメの続き」を三次元で目撃するための、いちばん身近な入口です。
         </p>
       </div>
 
-      {/* Intro */}
-      <div className="bg-theater-surface/40 border border-white/10 rounded-2xl p-6 sm:p-8 mb-6">
-        <h2 className="text-white font-bold text-lg mb-3">
-          「2.5次元 舞台 配信 どこで見れる？」に、ひとつ答えを増やす棚
+      {/* --- TOP SEO CONTENT BLOCK --- */}
+      <div className="bg-theater-surface/60 border border-white/5 rounded-2xl p-8 mb-12 backdrop-blur-md relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 blur-3xl pointer-events-none" />
+        <h2 className="text-white font-bold text-xl mb-6 flex items-center gap-3">
+          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+          「2.5次元 配信 どこで見れる？」に、ひとつ答えを増やす棚
         </h2>
 
-        <div className="text-slate-300 text-sm space-y-3 leading-relaxed">
+        <div className="text-slate-300 text-sm space-y-5 leading-relaxed font-light">
           <p>
             dアニメストアはアニメの印象が強い一方で、アニメ原作のメディアミックスとして
-            <span className="text-slate-200 font-semibold">2.5次元舞台・ミュージカルが配信対象になっていること</span>
-            もあります。
+            <span className="text-slate-100 font-bold border-b border-emerald-500/50">
+              2.5次元舞台・ミュージカル
+            </span>
+            が刺さるタイトルもあります。
           </p>
-
           <p>
             ただ、サービス内検索だけだと「舞台」「2.5次元」「○○ 配信」みたいな探し方がしづらい時もある。
-            そこでこのページでは、Stage Connect 側のデータベースを使って
-            <span className="text-slate-200 font-semibold">“舞台シリーズ”を入口にして探せる形</span>にまとめています。
+            そこでStage Connectでは、舞台シリーズを起点にして「次の一本」が見つかるよう、配信リンクをシリーズ単位で再構築しました。
+          </p>
+          <p className="text-xs text-slate-500 italic">
+            ※Stage Connectに登録された配信リンク（dアニメストア）を元に集約しています。最新の配信状況・料金は公式サイトでご確認ください。
           </p>
         </div>
 
-        {/* Keyword chips */}
-        <div className="mt-5 rounded-xl border border-white/10 bg-black/20 p-4">
-          <div className="text-[11px] text-slate-400 mb-3">
-            こんな検索でたどり着いた人向け（例）
-          </div>
-          <div className="flex flex-wrap gap-2">
-            {[
-              "2.5次元 舞台 配信",
-              "舞台 配信 サブスク",
-              "ミュージカル 配信",
-              "アニメ原作 舞台 配信",
-              "テニミュ 配信",
-              "ヒプステ 配信",
-              "刀剣乱舞 舞台 配信",
-              "舞台 どこで見れる",
-            ].map((t) => (
-              <span
-                key={t}
-                className="text-[10px] px-2 py-1 rounded-full bg-white/5 border border-white/10 text-slate-300"
-              >
-                {t}
-              </span>
-            ))}
-          </div>
-          <div className="mt-3 text-[11px] text-slate-500 leading-relaxed">
-            ※作品名が曖昧でもOK。まずはシリーズを開いて、作品一覧→キャスト→関連作へ回遊できます。
-          </div>
+        <div className="mt-8 flex flex-wrap gap-2 justify-center">
+          {[
+            "2.5次元 配信 安い",
+            "舞台 配信 サブスク",
+            "アニメ 舞台 どこ",
+            "アニメ原作 舞台化",
+            "2.5次元 dアニメストア",
+          ].map((chip) => (
+            <span
+              key={chip}
+              className="text-[10px] px-3 py-1 rounded-full bg-white/5 border border-white/10 text-slate-400 font-mono tracking-wider"
+            >
+              {chip}
+            </span>
+          ))}
         </div>
 
-        {/* How to use */}
-        <div className="mt-6 border-t border-white/10 pt-6">
-          <h3 className="text-white font-bold text-lg mb-3">このページの使い方</h3>
-
-          <div className="text-slate-300 text-sm space-y-2 leading-relaxed">
-            <p>・「シリーズ詳細」：Stage Connect 内（作品一覧 / キャスト / 年表へ）</p>
-            <p>・「dアニメストアを開く」：外部サイトへ（別タブ推奨）</p>
-            <p className="text-slate-400">
-              ※配信状況は変わることがあります。最終的な配信可否は遷移先でご確認ください。
-            </p>
-          </div>
-
-          <div className="mt-6 flex flex-wrap gap-2 justify-center">
-            <Link
-              to="/watch"
-              className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-white/10 transition-colors"
-            >
-              /watch に戻る
-            </Link>
-            <Link
-              to="/series"
-              className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-white/10 transition-colors"
-            >
-              シリーズ一覧へ
-            </Link>
-            <Link
-              to="/search"
-              className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-white/10 transition-colors"
-            >
-              検索へ
-            </Link>
-            <a
-              href={DANIME_FALLBACK_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-white/10 transition-colors"
-            >
-              dアニメストアを開く ↗
-            </a>
-          </div>
+        <div className="mt-10 pt-10 border-t border-white/5 grid grid-cols-1 md:grid-cols-3 gap-6">
+          {[
+            {
+              step: "01",
+              title: "アニメ名で当たりを付ける",
+              desc: "原作アニメのタイトルで絞り込めば、舞台版シリーズに最短でアクセスできます。",
+            },
+            {
+              step: "02",
+              title: "作品詳細からキャストへ",
+              desc: "出演作→共演の流れで回遊。別作品の発見まで繋げます。",
+            },
+            {
+              step: "03",
+              title: "シリーズで“どれから観る”を決める",
+              desc: "シリーズの並びを見れば、入り口を選びやすい。迷子になりません。",
+            },
+          ].map((how) => (
+            <div key={how.step} className="group">
+              <div className="text-[10px] font-black text-emerald-500 mb-1 tracking-widest uppercase">
+                Step {how.step}
+              </div>
+              <div className="text-white font-bold text-sm mb-2 group-hover:text-emerald-500 transition-colors">
+                {how.title}
+              </div>
+              <div className="text-slate-400 text-xs leading-relaxed font-light">
+                {how.desc}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 
-      {/* List */}
-      <div className="bg-theater-surface/30 border border-white/10 rounded-2xl overflow-hidden">
-        <div className="px-5 py-4 border-b border-white/5 bg-black/20 flex items-center justify-between">
-          <div className="text-[10px] font-bold uppercase tracking-widest text-slate-500">LIST</div>
-          <div className="text-[10px] text-slate-500">
-            {loading ? "読み込み中..." : `${(totalCount ?? filtered.length).toLocaleString()} シリーズ`}
+      {/* --- DATA LIST SECTION --- */}
+      <div className="bg-theater-surface/40 border border-white/5 rounded-2xl overflow-hidden backdrop-blur-sm mb-12">
+        <div className="px-8 py-5 border-b border-white/5 bg-black/20 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+            <div className="text-[10px] font-black tracking-[0.2em] text-slate-500 uppercase">
+              Series Library
+            </div>
+          </div>
+          <div className="text-[10px] font-mono text-slate-500">
+            {loading ? "FETCHING..." : `${countLabel} FRANCHISES`}
           </div>
         </div>
 
-        {/* Filter */}
-        <div className="px-5 py-4 border-b border-white/5 bg-black/10">
-          <input
-            value={q}
-            onChange={(e) => setQ(e.target.value)}
-            placeholder="シリーズ名で絞り込み（例：テニミュ / ヒプステ / 刀剣乱舞 など）"
-            className="w-full rounded-xl bg-black/30 border border-white/10 px-4 py-3 text-sm text-white placeholder:text-slate-600 outline-none focus:border-emerald-300/40 focus:ring-2 focus:ring-emerald-300/20 transition"
-          />
-          <div className="mt-2 text-[11px] text-slate-500">
-            ※表示はシリーズ単位（dアニメストアの視聴リンクが登録されている作品があるシリーズのみ）。
+        <div className="px-8 py-6 border-b border-white/5 bg-black/10">
+          <div className="relative group">
+            <input
+              value={q}
+              onChange={(e) => setQ(e.target.value)}
+              placeholder="シリーズ名で絞り込み（例：テニミュ / ヒプステ / 刀剣乱舞）"
+              className={`w-full rounded-xl bg-black/30 border border-white/10 px-6 py-4 text-sm text-white placeholder:text-slate-600 outline-none transition duration-300 ${INPUT_FOCUS}`}
+            />
+            <div className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-700 group-focus-within:text-emerald-500 transition-colors">
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div className="mt-3 text-[10px] text-slate-500 flex items-center gap-2 italic">
+            ※dアニメストアの配信リンクが登録されている作品を含むシリーズを表示しています。
           </div>
         </div>
 
-        {loading && <div className="p-10 text-center text-slate-500">読み込み中...</div>}
+        {loading && (
+          <div className="p-32 text-center text-slate-600 font-mono text-xs tracking-[0.3em] animate-pulse">
+            ACCESSING DATABASE...
+          </div>
+        )}
 
         {!loading && filtered.length === 0 && (
-          <div className="p-10 text-center text-slate-500">
-            該当するシリーズが見つかりませんでした。<br />
-            表記ゆれがありそうな場合は、短い単語（例：「刀剣」「テニミュ」）で試してみてください。
+          <div className="p-16 text-center text-slate-500 text-sm">
+            該当するシリーズが見つかりませんでした。別のキーワードでお試しください。
           </div>
         )}
 
         {!loading && filtered.length > 0 && (
-          <div className="p-4 sm:p-5 grid grid-cols-1 gap-3">
+          <div className="p-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
             {filtered.map((it) => {
               const seriesHref = `/series/${encodeURIComponent(it.key)}`;
               return (
                 <div
                   key={it.id}
-                  className={`rounded-xl border border-white/10 bg-black/30 p-4 transition-all duration-300 ${CARD_HOVER}`}
+                  className={`group relative rounded-xl border border-white/5 bg-black/30 p-6 transition-all duration-300 ${CARD_HOVER}`}
                 >
-                  <div className="flex items-center justify-between gap-3">
+                  <div className="flex items-center justify-between gap-4">
                     <div className="min-w-0">
                       <Link
                         to={seriesHref}
-                        className="block text-white font-semibold leading-snug hover:underline truncate"
+                        className="block text-white font-bold text-lg group-hover:text-emerald-500 transition-colors truncate mb-1"
                       >
                         {it.name}
                       </Link>
-                      <div className="mt-1 text-[11px] text-slate-500">
-                        dアニメストアのリンク登録作品：{it.playsCount} 件
+                      <div className="flex items-center gap-2 text-[10px] font-mono text-slate-500">
+                        <span className="text-emerald-500/60">COLLECTION:</span>
+                        <span>{it.playsCount} TITLES</span>
                       </div>
                     </div>
 
-                    <div className="flex flex-col gap-2 shrink-0">
-                      <Link
-                        to={seriesHref}
-                        className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-[11px] font-bold hover:bg-white/10 transition-colors text-center"
-                      >
-                        シリーズ詳細 →
-                      </Link>
-                    </div>
+                    <Link
+                      to={seriesHref}
+                      className="shrink-0 w-10 h-10 rounded-full bg-white/5 border border-white/5 flex items-center justify-center text-white/20 group-hover:bg-emerald-500/20 group-hover:text-emerald-500 group-hover:border-emerald-500/30 transition-all"
+                      aria-label="シリーズ詳細へ"
+                    >
+                      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </Link>
                   </div>
                 </div>
               );
@@ -314,93 +308,155 @@ const WatchDanimePage: React.FC = () => {
         )}
 
         {hasMore && !loading && (
-          <div className="p-4 border-t border-white/5 bg-black/20">
+          <div className="p-8 border-t border-white/5 bg-black/20 text-center">
             <button
               onClick={loadMore}
               disabled={loadingMore}
-              className="w-full px-4 py-3 rounded-full bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-white/10 disabled:opacity-50 transition-colors"
+              className="px-12 py-3 rounded-full bg-white/5 border border-white/10 text-white text-[10px] font-black tracking-[0.2em] hover:bg-white/10 hover:border-white/30 transition-all disabled:opacity-50 uppercase"
             >
-              {loadingMore ? "読み込み中..." : "もっと見る"}
+              {loadingMore ? "LOADING..." : "Discover More Series"}
             </button>
           </div>
         )}
       </div>
 
-      {/* Pricing / Trial */}
-      <div className="mt-8 bg-theater-surface/30 border border-white/10 rounded-2xl p-6 sm:p-8">
-        <h2 className="text-white font-bold text-lg mb-2">料金・無料期間は「申込経路」で変わる（改定予定あり）</h2>
+      {/* --- BOTTOM SEO / CV SECTION --- */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <div className="lg:col-span-7 space-y-12">
+          <section>
+            <h2 className="text-white font-bold text-xl mb-6 flex items-center gap-3">
+              <span className="w-1 h-6 bg-emerald-500 rounded-full shadow-[0_0_10px_#10B981]" />
+              月額で“アニメ→舞台”を繋げる。条件は申込経路で変わる
+            </h2>
 
-        <div className="text-slate-300 text-sm space-y-3 leading-relaxed">
-          <p>
-            dアニメストアは、月額で「アニメ＋関連コンテンツ（ライブ/ミュージカル等）」まで触れられるのが魅力です。
-            ただし、月額料金や無料期間は<span className="text-slate-200 font-semibold">申込経路（ブラウザ/アプリ）</span>で条件が変わります。
-          </p>
+            <div className="text-slate-400 text-sm leading-loose font-light space-y-4">
+              <p>
+                dアニメストアは、アニメ視聴の延長で「舞台版も触れる」導線を作りやすいのが強みです。
+                アニメを追った熱量のまま、同じ作品世界を“別表現”で目撃できます。
+              </p>
 
-          <div className="rounded-xl border border-white/10 bg-black/20 p-4">
-            <div className="text-white font-semibold mb-2">目安（公式案内ベース）</div>
-            <ul className="text-slate-300 text-sm space-y-2">
-              <li className="text-slate-300">
-                ・ブラウザ等（ドコモの申込）：
-                <span className="text-slate-200 font-semibold">月額550円（税込）</span>
-                → <span className="text-slate-200 font-semibold">2026年2月1日から月額660円（税込）</span>
-              </li>
-              <li className="text-slate-300">
-                ・App Store / Google Play：
-                <span className="text-slate-200 font-semibold">月額650円（税込）</span>
-                → <span className="text-slate-200 font-semibold">月額760円（税込）</span>
-                （改定日が異なります）
-              </li>
-              <li className="text-slate-500">
-                ※App Store：2026年2月1日より改定 / Google Play：2026年2月10日より改定（契約日によっては改定後料金が先に適用される場合あり）
-              </li>
-              <li className="text-slate-500">
-                ※初回無料は「7日間」や、申込経路によって「14日間」等になる場合があります。
-              </li>
+              <p>
+                なお、月額料金や無料期間は申込経路（ブラウザ/アプリ）で変わることがあります。
+                まずは公式の案内を確認しつつ、推しシリーズがどこまで配信対象かをチェックするのが最短ルートです。
+              </p>
+
+              <div className="rounded-xl border border-white/10 bg-black/20 p-4">
+                <div className="text-white font-semibold mb-2">料金の注意（要公式確認）</div>
+                <ul className="text-slate-300 text-sm space-y-2">
+                  <li>・ブラウザ等（ドコモ経由）と、App Store / Google Play で条件が異なる場合があります。</li>
+                  <li className="text-slate-500">
+                    ※料金・無料期間・配信状況は変更されることがあります。最終的な条件は必ず公式の案内をご確認ください。
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a
+                href={DANIME_FALLBACK_URL}
+                target="_blank"
+                rel="sponsored noopener noreferrer"
+                className="px-6 py-2.5 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-white text-xs font-bold hover:bg-emerald-500/40 transition-all"
+              >
+                dアニメストアを開く ↗
+              </a>
+              <Link
+                to="/series"
+                className="px-6 py-2.5 rounded-full bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-white/10 transition-all"
+              >
+                シリーズ一覧へ
+              </Link>
+            </div>
+          </section>
+
+          <section className="bg-theater-surface/30 border border-white/5 rounded-2xl p-8">
+            <h2 className="text-white font-bold text-lg mb-8 tracking-widest uppercase italic opacity-80">
+              dAnime Store FAQ
+            </h2>
+            <ul className="space-y-8">
+              {[
+                {
+                  q: "ここに載っているシリーズはdアニメストアで観られますか？",
+                  a: "Stage Connectに登録された配信情報を元に集計していますが、配信状況は入れ替わるため、最終的な視聴可否はdアニメストアの公式ページでご確認ください。",
+                },
+                {
+                  q: "無料期間はありますか？",
+                  a: "申込経路や時期により初回無料トライアルが用意されている場合があります。最新のキャンペーン情報は公式サイトの案内をご確認ください。",
+                },
+                {
+                  q: "アニメ版と舞台版、どちらから観るのがおすすめ？",
+                  a: "どちらからでも楽しめますが、アニメ版を履修してから舞台版を観ると、演出の工夫や再現度の凄さに気づきやすく、より深く刺さることが多いです。",
+                },
+              ].map((faq) => (
+                <li key={faq.q} className="group">
+                  <div className="text-white font-bold text-sm mb-3 flex gap-3">
+                    <span className="text-emerald-500 font-black">Q.</span> {faq.q}
+                  </div>
+                  <div className="text-slate-400 text-xs leading-relaxed pl-6 border-l border-white/5 group-hover:border-emerald-500/30 transition-colors font-light">
+                    {faq.a}
+                  </div>
+                </li>
+              ))}
             </ul>
+          </section>
+        </div>
+
+        <div className="lg:col-span-5">
+          <div className="bg-theater-surface/50 border border-white/5 rounded-2xl p-8 sticky top-24 backdrop-blur-md">
+            <h3 className="text-[10px] font-black text-slate-500 tracking-[0.3em] uppercase mb-6">
+              Archive Stats
+            </h3>
+            <div className="grid grid-cols-2 gap-6 mb-8">
+              <div className="bg-black/30 rounded-xl p-4 border border-white/5">
+                <div className="text-[10px] text-slate-500 mb-1">DANIME SERIES</div>
+                <div className="text-2xl font-black text-white">{countLabel}</div>
+              </div>
+              <div className="bg-black/30 rounded-xl p-4 border border-white/5">
+                <div className="text-[10px] text-slate-500 mb-1">LAST SYNC</div>
+                <div className="text-sm font-mono text-emerald-500">{UPDATED}</div>
+              </div>
+            </div>
+
+            <div className="space-y-3">
+              <Link
+                to="/search"
+                className="flex items-center justify-between w-full px-5 py-4 rounded-xl bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-emerald-500/10 hover:border-emerald-500/30 transition-all group"
+              >
+                作品名・原作名で検索
+                <svg
+                  className="w-4 h-4 text-slate-600 group-hover:text-emerald-500 transition-colors"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </Link>
+
+              <Link
+                to="/watch"
+                className="flex items-center justify-between w-full px-5 py-4 rounded-xl bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-white/10 transition-all group"
+              >
+                配信ガイドTOP
+                <svg
+                  className="w-4 h-4 text-slate-600 group-hover:text-white transition-colors"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </Link>
+            </div>
           </div>
-
-          <p className="text-slate-400">
-            ※料金・無料期間・配信状況は変更されることがあります。最終的な条件は必ず公式の案内をご確認ください。
-          </p>
-        </div>
-
-        <div className="mt-6 flex flex-wrap gap-2">
-          <a
-            href={DANIME_FALLBACK_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-white/10 transition-colors"
-          >
-            dアニメストアを開く ↗
-          </a>
-          <Link
-            to="/guide"
-            className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-white/10 transition-colors"
-          >
-            観劇ガイドへ
-          </Link>
-        </div>
-
-        <div className="mt-6 border-t border-white/10 pt-6">
-          <h3 className="text-white font-bold text-sm mb-3">よくある質問</h3>
-          <ul className="text-slate-300 text-sm space-y-3">
-            <li>
-              <span className="text-slate-400">Q.</span> ここに載っているシリーズは、今も必ず視聴できますか？
-              <br />
-              <span className="text-slate-500">
-                A. Stage Connect に登録されたリンクを元に整理しています。配信は入れ替わるため、最終的には遷移先でご確認ください。
-              </span>
-            </li>
-            <li>
-              <span className="text-slate-400">Q.</span> シリーズから入るメリットは？
-              <br />
-              <span className="text-slate-500">
-                A. 作品→キャスト→関連作の流れが作りやすく、「次に観るもの」が見つかりやすいからです。
-              </span>
-            </li>
-          </ul>
         </div>
       </div>
+
+      <p className="mt-20 text-[10px] text-slate-700 text-center font-light leading-loose tracking-widest uppercase">
+        ※Stage Connect Media Database | Optimized for Cross-Media Discovery
+        <br />
+        SYNC ID: DANIME-ARCHIVE-V2
+      </p>
     </div>
   );
 };
