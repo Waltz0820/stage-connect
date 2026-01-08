@@ -84,13 +84,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 to="/actors"
                 className={`text-sm tracking-wide transition-all duration-300 ${isActive('/actors')}`}
               >
-                キャスト
+                俳優
               </Link>
               <Link
                 to="/plays"
                 className={`text-sm tracking-wide transition-all duration-300 ${isActive('/plays')}`}
               >
-                作品一覧
+                作品
               </Link>
               <Link
                 to="/series"
