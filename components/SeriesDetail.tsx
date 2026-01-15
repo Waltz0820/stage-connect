@@ -8,6 +8,7 @@ import { supabase } from '../lib/supabase';
 import PlayCard from './PlayCard';
 import ActorAvatar from './ActorAvatar';
 import Breadcrumbs from './Breadcrumbs';
+import SeoHead from './SeoHead';
 
 import type { Actor, Gender } from '../lib/types';
 
@@ -19,6 +20,11 @@ type FranchiseRow = {
   // ✅ 管理画面から入力する用
   intro?: string | null; // 短文（上部の追加説明）
   description?: string | null; // 長文（折りたたみ）
+
+  // ✅ 固定情報（今回追加）
+  origin_type?: string | null; // 原作種別（漫画原作/ゲーム原作 など）
+  origin_note?: string | null; // 原作補足（作品名など）
+  production_companies?: string[] | null; // 制作会社
 };
 
 type PlayLike = {
@@ -81,6 +87,8 @@ const toPlainText = (s: any) => {
 };
 
 const truncate = (s: string, n: number) => (s.length <= n ? s : s.slice(0, Math.max(0, n - 1)) + '…');
+
+const normalizeOrigin = (s: any) => String(s ?? '').trim();
 
 // ✅ period から YYYYMM のソートキーを作る（雑な表記揺れに対応）
 const periodSortKey = (period?: string | null) => {
@@ -178,12 +186,8 @@ const SeriesDetail: React.FC = () => {
   // ✅ モーダル中は背景スクロールを完全停止（めり込み対策）
   useBodyScrollLock(isAllActorsOpen);
 
-  // -------------------------
-  // ✅ Site URL（canonical / OG 用）
-  // -------------------------
+  // JSON-LD 用に origin を取る（OG/canonicalは使わない）
   const siteUrl = useMemo(() => {
-    const envUrl = (import.meta as any)?.env?.VITE_SITE_URL as string | undefined;
-    if (envUrl) return envUrl.replace(/\/$/, '');
     if (typeof window !== 'undefined') return window.location.origin.replace(/\/$/, '');
     return '';
   }, []);
@@ -205,10 +209,10 @@ const SeriesDetail: React.FC = () => {
       setLoading(true);
 
       try {
-        // 1) franchise を slug or name で拾う
+        // 1) franchise を slug or name で拾う（✅ 固定情報も含めて取得）
         const { data: fr, error: frErr } = await supabase
           .from('franchises')
-          .select('id, name, slug, intro, description')
+          .select('id, name, slug, intro, description, origin_type, origin_note, production_companies')
           .or(`slug.eq.${decodedName},name.eq.${decodedName}`)
           .maybeSingle();
 
@@ -329,10 +333,8 @@ const SeriesDetail: React.FC = () => {
 
         setTopActors(tops);
 
-        // ✅ シリーズを変えたときは折りたたみを閉じる
+        // ✅ シリーズを変えたときは折りたたみ/モーダルを閉じる
         setIsIntroOpen(false);
-
-        // ✅ シリーズを変えたときはモーダルも閉じる
         setIsAllActorsOpen(false);
       } finally {
         setLoading(false);
@@ -384,14 +386,22 @@ const SeriesDetail: React.FC = () => {
     return t ? t : '';
   }, [franchise?.description]);
 
-  // -------------------------
-  // ✅ SEO
-  // -------------------------
-  const canonicalUrl = useMemo(() => {
-    if (!siteUrl || !franchise?.name) return '';
-    return `${siteUrl}/series/${encodeURIComponent(franchise.name)}`;
-  }, [siteUrl, franchise?.name]);
+  // ✅ 固定情報（原作/制作）
+  const originType = useMemo(() => normalizeOrigin(franchise?.origin_type), [franchise?.origin_type]);
+  const originNote = useMemo(() => (franchise?.origin_note ?? '').trim(), [franchise?.origin_note]);
+  const productionCompanies = useMemo(() => {
+    const arr = franchise?.production_companies ?? null;
+    const cleaned = (arr ?? []).map((x) => String(x ?? '').trim()).filter(Boolean);
+    return cleaned.length > 0 ? cleaned : [];
+  }, [franchise?.production_companies]);
 
+  const hasFixedMeta = useMemo(() => {
+    return Boolean(originType) || Boolean(originNote) || productionCompanies.length > 0;
+  }, [originType, originNote, productionCompanies.length]);
+
+  // -------------------------
+  // ✅ SEO（SeoHeadに統一）
+  // -------------------------
   const seoTitle = useMemo(() => {
     if (!franchise) return `${SITE_NAME}`;
     return `${franchise.name}｜シリーズ作品一覧・年表 - ${SITE_NAME}`;
@@ -408,12 +418,6 @@ const SeriesDetail: React.FC = () => {
 
     return truncate(toPlainText(composed), 155);
   }, [franchise, plays.length, startYear, endYearLabel, manualIntro]);
-
-  const ogImage = useMemo(() => {
-    const envOg = (import.meta as any)?.env?.VITE_OG_IMAGE as string | undefined;
-    if (envOg) return envOg;
-    return '';
-  }, []);
 
   // JSON-LD（FAQPage）
   const jsonLdFaq = useMemo(() => {
@@ -449,31 +453,32 @@ const SeriesDetail: React.FC = () => {
     };
   }, [franchise, plays.length, startYear, hasVod]);
 
-  // JSON-LD（BreadcrumbList）
+  // JSON-LD（BreadcrumbList）※絶対URLが取れる時だけ
   const jsonLdBreadcrumbs = useMemo(() => {
-    if (!canonicalUrl || !franchise?.name) return null;
+    if (!siteUrl || !franchise?.name) return null;
 
-    const list = [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'シリーズ一覧',
-        item: `${siteUrl}/series`,
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: franchise.name,
-        item: canonicalUrl,
-      },
-    ];
+    const seriesUrl = `${siteUrl}/series`;
+    const detailUrl = `${siteUrl}/series/${encodeURIComponent(franchise.name)}`;
 
     return {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
-      itemListElement: list,
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'シリーズ一覧',
+          item: seriesUrl,
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: franchise.name,
+          item: detailUrl,
+        },
+      ],
     };
-  }, [canonicalUrl, franchise?.name, siteUrl]);
+  }, [siteUrl, franchise?.name]);
 
   // -------------------------
   // ✅ Early returns
@@ -481,10 +486,7 @@ const SeriesDetail: React.FC = () => {
   if (loading) {
     return (
       <div className="container mx-auto px-6 pt-8 pb-16 lg:px-8 max-w-5xl animate-fade-in-up">
-        {/* ✅ SEO（loading時は noindex 推奨） */}
-        <title>読み込み中… | {SITE_NAME}</title>
-        <meta name="robots" content="noindex,nofollow" />
-
+        <SeoHead title={`読み込み中… - ${SITE_NAME}`} description="読み込み中…" robots="noindex,nofollow" />
         <Breadcrumbs items={[{ label: 'シリーズ一覧', to: '/series' }, { label: '読み込み中…' }]} />
         <div className="mt-10 text-slate-400">読み込み中...</div>
       </div>
@@ -494,10 +496,7 @@ const SeriesDetail: React.FC = () => {
   if (!franchise) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[60vh] text-center px-4 animate-fade-in-up">
-        {/* ✅ SEO（404相当） */}
-        <title>シリーズが見つかりません | {SITE_NAME}</title>
-        <meta name="robots" content="noindex,nofollow" />
-
+        <SeoHead title={`シリーズが見つかりません - ${SITE_NAME}`} description="シリーズが見つかりませんでした" robots="noindex,nofollow" />
         <h2 className="text-2xl font-bold text-white">シリーズが見つかりませんでした</h2>
         <Link
           to="/series"
@@ -511,25 +510,7 @@ const SeriesDetail: React.FC = () => {
 
   return (
     <div className="container mx-auto px-6 pt-8 pb-16 lg:px-8 max-w-5xl animate-fade-in-up">
-      {/* ✅ SEO head（React 19 native） */}
-      <title>{seoTitle}</title>
-      <meta name="description" content={seoDescription} />
-      <meta name="robots" content="index,follow" />
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-
-      {/* OG / Twitter */}
-      <meta property="og:locale" content="ja_JP" />
-      <meta property="og:type" content="article" />
-      <meta property="og:site_name" content={SITE_NAME} />
-      <meta property="og:title" content={seoTitle} />
-      <meta property="og:description" content={seoDescription} />
-      {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
-      {ogImage && <meta property="og:image" content={ogImage} />}
-
-      <meta name="twitter:card" content={ogImage ? 'summary_large_image' : 'summary'} />
-      <meta name="twitter:title" content={seoTitle} />
-      <meta name="twitter:description" content={seoDescription} />
-      {ogImage && <meta name="twitter:image" content={ogImage} />}
+      <SeoHead title={seoTitle} description={seoDescription} robots="index,follow" />
 
       {/* 構造化データ */}
       {jsonLdFaq && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }} />}
@@ -567,7 +548,6 @@ const SeriesDetail: React.FC = () => {
               ) : (
                 <>
                   <div className="relative">
-                    {/* うっすら左右フェード（“横に続いてる感”） */}
                     <div className="pointer-events-none absolute inset-y-0 left-0 w-6 bg-gradient-to-r from-theater-black/80 to-transparent" />
                     <div className="pointer-events-none absolute inset-y-0 right-0 w-6 bg-gradient-to-l from-theater-black/80 to-transparent" />
 
@@ -613,7 +593,6 @@ const SeriesDetail: React.FC = () => {
                     <div
                       className="fixed inset-0 z-[2147483647] bg-black/70 backdrop-blur-sm"
                       onMouseDown={(e) => {
-                        // 背景クリックで閉じる（外側だけ）
                         if (e.target === e.currentTarget) setIsAllActorsOpen(false);
                       }}
                       style={{
@@ -639,7 +618,6 @@ const SeriesDetail: React.FC = () => {
                             </button>
                           </div>
 
-                          {/* ✅ ここだけスクロールさせる（背景はロック済み） */}
                           <div className="p-4 overflow-y-auto overscroll-contain">
                             <div className="space-y-2">
                               {topActors.map(({ actor, count }, index) => (
@@ -678,7 +656,7 @@ const SeriesDetail: React.FC = () => {
               )}
             </div>
 
-            {/* ✅ Desktop: 従来の縦リスト */}
+            {/* ✅ Desktop: 縦リスト */}
             <div className="hidden lg:block">
               <div className="space-y-4">
                 {topActors.map(({ actor, count }, index) => (
@@ -713,12 +691,50 @@ const SeriesDetail: React.FC = () => {
 
         {/* Main */}
         <div className="lg:col-span-8 lg:order-1 space-y-12">
-          {/* ✅ Series Info：自動要約は固定 + 手動は追加で積む + 長文は折りたたみ */}
+          {/* ✅ Series Info：固定情報 + 自動要約 + 手動追記 + 長文折りたたみ */}
           <section className="bg-white/5 rounded-xl border border-white/10 p-6 backdrop-blur-sm">
             <h2 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-3 flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-neon-cyan"></span>
               Series Info
             </h2>
+
+            {/* ✅ 固定情報（流動しない要素） */}
+            {hasFixedMeta && (
+              <div className="mb-4 p-4 rounded-xl bg-theater-surface/60 border border-white/10">
+                <div className="flex flex-wrap gap-2">
+                  {originType && (
+                    <span className="inline-flex items-center px-2 py-1 rounded-full text-[10px] font-bold tracking-widest border border-white/10 bg-white/5 text-slate-300">
+                      {originType}
+                    </span>
+                  )}
+                  {productionCompanies.length > 0 && (
+                    <span className="inline-flex items-center px-2 py-1 rounded-full text-[10px] font-bold tracking-widest border border-white/10 bg-white/5 text-slate-300">
+                      制作：{productionCompanies.length}社
+                    </span>
+                  )}
+                </div>
+
+                {(originNote || productionCompanies.length > 0) && (
+                  <div className="mt-3 space-y-2">
+                    {originNote && (
+                      <div>
+                        <p className="text-[9px] uppercase tracking-widest text-slate-600 font-bold mb-1">原作</p>
+                        <p className="text-sm text-slate-300 leading-relaxed font-light whitespace-pre-wrap">{originNote}</p>
+                      </div>
+                    )}
+
+                    {productionCompanies.length > 0 && (
+                      <div>
+                        <p className="text-[9px] uppercase tracking-widest text-slate-600 font-bold mb-1">制作</p>
+                        <p className="text-sm text-slate-300 leading-relaxed font-light">
+                          {productionCompanies.join(' / ')}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
+            )}
 
             {/* 固定（自動挿入） */}
             <p className="text-slate-300 text-sm leading-relaxed font-light whitespace-pre-wrap">{autoIntro}</p>
