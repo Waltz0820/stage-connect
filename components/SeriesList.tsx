@@ -139,7 +139,8 @@ const SeriesList: React.FC = () => {
       const t = normalizeOrigin(f.meta?.origin_type);
       if (t) set.add(t);
     }
-    return ['all', ...Array.from(set).sort((a, b) => a.localeCompare(b, 'ja')));
+    // ✅ ここが修正点：余計な ")" を消して ] で閉じる
+    return ['all', ...Array.from(set).sort((a, b) => a.localeCompare(b, 'ja'))];
   }, [franchises]);
 
   // フィルタ＋ソート
@@ -281,7 +282,12 @@ const SeriesList: React.FC = () => {
 
                 <div className="flex items-center gap-4 text-sm text-slate-400 mb-6">
                   <span className="flex items-center gap-1">
-                    <svg className="w-4 h-4 text-neon-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg
+                      className="w-4 h-4 text-neon-purple"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -298,7 +304,9 @@ const SeriesList: React.FC = () => {
                   {/* 制作会社 */}
                   {franchise.meta?.production_companies && franchise.meta.production_companies.length > 0 && (
                     <div>
-                      <p className="text-[9px] uppercase tracking-widest text-slate-600 font-bold mb-0.5">制作</p>
+                      <p className="text-[9px] uppercase tracking-widest text-slate-600 font-bold mb-0.5">
+                        制作
+                      </p>
                       <p className="text-xs text-slate-400 font-medium truncate">
                         {franchise.meta.production_companies.join(', ')}
                       </p>
@@ -307,7 +315,9 @@ const SeriesList: React.FC = () => {
 
                   {/* 主要キャスト（テキスト） */}
                   <div>
-                    <p className="text-[9px] uppercase tracking-widest text-slate-600 font-bold mb-1">主要キャスト</p>
+                    <p className="text-[9px] uppercase tracking-widest text-slate-600 font-bold mb-1">
+                      主要キャスト
+                    </p>
 
                     <div className="text-sm font-bold text-slate-200 leading-snug">
                       {franchise.topActors.length === 0 ? (
@@ -317,7 +327,9 @@ const SeriesList: React.FC = () => {
                           {franchise.topActors.slice(0, 5).map(({ actor }, i) => (
                             <span key={actor.slug}>
                               {i > 0 && <span className="text-slate-600 font-normal mx-1.5">/</span>}
-                              <span className="group-hover:text-neon-cyan transition-colors duration-300">{actor.name}</span>
+                              <span className="group-hover:text-neon-cyan transition-colors duration-300">
+                                {actor.name}
+                              </span>
                             </span>
                           ))}
                           {franchise.topActors.length > 5 && (
@@ -333,7 +345,12 @@ const SeriesList: React.FC = () => {
                   <span className="text-xs font-bold text-neon-cyan opacity-0 group-hover:opacity-100 transition-opacity flex items-center">
                     シリーズ詳細
                     <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M17 8l4 4m0 0l-4 4m4-4H3"
+                      />
                     </svg>
                   </span>
                 </div>
