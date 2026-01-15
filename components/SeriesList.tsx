@@ -47,9 +47,23 @@ const toPlainText = (s: any) => {
     .trim();
 };
 
-const truncate = (s: string, n: number) => (s.length <= n ? s : s.slice(0, Math.max(0, n - 1)) + '…');
+const truncate = (s: string, n: number) =>
+  s.length <= n ? s : s.slice(0, Math.max(0, n - 1)) + '…';
 
 const normalizeOrigin = (s: any) => String(s ?? '').trim();
+
+/** ✅ ここが肝：一覧のURLキーは meta.slug を最優先 */
+const getSeriesKey = (f: FranchiseUI) => {
+  const slug = f.meta?.slug?.trim();
+  if (slug) return slug;
+
+  // meta.name があるならそれ（= DBと突き合わせた正規名称）
+  const metaName = f.meta?.name?.trim();
+  if (metaName) return metaName;
+
+  // 最後に集計側の name（従来互換）
+  return f.name;
+};
 
 const SeriesList: React.FC = () => {
   const [actorsDb, setActorsDb] = useState<Actor[] | null>(null);
@@ -102,7 +116,6 @@ const SeriesList: React.FC = () => {
   // ✅ Franchises（DB優先→ローカル）
   // -------------------------
   const baseFranchises: FranchiseStats[] = useMemo(() => {
-    // actorsDbがロードされていればそれを使い、なければ静的データを使う
     return actorsDb ? getAllFranchises(actorsDb) : getAllFranchises();
   }, [actorsDb]);
 
@@ -126,7 +139,7 @@ const SeriesList: React.FC = () => {
       const t = normalizeOrigin(f.meta?.origin_type);
       if (t) set.add(t);
     }
-    return ['all', ...Array.from(set).sort((a, b) => a.localeCompare(b, 'ja'))];
+    return ['all', ...Array.from(set).sort((a, b) => a.localeCompare(b, 'ja')));
   }, [franchises]);
 
   // フィルタ＋ソート
@@ -138,7 +151,6 @@ const SeriesList: React.FC = () => {
 
     const sorted = [...filtered].sort((a, b) => {
       if (sortKey === 'name_asc') return a.name.localeCompare(b.name, 'ja');
-      // play_count_desc
       return (b.playCount ?? 0) - (a.playCount ?? 0);
     });
 
@@ -150,7 +162,8 @@ const SeriesList: React.FC = () => {
   // -------------------------
   const seoTitle = `シリーズ一覧｜人気舞台シリーズ・フランチャイズ - ${SITE_NAME}`;
   const seoDescription = useMemo(() => {
-    const base = '人気舞台シリーズ・フランチャイズを一覧で検索。代表作数や主要キャストから、気になるシリーズの詳細ページへ。';
+    const base =
+      '人気舞台シリーズ・フランチャイズを一覧で検索。代表作数や主要キャストから、気になるシリーズの詳細ページへ。';
     const composed = franchises?.length ? `${base}（登録シリーズ：${franchises.length}）` : base;
     return truncate(toPlainText(composed), 155);
   }, [franchises]);
@@ -164,13 +177,17 @@ const SeriesList: React.FC = () => {
       <div className="mb-8 border-b border-white/10 pb-6 flex flex-col md:flex-row md:items-end justify-between gap-6">
         <div>
           <h2 className="text-3xl font-bold tracking-wide text-white mb-2">シリーズ一覧</h2>
-          <p className="text-sm text-slate-400 font-light tracking-wider">人気舞台シリーズ・フランチャイズ</p>
+          <p className="text-sm text-slate-400 font-light tracking-wider">
+            人気舞台シリーズ・フランチャイズ
+          </p>
         </div>
 
         <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
           {/* ソートボタン (Segmented Control Style) */}
           <div className="flex items-center gap-3 bg-theater-surface p-1.5 rounded-lg border border-white/5">
-            <span className="pl-2 text-[10px] font-bold text-slate-500 uppercase tracking-wider">並び替え</span>
+            <span className="pl-2 text-[10px] font-bold text-slate-500 uppercase tracking-wider">
+              並び替え
+            </span>
             <div className="flex gap-1">
               <button
                 type="button"
@@ -231,95 +248,99 @@ const SeriesList: React.FC = () => {
 
       {/* Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {viewFranchises.map((franchise) => (
-          <Link
-            key={franchise.name}
-            to={`/series/${encodeURIComponent(franchise.name)}`}
-            className="group block bg-theater-surface rounded-xl border border-white/5 p-8 transition-all duration-300 hover:border-neon-cyan/40 hover:shadow-[0_0_20px_rgba(0,255,255,0.15)] hover:-translate-y-1 relative overflow-hidden flex flex-col h-full"
-          >
-            {/* Hover Background Gradient */}
-            <div className="absolute inset-0 bg-gradient-to-br from-neon-cyan/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+        {viewFranchises.map((franchise) => {
+          const seriesKey = getSeriesKey(franchise);
 
-            <div className="relative z-10 flex flex-col h-full">
-              <div className="flex justify-between items-start mb-3 gap-3">
-                <h3 className="text-xl font-bold text-white group-hover:text-neon-cyan transition-colors duration-300 line-clamp-2">
-                  {franchise.name}
-                </h3>
-                <span className="bg-white/5 text-slate-300 text-xs font-mono px-3 py-1 rounded-full border border-white/10 shrink-0">
-                  {franchise.playCount}作品
-                </span>
-              </div>
+          return (
+            <Link
+              key={franchise.name}
+              to={`/series/${encodeURIComponent(seriesKey)}`}
+              className="group block bg-theater-surface rounded-xl border border-white/5 p-8 transition-all duration-300 hover:border-neon-cyan/40 hover:shadow-[0_0_20px_rgba(0,255,255,0.15)] hover:-translate-y-1 relative overflow-hidden flex flex-col h-full"
+            >
+              {/* Hover Background Gradient */}
+              <div className="absolute inset-0 bg-gradient-to-br from-neon-cyan/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
-              {/* Origin Type Badge */}
-              {normalizeOrigin(franchise.meta?.origin_type) && (
-                <div className="mb-4">
-                  <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold border border-white/10 bg-white/5 text-slate-400 tracking-wider">
-                    {normalizeOrigin(franchise.meta?.origin_type)}
+              <div className="relative z-10 flex flex-col h-full">
+                <div className="flex justify-between items-start mb-3 gap-3">
+                  <h3 className="text-xl font-bold text-white group-hover:text-neon-cyan transition-colors duration-300 line-clamp-2">
+                    {franchise.name}
+                  </h3>
+                  <span className="bg-white/5 text-slate-300 text-xs font-mono px-3 py-1 rounded-full border border-white/10 shrink-0">
+                    {franchise.playCount}作品
                   </span>
                 </div>
-              )}
 
-              <div className="flex items-center gap-4 text-sm text-slate-400 mb-6">
-                <span className="flex items-center gap-1">
-                  <svg className="w-4 h-4 text-neon-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                    />
-                  </svg>
-                  {franchise.years.start} - {franchise.years.end > 0 ? franchise.years.end : ''}
-                </span>
-              </div>
-
-              {/* ✅ 写真なし：制作 + 主要キャストをテキストで */}
-              <div className="mt-auto pt-4 border-t border-white/5 space-y-3">
-                {/* 制作会社 */}
-                {franchise.meta?.production_companies && franchise.meta.production_companies.length > 0 && (
-                  <div>
-                    <p className="text-[9px] uppercase tracking-widest text-slate-600 font-bold mb-0.5">制作</p>
-                    <p className="text-xs text-slate-400 font-medium truncate">
-                      {franchise.meta.production_companies.join(', ')}
-                    </p>
+                {/* Origin Type Badge */}
+                {normalizeOrigin(franchise.meta?.origin_type) && (
+                  <div className="mb-4">
+                    <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold border border-white/10 bg-white/5 text-slate-400 tracking-wider">
+                      {normalizeOrigin(franchise.meta?.origin_type)}
+                    </span>
                   </div>
                 )}
 
-                {/* 主要キャスト（テキスト） */}
-                <div>
-                  <p className="text-[9px] uppercase tracking-widest text-slate-600 font-bold mb-1">主要キャスト</p>
+                <div className="flex items-center gap-4 text-sm text-slate-400 mb-6">
+                  <span className="flex items-center gap-1">
+                    <svg className="w-4 h-4 text-neon-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                      />
+                    </svg>
+                    {franchise.years.start} - {franchise.years.end > 0 ? franchise.years.end : ''}
+                  </span>
+                </div>
 
-                  <div className="text-sm font-bold text-slate-200 leading-snug">
-                    {franchise.topActors.length === 0 ? (
-                      <span className="text-slate-600 text-xs font-normal italic">情報なし</span>
-                    ) : (
-                      <>
-                        {franchise.topActors.slice(0, 5).map(({ actor }, i) => (
-                          <span key={actor.slug}>
-                            {i > 0 && <span className="text-slate-600 font-normal mx-1.5">/</span>}
-                            <span className="group-hover:text-neon-cyan transition-colors duration-300">{actor.name}</span>
-                          </span>
-                        ))}
-                        {franchise.topActors.length > 5 && (
-                          <span className="text-slate-500 text-xs font-normal ml-1.5">他</span>
-                        )}
-                      </>
-                    )}
+                {/* ✅ 写真なし：制作 + 主要キャストをテキストで */}
+                <div className="mt-auto pt-4 border-t border-white/5 space-y-3">
+                  {/* 制作会社 */}
+                  {franchise.meta?.production_companies && franchise.meta.production_companies.length > 0 && (
+                    <div>
+                      <p className="text-[9px] uppercase tracking-widest text-slate-600 font-bold mb-0.5">制作</p>
+                      <p className="text-xs text-slate-400 font-medium truncate">
+                        {franchise.meta.production_companies.join(', ')}
+                      </p>
+                    </div>
+                  )}
+
+                  {/* 主要キャスト（テキスト） */}
+                  <div>
+                    <p className="text-[9px] uppercase tracking-widest text-slate-600 font-bold mb-1">主要キャスト</p>
+
+                    <div className="text-sm font-bold text-slate-200 leading-snug">
+                      {franchise.topActors.length === 0 ? (
+                        <span className="text-slate-600 text-xs font-normal italic">情報なし</span>
+                      ) : (
+                        <>
+                          {franchise.topActors.slice(0, 5).map(({ actor }, i) => (
+                            <span key={actor.slug}>
+                              {i > 0 && <span className="text-slate-600 font-normal mx-1.5">/</span>}
+                              <span className="group-hover:text-neon-cyan transition-colors duration-300">{actor.name}</span>
+                            </span>
+                          ))}
+                          {franchise.topActors.length > 5 && (
+                            <span className="text-slate-500 text-xs font-normal ml-1.5">他</span>
+                          )}
+                        </>
+                      )}
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div className="mt-4 flex justify-end">
-                <span className="text-xs font-bold text-neon-cyan opacity-0 group-hover:opacity-100 transition-opacity flex items-center">
-                  シリーズ詳細
-                  <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </span>
+                <div className="mt-4 flex justify-end">
+                  <span className="text-xs font-bold text-neon-cyan opacity-0 group-hover:opacity-100 transition-opacity flex items-center">
+                    シリーズ詳細
+                    <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </span>
+                </div>
               </div>
-            </div>
-          </Link>
-        ))}
+            </Link>
+          );
+        })}
       </div>
     </div>
   );
