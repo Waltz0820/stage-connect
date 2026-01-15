@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import Breadcrumbs from './Breadcrumbs';
 import SeoHead from './SeoHead';
 import { supabase } from '../lib/supabase';
-import { getAllFranchises, FranchiseStats } from '../lib/utils/getFranchises';
 import type { Actor, Gender } from '../lib/types';
 
 const SITE_NAME = 'Stage Connect';
@@ -19,9 +18,14 @@ type FranchiseMetaRow = {
   production_companies?: string[] | null;
 };
 
-type FranchiseUI = FranchiseStats & {
-  meta?: FranchiseMetaRow | null;
+type FranchiseStats = {
+  name: string;
+  playCount: number;
+  years: { start: number; end: number };
+  topActors: { actor: Actor; count: number }[];
 };
+
+type FranchiseUI = FranchiseMetaRow & FranchiseStats;
 
 type SortKey = 'play_count_desc' | 'name_asc';
 
@@ -52,58 +56,101 @@ const truncate = (s: string, n: number) =>
 
 const normalizeOrigin = (s: any) => String(s ?? '').trim();
 
-/** ✅ ここが肝：一覧のURLキーは meta.slug を最優先 */
+const yearFromPeriod = (period?: string | null) => {
+  if (!period) return 0;
+  const m = String(period).match(/(\d{4})/);
+  return m ? Number(m[1]) : 0;
+};
+
 const getSeriesKey = (f: FranchiseUI) => {
-  const slug = f.meta?.slug?.trim();
+  const slug = f.slug?.trim();
   if (slug) return slug;
-
-  // meta.name があるならそれ（= DBと突き合わせた正規名称）
-  const metaName = f.meta?.name?.trim();
-  if (metaName) return metaName;
-
-  // 最後に集計側の name（従来互換）
-  return f.name;
+  return f.name; // fallback
 };
 
 const SeriesList: React.FC = () => {
-  const [actorsDb, setActorsDb] = useState<Actor[] | null>(null);
-  const [frMetaDb, setFrMetaDb] = useState<FranchiseMetaRow[] | null>(null);
   const [loading, setLoading] = useState(true);
 
   // ✅ UI state
   const [originFilter, setOriginFilter] = useState<string>('all');
   const [sortKey, setSortKey] = useState<SortKey>('play_count_desc');
 
-  // -------------------------
-  // ✅ Data fetch（actors + franchises meta）
-  // -------------------------
+  // ✅ DB data
+  const [franchisesDb, setFranchisesDb] = useState<FranchiseMetaRow[]>([]);
+  const [playsDb, setPlaysDb] = useState<
+    { id: string; franchise_id: string | null; period?: string | null; created_at?: string | null }[]
+  >([]);
+  const [castsDb, setCastsDb] = useState<
+    { play_id: string; actor: any | null }[]
+  >([]);
+
   useEffect(() => {
     const run = async () => {
       setLoading(true);
       try {
-        // 1) actors（既存の統計生成用）
-        const { data: aData, error: aErr } = await supabase
-          .from('actors')
-          .select('slug,name,kana,profile,image_url,gender,sns,featured_play_slugs,tags');
-
-        if (aErr) {
-          console.warn('SeriesList actors fetch error:', aErr);
-          setActorsDb(null); // ローカルフォールバック
-        } else {
-          setActorsDb((aData ?? []).map(normalizeActorRow));
-        }
-
-        // 2) franchises（固定情報: origin_type 等）
+        // 1) franchises（母集合）
         const { data: fData, error: fErr } = await supabase
           .from('franchises')
-          .select('id,name,slug,origin_type,origin_note,production_companies');
+          .select('id,name,slug,origin_type,origin_note,production_companies')
+          .order('name', { ascending: true });
 
         if (fErr) {
-          console.warn('SeriesList franchises meta fetch error:', fErr);
-          setFrMetaDb(null);
-        } else {
-          setFrMetaDb((fData ?? []) as any);
+          console.warn('SeriesList franchises fetch error:', fErr);
+          setFranchisesDb([]);
+          return;
         }
+        const frs = (fData ?? []) as FranchiseMetaRow[];
+        setFranchisesDb(frs);
+
+        // 2) plays（集計用：最小カラム）
+        const { data: pData, error: pErr } = await supabase
+          .from('plays')
+          .select('id,franchise_id,period,created_at');
+
+        if (pErr) {
+          console.warn('SeriesList plays fetch error:', pErr);
+          setPlaysDb([]);
+          setCastsDb([]);
+          return;
+        }
+        const ps = (pData ?? []) as any[];
+        setPlaysDb(ps);
+
+        // 3) casts（トップ俳優集計用：play_id と actorだけ）
+        // plays が多いと in が長くなるので、まず playIds を作って投げる
+        const playIds = ps.map((p) => p.id).filter(Boolean) as string[];
+        if (playIds.length === 0) {
+          setCastsDb([]);
+          return;
+        }
+
+        const { data: cData, error: cErr } = await supabase
+          .from('casts')
+          .select(
+            `
+            play_id,
+            actor:actors (
+              slug,
+              name,
+              kana,
+              profile,
+              image_url,
+              gender,
+              sns,
+              tags,
+              featured_play_slugs
+            )
+          `
+          )
+          .in('play_id', playIds);
+
+        if (cErr) {
+          console.warn('SeriesList casts fetch error:', cErr);
+          setCastsDb([]);
+          return;
+        }
+
+        setCastsDb((cData ?? []) as any[]);
       } finally {
         setLoading(false);
       }
@@ -112,34 +159,96 @@ const SeriesList: React.FC = () => {
     run();
   }, []);
 
-  // -------------------------
-  // ✅ Franchises（DB優先→ローカル）
-  // -------------------------
-  const baseFranchises: FranchiseStats[] = useMemo(() => {
-    return actorsDb ? getAllFranchises(actorsDb) : getAllFranchises();
-  }, [actorsDb]);
+  // ✅ playId -> franchiseId
+  const playFranchiseMap = useMemo(() => {
+    const m = new Map<string, string>();
+    for (const p of playsDb) {
+      if (p?.id && p?.franchise_id) m.set(p.id, p.franchise_id);
+    }
+    return m;
+  }, [playsDb]);
 
-  // meta を name でマージ
+  // ✅ franchiseId -> stats(playCount/years)
+  const statsByFranchiseId = useMemo(() => {
+    const m = new Map<string, { playCount: number; start: number; end: number }>();
+
+    for (const p of playsDb) {
+      const fid = p.franchise_id;
+      if (!fid) continue;
+
+      const y = yearFromPeriod(p.period);
+      if (!m.has(fid)) m.set(fid, { playCount: 0, start: 0, end: 0 });
+
+      const cur = m.get(fid)!;
+      cur.playCount += 1;
+
+      if (y > 0) {
+        cur.start = cur.start === 0 ? y : Math.min(cur.start, y);
+        cur.end = cur.end === 0 ? y : Math.max(cur.end, y);
+      }
+    }
+
+    return m;
+  }, [playsDb]);
+
+  // ✅ franchiseId -> topActors
+  const topActorsByFranchiseId = useMemo(() => {
+    // franchiseId -> actorSlug -> set(playId)
+    const bucket = new Map<string, Map<string, { actor: Actor; playSet: Set<string> }>>();
+
+    for (const row of castsDb) {
+      const playId = row?.play_id as string | undefined;
+      const raw = row?.actor;
+      if (!playId || !raw) continue;
+
+      const fid = playFranchiseMap.get(playId);
+      if (!fid) continue;
+
+      const actor = normalizeActorRow(raw);
+      const slug = actor.slug;
+      if (!slug) continue;
+
+      if (!bucket.has(fid)) bucket.set(fid, new Map());
+      const actorMap = bucket.get(fid)!;
+
+      if (!actorMap.has(slug)) actorMap.set(slug, { actor, playSet: new Set() });
+      actorMap.get(slug)!.playSet.add(playId);
+    }
+
+    const out = new Map<string, { actor: Actor; count: number }[]>();
+    for (const [fid, actorMap] of bucket.entries()) {
+      const tops = Array.from(actorMap.values())
+        .map((v) => ({ actor: v.actor, count: v.playSet.size }))
+        .sort((a, b) => b.count - a.count)
+        .slice(0, 5);
+      out.set(fid, tops);
+    }
+
+    return out;
+  }, [castsDb, playFranchiseMap]);
+
+  // ✅ UI franchises
   const franchises: FranchiseUI[] = useMemo(() => {
-    const metaMap = new Map<string, FranchiseMetaRow>();
-    (frMetaDb ?? []).forEach((m) => {
-      if (m?.name) metaMap.set(m.name, m);
-    });
+    return (franchisesDb ?? []).map((fr) => {
+      const s = statsByFranchiseId.get(fr.id) ?? { playCount: 0, start: 0, end: 0 };
+      const tops = topActorsByFranchiseId.get(fr.id) ?? [];
 
-    return baseFranchises.map((f) => ({
-      ...f,
-      meta: metaMap.get(f.name) ?? null,
-    }));
-  }, [baseFranchises, frMetaDb]);
+      return {
+        ...fr,
+        playCount: s.playCount,
+        years: { start: s.start, end: s.end },
+        topActors: tops,
+      };
+    });
+  }, [franchisesDb, statsByFranchiseId, topActorsByFranchiseId]);
 
   // フィルタ候補（origin_type）
   const originOptions = useMemo(() => {
     const set = new Set<string>();
     for (const f of franchises) {
-      const t = normalizeOrigin(f.meta?.origin_type);
+      const t = normalizeOrigin(f.origin_type);
       if (t) set.add(t);
     }
-    // ✅ ここが修正点：余計な ")" を消して ] で閉じる
     return ['all', ...Array.from(set).sort((a, b) => a.localeCompare(b, 'ja'))];
   }, [franchises]);
 
@@ -148,7 +257,7 @@ const SeriesList: React.FC = () => {
     const filtered =
       originFilter === 'all'
         ? franchises
-        : franchises.filter((f) => normalizeOrigin(f.meta?.origin_type) === originFilter);
+        : franchises.filter((f) => normalizeOrigin(f.origin_type) === originFilter);
 
     const sorted = [...filtered].sort((a, b) => {
       if (sortKey === 'name_asc') return a.name.localeCompare(b.name, 'ja');
@@ -158,9 +267,7 @@ const SeriesList: React.FC = () => {
     return sorted;
   }, [franchises, originFilter, sortKey]);
 
-  // -------------------------
-  // ✅ SEO（SeoHead）
-  // -------------------------
+  // ✅ SEO
   const seoTitle = `シリーズ一覧｜人気舞台シリーズ・フランチャイズ - ${SITE_NAME}`;
   const seoDescription = useMemo(() => {
     const base =
@@ -178,17 +285,12 @@ const SeriesList: React.FC = () => {
       <div className="mb-8 border-b border-white/10 pb-6 flex flex-col md:flex-row md:items-end justify-between gap-6">
         <div>
           <h2 className="text-3xl font-bold tracking-wide text-white mb-2">シリーズ一覧</h2>
-          <p className="text-sm text-slate-400 font-light tracking-wider">
-            人気舞台シリーズ・フランチャイズ
-          </p>
+          <p className="text-sm text-slate-400 font-light tracking-wider">人気舞台シリーズ・フランチャイズ</p>
         </div>
 
         <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
-          {/* ソートボタン (Segmented Control Style) */}
           <div className="flex items-center gap-3 bg-theater-surface p-1.5 rounded-lg border border-white/5">
-            <span className="pl-2 text-[10px] font-bold text-slate-500 uppercase tracking-wider">
-              並び替え
-            </span>
+            <span className="pl-2 text-[10px] font-bold text-slate-500 uppercase tracking-wider">並び替え</span>
             <div className="flex gap-1">
               <button
                 type="button"
@@ -222,12 +324,10 @@ const SeriesList: React.FC = () => {
       </div>
 
       {loading && (
-        <div className="mb-8 p-4 text-center text-xs font-mono text-neon-cyan animate-pulse">
-          LOADING DATABASE...
-        </div>
+        <div className="mb-8 p-4 text-center text-xs font-mono text-neon-cyan animate-pulse">LOADING DATABASE...</div>
       )}
 
-      {/* Origin Filter (Pill List Style) */}
+      {/* Origin Filter */}
       <div className="mb-10 overflow-x-auto pb-4 -mx-6 px-6 md:mx-0 md:px-0">
         <div className="flex gap-2">
           {originOptions.map((opt) => (
@@ -254,11 +354,10 @@ const SeriesList: React.FC = () => {
 
           return (
             <Link
-              key={franchise.name}
+              key={franchise.id}
               to={`/series/${encodeURIComponent(seriesKey)}`}
               className="group block bg-theater-surface rounded-xl border border-white/5 p-8 transition-all duration-300 hover:border-neon-cyan/40 hover:shadow-[0_0_20px_rgba(0,255,255,0.15)] hover:-translate-y-1 relative overflow-hidden flex flex-col h-full"
             >
-              {/* Hover Background Gradient */}
               <div className="absolute inset-0 bg-gradient-to-br from-neon-cyan/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
               <div className="relative z-10 flex flex-col h-full">
@@ -271,23 +370,17 @@ const SeriesList: React.FC = () => {
                   </span>
                 </div>
 
-                {/* Origin Type Badge */}
-                {normalizeOrigin(franchise.meta?.origin_type) && (
+                {normalizeOrigin(franchise.origin_type) && (
                   <div className="mb-4">
                     <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold border border-white/10 bg-white/5 text-slate-400 tracking-wider">
-                      {normalizeOrigin(franchise.meta?.origin_type)}
+                      {normalizeOrigin(franchise.origin_type)}
                     </span>
                   </div>
                 )}
 
                 <div className="flex items-center gap-4 text-sm text-slate-400 mb-6">
                   <span className="flex items-center gap-1">
-                    <svg
-                      className="w-4 h-4 text-neon-purple"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
+                    <svg className="w-4 h-4 text-neon-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -295,30 +388,22 @@ const SeriesList: React.FC = () => {
                         d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
                       />
                     </svg>
-                    {franchise.years.start} - {franchise.years.end > 0 ? franchise.years.end : ''}
+                    {franchise.years.start || '----'} - {franchise.years.end || ''}
                   </span>
                 </div>
 
-                {/* ✅ 写真なし：制作 + 主要キャストをテキストで */}
                 <div className="mt-auto pt-4 border-t border-white/5 space-y-3">
-                  {/* 制作会社 */}
-                  {franchise.meta?.production_companies && franchise.meta.production_companies.length > 0 && (
+                  {franchise.production_companies && franchise.production_companies.length > 0 && (
                     <div>
-                      <p className="text-[9px] uppercase tracking-widest text-slate-600 font-bold mb-0.5">
-                        制作
-                      </p>
+                      <p className="text-[9px] uppercase tracking-widest text-slate-600 font-bold mb-0.5">制作</p>
                       <p className="text-xs text-slate-400 font-medium truncate">
-                        {franchise.meta.production_companies.join(', ')}
+                        {franchise.production_companies.join(', ')}
                       </p>
                     </div>
                   )}
 
-                  {/* 主要キャスト（テキスト） */}
                   <div>
-                    <p className="text-[9px] uppercase tracking-widest text-slate-600 font-bold mb-1">
-                      主要キャスト
-                    </p>
-
+                    <p className="text-[9px] uppercase tracking-widest text-slate-600 font-bold mb-1">主要キャスト</p>
                     <div className="text-sm font-bold text-slate-200 leading-snug">
                       {franchise.topActors.length === 0 ? (
                         <span className="text-slate-600 text-xs font-normal italic">情報なし</span>
@@ -327,14 +412,9 @@ const SeriesList: React.FC = () => {
                           {franchise.topActors.slice(0, 5).map(({ actor }, i) => (
                             <span key={actor.slug}>
                               {i > 0 && <span className="text-slate-600 font-normal mx-1.5">/</span>}
-                              <span className="group-hover:text-neon-cyan transition-colors duration-300">
-                                {actor.name}
-                              </span>
+                              <span className="group-hover:text-neon-cyan transition-colors duration-300">{actor.name}</span>
                             </span>
                           ))}
-                          {franchise.topActors.length > 5 && (
-                            <span className="text-slate-500 text-xs font-normal ml-1.5">他</span>
-                          )}
                         </>
                       )}
                     </div>
@@ -345,12 +425,7 @@ const SeriesList: React.FC = () => {
                   <span className="text-xs font-bold text-neon-cyan opacity-0 group-hover:opacity-100 transition-opacity flex items-center">
                     シリーズ詳細
                     <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M17 8l4 4m0 0l-4 4m4-4H3"
-                      />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
                   </span>
                 </div>
