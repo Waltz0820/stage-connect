@@ -17,14 +17,12 @@ type FranchiseRow = {
   name: string;
   slug?: string | null;
 
-  // ✅ 管理画面から入力する用
-  intro?: string | null; // 短文（上部の追加説明）
-  description?: string | null; // 長文（折りたたみ）
+  intro?: string | null;
+  description?: string | null;
 
-  // ✅ 固定情報（今回追加）
-  origin_type?: string | null; // 原作種別（漫画原作/ゲーム原作 など）
-  origin_note?: string | null; // 原作補足（作品名など）
-  production_companies?: string[] | null; // 制作会社
+  origin_type?: string | null;
+  origin_note?: string | null;
+  production_companies?: string[] | null;
 };
 
 type PlayLike = {
@@ -37,8 +35,8 @@ type PlayLike = {
   vod?: any;
   tags?: string[] | null;
   franchise_id?: string | null;
-  created_at?: string | null; // ✅ 追加（任意：同年月のタイブレーク用）
-  genre?: any | null; // PlayCard側のgenre表示が必要なら保持
+  created_at?: string | null;
+  genre?: any | null;
 };
 
 type TopActor = { actor: Actor; count: number };
@@ -94,15 +92,13 @@ const normalizeOrigin = (s: any) => String(s ?? '').trim();
 const periodSortKey = (period?: string | null) => {
   if (!period) return -1;
 
-  // "2019年7月", "2017/12", "2017-12", "2017年12月〜" など
   const m = period.match(/(\d{4})\D{0,2}(\d{1,2})/);
   if (m) {
     const y = Number(m[1]);
     const mo = Number(m[2]);
-    return y * 100 + mo; // YYYYMM
+    return y * 100 + mo;
   }
 
-  // 年だけ拾える場合
   const y = period.match(/(\d{4})/);
   if (y) return Number(y[1]) * 100;
 
@@ -113,9 +109,8 @@ const sortPlaysNewToOld = <T extends { period?: string | null; created_at?: stri
   return [...list].sort((a, b) => {
     const ak = periodSortKey(a.period);
     const bk = periodSortKey(b.period);
-    if (bk !== ak) return bk - ak; // ✅ new -> old
+    if (bk !== ak) return bk - ak;
 
-    // 同年月が複数ある場合の安定化（created_at があれば優先）
     const ad = a.created_at ? Date.parse(a.created_at) : 0;
     const bd = b.created_at ? Date.parse(b.created_at) : 0;
     return bd - ad;
@@ -124,7 +119,6 @@ const sortPlaysNewToOld = <T extends { period?: string | null; created_at?: stri
 
 /**
  * ✅ モーダル表示中の “めり込み/ズレ” を潰すためのスクロールロック
- * - iOS Safari は overflow:hidden だけだとズレやすいので position:fixed 方式
  */
 function useBodyScrollLock(locked: boolean) {
   useEffect(() => {
@@ -151,8 +145,6 @@ function useBodyScrollLock(locked: boolean) {
       body.style.left = prevLeft;
       body.style.right = prevRight;
       body.style.width = prevWidth;
-
-      // 復帰
       window.scrollTo(0, scrollY);
     };
   }, [locked]);
@@ -160,7 +152,6 @@ function useBodyScrollLock(locked: boolean) {
 
 /**
  * ✅ Portal（document.body直下）に出す
- * スタッキングコンテキストに閉じ込められて固定CTAに負ける問題を根本回避
  */
 const ModalPortal: React.FC<{ open: boolean; children: React.ReactNode }> = ({ open, children }) => {
   if (!open) return null;
@@ -169,30 +160,25 @@ const ModalPortal: React.FC<{ open: boolean; children: React.ReactNode }> = ({ o
 };
 
 const SeriesDetail: React.FC = () => {
-  const { name } = useParams<{ name: string }>();
-  const decodedName = useMemo(() => (name ? decodeURIComponent(name) : ''), [name]);
+  // ✅ ルートは /series/:slug を正にする（List側と統一）
+  const { slug } = useParams<{ slug: string }>();
+  const decodedKey = useMemo(() => (slug ? decodeURIComponent(slug) : ''), [slug]);
 
   const [franchise, setFranchise] = useState<FranchiseRow | null>(null);
   const [plays, setPlays] = useState<PlayLike[]>([]);
   const [topActors, setTopActors] = useState<TopActor[]>([]);
   const [loading, setLoading] = useState(true);
 
-  // ✅ 長文折りたたみ（description用）
   const [isIntroOpen, setIsIntroOpen] = useState(false);
-
-  // ✅ モバイル用：全員を見る（モーダル）
   const [isAllActorsOpen, setIsAllActorsOpen] = useState(false);
 
-  // ✅ モーダル中は背景スクロールを完全停止（めり込み対策）
   useBodyScrollLock(isAllActorsOpen);
 
-  // JSON-LD 用に origin を取る（OG/canonicalは使わない）
   const siteUrl = useMemo(() => {
     if (typeof window !== 'undefined') return window.location.origin.replace(/\/$/, '');
     return '';
   }, []);
 
-  // ESCで閉じる（PCも快適）
   useEffect(() => {
     if (!isAllActorsOpen) return;
     const onKeyDown = (e: KeyboardEvent) => {
@@ -203,31 +189,45 @@ const SeriesDetail: React.FC = () => {
   }, [isAllActorsOpen]);
 
   useEffect(() => {
-    if (!decodedName) return;
+    if (!decodedKey) return;
 
     const run = async () => {
       setLoading(true);
 
       try {
-        // 1) franchise を slug or name で拾う（✅ 固定情報も含めて取得）
-        const { data: fr, error: frErr } = await supabase
+        // 1) franchise を slug 優先で拾う（or文字列事故回避で2段階）
+        let frRow: any | null = null;
+
+        const { data: frBySlug, error: frSlugErr } = await supabase
           .from('franchises')
           .select('id, name, slug, intro, description, origin_type, origin_note, production_companies')
-          .or(`slug.eq.${decodedName},name.eq.${decodedName}`)
+          .eq('slug', decodedKey)
           .maybeSingle();
 
-        if (frErr || !fr) {
-          console.warn('SeriesDetail: franchise not found', frErr);
-          setFranchise(null);
-          setPlays([]);
-          setTopActors([]);
-          setLoading(false);
-          return;
+        if (!frSlugErr && frBySlug) {
+          frRow = frBySlug;
+        } else {
+          const { data: frByName, error: frNameErr } = await supabase
+            .from('franchises')
+            .select('id, name, slug, intro, description, origin_type, origin_note, production_companies')
+            .eq('name', decodedKey)
+            .maybeSingle();
+
+          if (frNameErr || !frByName) {
+            console.warn('SeriesDetail: franchise not found', frSlugErr ?? frNameErr);
+            setFranchise(null);
+            setPlays([]);
+            setTopActors([]);
+            setLoading(false);
+            return;
+          }
+
+          frRow = frByName;
         }
 
-        setFranchise(fr as any);
+        setFranchise(frRow as any);
 
-        // 2) plays を franchise_id で取得（✅ tags は join から作る）
+        // 2) plays を franchise_id で取得（tagsは join から作る）
         const { data: ps, error: psErr } = await supabase
           .from('plays')
           .select(
@@ -247,7 +247,7 @@ const SeriesDetail: React.FC = () => {
             )
           `
           )
-          .eq('franchise_id', (fr as any).id);
+          .eq('franchise_id', frRow.id);
 
         if (psErr || !ps) {
           console.warn('SeriesDetail: plays fetch error', psErr);
@@ -275,11 +275,12 @@ const SeriesDetail: React.FC = () => {
 
         setPlays(normalizedPlays);
 
-        // 3) topActors：このシリーズの play_ids から casts を集計
+        // 3) topActors
         const playIds = normalizedPlays.map((p) => p.id).filter(Boolean) as string[];
-
         if (playIds.length === 0) {
           setTopActors([]);
+          setIsIntroOpen(false);
+          setIsAllActorsOpen(false);
           setLoading(false);
           return;
         }
@@ -307,11 +308,12 @@ const SeriesDetail: React.FC = () => {
         if (castErr || !castRows) {
           console.warn('SeriesDetail: casts fetch error', castErr);
           setTopActors([]);
+          setIsIntroOpen(false);
+          setIsAllActorsOpen(false);
           setLoading(false);
           return;
         }
 
-        // slugごとに「出演したplay_idの集合」を作る（同一作品内の重複を排除）
         const map = new Map<string, { actor: Actor; playSet: Set<string> }>();
 
         for (const row of castRows as any[]) {
@@ -321,6 +323,7 @@ const SeriesDetail: React.FC = () => {
 
           const a = normalizeActorRow(raw);
           const key = a.slug;
+          if (!key) continue;
 
           if (!map.has(key)) map.set(key, { actor: a, playSet: new Set() });
           map.get(key)!.playSet.add(p);
@@ -333,7 +336,6 @@ const SeriesDetail: React.FC = () => {
 
         setTopActors(tops);
 
-        // ✅ シリーズを変えたときは折りたたみ/モーダルを閉じる
         setIsIntroOpen(false);
         setIsAllActorsOpen(false);
       } finally {
@@ -342,9 +344,8 @@ const SeriesDetail: React.FC = () => {
     };
 
     run();
-  }, [decodedName]);
+  }, [decodedKey]);
 
-  // ✅ 表示順：new -> old（period から推定）
   const sortedPlays = useMemo(() => sortPlaysNewToOld(plays), [plays]);
 
   const years = useMemo(() => {
@@ -356,7 +357,6 @@ const SeriesDetail: React.FC = () => {
       .filter((v): v is number => v !== null);
 
     if (ys.length === 0) return { start: 0, end: 0 };
-
     return { start: Math.min(...ys), end: Math.max(...ys) };
   }, [plays]);
 
@@ -366,7 +366,12 @@ const SeriesDetail: React.FC = () => {
   const endYear = years.end && years.end > 0 ? years.end : 0;
   const endYearLabel = endYear > 0 ? `${endYear}` : '現在';
 
-  // ✅ 自動要約：常に表示する“固定パート”
+  // ✅ slug 正：URLキー
+  const seriesKey = useMemo(() => {
+    const s = franchise?.slug?.trim();
+    return s ? s : franchise?.name ?? '';
+  }, [franchise?.slug, franchise?.name]);
+
   const autoIntro = useMemo(() => {
     const nm = franchise?.name ?? '';
     return `${nm}シリーズの舞台作品を年表形式でまとめました。全${plays.length}作品（${startYear || '----'}-${endYearLabel}）を掲載しています。${
@@ -374,19 +379,16 @@ const SeriesDetail: React.FC = () => {
     }`;
   }, [franchise?.name, plays.length, startYear, endYearLabel, hasVod]);
 
-  // ✅ 手動追加（短文）※自動要約の下に“積む”
   const manualIntro = useMemo(() => {
     const t = franchise?.intro?.trim();
     return t ? t : '';
   }, [franchise?.intro]);
 
-  // ✅ 長文（折りたたみ）
   const longText = useMemo(() => {
     const t = franchise?.description?.trim();
     return t ? t : '';
   }, [franchise?.description]);
 
-  // ✅ 固定情報（原作/制作）
   const originType = useMemo(() => normalizeOrigin(franchise?.origin_type), [franchise?.origin_type]);
   const originNote = useMemo(() => (franchise?.origin_note ?? '').trim(), [franchise?.origin_note]);
   const productionCompanies = useMemo(() => {
@@ -399,9 +401,6 @@ const SeriesDetail: React.FC = () => {
     return Boolean(originType) || Boolean(originNote) || productionCompanies.length > 0;
   }, [originType, originNote, productionCompanies.length]);
 
-  // -------------------------
-  // ✅ SEO（SeoHeadに統一）
-  // -------------------------
   const seoTitle = useMemo(() => {
     if (!franchise) return `${SITE_NAME}`;
     return `${franchise.name}｜シリーズ作品一覧・年表 - ${SITE_NAME}`;
@@ -419,7 +418,6 @@ const SeriesDetail: React.FC = () => {
     return truncate(toPlainText(composed), 155);
   }, [franchise, plays.length, startYear, endYearLabel, manualIntro]);
 
-  // JSON-LD（FAQPage）
   const jsonLdFaq = useMemo(() => {
     if (!franchise) return null;
     return {
@@ -453,36 +451,22 @@ const SeriesDetail: React.FC = () => {
     };
   }, [franchise, plays.length, startYear, hasVod]);
 
-  // JSON-LD（BreadcrumbList）※絶対URLが取れる時だけ
   const jsonLdBreadcrumbs = useMemo(() => {
     if (!siteUrl || !franchise?.name) return null;
 
     const seriesUrl = `${siteUrl}/series`;
-    const detailUrl = `${siteUrl}/series/${encodeURIComponent(franchise.name)}`;
+    const detailUrl = `${siteUrl}/series/${encodeURIComponent(seriesKey)}`;
 
     return {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        {
-          '@type': 'ListItem',
-          position: 1,
-          name: 'シリーズ一覧',
-          item: seriesUrl,
-        },
-        {
-          '@type': 'ListItem',
-          position: 2,
-          name: franchise.name,
-          item: detailUrl,
-        },
+        { '@type': 'ListItem', position: 1, name: 'シリーズ一覧', item: seriesUrl },
+        { '@type': 'ListItem', position: 2, name: franchise.name, item: detailUrl },
       ],
     };
-  }, [siteUrl, franchise?.name]);
+  }, [siteUrl, franchise?.name, seriesKey]);
 
-  // -------------------------
-  // ✅ Early returns
-  // -------------------------
   if (loading) {
     return (
       <div className="container mx-auto px-6 pt-8 pb-16 lg:px-8 max-w-5xl animate-fade-in-up">
@@ -512,7 +496,6 @@ const SeriesDetail: React.FC = () => {
     <div className="container mx-auto px-6 pt-8 pb-16 lg:px-8 max-w-5xl animate-fade-in-up">
       <SeoHead title={seoTitle} description={seoDescription} robots="index,follow" />
 
-      {/* 構造化データ */}
       {jsonLdFaq && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }} />}
       {jsonLdBreadcrumbs && (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumbs) }} />
@@ -541,7 +524,7 @@ const SeriesDetail: React.FC = () => {
               シリーズ・レギュラー
             </h3>
 
-            {/* ✅ Mobile: 先頭5件 横スライド + 全員を見る（モーダル） */}
+            {/* ✅ Mobile */}
             <div className="lg:hidden">
               {topActors.length === 0 ? (
                 <p className="text-xs text-slate-500">レギュラー情報はまだありません</p>
@@ -588,7 +571,6 @@ const SeriesDetail: React.FC = () => {
                     </button>
                   )}
 
-                  {/* ✅ 全員を見る：モーダル（Portalで最前面固定） */}
                   <ModalPortal open={isAllActorsOpen}>
                     <div
                       className="fixed inset-0 z-[2147483647] bg-black/70 backdrop-blur-sm"
@@ -656,7 +638,7 @@ const SeriesDetail: React.FC = () => {
               )}
             </div>
 
-            {/* ✅ Desktop: 縦リスト */}
+            {/* ✅ Desktop */}
             <div className="hidden lg:block">
               <div className="space-y-4">
                 {topActors.map(({ actor, count }, index) => (
@@ -691,14 +673,12 @@ const SeriesDetail: React.FC = () => {
 
         {/* Main */}
         <div className="lg:col-span-8 lg:order-1 space-y-12">
-          {/* ✅ Series Info：固定情報 + 自動要約 + 手動追記 + 長文折りたたみ */}
           <section className="bg-white/5 rounded-xl border border-white/10 p-6 backdrop-blur-sm">
             <h2 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-3 flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-neon-cyan"></span>
               Series Info
             </h2>
 
-            {/* ✅ 固定情報（流動しない要素） */}
             {hasFixedMeta && (
               <div className="mb-4 p-4 rounded-xl bg-theater-surface/60 border border-white/10">
                 <div className="flex flex-wrap gap-2">
@@ -736,15 +716,12 @@ const SeriesDetail: React.FC = () => {
               </div>
             )}
 
-            {/* 固定（自動挿入） */}
             <p className="text-slate-300 text-sm leading-relaxed font-light whitespace-pre-wrap">{autoIntro}</p>
 
-            {/* 追加（手動 intro） */}
             {manualIntro && (
               <p className="mt-4 text-slate-300 text-sm leading-relaxed font-light whitespace-pre-wrap">{manualIntro}</p>
             )}
 
-            {/* 追加（長文 description：折りたたみ） */}
             {longText && (
               <div className="mt-4">
                 <div
@@ -761,12 +738,7 @@ const SeriesDetail: React.FC = () => {
                   className="mt-3 inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-neon-cyan hover:text-white transition-colors"
                 >
                   {isIntroOpen ? '閉じる' : '続きを読む'}
-                  <svg
-                    className={`w-4 h-4 transition-transform ${isIntroOpen ? 'rotate-180' : ''}`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
+                  <svg className={`w-4 h-4 transition-transform ${isIntroOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
@@ -774,7 +746,6 @@ const SeriesDetail: React.FC = () => {
             )}
           </section>
 
-          {/* Timeline */}
           <div className="relative">
             <div className="absolute left-[19px] top-2 bottom-0 w-px bg-gradient-to-b from-neon-cyan/50 via-neon-cyan/20 to-transparent"></div>
 
@@ -793,7 +764,6 @@ const SeriesDetail: React.FC = () => {
             </div>
           </div>
 
-          {/* FAQ */}
           <section className="pt-8 border-t border-white/5 mt-8">
             <h2 className="text-xl font-bold text-white mb-6 flex items-center gap-3">
               <span className="w-1 h-6 bg-slate-500 rounded-full"></span>

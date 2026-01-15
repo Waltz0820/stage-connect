@@ -110,8 +110,14 @@ const App: React.FC = () => {
           <Route path="/actors/:slug" element={<ActorDetail />} />
           <Route path="/plays" element={<Plays />} />
           <Route path="/plays/:slug" element={<PlayDetail />} />
+
+          {/* ✅ Series */}
           <Route path="/series" element={<SeriesList />} />
+          {/* ✅ slug 統一（新） */}
+          <Route path="/series/:slug" element={<SeriesDetail />} />
+          {/* ✅ 旧互換：/series/:name でも同じ詳細を開ける（過去リンク救済） */}
           <Route path="/series/:name" element={<SeriesDetail />} />
+
           <Route path="/favorites" element={<Favorites />} />
 
           {/* Watch */}
