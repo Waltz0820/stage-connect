@@ -8,17 +8,37 @@ import { safeTrim, toSlug } from "./widgets/utils";
 
 type Mode = "new" | "edit";
 
+type OriginType =
+  | ""
+  | "漫画原作"
+  | "アニメ原作"
+  | "ゲーム原作"
+  | "メディアミックス"
+  | "小説原作"
+  | "特撮"
+  | "その他";
+
+const ORIGIN_TYPE_OPTIONS: { value: OriginType; label: string }[] = [
+  { value: "", label: "未設定" },
+  { value: "漫画原作", label: "漫画原作" },
+  { value: "アニメ原作", label: "アニメ原作" },
+  { value: "ゲーム原作", label: "ゲーム原作" },
+  { value: "メディアミックス", label: "メディアミックス" },
+  { value: "小説原作", label: "小説原作" },
+  { value: "特撮", label: "特撮" },
+  { value: "その他", label: "その他" },
+];
+
 type FranchiseRow = {
   id: string;
   name: string;
   slug?: string | null;
-  intro?: string | null;
   description?: string | null;
 
-  // ✅ 追加（固定情報）
-  origin_type?: string | null; // 例: "漫画原作" / "ゲーム原作" etc
-  origin_note?: string | null; // 例: 原作タイトル・作者・出版社など補足
-  production_companies?: string[] | null; // text[]
+  // ✅ 固定情報
+  origin_type?: string | null;
+  origin_note?: string | null;
+  production_companies?: string[] | null;
 };
 
 const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
@@ -31,29 +51,33 @@ const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
 
   const [name, setName] = useState("");
   const [slugText, setSlugText] = useState("");
-  const [intro, setIntro] = useState("");
   const [desc, setDesc] = useState("");
 
-  // ✅ 新規追加 fields
-  const [originType, setOriginType] = useState("");
+  // ✅ 固定情報 fields
+  const [originType, setOriginType] = useState<OriginType>("");
   const [originNote, setOriginNote] = useState("");
   const [productionCompaniesText, setProductionCompaniesText] = useState("");
 
   const [busy, setBusy] = useState(false);
   const [msg, setMsg] = useState("");
 
+  const normalizeOriginType = (v: any): OriginType => {
+    const s = safeTrim(v);
+    if (!s) return "";
+    const hit = ORIGIN_TYPE_OPTIONS.find((o) => o.value === (s as OriginType));
+    return hit ? (s as OriginType) : "";
+  };
+
   useEffect(() => {
     if (mode === "new") {
       setRow(null);
       setName("");
       setSlugText("");
-      setIntro("");
       setDesc("");
 
       setOriginType("");
       setOriginNote("");
       setProductionCompaniesText("");
-
       return;
     }
 
@@ -63,7 +87,7 @@ const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         const { data, error } = await supabase
           .from("franchises")
           .select(
-            "id,name,slug,intro,description,origin_type,origin_note,production_companies"
+            "id,name,slug,description,origin_type,origin_note,production_companies"
           )
           .or(`slug.eq.${key},name.eq.${key}`)
           .maybeSingle();
@@ -76,12 +100,13 @@ const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         setRow(r);
         setName(r.name ?? "");
         setSlugText(r.slug ?? "");
-        setIntro(r.intro ?? "");
         setDesc(r.description ?? "");
 
-        setOriginType((r as any).origin_type ?? "");
+        setOriginType(normalizeOriginType((r as any).origin_type));
         setOriginNote((r as any).origin_note ?? "");
-        setProductionCompaniesText(((r as any).production_companies ?? []).join(", "));
+        setProductionCompaniesText(
+          ((r as any).production_companies ?? []).join(", ")
+        );
       } catch (e: any) {
         setMsg(e?.message ?? "load error");
       } finally {
@@ -95,21 +120,22 @@ const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
   const save = async () => {
     setMsg("");
     setBusy(true);
+
     try {
       const payload: any = {
         name: safeTrim(name),
         slug: safeTrim(slugText) || toSlug(name),
-        intro: safeTrim(intro) || null,
         description: safeTrim(desc) || null,
       };
 
-      // ✅ production_companies は「カンマ区切り」→ text[] に変換
+      // ✅ production_companies: "a, b, c" → text[]
       const companies = productionCompaniesText
         .split(",")
         .map((s) => safeTrim(s))
         .filter((s) => s.length > 0);
 
-      payload.origin_type = safeTrim(originType) || null;
+      // ✅ origin_type はセレクト値のみ許可（それ以外は空扱い）
+      payload.origin_type = originType ? originType : null;
       payload.origin_note = safeTrim(originNote) || null;
       payload.production_companies = companies.length ? companies : null;
 
@@ -145,7 +171,10 @@ const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
     setMsg("");
     setBusy(true);
     try {
-      const { error } = await supabase.from("franchises").delete().eq("id", row.id);
+      const { error } = await supabase
+        .from("franchises")
+        .delete()
+        .eq("id", row.id);
       if (error) throw error;
       nav("/admin/series");
     } catch (e: any) {
@@ -164,9 +193,10 @@ const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
               {mode === "new" ? "シリーズ新規" : "シリーズ編集"}
             </h1>
             <p className="text-xs text-slate-400 mt-1">
-              autoIntro（作品数/VOD/年）に <b>追記</b> する目的で使う（＋固定情報を持たせる）
+              autoIntro（作品数/VOD/年）を主役にして、固定情報＋解説（description）だけ手入れする
             </p>
           </div>
+
           <div className="flex items-center gap-2">
             <Link
               to="/admin/series"
@@ -215,17 +245,28 @@ const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
           />
         </Field>
 
-        {/* ✅ 追加：固定情報（変動しない要素） */}
+        {/* ✅ 固定情報（変動しない要素） */}
         <Field
           label="origin_type"
-          hint="固定情報：原作カテゴリ（例：漫画原作 / ゲーム原作 / アニメ原作 / メディアミックス / 小説 / 特撮 / その他）"
+          hint="原作カテゴリ（DB制約に合わせて固定選択）。未設定でもOK"
         >
-          <input
+          <select
             className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
             value={originType}
-            onChange={(e) => setOriginType(e.target.value)}
-            placeholder="例：漫画原作"
-          />
+            onChange={(e) => setOriginType(e.target.value as OriginType)}
+          >
+            {ORIGIN_TYPE_OPTIONS.map((o) => (
+              <option key={o.label} value={o.value}>
+                {o.label}
+              </option>
+            ))}
+          </select>
+
+          {/* 小さく補足（入力事故防止） */}
+          <div className="mt-2 text-[11px] text-slate-500">
+            ※ここは <span className="text-slate-300">「アニメ原作」</span> まで含めた固定カテゴリで管理。
+            文字入力はさせない（制約エラーを根絶）。
+          </div>
         </Field>
 
         <Field label="production_companies" hint="制作会社（カンマ区切りで複数OK）">
@@ -247,18 +288,8 @@ const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
           />
         </Field>
 
-        {/* ✅ 既存：intro / description */}
-        <Field label="intro" hint="短文（上部）。空なら autoIntro のみで表示">
-          <textarea
-            className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
-            value={intro}
-            onChange={(e) => setIntro(e.target.value)}
-            rows={4}
-            placeholder="例：初見向けに“世界観/見どころ/入り口”を短く"
-          />
-        </Field>
-
-        <Field label="description" hint="長文（折りたたみ）。空なら出ない">
+        {/* ✅ 解説（折りたたみ表示される想定） */}
+        <Field label="description" hint="解説（折りたたみ）。空なら出ない">
           <textarea
             className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
             value={desc}
