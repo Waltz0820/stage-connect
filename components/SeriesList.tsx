@@ -74,16 +74,20 @@ const SeriesList: React.FC = () => {
   const [originFilter, setOriginFilter] = useState<string>('all');
   const [sortKey, setSortKey] = useState<SortKey>('play_count_desc');
 
-  // ✅ Pagination (Plays.tsx と同じ思想)
+  // ✅ Pagination（Plays.tsx と同じ思想）
   const [currentPage, setCurrentPage] = useState(1);
-  const ITEMS_PER_PAGE = 12;
+  const ITEMS_PER_PAGE = 10; // ✅ 5件×2段に統一
 
   // ✅ DB data
   const [franchisesDb, setFranchisesDb] = useState<FranchiseMetaRow[]>([]);
-  const [playsDb, setPlaysDb] = useState<{ id: string; franchise_id: string | null; period?: string | null; created_at?: string | null }[]>([]);
+  const [playsDb, setPlaysDb] = useState<
+    { id: string; franchise_id: string | null; period?: string | null; created_at?: string | null }[]
+  >([]);
   const [castsDb, setCastsDb] = useState<{ play_id: string; actor: any | null }[]>([]);
 
   useEffect(() => {
+    let cancelled = false;
+
     const run = async () => {
       setLoading(true);
       try {
@@ -92,6 +96,8 @@ const SeriesList: React.FC = () => {
           .from('franchises')
           .select('id,name,slug,origin_type,origin_note,production_companies')
           .order('name', { ascending: true });
+
+        if (cancelled) return;
 
         if (fErr) {
           console.warn('SeriesList franchises fetch error:', fErr);
@@ -103,6 +109,8 @@ const SeriesList: React.FC = () => {
 
         // 2) plays（集計用：最小カラム）
         const { data: pData, error: pErr } = await supabase.from('plays').select('id,franchise_id,period,created_at');
+
+        if (cancelled) return;
 
         if (pErr) {
           console.warn('SeriesList plays fetch error:', pErr);
@@ -140,6 +148,8 @@ const SeriesList: React.FC = () => {
           )
           .in('play_id', playIds);
 
+        if (cancelled) return;
+
         if (cErr) {
           console.warn('SeriesList casts fetch error:', cErr);
           setCastsDb([]);
@@ -148,11 +158,15 @@ const SeriesList: React.FC = () => {
 
         setCastsDb((cData ?? []) as any[]);
       } finally {
-        setLoading(false);
+        if (!cancelled) setLoading(false);
       }
     };
 
     run();
+
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   // ✅ playId -> franchiseId
@@ -261,7 +275,7 @@ const SeriesList: React.FC = () => {
     return sorted;
   }, [franchises, originFilter, sortKey]);
 
-  // ✅ Pagination 계산 (Plays.tsx と同じ)
+  // ✅ Pagination（Plays.tsx と同じ）
   const totalPages = Math.max(1, Math.ceil(viewFranchises.length / ITEMS_PER_PAGE));
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
   const visibleFranchises = viewFranchises.slice(startIndex, startIndex + ITEMS_PER_PAGE);
@@ -360,8 +374,8 @@ const SeriesList: React.FC = () => {
         </div>
       </div>
 
-      {/* Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {/* Cards（✅ Plays と同じ「最終5列」思想に寄せる） */}
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 min-h-[50vh]">
         {visibleFranchises.map((franchise) => {
           const seriesKey = getSeriesKey(franchise);
 
@@ -409,7 +423,9 @@ const SeriesList: React.FC = () => {
                   {franchise.production_companies && franchise.production_companies.length > 0 && (
                     <div>
                       <p className="text-[9px] uppercase tracking-widest text-slate-600 font-bold mb-0.5">制作</p>
-                      <p className="text-xs text-slate-400 font-medium truncate">{franchise.production_companies.join(', ')}</p>
+                      <p className="text-xs text-slate-400 font-medium truncate">
+                        {franchise.production_companies.join(', ')}
+                      </p>
                     </div>
                   )}
 
@@ -444,23 +460,19 @@ const SeriesList: React.FC = () => {
             </Link>
           );
         })}
+
+        {/* Empty State（loading終わって0件の時だけ） */}
+        {!loading && viewFranchises.length === 0 && (
+          <div className="col-span-full py-20 text-center border border-dashed border-white/10 rounded-xl bg-white/5">
+            <p className="text-slate-400 mb-2">該当するシリーズはありません</p>
+            <button type="button" onClick={() => setOriginFilter('all')} className="text-neon-cyan hover:underline text-sm">
+              条件をリセットする
+            </button>
+          </div>
+        )}
       </div>
 
-      {/* Empty State (loading終わって0件の時だけ) */}
-      {!loading && viewFranchises.length === 0 && (
-        <div className="mt-10 col-span-full py-20 text-center border border-dashed border-white/10 rounded-xl bg-white/5">
-          <p className="text-slate-400 mb-2">該当するシリーズはありません</p>
-          <button
-            type="button"
-            onClick={() => setOriginFilter('all')}
-            className="text-neon-cyan hover:underline text-sm"
-          >
-            条件をリセットする
-          </button>
-        </div>
-      )}
-
-      {/* Pagination */}
+      {/* Pagination（Plays と同じUI） */}
       {totalPages > 1 && !loading && (
         <div className="flex justify-center items-center gap-4 mt-16 pt-8 border-t border-white/5">
           <button

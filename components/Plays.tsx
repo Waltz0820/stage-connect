@@ -186,6 +186,9 @@ const Plays: React.FC = () => {
   const pageTitle = `作品一覧｜舞台作品アーカイブ - ${SITE_NAME}`;
   const pageDescription = `${SITE_NAME}の舞台作品アーカイブ。ジャンル別フィルタと公開順ソートで作品を探せます。`;
 
+  // ✅ 5×2のスケルトン（=10枚）を固定で出す
+  const skeletonCards = useMemo(() => Array.from({ length: ITEMS_PER_PAGE }, (_, i) => i), [ITEMS_PER_PAGE]);
+
   return (
     <div className="container mx-auto px-6 pt-8 pb-16 lg:px-8 max-w-[1400px] animate-fade-in-up">
       <title>{pageTitle}</title>
@@ -260,12 +263,30 @@ const Plays: React.FC = () => {
         </div>
       </div>
 
-      {/* ✅ ローディング */}
+      {/* ✅ ローディング：5×2 のスケルトン（=10枚） */}
       {loading ? (
-        <div className="rounded-2xl bg-theater-surface border border-white/10 p-8 animate-pulse min-h-[50vh]">
-          <div className="h-6 w-40 bg-white/10 rounded mb-4" />
-          <div className="h-4 w-24 bg-white/10 rounded mb-6" />
-          <div className="h-24 w-full bg-white/5 rounded" />
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 min-h-[50vh] animate-pulse">
+          {skeletonCards.map((i) => (
+            <div
+              key={i}
+              className="bg-theater-surface rounded-xl border border-white/10 p-6 flex flex-col h-full"
+            >
+              {/* title */}
+              <div className="h-5 w-3/4 bg-white/10 rounded mb-3" />
+              {/* meta */}
+              <div className="h-3 w-1/2 bg-white/10 rounded mb-5" />
+              {/* body placeholder */}
+              <div className="flex-1 space-y-3">
+                <div className="h-3 w-full bg-white/5 rounded" />
+                <div className="h-3 w-11/12 bg-white/5 rounded" />
+                <div className="h-3 w-9/12 bg-white/5 rounded" />
+              </div>
+              {/* footer */}
+              <div className="mt-6 pt-4 border-t border-white/10">
+                <div className="h-3 w-2/3 bg-white/10 rounded" />
+              </div>
+            </div>
+          ))}
         </div>
       ) : (
         <>
