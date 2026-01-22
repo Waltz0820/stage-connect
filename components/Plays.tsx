@@ -263,14 +263,18 @@ const Plays: React.FC = () => {
         </div>
       </div>
 
+      {/* ✅ LOADING DATABASE...（ネオンピンク） */}
+      {loading && (
+        <div className="mb-6 text-center text-xs font-mono tracking-widest text-neon-pink animate-pulse">
+          LOADING DATABASE...
+        </div>
+      )}
+
       {/* ✅ ローディング：5×2 のスケルトン（=10枚） */}
       {loading ? (
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 min-h-[50vh] animate-pulse">
           {skeletonCards.map((i) => (
-            <div
-              key={i}
-              className="bg-theater-surface rounded-xl border border-white/10 p-6 flex flex-col h-full"
-            >
+            <div key={i} className="bg-theater-surface rounded-xl border border-white/10 p-6 flex flex-col h-full">
               {/* title */}
               <div className="h-5 w-3/4 bg-white/10 rounded mb-3" />
               {/* meta */}
