@@ -51,8 +51,7 @@ const toPlainText = (s: any) => {
     .trim();
 };
 
-const truncate = (s: string, n: number) =>
-  s.length <= n ? s : s.slice(0, Math.max(0, n - 1)) + '…';
+const truncate = (s: string, n: number) => (s.length <= n ? s : s.slice(0, Math.max(0, n - 1)) + '…');
 
 const normalizeOrigin = (s: any) => String(s ?? '').trim();
 
@@ -75,14 +74,14 @@ const SeriesList: React.FC = () => {
   const [originFilter, setOriginFilter] = useState<string>('all');
   const [sortKey, setSortKey] = useState<SortKey>('play_count_desc');
 
+  // ✅ Pagination (Plays.tsx と同じ思想)
+  const [currentPage, setCurrentPage] = useState(1);
+  const ITEMS_PER_PAGE = 12;
+
   // ✅ DB data
   const [franchisesDb, setFranchisesDb] = useState<FranchiseMetaRow[]>([]);
-  const [playsDb, setPlaysDb] = useState<
-    { id: string; franchise_id: string | null; period?: string | null; created_at?: string | null }[]
-  >([]);
-  const [castsDb, setCastsDb] = useState<
-    { play_id: string; actor: any | null }[]
-  >([]);
+  const [playsDb, setPlaysDb] = useState<{ id: string; franchise_id: string | null; period?: string | null; created_at?: string | null }[]>([]);
+  const [castsDb, setCastsDb] = useState<{ play_id: string; actor: any | null }[]>([]);
 
   useEffect(() => {
     const run = async () => {
@@ -103,9 +102,7 @@ const SeriesList: React.FC = () => {
         setFranchisesDb(frs);
 
         // 2) plays（集計用：最小カラム）
-        const { data: pData, error: pErr } = await supabase
-          .from('plays')
-          .select('id,franchise_id,period,created_at');
+        const { data: pData, error: pErr } = await supabase.from('plays').select('id,franchise_id,period,created_at');
 
         if (pErr) {
           console.warn('SeriesList plays fetch error:', pErr);
@@ -117,7 +114,6 @@ const SeriesList: React.FC = () => {
         setPlaysDb(ps);
 
         // 3) casts（トップ俳優集計用：play_id と actorだけ）
-        // plays が多いと in が長くなるので、まず playIds を作って投げる
         const playIds = ps.map((p) => p.id).filter(Boolean) as string[];
         if (playIds.length === 0) {
           setCastsDb([]);
@@ -255,9 +251,7 @@ const SeriesList: React.FC = () => {
   // フィルタ＋ソート
   const viewFranchises = useMemo(() => {
     const filtered =
-      originFilter === 'all'
-        ? franchises
-        : franchises.filter((f) => normalizeOrigin(f.origin_type) === originFilter);
+      originFilter === 'all' ? franchises : franchises.filter((f) => normalizeOrigin(f.origin_type) === originFilter);
 
     const sorted = [...filtered].sort((a, b) => {
       if (sortKey === 'name_asc') return a.name.localeCompare(b.name, 'ja');
@@ -267,11 +261,30 @@ const SeriesList: React.FC = () => {
     return sorted;
   }, [franchises, originFilter, sortKey]);
 
+  // ✅ Pagination 계산 (Plays.tsx と同じ)
+  const totalPages = Math.max(1, Math.ceil(viewFranchises.length / ITEMS_PER_PAGE));
+  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+  const visibleFranchises = viewFranchises.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+
+  // currentPage がはみ出たら戻す（フィルタ変更などで起きる）
+  useEffect(() => {
+    if (currentPage > totalPages) setCurrentPage(totalPages);
+  }, [currentPage, totalPages]);
+
+  // フィルタ/ソート変更時は1ページ目へ戻す（Plays思想）
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [originFilter, sortKey]);
+
+  const handlePageChange = (newPage: number) => {
+    setCurrentPage(newPage);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   // ✅ SEO
   const seoTitle = `シリーズ一覧｜人気舞台シリーズ・フランチャイズ - ${SITE_NAME}`;
   const seoDescription = useMemo(() => {
-    const base =
-      '人気舞台シリーズ・フランチャイズを一覧で検索。代表作数や主要キャストから、気になるシリーズの詳細ページへ。';
+    const base = '人気舞台シリーズ・フランチャイズを一覧で検索。代表作数や主要キャストから、気になるシリーズの詳細ページへ。';
     const composed = franchises?.length ? `${base}（登録シリーズ：${franchises.length}）` : base;
     return truncate(toPlainText(composed), 155);
   }, [franchises]);
@@ -318,7 +331,7 @@ const SeriesList: React.FC = () => {
           </div>
 
           <div className="text-xs text-slate-500 font-mono text-right sm:text-left">
-            Total: {viewFranchises.length} / {franchises.length}
+            Total: {viewFranchises.length} / {franchises.length} / Page {currentPage}
           </div>
         </div>
       </div>
@@ -349,7 +362,7 @@ const SeriesList: React.FC = () => {
 
       {/* Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {viewFranchises.map((franchise) => {
+        {visibleFranchises.map((franchise) => {
           const seriesKey = getSeriesKey(franchise);
 
           return (
@@ -396,9 +409,7 @@ const SeriesList: React.FC = () => {
                   {franchise.production_companies && franchise.production_companies.length > 0 && (
                     <div>
                       <p className="text-[9px] uppercase tracking-widest text-slate-600 font-bold mb-0.5">制作</p>
-                      <p className="text-xs text-slate-400 font-medium truncate">
-                        {franchise.production_companies.join(', ')}
-                      </p>
+                      <p className="text-xs text-slate-400 font-medium truncate">{franchise.production_companies.join(', ')}</p>
                     </div>
                   )}
 
@@ -434,6 +445,45 @@ const SeriesList: React.FC = () => {
           );
         })}
       </div>
+
+      {/* Empty State (loading終わって0件の時だけ) */}
+      {!loading && viewFranchises.length === 0 && (
+        <div className="mt-10 col-span-full py-20 text-center border border-dashed border-white/10 rounded-xl bg-white/5">
+          <p className="text-slate-400 mb-2">該当するシリーズはありません</p>
+          <button
+            type="button"
+            onClick={() => setOriginFilter('all')}
+            className="text-neon-cyan hover:underline text-sm"
+          >
+            条件をリセットする
+          </button>
+        </div>
+      )}
+
+      {/* Pagination */}
+      {totalPages > 1 && !loading && (
+        <div className="flex justify-center items-center gap-4 mt-16 pt-8 border-t border-white/5">
+          <button
+            onClick={() => handlePageChange(Math.max(1, currentPage - 1))}
+            disabled={currentPage === 1}
+            className="px-6 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-bold text-slate-300 hover:bg-white/10 hover:border-white/20 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+          >
+            « 前へ
+          </button>
+
+          <span className="text-sm font-mono text-slate-500">
+            Page <span className="text-white font-bold text-base mx-1">{currentPage}</span> / {totalPages}
+          </span>
+
+          <button
+            onClick={() => handlePageChange(Math.min(totalPages, currentPage + 1))}
+            disabled={currentPage === totalPages}
+            className="px-6 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-bold text-slate-300 hover:bg-white/10 hover:border-white/20 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+          >
+            次へ »
+          </button>
+        </div>
+      )}
     </div>
   );
 };
