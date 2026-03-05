@@ -6,9 +6,12 @@ import { createPortal } from "react-dom";
 import { supabase } from "../lib/supabase";
 import type { Actor, Gender } from "../lib/types";
 
-import { getPlaysByActorSlug } from "../lib/utils/getPlaysByActorSlug"; // フォールバック用
+import { getPlaysByActorSlug } from "../lib/utils/getPlaysByActorSlug";
 import { groupPlaysByYear } from "../lib/utils/groupPlaysByYear";
 import { getCoStars } from "../lib/utils/getCoStars";
+import { normalizeActorRow } from "../lib/utils/normalizeActorRow";
+import { normalizeTagsFromJoin } from "../lib/utils/normalizeTagsFromJoin";
+import { useSiteUrl, useOgImage } from "../lib/hooks/useSiteUrl";
 
 import TimelineSection from "./TimelineSection";
 import ActorAvatar from "./ActorAvatar";
@@ -34,41 +37,9 @@ type CoStarItem = { actor: Actor; count: number };
 
 const SITE_NAME = "Stage Connect";
 
-// ✅ play_tags join から tags を安定的に取り出す（ActorDetail でも SeriesDetail と同じルールに統一）
-const normalizeTagsFromJoin = (p: any): string[] | null => {
-  const arr = (p?.play_tags ?? []) as any[];
-  const names = arr
-    .map((x) => x?.tag?.name)
-    .filter((v) => typeof v === "string" && v.trim().length > 0)
-    .map((v) => v.trim());
-
-  const uniq = Array.from(new Set(names));
-  return uniq.length > 0 ? uniq : null;
-};
-
-// ✅ 俳優 tags は運用しない方針なので、ここでは作らない（将来カラム削除しても壊れない）
-const normalizeActorRow = (data: any): Actor => ({
-  slug: data.slug,
-  name: data.name,
-  kana: data.kana ?? "",
-  profile: data.profile ?? "",
-  imageUrl: data.image_url ?? "",
-  gender: (data.gender ?? "male") as Gender,
-  sns: (data.sns as Actor["sns"]) ?? {},
-  featuredPlaySlugs: (data.featured_play_slugs as string[] | undefined) ?? [],
-});
 
 // RPC / ネスト取得どちらでも最低限Actor型に寄せる（共演カード表示用）
-const normalizeActorForCoStar = (data: any): Actor => ({
-  slug: data.slug,
-  name: data.name,
-  kana: data.kana ?? "",
-  profile: data.profile ?? "",
-  imageUrl: data.image_url ?? data.imageUrl ?? "",
-  gender: (data.gender ?? "male") as Gender,
-  sns: (data.sns as Actor["sns"]) ?? {},
-  featuredPlaySlugs: (data.featured_play_slugs as string[] | undefined) ?? [],
-});
+const normalizeActorForCoStar = normalizeActorRow;
 
 /**
  * ✅ モーダル表示中の “めり込み/ズレ” を潰すためのスクロールロック
@@ -302,13 +273,8 @@ const ActorDetail: React.FC = () => {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [isAllCoStarsOpen]);
 
-  // siteUrl（canonical/og:url 用）
-  const siteUrl = useMemo(() => {
-    const envUrl = (import.meta as any)?.env?.VITE_SITE_URL as string | undefined;
-    if (envUrl) return envUrl.replace(/\/$/, "");
-    if (typeof window !== "undefined") return window.location.origin.replace(/\/$/, "");
-    return "";
-  }, []);
+  const siteUrl = useSiteUrl();
+  const ogImageBase = useOgImage();
 
   // ---- Supabase から俳優1件＋出演作品を取得 ----
   useEffect(() => {
@@ -333,7 +299,7 @@ const ActorDetail: React.FC = () => {
           .eq("slug", slug)
           .maybeSingle();
 
-        console.log("ActorDetail / actor:", data, error);
+
 
         if (cancelled) return;
 
@@ -374,7 +340,7 @@ const ActorDetail: React.FC = () => {
             )
             .eq("actor_id", (data as any).id);
 
-          console.log("ActorDetail / casts->plays:", castRows, castErr);
+
 
           if (cancelled) return;
 

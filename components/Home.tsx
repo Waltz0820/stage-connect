@@ -3,6 +3,7 @@ import React, { useMemo } from "react";
 import { Link } from "react-router-dom";
 import { getTrendingTags } from "../lib/utils/getTrendingTags";
 import SeoHead from "./SeoHead";
+import { useSiteUrl, useOgImage } from "../lib/hooks/useSiteUrl";
 
 // const heroImage = '/images/hero-silhouette.png';
 
@@ -13,13 +14,8 @@ type CloudItem =
 const Home: React.FC = () => {
   const trendingTags = getTrendingTags(25);
 
-  // siteUrl（canonical/og:url 用）
-  const siteUrl = useMemo(() => {
-    const envUrl = (import.meta as any)?.env?.VITE_SITE_URL as string | undefined;
-    if (envUrl) return envUrl.replace(/\/$/, "");
-    if (typeof window !== "undefined") return window.location.origin.replace(/\/$/, "");
-    return "";
-  }, []);
+  const siteUrl = useSiteUrl();
+  const ogImageBase = useOgImage();
 
   const canonical = useMemo(() => {
     if (!siteUrl) return "";
@@ -30,12 +26,7 @@ const Home: React.FC = () => {
   const description =
     "2.5次元舞台・ミュージカルの作品とキャストをつなぐデジタルアーカイブ。出演者、配信（VOD）、公演情報、シリーズ情報をまとめて探せます。";
 
-  const ogImage = useMemo(() => {
-    // 共通OG画像を用意しているなら env で固定（任意）
-    const envOg = (import.meta as any)?.env?.VITE_OG_IMAGE as string | undefined;
-    if (envOg) return envOg;
-    return "";
-  }, []);
+  const ogImage = ogImageBase;
 
   // ランキングに応じたスタイルを決定するヘルパー（通常タグ用）
   const getTagStyle = (rank: number) => {

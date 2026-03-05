@@ -6,6 +6,9 @@ import Breadcrumbs from './Breadcrumbs';
 import SeoHead from './SeoHead';
 import { supabase } from '../lib/supabase';
 import type { Actor, Gender } from '../lib/types';
+import { normalizeActorRow } from '../lib/utils/normalizeActorRow';
+import { toPlainText, truncate } from '../lib/utils/text';
+import { useSiteUrl } from '../lib/hooks/useSiteUrl';
 
 const SITE_NAME = 'Stage Connect';
 
@@ -29,29 +32,9 @@ type FranchiseUI = FranchiseMetaRow & FranchiseStats;
 
 type SortKey = 'play_count_desc' | 'name_asc';
 
-const normalizeActorRow = (row: any): Actor => ({
-  slug: row.slug,
-  name: row.name,
-  kana: row.kana ?? '',
-  profile: row.profile ?? '',
-  imageUrl: row.image_url ?? row.imageUrl ?? '',
-  gender: (row.gender ?? 'male') as Gender,
-  sns: (row.sns as Actor['sns']) ?? {},
-  featuredPlaySlugs: (row.featured_play_slugs as string[] | undefined) ?? [],
-  tags: (row.tags as string[] | undefined) ?? [],
-});
 
-const toPlainText = (s: any) => {
-  const str = String(s ?? '');
-  return str
-    .replace(/<[^>]*>/g, ' ')
-    .replace(/\s+/g, ' ')
-    .replace(/[“”]/g, '"')
-    .replace(/[‘’]/g, "'")
-    .trim();
-};
 
-const truncate = (s: string, n: number) => (s.length <= n ? s : s.slice(0, Math.max(0, n - 1)) + '…');
+
 
 const normalizeOrigin = (s: any) => String(s ?? '').trim();
 
@@ -303,9 +286,12 @@ const SeriesList: React.FC = () => {
     return truncate(toPlainText(composed), 155);
   }, [franchises]);
 
+  const siteUrl = useSiteUrl();
+  const canonical = `${siteUrl}/series`;
+
   return (
     <div className="container mx-auto px-6 pt-8 pb-16 lg:px-8 max-w-[1400px] animate-fade-in-up">
-      <SeoHead title={seoTitle} description={seoDescription} robots="index,follow" />
+      <SeoHead title={seoTitle} description={seoDescription} canonical={canonical} robots="index,follow" />
       <Breadcrumbs items={[{ label: 'シリーズ一覧' }]} />
 
       {/* Header & Sort Controls */}
@@ -322,22 +308,20 @@ const SeriesList: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setSortKey('play_count_desc')}
-                className={`px-4 py-1.5 rounded-md text-xs font-bold transition-all duration-300 ${
-                  sortKey === 'play_count_desc'
-                    ? 'bg-neon-cyan text-theater-black shadow-[0_0_10px_rgba(0,255,255,0.3)]'
-                    : 'text-slate-400 hover:text-white hover:bg-white/5'
-                }`}
+                className={`px-4 py-1.5 rounded-md text-xs font-bold transition-all duration-300 ${sortKey === 'play_count_desc'
+                  ? 'bg-neon-cyan text-theater-black shadow-[0_0_10px_rgba(0,255,255,0.3)]'
+                  : 'text-slate-400 hover:text-white hover:bg-white/5'
+                  }`}
               >
                 作品数順
               </button>
               <button
                 type="button"
                 onClick={() => setSortKey('name_asc')}
-                className={`px-4 py-1.5 rounded-md text-xs font-bold transition-all duration-300 ${
-                  sortKey === 'name_asc'
-                    ? 'bg-neon-cyan text-theater-black shadow-[0_0_10px_rgba(0,255,255,0.3)]'
-                    : 'text-slate-400 hover:text-white hover:bg-white/5'
-                }`}
+                className={`px-4 py-1.5 rounded-md text-xs font-bold transition-all duration-300 ${sortKey === 'name_asc'
+                  ? 'bg-neon-cyan text-theater-black shadow-[0_0_10px_rgba(0,255,255,0.3)]'
+                  : 'text-slate-400 hover:text-white hover:bg-white/5'
+                  }`}
               >
                 名前順
               </button>
@@ -351,7 +335,9 @@ const SeriesList: React.FC = () => {
       </div>
 
       {loading && (
-        <div className="mb-8 p-4 text-center text-xs font-mono text-neon-cyan animate-pulse">LOADING DATABASE...</div>
+        <div className="mb-6 text-center text-xs font-mono tracking-widest text-neon-pink animate-pulse">
+          LOADING DATABASE...
+        </div>
       )}
 
       {/* Origin Filter */}
@@ -362,11 +348,10 @@ const SeriesList: React.FC = () => {
               key={opt}
               type="button"
               onClick={() => setOriginFilter(opt)}
-              className={`px-4 py-2 rounded-full text-xs font-bold tracking-wider transition-all duration-300 border whitespace-nowrap ${
-                originFilter === opt
-                  ? 'bg-neon-cyan/20 border-neon-cyan/50 text-white shadow-[0_0_15px_rgba(0,255,255,0.3)]'
-                  : 'bg-white/5 border-white/10 text-slate-400 hover:text-white hover:border-white/30'
-              }`}
+              className={`px-4 py-2 rounded-full text-xs font-bold tracking-wider transition-all duration-300 border whitespace-nowrap ${originFilter === opt
+                ? 'bg-neon-cyan/20 border-neon-cyan/50 text-white shadow-[0_0_15px_rgba(0,255,255,0.3)]'
+                : 'bg-white/5 border-white/10 text-slate-400 hover:text-white hover:border-white/30'
+                }`}
             >
               {opt === 'all' ? 'すべて' : opt}
             </button>
@@ -375,102 +360,125 @@ const SeriesList: React.FC = () => {
       </div>
 
       {/* Cards（✅ Plays と同じ「最終5列」思想に寄せる） */}
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 min-h-[50vh]">
-        {visibleFranchises.map((franchise) => {
-          const seriesKey = getSeriesKey(franchise);
+      {loading ? (
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 min-h-[50vh] animate-pulse">
+          {Array.from({ length: ITEMS_PER_PAGE }, (_, i) => (
+            <div key={i} className="bg-theater-surface rounded-xl border border-white/10 p-8 flex flex-col h-full">
+              {/* title + badge */}
+              <div className="flex justify-between items-start mb-3 gap-3">
+                <div className="h-5 w-3/4 bg-white/10 rounded" />
+                <div className="h-5 w-16 bg-white/10 rounded-full shrink-0" />
+              </div>
+              {/* origin badge */}
+              <div className="h-4 w-20 bg-white/5 rounded mb-4" />
+              {/* year */}
+              <div className="h-3 w-1/3 bg-white/5 rounded mb-6" />
+              {/* footer */}
+              <div className="mt-auto pt-4 border-t border-white/5 space-y-3">
+                <div className="h-3 w-1/2 bg-white/10 rounded" />
+                <div className="h-3 w-2/3 bg-white/10 rounded" />
+              </div>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 min-h-[50vh]">
+          {visibleFranchises.map((franchise) => {
+            const seriesKey = getSeriesKey(franchise);
 
-          return (
-            <Link
-              key={franchise.id}
-              to={`/series/${encodeURIComponent(seriesKey)}`}
-              className="group block bg-theater-surface rounded-xl border border-white/5 p-8 transition-all duration-300 hover:border-neon-cyan/40 hover:shadow-[0_0_20px_rgba(0,255,255,0.15)] hover:-translate-y-1 relative overflow-hidden flex flex-col h-full"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-neon-cyan/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+            return (
+              <Link
+                key={franchise.id}
+                to={`/series/${encodeURIComponent(seriesKey)}`}
+                className="group block bg-theater-surface rounded-xl border border-white/5 p-8 transition-all duration-300 hover:border-neon-cyan/40 hover:shadow-[0_0_20px_rgba(0,255,255,0.15)] hover:-translate-y-1 relative overflow-hidden flex flex-col h-full"
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-neon-cyan/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
-              <div className="relative z-10 flex flex-col h-full">
-                <div className="flex justify-between items-start mb-3 gap-3">
-                  <h3 className="text-xl font-bold text-white group-hover:text-neon-cyan transition-colors duration-300 line-clamp-2">
-                    {franchise.name}
-                  </h3>
-                  <span className="bg-white/5 text-slate-300 text-xs font-mono px-3 py-1 rounded-full border border-white/10 shrink-0">
-                    {franchise.playCount}作品
-                  </span>
-                </div>
-
-                {normalizeOrigin(franchise.origin_type) && (
-                  <div className="mb-4">
-                    <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold border border-white/10 bg-white/5 text-slate-400 tracking-wider">
-                      {normalizeOrigin(franchise.origin_type)}
+                <div className="relative z-10 flex flex-col h-full">
+                  <div className="flex justify-between items-start mb-3 gap-3">
+                    <h3 className="text-xl font-bold text-white group-hover:text-neon-cyan transition-colors duration-300 line-clamp-2">
+                      {franchise.name}
+                    </h3>
+                    <span className="bg-white/5 text-slate-300 text-xs font-mono px-3 py-1 rounded-full border border-white/10 shrink-0">
+                      {franchise.playCount}作品
                     </span>
                   </div>
-                )}
 
-                <div className="flex items-center gap-4 text-sm text-slate-400 mb-6">
-                  <span className="flex items-center gap-1">
-                    <svg className="w-4 h-4 text-neon-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                      />
-                    </svg>
-                    {franchise.years.start || '----'} - {franchise.years.end || ''}
-                  </span>
-                </div>
-
-                <div className="mt-auto pt-4 border-t border-white/5 space-y-3">
-                  {franchise.production_companies && franchise.production_companies.length > 0 && (
-                    <div>
-                      <p className="text-[9px] uppercase tracking-widest text-slate-600 font-bold mb-0.5">制作</p>
-                      <p className="text-xs text-slate-400 font-medium truncate">
-                        {franchise.production_companies.join(', ')}
-                      </p>
+                  {normalizeOrigin(franchise.origin_type) && (
+                    <div className="mb-4">
+                      <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold border border-white/10 bg-white/5 text-slate-400 tracking-wider">
+                        {normalizeOrigin(franchise.origin_type)}
+                      </span>
                     </div>
                   )}
 
-                  <div>
-                    <p className="text-[9px] uppercase tracking-widest text-slate-600 font-bold mb-1">主要キャスト</p>
-                    <div className="text-sm font-bold text-slate-200 leading-snug">
-                      {franchise.topActors.length === 0 ? (
-                        <span className="text-slate-600 text-xs font-normal italic">情報なし</span>
-                      ) : (
-                        <>
-                          {franchise.topActors.slice(0, 5).map(({ actor }, i) => (
-                            <span key={actor.slug}>
-                              {i > 0 && <span className="text-slate-600 font-normal mx-1.5">/</span>}
-                              <span className="group-hover:text-neon-cyan transition-colors duration-300">{actor.name}</span>
-                            </span>
-                          ))}
-                        </>
-                      )}
+                  <div className="flex items-center gap-4 text-sm text-slate-400 mb-6">
+                    <span className="flex items-center gap-1">
+                      <svg className="w-4 h-4 text-neon-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                        />
+                      </svg>
+                      {franchise.years.start || '----'} - {franchise.years.end || ''}
+                    </span>
+                  </div>
+
+                  <div className="mt-auto pt-4 border-t border-white/5 space-y-3">
+                    {franchise.production_companies && franchise.production_companies.length > 0 && (
+                      <div>
+                        <p className="text-[9px] uppercase tracking-widest text-slate-600 font-bold mb-0.5">制作</p>
+                        <p className="text-xs text-slate-400 font-medium truncate">
+                          {franchise.production_companies.join(', ')}
+                        </p>
+                      </div>
+                    )}
+
+                    <div>
+                      <p className="text-[9px] uppercase tracking-widest text-slate-600 font-bold mb-1">主要キャスト</p>
+                      <div className="text-sm font-bold text-slate-200 leading-snug">
+                        {franchise.topActors.length === 0 ? (
+                          <span className="text-slate-600 text-xs font-normal italic">情報なし</span>
+                        ) : (
+                          <>
+                            {franchise.topActors.slice(0, 5).map(({ actor }, i) => (
+                              <span key={actor.slug}>
+                                {i > 0 && <span className="text-slate-600 font-normal mx-1.5">/</span>}
+                                <span className="group-hover:text-neon-cyan transition-colors duration-300">{actor.name}</span>
+                              </span>
+                            ))}
+                          </>
+                        )}
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div className="mt-4 flex justify-end">
-                  <span className="text-xs font-bold text-neon-cyan opacity-0 group-hover:opacity-100 transition-opacity flex items-center">
-                    シリーズ詳細
-                    <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  </span>
+                  <div className="mt-4 flex justify-end">
+                    <span className="text-xs font-bold text-neon-cyan opacity-0 group-hover:opacity-100 transition-opacity flex items-center">
+                      シリーズ詳細
+                      <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </span>
+                  </div>
                 </div>
-              </div>
-            </Link>
-          );
-        })}
+              </Link>
+            );
+          })}
 
-        {/* Empty State（loading終わって0件の時だけ） */}
-        {!loading && viewFranchises.length === 0 && (
-          <div className="col-span-full py-20 text-center border border-dashed border-white/10 rounded-xl bg-white/5">
-            <p className="text-slate-400 mb-2">該当するシリーズはありません</p>
-            <button type="button" onClick={() => setOriginFilter('all')} className="text-neon-cyan hover:underline text-sm">
-              条件をリセットする
-            </button>
-          </div>
-        )}
-      </div>
+          {/* Empty State（loading終わって0件の時だけ） */}
+          {!loading && viewFranchises.length === 0 && (
+            <div className="col-span-full py-20 text-center border border-dashed border-white/10 rounded-xl bg-white/5">
+              <p className="text-slate-400 mb-2">該当するシリーズはありません</p>
+              <button type="button" onClick={() => setOriginFilter('all')} className="text-neon-cyan hover:underline text-sm">
+                条件をリセットする
+              </button>
+            </div>
+          )}
+        </div>
+      )}
 
       {/* Pagination（Plays と同じUI） */}
       {totalPages > 1 && !loading && (

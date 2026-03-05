@@ -51,11 +51,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       : "text-slate-400 hover:text-white hover:drop-shadow-[0_0_5px_rgba(255,255,255,0.5)]";
   };
 
-  const mobileLinkStyle = (path: string) => `text-2xl font-bold tracking-widest uppercase transition-all duration-300 ${
-    (path === '/' ? location.pathname === '/' : location.pathname.startsWith(path))
-      ? "text-transparent bg-clip-text bg-gradient-to-r from-neon-purple to-neon-pink drop-shadow-[0_0_10px_rgba(180,108,255,0.5)]"
-      : "text-slate-400 hover:text-white"
-  }`;
+  const mobileLinkStyle = (path: string) => `text-2xl font-bold tracking-widest uppercase transition-all duration-300 ${(path === '/' ? location.pathname === '/' : location.pathname.startsWith(path))
+    ? "text-transparent bg-clip-text bg-gradient-to-r from-neon-purple to-neon-pink drop-shadow-[0_0_10px_rgba(180,108,255,0.5)]"
+    : "text-slate-400 hover:text-white"
+    }`;
 
   return (
     <div className="flex min-h-screen flex-col bg-theater-black text-slate-200 font-sans antialiased relative overflow-hidden">
@@ -148,9 +147,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 z-[100] bg-theater-black/95 backdrop-blur-xl transition-all duration-500 flex flex-col ${
-          isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
-        }`}
+        className={`fixed inset-0 z-[100] bg-theater-black/95 backdrop-blur-xl transition-all duration-500 flex flex-col ${isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
+          }`}
       >
         <div className="container mx-auto px-6 h-full flex flex-col">
           {/* Menu Header */}
@@ -213,18 +211,61 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-white/5 bg-theater-black py-10 mt-20 relative z-10">
-        <div className="container mx-auto px-6 text-center">
-          <p className="text-xs text-slate-600 font-medium tracking-widest uppercase">
-            &copy; {new Date().getFullYear()} Stage Connect
-          </p>
+      <footer className="border-t border-white/5 bg-theater-black relative z-10">
+        {/* Links Section */}
+        <div className="container mx-auto px-6 pt-14 pb-10">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-10 max-w-3xl mx-auto">
+            {/* Column 1: コンテンツ */}
+            <div>
+              <h3 className="text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em] mb-4">コンテンツ</h3>
+              <ul className="space-y-2.5">
+                <li><Link to="/plays" className="text-sm text-slate-400 hover:text-neon-pink transition-colors">作品一覧</Link></li>
+                <li><Link to="/actors" className="text-sm text-slate-400 hover:text-neon-purple transition-colors">キャスト一覧</Link></li>
+                <li><Link to="/series" className="text-sm text-slate-400 hover:text-neon-cyan transition-colors">シリーズ一覧</Link></li>
+                <li><Link to="/tags" className="text-sm text-slate-400 hover:text-white transition-colors">タグ一覧</Link></li>
+              </ul>
+            </div>
+
+            {/* Column 2: 配信サービス */}
+            <div>
+              <h3 className="text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em] mb-4">配信で観る</h3>
+              <ul className="space-y-2.5">
+                <li><Link to="/watch" className="text-sm text-slate-400 hover:text-white transition-colors">配信サービス一覧</Link></li>
+                <li><Link to="/watch/dmm" className="text-sm text-slate-400 hover:text-white transition-colors">DMM TV</Link></li>
+                <li><Link to="/watch/u-next" className="text-sm text-slate-400 hover:text-white transition-colors">U-NEXT</Link></li>
+                <li><Link to="/watch/danime" className="text-sm text-slate-400 hover:text-white transition-colors">dアニメストア</Link></li>
+              </ul>
+            </div>
+
+            {/* Column 3: サイト情報 */}
+            <div className="col-span-2 sm:col-span-1">
+              <h3 className="text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em] mb-4">サイト情報</h3>
+              <ul className="space-y-2.5">
+                <li><Link to="/guide" className="text-sm text-slate-400 hover:text-white transition-colors">ガイド / コラム</Link></li>
+                <li><Link to="/search" className="text-sm text-slate-400 hover:text-white transition-colors">検索</Link></li>
+                <li><Link to="/favorites" className="text-sm text-slate-400 hover:text-white transition-colors">お気に入り</Link></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Divider + Copyright */}
+        <div className="border-t border-white/5">
+          <div className="container mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <p className="text-[10px] text-slate-600 font-medium tracking-[0.15em] uppercase">
+              &copy; {new Date().getFullYear()} Stage Connect
+            </p>
+            <p className="text-[10px] text-slate-700 tracking-wider">
+              2.5次元舞台とキャストをつなぐデジタルアーカイブ
+            </p>
+          </div>
         </div>
       </footer>
 
       {/* Global Context-Aware CTA（スクロール開始後に表示） */}
       {showCTA && (
         <FloatingCTA
-          url="https://example.com"        // ← 実際のDMMリンクに差し替え
+          url="https://example.com"        // TODO: DMMアフィリエイトURLに差し替え必須
           label="人気の2.5次元舞台をチェック"
           subText="POPULAR"
           buttonText="チェック"

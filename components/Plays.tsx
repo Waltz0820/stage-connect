@@ -6,6 +6,9 @@ import PlayCard from './PlayCard';
 import { getPlayYear } from '../lib/utils/getPlayYear';
 import Breadcrumbs from './Breadcrumbs';
 import { PlayGenre, GENRE_LABELS } from '../lib/types';
+import { normalizeTagsFromJoin } from '../lib/utils/normalizeTagsFromJoin';
+import SeoHead from './SeoHead';
+import { useSiteUrl } from '../lib/hooks/useSiteUrl';
 
 type PlayLike = {
   id?: string;
@@ -20,18 +23,7 @@ type PlayLike = {
   genre?: PlayGenre | null;
 };
 
-// ✅ tags の正規化（play_tags → tags.name）
-const normalizeTagsFromJoin = (p: any): string[] | null => {
-  const arr = (p?.play_tags ?? []) as any[];
-  const names = arr
-    .map((x) => x?.tag?.name)
-    .filter((v) => typeof v === 'string' && v.trim().length > 0)
-    .map((v) => v.trim());
 
-  // 重複除去（念のため）
-  const uniq = Array.from(new Set(names));
-  return uniq.length > 0 ? uniq : null;
-};
 
 const normalizePlayRow = (p: any): PlayLike => ({
   id: p.id,
@@ -186,13 +178,15 @@ const Plays: React.FC = () => {
   const pageTitle = `作品一覧｜舞台作品アーカイブ - ${SITE_NAME}`;
   const pageDescription = `${SITE_NAME}の舞台作品アーカイブ。ジャンル別フィルタと公開順ソートで作品を探せます。`;
 
+  const siteUrl = useSiteUrl();
+  const canonical = `${siteUrl}/plays`;
+
   // ✅ 5×2のスケルトン（=10枚）を固定で出す
   const skeletonCards = useMemo(() => Array.from({ length: ITEMS_PER_PAGE }, (_, i) => i), [ITEMS_PER_PAGE]);
 
   return (
     <div className="container mx-auto px-6 pt-8 pb-16 lg:px-8 max-w-[1400px] animate-fade-in-up">
-      <title>{pageTitle}</title>
-      <meta name="description" content={pageDescription} />
+      <SeoHead title={pageTitle} description={pageDescription} canonical={canonical} robots="index,follow" />
 
       <Breadcrumbs items={[{ label: '作品一覧' }]} />
 
@@ -209,21 +203,19 @@ const Plays: React.FC = () => {
             <div className="flex gap-1">
               <button
                 onClick={() => handleSortChange('new')}
-                className={`px-4 py-1.5 rounded-md text-xs font-bold transition-all duration-300 ${
-                  sortOrder === 'new'
-                    ? 'bg-neon-pink text-white shadow-[0_0_10px_rgba(233,68,166,0.3)]'
-                    : 'text-slate-400 hover:text-white hover:bg-white/5'
-                }`}
+                className={`px-4 py-1.5 rounded-md text-xs font-bold transition-all duration-300 ${sortOrder === 'new'
+                  ? 'bg-neon-pink text-white shadow-[0_0_10px_rgba(233,68,166,0.3)]'
+                  : 'text-slate-400 hover:text-white hover:bg-white/5'
+                  }`}
               >
                 新しい順
               </button>
               <button
                 onClick={() => handleSortChange('old')}
-                className={`px-4 py-1.5 rounded-md text-xs font-bold transition-all duration-300 ${
-                  sortOrder === 'old'
-                    ? 'bg-neon-pink text-white shadow-[0_0_10px_rgba(233,68,166,0.3)]'
-                    : 'text-slate-400 hover:text-white hover:bg-white/5'
-                }`}
+                className={`px-4 py-1.5 rounded-md text-xs font-bold transition-all duration-300 ${sortOrder === 'old'
+                  ? 'bg-neon-pink text-white shadow-[0_0_10px_rgba(233,68,166,0.3)]'
+                  : 'text-slate-400 hover:text-white hover:bg-white/5'
+                  }`}
               >
                 古い順
               </button>
@@ -251,11 +243,10 @@ const Plays: React.FC = () => {
             <button
               key={genre}
               onClick={() => handleGenreChange(genre)}
-              className={`px-4 py-2 rounded-full text-xs font-bold tracking-wider transition-all duration-300 border whitespace-nowrap ${
-                selectedGenre === genre
-                  ? 'bg-neon-pink/20 border-neon-pink/50 text-white shadow-[0_0_15px_rgba(233,68,166,0.3)]'
-                  : 'bg-white/5 border-white/10 text-slate-400 hover:text-white hover:border-white/30'
-              }`}
+              className={`px-4 py-2 rounded-full text-xs font-bold tracking-wider transition-all duration-300 border whitespace-nowrap ${selectedGenre === genre
+                ? 'bg-neon-pink/20 border-neon-pink/50 text-white shadow-[0_0_15px_rgba(233,68,166,0.3)]'
+                : 'bg-white/5 border-white/10 text-slate-400 hover:text-white hover:border-white/30'
+                }`}
             >
               {genre === 'all' ? 'すべて' : GENRE_LABELS[genre]}
             </button>

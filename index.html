@@ -1,101 +1,53 @@
 <!DOCTYPE html>
 <html lang="ja" class="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stage Connect｜2.5次元舞台とキャストのデータベース</title>
-    <meta name="description" content="Stage Connect（stageconnect.jp）は、2.5次元舞台作品とキャストの出演情報を横断的に検索できるデジタル・アーカイブです。推し俳優の出演歴や作品情報をまとめてチェックできます。">
-    
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=%VITE_GA_MEASUREMENT_ID%"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <meta name="description"
+        content="Stage Connect（stageconnect.jp）は、2.5次元舞台作品とキャストの出演情報を横断的に検索できるデジタル・アーカイブです。推し俳優の出演歴や作品情報をまとめてチェックできます。">
 
-  // SPAなので、ここでは send_page_view を false にしておく
-  gtag('config', '%VITE_GA_MEASUREMENT_ID%', { send_page_view: false });
-</script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KLT69885CC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        // SPAなので、ここでは send_page_view を false にしておく
+        gtag('config', 'G-KLT69885CC', { send_page_view: false });
+    </script>
 
 
     <!-- Open Graph / Facebook / LINE -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://stageconnect.jp/">
     <meta property="og:title" content="Stage Connect｜2.5次元舞台とキャストのデータベース">
-    <meta property="og:description" content="Stage Connect（stageconnect.jp）は、2.5次元舞台作品とキャストの出演情報を横断的に検索できるデジタル・アーカイブです。推し俳優の出演歴や作品情報をまとめてチェックできます。">
+    <meta property="og:description"
+        content="Stage Connect（stageconnect.jp）は、2.5次元舞台作品とキャストの出演情報を横断的に検索できるデジタル・アーカイブです。推し俳優の出演歴や作品情報をまとめてチェックできます。">
     <meta property="og:image" content="https://stageconnect.jp/ogp.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://stageconnect.jp/">
     <meta property="twitter:title" content="Stage Connect｜2.5次元舞台とキャストのデータベース">
-    <meta property="twitter:description" content="Stage Connect（stageconnect.jp）は、2.5次元舞台作品とキャストの出演情報を横断的に検索できるデジタル・アーカイブです。推し俳優の出演歴や作品情報をまとめてチェックできます。">
+    <meta property="twitter:description"
+        content="Stage Connect（stageconnect.jp）は、2.5次元舞台作品とキャストの出演情報を横断的に検索できるデジタル・アーカイブです。推し俳優の出演歴や作品情報をまとめてチェックできます。">
     <meta property="twitter:image" content="https://stageconnect.jp/ogp.png">
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        darkMode: 'class',
-        theme: {
-          extend: {
-            colors: {
-              theater: {
-                black: '#0A0A0F',
-                surface: '#11111A',
-                overlay: '#1A1A24',
-              },
-              neon: {
-                purple: '#B46CFF',
-                pink: '#E944A6',
-                cyan: '#00FFFF',
-              }
-            },
-            fontFamily: {
-              sans: ['Inter', 'Noto Sans JP', 'sans-serif'],
-            },
-            animation: {
-              'fade-in-up': 'fadeInUp 0.5s ease-out forwards',
-              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-            },
-            keyframes: {
-              fadeInUp: {
-                '0%': { opacity: '0', transform: 'translateY(10px)' },
-                '100%': { opacity: '1', transform: 'translateY(0)' },
-              }
-            }
-          }
-        }
-      }
-    </script>
-<script type="importmap">
-{
-  "imports": {
-    "react": "https://aistudiocdn.com/react@^19.2.1",
-    "react/": "https://aistudiocdn.com/react@^19.2.1/",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
-    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.10.1"
-  }
-}
-</script>
-<style>
-  /* Custom Scrollbar for Dark Theme */
-  ::-webkit-scrollbar {
-    width: 8px;
-  }
-  ::-webkit-scrollbar-track {
-    background: #0A0A0F;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: #333;
-    border-radius: 4px;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background: #B46CFF;
-  }
-</style>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 </head>
-<body class="bg-theater-black text-slate-200 m-0 p-0 antialiased min-h-screen flex flex-col selection:bg-neon-purple selection:text-white">
+
+<body
+    class="bg-theater-black text-slate-200 m-0 p-0 antialiased min-h-screen flex flex-col selection:bg-neon-purple selection:text-white">
     <div id="root" class="flex-1 flex flex-col"></div>
-<script type="module" src="/index.tsx"></script>
+    <script type="module" src="/index.tsx"></script>
 </body>
+
 </html>

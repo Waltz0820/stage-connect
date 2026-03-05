@@ -6,12 +6,16 @@ import { supabase } from "../lib/supabase";
 
 import { getPlayBySlug } from "../lib/utils/getPlayBySlug";
 import { getActorsByPlaySlug } from "../lib/utils/getActorsByPlaySlug";
+import { normalizeActorRow } from "../lib/utils/normalizeActorRow";
+import { toPlainText, truncate } from "../lib/utils/text";
+import { useSiteUrl, useOgImage } from "../lib/hooks/useSiteUrl";
 
 import ActorCard from "./ActorCard";
 import TagBadge from "./TagBadge";
 import FavoriteButton from "./FavoriteButton";
 import ShareButton from "./ShareButton";
 import Breadcrumbs from "./Breadcrumbs";
+import SeoHead from "./SeoHead";
 
 import type { Actor } from "../lib/types";
 
@@ -50,20 +54,7 @@ type PlayRecord = {
   credits?: CreditsObj | CreditItem[] | null;
 };
 
-// ✅ DB actor row -> front Actor へ寄せる
-const normalizeActorRow = (a: any): Actor => {
-  return {
-    slug: a.slug,
-    name: a.name,
-    kana: a.kana ?? "",
-    profile: a.profile ?? "",
-    imageUrl: a.image_url ?? a.imageUrl ?? "",
-    gender: (a.gender ?? "male") as any,
-    sns: (a.sns ?? {}) as any,
-    tags: (a.tags ?? []) as any,
-    featuredPlaySlugs: (a.featured_play_slugs ?? a.featuredPlaySlugs ?? []) as any,
-  } as Actor;
-};
+
 
 const SITE_NAME = "Stage Connect";
 
@@ -92,24 +83,8 @@ const PlayDetail: React.FC = () => {
     return String(names);
   };
 
-  const toPlainText = (s: any) => {
-    const str = String(s ?? "");
-    return str
-      .replace(/<[^>]*>/g, " ")
-      .replace(/\s+/g, " ")
-      .replace(/[“”]/g, '"')
-      .replace(/[‘’]/g, "'")
-      .trim();
-  };
-
-  const truncate = (s: string, n: number) => (s.length <= n ? s : s.slice(0, Math.max(0, n - 1)) + "…");
-
-  const siteUrl = useMemo(() => {
-    const envUrl = (import.meta as any)?.env?.VITE_SITE_URL as string | undefined;
-    if (envUrl) return envUrl.replace(/\/$/, "");
-    if (typeof window !== "undefined") return window.location.origin.replace(/\/$/, "");
-    return "";
-  }, []);
+  const siteUrl = useSiteUrl();
+  const ogImageBase = useOgImage();
 
   // -------------------------
   // ✅ credits：DBの形揺れを吸収して items[] を取り出す
@@ -198,11 +173,7 @@ const PlayDetail: React.FC = () => {
     return truncate(composed, 155);
   }, [play, castTop, hasVodLinks]);
 
-  const ogImage = useMemo(() => {
-    const envOg = (import.meta as any)?.env?.VITE_OG_IMAGE as string | undefined;
-    if (envOg) return envOg;
-    return "";
-  }, []);
+  const ogImage = ogImageBase;
 
   // -------------------------
   // ✅ JSON-LD
@@ -471,34 +442,27 @@ const PlayDetail: React.FC = () => {
 
   return (
     <div className="container mx-auto px-6 pt-8 pb-32 lg:px-8 max-w-5xl animate-fade-in-up">
-      {/* ✅ SEO head（React 19 native） */}
-      <title>{seoTitle}</title>
-      <meta name="description" content={seoDescription} />
-      <meta name="robots" content="index,follow" />
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-
-      {/* OG / Twitter */}
-      <meta property="og:locale" content="ja_JP" />
-      <meta property="og:type" content="article" />
-      <meta property="og:site_name" content={SITE_NAME} />
-      <meta property="og:title" content={seoTitle} />
-      <meta property="og:description" content={seoDescription} />
-      {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
-      {ogImage && <meta property="og:image" content={ogImage} />}
-
-      <meta name="twitter:card" content={ogImage ? "summary_large_image" : "summary"} />
-      <meta name="twitter:title" content={seoTitle} />
-      <meta name="twitter:description" content={seoDescription} />
-      {ogImage && <meta name="twitter:image" content={ogImage} />}
-
-      {/* 構造化データ */}
-      {jsonLdFaq && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }} />}
-      {jsonLdBreadcrumbs && (
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumbs) }} />
-      )}
-      {jsonLdCreativeWork && (
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdCreativeWork) }} />
-      )}
+      {/* ✅ SEO（SeoHead統一） */}
+      <SeoHead
+        title={seoTitle}
+        description={seoDescription}
+        canonical={canonicalUrl}
+        robots="index,follow"
+        metas={[
+          { property: "og:locale", content: "ja_JP" },
+          { property: "og:type", content: "article" },
+          { property: "og:site_name", content: SITE_NAME },
+          { property: "og:title", content: seoTitle },
+          { property: "og:description", content: seoDescription },
+          ...(canonicalUrl ? [{ property: "og:url", content: canonicalUrl }] : []),
+          ...(ogImage ? [{ property: "og:image", content: ogImage }] : []),
+          { name: "twitter:card", content: ogImage ? "summary_large_image" : "summary" },
+          { name: "twitter:title", content: seoTitle },
+          { name: "twitter:description", content: seoDescription },
+          ...(ogImage ? [{ name: "twitter:image", content: ogImage }] : []),
+        ]}
+        jsonLd={[jsonLdFaq, jsonLdBreadcrumbs, jsonLdCreativeWork].filter(Boolean)}
+      />
 
       <Breadcrumbs items={[{ label: "作品一覧", to: "/plays" }, { label: play.title }]} />
 

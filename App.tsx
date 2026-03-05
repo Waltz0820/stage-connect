@@ -45,6 +45,8 @@ const RouteTracker: React.FC = () => {
   const loc = useLocation();
 
   useEffect(() => {
+    // Scroll to top on route change
+    window.scrollTo(0, 0);
     const path = loc.pathname + loc.search + loc.hash;
     gaPageView(path);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -101,8 +103,8 @@ const App: React.FC = () => {
       <AdminNoIndex />
 
       <Layout>
-        {/* Supabase 接続テスト用（画面には何も出ない） */}
-        <DebugSupabase />
+        {/* Supabase 接続テスト用（devのみ） */}
+        {import.meta.env.DEV && <DebugSupabase />}
 
         <Routes>
           <Route path="/" element={<Home />} />
@@ -113,10 +115,7 @@ const App: React.FC = () => {
 
           {/* ✅ Series */}
           <Route path="/series" element={<SeriesList />} />
-          {/* ✅ slug 統一（新） */}
           <Route path="/series/:slug" element={<SeriesDetail />} />
-          {/* ✅ 旧互換：/series/:name でも同じ詳細を開ける（過去リンク救済） */}
-          <Route path="/series/:name" element={<SeriesDetail />} />
 
           <Route path="/favorites" element={<Favorites />} />
 

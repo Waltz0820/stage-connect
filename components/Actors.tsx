@@ -5,6 +5,7 @@ import { Gender, Actor } from "../lib/types";
 import ActorCard from "./ActorCard";
 import Breadcrumbs from "./Breadcrumbs";
 import SeoHead from "./SeoHead";
+import { useSiteUrl, useOgImage } from "../lib/hooks/useSiteUrl";
 
 const Actors: React.FC = () => {
   const [allActors, setAllActors] = useState<Actor[]>([]);
@@ -15,13 +16,8 @@ const Actors: React.FC = () => {
 
   const ITEMS_PER_PAGE = 10;
 
-  // siteUrl（canonical/og:url 用）
-  const siteUrl = useMemo(() => {
-    const envUrl = (import.meta as any)?.env?.VITE_SITE_URL as string | undefined;
-    if (envUrl) return envUrl.replace(/\/$/, "");
-    if (typeof window !== "undefined") return window.location.origin.replace(/\/$/, "");
-    return "";
-  }, []);
+  const siteUrl = useSiteUrl();
+  const ogImageBase = useOgImage();
 
   const canonical = useMemo(() => {
     if (!siteUrl) return "";
@@ -31,11 +27,7 @@ const Actors: React.FC = () => {
   const title = "キャスト一覧 | Stage Connect";
   const description = "2.5次元舞台・ミュージカルに出演するキャスト（俳優）一覧。名前順で探せます。";
 
-  const ogImage = useMemo(() => {
-    const envOg = (import.meta as any)?.env?.VITE_OG_IMAGE as string | undefined;
-    if (envOg) return envOg;
-    return "";
-  }, []);
+  const ogImage = ogImageBase;
 
   // ✅ 5×2 のスケルトン（=10枚）を固定で出す
   const skeletonCards = useMemo(() => Array.from({ length: ITEMS_PER_PAGE }, (_, i) => i), [ITEMS_PER_PAGE]);
@@ -153,31 +145,28 @@ const Actors: React.FC = () => {
       <div className="flex items-center gap-3 mb-6 overflow-x-auto pb-2">
         <button
           onClick={() => handleFilterChange("all")}
-          className={`px-6 py-2 rounded-full text-sm font-bold tracking-wider transition-all duration-300 border whitespace-nowrap ${
-            genderFilter === "all"
-              ? "bg-neon-purple/20 border-neon-purple/50 text-white shadow-[0_0_15px_rgba(180,108,255,0.3)]"
-              : "bg-white/5 border-white/10 text-slate-400 hover:text-white hover:border-white/30"
-          }`}
+          className={`px-6 py-2 rounded-full text-sm font-bold tracking-wider transition-all duration-300 border whitespace-nowrap ${genderFilter === "all"
+            ? "bg-neon-purple/20 border-neon-purple/50 text-white shadow-[0_0_15px_rgba(180,108,255,0.3)]"
+            : "bg-white/5 border-white/10 text-slate-400 hover:text-white hover:border-white/30"
+            }`}
         >
           すべて
         </button>
         <button
           onClick={() => handleFilterChange("male")}
-          className={`px-6 py-2 rounded-full text-sm font-bold tracking-wider transition-all duration-300 border whitespace-nowrap ${
-            genderFilter === "male"
-              ? "bg-neon-cyan/20 border-neon-cyan/50 text-white shadow-[0_0_15px_rgba(0,255,255,0.3)]"
-              : "bg-white/5 border-white/10 text-slate-400 hover:text-white hover:border-white/30"
-          }`}
+          className={`px-6 py-2 rounded-full text-sm font-bold tracking-wider transition-all duration-300 border whitespace-nowrap ${genderFilter === "male"
+            ? "bg-neon-cyan/20 border-neon-cyan/50 text-white shadow-[0_0_15px_rgba(0,255,255,0.3)]"
+            : "bg-white/5 border-white/10 text-slate-400 hover:text-white hover:border-white/30"
+            }`}
         >
           男性
         </button>
         <button
           onClick={() => handleFilterChange("female")}
-          className={`px-6 py-2 rounded-full text-sm font-bold tracking-wider transition-all duration-300 border whitespace-nowrap ${
-            genderFilter === "female"
-              ? "bg-neon-pink/20 border-neon-pink/50 text-white shadow-[0_0_15px_rgba(233,68,166,0.3)]"
-              : "bg-white/5 border-white/10 text-slate-400 hover:text-white hover:border-white/30"
-          }`}
+          className={`px-6 py-2 rounded-full text-sm font-bold tracking-wider transition-all duration-300 border whitespace-nowrap ${genderFilter === "female"
+            ? "bg-neon-pink/20 border-neon-pink/50 text-white shadow-[0_0_15px_rgba(233,68,166,0.3)]"
+            : "bg-white/5 border-white/10 text-slate-400 hover:text-white hover:border-white/30"
+            }`}
         >
           女性
         </button>
@@ -185,7 +174,7 @@ const Actors: React.FC = () => {
 
       {/* ✅ LOADING DATABASE...（ネオンパープルで統一） */}
       {loading && (
-        <div className="mb-6 p-4 text-center text-xs font-mono text-neon-purple animate-pulse">
+        <div className="mb-6 text-center text-xs font-mono tracking-widest text-neon-pink animate-pulse">
           LOADING DATABASE...
         </div>
       )}

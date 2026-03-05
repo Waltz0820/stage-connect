@@ -20,10 +20,10 @@ const supabase = createClient(SUPABASE_URL, SUPABASE_KEY, {
 
 const xmlEscape = (s: string) =>
   s.replace(/&/g, '&amp;')
-   .replace(/</g, '&lt;')
-   .replace(/>/g, '&gt;')
-   .replace(/"/g, '&quot;')
-   .replace(/'/g, '&apos;');
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
 
 const toIsoDate = (d?: string | null) => {
   if (!d) return undefined;
@@ -68,7 +68,12 @@ export default async function handler(req: any, res: any) {
       { loc: `${SITE_URL}/plays`, changefreq: 'daily', priority: 0.8 },
       { loc: `${SITE_URL}/actors`, changefreq: 'daily', priority: 0.8 },
       { loc: `${SITE_URL}/series`, changefreq: 'weekly', priority: 0.7 },
-      { loc: `${SITE_URL}/guide`, changefreq: 'weekly', priority: 0.7 }
+      { loc: `${SITE_URL}/guide`, changefreq: 'weekly', priority: 0.7 },
+      { loc: `${SITE_URL}/tags`, changefreq: 'weekly', priority: 0.6 },
+      { loc: `${SITE_URL}/watch`, changefreq: 'weekly', priority: 0.6 },
+      { loc: `${SITE_URL}/watch/dmm`, changefreq: 'weekly', priority: 0.5 },
+      { loc: `${SITE_URL}/watch/u-next`, changefreq: 'weekly', priority: 0.5 },
+      { loc: `${SITE_URL}/watch/danime`, changefreq: 'weekly', priority: 0.5 }
     );
 
     // plays
@@ -130,6 +135,21 @@ export default async function handler(req: any, res: any) {
         lastmod: toIsoDate(e.updated_at ?? e.published_at ?? null),
         changefreq: 'monthly',
         priority: 0.5,
+      });
+    }
+
+    // tags
+    const tags = await fetchAll<{ slug: string; updated_at?: string | null; created_at?: string | null }>(
+      'tags',
+      'slug, updated_at, created_at'
+    );
+    for (const t of tags) {
+      if (!t?.slug) continue;
+      urls.push({
+        loc: `${SITE_URL}/tags/${encodeURIComponent(t.slug)}`,
+        lastmod: toIsoDate(t.updated_at ?? t.created_at ?? null),
+        changefreq: 'weekly',
+        priority: 0.4,
       });
     }
 
