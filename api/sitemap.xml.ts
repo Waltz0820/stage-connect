@@ -138,19 +138,22 @@ export default async function handler(req: any, res: any) {
       });
     }
 
-    // tags
-    const tags = await fetchAll<{ slug: string; updated_at?: string | null; created_at?: string | null }>(
-      'tags',
-      'slug, updated_at, created_at'
-    );
-    for (const t of tags) {
-      if (!t?.slug) continue;
-      urls.push({
-        loc: `${SITE_URL}/tags/${encodeURIComponent(t.slug)}`,
-        lastmod: toIsoDate(t.updated_at ?? t.created_at ?? null),
-        changefreq: 'weekly',
-        priority: 0.4,
-      });
+    // tags（テーブルが存在しない場合はスキップ）
+    try {
+      const tags = await fetchAll<{ slug: string }>(
+        'tags',
+        'slug'
+      );
+      for (const t of tags) {
+        if (!t?.slug) continue;
+        urls.push({
+          loc: `${SITE_URL}/tags/${encodeURIComponent(t.slug)}`,
+          changefreq: 'weekly',
+          priority: 0.4,
+        });
+      }
+    } catch (_) {
+      // tags table may not exist yet — skip silently
     }
 
     const body =
