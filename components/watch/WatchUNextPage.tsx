@@ -1,35 +1,12 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { useMemo } from "react";
 import { Link } from "react-router-dom";
-import { supabase } from "../../lib/supabase";
 import Breadcrumbs from "../Breadcrumbs";
 import SeoHead from "../SeoHead";
 
-type WatchFranchiseRow = {
-  franchise_id: string;
-  name: string | null;
-  slug: string | null;
-  plays_count: number | null;
-};
-
-type FranchiseItem = {
-  id: string;
-  name: string;
-  key: string;
-  playsCount: number;
-};
-
-const PAGE_SIZE = 12;
+const DMM_PREMIUM_URL =
+  "https://al.dmm.com/?lurl=https%3A%2F%2Fpremium.dmm.com%2F&af_id=stageconnect-001&ch=link_tool&ch_id=text";
 
 const WatchUnextPage: React.FC = () => {
-  const [items, setItems] = useState<FranchiseItem[]>([]);
-  const [totalCount, setTotalCount] = useState<number | null>(null);
-  const [loading, setLoading] = useState(false);
-  const [loadingMore, setLoadingMore] = useState(false);
-  const [hasMore, setHasMore] = useState(true);
-  const [page, setPage] = useState(0);
-  const [q, setQ] = useState("");
-  const seqRef = useRef(0);
-
   const breadcrumbs = useMemo(
     () => [
       { label: "配信で観る", to: "/watch" },
@@ -38,145 +15,100 @@ const WatchUnextPage: React.FC = () => {
     []
   );
 
-  const BADGE_CLASS = "bg-neon-cyan/10 border-neon-cyan/30 text-neon-cyan";
-  const CARD_HOVER =
-    "hover:border-neon-cyan/40 hover:shadow-[0_0_20px_rgba(0,255,255,0.15)]";
-  const INPUT_FOCUS =
-    "focus:border-neon-cyan/40 focus:ring-2 focus:ring-neon-cyan/20";
+  const SEO_TITLE =
+    "U-NEXTで2.5次元舞台は観られる？配信ラインナップとおすすめの選び方";
+  const SEO_DESC =
+    "U-NEXTで視聴できる2.5次元舞台・ミュージカルの特徴と、より2.5次元に特化した配信サービスの選び方を解説。舞台ファン目線での比較ガイド。";
 
-  const UNEXT_FALLBACK_URL = "https://video.unext.jp/browse/genre/MNU0000140";
-  const UPDATED = new Date().toLocaleDateString("ja-JP");
-
-  const normalize = (r: WatchFranchiseRow): FranchiseItem | null => {
-    const name = (r.name ?? "").trim();
-    const slug = (r.slug ?? "").trim();
-    const key = slug || name;
-    if (!name || !key) return null;
-    const playsCount = typeof r.plays_count === "number" ? r.plays_count : 0;
-    return { id: r.franchise_id, name, key, playsCount };
+  const jsonLdFaq = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "U-NEXTで2.5次元舞台は観られますか？",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "U-NEXTでも一部の2.5次元舞台作品が配信されています。ただし、舞台のレンタル作品は追加料金がかかる場合があります。2.5次元舞台に特化した見放題ラインナップを求めるなら、DMMプレミアムの方が充実しています。",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "U-NEXTとDMMプレミアムの違いは？",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "U-NEXTは映画・アニメ・ドラマの総合ラインナップが豊富ですが、2.5次元舞台の見放題対象作品は限定的です。DMMプレミアムは2.5次元舞台・ミュージカルの配信数がトップクラスで、見放題対象作品も充実しています。",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "2.5次元舞台を一番安く観る方法は？",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "DMMプレミアムなら14日間の無料トライアルがあり、期間中は見放題対象の2.5次元舞台を追加料金なしで視聴できます。まずは無料体験で配信ラインナップを確認するのがおすすめです。",
+        },
+      },
+    ],
   };
-
-  const fetchTotal = async () => {
-    const res = await supabase
-      .from("watch_unext_franchises")
-      .select("franchise_id", { count: "exact", head: true });
-    if (res.error) return;
-    if (typeof res.count === "number") setTotalCount(res.count);
-  };
-
-  const fetchPage = async (nextPage: number) => {
-    const mySeq = ++seqRef.current;
-    const from = nextPage * PAGE_SIZE;
-    const to = from + PAGE_SIZE - 1;
-
-    const res = await supabase
-      .from("watch_unext_franchises")
-      .select("franchise_id, name, slug, plays_count")
-      .order("plays_count", { ascending: false })
-      .order("name", { ascending: true })
-      .range(from, to);
-
-    if (mySeq !== seqRef.current) return;
-    if (res.error) {
-      setHasMore(false);
-      return;
-    }
-
-    const raw: WatchFranchiseRow[] = (res.data as any) ?? [];
-    const normalized = raw.map(normalize).filter(Boolean) as FranchiseItem[];
-
-    if (raw.length < PAGE_SIZE) setHasMore(false);
-
-    if (nextPage === 0) setItems(normalized);
-    else setItems((prev) => [...prev, ...normalized]);
-
-    setPage(nextPage);
-  };
-
-  useEffect(() => {
-    setLoading(true);
-    Promise.all([fetchTotal(), fetchPage(0)]).finally(() => setLoading(false));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  const loadMore = async () => {
-    if (!hasMore) return;
-    setLoadingMore(true);
-    try {
-      await fetchPage(page + 1);
-    } finally {
-      setLoadingMore(false);
-    }
-  };
-
-  const filtered = useMemo(() => {
-    const s = q.trim().toLowerCase();
-    if (!s) return items;
-    return items.filter((it) => it.name.toLowerCase().includes(s));
-  }, [items, q]);
-
-  const countLabel = (totalCount ?? filtered.length).toLocaleString();
-  const SEO_TITLE = `原作アニメも舞台版もまとめて楽しむなら。U-NEXTで見られる2.5次元シリーズまとめ【現在${countLabel}シリーズ】`;
 
   return (
     <div className="container mx-auto px-6 pt-8 pb-32 lg:px-8 max-w-5xl animate-fade-in-up">
-      <SeoHead title={`${SEO_TITLE} | Stage Connect`} robots="index,follow" />
+      <SeoHead
+        title={`${SEO_TITLE} | Stage Connect`}
+        description={SEO_DESC}
+        robots="index,follow"
+        jsonLd={jsonLdFaq}
+      />
       <Breadcrumbs items={breadcrumbs} />
 
-      {/* --- HEADER SECTION --- */}
+      {/* --- HEADER --- */}
       <div className="mb-12 text-center relative">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-neon-cyan/10 blur-[120px] pointer-events-none" />
-        <span
-          className={`relative inline-block px-4 py-1.5 mb-6 rounded-full border text-[10px] font-black tracking-[0.3em] uppercase backdrop-blur-sm ${BADGE_CLASS}`}
-        >
-          U-NEXT Media Mix Archive
+        <span className="relative inline-block px-4 py-1.5 mb-6 rounded-full border text-[10px] font-black tracking-[0.3em] uppercase backdrop-blur-sm bg-neon-cyan/10 border-neon-cyan/30 text-neon-cyan">
+          VOD Comparison Guide
         </span>
         <h1 className="relative text-3xl sm:text-4xl md:text-5xl font-black text-white mb-6 tracking-tighter italic uppercase">
-          Watch on <span className="text-neon-cyan">U-NEXT</span>
+          <span className="text-neon-cyan">U-NEXT</span> と 2.5次元舞台
         </h1>
         <p className="relative max-w-2xl mx-auto text-slate-400 text-sm leading-relaxed font-light">
-          U-NEXTで視聴できる2.5次元舞台を、
-          <span className="text-slate-200 font-semibold">シリーズ単位</span>
-          で整理しました。
+          U-NEXTは映画・アニメ・ドラマを網羅する国内最大級のVOD。
           <br />
-          舞台から原作アニメ、映画、関連映像まで、作品世界をまるごと回遊するための入口です。
+          では、2.5次元舞台ファンにとってベストな選択肢なのか？ 特徴と選び方を整理しました。
         </p>
       </div>
 
-      {/* --- TOP SEO CONTENT BLOCK --- */}
+      {/* --- U-NEXTの特徴 --- */}
       <div className="bg-theater-surface/60 border border-white/5 rounded-2xl p-8 mb-12 backdrop-blur-md relative overflow-hidden">
         <div className="absolute top-0 right-0 w-32 h-32 bg-neon-cyan/5 blur-3xl pointer-events-none" />
         <h2 className="text-white font-bold text-xl mb-6 flex items-center gap-3">
           <span className="w-1.5 h-1.5 rounded-full bg-neon-cyan" />
-          U-NEXTが刺さるのは「世界観をまとめて追う人」
+          U-NEXTの特徴と強み
         </h2>
         <div className="text-slate-300 text-sm space-y-5 leading-relaxed font-light">
           <p>
-            「舞台を観てから原作アニメを履修したい」「原作ファンとして舞台版も見たい」。
-            <br />
-            そんな
-            <span className="text-slate-100 font-bold border-b border-neon-cyan/50">
-              “作品世界をまとめて追いかけたい人”
-            </span>
-            に向いているのがU-NEXTです。
+            U-NEXTは国内最大級の動画配信サービスで、映画・ドラマ・アニメ・書籍を含む
+            <span className="text-slate-100 font-bold">31万本以上</span>
+            のコンテンツを配信しています。月額プランには毎月ポイントが付与され、レンタル作品や書籍の購入に充てることができます。
           </p>
           <p>
-            同じシリーズでも、舞台だけ追うか、アニメ・映画・関連映像まで追うかで“満足度の伸び方”が変わります。U-NEXTは映像ラインが強いタイトルが多く、
-            <span className="text-slate-100 font-bold">「探す」「移動する」手間が減る</span>
-            のが大きな強みです。
+            2.5次元舞台に関しては、一部作品が見放題対象として配信されているほか、レンタル（追加課金）で視聴できるタイトルも存在します。
+            <span className="text-slate-100 font-bold">原作アニメや映画版も同じプラットフォームで視聴</span>
+            できるため、メディアミックス作品を横断的に楽しみたい方には利便性の高い環境です。
           </p>
-          <p className="text-xs text-slate-500 italic">
-            ※Stage Connectに登録された配信リンク（U-NEXT）を元に集約しています。最新の配信状況は遷移先でご確認ください。
+          <p>
+            ただし、2.5次元舞台の
+            <span className="text-slate-100 font-bold border-b border-neon-cyan/50">見放題対象作品は限定的</span>
+            で、観たい舞台がレンタル（別料金）になるケースも少なくありません。舞台を中心に視聴する場合は、実際のラインナップをよく確認してから検討することをおすすめします。
           </p>
         </div>
 
         <div className="mt-8 flex flex-wrap gap-2 justify-center">
           {[
-            "2.5次元 配信 U-NEXT",
-            "舞台 アニメ まとめて",
-            "原作 履修 順番",
-            "シリーズ 一気見",
-            "メディアミックス 配信",
+            "U-NEXT 2.5次元",
+            "U-NEXT 舞台 配信",
+            "U-NEXT ミュージカル",
+            "VOD 舞台 比較",
+            "2.5次元 見放題",
           ].map((chip) => (
             <span
               key={chip}
@@ -186,197 +118,88 @@ const WatchUnextPage: React.FC = () => {
             </span>
           ))}
         </div>
-
-        <div className="mt-10 pt-10 border-t border-white/5 grid grid-cols-1 md:grid-cols-3 gap-6">
-          {[
-            {
-              step: "01",
-              title: "シリーズで当たりを付ける",
-              desc: "まずシリーズ一覧で探す。舞台だけでなく、関連映像まで“追う前提”の人ほど効きます。",
-            },
-            {
-              step: "02",
-              title: "作品詳細からキャストへ",
-              desc: "推しの出演作→共演の流れで回遊。データベースを跨ぐことで“視聴計画”が立ちます。",
-            },
-            {
-              step: "03",
-              title: "うろ覚えなら検索",
-              desc: "タイトルが曖昧でもOK。検索からシリーズに寄るのが作品世界への最短ルートです。",
-            },
-          ].map((how) => (
-            <div key={how.step} className="group">
-              <div className="text-[10px] font-black text-neon-cyan mb-1 tracking-widest uppercase">
-                Step {how.step}
-              </div>
-              <div className="text-white font-bold text-sm mb-2 group-hover:text-neon-cyan transition-colors">
-                {how.title}
-              </div>
-              <div className="text-slate-400 text-xs leading-relaxed font-light">
-                {how.desc}
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
 
-      {/* --- DATA LIST SECTION --- */}
-      <div className="bg-theater-surface/40 border border-white/5 rounded-2xl overflow-hidden backdrop-blur-sm mb-12">
-        <div className="px-8 py-5 border-b border-white/5 bg-black/20 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-2 h-2 rounded-full bg-neon-cyan animate-pulse" />
-            <div className="text-[10px] font-black tracking-[0.2em] text-slate-500 uppercase">
-              Series Library
-            </div>
-          </div>
-          <div className="text-[10px] font-mono text-slate-500">
-            {loading ? "SEARCHING..." : `${countLabel} FRANCHISES`}
-          </div>
-        </div>
-
-        <div className="px-8 py-6 border-b border-white/5 bg-black/10">
-          <div className="relative group">
-            <input
-              value={q}
-              onChange={(e) => setQ(e.target.value)}
-              placeholder="シリーズ名で絞り込み（例：ヒプステ / テニミュ）"
-              className={`w-full rounded-xl bg-black/30 border border-white/10 px-6 py-4 text-sm text-white placeholder:text-slate-600 outline-none transition duration-300 ${INPUT_FOCUS}`}
-            />
-            <div className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-700 group-focus-within:text-neon-cyan transition-colors">
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                />
-              </svg>
-            </div>
-          </div>
-          <div className="mt-3 text-[10px] text-slate-500 flex items-center gap-2 italic">
-            ※U-NEXTの配信リンクが登録されている作品を含むシリーズを表示しています。
-          </div>
-        </div>
-
-        {loading && (
-          <div className="p-32 text-center text-slate-600 font-mono text-xs tracking-[0.3em] animate-pulse">
-            CONNECTING TO CATALOG...
-          </div>
-        )}
-
-        {!loading && filtered.length === 0 && (
-          <div className="p-16 text-center text-slate-500 text-sm">
-            該当するシリーズが見つかりませんでした。別のキーワードでお試しください。
-          </div>
-        )}
-
-        {!loading && filtered.length > 0 && (
-          <div className="p-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {filtered.map((it) => {
-              const seriesHref = `/series/${encodeURIComponent(it.key)}`;
-              return (
-                <div
-                  key={it.id}
-                  className={`group relative rounded-xl border border-white/5 bg-black/30 p-6 transition-all duration-300 ${CARD_HOVER}`}
-                >
-                  <div className="flex items-center justify-between gap-4">
-                    <div className="min-w-0">
-                      <Link
-                        to={seriesHref}
-                        className="block text-white font-bold text-lg group-hover:text-neon-cyan transition-colors truncate mb-1"
-                      >
-                        {it.name}
-                      </Link>
-                      <div className="flex items-center gap-2 text-[10px] font-mono text-slate-500">
-                        <span className="text-neon-cyan/60">COLLECTION:</span>
-                        <span>{it.playsCount} PLAYS</span>
-                      </div>
-                    </div>
-                    <Link
-                      to={seriesHref}
-                      className="shrink-0 w-10 h-10 rounded-full bg-white/5 border border-white/5 flex items-center justify-center text-white/20 group-hover:bg-neon-cyan/20 group-hover:text-neon-cyan group-hover:border-neon-cyan/30 transition-all"
-                      aria-label="シリーズ詳細へ"
-                    >
-                      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M9 5l7 7-7 7"
-                        />
-                      </svg>
-                    </Link>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        )}
-
-        {hasMore && !loading && (
-          <div className="p-8 border-t border-white/5 bg-black/20 text-center">
-            <button
-              onClick={loadMore}
-              disabled={loadingMore}
-              className="px-12 py-3 rounded-full bg-white/5 border border-white/10 text-white text-[10px] font-black tracking-[0.2em] hover:bg-white/10 hover:border-white/30 transition-all disabled:opacity-50 uppercase"
-            >
-              {loadingMore ? "LOADING..." : "Discover More Series"}
-            </button>
-          </div>
-        )}
-      </div>
-
-      {/* --- BOTTOM SEO / CV SECTION --- */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      {/* --- 比較セクション --- */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-12">
         <div className="lg:col-span-7 space-y-12">
-          <section>
+          {/* 比較テーブル */}
+          <section className="bg-theater-surface/40 border border-white/5 rounded-2xl p-8">
             <h2 className="text-white font-bold text-xl mb-6 flex items-center gap-3">
-              <span className="w-1 h-6 bg-neon-cyan rounded-full shadow-[0_0_10px_#00FFFF]" />
-              “月額が高い”を、ポイント込みで考える
+              <span className="w-1 h-6 bg-neon-pink rounded-full shadow-[0_0_10px_rgba(233,68,166,0.5)]" />
+              2.5次元舞台ファンのためのVOD比較
             </h2>
-            <div className="text-slate-400 text-sm leading-loose font-light space-y-4">
+            <div className="text-slate-300 text-sm leading-relaxed font-light space-y-5 mb-8">
               <p>
-                U-NEXTは月額料金が他サービスより高めに見えますが、月額プランにはポイントが付与される仕組みがあります。このポイントを使う前提であれば、舞台のレンタル作品や原作コミックの購入に充てることができ、体感の負担は大きく変わります。
+                2.5次元舞台を中心に観たい場合、VODサービスの選び方は「総合力」ではなく
+                <span className="text-slate-100 font-bold">「舞台の見放題ラインナップがどれだけ充実しているか」</span>
+                が最重要ポイントです。
               </p>
               <p>
-                舞台だけでなく映画・アニメ・関連映像も高画質で楽しみたい人にとって、これらを「一つの窓口でまとめて管理できる」メリットは計り知れません。まずは無料トライアルで、自分の推し作品がどこまで網羅されているかチェックするのが最短の正解です。
+                U-NEXTは総合VODとして映画やアニメに強い一方、2.5次元舞台の見放題対象は限られています。一方、
+                <span className="text-neon-pink font-bold">DMMプレミアム</span>
+                は2.5次元舞台・ミュージカルの配信に注力しており、見放題で視聴できるタイトル数はトップクラスです。
               </p>
             </div>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a
-                href={UNEXT_FALLBACK_URL}
-                target="_blank"
-                rel="sponsored noopener noreferrer"
-                className="px-6 py-2.5 rounded-full bg-neon-cyan/20 border border-neon-cyan/40 text-white text-xs font-bold hover:bg-neon-cyan/40 transition-all"
-              >
-                U-NEXTを開く ↗
-              </a>
-              <Link
-                to="/series"
-                className="px-6 py-2.5 rounded-full bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-white/10 transition-all"
-              >
-                シリーズ一覧へ
-              </Link>
+
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="border-b border-white/10">
+                    <th className="text-left py-3 px-4 text-[10px] font-black text-slate-500 uppercase tracking-wider" />
+                    <th className="text-center py-3 px-4 text-[10px] font-black text-neon-cyan uppercase tracking-wider">U-NEXT</th>
+                    <th className="text-center py-3 px-4 text-[10px] font-black text-neon-pink uppercase tracking-wider">DMMプレミアム</th>
+                  </tr>
+                </thead>
+                <tbody className="text-slate-400 font-light">
+                  <tr className="border-b border-white/5">
+                    <td className="py-3 px-4 text-slate-300 font-medium">2.5次元 見放題</td>
+                    <td className="py-3 px-4 text-center">一部</td>
+                    <td className="py-3 px-4 text-center text-neon-pink font-bold">◎ 充実</td>
+                  </tr>
+                  <tr className="border-b border-white/5">
+                    <td className="py-3 px-4 text-slate-300 font-medium">無料トライアル</td>
+                    <td className="py-3 px-4 text-center">31日間</td>
+                    <td className="py-3 px-4 text-center text-neon-pink font-bold">14日間</td>
+                  </tr>
+                  <tr className="border-b border-white/5">
+                    <td className="py-3 px-4 text-slate-300 font-medium">アニメ・映画</td>
+                    <td className="py-3 px-4 text-center text-neon-cyan font-bold">◎ 強い</td>
+                    <td className="py-3 px-4 text-center">○</td>
+                  </tr>
+                  <tr className="border-b border-white/5">
+                    <td className="py-3 px-4 text-slate-300 font-medium">舞台レンタル</td>
+                    <td className="py-3 px-4 text-center">多数（別料金）</td>
+                    <td className="py-3 px-4 text-center">一部</td>
+                  </tr>
+                  <tr>
+                    <td className="py-3 px-4 text-slate-300 font-medium">おすすめ層</td>
+                    <td className="py-3 px-4 text-center text-xs">総合エンタメ派</td>
+                    <td className="py-3 px-4 text-center text-xs text-neon-pink font-bold">舞台ファン</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </section>
 
+          {/* FAQ */}
           <section className="bg-theater-surface/30 border border-white/5 rounded-2xl p-8">
             <h2 className="text-white font-bold text-lg mb-8 tracking-widest uppercase italic opacity-80">
-              Media Mix FAQ
+              FAQ
             </h2>
             <ul className="space-y-8">
               {[
                 {
-                  q: "ここに載っているシリーズは全部U-NEXTで観られますか？",
-                  a: "Stage Connectに登録された配信リンクを元に整理しています。配信状況は日々変動するため、最終的には遷移先のU-NEXT公式ページでご確認ください。",
+                  q: "U-NEXTで2.5次元舞台は観られますか？",
+                  a: "一部作品は配信されていますが、見放題対象は限定的です。レンタル（追加課金）作品が中心となる場合もあるため、観たい舞台が見放題に含まれるかは事前に確認をおすすめします。",
                 },
                 {
-                  q: "“舞台→原作”で追う時、どこから入るのが楽？",
-                  a: "まず舞台の作品詳細ページへ。そこから原作が気になったら、シリーズ一覧や検索を使い、U-NEXT内で関連作を芋づる式に探すのが最も迷いにくいルートです。",
+                  q: "2.5次元舞台を見放題で観るならどこがおすすめ？",
+                  a: "2.5次元舞台の見放題ラインナップで選ぶなら、DMMプレミアムが最も充実しています。14日間の無料トライアルがあるので、まずは配信タイトルを確認してみるのがおすすめです。",
                 },
                 {
-                  q: "高画質で視聴したいのですが...",
-                  a: "U-NEXTは他サービスと比較しても配信ビットレートが高く、舞台の細かな表情や殺陣のスピード感を楽しみたい方に特におすすめの視聴環境です。",
+                  q: "U-NEXTのポイントで舞台のレンタルはできる？",
+                  a: "月額プランに付与されるポイントでレンタル作品を視聴することは可能です。ただし、ポイントには有効期限があるため計画的な利用が必要です。",
                 },
               ].map((faq) => (
                 <li key={faq.q} className="group">
@@ -392,30 +215,39 @@ const WatchUnextPage: React.FC = () => {
           </section>
         </div>
 
+        {/* --- SIDEBAR: DMM Premium CTA --- */}
         <div className="lg:col-span-5">
-          <div className="bg-theater-surface/50 border border-white/5 rounded-2xl p-8 sticky top-24 backdrop-blur-md">
-            <h3 className="text-[10px] font-black text-slate-500 tracking-[0.3em] uppercase mb-6">
-              Archive Stats
+          <div className="bg-theater-surface/50 border border-neon-pink/20 rounded-2xl p-8 sticky top-24 backdrop-blur-md">
+            <h3 className="text-[10px] font-black text-neon-pink tracking-[0.3em] uppercase mb-2">
+              Recommended for 2.5D Fans
             </h3>
-            <div className="grid grid-cols-2 gap-6 mb-8">
-              <div className="bg-black/30 rounded-xl p-4 border border-white/5">
-                <div className="text-[10px] text-slate-500 mb-1">UNEXT SERIES</div>
-                <div className="text-2xl font-black text-white">{countLabel}</div>
-              </div>
-              <div className="bg-black/30 rounded-xl p-4 border border-white/5">
-                <div className="text-[10px] text-slate-500 mb-1">LAST SYNC</div>
-                <div className="text-sm font-mono text-neon-cyan">{UPDATED}</div>
-              </div>
-            </div>
+            <p className="text-white font-bold text-lg mb-3">
+              2.5次元舞台を見放題で楽しむなら
+            </p>
+            <p className="text-slate-400 text-sm font-light leading-relaxed mb-6">
+              DMMプレミアムなら、2.5次元舞台・ミュージカルの見放題ラインナップが充実。
+              まずは14日間の無料トライアルで、推し作品が配信されているかチェックしてみてください。
+            </p>
+            <p className="text-[11px] text-neon-pink font-bold tracking-wide mb-3">
+              ✦ 14日間無料でお試し
+            </p>
+            <a
+              href={DMM_PREMIUM_URL}
+              target="_blank"
+              rel="sponsored noopener noreferrer"
+              className="block w-full text-center px-6 py-4 rounded-xl bg-neon-pink/20 border border-neon-pink/40 text-white text-sm font-bold hover:bg-neon-pink/30 hover:shadow-[0_0_20px_rgba(233,68,166,0.3)] transition-all"
+            >
+              DMMプレミアムを無料で始める
+            </a>
 
-            <div className="space-y-3">
+            <div className="mt-8 pt-6 border-t border-white/5 space-y-3">
               <Link
-                to="/search"
-                className="flex items-center justify-between w-full px-5 py-4 rounded-xl bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-neon-cyan/10 hover:border-neon-cyan/30 transition-all group"
+                to="/watch/dmm"
+                className="flex items-center justify-between w-full px-5 py-4 rounded-xl bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-neon-pink/10 hover:border-neon-pink/30 transition-all group"
               >
-                作品名・原作名で検索
+                DMM TVで配信中の作品を見る
                 <svg
-                  className="w-4 h-4 text-slate-600 group-hover:text-neon-cyan transition-colors"
+                  className="w-4 h-4 text-slate-600 group-hover:text-neon-pink transition-colors"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -423,12 +255,11 @@ const WatchUnextPage: React.FC = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
               </Link>
-
               <Link
-                to="/watch"
+                to="/series"
                 className="flex items-center justify-between w-full px-5 py-4 rounded-xl bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-white/10 transition-all group"
               >
-                配信ガイドTOP
+                シリーズ一覧へ
                 <svg
                   className="w-4 h-4 text-slate-600 group-hover:text-white transition-colors"
                   fill="none"
@@ -444,9 +275,9 @@ const WatchUnextPage: React.FC = () => {
       </div>
 
       <p className="mt-20 text-[10px] text-slate-700 text-center font-light leading-loose tracking-widest uppercase">
-        ※Stage Connect Media Database | Optimized for Cross-Media Discovery
+        ※Stage Connect Media Database | VOD Comparison Guide
         <br />
-        SYNC ID: UNEXT-ARCHIVE-V2
+        SYNC ID: UNEXT-GUIDE-V3
       </p>
     </div>
   );
