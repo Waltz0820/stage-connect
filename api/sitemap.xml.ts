@@ -71,9 +71,7 @@ export default async function handler(req: any, res: any) {
       { loc: `${SITE_URL}/guide`, changefreq: 'weekly', priority: 0.7 },
       { loc: `${SITE_URL}/tags`, changefreq: 'weekly', priority: 0.6 },
       { loc: `${SITE_URL}/watch`, changefreq: 'weekly', priority: 0.6 },
-      { loc: `${SITE_URL}/watch/dmm`, changefreq: 'weekly', priority: 0.5 },
-      { loc: `${SITE_URL}/watch/u-next`, changefreq: 'weekly', priority: 0.5 },
-      { loc: `${SITE_URL}/watch/danime`, changefreq: 'weekly', priority: 0.5 }
+      { loc: `${SITE_URL}/watch/dmm`, changefreq: 'weekly', priority: 0.5 }
     );
 
     // plays

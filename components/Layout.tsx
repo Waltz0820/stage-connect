@@ -226,14 +226,15 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               </ul>
             </div>
 
-            {/* Column 2: 配信サービス */}
+            {/* Column 2: 配信で観る */}
             <div>
               <h3 className="text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em] mb-4">配信で観る</h3>
               <ul className="space-y-2.5">
                 <li><Link to="/watch" className="text-sm text-slate-400 hover:text-white transition-colors">配信サービス一覧</Link></li>
                 <li><Link to="/watch/dmm" className="text-sm text-slate-400 hover:text-white transition-colors">DMM TV</Link></li>
-                <li><Link to="/watch/u-next" className="text-sm text-slate-400 hover:text-white transition-colors">U-NEXT</Link></li>
-                <li><Link to="/watch/danime" className="text-sm text-slate-400 hover:text-white transition-colors">dアニメストア</Link></li>
+                <li>
+                  <a href="https://al.dmm.com/?lurl=https%3A%2F%2Fpremium.dmm.com%2F&af_id=stageconnect-001&ch=link_tool&ch_id=text" rel="sponsored noopener" target="_blank" className="text-sm text-slate-400 hover:text-neon-pink transition-colors">DMMプレミアム</a>
+                </li>
               </ul>
             </div>
 
@@ -265,10 +266,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       {/* Global Context-Aware CTA（スクロール開始後に表示） */}
       {showCTA && (
         <FloatingCTA
-          url="https://example.com"        // TODO: DMMアフィリエイトURLに差し替え必須
-          label="人気の2.5次元舞台をチェック"
-          subText="POPULAR"
-          buttonText="チェック"
+          url="https://al.dmm.com/?lurl=https%3A%2F%2Fpremium.dmm.com%2F&af_id=stageconnect-001&ch=link_tool&ch_id=text"
+          label="2.5次元舞台が見放題"
+          subText="14日間無料でお試し"
+          buttonText="DMMプレミアム"
         />
       )}
     </div>
