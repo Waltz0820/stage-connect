@@ -26,22 +26,32 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     }
   }, [isMenuOpen]);
 
-  // 1回目のスクロールを検知して CTA を表示
+  // スクロール停止でCTA表示、再スクロールで非表示
   useEffect(() => {
+    let timer: ReturnType<typeof setTimeout> | null = null;
+    const IDLE_MS = 1500; // スクロール停止から表示までの待ち時間
+    const MIN_SCROLL = 80; // 最低スクロール量（ページ上部では出さない）
+
     const handleScroll = () => {
-      setShowCTA(true);
-      window.removeEventListener('scroll', handleScroll);
+      // スクロール中は非表示
+      setShowCTA(false);
+
+      // 前回のタイマーをクリア
+      if (timer) clearTimeout(timer);
+
+      // スクロールが止まったら表示
+      timer = setTimeout(() => {
+        if (window.scrollY > MIN_SCROLL) {
+          setShowCTA(true);
+        }
+      }, IDLE_MS);
     };
 
-    // すでに少しスクロールされている状態で開いたときのケア
-    if (window.scrollY > 10) {
-      setShowCTA(true);
-    } else {
-      window.addEventListener('scroll', handleScroll);
-    }
+    window.addEventListener('scroll', handleScroll, { passive: true });
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      if (timer) clearTimeout(timer);
     };
   }, []);
 
@@ -263,15 +273,14 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         </div>
       </footer>
 
-      {/* Global Context-Aware CTA（スクロール開始後に表示） */}
-      {showCTA && (
-        <FloatingCTA
-          url="https://al.dmm.com/?lurl=https%3A%2F%2Fpremium.dmm.com%2F&af_id=stageconnect-001&ch=link_tool&ch_id=text"
-          label="2.5次元舞台が見放題"
-          subText="14日間無料でお試し"
-          buttonText="DMMプレミアム"
-        />
-      )}
+      {/* Global Context-Aware CTA（スクロール停止時にフェードイン） */}
+      <FloatingCTA
+        url="https://al.dmm.com/?lurl=https%3A%2F%2Fpremium.dmm.com%2F&af_id=stageconnect-001&ch=link_tool&ch_id=text"
+        label="2.5次元舞台が見放題"
+        subText="14日間無料でお試し"
+        buttonText="DMMプレミアム"
+        visible={showCTA}
+      />
     </div>
   );
 };
