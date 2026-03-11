@@ -142,7 +142,7 @@ const PlayDetail: React.FC = () => {
   const castNames = castTop ? `${castTop}ら` : "未定";
 
   // hasVod
-  const hasVodLinks = useMemo(() => !!(play?.vod && (play.vod.dmm || play.vod.danime || play.vod.unext)), [play]);
+  const hasVodLinks = useMemo(() => !!play?.vod?.dmm, [play]);
 
   // -------------------------
   // ✅ SEO head (React 19 native)
@@ -190,8 +190,8 @@ const PlayDetail: React.FC = () => {
           acceptedAnswer: {
             "@type": "Answer",
             text: hasVodLinks
-              ? "はい、DMM TVやdアニメストア、U-NEXTなどで配信されている場合があります。詳細はページ内の「配信で見る」セクションをご確認ください。"
-              : "現在、主要なVODサービスでの定額見放題配信などは確認できていませんが、レンタル配信やディスク販売が行われている可能性があります。",
+              ? "はい、DMMプレミアム（DMM TV）で配信されています。詳細はページ内の「配信で見る」セクションからご確認ください。14日間の無料トライアルで視聴可能です。"
+              : "現在、主要な配信サービスでの取り扱い情報は確認中です。DMMプレミアムで今後配信される可能性もありますので、定期的にチェックしてみてください。",
           },
         },
         {
@@ -199,7 +199,7 @@ const PlayDetail: React.FC = () => {
           name: "無料で視聴できる期間はありますか？",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "VODサービスによっては、初回登録時の無料トライアル期間を利用して視聴できる場合があります。各サービスの公式サイトで最新のキャンペーン情報をご確認ください。",
+            text: "DMMプレミアムでは14日間の無料トライアルを提供しています。期間中は見放題対象の2.5次元舞台を追加料金なしで視聴できます。",
           },
         },
         {
@@ -589,41 +589,25 @@ const PlayDetail: React.FC = () => {
           {/* VOD */}
           {hasVodLinks && (
             <section className="pt-4">
-              <h2 className="text-lg font-bold text-white mb-6 tracking-wide flex items-center gap-2">
+              <h2 className="text-lg font-bold text-white mb-4 tracking-wide flex items-center gap-2">
                 配信で見る
                 <span className="text-[10px] font-normal text-slate-500 border border-slate-700 px-2 py-0.5 rounded ml-2">外部リンク</span>
               </h2>
+              <p className="text-xs text-slate-500 mb-4 font-light">
+                DMMプレミアムなら14日間無料でお試しできます。
+              </p>
               <div className="flex flex-wrap gap-4">
-                {play.vod?.dmm && (
-                  <a
-                    href={play.vod.dmm}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-[#E53935]/10 border border-[#E53935]/30 text-[#ff8a80] text-sm font-bold hover:bg-[#E53935]/20 hover:border-[#E53935] hover:shadow-[0_0_15px_rgba(229,57,53,0.3)] transition-all duration-300 min-w-[140px]"
-                  >
-                    DMM TV
-                  </a>
-                )}
-                {play.vod?.danime && (
-                  <a
-                    href={play.vod.danime}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-[#FF9800]/10 border border-[#FF9800]/30 text-[#ffcc80] text-sm font-bold hover:bg-[#FF9800]/20 hover:border-[#FF9800] hover:shadow-[0_0_15px_rgba(255,152,0,0.3)] transition-all duration-300 min-w-[140px]"
-                  >
-                    dアニメストア
-                  </a>
-                )}
-                {play.vod?.unext && (
-                  <a
-                    href={play.vod.unext}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-[#1E88E5]/10 border border-[#1E88E5]/30 text-[#90caf9] text-sm font-bold hover:bg-[#1E88E5]/20 hover:border-[#1E88E5] hover:shadow-[0_0_15px_rgba(30,136,229,0.3)] transition-all duration-300 min-w-[140px]"
-                  >
-                    U-NEXT
-                  </a>
-                )}
+                <a
+                  href={play.vod!.dmm!}
+                  target="_blank"
+                  rel="sponsored noopener noreferrer"
+                  className="inline-flex items-center justify-center px-8 py-3.5 rounded-lg bg-neon-pink/10 border border-neon-pink/30 text-white text-sm font-bold hover:bg-neon-pink/20 hover:border-neon-pink/50 hover:shadow-[0_0_15px_rgba(233,68,166,0.3)] transition-all duration-300 min-w-[180px]"
+                >
+                  DMM TVで見る
+                  <svg className="ml-2 w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
               </div>
             </section>
           )}
@@ -643,8 +627,8 @@ const PlayDetail: React.FC = () => {
                 </h3>
                 <p className="text-sm text-slate-400 leading-relaxed pl-5">
                   {hasVodLinks
-                    ? "はい、DMM TVやdアニメストア、U-NEXTなどで配信されている場合があります。詳細はページ内の「配信で見る」セクションをご確認ください。"
-                    : "現在、主要なVODサービスでの定額見放題配信などは確認できていませんが、レンタル配信やディスク販売が行われている可能性があります。"}
+                    ? "はい、DMMプレミアム（DMM TV）で配信されています。14日間の無料トライアルで視聴可能です。詳細はページ内の「配信で見る」セクションをご確認ください。"
+                    : "現在、配信情報は確認中です。DMMプレミアムで今後配信される可能性もありますので、定期的にチェックしてみてください。"}
                 </p>
               </div>
 
@@ -654,7 +638,7 @@ const PlayDetail: React.FC = () => {
                   無料で視聴できる期間はありますか？
                 </h3>
                 <p className="text-sm text-slate-400 leading-relaxed pl-5">
-                  VODサービスによっては、初回登録時の無料トライアル期間を利用して視聴できる場合があります。各サービスの公式サイトで最新のキャンペーン情報をご確認ください。
+                  DMMプレミアムでは14日間の無料トライアルを提供しています。期間中は見放題対象の2.5次元舞台を追加料金なしで視聴できます。
                 </p>
               </div>
 
