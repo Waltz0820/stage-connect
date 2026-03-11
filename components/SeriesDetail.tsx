@@ -383,7 +383,7 @@ const SeriesDetail: React.FC = () => {
   }, [plays]);
 
   const hasVod = useMemo(
-    () => plays.some((p) => p.vod?.dmm || p.vod?.danime || p.vod?.unext),
+    () => plays.some((p) => p.vod?.dmm),
     [plays]
   );
 
@@ -400,13 +400,11 @@ const SeriesDetail: React.FC = () => {
   // ✅ autoIntro主役（intro撤去）
   const autoIntro = useMemo(() => {
     const nm = franchise?.name ?? "";
-    return `${nm}シリーズの舞台作品を年表形式でまとめました。全${plays.length}作品（${
-      startYear || "----"
-    }-${endYearLabel}）を掲載しています。${
-      hasVod
+    return `${nm}シリーズの舞台作品を年表形式でまとめました。全${plays.length}作品（${startYear || "----"
+      }-${endYearLabel}）を掲載しています。${hasVod
         ? "配信（VOD）がある作品はカード内から確認できます。"
         : ""
-    }`;
+      }`;
   }, [franchise?.name, plays.length, startYear, endYearLabel, hasVod]);
 
   // ✅ description（折りたたみ）
@@ -448,9 +446,8 @@ const SeriesDetail: React.FC = () => {
     if (!franchise) return "人気舞台シリーズの作品を年表形式でまとめるStage Connect。";
     const nm = franchise.name;
 
-    const base = `${nm}シリーズの舞台作品一覧。全${plays.length}作品（${
-      startYear || "----"
-    }-${endYearLabel}）を年表形式で掲載。主要キャスト（シリーズ・レギュラー）や配信（VOD）情報も確認できます。`;
+    const base = `${nm}シリーズの舞台作品一覧。全${plays.length}作品（${startYear || "----"
+      }-${endYearLabel}）を年表形式で掲載。主要キャスト（シリーズ・レギュラー）や配信（VOD）情報も確認できます。`;
 
     // ✅ intro撤去：descriptionは長いのでSEO文には混ぜない（必要なら短縮して足せる）
     return truncate(toPlainText(base), 155);
@@ -475,9 +472,8 @@ const SeriesDetail: React.FC = () => {
           name: "どの順番で見ればいいですか？",
           acceptedAnswer: {
             "@type": "Answer",
-            text: `基本的には公開年順（${
-              startYear || "----"
-            }年〜）に見ることをお勧めします。このページでは時系列順に作品を掲載しています。`,
+            text: `基本的には公開年順（${startYear || "----"
+              }年〜）に見ることをお勧めします。このページでは時系列順に作品を掲載しています。`,
           },
         },
         {
@@ -486,8 +482,8 @@ const SeriesDetail: React.FC = () => {
           acceptedAnswer: {
             "@type": "Answer",
             text: hasVod
-              ? "はい、シリーズ作品の多くは動画配信サービスで視聴可能です。各作品カードに配信リンクがあるか確認してください。"
-              : "作品によっては配信が行われていないものもあります。詳細は各作品ページをご確認ください。",
+              ? "はい、シリーズ作品の一部はDMM TVで配信されています。各作品カードの配信リンクをご確認ください。DMMプレミアムなら14日間の無料トライアルがあります。"
+              : "作品によっては配信が行われていないものもあります。DMMプレミアムで今後配信される可能性もありますので、定期的にチェックしてみてください。",
           },
         },
       ],
@@ -607,11 +603,10 @@ const SeriesDetail: React.FC = () => {
                       >
                         <div className="flex items-center gap-3 overflow-hidden">
                           <span
-                            className={`shrink-0 flex items-center justify-center w-5 h-5 rounded text-[10px] font-black ${
-                              index < 3
-                                ? "bg-neon-cyan text-black shadow-[0_0_5px_rgba(0,255,255,0.5)]"
-                                : "bg-white/10 text-slate-400"
-                            }`}
+                            className={`shrink-0 flex items-center justify-center w-5 h-5 rounded text-[10px] font-black ${index < 3
+                              ? "bg-neon-cyan text-black shadow-[0_0_5px_rgba(0,255,255,0.5)]"
+                              : "bg-white/10 text-slate-400"
+                              }`}
                           >
                             {index + 1}
                           </span>
@@ -690,11 +685,10 @@ const SeriesDetail: React.FC = () => {
                               >
                                 <div className="flex items-center gap-4 overflow-hidden">
                                   <span
-                                    className={`shrink-0 flex items-center justify-center w-6 h-6 rounded text-xs font-black ${
-                                      index < 3
-                                        ? "bg-neon-cyan text-black shadow-[0_0_5px_rgba(0,255,255,0.5)]"
-                                        : "bg-white/10 text-slate-500"
-                                    }`}
+                                    className={`shrink-0 flex items-center justify-center w-6 h-6 rounded text-xs font-black ${index < 3
+                                      ? "bg-neon-cyan text-black shadow-[0_0_5px_rgba(0,255,255,0.5)]"
+                                      : "bg-white/10 text-slate-500"
+                                      }`}
                                   >
                                     {index + 1}
                                   </span>
@@ -727,11 +721,10 @@ const SeriesDetail: React.FC = () => {
                   >
                     <div className="flex items-center gap-3 overflow-hidden">
                       <span
-                        className={`shrink-0 flex items-center justify-center w-6 h-6 rounded text-xs font-black ${
-                          index < 3
-                            ? "bg-neon-cyan text-black shadow-[0_0_8px_rgba(0,255,255,0.4)]"
-                            : "bg-white/10 text-slate-500"
-                        }`}
+                        className={`shrink-0 flex items-center justify-center w-6 h-6 rounded text-xs font-black ${index < 3
+                          ? "bg-neon-cyan text-black shadow-[0_0_8px_rgba(0,255,255,0.4)]"
+                          : "bg-white/10 text-slate-500"
+                          }`}
                       >
                         {index + 1}
                       </span>
@@ -806,9 +799,8 @@ const SeriesDetail: React.FC = () => {
             {longText && (
               <div className="mt-4 pt-4 border-t border-white/5">
                 <div
-                  className={`text-slate-400 text-sm leading-relaxed font-light whitespace-pre-wrap transition-all duration-300 ${
-                    isDescOpen ? "" : "line-clamp-3"
-                  }`}
+                  className={`text-slate-400 text-sm leading-relaxed font-light whitespace-pre-wrap transition-all duration-300 ${isDescOpen ? "" : "line-clamp-3"
+                    }`}
                 >
                   {longText}
                 </div>
@@ -820,9 +812,8 @@ const SeriesDetail: React.FC = () => {
                 >
                   {isDescOpen ? "閉じる" : "続きを読む"}
                   <svg
-                    className={`w-4 h-4 transition-transform ${
-                      isDescOpen ? "rotate-180" : ""
-                    }`}
+                    className={`w-4 h-4 transition-transform ${isDescOpen ? "rotate-180" : ""
+                      }`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -897,8 +888,8 @@ const SeriesDetail: React.FC = () => {
                 </h3>
                 <p className="text-sm text-slate-400 leading-relaxed pl-5">
                   {hasVod
-                    ? "はい、シリーズ作品の多くは動画配信サービスで視聴可能です。各作品カードに配信リンクがあるか確認してください。"
-                    : "作品によっては配信が行われていないものもあります。詳細は各作品ページをご確認ください。"}
+                    ? "はい、シリーズ作品の一部はDMM TVで配信されています。各作品カードの配信リンクをご確認ください。DMMプレミアムなら14日間の無料トライアルがあります。"
+                    : "作品によっては配信が行われていないものもあります。DMMプレミアムで今後配信される可能性もありますので、定期的にチェックしてみてください。"}
                 </p>
               </div>
             </div>
