@@ -44,13 +44,11 @@ type PlayRecord = {
     [key: string]: any;
   } | null;
 
-  // 表示用：最終的には string[] に寄せる
   tags?: string[] | null;
 
   franchise?: string | null;
   franchise_id?: string | null;
 
-  // plays.credits(jsonb) は {items:[...]} or [...] の両対応で吸収する
   credits?: CreditsObj | CreditItem[] | null;
 };
 
@@ -64,13 +62,8 @@ const PlayDetail: React.FC = () => {
   const [cast, setCast] = useState<Actor[]>([]);
   const [loading, setLoading] = useState(true);
   const [notFound, setNotFound] = useState(false);
-
-  // スタッフ / クレジットの折りたたみ
   const [isCreditsOpen, setIsCreditsOpen] = useState(false);
 
-  // -------------------------
-  // Helpers
-  // -------------------------
   const normalizeNames = (names: any): string => {
     if (!names) return "";
     if (Array.isArray(names)) return names.filter(Boolean).join("　/　");
@@ -85,9 +78,6 @@ const PlayDetail: React.FC = () => {
   const siteUrl = useSiteUrl();
   const ogImageBase = useOgImage();
 
-  // -------------------------
-  // credits：DBの形揺れを吸収して items[] を取り出す
-  // -------------------------
   const extractCreditItems = (raw: any): CreditItem[] => {
     if (!raw) return [];
     if (Array.isArray(raw)) return raw as CreditItem[];
@@ -95,9 +85,6 @@ const PlayDetail: React.FC = () => {
     return [];
   };
 
-  // -------------------------
-  // credits を表示用に正規化
-  // -------------------------
   const creditsAll = useMemo(() => {
     const list = extractCreditItems(play?.credits) as CreditItem[];
     return list
@@ -112,8 +99,6 @@ const PlayDetail: React.FC = () => {
       .sort((a, b) => a.sort_order - b.sort_order);
   }, [play?.credits]);
 
-  // 並びは DB の sort_order のまま
-  // 先頭 N 件だけ常時表示、残りは折りたたみ
   const creditsVisible = useMemo(() => {
     return creditsAll.slice(0, CREDIT_VISIBLE_COUNT);
   }, [creditsAll]);
@@ -124,16 +109,11 @@ const PlayDetail: React.FC = () => {
 
   const hasAnyCredits = creditsAll.length > 0;
 
-  // castNames（表示用）
   const castTop = useMemo(() => cast.slice(0, 3).map((a) => a.name).join("、"), [cast]);
   const castNames = castTop ? `${castTop}ら` : "未定";
 
-  // hasVod
   const hasVodLinks = useMemo(() => !!play?.vod?.dmm, [play]);
 
-  // -------------------------
-  // SEO head
-  // -------------------------
   const canonicalUrl = useMemo(() => {
     if (!play?.slug || !siteUrl) return "";
     return `${siteUrl}/plays/${encodeURIComponent(play.slug)}`;
@@ -151,7 +131,7 @@ const PlayDetail: React.FC = () => {
     const period = play.period ? `期間：${toPlainText(play.period)}。` : "";
     const venue = play.venue ? `劇場：${toPlainText(play.venue)}。` : "";
     const castLine = castTop ? `出演：${castTop}。` : "";
-    const vodLine = hasVodLinks ? "VOD配信情報あり。" : "VOD配信情報は確認中。";
+    const vodLine = hasVodLinks ? "VOD配信情報あり。" : "配信情報は確認中。";
 
     const composed = base
       ? base
@@ -162,42 +142,67 @@ const PlayDetail: React.FC = () => {
 
   const ogImage = ogImageBase;
 
-  // -------------------------
-  // JSON-LD
-  // -------------------------
   const jsonLdFaq = useMemo(() => {
     if (!play) return null;
+
+    const mainEntity = hasVodLinks
+      ? [
+          {
+            "@type": "Question",
+            name: `『${play.title}』はどこで見られますか？`,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "DMM TVで配信されています。見放題対象かレンタルかは作品によって異なりますので、詳細はページ内の「配信で見る」セクションからご確認ください。DMMプレミアムなら14日間の無料トライアルがあります。",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "無料で視聴できる期間はありますか？",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "DMMプレミアムでは14日間の無料トライアルを提供しています。期間中は対象作品を追加料金なしで視聴できる場合があります。",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "出演キャストは誰ですか？",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: `主な出演者は${castNames}です。ページ下部の「出演キャスト」セクションで全キャスト詳細を確認できます。`,
+            },
+          },
+        ]
+      : [
+          {
+            "@type": "Question",
+            name: `『${play.title}』は現在配信されていますか？`,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "現在、主要な配信サービスでの取り扱いが確認できない場合があります。古い2.5次元作品はDVD・Blu-ray化や再演で触れられるケースもあります。配信状況は随時確認しています。",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "この作品を見る方法はありますか？",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "配信が確認できない場合は、シリーズの他作品や関連作品、DVD・Blu-ray展開、再演情報などをあわせて確認するのがおすすめです。",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "出演キャストは誰ですか？",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: `主な出演者は${castNames}です。ページ下部の「出演キャスト」セクションで全キャスト詳細を確認できます。`,
+            },
+          },
+        ];
+
     return {
       "@context": "https://schema.org",
       "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: `『${play.title}』は動画配信されていますか？`,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: hasVodLinks
-              ? "はい、DMM TVで配信されています。見放題対象かレンタルかは作品によって異なりますので、詳細はページ内の「配信で見る」セクションからご確認ください。DMMプレミアムなら14日間の無料トライアルがあります。"
-              : "現在、主要な配信サービスでの取り扱い情報は確認中です。DMMプレミアムで今後配信される可能性もありますので、定期的にチェックしてみてください。",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "無料で視聴できる期間はありますか？",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "DMMプレミアムでは14日間の無料トライアルを提供しています。期間中は見放題対象の2.5次元舞台を追加料金なしで視聴できます。",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "出演キャストは誰ですか？",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: `主な出演者は${castNames}です。ページ下部の「出演キャスト」セクションで全キャスト詳細を確認できます。`,
-          },
-        },
-      ],
+      mainEntity,
     };
   }, [play, hasVodLinks, castNames]);
 
@@ -231,9 +236,6 @@ const PlayDetail: React.FC = () => {
     };
   }, [play, canonicalUrl, seoDescription]);
 
-  // -------------------------
-  // Data fetch
-  // -------------------------
   useEffect(() => {
     if (!slug) return;
 
@@ -262,9 +264,7 @@ const PlayDetail: React.FC = () => {
         let mappedPlay: PlayRecord | null = null;
         let castActors: Actor[] = [];
 
-        // 1) DBが取れた
         if (dbPlay) {
-          // tags は play_tags を正として取る
           let resolvedTags: string[] = [];
           try {
             const { data: pt, error: ptErr } = await supabase
@@ -293,7 +293,6 @@ const PlayDetail: React.FC = () => {
             credits: dbPlay.credits ?? null,
           };
 
-          // franchise名
           if (dbPlay.franchise_id) {
             try {
               const { data: fr, error: frErr } = await supabase
@@ -307,13 +306,11 @@ const PlayDetail: React.FC = () => {
             }
           }
 
-          // casts → actors
           if (dbPlay.id) {
             try {
               const { data: castRows, error: castError } = await supabase
                 .from("casts")
-                .select(
-                  `
+                .select(`
                   is_starring,
                   role_name,
                   actor:actors (
@@ -327,8 +324,7 @@ const PlayDetail: React.FC = () => {
                     tags,
                     featured_play_slugs
                   )
-                `
-                )
+                `)
                 .eq("play_id", dbPlay.id)
                 .order("is_starring", { ascending: false })
                 .order("created_at", { ascending: true });
@@ -345,7 +341,6 @@ const PlayDetail: React.FC = () => {
           }
         }
 
-        // 2) DBが無い → ローカル
         if (!dbPlay) {
           const localPlay: any = getPlayBySlug(slug);
           if (!localPlay) {
@@ -372,7 +367,6 @@ const PlayDetail: React.FC = () => {
           castActors = getActorsByPlaySlug(slug);
         }
 
-        // DB playは取れたが casts が0 → ローカル補完
         if (dbPlay && castActors.length === 0) {
           castActors = getActorsByPlaySlug(slug);
         }
@@ -393,15 +387,11 @@ const PlayDetail: React.FC = () => {
     };
   }, [slug]);
 
-  // -------------------------
-  // 早期return
-  // -------------------------
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[60vh] text-center px-4 animate-fade-in-up">
         <title>読み込み中… - {SITE_NAME}</title>
         <meta name="robots" content="noindex,nofollow" />
-
         <p className="text-slate-400 text-sm mb-2">作品情報を読み込み中…</p>
         <div className="w-10 h-10 border-2 border-white/20 border-t-neon-purple rounded-full animate-spin" />
       </div>
@@ -567,7 +557,7 @@ const PlayDetail: React.FC = () => {
             </section>
           )}
 
-          {hasVodLinks && (
+          {hasVodLinks ? (
             <section className="pt-4">
               <h2 className="text-lg font-bold text-white mb-4 tracking-wide flex items-center gap-2">
                 配信で見る
@@ -595,6 +585,44 @@ const PlayDetail: React.FC = () => {
                 </a>
               </div>
             </section>
+          ) : (
+            <section className="pt-4">
+              <h2 className="text-lg font-bold text-white mb-4 tracking-wide flex items-center gap-2">
+                見る方法を探す
+                <span className="text-[10px] font-normal text-slate-500 border border-slate-700 px-2 py-0.5 rounded ml-2">
+                  回遊
+                </span>
+              </h2>
+              <p className="text-xs text-slate-500 mb-4 font-light">
+                現在この作品の主要配信サービスでの取り扱いは確認中です。シリーズ作品や出演キャストから関連作品を探せます。
+              </p>
+              <div className="flex flex-wrap gap-4">
+                {play.franchise && (
+                  <Link
+                    to={`/series/${encodeURIComponent(play.franchise_id || "")}`}
+                    className="inline-flex items-center justify-center px-8 py-3.5 rounded-lg bg-white/5 border border-white/10 text-white text-sm font-bold hover:bg-white/10 hover:border-neon-purple/40 transition-all duration-300 min-w-[180px]"
+                  >
+                    シリーズ作品を見る
+                  </Link>
+                )}
+
+                {cast.length > 0 && (
+                  <a
+                    href="#cast"
+                    className="inline-flex items-center justify-center px-8 py-3.5 rounded-lg bg-white/5 border border-white/10 text-white text-sm font-bold hover:bg-white/10 hover:border-neon-cyan/40 transition-all duration-300 min-w-[180px]"
+                  >
+                    出演キャストを見る
+                  </a>
+                )}
+
+                <Link
+                  to="/watch"
+                  className="inline-flex items-center justify-center px-8 py-3.5 rounded-lg bg-neon-pink/10 border border-neon-pink/30 text-white text-sm font-bold hover:bg-neon-pink/20 hover:border-neon-pink/50 hover:shadow-[0_0_15px_rgba(233,68,166,0.3)] transition-all duration-300 min-w-[180px]"
+                >
+                  DMMで他作品を探す
+                </Link>
+              </div>
+            </section>
           )}
 
           <section className="pt-8 border-t border-white/5 mt-8">
@@ -604,43 +632,77 @@ const PlayDetail: React.FC = () => {
             </h2>
 
             <div className="grid gap-4">
-              <div className="bg-theater-surface rounded-lg p-6 border border-white/5">
-                <h3 className="text-sm font-bold text-white mb-2 flex items-start gap-2">
-                  <span className="text-neon-pink">Q.</span>
-                  舞台『{play.title}』は動画配信されていますか？
-                </h3>
-                <p className="text-sm text-slate-400 leading-relaxed pl-5">
-                  {hasVodLinks
-                    ? "はい、DMM TVで配信されています。見放題対象かレンタルかは作品によって異なりますので、詳細は「配信で見る」セクションからご確認ください。DMMプレミアムなら14日間の無料トライアルがあります。"
-                    : "現在、配信情報は確認中です。DMMプレミアムで今後配信される可能性もありますので、定期的にチェックしてみてください。"}
-                </p>
-              </div>
+              {hasVodLinks ? (
+                <>
+                  <div className="bg-theater-surface rounded-lg p-6 border border-white/5">
+                    <h3 className="text-sm font-bold text-white mb-2 flex items-start gap-2">
+                      <span className="text-neon-pink">Q.</span>
+                      舞台『{play.title}』はどこで見られますか？
+                    </h3>
+                    <p className="text-sm text-slate-400 leading-relaxed pl-5">
+                      DMM TVで配信されています。見放題対象かレンタルかは作品によって異なりますので、詳細は「配信で見る」セクションからご確認ください。DMMプレミアムなら14日間の無料トライアルがあります。
+                    </p>
+                  </div>
 
-              <div className="bg-theater-surface rounded-lg p-6 border border-white/5">
-                <h3 className="text-sm font-bold text-white mb-2 flex items-start gap-2">
-                  <span className="text-neon-pink">Q.</span>
-                  無料で視聴できる期間はありますか？
-                </h3>
-                <p className="text-sm text-slate-400 leading-relaxed pl-5">
-                  DMMプレミアムでは14日間の無料トライアルを提供しています。期間中は見放題対象の2.5次元舞台を追加料金なしで視聴できます。
-                </p>
-              </div>
+                  <div className="bg-theater-surface rounded-lg p-6 border border-white/5">
+                    <h3 className="text-sm font-bold text-white mb-2 flex items-start gap-2">
+                      <span className="text-neon-pink">Q.</span>
+                      無料で視聴できる期間はありますか？
+                    </h3>
+                    <p className="text-sm text-slate-400 leading-relaxed pl-5">
+                      DMMプレミアムでは14日間の無料トライアルを提供しています。期間中は対象作品を追加料金なしで視聴できる場合があります。
+                    </p>
+                  </div>
 
-              <div className="bg-theater-surface rounded-lg p-6 border border-white/5">
-                <h3 className="text-sm font-bold text-white mb-2 flex items-start gap-2">
-                  <span className="text-neon-pink">Q.</span>
-                  出演キャストは誰ですか？
-                </h3>
-                <p className="text-sm text-slate-400 leading-relaxed pl-5">
-                  主な出演者は{castNames}です。ページ下部の「出演キャスト」セクションで全キャスト詳細を確認できます。
-                </p>
-              </div>
+                  <div className="bg-theater-surface rounded-lg p-6 border border-white/5">
+                    <h3 className="text-sm font-bold text-white mb-2 flex items-start gap-2">
+                      <span className="text-neon-pink">Q.</span>
+                      出演キャストは誰ですか？
+                    </h3>
+                    <p className="text-sm text-slate-400 leading-relaxed pl-5">
+                      主な出演者は{castNames}です。ページ下部の「出演キャスト」セクションで全キャスト詳細を確認できます。
+                    </p>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="bg-theater-surface rounded-lg p-6 border border-white/5">
+                    <h3 className="text-sm font-bold text-white mb-2 flex items-start gap-2">
+                      <span className="text-neon-pink">Q.</span>
+                      舞台『{play.title}』は現在配信されていますか？
+                    </h3>
+                    <p className="text-sm text-slate-400 leading-relaxed pl-5">
+                      現在、主要な配信サービスでの取り扱いが確認できない場合があります。古い2.5次元作品はDVD・Blu-ray化や再演で触れられるケースもあります。配信状況は随時確認しています。
+                    </p>
+                  </div>
+
+                  <div className="bg-theater-surface rounded-lg p-6 border border-white/5">
+                    <h3 className="text-sm font-bold text-white mb-2 flex items-start gap-2">
+                      <span className="text-neon-pink">Q.</span>
+                      この作品を見る方法はありますか？
+                    </h3>
+                    <p className="text-sm text-slate-400 leading-relaxed pl-5">
+                      配信が確認できない場合は、シリーズの他作品や関連作品、DVD・Blu-ray展開、再演情報などをあわせて確認するのがおすすめです。
+                    </p>
+                  </div>
+
+                  <div className="bg-theater-surface rounded-lg p-6 border border-white/5">
+                    <h3 className="text-sm font-bold text-white mb-2 flex items-start gap-2">
+                      <span className="text-neon-pink">Q.</span>
+                      出演キャストは誰ですか？
+                    </h3>
+                    <p className="text-sm text-slate-400 leading-relaxed pl-5">
+                      主な出演者は{castNames}です。ページ下部の「出演キャスト」セクションで全キャスト詳細を確認できます。
+                    </p>
+                  </div>
+                </>
+              )}
             </div>
           </section>
         </div>
       </div>
 
-      <section className="pt-16 border-t border-white/10 mt-16">
+      <section id="cast" className="pt-16 border-t border-white/10 mt-16">
         <h2 className="text-2xl font-bold text-white mb-8 tracking-wide">出演キャスト</h2>
 
         {cast.length > 0 ? (
