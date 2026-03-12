@@ -48,6 +48,7 @@ type PlayRecord = {
 
   franchise?: string | null;
   franchise_id?: string | null;
+  franchise_slug?: string | null;
 
   credits?: CreditsObj | CreditItem[] | null;
 };
@@ -290,6 +291,7 @@ const PlayDetail: React.FC = () => {
             tags: resolvedTags.length ? resolvedTags : null,
             franchise_id: dbPlay.franchise_id ?? null,
             franchise: null,
+            franchise_slug: null,
             credits: dbPlay.credits ?? null,
           };
 
@@ -297,10 +299,14 @@ const PlayDetail: React.FC = () => {
             try {
               const { data: fr, error: frErr } = await supabase
                 .from("franchises")
-                .select("name")
+                .select("name,slug")
                 .eq("id", dbPlay.franchise_id)
                 .maybeSingle();
-              if (!frErr && fr?.name) mappedPlay.franchise = fr.name;
+
+              if (!frErr && fr) {
+                if (fr.name) mappedPlay.franchise = fr.name;
+                if (fr.slug) mappedPlay.franchise_slug = fr.slug;
+              }
             } catch (err) {
               console.warn("[PlayDetail] franchises query failed:", err);
             }
@@ -361,6 +367,7 @@ const PlayDetail: React.FC = () => {
             vod: localPlay.vod,
             tags: localPlay.tags ?? null,
             franchise: typeof localPlay.franchise === "string" ? localPlay.franchise : null,
+            franchise_slug: localPlay.franchise_slug ?? null,
             credits: localPlay.credits ?? null,
           };
 
@@ -597,9 +604,9 @@ const PlayDetail: React.FC = () => {
                 現在この作品の主要配信サービスでの取り扱いは確認中です。シリーズ作品や出演キャストから関連作品を探せます。
               </p>
               <div className="flex flex-wrap gap-4">
-                {play.franchise && (
+                {play.franchise_slug && (
                   <Link
-                    to={`/series/${encodeURIComponent(play.franchise_id || "")}`}
+                    to={`/series/${encodeURIComponent(play.franchise_slug)}`}
                     className="inline-flex items-center justify-center px-8 py-3.5 rounded-lg bg-white/5 border border-white/10 text-white text-sm font-bold hover:bg-white/10 hover:border-neon-purple/40 transition-all duration-300 min-w-[180px]"
                   >
                     シリーズ作品を見る
