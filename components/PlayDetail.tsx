@@ -55,6 +55,7 @@ type PlayRecord = {
 };
 
 const SITE_NAME = "Stage Connect";
+const CREDIT_VISIBLE_COUNT = 3;
 
 const PlayDetail: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -64,7 +65,7 @@ const PlayDetail: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [notFound, setNotFound] = useState(false);
 
-  // 任意スタッフの折りたたみ
+  // スタッフ / クレジットの折りたたみ
   const [isCreditsOpen, setIsCreditsOpen] = useState(false);
 
   // -------------------------
@@ -111,19 +112,14 @@ const PlayDetail: React.FC = () => {
       .sort((a, b) => a.sort_order - b.sort_order);
   }, [play?.credits]);
 
-  // UI上で最初に見せたい役職だけを固定
-  // DBの is_core は広めについていても、表示の主役は role 名で制御する
-  const isCoreRole = (role: string) => {
-    const r = role.replace(/\s/g, "");
-    return r === "演出" || r === "脚本" || r === "脚本・作詞" || r === "主催";
-  };
-
-  const creditsCore = useMemo(() => {
-    return creditsAll.filter((c) => isCoreRole(c.role)).sort((a, b) => a.sort_order - b.sort_order);
+  // 並びは DB の sort_order のまま
+  // 先頭 N 件だけ常時表示、残りは折りたたみ
+  const creditsVisible = useMemo(() => {
+    return creditsAll.slice(0, CREDIT_VISIBLE_COUNT);
   }, [creditsAll]);
 
-  const creditsExtra = useMemo(() => {
-    return creditsAll.filter((c) => !isCoreRole(c.role)).sort((a, b) => a.sort_order - b.sort_order);
+  const creditsCollapsed = useMemo(() => {
+    return creditsAll.slice(CREDIT_VISIBLE_COUNT);
   }, [creditsAll]);
 
   const hasAnyCredits = creditsAll.length > 0;
@@ -530,19 +526,19 @@ const PlayDetail: React.FC = () => {
               <div className="flex items-center justify-between gap-3 mb-6">
                 <h3 className="text-xs font-bold uppercase tracking-widest text-slate-500">スタッフ / クレジット</h3>
 
-                {creditsExtra.length > 0 && (
+                {creditsCollapsed.length > 0 && (
                   <button
                     type="button"
                     onClick={() => setIsCreditsOpen((v) => !v)}
                     className="text-[11px] px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-slate-200 hover:bg-white/10 transition-colors font-bold"
                   >
-                    {isCreditsOpen ? "閉じる" : `続きを読む（${creditsExtra.length}）`}
+                    {isCreditsOpen ? "閉じる" : `続きを読む（${creditsCollapsed.length}）`}
                   </button>
                 )}
               </div>
 
               <div className="space-y-5">
-                {creditsCore.map((c, idx) => (
+                {creditsVisible.map((c, idx) => (
                   <div
                     key={`${c.role}-${idx}`}
                     className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-6 border-b border-white/5 pb-4 last:border-0 last:pb-0"
@@ -552,12 +548,12 @@ const PlayDetail: React.FC = () => {
                   </div>
                 ))}
 
-                {creditsExtra.length > 0 && isCreditsOpen && (
+                {creditsCollapsed.length > 0 && isCreditsOpen && (
                   <div className="pt-2 border-t border-white/10">
                     <div className="space-y-5 mt-4">
-                      {creditsExtra.map((c, idx) => (
+                      {creditsCollapsed.map((c, idx) => (
                         <div
-                          key={`${c.role}-${idx}`}
+                          key={`${c.role}-extra-${idx}`}
                           className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-6 border-b border-white/5 pb-4 last:border-0 last:pb-0"
                         >
                           <span className="min-w-[6rem] text-sm font-bold text-neon-cyan tracking-wider">{c.role}</span>
