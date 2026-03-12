@@ -17,10 +17,6 @@ type CreditItem = {
   sort_order?: number;
 };
 
-type CreditsObj = {
-  items: CreditItem[];
-};
-
 type PlayRow = {
   id: string;
   slug: string;
@@ -30,7 +26,7 @@ type PlayRow = {
   venue?: string | null;
   vod?: any;
   franchise_id?: string | null;
-  credits?: CreditsObj | null;
+  credits?: CreditItem[] | null;
 };
 
 // ===== credits helpers =====
@@ -80,7 +76,7 @@ const splitNamesSmart = (text: string): string[] => {
   return [t];
 };
 
-const pasteToCreditsObj = (raw: string): CreditsObj => {
+const pasteToCreditsArray = (raw: string): CreditItem[] => {
   const lines = (raw ?? "")
     .replace(/\r\n/g, "\n")
     .split("\n")
@@ -148,11 +144,11 @@ const pasteToCreditsObj = (raw: string): CreditsObj => {
       });
     });
 
-  return { items };
+  return items;
 };
 
-const creditsObjToPaste = (credits: CreditsObj | null | undefined): string => {
-  const items = credits?.items ?? [];
+const creditsArrayToPaste = (credits: CreditItem[] | null | undefined): string => {
+  const items = credits ?? [];
   if (!items.length) return "";
 
   // sort_order優先
@@ -171,8 +167,8 @@ const creditsObjToPaste = (credits: CreditsObj | null | undefined): string => {
   return parts.join("\n").trim() + "\n";
 };
 
-const creditsStats = (credits: CreditsObj | null | undefined) => {
-  const items = credits?.items ?? [];
+const creditsStats = (credits: CreditItem[] | null | undefined) => {
+  const items = credits ?? [];
   const roles = new Set(items.map((x) => x.role).filter(Boolean));
   const lines = items.reduce((acc, it) => acc + (it.names?.length ?? 0), 0);
   return { roles: roles.size, items: items.length, names: lines };
@@ -204,7 +200,7 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
 
   // ★ creditsは「貼り付けテキスト」だけを編集対象にする（ミスらない）
   const [creditsPaste, setCreditsPaste] = useState("");
-  const [creditsPreview, setCreditsPreview] = useState<CreditsObj>({ items: [] });
+  const [creditsPreview, setCreditsPreview] = useState<CreditItem[]>([]);
   const [creditsErr, setCreditsErr] = useState<string>("");
 
   const [busy, setBusy] = useState(false);
@@ -213,7 +209,7 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
   useEffect(() => {
     const loadFr = async () => {
       const { data } = await supabase.from("franchises").select("id,name").order("name", { ascending: true });
-      setFrs((data ?? []) as any);
+      setFrs((data ?? []) as FranchiseRow[]);
     };
     loadFr();
   }, []);
@@ -248,7 +244,9 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
       const rows = ((res.data ?? []) as any) as TagRow[];
 
       // is_active がある場合だけ効かせる（無い場合は全部OK）
-      const active = rows.filter((t) => (typeof (t as any).is_active === "boolean" ? (t as any).is_active !== false : true));
+      const active = rows.filter((t) =>
+        typeof (t as any).is_active === "boolean" ? (t as any).is_active !== false : true
+      );
       setAllTags(active);
     };
 
@@ -259,11 +257,11 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
   useEffect(() => {
     try {
       setCreditsErr("");
-      const obj = pasteToCreditsObj(creditsPaste);
-      setCreditsPreview(obj);
+      const arr = pasteToCreditsArray(creditsPaste);
+      setCreditsPreview(arr);
     } catch (e: any) {
       setCreditsErr(e?.message ?? "credits parse error");
-      setCreditsPreview({ items: [] });
+      setCreditsPreview([]);
     }
   }, [creditsPaste]);
 
@@ -300,7 +298,7 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
 
       // credits
       setCreditsPaste("");
-      setCreditsPreview({ items: [] });
+      setCreditsPreview([]);
       setCreditsErr("");
       return;
     }
@@ -316,7 +314,7 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         if (error) throw error;
         if (!data) return;
 
-        const r = data as any as PlayRow;
+        const r = data as PlayRow;
         setRow(r);
         setTitle(r.title ?? "");
         setSlugText(r.slug ?? "");
@@ -337,9 +335,9 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         }
 
         // credits
-        const paste = creditsObjToPaste(r.credits);
+        const paste = creditsArrayToPaste(r.credits);
         setCreditsPaste(paste);
-        setCreditsPreview(r.credits ?? { items: [] });
+        setCreditsPreview(r.credits ?? []);
         setCreditsErr("");
       } catch (e: any) {
         setMsg(e?.message ?? "load error");
@@ -357,17 +355,13 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
 
     try {
       // credits：保存直前に確定パース（ここで落ちたら保存しない）
-      let creditsObj: CreditsObj | null = null;
+      let creditsValue: CreditItem[] | null = null;
       const rawCredits = safeTrim(creditsPaste);
 
       if (rawCredits) {
-        const parsed = pasteToCreditsObj(rawCredits);
+        const parsed = pasteToCreditsArray(rawCredits);
 
-        // 「objectであること」制約対策：必ず {items:[]} の形で保存
-        creditsObj = { items: parsed.items ?? [] };
-
-        // 事故防止：role無し or names無しの項目があれば除外
-        creditsObj.items = creditsObj.items
+        creditsValue = (parsed ?? [])
           .map((it) => ({
             role: normalizeRole(it.role),
             names: (it.names ?? []).map((n) => normalizeNameLine(n)).filter(Boolean),
@@ -377,7 +371,7 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
           .filter((it) => it.role && it.names.length > 0);
 
         // ほぼ空ならnull扱いに戻す
-        if (creditsObj.items.length === 0) creditsObj = null;
+        if (creditsValue.length === 0) creditsValue = null;
       }
 
       const payload: any = {
@@ -388,7 +382,7 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         venue: safeTrim(venue) || null,
         franchise_id: franchiseId || null,
         vod: parseJsonOr<any>(vodText, {}),
-        credits: creditsObj,
+        credits: creditsValue,
       };
 
       if (!payload.title) {
@@ -444,10 +438,10 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
     // 現在の内容を一旦パース→整形して貼り戻す（運用ミスが減る）
     try {
       setCreditsErr("");
-      const obj = pasteToCreditsObj(creditsPaste);
-      const pretty = creditsObjToPaste(obj);
+      const arr = pasteToCreditsArray(creditsPaste);
+      const pretty = creditsArrayToPaste(arr);
       setCreditsPaste(pretty);
-      setCreditsPreview(obj);
+      setCreditsPreview(arr);
       setMsg("クレジットを整形しました（保存して確定）");
     } catch (e: any) {
       setCreditsErr(e?.message ?? "credits parse error");
@@ -570,11 +564,7 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         {/* tags（公式） */}
         <Field label="tags（公式）" hint={`最大${MAX_TAGS}つ。横断テーマだけ（ジャンル/シリーズと被らせない）`}>
           <div className="space-y-2">
-            {tagsErr && (
-              <div className="text-xs text-red-300">
-                tags の読み込みに失敗：{tagsErr}
-              </div>
-            )}
+            {tagsErr && <div className="text-xs text-red-300">tags の読み込みに失敗：{tagsErr}</div>}
             <TagMultiSelect
               allTags={allTags}
               selectedIds={selectedTagIds}
@@ -588,7 +578,7 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         {/* credits */}
         <Field
           label="スタッフ / クレジット（貼り付け）"
-          hint="公式サイトのスタッフ欄をそのままコピペでOK。見出しは【演出】の形式推奨。保存時にDB用JSONへ自動変換します。"
+          hint="公式サイトのスタッフ欄をそのままコピペでOK。見出しは【演出】の形式推奨。保存時にDB用JSON配列へ自動変換します。"
         >
           <div className="space-y-3">
             <textarea
@@ -625,7 +615,7 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
                 type="button"
                 onClick={() => {
                   setCreditsPaste("");
-                  setCreditsPreview({ items: [] });
+                  setCreditsPreview([]);
                   setCreditsErr("");
                 }}
                 className="text-xs px-3 py-2 rounded-full bg-white/5 border border-white/10 hover:bg-white/10"
@@ -643,7 +633,7 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
             </div>
 
             <div className="opacity-90">
-              <div className="text-xs text-slate-400 mb-1">（保存されるJSONのプレビュー / 編集不可）</div>
+              <div className="text-xs text-slate-400 mb-1">（保存されるJSON配列のプレビュー / 編集不可）</div>
               <JsonArea value={stringifyPretty(creditsPreview)} onChange={() => {}} rows={8} />
             </div>
           </div>
