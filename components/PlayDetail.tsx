@@ -487,7 +487,7 @@ const PlayDetail: React.FC = () => {
               INTRODUCTION
             </h2>
             <p className="text-slate-300 text-sm leading-relaxed font-light">
-              舞台『<span className="font-bold text-white">{play.title}</span>』の配信情報（VOD）と公演データをまとめました。出演キャストは{castNames}。
+              <span className="font-bold text-white">{play.title}</span>の配信情報（VOD）と公演データをまとめました。出演キャストは{castNames}。
               {hasVodLinks
                 ? "視聴できるサービスがある場合は、下記リンクから詳細を確認できます（配信状況は変動する場合があります）。"
                 : "現在、主要な配信サービスでの取り扱い情報は確認中ですが、DVD/Blu-ray等で視聴可能な場合があります。"}
@@ -644,7 +644,7 @@ const PlayDetail: React.FC = () => {
                   <div className="bg-theater-surface rounded-lg p-6 border border-white/5">
                     <h3 className="text-sm font-bold text-white mb-2 flex items-start gap-2">
                       <span className="text-neon-pink">Q.</span>
-                      舞台{play.title}はどこで見られますか？
+                      {play.title}はどこで見られますか？
                     </h3>
                     <p className="text-sm text-slate-400 leading-relaxed pl-5">
                       DMM TVで配信されています。見放題対象かレンタルかは作品によって異なりますので、詳細は「配信で見る」セクションからご確認ください。DMMプレミアムなら14日間の無料トライアルがあります。
@@ -676,7 +676,7 @@ const PlayDetail: React.FC = () => {
                   <div className="bg-theater-surface rounded-lg p-6 border border-white/5">
                     <h3 className="text-sm font-bold text-white mb-2 flex items-start gap-2">
                       <span className="text-neon-pink">Q.</span>
-                      舞台{play.title}は現在配信されていますか？
+                      {play.title}は現在配信されていますか？
                     </h3>
                     <p className="text-sm text-slate-400 leading-relaxed pl-5">
                       現在、主要な配信サービスでの取り扱いが確認できない場合があります。古い2.5次元作品はDVD・Blu-ray化や再演で触れられるケースもあります。配信状況は随時確認しています。
