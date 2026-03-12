@@ -44,17 +44,15 @@ type PlayRecord = {
     [key: string]: any;
   } | null;
 
-  // ✅ 表示用：最終的には string[] に寄せる（DB由来でもローカル由来でも）
+  // 表示用：最終的には string[] に寄せる
   tags?: string[] | null;
 
   franchise?: string | null;
   franchise_id?: string | null;
 
-  // ✅ plays.credits(jsonb) は {items:[...]} or [...] の両対応で吸収する
+  // plays.credits(jsonb) は {items:[...]} or [...] の両対応で吸収する
   credits?: CreditsObj | CreditItem[] | null;
 };
-
-
 
 const SITE_NAME = "Stage Connect";
 
@@ -66,11 +64,11 @@ const PlayDetail: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [notFound, setNotFound] = useState(false);
 
-  // ✅ 任意スタッフの折りたたみ
+  // 任意スタッフの折りたたみ
   const [isCreditsOpen, setIsCreditsOpen] = useState(false);
 
   // -------------------------
-  // ✅ Helpers
+  // Helpers
   // -------------------------
   const normalizeNames = (names: any): string => {
     if (!names) return "";
@@ -87,7 +85,7 @@ const PlayDetail: React.FC = () => {
   const ogImageBase = useOgImage();
 
   // -------------------------
-  // ✅ credits：DBの形揺れを吸収して items[] を取り出す
+  // credits：DBの形揺れを吸収して items[] を取り出す
   // -------------------------
   const extractCreditItems = (raw: any): CreditItem[] => {
     if (!raw) return [];
@@ -97,7 +95,7 @@ const PlayDetail: React.FC = () => {
   };
 
   // -------------------------
-  // ✅ credits を表示用に正規化
+  // credits を表示用に正規化
   // -------------------------
   const creditsAll = useMemo(() => {
     const list = extractCreditItems(play?.credits) as CreditItem[];
@@ -109,30 +107,23 @@ const PlayDetail: React.FC = () => {
         is_core: Boolean((c as any).is_core),
         sort_order: typeof (c as any).sort_order === "number" ? (c as any).sort_order : 999,
       }))
-      .filter((c) => c.role && c.namesText);
+      .filter((c) => c.role && c.namesText)
+      .sort((a, b) => a.sort_order - b.sort_order);
   }, [play?.credits]);
 
-  const isCoreRole = (role: string, is_core?: boolean) => {
-    if (is_core) return true;
+  // UI上で最初に見せたい役職だけを固定
+  // DBの is_core は広めについていても、表示の主役は role 名で制御する
+  const isCoreRole = (role: string) => {
     const r = role.replace(/\s/g, "");
     return r === "演出" || r === "脚本" || r === "脚本・作詞" || r === "主催";
   };
 
   const creditsCore = useMemo(() => {
-    const core = creditsAll.filter((c) => isCoreRole(c.role, c.is_core));
-    const order = ["演出", "脚本", "脚本・作詞", "主催"];
-    return core.sort((a, b) => {
-      const ai = order.indexOf(a.role);
-      const bi = order.indexOf(b.role);
-      const ax = ai === -1 ? 999 : ai;
-      const bx = bi === -1 ? 999 : bi;
-      if (ax !== bx) return ax - bx;
-      return a.sort_order - b.sort_order;
-    });
+    return creditsAll.filter((c) => isCoreRole(c.role)).sort((a, b) => a.sort_order - b.sort_order);
   }, [creditsAll]);
 
   const creditsExtra = useMemo(() => {
-    return creditsAll.filter((c) => !isCoreRole(c.role, c.is_core)).sort((a, b) => a.sort_order - b.sort_order);
+    return creditsAll.filter((c) => !isCoreRole(c.role)).sort((a, b) => a.sort_order - b.sort_order);
   }, [creditsAll]);
 
   const hasAnyCredits = creditsAll.length > 0;
@@ -145,7 +136,7 @@ const PlayDetail: React.FC = () => {
   const hasVodLinks = useMemo(() => !!play?.vod?.dmm, [play]);
 
   // -------------------------
-  // ✅ SEO head (React 19 native)
+  // SEO head
   // -------------------------
   const canonicalUrl = useMemo(() => {
     if (!play?.slug || !siteUrl) return "";
@@ -176,7 +167,7 @@ const PlayDetail: React.FC = () => {
   const ogImage = ogImageBase;
 
   // -------------------------
-  // ✅ JSON-LD
+  // JSON-LD
   // -------------------------
   const jsonLdFaq = useMemo(() => {
     if (!play) return null;
@@ -245,7 +236,7 @@ const PlayDetail: React.FC = () => {
   }, [play, canonicalUrl, seoDescription]);
 
   // -------------------------
-  // ✅ Data fetch
+  // Data fetch
   // -------------------------
   useEffect(() => {
     if (!slug) return;
@@ -261,7 +252,6 @@ const PlayDetail: React.FC = () => {
         let dbPlay: any = null;
 
         try {
-          // ※ select * はやめて必要項目だけ（安全＆軽い）
           const { data, error } = await supabase
             .from("plays")
             .select("id,slug,title,summary,period,venue,vod,franchise_id,credits")
@@ -278,7 +268,7 @@ const PlayDetail: React.FC = () => {
 
         // 1) DBが取れた
         if (dbPlay) {
-          // ✅ tags は play_tags を正として取る（plays.tags は使わない）
+          // tags は play_tags を正として取る
           let resolvedTags: string[] = [];
           try {
             const { data: pt, error: ptErr } = await supabase
@@ -301,10 +291,10 @@ const PlayDetail: React.FC = () => {
             period: dbPlay.period ?? null,
             venue: dbPlay.venue ?? null,
             vod: dbPlay.vod ?? null,
-            tags: resolvedTags.length ? resolvedTags : null, // ✅表示用
+            tags: resolvedTags.length ? resolvedTags : null,
             franchise_id: dbPlay.franchise_id ?? null,
             franchise: null,
-            credits: dbPlay.credits ?? null, // ✅ shapeは上で吸収する
+            credits: dbPlay.credits ?? null,
           };
 
           // franchise名
@@ -386,7 +376,7 @@ const PlayDetail: React.FC = () => {
           castActors = getActorsByPlaySlug(slug);
         }
 
-        // DB playは取れたが casts が0 → ローカル補完（任意）
+        // DB playは取れたが casts が0 → ローカル補完
         if (dbPlay && castActors.length === 0) {
           castActors = getActorsByPlaySlug(slug);
         }
@@ -408,7 +398,7 @@ const PlayDetail: React.FC = () => {
   }, [slug]);
 
   // -------------------------
-  // ✅ 早期return
+  // 早期return
   // -------------------------
   if (loading) {
     return (
@@ -442,7 +432,6 @@ const PlayDetail: React.FC = () => {
 
   return (
     <div className="container mx-auto px-6 pt-8 pb-32 lg:px-8 max-w-5xl animate-fade-in-up">
-      {/* ✅ SEO（SeoHead統一） */}
       <SeoHead
         title={seoTitle}
         description={seoDescription}
@@ -486,7 +475,6 @@ const PlayDetail: React.FC = () => {
               <ShareButton title={play.title} text={`${play.title}の作品情報 | ${SITE_NAME}`} className="shrink-0" />
             </div>
 
-            {/* ✅ tags は play_tags 正で表示 */}
             {play.tags && play.tags.length > 0 && (
               <div className="flex flex-wrap gap-2">
                 {play.tags.map((tag) => (
@@ -500,7 +488,6 @@ const PlayDetail: React.FC = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
         <div className="md:col-span-2 space-y-12">
-          {/* Intro */}
           <section className="bg-white/5 rounded-xl border border-white/10 p-6 backdrop-blur-sm">
             <h2 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-3 flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-neon-pink"></span>
@@ -521,7 +508,6 @@ const PlayDetail: React.FC = () => {
             </div>
           </section>
 
-          {/* 公演情報 */}
           <section className="bg-theater-surface rounded-xl border border-white/5 p-8 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-20 h-20 bg-white/5 blur-3xl rounded-full pointer-events-none"></div>
             <h3 className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-6">公演情報</h3>
@@ -537,7 +523,6 @@ const PlayDetail: React.FC = () => {
             </div>
           </section>
 
-          {/* ✅ スタッフ / クレジット */}
           {hasAnyCredits && (
             <section className="bg-theater-surface/70 rounded-xl border border-white/10 p-8 backdrop-blur-sm relative overflow-hidden">
               <div className="absolute top-[-40%] left-[-10%] w-[260px] h-[260px] bg-neon-cyan/10 blur-[90px] rounded-full pointer-events-none" />
@@ -586,16 +571,15 @@ const PlayDetail: React.FC = () => {
             </section>
           )}
 
-          {/* VOD */}
           {hasVodLinks && (
             <section className="pt-4">
               <h2 className="text-lg font-bold text-white mb-4 tracking-wide flex items-center gap-2">
                 配信で見る
-                <span className="text-[10px] font-normal text-slate-500 border border-slate-700 px-2 py-0.5 rounded ml-2">外部リンク</span>
+                <span className="text-[10px] font-normal text-slate-500 border border-slate-700 px-2 py-0.5 rounded ml-2">
+                  外部リンク
+                </span>
               </h2>
-              <p className="text-xs text-slate-500 mb-4 font-light">
-                DMMプレミアムなら14日間無料でお試しできます。
-              </p>
+              <p className="text-xs text-slate-500 mb-4 font-light">DMMプレミアムなら14日間無料でお試しできます。</p>
               <div className="flex flex-wrap gap-4">
                 <a
                   href={play.vod!.dmm!}
@@ -605,14 +589,18 @@ const PlayDetail: React.FC = () => {
                 >
                   DMM TVで見る
                   <svg className="ml-2 w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                    />
                   </svg>
                 </a>
               </div>
             </section>
           )}
 
-          {/* FAQ（表示） */}
           <section className="pt-8 border-t border-white/5 mt-8">
             <h2 className="text-xl font-bold text-white mb-6 flex items-center gap-3">
               <span className="w-1 h-6 bg-slate-500 rounded-full"></span>
@@ -656,7 +644,6 @@ const PlayDetail: React.FC = () => {
         </div>
       </div>
 
-      {/* 出演キャスト */}
       <section className="pt-16 border-t border-white/10 mt-16">
         <h2 className="text-2xl font-bold text-white mb-8 tracking-wide">出演キャスト</h2>
 
