@@ -22,13 +22,12 @@ type TagItem = {
   playsCount: number;
 };
 
-// ✅ plays 側は franchise_slug/name ではなく join で取る（ActorDetail と揃える）
 type PlayRow = {
   id: string;
   title: string | null;
   slug: string | null;
-  period: string | null; // date の代替（並びに使う）
-  franchise: { name: string | null } | null; // franchises(name)
+  period: string | null;
+  franchise: { name: string | null } | null;
 };
 
 type PlayItem = {
@@ -76,13 +75,13 @@ const normalizePlay = (r: PlayRow): PlayItem | null => {
 const badgeByType = (type: TagItem["type"]) => {
   switch (type) {
     case "world":
-      return "bg-white/5 border-white/10 text-slate-200";
+      return { badge: "bg-white/5 border-white/10 text-slate-200", dot: "bg-white/40", glow: "bg-white/5" };
     case "experience":
-      return "bg-neon-cyan/10 border-neon-cyan/30 text-neon-cyan";
+      return { badge: "bg-neon-cyan/10 border-neon-cyan/30 text-neon-cyan", dot: "bg-neon-cyan", glow: "bg-neon-cyan/10" };
     case "origin":
-      return "bg-neon-purple/10 border-neon-purple/30 text-neon-purple";
+      return { badge: "bg-neon-purple/10 border-neon-purple/30 text-neon-purple", dot: "bg-neon-purple", glow: "bg-neon-purple/10" };
     default:
-      return "bg-white/5 border-white/10 text-slate-200";
+      return { badge: "bg-white/5 border-white/10 text-slate-200", dot: "bg-white/40", glow: "bg-white/5" };
   }
 };
 
@@ -96,9 +95,9 @@ const TagDetailPage: React.FC = () => {
   const breadcrumbs = useMemo(
     () => [
       { label: "タグ", to: "/tags" },
-      { label: tag?.name ?? "タグ詳細", to: slug ? `/tags/${encodeURIComponent(slug)}` : "/tags" },
+      { label: tag?.name ?? "タグ詳細" },
     ],
-    [slug, tag?.name]
+    [tag?.name]
   );
 
   useEffect(() => {
@@ -108,7 +107,6 @@ const TagDetailPage: React.FC = () => {
     setTag(null);
     setPlays([]);
 
-    // まずタグを引く（2件未満は非公開扱い）
     supabase
       .from("tag_play_counts")
       .select("tag_id, slug, name, type, description, plays_count")
@@ -116,21 +114,18 @@ const TagDetailPage: React.FC = () => {
       .maybeSingle()
       .then(async (res) => {
         if (res.error || !res.data) {
-          console.warn("[tags/:slug] tag fetch error", res.error);
           setTag(null);
           return;
         }
 
         const t = normalizeTag(res.data as any);
         if (!t || t.playsCount < 2) {
-          // Perplexityルール：2件未満は非公開
           setTag(null);
           return;
         }
 
         setTag(t);
 
-        // ✅ タグに紐づく作品一覧：play_tags 起点で plays を join（ActorDetail と同じ方式）
         const playsRes = await supabase
           .from("play_tags")
           .select(
@@ -146,23 +141,17 @@ const TagDetailPage: React.FC = () => {
           )
           .eq("tag_id", t.id);
 
-        // ★ ここが落ちてると「0作品」になるのでログ必須
-        console.log("[tags/:slug] play_tags->play rows", playsRes.data, playsRes.error);
-
         if (playsRes.error) {
-          console.warn("[tags/:slug] plays fetch error", playsRes.error);
           setPlays([]);
           return;
         }
 
-        // rows -> play を抜く
         const rows = ((playsRes.data as any) ?? [])
           .map((x: any) => x?.play)
           .filter(Boolean) as PlayRow[];
 
         const normalized = rows.map(normalizePlay).filter(Boolean) as PlayItem[];
 
-        // period があるなら新しい順に寄せる（なければtitle順）
         normalized.sort((a, b) => {
           const ad = a.date ?? "";
           const bd = b.date ?? "";
@@ -183,121 +172,151 @@ const TagDetailPage: React.FC = () => {
 
   return (
     <div className="container mx-auto px-6 pt-8 pb-16 lg:px-8 max-w-5xl animate-fade-in-up">
-      {/* タグ詳細も noindex（ただしfollowで内部回遊は活かす） */}
       <SeoHead title={SEO_TITLE} robots="noindex,follow" />
       <Breadcrumbs items={breadcrumbs} />
 
-      {loading && <div className="p-10 text-center text-slate-500">読み込み中...</div>}
-
-      {!loading && !tag && (
-        <div className="bg-theater-surface/30 border border-white/10 rounded-2xl p-8 text-center">
-          <div className="text-white font-bold text-lg">このタグは表示できません</div>
-          <div className="text-slate-500 text-sm mt-2">※作品が2件未満のタグは非公開です（品質維持のため）</div>
-          <div className="mt-6">
-            <Link
-              to="/tags"
-              className="px-5 py-3 rounded-full bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-white/10 transition-colors"
-            >
-              タグ一覧へ戻る →
-            </Link>
-          </div>
+      {loading && (
+        <div className="p-20 text-center text-slate-600 font-mono text-xs tracking-[0.3em] animate-pulse">
+          LOADING...
         </div>
       )}
 
-      {!loading && tag && (
-        <>
-          <div className="mb-6 text-center">
-            <span
-              className={`inline-block px-3 py-1 mb-4 rounded-full border text-xs font-bold tracking-widest uppercase ${badgeByType(
-                tag.type
-              )}`}
-            >
-              TAG
-            </span>
-            <h1 className="text-3xl sm:text-4xl font-extrabold text-white mb-3">{tag.name}</h1>
+      {!loading && !tag && (
+        <div className="flex flex-col items-center justify-center min-h-[40vh] text-center">
+          <div className="text-white font-bold text-xl mb-3">このタグは表示できません</div>
+          <div className="text-slate-500 text-sm mb-8">
+            作品が2件未満のタグは品質維持のため非公開です。
+          </div>
+          <Link
+            to="/tags"
+            className="px-6 py-2.5 rounded-full bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-white/10 transition-colors"
+          >
+            タグ一覧へ戻る →
+          </Link>
+        </div>
+      )}
 
-            <p className="text-slate-400 text-sm leading-relaxed">
-              {tag.description ? tag.description : "このタグに該当する2.5次元作品をまとめています。"}
-              <br />
-              <span className="text-slate-500">（対象：{tag.playsCount.toLocaleString()} 作品）</span>
-            </p>
+      {!loading && tag && (() => {
+        const style = badgeByType(tag.type);
+        return (
+          <>
+            {/* --- HERO --- */}
+            <div className="mb-12 text-center relative">
+              <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 ${style.glow} blur-[100px] pointer-events-none`} />
+              <span
+                className={`relative inline-block px-4 py-1.5 mb-6 rounded-full border text-[10px] font-black tracking-[0.3em] uppercase backdrop-blur-sm ${style.badge}`}
+              >
+                Tag
+              </span>
+              <h1 className="relative text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-4 tracking-tight">
+                {tag.name}
+              </h1>
+              <p className="relative max-w-2xl mx-auto text-slate-400 text-sm leading-relaxed font-light">
+                {tag.description || `「${tag.name}」に該当する2.5次元作品をまとめています。`}
+              </p>
+              <div className="mt-4 text-slate-500 text-xs font-mono">
+                {tag.playsCount.toLocaleString()} 作品
+              </div>
+            </div>
 
-            <div className="mt-5 flex flex-wrap gap-2 justify-center">
+            {/* --- PLAY LIST --- */}
+            <div className="bg-theater-surface/30 border border-white/5 rounded-2xl overflow-hidden mb-10">
+              <div className="px-6 py-4 border-b border-white/5 bg-black/20 flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <span className={`w-2 h-2 rounded-full ${style.dot}`} />
+                  <div className="text-[10px] font-black tracking-[0.2em] text-slate-500 uppercase">
+                    Works
+                  </div>
+                </div>
+                <div className="text-[10px] font-mono text-slate-500">
+                  {plays.length.toLocaleString()} PLAYS
+                </div>
+              </div>
+
+              {plays.length === 0 ? (
+                <div className="p-16 text-center text-slate-500 text-sm">対象作品がありません</div>
+              ) : (
+                <div className="p-4 sm:p-5 grid grid-cols-1 gap-3">
+                  {plays.map((p) => {
+                    const playHref = `/plays/${encodeURIComponent(p.slugOrId)}`;
+                    const seriesHref = p.franchiseName
+                      ? `/series/${encodeURIComponent(p.franchiseName)}`
+                      : null;
+
+                    return (
+                      <div
+                        key={p.id}
+                        className="group rounded-xl border border-white/5 bg-black/30 p-5 hover:border-white/15 hover:bg-white/[0.03] transition-all"
+                      >
+                        <div className="flex items-start justify-between gap-4">
+                          <div className="min-w-0">
+                            <Link
+                              to={playHref}
+                              className="block text-white font-bold leading-snug group-hover:text-neon-cyan transition-colors"
+                            >
+                              {p.title}
+                            </Link>
+
+                            {(p.franchiseName || p.date) && (
+                              <div className="mt-1.5 text-[11px] text-slate-500 flex items-center gap-0">
+                                {p.franchiseName && (
+                                  <>
+                                    {seriesHref ? (
+                                      <Link to={seriesHref} className="hover:text-slate-300 transition-colors">
+                                        {p.franchiseName}
+                                      </Link>
+                                    ) : (
+                                      <span>{p.franchiseName}</span>
+                                    )}
+                                  </>
+                                )}
+                                {p.franchiseName && p.date && <span className="mx-2 text-slate-700">•</span>}
+                                {p.date && <span className="font-mono text-[10px]">{p.date}</span>}
+                              </div>
+                            )}
+                          </div>
+
+                          <Link
+                            to={playHref}
+                            className="shrink-0 w-9 h-9 rounded-full bg-white/5 border border-white/5 flex items-center justify-center text-white/20 group-hover:bg-white/10 group-hover:text-white transition-all"
+                            aria-label="作品詳細へ"
+                          >
+                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
+                          </Link>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
+
+            {/* --- BOTTOM NAV --- */}
+            <div className="flex flex-wrap gap-3 justify-center">
               <Link
                 to="/tags"
-                className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-white/10 transition-colors"
+                className="px-6 py-2.5 rounded-full bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-white/10 transition-all"
               >
                 タグ一覧へ
               </Link>
               <Link
                 to="/search"
-                className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-white/10 transition-colors"
+                className="px-6 py-2.5 rounded-full bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-white/10 transition-all"
               >
                 検索へ
               </Link>
+              <Link
+                to="/series"
+                className="px-6 py-2.5 rounded-full bg-white/5 border border-white/10 text-white text-xs font-bold hover:bg-white/10 transition-all"
+              >
+                シリーズ一覧へ
+              </Link>
             </div>
-          </div>
-
-          <div className="bg-theater-surface/30 border border-white/10 rounded-2xl overflow-hidden">
-            <div className="px-5 py-4 border-b border-white/5 bg-black/20 flex items-center justify-between">
-              <div className="text-[10px] font-bold uppercase tracking-widest text-slate-500">LIST</div>
-              <div className="text-[10px] text-slate-500">{plays.length.toLocaleString()} 作品</div>
-            </div>
-
-            {plays.length === 0 ? (
-              <div className="p-10 text-center text-slate-500">対象作品がありません</div>
-            ) : (
-              <div className="p-4 sm:p-5 grid grid-cols-1 gap-3">
-                {plays.map((p) => {
-                  const playHref = `/plays/${encodeURIComponent(p.slugOrId)}`;
-                  // ✅ SeriesDetail の route が /series/:name なので franchiseName を渡す（slugが必要なら後で変更）
-                  const seriesHref = p.franchiseName ? `/series/${encodeURIComponent(p.franchiseName)}` : null;
-
-                  return (
-                    <div
-                      key={p.id}
-                      className="rounded-xl border border-white/10 bg-black/30 p-4 hover:border-white/20 hover:bg-white/5 transition-colors"
-                    >
-                      <div className="flex items-start justify-between gap-3">
-                        <div className="min-w-0">
-                          <Link to={playHref} className="block text-white font-semibold leading-snug hover:underline">
-                            {p.title}
-                          </Link>
-
-                          {(p.franchiseName || p.date) && (
-                            <div className="mt-1 text-[11px] text-slate-500">
-                              {p.franchiseName && (
-                                <>
-                                  {seriesHref ? (
-                                    <Link to={seriesHref} className="hover:underline">
-                                      {p.franchiseName}
-                                    </Link>
-                                  ) : (
-                                    <span>{p.franchiseName}</span>
-                                  )}
-                                </>
-                              )}
-                              {p.franchiseName && p.date ? <span className="mx-2">•</span> : null}
-                              {p.date ? <span>{p.date}</span> : null}
-                            </div>
-                          )}
-                        </div>
-
-                        <Link
-                          to={playHref}
-                          className="shrink-0 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white text-[11px] font-bold hover:bg-white/10 transition-colors"
-                        >
-                          作品詳細 →
-                        </Link>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            )}
-          </div>
-        </>
-      )}
+          </>
+        );
+      })()}
     </div>
   );
 };
