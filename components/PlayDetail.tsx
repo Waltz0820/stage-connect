@@ -452,9 +452,12 @@ const PlayDetail: React.FC = () => {
         <div className="flex flex-col gap-4">
           <div>
             {play.franchise && (
-              <span className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-neon-pink mb-4 bg-neon-pink/10 px-3 py-1 rounded border border-neon-pink/20 shadow-[0_0_10px_rgba(233,68,166,0.2)]">
+              <Link
+                to={`/series/${encodeURIComponent(play.franchise_slug || play.franchise)}`}
+                className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-neon-pink mb-4 bg-neon-pink/10 px-3 py-1 rounded border border-neon-pink/20 shadow-[0_0_10px_rgba(233,68,166,0.2)] hover:bg-neon-pink/20 hover:border-neon-pink/40 transition-all"
+              >
                 {play.franchise}
-              </span>
+              </Link>
             )}
 
             <div className="flex items-start justify-between gap-4 mb-2">
