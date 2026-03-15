@@ -116,7 +116,7 @@ const PlayDetail: React.FC = () => {
 
   const hasAnyCredits = creditsAll.length > 0;
 
-  const castTop = useMemo(() => cast.slice(0, 3).map((a) => a.name).join("、"), [cast]);
+  const castTop = useMemo(() => cast.slice(0, 3).map((item) => item.actor.name).join("、"), [cast]);
   const castNames = castTop ? `${castTop}ら` : "未定";
 
   const hasVodLinks = useMemo(() => !!play?.vod?.dmm, [play]);
