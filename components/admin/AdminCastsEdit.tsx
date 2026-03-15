@@ -17,6 +17,8 @@ type CastRow = {
   actor?: ActorRow | null;
 };
 
+const normalizeCastValue = (value?: string | null) => (value ?? "").trim();
+
 const AdminCastsEdit: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
   const playSlug = useMemo(() => (slug ? decodeURIComponent(slug) : ""), [slug]);
@@ -157,16 +159,24 @@ const AdminCastsEdit: React.FC = () => {
     setMsg("");
     setBusy(true);
     try {
-      if (casts.some((c) => c.actor_id === pick.id)) {
-        setMsg("すでに登録済みです");
+      const nextRole = normalizeCastValue(role);
+      const nextGroup = normalizeCastValue(castGroupNew);
+
+      const hasExactDuplicate = casts.some((c) => {
+        if (c.actor_id !== pick.id) return false;
+        return normalizeCastValue(c.role_name) === nextRole && normalizeCastValue(c.cast_group) === nextGroup;
+      });
+
+      if (hasExactDuplicate) {
+        setMsg("同じ俳優・役名・グループの組み合わせは既に登録されています");
         return;
       }
 
       const payload = {
         play_id: play.id,
         actor_id: pick.id,
-        role_name: role.trim() || null,
-        cast_group: castGroupNew.trim() || null,
+        role_name: nextRole || null,
+        cast_group: nextGroup || null,
         is_starring: starringNew,
         billing_order: parseBilling(billingNew),
       };
@@ -204,7 +214,7 @@ const AdminCastsEdit: React.FC = () => {
   };
 
   const updateRole = async (castId: string) => {
-    const next = (roleDraft[castId] ?? "").trim();
+    const next = normalizeCastValue(roleDraft[castId]);
     if (saving[castId]) return;
 
     markSaving(castId, true);
@@ -221,7 +231,7 @@ const AdminCastsEdit: React.FC = () => {
   };
 
   const updateCastGroup = async (castId: string) => {
-    const next = (castGroupDraft[castId] ?? "").trim();
+    const next = normalizeCastValue(castGroupDraft[castId]);
     if (saving[castId]) return;
 
     markSaving(castId, true);
@@ -279,7 +289,7 @@ const AdminCastsEdit: React.FC = () => {
   const visibleCasts = useMemo(() => {
     return casts.filter((c) => {
       if (onlyStarring && !Boolean(starringDraft[c.id])) return false;
-      if (onlyMissingRole && (roleDraft[c.id] ?? "").trim() !== "") return false;
+      if (onlyMissingRole && normalizeCastValue(roleDraft[c.id]) !== "") return false;
       return true;
     });
   }, [casts, onlyMissingRole, onlyStarring, roleDraft, starringDraft]);
@@ -535,7 +545,7 @@ const AdminCastsEdit: React.FC = () => {
           </button>
 
           <p className="text-xs text-slate-500">
-            この画面は casts.actor_id -&gt; actors.id の外部キー前提です。役名とグループは未入力なら NULL のまま保存します。
+            この画面は casts.actor_id -&gt; actors.id の外部キー前提です。同じ俳優でも役名やグループが違えば複数行で登録できます。
           </p>
         </div>
       </div>

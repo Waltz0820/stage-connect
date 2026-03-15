@@ -63,6 +63,16 @@ type PlayCast = {
 const SITE_NAME = "Stage Connect";
 const CREDIT_VISIBLE_COUNT = 3;
 
+const mergeDelimitedValues = (...values: Array<string | null | undefined>): string | null => {
+  const parts = values
+    .flatMap((value) => String(value ?? "").split("/"))
+    .map((value) => value.trim())
+    .filter(Boolean);
+
+  if (parts.length === 0) return null;
+  return Array.from(new Set(parts)).join(" / ");
+};
+
 const PlayDetail: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
 
@@ -117,30 +127,31 @@ const PlayDetail: React.FC = () => {
 
   const hasAnyCredits = creditsAll.length > 0;
   const groupedCast = useMemo(() => {
-    const groups: Array<{ name: string | null; items: PlayCast[] }> = [];
-    const byName = new Map<string, PlayCast[]>();
-    const ungrouped: PlayCast[] = [];
+    const groups = new Map<string, { name: string | null; items: PlayCast[] }>();
 
     for (const item of cast) {
-      const name = item.castGroup?.trim() || null;
-      if (!name) {
-        ungrouped.push(item);
+      const groupName = item.castGroup?.trim() || null;
+      const groupKey = groupName ?? "__ungrouped__";
+      const currentGroup = groups.get(groupKey) ?? { name: groupName, items: [] };
+      const actorKey = item.actor.slug || item.actor.name;
+      const existingIndex = currentGroup.items.findIndex((entry) => (entry.actor.slug || entry.actor.name) === actorKey);
+
+      if (existingIndex === -1) {
+        currentGroup.items.push(item);
+        groups.set(groupKey, currentGroup);
         continue;
       }
-      const list = byName.get(name) ?? [];
-      list.push(item);
-      byName.set(name, list);
+
+      const existing = currentGroup.items[existingIndex];
+      currentGroup.items[existingIndex] = {
+        ...existing,
+        roleName: mergeDelimitedValues(existing.roleName, item.roleName),
+        isStarring: Boolean(existing.isStarring || item.isStarring),
+      };
+      groups.set(groupKey, currentGroup);
     }
 
-    for (const [name, items] of byName.entries()) {
-      groups.push({ name, items });
-    }
-
-    if (ungrouped.length > 0) {
-      groups.push({ name: null, items: ungrouped });
-    }
-
-    return groups;
+    return Array.from(groups.values());
   }, [cast]);
 
   const castTop = useMemo(() => cast.slice(0, 3).map((item) => item.actor.name).join("、"), [cast]);
