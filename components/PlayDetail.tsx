@@ -82,6 +82,29 @@ const PlayDetail: React.FC = () => {
   const [notFound, setNotFound] = useState(false);
   const [isCreditsOpen, setIsCreditsOpen] = useState(false);
 
+  const scrollToCast = () => {
+    if (typeof document === "undefined") return;
+    const castSection = document.getElementById("cast");
+    if (!castSection) return;
+    castSection.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
+  useEffect(() => {
+    const onDocumentClick = (event: MouseEvent) => {
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+
+      const anchor = target.closest('a[href="#cast"]');
+      if (!anchor) return;
+
+      event.preventDefault();
+      scrollToCast();
+    };
+
+    document.addEventListener("click", onDocumentClick);
+    return () => document.removeEventListener("click", onDocumentClick);
+  }, []);
+
   const normalizeNames = (names: any): string => {
     if (!names) return "";
     if (Array.isArray(names)) return names.filter(Boolean).join("　/　");
@@ -767,7 +790,7 @@ const PlayDetail: React.FC = () => {
         </div>
       </div>
 
-      <section id="cast" className="pt-16 border-t border-white/10 mt-16">
+      <section id="cast" className="scroll-mt-24 pt-16 border-t border-white/10 mt-16">
         <h2 className="text-2xl font-bold text-white mb-8 tracking-wide">出演キャスト</h2>
 
         {cast.length > 0 ? (
