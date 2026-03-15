@@ -56,6 +56,7 @@ type PlayRecord = {
 type PlayCast = {
   actor: Actor;
   roleName?: string | null;
+  castGroup?: string | null;
   isStarring?: boolean | null;
 };
 
@@ -115,6 +116,32 @@ const PlayDetail: React.FC = () => {
   }, [creditsAll]);
 
   const hasAnyCredits = creditsAll.length > 0;
+  const groupedCast = useMemo(() => {
+    const groups: Array<{ name: string | null; items: PlayCast[] }> = [];
+    const byName = new Map<string, PlayCast[]>();
+    const ungrouped: PlayCast[] = [];
+
+    for (const item of cast) {
+      const name = item.castGroup?.trim() || null;
+      if (!name) {
+        ungrouped.push(item);
+        continue;
+      }
+      const list = byName.get(name) ?? [];
+      list.push(item);
+      byName.set(name, list);
+    }
+
+    for (const [name, items] of byName.entries()) {
+      groups.push({ name, items });
+    }
+
+    if (ungrouped.length > 0) {
+      groups.push({ name: null, items: ungrouped });
+    }
+
+    return groups;
+  }, [cast]);
 
   const castTop = useMemo(() => cast.slice(0, 3).map((item) => item.actor.name).join("、"), [cast]);
   const castNames = castTop ? `${castTop}ら` : "未定";
@@ -326,6 +353,7 @@ const PlayDetail: React.FC = () => {
                   is_starring,
                   billing_order,
                   role_name,
+                  cast_group,
                   created_at,
                   actor:actors (
                     slug,
@@ -351,6 +379,7 @@ const PlayDetail: React.FC = () => {
                     return {
                       actor: normalizeActorRow(row.actor),
                       roleName: row.role_name ?? null,
+                      castGroup: row.cast_group ?? null,
                       isStarring: Boolean(row.is_starring),
                     } satisfies PlayCast;
                   })
@@ -731,14 +760,26 @@ const PlayDetail: React.FC = () => {
         <h2 className="text-2xl font-bold text-white mb-8 tracking-wide">出演キャスト</h2>
 
         {cast.length > 0 ? (
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-            {cast.map((castItem) => (
-              <ActorCard
-                key={`${castItem.actor.slug}-${castItem.roleName ?? "cast"}`}
-                actor={castItem.actor}
-                subtitle={castItem.roleName || undefined}
-                badge={castItem.isStarring ? "MAIN CAST" : undefined}
-              />
+          <div className="space-y-10">
+            {groupedCast.map((group, groupIndex) => (
+              <div key={group.name ?? `ungrouped-${groupIndex}`} className="space-y-4">
+                {group.name && (
+                  <div className="inline-flex items-center rounded-full border border-neon-pink/20 bg-neon-pink/10 px-4 py-1.5 text-sm font-bold tracking-wide text-neon-pink">
+                    {group.name}
+                  </div>
+                )}
+
+                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                  {group.items.map((castItem) => (
+                    <ActorCard
+                      key={`${castItem.actor.slug}-${castItem.roleName ?? "cast"}-${group.name ?? "ungrouped"}`}
+                      actor={castItem.actor}
+                      subtitle={castItem.roleName || undefined}
+                      badge={castItem.isStarring ? "MAIN CAST" : undefined}
+                    />
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         ) : (
