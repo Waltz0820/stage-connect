@@ -5,6 +5,7 @@ import Field from "./widgets/Field";
 import JsonArea from "./widgets/JsonArea";
 import TagMultiSelect, { TagRow } from "./widgets/TagMultiSelect";
 import { parseJsonOr, safeTrim, stringifyPretty, toSlug } from "./widgets/utils";
+import { GENRE_LABELS, type PlayGenre } from "../../lib/types";
 
 type Mode = "new" | "edit";
 
@@ -24,6 +25,7 @@ type PlayRow = {
   summary?: string | null;
   period?: string | null;
   venue?: string | null;
+  genre?: PlayGenre | null;
   vod?: any;
   franchise_id?: string | null;
   credits?: CreditItem[] | null;
@@ -176,6 +178,7 @@ const creditsStats = (credits: CreditItem[] | null | undefined) => {
 // ===== /credits helpers =====
 
 const MAX_TAGS = 4;
+const PLAY_GENRES = Object.keys(GENRE_LABELS) as PlayGenre[];
 
 const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
   const nav = useNavigate();
@@ -190,6 +193,7 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
   const [summary, setSummary] = useState("");
   const [period, setPeriod] = useState("");
   const [venue, setVenue] = useState("");
+  const [genre, setGenre] = useState<PlayGenre | "">("");
   const [franchiseId, setFranchiseId] = useState<string>("");
   const [vodText, setVodText] = useState("");
 
@@ -290,6 +294,7 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
       setSummary("");
       setPeriod("");
       setVenue("");
+      setGenre("");
       setFranchiseId("");
       setVodText(stringifyPretty({}));
 
@@ -308,7 +313,7 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
       try {
         const { data, error } = await supabase
           .from("plays")
-          .select("id,slug,title,summary,period,venue,vod,franchise_id,credits")
+          .select("id,slug,title,summary,period,venue,genre,vod,franchise_id,credits")
           .eq("slug", key)
           .maybeSingle();
         if (error) throw error;
@@ -321,6 +326,7 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         setSummary(r.summary ?? "");
         setPeriod(r.period ?? "");
         setVenue(r.venue ?? "");
+        setGenre((r.genre as PlayGenre | null) ?? "");
         setFranchiseId(r.franchise_id ?? "");
         setVodText(stringifyPretty(r.vod ?? {}));
 
@@ -380,6 +386,7 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         summary: safeTrim(summary) || null,
         period: safeTrim(period) || null,
         venue: safeTrim(venue) || null,
+        genre: genre || null,
         franchise_id: franchiseId || null,
         vod: parseJsonOr<any>(vodText, {}),
         credits: creditsValue,
@@ -543,6 +550,21 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
               {frs.map((f) => (
                 <option key={f.id} value={f.id}>
                   {f.name}
+                </option>
+              ))}
+            </select>
+          </Field>
+
+          <Field label="genre" hint="一覧の絞り込みや作品カード表示に使います">
+            <select
+              className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
+              value={genre}
+              onChange={(e) => setGenre((e.target.value as PlayGenre | "") || "")}
+            >
+              <option value="">未設定</option>
+              {PLAY_GENRES.map((value) => (
+                <option key={value} value={value}>
+                  {GENRE_LABELS[value]}
                 </option>
               ))}
             </select>
