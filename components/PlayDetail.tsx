@@ -53,6 +53,12 @@ type PlayRecord = {
   credits?: CreditsObj | CreditItem[] | null;
 };
 
+type PlayCast = {
+  actor: Actor;
+  roleName?: string | null;
+  isStarring?: boolean | null;
+};
+
 const SITE_NAME = "Stage Connect";
 const CREDIT_VISIBLE_COUNT = 3;
 
@@ -60,7 +66,7 @@ const PlayDetail: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
 
   const [play, setPlay] = useState<PlayRecord | null>(null);
-  const [cast, setCast] = useState<Actor[]>([]);
+  const [cast, setCast] = useState<PlayCast[]>([]);
   const [loading, setLoading] = useState(true);
   const [notFound, setNotFound] = useState(false);
   const [isCreditsOpen, setIsCreditsOpen] = useState(false);
@@ -263,7 +269,7 @@ const PlayDetail: React.FC = () => {
         }
 
         let mappedPlay: PlayRecord | null = null;
-        let castActors: Actor[] = [];
+        let castActors: PlayCast[] = [];
 
         if (dbPlay) {
           let resolvedTags: string[] = [];
@@ -318,7 +324,9 @@ const PlayDetail: React.FC = () => {
                 .from("casts")
                 .select(`
                   is_starring,
+                  billing_order,
                   role_name,
+                  created_at,
                   actor:actors (
                     slug,
                     name,
@@ -333,13 +341,20 @@ const PlayDetail: React.FC = () => {
                 `)
                 .eq("play_id", dbPlay.id)
                 .order("is_starring", { ascending: false })
+                .order("billing_order", { ascending: true, nullsFirst: false })
                 .order("created_at", { ascending: true });
 
               if (!castError && castRows && castRows.length > 0) {
                 castActors = (castRows as any[])
-                  .map((row) => row.actor)
-                  .filter(Boolean)
-                  .map(normalizeActorRow);
+                  .map((row) => {
+                    if (!row.actor) return null;
+                    return {
+                      actor: normalizeActorRow(row.actor),
+                      roleName: row.role_name ?? null,
+                      isStarring: Boolean(row.is_starring),
+                    } satisfies PlayCast;
+                  })
+                  .filter(Boolean) as PlayCast[];
               }
             } catch (err) {
               console.warn("[PlayDetail] casts query failed:", err);
@@ -371,11 +386,11 @@ const PlayDetail: React.FC = () => {
             credits: localPlay.credits ?? null,
           };
 
-          castActors = getActorsByPlaySlug(slug);
+          castActors = getActorsByPlaySlug(slug).map((actor) => ({ actor }));
         }
 
         if (dbPlay && castActors.length === 0) {
-          castActors = getActorsByPlaySlug(slug);
+          castActors = getActorsByPlaySlug(slug).map((actor) => ({ actor }));
         }
 
         if (cancelled) return;
@@ -717,8 +732,13 @@ const PlayDetail: React.FC = () => {
 
         {cast.length > 0 ? (
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-            {cast.map((actor) => (
-              <ActorCard key={actor.slug} actor={actor} />
+            {cast.map((castItem) => (
+              <ActorCard
+                key={`${castItem.actor.slug}-${castItem.roleName ?? "cast"}`}
+                actor={castItem.actor}
+                subtitle={castItem.roleName || undefined}
+                badge={castItem.isStarring ? "MAIN CAST" : undefined}
+              />
             ))}
           </div>
         ) : (

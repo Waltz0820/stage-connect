@@ -33,6 +33,7 @@ export type Play = {
   summary?: string;
   period?: string;
   venue?: string;
+  roleName?: string | null;
   actorSlugs: string[];
   tags?: string[];
   vod?: {

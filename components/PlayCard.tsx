@@ -156,6 +156,11 @@ const PlayCard: React.FC<PlayCardProps> = ({
           <h3 className="text-lg font-bold text-white leading-snug tracking-wide group-hover:text-neon-pink transition-colors duration-300">
             {play.title}
           </h3>
+          {(play as any).roleName && (
+            <p className="mt-2 text-sm font-medium text-slate-300 line-clamp-2">
+              {(play as any).roleName}
+            </p>
+          )}
         </div>
 
         {/* Summary */}

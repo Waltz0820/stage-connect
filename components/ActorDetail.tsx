@@ -27,6 +27,7 @@ type PlayLike = {
   summary?: string | null;
   period?: string | null;
   venue?: string | null;
+  roleName?: string | null;
   vod?: any;
   tags?: string[] | null;
   franchise?: string | null;
@@ -36,6 +37,16 @@ type PlayLike = {
 type CoStarItem = { actor: Actor; count: number };
 
 const SITE_NAME = "Stage Connect";
+
+const mergeRoleNames = (current?: string | null, next?: string | null): string | null => {
+  const values = [current, next]
+    .flatMap((value) => String(value ?? "").split("/"))
+    .map((value) => value.trim())
+    .filter(Boolean);
+
+  if (values.length === 0) return null;
+  return Array.from(new Set(values)).join(" / ");
+};
 
 
 // RPC / ネスト取得どちらでも最低限Actor型に寄せる（共演カード表示用）
@@ -322,6 +333,7 @@ const ActorDetail: React.FC = () => {
             .from("casts")
             .select(
               `
+              role_name,
               play:plays (
                 id,
                 slug,
@@ -358,6 +370,7 @@ const ActorDetail: React.FC = () => {
                 summary: p.summary ?? null,
                 period: p.period ?? null,
                 venue: p.venue ?? null,
+                roleName: row.role_name ?? null,
                 vod: p.vod ?? null,
                 // ✅ tags は play_tags join 由来に統一（旧tagsカラムは読まない）
                 tags: normalizeTagsFromJoin(p),
@@ -365,7 +378,16 @@ const ActorDetail: React.FC = () => {
                 genre: p.genre ?? null,
               };
 
-              uniq.set(mapped.slug, mapped);
+              const existing = uniq.get(mapped.slug);
+              if (!existing) {
+                uniq.set(mapped.slug, mapped);
+                continue;
+              }
+
+              uniq.set(mapped.slug, {
+                ...existing,
+                roleName: mergeRoleNames(existing.roleName, mapped.roleName),
+              });
             }
 
             setPlaysDb(Array.from(uniq.values()));

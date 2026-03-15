@@ -6,9 +6,11 @@ import FavoriteButton from "./FavoriteButton";
 
 interface ActorCardProps {
   actor: Actor;
+  subtitle?: string;
+  badge?: string;
 }
 
-const ActorCard: React.FC<ActorCardProps> = ({ actor }) => {
+const ActorCard: React.FC<ActorCardProps> = ({ actor, subtitle, badge }) => {
   const truncateProfile = (text?: string, maxLength: number = 70) => {
     if (!text) return "";
     if (text.length <= maxLength) return text;
@@ -37,6 +39,11 @@ const ActorCard: React.FC<ActorCardProps> = ({ actor }) => {
           <ActorAvatar imageUrl={imageUrl} alt={actor.name} size="sm" />
 
           <div className="flex-1 min-w-0">
+            {badge && (
+              <span className="mb-2 inline-flex max-w-full rounded-full border border-neon-pink/30 bg-neon-pink/10 px-2 py-1 text-[10px] font-bold tracking-[0.18em] text-neon-pink">
+                {badge}
+              </span>
+            )}
             {actor.kana && (
               <span className="text-[10px] text-neon-purple font-medium tracking-wider opacity-80 block truncate">
                 {actor.kana}
@@ -45,6 +52,11 @@ const ActorCard: React.FC<ActorCardProps> = ({ actor }) => {
             <h3 className="text-xl font-bold text-white tracking-wide group-hover:text-neon-purple transition-colors duration-300 truncate">
               {actor.name}
             </h3>
+            {subtitle && (
+              <p className="mt-2 text-sm font-medium text-slate-300 line-clamp-2">
+                {subtitle}
+              </p>
+            )}
             <div className="h-px w-8 bg-gradient-to-r from-neon-purple to-transparent mt-2 group-hover:w-full transition-all duration-500 ease-out opacity-50"></div>
           </div>
         </div>
