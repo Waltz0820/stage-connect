@@ -10,7 +10,7 @@ import { normalizeActorRow } from "../lib/utils/normalizeActorRow";
 import { toPlainText, truncate } from "../lib/utils/text";
 import { useSiteUrl, useOgImage } from "../lib/hooks/useSiteUrl";
 
-import ActorCard from "./ActorCard";
+import CastCard from "./CastCard";
 import TagBadge from "./TagBadge";
 import FavoriteButton from "./FavoriteButton";
 import ShareButton from "./ShareButton";
@@ -805,10 +805,10 @@ const PlayDetail: React.FC = () => {
 
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                   {group.items.map((castItem) => (
-                    <ActorCard
+                    <CastCard
                       key={`${castItem.actor.slug}-${castItem.roleName ?? "cast"}-${group.name ?? "ungrouped"}`}
                       actor={castItem.actor}
-                      subtitle={castItem.roleName || undefined}
+                      roleName={castItem.roleName || undefined}
                       badge={castItem.isStarring ? "MAIN CAST" : undefined}
                     />
                   ))}
