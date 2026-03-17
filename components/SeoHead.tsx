@@ -1,4 +1,3 @@
-// src/components/SeoHead.tsx
 import { useEffect } from "react";
 
 type MetaKV = { name?: string; property?: string; content?: string };
@@ -9,18 +8,10 @@ type Props = {
   description?: string;
   canonical?: string;
   robots?: string;
-
-  // OG / Twitter をまとめて渡してOK
   metas?: MetaKV[];
-
-  // JSON-LD（オブジェクト or 配列）
   jsonLd?: any | any[];
 };
 
-/**
- * Helmetが入らない環境向けの「簡易SEO Head」。
- * document.head に対して meta/link/script を upsert します。
- */
 export default function SeoHead({
   title,
   description,
@@ -30,16 +21,18 @@ export default function SeoHead({
   jsonLd,
 }: Props) {
   useEffect(() => {
-    // ---- title ----
+    const desiredMetaSelectors = new Set<string>();
+    const desiredLinkSelectors = new Set<string>();
+
     if (title) document.title = title;
 
-    // ---- helpers ----
     const ensureMeta = (key: { name?: string; property?: string }, content?: string) => {
       const attr = key.name ? "name" : "property";
       const value = key.name ?? key.property;
       if (!value) return;
 
       const selector = `meta[${attr}="${CSS.escape(value)}"][data-seo="1"]`;
+      desiredMetaSelectors.add(selector);
       let el = document.head.querySelector(selector) as HTMLMetaElement | null;
 
       if (!content) {
@@ -53,11 +46,13 @@ export default function SeoHead({
         el.setAttribute(attr, value);
         document.head.appendChild(el);
       }
+
       el.setAttribute("content", content);
     };
 
     const ensureLink = (link: LinkKV) => {
       const selector = `link[rel="${CSS.escape(link.rel)}"][data-seo="1"]`;
+      desiredLinkSelectors.add(selector);
       let el = document.head.querySelector(selector) as HTMLLinkElement | null;
 
       if (!link.href) {
@@ -71,6 +66,7 @@ export default function SeoHead({
         el.setAttribute("rel", link.rel);
         document.head.appendChild(el);
       }
+
       el.setAttribute("href", link.href);
     };
 
@@ -90,26 +86,39 @@ export default function SeoHead({
         el.setAttribute("data-seo", "1");
         document.head.appendChild(el);
       }
+
       el.text = JSON.stringify(payload);
     };
 
-    // ---- base metas ----
     ensureMeta({ name: "description" }, description);
     ensureMeta({ name: "robots" }, robots);
-
-    // ---- canonical ----
     ensureLink({ rel: "canonical", href: canonical || "" });
 
-    // ---- custom metas (og/twitter/anything) ----
-    metas.forEach((m) => {
-      if (m.name) ensureMeta({ name: m.name }, m.content);
-      if (m.property) ensureMeta({ property: m.property }, m.content);
+    metas.forEach((meta) => {
+      if (meta.name) ensureMeta({ name: meta.name }, meta.content);
+      if (meta.property) ensureMeta({ property: meta.property }, meta.content);
     });
 
-    // ---- json-ld ----
     ensureJsonLd(jsonLd);
 
-    // cleanupは基本不要（遷移時に上書きされる）
+    document.head.querySelectorAll('meta[data-seo="1"]').forEach((node) => {
+      const el = node as HTMLMetaElement;
+      const attr = el.getAttribute("name") ? "name" : el.getAttribute("property") ? "property" : "";
+      const value = attr ? el.getAttribute(attr) : "";
+      if (!attr || !value) return;
+
+      const selector = `meta[${attr}="${CSS.escape(value)}"][data-seo="1"]`;
+      if (!desiredMetaSelectors.has(selector)) el.remove();
+    });
+
+    document.head.querySelectorAll('link[data-seo="1"]').forEach((node) => {
+      const el = node as HTMLLinkElement;
+      const rel = el.getAttribute("rel");
+      if (!rel) return;
+
+      const selector = `link[rel="${CSS.escape(rel)}"][data-seo="1"]`;
+      if (!desiredLinkSelectors.has(selector)) el.remove();
+    });
   }, [title, description, canonical, robots, JSON.stringify(metas), JSON.stringify(jsonLd)]);
 
   return null;
