@@ -62,19 +62,18 @@ export default async function handler(req: any, res: any) {
   try {
     const urls: UrlItem[] = [];
 
-    // static pages
     urls.push(
       { loc: `${SITE_URL}/`, changefreq: 'daily', priority: 1.0 },
       { loc: `${SITE_URL}/plays`, changefreq: 'daily', priority: 0.8 },
       { loc: `${SITE_URL}/actors`, changefreq: 'daily', priority: 0.8 },
       { loc: `${SITE_URL}/series`, changefreq: 'weekly', priority: 0.7 },
       { loc: `${SITE_URL}/guide`, changefreq: 'weekly', priority: 0.7 },
-      { loc: `${SITE_URL}/tags`, changefreq: 'weekly', priority: 0.6 },
       { loc: `${SITE_URL}/watch`, changefreq: 'weekly', priority: 0.6 },
-      { loc: `${SITE_URL}/watch/dmm`, changefreq: 'weekly', priority: 0.5 }
+      { loc: `${SITE_URL}/watch/dmm`, changefreq: 'weekly', priority: 0.5 },
+      { loc: `${SITE_URL}/watch/u-next`, changefreq: 'weekly', priority: 0.4 },
+      { loc: `${SITE_URL}/watch/danime`, changefreq: 'weekly', priority: 0.4 }
     );
 
-    // plays
     const plays = await fetchAll<{ slug: string; updated_at?: string | null; created_at?: string | null }>(
       'plays',
       'slug, updated_at, created_at'
@@ -89,7 +88,6 @@ export default async function handler(req: any, res: any) {
       });
     }
 
-    // actors
     const actors = await fetchAll<{ slug: string; updated_at?: string | null; created_at?: string | null }>(
       'actors',
       'slug, updated_at, created_at'
@@ -104,7 +102,6 @@ export default async function handler(req: any, res: any) {
       });
     }
 
-    // series (franchises)
     const franchises = await fetchAll<{ slug?: string | null; name: string; updated_at?: string | null; created_at?: string | null }>(
       'franchises',
       'slug, name, updated_at, created_at'
@@ -120,7 +117,6 @@ export default async function handler(req: any, res: any) {
       });
     }
 
-    // guide (editorials) : published only
     const editorials = await fetchAll<{ slug: string; published_at?: string | null; updated_at?: string | null }>(
       'editorials',
       'slug, published_at, updated_at',
@@ -134,24 +130,6 @@ export default async function handler(req: any, res: any) {
         changefreq: 'monthly',
         priority: 0.5,
       });
-    }
-
-    // tags（テーブルが存在しない場合はスキップ）
-    try {
-      const tags = await fetchAll<{ slug: string }>(
-        'tags',
-        'slug'
-      );
-      for (const t of tags) {
-        if (!t?.slug) continue;
-        urls.push({
-          loc: `${SITE_URL}/tags/${encodeURIComponent(t.slug)}`,
-          changefreq: 'weekly',
-          priority: 0.4,
-        });
-      }
-    } catch (_) {
-      // tags table may not exist yet — skip silently
     }
 
     const body =
