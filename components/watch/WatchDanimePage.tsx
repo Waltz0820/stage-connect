@@ -2,11 +2,14 @@ import React, { useMemo } from "react";
 import { Link } from "react-router-dom";
 import Breadcrumbs from "../Breadcrumbs";
 import SeoHead from "../SeoHead";
+import { useOgImage, useSiteUrl } from "../../lib/hooks/useSiteUrl";
 
 const DMM_PREMIUM_URL =
   "https://al.dmm.com/?lurl=https%3A%2F%2Fpremium.dmm.com%2F&af_id=stageconnect-001&ch=link_tool&ch_id=text";
 
 const WatchDanimePage: React.FC = () => {
+  const siteUrl = useSiteUrl();
+  const ogImage = useOgImage();
   const breadcrumbs = useMemo(
     () => [
       { label: "配信で観る", to: "/watch" },
@@ -19,6 +22,8 @@ const WatchDanimePage: React.FC = () => {
     "dアニメストアで2.5次元舞台は観られる？配信状況と舞台ファン向けの選び方";
   const SEO_DESC =
     "dアニメストアで視聴できる2.5次元舞台・ミュージカルの特徴と、舞台ファンに最適な配信サービスの比較ガイド。dアニメとDMMプレミアムの違いを解説。";
+
+  const canonical = useMemo(() => (siteUrl ? `${siteUrl}/watch/danime` : ""), [siteUrl]);
 
   const jsonLdFaq = {
     "@context": "https://schema.org",
@@ -56,7 +61,21 @@ const WatchDanimePage: React.FC = () => {
       <SeoHead
         title={`${SEO_TITLE} | Stage Connect`}
         description={SEO_DESC}
+        canonical={canonical}
         robots="index,follow"
+        metas={[
+          { property: "og:locale", content: "ja_JP" },
+          { property: "og:type", content: "article" },
+          { property: "og:site_name", content: "Stage Connect" },
+          { property: "og:title", content: `${SEO_TITLE} | Stage Connect` },
+          { property: "og:description", content: SEO_DESC },
+          ...(canonical ? [{ property: "og:url", content: canonical }] : []),
+          ...(ogImage ? [{ property: "og:image", content: ogImage }] : []),
+          { name: "twitter:card", content: ogImage ? "summary_large_image" : "summary" },
+          { name: "twitter:title", content: `${SEO_TITLE} | Stage Connect` },
+          { name: "twitter:description", content: SEO_DESC },
+          ...(ogImage ? [{ name: "twitter:image", content: ogImage }] : []),
+        ]}
         jsonLd={jsonLdFaq}
       />
       <Breadcrumbs items={breadcrumbs} />

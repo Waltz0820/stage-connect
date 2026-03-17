@@ -2,11 +2,14 @@ import React, { useMemo } from "react";
 import { Link } from "react-router-dom";
 import Breadcrumbs from "../Breadcrumbs";
 import SeoHead from "../SeoHead";
+import { useOgImage, useSiteUrl } from "../../lib/hooks/useSiteUrl";
 
 const DMM_PREMIUM_URL =
   "https://al.dmm.com/?lurl=https%3A%2F%2Fpremium.dmm.com%2F&af_id=stageconnect-001&ch=link_tool&ch_id=text";
 
 const WatchUnextPage: React.FC = () => {
+  const siteUrl = useSiteUrl();
+  const ogImage = useOgImage();
   const breadcrumbs = useMemo(
     () => [
       { label: "配信で観る", to: "/watch" },
@@ -19,6 +22,8 @@ const WatchUnextPage: React.FC = () => {
     "U-NEXTで2.5次元舞台は観られる？配信ラインナップとおすすめの選び方";
   const SEO_DESC =
     "U-NEXTで視聴できる2.5次元舞台・ミュージカルの特徴と、より2.5次元に特化した配信サービスの選び方を解説。舞台ファン目線での比較ガイド。";
+
+  const canonical = useMemo(() => (siteUrl ? `${siteUrl}/watch/u-next` : ""), [siteUrl]);
 
   const jsonLdFaq = {
     "@context": "https://schema.org",
@@ -56,7 +61,21 @@ const WatchUnextPage: React.FC = () => {
       <SeoHead
         title={`${SEO_TITLE} | Stage Connect`}
         description={SEO_DESC}
+        canonical={canonical}
         robots="index,follow"
+        metas={[
+          { property: "og:locale", content: "ja_JP" },
+          { property: "og:type", content: "article" },
+          { property: "og:site_name", content: "Stage Connect" },
+          { property: "og:title", content: `${SEO_TITLE} | Stage Connect` },
+          { property: "og:description", content: SEO_DESC },
+          ...(canonical ? [{ property: "og:url", content: canonical }] : []),
+          ...(ogImage ? [{ property: "og:image", content: ogImage }] : []),
+          { name: "twitter:card", content: ogImage ? "summary_large_image" : "summary" },
+          { name: "twitter:title", content: `${SEO_TITLE} | Stage Connect` },
+          { name: "twitter:description", content: SEO_DESC },
+          ...(ogImage ? [{ name: "twitter:image", content: ogImage }] : []),
+        ]}
         jsonLd={jsonLdFaq}
       />
       <Breadcrumbs items={breadcrumbs} />

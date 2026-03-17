@@ -475,8 +475,7 @@ const PlayDetail: React.FC = () => {
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[60vh] text-center px-4 animate-fade-in-up">
-        <title>読み込み中… - {SITE_NAME}</title>
-        <meta name="robots" content="noindex,nofollow" />
+        <SeoHead title={`読み込み中… - ${SITE_NAME}`} robots="noindex,nofollow" />
         <p className="text-slate-400 text-sm mb-2">作品情報を読み込み中…</p>
         <div className="w-10 h-10 border-2 border-white/20 border-t-neon-purple rounded-full animate-spin" />
       </div>
@@ -486,8 +485,7 @@ const PlayDetail: React.FC = () => {
   if (!play || notFound) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[60vh] text-center px-4 animate-fade-in-up">
-        <title>作品が見つかりません - {SITE_NAME}</title>
-        <meta name="robots" content="noindex,nofollow" />
+        <SeoHead title={`作品が見つかりません - ${SITE_NAME}`} robots="noindex,nofollow" />
 
         <h2 className="text-2xl font-bold text-white">作品が見つかりませんでした</h2>
         <p className="mt-2 text-slate-400">お探しの作品は見つかりませんでした。</p>

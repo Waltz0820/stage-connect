@@ -506,6 +506,26 @@ const SeriesDetail: React.FC = () => {
     };
   }, [siteUrl, franchise?.name, seriesKey]);
 
+  const canonical = useMemo(() => {
+    if (!siteUrl || !seriesKey) return "";
+    return `${siteUrl}/series/${encodeURIComponent(seriesKey)}`;
+  }, [siteUrl, seriesKey]);
+
+  const seoMetas = useMemo(
+    () => [
+      { property: "og:locale", content: "ja_JP" },
+      { property: "og:type", content: "website" },
+      { property: "og:site_name", content: SITE_NAME },
+      { property: "og:title", content: seoTitle },
+      { property: "og:description", content: seoDescription },
+      ...(canonical ? [{ property: "og:url", content: canonical }] : []),
+      { name: "twitter:card", content: "summary" },
+      { name: "twitter:title", content: seoTitle },
+      { name: "twitter:description", content: seoDescription },
+    ],
+    [canonical, seoDescription, seoTitle]
+  );
+
   if (loading) {
     return (
       <div className="container mx-auto px-6 pt-8 pb-16 lg:px-8 max-w-5xl animate-fade-in-up">
@@ -545,20 +565,14 @@ const SeriesDetail: React.FC = () => {
 
   return (
     <div className="container mx-auto px-6 pt-8 pb-16 lg:px-8 max-w-5xl animate-fade-in-up">
-      <SeoHead title={seoTitle} description={seoDescription} robots="index,follow" />
-
-      {jsonLdFaq && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}
-        />
-      )}
-      {jsonLdBreadcrumbs && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumbs) }}
-        />
-      )}
+      <SeoHead
+        title={seoTitle}
+        description={seoDescription}
+        canonical={canonical}
+        robots="index,follow"
+        metas={seoMetas}
+        jsonLd={[jsonLdFaq, jsonLdBreadcrumbs].filter(Boolean)}
+      />
 
       <Breadcrumbs
         items={[{ label: "シリーズ一覧", to: "/series" }, { label: franchise.name }]}

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { supabase } from "../../lib/supabase";
 import Breadcrumbs from "../Breadcrumbs";
 import SeoHead from "../SeoHead";
+import { useOgImage, useSiteUrl } from "../../lib/hooks/useSiteUrl";
 
 const DMM_PREMIUM_URL =
   "https://al.dmm.com/?lurl=https%3A%2F%2Fpremium.dmm.com%2F&af_id=stageconnect-001&ch=link_tool&ch_id=text";
@@ -24,6 +25,8 @@ type FranchiseItem = {
 const PAGE_SIZE = 12;
 
 const WatchDmmPage: React.FC = () => {
+  const siteUrl = useSiteUrl();
+  const ogImage = useOgImage();
   const [items, setItems] = useState<FranchiseItem[]>([]);
   const [totalCount, setTotalCount] = useState<number | null>(null);
 
@@ -126,6 +129,8 @@ const WatchDmmPage: React.FC = () => {
   const SEO_DESC =
     `2.5次元舞台・ミュージカルをDMM TV（DMMプレミアム）で観るためのガイド。現在${countLabel}シリーズが配信中。刀剣乱舞・ヒプステ・テニミュなど人気作品を網羅。14日間無料トライアルあり。`;
 
+  const canonical = useMemo(() => (siteUrl ? `${siteUrl}/watch/dmm` : ""), [siteUrl]);
+
   const jsonLdFaq = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -170,7 +175,21 @@ const WatchDmmPage: React.FC = () => {
       <SeoHead
         title={`${SEO_TITLE} | Stage Connect`}
         description={SEO_DESC}
+        canonical={canonical}
         robots="index,follow"
+        metas={[
+          { property: "og:locale", content: "ja_JP" },
+          { property: "og:type", content: "article" },
+          { property: "og:site_name", content: "Stage Connect" },
+          { property: "og:title", content: `${SEO_TITLE} | Stage Connect` },
+          { property: "og:description", content: SEO_DESC },
+          ...(canonical ? [{ property: "og:url", content: canonical }] : []),
+          ...(ogImage ? [{ property: "og:image", content: ogImage }] : []),
+          { name: "twitter:card", content: ogImage ? "summary_large_image" : "summary" },
+          { name: "twitter:title", content: `${SEO_TITLE} | Stage Connect` },
+          { name: "twitter:description", content: SEO_DESC },
+          ...(ogImage ? [{ name: "twitter:image", content: ogImage }] : []),
+        ]}
         jsonLd={jsonLdFaq}
       />
       <Breadcrumbs items={breadcrumbs} />

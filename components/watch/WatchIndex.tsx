@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { supabase } from "../../lib/supabase";
 import Breadcrumbs from "../Breadcrumbs";
 import SeoHead from "../SeoHead";
+import { useOgImage, useSiteUrl } from "../../lib/hooks/useSiteUrl";
 
 const DMM_PREMIUM_URL =
   "https://al.dmm.com/?lurl=https%3A%2F%2Fpremium.dmm.com%2F&af_id=stageconnect-001&ch=link_tool&ch_id=text";
@@ -25,6 +26,8 @@ async function safeCount(tableOrView: string): Promise<number | null> {
 
 const WatchIndex: React.FC = () => {
   const [dmmSeriesCount, setDmmSeriesCount] = useState<number | null>(null);
+  const siteUrl = useSiteUrl();
+  const ogImage = useOgImage();
 
   useEffect(() => {
     safeCount("watch_dmm_franchises").then(setDmmSeriesCount);
@@ -33,6 +36,8 @@ const WatchIndex: React.FC = () => {
   const SEO_TITLE = "配信で観る｜2.5次元舞台の配信サービスガイド";
   const SEO_DESC =
     "2.5次元舞台・ミュージカルを配信で観るためのガイド。DMMプレミアム・U-NEXT・dアニメストアの比較や、作品の探し方を解説します。";
+
+  const canonical = useMemo(() => (siteUrl ? `${siteUrl}/watch` : ""), [siteUrl]);
 
   const jsonLdFaq = {
     "@context": "https://schema.org",
@@ -70,7 +75,21 @@ const WatchIndex: React.FC = () => {
       <SeoHead
         title={`${SEO_TITLE} | Stage Connect`}
         description={SEO_DESC}
+        canonical={canonical}
         robots="index,follow"
+        metas={[
+          { property: "og:locale", content: "ja_JP" },
+          { property: "og:type", content: "article" },
+          { property: "og:site_name", content: "Stage Connect" },
+          { property: "og:title", content: `${SEO_TITLE} | Stage Connect` },
+          { property: "og:description", content: SEO_DESC },
+          ...(canonical ? [{ property: "og:url", content: canonical }] : []),
+          ...(ogImage ? [{ property: "og:image", content: ogImage }] : []),
+          { name: "twitter:card", content: ogImage ? "summary_large_image" : "summary" },
+          { name: "twitter:title", content: `${SEO_TITLE} | Stage Connect` },
+          { name: "twitter:description", content: SEO_DESC },
+          ...(ogImage ? [{ name: "twitter:image", content: ogImage }] : []),
+        ]}
         jsonLd={jsonLdFaq}
       />
       <Breadcrumbs items={[{ label: "配信で観る" }]} />
