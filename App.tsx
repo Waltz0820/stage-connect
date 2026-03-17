@@ -37,6 +37,8 @@ import AdminActors from "./components/admin/AdminActors";
 import AdminActorEdit from "./components/admin/AdminActorEdit";
 
 import AdminCastsEdit from "./components/admin/AdminCastsEdit";
+import AdminGuides from "./components/admin/AdminGuides";
+import AdminGuideEdit from "./components/admin/AdminGuideEdit";
 
 import TagsIndexPage from "./components/tags/TagsIndexPage";
 import TagDetailPage from "./components/tags/TagDetailPage";
@@ -221,6 +223,37 @@ const App: React.FC = () => {
           />
 
           {/* Actors */}
+          <Route
+            path="/admin/guides"
+            element={
+              <AdminGuard>
+                <AdminLayout>
+                  <AdminGuides />
+                </AdminLayout>
+              </AdminGuard>
+            }
+          />
+          <Route
+            path="/admin/guides/new"
+            element={
+              <AdminGuard>
+                <AdminLayout>
+                  <AdminGuideEdit mode="new" />
+                </AdminLayout>
+              </AdminGuard>
+            }
+          />
+          <Route
+            path="/admin/guides/:slug"
+            element={
+              <AdminGuard>
+                <AdminLayout>
+                  <AdminGuideEdit mode="edit" />
+                </AdminLayout>
+              </AdminGuard>
+            }
+          />
+
           <Route
             path="/admin/actors"
             element={

@@ -12,7 +12,13 @@ type Editorial = {
   summary?: string | null;
   content?: string | null;
   published_at?: string | null;
+  category?: "series-guides" | "features" | null;
 };
+
+const CATEGORY_LABELS = {
+  "series-guides": "シリーズ整理",
+  features: "編集部ピックアップ",
+} as const;
 
 const GuideDetail: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -105,7 +111,7 @@ const GuideDetail: React.FC = () => {
       try {
         const { data, error } = await supabase
           .from('editorials')
-          .select('id, slug, title, summary, content, published_at')
+          .select('id, slug, title, summary, content, published_at, category')
           .eq('slug', slug)
           .eq('status', 'published')
           .maybeSingle();
@@ -184,6 +190,11 @@ const GuideDetail: React.FC = () => {
       <Breadcrumbs items={[{ label: 'ガイド', to: '/guide' }, { label: item.title }]} />
 
       <div className="mt-6 mb-8">
+        {item.category && (
+          <div className="mb-3 inline-flex rounded-full border border-neon-cyan/20 bg-neon-cyan/10 px-3 py-1 text-[11px] font-bold tracking-widest text-neon-cyan">
+            {CATEGORY_LABELS[item.category]}
+          </div>
+        )}
         <div className="text-xs font-mono text-neon-cyan/80 mb-2">
           {item.published_at ? new Date(item.published_at).toLocaleDateString('ja-JP') : ''}
         </div>

@@ -11,7 +11,13 @@ type Editorial = {
   title: string;
   summary?: string | null;
   published_at?: string | null;
+  category?: "series-guides" | "features" | null;
 };
+
+const CATEGORY_LABELS = {
+  "series-guides": "シリーズ整理",
+  features: "編集部ピックアップ",
+} as const;
 
 const GuideList: React.FC = () => {
   const [items, setItems] = useState<Editorial[]>([]);
@@ -93,7 +99,7 @@ const GuideList: React.FC = () => {
       try {
         const { data, error } = await supabase
           .from('editorials')
-          .select('id, slug, title, summary, published_at')
+          .select('id, slug, title, summary, published_at, category')
           .eq('status', 'published')
           .order('published_at', { ascending: false, nullsFirst: false });
 
@@ -155,6 +161,11 @@ const GuideList: React.FC = () => {
               to={`/guide/${g.slug}`}
               className="bg-theater-surface rounded-xl border border-white/5 p-6 hover:border-neon-cyan/30 transition-colors"
             >
+              {g.category && (
+                <div className="mb-2 inline-flex rounded-full border border-neon-cyan/20 bg-neon-cyan/10 px-2 py-1 text-[10px] font-bold tracking-widest text-neon-cyan">
+                  {CATEGORY_LABELS[g.category]}
+                </div>
+              )}
               <div className="text-xs font-mono text-neon-cyan/80 mb-2">
                 {g.published_at ? new Date(g.published_at).toLocaleDateString('ja-JP') : ''}
               </div>
