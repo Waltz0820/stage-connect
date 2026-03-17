@@ -14,6 +14,7 @@ type ActorRow = {
   slug: string;
   name: string;
   kana?: string | null;
+  birthday?: string | null;
   profile?: string | null;
   image_url?: string | null;
   gender?: string | null;
@@ -31,6 +32,7 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
   const [name, setName] = useState("");
   const [slugText, setSlugText] = useState("");
   const [kana, setKana] = useState("");
+  const [birthday, setBirthday] = useState("");
   const [profile, setProfile] = useState("");
   const [gender, setGender] = useState("male");
   const [imageUrl, setImageUrl] = useState("");
@@ -46,6 +48,7 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
       setName("");
       setSlugText("");
       setKana("");
+      setBirthday("");
       setProfile("");
       setGender("male");
       setImageUrl("");
@@ -60,7 +63,7 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         const { data, error } = await supabase
           .from("actors")
           // ✅ tags は読まない（廃止）
-          .select("id,slug,name,kana,profile,image_url,gender,sns,featured_play_slugs")
+          .select("id,slug,name,kana,birthday,profile,image_url,gender,sns,featured_play_slugs")
           .eq("slug", key)
           .maybeSingle();
 
@@ -72,6 +75,7 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         setName(r.name ?? "");
         setSlugText(r.slug ?? "");
         setKana(r.kana ?? "");
+        setBirthday(r.birthday ?? "");
         setProfile(r.profile ?? "");
         setGender((r.gender as any) ?? "male");
         setImageUrl(r.image_url ?? "");
@@ -95,6 +99,7 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         name: safeTrim(name),
         slug: safeTrim(slugText) || toSlug(name),
         kana: safeTrim(kana) || null,
+        birthday: safeTrim(birthday) || null,
         profile: safeTrim(profile) || null,
         gender: safeTrim(gender) || "male",
         image_url: safeTrim(imageUrl) || null,
@@ -212,6 +217,15 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
               value={kana}
               onChange={(e) => setKana(e.target.value)}
               placeholder="例：すずき たろう"
+            />
+          </Field>
+
+          <Field label="birthday" hint="YYYY-MM-DD">
+            <input
+              type="date"
+              className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
+              value={birthday}
+              onChange={(e) => setBirthday(e.target.value)}
             />
           </Field>
 

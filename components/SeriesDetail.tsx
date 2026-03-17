@@ -47,6 +47,7 @@ const normalizeActorRow = (row: any): Actor => {
     slug: row.slug,
     name: row.name,
     kana: row.kana ?? "",
+    birthday: row.birthday ?? "",
     profile: row.profile ?? "",
     imageUrl: row.image_url ?? row.imageUrl ?? "",
     gender: (row.gender ?? "male") as Gender,

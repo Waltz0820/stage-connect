@@ -48,6 +48,36 @@ const mergeRoleNames = (current?: string | null, next?: string | null): string |
   return Array.from(new Set(values)).join(" / ");
 };
 
+const formatBirthday = (birthday?: string | null) => {
+  const value = String(birthday ?? "").trim();
+  if (!value) return "";
+
+  const match = value.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if (!match) return value;
+
+  return `${match[1]}年${Number(match[2])}月${Number(match[3])}日`;
+};
+
+const getAgeFromBirthday = (birthday?: string | null) => {
+  const value = String(birthday ?? "").trim();
+  const match = value.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if (!match) return null;
+
+  const year = Number(match[1]);
+  const month = Number(match[2]);
+  const day = Number(match[3]);
+  if (!year || !month || !day) return null;
+
+  const today = new Date();
+  let age = today.getFullYear() - year;
+  const birthdayPassed =
+    today.getMonth() + 1 > month ||
+    (today.getMonth() + 1 === month && today.getDate() >= day);
+
+  if (!birthdayPassed) age -= 1;
+  return age >= 0 ? age : null;
+};
+
 
 // RPC / ネスト取得どちらでも最低限Actor型に寄せる（共演カード表示用）
 const normalizeActorForCoStar = normalizeActorRow;
@@ -110,6 +140,7 @@ type CastAggRow = {
     slug: string;
     name: string;
     kana?: string | null;
+    birthday?: string | null;
     image_url?: string | null;
     gender?: string | null;
     sns?: any;
@@ -167,7 +198,7 @@ async function getCoStarsFromCasts(params: { actorId: string; limit: number }): 
         actor_id,
         is_starring,
         billing_order,
-        actor:actors ( id, slug, name, kana, image_url, gender, sns, featured_play_slugs, profile )
+        actor:actors ( id, slug, name, kana, birthday, image_url, gender, sns, featured_play_slugs, profile )
       `
       )
       .in("play_id", ids)
@@ -306,7 +337,7 @@ const ActorDetail: React.FC = () => {
         // 1) actor（✅ tagsは不要なので取らない）
         const { data, error } = await supabase
           .from("actors")
-          .select("id,slug,name,kana,profile,image_url,gender,sns,featured_play_slugs")
+          .select("id,slug,name,kana,birthday,profile,image_url,gender,sns,featured_play_slugs")
           .eq("slug", slug)
           .maybeSingle();
 
@@ -473,6 +504,9 @@ const ActorDetail: React.FC = () => {
     return img.startsWith("/") ? `${siteUrl}${img}` : `${siteUrl}/${img}`;
   }, [actor?.imageUrl, siteUrl]);
 
+  const birthdayText = useMemo(() => formatBirthday(actor?.birthday), [actor?.birthday]);
+  const age = useMemo(() => getAgeFromBirthday(actor?.birthday), [actor?.birthday]);
+
   const pageTitle = actor?.name ? `${actor.name}｜出演作・配信（VOD）情報 - ${SITE_NAME}` : SITE_NAME;
 
   const pageDescription = actor?.name
@@ -487,9 +521,10 @@ const ActorDetail: React.FC = () => {
       name: actor.name,
       url: canonical || undefined,
       image: ogImage || undefined,
+      birthDate: actor.birthday || undefined,
       sameAs: [actor.sns?.x, actor.sns?.instagram, actor.sns?.official].filter(Boolean),
     };
-  }, [actor?.name, actor?.sns, canonical, ogImage]);
+  }, [actor?.birthday, actor?.name, actor?.sns, canonical, ogImage]);
 
   const jsonLdFaq = useMemo(() => {
     if (!actor?.name) return null;
@@ -611,6 +646,12 @@ const ActorDetail: React.FC = () => {
                   <span className="text-sm md:text-base text-neon-purple font-bold tracking-widest uppercase block">
                     {actor.kana}
                   </span>
+                )}
+                {birthdayText && (
+                  <div className="mt-3 inline-flex flex-wrap items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-300">
+                    <span>{birthdayText}</span>
+                    {age !== null && <span className="font-bold text-white">({age}歳)</span>}
+                  </div>
                 )}
               </div>
             </div>

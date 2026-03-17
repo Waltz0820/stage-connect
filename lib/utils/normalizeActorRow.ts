@@ -7,6 +7,7 @@ export const normalizeActorRow = (data: any): Actor => ({
     slug: data.slug,
     name: data.name,
     kana: data.kana ?? '',
+    birthday: data.birthday ?? '',
     profile: data.profile ?? '',
     imageUrl: data.image_url ?? data.imageUrl ?? '',
     gender: (data.gender ?? 'male') as Gender,

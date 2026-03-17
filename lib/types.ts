@@ -49,6 +49,7 @@ export type Actor = {
   slug: string;
   name: string;
   kana?: string;
+  birthday?: string;
   profile?: string;
   imageUrl?: string;
   gender?: Gender;
