@@ -216,11 +216,11 @@ const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
                 rel="noopener noreferrer"
                 className="text-xs px-3 py-2 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 font-bold"
               >
-                繝励Ξ繝薙Η繝ｼ
+                Preview
               </a>
             ) : (
               <span className="text-xs px-3 py-2 rounded-full bg-white/5 border border-white/10 text-slate-500">
-                繝励Ξ繝薙Η繝ｼ
+                Preview
               </span>
             )}
             <button

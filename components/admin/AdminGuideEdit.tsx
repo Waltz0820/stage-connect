@@ -201,11 +201,11 @@ const AdminGuideEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
                 rel="noopener noreferrer"
                 className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs font-bold hover:bg-white/10"
               >
-                繝励Ξ繝薙Η繝ｼ
+                Preview
               </a>
             ) : (
               <span className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs text-slate-500">
-                繝励Ξ繝薙Η繝ｼ
+                Preview
               </span>
             )}
             <button
