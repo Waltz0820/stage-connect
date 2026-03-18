@@ -56,6 +56,8 @@ const AdminGuideEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
 
   const [busy, setBusy] = useState(false);
   const [msg, setMsg] = useState("");
+  const previewSlug = useMemo(() => safeTrim(slugText) || (mode === "edit" ? row?.slug ?? "" : ""), [mode, row?.slug, slugText]);
+  const previewHref = previewSlug ? `/guide/${encodeURIComponent(previewSlug)}?preview=1` : "";
 
   useEffect(() => {
     const loadFranchises = async () => {
@@ -192,6 +194,20 @@ const AdminGuideEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
             <Link to="/admin/guides" className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs hover:bg-white/10">
               戻る
             </Link>
+            {previewHref ? (
+              <a
+                href={previewHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs font-bold hover:bg-white/10"
+              >
+                繝励Ξ繝薙Η繝ｼ
+              </a>
+            ) : (
+              <span className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs text-slate-500">
+                繝励Ξ繝薙Η繝ｼ
+              </span>
+            )}
             <button
               onClick={save}
               disabled={busy}

@@ -60,6 +60,11 @@ const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
 
   const [busy, setBusy] = useState(false);
   const [msg, setMsg] = useState("");
+  const previewKey = useMemo(
+    () => safeTrim(slugText) || safeTrim(name) || (mode === "edit" ? row?.slug ?? row?.name ?? "" : ""),
+    [mode, name, row?.name, row?.slug, slugText]
+  );
+  const previewHref = previewKey ? `/series/${encodeURIComponent(previewKey)}` : "";
 
   const normalizeOriginType = (v: any): OriginType => {
     const s = safeTrim(v);
@@ -204,6 +209,20 @@ const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
             >
               戻る
             </Link>
+            {previewHref ? (
+              <a
+                href={previewHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs px-3 py-2 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 font-bold"
+              >
+                繝励Ξ繝薙Η繝ｼ
+              </a>
+            ) : (
+              <span className="text-xs px-3 py-2 rounded-full bg-white/5 border border-white/10 text-slate-500">
+                繝励Ξ繝薙Η繝ｼ
+              </span>
+            )}
             <button
               onClick={save}
               disabled={busy}

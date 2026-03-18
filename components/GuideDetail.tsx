@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import { supabase } from "../lib/supabase";
 import Breadcrumbs from "./Breadcrumbs";
 import SeoHead from "./SeoHead";
@@ -15,15 +15,18 @@ type Editorial = {
 };
 
 const CATEGORY_LABELS = {
-  "series-guides": "シリーズ整理",
+  "series-guides": "シリーズガイド",
   features: "編集部ピックアップ",
 } as const;
 
 const GuideDetail: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
+  const location = useLocation();
   const [item, setItem] = useState<Editorial | null>(null);
   const [loading, setLoading] = useState(true);
   const [notFound, setNotFound] = useState(false);
+
+  const isPreview = useMemo(() => new URLSearchParams(location.search).get("preview") === "1", [location.search]);
 
   const toPlainText = (value: any) =>
     String(value ?? "")
@@ -45,9 +48,9 @@ const GuideDetail: React.FC = () => {
     return `${siteUrl}/guide/${encodeURIComponent(item.slug)}`;
   }, [item?.slug, siteUrl]);
 
-  const seoTitle = item ? `${item.title} | Stage Connect` : "ガイド | Stage Connect";
+  const seoTitle = item ? `${item.title}${isPreview ? " [Preview]" : ""} | Stage Connect` : "ガイド | Stage Connect";
   const seoDescription = useMemo(() => {
-    if (!item) return "シリーズ整理や作品の見どころをまとめた Stage Connect の編集部ガイドです。";
+    if (!item) return "シリーズガイドや作品の見どころをまとめた Stage Connect の編集部ガイドです。";
     return truncate(toPlainText(item.summary || item.content || item.title), 155);
   }, [item]);
 
@@ -73,13 +76,18 @@ const GuideDetail: React.FC = () => {
     const run = async () => {
       setLoading(true);
       setNotFound(false);
+
       try {
-        const { data, error } = await supabase
+        let query = supabase
           .from("editorials")
           .select("id, slug, title, summary, content, published_at, category")
-          .eq("slug", slug)
-          .eq("status", "published")
-          .maybeSingle();
+          .eq("slug", slug);
+
+        if (!isPreview) {
+          query = query.eq("status", "published");
+        }
+
+        const { data, error } = await query.maybeSingle();
 
         if (error || !data) {
           console.warn("GuideDetail fetch error", error);
@@ -88,14 +96,14 @@ const GuideDetail: React.FC = () => {
           return;
         }
 
-        setItem((data as any) as Editorial);
+        setItem(data as Editorial);
       } finally {
         setLoading(false);
       }
     };
 
     void run();
-  }, [slug]);
+  }, [isPreview, slug]);
 
   if (loading) {
     return (
@@ -128,7 +136,7 @@ const GuideDetail: React.FC = () => {
         title={seoTitle}
         description={seoDescription}
         canonical={canonicalUrl}
-        robots="index,follow"
+        robots={isPreview ? "noindex,nofollow" : "index,follow"}
         metas={[
           { property: "og:type", content: "article" },
           { property: "og:site_name", content: "Stage Connect" },
@@ -145,6 +153,11 @@ const GuideDetail: React.FC = () => {
       <Breadcrumbs items={[{ label: "ガイド", to: "/guide" }, { label: item.title }]} />
 
       <div className="mb-8 mt-6">
+        {isPreview && (
+          <div className="mb-4 inline-flex rounded-full border border-amber-400/30 bg-amber-400/10 px-3 py-1 text-[11px] font-bold tracking-widest text-amber-200">
+            PREVIEW
+          </div>
+        )}
         {item.category && (
           <div className="mb-3 inline-flex rounded-full border border-neon-cyan/20 bg-neon-cyan/10 px-3 py-1 text-[11px] font-bold tracking-widest text-neon-cyan">
             {CATEGORY_LABELS[item.category]}
