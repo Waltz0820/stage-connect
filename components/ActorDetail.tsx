@@ -1,4 +1,4 @@
-// src/components/ActorDetail.tsx
+﻿// src/components/ActorDetail.tsx
 
 import React, { useEffect, useState, useMemo } from "react";
 import { useParams, Link } from "react-router-dom";
@@ -298,12 +298,17 @@ const ActorDetail: React.FC = () => {
 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [isProfileExpanded, setIsProfileExpanded] = useState(false);
 
   // ✅ モバイル用：共演を全員見る（モーダル）
   const [isAllCoStarsOpen, setIsAllCoStarsOpen] = useState(false);
 
   // ✅ モーダル中は背景スクロールを完全停止
   useBodyScrollLock(isAllCoStarsOpen);
+
+  useEffect(() => {
+    setIsProfileExpanded(false);
+  }, [actor?.slug, actor?.profile]);
 
   // ESCで閉じる（PCも快適）
   useEffect(() => {
@@ -506,6 +511,8 @@ const ActorDetail: React.FC = () => {
 
   const birthdayText = useMemo(() => formatBirthday(actor?.birthday), [actor?.birthday]);
   const age = useMemo(() => getAgeFromBirthday(actor?.birthday), [actor?.birthday]);
+  const profileText = useMemo(() => actor?.profile?.trim() || "", [actor?.profile]);
+  const canCollapseProfile = useMemo(() => profileText.length > 220, [profileText]);
 
   const pageTitle = actor?.name ? `${actor.name}｜出演作・配信（VOD）情報 - ${SITE_NAME}` : SITE_NAME;
 
@@ -698,9 +705,31 @@ const ActorDetail: React.FC = () => {
               <span className="w-1 h-6 bg-neon-purple rounded-full shadow-[0_0_10px_#B46CFF]"></span>
               プロフィール
             </h2>
-            <div className="prose prose-invert prose-lg max-w-none text-slate-300 leading-loose font-light">
-              {actor.profile || "プロフィール情報はまだありません。"}
-            </div>
+            {profileText ? (
+              <div>
+                <div
+                  className={`prose prose-invert prose-lg max-w-none text-slate-300 leading-loose font-light transition-all duration-300 ${
+                    !isProfileExpanded && canCollapseProfile ? "line-clamp-6" : ""
+                  }`}
+                >
+                  {profileText}
+                </div>
+                {canCollapseProfile ? (
+                  <button
+                    type="button"
+                    onClick={() => setIsProfileExpanded((current) => !current)}
+                    aria-expanded={isProfileExpanded}
+                    className="mt-4 inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-slate-200 transition hover:border-neon-purple/40 hover:text-white"
+                  >
+                    {isProfileExpanded ? "閉じる" : "続きを読む"}
+                  </button>
+                ) : null}
+              </div>
+            ) : (
+              <div className="prose prose-invert prose-lg max-w-none text-slate-300 leading-loose font-light">
+                プロフィール情報はまだありません。
+              </div>
+            )}
           </section>
 
           {/* Timeline */}
