@@ -106,6 +106,24 @@ const periodSortKey = (period?: string | null) => {
   return -1;
 };
 
+const compactTimelinePeriod = (period?: string | null) => {
+  if (!period) return "Year Unknown";
+
+  const slashDate = period.match(/(\d{4})\/(\d{1,2})\/(\d{1,2})/);
+  if (slashDate) {
+    const [, year, month, day] = slashDate;
+    return `${year}/${month.padStart(2, "0")}/${day.padStart(2, "0")}-`;
+  }
+
+  const jpDate = period.match(/(\d{4})年\s*(\d{1,2})月\s*(\d{1,2})日/);
+  if (jpDate) {
+    const [, year, month, day] = jpDate;
+    return `${year}/${month.padStart(2, "0")}/${day.padStart(2, "0")}-`;
+  }
+
+  return period;
+};
+
 const sortPlaysNewToOld = <
   T extends { period?: string | null; created_at?: string | null }
 >(
@@ -854,8 +872,11 @@ const SeriesDetail: React.FC = () => {
                 <div key={play.slug} className="relative pl-12 flex flex-col">
                   <div className="absolute left-[15px] top-0 w-2.5 h-2.5 rounded-full bg-neon-cyan shadow-[0_0_10px_#00FFFF] ring-4 ring-theater-black"></div>
 
-                  <div className="mb-1 text-xs font-mono text-neon-cyan/80 tracking-wider">
-                    {play.period || "Year Unknown"}
+                  <div
+                    className="mb-1 text-xs font-mono text-neon-cyan/80 tracking-wider"
+                    title={play.period || "Year Unknown"}
+                  >
+                    {compactTimelinePeriod(play.period)}
                   </div>
 
                   <PlayCard play={play as any} className="h-auto w-full" />
