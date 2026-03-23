@@ -73,6 +73,81 @@ const mergeDelimitedValues = (...values: Array<string | null | undefined>): stri
   return Array.from(new Set(parts)).join(" / ");
 };
 
+const splitSlashList = (value?: string | null) =>
+  String(value ?? "")
+    .split(" / ")
+    .map((item) => item.trim())
+    .filter(Boolean);
+
+const parseScheduleEntries = (period?: string | null) =>
+  String(period ?? "")
+    .split(" / ")
+    .map((item) => item.trim())
+    .filter(Boolean);
+
+const extractPeriodSummary = (period?: string | null) => {
+  if (!period) return null;
+
+  const fullDates = Array.from(period.matchAll(/(\d{4})\/(\d{1,2})\/(\d{1,2})/g)).map((match) => ({
+    year: Number(match[1]),
+    month: Number(match[2]),
+    day: Number(match[3]),
+  }));
+
+  if (fullDates.length === 0) return null;
+
+  const first = fullDates[0];
+  let endYear = first.year;
+  let endMonth = first.month;
+  let endDay = first.day;
+
+  const monthDayMatches = Array.from(period.matchAll(/(?:\d{4}\/)?(\d{1,2})\/(\d{1,2})/g)).map((match) => ({
+    raw: match[0],
+    month: Number(match[1]),
+    day: Number(match[2]),
+    hasYear: /^\d{4}\//.test(match[0]),
+  }));
+
+  for (const item of monthDayMatches) {
+    if (item.hasYear) {
+      const yearMatch = item.raw.match(/^(\d{4})\//);
+      endYear = yearMatch ? Number(yearMatch[1]) : endYear;
+      endMonth = item.month;
+      endDay = item.day;
+      continue;
+    }
+
+    if (item.month < endMonth) endYear += 1;
+    endMonth = item.month;
+    endDay = item.day;
+  }
+
+  const pad = (n: number) => String(n).padStart(2, "0");
+
+  return `${first.year}/${pad(first.month)}/${pad(first.day)}-${endYear}/${pad(endMonth)}/${pad(endDay)}`;
+};
+
+const extractScheduleCities = (period?: string | null) => {
+  const cities = parseScheduleEntries(period)
+    .map((entry) => {
+      const colonSplit = entry.split(/[:：]/);
+      if (colonSplit.length > 1) return colonSplit[0].trim();
+      const direct = entry.match(/^([^\d]+?)\s+\d{4}\//);
+      return direct ? direct[1].trim() : "";
+    })
+    .filter(Boolean);
+
+  return Array.from(new Set(cities));
+};
+
+const summarizeVenues = (venue?: string | null) => {
+  const venues = splitSlashList(venue);
+
+  if (venues.length === 0) return null;
+  if (venues.length <= 3) return venues.join(" / ");
+  return `${venues.slice(0, 2).join(" / ")} / ほか${venues.length - 2}会場`;
+};
+
 const PlayDetail: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
 
@@ -81,6 +156,7 @@ const PlayDetail: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [notFound, setNotFound] = useState(false);
   const [isCreditsOpen, setIsCreditsOpen] = useState(false);
+  const [isScheduleOpen, setIsScheduleOpen] = useState(false);
 
   const scrollToCast = () => {
     if (typeof document === "undefined") return;
@@ -149,6 +225,12 @@ const PlayDetail: React.FC = () => {
   }, [creditsAll]);
 
   const hasAnyCredits = creditsAll.length > 0;
+  const scheduleEntries = useMemo(() => parseScheduleEntries(play?.period), [play?.period]);
+  const scheduleSummary = useMemo(() => extractPeriodSummary(play?.period), [play?.period]);
+  const scheduleCities = useMemo(() => extractScheduleCities(play?.period), [play?.period]);
+  const venueList = useMemo(() => splitSlashList(play?.venue), [play?.venue]);
+  const compactVenueSummary = useMemo(() => summarizeVenues(play?.venue), [play?.venue]);
+  const shouldCollapseSchedule = scheduleEntries.length > 2 || venueList.length > 3;
   const groupedCast = useMemo(() => {
     const groups = new Map<string, { name: string | null; items: PlayCast[] }>();
 
@@ -313,6 +395,7 @@ const PlayDetail: React.FC = () => {
       setLoading(true);
       setNotFound(false);
       setIsCreditsOpen(false);
+      setIsScheduleOpen(false);
 
       try {
         let dbPlay: any = null;
@@ -586,12 +669,50 @@ const PlayDetail: React.FC = () => {
             <div className="space-y-6">
               <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-6 border-b border-white/5 pb-4 last:border-0 last:pb-0">
                 <span className="min-w-[4rem] text-sm font-bold text-neon-purple tracking-wider">期間</span>
-                <span className="text-slate-200 text-sm font-medium">{play.period || "未定"}</span>
+                <div className="flex-1">
+                  <div className="text-slate-200 text-sm font-medium">
+                    {scheduleSummary || play.period || "未定"}
+                  </div>
+                  {scheduleCities.length > 0 && (
+                    <div className="mt-2 text-xs text-slate-400">
+                      {scheduleCities.length}都市 / {scheduleCities.slice(0, 5).join(" / ")}
+                      {scheduleCities.length > 5 ? " / ..." : ""}
+                    </div>
+                  )}
+                  {shouldCollapseSchedule && isScheduleOpen && play.period && (
+                    <div className="mt-3 rounded-lg border border-white/10 bg-white/5 p-3 text-xs text-slate-300 leading-relaxed whitespace-pre-wrap">
+                      {play.period}
+                    </div>
+                  )}
+                </div>
               </div>
               <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-6 border-b border-white/5 pb-4 last:border-0 last:pb-0">
                 <span className="min-w-[4rem] text-sm font-bold text-neon-purple tracking-wider">劇場</span>
-                <span className="text-slate-200 text-sm font-medium">{play.venue || "未定"}</span>
+                <div className="flex-1">
+                  <div className="text-slate-200 text-sm font-medium">
+                    {compactVenueSummary || play.venue || "未定"}
+                  </div>
+                  {venueList.length > 0 && (
+                    <div className="mt-2 text-xs text-slate-400">{venueList.length}会場</div>
+                  )}
+                  {shouldCollapseSchedule && isScheduleOpen && play.venue && (
+                    <div className="mt-3 rounded-lg border border-white/10 bg-white/5 p-3 text-xs text-slate-300 leading-relaxed whitespace-pre-wrap">
+                      {play.venue}
+                    </div>
+                  )}
+                </div>
               </div>
+              {shouldCollapseSchedule && (
+                <div className="pt-1">
+                  <button
+                    type="button"
+                    onClick={() => setIsScheduleOpen((value) => !value)}
+                    className="text-[11px] px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-slate-200 hover:bg-white/10 transition-colors font-bold"
+                  >
+                    {isScheduleOpen ? "折りたたむ" : "もっと見る"}
+                  </button>
+                </div>
+              )}
             </div>
           </section>
 
