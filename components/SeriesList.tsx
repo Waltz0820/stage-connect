@@ -323,8 +323,16 @@ const SeriesList: React.FC = () => {
 
   // フィルタ/ソート変更時は1ページ目へ戻す（Plays思想）
   useEffect(() => {
-    setCurrentPage(1);
-  }, [originFilter, sortKey]);
+    const pageParam = Number(searchParams.get('page'));
+    const nextPage = Number.isFinite(pageParam) && pageParam > 0 ? pageParam : 1;
+    const sortParam = searchParams.get('sort');
+    const nextSort: SortKey = sortParam === 'name_asc' ? 'name_asc' : 'play_count_desc';
+    const nextOrigin = searchParams.get('origin') || 'all';
+
+    if (currentPage !== nextPage) setCurrentPage(nextPage);
+    if (sortKey !== nextSort) setSortKey(nextSort);
+    if (originFilter !== nextOrigin) setOriginFilter(nextOrigin);
+  }, [searchParams]);
 
   const handlePageChange = (newPage: number) => {
     setCurrentPage(newPage);
@@ -360,7 +368,10 @@ const SeriesList: React.FC = () => {
             <div className="flex gap-1">
               <button
                 type="button"
-                onClick={() => setSortKey('play_count_desc')}
+                onClick={() => {
+                  setSortKey('play_count_desc');
+                  setCurrentPage(1);
+                }}
                 className={`px-4 py-1.5 rounded-md text-xs font-bold transition-all duration-300 ${sortKey === 'play_count_desc'
                   ? 'bg-neon-cyan text-theater-black shadow-[0_0_10px_rgba(0,255,255,0.3)]'
                   : 'text-slate-400 hover:text-white hover:bg-white/5'
@@ -370,7 +381,10 @@ const SeriesList: React.FC = () => {
               </button>
               <button
                 type="button"
-                onClick={() => setSortKey('name_asc')}
+                onClick={() => {
+                  setSortKey('name_asc');
+                  setCurrentPage(1);
+                }}
                 className={`px-4 py-1.5 rounded-md text-xs font-bold transition-all duration-300 ${sortKey === 'name_asc'
                   ? 'bg-neon-cyan text-theater-black shadow-[0_0_10px_rgba(0,255,255,0.3)]'
                   : 'text-slate-400 hover:text-white hover:bg-white/5'
@@ -400,7 +414,10 @@ const SeriesList: React.FC = () => {
             <button
               key={opt}
               type="button"
-              onClick={() => setOriginFilter(opt)}
+              onClick={() => {
+                setOriginFilter(opt);
+                setCurrentPage(1);
+              }}
               className={`px-4 py-2 rounded-full text-xs font-bold tracking-wider transition-all duration-300 border whitespace-nowrap ${originFilter === opt
                 ? 'bg-neon-cyan/20 border-neon-cyan/50 text-white shadow-[0_0_15px_rgba(0,255,255,0.3)]'
                 : 'bg-white/5 border-white/10 text-slate-400 hover:text-white hover:border-white/30'
@@ -525,7 +542,10 @@ const SeriesList: React.FC = () => {
           {!loading && viewFranchises.length === 0 && (
             <div className="col-span-full py-20 text-center border border-dashed border-white/10 rounded-xl bg-white/5">
               <p className="text-slate-400 mb-2">該当するシリーズはありません</p>
-              <button type="button" onClick={() => setOriginFilter('all')} className="text-neon-cyan hover:underline text-sm">
+              <button type="button" onClick={() => {
+                setOriginFilter('all');
+                setCurrentPage(1);
+              }} className="text-neon-cyan hover:underline text-sm">
                 条件をリセットする
               </button>
             </div>

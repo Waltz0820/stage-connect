@@ -230,6 +230,22 @@ const Plays: React.FC = () => {
     }
   }, [sortOrder, selectedGenre, currentPage, searchParams, setSearchParams]);
 
+  useEffect(() => {
+    const pageParam = Number(searchParams.get('page'));
+    const nextPage = Number.isFinite(pageParam) && pageParam > 0 ? pageParam : 1;
+    const sortParam = searchParams.get('sort');
+    const nextSort: 'new' | 'old' = sortParam === 'old' ? 'old' : 'new';
+    const genreParam = searchParams.get('genre');
+    const nextGenre =
+      genreParam && (genreParam === 'all' || genreParam in GENRE_LABELS)
+        ? (genreParam as 'all' | PlayGenre)
+        : 'all';
+
+    if (currentPage !== nextPage) setCurrentPage(nextPage);
+    if (sortOrder !== nextSort) setSortOrder(nextSort);
+    if (selectedGenre !== nextGenre) setSelectedGenre(nextGenre);
+  }, [searchParams]);
+
   // ✅ SEO meta（ActorDetailと同じ思想で最低限）
   const pageTitle = `作品一覧｜舞台作品アーカイブ - ${SITE_NAME}`;
   const pageDescription = `${SITE_NAME}の舞台作品アーカイブ。ジャンル別フィルタと公開順ソートで作品を探せます。`;

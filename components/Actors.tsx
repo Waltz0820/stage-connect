@@ -144,6 +144,19 @@ const Actors: React.FC = () => {
     }
   }, [genderFilter, currentPage, searchParams, setSearchParams]);
 
+  useEffect(() => {
+    const pageParam = Number(searchParams.get("page"));
+    const nextPage = Number.isFinite(pageParam) && pageParam > 0 ? pageParam : 1;
+    const genderParam = searchParams.get("gender");
+    const nextGender: "all" | Gender =
+      genderParam === "male" || genderParam === "female" || genderParam === "other"
+        ? genderParam
+        : "all";
+
+    if (currentPage !== nextPage) setCurrentPage(nextPage);
+    if (genderFilter !== nextGender) setGenderFilter(nextGender);
+  }, [searchParams]);
+
   const handleFilterChange = (filter: "all" | Gender) => {
     setGenderFilter(filter);
     setCurrentPage(1); // フィルタ変更時は1ページ目に戻す
