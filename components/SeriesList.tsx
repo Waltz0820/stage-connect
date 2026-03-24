@@ -303,8 +303,9 @@ const SeriesList: React.FC = () => {
 
   // currentPage がはみ出たら戻す（フィルタ変更などで起きる）
   useEffect(() => {
+    if (loading) return;
     if (currentPage > totalPages) setCurrentPage(totalPages);
-  }, [currentPage, totalPages]);
+  }, [currentPage, totalPages, loading]);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;

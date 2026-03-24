@@ -212,8 +212,9 @@ const Plays: React.FC = () => {
 
   // currentPage がはみ出たら戻す（フィルタ変更で起こり得る）
   useEffect(() => {
+    if (loading) return;
     if (currentPage > totalPages) setCurrentPage(totalPages);
-  }, [currentPage, totalPages]);
+  }, [currentPage, totalPages, loading]);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
