@@ -708,7 +708,7 @@ const ActorDetail: React.FC = () => {
             {profileText ? (
               <div>
                 <div
-                  className={`prose prose-invert prose-lg max-w-none text-slate-300 leading-loose font-light transition-all duration-300 ${
+                  className={`prose prose-invert prose-lg max-w-none whitespace-pre-line text-slate-300 leading-loose font-light transition-all duration-300 ${
                     !isProfileExpanded && canCollapseProfile ? "line-clamp-6" : ""
                   }`}
                 >
