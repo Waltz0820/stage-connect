@@ -11,6 +11,7 @@ import { toPlainText, truncate } from '../lib/utils/text';
 import { useSiteUrl } from '../lib/hooks/useSiteUrl';
 
 const SITE_NAME = 'Stage Connect';
+const STORAGE_KEY = 'series-list-state';
 
 type FranchiseMetaRow = {
   id: string;
@@ -54,11 +55,41 @@ const SeriesList: React.FC = () => {
   const [loading, setLoading] = useState(true);
 
   // ✅ UI state
-  const [originFilter, setOriginFilter] = useState<string>('all');
-  const [sortKey, setSortKey] = useState<SortKey>('play_count_desc');
+  const [originFilter, setOriginFilter] = useState<string>(() => {
+    if (typeof window === 'undefined') return 'all';
+    const saved = window.sessionStorage.getItem(STORAGE_KEY);
+    if (!saved) return 'all';
+    try {
+      const parsed = JSON.parse(saved) as { originFilter?: string };
+      return parsed.originFilter || 'all';
+    } catch {
+      return 'all';
+    }
+  });
+  const [sortKey, setSortKey] = useState<SortKey>(() => {
+    if (typeof window === 'undefined') return 'play_count_desc';
+    const saved = window.sessionStorage.getItem(STORAGE_KEY);
+    if (!saved) return 'play_count_desc';
+    try {
+      const parsed = JSON.parse(saved) as { sortKey?: SortKey };
+      return parsed.sortKey === 'name_asc' ? 'name_asc' : 'play_count_desc';
+    } catch {
+      return 'play_count_desc';
+    }
+  });
 
   // ✅ Pagination（Plays.tsx と同じ思想）
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(() => {
+    if (typeof window === 'undefined') return 1;
+    const saved = window.sessionStorage.getItem(STORAGE_KEY);
+    if (!saved) return 1;
+    try {
+      const parsed = JSON.parse(saved) as { currentPage?: number };
+      return parsed.currentPage && parsed.currentPage > 0 ? parsed.currentPage : 1;
+    } catch {
+      return 1;
+    }
+  });
   const ITEMS_PER_PAGE = 10; // ✅ 5件×2段に統一
 
   // ✅ DB data
@@ -267,6 +298,14 @@ const SeriesList: React.FC = () => {
   useEffect(() => {
     if (currentPage > totalPages) setCurrentPage(totalPages);
   }, [currentPage, totalPages]);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    window.sessionStorage.setItem(
+      STORAGE_KEY,
+      JSON.stringify({ originFilter, sortKey, currentPage })
+    );
+  }, [originFilter, sortKey, currentPage]);
 
   // フィルタ/ソート変更時は1ページ目へ戻す（Plays思想）
   useEffect(() => {

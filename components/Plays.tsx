@@ -42,11 +42,44 @@ const normalizePlayRow = (p: any): PlayLike => ({
 });
 
 const SITE_NAME = 'Stage Connect';
+const STORAGE_KEY = 'plays-list-state';
 
 const Plays: React.FC = () => {
-  const [sortOrder, setSortOrder] = useState<'new' | 'old'>('new');
-  const [selectedGenre, setSelectedGenre] = useState<'all' | PlayGenre>('all');
-  const [currentPage, setCurrentPage] = useState(1);
+  const [sortOrder, setSortOrder] = useState<'new' | 'old'>(() => {
+    if (typeof window === 'undefined') return 'new';
+    const saved = window.sessionStorage.getItem(STORAGE_KEY);
+    if (!saved) return 'new';
+    try {
+      const parsed = JSON.parse(saved) as { sortOrder?: 'new' | 'old' };
+      return parsed.sortOrder === 'old' ? 'old' : 'new';
+    } catch {
+      return 'new';
+    }
+  });
+  const [selectedGenre, setSelectedGenre] = useState<'all' | PlayGenre>(() => {
+    if (typeof window === 'undefined') return 'all';
+    const saved = window.sessionStorage.getItem(STORAGE_KEY);
+    if (!saved) return 'all';
+    try {
+      const parsed = JSON.parse(saved) as { selectedGenre?: 'all' | PlayGenre };
+      return parsed.selectedGenre && (parsed.selectedGenre === 'all' || parsed.selectedGenre in GENRE_LABELS)
+        ? parsed.selectedGenre
+        : 'all';
+    } catch {
+      return 'all';
+    }
+  });
+  const [currentPage, setCurrentPage] = useState(() => {
+    if (typeof window === 'undefined') return 1;
+    const saved = window.sessionStorage.getItem(STORAGE_KEY);
+    if (!saved) return 1;
+    try {
+      const parsed = JSON.parse(saved) as { currentPage?: number };
+      return parsed.currentPage && parsed.currentPage > 0 ? parsed.currentPage : 1;
+    } catch {
+      return 1;
+    }
+  });
   const ITEMS_PER_PAGE = 10;
 
   const [playsDb, setPlaysDb] = useState<PlayLike[] | null>(null);
@@ -173,6 +206,14 @@ const Plays: React.FC = () => {
   useEffect(() => {
     if (currentPage > totalPages) setCurrentPage(totalPages);
   }, [currentPage, totalPages]);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    window.sessionStorage.setItem(
+      STORAGE_KEY,
+      JSON.stringify({ sortOrder, selectedGenre, currentPage })
+    );
+  }, [sortOrder, selectedGenre, currentPage]);
 
   // ✅ SEO meta（ActorDetailと同じ思想で最低限）
   const pageTitle = `作品一覧｜舞台作品アーカイブ - ${SITE_NAME}`;

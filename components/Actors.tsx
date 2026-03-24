@@ -7,10 +7,34 @@ import Breadcrumbs from "./Breadcrumbs";
 import SeoHead from "./SeoHead";
 import { useSiteUrl, useOgImage } from "../lib/hooks/useSiteUrl";
 
+const STORAGE_KEY = "actors-list-state";
+
 const Actors: React.FC = () => {
   const [allActors, setAllActors] = useState<Actor[]>([]);
-  const [genderFilter, setGenderFilter] = useState<"all" | Gender>("all");
-  const [currentPage, setCurrentPage] = useState(1);
+  const [genderFilter, setGenderFilter] = useState<"all" | Gender>(() => {
+    if (typeof window === "undefined") return "all";
+    const saved = window.sessionStorage.getItem(STORAGE_KEY);
+    if (!saved) return "all";
+    try {
+      const parsed = JSON.parse(saved) as { genderFilter?: "all" | Gender };
+      return parsed.genderFilter === "male" || parsed.genderFilter === "female" || parsed.genderFilter === "other"
+        ? parsed.genderFilter
+        : "all";
+    } catch {
+      return "all";
+    }
+  });
+  const [currentPage, setCurrentPage] = useState(() => {
+    if (typeof window === "undefined") return 1;
+    const saved = window.sessionStorage.getItem(STORAGE_KEY);
+    if (!saved) return 1;
+    try {
+      const parsed = JSON.parse(saved) as { currentPage?: number };
+      return parsed.currentPage && parsed.currentPage > 0 ? parsed.currentPage : 1;
+    } catch {
+      return 1;
+    }
+  });
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -97,6 +121,14 @@ const Actors: React.FC = () => {
   useEffect(() => {
     if (currentPage > totalPages) setCurrentPage(totalPages);
   }, [currentPage, totalPages]);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    window.sessionStorage.setItem(
+      STORAGE_KEY,
+      JSON.stringify({ genderFilter, currentPage })
+    );
+  }, [genderFilter, currentPage]);
 
   const handleFilterChange = (filter: "all" | Gender) => {
     setGenderFilter(filter);

@@ -1,6 +1,6 @@
 // src/App.tsx
 import React, { useEffect } from "react";
-import { BrowserRouter, Routes, Route, useLocation, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation, Link, useNavigationType } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./components/Home";
 import Actors from "./components/Actors";
@@ -45,14 +45,17 @@ import TagDetailPage from "./components/tags/TagDetailPage";
 
 const RouteTracker: React.FC = () => {
   const loc = useLocation();
+  const navigationType = useNavigationType();
 
   useEffect(() => {
-    // Scroll to top on route change
-    window.scrollTo(0, 0);
+    // Keep browser-back behavior natural on POP navigation.
+    if (navigationType !== "POP") {
+      window.scrollTo(0, 0);
+    }
     const path = loc.pathname + loc.search + loc.hash;
     gaPageView(path);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [loc.pathname, loc.search, loc.hash]);
+  }, [loc.pathname, loc.search, loc.hash, navigationType]);
 
   return null;
 };
