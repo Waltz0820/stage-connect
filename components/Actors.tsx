@@ -1,5 +1,6 @@
 // src/components/Actors.tsx
 import React, { useMemo, useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import { supabase } from "../lib/supabase";
 import { Gender, Actor } from "../lib/types";
 import ActorCard from "./ActorCard";
@@ -10,8 +11,13 @@ import { useSiteUrl, useOgImage } from "../lib/hooks/useSiteUrl";
 const STORAGE_KEY = "actors-list-state";
 
 const Actors: React.FC = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
   const [allActors, setAllActors] = useState<Actor[]>([]);
   const [genderFilter, setGenderFilter] = useState<"all" | Gender>(() => {
+    const param = searchParams.get("gender");
+    if (param === "male" || param === "female" || param === "other" || param === "all") {
+      return param;
+    }
     if (typeof window === "undefined") return "all";
     const saved = window.sessionStorage.getItem(STORAGE_KEY);
     if (!saved) return "all";
@@ -25,6 +31,8 @@ const Actors: React.FC = () => {
     }
   });
   const [currentPage, setCurrentPage] = useState(() => {
+    const param = Number(searchParams.get("page"));
+    if (Number.isFinite(param) && param > 0) return param;
     if (typeof window === "undefined") return 1;
     const saved = window.sessionStorage.getItem(STORAGE_KEY);
     if (!saved) return 1;
@@ -128,7 +136,13 @@ const Actors: React.FC = () => {
       STORAGE_KEY,
       JSON.stringify({ genderFilter, currentPage })
     );
-  }, [genderFilter, currentPage]);
+    const nextParams = new URLSearchParams(searchParams);
+    nextParams.set("page", String(currentPage));
+    nextParams.set("gender", genderFilter);
+    if (nextParams.toString() !== searchParams.toString()) {
+      setSearchParams(nextParams, { replace: true });
+    }
+  }, [genderFilter, currentPage, searchParams, setSearchParams]);
 
   const handleFilterChange = (filter: "all" | Gender) => {
     setGenderFilter(filter);

@@ -1,7 +1,7 @@
 // src/components/SeriesList.tsx
 
 import React, { useEffect, useMemo, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import Breadcrumbs from './Breadcrumbs';
 import SeoHead from './SeoHead';
 import { supabase } from '../lib/supabase';
@@ -52,10 +52,13 @@ const getSeriesKey = (f: FranchiseUI) => {
 };
 
 const SeriesList: React.FC = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
   const [loading, setLoading] = useState(true);
 
   // ✅ UI state
   const [originFilter, setOriginFilter] = useState<string>(() => {
+    const param = searchParams.get('origin');
+    if (param) return param;
     if (typeof window === 'undefined') return 'all';
     const saved = window.sessionStorage.getItem(STORAGE_KEY);
     if (!saved) return 'all';
@@ -67,6 +70,8 @@ const SeriesList: React.FC = () => {
     }
   });
   const [sortKey, setSortKey] = useState<SortKey>(() => {
+    const param = searchParams.get('sort');
+    if (param === 'name_asc' || param === 'play_count_desc') return param;
     if (typeof window === 'undefined') return 'play_count_desc';
     const saved = window.sessionStorage.getItem(STORAGE_KEY);
     if (!saved) return 'play_count_desc';
@@ -80,6 +85,8 @@ const SeriesList: React.FC = () => {
 
   // ✅ Pagination（Plays.tsx と同じ思想）
   const [currentPage, setCurrentPage] = useState(() => {
+    const param = Number(searchParams.get('page'));
+    if (Number.isFinite(param) && param > 0) return param;
     if (typeof window === 'undefined') return 1;
     const saved = window.sessionStorage.getItem(STORAGE_KEY);
     if (!saved) return 1;
@@ -305,7 +312,14 @@ const SeriesList: React.FC = () => {
       STORAGE_KEY,
       JSON.stringify({ originFilter, sortKey, currentPage })
     );
-  }, [originFilter, sortKey, currentPage]);
+    const nextParams = new URLSearchParams(searchParams);
+    nextParams.set('page', String(currentPage));
+    nextParams.set('sort', sortKey);
+    nextParams.set('origin', originFilter);
+    if (nextParams.toString() !== searchParams.toString()) {
+      setSearchParams(nextParams, { replace: true });
+    }
+  }, [originFilter, sortKey, currentPage, searchParams, setSearchParams]);
 
   // フィルタ/ソート変更時は1ページ目へ戻す（Plays思想）
   useEffect(() => {

@@ -1,6 +1,7 @@
 // src/components/Plays.tsx
 
 import React, { useEffect, useMemo, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import PlayCard from './PlayCard';
 import { getPlayYear } from '../lib/utils/getPlayYear';
@@ -45,7 +46,10 @@ const SITE_NAME = 'Stage Connect';
 const STORAGE_KEY = 'plays-list-state';
 
 const Plays: React.FC = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
   const [sortOrder, setSortOrder] = useState<'new' | 'old'>(() => {
+    const param = searchParams.get('sort');
+    if (param === 'old' || param === 'new') return param;
     if (typeof window === 'undefined') return 'new';
     const saved = window.sessionStorage.getItem(STORAGE_KEY);
     if (!saved) return 'new';
@@ -57,6 +61,8 @@ const Plays: React.FC = () => {
     }
   });
   const [selectedGenre, setSelectedGenre] = useState<'all' | PlayGenre>(() => {
+    const param = searchParams.get('genre');
+    if (param && (param === 'all' || param in GENRE_LABELS)) return param as 'all' | PlayGenre;
     if (typeof window === 'undefined') return 'all';
     const saved = window.sessionStorage.getItem(STORAGE_KEY);
     if (!saved) return 'all';
@@ -70,6 +76,8 @@ const Plays: React.FC = () => {
     }
   });
   const [currentPage, setCurrentPage] = useState(() => {
+    const param = Number(searchParams.get('page'));
+    if (Number.isFinite(param) && param > 0) return param;
     if (typeof window === 'undefined') return 1;
     const saved = window.sessionStorage.getItem(STORAGE_KEY);
     if (!saved) return 1;
@@ -213,7 +221,14 @@ const Plays: React.FC = () => {
       STORAGE_KEY,
       JSON.stringify({ sortOrder, selectedGenre, currentPage })
     );
-  }, [sortOrder, selectedGenre, currentPage]);
+    const nextParams = new URLSearchParams(searchParams);
+    nextParams.set('page', String(currentPage));
+    nextParams.set('sort', sortOrder);
+    nextParams.set('genre', selectedGenre);
+    if (nextParams.toString() !== searchParams.toString()) {
+      setSearchParams(nextParams, { replace: true });
+    }
+  }, [sortOrder, selectedGenre, currentPage, searchParams, setSearchParams]);
 
   // ✅ SEO meta（ActorDetailと同じ思想で最低限）
   const pageTitle = `作品一覧｜舞台作品アーカイブ - ${SITE_NAME}`;
