@@ -23,6 +23,20 @@ type ActorRow = {
   featured_play_slugs?: string[] | null;
 };
 
+type SnsValue = {
+  x?: string;
+  instagram?: string;
+  official?: string;
+  youtube?: string;
+};
+
+const pickSns = (value: any): SnsValue => ({
+  x: safeTrim(value?.x) || undefined,
+  instagram: safeTrim(value?.instagram) || undefined,
+  official: safeTrim(value?.official) || undefined,
+  youtube: safeTrim(value?.youtube) || undefined,
+});
+
 const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
   const nav = useNavigate();
   const { slug } = useParams<{ slug: string }>();
@@ -38,6 +52,7 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
   const [imageUrl, setImageUrl] = useState("");
   const [featured, setFeatured] = useState("");
   const [snsText, setSnsText] = useState("");
+  const [snsForm, setSnsForm] = useState<SnsValue>({});
 
   const [busy, setBusy] = useState(false);
   const [msg, setMsg] = useState("");
@@ -56,6 +71,7 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
       setImageUrl("");
       setFeatured("");
       setSnsText(stringifyPretty({}));
+      setSnsForm({});
       return;
     }
 
@@ -82,7 +98,9 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         setGender((r.gender as any) ?? "male");
         setImageUrl(r.image_url ?? "");
         setFeatured((r.featured_play_slugs ?? []).join(", "));
-        setSnsText(stringifyPretty(r.sns ?? {}));
+        const nextSns = pickSns(r.sns ?? {});
+        setSnsText(stringifyPretty(nextSns));
+        setSnsForm(nextSns);
       } catch (e: any) {
         setMsg(e?.message ?? "load error");
       } finally {
@@ -92,6 +110,25 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
 
     if (key) run();
   }, [mode, key]);
+
+  const updateSnsField = (field: keyof SnsValue, value: string) => {
+    setSnsForm((current) => {
+      const next = {
+        ...current,
+        [field]: safeTrim(value) || undefined,
+      };
+      setSnsText(stringifyPretty(next));
+      return next;
+    });
+  };
+
+  const handleSnsTextChange = (value: string) => {
+    setSnsText(value);
+    const parsed = parseJsonOr<any>(value, null);
+    if (parsed && typeof parsed === "object" && !Array.isArray(parsed)) {
+      setSnsForm(pickSns(parsed));
+    }
+  };
 
   const save = async () => {
     setMsg("");
@@ -296,8 +333,37 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
           />
         </Field>
 
+        <Field label="sns helper" hint="URLを入れると JSON に自動反映。下の JSON 直打ちも可">
+          <div className="grid md:grid-cols-2 gap-4">
+            <input
+              className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
+              value={snsForm.x ?? ""}
+              onChange={(e) => updateSnsField("x", e.target.value)}
+              placeholder="X URL"
+            />
+            <input
+              className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
+              value={snsForm.instagram ?? ""}
+              onChange={(e) => updateSnsField("instagram", e.target.value)}
+              placeholder="Instagram URL"
+            />
+            <input
+              className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
+              value={snsForm.official ?? ""}
+              onChange={(e) => updateSnsField("official", e.target.value)}
+              placeholder="Official site URL"
+            />
+            <input
+              className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
+              value={snsForm.youtube ?? ""}
+              onChange={(e) => updateSnsField("youtube", e.target.value)}
+              placeholder="YouTube URL"
+            />
+          </div>
+        </Field>
+
         <Field label="sns (json)" hint='例：{ "x": "https://x.com/...", "instagram": "..." }'>
-          <JsonArea value={snsText} onChange={setSnsText} rows={10} />
+          <JsonArea value={snsText} onChange={handleSnsTextChange} rows={10} />
         </Field>
       </div>
     </div>

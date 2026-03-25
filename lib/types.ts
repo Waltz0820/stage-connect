@@ -57,6 +57,7 @@ export type Actor = {
     x?: string;
     instagram?: string;
     official?: string;
+    youtube?: string;
   };
   featuredPlaySlugs?: string[];
   tags?: string[];

@@ -529,7 +529,7 @@ const ActorDetail: React.FC = () => {
       url: canonical || undefined,
       image: ogImage || undefined,
       birthDate: actor.birthday || undefined,
-      sameAs: [actor.sns?.x, actor.sns?.instagram, actor.sns?.official].filter(Boolean),
+      sameAs: [actor.sns?.x, actor.sns?.instagram, actor.sns?.official, actor.sns?.youtube].filter(Boolean),
     };
   }, [actor?.birthday, actor?.name, actor?.sns, canonical, ogImage]);
 
@@ -1043,6 +1043,24 @@ const ActorDetail: React.FC = () => {
                         </svg>
                       </span>
                       Instagram
+                    </a>
+                  </li>
+                )}
+
+                {actor.sns.youtube && (
+                  <li>
+                    <a
+                      href={actor.sns.youtube}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center text-sm font-bold text-slate-300 hover:text-white transition-colors group"
+                    >
+                      <span className="w-10 h-10 rounded-full bg-black/40 border border-white/10 flex items-center justify-center mr-4 group-hover:border-neon-purple/50 group-hover:shadow-[0_0_10px_rgba(180,108,255,0.3)] transition-all">
+                        <svg className="w-4 h-4 text-slate-400 group-hover:text-neon-purple" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.2 31.2 0 0 0 0 12a31.2 31.2 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.2 31.2 0 0 0 24 12a31.2 31.2 0 0 0-.5-5.8ZM9.8 15.7V8.3L16.2 12l-6.4 3.7Z" />
+                        </svg>
+                      </span>
+                      YouTube
                     </a>
                   </li>
                 )}
