@@ -85,6 +85,12 @@ const parseScheduleEntries = (period?: string | null) =>
     .map((item) => item.trim())
     .filter(Boolean);
 
+const normalizeScheduleCity = (city: string) =>
+  city
+    .trim()
+    .replace(/(?:再)?凱旋$/u, "")
+    .trim();
+
 const extractPeriodSummary = (period?: string | null) => {
   if (!period) return null;
 
@@ -136,9 +142,9 @@ const extractScheduleCities = (period?: string | null) => {
   const cities = parseScheduleEntries(period)
     .map((entry) => {
       const colonSplit = entry.split(/[:：]/);
-      if (colonSplit.length > 1) return colonSplit[0].trim();
+      if (colonSplit.length > 1) return normalizeScheduleCity(colonSplit[0]);
       const direct = entry.match(/^([^\d]+?)\s+\d{4}\//);
-      return direct ? direct[1].trim() : "";
+      return direct ? normalizeScheduleCity(direct[1]) : "";
     })
     .filter(Boolean);
 
