@@ -8,12 +8,42 @@ export type TimelineGroup = {
 const periodSortKey = (period?: string) => {
   if (!period) return -1;
 
-  const fullDate = period.match(/(\d{4})\D{0,2}(\d{1,2})\D{0,2}(\d{1,2})/);
-  if (fullDate) {
-    const year = Number(fullDate[1]);
-    const month = Number(fullDate[2]);
-    const day = Number(fullDate[3]);
-    return year * 10000 + month * 100 + day;
+  const fullDates = Array.from(period.matchAll(/(\d{4})\D{0,2}(\d{1,2})\D{0,2}(\d{1,2})/g)).map((match) => ({
+    year: Number(match[1]),
+    month: Number(match[2]),
+    day: Number(match[3]),
+  }));
+
+  if (fullDates.length > 0) {
+    const first = fullDates[0];
+    let endYear = first.year;
+    let endMonth = first.month;
+    let endDay = first.day;
+
+    const monthDayMatches = Array.from(period.matchAll(/(?:\d{4}\D{0,2})?(\d{1,2})\D{0,2}(\d{1,2})/g)).map(
+      (match) => ({
+        raw: match[0],
+        month: Number(match[1]),
+        day: Number(match[2]),
+        hasYear: /^\d{4}\D/.test(match[0]),
+      })
+    );
+
+    for (const item of monthDayMatches) {
+      if (item.hasYear) {
+        const yearMatch = item.raw.match(/^(\d{4})\D/);
+        endYear = yearMatch ? Number(yearMatch[1]) : endYear;
+        endMonth = item.month;
+        endDay = item.day;
+        continue;
+      }
+
+      if (item.month < endMonth) endYear += 1;
+      endMonth = item.month;
+      endDay = item.day;
+    }
+
+    return endYear * 10000 + endMonth * 100 + endDay;
   }
 
   const yearMonth = period.match(/(\d{4})\D{0,2}(\d{1,2})/);

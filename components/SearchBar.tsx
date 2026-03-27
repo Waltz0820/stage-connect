@@ -29,6 +29,12 @@ const PLAYS_LIMIT = 5;
 // SearchPage と同じ
 const sanitizeForOr = (s: string) => s.replace(/,/g, " ").trim();
 const escapeLike = (s: string) => s.replace(/[%_]/g, "\\$&").trim();
+const stripSearchSpaces = (s: string) => s.replace(/[\s\u3000]+/g, "");
+const buildLooseLike = (s: string) => {
+  const compact = stripSearchSpaces(s);
+  if (!compact) return "";
+  return `%${compact.split("").map((ch) => escapeLike(ch)).join("%")}%`;
+};
 
 const SearchBar: React.FC = () => {
   const [query, setQuery] = useState("");
@@ -88,13 +94,18 @@ const SearchBar: React.FC = () => {
       try {
         const termForOr = escapeLike(sanitizeForOr(q));
         const like = `%${termForOr}%`;
+        const looseLike = buildLooseLike(q);
+        const actorOr =
+          looseLike && looseLike !== like
+            ? `name.ilike.${like},kana.ilike.${like},name.ilike.${looseLike},kana.ilike.${looseLike}`
+            : `name.ilike.${like},kana.ilike.${like}`;
 
         const [aRes, pRes] = await Promise.all([
           // actors（name / kana）
           supabase
             .from("actors")
             .select("id, slug, name, kana")
-            .or(`name.ilike.${like},kana.ilike.${like}`)
+            .or(actorOr)
             .order("name", { ascending: true })
             .limit(ACTORS_LIMIT),
 

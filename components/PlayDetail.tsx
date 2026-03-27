@@ -124,7 +124,12 @@ const extractPeriodSummary = (period?: string | null) => {
 
   const pad = (n: number) => String(n).padStart(2, "0");
 
-  return `${first.year}/${pad(first.month)}/${pad(first.day)}-${endYear}/${pad(endMonth)}/${pad(endDay)}`;
+  const start = `${first.year}/${pad(first.month)}/${pad(first.day)}`;
+  const end = `${endYear}/${pad(endMonth)}/${pad(endDay)}`;
+
+  if (start === end) return start;
+
+  return `${start}-${end}`;
 };
 
 const extractScheduleCities = (period?: string | null) => {
