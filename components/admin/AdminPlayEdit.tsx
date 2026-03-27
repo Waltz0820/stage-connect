@@ -195,6 +195,7 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
   const [venue, setVenue] = useState("");
   const [genre, setGenre] = useState<PlayGenre | "">("");
   const [franchiseId, setFranchiseId] = useState<string>("");
+  const [franchiseQuery, setFranchiseQuery] = useState("");
   const [vodText, setVodText] = useState("");
 
   // ★ tags（公式）: tags/play_tags を正として運用。plays.tags は触らない。
@@ -298,6 +299,7 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
       setVenue("");
       setGenre("");
       setFranchiseId("");
+      setFranchiseQuery("");
       setVodText(stringifyPretty({}));
 
       // tags
@@ -330,6 +332,7 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         setVenue(r.venue ?? "");
         setGenre((r.genre as PlayGenre | null) ?? "");
         setFranchiseId(r.franchise_id ?? "");
+        setFranchiseQuery("");
         setVodText(stringifyPretty(r.vod ?? {}));
 
         // tags（play_tags）
@@ -356,6 +359,19 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
 
     if (key) run();
   }, [mode, key]);
+
+  useEffect(() => {
+    if (!franchiseId) return;
+    if (franchiseQuery.trim()) return;
+    const selected = frs.find((f) => f.id === franchiseId);
+    if (selected) setFranchiseQuery(selected.name);
+  }, [franchiseId, frs, franchiseQuery]);
+
+  const visibleFranchises = useMemo(() => {
+    const query = safeTrim(franchiseQuery).toLowerCase();
+    if (!query) return frs.slice(0, 50);
+    return frs.filter((f) => f.name.toLowerCase().includes(query)).slice(0, 50);
+  }, [frs, franchiseQuery]);
 
   const save = async () => {
     setMsg("");
@@ -557,18 +573,36 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
           </Field>
 
           <Field label="series" hint="紐付け（任意）">
-            <select
-              className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
-              value={franchiseId}
-              onChange={(e) => setFranchiseId(e.target.value)}
-            >
-              <option value="">（なし）</option>
-              {frs.map((f) => (
-                <option key={f.id} value={f.id}>
-                  {f.name}
-                </option>
-              ))}
-            </select>
+            <div className="space-y-3">
+              <input
+                className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
+                value={franchiseQuery}
+                onChange={(e) => setFranchiseQuery(e.target.value)}
+                placeholder="シリーズ名で検索"
+              />
+              <select
+                className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
+                value={franchiseId}
+                onChange={(e) => {
+                  const nextId = e.target.value;
+                  setFranchiseId(nextId);
+                  const selected = frs.find((f) => f.id === nextId);
+                  if (selected) setFranchiseQuery(selected.name);
+                }}
+              >
+                <option value="">（なし）</option>
+                {visibleFranchises.map((f) => (
+                  <option key={f.id} value={f.id}>
+                    {f.name}
+                  </option>
+                ))}
+              </select>
+              <p className="text-xs text-slate-500">
+                {safeTrim(franchiseQuery)
+                  ? `${visibleFranchises.length}件表示中`
+                  : `全${frs.length}件中、先頭50件を表示`}
+              </p>
+            </div>
           </Field>
 
           <Field label="genre" hint="一覧の絞り込みや作品カード表示に使います">
