@@ -31,6 +31,12 @@ type PlayRow = {
   credits?: CreditItem[] | null;
 };
 
+type VodValue = {
+  dmm?: string;
+  danime?: string;
+  unext?: string;
+};
+
 // ===== credits helpers =====
 const CORE_ROLE_ORDER = [
   "原案",
@@ -179,6 +185,11 @@ const creditsStats = (credits: CreditItem[] | null | undefined) => {
 
 const MAX_TAGS = 4;
 const PLAY_GENRES = Object.keys(GENRE_LABELS) as PlayGenre[];
+const pickVod = (value: any): VodValue => ({
+  dmm: safeTrim(value?.dmm) || undefined,
+  danime: safeTrim(value?.danime) || undefined,
+  unext: safeTrim(value?.unext) || undefined,
+});
 
 const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
   const nav = useNavigate();
@@ -197,6 +208,7 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
   const [franchiseId, setFranchiseId] = useState<string>("");
   const [franchiseQuery, setFranchiseQuery] = useState("");
   const [vodText, setVodText] = useState("");
+  const [vodForm, setVodForm] = useState<VodValue>({});
 
   // ★ tags（公式）: tags/play_tags を正として運用。plays.tags は触らない。
   const [allTags, setAllTags] = useState<TagRow[]>([]);
@@ -301,6 +313,7 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
       setFranchiseId("");
       setFranchiseQuery("");
       setVodText(stringifyPretty({}));
+      setVodForm({});
 
       // tags
       setSelectedTagIds(new Set());
@@ -333,7 +346,9 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         setGenre((r.genre as PlayGenre | null) ?? "");
         setFranchiseId(r.franchise_id ?? "");
         setFranchiseQuery("");
-        setVodText(stringifyPretty(r.vod ?? {}));
+        const nextVod = pickVod(r.vod ?? {});
+        setVodText(stringifyPretty(nextVod));
+        setVodForm(nextVod);
 
         // tags（play_tags）
         const { data: pt, error: ptErr } = await supabase.from("play_tags").select("tag_id").eq("play_id", r.id);
@@ -372,6 +387,25 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
     if (!query) return frs.slice(0, 50);
     return frs.filter((f) => f.name.toLowerCase().includes(query)).slice(0, 50);
   }, [frs, franchiseQuery]);
+
+  const updateVodField = (field: keyof VodValue, value: string) => {
+    setVodForm((current) => {
+      const next = {
+        ...current,
+        [field]: safeTrim(value) || undefined,
+      };
+      setVodText(stringifyPretty(next));
+      return next;
+    });
+  };
+
+  const handleVodTextChange = (value: string) => {
+    setVodText(value);
+    const parsed = parseJsonOr<any>(value, null);
+    if (parsed && typeof parsed === "object" && !Array.isArray(parsed)) {
+      setVodForm(pickVod(parsed));
+    }
+  };
 
   const save = async () => {
     setMsg("");
@@ -711,8 +745,31 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
           </div>
         </Field>
 
+        <Field label="vod helper" hint="URLを入れると JSON に自動反映。下の JSON 直打ちも可">
+          <div className="grid md:grid-cols-3 gap-4">
+            <input
+              className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
+              value={vodForm.dmm ?? ""}
+              onChange={(e) => updateVodField("dmm", e.target.value)}
+              placeholder="DMM URL"
+            />
+            <input
+              className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
+              value={vodForm.danime ?? ""}
+              onChange={(e) => updateVodField("danime", e.target.value)}
+              placeholder="dアニメ URL"
+            />
+            <input
+              className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
+              value={vodForm.unext ?? ""}
+              onChange={(e) => updateVodField("unext", e.target.value)}
+              placeholder="U-NEXT URL"
+            />
+          </div>
+        </Field>
+
         <Field label="vod (json)" hint='例：{ "dmm": "https://...", "danime": "...", "unext": "..." }'>
-          <JsonArea value={vodText} onChange={setVodText} rows={10} />
+          <JsonArea value={vodText} onChange={handleVodTextChange} rows={10} />
         </Field>
       </div>
     </div>
