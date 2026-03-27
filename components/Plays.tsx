@@ -24,6 +24,62 @@ type PlayLike = {
   genre?: PlayGenre | null;
 };
 
+const periodSortKey = (period?: string | null) => {
+  if (!period) return -1;
+
+  const fullDates = Array.from(period.matchAll(/(\d{4})\D{0,2}(\d{1,2})\D{0,2}(\d{1,2})/g)).map((match) => ({
+    year: Number(match[1]),
+    month: Number(match[2]),
+    day: Number(match[3]),
+  }));
+
+  if (fullDates.length > 0) {
+    const first = fullDates[0];
+    let endYear = first.year;
+    let endMonth = first.month;
+    let endDay = first.day;
+
+    const monthDayMatches = Array.from(period.matchAll(/(?:\d{4}\D{0,2})?(\d{1,2})\D{0,2}(\d{1,2})/g)).map(
+      (match) => ({
+        raw: match[0],
+        month: Number(match[1]),
+        day: Number(match[2]),
+        hasYear: /^\d{4}\D/.test(match[0]),
+      })
+    );
+
+    for (const item of monthDayMatches) {
+      if (item.hasYear) {
+        const yearMatch = item.raw.match(/^(\d{4})\D/);
+        endYear = yearMatch ? Number(yearMatch[1]) : endYear;
+        endMonth = item.month;
+        endDay = item.day;
+        continue;
+      }
+
+      if (item.month < endMonth) endYear += 1;
+      endMonth = item.month;
+      endDay = item.day;
+    }
+
+    return endYear * 10000 + endMonth * 100 + endDay;
+  }
+
+  const yearMonth = period.match(/(\d{4})\D{0,2}(\d{1,2})/);
+  if (yearMonth) {
+    const year = Number(yearMonth[1]);
+    const month = Number(yearMonth[2]);
+    return year * 10000 + month * 100;
+  }
+
+  const yearOnly = period.match(/(\d{4})/);
+  if (yearOnly) {
+    return Number(yearOnly[1]) * 10000;
+  }
+
+  return -1;
+};
+
 
 
 const normalizePlayRow = (p: any): PlayLike => ({
@@ -188,18 +244,31 @@ const Plays: React.FC = () => {
     const arr = [...filteredPlays];
 
     arr.sort((a, b) => {
+      const periodA = periodSortKey(a.period);
+      const periodB = periodSortKey(b.period);
+
+      if (periodA !== periodB) {
+        return sortOrder === 'new' ? periodB - periodA : periodA - periodB;
+      }
+
       const yearA = getPlayYear(a as any);
       const yearB = getPlayYear(b as any);
 
-      if (sortOrder === 'new') {
-        if (yearA === 0) return 1;
-        if (yearB === 0) return -1;
-        return yearB - yearA;
-      } else {
-        if (yearA === 0) return 1;
-        if (yearB === 0) return -1;
-        return yearA - yearB;
+      if (yearA !== yearB) {
+        if (sortOrder === 'new') {
+          if (yearA === 0) return 1;
+          if (yearB === 0) return -1;
+          return yearB - yearA;
+        } else {
+          if (yearA === 0) return 1;
+          if (yearB === 0) return -1;
+          return yearA - yearB;
+        }
       }
+
+      return sortOrder === 'new'
+        ? a.title.localeCompare(b.title, 'ja')
+        : b.title.localeCompare(a.title, 'ja');
     });
 
     return arr;
