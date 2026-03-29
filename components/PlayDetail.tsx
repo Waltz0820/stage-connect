@@ -242,6 +242,8 @@ const PlayDetail: React.FC = () => {
   const venueList = useMemo(() => splitSlashList(play?.venue), [play?.venue]);
   const compactVenueSummary = useMemo(() => summarizeVenues(play?.venue), [play?.venue]);
   const shouldCollapseSchedule = scheduleEntries.length > 2 || venueList.length > 3;
+  const showPeriodDetails = Boolean(play?.period) && (isScheduleOpen || (!shouldCollapseSchedule && scheduleEntries.length > 1));
+  const showVenueDetails = Boolean(play?.venue) && (isScheduleOpen || (!shouldCollapseSchedule && venueList.length > 1));
   const groupedCast = useMemo(() => {
     const groups = new Map<string, { name: string | null; items: PlayCast[] }>();
 
@@ -690,7 +692,7 @@ const PlayDetail: React.FC = () => {
                       {scheduleCities.length > 5 ? " / ..." : ""}
                     </div>
                   )}
-                  {shouldCollapseSchedule && isScheduleOpen && play.period && (
+                  {showPeriodDetails && (
                     <div className="mt-3 rounded-lg border border-white/10 bg-white/5 p-3 text-xs text-slate-300 leading-relaxed whitespace-pre-wrap">
                       {play.period}
                     </div>
@@ -706,7 +708,7 @@ const PlayDetail: React.FC = () => {
                   {venueList.length > 0 && (
                     <div className="mt-2 text-xs text-slate-400">{venueList.length}会場</div>
                   )}
-                  {shouldCollapseSchedule && isScheduleOpen && play.venue && (
+                  {showVenueDetails && (
                     <div className="mt-3 rounded-lg border border-white/10 bg-white/5 p-3 text-xs text-slate-300 leading-relaxed whitespace-pre-wrap">
                       {play.venue}
                     </div>
