@@ -1,7 +1,7 @@
 // src/components/Home.tsx
-import React, { useMemo } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { getTrendingTags } from "../lib/utils/getTrendingTags";
+import { getTrendingTagsDb, type TrendingTag } from "../lib/utils/getTrendingTagsDb";
 import SeoHead from "./SeoHead";
 import { useSiteUrl, useOgImage } from "../lib/hooks/useSiteUrl";
 
@@ -12,7 +12,7 @@ type CloudItem =
   | { kind: "tag"; tag: string; rank: number };
 
 const Home: React.FC = () => {
-  const trendingTags = getTrendingTags(25);
+  const [trendingTags, setTrendingTags] = useState<TrendingTag[]>([]);
 
   const siteUrl = useSiteUrl();
   const ogImageBase = useOgImage();
@@ -27,6 +27,26 @@ const Home: React.FC = () => {
     "2.5次元舞台・ミュージカルの作品とキャストをつなぐデジタルアーカイブ。出演者、配信（VOD）、公演情報、シリーズ情報をまとめて探せます。";
 
   const ogImage = ogImageBase;
+
+  useEffect(() => {
+    let active = true;
+
+    (async () => {
+      try {
+        const rows = await getTrendingTagsDb(25);
+        if (!active) return;
+        setTrendingTags(rows);
+      } catch (error) {
+        console.warn("[home] failed to load trending tags", error);
+        if (!active) return;
+        setTrendingTags([]);
+      }
+    })();
+
+    return () => {
+      active = false;
+    };
+  }, []);
 
   // ランキングに応じたスタイルを決定するヘルパー（通常タグ用）
   const getTagStyle = (rank: number) => {
