@@ -216,6 +216,8 @@ const SeriesCastOverview: React.FC<{
   isAllActorsOpen: boolean;
   setIsAllActorsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }> = ({ topActors, visibleTopActors, isAllActorsOpen, setIsAllActorsOpen }) => {
+  const desktopTopActors = topActors.slice(0, 5);
+
   return (
     <section className="bg-theater-surface/50 backdrop-blur-sm rounded-xl p-6 border border-white/10">
       <h3 className="text-xs font-bold uppercase tracking-widest text-white mb-6 flex items-center gap-2">
@@ -283,7 +285,7 @@ const SeriesCastOverview: React.FC<{
 
       <div className="hidden lg:block">
         <div className="space-y-1">
-          {visibleTopActors.map(({ actor, count, roles, groups }, index) => (
+          {desktopTopActors.map(({ actor, count, roles, groups }, index) => (
             <Link
               key={actor.slug}
               to={`/actors/${actor.slug}`}
@@ -325,7 +327,7 @@ const SeriesCastOverview: React.FC<{
             <p className="text-xs text-slate-500">出演キャスト情報はまだありません</p>
           )}
 
-          {topActors.length > visibleTopActors.length && (
+          {topActors.length > desktopTopActors.length && (
             <button
               type="button"
               onClick={() => setIsAllActorsOpen(true)}
