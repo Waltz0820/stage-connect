@@ -716,7 +716,7 @@ const PlayDetail: React.FC = () => {
                 </div>
               </div>
               {shouldCollapseSchedule && (
-                <div className="pt-1">
+                <div className="pt-4 flex justify-end">
                   <button
                     type="button"
                     onClick={() => setIsScheduleOpen((value) => !value)}
