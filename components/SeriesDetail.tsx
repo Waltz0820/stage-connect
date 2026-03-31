@@ -38,7 +38,7 @@ type PlayLike = {
   genre?: any | null;
 };
 
-type TopActor = { actor: Actor; count: number };
+type TopActor = { actor: Actor; count: number; roles: string[] };
 
 const SITE_NAME = "Stage Connect";
 
@@ -122,6 +122,25 @@ const compactTimelinePeriod = (period?: string | null) => {
   }
 
   return period;
+};
+
+const mergeUniqueRoles = (current: string[], next?: string | null) => {
+  const parts = String(next ?? "")
+    .split("/")
+    .map((value) => value.trim())
+    .filter(Boolean);
+
+  for (const part of parts) {
+    if (!current.includes(part)) current.push(part);
+  }
+
+  return current;
+};
+
+const summarizeActorRoles = (roles: string[]) => {
+  if (roles.length === 0) return null;
+  if (roles.length <= 2) return roles.join(" / ");
+  return `${roles.slice(0, 2).join(" / ")} / ほか${roles.length - 2}役`;
 };
 
 const sortPlaysNewToOld = <
@@ -331,6 +350,7 @@ const SeriesDetail: React.FC = () => {
           .select(
             `
             play_id,
+            role_name,
             actor:actors (
               slug,
               name,
@@ -355,7 +375,7 @@ const SeriesDetail: React.FC = () => {
           return;
         }
 
-        const map = new Map<string, { actor: Actor; playSet: Set<string> }>();
+        const map = new Map<string, { actor: Actor; playSet: Set<string>; roles: string[] }>();
 
         for (const row of castRows as any[]) {
           const raw = row.actor;
@@ -366,13 +386,14 @@ const SeriesDetail: React.FC = () => {
           const k = a.slug;
           if (!k) continue;
 
-          if (!map.has(k)) map.set(k, { actor: a, playSet: new Set() });
+          if (!map.has(k)) map.set(k, { actor: a, playSet: new Set(), roles: [] });
           map.get(k)!.playSet.add(p);
+          mergeUniqueRoles(map.get(k)!.roles, row.role_name);
         }
 
         const tops: TopActor[] = Array.from(map.values())
-          .map((v) => ({ actor: v.actor, count: v.playSet.size }))
-          .sort((a, b) => b.count - a.count)
+          .map((v) => ({ actor: v.actor, count: v.playSet.size, roles: v.roles }))
+          .sort((a, b) => b.count - a.count || a.actor.name.localeCompare(b.actor.name, "ja"))
           .slice(0, 30);
 
         setTopActors(tops);
@@ -628,24 +649,31 @@ const SeriesDetail: React.FC = () => {
               ) : (
                 <>
                   <div className="flex gap-2 overflow-x-auto pb-2 snap-x snap-mandatory -mx-2 px-2">
-                    {topActors.slice(0, 5).map(({ actor, count }, index) => (
+                    {topActors.slice(0, 5).map(({ actor, count, roles }, index) => (
                       <Link
                         key={actor.slug}
                         to={`/actors/${actor.slug}`}
-                        className="snap-start shrink-0 flex items-center justify-between w-[200px] bg-white/5 border border-white/10 rounded-lg p-3 hover:bg-white/10 hover:border-neon-cyan/30 transition-all group"
+                        className="snap-start shrink-0 w-[220px] bg-white/5 border border-white/10 rounded-lg p-3 hover:bg-white/10 hover:border-neon-cyan/30 transition-all group"
                       >
-                        <div className="flex items-center gap-3 overflow-hidden">
+                        <div className="flex items-start gap-3 overflow-hidden">
                           <span
-                            className={`shrink-0 flex items-center justify-center w-5 h-5 rounded text-[10px] font-black ${index < 3
+                            className={`shrink-0 mt-0.5 flex items-center justify-center w-5 h-5 rounded text-[10px] font-black ${index < 3
                               ? "bg-neon-cyan text-black shadow-[0_0_5px_rgba(0,255,255,0.5)]"
                               : "bg-white/10 text-slate-400"
                               }`}
                           >
                             {index + 1}
                           </span>
-                          <span className="text-sm font-bold text-slate-200 group-hover:text-white truncate">
-                            {actor.name}
-                          </span>
+                          <div className="min-w-0">
+                            <div className="text-sm font-bold text-slate-200 group-hover:text-white truncate">
+                              {actor.name}
+                            </div>
+                            {summarizeActorRoles(roles) && (
+                              <div className="mt-1 text-[11px] leading-relaxed text-slate-500 line-clamp-2">
+                                {summarizeActorRoles(roles)}
+                              </div>
+                            )}
+                          </div>
                         </div>
                         <span className="text-xs font-mono text-neon-cyan/80 shrink-0">
                           {count}作
@@ -709,25 +737,32 @@ const SeriesDetail: React.FC = () => {
                           </div>
 
                           <div className="p-2 overflow-y-auto overscroll-contain">
-                            {topActors.map(({ actor, count }, index) => (
+                            {topActors.map(({ actor, count, roles }, index) => (
                               <Link
                                 key={actor.slug}
                                 to={`/actors/${actor.slug}`}
                                 onClick={() => setIsAllActorsOpen(false)}
-                                className="flex items-center justify-between p-3 rounded hover:bg-white/5 transition-colors group border-b border-white/5 last:border-0"
+                                className="flex items-start justify-between gap-3 p-3 rounded hover:bg-white/5 transition-colors group border-b border-white/5 last:border-0"
                               >
-                                <div className="flex items-center gap-4 overflow-hidden">
+                                <div className="flex items-start gap-4 overflow-hidden">
                                   <span
-                                    className={`shrink-0 flex items-center justify-center w-6 h-6 rounded text-xs font-black ${index < 3
+                                    className={`shrink-0 mt-0.5 flex items-center justify-center w-6 h-6 rounded text-xs font-black ${index < 3
                                       ? "bg-neon-cyan text-black shadow-[0_0_5px_rgba(0,255,255,0.5)]"
                                       : "bg-white/10 text-slate-500"
                                       }`}
                                   >
                                     {index + 1}
                                   </span>
-                                  <span className="text-sm font-bold text-slate-300 group-hover:text-white transition-colors truncate">
-                                    {actor.name}
-                                  </span>
+                                  <div className="min-w-0">
+                                    <div className="text-sm font-bold text-slate-300 group-hover:text-white transition-colors truncate">
+                                      {actor.name}
+                                    </div>
+                                    {summarizeActorRoles(roles) && (
+                                      <div className="mt-1 text-[11px] leading-relaxed text-slate-500 line-clamp-2">
+                                        {summarizeActorRoles(roles)}
+                                      </div>
+                                    )}
+                                  </div>
                                 </div>
                                 <span className="text-xs font-mono text-neon-cyan">
                                   {count}作品
@@ -746,24 +781,31 @@ const SeriesDetail: React.FC = () => {
             {/* ✅ Desktop: Vertical Ranking List */}
             <div className="hidden lg:block">
               <div className="space-y-1">
-                {topActors.map(({ actor, count }, index) => (
+                {topActors.map(({ actor, count, roles }, index) => (
                   <Link
                     key={actor.slug}
                     to={`/actors/${actor.slug}`}
-                    className="flex items-center justify-between p-3 rounded-lg hover:bg-white/5 border border-transparent hover:border-neon-cyan/20 transition-all group"
+                    className="flex items-start justify-between gap-3 p-3 rounded-lg hover:bg-white/5 border border-transparent hover:border-neon-cyan/20 transition-all group"
                   >
-                    <div className="flex items-center gap-3 overflow-hidden">
+                    <div className="flex items-start gap-3 overflow-hidden">
                       <span
-                        className={`shrink-0 flex items-center justify-center w-6 h-6 rounded text-xs font-black ${index < 3
+                        className={`shrink-0 mt-0.5 flex items-center justify-center w-6 h-6 rounded text-xs font-black ${index < 3
                           ? "bg-neon-cyan text-black shadow-[0_0_8px_rgba(0,255,255,0.4)]"
                           : "bg-white/10 text-slate-500"
                           }`}
                       >
                         {index + 1}
                       </span>
-                      <span className="text-sm font-bold text-slate-300 group-hover:text-white transition-colors truncate">
-                        {actor.name}
-                      </span>
+                      <div className="min-w-0">
+                        <div className="text-sm font-bold text-slate-300 group-hover:text-white transition-colors truncate">
+                          {actor.name}
+                        </div>
+                        {summarizeActorRoles(roles) && (
+                          <div className="mt-1 text-[11px] leading-relaxed text-slate-500 line-clamp-2">
+                            {summarizeActorRoles(roles)}
+                          </div>
+                        )}
+                      </div>
                     </div>
                     <span className="text-xs font-mono text-slate-500 group-hover:text-neon-cyan transition-colors whitespace-nowrap ml-2">
                       {count}作
