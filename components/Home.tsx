@@ -9,7 +9,7 @@ import { useSiteUrl, useOgImage } from "../lib/hooks/useSiteUrl";
 
 type CloudItem =
   | { kind: "watch"; key: "vod" | "dmm" | "unext"; label: string; to: string }
-  | { kind: "tag"; tag: string; rank: number };
+  | { kind: "tag"; tag: string; slug: string; rank: number };
 
 const Home: React.FC = () => {
   const [trendingTags, setTrendingTags] = useState<TrendingTag[]>([]);
@@ -72,6 +72,7 @@ const Home: React.FC = () => {
     const tagItems: CloudItem[] = trendingTags.map((t: any) => ({
       kind: "tag",
       tag: t.tag,
+      slug: t.slug,
       rank: t.rank,
     }));
     return [...watchLinks, ...tagItems];
@@ -198,7 +199,7 @@ const Home: React.FC = () => {
                 );
               }
 
-              const href = `/tags/${encodeURIComponent(item.tag)}`;
+              const href = `/tags/${encodeURIComponent(item.slug)}`;
               return (
                 <Link
                   key={`tag-${item.tag}`}
