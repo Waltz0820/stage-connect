@@ -210,6 +210,208 @@ const ModalPortal: React.FC<{ open: boolean; children: React.ReactNode }> = ({
   return createPortal(children, document.body);
 };
 
+const SeriesCastOverview: React.FC<{
+  topActors: TopActor[];
+  visibleTopActors: TopActor[];
+  isAllActorsOpen: boolean;
+  setIsAllActorsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}> = ({ topActors, visibleTopActors, isAllActorsOpen, setIsAllActorsOpen }) => {
+  return (
+    <section className="bg-theater-surface/50 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+      <h3 className="text-xs font-bold uppercase tracking-widest text-white mb-6 flex items-center gap-2">
+        <span className="w-1.5 h-1.5 rounded-full bg-neon-cyan"></span>
+        出演キャスト・役柄一覧
+      </h3>
+
+      <div className="lg:hidden">
+        {topActors.length === 0 ? (
+          <p className="text-xs text-slate-500">出演キャスト情報はまだありません</p>
+        ) : (
+          <>
+            <div className="flex gap-2 overflow-x-auto pb-2 snap-x snap-mandatory -mx-2 px-2">
+              {visibleTopActors.map(({ actor, count, roles, groups }, index) => (
+                <Link
+                  key={actor.slug}
+                  to={`/actors/${actor.slug}`}
+                  className="snap-start shrink-0 w-[220px] bg-white/5 border border-white/10 rounded-lg p-3 hover:bg-white/10 hover:border-neon-cyan/30 transition-all group"
+                >
+                  <div className="flex items-start gap-3 overflow-hidden">
+                    <span
+                      className={`shrink-0 mt-0.5 flex items-center justify-center w-5 h-5 rounded text-[10px] font-black ${
+                        index < 3
+                          ? "bg-neon-cyan text-black shadow-[0_0_5px_rgba(0,255,255,0.5)]"
+                          : "bg-white/10 text-slate-400"
+                      }`}
+                    >
+                      {index + 1}
+                    </span>
+                    <div className="min-w-0">
+                      <div className="text-sm font-bold text-slate-200 group-hover:text-white truncate">
+                        {actor.name}
+                      </div>
+                      {summarizeActorGroups(groups) && (
+                        <div className="mt-1 text-[10px] leading-relaxed text-slate-500 truncate">
+                          {summarizeActorGroups(groups)}
+                        </div>
+                      )}
+                      {summarizeActorRoles(roles) && (
+                        <div className="mt-1 text-[11px] leading-relaxed text-slate-500 line-clamp-2">
+                          {summarizeActorRoles(roles)}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                  <div className="mt-2 text-right text-xs font-mono text-neon-cyan/80 shrink-0">
+                    {count}作
+                  </div>
+                </Link>
+              ))}
+            </div>
+
+            {topActors.length > visibleTopActors.length && (
+              <button
+                type="button"
+                onClick={() => setIsAllActorsOpen(true)}
+                className="mt-3 w-full px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-slate-400 text-xs font-bold hover:bg-white/10 hover:text-white transition-colors"
+              >
+                すべての出演キャストを見る（{topActors.length}）
+              </button>
+            )}
+          </>
+        )}
+      </div>
+
+      <div className="hidden lg:block">
+        <div className="space-y-1">
+          {visibleTopActors.map(({ actor, count, roles, groups }, index) => (
+            <Link
+              key={actor.slug}
+              to={`/actors/${actor.slug}`}
+              className="flex items-start justify-between gap-3 p-3 rounded-lg hover:bg-white/5 border border-transparent hover:border-neon-cyan/20 transition-all group"
+            >
+              <div className="flex items-start gap-3 overflow-hidden">
+                <span
+                  className={`shrink-0 mt-0.5 flex items-center justify-center w-6 h-6 rounded text-xs font-black ${
+                    index < 3
+                      ? "bg-neon-cyan text-black shadow-[0_0_8px_rgba(0,255,255,0.4)]"
+                      : "bg-white/10 text-slate-500"
+                  }`}
+                >
+                  {index + 1}
+                </span>
+                <div className="min-w-0">
+                  <div className="text-sm font-bold text-slate-300 group-hover:text-white transition-colors truncate">
+                    {actor.name}
+                  </div>
+                  {summarizeActorGroups(groups) && (
+                    <div className="mt-1 text-[10px] leading-relaxed text-slate-500 truncate">
+                      {summarizeActorGroups(groups)}
+                    </div>
+                  )}
+                  {summarizeActorRoles(roles) && (
+                    <div className="mt-1 text-[11px] leading-relaxed text-slate-500 line-clamp-2">
+                      {summarizeActorRoles(roles)}
+                    </div>
+                  )}
+                </div>
+              </div>
+              <span className="text-xs font-mono text-slate-500 group-hover:text-neon-cyan transition-colors whitespace-nowrap ml-2">
+                {count}作
+              </span>
+            </Link>
+          ))}
+
+          {topActors.length === 0 && (
+            <p className="text-xs text-slate-500">出演キャスト情報はまだありません</p>
+          )}
+
+          {topActors.length > visibleTopActors.length && (
+            <button
+              type="button"
+              onClick={() => setIsAllActorsOpen(true)}
+              className="mt-3 w-full px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-slate-400 text-xs font-bold hover:bg-white/10 hover:text-white transition-colors"
+            >
+              すべての出演キャストを見る（{topActors.length}）
+            </button>
+          )}
+        </div>
+      </div>
+
+      <ModalPortal open={isAllActorsOpen}>
+        <div
+          className="fixed inset-0 z-[2147483647] bg-black/80 backdrop-blur-sm"
+          onMouseDown={(e) => {
+            if (e.target === e.currentTarget) setIsAllActorsOpen(false);
+          }}
+          style={{
+            paddingTop: "max(16px, env(safe-area-inset-top))",
+            paddingBottom: "max(16px, env(safe-area-inset-bottom))",
+          }}
+        >
+          <div className="h-full w-full flex items-center justify-center px-4">
+            <div
+              className="w-full max-w-sm rounded-xl border border-white/10 bg-theater-surface shadow-2xl flex flex-col"
+              style={{ maxHeight: "calc(100dvh - 64px)" }}
+            >
+              <div className="flex items-center justify-between px-5 py-4 border-b border-white/10 shrink-0 bg-black/20">
+                <p className="text-sm font-bold text-white">出演キャスト・役柄一覧</p>
+                <button
+                  type="button"
+                  onClick={() => setIsAllActorsOpen(false)}
+                  className="w-8 h-8 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/20 transition-colors"
+                >
+                  <svg className="w-4 h-4 text-slate-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+
+              <div className="p-2 overflow-y-auto overscroll-contain">
+                {topActors.map(({ actor, count, roles, groups }, index) => (
+                  <Link
+                    key={actor.slug}
+                    to={`/actors/${actor.slug}`}
+                    onClick={() => setIsAllActorsOpen(false)}
+                    className="flex items-start justify-between gap-3 p-3 rounded hover:bg-white/5 transition-colors group border-b border-white/5 last:border-0"
+                  >
+                    <div className="flex items-start gap-4 overflow-hidden">
+                      <span
+                        className={`shrink-0 mt-0.5 flex items-center justify-center w-6 h-6 rounded text-xs font-black ${
+                          index < 3
+                            ? "bg-neon-cyan text-black shadow-[0_0_5px_rgba(0,255,255,0.5)]"
+                            : "bg-white/10 text-slate-500"
+                        }`}
+                      >
+                        {index + 1}
+                      </span>
+                      <div className="min-w-0">
+                        <div className="text-sm font-bold text-slate-300 group-hover:text-white transition-colors truncate">
+                          {actor.name}
+                        </div>
+                        {summarizeActorGroups(groups) && (
+                          <div className="mt-1 text-[10px] leading-relaxed text-slate-500 truncate">
+                            {summarizeActorGroups(groups)}
+                          </div>
+                        )}
+                        {summarizeActorRoles(roles) && (
+                          <div className="mt-1 text-[11px] leading-relaxed text-slate-500 line-clamp-2">
+                            {summarizeActorRoles(roles)}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                    <span className="text-xs font-mono text-neon-cyan whitespace-nowrap">{count}作</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </ModalPortal>
+    </section>
+  );
+};
+
 const SeriesDetail: React.FC = () => {
   // ✅ ルートは /series/:slug を正にする（List側と統一）
   const { slug } = useParams<{ slug: string }>();
@@ -642,7 +844,7 @@ const SeriesDetail: React.FC = () => {
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
         {/* Sidebar: Ranking List Style (Text Only) */}
-        <div className="lg:col-span-4 lg:order-2">
+        <div className="hidden">
           <div className="bg-theater-surface/50 backdrop-blur-sm rounded-xl p-6 border border-white/10 sticky top-24">
             <h3 className="text-xs font-bold uppercase tracking-widest text-white mb-6 flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-neon-cyan"></span>
@@ -937,6 +1139,13 @@ const SeriesDetail: React.FC = () => {
               </div>
             )}
           </section>
+
+          <SeriesCastOverview
+            topActors={topActors}
+            visibleTopActors={visibleTopActors}
+            isAllActorsOpen={isAllActorsOpen}
+            setIsAllActorsOpen={setIsAllActorsOpen}
+          />
 
           {/* 年表（PlayCard） */}
           <div className="relative">
