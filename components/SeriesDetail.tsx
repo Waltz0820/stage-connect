@@ -402,7 +402,7 @@ const SeriesDetail: React.FC = () => {
         const tops: TopActor[] = Array.from(map.values())
           .map((v) => ({ actor: v.actor, count: v.playSet.size, roles: v.roles, groups: v.groups }))
           .sort((a, b) => b.count - a.count || a.actor.name.localeCompare(b.actor.name, "ja"))
-          .slice(0, 30);
+          ;
 
         setTopActors(tops);
 
@@ -417,6 +417,7 @@ const SeriesDetail: React.FC = () => {
   }, [decodedKey]);
 
   const sortedPlays = useMemo(() => sortPlaysNewToOld(plays), [plays]);
+  const visibleTopActors = useMemo(() => topActors.slice(0, 12), [topActors]);
 
   const years = useMemo(() => {
     const ys = plays
@@ -657,7 +658,7 @@ const SeriesDetail: React.FC = () => {
               ) : (
                 <>
                   <div className="flex gap-2 overflow-x-auto pb-2 snap-x snap-mandatory -mx-2 px-2">
-                    {topActors.slice(0, 5).map(({ actor, count, roles, groups }, index) => (
+                    {visibleTopActors.map(({ actor, count, roles, groups }, index) => (
                       <Link
                         key={actor.slug}
                         to={`/actors/${actor.slug}`}
@@ -677,8 +678,8 @@ const SeriesDetail: React.FC = () => {
                               {actor.name}
                             </div>
                             {summarizeActorGroups(groups) && (
-                              <div className="mt-1 inline-flex max-w-full rounded-full border border-white/10 bg-white/5 px-2 py-0.5 text-[10px] font-bold tracking-wide text-slate-300">
-                                <span className="truncate">{summarizeActorGroups(groups)}</span>
+                              <div className="mt-1 text-[10px] leading-relaxed text-slate-500 truncate">
+                                {summarizeActorGroups(groups)}
                               </div>
                             )}
                             {summarizeActorRoles(roles) && (
@@ -695,7 +696,7 @@ const SeriesDetail: React.FC = () => {
                     ))}
                   </div>
 
-                  {topActors.length > 5 && (
+                  {topActors.length > visibleTopActors.length && (
                     <button
                       type="button"
                       onClick={() => setIsAllActorsOpen(true)}
@@ -771,8 +772,8 @@ const SeriesDetail: React.FC = () => {
                                       {actor.name}
                                     </div>
                                     {summarizeActorGroups(groups) && (
-                                      <div className="mt-1 inline-flex max-w-full rounded-full border border-white/10 bg-white/5 px-2 py-0.5 text-[10px] font-bold tracking-wide text-slate-300">
-                                        <span className="truncate">{summarizeActorGroups(groups)}</span>
+                                      <div className="mt-1 text-[10px] leading-relaxed text-slate-500 truncate">
+                                        {summarizeActorGroups(groups)}
                                       </div>
                                     )}
                                     {summarizeActorRoles(roles) && (
@@ -799,7 +800,7 @@ const SeriesDetail: React.FC = () => {
             {/* ✅ Desktop: Vertical Ranking List */}
             <div className="hidden lg:block">
               <div className="space-y-1">
-                {topActors.map(({ actor, count, roles, groups }, index) => (
+                {visibleTopActors.map(({ actor, count, roles, groups }, index) => (
                   <Link
                     key={actor.slug}
                     to={`/actors/${actor.slug}`}
@@ -819,8 +820,8 @@ const SeriesDetail: React.FC = () => {
                           {actor.name}
                         </div>
                         {summarizeActorGroups(groups) && (
-                          <div className="mt-1 inline-flex max-w-full rounded-full border border-white/10 bg-white/5 px-2 py-0.5 text-[10px] font-bold tracking-wide text-slate-300">
-                            <span className="truncate">{summarizeActorGroups(groups)}</span>
+                          <div className="mt-1 text-[10px] leading-relaxed text-slate-500 truncate">
+                            {summarizeActorGroups(groups)}
                           </div>
                         )}
                         {summarizeActorRoles(roles) && (
@@ -840,6 +841,15 @@ const SeriesDetail: React.FC = () => {
                   <p className="text-xs text-slate-500">
                     出演キャスト情報はまだありません
                   </p>
+                )}
+                {topActors.length > visibleTopActors.length && (
+                  <button
+                    type="button"
+                    onClick={() => setIsAllActorsOpen(true)}
+                    className="mt-3 w-full px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-slate-400 text-xs font-bold hover:bg-white/10 hover:text-white transition-colors"
+                  >
+                    すべての出演キャストを見る（{topActors.length}）
+                  </button>
                 )}
               </div>
             </div>
