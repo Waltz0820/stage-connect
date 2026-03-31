@@ -733,18 +733,8 @@ const PlayDetail: React.FC = () => {
             <section className="bg-theater-surface/70 rounded-xl border border-white/10 p-8 backdrop-blur-sm relative overflow-hidden">
               <div className="absolute top-[-40%] left-[-10%] w-[260px] h-[260px] bg-neon-cyan/10 blur-[90px] rounded-full pointer-events-none" />
 
-              <div className="flex items-center justify-between gap-3 mb-6">
+              <div className="mb-6">
                 <h3 className="text-xs font-bold uppercase tracking-widest text-slate-500">スタッフ / クレジット</h3>
-
-                {creditsCollapsed.length > 0 && (
-                  <button
-                    type="button"
-                    onClick={() => setIsCreditsOpen((v) => !v)}
-                    className="text-[11px] px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-slate-200 hover:bg-white/10 transition-colors font-bold"
-                  >
-                    {isCreditsOpen ? "閉じる" : `続きを読む（${creditsCollapsed.length}）`}
-                  </button>
-                )}
               </div>
 
               <div className="space-y-5">
@@ -774,6 +764,18 @@ const PlayDetail: React.FC = () => {
                   </div>
                 )}
               </div>
+
+              {creditsCollapsed.length > 0 && (
+                <div className="pt-4 flex justify-end">
+                  <button
+                    type="button"
+                    onClick={() => setIsCreditsOpen((v) => !v)}
+                    className="text-[11px] px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-slate-200 hover:bg-white/10 transition-colors font-bold"
+                  >
+                    {isCreditsOpen ? "閉じる" : `続きを読む（${creditsCollapsed.length}）`}
+                  </button>
+                </div>
+              )}
             </section>
           )}
 
