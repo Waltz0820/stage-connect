@@ -63,10 +63,15 @@ type PlayCast = {
 const SITE_NAME = "Stage Connect";
 const CREDIT_VISIBLE_COUNT = 3;
 
+const normalizeDisplayRole = (value?: string | null) =>
+  String(value ?? "")
+    .split("※")[0]
+    .trim();
+
 const mergeDelimitedValues = (...values: Array<string | null | undefined>): string | null => {
   const parts = values
     .flatMap((value) => String(value ?? "").split("/"))
-    .map((value) => value.trim())
+    .map((value) => normalizeDisplayRole(value))
     .filter(Boolean);
 
   if (parts.length === 0) return null;
@@ -508,7 +513,7 @@ const PlayDetail: React.FC = () => {
                     if (!row.actor) return null;
                     return {
                       actor: normalizeActorRow(row.actor),
-                      roleName: row.role_name ?? null,
+                      roleName: normalizeDisplayRole(row.role_name),
                       castGroup: row.cast_group ?? null,
                       isStarring: Boolean(row.is_starring),
                     } satisfies PlayCast;

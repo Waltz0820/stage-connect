@@ -38,10 +38,15 @@ type CoStarItem = { actor: Actor; count: number };
 
 const SITE_NAME = "Stage Connect";
 
+const normalizeDisplayRole = (value?: string | null) =>
+  String(value ?? "")
+    .split("※")[0]
+    .trim();
+
 const mergeRoleNames = (current?: string | null, next?: string | null): string | null => {
   const values = [current, next]
     .flatMap((value) => String(value ?? "").split("/"))
-    .map((value) => value.trim())
+    .map((value) => normalizeDisplayRole(value))
     .filter(Boolean);
 
   if (values.length === 0) return null;
@@ -406,7 +411,7 @@ const ActorDetail: React.FC = () => {
                 summary: p.summary ?? null,
                 period: p.period ?? null,
                 venue: p.venue ?? null,
-                roleName: row.role_name ?? null,
+                roleName: normalizeDisplayRole(row.role_name),
                 vod: p.vod ?? null,
                 // ✅ tags は play_tags join 由来に統一（旧tagsカラムは読まない）
                 tags: normalizeTagsFromJoin(p),

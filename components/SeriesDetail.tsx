@@ -124,10 +124,15 @@ const compactTimelinePeriod = (period?: string | null) => {
   return period;
 };
 
+const normalizeDisplayRole = (value?: string | null) =>
+  String(value ?? "")
+    .split("※")[0]
+    .trim();
+
 const mergeUniqueRoles = (current: string[], next?: string | null) => {
   const parts = String(next ?? "")
     .split("/")
-    .map((value) => value.trim())
+    .map((value) => normalizeDisplayRole(value))
     .filter(Boolean);
 
   for (const part of parts) {
