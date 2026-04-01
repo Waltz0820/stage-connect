@@ -127,6 +127,7 @@ const compactTimelinePeriod = (period?: string | null) => {
 const normalizeDisplayRole = (value?: string | null) =>
   String(value ?? "")
     .split("※")[0]
+    .replace(/【[^】]*】/g, "")
     .trim();
 
 const mergeUniqueRoles = (current: string[], next?: string | null) => {

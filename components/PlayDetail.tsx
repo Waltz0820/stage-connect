@@ -79,6 +79,12 @@ const splitSlashList = (value?: string | null) =>
     .map((item) => item.trim())
     .filter(Boolean);
 
+const summarizeRoleNameForCastCard = (value?: string | null) => {
+  const roles = splitSlashList(value);
+  if (roles.length <= 3) return value ?? null;
+  return `${roles.slice(0, 3).join(" / ")} / ほか${roles.length - 3}役`;
+};
+
 const parseScheduleEntries = (period?: string | null) =>
   String(period ?? "")
     .split(" / ")
@@ -272,7 +278,16 @@ const PlayDetail: React.FC = () => {
     return Array.from(groups.values());
   }, [cast]);
 
-  const castTop = useMemo(() => cast.slice(0, 3).map((item) => item.actor.name).join("、"), [cast]);
+  const castTop = useMemo(() => {
+    const uniqueNames = Array.from(
+      new Set(
+        cast
+          .map((item) => item.actor.name?.trim())
+          .filter(Boolean)
+      )
+    );
+    return uniqueNames.slice(0, 3).join("、");
+  }, [cast]);
   const castNames = castTop ? `${castTop}ら` : "未定";
 
   const hasVodLinks = useMemo(() => !!play?.vod?.dmm, [play]);
@@ -942,7 +957,7 @@ const PlayDetail: React.FC = () => {
                     <CastCard
                       key={`${castItem.actor.slug}-${castItem.roleName ?? "cast"}-${group.name ?? "ungrouped"}`}
                       actor={castItem.actor}
-                      roleName={castItem.roleName || undefined}
+                      roleName={summarizeRoleNameForCastCard(castItem.roleName) || undefined}
                       badge={castItem.isStarring ? "MAIN CAST" : undefined}
                     />
                   ))}
