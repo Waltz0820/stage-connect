@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
+import { FavoriteButtonClient } from "./FavoriteButtonClient";
 
 type ActorFavorite = {
   slug: string;
@@ -110,9 +111,20 @@ export function FavoritesClient() {
         <div className="results-grid">
           {actors.map((actor) => (
             <article key={actor.slug} className="list-card">
-              <Link href={`/actors/${actor.slug}`} className="cast-name">
-                {actor.name}
-              </Link>
+              <div className="catalog-card__top">
+                <Link href={`/actors/${actor.slug}`} className="cast-name">
+                  {actor.name}
+                </Link>
+                <div className="catalog-card__top-actions">
+                  <FavoriteButtonClient
+                    slug={actor.slug}
+                    type="actor"
+                    size="sm"
+                    name={actor.name}
+                    kana={actor.kana}
+                  />
+                </div>
+              </div>
               {actor.kana ? <div className="muted">{actor.kana}</div> : null}
             </article>
           ))}
@@ -121,9 +133,20 @@ export function FavoritesClient() {
         <div className="results-grid">
           {plays.map((play) => (
             <article key={play.slug} className="list-card">
-              <Link href={`/plays/${play.slug}`} className="cast-name">
-                {play.title}
-              </Link>
+              <div className="catalog-card__top">
+                <Link href={`/plays/${play.slug}`} className="cast-name">
+                  {play.title}
+                </Link>
+                <div className="catalog-card__top-actions">
+                  <FavoriteButtonClient
+                    slug={play.slug}
+                    type="play"
+                    size="sm"
+                    title={play.title}
+                    franchiseName={play.franchiseName}
+                  />
+                </div>
+              </div>
               {play.franchiseName ? <div className="muted">{play.franchiseName}</div> : null}
             </article>
           ))}
