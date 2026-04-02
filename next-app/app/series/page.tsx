@@ -109,7 +109,7 @@ export default async function SeriesPage({
             </Link>
           </div>
 
-          <div className="filter-row filter-row--dense">
+          <div className="filter-row filter-row--dense genre-filter-row">
             {originOptions.map((option) => (
               <Link
                 key={option}
