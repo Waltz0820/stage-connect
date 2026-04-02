@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import FloatingCTA from "./FloatingCTA";
+import { SearchBarClient } from "./SearchBarClient";
 
 const primaryNav = [
   { href: "/actors", label: "俳優" },
@@ -16,6 +17,8 @@ const primaryNav = [
 const mobileNav = [
   { href: "/", label: "TOP" },
   ...primaryNav,
+  { href: "/favorites", label: "お気に入り" },
+  { href: "/tags", label: "タグ" },
 ];
 
 export default function SiteChrome({ children }: { children: React.ReactNode }) {
@@ -88,6 +91,13 @@ export default function SiteChrome({ children }: { children: React.ReactNode }) 
             </nav>
           </div>
 
+          <div className="site-header__actions">
+            <SearchBarClient />
+            <Link href="/favorites" className={`header-utility ${isActive("/favorites") ? "is-active" : ""}`}>
+              お気に入り
+            </Link>
+          </div>
+
           <button
             type="button"
             className="site-menu-button"
@@ -146,6 +156,8 @@ export default function SiteChrome({ children }: { children: React.ReactNode }) 
                 <li><Link href="/plays">作品一覧</Link></li>
                 <li><Link href="/actors">キャスト一覧</Link></li>
                 <li><Link href="/series">シリーズ一覧</Link></li>
+                <li><Link href="/tags">タグ一覧</Link></li>
+                <li><Link href="/favorites">お気に入り</Link></li>
               </ul>
             </section>
 

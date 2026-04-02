@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { FavoriteButtonClient } from "../../../components/FavoriteButtonClient";
+import { ShareButtonClient } from "../../../components/ShareButtonClient";
 import {
   getCreditItems,
   getPlayDetailBySlug,
@@ -310,6 +312,11 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
 
             <div>
               <h1 className="page-title">{play.title}</h1>
+            </div>
+
+            <div className="detail-actions">
+              <FavoriteButtonClient slug={play.slug} type="play" size="lg" />
+              <ShareButtonClient title={play.title} text={`${play.title}の作品情報 | Stage Connect`} />
             </div>
 
             {play.tags.length > 0 ? (

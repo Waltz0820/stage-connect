@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ActorCoStarsClient } from "../../../components/ActorCoStarsClient";
+import { FavoriteButtonClient } from "../../../components/FavoriteButtonClient";
+import { ShareButtonClient } from "../../../components/ShareButtonClient";
 import {
   formatBirthday,
   getActorDetailBySlug,
@@ -121,6 +123,11 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
             <div>
               <h1 className="page-title">{actor.name}</h1>
               {actor.kana ? <div className="muted">{actor.kana}</div> : null}
+            </div>
+
+            <div className="detail-actions">
+              <FavoriteButtonClient slug={actor.slug} type="actor" size="lg" />
+              <ShareButtonClient title={actor.name} text={`${actor.name}のプロフィール | Stage Connect`} />
             </div>
 
             <div className="pill-row">

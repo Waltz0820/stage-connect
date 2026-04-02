@@ -107,6 +107,54 @@ export type GuideDetailData = {
   category: "series-guides" | "features" | null;
 };
 
+export type TagListItem = {
+  id: string;
+  slug: string;
+  name: string;
+  type: "world" | "experience" | "origin";
+  description: string;
+  playsCount: number;
+  priority: number;
+};
+
+export type TagDetailData = {
+  id: string;
+  slug: string;
+  name: string;
+  type: "world" | "experience" | "origin";
+  description: string;
+  playsCount: number;
+  plays: Array<{
+    id: string;
+    slug: string;
+    title: string;
+    period: string | null;
+    franchiseName: string | null;
+    franchiseSlug: string | null;
+  }>;
+};
+
+export type SearchResultBundle = {
+  actors: Array<{
+    id: string;
+    slug: string;
+    name: string;
+    kana: string | null;
+  }>;
+  plays: Array<{
+    id: string;
+    slug: string;
+    title: string;
+    franchiseName: string | null;
+    franchiseSlug: string | null;
+  }>;
+  series: Array<{
+    id: string;
+    slug: string;
+    name: string;
+  }>;
+};
+
 export type WatchFranchiseItem = {
   id: string;
   name: string;
@@ -149,6 +197,17 @@ export type CreditItem = {
 
 const uniq = (values: Array<string | null | undefined>) =>
   Array.from(new Set(values.map((value) => String(value ?? "").trim()).filter(Boolean)));
+
+const sanitizeForLike = (value: string) => value.replace(/[%_]/g, "\\$&").trim();
+const stripSearchSpaces = (value: string) => value.replace(/[\s\u3000]+/g, "");
+const buildLooseLike = (value: string) => {
+  const compact = stripSearchSpaces(value);
+  if (!compact) return "";
+  return `%${compact
+    .split("")
+    .map((char) => sanitizeForLike(char))
+    .join("%")}%`;
+};
 
 const normalizeDisplayRole = (value?: string | null) =>
   String(value ?? "")
@@ -780,6 +839,197 @@ export async function getGuideDetailBySlug(slug: string): Promise<GuideDetailDat
     publishedAt: (data.published_at as string | null) ?? null,
     category: (data.category as "series-guides" | "features" | null) ?? null,
   };
+}
+
+export async function getTagList(): Promise<TagListItem[]> {
+  if (!hasSupabaseEnv) return [];
+  const supabase = createSupabaseServerClient();
+  const { data, error } = await supabase
+    .from("public_tags_min2")
+    .select("tag_id, slug, name, type, description, plays_count, priority")
+    .order("priority", { ascending: false })
+    .order("plays_count", { ascending: false })
+    .order("name", { ascending: true });
+
+  if (error) throw error;
+
+  return ((data ?? []) as any[])
+    .map((row) => {
+      const id = String(row?.tag_id ?? "").trim();
+      const slug = String(row?.slug ?? "").trim();
+      const name = String(row?.name ?? "").trim();
+      const type = row?.type;
+
+      if (!id || !slug || !name) return null;
+      if (type !== "world" && type !== "experience" && type !== "origin") return null;
+
+      return {
+        id,
+        slug,
+        name,
+        type,
+        description: String(row?.description ?? "").trim(),
+        playsCount: typeof row?.plays_count === "number" ? row.plays_count : 0,
+        priority: typeof row?.priority === "number" ? row.priority : 0,
+      } satisfies TagListItem;
+    })
+    .filter((item): item is TagListItem => Boolean(item));
+}
+
+export async function getTagDetailBySlug(slug: string): Promise<TagDetailData | null> {
+  if (!hasSupabaseEnv) return null;
+  const supabase = createSupabaseServerClient();
+
+  const { data: tagRow, error: tagError } = await supabase
+    .from("tag_play_counts")
+    .select("tag_id, slug, name, type, description, plays_count")
+    .eq("slug", slug)
+    .maybeSingle();
+
+  if (tagError) throw tagError;
+  if (!tagRow) return null;
+
+  const tagId = String(tagRow.tag_id ?? "").trim();
+  const tagSlug = String(tagRow.slug ?? "").trim();
+  const tagName = String(tagRow.name ?? "").trim();
+  const tagType = tagRow.type;
+
+  if (!tagId || !tagSlug || !tagName) return null;
+  if (tagType !== "world" && tagType !== "experience" && tagType !== "origin") return null;
+
+  const { data: playRows, error: playError } = await supabase
+    .from("play_tags")
+    .select(
+      `
+      play:plays (
+        id,
+        slug,
+        title,
+        period,
+        franchise:franchises (
+          name,
+          slug
+        )
+      )
+    `
+    )
+    .eq("tag_id", tagId);
+
+  if (playError) throw playError;
+
+  const plays = ((playRows ?? []) as any[])
+    .map((row) => row?.play)
+    .filter(Boolean)
+    .map((row) => {
+      const franchise = Array.isArray(row?.franchise) ? row.franchise[0] : row?.franchise;
+      const playId = String(row?.id ?? "").trim();
+      const playSlug = String(row?.slug ?? "").trim();
+      const playTitle = String(row?.title ?? "").trim();
+      if (!playId || !playSlug || !playTitle) return null;
+
+      return {
+        id: playId,
+        slug: playSlug,
+        title: playTitle,
+        period: (row?.period as string | null) ?? null,
+        franchiseName: franchise?.name ?? null,
+        franchiseSlug: franchise?.slug ?? null,
+      };
+    })
+    .filter((item): item is TagDetailData["plays"][number] => Boolean(item))
+    .sort((a, b) => periodSortKey(b.period) - periodSortKey(a.period) || a.title.localeCompare(b.title, "ja"));
+
+  return {
+    id: tagId,
+    slug: tagSlug,
+    name: tagName,
+    type: tagType,
+    description: String(tagRow.description ?? "").trim(),
+    playsCount: typeof tagRow.plays_count === "number" ? tagRow.plays_count : plays.length,
+    plays,
+  };
+}
+
+export async function searchSite(query: string, limit = 20): Promise<SearchResultBundle> {
+  if (!hasSupabaseEnv) return { actors: [], plays: [], series: [] };
+
+  const q = String(query ?? "").trim();
+  if (!q) return { actors: [], plays: [], series: [] };
+
+  const supabase = createSupabaseServerClient();
+  const like = `%${sanitizeForLike(q)}%`;
+  const looseLike = buildLooseLike(q);
+  const actorOr =
+    looseLike && looseLike !== like
+      ? `name.ilike.${like},kana.ilike.${like},name.ilike.${looseLike},kana.ilike.${looseLike}`
+      : `name.ilike.${like},kana.ilike.${like}`;
+
+  const [actorsRes, playsRes, seriesRes] = await Promise.all([
+    supabase
+      .from("actors")
+      .select("id, slug, name, kana")
+      .or(actorOr)
+      .order("name", { ascending: true })
+      .limit(limit),
+    supabase
+      .from("plays")
+      .select(
+        `
+        id,
+        slug,
+        title,
+        franchise:franchises (
+          name,
+          slug
+        )
+      `
+      )
+      .ilike("title", like)
+      .order("title", { ascending: true })
+      .limit(limit),
+    supabase
+      .from("franchises")
+      .select("id, slug, name")
+      .or(`name.ilike.${like},slug.ilike.${like}`)
+      .order("name", { ascending: true })
+      .limit(limit),
+  ]);
+
+  if (actorsRes.error) throw actorsRes.error;
+  if (playsRes.error) throw playsRes.error;
+  if (seriesRes.error) throw seriesRes.error;
+
+  const actors = ((actorsRes.data ?? []) as any[])
+    .map((row) => ({
+      id: String(row?.id ?? "").trim(),
+      slug: String(row?.slug ?? "").trim(),
+      name: String(row?.name ?? "").trim(),
+      kana: (row?.kana as string | null) ?? null,
+    }))
+    .filter((row) => row.id && row.slug && row.name);
+
+  const plays = ((playsRes.data ?? []) as any[])
+    .map((row) => {
+      const franchise = Array.isArray(row?.franchise) ? row.franchise[0] : row?.franchise;
+      return {
+        id: String(row?.id ?? "").trim(),
+        slug: String(row?.slug ?? "").trim(),
+        title: String(row?.title ?? "").trim(),
+        franchiseName: franchise?.name ?? null,
+        franchiseSlug: franchise?.slug ?? null,
+      };
+    })
+    .filter((row) => row.id && row.slug && row.title);
+
+  const series = ((seriesRes.data ?? []) as any[])
+    .map((row) => ({
+      id: String(row?.id ?? "").trim(),
+      slug: String(row?.slug ?? "").trim(),
+      name: String(row?.name ?? "").trim(),
+    }))
+    .filter((row) => row.id && row.slug && row.name);
+
+  return { actors, plays, series };
 }
 
 export async function getWatchOverview(): Promise<WatchOverviewData> {
