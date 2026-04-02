@@ -1143,6 +1143,10 @@ a {
   margin-top: 12px;
 }
 
+.detail-block {
+  width: 100%;
+}
+
 .detail-block summary {
   width: fit-content;
   list-style: none;
@@ -1153,6 +1157,7 @@ a {
   font-size: 12px;
   color: var(--text);
   background: rgba(255, 255, 255, 0.03);
+  margin-left: auto;
 }
 
 .detail-block summary::-webkit-details-marker {

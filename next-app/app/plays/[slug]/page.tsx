@@ -214,6 +214,9 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
   const venueList = splitSlashList(play.venue);
   const compactVenueSummary = summarizeVenues(play.venue);
   const shouldCollapseSchedule = scheduleEntries.length > 2 || venueList.length > 3;
+  const shouldShowScheduleDetailToggle =
+    (Boolean(play.period) && (shouldCollapseSchedule || scheduleEntries.length > 1)) ||
+    (Boolean(play.venue) && (shouldCollapseSchedule || venueList.length > 1));
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -389,10 +392,10 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
                       {scheduleCities.length > 5 ? " / ..." : ""}
                     </div>
                   ) : null}
-                  {(shouldCollapseSchedule || scheduleEntries.length > 1) && (
+                  {false && (
                     <details className="detail-block">
                       <summary>詳細を見る</summary>
-                      <div className="detail-panel">{play.period}</div>
+                      <div className="detail-panel">{play?.period}</div>
                     </details>
                   )}
                 </div>
@@ -405,12 +408,41 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
                 <div className="meta-value">
                   <div>{compactVenueSummary || play.venue}</div>
                   {venueList.length > 0 ? <div className="subtle-line">{venueList.length}会場</div> : null}
-                  {(shouldCollapseSchedule || venueList.length > 1) && (
+                  {false && (
                     <details className="detail-block">
                       <summary>詳細を見る</summary>
-                      <div className="detail-panel">{play.venue}</div>
+                      <div className="detail-panel">{play?.venue}</div>
                     </details>
                   )}
+                </div>
+              </div>
+            ) : null}
+            {shouldShowScheduleDetailToggle ? (
+              <div className="meta-row">
+                <div className="meta-label accent-label">隧ｳ邏ｰ</div>
+                <div className="meta-value">
+                  <details className="detail-block">
+                    <summary>隧ｳ邏ｰ繧定ｦ九ｋ</summary>
+                    <div className="detail-panel">
+                      {play.period ? (
+                        <div className="stack-sm">
+                          <div className="muted" style={{ fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase" }}>
+                            譛滄俣
+                          </div>
+                          <div>{play.period}</div>
+                        </div>
+                      ) : null}
+                      {play.period && play.venue ? <div style={{ height: 12 }} /> : null}
+                      {play.venue ? (
+                        <div className="stack-sm">
+                          <div className="muted" style={{ fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase" }}>
+                            蜉・ｴ
+                          </div>
+                          <div>{play.venue}</div>
+                        </div>
+                      ) : null}
+                    </div>
+                  </details>
                 </div>
               </div>
             ) : null}
