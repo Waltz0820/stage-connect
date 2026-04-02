@@ -187,44 +187,49 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
             {startYear ? <span className="pill">{startYear}年〜</span> : null}
           </div>
 
-          <div className="cast-grid cast-grid-wide">
+          <div className="timeline-shell">
             {series.plays.map((play) => (
-              <article className="catalog-card" key={play.slug}>
-                <div className="catalog-card__top">
-                  <div>
-                    <div className="catalog-card__sub mono">{compactTimelinePeriod(play.period)}</div>
-                    <div className="catalog-card__title" style={{ marginTop: 8 }}>
-                      {play.title}
+              <section key={play.slug} className="timeline-year-block">
+                <div className="timeline-dot" />
+                <div className="timeline-year-heading">
+                  <span className="timeline-year">{compactTimelinePeriod(play.period)}</span>
+                  <span className="timeline-year-sub">RELEASE</span>
+                </div>
+
+                <article className="catalog-card">
+                  <div className="catalog-card__top">
+                    <div>
+                      <div className="catalog-card__title">{play.title}</div>
+                    </div>
+                    {hasVod(play.vod) ? <span className="catalog-card__badge">配信あり</span> : null}
+                  </div>
+
+                  {play.summary ? <div className="catalog-card__text">{play.summary}</div> : null}
+
+                  <div className="catalog-card__footer">
+                    <div className="action-row">
+                      <Link className="action-button action-button-primary" href={`/plays/${play.slug}`}>
+                        作品詳細を見る
+                      </Link>
+                      {play.vod?.dmm ? (
+                        <a className="action-button" href={play.vod.dmm} target="_blank" rel="noopener noreferrer">
+                          DMM TV
+                        </a>
+                      ) : null}
+                      {play.vod?.unext ? (
+                        <a className="action-button" href={play.vod.unext} target="_blank" rel="noopener noreferrer">
+                          U-NEXT
+                        </a>
+                      ) : null}
+                      {play.vod?.danime ? (
+                        <a className="action-button" href={play.vod.danime} target="_blank" rel="noopener noreferrer">
+                          dアニメ
+                        </a>
+                      ) : null}
                     </div>
                   </div>
-                  {hasVod(play.vod) ? <span className="catalog-card__badge">配信あり</span> : null}
-                </div>
-
-                {play.summary ? <div className="catalog-card__text">{play.summary}</div> : null}
-
-                <div className="catalog-card__footer">
-                  <div className="action-row">
-                    <Link className="action-button action-button-primary" href={`/plays/${play.slug}`}>
-                      作品詳細を見る
-                    </Link>
-                    {play.vod?.dmm ? (
-                      <a className="action-button" href={play.vod.dmm} target="_blank" rel="noopener noreferrer">
-                        DMM TV
-                      </a>
-                    ) : null}
-                    {play.vod?.unext ? (
-                      <a className="action-button" href={play.vod.unext} target="_blank" rel="noopener noreferrer">
-                        U-NEXT
-                      </a>
-                    ) : null}
-                    {play.vod?.danime ? (
-                      <a className="action-button" href={play.vod.danime} target="_blank" rel="noopener noreferrer">
-                        dアニメ
-                      </a>
-                    ) : null}
-                  </div>
-                </div>
-              </article>
+                </article>
+              </section>
             ))}
           </div>
         </section>
