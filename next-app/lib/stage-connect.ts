@@ -527,6 +527,12 @@ export async function getSeriesDetailBySlug(slug: string): Promise<SeriesDetailD
         .replace(/【.*$/, "")
         .trim();
 
+    const normalizeSeriesDisplayGroup = (value?: string | null) =>
+      String(value ?? "")
+        .replace(/※.*$/, "")
+        .replace(/【.*$/, "")
+        .trim();
+
     const { data: castRows, error: castError } = await supabase
       .from("casts")
       .select(
@@ -580,7 +586,11 @@ export async function getSeriesDetailBySlug(slug: string): Promise<SeriesDetailD
         if (role && !existing.roles.includes(role)) existing.roles.push(role);
       }
 
-      for (const group of uniq(String(row?.cast_group ?? "").split("/"))) {
+      for (const group of uniq(
+        String(row?.cast_group ?? "")
+          .split("/")
+          .map((item) => normalizeSeriesDisplayGroup(item))
+      )) {
         if (group && !existing.groups.includes(group)) existing.groups.push(group);
       }
 
