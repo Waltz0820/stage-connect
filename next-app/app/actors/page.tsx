@@ -71,8 +71,7 @@ export default async function ActorsPage({
             <span className="eyebrow">Actors</span>
             <h1 className="page-title">俳優一覧</h1>
             <p className="lead">
-              2.5次元舞台・ミュージカルに出演する俳優を一覧で確認できます。
-              プロフィール、年表、共演情報までたどれるデータベースの入口です。
+              2.5次元舞台・ミュージカルに出演する俳優を、プロフィールや出演作品とあわせて一覧できます。
             </p>
           </div>
 

@@ -74,8 +74,7 @@ export default async function SeriesPage({
             <span className="eyebrow">Series</span>
             <h1 className="page-title">シリーズ一覧</h1>
             <p className="lead">
-              テニミュのシーズン区切りや、刀剣乱舞のようなシリーズ単位で作品群を整理しています。
-              配下作品や出演キャスト、年表の入口として使える一覧です。
+              2.5次元舞台・ミュージカルのシリーズを、原作や作品数ごとに一覧できます。
             </p>
           </div>
 

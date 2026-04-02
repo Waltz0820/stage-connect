@@ -83,8 +83,7 @@ export default async function PlaysPage({
             <span className="eyebrow">Plays</span>
             <h1 className="page-title">作品一覧</h1>
             <p className="lead">
-              2.5次元舞台・ミュージカル作品を、シリーズ・公演時期・ジャンルとあわせて一覧で確認できます。
-              データベースの導線として、気になる作品詳細へそのまま進める入口です。
+              2.5次元舞台・ミュージカル作品を、公演時期・ジャンル別に一覧できます。
             </p>
           </div>
 

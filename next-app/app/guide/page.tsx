@@ -30,8 +30,7 @@ export default async function GuidePage() {
             <span className="eyebrow">Guide</span>
             <h1 className="page-title">編集部ガイド</h1>
             <p className="lead">
-              シリーズ整理や作品ピックアップを、Stage Connect の編集部目線でまとめた読み物です。
-              DBページとあわせて読むことで、シリーズ全体の流れや見どころをつかみやすくするための補助線として用意しています。
+              2.5次元舞台・ミュージカルの見方や作品理解に役立つ編集部ガイドを一覧できます。
             </p>
           </div>
 
