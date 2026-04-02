@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
-  getPlayList,
   getCreditItems,
   getPlayDetailBySlug,
   summarizeCast,
@@ -15,11 +14,8 @@ type Params = {
 };
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
-
-export async function generateStaticParams() {
-  const plays = await getPlayList();
-  return plays.map((play) => ({ slug: play.slug }));
-}
+export const revalidate = 3600;
+export const dynamicParams = true;
 
 export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
   const { slug } = await params;

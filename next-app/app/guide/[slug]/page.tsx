@@ -1,17 +1,14 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getGuideDetailBySlug, getGuideList, toPlainText, truncate } from "../../../lib/stage-connect";
+import { getGuideDetailBySlug, toPlainText, truncate } from "../../../lib/stage-connect";
 
 type Params = {
   slug: string;
 };
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
-
-export async function generateStaticParams() {
-  const guides = await getGuideList();
-  return guides.map((guide) => ({ slug: guide.slug }));
-}
+export const revalidate = 3600;
+export const dynamicParams = true;
 
 const CATEGORY_LABELS: Record<string, string> = {
   "series-guides": "シリーズガイド",

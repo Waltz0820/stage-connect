@@ -1,18 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getSeriesDetailBySlug, getSeriesList, toPlainText, truncate } from "../../../lib/stage-connect";
+import { getSeriesDetailBySlug, toPlainText, truncate } from "../../../lib/stage-connect";
 
 type Params = {
   slug: string;
 };
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
-
-export async function generateStaticParams() {
-  const seriesList = await getSeriesList();
-  return seriesList.map((series) => ({ slug: series.slug }));
-}
+export const revalidate = 3600;
+export const dynamicParams = true;
 
 const summarizeRoles = (roles: string[]) => {
   if (roles.length === 0) return null;
