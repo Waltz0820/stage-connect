@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import Link from "next/link";
 import "./globals.css";
 
@@ -7,8 +7,14 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
 export const metadata: Metadata = {
   title: "Stage Connect",
   description:
-    "Stage Connect の公開ページを SSR / SSG 化し、主要内部リンクを初期HTMLで出力するための Next.js プロトタイプです。",
+    "2.5次元舞台・ミュージカルの作品、俳優、シリーズ、配信情報を横断できるデータベースメディアです。",
   metadataBase: new URL(siteUrl),
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
