@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { FavoriteButtonClient } from "../../components/FavoriteButtonClient";
 import {
   formatBirthday,
   getActorList,
@@ -111,7 +112,10 @@ export default async function ActorsPage({
                     <Link className="catalog-card__title" href={`/actors/${actor.slug}`}>
                       {actor.name}
                     </Link>
-                    {birthday ? <span className="catalog-card__badge">Profile</span> : null}
+                    <div className="catalog-card__top-actions">
+                      {birthday ? <span className="catalog-card__badge">Profile</span> : null}
+                      <FavoriteButtonClient slug={actor.slug} type="actor" size="sm" />
+                    </div>
                   </div>
 
                   {actor.kana ? <div className="catalog-card__sub">{actor.kana}</div> : null}

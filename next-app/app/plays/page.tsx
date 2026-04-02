@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { FavoriteButtonClient } from "../../components/FavoriteButtonClient";
 import { getPlayList, periodSortKey, toPlainText, truncate } from "../../lib/stage-connect";
 
 type SearchParamValue = string | string[] | undefined;
@@ -131,7 +132,10 @@ export default async function PlaysPage({
                   <Link className="catalog-card__title" href={`/plays/${play.slug}`}>
                     {play.title}
                   </Link>
-                  {play.franchiseName ? <span className="catalog-card__badge">シリーズ</span> : null}
+                  <div className="catalog-card__top-actions">
+                    {play.franchiseName ? <span className="catalog-card__badge">シリーズ</span> : null}
+                    <FavoriteButtonClient slug={play.slug} type="play" size="sm" />
+                  </div>
                 </div>
 
                 {play.franchiseName ? <div className="catalog-card__sub">{play.franchiseName}</div> : null}

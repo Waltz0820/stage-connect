@@ -1164,6 +1164,13 @@ a {
   align-items: flex-start;
 }
 
+.catalog-card__top-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex: 0 0 auto;
+}
+
 .catalog-card__title {
   font-size: 18px;
   font-weight: 800;
