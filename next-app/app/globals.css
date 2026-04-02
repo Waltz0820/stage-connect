@@ -415,7 +415,9 @@ a {
 
 .site-footer__column a {
   color: var(--muted);
-  font-size: 14px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
   transition: color 0.2s ease;
 }
 

@@ -186,8 +186,6 @@ export default function SiteChrome({ children }: { children: React.ReactNode }) 
               <h3>サイト情報</h3>
               <ul>
                 <li><Link href="/guide">ガイド / コラム</Link></li>
-                <li><Link href="/watch">配信ガイド</Link></li>
-                <li><Link href="/series">人気シリーズ</Link></li>
               </ul>
             </section>
           </div>
