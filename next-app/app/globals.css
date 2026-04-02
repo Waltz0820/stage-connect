@@ -552,23 +552,6 @@ a {
   opacity: 0.72;
 }
 
-.home-hero__subline {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px 18px;
-  color: var(--muted);
-  font-size: 13px;
-}
-
-.home-hero__subline a {
-  color: var(--muted);
-}
-
-.home-hero__subline a:hover {
-  color: var(--text);
-}
-
 .hero-card,
 .section-card {
   border: 1px solid var(--line);

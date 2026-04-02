@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import {
-  getTrendingTags,
-  getWatchOverview,
-} from "../lib/stage-connect";
+import { getTrendingTags } from "../lib/stage-connect";
 
 export const metadata: Metadata = {
   title: "Stage Connect | 2.5次元舞台・ミュージカルのキャスト・作品アーカイブ",
@@ -12,10 +9,7 @@ export const metadata: Metadata = {
 };
 
 export default async function HomePage() {
-  const [trendingTags, watchOverview] = await Promise.all([
-    getTrendingTags(25),
-    getWatchOverview(),
-  ]);
+  const trendingTags = await getTrendingTags(25);
 
   const watchLinks = [
     { key: "vod", label: "VOD", to: "/watch" },
@@ -93,11 +87,6 @@ export default async function HomePage() {
           </div>
         </div>
 
-        <div className="home-hero__subline">
-          <Link href="/guide">編集部ガイド</Link>
-          <Link href="/watch">配信ガイド</Link>
-          <span>DMM掲載シリーズ {watchOverview.dmmSeriesCount.toLocaleString()}件</span>
-        </div>
       </div>
     </main>
   );
