@@ -181,6 +181,44 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
         </section>
 
         <section className="section-card stack-md">
+          <h2 className="section-title">出演作品タイムライン</h2>
+          <div className="timeline-shell">
+            {timeline.map((group) => (
+              <section key={group.year} className="timeline-year-block">
+                <div className="timeline-dot" />
+                <div className="timeline-year-heading">
+                  <span className="timeline-year">{group.year}</span>
+                  <span className="timeline-year-sub">YEAR</span>
+                </div>
+
+                <div className="cast-grid cast-grid-wide">
+                  {group.plays.map((play) => (
+                    <Link className="cast-card cast-card-link" href={`/plays/${play.slug}`} key={play.slug}>
+                      <div className="cast-name">
+                        {play.title}
+                      </div>
+                      {play.franchiseName ? (
+                        <div className="muted" style={{ marginTop: 6, fontSize: 13 }}>
+                          {play.franchiseName}
+                        </div>
+                      ) : null}
+                      {play.roleName ? <div className="cast-role">{play.roleName}</div> : null}
+                      {formatTimelineLeadDate(play.period) ? (
+                        <div className="subtle-line" style={{ marginTop: 10 }}>
+                          {formatTimelineLeadDate(play.period)}
+                        </div>
+                      ) : null}
+                    </Link>
+                  ))}
+                </div>
+              </section>
+            ))}
+          </div>
+        </section>
+
+        {actor.coStars.length > 0 ? <ActorCoStarsClient coStars={actor.coStars} /> : null}
+
+        <section className="section-card stack-md">
           <h2 className="section-title">公式リンク</h2>
           {hasSns ? (
             <div className="action-row">
@@ -225,43 +263,6 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
           )}
         </section>
 
-        <section className="section-card stack-md">
-          <h2 className="section-title">出演作品タイムライン</h2>
-          <div className="timeline-shell">
-            {timeline.map((group) => (
-              <section key={group.year} className="timeline-year-block">
-                <div className="timeline-dot" />
-                <div className="timeline-year-heading">
-                  <span className="timeline-year">{group.year}</span>
-                  <span className="timeline-year-sub">YEAR</span>
-                </div>
-
-                <div className="cast-grid cast-grid-wide">
-                  {group.plays.map((play) => (
-                    <Link className="cast-card cast-card-link" href={`/plays/${play.slug}`} key={play.slug}>
-                      <div className="cast-name">
-                        {play.title}
-                      </div>
-                      {play.franchiseName ? (
-                        <div className="muted" style={{ marginTop: 6, fontSize: 13 }}>
-                          {play.franchiseName}
-                        </div>
-                      ) : null}
-                      {play.roleName ? <div className="cast-role">{play.roleName}</div> : null}
-                      {formatTimelineLeadDate(play.period) ? (
-                        <div className="subtle-line" style={{ marginTop: 10 }}>
-                          {formatTimelineLeadDate(play.period)}
-                        </div>
-                      ) : null}
-                    </Link>
-                  ))}
-                </div>
-              </section>
-            ))}
-          </div>
-        </section>
-
-        {actor.coStars.length > 0 ? <ActorCoStarsClient coStars={actor.coStars} /> : null}
 
         <section className="section-card stack-md">
           <h2 className="section-title">よくある質問 (FAQ)</h2>
@@ -292,3 +293,4 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
     </main>
   );
 }
+
