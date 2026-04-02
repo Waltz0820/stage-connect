@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type TopActor = {
   actor: {
@@ -31,8 +31,23 @@ const summarizeGroups = (groups: string[]) => {
 
 export function SeriesCastOverviewClient({ topActors }: Props) {
   const [isOpen, setIsOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(true);
   const mobileVisible = topActors.slice(0, 12);
   const desktopVisible = topActors.slice(0, 5);
+
+  useEffect(() => {
+    const media = window.matchMedia("(max-width: 979px), (hover: none) and (pointer: coarse)");
+    const update = () => setIsMobile(media.matches);
+    update();
+
+    if (typeof media.addEventListener === "function") {
+      media.addEventListener("change", update);
+      return () => media.removeEventListener("change", update);
+    }
+
+    media.addListener(update);
+    return () => media.removeListener(update);
+  }, []);
 
   if (topActors.length === 0) {
     return (
@@ -47,7 +62,7 @@ export function SeriesCastOverviewClient({ topActors }: Props) {
     <section className="section-card stack-md">
       <h2 className="section-title">出演キャスト・役柄一覧</h2>
 
-      <div className="mobile-only-block">
+      {isMobile ? (
         <div className="card-carousel">
           {mobileVisible.map((item, index) => (
             <article className="cast-card card-carousel-item" key={item.actor.slug}>
@@ -67,27 +82,27 @@ export function SeriesCastOverviewClient({ topActors }: Props) {
             </article>
           ))}
         </div>
-      </div>
-
-      <div className="desktop-only-grid cast-grid cast-grid-wide">
-        {desktopVisible.map((item, index) => (
-          <article className="cast-card" key={`desktop-${item.actor.slug}`}>
-            <div className="series-rank-row">
-              <span className="series-rank-badge">{index + 1}</span>
-              <div className="series-rank-count">{item.count}作品</div>
-            </div>
-            <Link className="cast-name" href={`/actors/${item.actor.slug}`}>
-              {item.actor.name}
-            </Link>
-            {summarizeGroups(item.groups) ? (
-              <div className="subtle-line" style={{ marginTop: 6 }}>
-                {summarizeGroups(item.groups)}
+      ) : (
+        <div className="cast-grid cast-grid-wide">
+          {desktopVisible.map((item, index) => (
+            <article className="cast-card" key={`desktop-${item.actor.slug}`}>
+              <div className="series-rank-row">
+                <span className="series-rank-badge">{index + 1}</span>
+                <div className="series-rank-count">{item.count}作品</div>
               </div>
-            ) : null}
-            {summarizeRoles(item.roles) ? <div className="cast-role">{summarizeRoles(item.roles)}</div> : null}
-          </article>
-        ))}
-      </div>
+              <Link className="cast-name" href={`/actors/${item.actor.slug}`}>
+                {item.actor.name}
+              </Link>
+              {summarizeGroups(item.groups) ? (
+                <div className="subtle-line" style={{ marginTop: 6 }}>
+                  {summarizeGroups(item.groups)}
+                </div>
+              ) : null}
+              {summarizeRoles(item.roles) ? <div className="cast-role">{summarizeRoles(item.roles)}</div> : null}
+            </article>
+          ))}
+        </div>
+      )}
 
       {topActors.length > Math.max(mobileVisible.length, desktopVisible.length) ? (
         <>

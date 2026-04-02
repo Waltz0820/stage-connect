@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type CoStar = {
   slug: string;
@@ -16,7 +16,22 @@ type Props = {
 
 export function ActorCoStarsClient({ coStars }: Props) {
   const [isOpen, setIsOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(true);
   const visible = coStars.slice(0, 5);
+
+  useEffect(() => {
+    const media = window.matchMedia("(max-width: 979px), (hover: none) and (pointer: coarse)");
+    const update = () => setIsMobile(media.matches);
+    update();
+
+    if (typeof media.addEventListener === "function") {
+      media.addEventListener("change", update);
+      return () => media.removeEventListener("change", update);
+    }
+
+    media.addListener(update);
+    return () => media.removeListener(update);
+  }, []);
 
   return (
     <section className="section-card stack-md">
@@ -25,7 +40,7 @@ export function ActorCoStarsClient({ coStars }: Props) {
         <span className="pill">共演数の多いキャスト</span>
       </div>
 
-      <div className="mobile-only-block">
+      {isMobile ? (
         <div className="card-carousel">
           {visible.map((coStar, index) => (
             <article className="cast-card card-carousel-item" key={coStar.slug}>
@@ -44,26 +59,26 @@ export function ActorCoStarsClient({ coStars }: Props) {
             </article>
           ))}
         </div>
-      </div>
-
-      <div className="desktop-only-grid cast-grid cast-grid-wide">
-        {visible.map((coStar, index) => (
-          <article className="cast-card" key={`desktop-${coStar.slug}`}>
-            <div className="series-rank-row">
-              <span className="series-rank-badge">{index + 1}</span>
-              <div className="series-rank-count">共演 {coStar.count}作品</div>
-            </div>
-            <Link className="cast-name" href={`/actors/${coStar.slug}`}>
-              {coStar.name}
-            </Link>
-            {coStar.kana ? (
-              <div className="muted" style={{ marginTop: 6, fontSize: 13 }}>
-                {coStar.kana}
+      ) : (
+        <div className="cast-grid cast-grid-wide">
+          {visible.map((coStar, index) => (
+            <article className="cast-card" key={`desktop-${coStar.slug}`}>
+              <div className="series-rank-row">
+                <span className="series-rank-badge">{index + 1}</span>
+                <div className="series-rank-count">共演 {coStar.count}作品</div>
               </div>
-            ) : null}
-          </article>
-        ))}
-      </div>
+              <Link className="cast-name" href={`/actors/${coStar.slug}`}>
+                {coStar.name}
+              </Link>
+              {coStar.kana ? (
+                <div className="muted" style={{ marginTop: 6, fontSize: 13 }}>
+                  {coStar.kana}
+                </div>
+              ) : null}
+            </article>
+          ))}
+        </div>
+      )}
 
       {coStars.length > visible.length ? (
         <>
