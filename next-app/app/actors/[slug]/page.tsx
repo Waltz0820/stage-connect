@@ -119,8 +119,13 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
 
       <div className="stack-lg">
         <section className="hero-card stack-md">
-          <div className="stack-sm">
-            <div>
+          <div className="detail-hero-grid">
+            <div className="detail-monogram" aria-hidden="true">
+              {actor.name.trim().charAt(0)}
+            </div>
+
+            <div className="detail-hero-copy">
+              <div className="title-subtle">Actor Profile</div>
               <h1 className="page-title">{actor.name}</h1>
               {actor.kana ? <div className="muted">{actor.kana}</div> : null}
             </div>
