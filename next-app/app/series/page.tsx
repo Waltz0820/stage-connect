@@ -86,12 +86,7 @@ export default async function SeriesPage({
         </section>
 
         <section className="section-card stack-md">
-          <div className="stack-sm">
-            <h2 className="section-title">シリーズ・フランチャイズ</h2>
-            <p className="catalog-note">
-              原作種別や作品数の多い順を切り替えながら、関連作品のまとまりを一覧で確認できます。
-            </p>
-          </div>
+          <h2 className="section-title">シリーズ・フランチャイズ</h2>
 
           <div className="filter-row filter-row--dense">
             <Link

@@ -95,12 +95,7 @@ export default async function PlaysPage({
         </section>
 
         <section className="section-card stack-md">
-          <div className="stack-sm">
-            <h2 className="section-title">作品データベース</h2>
-            <p className="catalog-note">
-              ジャンルや並び順を切り替えながら、シリーズ・あらすじ・公演情報を一覧で確認できます。
-            </p>
-          </div>
+          <h2 className="section-title">作品データベース</h2>
 
           <div className="filter-row filter-row--dense">
             <Link

@@ -83,12 +83,7 @@ export default async function ActorsPage({
         </section>
 
         <section className="section-card stack-md">
-          <div className="stack-sm">
-            <h2 className="section-title">俳優データベース</h2>
-            <p className="catalog-note">
-              性別フィルタを切り替えながら、プロフィールと出演作品年表の入口を一覧で確認できます。
-            </p>
-          </div>
+          <h2 className="section-title">俳優データベース</h2>
 
           <div className="filter-row filter-row--dense">
             <Link className={`filter-chip ${gender === "all" ? "is-active" : ""}`} href={buildHref({ page: 1, gender: "all" })}>
