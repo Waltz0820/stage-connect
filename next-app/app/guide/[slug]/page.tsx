@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getGuideDetailBySlug, toPlainText, truncate } from "../../../lib/stage-connect";
 
@@ -52,33 +53,34 @@ export default async function GuideDetailPage({ params }: { params: Promise<Para
 
   return (
     <main className="container" style={{ paddingBlock: 32 }}>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <div className="stack-lg">
         <section className="hero-card stack-md">
-          <div>
-            <span className="eyebrow">Guide Detail SSR</span>
-            <h1 className="page-title">{guide.title}</h1>
+          <div className="stack-sm">
+            <div className="inline-links">
+              <Link className="inline-link" href="/guide">
+                編集部ガイド
+              </Link>
+            </div>
+
             {guide.category ? (
-              <div className="muted mono" style={{ marginTop: 8, fontSize: 12 }}>
-                {CATEGORY_LABELS[guide.category] ?? guide.category}
-              </div>
+              <div className="guide-category">{CATEGORY_LABELS[guide.category] ?? guide.category}</div>
             ) : null}
+
+            <h1 className="page-title">{guide.title}</h1>
+
             {guide.publishedAt ? (
-              <div className="muted" style={{ marginTop: 8, fontSize: 13 }}>
-                {new Date(guide.publishedAt).toLocaleDateString("ja-JP")}
-              </div>
+              <div className="catalog-note">{new Date(guide.publishedAt).toLocaleDateString("ja-JP")}</div>
             ) : null}
+
+            {guide.summary ? <p className="lead">{guide.summary}</p> : null}
           </div>
-          {guide.summary ? <p className="lead">{guide.summary}</p> : null}
         </section>
 
         <section className="section-card stack-md">
           <h2 className="section-title">本文</h2>
-          <div style={{ whiteSpace: "pre-wrap", lineHeight: 1.9 }}>{guide.content || "本文は準備中です。"}</div>
+          <div className="prose-panel">{guide.content || "本文は準備中です。"}</div>
         </section>
       </div>
     </main>
