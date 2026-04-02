@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getWatchOverview } from "../../lib/stage-connect";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
+
 const DMM_PREMIUM_URL =
   "https://al.dmm.com/?lurl=https%3A%2F%2Fpremium.dmm.com%2F&af_id=stageconnect-001&ch=link_tool&ch_id=text";
 
@@ -9,6 +11,10 @@ export const metadata: Metadata = {
   title: "配信で観る | Stage Connect",
   description:
     "2.5次元舞台・ミュージカルをどこで配信で観られるかを整理したガイドです。DMM TVを中心に、U-NEXT・dアニメストアとの違いも比較できます。",
+};
+
+metadata.alternates = {
+  canonical: `${siteUrl}/watch`,
 };
 
 export default async function WatchPage() {

@@ -13,6 +13,7 @@ type SearchParamValue = string | string[] | undefined;
 type SearchParams = Record<string, SearchParamValue>;
 
 const ITEMS_PER_PAGE = 10;
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
 const GENDER_LABELS: Record<string, string> = {
   male: "男性",
   female: "女性",
@@ -35,6 +36,10 @@ export const metadata: Metadata = {
   title: "俳優一覧 | Stage Connect",
   description:
     "2.5次元舞台・ミュージカルに出演する俳優を一覧で整理。プロフィール、出演作品年表、共演ネットワークへの入口として使えます。",
+};
+
+metadata.alternates = {
+  canonical: `${siteUrl}/actors`,
 };
 
 export default async function ActorsPage({

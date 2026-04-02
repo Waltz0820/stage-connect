@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getGuideList, toPlainText, truncate } from "../../lib/stage-connect";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
+
 const CATEGORY_LABELS: Record<string, string> = {
   "series-guides": "シリーズガイド",
   features: "編集部ピックアップ",
@@ -11,6 +13,10 @@ export const metadata: Metadata = {
   title: "編集部ガイド | Stage Connect",
   description:
     "シリーズ整理や作品ピックアップをまとめた Stage Connect の編集部ガイド一覧。DBだけでは整理しきれない文脈も、読み物として確認できます。",
+};
+
+metadata.alternates = {
+  canonical: `${siteUrl}/guide`,
 };
 
 export default async function GuidePage() {

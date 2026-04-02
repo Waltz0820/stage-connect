@@ -7,6 +7,7 @@ type SearchParamValue = string | string[] | undefined;
 type SearchParams = Record<string, SearchParamValue>;
 
 const ITEMS_PER_PAGE = 10;
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
 const GENRE_LABELS: Record<string, string> = {
   history: "歴史・時代劇",
   fantasy: "ファンタジー",
@@ -37,6 +38,10 @@ export const metadata: Metadata = {
   title: "作品一覧 | Stage Connect",
   description:
     "2.5次元舞台・ミュージカル作品を一覧で整理。シリーズ、あらすじ、公演情報を見ながら、気になる作品詳細へそのまま進めます。",
+};
+
+metadata.alternates = {
+  canonical: `${siteUrl}/plays`,
 };
 
 export default async function PlaysPage({

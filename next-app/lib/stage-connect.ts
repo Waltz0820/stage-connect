@@ -69,6 +69,7 @@ export type PlayListItem = {
   period: string | null;
   franchiseName: string | null;
   genre: string | null;
+  createdAt: string | null;
 };
 
 export type ActorListItem = {
@@ -86,6 +87,7 @@ export type SeriesListItem = {
   description: string | null;
   playCount: number;
   originType: string | null;
+  updatedAt: string | null;
 };
 
 export type GuideListItem = {
@@ -730,7 +732,7 @@ export async function getPlayList(): Promise<PlayListItem[]> {
       const bd = b.createdAt ? Date.parse(b.createdAt) : 0;
       return bd - ad;
     })
-    .map(({ createdAt, ...row }) => row);
+    .map((row) => row);
 }
 
 export async function getActorList(): Promise<ActorListItem[]> {
@@ -761,17 +763,24 @@ export async function getSeriesList(): Promise<SeriesListItem[]> {
 
   const [{ data: franchises, error: franchiseError }, { data: plays, error: playError }] = await Promise.all([
     supabase.from("franchises").select("id, slug, name, description, origin_type").order("name", { ascending: true }),
-    supabase.from("plays").select("id, franchise_id"),
+    supabase.from("plays").select("id, franchise_id, created_at"),
   ]);
 
   if (franchiseError) throw franchiseError;
   if (playError) throw playError;
 
   const countByFranchise = new Map<string, number>();
+  const latestPlayByFranchise = new Map<string, string>();
   for (const play of (plays ?? []) as any[]) {
     const franchiseId = String(play?.franchise_id ?? "").trim();
     if (!franchiseId) continue;
     countByFranchise.set(franchiseId, (countByFranchise.get(franchiseId) ?? 0) + 1);
+
+    const createdAt = String(play?.created_at ?? "").trim();
+    const currentLatest = latestPlayByFranchise.get(franchiseId);
+    if (createdAt && (!currentLatest || Date.parse(createdAt) > Date.parse(currentLatest))) {
+      latestPlayByFranchise.set(franchiseId, createdAt);
+    }
   }
 
   return ((franchises ?? []) as any[])
@@ -782,6 +791,7 @@ export async function getSeriesList(): Promise<SeriesListItem[]> {
       description: (row.description as string | null) ?? null,
       playCount: countByFranchise.get(row.id as string) ?? 0,
       originType: (row.origin_type as string | null) ?? null,
+      updatedAt: latestPlayByFranchise.get(row.id as string) ?? null,
     }))
     .filter((row) => row.slug)
     .map((row) => ({
@@ -790,6 +800,7 @@ export async function getSeriesList(): Promise<SeriesListItem[]> {
       description: row.description,
       playCount: row.playCount,
       originType: row.originType,
+      updatedAt: row.updatedAt,
     }))
     .sort((a, b) => b.playCount - a.playCount || a.name.localeCompare(b.name, "ja"));
 }

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
+
 const DMM_PREMIUM_URL =
   "https://al.dmm.com/?lurl=https%3A%2F%2Fpremium.dmm.com%2F&af_id=stageconnect-001&ch=link_tool&ch_id=text";
 
@@ -8,6 +10,10 @@ export const metadata: Metadata = {
   title: "U-NEXTと2.5次元舞台 - Stage Connect",
   description:
     "U-NEXTで2.5次元舞台・ミュージカルを見るときの考え方を整理しています。DMM TVとの違いと、どんな人に向いているかを比較できます。",
+};
+
+metadata.alternates = {
+  canonical: `${siteUrl}/watch/u-next`,
 };
 
 export default function WatchUNextPage() {

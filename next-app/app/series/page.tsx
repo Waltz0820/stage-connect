@@ -6,6 +6,7 @@ type SearchParamValue = string | string[] | undefined;
 type SearchParams = Record<string, SearchParamValue>;
 
 const ITEMS_PER_PAGE = 10;
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
 
 const getSingleParam = (value: SearchParamValue) => (Array.isArray(value) ? value[0] : value) ?? "";
 
@@ -23,6 +24,10 @@ export const metadata: Metadata = {
   title: "シリーズ一覧 | Stage Connect",
   description:
     "2.5次元舞台・ミュージカルのシリーズやフランチャイズを一覧で整理。配下作品、出演キャスト、年表への入口として確認できます。",
+};
+
+metadata.alternates = {
+  canonical: `${siteUrl}/series`,
 };
 
 export default async function SeriesPage({

@@ -2,10 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getTrendingTags } from "../lib/stage-connect";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
+
 export const metadata: Metadata = {
   title: "Stage Connect | 2.5次元舞台・ミュージカルのキャスト・作品アーカイブ",
   description:
     "2.5次元舞台・ミュージカルの作品とキャストをつなぐデジタルアーカイブ。出演者・配信（VOD）・公演情報・シリーズ情報をまとめて確認できます。",
+  alternates: {
+    canonical: siteUrl,
+  },
 };
 
 export default async function HomePage() {
