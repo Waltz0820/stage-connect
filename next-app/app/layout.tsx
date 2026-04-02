@@ -5,7 +5,7 @@ import "./globals.css";
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
 
 export const metadata: Metadata = {
-  title: "Stage Connect Next Prototype",
+  title: "Stage Connect",
   description:
     "Stage Connect の公開ページを SSR / SSG 化し、主要内部リンクを初期HTMLで出力するための Next.js プロトタイプです。",
   metadataBase: new URL(siteUrl),
