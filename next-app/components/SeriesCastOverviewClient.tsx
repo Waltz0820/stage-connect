@@ -47,7 +47,7 @@ export function SeriesCastOverviewClient({ topActors }: Props) {
     <section className="section-card stack-md">
       <h2 className="section-title">出演キャスト・役柄一覧</h2>
 
-      <div className="lg:hidden">
+      <div className="mobile-only-block">
         <div className="card-carousel">
           {mobileVisible.map((item, index) => (
             <article className="cast-card card-carousel-item" key={item.actor.slug}>
@@ -69,7 +69,7 @@ export function SeriesCastOverviewClient({ topActors }: Props) {
         </div>
       </div>
 
-      <div className="hidden lg:grid cast-grid cast-grid-wide">
+      <div className="desktop-only-grid cast-grid cast-grid-wide">
         {desktopVisible.map((item, index) => (
           <article className="cast-card" key={`desktop-${item.actor.slug}`}>
             <div className="series-rank-row">

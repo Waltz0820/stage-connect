@@ -25,7 +25,7 @@ export function ActorCoStarsClient({ coStars }: Props) {
         <span className="pill">共演数の多いキャスト</span>
       </div>
 
-      <div className="lg:hidden">
+      <div className="mobile-only-block">
         <div className="card-carousel">
           {visible.map((coStar, index) => (
             <article className="cast-card card-carousel-item" key={coStar.slug}>
@@ -46,7 +46,7 @@ export function ActorCoStarsClient({ coStars }: Props) {
         </div>
       </div>
 
-      <div className="hidden lg:grid cast-grid cast-grid-wide">
+      <div className="desktop-only-grid cast-grid cast-grid-wide">
         {visible.map((coStar, index) => (
           <article className="cast-card" key={`desktop-${coStar.slug}`}>
             <div className="series-rank-row">
