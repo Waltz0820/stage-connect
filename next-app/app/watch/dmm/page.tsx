@@ -19,8 +19,8 @@ export default async function WatchDmmPage() {
       <div className="stack-lg">
         <section className="hero-card stack-md">
           <div className="stack-sm">
-            <span className="eyebrow">DMM TV</span>
-            <h1 className="page-title">DMM TVで見られるシリーズ</h1>
+            <span className="eyebrow">DMM Premium × Stage Connect</span>
+            <h1 className="page-title">2.5次元舞台をDMM TVで観る</h1>
             <p className="lead">
               DMM TVで視聴できる2.5次元舞台・ミュージカルを、シリーズ単位で整理しています。
               Stage Connectでは現在 {overview.dmmSeriesCount.toLocaleString()} シリーズを確認できます。
@@ -43,26 +43,53 @@ export default async function WatchDmmPage() {
         </section>
 
         <section className="section-card stack-md">
-          <div className="catalog-summary">
-            <span className="catalog-chip">月額 550円</span>
-            <span className="catalog-chip">14日間無料トライアル</span>
-            <span className="catalog-chip">掲載シリーズ {overview.dmmSeriesCount.toLocaleString()}件</span>
+          <div className="watch-stat-grid">
+            <div className="watch-stat-card">
+              <div className="watch-stat-label">月額</div>
+              <div className="watch-stat-value">550円</div>
+            </div>
+            <div className="watch-stat-card">
+              <div className="watch-stat-label">無料トライアル</div>
+              <div className="watch-stat-value">14日間</div>
+            </div>
+            <div className="watch-stat-card">
+              <div className="watch-stat-label">配信シリーズ</div>
+              <div className="watch-stat-value">{overview.dmmSeriesCount.toLocaleString()}件</div>
+            </div>
           </div>
         </section>
 
-        <section className="section-card stack-md">
-          <div className="stack-sm">
-            <h2 className="section-title">DMM TVを使う理由</h2>
-            <p className="catalog-note">
-              2.5次元舞台の配信本数を重視するなら、まずDMM TVを起点に見るのが分かりやすいです。
-            </p>
-          </div>
+        <section className="grid grid-2">
+          <section className="section-card stack-md">
+            <h2 className="section-title">なぜDMM TVが2.5次元に強いのか</h2>
+            <div className="prose-panel">
+              {`2.5次元舞台・ミュージカルを見放題で観たいなら、現状もっとも有力なのがDMM TVです。
+刀剣乱舞、ヒプステ、テニミュ、あんステなど、主要シリーズの多くが配信対象に含まれています。
+他のサービスではレンタル中心になる作品も、DMMプレミアムでは見放題に入っているケースが多く、2.5次元ファンがまず確認すべき配信先になっています。`}
+            </div>
 
-          <div className="prose-panel">
-            {`DMM TVは、2.5次元舞台・ミュージカルを見たい人にとって最初に確認しやすい配信サービスです。
-シリーズ単位で追いかけやすく、作品ページからそのまま配信導線へ移動できるのが強みです。
-まずは見たいシリーズを確認して、シリーズページ・作品ページへ移動しながら視聴可否を把握していく使い方がおすすめです。`}
-          </div>
+            <div className="catalog-summary">
+              <span className="catalog-chip">2.5次元 見放題が充実</span>
+              <span className="catalog-chip">シリーズ単位で確認しやすい</span>
+              <span className="catalog-chip">作品詳細からそのまま遷移</span>
+            </div>
+          </section>
+
+          <section className="section-card stack-md">
+            <h2 className="section-title">次の動き方</h2>
+            <div className="compare-grid">
+              <article className="compare-card">
+                <div className="compare-card__eyebrow">Step 01</div>
+                <div className="compare-card__title">シリーズから入る</div>
+                <div className="compare-card__text">見たいシリーズを選び、年表と作品一覧から履修順を把握します。</div>
+              </article>
+              <article className="compare-card">
+                <div className="compare-card__eyebrow">Step 02</div>
+                <div className="compare-card__title">作品詳細で深掘る</div>
+                <div className="compare-card__text">キャストや公演情報を確認しながら、視聴リンクへつなげます。</div>
+              </article>
+            </div>
+          </section>
         </section>
 
         <section className="section-card stack-md">
@@ -78,7 +105,7 @@ export default async function WatchDmmPage() {
                 </div>
 
                 <div className="catalog-card__text">
-                  DMM TVで追いやすいシリーズです。シリーズページから作品数や出演キャストも確認できます。
+                  DMM TVで配信導線をたどれるシリーズです。シリーズ詳細から作品一覧や出演キャストも確認できます。
                 </div>
 
                 <div className="catalog-card__footer">
