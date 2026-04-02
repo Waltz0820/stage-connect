@@ -119,6 +119,13 @@ export type WatchOverviewData = {
   dmmTopFranchises: WatchFranchiseItem[];
 };
 
+export type TrendingTag = {
+  tag: string;
+  slug: string;
+  rank: number;
+  count: number;
+};
+
 export type PlayDetailData = {
   id: string;
   slug: string;
@@ -807,6 +814,27 @@ export async function getWatchOverview(): Promise<WatchOverviewData> {
     dmmSeriesCount: typeof count === "number" ? count : 0,
     dmmTopFranchises,
   };
+}
+
+export async function getTrendingTags(limit = 25): Promise<TrendingTag[]> {
+  if (!hasSupabaseEnv) return [];
+  const supabase = createSupabaseServerClient();
+  const { data, error } = await supabase.rpc("get_trending_tags", { p_limit: limit });
+
+  if (error) throw error;
+
+  const rows = (data ?? []) as Array<{
+    name: string;
+    slug: string | null;
+    usage_count: number | string | null;
+  }>;
+
+  return rows.map((row, index) => ({
+    tag: row.name,
+    slug: row.slug ?? row.name,
+    count: Number(row.usage_count ?? 0),
+    rank: index + 1,
+  }));
 }
 
 export const toPlainText = (value: unknown) =>

@@ -1,13 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import {
-  getActorList,
-  getGuideList,
-  getPlayList,
-  getSeriesList,
+  getTrendingTags,
   getWatchOverview,
-  toPlainText,
-  truncate,
 } from "../lib/stage-connect";
 
 export const metadata: Metadata = {
@@ -17,169 +12,92 @@ export const metadata: Metadata = {
 };
 
 export default async function HomePage() {
-  const [plays, actors, seriesList, guides, watchOverview] = await Promise.all([
-    getPlayList(),
-    getActorList(),
-    getSeriesList(),
-    getGuideList(),
+  const [trendingTags, watchOverview] = await Promise.all([
+    getTrendingTags(25),
     getWatchOverview(),
   ]);
 
-  const featuredPlays = plays.slice(0, 6);
-  const featuredActors = actors.slice(0, 6);
-  const featuredSeries = seriesList.slice(0, 6);
-  const featuredGuides = guides.slice(0, 4);
+  const watchLinks = [
+    { key: "vod", label: "VOD", to: "/watch" },
+    { key: "dmm", label: "DMM", to: "/watch/dmm" },
+    { key: "unext", label: "U-NEXT", to: "/watch/u-next" },
+  ];
+
+  const getTagStyle = (rank: number) => {
+    if (rank <= 3) return "tag-cloud-link is-rank-1";
+    if (rank <= 8) return "tag-cloud-link is-rank-2";
+    if (rank <= 15) return "tag-cloud-link is-rank-3";
+    return "tag-cloud-link is-rank-4";
+  };
+
+  const getWatchStyle = (key: string) => {
+    if (key === "vod") return "tag-cloud-link is-watch-vod";
+    if (key === "dmm") return "tag-cloud-link is-watch-dmm";
+    if (key === "unext") return "tag-cloud-link is-watch-unext";
+    return "tag-cloud-link";
+  };
 
   return (
-    <main className="container" style={{ paddingBlock: 32 }}>
-      <div className="stack-lg">
-        <section className="hero-card stack-lg">
-          <div>
-            <span className="eyebrow">Digital Archive</span>
-            <h1 className="page-title">Stage Connect | 2.5次元舞台・ミュージカルの情報アーカイブ</h1>
-            <p className="lead">
-              2.5次元舞台・ミュージカルの作品とキャストをつなぐデジタルアーカイブです。
-              作品・俳優・シリーズ・配信ガイドを横断しながら、見たい情報へ最短でたどり着ける構造を目指しています。
-            </p>
-          </div>
+    <main className="home-hero">
+      <div className="home-hero__spotlight" />
+      <div className="home-hero__inner">
+        <div className="home-hero__copy">
+          <span className="home-hero__eyebrow">DIGITAL ARCHIVE</span>
 
-          <div className="pill-row">
-            <span className="pill">作品 {plays.length}件</span>
-            <span className="pill">俳優 {actors.length}人</span>
-            <span className="pill">シリーズ {seriesList.length}件</span>
-            <span className="pill">ガイド {guides.length}本</span>
-            <span className="pill">DMM掲載シリーズ {watchOverview.dmmSeriesCount}件</span>
-          </div>
+          <h1 className="home-hero__title">
+            <span>STAGE</span>
+            <span className="is-accent">CONNECT</span>
+          </h1>
 
-          <div className="inline-links">
-            <Link className="inline-link" href="/plays">
-              作品一覧
-            </Link>
-            <Link className="inline-link" href="/actors">
-              俳優一覧
-            </Link>
-            <Link className="inline-link" href="/series">
-              シリーズ一覧
-            </Link>
-            <Link className="inline-link" href="/guide">
-              編集部ガイド
-            </Link>
-            <Link className="inline-link" href="/watch">
-              見る方法を探す
-            </Link>
-          </div>
-        </section>
+          <p className="home-hero__lead">
+            2.5次元舞台とキャストをつなぐ、デジタル・アーカイブ
+          </p>
+        </div>
 
-        <section className="section-card stack-md">
-          <div style={{ display: "flex", justifyContent: "space-between", gap: 16, alignItems: "center", flexWrap: "wrap" }}>
-            <h2 className="section-title" style={{ marginBottom: 0 }}>
-              新着作品
-            </h2>
-            <Link className="inline-link" href="/plays">
-              作品一覧を見る
-            </Link>
-          </div>
-          <div className="cast-list">
-            {featuredPlays.map((play) => (
-              <article className="cast-card" key={play.slug}>
-                <Link className="cast-name" href={`/plays/${play.slug}`}>
-                  {play.title}
-                </Link>
-                {play.franchiseName ? <div className="muted" style={{ marginTop: 4 }}>{play.franchiseName}</div> : null}
-                {play.period ? <div className="muted" style={{ marginTop: 8, fontSize: 13 }}>{play.period}</div> : null}
-                {play.summary ? <div className="cast-role">{truncate(toPlainText(play.summary), 120)}</div> : null}
-              </article>
+        <div className="home-hero__actions">
+          <Link href="/actors" className="home-hero__button is-primary">
+            推しを見つける
+          </Link>
+          <Link href="/plays" className="home-hero__button">
+            作品を探す
+          </Link>
+          <Link href="/series" className="home-hero__button">
+            人気シリーズから
+          </Link>
+        </div>
+
+        <div className="home-tag-cloud">
+          <h3 className="home-tag-cloud__title">
+            <span />
+            TREND WORDS
+            <span />
+          </h3>
+
+          <div className="home-tag-cloud__items">
+            {watchLinks.map((item) => (
+              <Link key={item.key} href={item.to} className={getWatchStyle(item.key)}>
+                #{item.label}
+                <span className="home-tag-cloud__arrow">→</span>
+              </Link>
+            ))}
+
+            {trendingTags.map((item) => (
+              <Link
+                key={item.slug}
+                href={`/tags/${encodeURIComponent(item.slug)}`}
+                className={getTagStyle(item.rank)}
+              >
+                #{item.tag}
+              </Link>
             ))}
           </div>
-        </section>
+        </div>
 
-        <section className="section-card stack-md">
-          <div style={{ display: "flex", justifyContent: "space-between", gap: 16, alignItems: "center", flexWrap: "wrap" }}>
-            <h2 className="section-title" style={{ marginBottom: 0 }}>
-              注目シリーズ
-            </h2>
-            <Link className="inline-link" href="/series">
-              シリーズ一覧を見る
-            </Link>
-          </div>
-          <div className="cast-list">
-            {featuredSeries.map((series) => (
-              <article className="cast-card" key={series.slug}>
-                <Link className="cast-name" href={`/series/${series.slug}`}>
-                  {series.name}
-                </Link>
-                <div className="muted" style={{ marginTop: 8, fontSize: 13 }}>{series.playCount}作品</div>
-                {series.description ? <div className="cast-role">{truncate(toPlainText(series.description), 120)}</div> : null}
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="grid grid-2">
-          <section className="section-card stack-md">
-            <div style={{ display: "flex", justifyContent: "space-between", gap: 16, alignItems: "center", flexWrap: "wrap" }}>
-              <h2 className="section-title" style={{ marginBottom: 0 }}>
-                俳優
-              </h2>
-              <Link className="inline-link" href="/actors">
-                俳優一覧を見る
-              </Link>
-            </div>
-            <div className="cast-list">
-              {featuredActors.map((actor) => (
-                <article className="cast-card" key={actor.slug}>
-                  <Link className="cast-name" href={`/actors/${actor.slug}`}>
-                    {actor.name}
-                  </Link>
-                  {actor.kana ? <div className="muted" style={{ marginTop: 4 }}>{actor.kana}</div> : null}
-                  {actor.profile ? <div className="cast-role">{truncate(toPlainText(actor.profile), 100)}</div> : null}
-                </article>
-              ))}
-            </div>
-          </section>
-
-          <section className="section-card stack-md">
-            <div style={{ display: "flex", justifyContent: "space-between", gap: 16, alignItems: "center", flexWrap: "wrap" }}>
-              <h2 className="section-title" style={{ marginBottom: 0 }}>
-                編集部ガイド
-              </h2>
-              <Link className="inline-link" href="/guide">
-                ガイド一覧を見る
-              </Link>
-            </div>
-            <div className="cast-list">
-              {featuredGuides.map((guide) => (
-                <article className="cast-card" key={guide.slug}>
-                  <Link className="cast-name" href={`/guide/${guide.slug}`}>
-                    {guide.title}
-                  </Link>
-                  <div className="cast-role">{truncate(toPlainText(guide.summary || guide.content || guide.title), 120)}</div>
-                </article>
-              ))}
-            </div>
-          </section>
-        </section>
-
-        <section className="section-card stack-md">
-          <div style={{ display: "flex", justifyContent: "space-between", gap: 16, alignItems: "center", flexWrap: "wrap" }}>
-            <h2 className="section-title" style={{ marginBottom: 0 }}>
-              配信ガイド
-            </h2>
-            <Link className="inline-link" href="/watch">
-              配信ガイドを見る
-            </Link>
-          </div>
-          <div className="cast-list">
-            <article className="cast-card">
-              <Link className="cast-name" href="/watch/dmm">
-                DMM TV で見られるシリーズ一覧
-              </Link>
-              <div className="cast-role">
-                現在 {watchOverview.dmmSeriesCount.toLocaleString()} シリーズを掲載しています。視聴の主軸として使いやすい配信先です。
-              </div>
-            </article>
-          </div>
-        </section>
+        <div className="home-hero__subline">
+          <Link href="/guide">編集部ガイド</Link>
+          <Link href="/watch">配信ガイド</Link>
+          <span>DMM掲載シリーズ {watchOverview.dmmSeriesCount.toLocaleString()}件</span>
+        </div>
       </div>
     </main>
   );
