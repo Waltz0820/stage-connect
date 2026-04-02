@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import Link from "next/link";
+import SiteChrome from "../components/SiteChrome";
 import "./globals.css";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
@@ -24,23 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
       </head>
       <body>
-        <div className="page-shell">
-          <header className="site-header">
-            <div className="container site-header__inner">
-              <Link href="/" className="site-brand">
-                STAGE <span>CONNECT</span>
-              </Link>
-              <nav className="site-nav">
-                <Link href="/plays">作品一覧</Link>
-                <Link href="/actors">俳優一覧</Link>
-                <Link href="/series">シリーズ一覧</Link>
-                <Link href="/guide">編集部ガイド</Link>
-                <Link href="/watch">視聴ガイド</Link>
-              </nav>
-            </div>
-          </header>
-          {children}
-        </div>
+        <SiteChrome>{children}</SiteChrome>
       </body>
     </html>
   );
