@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SeriesCastOverviewClient } from "../../../components/SeriesCastOverviewClient";
 import { getSeriesDetailBySlug, toPlainText, truncate } from "../../../lib/stage-connect";
@@ -133,7 +132,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
         <section className="section-card stack-md">
           <h2 className="section-title">Series Info</h2>
           <div className="rich-text">
-            {series.description || `${series.name}のシリーズ紹介文は現在準備中です。`}
+            {series.description || `${series.name}のシリーズ説明は現在準備中です。`}
           </div>
 
           {(series.originNote || series.productionCompanies.length > 0) && (
@@ -161,9 +160,9 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
           <div className="cast-grid cast-grid-wide">
             {series.plays.map((play) => (
               <article className="cast-card" key={play.slug}>
-                <Link className="cast-name" href={`/plays/${play.slug}`}>
+                <a className="cast-name" href={`/plays/${play.slug}`}>
                   {play.title}
-                </Link>
+                </a>
                 {play.period ? (
                   <div className="subtle-line" style={{ marginTop: 8 }}>
                     {play.period}
@@ -181,15 +180,13 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
             <article className="faq-card">
               <h3 className="faq-question">Q. {series.name}の関連作品は全部で何作ありますか？</h3>
               <p className="faq-answer">
-                現在、{series.name}には{series.plays.length}
-                作品が登録されています。
+                現在、{series.name}には{series.plays.length}作品が登録されています。
               </p>
             </article>
             <article className="faq-card">
               <h3 className="faq-question">Q. どの順番で見ればいいですか？</h3>
               <p className="faq-answer">
-                基本的には公開年順に見るのがおすすめです。{startYear ?? "----"}
-                年頃からの年表順に作品を追えるよう、このページではシリーズ作品を整理しています。
+                基本的には公開年順に見るのがおすすめです。{startYear ?? "----"}年頃からの年表順に作品を追えるよう、このページではシリーズ作品を整理しています。
               </p>
             </article>
             <article className="faq-card">

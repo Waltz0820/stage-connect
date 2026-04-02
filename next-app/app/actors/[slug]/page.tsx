@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ActorCoStarsClient } from "../../../components/ActorCoStarsClient";
 import {
@@ -83,7 +82,7 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
         name: `${actor.name}の出演作はどこで見られますか？`,
         acceptedAnswer: {
           "@type": "Answer",
-          text: `Stage Connectでは${actor.name}の出演情報を作品ごとにまとめています。各作品ページで公演データやあらすじを確認できます。`,
+          text: `Stage Connectでは${actor.name}の出演作品を作品ごとにまとめています。出演作品ページで公式データやあらすじを確認できます。`,
         },
       },
       {
@@ -91,7 +90,7 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
         name: "配信で視聴できる作品はありますか？",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "配信対応の有無は作品ごとに異なります。各作品詳細ページでDMM TVなどの配信リンクをご確認ください。",
+          text: "配信対応の有無は作品ごとに異なります。出演作品詳細ページでDMM TVなどの配信リンクをご確認ください。",
         },
       },
       {
@@ -202,9 +201,9 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
                 <div className="cast-grid cast-grid-wide">
                   {group.plays.map((play) => (
                     <article className="cast-card" key={play.slug}>
-                      <Link className="cast-name" href={`/plays/${play.slug}`}>
+                      <a className="cast-name" href={`/plays/${play.slug}`}>
                         {play.title}
-                      </Link>
+                      </a>
                       {play.franchiseName ? (
                         <div className="muted" style={{ marginTop: 6, fontSize: 13 }}>
                           {play.franchiseName}
@@ -233,13 +232,13 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
               <h3 className="faq-question">Q. {actor.name}の出演作はどこで見られますか？</h3>
               <p className="faq-answer">
                 Stage Connectでは{actor.name}
-                の出演情報を作品ごとにまとめています。各作品ページで公演データやあらすじを確認できます。
+                の出演作品を作品ごとにまとめています。出演作品ページで公式データやあらすじを確認できます。
               </p>
             </article>
             <article className="faq-card">
               <h3 className="faq-question">Q. 配信で視聴できる作品はありますか？</h3>
               <p className="faq-answer">
-                配信対応の有無は作品ごとに異なります。各作品詳細ページでDMM TVなどの配信リンクをご確認ください。
+                配信対応の有無は作品ごとに異なります。出演作品詳細ページでDMM TVなどの配信リンクをご確認ください。
               </p>
             </article>
             <article className="faq-card">

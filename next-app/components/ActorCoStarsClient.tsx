@@ -59,7 +59,7 @@ export function ActorCoStarsClient({ coStars }: Props) {
             >
               <div className="next-modal-panel">
                 <div className="next-modal-header">
-                  <p className="next-modal-title">共演ネットワーク（全{coStars.length}）</p>
+                  <p className="next-modal-title">共演ネットワーク（全{coStars.length}名）</p>
                   <button type="button" className="next-modal-close" onClick={() => setIsOpen(false)}>
                     閉じる
                   </button>
