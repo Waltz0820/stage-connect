@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@source "../../components/admin";
 
 @theme {
   --color-theater-black: #0A0A0F;
