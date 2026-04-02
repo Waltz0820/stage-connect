@@ -1,5 +1,20 @@
+import type { Metadata } from "next";
 import Link from "next/link";
-import { getActorList, getGuideList, getPlayList, getSeriesList, getWatchOverview, truncate, toPlainText } from "../lib/stage-connect";
+import {
+  getActorList,
+  getGuideList,
+  getPlayList,
+  getSeriesList,
+  getWatchOverview,
+  toPlainText,
+  truncate,
+} from "../lib/stage-connect";
+
+export const metadata: Metadata = {
+  title: "Stage Connect | 2.5次元舞台・ミュージカルのキャスト・作品アーカイブ",
+  description:
+    "2.5次元舞台・ミュージカルの作品とキャストをつなぐデジタルアーカイブ。出演者・配信（VOD）・公演情報・シリーズ情報をまとめて確認できます。",
+};
 
 export default async function HomePage() {
   const [plays, actors, seriesList, guides, watchOverview] = await Promise.all([
@@ -20,11 +35,11 @@ export default async function HomePage() {
       <div className="stack-lg">
         <section className="hero-card stack-lg">
           <div>
-            <span className="eyebrow">Next Prototype</span>
-            <h1 className="page-title">Stage Connect 公開ページ移行の確認用プロトタイプ</h1>
+            <span className="eyebrow">Digital Archive</span>
+            <h1 className="page-title">Stage Connect | 2.5次元舞台・ミュージカルの情報アーカイブ</h1>
             <p className="lead">
-              現行の Vite 構成を止めずに、公開ページだけ Next.js へ並行移行するための確認用フロントです。
-              作品・俳優・シリーズ・ガイド・視聴導線を初期HTMLに含めて出力し、内部リンクの認識を強めることを目的にしています。
+              2.5次元舞台・ミュージカルの作品とキャストをつなぐデジタルアーカイブです。
+              作品・俳優・シリーズ・配信ガイドを横断しながら、見たい情報へ最短でたどり着ける構造を目指しています。
             </p>
           </div>
 
@@ -33,7 +48,7 @@ export default async function HomePage() {
             <span className="pill">俳優 {actors.length}人</span>
             <span className="pill">シリーズ {seriesList.length}件</span>
             <span className="pill">ガイド {guides.length}本</span>
-            <span className="pill">DMM確認シリーズ {watchOverview.dmmSeriesCount}件</span>
+            <span className="pill">DMM掲載シリーズ {watchOverview.dmmSeriesCount}件</span>
           </div>
 
           <div className="inline-links">
@@ -50,7 +65,7 @@ export default async function HomePage() {
               編集部ガイド
             </Link>
             <Link className="inline-link" href="/watch">
-              視聴ガイド
+              見る方法を探す
             </Link>
           </div>
         </section>
@@ -58,7 +73,7 @@ export default async function HomePage() {
         <section className="section-card stack-md">
           <div style={{ display: "flex", justifyContent: "space-between", gap: 16, alignItems: "center", flexWrap: "wrap" }}>
             <h2 className="section-title" style={{ marginBottom: 0 }}>
-              新しい作品
+              新着作品
             </h2>
             <Link className="inline-link" href="/plays">
               作品一覧を見る
@@ -81,7 +96,7 @@ export default async function HomePage() {
         <section className="section-card stack-md">
           <div style={{ display: "flex", justifyContent: "space-between", gap: 16, alignItems: "center", flexWrap: "wrap" }}>
             <h2 className="section-title" style={{ marginBottom: 0 }}>
-              主要シリーズ
+              注目シリーズ
             </h2>
             <Link className="inline-link" href="/series">
               シリーズ一覧を見る
@@ -148,19 +163,19 @@ export default async function HomePage() {
         <section className="section-card stack-md">
           <div style={{ display: "flex", justifyContent: "space-between", gap: 16, alignItems: "center", flexWrap: "wrap" }}>
             <h2 className="section-title" style={{ marginBottom: 0 }}>
-              視聴導線
+              配信ガイド
             </h2>
             <Link className="inline-link" href="/watch">
-              視聴ガイドを見る
+              配信ガイドを見る
             </Link>
           </div>
           <div className="cast-list">
             <article className="cast-card">
               <Link className="cast-name" href="/watch/dmm">
-                DMM TV で観られるシリーズ一覧
+                DMM TV で見られるシリーズ一覧
               </Link>
               <div className="cast-role">
-                現在 {watchOverview.dmmSeriesCount.toLocaleString()} シリーズを確認しています。視聴導線の主軸として使う想定です。
+                現在 {watchOverview.dmmSeriesCount.toLocaleString()} シリーズを掲載しています。視聴の主軸として使いやすい配信先です。
               </div>
             </article>
           </div>

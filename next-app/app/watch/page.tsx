@@ -3,9 +3,9 @@ import Link from "next/link";
 import { getWatchOverview } from "../../lib/stage-connect";
 
 export const metadata: Metadata = {
-  title: "視聴ガイド - Stage Connect",
+  title: "配信で見る | Stage Connect",
   description:
-    "2.5次元舞台・ミュージカルをどこで見られるかを整理した視聴ガイド。DMM TV を軸に、U-NEXT・dアニメとの比較導線も用意しています。",
+    "2.5次元舞台・ミュージカルをどこで見られるかを整理した配信ガイド。DMM TV を中心に、U-NEXT・dアニメストアとの比較や使い分けもまとめています。",
 };
 
 export default async function WatchPage() {
@@ -16,25 +16,25 @@ export default async function WatchPage() {
       <div className="stack-lg">
         <section className="hero-card stack-md">
           <div className="stack-sm">
-            <span className="eyebrow">Watch</span>
-            <h1 className="page-title">視聴ガイド</h1>
+            <span className="eyebrow">Watch Guide</span>
+            <h1 className="page-title">配信で見る</h1>
             <p className="lead">
-              2.5次元舞台・ミュージカルを、どの配信サービスで見られるかを整理しています。DMM TV を主軸に、
-              U-NEXT・dアニメストアとの比較や、シリーズ単位の視聴導線へ繋げるためのハブページです。
+              2.5次元舞台・ミュージカルを、どの配信サービスで見られるかを整理したガイドです。
+              DMM TV を主軸に、U-NEXT・dアニメストアとの比較や、シリーズ単位の視聴導線までまとめています。
             </p>
           </div>
 
           <div className="catalog-summary">
             <span className="catalog-chip">DMM掲載シリーズ {overview.dmmSeriesCount.toLocaleString()}件</span>
-            <span className="catalog-chip">比較導線あり</span>
-            <span className="catalog-chip">シリーズページへ接続</span>
+            <span className="catalog-chip">比較・選び方あり</span>
+            <span className="catalog-chip">シリーズ単位で確認可能</span>
           </div>
         </section>
 
         <section className="section-card stack-md">
           <div className="stack-sm">
-            <h2 className="section-title">主要サービス</h2>
-            <p className="catalog-note">まずは DMM TV を軸に、比較用の導線をまとめています。</p>
+            <h2 className="section-title">主なサービス</h2>
+            <p className="muted">まずは DMM TV を軸に、主要サービスの違いをまとめています。</p>
           </div>
 
           <div className="compare-grid">
@@ -54,7 +54,7 @@ export default async function WatchPage() {
                 U-NEXT との比較を見る
               </Link>
               <div className="compare-card__text">
-                U-NEXT の強みと、2.5次元作品を見る上での立ち位置を整理しています。
+                U-NEXT の強みと、2.5次元舞台を探すうえでの違いを整理しています。
               </div>
             </article>
 
@@ -64,7 +64,7 @@ export default async function WatchPage() {
                 dアニメとの比較を見る
               </Link>
               <div className="compare-card__text">
-                アニメ寄りのサービスとの違いを整理しながら、舞台視聴の向き不向きを確認できます。
+                アニメ寄りのサービスとの違いを見ながら、舞台作品の探し方を確認できます。
               </div>
             </article>
           </div>
@@ -83,7 +83,7 @@ export default async function WatchPage() {
                 </div>
 
                 <div className="catalog-card__text">
-                  DMM TV から視聴導線を辿れるシリーズです。シリーズページから作品一覧や出演キャストも確認できます。
+                  DMM TV から視聴導線をたどれるシリーズです。シリーズページから作品一覧や出演キャストも確認できます。
                 </div>
 
                 <div className="catalog-card__footer">
