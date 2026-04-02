@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ActorCoStarsClient } from "../../../components/ActorCoStarsClient";
+import { ActorProfileClient } from "../../../components/ActorProfileClient";
 import { FavoriteButtonClient } from "../../../components/FavoriteButtonClient";
 import { ShareButtonClient } from "../../../components/ShareButtonClient";
 import {
@@ -14,6 +16,30 @@ import {
 
 type Params = {
   slug: string;
+};
+
+const formatTimelineLeadDate = (period?: string | null) => {
+  const value = String(period ?? "").trim();
+  if (!value) return null;
+
+  const fullDate = value.match(/(\d{4})\D{0,2}(\d{1,2})\D{0,2}(\d{1,2})/);
+  if (fullDate) {
+    const [, year, month, day] = fullDate;
+    return `${year}/${month.padStart(2, "0")}/${day.padStart(2, "0")}-`;
+  }
+
+  const yearMonth = value.match(/(\d{4})\D{0,2}(\d{1,2})/);
+  if (yearMonth) {
+    const [, year, month] = yearMonth;
+    return `${year}/${month.padStart(2, "0")}-`;
+  }
+
+  const yearOnly = value.match(/(\d{4})/);
+  if (yearOnly) {
+    return `${yearOnly[1]}-`;
+  }
+
+  return value;
 };
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
@@ -61,6 +87,8 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
   const age = getAgeFromBirthday(actor.birthday);
   const timeline = groupPlayTimelineByYear(actor.plays);
   const hasSns = Boolean(actor.sns && Object.values(actor.sns).some(Boolean));
+  const profileText = actor.profile || `${actor.name}のプロフィール情報はまだありません。`;
+  const shouldCollapseProfile = toPlainText(profileText).length > 260;
 
   const personJsonLd = {
     "@context": "https://schema.org",
@@ -149,9 +177,7 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
 
         <section className="section-card stack-md">
           <h2 className="section-title">プロフィール</h2>
-          <div className="rich-text">
-            {actor.profile || `${actor.name}のプロフィール情報はまだありません。`}
-          </div>
+          <ActorProfileClient text={profileText} collapsed={shouldCollapseProfile} />
         </section>
 
         <section className="section-card stack-md">
@@ -212,22 +238,22 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
 
                 <div className="cast-grid cast-grid-wide">
                   {group.plays.map((play) => (
-                    <article className="cast-card" key={play.slug}>
-                      <a className="cast-name" href={`/plays/${play.slug}`}>
+                    <Link className="cast-card cast-card-link" href={`/plays/${play.slug}`} key={play.slug}>
+                      <div className="cast-name">
                         {play.title}
-                      </a>
+                      </div>
                       {play.franchiseName ? (
                         <div className="muted" style={{ marginTop: 6, fontSize: 13 }}>
                           {play.franchiseName}
                         </div>
                       ) : null}
                       {play.roleName ? <div className="cast-role">{play.roleName}</div> : null}
-                      {play.period ? (
+                      {formatTimelineLeadDate(play.period) ? (
                         <div className="subtle-line" style={{ marginTop: 10 }}>
-                          {play.period}
+                          {formatTimelineLeadDate(play.period)}
                         </div>
                       ) : null}
-                    </article>
+                    </Link>
                   ))}
                 </div>
               </section>
