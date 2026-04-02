@@ -1,0 +1,62 @@
+import type { MetadataRoute } from "next";
+import { getActorList, getGuideList, getPlayList, getSeriesList } from "../lib/stage-connect";
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const [plays, actors, seriesList, guides] = await Promise.all([
+    getPlayList(),
+    getActorList(),
+    getSeriesList(),
+    getGuideList(),
+  ]);
+
+  const now = new Date();
+
+  const staticRoutes: MetadataRoute.Sitemap = [
+    "",
+    "/plays",
+    "/actors",
+    "/series",
+    "/guide",
+    "/watch",
+    "/watch/dmm",
+    "/watch/u-next",
+    "/watch/danime",
+  ].map((path) => ({
+    url: `${siteUrl}${path}`,
+    lastModified: now,
+    changeFrequency: "weekly",
+    priority: path === "" ? 1 : 0.8,
+  }));
+
+  const playRoutes: MetadataRoute.Sitemap = plays.map((play) => ({
+    url: `${siteUrl}/plays/${play.slug}`,
+    lastModified: now,
+    changeFrequency: "weekly",
+    priority: 0.9,
+  }));
+
+  const actorRoutes: MetadataRoute.Sitemap = actors.map((actor) => ({
+    url: `${siteUrl}/actors/${actor.slug}`,
+    lastModified: now,
+    changeFrequency: "weekly",
+    priority: 0.8,
+  }));
+
+  const seriesRoutes: MetadataRoute.Sitemap = seriesList.map((series) => ({
+    url: `${siteUrl}/series/${series.slug}`,
+    lastModified: now,
+    changeFrequency: "weekly",
+    priority: 0.85,
+  }));
+
+  const guideRoutes: MetadataRoute.Sitemap = guides.map((guide) => ({
+    url: `${siteUrl}/guide/${guide.slug}`,
+    lastModified: guide.publishedAt ? new Date(guide.publishedAt) : now,
+    changeFrequency: "monthly",
+    priority: 0.75,
+  }));
+
+  return [...staticRoutes, ...playRoutes, ...actorRoutes, ...seriesRoutes, ...guideRoutes];
+}
