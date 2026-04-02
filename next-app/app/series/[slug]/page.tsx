@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { SeriesCastOverviewClient } from "../../../components/SeriesCastOverviewClient";
 import { getSeriesDetailBySlug, toPlainText, truncate } from "../../../lib/stage-connect";
 
 type Params = {
@@ -11,18 +12,6 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
 
 export const revalidate = 3600;
 export const dynamicParams = true;
-
-const summarizeRoles = (roles: string[]) => {
-  if (roles.length === 0) return null;
-  if (roles.length <= 3) return roles.join(" / ");
-  return `${roles.slice(0, 3).join(" / ")} / ほか${roles.length - 3}役`;
-};
-
-const summarizeGroups = (groups: string[]) => {
-  if (groups.length === 0) return null;
-  if (groups.length <= 2) return groups.join(" / ");
-  return `${groups.slice(0, 2).join(" / ")} / ほか${groups.length - 2}`;
-};
 
 const getStartYear = (periods: Array<string | null>) => {
   const years = periods
@@ -69,7 +58,6 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
   if (!series) notFound();
 
   const startYear = getStartYear(series.plays.map((play) => play.period));
-  const visibleTopActors = series.topActors.slice(0, 5);
 
   const collectionJsonLd = {
     "@context": "https://schema.org",
@@ -166,63 +154,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
           )}
         </section>
 
-        <section className="section-card stack-md">
-          <h2 className="section-title">出演キャスト・役柄一覧</h2>
-          {series.topActors.length > 0 ? (
-            <>
-              <div className="cast-grid cast-grid-wide">
-                {visibleTopActors.map((item, index) => (
-                  <article className="cast-card" key={item.actor.slug}>
-                    <div className="series-rank-row">
-                      <span className="series-rank-badge">{index + 1}</span>
-                      <div className="series-rank-count">{item.count}作品</div>
-                    </div>
-                    <Link className="cast-name" href={`/actors/${item.actor.slug}`}>
-                      {item.actor.name}
-                    </Link>
-                    {summarizeGroups(item.groups) ? (
-                      <div className="subtle-line" style={{ marginTop: 6 }}>
-                        {summarizeGroups(item.groups)}
-                      </div>
-                    ) : null}
-                    {summarizeRoles(item.roles) ? (
-                      <div className="cast-role">{summarizeRoles(item.roles)}</div>
-                    ) : null}
-                  </article>
-                ))}
-              </div>
-
-              {series.topActors.length > visibleTopActors.length ? (
-                <details className="detail-block">
-                  <summary>すべての出演キャストを見る（{series.topActors.length}）</summary>
-                  <div className="cast-grid cast-grid-wide" style={{ marginTop: 16 }}>
-                    {series.topActors.map((item, index) => (
-                      <article className="cast-card" key={`${item.actor.slug}-all`}>
-                        <div className="series-rank-row">
-                          <span className="series-rank-badge">{index + 1}</span>
-                          <div className="series-rank-count">{item.count}作品</div>
-                        </div>
-                        <Link className="cast-name" href={`/actors/${item.actor.slug}`}>
-                          {item.actor.name}
-                        </Link>
-                        {summarizeGroups(item.groups) ? (
-                          <div className="subtle-line" style={{ marginTop: 6 }}>
-                            {summarizeGroups(item.groups)}
-                          </div>
-                        ) : null}
-                        {summarizeRoles(item.roles) ? (
-                          <div className="cast-role">{summarizeRoles(item.roles)}</div>
-                        ) : null}
-                      </article>
-                    ))}
-                  </div>
-                </details>
-              ) : null}
-            </>
-          ) : (
-            <p className="muted">出演キャスト情報はまだありません。</p>
-          )}
-        </section>
+        <SeriesCastOverviewClient topActors={series.topActors} />
 
         <section className="section-card stack-md">
           <h2 className="section-title">年表</h2>

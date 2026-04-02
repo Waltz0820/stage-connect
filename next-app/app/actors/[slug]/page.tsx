@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { ActorCoStarsClient } from "../../../components/ActorCoStarsClient";
 import {
   formatBirthday,
   getActorDetailBySlug,
@@ -59,8 +60,6 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
   const age = getAgeFromBirthday(actor.birthday);
   const timeline = groupPlayTimelineByYear(actor.plays);
   const hasSns = Boolean(actor.sns && Object.values(actor.sns).some(Boolean));
-  const topCoStars = actor.coStars.slice(0, 5);
-  const remainingCoStars = actor.coStars.slice(5);
 
   const personJsonLd = {
     "@context": "https://schema.org",
@@ -199,6 +198,7 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
                   <span className="timeline-year">{group.year}</span>
                   <span className="timeline-year-sub">YEAR</span>
                 </div>
+
                 <div className="cast-grid cast-grid-wide">
                   {group.plays.map((play) => (
                     <article className="cast-card" key={play.slug}>
@@ -224,57 +224,7 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
           </div>
         </section>
 
-        {actor.coStars.length > 0 ? (
-          <section className="section-card stack-md">
-            <div className="section-header-inline">
-              <h2 className="section-title">共演ネットワーク</h2>
-              <span className="pill">共演数の多いキャスト</span>
-            </div>
-
-            <div className="cast-grid cast-grid-wide">
-              {topCoStars.map((coStar, index) => (
-                <article className="cast-card" key={coStar.slug}>
-                  <div className="series-rank-row">
-                    <span className="series-rank-badge">{index + 1}</span>
-                    <div className="series-rank-count">共演 {coStar.count}作品</div>
-                  </div>
-                  <Link className="cast-name" href={`/actors/${coStar.slug}`}>
-                    {coStar.name}
-                  </Link>
-                  {coStar.kana ? (
-                    <div className="muted" style={{ marginTop: 6, fontSize: 13 }}>
-                      {coStar.kana}
-                    </div>
-                  ) : null}
-                </article>
-              ))}
-            </div>
-
-            {remainingCoStars.length > 0 ? (
-              <details className="detail-block">
-                <summary>全員を見る（{actor.coStars.length}）</summary>
-                <div className="cast-grid cast-grid-wide" style={{ marginTop: 16 }}>
-                  {actor.coStars.map((coStar, index) => (
-                    <article className="cast-card" key={coStar.slug}>
-                      <div className="series-rank-row">
-                        <span className="series-rank-badge">{index + 1}</span>
-                        <div className="series-rank-count">共演 {coStar.count}作品</div>
-                      </div>
-                      <Link className="cast-name" href={`/actors/${coStar.slug}`}>
-                        {coStar.name}
-                      </Link>
-                      {coStar.kana ? (
-                        <div className="muted" style={{ marginTop: 6, fontSize: 13 }}>
-                          {coStar.kana}
-                        </div>
-                      ) : null}
-                    </article>
-                  ))}
-                </div>
-              </details>
-            ) : null}
-          </section>
-        ) : null}
+        {actor.coStars.length > 0 ? <ActorCoStarsClient coStars={actor.coStars} /> : null}
 
         <section className="section-card stack-md">
           <h2 className="section-title">よくある質問 (FAQ)</h2>
