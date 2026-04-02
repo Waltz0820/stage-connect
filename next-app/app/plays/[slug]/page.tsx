@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { FavoriteButtonClient } from "../../../components/FavoriteButtonClient";
@@ -392,12 +392,6 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
                       {scheduleCities.length > 5 ? " / ..." : ""}
                     </div>
                   ) : null}
-                  {false && (
-                    <details className="detail-block">
-                      <summary>詳細を見る</summary>
-                      <div className="detail-panel">{play?.period}</div>
-                    </details>
-                  )}
                 </div>
               </div>
             ) : null}
@@ -408,26 +402,20 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
                 <div className="meta-value">
                   <div>{compactVenueSummary || play.venue}</div>
                   {venueList.length > 0 ? <div className="subtle-line">{venueList.length}会場</div> : null}
-                  {false && (
-                    <details className="detail-block">
-                      <summary>詳細を見る</summary>
-                      <div className="detail-panel">{play?.venue}</div>
-                    </details>
-                  )}
                 </div>
               </div>
             ) : null}
             {shouldShowScheduleDetailToggle ? (
               <div className="meta-row">
-                <div className="meta-label accent-label">隧ｳ邏ｰ</div>
+                <div className="meta-label accent-label">詳細</div>
                 <div className="meta-value">
                   <details className="detail-block">
-                    <summary>隧ｳ邏ｰ繧定ｦ九ｋ</summary>
+                    <summary>詳細を見る</summary>
                     <div className="detail-panel">
                       {play.period ? (
                         <div className="stack-sm">
                           <div className="muted" style={{ fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase" }}>
-                            譛滄俣
+                            期間
                           </div>
                           <div>{play.period}</div>
                         </div>
@@ -436,7 +424,7 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
                       {play.venue ? (
                         <div className="stack-sm">
                           <div className="muted" style={{ fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase" }}>
-                            蜉・ｴ
+                            劇場
                           </div>
                           <div>{play.venue}</div>
                         </div>
