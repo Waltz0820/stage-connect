@@ -69,6 +69,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
   if (!series) notFound();
 
   const startYear = getStartYear(series.plays.map((play) => play.period));
+  const visibleTopActors = series.topActors.slice(0, 5);
 
   const collectionJsonLd = {
     "@context": "https://schema.org",
@@ -168,26 +169,56 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
         <section className="section-card stack-md">
           <h2 className="section-title">出演キャスト・役柄一覧</h2>
           {series.topActors.length > 0 ? (
-            <div className="cast-grid cast-grid-wide">
-              {series.topActors.slice(0, 8).map((item) => (
-                <article className="cast-card" key={item.actor.slug}>
-                  <Link className="cast-name" href={`/actors/${item.actor.slug}`}>
-                    {item.actor.name}
-                  </Link>
-                  {summarizeGroups(item.groups) ? (
-                    <div className="subtle-line" style={{ marginTop: 6 }}>
-                      {summarizeGroups(item.groups)}
+            <>
+              <div className="cast-grid cast-grid-wide">
+                {visibleTopActors.map((item, index) => (
+                  <article className="cast-card" key={item.actor.slug}>
+                    <div className="series-rank-row">
+                      <span className="series-rank-badge">{index + 1}</span>
+                      <div className="series-rank-count">{item.count}作品</div>
                     </div>
-                  ) : null}
-                  {summarizeRoles(item.roles) ? (
-                    <div className="cast-role">{summarizeRoles(item.roles)}</div>
-                  ) : null}
-                  <div className="subtle-line" style={{ marginTop: 10 }}>
-                    {item.count}作品に出演
+                    <Link className="cast-name" href={`/actors/${item.actor.slug}`}>
+                      {item.actor.name}
+                    </Link>
+                    {summarizeGroups(item.groups) ? (
+                      <div className="subtle-line" style={{ marginTop: 6 }}>
+                        {summarizeGroups(item.groups)}
+                      </div>
+                    ) : null}
+                    {summarizeRoles(item.roles) ? (
+                      <div className="cast-role">{summarizeRoles(item.roles)}</div>
+                    ) : null}
+                  </article>
+                ))}
+              </div>
+
+              {series.topActors.length > visibleTopActors.length ? (
+                <details className="detail-block">
+                  <summary>すべての出演キャストを見る（{series.topActors.length}）</summary>
+                  <div className="cast-grid cast-grid-wide" style={{ marginTop: 16 }}>
+                    {series.topActors.map((item, index) => (
+                      <article className="cast-card" key={`${item.actor.slug}-all`}>
+                        <div className="series-rank-row">
+                          <span className="series-rank-badge">{index + 1}</span>
+                          <div className="series-rank-count">{item.count}作品</div>
+                        </div>
+                        <Link className="cast-name" href={`/actors/${item.actor.slug}`}>
+                          {item.actor.name}
+                        </Link>
+                        {summarizeGroups(item.groups) ? (
+                          <div className="subtle-line" style={{ marginTop: 6 }}>
+                            {summarizeGroups(item.groups)}
+                          </div>
+                        ) : null}
+                        {summarizeRoles(item.roles) ? (
+                          <div className="cast-role">{summarizeRoles(item.roles)}</div>
+                        ) : null}
+                      </article>
+                    ))}
                   </div>
-                </article>
-              ))}
-            </div>
+                </details>
+              ) : null}
+            </>
           ) : (
             <p className="muted">出演キャスト情報はまだありません。</p>
           )}
