@@ -68,7 +68,7 @@ export function ActorCoStarsClient({ coStars }: Props) {
       {coStars.length > visible.length ? (
         <>
           <button type="button" className="action-button" onClick={() => setIsOpen(true)}>
-            全員を見る（{coStars.length}）
+            全員を見る（{coStars.length}人）
           </button>
 
           {isOpen ? (
@@ -80,7 +80,7 @@ export function ActorCoStarsClient({ coStars }: Props) {
             >
               <div className="next-modal-panel">
                 <div className="next-modal-header">
-                  <p className="next-modal-title">共演ネットワーク（全{coStars.length}名）</p>
+                  <p className="next-modal-title">共演ネットワーク（{coStars.length}人）</p>
                   <button type="button" className="next-modal-close" onClick={() => setIsOpen(false)}>
                     閉じる
                   </button>

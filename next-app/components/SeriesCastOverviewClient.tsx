@@ -92,7 +92,7 @@ export function SeriesCastOverviewClient({ topActors }: Props) {
       {topActors.length > Math.max(mobileVisible.length, desktopVisible.length) ? (
         <>
           <button type="button" className="action-button" onClick={() => setIsOpen(true)}>
-            すべての出演キャストを見る（{topActors.length}）
+            すべての出演キャストを見る（{topActors.length}人）
           </button>
 
           {isOpen ? (

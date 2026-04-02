@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   const description = truncate(
     toPlainText(
       series.description ||
-        `${series.name}のシリーズ作品一覧と出演キャスト、年表をまとめたページです。収録作品数は${series.plays.length}件です。`
+        `${series.name} のシリーズ作品一覧と出演キャスト、年表をまとめたページです。収録作品数は ${series.plays.length} 件です。`
     ),
     150
   );
@@ -65,7 +65,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
     "@type": "CollectionPage",
     name: series.name,
     description: toPlainText(
-      series.description || `${series.name}のシリーズ作品一覧と出演キャストをまとめたページです。`
+      series.description || `${series.name} のシリーズ作品一覧と出演キャストをまとめたページです。`
     ),
     url: `${siteUrl}/series/${series.slug ?? slug}`,
     hasPart: series.plays.slice(0, 50).map((play) => ({
@@ -81,10 +81,10 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
     mainEntity: [
       {
         "@type": "Question",
-        name: `${series.name}の関連作品は全部で何作ありますか？`,
+        name: `${series.name} の関連作品はすべて見られますか？`,
         acceptedAnswer: {
           "@type": "Answer",
-          text: `現在、${series.name}には${series.plays.length}作品が登録されています。`,
+          text: `現時点で、${series.name} には ${series.plays.length} 作品が収録されています。`,
         },
       },
       {
@@ -92,7 +92,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
         name: "どの順番で見ればいいですか？",
         acceptedAnswer: {
           "@type": "Answer",
-          text: `基本的には公開年順に見るのがおすすめです。${startYear ?? "----"}年頃からの年表順に作品を追えるよう、このページではシリーズ作品を整理しています。`,
+          text: `基本的には公開年順に見るのがおすすめです。${startYear ?? "----"}年ごろからの年表順に作品を追えるよう、このページではシリーズ作品を整理しています。`,
         },
       },
       {
@@ -100,7 +100,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
         name: "出演キャストも確認できますか？",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "はい。シリーズ配下の作品に出ている俳優と役柄を集約して確認できます。気になる俳優がいれば、そのまま俳優詳細ページへ移動できます。",
+          text: "はい。シリーズ内で出演数の多いキャストと役柄を確認できます。気になる俳優がいれば、そのまま俳優詳細ページへ移動できます。",
         },
       },
     ],
@@ -112,10 +112,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       <div className="stack-lg">
         <section className="hero-card stack-md">
@@ -134,7 +131,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
         <section className="section-card stack-md">
           <h2 className="section-title">Series Info</h2>
           <div className="rich-text">
-            {series.description || `${series.name}のシリーズ説明は現在準備中です。`}
+            {series.description || `${series.name} のシリーズ情報を掲載しています。`}
           </div>
 
           {(series.originNote || series.productionCompanies.length > 0) && (
@@ -196,24 +193,24 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
         </section>
 
         <section className="section-card stack-md">
-          <h2 className="section-title">よくある質問 (FAQ)</h2>
+          <h2 className="section-title">よくある質問（FAQ）</h2>
           <div className="faq-grid">
             <article className="faq-card">
-              <h3 className="faq-question">Q. {series.name}の関連作品は全部で何作ありますか？</h3>
+              <h3 className="faq-question">Q. {series.name} の関連作品はすべて見られますか？</h3>
               <p className="faq-answer">
-                現在、{series.name}には{series.plays.length}作品が登録されています。
+                現時点で、{series.name} には {series.plays.length} 作品が収録されています。
               </p>
             </article>
             <article className="faq-card">
               <h3 className="faq-question">Q. どの順番で見ればいいですか？</h3>
               <p className="faq-answer">
-                基本的には公開年順に見るのがおすすめです。{startYear ?? "----"}年頃からの年表順に作品を追えるよう、このページではシリーズ作品を整理しています。
+                基本的には公開年順に見るのがおすすめです。{startYear ?? "----"}年ごろからの年表順に作品を追えるよう、このページではシリーズ作品を整理しています。
               </p>
             </article>
             <article className="faq-card">
               <h3 className="faq-question">Q. 出演キャストも確認できますか？</h3>
               <p className="faq-answer">
-                はい。シリーズ配下の作品に出ている俳優と役柄を集約して確認できます。気になる俳優がいれば、そのまま俳優詳細ページへ移動できます。
+                はい。シリーズ内で出演数の多いキャストと役柄を確認できます。気になる俳優がいれば、そのまま俳優詳細ページへ移動できます。
               </p>
             </article>
           </div>

@@ -16,6 +16,7 @@
 
 html {
   background: var(--bg);
+  overflow-x: hidden;
 }
 
 body {
@@ -23,6 +24,7 @@ body {
   background: linear-gradient(180deg, #09090d 0%, #0a0a0f 100%);
   color: var(--text);
   font-family: Inter, "Noto Sans JP", sans-serif;
+  overflow-x: hidden;
 }
 
 a {
@@ -32,6 +34,7 @@ a {
 
 .page-shell {
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .container {
@@ -57,6 +60,10 @@ a {
   padding: 14px 0;
 }
 
+.site-header__inner > * {
+  min-width: 0;
+}
+
 .site-brand {
   font-size: 15px;
   font-weight: 800;
@@ -73,6 +80,7 @@ a {
   gap: 14px;
   color: var(--muted);
   font-size: 13px;
+  min-width: 0;
 }
 
 .hero-card,
@@ -183,10 +191,14 @@ a {
   border-radius: 16px;
   padding: 16px;
   background: rgba(255, 255, 255, 0.025);
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .cast-name {
   font-weight: 800;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .cast-role {
@@ -194,6 +206,8 @@ a {
   color: var(--muted);
   line-height: 1.7;
   font-size: 14px;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .inline-links {
@@ -263,6 +277,8 @@ a {
   color: var(--muted);
   line-height: 1.95;
   white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .roomy {
@@ -332,6 +348,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+  min-width: 0;
 }
 
 .action-button {
@@ -347,6 +364,7 @@ a {
   font-size: 14px;
   font-weight: 700;
   transition: background 0.2s ease, border-color 0.2s ease;
+  max-width: 100%;
 }
 
 .action-button:hover {
@@ -393,11 +411,13 @@ a {
   padding-bottom: 8px;
   margin-inline: -4px;
   scroll-snap-type: x mandatory;
+  max-width: 100%;
 }
 
 .card-carousel-item {
   min-width: 220px;
   width: 220px;
+  max-width: calc(100vw - 56px);
   flex: 0 0 auto;
   scroll-snap-align: start;
 }
@@ -653,6 +673,8 @@ a {
   font-size: 14px;
   font-weight: 800;
   line-height: 1.7;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .faq-answer {
@@ -660,6 +682,8 @@ a {
   color: var(--muted);
   line-height: 1.85;
   font-size: 14px;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .series-rank-row {
@@ -770,6 +794,7 @@ a {
   border: 1px solid var(--line);
   background: linear-gradient(180deg, rgba(17, 17, 26, 0.98), rgba(10, 10, 15, 0.98));
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+  min-width: 0;
 }
 
 .next-modal-header {
@@ -823,6 +848,11 @@ a {
   .site-nav {
     width: 100%;
     gap: 10px 14px;
+  }
+
+  .action-button {
+    min-width: 0;
+    width: 100%;
   }
 }
 
