@@ -1,7 +1,7 @@
 // @ts-nocheck
 import React, { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "../../next-app/lib/admin-router-shim";
-import { supabase } from "../../lib/supabase";
+import { supabase } from "../../next-app/lib/admin-supabase";
 import Field from "./widgets/Field";
 
 type PlayRow = { id: string; slug: string; title: string };

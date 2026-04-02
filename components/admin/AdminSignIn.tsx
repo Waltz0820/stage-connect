@@ -1,6 +1,6 @@
 // @ts-nocheck
 import React, { useState } from "react";
-import { supabase } from "../../lib/supabase";
+import { supabase } from "../../next-app/lib/admin-supabase";
 
 const AdminSignIn: React.FC = () => {
   const [email, setEmail] = useState("");

@@ -1,7 +1,7 @@
 // @ts-nocheck
 import React, { useEffect, useMemo, useState } from "react";
 import { Link, useNavigate, useParams } from "../../next-app/lib/admin-router-shim";
-import { supabase } from "../../lib/supabase";
+import { supabase } from "../../next-app/lib/admin-supabase";
 import Field from "./widgets/Field";
 import JsonArea from "./widgets/JsonArea";
 import TagMultiSelect, { TagRow } from "./widgets/TagMultiSelect";

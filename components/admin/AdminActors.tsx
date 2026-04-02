@@ -1,7 +1,7 @@
 // @ts-nocheck
 import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "../../next-app/lib/admin-router-shim";
-import { supabase } from "../../lib/supabase";
+import { supabase } from "../../next-app/lib/admin-supabase";
 
 type ActorRow = {
   id?: string;
