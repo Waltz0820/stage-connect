@@ -321,7 +321,13 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
             </div>
 
             <div className="detail-actions">
-              <FavoriteButtonClient slug={play.slug} type="play" size="lg" />
+              <FavoriteButtonClient
+                slug={play.slug}
+                type="play"
+                size="lg"
+                title={play.title}
+                franchiseName={play.franchiseName}
+              />
               <ShareButtonClient title={play.title} text={`${play.title}の作品情報 | Stage Connect`} />
             </div>
 

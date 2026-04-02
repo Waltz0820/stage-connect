@@ -4,6 +4,16 @@ import { useEffect, useMemo, useState } from "react";
 
 type FavoriteType = "actor" | "play";
 
+type StoredFavorite =
+  | string
+  | {
+      slug: string;
+      name?: string | null;
+      kana?: string | null;
+      title?: string | null;
+      franchiseName?: string | null;
+    };
+
 const storageKeyByType: Record<FavoriteType, string> = {
   actor: "favorite_actors",
   play: "favorite_plays",
@@ -14,6 +24,10 @@ type Props = {
   type: FavoriteType;
   size?: "sm" | "md" | "lg";
   className?: string;
+  name?: string | null;
+  kana?: string | null;
+  title?: string | null;
+  franchiseName?: string | null;
 };
 
 const sizeClassMap = {
@@ -22,16 +36,29 @@ const sizeClassMap = {
   lg: "favorite-button--lg",
 };
 
-export function FavoriteButtonClient({ slug, type, size = "md", className = "" }: Props) {
+const readFavoriteSlugs = (storageKey: string) => {
+  const raw = window.localStorage.getItem(storageKey);
+  const list = raw ? (JSON.parse(raw) as StoredFavorite[]) : [];
+  return list.map((item) => (typeof item === "string" ? item : String(item?.slug ?? "").trim())).filter(Boolean);
+};
+
+export function FavoriteButtonClient({
+  slug,
+  type,
+  size = "md",
+  className = "",
+  name,
+  kana,
+  title,
+  franchiseName,
+}: Props) {
   const storageKey = storageKeyByType[type];
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
     const sync = () => {
       try {
-        const raw = window.localStorage.getItem(storageKey);
-        const list = raw ? (JSON.parse(raw) as string[]) : [];
-        setIsActive(list.includes(slug));
+        setIsActive(readFavoriteSlugs(storageKey).includes(slug));
       } catch {
         setIsActive(false);
       }
@@ -42,10 +69,7 @@ export function FavoriteButtonClient({ slug, type, size = "md", className = "" }
     return () => window.removeEventListener("favorites-updated", sync);
   }, [slug, storageKey]);
 
-  const label = useMemo(
-    () => (isActive ? "お気に入りから外す" : "お気に入りに追加"),
-    [isActive]
-  );
+  const label = useMemo(() => (isActive ? "お気に入りから外す" : "お気に入りに追加"), [isActive]);
 
   const onToggle = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
@@ -53,13 +77,19 @@ export function FavoriteButtonClient({ slug, type, size = "md", className = "" }
 
     try {
       const raw = window.localStorage.getItem(storageKey);
-      const current = raw ? (JSON.parse(raw) as string[]) : [];
-      const next = current.includes(slug)
-        ? current.filter((item) => item !== slug)
-        : [...current, slug];
+      const current = raw ? (JSON.parse(raw) as StoredFavorite[]) : [];
+      const isStored = current.some((item) => (typeof item === "string" ? item : item?.slug) === slug);
+      const next = isStored
+        ? current.filter((item) => (typeof item === "string" ? item : item?.slug) !== slug)
+        : [
+            ...current.filter(Boolean),
+            type === "actor"
+              ? { slug, name: name ?? slug, kana: kana ?? null }
+              : { slug, title: title ?? slug, franchiseName: franchiseName ?? null },
+          ];
 
       window.localStorage.setItem(storageKey, JSON.stringify(next));
-      setIsActive(next.includes(slug));
+      setIsActive(!isStored);
       window.dispatchEvent(new Event("favorites-updated"));
     } catch {
       // no-op

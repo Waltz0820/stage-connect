@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
-import { getSupabaseBrowserClient } from "../lib/supabase-browser";
 
 type ActorFavorite = {
   slug: string;
@@ -16,54 +15,56 @@ type PlayFavorite = {
   franchiseName: string | null;
 };
 
+type StoredFavorite =
+  | string
+  | {
+      slug: string;
+      name?: string | null;
+      kana?: string | null;
+      title?: string | null;
+      franchiseName?: string | null;
+    };
+
+const parseStoredActorFavorites = (value: string | null): ActorFavorite[] => {
+  const list = value ? (JSON.parse(value) as StoredFavorite[]) : [];
+  return list
+    .map((item) =>
+      typeof item === "string"
+        ? null
+        : {
+            slug: String(item.slug ?? "").trim(),
+            name: String(item.name ?? "").trim(),
+            kana: item.kana ?? null,
+          }
+    )
+    .filter((item): item is ActorFavorite => Boolean(item?.slug && item?.name));
+};
+
+const parseStoredPlayFavorites = (value: string | null): PlayFavorite[] => {
+  const list = value ? (JSON.parse(value) as StoredFavorite[]) : [];
+  return list
+    .map((item) =>
+      typeof item === "string"
+        ? null
+        : {
+            slug: String(item.slug ?? "").trim(),
+            title: String(item.title ?? "").trim(),
+            franchiseName: item.franchiseName ?? null,
+          }
+    )
+    .filter((item): item is PlayFavorite => Boolean(item?.slug && item?.title));
+};
+
 export function FavoritesClient() {
   const [tab, setTab] = useState<"actors" | "plays">("actors");
   const [actors, setActors] = useState<ActorFavorite[]>([]);
   const [plays, setPlays] = useState<PlayFavorite[]>([]);
 
   useEffect(() => {
-    const sync = async () => {
+    const sync = () => {
       try {
-        const actorSlugs = JSON.parse(window.localStorage.getItem("favorite_actors") || "[]") as string[];
-        const playSlugs = JSON.parse(window.localStorage.getItem("favorite_plays") || "[]") as string[];
-        const supabase = getSupabaseBrowserClient();
-
-        if (actorSlugs.length > 0) {
-          const { data } = await supabase
-            .from("actors")
-            .select("slug, name, kana")
-            .in("slug", actorSlugs);
-          const rows = ((data ?? []) as any[]).map((row) => ({
-            slug: String(row?.slug ?? "").trim(),
-            name: String(row?.name ?? "").trim(),
-            kana: (row?.kana as string | null) ?? null,
-          }));
-          const order = new Map(actorSlugs.map((slug, index) => [slug, index]));
-          rows.sort((a, b) => (order.get(a.slug) ?? 9999) - (order.get(b.slug) ?? 9999));
-          setActors(rows.filter((row) => row.slug && row.name));
-        } else {
-          setActors([]);
-        }
-
-        if (playSlugs.length > 0) {
-          const { data } = await supabase
-            .from("plays")
-            .select("slug, title, franchise:franchises(name)")
-            .in("slug", playSlugs);
-          const rows = ((data ?? []) as any[]).map((row) => {
-            const franchise = Array.isArray(row?.franchise) ? row.franchise[0] : row?.franchise;
-            return {
-              slug: String(row?.slug ?? "").trim(),
-              title: String(row?.title ?? "").trim(),
-              franchiseName: franchise?.name ?? null,
-            };
-          });
-          const order = new Map(playSlugs.map((slug, index) => [slug, index]));
-          rows.sort((a, b) => (order.get(a.slug) ?? 9999) - (order.get(b.slug) ?? 9999));
-          setPlays(rows.filter((row) => row.slug && row.title));
-        } else {
-          setPlays([]);
-        }
+        setActors(parseStoredActorFavorites(window.localStorage.getItem("favorite_actors")));
+        setPlays(parseStoredPlayFavorites(window.localStorage.getItem("favorite_plays")));
       } catch {
         setActors([]);
         setPlays([]);
@@ -81,7 +82,7 @@ export function FavoritesClient() {
     <div className="stack-lg">
       <div className="stack-sm">
         <h1 className="page-title">お気に入り</h1>
-        <p className="muted">保存したキャストと作品をあとからまとめて見返せます。</p>
+        <p className="muted">保存したキャストと作品を、あとからまとめて見返せます。</p>
       </div>
 
       <div className="favorite-tabs">

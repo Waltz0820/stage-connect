@@ -113,7 +113,7 @@ export default async function ActorsPage({
                     </Link>
                     <div className="catalog-card__top-actions">
                       {birthday ? <span className="catalog-card__badge">Profile</span> : null}
-                      <FavoriteButtonClient slug={actor.slug} type="actor" size="sm" />
+                      <FavoriteButtonClient slug={actor.slug} type="actor" size="sm" name={actor.name} kana={actor.kana} />
                     </div>
                   </div>
 

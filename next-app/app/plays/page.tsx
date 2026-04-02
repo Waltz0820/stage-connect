@@ -131,7 +131,13 @@ export default async function PlaysPage({
                   <div className="catalog-card__title">{play.title}</div>
                   <div className="catalog-card__top-actions">
                     {play.franchiseName ? <span className="catalog-card__badge">シリーズ</span> : null}
-                    <FavoriteButtonClient slug={play.slug} type="play" size="sm" />
+                    <FavoriteButtonClient
+                      slug={play.slug}
+                      type="play"
+                      size="sm"
+                      title={play.title}
+                      franchiseName={play.franchiseName}
+                    />
                   </div>
                 </div>
 

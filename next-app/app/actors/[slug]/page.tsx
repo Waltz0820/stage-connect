@@ -159,7 +159,7 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
             </div>
 
             <div className="detail-actions">
-              <FavoriteButtonClient slug={actor.slug} type="actor" size="lg" />
+              <FavoriteButtonClient slug={actor.slug} type="actor" size="lg" name={actor.name} kana={actor.kana} />
               <ShareButtonClient title={actor.name} text={`${actor.name}のプロフィール | Stage Connect`} />
             </div>
 
