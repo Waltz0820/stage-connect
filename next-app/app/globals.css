@@ -717,6 +717,20 @@ a {
   padding: 28px;
 }
 
+.hero-card--center {
+  text-align: center;
+}
+
+.hero-card--center > * {
+  justify-items: center;
+}
+
+.hero-card--center .section-header-inline,
+.hero-card--center .action-row,
+.hero-card--center .watch-stat-grid {
+  justify-content: center;
+}
+
 .section-card {
   padding: 22px;
 }

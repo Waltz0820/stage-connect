@@ -14,7 +14,7 @@ export default function WatchUNextPage() {
   return (
     <main className="container" style={{ paddingBlock: 32 }}>
       <div className="stack-lg">
-        <section className="hero-card stack-md">
+        <section className="hero-card hero-card--center stack-md">
           <div className="stack-sm">
             <span className="eyebrow">VOD Comparison Guide</span>
             <h1 className="page-title">U-NEXTと2.5次元舞台</h1>

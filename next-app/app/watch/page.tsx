@@ -17,7 +17,7 @@ export default async function WatchPage() {
   return (
     <main className="container" style={{ paddingBlock: 32 }}>
       <div className="stack-lg">
-        <section className="hero-card stack-md">
+        <section className="hero-card hero-card--center stack-md">
           <div className="stack-sm">
             <span className="eyebrow">Streaming Guide</span>
             <h1 className="page-title">2.5次元舞台を配信で観る</h1>
