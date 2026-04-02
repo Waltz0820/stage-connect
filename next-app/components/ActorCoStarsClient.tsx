@@ -104,7 +104,6 @@ export function ActorCoStarsClient({ coStars }: Props) {
                         className="cast-card cast-card-link"
                         href={`/actors/${coStar.slug}`}
                         key={`${coStar.slug}-modal`}
-                        onClick={() => setIsOpen(false)}
                       >
                         <div className="series-rank-row">
                           <span className="series-rank-badge">{index + 1}</span>

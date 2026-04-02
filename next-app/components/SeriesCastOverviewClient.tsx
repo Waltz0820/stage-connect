@@ -128,7 +128,6 @@ export function SeriesCastOverviewClient({ topActors }: Props) {
                         className="cast-card cast-card-link"
                         href={`/actors/${item.actor.slug}`}
                         key={`${item.actor.slug}-modal`}
-                        onClick={() => setIsOpen(false)}
                       >
                         <div className="series-rank-row">
                           <span className="series-rank-badge">{index + 1}</span>
