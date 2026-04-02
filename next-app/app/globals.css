@@ -664,6 +664,65 @@ a {
   font-weight: 700;
 }
 
+.timeline-shell {
+  position: relative;
+  display: grid;
+  gap: 28px;
+}
+
+.timeline-shell::before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 8px;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(
+    180deg,
+    rgba(180, 108, 255, 0.5) 0%,
+    rgba(180, 108, 255, 0.18) 55%,
+    rgba(180, 108, 255, 0) 100%
+  );
+}
+
+.timeline-year-block {
+  position: relative;
+  padding-left: 34px;
+  display: grid;
+  gap: 14px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: var(--purple);
+  box-shadow: 0 0 10px rgba(180, 108, 255, 0.55);
+}
+
+.timeline-year-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.timeline-year {
+  color: var(--purple);
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.timeline-year-sub {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
 @media (max-width: 920px) {
   .grid-2 {
     grid-template-columns: 1fr;

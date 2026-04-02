@@ -191,10 +191,14 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
 
         <section className="section-card stack-md">
           <h2 className="section-title">出演作品タイムライン</h2>
-          <div className="stack-lg">
+          <div className="timeline-shell">
             {timeline.map((group) => (
-              <section key={group.year} className="stack-md">
-                <div className="meta-label mono">{group.year}</div>
+              <section key={group.year} className="timeline-year-block">
+                <div className="timeline-dot" />
+                <div className="timeline-year-heading">
+                  <span className="timeline-year">{group.year}</span>
+                  <span className="timeline-year-sub">YEAR</span>
+                </div>
                 <div className="cast-grid cast-grid-wide">
                   {group.plays.map((play) => (
                     <article className="cast-card" key={play.slug}>
