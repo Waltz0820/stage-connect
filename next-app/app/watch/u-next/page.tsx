@@ -7,9 +7,9 @@ const DMM_PREMIUM_URL =
   "https://al.dmm.com/?lurl=https%3A%2F%2Fpremium.dmm.com%2F&af_id=stageconnect-001&ch=link_tool&ch_id=text";
 
 export const metadata: Metadata = {
-  title: "U-NEXTと2.5次元舞台 - Stage Connect",
+  title: "U-NEXTと2.5次元舞台 | Stage Connect（ステコネ）",
   description:
-    "U-NEXTで2.5次元舞台・ミュージカルを見るときの考え方を整理しています。DMM TVとの違いと、どんな人に向いているかを比較できます。",
+    "Stage Connect（ステコネ）で、U-NEXTで2.5次元舞台・ミュージカルを見るときの考え方を整理。DMM TVとの違いや、どんな人に向いているかを比較できます。",
 };
 
 metadata.alternates = {

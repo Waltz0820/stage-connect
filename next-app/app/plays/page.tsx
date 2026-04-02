@@ -35,9 +35,9 @@ const buildHref = (params: Record<string, string | number | null | undefined>) =
 };
 
 export const metadata: Metadata = {
-  title: "作品一覧 | Stage Connect",
+  title: "作品一覧 | Stage Connect（ステコネ）",
   description:
-    "2.5次元舞台・ミュージカル作品を一覧で整理。シリーズ、あらすじ、公演情報を見ながら、気になる作品詳細へそのまま進めます。",
+    "Stage Connect（ステコネ）で、2.5次元舞台・ミュージカル作品を一覧で整理。シリーズ、あらすじ、公演情報を見ながら、気になる作品詳細へそのまま進めます。",
 };
 
 metadata.alternates = {

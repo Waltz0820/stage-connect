@@ -7,7 +7,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
 export const metadata: Metadata = {
   title: "Stage Connect",
   description:
-    "2.5次元舞台・ミュージカルの作品、俳優、シリーズ、配信情報を横断できるデータベースメディアです。",
+    "Stage Connect（ステコネ）は、2.5次元舞台・ミュージカルの作品、キャスト、シリーズ、公演情報を整理して読めるデジタルアーカイブです。",
   metadataBase: new URL(siteUrl),
 };
 

@@ -53,7 +53,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
 
   if (!actor) {
     return {
-      title: "俳優が見つかりません | Stage Connect",
+      title: "俳優が見つかりません | Stage Connect（ステコネ）",
       robots: {
         index: false,
         follow: false,
@@ -69,7 +69,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   );
 
   return {
-    title: `${actor.name} | 俳優詳細 - Stage Connect`,
+    title: `${actor.name} | 俳優詳細 | Stage Connect（ステコネ）`,
     description,
     alternates: {
       canonical: `/actors/${actor.slug}`,

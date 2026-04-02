@@ -8,9 +8,9 @@ const DMM_PREMIUM_URL =
   "https://al.dmm.com/?lurl=https%3A%2F%2Fpremium.dmm.com%2F&af_id=stageconnect-001&ch=link_tool&ch_id=text";
 
 export const metadata: Metadata = {
-  title: "DMM TVで見られる2.5次元舞台・ミュージカル - Stage Connect",
+  title: "DMM TVで見られる2.5次元舞台・ミュージカル | Stage Connect（ステコネ）",
   description:
-    "DMM TVで見られる2.5次元舞台・ミュージカルのシリーズ一覧です。DMMプレミアムの料金や、シリーズページへの導線をまとめています。",
+    "Stage Connect（ステコネ）で、DMM TVで見られる2.5次元舞台・ミュージカルのシリーズ一覧を整理。DMMプレミアムの料金や、シリーズページへの導線もまとめています。",
 };
 
 metadata.alternates = {

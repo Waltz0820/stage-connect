@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { FavoriteButtonClient } from "../../../components/FavoriteButtonClient";
@@ -173,7 +173,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
 
   if (!play) {
     return {
-      title: "作品が見つかりません | Stage Connect",
+      title: "作品が見つかりません | Stage Connect（ステコネ）",
       robots: {
         index: false,
         follow: false,
@@ -190,7 +190,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   );
 
   return {
-    title: `${play.title}｜キャスト・配信（VOD）・公演情報 - Stage Connect`,
+    title: `${play.title}｜キャスト・配信（VOD）・公演情報 | Stage Connect（ステコネ）`,
     description,
     alternates: {
       canonical: `/plays/${play.slug}`,

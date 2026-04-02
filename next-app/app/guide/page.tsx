@@ -10,9 +10,9 @@ const CATEGORY_LABELS: Record<string, string> = {
 };
 
 export const metadata: Metadata = {
-  title: "編集部ガイド | Stage Connect",
+  title: "編集部ガイド | Stage Connect（ステコネ）",
   description:
-    "シリーズ整理や作品ピックアップをまとめた Stage Connect の編集部ガイド一覧。DBだけでは整理しきれない文脈も、読み物として確認できます。",
+    "Stage Connect（ステコネ）の編集部ガイド一覧です。シリーズ整理や作品ピックアップなど、DBだけでは整理しきれない文脈も読み物として確認できます。",
 };
 
 metadata.alternates = {

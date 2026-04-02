@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
 
   if (!guide) {
     return {
-      title: "ガイドが見つかりません | Stage Connect",
+      title: "ガイドが見つかりません | Stage Connect（ステコネ）",
       robots: { index: false, follow: false },
     };
   }
@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   const description = truncate(toPlainText(guide.summary || guide.content || guide.title), 150);
 
   return {
-    title: `${guide.title} | Stage Connect`,
+    title: `${guide.title} | Stage Connect（ステコネ）`,
     description,
     alternates: {
       canonical: `/guide/${guide.slug}`,

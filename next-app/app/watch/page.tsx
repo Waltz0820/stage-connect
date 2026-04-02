@@ -8,9 +8,9 @@ const DMM_PREMIUM_URL =
   "https://al.dmm.com/?lurl=https%3A%2F%2Fpremium.dmm.com%2F&af_id=stageconnect-001&ch=link_tool&ch_id=text";
 
 export const metadata: Metadata = {
-  title: "配信で観る | Stage Connect",
+  title: "配信で観る | Stage Connect（ステコネ）",
   description:
-    "2.5次元舞台・ミュージカルをどこで配信で観られるかを整理したガイドです。DMM TVを中心に、U-NEXT・dアニメストアとの違いも比較できます。",
+    "Stage Connect（ステコネ）で、2.5次元舞台・ミュージカルをどこで配信で観られるかを整理。DMM TVを中心に、U-NEXT・dアニメストアとの違いも比較できます。",
 };
 
 metadata.alternates = {

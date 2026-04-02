@@ -21,9 +21,9 @@ const buildHref = (params: Record<string, string | number | null | undefined>) =
 };
 
 export const metadata: Metadata = {
-  title: "シリーズ一覧 | Stage Connect",
+  title: "シリーズ一覧 | Stage Connect（ステコネ）",
   description:
-    "2.5次元舞台・ミュージカルのシリーズやフランチャイズを一覧で整理。配下作品、出演キャスト、年表への入口として確認できます。",
+    "Stage Connect（ステコネ）で、2.5次元舞台・ミュージカルのシリーズやフランチャイズを一覧で整理。配下作品、出演キャスト、年表への入口として確認できます。",
 };
 
 metadata.alternates = {
