@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SeriesCastOverviewClient } from "../../../components/SeriesCastOverviewClient";
 import { getSeriesDetailBySlug, toPlainText, truncate } from "../../../lib/stage-connect";
@@ -20,6 +21,35 @@ const getStartYear = (periods: Array<string | null>) => {
 
   if (years.length === 0) return null;
   return Math.min(...years);
+};
+
+const compactTimelinePeriod = (period?: string | null) => {
+  if (!period) return "公開時期未定";
+
+  const slashDate = period.match(/(\d{4})\/(\d{1,2})\/(\d{1,2})/);
+  if (slashDate) {
+    const [, year, month] = slashDate;
+    return `${year}/${month.padStart(2, "0")}-`;
+  }
+
+  const jpDate = period.match(/(\d{4})年\s*(\d{1,2})月\s*(\d{1,2})日/);
+  if (jpDate) {
+    const [, year, month] = jpDate;
+    return `${year}/${month.padStart(2, "0")}-`;
+  }
+
+  const yearMonth = period.match(/(\d{4})\D{0,2}(\d{1,2})/);
+  if (yearMonth) {
+    const [, year, month] = yearMonth;
+    return `${year}/${month.padStart(2, "0")}-`;
+  }
+
+  const yearOnly = period.match(/(\d{4})/);
+  if (yearOnly) {
+    return `${yearOnly[1]}-`;
+  }
+
+  return period;
 };
 
 const hasVod = (vod?: Record<string, string> | null) => Boolean(vod?.dmm || vod?.danime || vod?.unext);
@@ -117,10 +147,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
       <div className="stack-lg">
         <section className="hero-card stack-md">
           <div className="stack-sm">
-            <div>
-              <h1 className="page-title">{series.name}</h1>
-            </div>
-
+            <h1 className="page-title">{series.name}</h1>
             <div className="pill-row">
               <span className="pill accent-pill">作品数: {series.plays.length}</span>
               {series.originType ? <span className="pill">原作: {series.originType}</span> : null}
@@ -155,21 +182,31 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
         <SeriesCastOverviewClient topActors={series.topActors} />
 
         <section className="section-card stack-md">
-          <h2 className="section-title">年表</h2>
+          <div className="section-header-inline">
+            <h2 className="section-title">年表</h2>
+            {startYear ? <span className="pill">{startYear}年〜</span> : null}
+          </div>
+
           <div className="cast-grid cast-grid-wide">
             {series.plays.map((play) => (
-              <article className="cast-card" key={play.slug}>
-                <a className="cast-name" href={`/plays/${play.slug}`}>
-                  {play.title}
-                </a>
-                {play.period ? (
-                  <div className="subtle-line" style={{ marginTop: 8 }}>
-                    {play.period}
+              <article className="catalog-card" key={play.slug}>
+                <div className="catalog-card__top">
+                  <div>
+                    <div className="catalog-card__sub mono">{compactTimelinePeriod(play.period)}</div>
+                    <div className="catalog-card__title" style={{ marginTop: 8 }}>
+                      {play.title}
+                    </div>
                   </div>
-                ) : null}
-                {play.summary ? <div className="cast-role">{play.summary}</div> : null}
-                {hasVod(play.vod) ? (
-                  <div className="action-row" style={{ marginTop: 12 }}>
+                  {hasVod(play.vod) ? <span className="catalog-card__badge">配信あり</span> : null}
+                </div>
+
+                {play.summary ? <div className="catalog-card__text">{play.summary}</div> : null}
+
+                <div className="catalog-card__footer">
+                  <div className="action-row">
+                    <Link className="action-button action-button-primary" href={`/plays/${play.slug}`}>
+                      作品詳細を見る
+                    </Link>
                     {play.vod?.dmm ? (
                       <a className="action-button" href={play.vod.dmm} target="_blank" rel="noopener noreferrer">
                         DMM TV
@@ -186,7 +223,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
                       </a>
                     ) : null}
                   </div>
-                ) : null}
+                </div>
               </article>
             ))}
           </div>
