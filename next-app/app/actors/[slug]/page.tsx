@@ -34,8 +34,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
 
   const description = truncate(
     toPlainText(
-      actor.profile ||
-        `${actor.name} の俳優プロフィールと出演作品をまとめたページです。掲載作品数は ${actor.plays.length} 件です。`
+      actor.profile || `${actor.name} の俳優プロフィールと出演作品をまとめたページです。出演作品数は ${actor.plays.length} 件です。`
     ),
     150
   );
@@ -58,6 +57,7 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
   const birthdayText = formatBirthday(actor.birthday);
   const age = getAgeFromBirthday(actor.birthday);
   const timeline = groupPlayTimelineByYear(actor.plays);
+  const hasSns = Boolean(actor.sns && Object.values(actor.sns).some(Boolean));
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -79,75 +79,81 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
 
       <div className="stack-lg">
         <section className="hero-card stack-md">
-          <div>
-            <span className="eyebrow">Actor Detail SSR</span>
-            <h1 className="page-title">{actor.name}</h1>
-            {actor.kana ? <div className="muted">{actor.kana}</div> : null}
+          <div className="stack-sm">
+            <div>
+              <h1 className="page-title">{actor.name}</h1>
+              {actor.kana ? <div className="muted">{actor.kana}</div> : null}
+            </div>
+
+            <div className="pill-row">
+              {birthdayText ? (
+                <span className="pill">
+                  生年月日: {birthdayText}
+                  {age !== null ? ` (${age}歳)` : ""}
+                </span>
+              ) : null}
+              <span className="pill accent-pill">出演作品数: {actor.plays.length}</span>
+            </div>
           </div>
-          <p className="lead">
-            {actor.profile ||
-              `${actor.name} の俳優プロフィールと出演作品をまとめたページです。初期HTMLで年表と関連作品リンクを出力します。`}
-          </p>
-          <div className="pill-row">
-            {birthdayText ? (
-              <span className="pill">
-                生年月日: {birthdayText}
-                {age !== null ? ` (${age}歳)` : ""}
-              </span>
-            ) : null}
-            <span className="pill">出演作品数: {actor.plays.length}</span>
+        </section>
+
+        <section className="section-card stack-md">
+          <h2 className="section-title">プロフィール</h2>
+          <div className="rich-text">
+            {actor.profile || `${actor.name} のプロフィール情報はまだありません。`}
           </div>
         </section>
 
         <section className="section-card stack-md">
           <h2 className="section-title">公式リンク</h2>
-          <div className="inline-links">
-            {actor.sns?.x ? (
-              <a className="inline-link" href={actor.sns.x} target="_blank" rel="noopener noreferrer">
-                X
-              </a>
-            ) : null}
-            {actor.sns?.instagram ? (
-              <a className="inline-link" href={actor.sns.instagram} target="_blank" rel="noopener noreferrer">
-                Instagram
-              </a>
-            ) : null}
-            {actor.sns?.official ? (
-              <a className="inline-link" href={actor.sns.official} target="_blank" rel="noopener noreferrer">
-                Official
-              </a>
-            ) : null}
-            {actor.sns?.youtube ? (
-              <a className="inline-link" href={actor.sns.youtube} target="_blank" rel="noopener noreferrer">
-                YouTube
-              </a>
-            ) : null}
-            <Link className="inline-link" href="/actors">
-              俳優一覧へ戻る
-            </Link>
-          </div>
+          {hasSns ? (
+            <div className="action-row">
+              {actor.sns?.x ? (
+                <a className="action-button" href={actor.sns.x} target="_blank" rel="noopener noreferrer">
+                  X
+                </a>
+              ) : null}
+              {actor.sns?.instagram ? (
+                <a className="action-button" href={actor.sns.instagram} target="_blank" rel="noopener noreferrer">
+                  Instagram
+                </a>
+              ) : null}
+              {actor.sns?.official ? (
+                <a className="action-button action-button-primary" href={actor.sns.official} target="_blank" rel="noopener noreferrer">
+                  Official
+                </a>
+              ) : null}
+              {actor.sns?.youtube ? (
+                <a className="action-button" href={actor.sns.youtube} target="_blank" rel="noopener noreferrer">
+                  YouTube
+                </a>
+              ) : null}
+            </div>
+          ) : (
+            <p className="muted">リンク情報はまだありません。</p>
+          )}
         </section>
 
         <section className="section-card stack-md">
-          <h2 className="section-title">出演年表</h2>
+          <h2 className="section-title">出演作品タイムライン</h2>
           <div className="stack-lg">
             {timeline.map((group) => (
               <section key={group.year} className="stack-md">
                 <div className="meta-label mono">{group.year}</div>
-                <div className="cast-list">
+                <div className="cast-grid cast-grid-wide">
                   {group.plays.map((play) => (
                     <article className="cast-card" key={play.slug}>
                       <Link className="cast-name" href={`/plays/${play.slug}`}>
                         {play.title}
                       </Link>
                       {play.franchiseName ? (
-                        <div className="muted" style={{ marginTop: 4 }}>
+                        <div className="muted" style={{ marginTop: 6, fontSize: 13 }}>
                           {play.franchiseName}
                         </div>
                       ) : null}
                       {play.roleName ? <div className="cast-role">{play.roleName}</div> : null}
                       {play.period ? (
-                        <div className="muted" style={{ marginTop: 8, fontSize: 13 }}>
+                        <div className="subtle-line" style={{ marginTop: 10 }}>
                           {play.period}
                         </div>
                       ) : null}

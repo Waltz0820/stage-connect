@@ -13,8 +13,8 @@ export const dynamicParams = true;
 
 const summarizeRoles = (roles: string[]) => {
   if (roles.length === 0) return null;
-  if (roles.length <= 2) return roles.join(" / ");
-  return `${roles.slice(0, 2).join(" / ")} / ほか${roles.length - 2}役`;
+  if (roles.length <= 3) return roles.join(" / ");
+  return `${roles.slice(0, 3).join(" / ")} / ほか${roles.length - 3}役`;
 };
 
 const summarizeGroups = (groups: string[]) => {
@@ -36,8 +36,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
 
   const description = truncate(
     toPlainText(
-      series.description ||
-        `${series.name} のシリーズ詳細ページです。作品一覧、出演キャスト、年表をまとめています。掲載作品数は ${series.plays.length} 件です。`
+      series.description || `${series.name} のシリーズ作品一覧と出演キャスト、年表をまとめたページです。掲載作品数は ${series.plays.length} 件です。`
     ),
     150
   );
@@ -79,70 +78,77 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
 
       <div className="stack-lg">
         <section className="hero-card stack-md">
-          <div>
-            <span className="eyebrow">Series Detail SSR</span>
-            <h1 className="page-title">{series.name}</h1>
-          </div>
-          <p className="lead">
-            {series.description ||
-              `${series.name} のシリーズ詳細ページです。作品一覧、出演キャスト、年表を初期HTMLで出力する Next.js プロトタイプです。`}
-          </p>
-          <div className="pill-row">
-            <span className="pill">掲載作品数: {series.plays.length}</span>
-            {series.originType ? <span className="pill">種別: {series.originType}</span> : null}
+          <div className="stack-sm">
+            <div>
+              <h1 className="page-title">{series.name}</h1>
+            </div>
+
+            <div className="pill-row">
+              <span className="pill accent-pill">作品数: {series.plays.length}</span>
+              {series.originType ? <span className="pill">原作: {series.originType}</span> : null}
+            </div>
           </div>
         </section>
 
         <section className="section-card stack-md">
           <h2 className="section-title">Series Info</h2>
-          <div className="meta-list">
-            {series.originNote ? (
-              <div className="meta-item">
-                <div className="meta-label">原作・出典</div>
-                <div className="meta-value">{series.originNote}</div>
-              </div>
-            ) : null}
-            {series.productionCompanies.length > 0 ? (
-              <div className="meta-item">
-                <div className="meta-label">制作・関連</div>
-                <div className="meta-value">{series.productionCompanies.join(" / ")}</div>
-              </div>
-            ) : null}
+          <div className="rich-text">
+            {series.description || `${series.name} のシリーズ概要は現在整備中です。`}
           </div>
+          {(series.originNote || series.productionCompanies.length > 0) && (
+            <div className="meta-list roomy">
+              {series.originNote ? (
+                <div className="meta-row">
+                  <div className="meta-label accent-label">原作・出典</div>
+                  <div className="meta-value">{series.originNote}</div>
+                </div>
+              ) : null}
+              {series.productionCompanies.length > 0 ? (
+                <div className="meta-row">
+                  <div className="meta-label accent-label">制作・関連</div>
+                  <div className="meta-value">{series.productionCompanies.join(" / ")}</div>
+                </div>
+              ) : null}
+            </div>
+          )}
         </section>
 
         <section className="section-card stack-md">
           <h2 className="section-title">出演キャスト・役柄一覧</h2>
-          <div className="cast-list">
-            {series.topActors.slice(0, 8).map((item) => (
-              <article className="cast-card" key={item.actor.slug}>
-                <Link className="cast-name" href={`/actors/${item.actor.slug}`}>
-                  {item.actor.name}
-                </Link>
-                {summarizeGroups(item.groups) ? (
-                  <div className="muted" style={{ marginTop: 4, fontSize: 12 }}>
-                    {summarizeGroups(item.groups)}
+          {series.topActors.length > 0 ? (
+            <div className="cast-grid cast-grid-wide">
+              {series.topActors.slice(0, 8).map((item) => (
+                <article className="cast-card" key={item.actor.slug}>
+                  <Link className="cast-name" href={`/actors/${item.actor.slug}`}>
+                    {item.actor.name}
+                  </Link>
+                  {summarizeGroups(item.groups) ? (
+                    <div className="subtle-line" style={{ marginTop: 6 }}>
+                      {summarizeGroups(item.groups)}
+                    </div>
+                  ) : null}
+                  {summarizeRoles(item.roles) ? <div className="cast-role">{summarizeRoles(item.roles)}</div> : null}
+                  <div className="subtle-line" style={{ marginTop: 10 }}>
+                    {item.count}作品に出演
                   </div>
-                ) : null}
-                {summarizeRoles(item.roles) ? <div className="cast-role">{summarizeRoles(item.roles)}</div> : null}
-                <div className="muted" style={{ marginTop: 8, fontSize: 13 }}>
-                  {item.count}作品に出演
-                </div>
-              </article>
-            ))}
-          </div>
+                </article>
+              ))}
+            </div>
+          ) : (
+            <p className="muted">出演キャスト情報はまだありません。</p>
+          )}
         </section>
 
         <section className="section-card stack-md">
-          <h2 className="section-title">作品年表</h2>
-          <div className="cast-list">
+          <h2 className="section-title">年表</h2>
+          <div className="cast-grid cast-grid-wide">
             {series.plays.map((play) => (
               <article className="cast-card" key={play.slug}>
                 <Link className="cast-name" href={`/plays/${play.slug}`}>
                   {play.title}
                 </Link>
                 {play.period ? (
-                  <div className="muted" style={{ marginTop: 8, fontSize: 13 }}>
+                  <div className="subtle-line" style={{ marginTop: 8 }}>
                     {play.period}
                   </div>
                 ) : null}
