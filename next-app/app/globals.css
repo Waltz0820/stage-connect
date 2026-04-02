@@ -384,6 +384,23 @@ a {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
+.card-carousel {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-inline: 4px;
+  padding-bottom: 8px;
+  margin-inline: -4px;
+  scroll-snap-type: x mandatory;
+}
+
+.card-carousel-item {
+  min-width: 220px;
+  width: 220px;
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
 .cast-badge {
   margin-top: 10px;
   font-size: 11px;

@@ -25,9 +25,30 @@ export function ActorCoStarsClient({ coStars }: Props) {
         <span className="pill">共演数の多いキャスト</span>
       </div>
 
-      <div className="cast-grid cast-grid-wide">
+      <div className="lg:hidden">
+        <div className="card-carousel">
+          {visible.map((coStar, index) => (
+            <article className="cast-card card-carousel-item" key={coStar.slug}>
+              <div className="series-rank-row">
+                <span className="series-rank-badge">{index + 1}</span>
+                <div className="series-rank-count">共演 {coStar.count}作品</div>
+              </div>
+              <Link className="cast-name" href={`/actors/${coStar.slug}`}>
+                {coStar.name}
+              </Link>
+              {coStar.kana ? (
+                <div className="muted" style={{ marginTop: 6, fontSize: 13 }}>
+                  {coStar.kana}
+                </div>
+              ) : null}
+            </article>
+          ))}
+        </div>
+      </div>
+
+      <div className="hidden lg:grid cast-grid cast-grid-wide">
         {visible.map((coStar, index) => (
-          <article className="cast-card" key={coStar.slug}>
+          <article className="cast-card" key={`desktop-${coStar.slug}`}>
             <div className="series-rank-row">
               <span className="series-rank-badge">{index + 1}</span>
               <div className="series-rank-count">共演 {coStar.count}作品</div>

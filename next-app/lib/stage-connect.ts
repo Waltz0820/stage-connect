@@ -48,6 +48,7 @@ export type SeriesDetailData = {
     title: string;
     period: string | null;
     summary: string | null;
+    vod: Record<string, string> | null;
     tags: string[];
   }>;
   topActors: Array<{
@@ -481,6 +482,7 @@ export async function getSeriesDetailBySlug(slug: string): Promise<SeriesDetailD
       title,
       period,
       summary,
+      vod,
       created_at,
       play_tags:play_tags (
         tag:tags (
@@ -501,6 +503,7 @@ export async function getSeriesDetailBySlug(slug: string): Promise<SeriesDetailD
       title: row.title as string,
       period: (row.period as string | null) ?? null,
       summary: (row.summary as string | null) ?? null,
+      vod: (row.vod as Record<string, string> | null) ?? null,
       createdAt: (row.created_at as string | null) ?? null,
       tags: uniq(((row.play_tags ?? []) as any[]).map((item) => item?.tag?.name)),
     }))

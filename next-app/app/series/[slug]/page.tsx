@@ -22,6 +22,8 @@ const getStartYear = (periods: Array<string | null>) => {
   return Math.min(...years);
 };
 
+const hasVod = (vod?: Record<string, string> | null) => Boolean(vod?.dmm || vod?.danime || vod?.unext);
+
 export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
   const { slug } = await params;
   const series = await getSeriesDetailBySlug(slug);
@@ -169,6 +171,25 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
                   </div>
                 ) : null}
                 {play.summary ? <div className="cast-role">{play.summary}</div> : null}
+                {hasVod(play.vod) ? (
+                  <div className="action-row" style={{ marginTop: 12 }}>
+                    {play.vod?.dmm ? (
+                      <a className="action-button" href={play.vod.dmm} target="_blank" rel="noopener noreferrer">
+                        DMM TV
+                      </a>
+                    ) : null}
+                    {play.vod?.unext ? (
+                      <a className="action-button" href={play.vod.unext} target="_blank" rel="noopener noreferrer">
+                        U-NEXT
+                      </a>
+                    ) : null}
+                    {play.vod?.danime ? (
+                      <a className="action-button" href={play.vod.danime} target="_blank" rel="noopener noreferrer">
+                        dアニメ
+                      </a>
+                    ) : null}
+                  </div>
+                ) : null}
               </article>
             ))}
           </div>

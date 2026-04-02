@@ -31,7 +31,8 @@ const summarizeGroups = (groups: string[]) => {
 
 export function SeriesCastOverviewClient({ topActors }: Props) {
   const [isOpen, setIsOpen] = useState(false);
-  const visible = topActors.slice(0, 5);
+  const mobileVisible = topActors.slice(0, 12);
+  const desktopVisible = topActors.slice(0, 5);
 
   if (topActors.length === 0) {
     return (
@@ -46,9 +47,31 @@ export function SeriesCastOverviewClient({ topActors }: Props) {
     <section className="section-card stack-md">
       <h2 className="section-title">出演キャスト・役柄一覧</h2>
 
-      <div className="cast-grid cast-grid-wide">
-        {visible.map((item, index) => (
-          <article className="cast-card" key={item.actor.slug}>
+      <div className="lg:hidden">
+        <div className="card-carousel">
+          {mobileVisible.map((item, index) => (
+            <article className="cast-card card-carousel-item" key={item.actor.slug}>
+              <div className="series-rank-row">
+                <span className="series-rank-badge">{index + 1}</span>
+                <div className="series-rank-count">{item.count}作品</div>
+              </div>
+              <Link className="cast-name" href={`/actors/${item.actor.slug}`}>
+                {item.actor.name}
+              </Link>
+              {summarizeGroups(item.groups) ? (
+                <div className="subtle-line" style={{ marginTop: 6 }}>
+                  {summarizeGroups(item.groups)}
+                </div>
+              ) : null}
+              {summarizeRoles(item.roles) ? <div className="cast-role">{summarizeRoles(item.roles)}</div> : null}
+            </article>
+          ))}
+        </div>
+      </div>
+
+      <div className="hidden lg:grid cast-grid cast-grid-wide">
+        {desktopVisible.map((item, index) => (
+          <article className="cast-card" key={`desktop-${item.actor.slug}`}>
             <div className="series-rank-row">
               <span className="series-rank-badge">{index + 1}</span>
               <div className="series-rank-count">{item.count}作品</div>
@@ -66,7 +89,7 @@ export function SeriesCastOverviewClient({ topActors }: Props) {
         ))}
       </div>
 
-      {topActors.length > visible.length ? (
+      {topActors.length > Math.max(mobileVisible.length, desktopVisible.length) ? (
         <>
           <button type="button" className="action-button" onClick={() => setIsOpen(true)}>
             すべての出演キャストを見る（{topActors.length}）
