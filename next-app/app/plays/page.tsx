@@ -103,7 +103,7 @@ export default async function PlaysPage({
             </p>
           </div>
 
-          <div className="filter-row">
+          <div className="filter-row filter-row--dense">
             <Link
               className={`filter-chip ${sort === "new" ? "is-active" : ""}`}
               href={buildHref({ page: 1, sort: "new", genre })}
@@ -118,7 +118,7 @@ export default async function PlaysPage({
             </Link>
           </div>
 
-          <div className="filter-row genre-filter-row">
+          <div className="filter-row filter-row--dense genre-filter-row">
             {genreOptions.map((option) => (
               <Link
                 key={option}

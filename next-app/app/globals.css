@@ -711,7 +711,7 @@ a {
 }
 
 .tag-cloud-link.is-rank-3 {
-  color: rgba(233, 68, 166, 0.92);
+  color: rgba(212, 202, 184, 0.9);
   font-size: clamp(18px, 2.4vw, 24px);
   font-weight: 700;
 }
@@ -868,7 +868,8 @@ a {
 .detail-actions {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+  align-self: start;
 }
 
 .detail-ledger-shell .page-title {
@@ -929,6 +930,18 @@ a {
   background: rgba(255, 255, 255, 0.012);
   min-width: 0;
   overflow-wrap: anywhere;
+}
+
+.cast-card-link {
+  display: block;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.cast-card-link:hover {
+  border-color: rgba(243, 240, 234, 0.22);
+  background: rgba(255, 255, 255, 0.028);
+  transform: translateY(-1px);
 }
 
 .cast-name {
@@ -1042,8 +1055,8 @@ a {
 
 .favorite-button--md,
 .share-button {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
 }
 
 .favorite-button--lg {
@@ -1169,12 +1182,14 @@ a {
 .group-chip {
   width: fit-content;
   padding: 7px 12px;
-  border-radius: 999px;
-  border: 1px solid rgba(233, 68, 166, 0.24);
-  background: rgba(233, 68, 166, 0.1);
-  color: var(--pink);
+  border-radius: 0;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--text);
   font-size: 12px;
   font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .cast-grid {
@@ -1313,10 +1328,12 @@ a {
   padding: 6px 10px;
   border-radius: 0;
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.02);
   color: var(--muted);
   font-size: 11px;
   font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   white-space: nowrap;
 }
 
@@ -1403,9 +1420,17 @@ a {
 }
 
 .catalog-link {
-  color: var(--cyan);
+  color: var(--text);
   font-size: 13px;
   font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+}
+
+.catalog-link:hover {
+  border-color: rgba(243, 240, 234, 0.4);
 }
 
 .catalog-note {
@@ -1437,24 +1462,30 @@ a {
   align-items: center;
   justify-content: center;
   padding: 9px 13px;
-  border-radius: 999px;
+  border-radius: 0;
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.02);
   color: var(--muted);
   font-size: 12px;
   font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
 }
 
 .filter-chip:hover {
-  border-color: rgba(180, 108, 255, 0.32);
+  border-color: rgba(243, 240, 234, 0.28);
   color: var(--text);
 }
 
 .filter-chip.is-active {
-  border-color: rgba(180, 108, 255, 0.34);
-  background: rgba(180, 108, 255, 0.14);
+  border-color: rgba(243, 240, 234, 0.28);
+  background: rgba(243, 240, 234, 0.07);
   color: var(--text);
+}
+
+.filter-row--dense {
+  gap: 8px;
 }
 
 .pagination-row {
@@ -1472,12 +1503,19 @@ a {
   justify-content: center;
   min-width: 112px;
   padding: 10px 14px;
-  border-radius: 999px;
+  border-radius: 0;
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.02);
   color: var(--text);
   font-size: 13px;
   font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.pagination-link:hover {
+  border-color: rgba(243, 240, 234, 0.28);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .pagination-link.is-disabled {
@@ -1619,10 +1657,10 @@ a {
   justify-content: center;
   width: 26px;
   height: 26px;
-  border-radius: 999px;
-  background: rgba(0, 255, 255, 0.12);
-  border: 1px solid rgba(0, 255, 255, 0.2);
-  color: var(--cyan);
+  border-radius: 0;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--line);
+  color: var(--text);
   font-size: 12px;
   font-weight: 800;
 }
@@ -1771,6 +1809,16 @@ a {
   line-height: 1;
   letter-spacing: -0.08em;
   color: var(--text);
+}
+
+.detail-hero-copy {
+  display: grid;
+  gap: 12px;
+  align-content: start;
+}
+
+.detail-hero-copy .page-title {
+  margin: 0;
 }
 
 .title-subtle {

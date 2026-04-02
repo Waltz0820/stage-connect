@@ -76,7 +76,7 @@ export default async function ActorsPage({
             </p>
           </div>
 
-          <div className="catalog-summary">
+          <div className="catalog-summary catalog-summary--ledger">
             <span className="catalog-chip">該当俳優 {filteredActors.length}人</span>
             <span className="catalog-chip">全掲載俳優 {allActors.length}人</span>
             <span className="catalog-chip">Page {safePage}</span>
@@ -91,7 +91,7 @@ export default async function ActorsPage({
             </p>
           </div>
 
-          <div className="filter-row">
+          <div className="filter-row filter-row--dense">
             <Link className={`filter-chip ${gender === "all" ? "is-active" : ""}`} href={buildHref({ page: 1, gender: "all" })}>
               すべて
             </Link>

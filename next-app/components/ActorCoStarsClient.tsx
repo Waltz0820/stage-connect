@@ -43,39 +43,35 @@ export function ActorCoStarsClient({ coStars }: Props) {
       {isMobile ? (
         <div className="card-carousel">
           {visible.map((coStar, index) => (
-            <article className="cast-card card-carousel-item" key={coStar.slug}>
+            <Link className="cast-card cast-card-link card-carousel-item" href={`/actors/${coStar.slug}`} key={coStar.slug}>
               <div className="series-rank-row">
                 <span className="series-rank-badge">{index + 1}</span>
                 <div className="series-rank-count">共演 {coStar.count}作品</div>
               </div>
-              <Link className="cast-name" href={`/actors/${coStar.slug}`}>
-                {coStar.name}
-              </Link>
+              <div className="cast-name">{coStar.name}</div>
               {coStar.kana ? (
                 <div className="muted" style={{ marginTop: 6, fontSize: 13 }}>
                   {coStar.kana}
                 </div>
               ) : null}
-            </article>
+            </Link>
           ))}
         </div>
       ) : (
         <div className="cast-grid cast-grid-wide">
           {visible.map((coStar, index) => (
-            <article className="cast-card" key={`desktop-${coStar.slug}`}>
+            <Link className="cast-card cast-card-link" href={`/actors/${coStar.slug}`} key={`desktop-${coStar.slug}`}>
               <div className="series-rank-row">
                 <span className="series-rank-badge">{index + 1}</span>
                 <div className="series-rank-count">共演 {coStar.count}作品</div>
               </div>
-              <Link className="cast-name" href={`/actors/${coStar.slug}`}>
-                {coStar.name}
-              </Link>
+              <div className="cast-name">{coStar.name}</div>
               {coStar.kana ? (
                 <div className="muted" style={{ marginTop: 6, fontSize: 13 }}>
                   {coStar.kana}
                 </div>
               ) : null}
-            </article>
+            </Link>
           ))}
         </div>
       )}
@@ -83,7 +79,7 @@ export function ActorCoStarsClient({ coStars }: Props) {
       {coStars.length > visible.length ? (
         <>
           <button type="button" className="action-button" onClick={() => setIsOpen(true)}>
-            全員を見る（{coStars.length}人）
+            全員を見る ({coStars.length}人)
           </button>
 
           {isOpen ? (
@@ -95,7 +91,7 @@ export function ActorCoStarsClient({ coStars }: Props) {
             >
               <div className="next-modal-panel">
                 <div className="next-modal-header">
-                  <p className="next-modal-title">共演ネットワーク（{coStars.length}人）</p>
+                  <p className="next-modal-title">共演ネットワーク ({coStars.length}人)</p>
                   <button type="button" className="next-modal-close" onClick={() => setIsOpen(false)}>
                     閉じる
                   </button>
@@ -104,20 +100,23 @@ export function ActorCoStarsClient({ coStars }: Props) {
                 <div className="next-modal-body">
                   <div className="cast-grid cast-grid-wide">
                     {coStars.map((coStar, index) => (
-                      <article className="cast-card" key={`${coStar.slug}-modal`}>
+                      <Link
+                        className="cast-card cast-card-link"
+                        href={`/actors/${coStar.slug}`}
+                        key={`${coStar.slug}-modal`}
+                        onClick={() => setIsOpen(false)}
+                      >
                         <div className="series-rank-row">
                           <span className="series-rank-badge">{index + 1}</span>
                           <div className="series-rank-count">共演 {coStar.count}作品</div>
                         </div>
-                        <Link className="cast-name" href={`/actors/${coStar.slug}`} onClick={() => setIsOpen(false)}>
-                          {coStar.name}
-                        </Link>
+                        <div className="cast-name">{coStar.name}</div>
                         {coStar.kana ? (
                           <div className="muted" style={{ marginTop: 6, fontSize: 13 }}>
                             {coStar.kana}
                           </div>
                         ) : null}
-                      </article>
+                      </Link>
                     ))}
                   </div>
                 </div>

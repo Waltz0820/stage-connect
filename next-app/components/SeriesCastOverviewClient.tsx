@@ -65,41 +65,37 @@ export function SeriesCastOverviewClient({ topActors }: Props) {
       {isMobile ? (
         <div className="card-carousel">
           {mobileVisible.map((item, index) => (
-            <article className="cast-card card-carousel-item" key={item.actor.slug}>
+            <Link className="cast-card cast-card-link card-carousel-item" href={`/actors/${item.actor.slug}`} key={item.actor.slug}>
               <div className="series-rank-row">
                 <span className="series-rank-badge">{index + 1}</span>
                 <div className="series-rank-count">{item.count}作品</div>
               </div>
-              <Link className="cast-name" href={`/actors/${item.actor.slug}`}>
-                {item.actor.name}
-              </Link>
+              <div className="cast-name">{item.actor.name}</div>
               {summarizeGroups(item.groups) ? (
                 <div className="subtle-line" style={{ marginTop: 6 }}>
                   {summarizeGroups(item.groups)}
                 </div>
               ) : null}
               {summarizeRoles(item.roles) ? <div className="cast-role">{summarizeRoles(item.roles)}</div> : null}
-            </article>
+            </Link>
           ))}
         </div>
       ) : (
         <div className="cast-grid cast-grid-wide">
           {desktopVisible.map((item, index) => (
-            <article className="cast-card" key={`desktop-${item.actor.slug}`}>
+            <Link className="cast-card cast-card-link" href={`/actors/${item.actor.slug}`} key={`desktop-${item.actor.slug}`}>
               <div className="series-rank-row">
                 <span className="series-rank-badge">{index + 1}</span>
                 <div className="series-rank-count">{item.count}作品</div>
               </div>
-              <Link className="cast-name" href={`/actors/${item.actor.slug}`}>
-                {item.actor.name}
-              </Link>
+              <div className="cast-name">{item.actor.name}</div>
               {summarizeGroups(item.groups) ? (
                 <div className="subtle-line" style={{ marginTop: 6 }}>
                   {summarizeGroups(item.groups)}
                 </div>
               ) : null}
               {summarizeRoles(item.roles) ? <div className="cast-role">{summarizeRoles(item.roles)}</div> : null}
-            </article>
+            </Link>
           ))}
         </div>
       )}
@@ -107,7 +103,7 @@ export function SeriesCastOverviewClient({ topActors }: Props) {
       {topActors.length > Math.max(mobileVisible.length, desktopVisible.length) ? (
         <>
           <button type="button" className="action-button" onClick={() => setIsOpen(true)}>
-            すべての出演キャストを見る（{topActors.length}人）
+            すべての出演キャストを見る ({topActors.length}人)
           </button>
 
           {isOpen ? (
@@ -128,18 +124,17 @@ export function SeriesCastOverviewClient({ topActors }: Props) {
                 <div className="next-modal-body">
                   <div className="cast-grid cast-grid-wide">
                     {topActors.map((item, index) => (
-                      <article className="cast-card" key={`${item.actor.slug}-modal`}>
+                      <Link
+                        className="cast-card cast-card-link"
+                        href={`/actors/${item.actor.slug}`}
+                        key={`${item.actor.slug}-modal`}
+                        onClick={() => setIsOpen(false)}
+                      >
                         <div className="series-rank-row">
                           <span className="series-rank-badge">{index + 1}</span>
                           <div className="series-rank-count">{item.count}作品</div>
                         </div>
-                        <Link
-                          className="cast-name"
-                          href={`/actors/${item.actor.slug}`}
-                          onClick={() => setIsOpen(false)}
-                        >
-                          {item.actor.name}
-                        </Link>
+                        <div className="cast-name">{item.actor.name}</div>
                         {summarizeGroups(item.groups) ? (
                           <div className="subtle-line" style={{ marginTop: 6 }}>
                             {summarizeGroups(item.groups)}
@@ -148,7 +143,7 @@ export function SeriesCastOverviewClient({ topActors }: Props) {
                         {summarizeRoles(item.roles) ? (
                           <div className="cast-role">{summarizeRoles(item.roles)}</div>
                         ) : null}
-                      </article>
+                      </Link>
                     ))}
                   </div>
                 </div>

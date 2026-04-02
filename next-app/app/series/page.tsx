@@ -79,7 +79,7 @@ export default async function SeriesPage({
             </p>
           </div>
 
-          <div className="catalog-summary">
+          <div className="catalog-summary catalog-summary--ledger">
             <span className="catalog-chip">該当シリーズ {filteredSeries.length}件</span>
             <span className="catalog-chip">全掲載シリーズ {allSeries.length}件</span>
             <span className="catalog-chip">Page {safePage}</span>
@@ -94,7 +94,7 @@ export default async function SeriesPage({
             </p>
           </div>
 
-          <div className="filter-row">
+          <div className="filter-row filter-row--dense">
             <Link
               className={`filter-chip ${sort === "play_count_desc" ? "is-active" : ""}`}
               href={buildHref({ page: 1, sort: "play_count_desc", origin })}
@@ -109,7 +109,7 @@ export default async function SeriesPage({
             </Link>
           </div>
 
-          <div className="filter-row">
+          <div className="filter-row filter-row--dense">
             {originOptions.map((option) => (
               <Link
                 key={option}
