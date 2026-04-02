@@ -16,7 +16,6 @@
 
 html {
   background: var(--bg);
-  overflow-x: hidden;
 }
 
 body {
@@ -24,7 +23,6 @@ body {
   background: linear-gradient(180deg, #09090d 0%, #0a0a0f 100%);
   color: var(--text);
   font-family: Inter, "Noto Sans JP", sans-serif;
-  overflow-x: hidden;
 }
 
 a {
@@ -34,7 +32,6 @@ a {
 
 .page-shell {
   min-height: 100vh;
-  overflow-x: hidden;
 }
 
 .container {
@@ -413,7 +410,6 @@ a {
   overflow-x: auto;
   padding-inline: 4px;
   padding-bottom: 8px;
-  margin-inline: -4px;
   scroll-snap-type: x mandatory;
   max-width: 100%;
 }
