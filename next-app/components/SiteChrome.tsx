@@ -26,6 +26,10 @@ export default function SiteChrome({ children }: { children: React.ReactNode }) 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showCTA, setShowCTA] = useState(false);
 
+  if (pathname?.startsWith("/admin")) {
+    return <>{children}</>;
+  }
+
   useEffect(() => {
     setIsMenuOpen(false);
   }, [pathname]);

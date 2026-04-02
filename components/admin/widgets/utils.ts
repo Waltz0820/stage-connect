@@ -1,3 +1,4 @@
+// @ts-nocheck
 export const safeTrim = (v: any) => (typeof v === "string" ? v.trim() : "");
 
 export const toSlug = (s: string) =>

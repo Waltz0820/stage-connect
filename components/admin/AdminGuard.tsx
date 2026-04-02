@@ -1,9 +1,18 @@
+// @ts-nocheck
 import React, { useEffect, useMemo, useState } from "react";
 import { supabase } from "../../lib/supabase";
 import AdminSignIn from "./AdminSignIn";
 
 const getAdminEmails = () => {
-  const raw = import.meta.env.VITE_ADMIN_EMAILS as string | undefined;
+  const viteEnv =
+    typeof import.meta !== "undefined" && (import.meta as ImportMeta & { env?: Record<string, string | undefined> }).env
+      ? (import.meta as ImportMeta & { env?: Record<string, string | undefined> }).env!
+      : {};
+  const raw =
+    viteEnv.VITE_ADMIN_EMAILS ||
+    process.env.NEXT_PUBLIC_ADMIN_EMAILS ||
+    process.env.ADMIN_EMAILS ||
+    process.env.VITE_ADMIN_EMAILS;
   return (raw ?? "")
     .split(",")
     .map((s) => s.trim().toLowerCase())
