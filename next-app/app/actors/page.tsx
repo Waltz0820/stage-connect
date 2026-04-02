@@ -31,9 +31,9 @@ const buildHref = (params: Record<string, string | number | null | undefined>) =
 };
 
 export const metadata: Metadata = {
-  title: "俳優一覧 - Stage Connect",
+  title: "俳優一覧 | Stage Connect",
   description:
-    "2.5次元舞台・ミュージカルに出演する俳優を一覧で整理。プロフィールや出演作品年表へすぐ辿れる、俳優データベースの入口です。",
+    "2.5次元舞台・ミュージカルに出演する俳優を一覧で整理。プロフィール、出演作品年表、共演ネットワークへの入口として使えます。",
 };
 
 export default async function ActorsPage({
@@ -65,14 +65,14 @@ export default async function ActorsPage({
             <span className="eyebrow">Actors</span>
             <h1 className="page-title">俳優一覧</h1>
             <p className="lead">
-              2.5次元舞台・ミュージカルに出演する俳優を一覧で確認できます。プロフィール、生年月日、
-              公式リンク、出演作品年表まで、そのまま各詳細ページから追える構成です。
+              2.5次元舞台・ミュージカルに出演する俳優を一覧で確認できます。
+              プロフィール、年表、共演情報までたどれるデータベースの入口です。
             </p>
           </div>
 
           <div className="catalog-summary">
-            <span className="catalog-chip">掲載俳優 {filteredActors.length}人</span>
-            <span className="catalog-chip">全体登録数 {allActors.length}人</span>
+            <span className="catalog-chip">該当俳優 {filteredActors.length}人</span>
+            <span className="catalog-chip">全掲載俳優 {allActors.length}人</span>
             <span className="catalog-chip">Page {safePage}</span>
           </div>
         </section>
@@ -81,7 +81,7 @@ export default async function ActorsPage({
           <div className="stack-sm">
             <h2 className="section-title">俳優データベース</h2>
             <p className="catalog-note">
-              性別フィルタを切り替えながら、俳優プロフィールと出演作品年表の入口を一覧で確認できます。
+              性別フィルタを切り替えながら、プロフィールと出演作品年表の入口を一覧で確認できます。
             </p>
           </div>
 
@@ -128,7 +128,7 @@ export default async function ActorsPage({
                   {actor.profile ? (
                     <div className="catalog-card__text">{truncate(toPlainText(actor.profile), 140)}</div>
                   ) : (
-                    <div className="catalog-card__text">プロフィールは順次整備中です。</div>
+                    <div className="catalog-card__text">プロフィールは現在準備中です。</div>
                   )}
 
                   <div className="catalog-card__footer">

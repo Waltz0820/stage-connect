@@ -6,7 +6,6 @@ type SearchParamValue = string | string[] | undefined;
 type SearchParams = Record<string, SearchParamValue>;
 
 const ITEMS_PER_PAGE = 10;
-
 const GENRE_LABELS: Record<string, string> = {
   history: "歴史・時代劇",
   fantasy: "ファンタジー",
@@ -34,9 +33,9 @@ const buildHref = (params: Record<string, string | number | null | undefined>) =
 };
 
 export const metadata: Metadata = {
-  title: "作品一覧 - Stage Connect",
+  title: "作品一覧 | Stage Connect",
   description:
-    "2.5次元舞台・ミュージカル作品を一覧で整理。シリーズ、あらすじ、公演期間を横断しながら、気になる作品詳細へスムーズに辿れます。",
+    "2.5次元舞台・ミュージカル作品を一覧で整理。シリーズ、あらすじ、公演情報を見ながら、気になる作品詳細へそのまま進めます。",
 };
 
 export default async function PlaysPage({
@@ -78,14 +77,14 @@ export default async function PlaysPage({
             <span className="eyebrow">Plays</span>
             <h1 className="page-title">作品一覧</h1>
             <p className="lead">
-              2.5次元舞台・ミュージカル作品を、シリーズや公演時期の流れとあわせて一覧で確認できます。
-              データベースの起点として、気になる作品詳細へそのまま辿れる構成です。
+              2.5次元舞台・ミュージカル作品を、シリーズ・公演時期・ジャンルとあわせて一覧で確認できます。
+              データベースの導線として、気になる作品詳細へそのまま進める入口です。
             </p>
           </div>
 
           <div className="catalog-summary">
-            <span className="catalog-chip">掲載作品 {filteredPlays.length}件</span>
-            <span className="catalog-chip">全体登録数 {allPlays.length}件</span>
+            <span className="catalog-chip">該当作品 {filteredPlays.length}件</span>
+            <span className="catalog-chip">全掲載作品 {allPlays.length}件</span>
             <span className="catalog-chip">Page {safePage}</span>
           </div>
         </section>
@@ -94,7 +93,7 @@ export default async function PlaysPage({
           <div className="stack-sm">
             <h2 className="section-title">作品データベース</h2>
             <p className="catalog-note">
-              ジャンルと並び順を切り替えながら、シリーズ・あらすじ・公演情報を一覧で拾えます。
+              ジャンルや並び順を切り替えながら、シリーズ・あらすじ・公演情報を一覧で確認できます。
             </p>
           </div>
 
@@ -144,7 +143,7 @@ export default async function PlaysPage({
                 {play.summary ? (
                   <div className="catalog-card__text">{truncate(toPlainText(play.summary), 140)}</div>
                 ) : (
-                  <div className="catalog-card__text">作品概要は順次整備中です。</div>
+                  <div className="catalog-card__text">作品概要は現在準備中です。</div>
                 )}
 
                 <div className="catalog-card__footer">

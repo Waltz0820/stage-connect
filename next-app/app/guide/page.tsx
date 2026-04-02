@@ -8,9 +8,9 @@ const CATEGORY_LABELS: Record<string, string> = {
 };
 
 export const metadata: Metadata = {
-  title: "編集部ガイド - Stage Connect",
+  title: "編集部ガイド | Stage Connect",
   description:
-    "シリーズ整理、履修ルート、作品ピックアップをまとめた Stage Connect の編集部ガイド一覧。DBだけでは整理しきれない文脈を補う読みものです。",
+    "シリーズ整理や作品ピックアップをまとめた Stage Connect の編集部ガイド一覧。DBだけでは整理しきれない文脈も、読み物として確認できます。",
 };
 
 export default async function GuidePage() {
@@ -24,15 +24,15 @@ export default async function GuidePage() {
             <span className="eyebrow">Guide</span>
             <h1 className="page-title">編集部ガイド</h1>
             <p className="lead">
-              シリーズ整理や履修ルート、作品ピックアップを、Stage Connect の編集部視点でまとめています。
-              DBページとあわせて読むことで、シリーズ全体の文脈を掴みやすくするための導線です。
+              シリーズ整理や作品ピックアップを、Stage Connect の編集部目線でまとめた読み物です。
+              DBページとあわせて読むことで、シリーズ全体の流れや見どころをつかみやすくするための補助線として用意しています。
             </p>
           </div>
 
           <div className="catalog-summary">
             <span className="catalog-chip">公開ガイド {guides.length}本</span>
-            <span className="catalog-chip">シリーズ導線を補強</span>
-            <span className="catalog-chip">作品理解を深掘り</span>
+            <span className="catalog-chip">シリーズ整理を補強</span>
+            <span className="catalog-chip">作品文脈を深掘り</span>
           </div>
         </section>
 
@@ -40,7 +40,7 @@ export default async function GuidePage() {
           <div className="stack-sm">
             <h2 className="section-title">ガイド一覧</h2>
             <p className="catalog-note">
-              気になるシリーズの履修や、作品群の整理に使えるガイドをまとめています。
+              気になるシリーズの整理や、作品ごとの補助線として使えるガイドをまとめています。
             </p>
           </div>
 

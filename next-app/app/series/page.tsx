@@ -20,9 +20,9 @@ const buildHref = (params: Record<string, string | number | null | undefined>) =
 };
 
 export const metadata: Metadata = {
-  title: "シリーズ一覧 - Stage Connect",
+  title: "シリーズ一覧 | Stage Connect",
   description:
-    "2.5次元舞台・ミュージカルのシリーズやフランチャイズを一覧で整理。配下作品や出演キャストへ繋がるシリーズページの入口です。",
+    "2.5次元舞台・ミュージカルのシリーズやフランチャイズを一覧で整理。配下作品、出演キャスト、年表への入口として確認できます。",
 };
 
 export default async function SeriesPage({
@@ -69,14 +69,14 @@ export default async function SeriesPage({
             <span className="eyebrow">Series</span>
             <h1 className="page-title">シリーズ一覧</h1>
             <p className="lead">
-              テニミュの各シーズンや、刀ステ・刀ミュのようなシリーズ単位で作品群を整理しています。
-              シリーズページから作品年表、出演キャスト、役柄一覧まで横断できる構成です。
+              テニミュのシーズン区切りや、刀剣乱舞のようなシリーズ単位で作品群を整理しています。
+              配下作品や出演キャスト、年表の入口として使える一覧です。
             </p>
           </div>
 
           <div className="catalog-summary">
-            <span className="catalog-chip">掲載シリーズ {filteredSeries.length}件</span>
-            <span className="catalog-chip">全体登録数 {allSeries.length}件</span>
+            <span className="catalog-chip">該当シリーズ {filteredSeries.length}件</span>
+            <span className="catalog-chip">全掲載シリーズ {allSeries.length}件</span>
             <span className="catalog-chip">Page {safePage}</span>
           </div>
         </section>
@@ -85,7 +85,7 @@ export default async function SeriesPage({
           <div className="stack-sm">
             <h2 className="section-title">シリーズ・フランチャイズ</h2>
             <p className="catalog-note">
-              原作種別と並び順を切り替えながら、長期シリーズや派生展開の多い作品群を一覧で整理できます。
+              原作種別や作品数の多い順を切り替えながら、関連作品のまとまりを一覧で確認できます。
             </p>
           </div>
 
@@ -131,7 +131,7 @@ export default async function SeriesPage({
                 {series.description ? (
                   <div className="catalog-card__text">{truncate(toPlainText(series.description), 140)}</div>
                 ) : (
-                  <div className="catalog-card__text">シリーズ情報は順次整備中です。</div>
+                  <div className="catalog-card__text">シリーズ説明は現在準備中です。</div>
                 )}
 
                 <div className="catalog-card__footer">
