@@ -53,6 +53,7 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
+  flex-wrap: wrap;
   padding: 14px 0;
 }
 
@@ -813,6 +814,15 @@ a {
   .hero-card,
   .section-card {
     padding: 18px;
+  }
+
+  .site-header__inner {
+    align-items: flex-start;
+  }
+
+  .site-nav {
+    width: 100%;
+    gap: 10px 14px;
   }
 }
 
