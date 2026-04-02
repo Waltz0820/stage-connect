@@ -188,7 +188,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   );
 
   return {
-    title: `${play.title} | 作品詳細 - Stage Connect`,
+    title: `${play.title}｜キャスト・配信（VOD）・公演情報 - Stage Connect`,
     description,
     alternates: {
       canonical: `/plays/${play.slug}`,
@@ -230,11 +230,73 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
     })),
   };
 
+  const jsonLdFaq = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: hasVod
+      ? [
+          {
+            "@type": "Question",
+            name: `${play.title}はどこで見られますか？`,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "DMM TVで配信されている場合があります。見放題対象かレンタルかは作品によって異なりますので、詳細は「配信で見る」セクションからご確認ください。DMMプレミアムなら14日間の無料トライアルがあります。",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "無料で視聴できる期間はありますか？",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "DMMプレミアムでは14日間の無料トライアルを提供しています。期間中は対象作品を追加料金なしで視聴できる場合があります。",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "出演キャストは誰ですか？",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: `主な出演者は${castSummary}です。ページ下部の「出演キャスト」セクションで全キャスト詳細を確認できます。`,
+            },
+          },
+        ]
+      : [
+          {
+            "@type": "Question",
+            name: `${play.title}は現在配信されていますか？`,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "現在、主要な配信サービスでの取り扱いが確認できない場合があります。古い2.5次元作品はDVD・Blu-ray化や再演で触れられるケースもあります。配信状況は随時確認しています。",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "この作品を見る方法はありますか？",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "配信が確認できない場合は、シリーズの他作品や関連作品、DVD・Blu-ray展開、再演情報などをあわせて確認するのがおすすめです。",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "出演キャストは誰ですか？",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: `主な出演者は${castSummary}です。ページ下部の「出演キャスト」セクションで全キャスト詳細を確認できます。`,
+            },
+          },
+        ],
+  };
+
   return (
     <main className="container" style={{ paddingBlock: 32 }}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}
       />
 
       <div className="stack-lg">
@@ -270,8 +332,11 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
         <section className="section-card stack-md">
           <h2 className="section-title">INTRODUCTION</h2>
           <p className="lead">
-            <strong className="strong-inline">{play.title}</strong> の公演データと出演キャスト情報をまとめた作品詳細ページです。
-            主な出演は {castSummary}。{hasVod ? "配信サービスがある場合は視聴先も確認できます。" : "配信情報は現在調査中です。"}
+            <strong className="strong-inline">{play.title}</strong>
+            の配信情報（VOD）と公演データをまとめました。出演キャストは{castSummary}。
+            {hasVod
+              ? "視聴できるサービスがある場合は、下記リンクから詳細を確認できます（配信状況は変動する場合があります）。"
+              : "現在、主要な配信サービスでの取り扱い情報は確認中ですが、DVD/Blu-ray等で視聴可能な場合があります。"}
           </p>
         </section>
 
@@ -333,7 +398,7 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
           <section className="section-card stack-md">
             <h2 className="section-title">スタッフ / クレジット</h2>
             <details className="detail-block" open={creditItems.length <= 3}>
-              <summary>{creditItems.length <= 3 ? "クレジットを見る" : `クレジットを見る (${creditItems.length}件)`}</summary>
+              <summary>{creditItems.length <= 3 ? "クレジットを見る" : `続きを読む（${creditItems.length}件）`}</summary>
               <div className="meta-list roomy detail-credit-list">
                 {creditItems.map((item) => (
                   <div className="meta-row" key={`${item.role}-${item.names.join("-")}`}>
@@ -348,6 +413,13 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
 
         <section className="section-card stack-md">
           <h2 className="section-title">{hasVod ? "配信で見る" : "見る方法を探す"}</h2>
+          {hasVod ? (
+            <p className="muted">DMMプレミアムなら14日間無料でお試しできます。</p>
+          ) : (
+            <p className="muted">
+              現在この作品の主要配信サービスでの取り扱いは確認中です。シリーズ作品や出演キャストから関連作品を探せます。
+            </p>
+          )}
           <div className="action-row">
             {play.vod?.dmm ? (
               <a className="action-button action-button-primary" href={play.vod.dmm} target="_blank" rel="noopener noreferrer">
@@ -365,8 +437,62 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
               </a>
             ) : null}
             <Link className="action-button" href="/watch">
-              配信ガイドを見る
+              {hasVod ? "配信ガイドを見る" : "DMMで他作品を探す"}
             </Link>
+            {!hasVod && play.franchiseSlug ? (
+              <Link className="action-button" href={`/series/${play.franchiseSlug}`}>
+                シリーズ作品を見る
+              </Link>
+            ) : null}
+          </div>
+        </section>
+
+        <section className="section-card stack-md">
+          <h2 className="section-title">よくある質問（FAQ）</h2>
+          <div className="faq-grid">
+            {hasVod ? (
+              <>
+                <article className="faq-card">
+                  <h3 className="faq-question">{play.title}はどこで見られますか？</h3>
+                  <p className="faq-answer">
+                    DMM TVで配信されている場合があります。見放題対象かレンタルかは作品によって異なりますので、詳細は「配信で見る」セクションからご確認ください。DMMプレミアムなら14日間の無料トライアルがあります。
+                  </p>
+                </article>
+                <article className="faq-card">
+                  <h3 className="faq-question">無料で視聴できる期間はありますか？</h3>
+                  <p className="faq-answer">
+                    DMMプレミアムでは14日間の無料トライアルを提供しています。期間中は対象作品を追加料金なしで視聴できる場合があります。
+                  </p>
+                </article>
+                <article className="faq-card">
+                  <h3 className="faq-question">出演キャストは誰ですか？</h3>
+                  <p className="faq-answer">
+                    主な出演者は{castSummary}です。ページ下部の「出演キャスト」セクションで全キャスト詳細を確認できます。
+                  </p>
+                </article>
+              </>
+            ) : (
+              <>
+                <article className="faq-card">
+                  <h3 className="faq-question">{play.title}は現在配信されていますか？</h3>
+                  <p className="faq-answer">
+                    現在、主要な配信サービスでの取り扱いが確認できない場合があります。古い2.5次元作品はDVD・Blu-ray化や再演で触れられるケースもあります。配信状況は随時確認しています。
+                  </p>
+                </article>
+                <article className="faq-card">
+                  <h3 className="faq-question">この作品を見る方法はありますか？</h3>
+                  <p className="faq-answer">
+                    配信が確認できない場合は、シリーズの他作品や関連作品、DVD・Blu-ray展開、再演情報などをあわせて確認するのがおすすめです。
+                  </p>
+                </article>
+                <article className="faq-card">
+                  <h3 className="faq-question">出演キャストは誰ですか？</h3>
+                  <p className="faq-answer">
+                    主な出演者は{castSummary}です。ページ下部の「出演キャスト」セクションで全キャスト詳細を確認できます。
+                  </p>
+                </article>
+              </>
+            )}
           </div>
         </section>
 
