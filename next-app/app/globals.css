@@ -392,6 +392,103 @@ a {
   color: var(--cyan);
 }
 
+.catalog-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.catalog-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.catalog-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.catalog-card {
+  display: grid;
+  gap: 12px;
+  min-height: 100%;
+  padding: 18px;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.025);
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.catalog-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(180, 108, 255, 0.3);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.catalog-card__top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.catalog-card__title {
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.catalog-card__badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.catalog-card__sub {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.catalog-card__text {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.catalog-card__footer {
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+
+.catalog-link {
+  color: var(--cyan);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.catalog-note {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
 @media (max-width: 920px) {
   .grid-2 {
     grid-template-columns: 1fr;
@@ -417,6 +514,10 @@ a {
   .cast-grid-wide {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .catalog-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (min-width: 980px) {
@@ -426,5 +527,15 @@ a {
 
   .cast-grid-wide {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .catalog-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1240px) {
+  .catalog-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
