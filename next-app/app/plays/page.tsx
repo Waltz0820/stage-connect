@@ -112,7 +112,7 @@ export default async function PlaysPage({
             </Link>
           </div>
 
-          <div className="filter-row">
+          <div className="filter-row genre-filter-row">
             {genreOptions.map((option) => (
               <Link
                 key={option}
