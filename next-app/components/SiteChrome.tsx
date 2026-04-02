@@ -160,6 +160,7 @@ export default function SiteChrome({ children }: { children: React.ReactNode }) 
                 <li><Link href="/plays">作品一覧</Link></li>
                 <li><Link href="/actors">キャスト一覧</Link></li>
                 <li><Link href="/series">シリーズ一覧</Link></li>
+                <li><Link href="/guide">ガイド / コラム</Link></li>
                 <li><Link href="/tags">タグ一覧</Link></li>
                 <li><Link href="/favorites">お気に入り</Link></li>
               </ul>
@@ -182,12 +183,6 @@ export default function SiteChrome({ children }: { children: React.ReactNode }) 
               </ul>
             </section>
 
-            <section className="site-footer__column">
-              <h3>サイト情報</h3>
-              <ul>
-                <li><Link href="/guide">ガイド / コラム</Link></li>
-              </ul>
-            </section>
           </div>
         </div>
 
