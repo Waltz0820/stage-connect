@@ -61,6 +61,7 @@ export type PlayListItem = {
   summary: string | null;
   period: string | null;
   franchiseName: string | null;
+  genre: string | null;
 };
 
 export type ActorListItem = {
@@ -69,6 +70,7 @@ export type ActorListItem = {
   kana: string | null;
   birthday: string | null;
   profile: string | null;
+  gender: string | null;
 };
 
 export type SeriesListItem = {
@@ -76,6 +78,7 @@ export type SeriesListItem = {
   name: string;
   description: string | null;
   playCount: number;
+  originType: string | null;
 };
 
 export type GuideListItem = {
@@ -139,7 +142,7 @@ const normalizeDisplayRole = (value?: string | null) =>
     .split("【")[0]
     .trim();
 
-const periodSortKey = (period?: string | null) => {
+export const periodSortKey = (period?: string | null) => {
   if (!period) return -1;
 
   const fullDates = Array.from(period.matchAll(/(\d{4})\D{0,2}(\d{1,2})\D{0,2}(\d{1,2})/g)).map((match) => ({
@@ -542,6 +545,7 @@ export async function getPlayList(): Promise<PlayListItem[]> {
       title,
       summary,
       period,
+      genre,
       created_at,
       franchise:franchises (
         name
@@ -561,6 +565,7 @@ export async function getPlayList(): Promise<PlayListItem[]> {
         summary: (row.summary as string | null) ?? null,
         period: (row.period as string | null) ?? null,
         franchiseName: franchise?.name ?? null,
+        genre: (row.genre as string | null) ?? null,
         createdAt: (row.created_at as string | null) ?? null,
       };
     })
@@ -579,7 +584,7 @@ export async function getActorList(): Promise<ActorListItem[]> {
   const supabase = createSupabaseServerClient();
   const { data, error } = await supabase
     .from("actors")
-    .select("slug, name, kana, birthday, profile")
+    .select("slug, name, kana, birthday, profile, gender")
     .order("name", { ascending: true });
 
   if (error) throw error;
@@ -592,6 +597,7 @@ export async function getActorList(): Promise<ActorListItem[]> {
       kana: (row.kana as string | null) ?? null,
       birthday: (row.birthday as string | null) ?? null,
       profile: (row.profile as string | null) ?? null,
+      gender: (row.gender as string | null) ?? null,
     }));
 }
 
@@ -600,7 +606,7 @@ export async function getSeriesList(): Promise<SeriesListItem[]> {
   const supabase = createSupabaseServerClient();
 
   const [{ data: franchises, error: franchiseError }, { data: plays, error: playError }] = await Promise.all([
-    supabase.from("franchises").select("id, slug, name, description").order("name", { ascending: true }),
+    supabase.from("franchises").select("id, slug, name, description, origin_type").order("name", { ascending: true }),
     supabase.from("plays").select("id, franchise_id"),
   ]);
 
@@ -621,6 +627,7 @@ export async function getSeriesList(): Promise<SeriesListItem[]> {
       name: row.name as string,
       description: (row.description as string | null) ?? null,
       playCount: countByFranchise.get(row.id as string) ?? 0,
+      originType: (row.origin_type as string | null) ?? null,
     }))
     .filter((row) => row.slug)
     .map((row) => ({
@@ -628,6 +635,7 @@ export async function getSeriesList(): Promise<SeriesListItem[]> {
       name: row.name,
       description: row.description,
       playCount: row.playCount,
+      originType: row.originType,
     }))
     .sort((a, b) => b.playCount - a.playCount || a.name.localeCompare(b.name, "ja"));
 }
