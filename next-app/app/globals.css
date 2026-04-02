@@ -1,3 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+  --color-theater-black: #0A0A0F;
+  --color-theater-surface: #11111A;
+  --color-theater-overlay: #1A1A24;
+  --color-neon-purple: #B46CFF;
+  --color-neon-pink: #E944A6;
+  --color-neon-cyan: #00FFFF;
+  --font-sans: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+
 :root {
   --bg: #060606;
   --surface: #0d0d0d;
