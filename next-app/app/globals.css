@@ -868,6 +868,16 @@ a {
   }
 }
 
+@media (hover: none) and (pointer: coarse) {
+  .mobile-only-block {
+    display: block !important;
+  }
+
+  .desktop-only-grid {
+    display: none !important;
+  }
+}
+
 @media (min-width: 1240px) {
   .catalog-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
