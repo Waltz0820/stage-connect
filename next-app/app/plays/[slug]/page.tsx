@@ -303,7 +303,7 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
 
       <div className="stack-lg">
         <section className="hero-card stack-md">
-          <div className="stack-sm">
+          <div className="stack-sm detail-ledger-shell">
             {play.franchiseSlug && play.franchiseName ? (
               <Link className="pill series-pill" href={`/series/${play.franchiseSlug}`}>
                 シリーズ: {play.franchiseName}
@@ -311,6 +311,7 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
             ) : null}
 
             <div>
+              <div className="title-subtle">Stage File</div>
               <h1 className="page-title">{play.title}</h1>
             </div>
 
@@ -333,6 +334,21 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
                 <span className="pill accent-pill">配信あり</span>
               </div>
             ) : null}
+
+            <div className="detail-ledger">
+              <div className="detail-ledger__item">
+                <span className="detail-ledger__label">CAST</span>
+                <strong>{play.cast.length}</strong>
+              </div>
+              <div className="detail-ledger__item">
+                <span className="detail-ledger__label">SERIES</span>
+                <strong>{play.franchiseName || "Standalone"}</strong>
+              </div>
+              <div className="detail-ledger__item">
+                <span className="detail-ledger__label">VOD</span>
+                <strong>{hasVod ? "AVAILABLE" : "NONE"}</strong>
+              </div>
+            </div>
           </div>
         </section>
 

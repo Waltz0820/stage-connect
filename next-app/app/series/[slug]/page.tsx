@@ -146,11 +146,26 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
 
       <div className="stack-lg">
         <section className="hero-card stack-md">
-          <div className="stack-sm">
+          <div className="stack-sm detail-ledger-shell">
+            <div className="title-subtle">Series File</div>
             <h1 className="page-title">{series.name}</h1>
             <div className="pill-row">
               <span className="pill accent-pill">作品数: {series.plays.length}</span>
               {series.originType ? <span className="pill">原作: {series.originType}</span> : null}
+            </div>
+            <div className="detail-ledger">
+              <div className="detail-ledger__item">
+                <span className="detail-ledger__label">TYPE</span>
+                <strong>{series.originType || "Series"}</strong>
+              </div>
+              <div className="detail-ledger__item">
+                <span className="detail-ledger__label">PLAYS</span>
+                <strong>{series.plays.length}</strong>
+              </div>
+              <div className="detail-ledger__item">
+                <span className="detail-ledger__label">START</span>
+                <strong>{startYear ?? "--"}</strong>
+              </div>
             </div>
           </div>
         </section>

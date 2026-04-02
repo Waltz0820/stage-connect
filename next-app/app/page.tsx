@@ -53,6 +53,21 @@ export default async function HomePage() {
           </p>
         </div>
 
+        <div className="home-hero__ledger" aria-label="site snapshot">
+          <div className="home-hero__ledger-item">
+            <span className="home-hero__ledger-label">MODE</span>
+            <strong>STAGE FILE / LIVE INDEX</strong>
+          </div>
+          <div className="home-hero__ledger-item">
+            <span className="home-hero__ledger-label">FOCUS</span>
+            <strong>PLAYS / ACTORS / SERIES</strong>
+          </div>
+          <div className="home-hero__ledger-item">
+            <span className="home-hero__ledger-label">TONE</span>
+            <strong>ARCHIVE / SCRIPT / DATABASE</strong>
+          </div>
+        </div>
+
         <div className="home-hero__actions">
           <Link href="/actors" className="home-hero__button is-primary">
             推しを見つける

@@ -88,7 +88,7 @@ export default async function PlaysPage({
             </p>
           </div>
 
-          <div className="catalog-summary">
+          <div className="catalog-summary catalog-summary--ledger">
             <span className="catalog-chip">該当作品 {filteredPlays.length}件</span>
             <span className="catalog-chip">全掲載作品 {allPlays.length}件</span>
             <span className="catalog-chip">Page {safePage}</span>
