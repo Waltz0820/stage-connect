@@ -2,10 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getWatchOverview } from "../../lib/stage-connect";
 
+const DMM_PREMIUM_URL =
+  "https://al.dmm.com/?lurl=https%3A%2F%2Fpremium.dmm.com%2F&af_id=stageconnect-001&ch=link_tool&ch_id=text";
+
 export const metadata: Metadata = {
-  title: "配信で見る | Stage Connect",
+  title: "配信で観る | Stage Connect",
   description:
-    "2.5次元舞台・ミュージカルをどこで見られるかを整理した配信ガイド。DMM TV を中心に、U-NEXT・dアニメストアとの比較や使い分けもまとめています。",
+    "2.5次元舞台・ミュージカルをどこで配信で観られるかを整理したガイドです。DMM TVを中心に、U-NEXT・dアニメストアとの違いも比較できます。",
 };
 
 export default async function WatchPage() {
@@ -19,8 +22,9 @@ export default async function WatchPage() {
             <span className="eyebrow">Streaming Guide</span>
             <h1 className="page-title">2.5次元舞台を配信で観る</h1>
             <p className="lead">
-              「どこで配信してる？」「見放題で観れる？」という疑問に向けて、
-              2.5次元舞台・ミュージカルを配信で観るための導線を整理したガイドです。
+              「どこで配信しているか」「何を基準に選べばいいか」を
+              Stage Connect の視点で整理したガイドです。2.5次元舞台の視聴先としては
+              DMM TV を主軸に考えつつ、U-NEXT・dアニメストアとの違いも比較できます。
             </p>
           </div>
 
@@ -34,7 +38,7 @@ export default async function WatchPage() {
               <div className="watch-stat-value">3本</div>
             </div>
             <div className="watch-stat-card">
-              <div className="watch-stat-label">主軸サービス</div>
+              <div className="watch-stat-label">主導線</div>
               <div className="watch-stat-value">DMM TV</div>
             </div>
           </div>
@@ -42,32 +46,36 @@ export default async function WatchPage() {
 
         <section className="section-card stack-md">
           <div className="section-header-inline">
-            <h2 className="section-title">DMMプレミアムを主軸に考える</h2>
+            <h2 className="section-title">まずは DMM TV を軸に考える</h2>
             <a
               className="action-button action-button-primary"
-              href="https://al.dmm.com/?lurl=https%3A%2F%2Fpremium.dmm.com%2F&af_id=stageconnect-001&ch=link_tool&ch_id=text"
+              href={DMM_PREMIUM_URL}
               target="_blank"
               rel="sponsored noopener noreferrer"
             >
-              14日間無料で始める
+              14日間無料で試す
             </a>
           </div>
           <div className="prose-panel">
-            {`2.5次元舞台・ミュージカルの見放題ラインナップがもっとも厚いのは、現状ではDMM TVです。
-刀剣乱舞、ヒプステ、テニミュ、あんステなど人気シリーズを追いかけたいなら、まずDMM TVを軸に確認するのが自然です。
-Stage Connectでは、シリーズページや作品詳細ページからそのまま配信導線へつながるよう整理しています。`}
+            2.5次元舞台・ミュージカルの配信をできるだけ広く見たいなら、まずは DMM TV
+            を起点に考えるのが自然です。Stage Connect
+            でも掲載シリーズ数と使いやすさの両面から、最初に確認するサービスとして DMM
+            TV を主導線に置いています。無料トライアルがあり、シリーズ単位でどの作品が配信されているかも追いやすいため、
+            2.5次元の入口として扱いやすいのが強みです。
           </div>
           <div className="catalog-summary">
-            <span className="catalog-chip">月額 550円（税込）</span>
+            <span className="catalog-chip">月額550円（税込）</span>
             <span className="catalog-chip">14日間無料トライアル</span>
-            <span className="catalog-chip">シリーズ単位で確認可能</span>
+            <span className="catalog-chip">シリーズ横断で比較しやすい</span>
           </div>
         </section>
 
         <section className="section-card stack-md">
           <div className="stack-sm">
-            <h2 className="section-title">他のサービスと比較する</h2>
-            <p className="catalog-note">まずは DMM TV を基準に、U-NEXT・dアニメストアとの違いを整理しています。</p>
+            <h2 className="section-title">3サービスの違い</h2>
+            <p className="catalog-note">
+              まずは DMM TV を主軸に、U-NEXT・dアニメストアを比較する前提で整理しています。
+            </p>
           </div>
           <div className="compare-grid">
             <article className="compare-card">
@@ -76,49 +84,55 @@ Stage Connectでは、シリーズページや作品詳細ページからその�
                 DMM TVで配信中のシリーズを見る
               </Link>
               <div className="compare-card__text">
-                2.5次元舞台との相性が強い DMM TV を主軸に、シリーズ一覧と導線をまとめています。
+                2.5次元舞台を優先して探すならまずここ。シリーズ掲載数と無料トライアルの両方を見ながら判断できます。
               </div>
             </article>
 
             <article className="compare-card">
               <div className="compare-card__eyebrow">Compare</div>
               <Link className="compare-card__title" href="/watch/u-next">
-                U-NEXT との比較を見る
+                U-NEXTとの違いを見る
               </Link>
               <div className="compare-card__text">
-                U-NEXT の強みと、2.5次元舞台を探すうえでの違いを整理しています。
+                総合VODとしての強みと、2.5次元舞台を見るうえでの向き不向きを整理しています。
               </div>
             </article>
 
             <article className="compare-card">
               <div className="compare-card__eyebrow">Compare</div>
               <Link className="compare-card__title" href="/watch/danime">
-                dアニメストアとの比較を見る
+                dアニメストアとの違いを見る
               </Link>
               <div className="compare-card__text">
-                アニメ寄りのサービスとの違いを見ながら、舞台作品の探し方を確認できます。
+                アニメ寄りのサービスとしての相性と、2.5次元舞台を見る際の注意点をまとめています。
               </div>
             </article>
           </div>
         </section>
 
         <section className="section-card stack-md">
-          <h2 className="section-title">Stage Connectでの探し方</h2>
+          <h2 className="section-title">Stage Connectでの使い方</h2>
           <div className="compare-grid">
             <article className="compare-card">
               <div className="compare-card__eyebrow">Step 01</div>
               <div className="compare-card__title">シリーズから探す</div>
-              <div className="compare-card__text">同じ作品世界の舞台をまとめてチェック。年表で履修順も把握できます。</div>
+              <div className="compare-card__text">
+                気になるシリーズのページを開くと、配信のある作品をまとめて確認できます。
+              </div>
             </article>
             <article className="compare-card">
               <div className="compare-card__eyebrow">Step 02</div>
-              <div className="compare-card__title">キャストから探す</div>
-              <div className="compare-card__text">推し俳優の出演作一覧や共演ネットワークから、次に観る作品が見つかります。</div>
+              <div className="compare-card__title">作品詳細で確認する</div>
+              <div className="compare-card__text">
+                作品詳細では、キャストやあらすじと一緒に配信状況も確認できます。
+              </div>
             </article>
             <article className="compare-card">
               <div className="compare-card__eyebrow">Step 03</div>
-              <div className="compare-card__title">キーワードで検索</div>
-              <div className="compare-card__text">タイトルが曖昧でも、検索やシリーズ導線から作品詳細にたどれます。</div>
+              <div className="compare-card__title">ガイドで比較する</div>
+              <div className="compare-card__text">
+                迷ったらこの配信ガイドで比較し、無料トライアルや掲載数を基準に選ぶのがおすすめです。
+              </div>
             </article>
           </div>
         </section>
@@ -136,7 +150,7 @@ Stage Connectでは、シリーズページや作品詳細ページからその�
                 </div>
 
                 <div className="catalog-card__text">
-                  DMM TV から視聴導線をたどれるシリーズです。シリーズページから作品一覧や出演キャストも確認できます。
+                  DMM TV から視聴導線をつなげやすいシリーズです。シリーズページでは作品一覧やキャスト情報もあわせて確認できます。
                 </div>
 
                 <div className="catalog-card__footer">
@@ -153,16 +167,23 @@ Stage Connectでは、シリーズページや作品詳細ページからその�
           <h2 className="section-title">FAQ</h2>
           <div className="faq-grid">
             <div className="faq-card">
-              <p className="faq-question">2.5次元舞台を見放題で観るならどのサービスがおすすめ？</p>
-              <p className="faq-answer">見放題ラインナップの充実度で選ぶなら、まずはDMMプレミアムが有力です。</p>
+              <p className="faq-question">2.5次元舞台を見るならどのサービスがおすすめですか？</p>
+              <p className="faq-answer">
+                掲載シリーズ数と無料トライアルの両方を見ると、まずは DMM TV
+                を基準に考えるのが自然です。
+              </p>
             </div>
             <div className="faq-card">
-              <p className="faq-question">Stage Connectで動画は再生できますか？</p>
-              <p className="faq-answer">Stage Connectは作品データベースです。作品詳細ページの視聴リンクから各配信サービスへ移動します。</p>
+              <p className="faq-question">Stage Connectでは何が分かりますか？</p>
+              <p className="faq-answer">
+                作品詳細・シリーズページ・配信ガイドを横断して、どこで配信されているかをまとめて確認できます。
+              </p>
             </div>
             <div className="faq-card">
-              <p className="faq-question">配信状況は常に最新ですか？</p>
-              <p className="faq-answer">登録された配信リンクを元に整理しています。最終的には遷移先の公式ページでご確認ください。</p>
+              <p className="faq-question">配信情報は最新ですか？</p>
+              <p className="faq-answer">
+                掲載時点の情報をもとに整理しています。最終確認は各配信サービスの公式ページで行ってください。
+              </p>
             </div>
           </div>
         </section>
