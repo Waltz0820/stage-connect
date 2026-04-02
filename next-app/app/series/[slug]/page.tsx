@@ -219,7 +219,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
                     {hasVod(play.vod) ? <span className="catalog-card__badge">配信あり</span> : null}
                   </div>
 
-                  {play.summary ? <div className="catalog-card__text">{play.summary}</div> : null}
+                  {play.summary ? <div className="catalog-card__text catalog-card__text--clamped">{play.summary}</div> : null}
 
                   <div className="catalog-card__footer">
                     <div className="action-row">

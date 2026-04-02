@@ -1394,6 +1394,13 @@ a {
   line-height: 1.85;
 }
 
+.catalog-card__text--clamped {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
 .catalog-card__footer {
   margin-top: auto;
   padding-top: 12px;
