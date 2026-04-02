@@ -15,6 +15,7 @@ type Params = {
 };
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
+
 export const revalidate = 3600;
 export const dynamicParams = true;
 
@@ -34,7 +35,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
 
   const description = truncate(
     toPlainText(
-      actor.profile || `${actor.name} の俳優プロフィールと出演作品をまとめたページです。出演作品数は ${actor.plays.length} 件です。`
+      actor.profile || `${actor.name}の俳優プロフィールと出演作品をまとめたページです。出演作品数は${actor.plays.length}件です。`
     ),
     150
   );
@@ -58,23 +59,62 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
   const age = getAgeFromBirthday(actor.birthday);
   const timeline = groupPlayTimelineByYear(actor.plays);
   const hasSns = Boolean(actor.sns && Object.values(actor.sns).some(Boolean));
+  const topCoStars = actor.coStars.slice(0, 6);
+  const remainingCoStars = actor.coStars.slice(6);
 
-  const jsonLd = {
+  const personJsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
     name: actor.name,
     alternateName: actor.kana || undefined,
-    description: toPlainText(actor.profile || `${actor.name} の俳優プロフィールページです。`),
+    description: toPlainText(
+      actor.profile || `${actor.name}の俳優プロフィールと出演作品をまとめたページです。`
+    ),
     url: `${siteUrl}/actors/${actor.slug}`,
     birthDate: actor.birthday || undefined,
     sameAs: Object.values(actor.sns || {}).filter(Boolean),
+  };
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: `${actor.name}の出演作はどこで見られますか？`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `Stage Connectでは${actor.name}の出演情報を作品ごとにまとめています。各作品ページで公演データやあらすじを確認できます。`,
+        },
+      },
+      {
+        "@type": "Question",
+        name: "配信で視聴できる作品はありますか？",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "配信対応の有無は作品ごとに異なります。各作品詳細ページでDMM TVなどの配信リンクをご確認ください。",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "最新の出演情報はどこで確認できますか？",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `${actor.name}の公式SNSやオフィシャルサイトで最新情報を確認することをおすすめします。このページの出演作品情報も随時更新しています。`,
+        },
+      },
+    ],
   };
 
   return (
     <main className="container" style={{ paddingBlock: 32 }}>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
       <div className="stack-lg">
@@ -100,7 +140,7 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
         <section className="section-card stack-md">
           <h2 className="section-title">プロフィール</h2>
           <div className="rich-text">
-            {actor.profile || `${actor.name} のプロフィール情報はまだありません。`}
+            {actor.profile || `${actor.name}のプロフィール情報はまだありません。`}
           </div>
         </section>
 
@@ -114,17 +154,32 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
                 </a>
               ) : null}
               {actor.sns?.instagram ? (
-                <a className="action-button" href={actor.sns.instagram} target="_blank" rel="noopener noreferrer">
+                <a
+                  className="action-button"
+                  href={actor.sns.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Instagram
                 </a>
               ) : null}
               {actor.sns?.official ? (
-                <a className="action-button action-button-primary" href={actor.sns.official} target="_blank" rel="noopener noreferrer">
+                <a
+                  className="action-button action-button-primary"
+                  href={actor.sns.official}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Official
                 </a>
               ) : null}
               {actor.sns?.youtube ? (
-                <a className="action-button" href={actor.sns.youtube} target="_blank" rel="noopener noreferrer">
+                <a
+                  className="action-button"
+                  href={actor.sns.youtube}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   YouTube
                 </a>
               ) : null}
@@ -162,6 +217,82 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
                 </div>
               </section>
             ))}
+          </div>
+        </section>
+
+        {actor.coStars.length > 0 ? (
+          <section className="section-card stack-md">
+            <div className="section-header-inline">
+              <h2 className="section-title">共演ネットワーク</h2>
+              <span className="pill">共演数の多いキャスト</span>
+            </div>
+
+            <div className="cast-grid cast-grid-wide">
+              {topCoStars.map((coStar) => (
+                <article className="cast-card" key={coStar.slug}>
+                  <Link className="cast-name" href={`/actors/${coStar.slug}`}>
+                    {coStar.name}
+                  </Link>
+                  {coStar.kana ? (
+                    <div className="muted" style={{ marginTop: 6, fontSize: 13 }}>
+                      {coStar.kana}
+                    </div>
+                  ) : null}
+                  <div className="subtle-line" style={{ marginTop: 10 }}>
+                    共演 {coStar.count}作品
+                  </div>
+                </article>
+              ))}
+            </div>
+
+            {remainingCoStars.length > 0 ? (
+              <details className="detail-block">
+                <summary>さらに{remainingCoStars.length}名を見る</summary>
+                <div className="cast-grid cast-grid-wide" style={{ marginTop: 16 }}>
+                  {remainingCoStars.map((coStar) => (
+                    <article className="cast-card" key={coStar.slug}>
+                      <Link className="cast-name" href={`/actors/${coStar.slug}`}>
+                        {coStar.name}
+                      </Link>
+                      {coStar.kana ? (
+                        <div className="muted" style={{ marginTop: 6, fontSize: 13 }}>
+                          {coStar.kana}
+                        </div>
+                      ) : null}
+                      <div className="subtle-line" style={{ marginTop: 10 }}>
+                        共演 {coStar.count}作品
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              </details>
+            ) : null}
+          </section>
+        ) : null}
+
+        <section className="section-card stack-md">
+          <h2 className="section-title">よくある質問 (FAQ)</h2>
+          <div className="faq-grid">
+            <article className="faq-card">
+              <h3 className="faq-question">Q. {actor.name}の出演作はどこで見られますか？</h3>
+              <p className="faq-answer">
+                Stage Connectでは{actor.name}
+                の出演情報を作品ごとにまとめています。各作品ページで公演データやあらすじを確認できます。
+              </p>
+            </article>
+            <article className="faq-card">
+              <h3 className="faq-question">Q. 配信で視聴できる作品はありますか？</h3>
+              <p className="faq-answer">
+                配信対応の有無は作品ごとに異なります。各作品詳細ページでDMM TVなどの配信リンクをご確認ください。
+              </p>
+            </article>
+            <article className="faq-card">
+              <h3 className="faq-question">Q. 最新の出演情報はどこで確認できますか？</h3>
+              <p className="faq-answer">
+                {actor.name}
+                の公式SNSやオフィシャルサイトで最新情報を確認することをおすすめします。このページの出演作品情報も随時更新しています。
+              </p>
+            </article>
           </div>
         </section>
       </div>

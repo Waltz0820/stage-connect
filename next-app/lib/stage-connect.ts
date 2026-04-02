@@ -26,6 +26,12 @@ export type ActorDetailData = {
     roleName: string | null;
     franchiseName: string | null;
   }>;
+  coStars: Array<{
+    slug: string;
+    name: string;
+    kana: string | null;
+    count: number;
+  }>;
 };
 
 export type SeriesDetailData = {
@@ -299,6 +305,7 @@ export async function getActorDetailBySlug(slug: string): Promise<ActorDetailDat
     .from("casts")
     .select(
       `
+      play_id,
       role_name,
       play:plays (
         slug,
@@ -362,6 +369,67 @@ export async function getActorDetailBySlug(slug: string): Promise<ActorDetailDat
   }
 
   const plays = Array.from(byPlay.values()).sort((a, b) => periodSortKey(b.period) - periodSortKey(a.period));
+  const playIds = uniq(((castRows ?? []) as any[]).map((row) => row?.play_id));
+  let coStars: ActorDetailData["coStars"] = [];
+
+  if (playIds.length > 0) {
+    const { data: coStarRows, error: coStarError } = await supabase
+      .from("casts")
+      .select(
+        `
+        play_id,
+        actor:actors (
+          slug,
+          name,
+          kana
+        )
+      `
+      )
+      .in("play_id", playIds)
+      .neq("actor_id", actor.id);
+
+    if (coStarError) throw coStarError;
+
+    const bucket = new Map<
+      string,
+      {
+        slug: string;
+        name: string;
+        kana: string | null;
+        playSet: Set<string>;
+      }
+    >();
+
+    for (const row of (coStarRows ?? []) as any[]) {
+      const linkedActor = Array.isArray(row?.actor) ? row.actor[0] : row?.actor;
+      const actorSlug = String(linkedActor?.slug ?? "").trim();
+      const actorName = String(linkedActor?.name ?? "").trim();
+      const actorKana = String(linkedActor?.kana ?? "").trim() || null;
+      const playId = String(row?.play_id ?? "").trim();
+      if (!actorSlug || !actorName || !playId) continue;
+
+      const existing =
+        bucket.get(actorSlug) ??
+        {
+          slug: actorSlug,
+          name: actorName,
+          kana: actorKana,
+          playSet: new Set<string>(),
+        };
+
+      existing.playSet.add(playId);
+      bucket.set(actorSlug, existing);
+    }
+
+    coStars = Array.from(bucket.values())
+      .map((item) => ({
+        slug: item.slug,
+        name: item.name,
+        kana: item.kana,
+        count: item.playSet.size,
+      }))
+      .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name, "ja"));
+  }
 
   return {
     id: actor.id,
@@ -373,6 +441,7 @@ export async function getActorDetailBySlug(slug: string): Promise<ActorDetailDat
     imageUrl: actor.image_url ?? null,
     sns: (actor.sns as Record<string, string> | null) ?? null,
     plays,
+    coStars,
   };
 }
 
