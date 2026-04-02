@@ -6,9 +6,9 @@ const DMM_PREMIUM_URL =
   "https://al.dmm.com/?lurl=https%3A%2F%2Fpremium.dmm.com%2F&af_id=stageconnect-001&ch=link_tool&ch_id=text";
 
 export const metadata: Metadata = {
-  title: "DMM TVで見られる2.5次元舞台 - Stage Connect",
+  title: "DMM TVで見られる2.5次元舞台・ミュージカル - Stage Connect",
   description:
-    "DMM TV で見られる 2.5次元舞台・ミュージカルのシリーズ一覧。DMM プレミアム導線と、シリーズページへの接続をまとめています。",
+    "DMM TVで見られる2.5次元舞台・ミュージカルのシリーズ一覧です。DMMプレミアムの料金や、シリーズページへの導線をまとめています。",
 };
 
 export default async function WatchDmmPage() {
@@ -20,10 +20,10 @@ export default async function WatchDmmPage() {
         <section className="hero-card stack-md">
           <div className="stack-sm">
             <span className="eyebrow">DMM TV</span>
-            <h1 className="page-title">DMM TV で見られるシリーズ</h1>
+            <h1 className="page-title">DMM TVで見られるシリーズ</h1>
             <p className="lead">
-              DMM TV で視聴できる 2.5次元舞台・ミュージカルを、シリーズ単位で整理しています。
-              Stage Connect では現在 {overview.dmmSeriesCount.toLocaleString()} シリーズ分の導線を掲載しています。
+              DMM TVで視聴できる2.5次元舞台・ミュージカルを、シリーズ単位で整理しています。
+              Stage Connectでは現在 {overview.dmmSeriesCount.toLocaleString()} シリーズを確認できます。
             </p>
           </div>
 
@@ -34,10 +34,10 @@ export default async function WatchDmmPage() {
               target="_blank"
               rel="sponsored noopener noreferrer"
             >
-              DMMプレミアムへ
+              DMMプレミアムを見る
             </a>
             <Link className="action-button" href="/watch">
-              視聴ガイドTOPへ
+              配信ガイドへ戻る
             </Link>
           </div>
         </section>
@@ -52,18 +52,16 @@ export default async function WatchDmmPage() {
 
         <section className="section-card stack-md">
           <div className="stack-sm">
-            <h2 className="section-title">DMM TV を使う理由</h2>
+            <h2 className="section-title">DMM TVを使う理由</h2>
             <p className="catalog-note">
-              2.5次元舞台の配信本数が多く、シリーズ単位で視聴導線をまとめやすいのが強みです。
+              2.5次元舞台の配信本数を重視するなら、まずDMM TVを起点に見るのが分かりやすいです。
             </p>
           </div>
 
           <div className="prose-panel">
-            {`DMM TV は、2.5次元舞台・ミュージカルを追ううえで最初に見ておきたい配信サービスです。
-
-特定シリーズのまとまり方や、再演・ライブ・スピンオフへの接続が強く、Stage Connect でも主軸の視聴導線として扱っています。
-
-まずはシリーズ一覧から見たい作品群を確認して、各シリーズページ・作品ページへ移動する使い方が自然です。`}
+            {`DMM TVは、2.5次元舞台・ミュージカルを見たい人にとって最初に確認しやすい配信サービスです。
+シリーズ単位で追いかけやすく、作品ページからそのまま配信導線へ移動できるのが強みです。
+まずは見たいシリーズを確認して、シリーズページ・作品ページへ移動しながら視聴可否を把握していく使い方がおすすめです。`}
           </div>
         </section>
 
@@ -80,7 +78,7 @@ export default async function WatchDmmPage() {
                 </div>
 
                 <div className="catalog-card__text">
-                  DMM TV から視聴しやすいシリーズです。シリーズページでは作品年表や出演キャストも確認できます。
+                  DMM TVで追いやすいシリーズです。シリーズページから作品数や出演キャストも確認できます。
                 </div>
 
                 <div className="catalog-card__footer">

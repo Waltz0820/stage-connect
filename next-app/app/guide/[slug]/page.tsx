@@ -8,6 +8,7 @@ type Params = {
 };
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
+
 export const revalidate = 3600;
 export const dynamicParams = true;
 
@@ -27,9 +28,11 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
     };
   }
 
+  const description = truncate(toPlainText(guide.summary || guide.content || guide.title), 150);
+
   return {
     title: `${guide.title} | Stage Connect`,
-    description: truncate(toPlainText(guide.summary || guide.content || guide.title), 150),
+    description,
     alternates: {
       canonical: `/guide/${guide.slug}`,
     },
@@ -42,13 +45,22 @@ export default async function GuideDetailPage({ params }: { params: Promise<Para
 
   if (!guide) notFound();
 
+  const description = toPlainText(guide.summary || guide.content || guide.title);
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: guide.title,
-    description: toPlainText(guide.summary || guide.content || guide.title),
+    description,
     url: `${siteUrl}/guide/${guide.slug}`,
     datePublished: guide.publishedAt || undefined,
+    author: {
+      "@type": "Organization",
+      name: "Stage Connect",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Stage Connect",
+    },
   };
 
   return (

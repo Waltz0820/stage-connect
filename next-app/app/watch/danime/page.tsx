@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "dアニメストア と 2.5次元舞台 - Stage Connect",
+  title: "dアニメストアと2.5次元舞台 - Stage Connect",
   description:
-    "dアニメストア と 2.5次元舞台・ミュージカルの相性を整理した比較ページ。DMM TV と見比べながら、用途の違いを把握できます。",
+    "dアニメストアと2.5次元舞台・ミュージカルの相性を整理した比較ガイドです。アニメ寄りのサービスとしての特徴と、DMM TVとの違いをまとめています。",
 };
 
 export default function WatchDanimePage() {
@@ -14,31 +14,29 @@ export default function WatchDanimePage() {
         <section className="hero-card stack-md">
           <div className="stack-sm">
             <span className="eyebrow">Compare</span>
-            <h1 className="page-title">dアニメストア と 2.5次元舞台</h1>
+            <h1 className="page-title">dアニメストアと2.5次元舞台</h1>
             <p className="lead">
-              dアニメストアはアニメ視聴には強いサービスですが、2.5次元舞台の主導線としては DMM TV を軸に見る方が整理しやすいです。
-              ここでは比較用の補助情報として位置づけています。
+              dアニメストアはアニメ視聴に強いサービスです。2.5次元舞台の配信も一部ありますが、
+              作品数を重視するならDMM TVを軸に考えるのが分かりやすいです。
             </p>
           </div>
 
           <div className="action-row">
             <Link className="action-button" href="/watch/dmm">
-              DMM TV の一覧を見る
+              DMM TVとの違いを見る
             </Link>
             <Link className="action-button" href="/watch">
-              視聴ガイドTOPへ
+              配信ガイドへ戻る
             </Link>
           </div>
         </section>
 
         <section className="section-card stack-md">
-          <h2 className="section-title">位置づけ</h2>
+          <h2 className="section-title">dアニメストアの立ち位置</h2>
           <div className="prose-panel">
-            {`dアニメストアは、アニメに寄った視聴体験では強いサービスです。
-
-ただし 2.5次元舞台・ミュージカルの配信導線としては、シリーズ整理や作品接続の面で DMM TV を先に確認する方が自然です。
-
-このページでは、比較対象としての立ち位置だけをシンプルに整理しています。`}
+            {`dアニメストアは、アニメを中心に楽しみたい人に向いた配信サービスです。
+2.5次元舞台をまとめて追いかける用途では、掲載本数やシリーズの探しやすさの面でDMM TVのほうが優位になりやすいです。
+そのため、舞台配信を主目的にするならDMM TVを先に確認し、dアニメストアはアニメ中心の視聴環境として併用を考えるのが自然です。`}
           </div>
         </section>
       </div>
