@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
-import { FavoriteButtonClient } from "./FavoriteButtonClient";
 
 type ActorFavorite = {
   slug: string;
@@ -56,6 +55,18 @@ const parseStoredPlayFavorites = (value: string | null): PlayFavorite[] => {
     .filter((item): item is PlayFavorite => Boolean(item?.slug && item?.title));
 };
 
+const removeStoredFavorite = (storageKey: "favorite_actors" | "favorite_plays", slug: string) => {
+  try {
+    const raw = window.localStorage.getItem(storageKey);
+    const current = raw ? (JSON.parse(raw) as StoredFavorite[]) : [];
+    const next = current.filter((item) => (typeof item === "string" ? item : item?.slug) !== slug);
+    window.localStorage.setItem(storageKey, JSON.stringify(next));
+    window.dispatchEvent(new Event("favorites-updated"));
+  } catch {
+    // no-op
+  }
+};
+
 export function FavoritesClient() {
   const [tab, setTab] = useState<"actors" | "plays">("actors");
   const [actors, setActors] = useState<ActorFavorite[]>([]);
@@ -78,6 +89,16 @@ export function FavoritesClient() {
   }, []);
 
   const activeCount = useMemo(() => (tab === "actors" ? actors.length : plays.length), [tab, actors.length, plays.length]);
+
+  const removeActor = (slug: string) => {
+    setActors((current) => current.filter((actor) => actor.slug !== slug));
+    removeStoredFavorite("favorite_actors", slug);
+  };
+
+  const removePlay = (slug: string) => {
+    setPlays((current) => current.filter((play) => play.slug !== slug));
+    removeStoredFavorite("favorite_plays", slug);
+  };
 
   return (
     <div className="stack-lg">
@@ -116,13 +137,21 @@ export function FavoritesClient() {
                   {actor.name}
                 </Link>
                 <div className="catalog-card__top-actions">
-                  <FavoriteButtonClient
-                    slug={actor.slug}
-                    type="actor"
-                    size="sm"
-                    name={actor.name}
-                    kana={actor.kana}
-                  />
+                  <button
+                    type="button"
+                    className="favorite-button favorite-button--sm is-active"
+                    aria-label="お気に入りから外す"
+                    title="お気に入りから外す"
+                    onClick={() => removeActor(actor.slug)}
+                  >
+                    <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="1.8">
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                      />
+                    </svg>
+                  </button>
                 </div>
               </div>
               {actor.kana ? <div className="muted">{actor.kana}</div> : null}
@@ -138,13 +167,21 @@ export function FavoritesClient() {
                   {play.title}
                 </Link>
                 <div className="catalog-card__top-actions">
-                  <FavoriteButtonClient
-                    slug={play.slug}
-                    type="play"
-                    size="sm"
-                    title={play.title}
-                    franchiseName={play.franchiseName}
-                  />
+                  <button
+                    type="button"
+                    className="favorite-button favorite-button--sm is-active"
+                    aria-label="お気に入りから外す"
+                    title="お気に入りから外す"
+                    onClick={() => removePlay(play.slug)}
+                  >
+                    <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="1.8">
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                      />
+                    </svg>
+                  </button>
                 </div>
               </div>
               {play.franchiseName ? <div className="muted">{play.franchiseName}</div> : null}
