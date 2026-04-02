@@ -59,8 +59,8 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
   const age = getAgeFromBirthday(actor.birthday);
   const timeline = groupPlayTimelineByYear(actor.plays);
   const hasSns = Boolean(actor.sns && Object.values(actor.sns).some(Boolean));
-  const topCoStars = actor.coStars.slice(0, 6);
-  const remainingCoStars = actor.coStars.slice(6);
+  const topCoStars = actor.coStars.slice(0, 5);
+  const remainingCoStars = actor.coStars.slice(5);
 
   const personJsonLd = {
     "@context": "https://schema.org",
@@ -228,8 +228,12 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
             </div>
 
             <div className="cast-grid cast-grid-wide">
-              {topCoStars.map((coStar) => (
+              {topCoStars.map((coStar, index) => (
                 <article className="cast-card" key={coStar.slug}>
+                  <div className="series-rank-row">
+                    <span className="series-rank-badge">{index + 1}</span>
+                    <div className="series-rank-count">共演 {coStar.count}作品</div>
+                  </div>
                   <Link className="cast-name" href={`/actors/${coStar.slug}`}>
                     {coStar.name}
                   </Link>
@@ -238,19 +242,20 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
                       {coStar.kana}
                     </div>
                   ) : null}
-                  <div className="subtle-line" style={{ marginTop: 10 }}>
-                    共演 {coStar.count}作品
-                  </div>
                 </article>
               ))}
             </div>
 
             {remainingCoStars.length > 0 ? (
               <details className="detail-block">
-                <summary>さらに{remainingCoStars.length}名を見る</summary>
+                <summary>全員を見る（{actor.coStars.length}）</summary>
                 <div className="cast-grid cast-grid-wide" style={{ marginTop: 16 }}>
-                  {remainingCoStars.map((coStar) => (
+                  {actor.coStars.map((coStar, index) => (
                     <article className="cast-card" key={coStar.slug}>
+                      <div className="series-rank-row">
+                        <span className="series-rank-badge">{index + 1}</span>
+                        <div className="series-rank-count">共演 {coStar.count}作品</div>
+                      </div>
                       <Link className="cast-name" href={`/actors/${coStar.slug}`}>
                         {coStar.name}
                       </Link>
@@ -259,9 +264,6 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
                           {coStar.kana}
                         </div>
                       ) : null}
-                      <div className="subtle-line" style={{ marginTop: 10 }}>
-                        共演 {coStar.count}作品
-                      </div>
                     </article>
                   ))}
                 </div>
