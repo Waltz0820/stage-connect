@@ -217,6 +217,8 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
   const shouldShowScheduleDetailToggle =
     (Boolean(play.period) && (shouldCollapseSchedule || scheduleEntries.length > 1)) ||
     (Boolean(play.venue) && (shouldCollapseSchedule || venueList.length > 1));
+  const visibleCreditItems = creditItems.slice(0, 3);
+  const hiddenCreditItems = creditItems.slice(3);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -440,17 +442,27 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
         {creditItems.length > 0 ? (
           <section className="section-card stack-md">
             <h2 className="section-title">スタッフ / クレジット</h2>
-            <details className="detail-block" open={creditItems.length <= 3}>
-              <summary>{creditItems.length <= 3 ? "クレジットを見る" : `続きを読む（${creditItems.length}件）`}</summary>
-              <div className="meta-list roomy detail-credit-list">
-                {creditItems.map((item) => (
-                  <div className="meta-row" key={`${item.role}-${item.names.join("-")}`}>
-                    <div className="meta-label accent-label">{item.role}</div>
-                    <div className="meta-value">{item.names.join(" / ")}</div>
-                  </div>
-                ))}
-              </div>
-            </details>
+            <div className="meta-list roomy">
+              {visibleCreditItems.map((item) => (
+                <div className="meta-row" key={`${item.role}-${item.names.join("-")}`}>
+                  <div className="meta-label accent-label">{item.role}</div>
+                  <div className="meta-value">{item.names.join(" / ")}</div>
+                </div>
+              ))}
+            </div>
+            {hiddenCreditItems.length > 0 ? (
+              <details className="detail-block">
+                <summary>続きを読む（残り{hiddenCreditItems.length}件）</summary>
+                <div className="meta-list roomy detail-credit-list">
+                  {hiddenCreditItems.map((item) => (
+                    <div className="meta-row" key={`${item.role}-${item.names.join("-")}`}>
+                      <div className="meta-label accent-label">{item.role}</div>
+                      <div className="meta-value">{item.names.join(" / ")}</div>
+                    </div>
+                  ))}
+                </div>
+              </details>
+            ) : null}
           </section>
         ) : null}
 
@@ -548,13 +560,15 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
                   {group.name ? <div className="group-chip">{group.name}</div> : null}
                   <div className="cast-grid">
                     {group.items.map((item) => (
-                      <article className="cast-card" key={`${item.slug}-${item.roleName ?? "cast"}-${group.name ?? "ungrouped"}`}>
-                        <Link href={`/actors/${item.slug}`} className="cast-name">
-                          {item.name}
-                        </Link>
+                      <Link
+                        href={`/actors/${item.slug}`}
+                        className="cast-card cast-card-link"
+                        key={`${item.slug}-${item.roleName ?? "cast"}-${group.name ?? "ungrouped"}`}
+                      >
+                        <div className="cast-name">{item.name}</div>
                         {item.roleName ? <div className="cast-role">{summarizeRoleName(item.roleName)}</div> : null}
                         {item.isStarring ? <div className="cast-badge">MAIN CAST</div> : null}
-                      </article>
+                      </Link>
                     ))}
                   </div>
                 </div>

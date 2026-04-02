@@ -128,32 +128,30 @@ export default async function PlaysPage({
             {visiblePlays.map((play) => (
               <article className="catalog-card" key={play.slug}>
                 <div className="catalog-card__top">
-                  <Link className="catalog-card__title" href={`/plays/${play.slug}`}>
-                    {play.title}
-                  </Link>
+                  <div className="catalog-card__title">{play.title}</div>
                   <div className="catalog-card__top-actions">
                     {play.franchiseName ? <span className="catalog-card__badge">シリーズ</span> : null}
                     <FavoriteButtonClient slug={play.slug} type="play" size="sm" />
                   </div>
                 </div>
 
-                {play.franchiseName ? <div className="catalog-card__sub">{play.franchiseName}</div> : null}
-                {play.period ? <div className="catalog-card__sub mono">{play.period}</div> : null}
-                {play.genre ? (
-                  <div className="catalog-card__sub">{GENRE_LABELS[play.genre] ?? play.genre}</div>
-                ) : null}
+                <Link className="catalog-card__body-link" href={`/plays/${play.slug}`}>
+                  {play.franchiseName ? <div className="catalog-card__sub">{play.franchiseName}</div> : null}
+                  {play.period ? <div className="catalog-card__sub mono">{play.period}</div> : null}
+                  {play.genre ? (
+                    <div className="catalog-card__sub">{GENRE_LABELS[play.genre] ?? play.genre}</div>
+                  ) : null}
 
-                {play.summary ? (
-                  <div className="catalog-card__text">{truncate(toPlainText(play.summary), 140)}</div>
-                ) : (
-                  <div className="catalog-card__text">作品概要は現在準備中です。</div>
-                )}
+                  {play.summary ? (
+                    <div className="catalog-card__text">{truncate(toPlainText(play.summary), 140)}</div>
+                  ) : (
+                    <div className="catalog-card__text">作品概要は現在準備中です。</div>
+                  )}
 
-                <div className="catalog-card__footer">
-                  <Link className="catalog-link" href={`/plays/${play.slug}`}>
-                    作品詳細を見る
-                  </Link>
-                </div>
+                  <div className="catalog-card__footer">
+                    <span className="catalog-link">作品詳細を見る</span>
+                  </div>
+                </Link>
               </article>
             ))}
           </div>

@@ -1361,6 +1361,12 @@ a {
   line-height: 1.45;
 }
 
+.catalog-card__body-link {
+  display: grid;
+  gap: 12px;
+  min-height: 100%;
+}
+
 .catalog-card__badge {
   display: inline-flex;
   align-items: center;
