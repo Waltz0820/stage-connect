@@ -521,6 +521,12 @@ export async function getSeriesDetailBySlug(slug: string): Promise<SeriesDetailD
   let topActors: SeriesDetailData["topActors"] = [];
 
   if (playIds.length > 0) {
+    const normalizeSeriesDisplayRole = (value?: string | null) =>
+      String(value ?? "")
+        .replace(/※.*$/, "")
+        .replace(/【.*$/, "")
+        .trim();
+
     const { data: castRows, error: castError } = await supabase
       .from("casts")
       .select(
@@ -569,7 +575,7 @@ export async function getSeriesDetailBySlug(slug: string): Promise<SeriesDetailD
       for (const role of uniq(
         String(row?.role_name ?? "")
           .split("/")
-          .map((item) => normalizeDisplayRole(item))
+          .map((item) => normalizeSeriesDisplayRole(normalizeDisplayRole(item)))
       )) {
         if (role && !existing.roles.includes(role)) existing.roles.push(role);
       }
