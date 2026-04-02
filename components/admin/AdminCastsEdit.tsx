@@ -1,6 +1,6 @@
 // @ts-nocheck
 import React, { useEffect, useMemo, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams } from "../../next-app/lib/admin-router-shim";
 import { supabase } from "../../lib/supabase";
 import Field from "./widgets/Field";
 

@@ -1,6 +1,6 @@
 // @ts-nocheck
 import React, { useEffect, useMemo, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "../../next-app/lib/admin-router-shim";
 import { supabase } from "../../lib/supabase";
 
 type GuideCategory = "series-guides" | "features";

@@ -1,6 +1,6 @@
 // @ts-nocheck
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation } from "../../next-app/lib/admin-router-shim";
 import { supabase } from "../../lib/supabase";
 
 const AdminLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
