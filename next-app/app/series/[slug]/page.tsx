@@ -24,7 +24,7 @@ const getStartYear = (periods: Array<string | null>) => {
 };
 
 const compactTimelinePeriod = (period?: string | null) => {
-  if (!period) return "公開時期未定";
+  if (!period) return "公演時期未定";
 
   const slashDate = period.match(/(\d{4})\/(\d{1,2})\/(\d{1,2})/);
   if (slashDate) {
@@ -68,7 +68,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   const description = truncate(
     toPlainText(
       series.description ||
-        `${series.name} のシリーズ作品一覧と出演キャスト、年表をまとめたページです。収録作品数は ${series.plays.length} 件です。`
+        `${series.name} のシリーズ一覧と出演キャスト、年表をまとめたページです。作品数は ${series.plays.length} 件です。`
     ),
     150
   );
@@ -95,7 +95,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
     "@type": "CollectionPage",
     name: series.name,
     description: toPlainText(
-      series.description || `${series.name} のシリーズ作品一覧と出演キャストをまとめたページです。`
+      series.description || `${series.name} のシリーズ一覧と出演キャストをまとめたページです。`
     ),
     url: `${siteUrl}/series/${series.slug ?? slug}`,
     hasPart: series.plays.slice(0, 50).map((play) => ({
@@ -114,15 +114,15 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
         name: `${series.name} の関連作品はすべて見られますか？`,
         acceptedAnswer: {
           "@type": "Answer",
-          text: `現時点で、${series.name} には ${series.plays.length} 作品が収録されています。`,
+          text: `現時点で、${series.name} には ${series.plays.length} 作品が登録されています。`,
         },
       },
       {
         "@type": "Question",
-        name: "どの順番で見ればいいですか？",
+        name: "どの順番で見ればよいですか？",
         acceptedAnswer: {
           "@type": "Answer",
-          text: `基本的には公開年順に見るのがおすすめです。${startYear ?? "----"}年ごろからの年表順に作品を追えるよう、このページではシリーズ作品を整理しています。`,
+          text: `基本的には公開年順に見るのがおすすめです。${startYear ?? "----"}年ごろからの年表順で作品を追えるよう、このページではシリーズ作品を時系列で掲載しています。`,
         },
       },
       {
@@ -130,7 +130,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
         name: "出演キャストも確認できますか？",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "はい。シリーズ内で出演数の多いキャストと役柄を確認できます。気になる俳優がいれば、そのまま俳優詳細ページへ移動できます。",
+          text: "はい。シリーズ内で出演回数の多いキャストと役柄を確認できます。気になる俳優がいれば、そのまま俳優詳細ページへ移動できます。",
         },
       },
     ],
@@ -151,7 +151,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
             <h1 className="page-title">{series.name}</h1>
             <div className="pill-row">
               <span className="pill accent-pill">作品数: {series.plays.length}</span>
-              {series.originType ? <span className="pill">原作: {series.originType}</span> : null}
+              {series.originType ? <span className="pill">種別: {series.originType}</span> : null}
             </div>
             <div className="detail-ledger">
               <div className="detail-ledger__item">
@@ -186,49 +186,13 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
               ) : null}
               {series.productionCompanies.length > 0 ? (
                 <div className="meta-row">
-                  <div className="meta-label accent-label">製作・関連</div>
+                  <div className="meta-label accent-label">主催・関連</div>
                   <div className="meta-value">{series.productionCompanies.join(" / ")}</div>
                 </div>
               ) : null}
             </div>
           )}
         </section>
-
-        {series.relatedSeries.length > 0 ? (
-          <section className="section-card stack-md">
-            <div className="section-header-inline">
-              <div className="stack-sm">
-                <h2 className="section-title">同作品の他シリーズ</h2>
-                <p className="catalog-note">
-                  この作品群とあわせて見られている、関連シリーズへの導線です。
-                </p>
-              </div>
-              <span className="pill">{series.relatedSeries.length}件</span>
-            </div>
-
-            <div className="catalog-grid">
-              {series.relatedSeries.map((related) => (
-                <article key={related.id} className="catalog-card">
-                  <div className="catalog-card__top">
-                    <div className="catalog-card__title">{related.name}</div>
-                    {related.originType ? <span className="catalog-card__badge">{related.originType}</span> : null}
-                  </div>
-                  <Link
-                    className="catalog-card__body-link"
-                    href={related.slug ? `/series/${related.slug}` : `/series`}
-                  >
-                    <div className="catalog-card__text catalog-card__text--clamped">
-                      {related.description || `${related.name} のシリーズ詳細ページです。`}
-                    </div>
-                    <div className="catalog-card__footer">
-                      <span className="catalog-link">シリーズ詳細を見る</span>
-                    </div>
-                  </Link>
-                </article>
-              ))}
-            </div>
-          </section>
-        ) : null}
 
         <SeriesCastOverviewClient topActors={series.topActors} />
 
@@ -285,25 +249,86 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
           </div>
         </section>
 
+        {series.relatedSeries.length > 0 ? (
+          <section className="section-card stack-md">
+            <div className="section-header-inline">
+              <div className="stack-sm">
+                <h2 className="section-title">同作品の他シリーズ</h2>
+                <p className="catalog-note">同じ作品タイトルで派生・分岐しているシリーズをまとめています。</p>
+              </div>
+              <span className="pill">{series.relatedSeries.length}件</span>
+            </div>
+
+            <div className="mobile-only-block">
+              <div className="card-carousel">
+                {series.relatedSeries.map((related) => (
+                  <Link
+                    key={related.id}
+                    className="catalog-card card-carousel-item"
+                    href={related.slug ? `/series/${related.slug}` : `/series`}
+                  >
+                    <div className="catalog-card__top">
+                      <div className="catalog-card__title">{related.name}</div>
+                      {related.originType ? <span className="catalog-card__badge">{related.originType}</span> : null}
+                    </div>
+                    <div className="catalog-card__text catalog-card__text--clamped">
+                      {related.description || `${related.name} のシリーズ詳細ページです。`}
+                    </div>
+                    <div className="catalog-card__footer">
+                      <span className="catalog-link">シリーズ詳細を見る</span>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            <div className="desktop-only-grid">
+              <div className="catalog-grid">
+                {series.relatedSeries.map((related) => (
+                  <article key={`desktop-${related.id}`} className="catalog-card">
+                    <div className="catalog-card__top">
+                      <div className="catalog-card__title">{related.name}</div>
+                      {related.originType ? <span className="catalog-card__badge">{related.originType}</span> : null}
+                    </div>
+                    <Link
+                      className="catalog-card__body-link"
+                      href={related.slug ? `/series/${related.slug}` : `/series`}
+                    >
+                      <div className="catalog-card__text catalog-card__text--clamped">
+                        {related.description || `${related.name} のシリーズ詳細ページです。`}
+                      </div>
+                      <div className="catalog-card__footer">
+                        <span className="catalog-link">シリーズ詳細を見る</span>
+                      </div>
+                    </Link>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+        ) : null}
+
         <section className="section-card stack-md">
           <h2 className="section-title">よくある質問（FAQ）</h2>
           <div className="faq-grid">
             <article className="faq-card">
               <h3 className="faq-question">Q. {series.name} の関連作品はすべて見られますか？</h3>
               <p className="faq-answer">
-                現時点で、{series.name} には {series.plays.length} 作品が収録されています。
+                現時点で、{series.name} には {series.plays.length} 作品が登録されています。
               </p>
             </article>
             <article className="faq-card">
-              <h3 className="faq-question">Q. どの順番で見ればいいですか？</h3>
+              <h3 className="faq-question">Q. どの順番で見ればよいですか？</h3>
               <p className="faq-answer">
-                基本的には公開年順に見るのがおすすめです。{startYear ?? "----"}年ごろからの年表順に作品を追えるよう、このページではシリーズ作品を整理しています。
+                基本的には公開年順に見るのがおすすめです。{startYear ?? "----"}年ごろからの年表順で作品を追えるよう、
+                このページではシリーズ作品を時系列で掲載しています。
               </p>
             </article>
             <article className="faq-card">
               <h3 className="faq-question">Q. 出演キャストも確認できますか？</h3>
               <p className="faq-answer">
-                はい。シリーズ内で出演数の多いキャストと役柄を確認できます。気になる俳優がいれば、そのまま俳優詳細ページへ移動できます。
+                はい。シリーズ内で出演回数の多いキャストと役柄を確認できます。気になる俳優がいれば、
+                そのまま俳優詳細ページへ移動できます。
               </p>
             </article>
           </div>
