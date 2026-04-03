@@ -74,13 +74,13 @@ export default async function SeriesPage({
             <span className="eyebrow">Series</span>
             <h1 className="page-title">シリーズ一覧</h1>
             <p className="lead">
-              2.5次元舞台・ミュージカルのシリーズを、原作や作品数ごとに一覧できます。
+              2.5次元舞台・ミュージカルのシリーズを、代表作や作品数とあわせて一覧で確認できます。
             </p>
           </div>
 
           <div className="catalog-summary catalog-summary--ledger">
-            <span className="catalog-chip">該当シリーズ {filteredSeries.length}件</span>
-            <span className="catalog-chip">全掲載シリーズ {allSeries.length}件</span>
+            <span className="catalog-chip">表示中のシリーズ {filteredSeries.length}件</span>
+            <span className="catalog-chip">登録シリーズ {allSeries.length}件</span>
             <span className="catalog-chip">Page {safePage}</span>
           </div>
         </section>
@@ -120,7 +120,7 @@ export default async function SeriesPage({
               <article className="catalog-card" key={series.slug}>
                 <div className="catalog-card__top">
                   <div className="catalog-card__title">{series.name}</div>
-                  <span className="catalog-card__badge">{series.playCount}菴懷刀</span>
+                  <span className="catalog-card__badge">{series.playCount}作品</span>
                 </div>
 
                 <Link className="catalog-card__body-link" href={`/series/${series.slug}`}>
@@ -133,7 +133,7 @@ export default async function SeriesPage({
                   )}
 
                   <div className="catalog-card__footer">
-                    <span className="catalog-link">繧ｷ繝ｪ繝ｼ繧ｺ隧ｳ邏ｰ繧定ｦ九ｋ</span>
+                    <span className="catalog-link">シリーズ詳細を見る</span>
                   </div>
                 </Link>
               </article>

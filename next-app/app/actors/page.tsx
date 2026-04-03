@@ -71,13 +71,13 @@ export default async function ActorsPage({
             <span className="eyebrow">Actors</span>
             <h1 className="page-title">俳優一覧</h1>
             <p className="lead">
-              2.5次元舞台・ミュージカルに出演する俳優を、プロフィールや出演作品とあわせて一覧できます。
+              2.5次元舞台・ミュージカルに出演する俳優を、プロフィールや出演作品とあわせて一覧で確認できます。
             </p>
           </div>
 
           <div className="catalog-summary catalog-summary--ledger">
-            <span className="catalog-chip">該当俳優 {filteredActors.length}人</span>
-            <span className="catalog-chip">全掲載俳優 {allActors.length}人</span>
+            <span className="catalog-chip">表示中の俳優 {filteredActors.length}人</span>
+            <span className="catalog-chip">登録俳優 {allActors.length}人</span>
             <span className="catalog-chip">Page {safePage}</span>
           </div>
         </section>
@@ -120,7 +120,7 @@ export default async function ActorsPage({
                     {birthday ? (
                       <div className="catalog-card__sub">
                         {birthday}
-                        {age !== null ? ` (${age}豁ｳ)` : ""}
+                        {age !== null ? ` (${age}歳)` : ""}
                       </div>
                     ) : null}
                     {actor.gender && actor.gender in GENDER_LABELS ? (
@@ -134,7 +134,7 @@ export default async function ActorsPage({
                     )}
 
                     <div className="catalog-card__footer">
-                      <span className="catalog-link">菫ｳ蜆ｪ隧ｳ邏ｰ繧定ｦ九ｋ</span>
+                      <span className="catalog-link">俳優詳細を見る</span>
                     </div>
                   </Link>
                 </article>
