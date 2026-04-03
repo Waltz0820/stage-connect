@@ -1247,8 +1247,7 @@ a {
   display: flex;
   gap: 12px;
   overflow-x: auto;
-  padding-inline: 4px;
-  padding-bottom: 8px;
+  padding: 3px 6px 10px;
   scroll-snap-type: x mandatory;
   max-width: 100%;
 }
@@ -1259,6 +1258,11 @@ a {
   max-width: calc(100vw - 56px);
   flex: 0 0 auto;
   scroll-snap-align: start;
+}
+
+.card-carousel .cast-card-link:hover,
+.card-carousel .catalog-card:hover {
+  transform: translateY(-1px);
 }
 
 .mobile-only-block {
@@ -1606,7 +1610,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   flex-wrap: nowrap;
   margin-top: 12px;
   overflow-x: auto;
@@ -1617,16 +1621,16 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 112px;
+  min-width: 96px;
   flex: 0 0 auto;
-  padding: 10px 14px;
+  padding: 9px 12px;
   border-radius: 0;
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.015);
   color: var(--text);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   white-space: nowrap;
 }
