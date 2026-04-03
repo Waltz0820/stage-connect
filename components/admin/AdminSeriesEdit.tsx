@@ -9,15 +9,8 @@ import { safeTrim, toSlug } from "./widgets/utils";
 
 type Mode = "new" | "edit";
 
-type OriginType =
-  | ""
-  | "漫画原作"
-  | "アニメ原作"
-  | "ゲーム原作"
-  | "メディアミックス"
-  | "小説原作"
-  | "特撮"
-  | "その他";
+type OriginType = "" | "漫画原作" | "アニメ原作" | "ゲーム原作" | "メディアミックス" | "小説原作" | "特撮" | "その他";
+type PerformanceFormat = "" | "stage" | "musical";
 
 const ORIGIN_TYPE_OPTIONS: { value: OriginType; label: string }[] = [
   { value: "", label: "未設定" },
@@ -30,11 +23,18 @@ const ORIGIN_TYPE_OPTIONS: { value: OriginType; label: string }[] = [
   { value: "その他", label: "その他" },
 ];
 
+const FORMAT_OPTIONS: { value: PerformanceFormat; label: string }[] = [
+  { value: "", label: "未設定" },
+  { value: "stage", label: "舞台" },
+  { value: "musical", label: "ミュージカル" },
+];
+
 type FranchiseRow = {
   id: string;
   name: string;
   slug?: string | null;
   description?: string | null;
+  format?: string | null;
   origin_type?: string | null;
   origin_note?: string | null;
   production_companies?: string[] | null;
@@ -44,7 +44,6 @@ type FranchiseRow = {
 const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
   const nav = useNavigate();
   const { slug } = useParams<{ slug: string }>();
-
   const key = useMemo(() => (slug ? decodeURIComponent(slug) : ""), [slug]);
 
   const [row, setRow] = useState<FranchiseRow | null>(null);
@@ -53,7 +52,7 @@ const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
   const [name, setName] = useState("");
   const [slugText, setSlugText] = useState("");
   const [desc, setDesc] = useState("");
-
+  const [performanceFormat, setPerformanceFormat] = useState<PerformanceFormat>("");
   const [originType, setOriginType] = useState<OriginType>("");
   const [originNote, setOriginNote] = useState("");
   const [productionCompaniesText, setProductionCompaniesText] = useState("");
@@ -62,18 +61,12 @@ const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
 
   const [busy, setBusy] = useState(false);
   const [msg, setMsg] = useState("");
+
   const previewKey = useMemo(
     () => safeTrim(slugText) || safeTrim(name) || (mode === "edit" ? row?.slug ?? row?.name ?? "" : ""),
     [mode, name, row?.name, row?.slug, slugText]
   );
   const previewHref = previewKey ? `/series/${encodeURIComponent(previewKey)}` : "";
-
-  const normalizeOriginType = (v: any): OriginType => {
-    const s = safeTrim(v);
-    if (!s) return "";
-    const hit = ORIGIN_TYPE_OPTIONS.find((o) => o.value === (s as OriginType));
-    return hit ? (s as OriginType) : "";
-  };
 
   useEffect(() => {
     const loadFranchises = async () => {
@@ -89,6 +82,7 @@ const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
       setName("");
       setSlugText("");
       setDesc("");
+      setPerformanceFormat("");
       setOriginType("");
       setOriginNote("");
       setProductionCompaniesText("");
@@ -106,20 +100,20 @@ const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         {
           const res = await supabase
             .from("franchises")
-            .select("id,name,slug,description,origin_type,origin_note,production_companies,related_franchise_ids")
+            .select("id,name,slug,description,format,origin_type,origin_note,production_companies,related_franchise_ids")
             .or(`slug.eq.${key},name.eq.${key}`)
             .maybeSingle();
           data = res.data;
           error = res.error;
         }
 
-        if (error && /related_franchise_ids/i.test(String(error.message ?? ""))) {
+        if (error && /(related_franchise_ids|format)/i.test(String(error.message ?? ""))) {
           const fallback = await supabase
             .from("franchises")
             .select("id,name,slug,description,origin_type,origin_note,production_companies")
             .or(`slug.eq.${key},name.eq.${key}`)
             .maybeSingle();
-          data = fallback.data ? { ...fallback.data, related_franchise_ids: [] } : fallback.data;
+          data = fallback.data ? { ...fallback.data, format: null, related_franchise_ids: [] } : fallback.data;
           error = fallback.error;
         }
 
@@ -131,7 +125,8 @@ const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         setName(r.name ?? "");
         setSlugText(r.slug ?? "");
         setDesc(r.description ?? "");
-        setOriginType(normalizeOriginType(r.origin_type));
+        setPerformanceFormat((safeTrim(r.format) as PerformanceFormat) || "");
+        setOriginType((safeTrim(r.origin_type) as OriginType) || "");
         setOriginNote(r.origin_note ?? "");
         setProductionCompaniesText((r.production_companies ?? []).join(", "));
         setRelatedFranchiseIds(new Set((r.related_franchise_ids ?? []).filter(Boolean)));
@@ -175,6 +170,9 @@ const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         name: safeTrim(name),
         slug: safeTrim(slugText) || toSlug(name),
         description: safeTrim(desc) || null,
+        format: performanceFormat || null,
+        origin_type: originType || null,
+        origin_note: safeTrim(originNote) || null,
       };
 
       const companies = productionCompaniesText
@@ -182,8 +180,6 @@ const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         .map((s) => safeTrim(s))
         .filter((s) => s.length > 0);
 
-      payload.origin_type = originType || null;
-      payload.origin_note = safeTrim(originNote) || null;
       payload.production_companies = companies.length ? companies : null;
       payload.related_franchise_ids = Array.from(relatedFranchiseIds)
         .filter((id) => id !== row?.id)
@@ -201,8 +197,8 @@ const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
           error = res.error;
         }
 
-        if (error && /related_franchise_ids/i.test(String(error.message ?? ""))) {
-          const { related_franchise_ids, ...fallbackPayload } = payload;
+        if (error && /(related_franchise_ids|format)/i.test(String(error.message ?? ""))) {
+          const { related_franchise_ids, format, ...fallbackPayload } = payload;
           const res = await supabase.from("franchises").insert(fallbackPayload);
           error = res.error;
         }
@@ -218,8 +214,8 @@ const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
           error = res.error;
         }
 
-        if (error && /related_franchise_ids/i.test(String(error.message ?? ""))) {
-          const { related_franchise_ids, ...fallbackPayload } = payload;
+        if (error && /(related_franchise_ids|format)/i.test(String(error.message ?? ""))) {
+          const { related_franchise_ids, format, ...fallbackPayload } = payload;
           const res = await supabase.from("franchises").update(fallbackPayload).eq("id", row.id);
           error = res.error;
         }
@@ -236,7 +232,7 @@ const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
 
   const del = async () => {
     if (!row?.id) return;
-    if (!confirm("削除しますか？元に戻せません。")) return;
+    if (!confirm("削除しますか？ 元には戻せません。")) return;
 
     setMsg("");
     setBusy(true);
@@ -306,7 +302,7 @@ const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
       </div>
 
       <div className="bg-white/5 border border-white/10 rounded-2xl p-6 space-y-6">
-        <Field label="name" hint="表示名・必須">
+        <Field label="name" hint="シリーズ名">
           <input
             className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
             value={name}
@@ -324,6 +320,20 @@ const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
           />
         </Field>
 
+        <Field label="format" hint="上演形式。作品一覧では親シリーズの値を使って絞り込みます。">
+          <select
+            className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
+            value={performanceFormat}
+            onChange={(e) => setPerformanceFormat(e.target.value as PerformanceFormat)}
+          >
+            {FORMAT_OPTIONS.map((o) => (
+              <option key={o.label} value={o.value}>
+                {o.label}
+              </option>
+            ))}
+          </select>
+        </Field>
+
         <Field label="origin_type" hint="原作カテゴリ。未設定でもOK">
           <select
             className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
@@ -338,7 +348,7 @@ const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
           </select>
         </Field>
 
-        <Field label="production_companies" hint="製作・主催。カンマ区切りで複数OK">
+        <Field label="production_companies" hint="主催・関連。カンマ区切りで複数OK">
           <input
             className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
             value={productionCompaniesText}
@@ -347,17 +357,17 @@ const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
           />
         </Field>
 
-        <Field label="origin_note" hint="原作表記や補足情報。プレーンテキストでOK">
+        <Field label="origin_note" hint="原作表記や出典情報。プレーンテキストでOK">
           <textarea
             className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
             value={originNote}
             onChange={(e) => setOriginNote(e.target.value)}
             rows={3}
-            placeholder="例: 原案『刀剣乱舞ONLINE』より"
+            placeholder="例: 原作『刀剣乱舞ONLINE』より"
           />
         </Field>
 
-        <Field label="related series" hint="同作品の他シリーズ。最大5件まで、シリーズ詳細に表示します">
+        <Field label="related series" hint="同作品の他シリーズ。最大5件まで、シリーズ詳細に表示されます。">
           <div className="space-y-3">
             <input
               className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
@@ -415,13 +425,13 @@ const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
           </div>
         </Field>
 
-        <Field label="description" hint="シリーズ説明。未入力でも可">
+        <Field label="description" hint="シリーズ概要。未入力でも可">
           <textarea
             className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
             value={desc}
             onChange={(e) => setDesc(e.target.value)}
             rows={10}
-            placeholder="シリーズ概要や代表作の流れなどを記述"
+            placeholder="シリーズ説明や補足情報を記入"
           />
         </Field>
       </div>

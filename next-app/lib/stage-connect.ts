@@ -75,6 +75,7 @@ export type PlayListItem = {
   summary: string | null;
   period: string | null;
   franchiseName: string | null;
+  franchiseFormat: string | null;
   genre: string | null;
   createdAt: string | null;
 };
@@ -757,21 +758,56 @@ export async function getSeriesDetailBySlug(slug: string): Promise<SeriesDetailD
 export async function getPlayList(): Promise<PlayListItem[]> {
   if (!hasSupabaseEnv) return [];
   const supabase = createSupabaseServerClient();
-  const { data, error } = await supabase
-    .from("plays")
-    .select(
+  let data: any[] | null = null;
+  let error: any = null;
+
+  {
+    const res = await supabase
+      .from("plays")
+      .select(
+        `
+        slug,
+        title,
+        summary,
+        period,
+        genre,
+        created_at,
+        franchise:franchises (
+          name,
+          format
+        )
       `
-      slug,
-      title,
-      summary,
-      period,
-      genre,
-      created_at,
-      franchise:franchises (
-        name
-      )
-    `
-    );
+      );
+    data = res.data as any[] | null;
+    error = res.error;
+  }
+
+  if (error && /format/i.test(String(error.message ?? ""))) {
+    const fallback = await supabase
+      .from("plays")
+      .select(
+        `
+        slug,
+        title,
+        summary,
+        period,
+        genre,
+        created_at,
+        franchise:franchises (
+          name
+        )
+      `
+      );
+    data = (fallback.data as any[] | null)?.map((row) => ({
+      ...row,
+      franchise: Array.isArray(row?.franchise)
+        ? row.franchise.map((item: any) => ({ ...item, format: null }))
+        : row?.franchise
+          ? { ...row.franchise, format: null }
+          : row?.franchise,
+    })) ?? null;
+    error = fallback.error;
+  }
 
   if (error) throw error;
 
@@ -785,6 +821,7 @@ export async function getPlayList(): Promise<PlayListItem[]> {
         summary: (row.summary as string | null) ?? null,
         period: (row.period as string | null) ?? null,
         franchiseName: franchise?.name ?? null,
+        franchiseFormat: (franchise?.format as string | null) ?? null,
         genre: (row.genre as string | null) ?? null,
         createdAt: (row.created_at as string | null) ?? null,
       };
