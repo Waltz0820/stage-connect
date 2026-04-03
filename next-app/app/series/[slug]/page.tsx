@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { RelatedSeriesClient } from "../../../components/RelatedSeriesClient";
 import { SeriesCastOverviewClient } from "../../../components/SeriesCastOverviewClient";
 import { getSeriesDetailBySlug, toPlainText, truncate } from "../../../lib/stage-connect";
 
@@ -258,53 +259,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
               </div>
               <span className="pill">{series.relatedSeries.length}件</span>
             </div>
-
-            <div className="mobile-only-block">
-              <div className="card-carousel">
-                {series.relatedSeries.map((related) => (
-                  <Link
-                    key={related.id}
-                    className="catalog-card card-carousel-item"
-                    href={related.slug ? `/series/${related.slug}` : `/series`}
-                  >
-                    <div className="catalog-card__top">
-                      <div className="catalog-card__title">{related.name}</div>
-                      {related.originType ? <span className="catalog-card__badge">{related.originType}</span> : null}
-                    </div>
-                    <div className="catalog-card__text catalog-card__text--clamped">
-                      {related.description || `${related.name} のシリーズ詳細ページです。`}
-                    </div>
-                    <div className="catalog-card__footer">
-                      <span className="catalog-link">シリーズ詳細を見る</span>
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            </div>
-
-            <div className="desktop-only-grid">
-              <div className="catalog-grid">
-                {series.relatedSeries.map((related) => (
-                  <article key={`desktop-${related.id}`} className="catalog-card">
-                    <div className="catalog-card__top">
-                      <div className="catalog-card__title">{related.name}</div>
-                      {related.originType ? <span className="catalog-card__badge">{related.originType}</span> : null}
-                    </div>
-                    <Link
-                      className="catalog-card__body-link"
-                      href={related.slug ? `/series/${related.slug}` : `/series`}
-                    >
-                      <div className="catalog-card__text catalog-card__text--clamped">
-                        {related.description || `${related.name} のシリーズ詳細ページです。`}
-                      </div>
-                      <div className="catalog-card__footer">
-                        <span className="catalog-link">シリーズ詳細を見る</span>
-                      </div>
-                    </Link>
-                  </article>
-                ))}
-              </div>
-            </div>
+            <RelatedSeriesClient items={series.relatedSeries} />
           </section>
         ) : null}
 
