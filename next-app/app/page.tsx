@@ -4,6 +4,8 @@ import { getTrendingTags } from "../lib/stage-connect";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
 
+export const revalidate = 3600;
+
 export const metadata: Metadata = {
   title: "Stage Connect（ステコネ） | 2.5次元舞台・ミュージカルのキャスト・作品アーカイブ",
   description:
@@ -41,16 +43,33 @@ export default async function HomePage() {
       <div className="home-hero__spotlight" />
       <div className="home-hero__inner">
         <div className="home-hero__copy">
-          <span className="home-hero__eyebrow">DIGITAL ARCHIVE</span>
+          <span className="home-hero__eyebrow">Stage Connect</span>
 
           <h1 className="home-hero__title">
-            <span>STAGE</span>
-            <span className="is-accent">CONNECT</span>
+            2.5次元舞台と
+            <span className="is-accent">キャストをつなぐ</span>
           </h1>
 
           <p className="home-hero__lead">
-            2.5次元舞台とキャストをつなぐ、デジタル・アーカイブ
+            作品・シリーズ・出演者・配信情報を横断して追える、
+            2.5次元舞台に特化したデジタルアーカイブ。
+            気になるキャストの出演歴から、次に観る一本を見つけよう。
           </p>
+        </div>
+
+        <div className="home-hero__ledger">
+          <div className="home-hero__ledger-item">
+            <span className="home-hero__ledger-label">Navigate</span>
+            <strong>作品・シリーズ・俳優</strong>
+          </div>
+          <div className="home-hero__ledger-item">
+            <span className="home-hero__ledger-label">Discover</span>
+            <strong>出演歴から芋づる式</strong>
+          </div>
+          <div className="home-hero__ledger-item">
+            <span className="home-hero__ledger-label">Watch</span>
+            <strong>配信で今すぐ</strong>
+          </div>
         </div>
 
         <div className="home-hero__actions">
