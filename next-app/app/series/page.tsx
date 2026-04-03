@@ -119,25 +119,23 @@ export default async function SeriesPage({
             {visibleSeries.map((series) => (
               <article className="catalog-card" key={series.slug}>
                 <div className="catalog-card__top">
-                  <Link className="catalog-card__title" href={`/series/${series.slug}`}>
-                    {series.name}
-                  </Link>
-                  <span className="catalog-card__badge">{series.playCount}作品</span>
+                  <div className="catalog-card__title">{series.name}</div>
+                  <span className="catalog-card__badge">{series.playCount}菴懷刀</span>
                 </div>
 
-                {series.originType ? <div className="catalog-card__sub">{series.originType}</div> : null}
+                <Link className="catalog-card__body-link" href={`/series/${series.slug}`}>
+                  {series.originType ? <div className="catalog-card__sub">{series.originType}</div> : null}
 
-                {series.description ? (
-                  <div className="catalog-card__text">{truncate(toPlainText(series.description), 140)}</div>
-                ) : (
-                  <div className="catalog-card__text">シリーズ説明は現在準備中です。</div>
-                )}
+                  {series.description ? (
+                    <div className="catalog-card__text">{truncate(toPlainText(series.description), 140)}</div>
+                  ) : (
+                    <div className="catalog-card__text">シリーズ説明は現在準備中です。</div>
+                  )}
 
-                <div className="catalog-card__footer">
-                  <Link className="catalog-link" href={`/series/${series.slug}`}>
-                    シリーズ詳細を見る
-                  </Link>
-                </div>
+                  <div className="catalog-card__footer">
+                    <span className="catalog-link">繧ｷ繝ｪ繝ｼ繧ｺ隧ｳ邏ｰ繧定ｦ九ｋ</span>
+                  </div>
+                </Link>
               </article>
             ))}
           </div>

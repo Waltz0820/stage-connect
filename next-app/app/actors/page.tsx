@@ -108,37 +108,35 @@ export default async function ActorsPage({
               return (
                 <article className="catalog-card" key={actor.slug}>
                   <div className="catalog-card__top">
-                    <Link className="catalog-card__title" href={`/actors/${actor.slug}`}>
-                      {actor.name}
-                    </Link>
+                    <div className="catalog-card__title">{actor.name}</div>
                     <div className="catalog-card__top-actions">
                       {birthday ? <span className="catalog-card__badge">Profile</span> : null}
                       <FavoriteButtonClient slug={actor.slug} type="actor" size="sm" name={actor.name} kana={actor.kana} />
                     </div>
                   </div>
 
-                  {actor.kana ? <div className="catalog-card__sub">{actor.kana}</div> : null}
-                  {birthday ? (
-                    <div className="catalog-card__sub">
-                      {birthday}
-                      {age !== null ? ` (${age}歳)` : ""}
+                  <Link className="catalog-card__body-link" href={`/actors/${actor.slug}`}>
+                    {actor.kana ? <div className="catalog-card__sub">{actor.kana}</div> : null}
+                    {birthday ? (
+                      <div className="catalog-card__sub">
+                        {birthday}
+                        {age !== null ? ` (${age}豁ｳ)` : ""}
+                      </div>
+                    ) : null}
+                    {actor.gender && actor.gender in GENDER_LABELS ? (
+                      <div className="catalog-card__sub">{GENDER_LABELS[actor.gender]}</div>
+                    ) : null}
+
+                    {actor.profile ? (
+                      <div className="catalog-card__text">{truncate(toPlainText(actor.profile), 140)}</div>
+                    ) : (
+                      <div className="catalog-card__text">プロフィールは現在準備中です。</div>
+                    )}
+
+                    <div className="catalog-card__footer">
+                      <span className="catalog-link">菫ｳ蜆ｪ隧ｳ邏ｰ繧定ｦ九ｋ</span>
                     </div>
-                  ) : null}
-                  {actor.gender && actor.gender in GENDER_LABELS ? (
-                    <div className="catalog-card__sub">{GENDER_LABELS[actor.gender]}</div>
-                  ) : null}
-
-                  {actor.profile ? (
-                    <div className="catalog-card__text">{truncate(toPlainText(actor.profile), 140)}</div>
-                  ) : (
-                    <div className="catalog-card__text">プロフィールは現在準備中です。</div>
-                  )}
-
-                  <div className="catalog-card__footer">
-                    <Link className="catalog-link" href={`/actors/${actor.slug}`}>
-                      俳優詳細を見る
-                    </Link>
-                  </div>
+                  </Link>
                 </article>
               );
             })}
