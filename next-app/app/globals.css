@@ -618,7 +618,7 @@ a {
   display: grid;
   gap: 8px;
   padding: 14px 16px;
-  background: rgba(0, 0, 0, 0.34);
+  background: rgba(255, 255, 255, 0.012);
   text-align: left;
 }
 
@@ -917,7 +917,7 @@ a {
   gap: 8px;
   min-width: 0;
   padding: 12px 14px;
-  background: rgba(255, 255, 255, 0.015);
+  background: rgba(255, 255, 255, 0.009);
 }
 
 .detail-ledger__item strong {
@@ -1313,7 +1313,7 @@ a {
   padding: 12px 14px;
   border: 0;
   border-radius: 0;
-  background: rgba(255, 255, 255, 0.015);
+  background: rgba(255, 255, 255, 0.009);
 }
 
 @media (max-width: 760px) {
