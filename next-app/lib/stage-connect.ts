@@ -42,6 +42,13 @@ export type SeriesDetailData = {
   originType: string | null;
   originNote: string | null;
   productionCompanies: string[];
+  relatedSeries: Array<{
+    id: string;
+    slug: string | null;
+    name: string;
+    description: string | null;
+    originType: string | null;
+  }>;
   plays: Array<{
     id: string;
     slug: string;
@@ -541,25 +548,59 @@ export async function getSeriesDetailBySlug(slug: string): Promise<SeriesDetailD
 
   if (!franchise?.id || !franchise?.name) return null;
 
-  const { data: playRows, error: playError } = await supabase
-    .from("plays")
-    .select(
-      `
-      id,
-      slug,
-      title,
-      period,
-      summary,
-      vod,
-      created_at,
-      play_tags:play_tags (
-        tag:tags (
-          name
+  let playRows: any[] | null = null;
+  let playError: any = null;
+
+  {
+    const res = await supabase
+      .from("plays")
+      .select(
+        `
+        id,
+        slug,
+        title,
+        period,
+        summary,
+        vod,
+        created_at,
+        related_franchise_ids,
+        play_tags:play_tags (
+          tag:tags (
+            name
+          )
         )
+      `
       )
-    `
-    )
-    .eq("franchise_id", franchise.id);
+      .eq("franchise_id", franchise.id);
+
+    playRows = (res.data ?? null) as any[] | null;
+    playError = res.error;
+  }
+
+  if (playError && /related_franchise_ids/i.test(String(playError.message ?? ""))) {
+    const fallback = await supabase
+      .from("plays")
+      .select(
+        `
+        id,
+        slug,
+        title,
+        period,
+        summary,
+        vod,
+        created_at,
+        play_tags:play_tags (
+          tag:tags (
+            name
+          )
+        )
+      `
+      )
+      .eq("franchise_id", franchise.id);
+
+    playRows = ((fallback.data ?? []) as any[]).map((row) => ({ ...row, related_franchise_ids: [] }));
+    playError = fallback.error;
+  }
 
   if (playError) throw playError;
 
@@ -583,6 +624,42 @@ export async function getSeriesDetailBySlug(slug: string): Promise<SeriesDetailD
       return bd - ad;
     })
     .map(({ createdAt, ...row }) => row);
+
+  const relatedFranchiseIds = uniq(
+    ((playRows ?? []) as any[]).flatMap((row) =>
+      Array.isArray(row?.related_franchise_ids) ? row.related_franchise_ids : []
+    )
+  ).filter((id) => id !== franchise.id);
+
+  let relatedSeries: SeriesDetailData["relatedSeries"] = [];
+
+  if (relatedFranchiseIds.length > 0) {
+    const { data: relatedRows, error: relatedError } = await supabase
+      .from("franchises")
+      .select("id, slug, name, description, origin_type")
+      .in("id", relatedFranchiseIds);
+
+    if (relatedError) throw relatedError;
+
+    const relatedMap = new Map(
+      ((relatedRows ?? []) as any[])
+        .filter((row) => row?.id && row?.name)
+        .map((row) => [
+          String(row.id),
+          {
+            id: String(row.id),
+            slug: row.slug ? String(row.slug) : null,
+            name: String(row.name),
+            description: row.description ? String(row.description) : null,
+            originType: row.origin_type ? String(row.origin_type) : null,
+          },
+        ])
+    );
+
+    relatedSeries = relatedFranchiseIds
+      .map((id) => relatedMap.get(id))
+      .filter((item): item is SeriesDetailData["relatedSeries"][number] => Boolean(item));
+  }
 
   const playIds = plays.map((play) => play.id);
 
@@ -685,6 +762,7 @@ export async function getSeriesDetailBySlug(slug: string): Promise<SeriesDetailD
     productionCompanies: Array.isArray(franchise.production_companies)
       ? uniq(franchise.production_companies)
       : [],
+    relatedSeries,
     plays,
     topActors,
   };

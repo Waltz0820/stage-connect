@@ -4,13 +4,25 @@ import { notFound } from "next/navigation";
 import { getTagDetailBySlug, toPlainText, truncate } from "../../../lib/stage-connect";
 
 type Params = { slug: string };
+type SearchParamValue = string | string[] | undefined;
+type SearchParams = Record<string, SearchParamValue>;
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
+const ITEMS_PER_PAGE = 12;
 
 const TYPE_LABELS: Record<string, string> = {
   world: "世界観・ジャンル",
   experience: "観劇体験タグ",
   origin: "原作・出典ジャンル",
+};
+
+const getSingleParam = (value: SearchParamValue) => (Array.isArray(value) ? value[0] : value) ?? "";
+
+const buildHref = (slug: string, page: number) => {
+  const search = new URLSearchParams();
+  if (page > 1) search.set("page", String(page));
+  const query = search.toString();
+  return query ? `/tags/${slug}?${query}` : `/tags/${slug}`;
 };
 
 export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
@@ -37,12 +49,25 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   };
 }
 
-export default async function TagDetailPage({ params }: { params: Promise<Params> }) {
+export default async function TagDetailPage({
+  params,
+  searchParams,
+}: {
+  params: Promise<Params>;
+  searchParams?: Promise<SearchParams>;
+}) {
   const { slug } = await params;
+  const resolvedSearchParams = (await searchParams) ?? {};
   const tag = await getTagDetailBySlug(slug);
   if (!tag) notFound();
 
   const typeLabel = TYPE_LABELS[tag.type] ?? "タグ";
+  const requestedPage = Number(getSingleParam(resolvedSearchParams.page));
+  const page = Number.isFinite(requestedPage) && requestedPage > 0 ? requestedPage : 1;
+  const totalPages = Math.max(1, Math.ceil(tag.plays.length / ITEMS_PER_PAGE));
+  const safePage = Math.min(page, totalPages);
+  const startIndex = (safePage - 1) * ITEMS_PER_PAGE;
+  const visiblePlays = tag.plays.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 
   return (
     <main className="container" style={{ paddingBlock: 32 }}>
@@ -67,7 +92,9 @@ export default async function TagDetailPage({ params }: { params: Promise<Params
           <div className="section-header-inline">
             <div className="stack-sm">
               <h2 className="section-title">関連作品</h2>
-              <p className="catalog-note">{tag.name} に紐づく作品を新しい順に表示しています。</p>
+              <p className="catalog-note">
+                {tag.name} に紐づく作品を新しい順に表示しています。{tag.plays.length}件中 {visiblePlays.length}件を表示中です。
+              </p>
             </div>
             <Link href="/tags" className="action-button">
               タグ一覧へ戻る
@@ -75,7 +102,7 @@ export default async function TagDetailPage({ params }: { params: Promise<Params
           </div>
 
           <div className="catalog-grid">
-            {tag.plays.map((play) => (
+            {visiblePlays.map((play) => (
               <article key={play.id} className="catalog-card">
                 <div className="catalog-card__top">
                   <div className="catalog-card__title">{play.title}</div>
@@ -109,6 +136,26 @@ export default async function TagDetailPage({ params }: { params: Promise<Params
               </article>
             ))}
           </div>
+
+          {totalPages > 1 ? (
+            <div className="pagination-row">
+              <Link
+                className={`pagination-link ${safePage === 1 ? "is-disabled" : ""}`}
+                href={buildHref(tag.slug, Math.max(1, safePage - 1))}
+              >
+                前へ
+              </Link>
+              <span className="catalog-note">
+                Page {safePage} / {totalPages}
+              </span>
+              <Link
+                className={`pagination-link ${safePage === totalPages ? "is-disabled" : ""}`}
+                href={buildHref(tag.slug, Math.min(totalPages, safePage + 1))}
+              >
+                次へ
+              </Link>
+            </div>
+          ) : null}
         </section>
       </div>
     </main>

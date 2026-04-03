@@ -1607,8 +1607,10 @@ a {
   justify-content: center;
   align-items: center;
   gap: 12px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   margin-top: 12px;
+  overflow-x: auto;
+  padding-bottom: 4px;
 }
 
 .pagination-link {
@@ -1616,6 +1618,7 @@ a {
   align-items: center;
   justify-content: center;
   min-width: 112px;
+  flex: 0 0 auto;
   padding: 10px 14px;
   border-radius: 0;
   border: 1px solid var(--line);
@@ -1636,6 +1639,11 @@ a {
 .pagination-link.is-disabled {
   opacity: 0.35;
   pointer-events: none;
+}
+
+.pagination-row .catalog-note {
+  flex: 0 0 auto;
+  white-space: nowrap;
 }
 
 .prose-panel {

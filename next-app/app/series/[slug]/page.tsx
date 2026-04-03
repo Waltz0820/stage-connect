@@ -194,6 +194,42 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
           )}
         </section>
 
+        {series.relatedSeries.length > 0 ? (
+          <section className="section-card stack-md">
+            <div className="section-header-inline">
+              <div className="stack-sm">
+                <h2 className="section-title">同作品の他シリーズ</h2>
+                <p className="catalog-note">
+                  この作品群とあわせて見られている、関連シリーズへの導線です。
+                </p>
+              </div>
+              <span className="pill">{series.relatedSeries.length}件</span>
+            </div>
+
+            <div className="catalog-grid">
+              {series.relatedSeries.map((related) => (
+                <article key={related.id} className="catalog-card">
+                  <div className="catalog-card__top">
+                    <div className="catalog-card__title">{related.name}</div>
+                    {related.originType ? <span className="catalog-card__badge">{related.originType}</span> : null}
+                  </div>
+                  <Link
+                    className="catalog-card__body-link"
+                    href={related.slug ? `/series/${related.slug}` : `/series`}
+                  >
+                    <div className="catalog-card__text catalog-card__text--clamped">
+                      {related.description || `${related.name} のシリーズ詳細ページです。`}
+                    </div>
+                    <div className="catalog-card__footer">
+                      <span className="catalog-link">シリーズ詳細を見る</span>
+                    </div>
+                  </Link>
+                </article>
+              ))}
+            </div>
+          </section>
+        ) : null}
+
         <SeriesCastOverviewClient topActors={series.topActors} />
 
         <section className="section-card stack-md">
