@@ -57,21 +57,6 @@ export default async function HomePage() {
           </p>
         </div>
 
-        <div className="home-hero__ledger">
-          <div className="home-hero__ledger-item">
-            <span className="home-hero__ledger-label">Navigate</span>
-            <strong>作品・シリーズ・俳優</strong>
-          </div>
-          <div className="home-hero__ledger-item">
-            <span className="home-hero__ledger-label">Discover</span>
-            <strong>出演歴から芋づる式</strong>
-          </div>
-          <div className="home-hero__ledger-item">
-            <span className="home-hero__ledger-label">Watch</span>
-            <strong>配信で今すぐ</strong>
-          </div>
-        </div>
-
         <div className="home-hero__actions">
           <Link href="/actors" className="home-hero__button is-primary">
             推しを見つける
