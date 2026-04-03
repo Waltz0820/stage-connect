@@ -597,13 +597,13 @@ a {
 }
 
 .home-hero__lead {
-  max-width: 520px;
+  max-width: 480px;
   margin: 0 auto;
   color: var(--muted);
-  font-size: 13px;
-  line-height: 1.8;
+  font-size: 12px;
+  line-height: 1.75;
   font-weight: 400;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
 }
 
 .home-hero__ledger {
