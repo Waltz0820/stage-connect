@@ -35,11 +35,10 @@ type FranchiseRow = {
   name: string;
   slug?: string | null;
   description?: string | null;
-
-  // ✅ 固定情報
   origin_type?: string | null;
   origin_note?: string | null;
   production_companies?: string[] | null;
+  related_franchise_ids?: string[] | null;
 };
 
 const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
@@ -49,15 +48,17 @@ const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
   const key = useMemo(() => (slug ? decodeURIComponent(slug) : ""), [slug]);
 
   const [row, setRow] = useState<FranchiseRow | null>(null);
+  const [franchises, setFranchises] = useState<FranchiseRow[]>([]);
 
   const [name, setName] = useState("");
   const [slugText, setSlugText] = useState("");
   const [desc, setDesc] = useState("");
 
-  // ✅ 固定情報 fields
   const [originType, setOriginType] = useState<OriginType>("");
   const [originNote, setOriginNote] = useState("");
   const [productionCompaniesText, setProductionCompaniesText] = useState("");
+  const [relatedFranchiseIds, setRelatedFranchiseIds] = useState<Set<string>>(new Set());
+  const [relatedFranchiseQuery, setRelatedFranchiseQuery] = useState("");
 
   const [busy, setBusy] = useState(false);
   const [msg, setMsg] = useState("");
@@ -75,44 +76,66 @@ const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
   };
 
   useEffect(() => {
+    const loadFranchises = async () => {
+      const { data } = await supabase.from("franchises").select("id,name,slug").order("name", { ascending: true });
+      setFranchises((data ?? []) as FranchiseRow[]);
+    };
+    void loadFranchises();
+  }, []);
+
+  useEffect(() => {
     if (mode === "new") {
       setRow(null);
       setName("");
       setSlugText("");
       setDesc("");
-
       setOriginType("");
       setOriginNote("");
       setProductionCompaniesText("");
+      setRelatedFranchiseIds(new Set());
+      setRelatedFranchiseQuery("");
       return;
     }
 
     const run = async () => {
       setBusy(true);
       try {
-        const { data, error } = await supabase
-          .from("franchises")
-          .select(
-            "id,name,slug,description,origin_type,origin_note,production_companies"
-          )
-          .or(`slug.eq.${key},name.eq.${key}`)
-          .maybeSingle();
+        let data: any = null;
+        let error: any = null;
+
+        {
+          const res = await supabase
+            .from("franchises")
+            .select("id,name,slug,description,origin_type,origin_note,production_companies,related_franchise_ids")
+            .or(`slug.eq.${key},name.eq.${key}`)
+            .maybeSingle();
+          data = res.data;
+          error = res.error;
+        }
+
+        if (error && /related_franchise_ids/i.test(String(error.message ?? ""))) {
+          const fallback = await supabase
+            .from("franchises")
+            .select("id,name,slug,description,origin_type,origin_note,production_companies")
+            .or(`slug.eq.${key},name.eq.${key}`)
+            .maybeSingle();
+          data = fallback.data ? { ...fallback.data, related_franchise_ids: [] } : fallback.data;
+          error = fallback.error;
+        }
 
         if (error) throw error;
         if (!data) return;
 
-        const r = data as any as FranchiseRow;
-
+        const r = data as FranchiseRow;
         setRow(r);
         setName(r.name ?? "");
         setSlugText(r.slug ?? "");
         setDesc(r.description ?? "");
-
-        setOriginType(normalizeOriginType((r as any).origin_type));
-        setOriginNote((r as any).origin_note ?? "");
-        setProductionCompaniesText(
-          ((r as any).production_companies ?? []).join(", ")
-        );
+        setOriginType(normalizeOriginType(r.origin_type));
+        setOriginNote(r.origin_note ?? "");
+        setProductionCompaniesText((r.production_companies ?? []).join(", "));
+        setRelatedFranchiseIds(new Set((r.related_franchise_ids ?? []).filter(Boolean)));
+        setRelatedFranchiseQuery("");
       } catch (e: any) {
         setMsg(e?.message ?? "load error");
       } finally {
@@ -120,8 +143,28 @@ const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
       }
     };
 
-    if (key) run();
+    if (key) void run();
   }, [mode, key]);
+
+  const visibleRelatedFranchises = useMemo(() => {
+    const query = safeTrim(relatedFranchiseQuery).toLowerCase();
+    const list = franchises.filter((franchise) => franchise.id !== row?.id);
+    if (!query) return list.slice(0, 50);
+    return list.filter((franchise) => franchise.name.toLowerCase().includes(query)).slice(0, 50);
+  }, [franchises, relatedFranchiseQuery, row?.id]);
+
+  const toggleRelatedFranchise = (id: string) => {
+    setRelatedFranchiseIds((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) {
+        next.delete(id);
+        return next;
+      }
+      if (next.size >= 5) return next;
+      next.add(id);
+      return next;
+    });
+  };
 
   const save = async () => {
     setMsg("");
@@ -134,32 +177,53 @@ const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         description: safeTrim(desc) || null,
       };
 
-      // ✅ production_companies: "a, b, c" → text[]
       const companies = productionCompaniesText
         .split(",")
         .map((s) => safeTrim(s))
         .filter((s) => s.length > 0);
 
-      // ✅ origin_type はセレクト値のみ許可（それ以外は空扱い）
-      payload.origin_type = originType ? originType : null;
+      payload.origin_type = originType || null;
       payload.origin_note = safeTrim(originNote) || null;
       payload.production_companies = companies.length ? companies : null;
+      payload.related_franchise_ids = Array.from(relatedFranchiseIds)
+        .filter((id) => id !== row?.id)
+        .slice(0, 5);
 
       if (!payload.name) {
-        setMsg("name は必須");
+        setMsg("name は必須です");
         return;
       }
 
       if (mode === "new") {
-        const { error } = await supabase.from("franchises").insert(payload);
+        let error: any = null;
+        {
+          const res = await supabase.from("franchises").insert(payload);
+          error = res.error;
+        }
+
+        if (error && /related_franchise_ids/i.test(String(error.message ?? ""))) {
+          const { related_franchise_ids, ...fallbackPayload } = payload;
+          const res = await supabase.from("franchises").insert(fallbackPayload);
+          error = res.error;
+        }
+
         if (error) throw error;
         nav(`/admin/series/${encodeURIComponent(payload.slug || payload.name)}`);
       } else {
         if (!row?.id) return;
-        const { error } = await supabase
-          .from("franchises")
-          .update(payload)
-          .eq("id", row.id);
+
+        let error: any = null;
+        {
+          const res = await supabase.from("franchises").update(payload).eq("id", row.id);
+          error = res.error;
+        }
+
+        if (error && /related_franchise_ids/i.test(String(error.message ?? ""))) {
+          const { related_franchise_ids, ...fallbackPayload } = payload;
+          const res = await supabase.from("franchises").update(fallbackPayload).eq("id", row.id);
+          error = res.error;
+        }
+
         if (error) throw error;
         setMsg("保存しました");
       }
@@ -172,15 +236,12 @@ const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
 
   const del = async () => {
     if (!row?.id) return;
-    if (!confirm("削除する？（戻せない）")) return;
+    if (!confirm("削除しますか？元に戻せません。")) return;
 
     setMsg("");
     setBusy(true);
     try {
-      const { error } = await supabase
-        .from("franchises")
-        .delete()
-        .eq("id", row.id);
+      const { error } = await supabase.from("franchises").delete().eq("id", row.id);
       if (error) throw error;
       nav("/admin/series");
     } catch (e: any) {
@@ -195,11 +256,9 @@ const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
       <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
         <div className="flex items-start justify-between gap-3">
           <div>
-            <h1 className="text-xl font-extrabold text-white">
-              {mode === "new" ? "シリーズ新規" : "シリーズ編集"}
-            </h1>
+            <h1 className="text-xl font-extrabold text-white">{mode === "new" ? "シリーズ新規" : "シリーズ編集"}</h1>
             <p className="text-xs text-slate-400 mt-1">
-              autoIntro（作品数/VOD/年）を主役にして、固定情報＋解説（description）だけ手入れする
+              シリーズ詳細の基本情報と、同作品の他シリーズ導線をここで管理します。
             </p>
           </div>
 
@@ -247,29 +306,25 @@ const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
       </div>
 
       <div className="bg-white/5 border border-white/10 rounded-2xl p-6 space-y-6">
-        <Field label="name" hint="表示名（必須）">
+        <Field label="name" hint="表示名・必須">
           <input
             className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            placeholder="例：刀剣乱舞"
+            placeholder="例: 舞台『刀剣乱舞』"
           />
         </Field>
 
-        <Field label="slug" hint="URL用。空なら name から自動生成される">
+        <Field label="slug" hint="URL用。未入力なら name から自動生成">
           <input
             className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
             value={slugText}
             onChange={(e) => setSlugText(e.target.value)}
-            placeholder="例：toukenranbu"
+            placeholder="例: butai-touken-ranbu"
           />
         </Field>
 
-        {/* ✅ 固定情報（変動しない要素） */}
-        <Field
-          label="origin_type"
-          hint="原作カテゴリ（DB制約に合わせて固定選択）。未設定でもOK"
-        >
+        <Field label="origin_type" hint="原作カテゴリ。未設定でもOK">
           <select
             className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
             value={originType}
@@ -281,41 +336,92 @@ const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
               </option>
             ))}
           </select>
-
-          {/* 小さく補足（入力事故防止） */}
-          <div className="mt-2 text-[11px] text-slate-500">
-            ※ここは <span className="text-slate-300">「アニメ原作」</span> まで含めた固定カテゴリで管理。
-            文字入力はさせない（制約エラーを根絶）。
-          </div>
         </Field>
 
-        <Field label="production_companies" hint="制作会社（カンマ区切りで複数OK）">
+        <Field label="production_companies" hint="製作・主催。カンマ区切りで複数OK">
           <input
             className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
             value={productionCompaniesText}
             onChange={(e) => setProductionCompaniesText(e.target.value)}
-            placeholder="例：ネルケプランニング, マーベラス"
+            placeholder="例: マーベラス, ネルケプランニング"
           />
         </Field>
 
-        <Field label="origin_note" hint="原作補足（タイトル/作者/出版社など。短文でOK）">
+        <Field label="origin_note" hint="原作表記や補足情報。プレーンテキストでOK">
           <textarea
             className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
             value={originNote}
             onChange={(e) => setOriginNote(e.target.value)}
             rows={3}
-            placeholder="例：原作：『刀剣乱舞-ONLINE-』（DMM GAMES / Nitroplus）"
+            placeholder="例: 原案『刀剣乱舞ONLINE』より"
           />
         </Field>
 
-        {/* ✅ 解説（折りたたみ表示される想定） */}
-        <Field label="description" hint="解説（折りたたみ）。空なら出ない">
+        <Field label="related series" hint="同作品の他シリーズ。最大5件まで、シリーズ詳細に表示します">
+          <div className="space-y-3">
+            <input
+              className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
+              value={relatedFranchiseQuery}
+              onChange={(e) => setRelatedFranchiseQuery(e.target.value)}
+              placeholder="シリーズ名で検索"
+            />
+
+            <div className="flex flex-wrap gap-2">
+              {Array.from(relatedFranchiseIds).map((id) => {
+                const selected = franchises.find((f) => f.id === id);
+                if (!selected) return null;
+                return (
+                  <button
+                    key={id}
+                    type="button"
+                    onClick={() => toggleRelatedFranchise(id)}
+                    className="text-xs px-3 py-2 rounded-full bg-white/10 border border-white/10 hover:bg-white/15"
+                  >
+                    {selected.name} ×
+                  </button>
+                );
+              })}
+              {relatedFranchiseIds.size === 0 ? <span className="text-xs text-slate-500">未設定</span> : null}
+            </div>
+
+            <div className="grid gap-2 max-h-64 overflow-auto">
+              {visibleRelatedFranchises.map((franchise) => {
+                const checked = relatedFranchiseIds.has(franchise.id);
+                const disabled = !checked && relatedFranchiseIds.size >= 5;
+                return (
+                  <label
+                    key={franchise.id}
+                    className={`flex cursor-pointer items-center justify-between gap-3 rounded-xl border px-4 py-3 ${
+                      checked ? "border-white/20 bg-white/10" : "border-white/10 bg-black/30 hover:bg-white/5"
+                    } ${disabled ? "opacity-50" : ""}`}
+                  >
+                    <div className="min-w-0">
+                      <div className="truncate text-sm font-bold text-white">{franchise.name}</div>
+                      <div className="truncate text-[11px] text-slate-500">{franchise.slug || "-"}</div>
+                    </div>
+                    <input
+                      type="checkbox"
+                      checked={checked}
+                      disabled={disabled}
+                      onChange={() => toggleRelatedFranchise(franchise.id)}
+                      className="accent-white"
+                    />
+                  </label>
+                );
+              })}
+            </div>
+
+            <p className="text-xs text-slate-500">{relatedFranchiseIds.size}/5件選択中</p>
+          </div>
+        </Field>
+
+        <Field label="description" hint="シリーズ説明。未入力でも可">
           <textarea
             className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
             value={desc}
             onChange={(e) => setDesc(e.target.value)}
             rows={10}
-            placeholder="例：初心者向けの観劇前提/配信の見方/派生作品の差分…など。長くてOK"
+            placeholder="シリーズ概要や代表作の流れなどを記述"
           />
         </Field>
       </div>

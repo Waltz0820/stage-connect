@@ -527,80 +527,68 @@ export async function getSeriesDetailBySlug(slug: string): Promise<SeriesDetailD
 
   let franchise: any = null;
 
-  const { data: bySlug, error: bySlugError } = await supabase
-    .from("franchises")
-    .select("id, name, slug, description, origin_type, origin_note, production_companies")
-    .eq("slug", slug)
-    .maybeSingle();
+  {
+    const res = await supabase
+      .from("franchises")
+      .select("id, name, slug, description, origin_type, origin_note, production_companies, related_franchise_ids")
+      .eq("slug", slug)
+      .maybeSingle();
 
-  if (bySlugError) throw bySlugError;
-  franchise = bySlug;
+    if (res.error && /related_franchise_ids/i.test(String(res.error.message ?? ""))) {
+      const fallback = await supabase
+        .from("franchises")
+        .select("id, name, slug, description, origin_type, origin_note, production_companies")
+        .eq("slug", slug)
+        .maybeSingle();
+      if (fallback.error) throw fallback.error;
+      franchise = fallback.data ? { ...fallback.data, related_franchise_ids: [] } : null;
+    } else {
+      if (res.error) throw res.error;
+      franchise = res.data;
+    }
+  }
 
   if (!franchise) {
-    const { data: byName, error: byNameError } = await supabase
+    const res = await supabase
       .from("franchises")
-      .select("id, name, slug, description, origin_type, origin_note, production_companies")
+      .select("id, name, slug, description, origin_type, origin_note, production_companies, related_franchise_ids")
       .eq("name", slug)
       .maybeSingle();
-    if (byNameError) throw byNameError;
-    franchise = byName;
+    if (res.error && /related_franchise_ids/i.test(String(res.error.message ?? ""))) {
+      const fallback = await supabase
+        .from("franchises")
+        .select("id, name, slug, description, origin_type, origin_note, production_companies")
+        .eq("name", slug)
+        .maybeSingle();
+      if (fallback.error) throw fallback.error;
+      franchise = fallback.data ? { ...fallback.data, related_franchise_ids: [] } : null;
+    } else {
+      if (res.error) throw res.error;
+      franchise = res.data;
+    }
   }
 
   if (!franchise?.id || !franchise?.name) return null;
 
-  let playRows: any[] | null = null;
-  let playError: any = null;
-
-  {
-    const res = await supabase
-      .from("plays")
-      .select(
-        `
-        id,
-        slug,
-        title,
-        period,
-        summary,
-        vod,
-        created_at,
-        related_franchise_ids,
-        play_tags:play_tags (
-          tag:tags (
-            name
-          )
-        )
+  const { data: playRows, error: playError } = await supabase
+    .from("plays")
+    .select(
       `
-      )
-      .eq("franchise_id", franchise.id);
-
-    playRows = (res.data ?? null) as any[] | null;
-    playError = res.error;
-  }
-
-  if (playError && /related_franchise_ids/i.test(String(playError.message ?? ""))) {
-    const fallback = await supabase
-      .from("plays")
-      .select(
-        `
-        id,
-        slug,
-        title,
-        period,
-        summary,
-        vod,
-        created_at,
-        play_tags:play_tags (
-          tag:tags (
-            name
-          )
+      id,
+      slug,
+      title,
+      period,
+      summary,
+      vod,
+      created_at,
+      play_tags:play_tags (
+        tag:tags (
+          name
         )
-      `
       )
-      .eq("franchise_id", franchise.id);
-
-    playRows = ((fallback.data ?? []) as any[]).map((row) => ({ ...row, related_franchise_ids: [] }));
-    playError = fallback.error;
-  }
+    `
+    )
+    .eq("franchise_id", franchise.id);
 
   if (playError) throw playError;
 
@@ -626,9 +614,7 @@ export async function getSeriesDetailBySlug(slug: string): Promise<SeriesDetailD
     .map(({ createdAt, ...row }) => row);
 
   const relatedFranchiseIds = uniq(
-    ((playRows ?? []) as any[]).flatMap((row) =>
-      Array.isArray(row?.related_franchise_ids) ? row.related_franchise_ids : []
-    )
+    Array.isArray(franchise.related_franchise_ids) ? franchise.related_franchise_ids : []
   ).filter((id) => id !== franchise.id);
 
   let relatedSeries: SeriesDetailData["relatedSeries"] = [];

@@ -29,7 +29,6 @@ type PlayRow = {
   genre?: PlayGenre | null;
   vod?: any;
   franchise_id?: string | null;
-  related_franchise_ids?: string[] | null;
   credits?: CreditItem[] | null;
 };
 
@@ -209,8 +208,6 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
   const [genre, setGenre] = useState<PlayGenre | "">("");
   const [franchiseId, setFranchiseId] = useState<string>("");
   const [franchiseQuery, setFranchiseQuery] = useState("");
-  const [relatedFranchiseIds, setRelatedFranchiseIds] = useState<Set<string>>(new Set());
-  const [relatedFranchiseQuery, setRelatedFranchiseQuery] = useState("");
   const [vodText, setVodText] = useState("");
   const [vodForm, setVodForm] = useState<VodValue>({});
 
@@ -316,8 +313,6 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
       setGenre("");
       setFranchiseId("");
       setFranchiseQuery("");
-      setRelatedFranchiseIds(new Set());
-      setRelatedFranchiseQuery("");
       setVodText(stringifyPretty({}));
       setVodForm({});
 
@@ -334,28 +329,11 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
     const run = async () => {
       setBusy(true);
       try {
-        let data: any = null;
-        let error: any = null;
-
-        {
-          const res = await supabase
-            .from("plays")
-            .select("id,slug,title,summary,period,venue,genre,vod,franchise_id,related_franchise_ids,credits")
-            .eq("slug", key)
-            .maybeSingle();
-          data = res.data;
-          error = res.error;
-        }
-
-        if (error && /related_franchise_ids/i.test(String(error.message ?? ""))) {
-          const fallback = await supabase
-            .from("plays")
-            .select("id,slug,title,summary,period,venue,genre,vod,franchise_id,credits")
-            .eq("slug", key)
-            .maybeSingle();
-          data = fallback.data ? { ...fallback.data, related_franchise_ids: [] } : fallback.data;
-          error = fallback.error;
-        }
+        const { data, error } = await supabase
+          .from("plays")
+          .select("id,slug,title,summary,period,venue,genre,vod,franchise_id,credits")
+          .eq("slug", key)
+          .maybeSingle();
         if (error) throw error;
         if (!data) return;
 
@@ -369,8 +347,6 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         setGenre((r.genre as PlayGenre | null) ?? "");
         setFranchiseId(r.franchise_id ?? "");
         setFranchiseQuery("");
-        setRelatedFranchiseIds(new Set((r.related_franchise_ids ?? []).filter(Boolean)));
-        setRelatedFranchiseQuery("");
         const nextVod = pickVod(r.vod ?? {});
         setVodText(stringifyPretty(nextVod));
         setVodForm(nextVod);
@@ -412,26 +388,6 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
     if (!query) return frs.slice(0, 50);
     return frs.filter((f) => f.name.toLowerCase().includes(query)).slice(0, 50);
   }, [frs, franchiseQuery]);
-
-  const visibleRelatedFranchises = useMemo(() => {
-    const query = safeTrim(relatedFranchiseQuery).toLowerCase();
-    const list = frs.filter((f) => f.id !== franchiseId);
-    if (!query) return list.slice(0, 50);
-    return list.filter((f) => f.name.toLowerCase().includes(query)).slice(0, 50);
-  }, [franchiseId, frs, relatedFranchiseQuery]);
-
-  const toggleRelatedFranchise = (id: string) => {
-    setRelatedFranchiseIds((prev) => {
-      const next = new Set(prev);
-      if (next.has(id)) {
-        next.delete(id);
-        return next;
-      }
-      if (next.size >= 5) return next;
-      next.add(id);
-      return next;
-    });
-  };
 
   const updateVodField = (field: keyof VodValue, value: string) => {
     setVodForm((current) => {
@@ -485,7 +441,6 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         venue: safeTrim(venue) || null,
         genre: genre || null,
         franchise_id: franchiseId || null,
-        related_franchise_ids: Array.from(relatedFranchiseIds).filter((id) => id !== franchiseId).slice(0, 5),
         vod: parseJsonOr<any>(vodText, {}),
         credits: creditsValue,
       };
@@ -501,22 +456,7 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
       }
 
       if (mode === "new") {
-        let created: any = null;
-        let error: any = null;
-
-        {
-          const res = await supabase.from("plays").insert(payload).select("id,slug").single();
-          created = res.data;
-          error = res.error;
-        }
-
-        if (error && /related_franchise_ids/i.test(String(error.message ?? ""))) {
-          const { related_franchise_ids, ...fallbackPayload } = payload;
-          const res = await supabase.from("plays").insert(fallbackPayload).select("id,slug").single();
-          created = res.data;
-          error = res.error;
-        }
-
+        const { data: created, error } = await supabase.from("plays").insert(payload).select("id,slug").single();
         if (error) throw error;
 
         await syncPlayTags(created.id, selectedTagIds);
@@ -524,19 +464,7 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
       } else {
         if (!row?.id) return;
 
-        let error: any = null;
-
-        {
-          const res = await supabase.from("plays").update(payload).eq("id", row.id);
-          error = res.error;
-        }
-
-        if (error && /related_franchise_ids/i.test(String(error.message ?? ""))) {
-          const { related_franchise_ids, ...fallbackPayload } = payload;
-          const res = await supabase.from("plays").update(fallbackPayload).eq("id", row.id);
-          error = res.error;
-        }
-
+        const { error } = await supabase.from("plays").update(payload).eq("id", row.id);
         if (error) throw error;
 
         await syncPlayTags(row.id, selectedTagIds);
@@ -693,11 +621,6 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
                 onChange={(e) => {
                   const nextId = e.target.value;
                   setFranchiseId(nextId);
-                  setRelatedFranchiseIds((prev) => {
-                    const next = new Set(prev);
-                    if (nextId) next.delete(nextId);
-                    return next;
-                  });
                   const selected = frs.find((f) => f.id === nextId);
                   if (selected) setFranchiseQuery(selected.name);
                 }}
@@ -714,63 +637,6 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
                   ? `${visibleFranchises.length}件表示中`
                   : `全${frs.length}件中、先頭50件を表示`}
               </p>
-            </div>
-          </Field>
-
-          <Field label="related series" hint="同作品の他シリーズ。最大5件まで、シリーズ詳細に表示します">
-            <div className="space-y-3">
-              <input
-                className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
-                value={relatedFranchiseQuery}
-                onChange={(e) => setRelatedFranchiseQuery(e.target.value)}
-                placeholder="シリーズ名で検索"
-              />
-
-              <div className="flex flex-wrap gap-2">
-                {Array.from(relatedFranchiseIds).map((id) => {
-                  const selected = frs.find((f) => f.id === id);
-                  if (!selected) return null;
-                  return (
-                    <button
-                      key={id}
-                      type="button"
-                      onClick={() => toggleRelatedFranchise(id)}
-                      className="text-xs px-3 py-2 rounded-full bg-white/10 border border-white/10 hover:bg-white/15"
-                    >
-                      {selected.name} ×
-                    </button>
-                  );
-                })}
-                {relatedFranchiseIds.size === 0 ? <span className="text-xs text-slate-500">未設定</span> : null}
-              </div>
-
-              <div className="grid gap-2 max-h-64 overflow-auto">
-                {visibleRelatedFranchises.map((f) => {
-                  const checked = relatedFranchiseIds.has(f.id);
-                  const disabled = !checked && relatedFranchiseIds.size >= 5;
-                  return (
-                    <label
-                      key={f.id}
-                      className={`flex cursor-pointer items-center justify-between gap-3 rounded-xl border px-4 py-3 ${
-                        checked ? "border-white/20 bg-white/10" : "border-white/10 bg-black/30 hover:bg-white/5"
-                      } ${disabled ? "opacity-50" : ""}`}
-                    >
-                      <div className="min-w-0">
-                        <div className="truncate text-sm font-bold text-white">{f.name}</div>
-                      </div>
-                      <input
-                        type="checkbox"
-                        checked={checked}
-                        disabled={disabled}
-                        onChange={() => toggleRelatedFranchise(f.id)}
-                        className="accent-white"
-                      />
-                    </label>
-                  );
-                })}
-              </div>
-
-              <p className="text-xs text-slate-500">{relatedFranchiseIds.size}/5件選択中</p>
             </div>
           </Field>
 
