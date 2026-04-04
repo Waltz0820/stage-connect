@@ -1014,6 +1014,30 @@ a {
   line-height: 1.8;
 }
 
+.detail-toggle {
+  width: 100%;
+}
+
+.detail-toggle__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 8px 12px;
+  margin-left: auto;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.detail-toggle__actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 12px;
+}
+
 .muted {
   color: var(--muted);
 }

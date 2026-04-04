@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { DetailToggleClient } from "../../../components/DetailToggleClient";
 import { FavoriteButtonClient } from "../../../components/FavoriteButtonClient";
 import { ShareButtonClient } from "../../../components/ShareButtonClient";
 import {
@@ -266,7 +267,7 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
               text: `主な出演者は${castSummary}です。ページ下部の「出演キャスト」セクションで全キャスト詳細を確認できます。`,
             },
           },
-        ]
+        ].slice(0, 2)
       : [
           {
             "@type": "Question",
@@ -292,7 +293,7 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
               text: `主な出演者は${castSummary}です。ページ下部の「出演キャスト」セクションで全キャスト詳細を確認できます。`,
             },
           },
-        ],
+        ].slice(0, 2),
   };
 
   return (
@@ -417,9 +418,8 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
               <div className="meta-row">
                 <div className="meta-label accent-label">詳細</div>
                 <div className="meta-value">
-                  <details className="detail-block">
-                    <summary>詳細を見る</summary>
-                    <div className="detail-panel">
+                  <DetailToggleClient summary="詳細を見る">
+                    <div className="stack-sm">
                       {play.period ? (
                         <div className="stack-sm">
                           <div className="muted" style={{ fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase" }}>
@@ -438,7 +438,7 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
                         </div>
                       ) : null}
                     </div>
-                  </details>
+                  </DetailToggleClient>
                 </div>
               </div>
             ) : null}
@@ -457,8 +457,7 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
               ))}
             </div>
             {hiddenCreditItems.length > 0 ? (
-              <details className="detail-block">
-                <summary>続きを読む（残り{hiddenCreditItems.length}件）</summary>
+              <DetailToggleClient summary={`続きを読む（残り${hiddenCreditItems.length}件）`}>
                 <div className="meta-list roomy detail-credit-list">
                   {hiddenCreditItems.map((item) => (
                     <div className="meta-row" key={`${item.role}-${item.names.join("-")}`}>
@@ -467,7 +466,7 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
                     </div>
                   ))}
                 </div>
-              </details>
+              </DetailToggleClient>
             ) : null}
           </section>
         ) : null}
@@ -525,12 +524,6 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
                     DMMプレミアムでは14日間の無料トライアルを提供しています。期間中は対象作品を追加料金なしで視聴できる場合があります。
                   </p>
                 </article>
-                <article className="faq-card">
-                  <h3 className="faq-question">出演キャストは誰ですか？</h3>
-                  <p className="faq-answer">
-                    主な出演者は{castSummary}です。ページ下部の「出演キャスト」セクションで全キャスト詳細を確認できます。
-                  </p>
-                </article>
               </>
             ) : (
               <>
@@ -544,12 +537,6 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
                   <h3 className="faq-question">この作品を見る方法はありますか？</h3>
                   <p className="faq-answer">
                     配信が確認できない場合は、シリーズの他作品や関連作品、DVD・Blu-ray展開、再演情報などをあわせて確認するのがおすすめです。
-                  </p>
-                </article>
-                <article className="faq-card">
-                  <h3 className="faq-question">出演キャストは誰ですか？</h3>
-                  <p className="faq-answer">
-                    主な出演者は{castSummary}です。ページ下部の「出演キャスト」セクションで全キャスト詳細を確認できます。
                   </p>
                 </article>
               </>
