@@ -147,7 +147,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       <div className="stack-lg">
-        <Breadcrumbs items={[{ label: "??????", href: "/series" }, { label: series.name }]} />
+        <Breadcrumbs items={[{ label: "シリーズ一覧", href: "/series" }, { label: series.name }]} />
         <section className="hero-card stack-md">
           <div className="stack-sm detail-ledger-shell">
             <h1 className="page-title">{series.name}</h1>
