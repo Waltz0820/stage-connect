@@ -8,6 +8,11 @@ type SearchParams = Record<string, SearchParamValue>;
 const ITEMS_PER_PAGE = 10;
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
 
+const FORMAT_LABELS: Record<string, string> = {
+  stage: "舞台",
+  musical: "ミュージカル",
+};
+
 const getSingleParam = (value: SearchParamValue) => (Array.isArray(value) ? value[0] : value) ?? "";
 
 const buildHref = (params: Record<string, string | number | null | undefined>) => {
@@ -23,11 +28,10 @@ const buildHref = (params: Record<string, string | number | null | undefined>) =
 export const metadata: Metadata = {
   title: "シリーズ一覧 | Stage Connect（ステコネ）",
   description:
-    "Stage Connect（ステコネ）で、2.5次元舞台・ミュージカルのシリーズやフランチャイズを一覧で整理。配下作品、出演キャスト、年表への入口として確認できます。",
-};
-
-metadata.alternates = {
-  canonical: `${siteUrl}/series`,
+    "Stage Connect（ステコネ）で、2.5次元舞台・ミュージカルのシリーズやフランチャイズを一覧できます。舞台・ミュージカルや原作別に絞り込みできます。",
+  alternates: {
+    canonical: `${siteUrl}/series`,
+  },
 };
 
 export default async function SeriesPage({
@@ -40,10 +44,13 @@ export default async function SeriesPage({
 
   const requestedSort = getSingleParam(params.sort);
   const sort = requestedSort === "name_asc" ? "name_asc" : "play_count_desc";
+  const requestedFormat = getSingleParam(params.format);
+  const format = requestedFormat && requestedFormat in FORMAT_LABELS ? requestedFormat : "all";
   const origin = getSingleParam(params.origin) || "all";
   const requestedPage = Number(getSingleParam(params.page));
   const page = Number.isFinite(requestedPage) && requestedPage > 0 ? requestedPage : 1;
 
+  const formatOptions = ["all", ...Object.keys(FORMAT_LABELS)];
   const originOptions = [
     "all",
     ...Array.from(new Set(allSeries.map((series) => String(series.originType ?? "").trim()).filter(Boolean))).sort(
@@ -51,10 +58,13 @@ export default async function SeriesPage({
     ),
   ];
 
+  const formatFilteredSeries =
+    format === "all" ? allSeries : allSeries.filter((series) => String(series.format ?? "") === format);
+
   const filteredSeries =
     origin === "all"
-      ? allSeries
-      : allSeries.filter((series) => String(series.originType ?? "").trim() === origin);
+      ? formatFilteredSeries
+      : formatFilteredSeries.filter((series) => String(series.originType ?? "").trim() === origin);
 
   const sortedSeries = [...filteredSeries].sort((a, b) => {
     if (sort === "name_asc") return a.name.localeCompare(b.name, "ja");
@@ -73,9 +83,7 @@ export default async function SeriesPage({
           <div className="stack-sm">
             <span className="eyebrow">Series</span>
             <h1 className="page-title">シリーズ一覧</h1>
-            <p className="lead">
-              2.5次元舞台・ミュージカルのシリーズを、代表作や作品数とあわせて一覧で確認できます。
-            </p>
+            <p className="lead">2.5次元舞台・ミュージカルのシリーズを、原作や上演形式とあわせて一覧できます。</p>
           </div>
 
           <div className="catalog-summary catalog-summary--ledger">
@@ -91,16 +99,28 @@ export default async function SeriesPage({
           <div className="filter-row filter-row--dense">
             <Link
               className={`filter-chip ${sort === "play_count_desc" ? "is-active" : ""}`}
-              href={buildHref({ page: 1, sort: "play_count_desc", origin })}
+              href={buildHref({ page: 1, sort: "play_count_desc", format, origin })}
             >
               作品数順
             </Link>
             <Link
               className={`filter-chip ${sort === "name_asc" ? "is-active" : ""}`}
-              href={buildHref({ page: 1, sort: "name_asc", origin })}
+              href={buildHref({ page: 1, sort: "name_asc", format, origin })}
             >
               名前順
             </Link>
+          </div>
+
+          <div className="filter-row filter-row--dense genre-filter-row">
+            {formatOptions.map((option) => (
+              <Link
+                key={option}
+                className={`filter-chip ${format === option ? "is-active" : ""}`}
+                href={buildHref({ page: 1, sort, format: option, origin })}
+              >
+                {option === "all" ? "すべて" : FORMAT_LABELS[option]}
+              </Link>
+            ))}
           </div>
 
           <div className="filter-row filter-row--dense genre-filter-row">
@@ -108,7 +128,7 @@ export default async function SeriesPage({
               <Link
                 key={option}
                 className={`filter-chip ${origin === option ? "is-active" : ""}`}
-                href={buildHref({ page: 1, sort, origin: option })}
+                href={buildHref({ page: 1, sort, format, origin: option })}
               >
                 {option === "all" ? "すべて" : option}
               </Link>
@@ -120,7 +140,12 @@ export default async function SeriesPage({
               <article className="catalog-card" key={series.slug}>
                 <div className="catalog-card__top">
                   <div className="catalog-card__title">{series.name}</div>
-                  <span className="catalog-card__badge">{series.playCount}作品</span>
+                  <div className="catalog-card__top-actions">
+                    {format === "all" && series.format ? (
+                      <span className="catalog-card__badge">{FORMAT_LABELS[series.format] ?? series.format}</span>
+                    ) : null}
+                    <span className="catalog-card__badge">{series.playCount}作品</span>
+                  </div>
                 </div>
 
                 <Link className="catalog-card__body-link" href={`/series/${series.slug}`}>
@@ -129,7 +154,7 @@ export default async function SeriesPage({
                   {series.description ? (
                     <div className="catalog-card__text">{truncate(toPlainText(series.description), 140)}</div>
                   ) : (
-                    <div className="catalog-card__text">シリーズ説明は現在準備中です。</div>
+                    <div className="catalog-card__text">シリーズ説明は現在整理中です。</div>
                   )}
 
                   <div className="catalog-card__footer">
@@ -144,7 +169,7 @@ export default async function SeriesPage({
             <div className="pagination-row">
               <Link
                 className={`pagination-link ${safePage === 1 ? "is-disabled" : ""}`}
-                href={buildHref({ page: Math.max(1, safePage - 1), sort, origin })}
+                href={buildHref({ page: Math.max(1, safePage - 1), sort, format, origin })}
               >
                 前へ
               </Link>
@@ -153,7 +178,7 @@ export default async function SeriesPage({
               </span>
               <Link
                 className={`pagination-link ${safePage === totalPages ? "is-disabled" : ""}`}
-                href={buildHref({ page: Math.min(totalPages, safePage + 1), sort, origin })}
+                href={buildHref({ page: Math.min(totalPages, safePage + 1), sort, format, origin })}
               >
                 次へ
               </Link>

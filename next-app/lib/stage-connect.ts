@@ -94,6 +94,7 @@ export type SeriesListItem = {
   name: string;
   description: string | null;
   playCount: number;
+  format: string | null;
   originType: string | null;
   updatedAt: string | null;
 };
@@ -862,10 +863,34 @@ export async function getSeriesList(): Promise<SeriesListItem[]> {
   if (!hasSupabaseEnv) return [];
   const supabase = createSupabaseServerClient();
 
-  const [{ data: franchises, error: franchiseError }, { data: plays, error: playError }] = await Promise.all([
-    supabase.from("franchises").select("id, slug, name, description, origin_type").order("name", { ascending: true }),
+  const [{ data: plays, error: playError }] = await Promise.all([
     supabase.from("plays").select("id, franchise_id, created_at"),
   ]);
+
+  let franchises: any[] | null = null;
+  let franchiseError: any = null;
+
+  {
+    const res = await supabase
+      .from("franchises")
+      .select("id, slug, name, description, format, origin_type")
+      .order("name", { ascending: true });
+    franchises = res.data as any[] | null;
+    franchiseError = res.error;
+  }
+
+  if (franchiseError && /format/i.test(String(franchiseError.message ?? ""))) {
+    const fallback = await supabase
+      .from("franchises")
+      .select("id, slug, name, description, origin_type")
+      .order("name", { ascending: true });
+    franchises =
+      (fallback.data as any[] | null)?.map((row) => ({
+        ...row,
+        format: null,
+      })) ?? null;
+    franchiseError = fallback.error;
+  }
 
   if (franchiseError) throw franchiseError;
   if (playError) throw playError;
@@ -891,6 +916,7 @@ export async function getSeriesList(): Promise<SeriesListItem[]> {
       name: row.name as string,
       description: (row.description as string | null) ?? null,
       playCount: countByFranchise.get(row.id as string) ?? 0,
+      format: (row.format as string | null) ?? null,
       originType: (row.origin_type as string | null) ?? null,
       updatedAt: latestPlayByFranchise.get(row.id as string) ?? null,
     }))
@@ -900,6 +926,7 @@ export async function getSeriesList(): Promise<SeriesListItem[]> {
       name: row.name,
       description: row.description,
       playCount: row.playCount,
+      format: row.format,
       originType: row.originType,
       updatedAt: row.updatedAt,
     }))
