@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { getSeriesList, toPlainText, truncate } from "../../lib/stage-connect";
 
 type SearchParamValue = string | string[] | undefined;
@@ -79,6 +80,7 @@ export default async function SeriesPage({
   return (
     <main className="container" style={{ paddingBlock: 32 }}>
       <div className="stack-lg">
+        <Breadcrumbs items={[{ label: "シリーズ一覧" }]} />
         <section className="hero-card stack-md">
           <div className="stack-sm">
             <span className="eyebrow">Series</span>

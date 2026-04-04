@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ActorCoStarsClient } from "../../../components/ActorCoStarsClient";
+import { Breadcrumbs } from "../../../components/Breadcrumbs";
 import { ActorProfileClient } from "../../../components/ActorProfileClient";
 import { FavoriteButtonClient } from "../../../components/FavoriteButtonClient";
 import { ShareButtonClient } from "../../../components/ShareButtonClient";
@@ -146,6 +147,7 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
       />
 
       <div className="stack-lg">
+        <Breadcrumbs items={[{ label: "俳優一覧", href: "/actors" }, { label: actor.name }]} />
         <section className="hero-card stack-md">
           <div className="detail-hero-grid">
             <div className="detail-monogram" aria-hidden="true">

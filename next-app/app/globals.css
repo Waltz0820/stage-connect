@@ -58,6 +58,45 @@ a {
   margin: 0 auto;
 }
 
+.breadcrumbs {
+  margin-bottom: 20px;
+}
+
+.breadcrumbs__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: rgba(229, 226, 217, 0.56);
+}
+
+.breadcrumbs__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+
+.breadcrumbs__divider {
+  color: rgba(229, 226, 217, 0.32);
+}
+
+.breadcrumbs__link {
+  color: rgba(229, 226, 217, 0.64);
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+
+.breadcrumbs__link:hover {
+  color: rgba(248, 245, 239, 0.92);
+}
+
+.breadcrumbs__current {
+  color: rgba(248, 245, 239, 0.9);
+}
+
 .site-header {
   position: sticky;
   top: 0;

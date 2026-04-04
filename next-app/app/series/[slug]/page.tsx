@@ -1,6 +1,7 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Breadcrumbs } from "../../../components/Breadcrumbs";
 import { RelatedSeriesClient } from "../../../components/RelatedSeriesClient";
 import { SeriesCastOverviewClient } from "../../../components/SeriesCastOverviewClient";
 import { getSeriesDetailBySlug, toPlainText, truncate } from "../../../lib/stage-connect";
@@ -146,6 +147,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       <div className="stack-lg">
+        <Breadcrumbs items={[{ label: "??????", href: "/series" }, { label: series.name }]} />
         <section className="hero-card stack-md">
           <div className="stack-sm detail-ledger-shell">
             <h1 className="page-title">{series.name}</h1>

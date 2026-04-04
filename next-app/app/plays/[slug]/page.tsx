@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Breadcrumbs } from "../../../components/Breadcrumbs";
 import { DetailToggleClient } from "../../../components/DetailToggleClient";
 import { FavoriteButtonClient } from "../../../components/FavoriteButtonClient";
 import { ShareButtonClient } from "../../../components/ShareButtonClient";
@@ -306,6 +307,7 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
       />
 
       <div className="stack-lg">
+        <Breadcrumbs items={[{ label: "作品一覧", href: "/plays" }, { label: play.title }]} />
         <section className="hero-card stack-md">
           <div className="stack-sm detail-ledger-shell">
             {play.franchiseSlug && play.franchiseName ? (

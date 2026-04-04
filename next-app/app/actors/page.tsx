@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { FavoriteButtonClient } from "../../components/FavoriteButtonClient";
 import {
   formatBirthday,
@@ -66,6 +67,7 @@ export default async function ActorsPage({
   return (
     <main className="container" style={{ paddingBlock: 32 }}>
       <div className="stack-lg">
+        <Breadcrumbs items={[{ label: "俳優一覧" }]} />
         <section className="hero-card stack-md">
           <div className="stack-sm">
             <span className="eyebrow">Actors</span>
