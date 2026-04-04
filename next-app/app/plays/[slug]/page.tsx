@@ -550,13 +550,15 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
                   {group.name ? <div className="group-chip">{group.name}</div> : null}
                   <div className="cast-grid">
                     {group.items.map((item) => (
-                      <article className="cast-card" key={`${item.slug}-${item.roleName ?? "cast"}-${group.name ?? "ungrouped"}`}>
-                        <Link href={`/actors/${item.slug}`} className="cast-name">
-                          {item.name}
-                        </Link>
+                      <Link
+                        href={`/actors/${item.slug}`}
+                        className="cast-card cast-card-link"
+                        key={`${item.slug}-${item.roleName ?? "cast"}-${group.name ?? "ungrouped"}`}
+                      >
+                        <div className="cast-name">{item.name}</div>
                         {item.roleName ? <div className="cast-role">{summarizeRoleName(item.roleName)}</div> : null}
                         {item.isStarring ? <div className="cast-badge">MAIN CAST</div> : null}
-                      </article>
+                      </Link>
                     ))}
                   </div>
                 </div>

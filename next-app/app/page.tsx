@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { getTrendingTags } from "../lib/stage-connect";
 
@@ -43,7 +43,7 @@ export default async function HomePage() {
       <div className="home-hero__spotlight" />
       <div className="home-hero__inner">
         <div className="home-hero__copy">
-          <span className="home-hero__eyebrow">ステコネ</span>
+          <span className="home-hero__eyebrow">Stage Connect</span>
 
           <h1 className="home-hero__title">
             2.5次元舞台と
