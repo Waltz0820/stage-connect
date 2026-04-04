@@ -59,7 +59,7 @@ a {
 }
 
 .breadcrumbs {
-  margin-bottom: 12px;
+  margin-bottom: -10px;
 }
 
 .breadcrumbs__list {
@@ -95,6 +95,10 @@ a {
 
 .breadcrumbs__current {
   color: rgba(248, 245, 239, 0.9);
+}
+
+.stack-lg > .breadcrumbs + * {
+  margin-top: -6px;
 }
 
 .site-header {
