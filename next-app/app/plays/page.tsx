@@ -28,6 +28,35 @@ const GENRE_LABELS: Record<string, string> = {
   other: "その他",
 };
 
+const compactListPeriod = (period?: string | null) => {
+  if (!period) return null;
+
+  const slashDate = period.match(/(\d{4})\/(\d{1,2})\/(\d{1,2})/);
+  if (slashDate) {
+    const [, year, month, day] = slashDate;
+    return `${year}/${month.padStart(2, "0")}/${day.padStart(2, "0")}-`;
+  }
+
+  const jpDate = period.match(/(\d{4})年\s*(\d{1,2})月\s*(\d{1,2})日/);
+  if (jpDate) {
+    const [, year, month, day] = jpDate;
+    return `${year}/${month.padStart(2, "0")}/${day.padStart(2, "0")}-`;
+  }
+
+  const yearMonth = period.match(/(\d{4})\D{0,2}(\d{1,2})/);
+  if (yearMonth) {
+    const [, year, month] = yearMonth;
+    return `${year}/${month.padStart(2, "0")}-`;
+  }
+
+  const yearOnly = period.match(/(\d{4})/);
+  if (yearOnly) {
+    return `${yearOnly[1]}-`;
+  }
+
+  return period;
+};
+
 const getSingleParam = (value: SearchParamValue) => (Array.isArray(value) ? value[0] : value) ?? "";
 
 const buildHref = (params: Record<string, string | number | null | undefined>) => {
@@ -172,8 +201,16 @@ export default async function PlaysPage({
 
                 <Link className="catalog-card__body-link" href={`/plays/${play.slug}`}>
                   {play.franchiseName ? <div className="catalog-card__sub">{play.franchiseName}</div> : null}
-                  {play.period ? <div className="catalog-card__sub mono">{play.period}</div> : null}
-                  {play.genre ? <div className="catalog-card__sub">{GENRE_LABELS[play.genre] ?? play.genre}</div> : null}
+                  {compactListPeriod(play.period) ? (
+                    <div className="catalog-card__sub">
+                      <strong className="strong-inline">日程:</strong> <span className="mono">{compactListPeriod(play.period)}</span>
+                    </div>
+                  ) : null}
+                  {play.genre ? (
+                    <div className="catalog-card__sub">
+                      <strong className="strong-inline">ジャンル:</strong> {GENRE_LABELS[play.genre] ?? play.genre}
+                    </div>
+                  ) : null}
 
                   {play.summary ? (
                     <div className="catalog-card__text">{truncate(toPlainText(play.summary), 140)}</div>
