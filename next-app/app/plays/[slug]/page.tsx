@@ -307,7 +307,7 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
       />
 
       <div className="stack-lg">
-        <Breadcrumbs items={[{ label: "作品一覧", href: "/plays" }, { label: play.title }]} />
+        <Breadcrumbs items={[{ label: "\u4f5c\u54c1\u4e00\u89a7", href: "/plays" }]} />
         <section className="hero-card stack-md">
           <div className="stack-sm detail-ledger-shell">
             {play.franchiseSlug && play.franchiseName ? (

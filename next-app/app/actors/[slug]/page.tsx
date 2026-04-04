@@ -147,7 +147,7 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
       />
 
       <div className="stack-lg">
-        <Breadcrumbs items={[{ label: "俳優一覧", href: "/actors" }, { label: actor.name }]} />
+        <Breadcrumbs items={[{ label: "\u4ff3\u512a\u4e00\u89a7", href: "/actors" }]} />
         <section className="hero-card stack-md">
           <div className="detail-hero-grid">
             <div className="detail-monogram" aria-hidden="true">
