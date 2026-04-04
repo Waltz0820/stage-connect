@@ -59,8 +59,8 @@ a {
 }
 
 .breadcrumbs {
-  margin-top: -18px;
-  margin-bottom: -14px;
+  margin-top: -10px;
+  margin-bottom: -18px;
 }
 
 .breadcrumbs__list {
@@ -99,7 +99,7 @@ a {
 }
 
 .stack-lg > .breadcrumbs + * {
-  margin-top: -6px;
+  margin-top: -10px;
 }
 
 .site-header {
