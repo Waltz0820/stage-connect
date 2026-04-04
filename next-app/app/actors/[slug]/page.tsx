@@ -153,7 +153,7 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
             </div>
 
             <div className="detail-hero-copy">
-              <div className="title-subtle">Actor Profile</div>
+              <div className="title-subtle">俳優プロフィール</div>
               <h1 className="page-title">{actor.name}</h1>
               {actor.kana ? <div className="muted">{actor.kana}</div> : null}
             </div>
@@ -188,7 +188,7 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
                 <div className="timeline-dot" />
                 <div className="timeline-year-heading">
                   <span className="timeline-year">{group.year}</span>
-                  <span className="timeline-year-sub">YEAR</span>
+                  <span className="timeline-year-sub">公開年</span>
                 </div>
 
                 <div className="cast-grid cast-grid-wide">
@@ -244,7 +244,7 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Official
+                  公式サイト
                 </a>
               ) : null}
               {actor.sns?.youtube ? (

@@ -148,7 +148,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
       <div className="stack-lg">
         <section className="hero-card stack-md">
           <div className="stack-sm detail-ledger-shell">
-            <div className="title-subtle">Series File</div>
+            <div className="title-subtle">シリーズ資料</div>
             <h1 className="page-title">{series.name}</h1>
             <div className="pill-row">
               <span className="pill accent-pill">作品数: {series.plays.length}</span>
@@ -156,15 +156,15 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
             </div>
             <div className="detail-ledger">
               <div className="detail-ledger__item">
-                <span className="detail-ledger__label">TYPE</span>
+                <span className="detail-ledger__label">種別</span>
                 <strong>{series.originType || "Series"}</strong>
               </div>
               <div className="detail-ledger__item">
-                <span className="detail-ledger__label">PLAYS</span>
+                <span className="detail-ledger__label">作品数</span>
                 <strong>{series.plays.length}</strong>
               </div>
               <div className="detail-ledger__item">
-                <span className="detail-ledger__label">START</span>
+                <span className="detail-ledger__label">開始年</span>
                 <strong>{startYear ?? "--"}</strong>
               </div>
             </div>
@@ -172,7 +172,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
         </section>
 
         <section className="section-card stack-md">
-          <h2 className="section-title">Series Info</h2>
+          <h2 className="section-title">シリーズ情報</h2>
           <div className="rich-text">
             {series.description || `${series.name} のシリーズ情報を掲載しています。`}
           </div>
@@ -209,7 +209,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
                 <div className="timeline-dot" />
                 <div className="timeline-year-heading">
                   <span className="timeline-year">{compactTimelinePeriod(play.period)}</span>
-                  <span className="timeline-year-sub">RELEASE</span>
+                  <span className="timeline-year-sub">公開時期</span>
                 </div>
 
                 <article className="catalog-card">

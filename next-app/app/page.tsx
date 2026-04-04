@@ -43,7 +43,7 @@ export default async function HomePage() {
       <div className="home-hero__spotlight" />
       <div className="home-hero__inner">
         <div className="home-hero__copy">
-          <span className="home-hero__eyebrow">Stage Connect</span>
+          <span className="home-hero__eyebrow">ステコネ</span>
 
           <h1 className="home-hero__title">
             2.5次元舞台と
@@ -72,7 +72,7 @@ export default async function HomePage() {
         <div className="home-tag-cloud">
           <h3 className="home-tag-cloud__title">
             <span />
-            TREND WORDS
+            注目ワード
             <span />
           </h3>
 
