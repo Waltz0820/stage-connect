@@ -201,16 +201,16 @@ export default async function PlaysPage({
 
                 <Link className="catalog-card__body-link" href={`/plays/${play.slug}`}>
                   {play.franchiseName ? <div className="catalog-card__sub">{play.franchiseName}</div> : null}
-                  {compactListPeriod(play.period) ? (
-                    <div className="catalog-card__sub">
-                      <strong className="strong-inline">日程:</strong> <span className="mono">{compactListPeriod(play.period)}</span>
-                    </div>
-                  ) : null}
-                  {play.genre ? (
-                    <div className="catalog-card__sub">
-                      <strong className="strong-inline">ジャンル:</strong> {GENRE_LABELS[play.genre] ?? play.genre}
-                    </div>
-                  ) : null}
+                {compactListPeriod(play.period) ? (
+                  <div className="catalog-card__sub">
+                    日程: <span className="mono">{compactListPeriod(play.period)}</span>
+                  </div>
+                ) : null}
+                {play.genre ? (
+                  <div className="catalog-card__sub">
+                    ジャンル: {GENRE_LABELS[play.genre] ?? play.genre}
+                  </div>
+                ) : null}
 
                   {play.summary ? (
                     <div className="catalog-card__text">{truncate(toPlainText(play.summary), 140)}</div>
