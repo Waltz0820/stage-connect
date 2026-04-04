@@ -151,7 +151,7 @@ export default async function PlaysPage({
                 <div className="catalog-card__top">
                   <div className="catalog-card__title">{play.title}</div>
                   <div className="catalog-card__top-actions">
-                    {play.franchiseFormat ? (
+                    {format === "all" && play.franchiseFormat ? (
                       <span className="catalog-card__badge">
                         {FORMAT_LABELS[play.franchiseFormat] ?? play.franchiseFormat}
                       </span>

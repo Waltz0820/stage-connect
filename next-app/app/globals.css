@@ -1355,16 +1355,20 @@ a {
 }
 
 .catalog-card__top-actions {
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
   gap: 8px;
   flex: 0 0 auto;
+  max-width: 42%;
 }
 
 .catalog-card__title {
   font-size: 18px;
   font-weight: 800;
   line-height: 1.45;
+  min-width: 0;
 }
 
 .catalog-card__body-link {
