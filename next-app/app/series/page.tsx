@@ -138,17 +138,17 @@ export default async function SeriesPage({
           <div className="catalog-grid">
             {visibleSeries.map((series) => (
               <article className="catalog-card" key={series.slug}>
-                <div className="catalog-card__top catalog-card__top--stack">
-                  <div className="catalog-card__title">{series.name}</div>
-                  <div className="catalog-card__top-actions">
-                    {format === "all" && series.format ? (
-                      <span className="catalog-card__badge">{FORMAT_LABELS[series.format] ?? series.format}</span>
-                    ) : null}
-                    <span className="catalog-card__badge">{series.playCount}作品</span>
-                  </div>
-                </div>
-
                 <Link className="catalog-card__body-link" href={`/series/${series.slug}`}>
+                  <div className="catalog-card__top catalog-card__top--stack">
+                    <div className="catalog-card__title">{series.name}</div>
+                    <div className="catalog-card__top-actions">
+                      {format === "all" && series.format ? (
+                        <span className="catalog-card__badge">{FORMAT_LABELS[series.format] ?? series.format}</span>
+                      ) : null}
+                      <span className="catalog-card__badge">{series.playCount}作品</span>
+                    </div>
+                  </div>
+
                   {series.originType ? <div className="catalog-card__sub">{series.originType}</div> : null}
 
                   {series.description ? (
