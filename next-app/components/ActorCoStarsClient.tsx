@@ -14,10 +14,16 @@ type Props = {
   coStars: CoStar[];
 };
 
+const INITIAL_VISIBLE_COUNT = 5;
+const MAX_VISIBLE_COUNT = 30;
+
 export function ActorCoStarsClient({ coStars }: Props) {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(true);
-  const visible = coStars.slice(0, 5);
+
+  const visible = coStars.slice(0, INITIAL_VISIBLE_COUNT);
+  const modalItems = coStars.slice(0, MAX_VISIBLE_COUNT);
+  const hasMoreThanModalLimit = coStars.length > MAX_VISIBLE_COUNT;
 
   useEffect(() => {
     const media = window.matchMedia("(max-width: 979px), (hover: none) and (pointer: coarse)");
@@ -37,7 +43,7 @@ export function ActorCoStarsClient({ coStars }: Props) {
     <section className="section-card stack-md">
       <div className="section-header-inline">
         <h2 className="section-title">共演ネットワーク</h2>
-        <span className="pill">共演数の多いキャスト</span>
+        <span className="pill">共演数の多い俳優</span>
       </div>
 
       {isMobile ? (
@@ -79,7 +85,7 @@ export function ActorCoStarsClient({ coStars }: Props) {
       {coStars.length > visible.length ? (
         <>
           <button type="button" className="action-button" onClick={() => setIsOpen(true)}>
-            全員を見る ({coStars.length}人)
+            上位{Math.min(coStars.length, MAX_VISIBLE_COUNT)}人を見る
           </button>
 
           {isOpen ? (
@@ -91,7 +97,12 @@ export function ActorCoStarsClient({ coStars }: Props) {
             >
               <div className="next-modal-panel">
                 <div className="next-modal-header">
-                  <p className="next-modal-title">共演ネットワーク ({coStars.length}人)</p>
+                  <div className="stack-xs">
+                    <p className="next-modal-title">共演ネットワーク</p>
+                    <p className="catalog-note">
+                      共演数の多い上位{Math.min(coStars.length, MAX_VISIBLE_COUNT)}人を表示しています。
+                    </p>
+                  </div>
                   <button type="button" className="next-modal-close" onClick={() => setIsOpen(false)}>
                     閉じる
                   </button>
@@ -99,12 +110,8 @@ export function ActorCoStarsClient({ coStars }: Props) {
 
                 <div className="next-modal-body">
                   <div className="cast-grid cast-grid-wide">
-                    {coStars.map((coStar, index) => (
-                      <Link
-                        className="cast-card cast-card-link"
-                        href={`/actors/${coStar.slug}`}
-                        key={`${coStar.slug}-modal`}
-                      >
+                    {modalItems.map((coStar, index) => (
+                      <Link className="cast-card cast-card-link" href={`/actors/${coStar.slug}`} key={`${coStar.slug}-modal`}>
                         <div className="series-rank-row">
                           <span className="series-rank-badge">{index + 1}</span>
                           <div className="series-rank-count">共演 {coStar.count}作品</div>
@@ -118,6 +125,10 @@ export function ActorCoStarsClient({ coStars }: Props) {
                       </Link>
                     ))}
                   </div>
+
+                  {hasMoreThanModalLimit ? (
+                    <p className="catalog-note">表示件数を絞るため、共演数の多い順に上位{MAX_VISIBLE_COUNT}人まで掲載しています。</p>
+                  ) : null}
                 </div>
               </div>
             </div>
