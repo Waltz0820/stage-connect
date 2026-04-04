@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { RelatedSeriesClient } from "../../../components/RelatedSeriesClient";
@@ -148,7 +148,6 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
       <div className="stack-lg">
         <section className="hero-card stack-md">
           <div className="stack-sm detail-ledger-shell">
-            <div className="title-subtle">シリーズ資料</div>
             <h1 className="page-title">{series.name}</h1>
             <div className="pill-row">
               <span className="pill accent-pill">作品数: {series.plays.length}</span>
@@ -157,7 +156,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
             <div className="detail-ledger">
               <div className="detail-ledger__item">
                 <span className="detail-ledger__label">種別</span>
-                <strong>{series.originType || "Series"}</strong>
+                <strong>{series.originType || "シリーズ"}</strong>
               </div>
               <div className="detail-ledger__item">
                 <span className="detail-ledger__label">作品数</span>

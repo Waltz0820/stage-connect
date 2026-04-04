@@ -315,7 +315,6 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
             ) : null}
 
             <div>
-              <div className="title-subtle">Stage File</div>
               <h1 className="page-title">{play.title}</h1>
             </div>
 
@@ -341,16 +340,16 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
 
             <div className="detail-ledger">
               <div className="detail-ledger__item">
-                <span className="detail-ledger__label">CAST</span>
+                <span className="detail-ledger__label">出演</span>
                 <strong>{play.cast.length}</strong>
               </div>
               <div className="detail-ledger__item">
-                <span className="detail-ledger__label">SERIES</span>
-                <strong>{play.franchiseName || "Standalone"}</strong>
+                <span className="detail-ledger__label">シリーズ</span>
+                <strong>{play.franchiseName || "単独作品"}</strong>
               </div>
               <div className="detail-ledger__item">
-                <span className="detail-ledger__label">VOD</span>
-                <strong>{hasVod ? "AVAILABLE" : "NONE"}</strong>
+                <span className="detail-ledger__label">配信</span>
+                <strong>{hasVod ? "配信あり" : "未配信"}</strong>
               </div>
             </div>
           </div>
