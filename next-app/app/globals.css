@@ -59,15 +59,15 @@ a {
 }
 
 .breadcrumbs {
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 .breadcrumbs__list {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 4px;
   align-items: center;
-  font-size: 12px;
+  font-size: 11px;
   letter-spacing: 0.12em;
   color: rgba(229, 226, 217, 0.56);
 }
@@ -75,7 +75,7 @@ a {
 .breadcrumbs__item {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 4px;
   min-width: 0;
 }
 
