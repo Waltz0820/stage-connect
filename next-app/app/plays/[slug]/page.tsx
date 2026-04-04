@@ -39,7 +39,7 @@ const splitSlashList = (value?: string | null) =>
 const summarizeRoleName = (value?: string | null) => {
   const roles = splitSlashList(value);
   if (roles.length <= 3) return value ?? null;
-  return `${roles.slice(0, 3).join(" / ")} / ほぁE{roles.length - 3}役`;
+  return `${roles.slice(0, 3).join(" / ")} / ほか${roles.length - 3}役`;
 };
 
 const parseScheduleEntries = (period?: string | null) =>
@@ -51,7 +51,7 @@ const parseScheduleEntries = (period?: string | null) =>
 const normalizeScheduleCity = (city: string) =>
   city
     .trim()
-    .replace(/(?:冁E?凱旁Egu, "")
+    .replace(/(?:再)?凱旋/gu, "")
     .trim();
 
 const extractPeriodSummary = (period?: string | null) => {
@@ -102,7 +102,7 @@ const extractPeriodSummary = (period?: string | null) => {
 const extractScheduleCities = (period?: string | null) => {
   const cities = parseScheduleEntries(period)
     .map((entry) => {
-      const colonSplit = entry.split(/[:�E�]/);
+      const colonSplit = entry.split(/[:：]/);
       if (colonSplit.length > 1) return normalizeScheduleCity(colonSplit[0]);
       const direct = entry.match(/^([^\d]+?)\s+\d{4}\//);
       return direct ? normalizeScheduleCity(direct[1]) : "";
@@ -116,7 +116,7 @@ const summarizeVenues = (venue?: string | null) => {
   const venues = splitSlashList(venue);
   if (venues.length === 0) return null;
   if (venues.length <= 3) return venues.join(" / ");
-  return `${venues.slice(0, 2).join(" / ")} / ほぁE{venues.length - 2}会場`;
+  return `${venues.slice(0, 2).join(" / ")} / ほか${venues.length - 2}会場`;
 };
 
 const groupCast = (
@@ -174,7 +174,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
 
   if (!play) {
     return {
-      title: "作品が見つかりません | Stage Connect�E�スチE��ネ！E,
+      title: "作品が見つかりません | Stage Connect",
       robots: {
         index: false,
         follow: false,
@@ -185,13 +185,13 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   const castText = summarizeCast(play.cast);
   const description = truncate(
     toPlainText(
-      play.summary || `${play.title}の公演データと出演キャスト情報をまとめた作品詳細ペ�Eジです。主な出演�E ${castText} です。`
+      play.summary || `${play.title}の公演データと出演キャスト情報をまとめた作品詳細ページです。主な出演は ${castText} です。`
     ),
     150
   );
 
   return {
-    title: `${play.title}�E�キャスト�E配信�E�EOD�E��E公演情報 | Stage Connect�E�スチE��ネ）`,
+    title: `${play.title}｜キャスト・配信（VOD）・公演情報 - Stage Connect`,
     description,
     alternates: {
       canonical: `/plays/${play.slug}`,
@@ -218,15 +218,13 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
   const shouldShowScheduleDetailToggle =
     (Boolean(play.period) && (shouldCollapseSchedule || scheduleEntries.length > 1)) ||
     (Boolean(play.venue) && (shouldCollapseSchedule || venueList.length > 1));
-  const visibleCreditItems = creditItems.slice(0, 3);
-  const hiddenCreditItems = creditItems.slice(3);
 
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "CreativeWork",
     name: play.title,
     description: toPlainText(
-      play.summary || `${play.title}の公演データと出演キャスト情報をまとめた作品詳細ペ�Eジです。`
+      play.summary || `${play.title}の公演データと出演キャスト情報をまとめた作品詳細ページです。`
     ),
     url: `${siteUrl}/plays/${play.slug}`,
     keywords: play.tags.join(", "),
@@ -245,55 +243,55 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
       ? [
           {
             "@type": "Question",
-            name: `${play.title}はどこで見られますか�E�`,
+            name: `${play.title}はどこで見られますか？`,
             acceptedAnswer: {
               "@type": "Answer",
-              text: "DMM TVで配信されてぁE��場合があります。見放題対象かレンタルか�E作品によって異なります�Eで、詳細は「�E信で見る」セクションからご確認ください、EMMプレミアムなめE4日間�E無料トライアルがあります、E,
+              text: "DMM TVで配信されている場合があります。見放題対象かレンタルかは作品によって異なりますので、詳細は「配信で見る」セクションからご確認ください。DMMプレミアムなら14日間の無料トライアルがあります。",
             },
           },
           {
             "@type": "Question",
-            name: "無料で視�Eできる期間はありますか�E�E,
+            name: "無料で視聴できる期間はありますか？",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "DMMプレミアムでは14日間�E無料トライアルを提供してぁE��す。期間中は対象作品を追加料��なしで視�Eできる場合があります、E,
+              text: "DMMプレミアムでは14日間の無料トライアルを提供しています。期間中は対象作品を追加料金なしで視聴できる場合があります。",
             },
           },
           {
             "@type": "Question",
-            name: "出演キャスト�E誰ですか�E�E,
+            name: "出演キャストは誰ですか？",
             acceptedAnswer: {
               "@type": "Answer",
-              text: `主な出演老E�E${castSummary}です。�Eージ下部の「�E演キャスト」セクションで全キャスト詳細を確認できます。`,
+              text: `主な出演者は${castSummary}です。ページ下部の「出演キャスト」セクションで全キャスト詳細を確認できます。`,
             },
           },
-        ].slice(0, 2)
+        ]
       : [
           {
             "@type": "Question",
-            name: `${play.title}は現在配信されてぁE��すか�E�`,
+            name: `${play.title}は現在配信されていますか？`,
             acceptedAnswer: {
               "@type": "Answer",
-              text: "現在、主要な配信サービスでの取り扱ぁE��確認できなぁE��合があります。古ぁE.5次允E��品はDVD・Blu-ray化や再演で触れられるケースもあります。�E信状況�E随時確認してぁE��す、E,
+              text: "現在、主要な配信サービスでの取り扱いが確認できない場合があります。古い2.5次元作品はDVD・Blu-ray化や再演で触れられるケースもあります。配信状況は随時確認しています。",
             },
           },
           {
             "@type": "Question",
-            name: "こ�E作品を見る方法�Eありますか�E�E,
+            name: "この作品を見る方法はありますか？",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "配信が確認できなぁE��合�E、シリーズの他作品めE��連作品、DVD・Blu-ray展開、�E演情報などをあわせて確認する�Eがおすすめです、E,
+              text: "配信が確認できない場合は、シリーズの他作品や関連作品、DVD・Blu-ray展開、再演情報などをあわせて確認するのがおすすめです。",
             },
           },
           {
             "@type": "Question",
-            name: "出演キャスト�E誰ですか�E�E,
+            name: "出演キャストは誰ですか？",
             acceptedAnswer: {
               "@type": "Answer",
-              text: `主な出演老E�E${castSummary}です。�Eージ下部の「�E演キャスト」セクションで全キャスト詳細を確認できます。`,
+              text: `主な出演者は${castSummary}です。ページ下部の「出演キャスト」セクションで全キャスト詳細を確認できます。`,
             },
           },
-        ].slice(0, 2),
+        ],
   };
 
   return (
@@ -322,14 +320,8 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
             </div>
 
             <div className="detail-actions">
-              <FavoriteButtonClient
-                slug={play.slug}
-                type="play"
-                size="lg"
-                title={play.title}
-                franchiseName={play.franchiseName}
-              />
-              <ShareButtonClient title={play.title} text={`${play.title}の作品惁E�� | Stage Connect`} />
+              <FavoriteButtonClient slug={play.slug} type="play" size="lg" />
+              <ShareButtonClient title={play.title} text={`${play.title}の作品情報 | Stage Connect`} />
             </div>
 
             {play.tags.length > 0 ? (
@@ -367,17 +359,17 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
         <section className="section-card stack-md">
           <p className="lead">
             <strong className="strong-inline">{play.title}</strong>
-            の配信惁E���E�EOD�E�と公演データをまとめました。�E演キャスト�E{castSummary}、E
+            の配信情報（VOD）と公演データをまとめました。出演キャストは{castSummary}。
             {hasVod
-              ? "視�Eできるサービスがある場合�E、下記リンクから詳細を確認できます（�E信状況�E変動する場合があります）、E
-              : "現在、主要な配信サービスでの取り扱ぁE��報は確認中ですが、DVD/Blu-ray等で視�E可能な場合があります、E}
+              ? "視聴できるサービスがある場合は、下記リンクから詳細を確認できます（配信状況は変動する場合があります）。"
+              : "現在、主要な配信サービスでの取り扱い情報は確認中ですが、DVD/Blu-ray等で視聴可能な場合があります。"}
           </p>
         </section>
 
         <section className="section-card stack-md">
           <h2 className="section-title">あらすじ</h2>
           <div className="rich-text">
-            {play.summary || "あらすじ惁E��はまだありません、E}
+            {play.summary || "あらすじ情報はまだありません。"}
           </div>
         </section>
 
@@ -391,20 +383,32 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
                   <div>{scheduleSummary || play.period}</div>
                   {scheduleCities.length > 0 ? (
                     <div className="subtle-line">
-                      {scheduleCities.length}都币E/ {scheduleCities.slice(0, 5).join(" / ")}
+                      {scheduleCities.length}都市 / {scheduleCities.slice(0, 5).join(" / ")}
                       {scheduleCities.length > 5 ? " / ..." : ""}
                     </div>
                   ) : null}
+                  {false && (
+                    <details className="detail-block">
+                      <summary>詳細を見る</summary>
+                      <div className="detail-panel">{play?.period}</div>
+                    </details>
+                  )}
                 </div>
               </div>
             ) : null}
 
             {play.venue ? (
               <div className="meta-row">
-                <div className="meta-label accent-label">劁E��</div>
+                <div className="meta-label accent-label">劇場</div>
                 <div className="meta-value">
                   <div>{compactVenueSummary || play.venue}</div>
                   {venueList.length > 0 ? <div className="subtle-line">{venueList.length}会場</div> : null}
+                  {false && (
+                    <details className="detail-block">
+                      <summary>詳細を見る</summary>
+                      <div className="detail-panel">{play?.venue}</div>
+                    </details>
+                  )}
                 </div>
               </div>
             ) : null}
@@ -426,7 +430,7 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
                       {play.venue ? (
                         <div className="stack-sm">
                           <div className="muted" style={{ fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase" }}>
-                            劁E��
+                            劇場
                           </div>
                           <div>{play.venue}</div>
                         </div>
@@ -441,19 +445,19 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
 
         {creditItems.length > 0 ? (
           <section className="section-card stack-md">
-            <h2 className="section-title">スタチE�� / クレジチE��</h2>
+            <h2 className="section-title">スタッフ / クレジット</h2>
             <div className="meta-list roomy">
-              {visibleCreditItems.map((item) => (
-                <div className="meta-row" key={`${item.role}-${item.names.join("-")}`}>
-                  <div className="meta-label accent-label">{item.role}</div>
-                  <div className="meta-value">{item.names.join(" / ")}</div>
-                </div>
-              ))}
+              {creditItems.slice(0, 3).map((item) => (
+                  <div className="meta-row" key={`${item.role}-${item.names.join("-")}`}>
+                    <div className="meta-label accent-label">{item.role}</div>
+                    <div className="meta-value">{item.names.join(" / ")}</div>
+                  </div>
+                ))}
             </div>
-            {hiddenCreditItems.length > 0 ? (
-              <DetailToggleClient summary={`続きを読む�E�残り${hiddenCreditItems.length}件�E�`}>
+            {creditItems.length > 3 ? (
+              <DetailToggleClient summary={`続きを読む（残り${creditItems.length - 3}項目）`}>
                 <div className="meta-list roomy detail-credit-list">
-                  {hiddenCreditItems.map((item) => (
+                  {creditItems.slice(3).map((item) => (
                     <div className="meta-row" key={`${item.role}-${item.names.join("-")}`}>
                       <div className="meta-label accent-label">{item.role}</div>
                       <div className="meta-value">{item.names.join(" / ")}</div>
@@ -466,12 +470,12 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
         ) : null}
 
         <section className="section-card stack-md">
-          <h2 className="section-title">{hasVod ? "配信で見る" : "見る方法を探ぁE}</h2>
+          <h2 className="section-title">{hasVod ? "配信で見る" : "見る方法を探す"}</h2>
           {hasVod ? (
-            <p className="muted">DMMプレミアムなめE4日間無料でお試しできます、E/p>
+            <p className="muted">DMMプレミアムなら14日間無料でお試しできます。</p>
           ) : (
             <p className="muted">
-              現在こ�E作品の主要E�E信サービスでの取り扱ぁE�E確認中です。シリーズ作品めE�E演キャストから関連作品を探せます、E
+              現在この作品の主要配信サービスでの取り扱いは確認中です。シリーズ作品や出演キャストから関連作品を探せます。
             </p>
           )}
           <div className="action-row">
@@ -491,7 +495,7 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
               </a>
             ) : null}
             <Link className="action-button" href="/watch">
-              {hasVod ? "配信ガイドを見る" : "DMMで他作品を探ぁE}
+              {hasVod ? "配信ガイドを見る" : "DMMで他作品を探す"}
             </Link>
             {!hasVod && play.franchiseSlug ? (
               <Link className="action-button" href={`/series/${play.franchiseSlug}`}>
@@ -502,35 +506,35 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
         </section>
 
         <section className="section-card stack-md">
-          <h2 className="section-title">よくある質問！EAQ�E�E/h2>
+          <h2 className="section-title">よくある質問（FAQ）</h2>
           <div className="faq-grid">
             {hasVod ? (
               <>
                 <article className="faq-card">
-                  <h3 className="faq-question">{play.title}はどこで見られますか�E�E/h3>
+                  <h3 className="faq-question">{play.title}はどこで見られますか？</h3>
                   <p className="faq-answer">
-                    DMM TVで配信されてぁE��場合があります。見放題対象かレンタルか�E作品によって異なります�Eで、詳細は「�E信で見る」セクションからご確認ください、EMMプレミアムなめE4日間�E無料トライアルがあります、E
+                    DMM TVで配信されている場合があります。見放題対象かレンタルかは作品によって異なりますので、詳細は「配信で見る」セクションからご確認ください。DMMプレミアムなら14日間の無料トライアルがあります。
                   </p>
                 </article>
                 <article className="faq-card">
-                  <h3 className="faq-question">無料で視�Eできる期間はありますか�E�E/h3>
+                  <h3 className="faq-question">無料で視聴できる期間はありますか？</h3>
                   <p className="faq-answer">
-                    DMMプレミアムでは14日間�E無料トライアルを提供してぁE��す。期間中は対象作品を追加料��なしで視�Eできる場合があります、E
+                    DMMプレミアムでは14日間の無料トライアルを提供しています。期間中は対象作品を追加料金なしで視聴できる場合があります。
                   </p>
                 </article>
               </>
             ) : (
               <>
                 <article className="faq-card">
-                  <h3 className="faq-question">{play.title}は現在配信されてぁE��すか�E�E/h3>
+                  <h3 className="faq-question">{play.title}は現在配信されていますか？</h3>
                   <p className="faq-answer">
-                    現在、主要な配信サービスでの取り扱ぁE��確認できなぁE��合があります。古ぁE.5次允E��品はDVD・Blu-ray化や再演で触れられるケースもあります。�E信状況�E随時確認してぁE��す、E
+                    現在、主要な配信サービスでの取り扱いが確認できない場合があります。古い2.5次元作品はDVD・Blu-ray化や再演で触れられるケースもあります。配信状況は随時確認しています。
                   </p>
                 </article>
                 <article className="faq-card">
-                  <h3 className="faq-question">こ�E作品を見る方法�Eありますか�E�E/h3>
+                  <h3 className="faq-question">この作品を見る方法はありますか？</h3>
                   <p className="faq-answer">
-                    配信が確認できなぁE��合�E、シリーズの他作品めE��連作品、DVD・Blu-ray展開、�E演情報などをあわせて確認する�Eがおすすめです、E
+                    配信が確認できない場合は、シリーズの他作品や関連作品、DVD・Blu-ray展開、再演情報などをあわせて確認するのがおすすめです。
                   </p>
                 </article>
               </>
@@ -539,7 +543,7 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
         </section>
 
         <section className="section-card stack-md">
-          <h2 className="section-title">出演キャスチE/h2>
+          <h2 className="section-title">出演キャスト</h2>
           {play.cast.length > 0 ? (
             <div className="stack-md">
               {groupedCast.map((group, index) => (
@@ -547,22 +551,20 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
                   {group.name ? <div className="group-chip">{group.name}</div> : null}
                   <div className="cast-grid">
                     {group.items.map((item) => (
-                      <Link
-                        href={`/actors/${item.slug}`}
-                        className="cast-card cast-card-link"
-                        key={`${item.slug}-${item.roleName ?? "cast"}-${group.name ?? "ungrouped"}`}
-                      >
-                        <div className="cast-name">{item.name}</div>
+                      <article className="cast-card" key={`${item.slug}-${item.roleName ?? "cast"}-${group.name ?? "ungrouped"}`}>
+                        <Link href={`/actors/${item.slug}`} className="cast-name">
+                          {item.name}
+                        </Link>
                         {item.roleName ? <div className="cast-role">{summarizeRoleName(item.roleName)}</div> : null}
                         {item.isStarring ? <div className="cast-badge">MAIN CAST</div> : null}
-                      </Link>
+                      </article>
                     ))}
                   </div>
                 </div>
               ))}
             </div>
           ) : (
-            <p className="muted">登録されてぁE��出演キャスト�Eまだありません、E/p>
+            <p className="muted">登録されている出演キャストはまだありません。</p>
           )}
         </section>
       </div>
