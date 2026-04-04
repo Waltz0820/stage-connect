@@ -75,9 +75,7 @@ export default async function PlaysPage({
     genre === "all" ? formatFilteredPlays : formatFilteredPlays.filter((play) => String(play.genre ?? "") === genre);
 
   const sortedPlays = [...filteredPlays].sort((a, b) => {
-    if (sort === "old") {
-      return periodSortKey(a.period) - periodSortKey(b.period);
-    }
+    if (sort === "old") return periodSortKey(a.period) - periodSortKey(b.period);
     return periodSortKey(b.period) - periodSortKey(a.period);
   });
 
@@ -148,15 +146,9 @@ export default async function PlaysPage({
           <div className="catalog-grid">
             {visiblePlays.map((play) => (
               <article className="catalog-card" key={play.slug}>
-                <div className="catalog-card__top">
-                  <div className="catalog-card__title">{play.title}</div>
-                  <div className="catalog-card__top-actions">
-                    {format === "all" && play.franchiseFormat ? (
-                      <span className="catalog-card__badge">
-                        {FORMAT_LABELS[play.franchiseFormat] ?? play.franchiseFormat}
-                      </span>
-                    ) : null}
-                    {play.franchiseName ? <span className="catalog-card__badge">シリーズ</span> : null}
+                <div className="catalog-card__top catalog-card__top--stack">
+                  <div className="catalog-card__top-title-row">
+                    <div className="catalog-card__title">{play.title}</div>
                     <FavoriteButtonClient
                       slug={play.slug}
                       type="play"
@@ -165,6 +157,17 @@ export default async function PlaysPage({
                       franchiseName={play.franchiseName}
                     />
                   </div>
+
+                  {(format === "all" && play.franchiseFormat) || play.franchiseName ? (
+                    <div className="catalog-card__top-actions">
+                      {format === "all" && play.franchiseFormat ? (
+                        <span className="catalog-card__badge">
+                          {FORMAT_LABELS[play.franchiseFormat] ?? play.franchiseFormat}
+                        </span>
+                      ) : null}
+                      {play.franchiseName ? <span className="catalog-card__badge">シリーズ</span> : null}
+                    </div>
+                  ) : null}
                 </div>
 
                 <Link className="catalog-card__body-link" href={`/plays/${play.slug}`}>

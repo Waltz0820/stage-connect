@@ -138,7 +138,7 @@ export default async function SeriesPage({
           <div className="catalog-grid">
             {visibleSeries.map((series) => (
               <article className="catalog-card" key={series.slug}>
-                <div className="catalog-card__top">
+                <div className="catalog-card__top catalog-card__top--stack">
                   <div className="catalog-card__title">{series.name}</div>
                   <div className="catalog-card__top-actions">
                     {format === "all" && series.format ? (
