@@ -68,7 +68,7 @@ export function SeriesCastOverviewClient({ topActors }: Props) {
             <Link className="cast-card cast-card-link card-carousel-item" href={`/actors/${item.actor.slug}`} key={item.actor.slug}>
               <div className="series-rank-row">
                 <span className="series-rank-badge">{index + 1}</span>
-                <div className="series-rank-count">{item.count}作品</div>
+                <div className="series-rank-count">{item.count} 作品</div>
               </div>
               <div className="cast-name">{item.actor.name}</div>
               {summarizeGroups(item.groups) ? (
@@ -86,7 +86,7 @@ export function SeriesCastOverviewClient({ topActors }: Props) {
             <Link className="cast-card cast-card-link" href={`/actors/${item.actor.slug}`} key={`desktop-${item.actor.slug}`}>
               <div className="series-rank-row">
                 <span className="series-rank-badge">{index + 1}</span>
-                <div className="series-rank-count">{item.count}作品</div>
+                <div className="series-rank-count">{item.count} 作品</div>
               </div>
               <div className="cast-name">{item.actor.name}</div>
               {summarizeGroups(item.groups) ? (
@@ -103,52 +103,51 @@ export function SeriesCastOverviewClient({ topActors }: Props) {
       {topActors.length > Math.max(mobileVisible.length, desktopVisible.length) ? (
         <>
           <button type="button" className="action-button" onClick={() => setIsOpen(true)}>
-            すべての出演キャストを見る ({topActors.length}人)
+            すべての出演キャストを見る ({topActors.length} 人)
           </button>
 
-          {isOpen ? (
-            <div
-              className="next-modal-overlay"
-              onMouseDown={(event) => {
-                if (event.target === event.currentTarget) setIsOpen(false);
-              }}
-            >
-              <div className="next-modal-panel">
-                <div className="next-modal-header">
-                  <p className="next-modal-title">出演キャスト・役柄一覧</p>
-                  <button type="button" className="next-modal-close" onClick={() => setIsOpen(false)}>
-                    閉じる
-                  </button>
-                </div>
+          <div
+            className={`next-modal-overlay${isOpen ? " is-open" : ""}`}
+            aria-hidden={!isOpen}
+            onMouseDown={(event) => {
+              if (event.target === event.currentTarget) setIsOpen(false);
+            }}
+          >
+            <div className="next-modal-panel">
+              <div className="next-modal-header">
+                <p className="next-modal-title">出演キャスト・役柄一覧</p>
+                <button type="button" className="next-modal-close" onClick={() => setIsOpen(false)}>
+                  閉じる
+                </button>
+              </div>
 
-                <div className="next-modal-body">
-                  <div className="cast-grid cast-grid-wide">
-                    {topActors.map((item, index) => (
-                      <Link
-                        className="cast-card cast-card-link"
-                        href={`/actors/${item.actor.slug}`}
-                        key={`${item.actor.slug}-modal`}
-                      >
-                        <div className="series-rank-row">
-                          <span className="series-rank-badge">{index + 1}</span>
-                          <div className="series-rank-count">{item.count}作品</div>
+              <div className="next-modal-body">
+                <div className="cast-grid cast-grid-wide">
+                  {topActors.map((item, index) => (
+                    <Link
+                      className="cast-card cast-card-link"
+                      href={`/actors/${item.actor.slug}`}
+                      key={`${item.actor.slug}-modal`}
+                    >
+                      <div className="series-rank-row">
+                        <span className="series-rank-badge">{index + 1}</span>
+                        <div className="series-rank-count">{item.count} 作品</div>
+                      </div>
+                      <div className="cast-name">{item.actor.name}</div>
+                      {summarizeGroups(item.groups) ? (
+                        <div className="subtle-line" style={{ marginTop: 6 }}>
+                          {summarizeGroups(item.groups)}
                         </div>
-                        <div className="cast-name">{item.actor.name}</div>
-                        {summarizeGroups(item.groups) ? (
-                          <div className="subtle-line" style={{ marginTop: 6 }}>
-                            {summarizeGroups(item.groups)}
-                          </div>
-                        ) : null}
-                        {summarizeRoles(item.roles) ? (
-                          <div className="cast-role">{summarizeRoles(item.roles)}</div>
-                        ) : null}
-                      </Link>
-                    ))}
-                  </div>
+                      ) : null}
+                      {summarizeRoles(item.roles) ? (
+                        <div className="cast-role">{summarizeRoles(item.roles)}</div>
+                      ) : null}
+                    </Link>
+                  ))}
                 </div>
               </div>
             </div>
-          ) : null}
+          </div>
         </>
       ) : null}
     </section>

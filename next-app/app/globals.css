@@ -1962,6 +1962,16 @@ a {
   padding: 16px;
   background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(8px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.next-modal-overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .next-modal-panel {
