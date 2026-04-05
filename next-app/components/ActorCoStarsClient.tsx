@@ -15,12 +15,15 @@ type Props = {
 };
 
 const INITIAL_VISIBLE_COUNT = 5;
+const MAX_VISIBLE_COUNT = 30;
 
 export function ActorCoStarsClient({ coStars }: Props) {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(true);
 
   const visible = coStars.slice(0, INITIAL_VISIBLE_COUNT);
+  const modalVisible = coStars.slice(0, MAX_VISIBLE_COUNT);
+  const hiddenSeoItems = coStars.slice(MAX_VISIBLE_COUNT);
 
   useEffect(() => {
     const media = window.matchMedia("(max-width: 979px), (hover: none) and (pointer: coarse)");
@@ -96,7 +99,7 @@ export function ActorCoStarsClient({ coStars }: Props) {
               <div className="next-modal-header">
                 <div className="stack-xs">
                   <p className="next-modal-title">共演ネットワーク</p>
-                  <p className="catalog-note">共演数の多い俳優を {coStars.length} 人表示しています。</p>
+                  <p className="catalog-note">共演数の多い俳優を上位 {Math.min(coStars.length, MAX_VISIBLE_COUNT)} 人まで表示しています。</p>
                 </div>
                 <button type="button" className="next-modal-close" onClick={() => setIsOpen(false)}>
                   閉じる
@@ -105,7 +108,7 @@ export function ActorCoStarsClient({ coStars }: Props) {
 
               <div className="next-modal-body">
                 <div className="cast-grid cast-grid-wide">
-                  {coStars.map((coStar, index) => (
+                  {modalVisible.map((coStar, index) => (
                     <Link className="cast-card cast-card-link" href={`/actors/${coStar.slug}`} key={`${coStar.slug}-modal`}>
                       <div className="series-rank-row">
                         <span className="series-rank-badge">{index + 1}</span>
@@ -120,6 +123,20 @@ export function ActorCoStarsClient({ coStars }: Props) {
                     </Link>
                   ))}
                 </div>
+
+                {coStars.length > MAX_VISIBLE_COUNT ? (
+                  <p className="catalog-note">共演数の多い上位 {MAX_VISIBLE_COUNT} 人まで掲載しています。</p>
+                ) : null}
+
+                {hiddenSeoItems.length > 0 ? (
+                  <div className="seo-link-cluster" aria-hidden="true">
+                    {hiddenSeoItems.map((coStar) => (
+                      <Link href={`/actors/${coStar.slug}`} key={`${coStar.slug}-seo`}>
+                        {coStar.name}
+                      </Link>
+                    ))}
+                  </div>
+                ) : null}
               </div>
             </div>
           </div>
