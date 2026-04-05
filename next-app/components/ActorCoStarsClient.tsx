@@ -85,7 +85,7 @@ export function ActorCoStarsClient({ coStars }: Props) {
       {coStars.length > visible.length ? (
         <>
           <button type="button" className="action-button" onClick={() => setIsOpen(true)}>
-            すべて見る ({coStars.length} 人)
+            すべて見る（上位 {Math.min(coStars.length, MAX_VISIBLE_COUNT)} 人）
           </button>
 
           <div
