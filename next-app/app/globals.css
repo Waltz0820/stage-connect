@@ -1063,6 +1063,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  gap: 12px;
 }
 
 .detail-toggle__button {
@@ -1078,14 +1079,41 @@ a {
   cursor: pointer;
 }
 
+.detail-toggle__button--open {
+  align-self: flex-end;
+}
+
+.detail-toggle__panel {
+  margin-top: 0;
+}
+
+.detail-toggle:not(.is-open) .detail-toggle__panel {
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.detail-toggle:not(.is-open) .detail-toggle__content {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  border: 0;
+  white-space: nowrap;
+}
+
+.detail-toggle:not(.is-open) .detail-toggle__actions {
+  display: none;
+}
+
 .detail-toggle__actions {
   display: flex;
   justify-content: flex-end;
   margin-top: 12px;
-}
-
-.detail-toggle > .detail-toggle__button {
-  align-self: flex-end;
 }
 
 .muted {

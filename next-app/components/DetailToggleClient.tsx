@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useId, useState } from "react";
 
 type DetailToggleClientProps = {
   summary: string;
@@ -14,31 +14,32 @@ export function DetailToggleClient({
   children,
 }: DetailToggleClientProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const contentId = useId();
 
   return (
-    <div className="detail-toggle">
-      {!isOpen ? (
-        <button
-          type="button"
-          className="detail-toggle__button"
-          onClick={() => setIsOpen(true)}
-        >
-          {summary}
-        </button>
-      ) : (
-        <div className="detail-panel">
-          {children}
-          <div className="detail-toggle__actions">
-            <button
-              type="button"
-              className="detail-toggle__button"
-              onClick={() => setIsOpen(false)}
-            >
-              {closeLabel}
-            </button>
-          </div>
+    <div className={`detail-toggle${isOpen ? " is-open" : ""}`}>
+      <button
+        type="button"
+        className="detail-toggle__button detail-toggle__button--open"
+        aria-expanded={isOpen}
+        aria-controls={contentId}
+        onClick={() => setIsOpen(true)}
+      >
+        {summary}
+      </button>
+
+      <div className="detail-panel detail-toggle__panel" id={contentId}>
+        <div className="detail-toggle__content">{children}</div>
+        <div className="detail-toggle__actions">
+          <button
+            type="button"
+            className="detail-toggle__button"
+            onClick={() => setIsOpen(false)}
+          >
+            {closeLabel}
+          </button>
         </div>
-      )}
+      </div>
     </div>
   );
 }
