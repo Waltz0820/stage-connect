@@ -214,19 +214,21 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
                 </div>
 
                 <article className="catalog-card">
-                  <div className="catalog-card__top">
-                    <div>
-                      <div className="catalog-card__title">{play.title}</div>
+                  <Link className="catalog-card__body-link" href={`/plays/${play.slug}`}>
+                    <div className="catalog-card__top">
+                      <div>
+                        <div className="catalog-card__title">{play.title}</div>
+                      </div>
+                      {hasVod(play.vod) ? <span className="catalog-card__badge">\u914d\u4fe1\u3042\u308a</span> : null}
                     </div>
-                    {hasVod(play.vod) ? <span className="catalog-card__badge">配信あり</span> : null}
-                  </div>
 
-                  {play.summary ? <div className="catalog-card__text catalog-card__text--clamped">{play.summary}</div> : null}
+                    {play.summary ? <div className="catalog-card__text catalog-card__text--clamped">{play.summary}</div> : null}
+                  </Link>
 
                   <div className="catalog-card__footer">
                     <div className="action-row">
                       <Link className="action-button action-button-primary" href={`/plays/${play.slug}`}>
-                        作品詳細を見る
+                        \u4f5c\u54c1\u8a73\u7d30\u3092\u898b\u308b
                       </Link>
                       {play.vod?.dmm ? (
                         <a className="action-button" href={play.vod.dmm} target="_blank" rel="noopener noreferrer">
@@ -240,7 +242,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
                       ) : null}
                       {play.vod?.danime ? (
                         <a className="action-button" href={play.vod.danime} target="_blank" rel="noopener noreferrer">
-                          dアニメ
+                          d\u30a2\u30cb\u30e1
                         </a>
                       ) : null}
                     </div>
