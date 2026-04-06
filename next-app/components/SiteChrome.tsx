@@ -43,6 +43,7 @@ const copy = {
   en: {
     home: { href: "/en", label: "HOME" },
     primaryNav: [
+      { href: "/en/actors", label: "Actors" },
       { href: "/en/plays", label: "Plays" },
       { href: "/en/series", label: "Series" },
       { href: "/watch", label: "Streaming" },
@@ -263,7 +264,7 @@ export default function SiteChrome({ children }: { children: React.ReactNode }) 
               <h3>{labels.footerContent}</h3>
               <ul>
                 <li><Link href={locale === "en" ? "/en/plays" : "/plays"}>{labels.plays}</Link></li>
-                {locale === "ja" ? <li><Link href="/actors">{labels.actors}</Link></li> : null}
+                <li><Link href={locale === "en" ? "/en/actors" : "/actors"}>{labels.actors}</Link></li>
                 <li><Link href={locale === "en" ? "/en/series" : "/series"}>{labels.series}</Link></li>
                 <li><Link href="/guide">{labels.guide}</Link></li>
                 <li><Link href="/tags">{labels.tags}</Link></li>

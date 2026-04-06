@@ -61,14 +61,14 @@ export default async function EnglishHomePage() {
         </div>
 
         <div className="home-hero__actions">
-          <Link href="/en/plays" className="home-hero__button is-primary">
+          <Link href="/en/actors" className="home-hero__button is-primary">
+            Browse actors
+          </Link>
+          <Link href="/en/plays" className="home-hero__button">
             Browse plays
           </Link>
           <Link href="/en/series" className="home-hero__button">
             Browse series
-          </Link>
-          <Link href="/guide" className="home-hero__button">
-            Editorial guides
           </Link>
         </div>
 
