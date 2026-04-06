@@ -195,7 +195,11 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
     title: `${play.title}｜キャスト・配信（VOD）・公演情報 - Stage Connect`,
     description,
     alternates: {
-      canonical: `/plays/${play.slug}`,
+      canonical: `${siteUrl}/plays/${play.slug}`,
+      languages: {
+        ja: `${siteUrl}/plays/${play.slug}`,
+        en: `${siteUrl}/en/plays/${play.slug}`,
+      },
     },
   };
 }

@@ -1,17 +1,17 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
-import { getTrendingTags } from "../lib/stage-connect";
+import { getTrendingTags } from "../../lib/stage-connect";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
 
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Stage Connect（ステコネ） | 2.5次元舞台・ミュージカルのキャスト・作品アーカイブ",
+  title: "Stage Connect | 2.5D Stage Play & Musical Archive",
   description:
-    "Stage Connect（ステコネ）は、2.5次元舞台・ミュージカルの作品とキャストをつなぐデジタルアーカイブです。出演者・配信（VOD）・公演情報・シリーズ情報をまとめて確認できます。",
+    "Stage Connect is a digital archive for 2.5D stage plays and musicals. Browse productions, series, cast connections, and streaming availability from one place.",
   alternates: {
-    canonical: siteUrl,
+    canonical: `${siteUrl}/en`,
     languages: {
       ja: siteUrl,
       en: `${siteUrl}/en`,
@@ -19,12 +19,12 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function HomePage() {
+export default async function EnglishHomePage() {
   const trendingTags = await getTrendingTags(25);
 
   const watchLinks = [
-    { key: "vod", label: "VOD", to: "/watch" },
-    { key: "dmm", label: "DMM", to: "/watch/dmm" },
+    { key: "vod", label: "Streaming", to: "/watch" },
+    { key: "dmm", label: "DMM TV", to: "/watch/dmm" },
     { key: "unext", label: "U-NEXT", to: "/watch/u-next" },
   ];
 
@@ -50,33 +50,32 @@ export default async function HomePage() {
           <span className="home-hero__eyebrow">Stage Connect</span>
 
           <h1 className="home-hero__title">
-            2.5次元舞台と
-            <span className="is-accent">キャストをつなぐ</span>
+            Track 2.5D stage works
+            <span className="is-accent">through cast and series</span>
           </h1>
 
           <p className="home-hero__lead">
-            作品・シリーズ・出演者・配信情報を横断して追える、
-            2.5次元舞台に特化したデジタルアーカイブ。
-            気になるキャストの出演歴から、次に観る一本を見つけよう。
+            A digital archive for Japanese 2.5D stage plays and musicals.
+            Follow productions, series lines, and cast history from one place.
           </p>
         </div>
 
         <div className="home-hero__actions">
-          <Link href="/actors" className="home-hero__button is-primary">
-            推しを見つける
+          <Link href="/en/plays" className="home-hero__button is-primary">
+            Browse plays
           </Link>
-          <Link href="/plays" className="home-hero__button">
-            作品を探す
+          <Link href="/en/series" className="home-hero__button">
+            Browse series
           </Link>
-          <Link href="/series" className="home-hero__button">
-            人気シリーズから
+          <Link href="/guide" className="home-hero__button">
+            Editorial guides
           </Link>
         </div>
 
         <div className="home-tag-cloud">
           <h3 className="home-tag-cloud__title">
             <span />
-            注目ワード
+            Trending tags
             <span />
           </h3>
 
@@ -99,7 +98,6 @@ export default async function HomePage() {
             ))}
           </div>
         </div>
-
       </div>
     </main>
   );

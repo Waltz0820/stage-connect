@@ -76,6 +76,10 @@ export const metadata: Metadata = {
     "Stage Connect（ステコネ）で、2.5次元舞台・ミュージカル作品を一覧できます。舞台・ミュージカルやジャンル別に絞り込み、気になる作品詳細へそのまま移動できます。",
   alternates: {
     canonical: `${siteUrl}/plays`,
+    languages: {
+      ja: `${siteUrl}/plays`,
+      en: `${siteUrl}/en/plays`,
+    },
   },
 };
 

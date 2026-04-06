@@ -79,7 +79,11 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
     title: `${series.name} | シリーズ詳細 | Stage Connect（ステコネ）`,
     description,
     alternates: {
-      canonical: `/series/${series.slug ?? slug}`,
+      canonical: `${siteUrl}/series/${series.slug ?? slug}`,
+      languages: {
+        ja: `${siteUrl}/series/${series.slug ?? slug}`,
+        en: `${siteUrl}/en/series/${series.slug ?? slug}`,
+      },
     },
   };
 }

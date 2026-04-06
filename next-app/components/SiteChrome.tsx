@@ -6,20 +6,73 @@ import { useEffect, useMemo, useState } from "react";
 import FloatingCTA from "./FloatingCTA";
 import { SearchBarClient } from "./SearchBarClient";
 
-const primaryNav = [
-  { href: "/actors", label: "俳優" },
-  { href: "/plays", label: "作品" },
-  { href: "/series", label: "シリーズ" },
-  { href: "/watch", label: "配信" },
-  { href: "/guide", label: "ガイド" },
-];
+const copy = {
+  ja: {
+    home: { href: "/", label: "TOP" },
+    primaryNav: [
+      { href: "/actors", label: "俳優" },
+      { href: "/plays", label: "作品" },
+      { href: "/series", label: "シリーズ" },
+      { href: "/watch", label: "配信" },
+      { href: "/guide", label: "ガイド" },
+    ],
+    mobileNavExtra: [
+      { href: "/favorites", label: "お気に入り" },
+      { href: "/tags", label: "タグ" },
+    ],
+    favorites: "お気に入り",
+    globalNavLabel: "グローバルナビゲーション",
+    mobileNavLabel: "モバイルナビゲーション",
+    openMenu: "メニューを開く",
+    closeMenu: "メニューを閉じる",
+    footerContent: "コンテンツ",
+    footerWatch: "配信で観る",
+    plays: "作品一覧",
+    actors: "俳優一覧",
+    series: "シリーズ一覧",
+    guide: "ガイド / コラム",
+    tags: "タグ一覧",
+    watch: "配信サービス一覧",
+    privacy: "プライバシーポリシー",
+    footerCopy: "2.5次元舞台とキャストをつなぐデジタルアーカイブ。",
+    ctaLabel: "2.5次元舞台を今すぐ観る",
+    ctaSubText: "POPULAR",
+    ctaButton: "DMMプレミアム",
+  },
+  en: {
+    home: { href: "/en", label: "HOME" },
+    primaryNav: [
+      { href: "/en/plays", label: "Plays" },
+      { href: "/en/series", label: "Series" },
+      { href: "/watch", label: "Streaming" },
+      { href: "/guide", label: "Guides" },
+    ],
+    mobileNavExtra: [
+      { href: "/favorites", label: "Favorites" },
+      { href: "/tags", label: "Tags" },
+    ],
+    favorites: "Favorites",
+    globalNavLabel: "Global navigation",
+    mobileNavLabel: "Mobile navigation",
+    openMenu: "Open menu",
+    closeMenu: "Close menu",
+    footerContent: "Content",
+    footerWatch: "Streaming",
+    plays: "Browse Plays",
+    actors: "Browse Actors",
+    series: "Browse Series",
+    guide: "Guides / Columns",
+    tags: "Browse Tags",
+    watch: "Streaming Guides",
+    privacy: "Privacy Policy",
+    footerCopy: "A digital archive connecting 2.5D stage productions and cast history.",
+    ctaLabel: "Watch 2.5D stage productions now",
+    ctaSubText: "POPULAR",
+    ctaButton: "DMM Premium",
+  },
+} as const;
 
-const mobileNav = [
-  { href: "/", label: "TOP" },
-  ...primaryNav,
-  { href: "/favorites", label: "お気に入り" },
-  { href: "/tags", label: "タグ" },
-];
+type LocaleKey = keyof typeof copy;
 
 export default function SiteChrome({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -29,6 +82,10 @@ export default function SiteChrome({ children }: { children: React.ReactNode }) 
   if (pathname?.startsWith("/admin")) {
     return <>{children}</>;
   }
+
+  const locale: LocaleKey = pathname?.startsWith("/en") ? "en" : "ja";
+  const labels = copy[locale];
+  const mobileNav = [labels.home, ...labels.primaryNav, ...labels.mobileNavExtra];
 
   useEffect(() => {
     setIsMenuOpen(false);
@@ -70,25 +127,19 @@ export default function SiteChrome({ children }: { children: React.ReactNode }) 
   }, []);
 
   const mobileFooterYear = useMemo(() => new Date().getFullYear(), []);
-
-  const isActive = (href: string) =>
-    href === "/" ? pathname === "/" : pathname.startsWith(href);
+  const isActive = (href: string) => (href === "/" || href === "/en" ? pathname === href : pathname.startsWith(href));
 
   return (
     <div className="page-shell">
       <header className="site-header">
         <div className="container site-header__inner">
           <div className="site-header__left">
-            <Link href="/" className="site-brand">
+            <Link href={locale === "en" ? "/en" : "/"} className="site-brand">
               STAGE <span>CONNECT</span>
             </Link>
-            <nav className="site-nav desktop-nav" aria-label="グローバルナビゲーション">
-              {primaryNav.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={isActive(item.href) ? "is-active" : undefined}
-                >
+            <nav className="site-nav desktop-nav" aria-label={labels.globalNavLabel}>
+              {labels.primaryNav.map((item) => (
+                <Link key={item.href} href={item.href} className={isActive(item.href) ? "is-active" : undefined}>
                   {item.label}
                 </Link>
               ))}
@@ -98,7 +149,7 @@ export default function SiteChrome({ children }: { children: React.ReactNode }) 
           <div className="site-header__actions">
             <SearchBarClient />
             <Link href="/favorites" className={`header-utility ${isActive("/favorites") ? "is-active" : ""}`}>
-              お気に入り
+              {labels.favorites}
             </Link>
           </div>
 
@@ -106,7 +157,7 @@ export default function SiteChrome({ children }: { children: React.ReactNode }) 
             type="button"
             className="site-menu-button"
             onClick={() => setIsMenuOpen(true)}
-            aria-label="メニューを開く"
+            aria-label={labels.openMenu}
           >
             <svg fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -123,7 +174,7 @@ export default function SiteChrome({ children }: { children: React.ReactNode }) 
               type="button"
               className="mobile-menu__close"
               onClick={() => setIsMenuOpen(false)}
-              aria-label="メニューを閉じる"
+              aria-label={labels.closeMenu}
             >
               <svg fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -131,13 +182,9 @@ export default function SiteChrome({ children }: { children: React.ReactNode }) 
             </button>
           </div>
 
-          <nav className="mobile-menu__nav" aria-label="モバイルナビゲーション">
+          <nav className="mobile-menu__nav" aria-label={labels.mobileNavLabel}>
             {mobileNav.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={isActive(item.href) ? "is-active" : undefined}
-              >
+              <Link key={item.href} href={item.href} className={isActive(item.href) ? "is-active" : undefined}>
                 {item.label}
               </Link>
             ))}
@@ -155,52 +202,51 @@ export default function SiteChrome({ children }: { children: React.ReactNode }) 
         <div className="container site-footer__upper">
           <div className="site-footer__grid">
             <section className="site-footer__column">
-              <h3>コンテンツ</h3>
+              <h3>{labels.footerContent}</h3>
               <ul>
-                <li><Link href="/plays">作品一覧</Link></li>
-                <li><Link href="/actors">キャスト一覧</Link></li>
-                <li><Link href="/series">シリーズ一覧</Link></li>
-                <li><Link href="/guide">ガイド / コラム</Link></li>
-                <li><Link href="/tags">タグ一覧</Link></li>
-                <li><Link href="/favorites">お気に入り</Link></li>
+                <li><Link href={locale === "en" ? "/en/plays" : "/plays"}>{labels.plays}</Link></li>
+                {locale === "ja" ? <li><Link href="/actors">{labels.actors}</Link></li> : null}
+                <li><Link href={locale === "en" ? "/en/series" : "/series"}>{labels.series}</Link></li>
+                <li><Link href="/guide">{labels.guide}</Link></li>
+                <li><Link href="/tags">{labels.tags}</Link></li>
+                <li><Link href="/favorites">{labels.favorites}</Link></li>
               </ul>
             </section>
 
             <section className="site-footer__column">
-              <h3>配信で観る</h3>
+              <h3>{labels.footerWatch}</h3>
               <ul>
-                <li><Link href="/watch">配信サービス一覧</Link></li>
+                <li><Link href="/watch">{labels.watch}</Link></li>
                 <li><Link href="/watch/dmm">DMM TV</Link></li>
-                <li><Link href="/privacy">プライバシーポリシー</Link></li>
+                <li><Link href="/privacy">{labels.privacy}</Link></li>
                 <li>
                   <a
                     href="https://al.dmm.com/?lurl=https%3A%2F%2Fpremium.dmm.com%2F&af_id=stageconnect-001&ch=link_tool&ch_id=text"
                     rel="sponsored noopener"
                     target="_blank"
                   >
-                    DMMプレミアム
+                    {labels.ctaButton}
                   </a>
                 </li>
               </ul>
             </section>
-
           </div>
         </div>
 
         <div className="site-footer__lower">
           <div className="container site-footer__meta">
             <p>&copy; {mobileFooterYear} Stage Connect</p>
-            <p>2.5次元舞台とキャストをつなぐデジタルアーカイブ</p>
+            <p>{labels.footerCopy}</p>
           </div>
         </div>
       </footer>
 
       <FloatingCTA
         url="https://al.dmm.com/?lurl=https%3A%2F%2Fpremium.dmm.com%2F&af_id=stageconnect-001&ch=link_tool&ch_id=text"
-        label="2.5次元舞台が見放題"
-        subText="POPULAR"
-        buttonText="DMMプレミアム"
-        visible={showCTA}
+        label={labels.ctaLabel}
+        subText={labels.ctaSubText}
+        buttonText={labels.ctaButton}
+        visible={locale === "ja" && showCTA}
       />
     </div>
   );

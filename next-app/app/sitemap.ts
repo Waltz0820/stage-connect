@@ -13,9 +13,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const staticRoutes: MetadataRoute.Sitemap = [
     "",
+    "/en",
     "/plays",
+    "/en/plays",
     "/actors",
     "/series",
+    "/en/series",
     "/guide",
     "/watch",
     "/watch/dmm",
@@ -34,6 +37,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.9,
   }));
 
+  const englishPlayRoutes: MetadataRoute.Sitemap = plays.map((play) => ({
+    url: `${siteUrl}/en/plays/${play.slug}`,
+    lastModified: play.createdAt ? new Date(play.createdAt) : undefined,
+    changeFrequency: "weekly",
+    priority: 0.75,
+  }));
+
   const actorRoutes: MetadataRoute.Sitemap = actors.map((actor) => ({
     url: `${siteUrl}/actors/${actor.slug}`,
     changeFrequency: "weekly",
@@ -47,6 +57,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.85,
   }));
 
+  const englishSeriesRoutes: MetadataRoute.Sitemap = seriesList.map((series) => ({
+    url: `${siteUrl}/en/series/${series.slug}`,
+    lastModified: series.updatedAt ? new Date(series.updatedAt) : undefined,
+    changeFrequency: "weekly",
+    priority: 0.7,
+  }));
+
   const guideRoutes: MetadataRoute.Sitemap = guides.map((guide) => ({
     url: `${siteUrl}/guide/${guide.slug}`,
     lastModified: guide.publishedAt ? new Date(guide.publishedAt) : undefined,
@@ -54,5 +71,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.75,
   }));
 
-  return [...staticRoutes, ...playRoutes, ...actorRoutes, ...seriesRoutes, ...guideRoutes];
+  return [
+    ...staticRoutes,
+    ...playRoutes,
+    ...englishPlayRoutes,
+    ...actorRoutes,
+    ...seriesRoutes,
+    ...englishSeriesRoutes,
+    ...guideRoutes,
+  ];
 }
