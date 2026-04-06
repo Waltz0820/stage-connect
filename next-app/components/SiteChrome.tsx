@@ -171,6 +171,7 @@ export default function SiteChrome({ children }: { children: React.ReactNode }) 
               <ul>
                 <li><Link href="/watch">配信サービス一覧</Link></li>
                 <li><Link href="/watch/dmm">DMM TV</Link></li>
+                <li><Link href="/privacy">プライバシーポリシー</Link></li>
                 <li>
                   <a
                     href="https://al.dmm.com/?lurl=https%3A%2F%2Fpremium.dmm.com%2F&af_id=stageconnect-001&ch=link_tool&ch_id=text"
