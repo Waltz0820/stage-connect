@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { toEnglishOriginType } from "../lib/en-copy";
 
 type RelatedSeries = {
   id: string;
@@ -47,7 +48,11 @@ export function RelatedSeriesClient({ items }: Props) {
           >
             <div className="catalog-card__top">
               <div className="catalog-card__title">{related.name}</div>
-              {related.originType ? <span className="catalog-card__badge">{related.originType}</span> : null}
+              {related.originType ? (
+                <span className="catalog-card__badge">
+                  {isEnglish ? toEnglishOriginType(related.originType) : related.originType}
+                </span>
+              ) : null}
             </div>
             <div className="catalog-card__text catalog-card__text--clamped">
               {related.description || (isEnglish ? `${related.name} related series archive.` : `${related.name} のシリーズ詳細ページです。`)}
@@ -67,7 +72,11 @@ export function RelatedSeriesClient({ items }: Props) {
         <article key={related.id} className="catalog-card">
           <div className="catalog-card__top">
             <div className="catalog-card__title">{related.name}</div>
-            {related.originType ? <span className="catalog-card__badge">{related.originType}</span> : null}
+            {related.originType ? (
+              <span className="catalog-card__badge">
+                {isEnglish ? toEnglishOriginType(related.originType) : related.originType}
+              </span>
+            ) : null}
           </div>
           <Link className="catalog-card__body-link" href={related.slug ? `${seriesHrefBase}/${related.slug}` : seriesHrefBase}>
             <div className="catalog-card__text catalog-card__text--clamped">

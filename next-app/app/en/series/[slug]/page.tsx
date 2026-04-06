@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "../../../../components/Breadcrumbs";
-import { truncateText } from "../../../../lib/en-copy";
+import { toEnglishOriginType, truncateText } from "../../../../lib/en-copy";
 import { getSeriesDetailBySlug, toPlainText } from "../../../../lib/stage-connect";
 
 type Params = { slug: string };
@@ -91,12 +91,12 @@ export default async function EnglishSeriesDetailPage({ params }: { params: Prom
             <h1 className="page-title">{series.name}</h1>
             <div className="pill-row">
               <span className="pill accent-pill">{series.plays.length} plays</span>
-              {series.originType ? <span className="pill">Origin: {series.originType}</span> : null}
+              {series.originType ? <span className="pill">Origin: {toEnglishOriginType(series.originType)}</span> : null}
             </div>
             <div className="detail-ledger">
               <div className="detail-ledger__item">
                 <span className="detail-ledger__label">Origin</span>
-                <strong>{series.originType || "Series"}</strong>
+                <strong>{toEnglishOriginType(series.originType) || "Series"}</strong>
               </div>
               <div className="detail-ledger__item">
                 <span className="detail-ledger__label">Play count</span>
@@ -207,7 +207,7 @@ export default async function EnglishSeriesDetailPage({ params }: { params: Prom
                     <div className="catalog-card__top">
                       <div className="catalog-card__title">{item.name}</div>
                     </div>
-                    {item.originType ? <div className="catalog-card__sub">{item.originType}</div> : null}
+                    {item.originType ? <div className="catalog-card__sub">{toEnglishOriginType(item.originType)}</div> : null}
                     <div className="catalog-card__text">
                       {item.description ? truncateText(toPlainText(item.description), 140) : "Related series archive."}
                     </div>

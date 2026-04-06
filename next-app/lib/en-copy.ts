@@ -3,6 +3,24 @@ export const EN_FORMAT_LABELS: Record<string, string> = {
   musical: "Musical",
 };
 
+export const EN_ORIGIN_TYPE_LABELS: Record<string, string> = {
+  anime: "Anime",
+  manga: "Manga",
+  game: "Game",
+  novel: "Novel",
+  light_novel: "Light Novel",
+  visual_novel: "Visual Novel",
+  tokusatsu: "Tokusatsu",
+  original: "Original",
+  mixed_media: "Mixed Media",
+  music: "Music",
+  idol: "Idol",
+  stage: "Stage",
+  musical: "Musical",
+  movie: "Film",
+  drama: "Drama",
+};
+
 export const EN_GENRE_LABELS: Record<string, string> = {
   history: "History / Period",
   fantasy: "Fantasy",
@@ -46,3 +64,9 @@ export const compactListPeriodEn = (period?: string | null) => {
 
 export const truncateText = (text: string, max: number) =>
   text.length <= max ? text : `${text.slice(0, Math.max(0, max - 1))}…`;
+
+export const toEnglishOriginType = (value?: string | null) => {
+  const raw = String(value ?? "").trim();
+  if (!raw) return null;
+  return EN_ORIGIN_TYPE_LABELS[raw] ?? raw;
+};

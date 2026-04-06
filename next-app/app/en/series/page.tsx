@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "../../../components/Breadcrumbs";
-import { EN_FORMAT_LABELS, truncateText } from "../../../lib/en-copy";
+import { EN_FORMAT_LABELS, toEnglishOriginType, truncateText } from "../../../lib/en-copy";
 import { getSeriesList, toPlainText } from "../../../lib/stage-connect";
 
 type SearchParamValue = string | string[] | undefined;
@@ -134,7 +134,7 @@ export default async function EnglishSeriesPage({
                 className={`filter-chip ${origin === option ? "is-active" : ""}`}
                 href={buildHref({ page: 1, sort, format, origin: option })}
               >
-                {option === "all" ? "All origins" : option}
+                {option === "all" ? "All origins" : toEnglishOriginType(option) ?? option}
               </Link>
             ))}
           </div>
@@ -153,7 +153,7 @@ export default async function EnglishSeriesPage({
                     </div>
                   </div>
 
-                  {series.originType ? <div className="catalog-card__sub">{series.originType}</div> : null}
+                  {series.originType ? <div className="catalog-card__sub">{toEnglishOriginType(series.originType)}</div> : null}
 
                   <div className="catalog-card__text">
                     {series.description
