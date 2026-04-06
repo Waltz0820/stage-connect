@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 type BreadcrumbItem = {
   label: string;
@@ -10,10 +13,13 @@ type Props = {
 };
 
 export function Breadcrumbs({ items }: Props) {
-  const allItems: BreadcrumbItem[] = [{ label: "TOP", href: "/" }, ...items];
+  const pathname = usePathname();
+  const isEnglish = pathname?.startsWith("/en");
+  const rootItem: BreadcrumbItem = isEnglish ? { label: "HOME", href: "/en" } : { label: "TOP", href: "/" };
+  const allItems: BreadcrumbItem[] = [rootItem, ...items];
 
   return (
-    <nav aria-label="パンくずリスト" className="breadcrumbs">
+    <nav aria-label={isEnglish ? "Breadcrumb" : "パンくずリスト"} className="breadcrumbs">
       <ol className="breadcrumbs__list">
         {allItems.map((item, index) => {
           const isLast = index === allItems.length - 1;

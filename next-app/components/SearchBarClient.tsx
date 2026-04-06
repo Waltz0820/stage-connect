@@ -34,6 +34,7 @@ const buildLooseLike = (value: string) => {
 export function SearchBarClient() {
   const router = useRouter();
   const pathname = usePathname();
+  const isEnglish = pathname?.startsWith("/en");
   const rootRef = useRef<HTMLDivElement>(null);
   const [query, setQuery] = useState("");
   const [isOpen, setIsOpen] = useState(false);
@@ -126,6 +127,8 @@ export function SearchBarClient() {
   };
 
   const hasResults = actors.length > 0 || plays.length > 0;
+  const playHrefBase = isEnglish ? "/en/plays" : "/plays";
+  const actorHrefBase = "/actors";
 
   return (
     <div className="search-shell" ref={rootRef}>
@@ -133,7 +136,7 @@ export function SearchBarClient() {
         type="button"
         className="search-toggle"
         onClick={() => setIsMobileOpen((current) => !current)}
-        aria-label="検索を開く"
+        aria-label={isEnglish ? "Open search" : "検索を開く"}
       >
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
           <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -161,22 +164,26 @@ export function SearchBarClient() {
                 setIsMobileOpen(false);
               }
             }}
-            placeholder="キャスト・作品を検索..."
+            placeholder={isEnglish ? "Search cast or plays..." : "キャスト・作品を検索..."}
             className="search-input"
           />
         </div>
 
         {isOpen && query.trim() ? (
           <div className="search-dropdown">
-            {!hasResults ? <div className="search-empty">検索結果が見つかりませんでした</div> : null}
+            {!hasResults ? (
+              <div className="search-empty">
+                {isEnglish ? "No search results found." : "検索結果が見つかりませんでした"}
+              </div>
+            ) : null}
 
             {actors.length > 0 ? (
               <div className="search-group">
-                <div className="search-group-title">キャスト</div>
+                <div className="search-group-title">{isEnglish ? "Cast" : "キャスト"}</div>
                 {actors.map((actor) => (
                   <Link
                     key={actor.id}
-                    href={`/actors/${actor.slug}`}
+                    href={`${actorHrefBase}/${actor.slug}`}
                     className="search-item"
                     onClick={() => {
                       setIsOpen(false);
@@ -187,7 +194,7 @@ export function SearchBarClient() {
                       <strong>{actor.name}</strong>
                       {actor.kana ? <span className="search-item-sub">{actor.kana}</span> : null}
                     </span>
-                    <span className="search-item-arrow">›</span>
+                    <span className="search-item-arrow">→</span>
                   </Link>
                 ))}
               </div>
@@ -195,11 +202,11 @@ export function SearchBarClient() {
 
             {plays.length > 0 ? (
               <div className="search-group">
-                <div className="search-group-title">作品</div>
+                <div className="search-group-title">{isEnglish ? "Plays" : "作品"}</div>
                 {plays.map((play) => (
                   <Link
                     key={play.id}
-                    href={`/plays/${play.slug}`}
+                    href={`${playHrefBase}/${play.slug}`}
                     className="search-item"
                     onClick={() => {
                       setIsOpen(false);
@@ -210,14 +217,14 @@ export function SearchBarClient() {
                       <strong>{play.title}</strong>
                       {play.franchise ? <span className="search-item-sub">{play.franchise}</span> : null}
                     </span>
-                    <span className="search-item-arrow">›</span>
+                    <span className="search-item-arrow">→</span>
                   </Link>
                 ))}
               </div>
             ) : null}
 
             <button type="button" className="search-submit" onClick={submit}>
-              すべての検索結果を見る
+              {isEnglish ? "View all search results" : "すべての検索結果を見る"}
             </button>
           </div>
         ) : null}
