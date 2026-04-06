@@ -38,6 +38,7 @@ const copy = {
     ctaLabel: "2.5次元舞台を今すぐ観る",
     ctaSubText: "POPULAR",
     ctaButton: "DMMプレミアム",
+    localeLabel: "言語切替",
   },
   en: {
     home: { href: "/en", label: "HOME" },
@@ -69,10 +70,44 @@ const copy = {
     ctaLabel: "Watch 2.5D stage productions now",
     ctaSubText: "POPULAR",
     ctaButton: "DMM Premium",
+    localeLabel: "Language switcher",
   },
 } as const;
 
 type LocaleKey = keyof typeof copy;
+
+function getLanguageTargets(pathname: string | null) {
+  if (!pathname) {
+    return { locale: "ja" as const, jaHref: "/", enHref: "/en", enAvailable: true };
+  }
+
+  if (pathname === "/en") {
+    return { locale: "en" as const, jaHref: "/", enHref: "/en", enAvailable: true };
+  }
+
+  if (pathname.startsWith("/en/")) {
+    return {
+      locale: "en" as const,
+      jaHref: pathname.replace(/^\/en/, "") || "/",
+      enHref: pathname,
+      enAvailable: true,
+    };
+  }
+
+  const englishCompatible =
+    pathname === "/" ||
+    pathname === "/plays" ||
+    pathname.startsWith("/plays/") ||
+    pathname === "/series" ||
+    pathname.startsWith("/series/");
+
+  return {
+    locale: "ja" as const,
+    jaHref: pathname,
+    enHref: pathname === "/" ? "/en" : `/en${pathname}`,
+    enAvailable: englishCompatible,
+  };
+}
 
 export default function SiteChrome({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -83,7 +118,7 @@ export default function SiteChrome({ children }: { children: React.ReactNode }) 
     return <>{children}</>;
   }
 
-  const locale: LocaleKey = pathname?.startsWith("/en") ? "en" : "ja";
+  const { locale, jaHref, enHref, enAvailable } = getLanguageTargets(pathname);
   const labels = copy[locale];
   const mobileNav = [labels.home, ...labels.primaryNav, ...labels.mobileNavExtra];
 
@@ -106,9 +141,7 @@ export default function SiteChrome({ children }: { children: React.ReactNode }) 
     const handleScroll = () => {
       setShowCTA(false);
 
-      if (timer) {
-        clearTimeout(timer);
-      }
+      if (timer) clearTimeout(timer);
 
       timer = setTimeout(() => {
         if (window.scrollY > minScroll) {
@@ -120,14 +153,36 @@ export default function SiteChrome({ children }: { children: React.ReactNode }) 
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      if (timer) {
-        clearTimeout(timer);
-      }
+      if (timer) clearTimeout(timer);
     };
   }, []);
 
   const mobileFooterYear = useMemo(() => new Date().getFullYear(), []);
-  const isActive = (href: string) => (href === "/" || href === "/en" ? pathname === href : pathname.startsWith(href));
+  const isActive = (href: string) => (href === "/" || href === "/en" ? pathname === href : Boolean(pathname?.startsWith(href)));
+
+  const localeSwitcher = (
+    <div className="locale-switcher" aria-label={labels.localeLabel}>
+      {locale === "en" ? (
+        <Link href={jaHref} className="locale-switcher__link">
+          JP
+        </Link>
+      ) : (
+        <span className="locale-switcher__current">JP</span>
+      )}
+
+      {enAvailable ? (
+        locale === "en" ? (
+          <span className="locale-switcher__current">EN</span>
+        ) : (
+          <Link href={enHref} className="locale-switcher__link">
+            EN
+          </Link>
+        )
+      ) : (
+        <span className="locale-switcher__disabled">EN</span>
+      )}
+    </div>
+  );
 
   return (
     <div className="page-shell">
@@ -147,6 +202,7 @@ export default function SiteChrome({ children }: { children: React.ReactNode }) 
           </div>
 
           <div className="site-header__actions">
+            {localeSwitcher}
             <SearchBarClient />
             <Link href="/favorites" className={`header-utility ${isActive("/favorites") ? "is-active" : ""}`}>
               {labels.favorites}
@@ -181,6 +237,8 @@ export default function SiteChrome({ children }: { children: React.ReactNode }) 
               </svg>
             </button>
           </div>
+
+          <div className="mobile-menu__locale">{localeSwitcher}</div>
 
           <nav className="mobile-menu__nav" aria-label={labels.mobileNavLabel}>
             {mobileNav.map((item) => (

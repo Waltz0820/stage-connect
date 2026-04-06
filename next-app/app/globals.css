@@ -144,6 +144,52 @@ a {
   gap: 12px;
 }
 
+.locale-switcher {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(243, 240, 234, 0.14);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.locale-switcher__link,
+.locale-switcher__current,
+.locale-switcher__disabled {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 42px;
+  min-height: 40px;
+  padding: 0 10px;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-right: 1px solid rgba(243, 240, 234, 0.14);
+}
+
+.locale-switcher__link:last-child,
+.locale-switcher__current:last-child,
+.locale-switcher__disabled:last-child {
+  border-right: 0;
+}
+
+.locale-switcher__link {
+  color: var(--muted);
+}
+
+.locale-switcher__link:hover {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.locale-switcher__current {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.locale-switcher__disabled {
+  color: rgba(154, 160, 172, 0.55);
+}
+
 .site-nav {
   display: flex;
   flex-wrap: wrap;
@@ -395,6 +441,12 @@ a {
   align-items: center;
   justify-content: center;
   gap: 26px;
+}
+
+.mobile-menu__locale {
+  padding: 20px 0 0;
+  display: flex;
+  justify-content: center;
 }
 
 .mobile-menu__nav a {
@@ -2115,6 +2167,10 @@ a {
   }
 
   .header-utility {
+    display: none;
+  }
+
+  .site-header__actions .locale-switcher {
     display: none;
   }
 
