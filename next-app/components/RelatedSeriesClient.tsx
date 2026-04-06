@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 type RelatedSeries = {
@@ -16,6 +17,9 @@ type Props = {
 };
 
 export function RelatedSeriesClient({ items }: Props) {
+  const pathname = usePathname();
+  const isEnglish = pathname?.startsWith("/en");
+  const seriesHrefBase = isEnglish ? "/en/series" : "/series";
   const [isMobile, setIsMobile] = useState(true);
 
   useEffect(() => {
@@ -39,17 +43,17 @@ export function RelatedSeriesClient({ items }: Props) {
           <Link
             key={related.id}
             className="catalog-card card-carousel-item"
-            href={related.slug ? `/series/${related.slug}` : "/series"}
+            href={related.slug ? `${seriesHrefBase}/${related.slug}` : seriesHrefBase}
           >
             <div className="catalog-card__top">
               <div className="catalog-card__title">{related.name}</div>
               {related.originType ? <span className="catalog-card__badge">{related.originType}</span> : null}
             </div>
             <div className="catalog-card__text catalog-card__text--clamped">
-              {related.description || `${related.name} のシリーズ詳細ページです。`}
+              {related.description || (isEnglish ? `${related.name} related series archive.` : `${related.name} のシリーズ詳細ページです。`)}
             </div>
             <div className="catalog-card__footer">
-              <span className="catalog-link">シリーズ詳細を見る</span>
+              <span className="catalog-link">{isEnglish ? "View series details" : "シリーズ詳細を見る"}</span>
             </div>
           </Link>
         ))}
@@ -65,12 +69,12 @@ export function RelatedSeriesClient({ items }: Props) {
             <div className="catalog-card__title">{related.name}</div>
             {related.originType ? <span className="catalog-card__badge">{related.originType}</span> : null}
           </div>
-          <Link className="catalog-card__body-link" href={related.slug ? `/series/${related.slug}` : "/series"}>
+          <Link className="catalog-card__body-link" href={related.slug ? `${seriesHrefBase}/${related.slug}` : seriesHrefBase}>
             <div className="catalog-card__text catalog-card__text--clamped">
-              {related.description || `${related.name} のシリーズ詳細ページです。`}
+              {related.description || (isEnglish ? `${related.name} related series archive.` : `${related.name} のシリーズ詳細ページです。`)}
             </div>
             <div className="catalog-card__footer">
-              <span className="catalog-link">シリーズ詳細を見る</span>
+              <span className="catalog-link">{isEnglish ? "View series details" : "シリーズ詳細を見る"}</span>
             </div>
           </Link>
         </article>

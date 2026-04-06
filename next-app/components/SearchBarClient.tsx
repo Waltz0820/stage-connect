@@ -128,7 +128,7 @@ export function SearchBarClient() {
 
   const hasResults = actors.length > 0 || plays.length > 0;
   const playHrefBase = isEnglish ? "/en/plays" : "/plays";
-  const actorHrefBase = "/actors";
+  const actorHrefBase = isEnglish ? "/en/actors" : "/actors";
 
   return (
     <div className="search-shell" ref={rootRef}>
