@@ -1,5 +1,6 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 
 type FavoriteType = "actor" | "play";
@@ -52,6 +53,8 @@ export function FavoriteButtonClient({
   title,
   franchiseName,
 }: Props) {
+  const pathname = usePathname();
+  const isEnglish = pathname?.startsWith("/en");
   const storageKey = storageKeyByType[type];
   const [isActive, setIsActive] = useState(false);
 
@@ -69,7 +72,10 @@ export function FavoriteButtonClient({
     return () => window.removeEventListener("favorites-updated", sync);
   }, [slug, storageKey]);
 
-  const label = useMemo(() => (isActive ? "お気に入りから外す" : "お気に入りに追加"), [isActive]);
+  const label = useMemo(() => {
+    if (isEnglish) return isActive ? "Remove from favorites" : "Add to favorites";
+    return isActive ? "お気に入りから外す" : "お気に入りに追加";
+  }, [isActive, isEnglish]);
 
   const onToggle = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
@@ -102,14 +108,7 @@ export function FavoriteButtonClient({
       onClick={onToggle}
       aria-label={label}
       title={label}
-      className={[
-        "favorite-button",
-        sizeClassMap[size],
-        isActive ? "is-active" : "",
-        className,
-      ]
-        .filter(Boolean)
-        .join(" ")}
+      className={["favorite-button", sizeClassMap[size], isActive ? "is-active" : "", className].filter(Boolean).join(" ")}
     >
       <svg viewBox="0 0 24 24" fill={isActive ? "currentColor" : "none"} stroke="currentColor" strokeWidth="1.8">
         <path

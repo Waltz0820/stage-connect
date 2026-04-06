@@ -1,5 +1,6 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 type ActorProfileClientProps = {
@@ -8,6 +9,8 @@ type ActorProfileClientProps = {
 };
 
 export function ActorProfileClient({ text, collapsed = false }: ActorProfileClientProps) {
+  const pathname = usePathname();
+  const isEnglish = pathname?.startsWith("/en");
   const [isExpanded, setIsExpanded] = useState(!collapsed);
 
   return (
@@ -21,7 +24,7 @@ export function ActorProfileClient({ text, collapsed = false }: ActorProfileClie
             style={{ width: "auto", minWidth: 0 }}
             onClick={() => setIsExpanded((value) => !value)}
           >
-            {isExpanded ? "閉じる" : "続きを読む"}
+            {isExpanded ? (isEnglish ? "Close" : "閉じる") : isEnglish ? "Read more" : "続きを読む"}
           </button>
         </div>
       ) : null}

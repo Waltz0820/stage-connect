@@ -1,5 +1,7 @@
 "use client";
 
+import { usePathname } from "next/navigation";
+
 type Props = {
   title: string;
   text?: string;
@@ -8,6 +10,9 @@ type Props = {
 };
 
 export function ShareButtonClient({ title, text, url, className = "" }: Props) {
+  const pathname = usePathname();
+  const isEnglish = pathname?.startsWith("/en");
+
   const onShare = async (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
     event.stopPropagation();
@@ -41,8 +46,8 @@ export function ShareButtonClient({ title, text, url, className = "" }: Props) {
     <button
       type="button"
       onClick={onShare}
-      aria-label="シェアする"
-      title="シェアする"
+      aria-label={isEnglish ? "Share" : "シェアする"}
+      title={isEnglish ? "Share" : "シェアする"}
       className={["share-button", className].filter(Boolean).join(" ")}
     >
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">

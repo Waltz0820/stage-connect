@@ -139,7 +139,7 @@ export default async function EnglishSeriesDetailPage({ params }: { params: Prom
               {series.topActors.slice(0, 12).map((item, index) => (
                 <Link
                   key={`${item.actor.slug}-${index}`}
-                  href={`/actors/${item.actor.slug}`}
+                  href={`/en/actors/${item.actor.slug}`}
                   className="cast-card cast-card-link"
                 >
                   <div className="cast-name">{item.actor.name}</div>

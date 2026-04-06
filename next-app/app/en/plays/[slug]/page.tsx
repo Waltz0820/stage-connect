@@ -179,7 +179,7 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
           <h2 className="section-title">Featured cast</h2>
           <div className="cast-grid">
             {featuredCast.map((item) => (
-              <Link href={`/actors/${item.slug}`} className="cast-card cast-card-link" key={`${item.slug}-${item.roleName ?? "cast"}`}>
+              <Link href={`/en/actors/${item.slug}`} className="cast-card cast-card-link" key={`${item.slug}-${item.roleName ?? "cast"}`}>
                 <div className="cast-name">{item.name}</div>
                 {item.roleName ? <div className="cast-role">{item.roleName}</div> : null}
               </Link>
