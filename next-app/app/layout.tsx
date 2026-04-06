@@ -8,6 +8,7 @@ import "./globals.css";
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
 const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-KLT69885CC";
 const googleSiteVerification = process.env.GOOGLE_SITE_VERIFICATION || process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
+const adsenseClient = "ca-pub-3321869445789640";
 
 export const metadata: Metadata = {
   title: "Stage Connect",
@@ -32,6 +33,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="ja">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <Script
+          async
+          crossOrigin="anonymous"
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClient}`}
+          strategy="afterInteractive"
+        />
         <Script async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} strategy="afterInteractive" />
         <Script id="ga4-init" strategy="afterInteractive">
           {`
