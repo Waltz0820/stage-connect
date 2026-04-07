@@ -548,6 +548,24 @@ a {
   text-transform: uppercase;
 }
 
+.site-footer__locale {
+  display: flex;
+  justify-content: center;
+  margin-top: 6px;
+}
+
+.site-footer__locale .locale-switcher {
+  background: rgba(255, 255, 255, 0.015);
+}
+
+.site-footer__locale .locale-switcher__link,
+.site-footer__locale .locale-switcher__current,
+.site-footer__locale .locale-switcher__disabled {
+  min-width: 38px;
+  min-height: 34px;
+  font-size: 10px;
+}
+
 .floating-cta {
   position: fixed;
   left: 0;
@@ -2398,6 +2416,12 @@ a {
 
   .site-footer__meta {
     flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .site-footer__locale {
+    margin-top: 0;
+    margin-left: auto;
   }
 }
 

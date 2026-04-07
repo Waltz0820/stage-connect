@@ -277,7 +277,6 @@ export default function SiteChrome({ children }: { children: React.ReactNode }) 
               <ul>
                 <li><Link href="/watch">{labels.watch}</Link></li>
                 <li><Link href="/watch/dmm">DMM TV</Link></li>
-                <li><Link href="/privacy">{labels.privacy}</Link></li>
                 <li>
                   <a
                     href="https://al.dmm.com/?lurl=https%3A%2F%2Fpremium.dmm.com%2F&af_id=stageconnect-001&ch=link_tool&ch_id=text"
@@ -287,6 +286,7 @@ export default function SiteChrome({ children }: { children: React.ReactNode }) 
                     {labels.ctaButton}
                   </a>
                 </li>
+                <li><Link href="/privacy">{labels.privacy}</Link></li>
               </ul>
             </section>
           </div>
@@ -296,6 +296,9 @@ export default function SiteChrome({ children }: { children: React.ReactNode }) 
           <div className="container site-footer__meta">
             <p>&copy; {mobileFooterYear} Stage Connect</p>
             <p>{labels.footerCopy}</p>
+            <div className="site-footer__locale">
+              {localeSwitcher}
+            </div>
           </div>
         </div>
       </footer>
