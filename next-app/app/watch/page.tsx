@@ -10,9 +10,9 @@ const DMM_PREMIUM_URL =
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "配信で観る｜2.5次元舞台の視聴ガイド | Stage Connect（ステコネ）",
+  title: "2.5次元舞台の配信サービス比較ガイド｜DMM TV・U-NEXT・dアニメストア | Stage Connect（ステコネ）",
   description:
-    "2.5次元舞台・ミュージカルをどこで配信で観られるかを整理。DMM TVを中心に、U-NEXT・dアニメストアとの違いも比較。掲載シリーズ数と無料トライアルで選ぶための配信ガイドです。",
+    "2.5次元舞台・ミュージカルをどの配信サービスで見るべきかを比較。DMM TV・U-NEXT・dアニメストアの料金・無料トライアル・2.5次元の充実度を一覧比較。DMM TVを主軸にした配信ガイドです。",
   alternates: {
     canonical: `${siteUrl}/watch`,
   },
@@ -25,7 +25,11 @@ export default async function WatchPage() {
   const faqItems = [
     {
       q: "2.5次元舞台を見るならどのサービスがおすすめですか？",
-      a: "掲載シリーズ数と無料トライアルの両面から、まずはDMM TV（DMMプレミアム）を基準に考えるのがおすすめです。月額550円・14日間無料で始められます。",
+      a: `掲載シリーズ数と月額のバランスから、まずはDMM TV（DMMプレミアム）を基準に考えるのがおすすめです。${countLabel}シリーズ確認済み、月額550円・14日間無料で始められます。`,
+    },
+    {
+      q: "DMM TV・U-NEXT・dアニメストアの違いは？",
+      a: "DMM TVは2.5次元舞台の見放題が最も充実（月額550円）。U-NEXTは総合VODとして強い（月額2,189円）。dアニメストアはアニメ特化（月額550円）。2.5次元が主目的ならDMM TVが最適です。",
     },
     {
       q: "Stage Connectでは何が分かりますか？",
@@ -50,20 +54,42 @@ export default async function WatchPage() {
     })),
   };
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "ホーム", item: siteUrl },
+      { "@type": "ListItem", position: 2, name: "配信ガイド" },
+    ],
+  };
+
   return (
     <main className="container" style={{ paddingBlock: 32 }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
 
       <div className="stack-lg">
+        {/* --- Breadcrumb --- */}
+        <nav className="breadcrumbs" aria-label="パンくずリスト">
+          <ol className="breadcrumbs__list">
+            <li className="breadcrumbs__item">
+              <Link className="breadcrumbs__link" href="/">ホーム</Link>
+              <span className="breadcrumbs__divider">/</span>
+            </li>
+            <li className="breadcrumbs__item">
+              <span className="breadcrumbs__current">配信ガイド</span>
+            </li>
+          </ol>
+        </nav>
+
         {/* --- HERO --- */}
         <section className="hero-card hero-card--center stack-md">
           <div className="stack-sm">
             <span className="eyebrow">Streaming Guide</span>
-            <h1 className="page-title">2.5次元舞台を配信で観る</h1>
+            <h1 className="page-title">2.5次元舞台の配信サービス比較</h1>
             <p className="lead">
-              「どこで配信しているか」「何を基準に選べばいいか」を
-              Stage Connect の視点で整理したガイドです。
-              DMM TVを主軸に、U-NEXT・dアニメストアとの違いも比較できます。
+              DMM TV・U-NEXT・dアニメストアの3サービスを、2.5次元舞台の視点で比較。
+              料金・無料トライアル・見放題シリーズ数から、自分に合うサービスを見つけるためのガイドです。
             </p>
           </div>
 
@@ -73,12 +99,80 @@ export default async function WatchPage() {
               <div className="watch-stat-value">{countLabel}件</div>
             </div>
             <div className="watch-stat-card">
-              <div className="watch-stat-label">無料トライアル</div>
-              <div className="watch-stat-value">14日間</div>
+              <div className="watch-stat-label">最安月額</div>
+              <div className="watch-stat-value">550円</div>
             </div>
             <div className="watch-stat-card">
-              <div className="watch-stat-label">月額</div>
-              <div className="watch-stat-value">550円</div>
+              <div className="watch-stat-label">無料トライアル</div>
+              <div className="watch-stat-value">14日間〜</div>
+            </div>
+          </div>
+        </section>
+
+        {/* --- 3サービス比較テーブル --- */}
+        <section className="section-card stack-md">
+          <h2 className="section-title">3サービス一覧比較</h2>
+          <div className="watch-compare-table">
+            <div className="watch-compare-col is-recommended">
+              <div className="watch-compare-col__name">
+                DMM TV<span className="watch-compare-col__badge">おすすめ</span>
+              </div>
+              <div className="watch-compare-row">
+                <span className="watch-compare-label">月額</span>
+                <span className="watch-compare-value is-strong">550円</span>
+              </div>
+              <div className="watch-compare-row">
+                <span className="watch-compare-label">無料トライアル</span>
+                <span className="watch-compare-value is-strong">14日間</span>
+              </div>
+              <div className="watch-compare-row">
+                <span className="watch-compare-label">2.5次元シリーズ</span>
+                <span className="watch-compare-value is-strong">{countLabel}件確認済み</span>
+              </div>
+              <div className="watch-compare-row">
+                <span className="watch-compare-label">強み</span>
+                <span className="watch-compare-value is-strong">2.5次元見放題が充実</span>
+              </div>
+            </div>
+
+            <div className="watch-compare-col">
+              <div className="watch-compare-col__name">U-NEXT</div>
+              <div className="watch-compare-row">
+                <span className="watch-compare-label">月額</span>
+                <span className="watch-compare-value is-weak">2,189円</span>
+              </div>
+              <div className="watch-compare-row">
+                <span className="watch-compare-label">無料トライアル</span>
+                <span className="watch-compare-value">31日間</span>
+              </div>
+              <div className="watch-compare-row">
+                <span className="watch-compare-label">2.5次元シリーズ</span>
+                <span className="watch-compare-value is-weak">一部のみ</span>
+              </div>
+              <div className="watch-compare-row">
+                <span className="watch-compare-label">強み</span>
+                <span className="watch-compare-value">総合VOD（映画・ドラマ・アニメ）</span>
+              </div>
+            </div>
+
+            <div className="watch-compare-col">
+              <div className="watch-compare-col__name">dアニメストア</div>
+              <div className="watch-compare-row">
+                <span className="watch-compare-label">月額</span>
+                <span className="watch-compare-value">550円</span>
+              </div>
+              <div className="watch-compare-row">
+                <span className="watch-compare-label">無料トライアル</span>
+                <span className="watch-compare-value">初月無料</span>
+              </div>
+              <div className="watch-compare-row">
+                <span className="watch-compare-label">2.5次元シリーズ</span>
+                <span className="watch-compare-value is-weak">限定的</span>
+              </div>
+              <div className="watch-compare-row">
+                <span className="watch-compare-label">強み</span>
+                <span className="watch-compare-value">アニメ特化</span>
+              </div>
             </div>
           </div>
         </section>
@@ -97,40 +191,30 @@ export default async function WatchPage() {
             </a>
           </div>
           <div className="prose-panel">
-            2.5次元舞台・ミュージカルの配信をできるだけ広く見たいなら、まずはDMM TVを起点に考えるのが自然です。
-            Stage Connectでも掲載シリーズ数と使いやすさの両面から、最初に確認するサービスとしてDMM TVを主導線に置いています。
-            14日間の無料トライアルがあり、シリーズ単位でどの作品が配信されているかも追いやすいため、2.5次元の入口として最も扱いやすいサービスです。
-          </div>
-          <div className="catalog-summary">
-            <span className="catalog-chip">月額550円（税込）</span>
-            <span className="catalog-chip">14日間無料トライアル</span>
-            <span className="catalog-chip">2.5次元 見放題が充実</span>
+            2.5次元舞台・ミュージカルの見放題をできるだけ広く見たいなら、まずはDMM TVを起点に考えるのが自然です。
+            Stage Connectで確認済みのDMM TV配信シリーズは{countLabel}件。
+            月額550円・14日間の無料トライアルがあり、シリーズ単位で配信状況も追いやすいため、2.5次元の入口として最も扱いやすいサービスです。
           </div>
         </section>
 
-        {/* --- 3サービス比較 --- */}
+        {/* --- 各サービス詳細ガイド --- */}
         <section className="section-card stack-md">
-          <div className="stack-sm">
-            <h2 className="section-title">3サービスの違い</h2>
-            <p className="catalog-note">
-              DMM TVを主軸に、U-NEXT・dアニメストアそれぞれの強みと向き不向きを整理しています。
-            </p>
-          </div>
+          <h2 className="section-title">サービス別の詳細ガイド</h2>
           <div className="compare-grid">
             <article className="compare-card">
               <div className="compare-card__eyebrow">Recommended</div>
               <Link className="compare-card__title" href="/watch/dmm">
-                DMM TVで配信中のシリーズを見る
+                DMM TVの配信シリーズを見る
               </Link>
               <div className="compare-card__text">
-                2.5次元舞台を優先して探すならまずここ。{countLabel}シリーズのラインナップと14日間の無料トライアルで判断できます。
+                {countLabel}シリーズのラインナップと14日間の無料トライアルで判断できます。
               </div>
             </article>
 
             <article className="compare-card">
               <div className="compare-card__eyebrow">Compare</div>
               <Link className="compare-card__title" href="/watch/u-next">
-                U-NEXTとの違いを見る
+                U-NEXTとの違いを比較する
               </Link>
               <div className="compare-card__text">
                 総合VODとしての強みと、2.5次元舞台を見るうえでの向き不向きを整理しています。
@@ -140,38 +224,10 @@ export default async function WatchPage() {
             <article className="compare-card">
               <div className="compare-card__eyebrow">Compare</div>
               <Link className="compare-card__title" href="/watch/danime">
-                dアニメストアとの違いを見る
+                dアニメストアとの違いを比較する
               </Link>
               <div className="compare-card__text">
-                アニメ寄りサービスとしての相性と、2.5次元舞台を見る際の注意点をまとめています。
-              </div>
-            </article>
-          </div>
-        </section>
-
-        {/* --- 使い方 --- */}
-        <section className="section-card stack-md">
-          <h2 className="section-title">Stage Connectでの使い方</h2>
-          <div className="compare-grid">
-            <article className="compare-card">
-              <div className="compare-card__eyebrow">Step 01</div>
-              <div className="compare-card__title">シリーズから探す</div>
-              <div className="compare-card__text">
-                気になるシリーズのページを開くと、配信のある作品をまとめて確認できます。
-              </div>
-            </article>
-            <article className="compare-card">
-              <div className="compare-card__eyebrow">Step 02</div>
-              <div className="compare-card__title">作品詳細で確認する</div>
-              <div className="compare-card__text">
-                作品詳細では、キャストやあらすじと一緒に配信状況も確認できます。
-              </div>
-            </article>
-            <article className="compare-card">
-              <div className="compare-card__eyebrow">Step 03</div>
-              <div className="compare-card__title">ガイドで比較する</div>
-              <div className="compare-card__text">
-                迷ったらこの配信ガイドで比較し、無料トライアルや掲載数を基準に選ぶのがおすすめです。
+                アニメ特化サービスとの比較。同じ月額550円でも2.5次元の充実度はDMM TVが優位です。
               </div>
             </article>
           </div>

@@ -1961,6 +1961,98 @@ a {
   word-break: break-word;
 }
 
+/* --- Watch compare table (mobile-first: stacked cards → table at 600px) --- */
+.watch-compare-table {
+  display: grid;
+  gap: 14px;
+}
+
+.watch-compare-col {
+  border: 1px solid var(--line);
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.012);
+}
+
+.watch-compare-col.is-recommended {
+  border-color: rgba(229, 72, 77, 0.3);
+  background: rgba(229, 72, 77, 0.03);
+}
+
+.watch-compare-col__name {
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  margin-bottom: 12px;
+}
+
+.watch-compare-col__badge {
+  display: inline-flex;
+  margin-left: 8px;
+  padding: 3px 8px;
+  border: 1px solid rgba(229, 72, 77, 0.4);
+  color: var(--pink);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.watch-compare-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  padding: 8px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.watch-compare-row:first-of-type {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.watch-compare-label {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.watch-compare-value {
+  font-size: 14px;
+  font-weight: 800;
+  text-align: right;
+}
+
+.watch-compare-value.is-strong {
+  color: var(--text);
+}
+
+.watch-compare-value.is-weak {
+  color: var(--muted);
+}
+
+@media (min-width: 600px) {
+  .watch-compare-table {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0;
+  }
+
+  .watch-compare-col + .watch-compare-col {
+    border-left: 0;
+  }
+
+  .watch-compare-row {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .watch-compare-value {
+    text-align: left;
+  }
+}
+
 .series-rank-row {
   display: flex;
   align-items: center;

@@ -13,7 +13,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const overview = await getWatchOverview();
   return {
     title: "DMM TVで観られる2.5次元舞台｜シリーズ一覧・配信ガイド | Stage Connect（ステコネ）",
-    description: `2.5次元舞台・ミュージカルをDMM TV（DMMプレミアム）で観るためのガイド。現在${overview.dmmSeriesCount}シリーズが確認済み。刀剣乱舞・ヒプステ・テニミュなど人気作品を網羅。14日間無料トライアルあり。`,
+    description: `2.5次元舞台・ミュージカルをDMM TV（DMMプレミアム）で観るためのガイド。現在${overview.dmmSeriesCount}シリーズが確認済み。刀剣乱舞・ヒプステ・テニミュなど人気作品を網羅。月額550円・14日間無料トライアルあり。`,
     alternates: {
       canonical: `${siteUrl}/watch/dmm`,
     },
@@ -26,12 +26,20 @@ export default async function WatchDmmPage() {
 
   const faqItems = [
     {
-      q: `DMM TVで2.5次元舞台は何シリーズ観られますか？`,
+      q: "DMM TVで2.5次元舞台は何シリーズ観られますか？",
       a: `現在、Stage Connectに登録されているDMM TV配信作品は${countLabel}シリーズです。刀剣乱舞、ヒプノシスマイク、テニスの王子様など主要な2.5次元舞台を網羅しています。`,
     },
     {
       q: "DMMプレミアムの料金と無料期間は？",
       a: "DMMプレミアムは月額550円（税込）で、初回登録時は14日間の無料トライアルがあります。期間中は見放題対象の2.5次元舞台を追加料金なしで視聴できます。",
+    },
+    {
+      q: "DMM TVとU-NEXTはどちらがいい？",
+      a: "2.5次元舞台が最優先ならDMM TV。映画・ドラマも含めた総合VODならU-NEXT。Stage Connectでは2.5次元の充実度からDMM TVを主導線にしています。",
+    },
+    {
+      q: "DMM TVとdアニメストアはどちらがいい？",
+      a: "どちらも月額550円ですが、2.5次元舞台の見放題ラインナップはDMM TVが圧倒的に充実。アニメが主目的ならdアニメストア、2.5次元が主目的ならDMM TVがおすすめです。",
     },
     {
       q: "ここに載っているシリーズは必ず見放題ですか？",
@@ -56,11 +64,39 @@ export default async function WatchDmmPage() {
     })),
   };
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "ホーム", item: siteUrl },
+      { "@type": "ListItem", position: 2, name: "配信ガイド", item: `${siteUrl}/watch` },
+      { "@type": "ListItem", position: 3, name: "DMM TV" },
+    ],
+  };
+
   return (
     <main className="container" style={{ paddingBlock: 32 }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
 
       <div className="stack-lg">
+        {/* --- Breadcrumb --- */}
+        <nav className="breadcrumbs" aria-label="パンくずリスト">
+          <ol className="breadcrumbs__list">
+            <li className="breadcrumbs__item">
+              <Link className="breadcrumbs__link" href="/">ホーム</Link>
+              <span className="breadcrumbs__divider">/</span>
+            </li>
+            <li className="breadcrumbs__item">
+              <Link className="breadcrumbs__link" href="/watch">配信ガイド</Link>
+              <span className="breadcrumbs__divider">/</span>
+            </li>
+            <li className="breadcrumbs__item">
+              <span className="breadcrumbs__current">DMM TV</span>
+            </li>
+          </ol>
+        </nav>
+
         {/* --- HERO --- */}
         <section className="hero-card hero-card--center stack-md">
           <div className="stack-sm">
@@ -97,7 +133,7 @@ export default async function WatchDmmPage() {
               14日間無料で始める
             </a>
             <Link className="action-button" href="/watch">
-              配信ガイドへ戻る
+              配信ガイドTOPへ
             </Link>
           </div>
         </section>
@@ -115,7 +151,64 @@ export default async function WatchDmmPage() {
             <span className="catalog-chip">2.5次元 見放題が充実</span>
             <span className="catalog-chip">月額550円（税込）</span>
             <span className="catalog-chip">14日間無料トライアル</span>
-            <span className="catalog-chip">シリーズ単位で確認しやすい</span>
+          </div>
+        </section>
+
+        {/* --- 比較テーブル --- */}
+        <section className="section-card stack-md">
+          <h2 className="section-title">他サービスとの比較</h2>
+          <div className="watch-compare-table">
+            <div className="watch-compare-col is-recommended">
+              <div className="watch-compare-col__name">
+                DMM TV<span className="watch-compare-col__badge">おすすめ</span>
+              </div>
+              <div className="watch-compare-row">
+                <span className="watch-compare-label">月額</span>
+                <span className="watch-compare-value is-strong">550円</span>
+              </div>
+              <div className="watch-compare-row">
+                <span className="watch-compare-label">無料期間</span>
+                <span className="watch-compare-value is-strong">14日間</span>
+              </div>
+              <div className="watch-compare-row">
+                <span className="watch-compare-label">2.5次元</span>
+                <span className="watch-compare-value is-strong">{countLabel}件</span>
+              </div>
+            </div>
+            <div className="watch-compare-col">
+              <div className="watch-compare-col__name">U-NEXT</div>
+              <div className="watch-compare-row">
+                <span className="watch-compare-label">月額</span>
+                <span className="watch-compare-value is-weak">2,189円</span>
+              </div>
+              <div className="watch-compare-row">
+                <span className="watch-compare-label">無料期間</span>
+                <span className="watch-compare-value">31日間</span>
+              </div>
+              <div className="watch-compare-row">
+                <span className="watch-compare-label">2.5次元</span>
+                <span className="watch-compare-value is-weak">一部</span>
+              </div>
+            </div>
+            <div className="watch-compare-col">
+              <div className="watch-compare-col__name">dアニメストア</div>
+              <div className="watch-compare-row">
+                <span className="watch-compare-label">月額</span>
+                <span className="watch-compare-value">550円</span>
+              </div>
+              <div className="watch-compare-row">
+                <span className="watch-compare-label">無料期間</span>
+                <span className="watch-compare-value">初月無料</span>
+              </div>
+              <div className="watch-compare-row">
+                <span className="watch-compare-label">2.5次元</span>
+                <span className="watch-compare-value is-weak">限定的</span>
+              </div>
+            </div>
+          </div>
+          <div className="action-row">
+            <Link className="action-button" href="/watch/u-next">U-NEXTとの比較</Link>
+            <Link className="action-button" href="/watch/danime">dアニメストアとの比較</Link>
           </div>
         </section>
 
