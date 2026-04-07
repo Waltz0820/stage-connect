@@ -6,14 +6,8 @@ import { ActorProfileClient } from "../../../../components/ActorProfileClient";
 import { Breadcrumbs } from "../../../../components/Breadcrumbs";
 import { FavoriteButtonClient } from "../../../../components/FavoriteButtonClient";
 import { ShareButtonClient } from "../../../../components/ShareButtonClient";
-import {
-  formatBirthday,
-  getActorDetailBySlug,
-  getAgeFromBirthday,
-  groupPlayTimelineByYear,
-  toPlainText,
-} from "../../../../lib/stage-connect";
-import { truncateText } from "../../../../lib/en-copy";
+import { getActorDetailBySlug, getAgeFromBirthday, groupPlayTimelineByYear, toPlainText } from "../../../../lib/stage-connect";
+import { formatAgeEn, formatBirthdayEn, truncateText } from "../../../../lib/en-copy";
 
 type Params = {
   slug: string;
@@ -84,8 +78,9 @@ export default async function EnglishActorDetailPage({ params }: { params: Promi
 
   if (!actor) notFound();
 
-  const birthdayText = formatBirthday(actor.birthday);
+  const birthdayText = formatBirthdayEn(actor.birthday);
   const age = getAgeFromBirthday(actor.birthday);
+  const ageLabel = formatAgeEn(age);
   const timeline = groupPlayTimelineByYear(actor.plays);
   const hasSns = Boolean(actor.sns && Object.values(actor.sns).some(Boolean));
   const profileText = actor.profile || `${actor.name} profile text is not available yet.`;
@@ -116,8 +111,8 @@ export default async function EnglishActorDetailPage({ params }: { params: Promi
             <div className="pill-row">
               {birthdayText ? (
                 <span className="pill">
-                  Born: {birthdayText}
-                  {age !== null ? ` (${age})` : ""}
+                  DOB: {birthdayText}
+                  {ageLabel ? ` / ${ageLabel}` : ""}
                 </span>
               ) : null}
               <span className="pill accent-pill">Appearances: {actor.plays.length}</span>

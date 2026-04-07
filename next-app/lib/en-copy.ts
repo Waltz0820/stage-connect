@@ -44,12 +44,6 @@ export const compactListPeriodEn = (period?: string | null) => {
     return `${year}/${month.padStart(2, "0")}/${day.padStart(2, "0")}-`;
   }
 
-  const jpDate = period.match(/(\d{4})年\s*(\d{1,2})月\s*(\d{1,2})日/);
-  if (jpDate) {
-    const [, year, month, day] = jpDate;
-    return `${year}/${month.padStart(2, "0")}/${day.padStart(2, "0")}-`;
-  }
-
   const yearMonth = period.match(/(\d{4})\D{0,2}(\d{1,2})/);
   if (yearMonth) {
     const [, year, month] = yearMonth;
@@ -62,8 +56,26 @@ export const compactListPeriodEn = (period?: string | null) => {
   return period;
 };
 
+export const formatBirthdayEn = (birthday?: string | null) => {
+  const value = String(birthday ?? "").trim();
+  const match = value.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if (!match) return value;
+
+  const date = new Date(Number(match[1]), Number(match[2]) - 1, Number(match[3]));
+  return new Intl.DateTimeFormat("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  }).format(date);
+};
+
+export const formatAgeEn = (age?: number | null) => {
+  if (typeof age !== "number" || !Number.isFinite(age) || age < 0) return null;
+  return `${age} y/o`;
+};
+
 export const truncateText = (text: string, max: number) =>
-  text.length <= max ? text : `${text.slice(0, Math.max(0, max - 1))}…`;
+  text.length <= max ? text : `${text.slice(0, Math.max(0, max - 1))}...`;
 
 export const toEnglishOriginType = (value?: string | null) => {
   const raw = String(value ?? "").trim();

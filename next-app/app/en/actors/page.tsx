@@ -2,13 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "../../../components/Breadcrumbs";
 import { FavoriteButtonClient } from "../../../components/FavoriteButtonClient";
-import {
-  formatBirthday,
-  getActorList,
-  getAgeFromBirthday,
-  toPlainText,
-} from "../../../lib/stage-connect";
-import { truncateText } from "../../../lib/en-copy";
+import { getActorList, getAgeFromBirthday, toPlainText } from "../../../lib/stage-connect";
+import { formatAgeEn, formatBirthdayEn, truncateText } from "../../../lib/en-copy";
 
 type SearchParamValue = string | string[] | undefined;
 type SearchParams = Record<string, SearchParamValue>;
@@ -109,8 +104,9 @@ export default async function EnglishActorsPage({
 
           <div className="catalog-grid">
             {visibleActors.map((actor) => {
-              const birthday = formatBirthday(actor.birthday);
+              const birthday = formatBirthdayEn(actor.birthday);
               const age = getAgeFromBirthday(actor.birthday);
+              const ageLabel = formatAgeEn(age);
 
               return (
                 <article className="catalog-card" key={actor.slug}>
@@ -126,8 +122,8 @@ export default async function EnglishActorsPage({
                     {actor.kana ? <div className="catalog-card__sub">{actor.kana}</div> : null}
                     {birthday ? (
                       <div className="catalog-card__sub">
-                        Born {birthday}
-                        {age !== null ? ` (${age})` : ""}
+                        DOB: {birthday}
+                        {ageLabel ? ` / ${ageLabel}` : ""}
                       </div>
                     ) : null}
                     {actor.gender && actor.gender in GENDER_LABELS ? (
