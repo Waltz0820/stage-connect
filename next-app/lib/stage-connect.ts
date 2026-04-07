@@ -393,6 +393,7 @@ export async function getPlayDetailBySlug(slug: string): Promise<PlayDetailData 
       cast_group,
       is_starring,
       billing_order,
+      created_at,
       actor:actors (
         slug,
         name
@@ -400,7 +401,8 @@ export async function getPlayDetailBySlug(slug: string): Promise<PlayDetailData 
     `
     )
     .eq("play_id", play.id)
-    .order("billing_order", { ascending: true, nullsFirst: false });
+    .order("billing_order", { ascending: true, nullsFirst: false })
+    .order("created_at", { ascending: true });
 
   if (castError) throw castError;
 
@@ -412,10 +414,20 @@ export async function getPlayDetailBySlug(slug: string): Promise<PlayDetailData 
       castGroup: String(row?.cast_group ?? "").trim() || null,
       isStarring: typeof row?.is_starring === "boolean" ? row.is_starring : null,
       billingOrder: typeof row?.billing_order === "number" ? row.billing_order : Number.MAX_SAFE_INTEGER,
+      createdAt: String(row?.created_at ?? "").trim() || null,
     }))
     .filter((row) => row.slug && row.name)
-    .sort((a, b) => a.billingOrder - b.billingOrder)
-    .map(({ billingOrder, ...row }) => row);
+    .sort((a, b) => {
+      const diff = a.billingOrder - b.billingOrder;
+      if (diff !== 0) return diff;
+
+      const aCreated = a.createdAt ? Date.parse(a.createdAt) : Number.MAX_SAFE_INTEGER;
+      const bCreated = b.createdAt ? Date.parse(b.createdAt) : Number.MAX_SAFE_INTEGER;
+      if (aCreated !== bCreated) return aCreated - bCreated;
+
+      return a.name.localeCompare(b.name, "ja");
+    })
+    .map(({ billingOrder, createdAt, ...row }) => row);
 
   const tags = uniq(((play.play_tags ?? []) as any[]).map((item) => item?.tag?.name));
   const franchise = Array.isArray(play.franchise) ? play.franchise[0] : play.franchise;
