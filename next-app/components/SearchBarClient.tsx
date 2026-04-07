@@ -164,7 +164,7 @@ export function SearchBarClient() {
                 setIsMobileOpen(false);
               }
             }}
-            placeholder={isEnglish ? "Search cast or plays..." : "キャスト・作品を検索..."}
+            placeholder={isEnglish ? "Search actors or plays..." : "キャスト・作品を検索..."}
             className="search-input"
           />
         </div>
@@ -179,7 +179,7 @@ export function SearchBarClient() {
 
             {actors.length > 0 ? (
               <div className="search-group">
-                <div className="search-group-title">{isEnglish ? "Cast" : "キャスト"}</div>
+                <div className="search-group-title">{isEnglish ? "Actors" : "キャスト"}</div>
                 {actors.map((actor) => (
                   <Link
                     key={actor.id}
@@ -224,7 +224,7 @@ export function SearchBarClient() {
             ) : null}
 
             <button type="button" className="search-submit" onClick={submit}>
-              {isEnglish ? "View all search results" : "すべての検索結果を見る"}
+              {isEnglish ? "View all results" : "すべての検索結果を見る"}
             </button>
           </div>
         ) : null}

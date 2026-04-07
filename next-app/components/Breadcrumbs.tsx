@@ -19,7 +19,7 @@ export function Breadcrumbs({ items }: Props) {
   const allItems: BreadcrumbItem[] = [rootItem, ...items];
 
   return (
-    <nav aria-label={isEnglish ? "Breadcrumb" : "パンくずリスト"} className="breadcrumbs">
+    <nav aria-label={isEnglish ? "Breadcrumbs" : "パンくずリスト"} className="breadcrumbs">
       <ol className="breadcrumbs__list">
         {allItems.map((item, index) => {
           const isLast = index === allItems.length - 1;
