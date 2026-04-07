@@ -31,7 +31,7 @@ export default async function WatchUNextPage() {
     },
     {
       q: "U-NEXTとDMM TVはどう使い分ければいい？",
-      a: `2.5次元舞台を最優先するならDMM TV（${dmmCount}シリーズ確認済み、月額550円）。映画・ドラマ・アニメも含めて1つのサービスで済ませたいならU-NEXT（月額2,189円）。目的で選ぶのが自然です。`,
+      a: "2.5次元舞台を最優先するならDMM TV（国内最多級のシリーズ数、月額550円）。映画・ドラマ・アニメも含めて1つのサービスで済ませたいならU-NEXT（月額2,189円）。目的で選ぶのが自然です。",
     },
     {
       q: "U-NEXTの2.5次元舞台は見放題ですか？",
@@ -137,7 +137,7 @@ export default async function WatchUNextPage() {
               </div>
               <div className="watch-compare-row">
                 <span className="watch-compare-label">2.5次元シリーズ</span>
-                <span className="watch-compare-value is-strong">{dmmCount}件確認済み</span>
+                <span className="watch-compare-value is-strong">国内最多級</span>
               </div>
               <div className="watch-compare-row">
                 <span className="watch-compare-label">強み</span>
@@ -220,13 +220,13 @@ export default async function WatchUNextPage() {
             2.5次元舞台・ミュージカルの見放題ラインナップが最も充実しているのがDMM TVです。
             月額550円と手頃で、刀剣乱舞・ヒプノシスマイク・テニスの王子様・あんさんぶるスターズなど
             主要シリーズの多くがカバーされています。
-            Stage Connectで確認済みのDMM TV配信シリーズは現在{dmmCount}件。
+            DMM TVは2.5次元舞台の見放題シリーズ数が国内最多級。
             14日間の無料トライアルがあるので、まず試して判断するのが最も効率的です。
           </div>
           <div className="catalog-summary">
             <span className="catalog-chip">月額550円（税込）</span>
             <span className="catalog-chip">14日間無料トライアル</span>
-            <span className="catalog-chip">{dmmCount}シリーズ確認済み</span>
+            <span className="catalog-chip">2.5次元 国内最多級</span>
           </div>
           <div className="action-row">
             <a
@@ -251,7 +251,7 @@ export default async function WatchUNextPage() {
               <div className="compare-card__eyebrow">2.5次元が最優先</div>
               <div className="compare-card__title">→ DMM TV</div>
               <div className="compare-card__text">
-                2.5次元舞台をできるだけ多く見放題で観たい人。月額550円で{dmmCount}シリーズ。
+                2.5次元舞台をできるだけ多く見放題で観たい人。月額550円で国内最多級のラインナップ。
               </div>
             </article>
             <article className="compare-card">
@@ -290,7 +290,7 @@ export default async function WatchUNextPage() {
                 DMM TV配信シリーズ一覧
               </Link>
               <div className="compare-card__text">
-                DMM TVで確認済みの{dmmCount}シリーズを一覧で表示。シリーズ詳細への導線もあります。
+                DMM TVで見られるシリーズを一覧で表示。シリーズ詳細への導線もあります。
               </div>
             </article>
           </div>

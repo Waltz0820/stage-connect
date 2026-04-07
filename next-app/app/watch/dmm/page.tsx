@@ -119,7 +119,7 @@ export default async function WatchDmmPage() {
             </div>
             <div className="watch-stat-card">
               <div className="watch-stat-label">配信シリーズ</div>
-              <div className="watch-stat-value">{countLabel}件</div>
+              <div className="watch-stat-value">国内最多級</div>
             </div>
           </div>
 
@@ -172,7 +172,7 @@ export default async function WatchDmmPage() {
               </div>
               <div className="watch-compare-row">
                 <span className="watch-compare-label">2.5次元</span>
-                <span className="watch-compare-value is-strong">{countLabel}件</span>
+                <span className="watch-compare-value is-strong">国内最多級</span>
               </div>
             </div>
             <div className="watch-compare-col">

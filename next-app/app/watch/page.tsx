@@ -96,7 +96,7 @@ export default async function WatchPage() {
           <div className="watch-stat-grid">
             <div className="watch-stat-card">
               <div className="watch-stat-label">DMM掲載シリーズ</div>
-              <div className="watch-stat-value">{countLabel}件</div>
+              <div className="watch-stat-value">国内最多級</div>
             </div>
             <div className="watch-stat-card">
               <div className="watch-stat-label">最安月額</div>
@@ -127,7 +127,7 @@ export default async function WatchPage() {
               </div>
               <div className="watch-compare-row">
                 <span className="watch-compare-label">2.5次元シリーズ</span>
-                <span className="watch-compare-value is-strong">{countLabel}件確認済み</span>
+                <span className="watch-compare-value is-strong">国内最多級</span>
               </div>
               <div className="watch-compare-row">
                 <span className="watch-compare-label">強み</span>
@@ -192,7 +192,7 @@ export default async function WatchPage() {
           </div>
           <div className="prose-panel">
             2.5次元舞台・ミュージカルの見放題をできるだけ広く見たいなら、まずはDMM TVを起点に考えるのが自然です。
-            Stage Connectで確認済みのDMM TV配信シリーズは{countLabel}件。
+            DMM TVは2.5次元舞台の見放題シリーズ数が国内最多級。
             月額550円・14日間の無料トライアルがあり、シリーズ単位で配信状況も追いやすいため、2.5次元の入口として最も扱いやすいサービスです。
           </div>
         </section>

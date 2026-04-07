@@ -31,7 +31,7 @@ export default async function WatchDanimePage() {
     },
     {
       q: "dアニメストアとDMM TVはどう違いますか？",
-      a: `dアニメストアはアニメ特化、DMM TVは2.5次元舞台を含む幅広いジャンルをカバー。2.5次元舞台の見放題シリーズ数はDMM TVが${dmmCount}件確認済みで優位です。`,
+      a: "dアニメストアはアニメ特化、DMM TVは2.5次元舞台を含む幅広いジャンルをカバー。2.5次元舞台の見放題シリーズ数はDMM TVが国内最多級で優位です。",
     },
     {
       q: "dアニメストアとDMM TVの料金は？",
@@ -137,7 +137,7 @@ export default async function WatchDanimePage() {
               </div>
               <div className="watch-compare-row">
                 <span className="watch-compare-label">2.5次元シリーズ</span>
-                <span className="watch-compare-value is-strong">{dmmCount}件確認済み</span>
+                <span className="watch-compare-value is-strong">国内最多級</span>
               </div>
               <div className="watch-compare-row">
                 <span className="watch-compare-label">強み</span>
@@ -207,7 +207,7 @@ export default async function WatchDanimePage() {
               <div className="compare-card__eyebrow">dアニメの弱み</div>
               <div className="compare-card__title">2.5次元は手薄</div>
               <div className="compare-card__text">
-                2.5次元舞台の掲載は限定的。同じ550円ならDMM TVの方が{dmmCount}シリーズ確認済みで圧倒的に充実しています。
+                2.5次元舞台の掲載は限定的。同じ550円ならDMM TVの方が国内最多級のラインナップで圧倒的に充実しています。
               </div>
             </article>
           </div>
@@ -218,12 +218,12 @@ export default async function WatchDanimePage() {
           <h2 className="section-title">同じ月額550円ならDMM TVが有利</h2>
           <div className="prose-panel">
             dアニメストアもDMM TVも月額550円（税込）。同じ価格なら、2.5次元舞台の見放題が圧倒的に充実しているDMM TVを選ぶ方が合理的です。
-            DMM TVではStage Connectで確認済みの{dmmCount}シリーズが配信されており、
+            DMM TVは2.5次元舞台の見放題シリーズ数が国内最多級。
             14日間の無料トライアルで実際のラインナップを確認してから判断できます。
           </div>
           <div className="catalog-summary">
             <span className="catalog-chip">月額550円 — 同額</span>
-            <span className="catalog-chip">DMM TVは{dmmCount}シリーズ</span>
+            <span className="catalog-chip">2.5次元 国内最多級</span>
             <span className="catalog-chip">14日間無料トライアル</span>
           </div>
           <div className="action-row">
@@ -260,7 +260,7 @@ export default async function WatchDanimePage() {
                 DMM TV配信シリーズ一覧
               </Link>
               <div className="compare-card__text">
-                DMM TVで確認済みの{dmmCount}シリーズを一覧で表示しています。
+                DMM TVで見られるシリーズを一覧で表示しています。
               </div>
             </article>
           </div>
