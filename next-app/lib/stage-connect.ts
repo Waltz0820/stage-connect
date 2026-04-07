@@ -39,6 +39,7 @@ export type SeriesDetailData = {
   slug: string | null;
   name: string;
   description: string | null;
+  descriptionEn: string | null;
   originType: string | null;
   originNote: string | null;
   productionCompanies: string[];
@@ -47,6 +48,7 @@ export type SeriesDetailData = {
     slug: string | null;
     name: string;
     description: string | null;
+    descriptionEn: string | null;
     originType: string | null;
   }>;
   plays: Array<{
@@ -55,6 +57,7 @@ export type SeriesDetailData = {
     title: string;
     period: string | null;
     summary: string | null;
+    summaryEn: string | null;
     vod: Record<string, string> | null;
     tags: string[];
   }>;
@@ -73,6 +76,7 @@ export type PlayListItem = {
   slug: string;
   title: string;
   summary: string | null;
+  summaryEn: string | null;
   period: string | null;
   franchiseName: string | null;
   franchiseFormat: string | null;
@@ -93,6 +97,7 @@ export type SeriesListItem = {
   slug: string;
   name: string;
   description: string | null;
+  descriptionEn: string | null;
   playCount: number;
   format: string | null;
   originType: string | null;
@@ -190,6 +195,7 @@ export type PlayDetailData = {
   slug: string;
   title: string;
   summary: string | null;
+  summaryEn: string | null;
   period: string | null;
   venue: string | null;
   vod: Record<string, string> | null;
@@ -312,31 +318,69 @@ export async function getPlayDetailBySlug(slug: string): Promise<PlayDetailData 
   if (!hasSupabaseEnv) return null;
   const supabase = createSupabaseServerClient();
 
-  const { data: play, error: playError } = await supabase
-    .from("plays")
-    .select(
-      `
-      id,
-      slug,
-      title,
-      summary,
-      period,
-      venue,
-      vod,
-      credits,
-      franchise:franchises (
-        name,
-        slug
-      ),
-      play_tags:play_tags (
-        tag:tags (
-          name
+  let play: any = null;
+  let playError: any = null;
+
+  {
+    const res = await supabase
+      .from("plays")
+      .select(
+        `
+        id,
+        slug,
+        title,
+        summary,
+        summary_en,
+        period,
+        venue,
+        vod,
+        credits,
+        franchise:franchises (
+          name,
+          slug
+        ),
+        play_tags:play_tags (
+          tag:tags (
+            name
+          )
         )
+      `
       )
-    `
-    )
-    .eq("slug", slug)
-    .maybeSingle();
+      .eq("slug", slug)
+      .maybeSingle();
+    play = res.data;
+    playError = res.error;
+  }
+
+  if (playError && /summary_en/i.test(String(playError.message ?? ""))) {
+    const fallback = await supabase
+      .from("plays")
+      .select(
+        `
+        id,
+        slug,
+        title,
+        summary,
+        period,
+        venue,
+        vod,
+        credits,
+        franchise:franchises (
+          name,
+          slug
+        ),
+        play_tags:play_tags (
+          tag:tags (
+            name
+          )
+        )
+      `
+      )
+      .eq("slug", slug)
+      .maybeSingle();
+    play = fallback.data ? { ...fallback.data, summary_en: null } : fallback.data;
+    playError = fallback.error;
+  }
 
   if (playError) throw playError;
   if (!play?.id || !play?.slug || !play?.title) return null;
@@ -381,6 +425,7 @@ export async function getPlayDetailBySlug(slug: string): Promise<PlayDetailData 
     slug: play.slug,
     title: play.title,
     summary: play.summary ?? null,
+    summaryEn: play.summary_en ?? null,
     period: play.period ?? null,
     venue: play.venue ?? null,
     vod: (play.vod as Record<string, string> | null) ?? null,
@@ -558,16 +603,18 @@ export async function getSeriesDetailBySlug(slug: string): Promise<SeriesDetailD
   {
     const res = await supabase
       .from("franchises")
-      .select("id, name, slug, description, origin_type, origin_note, production_companies, related_franchise_ids")
+      .select(
+        "id, name, slug, description, description_en, origin_type, origin_note, production_companies, related_franchise_ids"
+      )
       .eq("slug", slug)
       .maybeSingle();
 
-    if (res.error && /related_franchise_ids/i.test(String(res.error.message ?? ""))) {
-      const fallback = await supabase
-        .from("franchises")
-        .select("id, name, slug, description, origin_type, origin_note, production_companies")
-        .eq("slug", slug)
-        .maybeSingle();
+      if (res.error && /(related_franchise_ids|description_en)/i.test(String(res.error.message ?? ""))) {
+        const fallback = await supabase
+          .from("franchises")
+          .select("id, name, slug, description, description_en, origin_type, origin_note, production_companies")
+          .eq("slug", slug)
+          .maybeSingle();
       if (fallback.error) throw fallback.error;
       franchise = fallback.data ? { ...fallback.data, related_franchise_ids: [] } : null;
     } else {
@@ -579,15 +626,17 @@ export async function getSeriesDetailBySlug(slug: string): Promise<SeriesDetailD
   if (!franchise) {
     const res = await supabase
       .from("franchises")
-      .select("id, name, slug, description, origin_type, origin_note, production_companies, related_franchise_ids")
+      .select(
+        "id, name, slug, description, description_en, origin_type, origin_note, production_companies, related_franchise_ids"
+      )
       .eq("name", slug)
       .maybeSingle();
-    if (res.error && /related_franchise_ids/i.test(String(res.error.message ?? ""))) {
-      const fallback = await supabase
-        .from("franchises")
-        .select("id, name, slug, description, origin_type, origin_note, production_companies")
-        .eq("name", slug)
-        .maybeSingle();
+      if (res.error && /(related_franchise_ids|description_en)/i.test(String(res.error.message ?? ""))) {
+        const fallback = await supabase
+          .from("franchises")
+          .select("id, name, slug, description, description_en, origin_type, origin_note, production_companies")
+          .eq("name", slug)
+          .maybeSingle();
       if (fallback.error) throw fallback.error;
       franchise = fallback.data ? { ...fallback.data, related_franchise_ids: [] } : null;
     } else {
@@ -598,25 +647,61 @@ export async function getSeriesDetailBySlug(slug: string): Promise<SeriesDetailD
 
   if (!franchise?.id || !franchise?.name) return null;
 
-  const { data: playRows, error: playError } = await supabase
-    .from("plays")
-    .select(
-      `
-      id,
-      slug,
-      title,
-      period,
-      summary,
-      vod,
-      created_at,
-      play_tags:play_tags (
-        tag:tags (
-          name
+  let playRows: any[] | null = null;
+  let playError: any = null;
+
+  {
+    const res = await supabase
+      .from("plays")
+      .select(
+        `
+        id,
+        slug,
+        title,
+        period,
+        summary,
+        summary_en,
+        vod,
+        created_at,
+        play_tags:play_tags (
+          tag:tags (
+            name
+          )
         )
+      `
       )
-    `
-    )
-    .eq("franchise_id", franchise.id);
+      .eq("franchise_id", franchise.id);
+    playRows = res.data as any[] | null;
+    playError = res.error;
+  }
+
+  if (playError && /summary_en/i.test(String(playError.message ?? ""))) {
+    const fallback = await supabase
+      .from("plays")
+      .select(
+        `
+        id,
+        slug,
+        title,
+        period,
+        summary,
+        vod,
+        created_at,
+        play_tags:play_tags (
+          tag:tags (
+            name
+          )
+        )
+      `
+      )
+      .eq("franchise_id", franchise.id);
+    playRows =
+      (fallback.data as any[] | null)?.map((row) => ({
+        ...row,
+        summary_en: null,
+      })) ?? null;
+    playError = fallback.error;
+  }
 
   if (playError) throw playError;
 
@@ -628,6 +713,7 @@ export async function getSeriesDetailBySlug(slug: string): Promise<SeriesDetailD
       title: row.title as string,
       period: (row.period as string | null) ?? null,
       summary: (row.summary as string | null) ?? null,
+      summaryEn: (row.summary_en as string | null) ?? null,
       vod: (row.vod as Record<string, string> | null) ?? null,
       createdAt: (row.created_at as string | null) ?? null,
       tags: uniq(((row.play_tags ?? []) as any[]).map((item) => item?.tag?.name)),
@@ -648,10 +734,30 @@ export async function getSeriesDetailBySlug(slug: string): Promise<SeriesDetailD
   let relatedSeries: SeriesDetailData["relatedSeries"] = [];
 
   if (relatedFranchiseIds.length > 0) {
-    const { data: relatedRows, error: relatedError } = await supabase
-      .from("franchises")
-      .select("id, slug, name, description, origin_type")
-      .in("id", relatedFranchiseIds);
+    let relatedRows: any[] | null = null;
+    let relatedError: any = null;
+
+    {
+      const res = await supabase
+        .from("franchises")
+        .select("id, slug, name, description, description_en, origin_type")
+        .in("id", relatedFranchiseIds);
+      relatedRows = res.data as any[] | null;
+      relatedError = res.error;
+    }
+
+    if (relatedError && /description_en/i.test(String(relatedError.message ?? ""))) {
+      const fallback = await supabase
+        .from("franchises")
+        .select("id, slug, name, description, origin_type")
+        .in("id", relatedFranchiseIds);
+      relatedRows =
+        (fallback.data as any[] | null)?.map((row) => ({
+          ...row,
+          description_en: null,
+        })) ?? null;
+      relatedError = fallback.error;
+    }
 
     if (relatedError) throw relatedError;
 
@@ -665,6 +771,7 @@ export async function getSeriesDetailBySlug(slug: string): Promise<SeriesDetailD
             slug: row.slug ? String(row.slug) : null,
             name: String(row.name),
             description: row.description ? String(row.description) : null,
+            descriptionEn: row.description_en ? String(row.description_en) : null,
             originType: row.origin_type ? String(row.origin_type) : null,
           },
         ])
@@ -771,6 +878,7 @@ export async function getSeriesDetailBySlug(slug: string): Promise<SeriesDetailD
     slug: franchise.slug ?? null,
     name: franchise.name,
     description: franchise.description ?? null,
+    descriptionEn: franchise.description_en ?? null,
     originType: franchise.origin_type ?? null,
     originNote: franchise.origin_note ?? null,
     productionCompanies: Array.isArray(franchise.production_companies)
@@ -796,6 +904,7 @@ export async function getPlayList(): Promise<PlayListItem[]> {
         slug,
         title,
         summary,
+        summary_en,
         period,
         genre,
         created_at,
@@ -807,6 +916,31 @@ export async function getPlayList(): Promise<PlayListItem[]> {
       );
     data = res.data as any[] | null;
     error = res.error;
+  }
+
+  if (error && /summary_en/i.test(String(error.message ?? ""))) {
+    const fallback = await supabase
+      .from("plays")
+      .select(
+        `
+        slug,
+        title,
+        summary,
+        period,
+        genre,
+        created_at,
+        franchise:franchises (
+          name,
+          format
+        )
+      `
+      );
+    data =
+      (fallback.data as any[] | null)?.map((row) => ({
+        ...row,
+        summary_en: null,
+      })) ?? null;
+    error = fallback.error;
   }
 
   if (error && /format/i.test(String(error.message ?? ""))) {
@@ -846,6 +980,7 @@ export async function getPlayList(): Promise<PlayListItem[]> {
         slug: row.slug as string,
         title: row.title as string,
         summary: (row.summary as string | null) ?? null,
+        summaryEn: (row.summary_en as string | null) ?? null,
         period: (row.period as string | null) ?? null,
         franchiseName: franchise?.name ?? null,
         franchiseFormat: (franchise?.format as string | null) ?? null,
@@ -899,10 +1034,23 @@ export async function getSeriesList(): Promise<SeriesListItem[]> {
   {
     const res = await supabase
       .from("franchises")
-      .select("id, slug, name, description, format, origin_type")
+      .select("id, slug, name, description, description_en, format, origin_type")
       .order("name", { ascending: true });
     franchises = res.data as any[] | null;
     franchiseError = res.error;
+  }
+
+  if (franchiseError && /description_en/i.test(String(franchiseError.message ?? ""))) {
+    const fallback = await supabase
+      .from("franchises")
+      .select("id, slug, name, description, format, origin_type")
+      .order("name", { ascending: true });
+    franchises =
+      (fallback.data as any[] | null)?.map((row) => ({
+        ...row,
+        description_en: null,
+      })) ?? null;
+    franchiseError = fallback.error;
   }
 
   if (franchiseError && /format/i.test(String(franchiseError.message ?? ""))) {
@@ -913,6 +1061,7 @@ export async function getSeriesList(): Promise<SeriesListItem[]> {
     franchises =
       (fallback.data as any[] | null)?.map((row) => ({
         ...row,
+        description_en: null,
         format: null,
       })) ?? null;
     franchiseError = fallback.error;
@@ -941,6 +1090,7 @@ export async function getSeriesList(): Promise<SeriesListItem[]> {
       slug: (row.slug as string | null) ?? null,
       name: row.name as string,
       description: (row.description as string | null) ?? null,
+      descriptionEn: (row.description_en as string | null) ?? null,
       playCount: countByFranchise.get(row.id as string) ?? 0,
       format: (row.format as string | null) ?? null,
       originType: (row.origin_type as string | null) ?? null,
@@ -951,6 +1101,7 @@ export async function getSeriesList(): Promise<SeriesListItem[]> {
       slug: row.slug as string,
       name: row.name,
       description: row.description,
+      descriptionEn: row.descriptionEn,
       playCount: row.playCount,
       format: row.format,
       originType: row.originType,

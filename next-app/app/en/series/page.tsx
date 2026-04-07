@@ -156,8 +156,8 @@ export default async function EnglishSeriesPage({
                   {series.originType ? <div className="catalog-card__sub">{toEnglishOriginType(series.originType)}</div> : null}
 
                   <div className="catalog-card__text">
-                    {series.description
-                      ? truncateText(toPlainText(series.description), 160)
+                    {series.descriptionEn || series.description
+                      ? truncateText(toPlainText(series.descriptionEn || series.description), 160)
                       : "Series description not available yet."}
                   </div>
 

@@ -24,6 +24,7 @@ type PlayRow = {
   slug: string;
   title: string;
   summary?: string | null;
+  summary_en?: string | null;
   period?: string | null;
   venue?: string | null;
   genre?: PlayGenre | null;
@@ -203,6 +204,7 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
   const [title, setTitle] = useState("");
   const [slugText, setSlugText] = useState("");
   const [summary, setSummary] = useState("");
+  const [summaryEn, setSummaryEn] = useState("");
   const [period, setPeriod] = useState("");
   const [venue, setVenue] = useState("");
   const [genre, setGenre] = useState<PlayGenre | "">("");
@@ -308,6 +310,7 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
       setTitle("");
       setSlugText("");
       setSummary("");
+      setSummaryEn("");
       setPeriod("");
       setVenue("");
       setGenre("");
@@ -329,11 +332,28 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
     const run = async () => {
       setBusy(true);
       try {
-        const { data, error } = await supabase
-          .from("plays")
-          .select("id,slug,title,summary,period,venue,genre,vod,franchise_id,credits")
-          .eq("slug", key)
-          .maybeSingle();
+        let data: any = null;
+        let error: any = null;
+
+        {
+          const res = await supabase
+            .from("plays")
+            .select("id,slug,title,summary,summary_en,period,venue,genre,vod,franchise_id,credits")
+            .eq("slug", key)
+            .maybeSingle();
+          data = res.data;
+          error = res.error;
+        }
+
+        if (error && /summary_en/i.test(String(error.message ?? ""))) {
+          const fallback = await supabase
+            .from("plays")
+            .select("id,slug,title,summary,period,venue,genre,vod,franchise_id,credits")
+            .eq("slug", key)
+            .maybeSingle();
+          data = fallback.data ? { ...fallback.data, summary_en: null } : fallback.data;
+          error = fallback.error;
+        }
         if (error) throw error;
         if (!data) return;
 
@@ -342,6 +362,7 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         setTitle(r.title ?? "");
         setSlugText(r.slug ?? "");
         setSummary(r.summary ?? "");
+        setSummaryEn(r.summary_en ?? "");
         setPeriod(r.period ?? "");
         setVenue(r.venue ?? "");
         setGenre((r.genre as PlayGenre | null) ?? "");
@@ -437,6 +458,7 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         title: safeTrim(title),
         slug: safeTrim(slugText) || toSlug(title),
         summary: safeTrim(summary) || null,
+        summary_en: safeTrim(summaryEn) || null,
         period: safeTrim(period) || null,
         venue: safeTrim(venue) || null,
         genre: genre || null,
@@ -456,7 +478,19 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
       }
 
       if (mode === "new") {
-        const { data: created, error } = await supabase.from("plays").insert(payload).select("id,slug").single();
+        let created: any = null;
+        let error: any = null;
+        {
+          const res = await supabase.from("plays").insert(payload).select("id,slug").single();
+          created = res.data;
+          error = res.error;
+        }
+        if (error && /summary_en/i.test(String(error.message ?? ""))) {
+          const { summary_en, ...fallbackPayload } = payload;
+          const res = await supabase.from("plays").insert(fallbackPayload).select("id,slug").single();
+          created = res.data;
+          error = res.error;
+        }
         if (error) throw error;
 
         await syncPlayTags(created.id, selectedTagIds);
@@ -464,7 +498,16 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
       } else {
         if (!row?.id) return;
 
-        const { error } = await supabase.from("plays").update(payload).eq("id", row.id);
+        let error: any = null;
+        {
+          const res = await supabase.from("plays").update(payload).eq("id", row.id);
+          error = res.error;
+        }
+        if (error && /summary_en/i.test(String(error.message ?? ""))) {
+          const { summary_en, ...fallbackPayload } = payload;
+          const res = await supabase.from("plays").update(fallbackPayload).eq("id", row.id);
+          error = res.error;
+        }
         if (error) throw error;
 
         await syncPlayTags(row.id, selectedTagIds);
@@ -771,6 +814,15 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
 
         <Field label="vod (json)" hint='例：{ "dmm": "https://...", "danime": "...", "unext": "..." }'>
           <JsonArea value={vodText} onChange={handleVodTextChange} rows={10} />
+        </Field>
+        <Field label="summary_en" hint="English synopsis for /en/plays pages">
+          <textarea
+            className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
+            value={summaryEn}
+            onChange={(e) => setSummaryEn(e.target.value)}
+            rows={6}
+            placeholder="Write an English synopsis for /en/plays pages."
+          />
         </Field>
       </div>
     </div>

@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   }
 
   const description = truncateText(
-    toPlainText(play.summary || `${play.title} cast and production archive page on Stage Connect.`),
+    toPlainText(play.summaryEn || play.summary || `${play.title} cast and production archive page on Stage Connect.`),
     150
   );
 
@@ -57,6 +57,7 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
   const hasVod = Boolean(play.vod && Object.keys(play.vod).length > 0);
   const venues = splitSlashList(play.venue);
   const featuredCast = play.cast.slice(0, 12);
+  const synopsis = play.summaryEn || play.summary;
 
   return (
     <main className="container" style={{ paddingBlock: 32 }}>
@@ -108,7 +109,7 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
 
         <section className="section-card stack-md">
           <h2 className="section-title">Synopsis</h2>
-          <div className="rich-text">{play.summary || "Synopsis not available yet."}</div>
+          <div className="rich-text">{synopsis || "Synopsis not available yet."}</div>
         </section>
 
         <section className="section-card stack-md">

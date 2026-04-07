@@ -158,8 +158,8 @@ export default async function EnglishPlaysPage({
                   ) : null}
 
                   <div className="catalog-card__text">
-                    {play.summary
-                      ? truncateText(toPlainText(play.summary), 160)
+                    {play.summaryEn || play.summary
+                      ? truncateText(toPlainText(play.summaryEn || play.summary), 160)
                       : "Summary not available yet."}
                   </div>
 

@@ -56,7 +56,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   }
 
   const description = truncateText(
-    toPlainText(series.description || `${series.name} series archive page on Stage Connect.`),
+    toPlainText(series.descriptionEn || series.description || `${series.name} series archive page on Stage Connect.`),
     150
   );
 
@@ -80,6 +80,7 @@ export default async function EnglishSeriesDetailPage({ params }: { params: Prom
   if (!series) notFound();
 
   const startYear = getStartYear(series.plays.map((play) => play.period));
+  const seriesOverview = series.descriptionEn || series.description;
 
   return (
     <main className="container" style={{ paddingBlock: 32 }}>
@@ -112,7 +113,7 @@ export default async function EnglishSeriesDetailPage({ params }: { params: Prom
 
         <section className="section-card stack-md">
           <h2 className="section-title">Series overview</h2>
-          <div className="rich-text">{series.description || "Series overview not available yet."}</div>
+          <div className="rich-text">{seriesOverview || "Series overview not available yet."}</div>
 
           {(series.originNote || series.productionCompanies.length > 0) && (
             <div className="meta-list roomy">
@@ -175,9 +176,9 @@ export default async function EnglishSeriesDetailPage({ params }: { params: Prom
                       {hasVod(play.vod) ? <span className="catalog-card__badge">Streaming</span> : null}
                     </div>
 
-                    {play.summary ? (
+                    {play.summaryEn || play.summary ? (
                       <div className="catalog-card__text catalog-card__text--clamped">
-                        {truncateText(toPlainText(play.summary), 220)}
+                        {truncateText(toPlainText(play.summaryEn || play.summary), 220)}
                       </div>
                     ) : null}
 
@@ -209,7 +210,9 @@ export default async function EnglishSeriesDetailPage({ params }: { params: Prom
                     </div>
                     {item.originType ? <div className="catalog-card__sub">{toEnglishOriginType(item.originType)}</div> : null}
                     <div className="catalog-card__text">
-                      {item.description ? truncateText(toPlainText(item.description), 140) : "Related series archive."}
+                      {item.descriptionEn || item.description
+                        ? truncateText(toPlainText(item.descriptionEn || item.description), 140)
+                        : "Related series archive."}
                     </div>
                   </Link>
                 </article>
