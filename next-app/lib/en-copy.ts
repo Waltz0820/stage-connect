@@ -19,6 +19,13 @@ export const EN_ORIGIN_TYPE_LABELS: Record<string, string> = {
   musical: "Musical",
   movie: "Film",
   drama: "Drama",
+  漫画原作: "Manga",
+  アニメ原作: "Anime",
+  ゲーム原作: "Game",
+  メディアミックス: "Mixed Media",
+  小説原作: "Novel",
+  特撮: "Tokusatsu",
+  その他: "Other",
 };
 
 export const EN_GENRE_LABELS: Record<string, string> = {
