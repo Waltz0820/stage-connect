@@ -23,13 +23,11 @@ export function ActorTopSeriesClient({
     locale === "en"
       ? {
           title: "Major series",
-          itemLabel: "Series",
           itemSuffix: "credited works",
           hrefBase: "/en/series",
         }
       : {
           title: "主な出演シリーズ",
-          itemLabel: "シリーズ",
           itemSuffix: "作品に出演",
           hrefBase: "/series",
         };
@@ -40,7 +38,6 @@ export function ActorTopSeriesClient({
       <div className="meta-list top-series-list">
         {items.slice(0, INITIAL_VISIBLE).map((series) => (
           <div key={series.slug} className="meta-row top-series-row">
-            <div className="meta-label">{labels.itemLabel}</div>
             <div className="meta-value">
               <Link href={`${labels.hrefBase}/${series.slug}`} className="catalog-link">
                 {series.name}
