@@ -4,7 +4,6 @@ import { notFound } from "next/navigation";
 import { ActorCoStarsClient } from "../../../components/ActorCoStarsClient";
 import { ActorTopSeriesClient } from "../../../components/ActorTopSeriesClient";
 import { Breadcrumbs } from "../../../components/Breadcrumbs";
-import { ActorProfileClient } from "../../../components/ActorProfileClient";
 import { FavoriteButtonClient } from "../../../components/FavoriteButtonClient";
 import { ShareButtonClient } from "../../../components/ShareButtonClient";
 import {
@@ -19,6 +18,11 @@ import {
 type Params = {
   slug: string;
 };
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
+
+export const revalidate = 3600;
+export const dynamicParams = true;
 
 const formatTimelineLeadDate = (period?: string | null) => {
   const value = String(period ?? "").trim();
@@ -37,17 +41,10 @@ const formatTimelineLeadDate = (period?: string | null) => {
   }
 
   const yearOnly = value.match(/(\d{4})/);
-  if (yearOnly) {
-    return `${yearOnly[1]}-`;
-  }
+  if (yearOnly) return `${yearOnly[1]}-`;
 
   return value;
 };
-
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
-
-export const revalidate = 3600;
-export const dynamicParams = true;
 
 export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
   const { slug } = await params;
@@ -63,10 +60,9 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
     };
   }
 
+  const statusLine = toPlainText(actor.profile || "") || `${actor.name}の俳優プロフィールページです。`;
   const description = truncate(
-    toPlainText(
-      actor.profile || `${actor.name}の俳優プロフィールと出演作品をまとめたページです。出演作品数は${actor.plays.length}件です。`
-    ),
+    `${statusLine} 出演作品数は${actor.plays.length}件です。`,
     150
   );
 
@@ -75,6 +71,10 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
     description,
     alternates: {
       canonical: `/actors/${actor.slug}`,
+      languages: {
+        ja: `${siteUrl}/actors/${actor.slug}`,
+        en: `${siteUrl}/en/actors/${actor.slug}`,
+      },
     },
   };
 }
@@ -89,17 +89,14 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
   const age = getAgeFromBirthday(actor.birthday);
   const timeline = groupPlayTimelineByYear(actor.plays);
   const hasSns = Boolean(actor.sns && Object.values(actor.sns).some(Boolean));
-  const profileText = actor.profile || `${actor.name}のプロフィール情報はまだありません。`;
-  const shouldCollapseProfile = toPlainText(profileText).length > 260;
+  const statusLine = toPlainText(actor.profile || "") || `${actor.name}のプロフィール情報はまだありません。`;
 
   const personJsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
     name: actor.name,
     alternateName: actor.kana || undefined,
-    description: toPlainText(
-      actor.profile || `${actor.name}の俳優プロフィールと出演作品をまとめたページです。`
-    ),
+    description: statusLine,
     url: `${siteUrl}/actors/${actor.slug}`,
     birthDate: actor.birthday || undefined,
     sameAs: Object.values(actor.sns || {}).filter(Boolean),
@@ -114,15 +111,15 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
         name: `${actor.name}の出演作はどこで見られますか？`,
         acceptedAnswer: {
           "@type": "Answer",
-          text: `Stage Connectでは${actor.name}の出演作品を作品ごとにまとめています。出演作品ページで公式データやあらすじを確認できます。`,
+          text: `Stage Connectでは${actor.name}の出演作品を作品ごとにまとめています。出演作品タイムラインから関連する公演ページへ移動できます。`,
         },
       },
       {
         "@type": "Question",
-        name: "配信で視聴できる作品はありますか？",
+        name: "配信で見られる作品はありますか？",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "配信対応の有無は作品ごとに異なります。出演作品詳細ページでDMM TVなどの配信リンクをご確認ください。",
+          text: "配信対応の有無は作品ごとに異なります。出演作品ページでDMM TVなどの配信リンクを確認できます。",
         },
       },
       {
@@ -130,7 +127,7 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
         name: "最新の出演情報はどこで確認できますか？",
         acceptedAnswer: {
           "@type": "Answer",
-          text: `${actor.name}の公式SNSやオフィシャルサイトで最新情報を確認することをおすすめします。このページの出演作品情報も随時更新しています。`,
+          text: `${actor.name}の公式SNSや公式サイトで最新情報を確認できます。このページの出演作品情報も随時更新しています。`,
         },
       },
     ],
@@ -148,7 +145,8 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
       />
 
       <div className="stack-lg">
-        <Breadcrumbs items={[{ label: "\u4ff3\u512a\u4e00\u89a7", href: "/actors" }]} />
+        <Breadcrumbs items={[{ label: "俳優一覧", href: "/actors" }]} />
+
         <section className="hero-card stack-md">
           <div className="detail-hero-grid">
             <div className="detail-monogram" aria-hidden="true">
@@ -159,11 +157,12 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
               <div className="title-subtle">俳優プロフィール</div>
               <h1 className="page-title">{actor.name}</h1>
               {actor.kana ? <div className="muted">{actor.kana}</div> : null}
+              <p className="detail-status-line">{statusLine}</p>
             </div>
 
             <div className="detail-actions">
               <FavoriteButtonClient slug={actor.slug} type="actor" size="lg" name={actor.name} kana={actor.kana} />
-              <ShareButtonClient title={actor.name} text={`${actor.name}のプロフィール | Stage Connect`} />
+              <ShareButtonClient title={actor.name} text={`${actor.name}の俳優プロフィール | Stage Connect`} />
             </div>
 
             <div className="pill-row">
@@ -173,14 +172,11 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
                   {age !== null ? ` (${age}歳)` : ""}
                 </span>
               ) : null}
+              {actor.heightCm !== null ? <span className="pill">身長: {actor.heightCm}cm</span> : null}
+              {actor.bloodType ? <span className="pill">血液型: {actor.bloodType}</span> : null}
               <span className="pill accent-pill">出演作品数: {actor.plays.length}</span>
             </div>
           </div>
-        </section>
-
-        <section className="section-card stack-md">
-          <h2 className="section-title">プロフィール</h2>
-          <ActorProfileClient text={profileText} collapsed={shouldCollapseProfile} />
         </section>
 
         {actor.topSeries.length > 0 ? <ActorTopSeriesClient items={actor.topSeries} /> : null}
@@ -199,9 +195,7 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
                 <div className="cast-grid cast-grid-wide">
                   {group.plays.map((play) => (
                     <Link className="cast-card cast-card-link" href={`/plays/${play.slug}`} key={play.slug}>
-                      <div className="cast-name">
-                        {play.title}
-                      </div>
+                      <div className="cast-name">{play.title}</div>
                       {play.franchiseName ? (
                         <div className="muted" style={{ marginTop: 6, fontSize: 13 }}>
                           {play.franchiseName}
@@ -233,32 +227,17 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
                 </a>
               ) : null}
               {actor.sns?.instagram ? (
-                <a
-                  className="action-button"
-                  href={actor.sns.instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a className="action-button" href={actor.sns.instagram} target="_blank" rel="noopener noreferrer">
                   Instagram
                 </a>
               ) : null}
               {actor.sns?.official ? (
-                <a
-                  className="action-button action-button-primary"
-                  href={actor.sns.official}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a className="action-button action-button-primary" href={actor.sns.official} target="_blank" rel="noopener noreferrer">
                   公式サイト
                 </a>
               ) : null}
               {actor.sns?.youtube ? (
-                <a
-                  className="action-button"
-                  href={actor.sns.youtube}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a className="action-button" href={actor.sns.youtube} target="_blank" rel="noopener noreferrer">
                   YouTube
                 </a>
               ) : null}
@@ -268,28 +247,25 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
           )}
         </section>
 
-
         <section className="section-card stack-md">
           <h2 className="section-title">よくある質問 (FAQ)</h2>
           <div className="faq-grid">
             <article className="faq-card">
               <h3 className="faq-question">Q. {actor.name}の出演作はどこで見られますか？</h3>
               <p className="faq-answer">
-                Stage Connectでは{actor.name}
-                の出演作品を作品ごとにまとめています。出演作品ページで公式データやあらすじを確認できます。
+                Stage Connectでは{actor.name}の出演作品を作品ごとにまとめています。出演作品タイムラインから関連する公演ページへ移動できます。
               </p>
             </article>
             <article className="faq-card">
-              <h3 className="faq-question">Q. 配信で視聴できる作品はありますか？</h3>
+              <h3 className="faq-question">Q. 配信で見られる作品はありますか？</h3>
               <p className="faq-answer">
-                配信対応の有無は作品ごとに異なります。出演作品詳細ページでDMM TVなどの配信リンクをご確認ください。
+                配信対応の有無は作品ごとに異なります。出演作品ページでDMM TVなどの配信リンクを確認できます。
               </p>
             </article>
             <article className="faq-card">
               <h3 className="faq-question">Q. 最新の出演情報はどこで確認できますか？</h3>
               <p className="faq-answer">
-                {actor.name}
-                の公式SNSやオフィシャルサイトで最新情報を確認することをおすすめします。このページの出演作品情報も随時更新しています。
+                {actor.name}の公式SNSや公式サイトで最新情報を確認できます。このページの出演作品情報も随時更新しています。
               </p>
             </article>
           </div>
@@ -298,4 +274,3 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
     </main>
   );
 }
-

@@ -16,6 +16,8 @@ export type ActorDetailData = {
   kana: string | null;
   birthday: string | null;
   profile: string | null;
+  heightCm: number | null;
+  bloodType: string | null;
   imageUrl: string | null;
   sns: Record<string, string> | null;
   plays: Array<{
@@ -459,11 +461,30 @@ export async function getActorDetailBySlug(slug: string): Promise<ActorDetailDat
   if (!hasSupabaseEnv) return null;
   const supabase = createSupabaseServerClient();
 
-  const { data: actor, error: actorError } = await supabase
-    .from("actors")
-    .select("id, slug, name, kana, birthday, profile, image_url, sns")
-    .eq("slug", slug)
-    .maybeSingle();
+  let actor: any = null;
+  let actorError: any = null;
+
+  {
+    const res = await supabase
+      .from("actors")
+      .select("id, slug, name, kana, birthday, profile, height_cm, blood_type, image_url, sns")
+      .eq("slug", slug)
+      .maybeSingle();
+    actor = res.data;
+    actorError = res.error;
+  }
+
+  if (actorError && /(height_cm|blood_type)/i.test(String(actorError.message ?? ""))) {
+    const fallback = await supabase
+      .from("actors")
+      .select("id, slug, name, kana, birthday, profile, image_url, sns")
+      .eq("slug", slug)
+      .maybeSingle();
+    actor = fallback.data
+      ? { ...fallback.data, height_cm: null, blood_type: null }
+      : fallback.data;
+    actorError = fallback.error;
+  }
 
   if (actorError) throw actorError;
   if (!actor?.id || !actor?.slug || !actor?.name) return null;
@@ -625,6 +646,8 @@ export async function getActorDetailBySlug(slug: string): Promise<ActorDetailDat
     kana: actor.kana ?? null,
     birthday: actor.birthday ?? null,
     profile: actor.profile ?? null,
+    heightCm: typeof actor.height_cm === "number" ? actor.height_cm : null,
+    bloodType: actor.blood_type ?? null,
     imageUrl: actor.image_url ?? null,
     sns: (actor.sns as Record<string, string> | null) ?? null,
     plays,

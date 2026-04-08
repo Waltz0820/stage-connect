@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ActorCoStarsClient } from "../../../../components/ActorCoStarsClient";
-import { ActorProfileClient } from "../../../../components/ActorProfileClient";
 import { ActorTopSeriesClient } from "../../../../components/ActorTopSeriesClient";
 import { Breadcrumbs } from "../../../../components/Breadcrumbs";
 import { FavoriteButtonClient } from "../../../../components/FavoriteButtonClient";
@@ -84,8 +83,7 @@ export default async function EnglishActorDetailPage({ params }: { params: Promi
   const ageLabel = formatAgeEn(age);
   const timeline = groupPlayTimelineByYear(actor.plays);
   const hasSns = Boolean(actor.sns && Object.values(actor.sns).some(Boolean));
-  const profileText = actor.profile || `${actor.name} profile text is not available yet.`;
-  const shouldCollapseProfile = toPlainText(profileText).length > 260;
+  const statusLine = toPlainText(actor.profile || "") || `${actor.name} profile text is not available yet.`;
 
   return (
     <main className="container" style={{ paddingBlock: 32 }}>
@@ -102,6 +100,7 @@ export default async function EnglishActorDetailPage({ params }: { params: Promi
               <div className="title-subtle">Actor profile</div>
               <h1 className="page-title">{actor.name}</h1>
               {actor.kana ? <div className="muted">{actor.kana}</div> : null}
+              <p className="detail-status-line">{statusLine}</p>
             </div>
 
             <div className="detail-actions">
@@ -116,14 +115,11 @@ export default async function EnglishActorDetailPage({ params }: { params: Promi
                   {ageLabel ? ` / ${ageLabel}` : ""}
                 </span>
               ) : null}
+              {actor.heightCm !== null ? <span className="pill">Height: {actor.heightCm}cm</span> : null}
+              {actor.bloodType ? <span className="pill">Blood type: {actor.bloodType}</span> : null}
               <span className="pill accent-pill">Appearances: {actor.plays.length}</span>
             </div>
           </div>
-        </section>
-
-        <section className="section-card stack-md">
-          <h2 className="section-title">Profile</h2>
-          <ActorProfileClient text={profileText} collapsed={shouldCollapseProfile} />
         </section>
 
         {actor.topSeries.length > 0 ? (

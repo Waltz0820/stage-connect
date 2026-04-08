@@ -17,6 +17,8 @@ type ActorRow = {
   kana?: string | null;
   birthday?: string | null;
   profile?: string | null;
+  height_cm?: number | null;
+  blood_type?: string | null;
   image_url?: string | null;
   gender?: string | null;
   sns?: any;
@@ -49,6 +51,8 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
   const [kana, setKana] = useState("");
   const [birthday, setBirthday] = useState("");
   const [profile, setProfile] = useState("");
+  const [heightCm, setHeightCm] = useState("");
+  const [bloodType, setBloodType] = useState("");
   const [gender, setGender] = useState("male");
   const [imageUrl, setImageUrl] = useState("");
   const [featured, setFeatured] = useState("");
@@ -68,6 +72,8 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
       setKana("");
       setBirthday("");
       setProfile("");
+      setHeightCm("");
+      setBloodType("");
       setGender("male");
       setImageUrl("");
       setFeatured("");
@@ -82,7 +88,7 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         const { data, error } = await supabase
           .from("actors")
           // ✅ tags は読まない（廃止）
-          .select("id,slug,name,kana,birthday,profile,image_url,gender,sns,featured_play_slugs")
+          .select("id,slug,name,kana,birthday,profile,height_cm,blood_type,image_url,gender,sns,featured_play_slugs")
           .eq("slug", key)
           .maybeSingle();
 
@@ -96,6 +102,8 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         setKana(r.kana ?? "");
         setBirthday(r.birthday ?? "");
         setProfile(r.profile ?? "");
+        setHeightCm(r.height_cm != null ? String(r.height_cm) : "");
+        setBloodType(r.blood_type ?? "");
         setGender((r.gender as any) ?? "male");
         setImageUrl(r.image_url ?? "");
         setFeatured((r.featured_play_slugs ?? []).join(", "));
@@ -141,6 +149,8 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         kana: safeTrim(kana) || null,
         birthday: safeTrim(birthday) || null,
         profile: safeTrim(profile) || null,
+        height_cm: safeTrim(heightCm) ? Number.parseInt(safeTrim(heightCm), 10) || null : null,
+        blood_type: safeTrim(bloodType).toUpperCase() || null,
         gender: safeTrim(gender) || "male",
         image_url: safeTrim(imageUrl) || null,
 
@@ -280,6 +290,26 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
               className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
               value={birthday}
               onChange={(e) => setBirthday(e.target.value)}
+            />
+          </Field>
+
+          <Field label="height_cm" hint="数字のみ">
+            <input
+              type="number"
+              inputMode="numeric"
+              className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
+              value={heightCm}
+              onChange={(e) => setHeightCm(e.target.value)}
+              placeholder="176"
+            />
+          </Field>
+
+          <Field label="blood_type" hint="A / B / O / AB">
+            <input
+              className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
+              value={bloodType}
+              onChange={(e) => setBloodType(e.target.value)}
+              placeholder="AB"
             />
           </Field>
 
