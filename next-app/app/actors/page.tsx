@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { FavoriteButtonClient } from "../../components/FavoriteButtonClient";
 import {
-  formatBirthday,
+  getDisplayBirthday,
   getActorList,
   getAgeFromBirthday,
   toPlainText,
@@ -104,7 +104,7 @@ export default async function ActorsPage({
 
           <div className="catalog-grid">
             {visibleActors.map((actor) => {
-              const birthday = formatBirthday(actor.birthday);
+              const birthday = getDisplayBirthday(actor.birthday, actor.birthdayLabel);
               const age = getAgeFromBirthday(actor.birthday);
 
               return (

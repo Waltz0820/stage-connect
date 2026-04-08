@@ -7,7 +7,7 @@ import { Breadcrumbs } from "../../../components/Breadcrumbs";
 import { FavoriteButtonClient } from "../../../components/FavoriteButtonClient";
 import { ShareButtonClient } from "../../../components/ShareButtonClient";
 import {
-  formatBirthday,
+  getDisplayBirthday,
   getActorDetailBySlug,
   getAgeFromBirthday,
   groupPlayTimelineByYear,
@@ -85,7 +85,7 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
 
   if (!actor) notFound();
 
-  const birthdayText = formatBirthday(actor.birthday);
+  const birthdayText = getDisplayBirthday(actor.birthday, actor.birthdayLabel);
   const age = getAgeFromBirthday(actor.birthday);
   const timeline = groupPlayTimelineByYear(actor.plays);
   const hasSns = Boolean(actor.sns && Object.values(actor.sns).some(Boolean));

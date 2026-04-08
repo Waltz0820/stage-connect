@@ -76,6 +76,30 @@ export const formatBirthdayEn = (birthday?: string | null) => {
   }).format(date);
 };
 
+export const formatBirthdayLabelEn = (birthdayLabel?: string | null) => {
+  const value = String(birthdayLabel ?? "").trim();
+  if (!value) return "";
+
+  const monthDay = value.match(/^(\d{1,2})月(\d{1,2})日$/);
+  if (monthDay) {
+    const date = new Date(2000, Number(monthDay[1]) - 1, Number(monthDay[2]));
+    return new Intl.DateTimeFormat("en-US", {
+      month: "short",
+      day: "numeric",
+    }).format(date);
+  }
+
+  const monthOnly = value.match(/^(\d{1,2})月$/);
+  if (monthOnly) {
+    const date = new Date(2000, Number(monthOnly[1]) - 1, 1);
+    return new Intl.DateTimeFormat("en-US", {
+      month: "long",
+    }).format(date);
+  }
+
+  return value;
+};
+
 export const formatAgeEn = (age?: number | null) => {
   if (typeof age !== "number" || !Number.isFinite(age) || age < 0) return null;
   return `${age} y/o`;

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Breadcrumbs } from "../../../components/Breadcrumbs";
 import { FavoriteButtonClient } from "../../../components/FavoriteButtonClient";
 import { getActorList, getAgeFromBirthday, toPlainText } from "../../../lib/stage-connect";
-import { formatAgeEn, formatBirthdayEn, truncateText } from "../../../lib/en-copy";
+import { formatAgeEn, formatBirthdayEn, formatBirthdayLabelEn, truncateText } from "../../../lib/en-copy";
 
 type SearchParamValue = string | string[] | undefined;
 type SearchParams = Record<string, SearchParamValue>;
@@ -104,7 +104,9 @@ export default async function EnglishActorsPage({
 
           <div className="catalog-grid">
             {visibleActors.map((actor) => {
-              const birthday = formatBirthdayEn(actor.birthday);
+              const birthday = actor.birthdayLabel
+                ? formatBirthdayLabelEn(actor.birthdayLabel)
+                : formatBirthdayEn(actor.birthday);
               const age = getAgeFromBirthday(actor.birthday);
               const ageLabel = formatAgeEn(age);
 

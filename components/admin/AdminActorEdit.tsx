@@ -16,6 +16,7 @@ type ActorRow = {
   name: string;
   kana?: string | null;
   birthday?: string | null;
+  birthday_label?: string | null;
   profile?: string | null;
   height_cm?: number | null;
   blood_type?: string | null;
@@ -50,6 +51,7 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
   const [slugText, setSlugText] = useState("");
   const [kana, setKana] = useState("");
   const [birthday, setBirthday] = useState("");
+  const [birthdayLabel, setBirthdayLabel] = useState("");
   const [profile, setProfile] = useState("");
   const [heightCm, setHeightCm] = useState("");
   const [bloodType, setBloodType] = useState("");
@@ -71,6 +73,7 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
       setSlugText("");
       setKana("");
       setBirthday("");
+      setBirthdayLabel("");
       setProfile("");
       setHeightCm("");
       setBloodType("");
@@ -88,7 +91,7 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         const { data, error } = await supabase
           .from("actors")
           // ✅ tags は読まない（廃止）
-          .select("id,slug,name,kana,birthday,profile,height_cm,blood_type,image_url,gender,sns,featured_play_slugs")
+          .select("id,slug,name,kana,birthday,birthday_label,profile,height_cm,blood_type,image_url,gender,sns,featured_play_slugs")
           .eq("slug", key)
           .maybeSingle();
 
@@ -101,6 +104,7 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         setSlugText(r.slug ?? "");
         setKana(r.kana ?? "");
         setBirthday(r.birthday ?? "");
+        setBirthdayLabel(r.birthday_label ?? "");
         setProfile(r.profile ?? "");
         setHeightCm(r.height_cm != null ? String(r.height_cm) : "");
         setBloodType(r.blood_type ?? "");
@@ -148,6 +152,7 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         slug: safeTrim(slugText) || toSlug(name),
         kana: safeTrim(kana) || null,
         birthday: safeTrim(birthday) || null,
+        birthday_label: safeTrim(birthdayLabel) || null,
         profile: safeTrim(profile) || null,
         height_cm: safeTrim(heightCm) ? Number.parseInt(safeTrim(heightCm), 10) || null : null,
         blood_type: safeTrim(bloodType).toUpperCase() || null,
@@ -290,6 +295,15 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
               className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
               value={birthday}
               onChange={(e) => setBirthday(e.target.value)}
+            />
+          </Field>
+
+          <Field label="birthday_label" hint="年を出さない時だけ使う">
+            <input
+              className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
+              value={birthdayLabel}
+              onChange={(e) => setBirthdayLabel(e.target.value)}
+              placeholder="2月5日 / 非公表"
             />
           </Field>
 

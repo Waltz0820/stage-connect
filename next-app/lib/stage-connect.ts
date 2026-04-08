@@ -15,6 +15,7 @@ export type ActorDetailData = {
   name: string;
   kana: string | null;
   birthday: string | null;
+  birthdayLabel: string | null;
   profile: string | null;
   heightCm: number | null;
   bloodType: string | null;
@@ -97,6 +98,7 @@ export type ActorListItem = {
   name: string;
   kana: string | null;
   birthday: string | null;
+  birthdayLabel: string | null;
   profile: string | null;
   gender: string | null;
 };
@@ -467,21 +469,21 @@ export async function getActorDetailBySlug(slug: string): Promise<ActorDetailDat
   {
     const res = await supabase
       .from("actors")
-      .select("id, slug, name, kana, birthday, profile, height_cm, blood_type, image_url, sns")
+      .select("id, slug, name, kana, birthday, birthday_label, profile, height_cm, blood_type, image_url, sns")
       .eq("slug", slug)
       .maybeSingle();
     actor = res.data;
     actorError = res.error;
   }
 
-  if (actorError && /(height_cm|blood_type)/i.test(String(actorError.message ?? ""))) {
+  if (actorError && /(height_cm|blood_type|birthday_label)/i.test(String(actorError.message ?? ""))) {
     const fallback = await supabase
       .from("actors")
       .select("id, slug, name, kana, birthday, profile, image_url, sns")
       .eq("slug", slug)
       .maybeSingle();
     actor = fallback.data
-      ? { ...fallback.data, height_cm: null, blood_type: null }
+      ? { ...fallback.data, birthday_label: null, height_cm: null, blood_type: null }
       : fallback.data;
     actorError = fallback.error;
   }
@@ -645,6 +647,7 @@ export async function getActorDetailBySlug(slug: string): Promise<ActorDetailDat
     name: actor.name,
     kana: actor.kana ?? null,
     birthday: actor.birthday ?? null,
+    birthdayLabel: actor.birthday_label ?? null,
     profile: actor.profile ?? null,
     heightCm: typeof actor.height_cm === "number" ? actor.height_cm : null,
     bloodType: actor.blood_type ?? null,
@@ -1063,10 +1066,30 @@ export async function getPlayList(): Promise<PlayListItem[]> {
 export async function getActorList(): Promise<ActorListItem[]> {
   if (!hasSupabaseEnv) return [];
   const supabase = createSupabaseServerClient();
-  const { data, error } = await supabase
-    .from("actors")
-    .select("slug, name, kana, birthday, profile, gender")
-    .order("name", { ascending: true });
+  let data: any[] | null = null;
+  let error: any = null;
+
+  {
+    const res = await supabase
+      .from("actors")
+      .select("slug, name, kana, birthday, birthday_label, profile, gender")
+      .order("name", { ascending: true });
+    data = res.data as any[] | null;
+    error = res.error;
+  }
+
+  if (error && /birthday_label/i.test(String(error.message ?? ""))) {
+    const fallback = await supabase
+      .from("actors")
+      .select("slug, name, kana, birthday, profile, gender")
+      .order("name", { ascending: true });
+    data =
+      (fallback.data as any[] | null)?.map((row) => ({
+        ...row,
+        birthday_label: null,
+      })) ?? null;
+    error = fallback.error;
+  }
 
   if (error) throw error;
 
@@ -1077,6 +1100,7 @@ export async function getActorList(): Promise<ActorListItem[]> {
       name: row.name as string,
       kana: (row.kana as string | null) ?? null,
       birthday: (row.birthday as string | null) ?? null,
+      birthdayLabel: (row.birthday_label as string | null) ?? null,
       profile: (row.profile as string | null) ?? null,
       gender: (row.gender as string | null) ?? null,
     }));
@@ -1485,6 +1509,15 @@ export const formatBirthday = (birthday?: string | null) => {
   const match = value.match(/^(\d{4})-(\d{2})-(\d{2})$/);
   if (!match) return value;
   return `${match[1]}年${Number(match[2])}月${Number(match[3])}日`;
+};
+
+export const getDisplayBirthday = (
+  birthday?: string | null,
+  birthdayLabel?: string | null
+) => {
+  const label = String(birthdayLabel ?? "").trim();
+  if (label) return label;
+  return formatBirthday(birthday);
 };
 
 export const getAgeFromBirthday = (birthday?: string | null) => {

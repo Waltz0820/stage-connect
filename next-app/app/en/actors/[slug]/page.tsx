@@ -7,7 +7,7 @@ import { Breadcrumbs } from "../../../../components/Breadcrumbs";
 import { FavoriteButtonClient } from "../../../../components/FavoriteButtonClient";
 import { ShareButtonClient } from "../../../../components/ShareButtonClient";
 import { getActorDetailBySlug, getAgeFromBirthday, groupPlayTimelineByYear, toPlainText } from "../../../../lib/stage-connect";
-import { formatAgeEn, formatBirthdayEn, truncateText } from "../../../../lib/en-copy";
+import { formatAgeEn, formatBirthdayEn, formatBirthdayLabelEn, truncateText } from "../../../../lib/en-copy";
 
 type Params = {
   slug: string;
@@ -78,7 +78,9 @@ export default async function EnglishActorDetailPage({ params }: { params: Promi
 
   if (!actor) notFound();
 
-  const birthdayText = formatBirthdayEn(actor.birthday);
+  const birthdayText = actor.birthdayLabel
+    ? formatBirthdayLabelEn(actor.birthdayLabel)
+    : formatBirthdayEn(actor.birthday);
   const age = getAgeFromBirthday(actor.birthday);
   const ageLabel = formatAgeEn(age);
   const timeline = groupPlayTimelineByYear(actor.plays);

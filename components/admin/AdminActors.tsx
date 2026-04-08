@@ -10,6 +10,7 @@ type ActorRow = {
   name: string;
   kana?: string | null;
   birthday?: string | null;
+  birthday_label?: string | null;
   image_url?: string | null;
   gender?: string | null;
   profile?: string | null;
@@ -19,6 +20,7 @@ type ActorRow = {
 
 type QuickDraft = {
   birthday: string;
+  birthdayLabel: string;
   profile: string;
   heightCm: string;
   bloodType: string;
@@ -26,6 +28,7 @@ type QuickDraft = {
 
 const buildDraft = (row: ActorRow): QuickDraft => ({
   birthday: row.birthday ?? "",
+  birthdayLabel: row.birthday_label ?? "",
   profile: row.profile ?? "",
   heightCm: row.height_cm != null ? String(row.height_cm) : "",
   bloodType: row.blood_type ?? "",
@@ -45,7 +48,7 @@ const AdminActors: React.FC = () => {
     try {
       const { data, error } = await supabase
         .from("actors")
-        .select("id,slug,name,kana,birthday,image_url,gender,profile,height_cm,blood_type")
+        .select("id,slug,name,kana,birthday,birthday_label,image_url,gender,profile,height_cm,blood_type")
         .order("name", { ascending: true });
       if (error) throw error;
       const nextRows = (data ?? []) as any as ActorRow[];
@@ -80,7 +83,7 @@ const AdminActors: React.FC = () => {
     setDrafts((current) => ({
       ...current,
       [slug]: {
-        ...(current[slug] ?? { birthday: "", profile: "", heightCm: "", bloodType: "" }),
+        ...(current[slug] ?? { birthday: "", birthdayLabel: "", profile: "", heightCm: "", bloodType: "" }),
         ...patch,
       },
     }));
@@ -101,6 +104,7 @@ const AdminActors: React.FC = () => {
     try {
       const payload = {
         birthday: safeTrim(draft.birthday) || null,
+        birthday_label: safeTrim(draft.birthdayLabel) || null,
         profile: safeTrim(draft.profile) || null,
         height_cm: safeTrim(draft.heightCm)
           ? Number.parseInt(safeTrim(draft.heightCm), 10) || null
@@ -121,6 +125,7 @@ const AdminActors: React.FC = () => {
             ? {
                 ...item,
                 birthday: payload.birthday,
+                birthday_label: payload.birthday_label,
                 profile: payload.profile,
                 height_cm: payload.height_cm,
                 blood_type: payload.blood_type,
@@ -208,7 +213,7 @@ const AdminActors: React.FC = () => {
 
                     <div className="text-xs text-slate-500 mt-1 truncate">
                       slug: {r.slug} / gender: {r.gender || "-"} / 身長: {r.height_cm ?? "-"} / 血液型:{" "}
-                      {r.blood_type || "-"} / 生年月日: {r.birthday || "-"}
+                      {r.blood_type || "-"} / 生年月日: {r.birthday || "-"} / 表示用日付: {r.birthday_label || "-"}
                     </div>
 
                     {r.profile ? (
@@ -247,6 +252,16 @@ const AdminActors: React.FC = () => {
                           className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
                           value={draft.birthday}
                           onChange={(e) => updateDraft(r.slug, { birthday: e.target.value })}
+                        />
+                      </div>
+
+                      <div>
+                        <label className="block text-xs text-slate-400 mb-2">birthday_label</label>
+                        <input
+                          className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
+                          value={draft.birthdayLabel}
+                          onChange={(e) => updateDraft(r.slug, { birthdayLabel: e.target.value })}
+                          placeholder="2月5日 / 非公表"
                         />
                       </div>
 
