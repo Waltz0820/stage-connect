@@ -20,6 +20,26 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
 export const revalidate = 3600;
 export const dynamicParams = true;
 
+const buildActorMetaDescriptionEn = (actor: NonNullable<Awaited<ReturnType<typeof getActorDetailBySlug>>>) => {
+  const parts: string[] = [];
+  const statusLine = toPlainText(actor.profile || "").trim().replace(/[.。]\s*$/u, "");
+
+  if (statusLine) parts.push(`${statusLine}.`);
+
+  const factParts: string[] = [];
+  if (actor.heightCm !== null) factParts.push(`Height ${actor.heightCm} cm`);
+  if (actor.bloodType) factParts.push(`Blood type ${actor.bloodType}`);
+  if (factParts.length > 0) parts.push(`${factParts.join(", ")}.`);
+
+  if (actor.topSeries.length > 0) {
+    const topNames = actor.topSeries.slice(0, 2).map((item) => `"${item.name}"`);
+    parts.push(`Major series include ${topNames.join(" and ")}.`);
+  }
+
+  parts.push(`${actor.plays.length} credited works. Includes appearance timeline and co-star links.`);
+  return truncateText(parts.join(" "), 150);
+};
+
 const formatTimelineLeadDate = (period?: string | null) => {
   const value = String(period ?? "").trim();
   if (!value) return null;
@@ -56,14 +76,9 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
     };
   }
 
-  const description = truncateText(
-    toPlainText(actor.profile || `${actor.name} actor archive page on Stage Connect.`),
-    150
-  );
-
   return {
     title: `${actor.name} | Actor archive | Stage Connect`,
-    description,
+    description: buildActorMetaDescriptionEn(actor),
     alternates: {
       canonical: `${siteUrl}/en/actors/${actor.slug}`,
       languages: {

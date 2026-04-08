@@ -26,6 +26,26 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
 export const revalidate = 3600;
 export const dynamicParams = true;
 
+const buildActorMetaDescriptionJa = (actor: NonNullable<Awaited<ReturnType<typeof getActorDetailBySlug>>>) => {
+  const parts: string[] = [];
+  const statusLine = toPlainText(actor.profile || "").trim().replace(/[。．]\s*$/u, "");
+
+  if (statusLine) parts.push(`${statusLine}。`);
+
+  const factParts: string[] = [];
+  if (actor.heightCm !== null) factParts.push(`身長${actor.heightCm}cm`);
+  if (actor.bloodType) factParts.push(`血液型${actor.bloodType}型`);
+  if (factParts.length > 0) parts.push(`${factParts.join("、")}。`);
+
+  if (actor.topSeries.length > 0) {
+    const topNames = actor.topSeries.slice(0, 2).map((item) => `『${item.name}』`);
+    parts.push(`主な出演シリーズは${topNames.join("、")}など。`);
+  }
+
+  parts.push(`出演作品数は${actor.plays.length}作。出演年表と共演情報を掲載。`);
+  return truncate(parts.join(" "), 150);
+};
+
 const formatTimelineLeadDate = (period?: string | null) => {
   const value = String(period ?? "").trim();
   if (!value) return null;
@@ -62,15 +82,9 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
     };
   }
 
-  const statusLine = toPlainText(actor.profile || "") || `${actor.name}の俳優プロフィールページです。`;
-  const description = truncate(
-    `${statusLine} 出演作品数は${actor.plays.length}件です。`,
-    150
-  );
-
   return {
     title: `${actor.name} | 俳優詳細 | Stage Connect（ステコネ）`,
-    description,
+    description: buildActorMetaDescriptionJa(actor),
     alternates: {
       canonical: `/actors/${actor.slug}`,
       languages: {
@@ -121,7 +135,7 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
         name: "配信で見られる作品はありますか？",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "配信対応の有無は作品ごとに異なります。出演作品ページでDMM TVなどの配信リンクを確認できます。",
+          text: "配信対応の作品は作品ごとに案内しています。作品ページでDMM TVなどの配信リンクを確認できます。",
         },
       },
       {
@@ -129,11 +143,12 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
         name: "最新の出演情報はどこで確認できますか？",
         acceptedAnswer: {
           "@type": "Answer",
-          text: `${actor.name}の公式SNSや公式サイトで最新情報を確認できます。このページの出演作品情報も随時更新しています。`,
+          text: `${actor.name}の公式SNSや公式サイトで最新情報を確認できます。このページの公式リンクから移動できます。`,
         },
       },
     ],
   };
+
   const breadcrumbJsonLd = buildBreadcrumbList([
     { name: "TOP", path: "/" },
     { name: "俳優一覧", path: "/actors" },
@@ -143,14 +158,8 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
   return (
     <main className="container" style={{ paddingBlock: 32 }}>
       <StructuredData data={breadcrumbJsonLd} />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
+      <StructuredData data={personJsonLd} />
+      <StructuredData data={faqJsonLd} />
 
       <div className="stack-lg">
         <Breadcrumbs items={[{ label: "俳優一覧", href: "/actors" }]} />
@@ -255,7 +264,7 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
         </section>
 
         <section className="section-card stack-md">
-          <h2 className="section-title">よくある質問 (FAQ)</h2>
+          <h2 className="section-title">よくある質問（FAQ）</h2>
           <div className="faq-grid">
             <article className="faq-card">
               <h3 className="faq-question">Q. {actor.name}の出演作はどこで見られますか？</h3>
@@ -266,13 +275,13 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
             <article className="faq-card">
               <h3 className="faq-question">Q. 配信で見られる作品はありますか？</h3>
               <p className="faq-answer">
-                配信対応の有無は作品ごとに異なります。出演作品ページでDMM TVなどの配信リンクを確認できます。
+                配信対応の作品は作品ごとに案内しています。作品ページでDMM TVなどの配信リンクを確認できます。
               </p>
             </article>
             <article className="faq-card">
               <h3 className="faq-question">Q. 最新の出演情報はどこで確認できますか？</h3>
               <p className="faq-answer">
-                {actor.name}の公式SNSや公式サイトで最新情報を確認できます。このページの出演作品情報も随時更新しています。
+                {actor.name}の公式SNSや公式サイトで最新情報を確認できます。このページの公式リンクから移動できます。
               </p>
             </article>
           </div>
