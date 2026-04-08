@@ -8,9 +8,9 @@ import { FavoriteButtonClient } from "../../../components/FavoriteButtonClient";
 import { ShareButtonClient } from "../../../components/ShareButtonClient";
 import { StructuredData } from "../../../components/StructuredData";
 import {
-  getDisplayBirthday,
   getActorDetailBySlug,
   getAgeFromBirthday,
+  getDisplayBirthday,
   groupPlayTimelineByYear,
   toPlainText,
   truncate,
@@ -39,7 +39,7 @@ const buildActorMetaDescriptionJa = (actor: NonNullable<Awaited<ReturnType<typeo
 
   if (actor.topSeries.length > 0) {
     const topNames = actor.topSeries.slice(0, 2).map((item) => `『${item.name}』`);
-    parts.push(`主な出演シリーズは${topNames.join("、")}など。`);
+    parts.push(`主な出演シリーズは${topNames.join("など")}。`);
   }
 
   parts.push(`出演作品数は${actor.plays.length}作。出演年表と共演情報を掲載。`);
@@ -86,7 +86,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
     title: `${actor.name} | 俳優詳細 | Stage Connect（ステコネ）`,
     description: buildActorMetaDescriptionJa(actor),
     alternates: {
-      canonical: `/actors/${actor.slug}`,
+      canonical: `${siteUrl}/actors/${actor.slug}`,
       languages: {
         ja: `${siteUrl}/actors/${actor.slug}`,
         en: `${siteUrl}/en/actors/${actor.slug}`,
@@ -124,10 +124,10 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
     mainEntity: [
       {
         "@type": "Question",
-        name: `${actor.name}の出演作はどこで見られますか？`,
+        name: `${actor.name}の出演作品はどこで見られますか？`,
         acceptedAnswer: {
           "@type": "Answer",
-          text: `Stage Connectでは${actor.name}の出演作品を作品ごとにまとめています。出演作品タイムラインから関連する公演ページへ移動できます。`,
+          text: `Stage Connectでは${actor.name}の出演作品を年表順にまとめています。出演作品タイムラインから関連する作品ページへ移動できます。`,
         },
       },
       {
@@ -135,7 +135,7 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
         name: "配信で見られる作品はありますか？",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "配信対応の作品は作品ごとに案内しています。作品ページでDMM TVなどの配信リンクを確認できます。",
+          text: "配信対応の作品は作品詳細ページに掲載しています。作品ページでDMM TVなどの配信リンクを確認できます。",
         },
       },
       {
@@ -267,15 +267,15 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
           <h2 className="section-title">よくある質問（FAQ）</h2>
           <div className="faq-grid">
             <article className="faq-card">
-              <h3 className="faq-question">Q. {actor.name}の出演作はどこで見られますか？</h3>
+              <h3 className="faq-question">Q. {actor.name}の出演作品はどこで見られますか？</h3>
               <p className="faq-answer">
-                Stage Connectでは{actor.name}の出演作品を作品ごとにまとめています。出演作品タイムラインから関連する公演ページへ移動できます。
+                Stage Connectでは{actor.name}の出演作品を年表順にまとめています。出演作品タイムラインから関連する作品ページへ移動できます。
               </p>
             </article>
             <article className="faq-card">
               <h3 className="faq-question">Q. 配信で見られる作品はありますか？</h3>
               <p className="faq-answer">
-                配信対応の作品は作品ごとに案内しています。作品ページでDMM TVなどの配信リンクを確認できます。
+                配信対応の作品は作品詳細ページに掲載しています。作品ページでDMM TVなどの配信リンクを確認できます。
               </p>
             </article>
             <article className="faq-card">

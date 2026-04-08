@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { FavoriteButtonClient } from "../../components/FavoriteButtonClient";
@@ -40,7 +40,7 @@ const compactListPeriod = (period?: string | null) => {
     return `${year}/${month.padStart(2, "0")}/${day.padStart(2, "0")}-`;
   }
 
-  const jpDate = period.match(/(\d{4})蟷ｴ\s*(\d{1,2})譛・s*(\d{1,2})譌･/);
+  const jpDate = period.match(/(\d{4})年\s*(\d{1,2})月\s*(\d{1,2})日/);
   if (jpDate) {
     const [, year, month, day] = jpDate;
     return `${year}/${month.padStart(2, "0")}/${day.padStart(2, "0")}-`;
@@ -93,7 +93,7 @@ export default async function PlaysPage({
   const allPlays = await getPlayList();
   const breadcrumbJsonLd = buildBreadcrumbList([
     { name: "TOP", path: "/" },
-    { name: "菴懷刀荳隕ｧ", path: "/plays" },
+    { name: "作品一覧", path: "/plays" },
   ]);
   const collectionJsonLd = buildCollectionPageStructuredData({
     name: "作品一覧",
@@ -149,19 +149,21 @@ export default async function PlaysPage({
         </section>
 
         <section className="section-card stack-md">
-          <h2 className="section-title">菴懷刀繝・・繧ｿ繝吶・繧ｹ</h2>
+          <h2 className="section-title">作品データベース</h2>
 
           <div className="filter-row filter-row--dense">
             <Link
               className={`filter-chip ${sort === "new" ? "is-active" : ""}`}
               href={buildHref({ page: 1, sort: "new", format, genre })}
             >
-              譁ｰ縺励＞鬆・            </Link>
+              新しい順
+            </Link>
             <Link
               className={`filter-chip ${sort === "old" ? "is-active" : ""}`}
               href={buildHref({ page: 1, sort: "old", format, genre })}
             >
-              蜿､縺・・            </Link>
+              古い順
+            </Link>
           </div>
 
           <div className="filter-row filter-row--dense genre-filter-row">
@@ -171,7 +173,7 @@ export default async function PlaysPage({
                 className={`filter-chip ${format === option ? "is-active" : ""}`}
                 href={buildHref({ page: 1, sort, format: option, genre })}
               >
-                {option === "all" ? "縺吶∋縺ｦ" : FORMAT_LABELS[option]}
+                {option === "all" ? "すべて" : FORMAT_LABELS[option]}
               </Link>
             ))}
           </div>
@@ -183,7 +185,7 @@ export default async function PlaysPage({
                 className={`filter-chip ${genre === option ? "is-active" : ""}`}
                 href={buildHref({ page: 1, sort, format, genre: option })}
               >
-                {option === "all" ? "縺吶∋縺ｦ" : GENRE_LABELS[option]}
+                {option === "all" ? "すべて" : GENRE_LABELS[option]}
               </Link>
             ))}
           </div>
@@ -210,23 +212,21 @@ export default async function PlaysPage({
                           {FORMAT_LABELS[play.franchiseFormat] ?? play.franchiseFormat}
                         </span>
                       ) : null}
-                      {play.franchiseName ? <span className="catalog-card__badge">繧ｷ繝ｪ繝ｼ繧ｺ</span> : null}
+                      {play.franchiseName ? <span className="catalog-card__badge">シリーズ</span> : null}
                     </div>
                   ) : null}
                 </div>
 
                 <Link className="catalog-card__body-link" href={`/plays/${play.slug}`}>
                   {play.franchiseName ? <div className="catalog-card__sub">{play.franchiseName}</div> : null}
-                {compactListPeriod(play.period) ? (
-                  <div className="catalog-card__sub">
-                    譌･遞・ <span className="mono">{compactListPeriod(play.period)}</span>
-                  </div>
-                ) : null}
-                {play.genre ? (
-                  <div className="catalog-card__sub">
-                    繧ｸ繝｣繝ｳ繝ｫ: {GENRE_LABELS[play.genre] ?? play.genre}
-                  </div>
-                ) : null}
+                  {compactListPeriod(play.period) ? (
+                    <div className="catalog-card__sub">
+                      日程: <span className="mono">{compactListPeriod(play.period)}</span>
+                    </div>
+                  ) : null}
+                  {play.genre ? (
+                    <div className="catalog-card__sub">ジャンル: {GENRE_LABELS[play.genre] ?? play.genre}</div>
+                  ) : null}
 
                   {play.summary ? (
                     <div className="catalog-card__text">{truncate(toPlainText(play.summary), 140)}</div>
@@ -248,7 +248,7 @@ export default async function PlaysPage({
                 className={`pagination-link ${safePage === 1 ? "is-disabled" : ""}`}
                 href={buildHref({ page: Math.max(1, safePage - 1), sort, format, genre })}
               >
-                蜑阪∈
+                前へ
               </Link>
               <span className="catalog-note">
                 Page {safePage} / {totalPages}
@@ -257,7 +257,7 @@ export default async function PlaysPage({
                 className={`pagination-link ${safePage === totalPages ? "is-disabled" : ""}`}
                 href={buildHref({ page: Math.min(totalPages, safePage + 1), sort, format, genre })}
               >
-                谺｡縺ｸ
+                次へ
               </Link>
             </div>
           ) : null}
@@ -266,4 +266,3 @@ export default async function PlaysPage({
     </main>
   );
 }
-

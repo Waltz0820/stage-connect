@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "../../../components/Breadcrumbs";
@@ -49,9 +49,7 @@ const compactTimelinePeriod = (period?: string | null) => {
   }
 
   const yearOnly = period.match(/(\d{4})/);
-  if (yearOnly) {
-    return `${yearOnly[1]}-`;
-  }
+  if (yearOnly) return `${yearOnly[1]}-`;
 
   return period;
 };
@@ -134,7 +132,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
         name: `${series.name}の関連作品はすべて見られますか？`,
         acceptedAnswer: {
           "@type": "Answer",
-          text: `現時点で、${series.name} には ${series.plays.length} 作品を掲載しています。`,
+          text: `現時点で、${series.name}には${series.plays.length}作品を掲載しています。`,
         },
       },
       {
@@ -142,7 +140,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
         name: "どの順番で見ればよいですか？",
         acceptedAnswer: {
           "@type": "Answer",
-          text: `公開順に見たい場合は ${startYear ?? "初期"} 年ごろからの年表順で作品をたどるのがおすすめです。`,
+          text: `公開順に見たい場合は${startYear ?? "初期"}年ごろからの年表順で作品をたどるのがおすすめです。`,
         },
       },
       {
@@ -155,9 +153,10 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
       },
     ],
   };
+
   const breadcrumbJsonLd = buildBreadcrumbList([
     { name: "TOP", path: "/" },
-    { name: "繧ｷ繝ｪ繝ｼ繧ｺ荳隕ｧ", path: "/series" },
+    { name: "シリーズ一覧", path: "/series" },
     { name: series.name, path: `/series/${series.slug ?? slug}` },
   ]);
 
@@ -168,25 +167,26 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       <div className="stack-lg">
-        <Breadcrumbs items={[{ label: "\u30b7\u30ea\u30fc\u30ba\u4e00\u89a7", href: "/series" }]} />
+        <Breadcrumbs items={[{ label: "シリーズ一覧", href: "/series" }]} />
+
         <section className="hero-card stack-md">
           <div className="stack-sm detail-ledger-shell">
             <h1 className="page-title">{series.name}</h1>
             <div className="pill-row">
-              <span className="pill accent-pill">菴懷刀謨ｰ: {series.plays.length}</span>
-              {series.originType ? <span className="pill">遞ｮ蛻･: {series.originType}</span> : null}
+              <span className="pill accent-pill">作品数: {series.plays.length}</span>
+              {series.originType ? <span className="pill">種別: {series.originType}</span> : null}
             </div>
             <div className="detail-ledger">
               <div className="detail-ledger__item">
-                <span className="detail-ledger__label">遞ｮ蛻･</span>
-                <strong>{series.originType || "繧ｷ繝ｪ繝ｼ繧ｺ"}</strong>
+                <span className="detail-ledger__label">種別</span>
+                <strong>{series.originType || "シリーズ"}</strong>
               </div>
               <div className="detail-ledger__item">
-                <span className="detail-ledger__label">菴懷刀謨ｰ</span>
+                <span className="detail-ledger__label">作品数</span>
                 <strong>{series.plays.length}</strong>
               </div>
               <div className="detail-ledger__item">
-                <span className="detail-ledger__label">髢句ｧ句ｹｴ</span>
+                <span className="detail-ledger__label">開始年</span>
                 <strong>{startYear ?? "--"}</strong>
               </div>
             </div>
@@ -195,21 +195,19 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
 
         <section className="section-card stack-md">
           <h2 className="section-title">シリーズ情報</h2>
-          <div className="rich-text">
-            {series.description || `${series.name} のシリーズ情報を掲載しています。`}
-          </div>
+          <div className="rich-text">{series.description || `${series.name}のシリーズ情報を掲載しています。`}</div>
 
           {(series.originNote || series.productionCompanies.length > 0) && (
             <div className="meta-list roomy">
               {series.originNote ? (
                 <div className="meta-row">
-                  <div className="meta-label accent-label">蜴滉ｽ懊・蜃ｺ蜈ｸ</div>
+                  <div className="meta-label accent-label">原作・出典</div>
                   <div className="meta-value">{series.originNote}</div>
                 </div>
               ) : null}
               {series.productionCompanies.length > 0 ? (
                 <div className="meta-row">
-                  <div className="meta-label accent-label">荳ｻ蛯ｬ繝ｻ髢｢騾｣</div>
+                  <div className="meta-label accent-label">主催・関係会社</div>
                   <div className="meta-value">{series.productionCompanies.join(" / ")}</div>
                 </div>
               ) : null}
@@ -240,16 +238,18 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
                       <div>
                         <div className="catalog-card__title">{play.title}</div>
                       </div>
-                      {hasVod(play.vod) ? <span className="catalog-card__badge">{"\u914d\u4fe1\u3042\u308a"}</span> : null}
+                      {hasVod(play.vod) ? <span className="catalog-card__badge">配信あり</span> : null}
                     </div>
 
-                    {play.summary ? <div className="catalog-card__text catalog-card__text--clamped">{play.summary}</div> : null}
+                    {play.summary ? (
+                      <div className="catalog-card__text catalog-card__text--clamped">{play.summary}</div>
+                    ) : null}
                   </Link>
 
                   <div className="catalog-card__footer">
                     <div className="action-row">
                       <Link className="action-button action-button-primary" href={`/plays/${play.slug}`}>
-                        {"\u4f5c\u54c1\u8a73\u7d30\u3092\u898b\u308b"}
+                        作品詳細を見る
                       </Link>
                       {play.vod?.dmm ? (
                         <a className="action-button" href={play.vod.dmm} target="_blank" rel="noopener noreferrer">
@@ -263,7 +263,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
                       ) : null}
                       {play.vod?.danime ? (
                         <a className="action-button" href={play.vod.danime} target="_blank" rel="noopener noreferrer">
-                          {"d\u30a2\u30cb\u30e1"}
+                          dアニメ
                         </a>
                       ) : null}
                     </div>
@@ -278,10 +278,10 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
           <section className="section-card stack-md">
             <div className="section-header-inline">
               <div className="stack-sm">
-                <h2 className="section-title">蜷御ｽ懷刀縺ｮ莉悶す繝ｪ繝ｼ繧ｺ</h2>
+                <h2 className="section-title">関連シリーズ</h2>
                 <p className="catalog-note">同じ作品タイトルで派生しているシリーズをまとめています。</p>
               </div>
-              <span className="pill">{series.relatedSeries.length}莉ｶ</span>
+              <span className="pill">{series.relatedSeries.length}件</span>
             </div>
             <RelatedSeriesClient items={series.relatedSeries} />
           </section>
@@ -291,15 +291,15 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
           <h2 className="section-title">よくある質問（FAQ）</h2>
           <div className="faq-grid">
             <article className="faq-card">
-              <h3 className="faq-question">Q. {series.name} の関連作品はすべて見られますか？</h3>
+              <h3 className="faq-question">Q. {series.name}の関連作品はすべて見られますか？</h3>
               <p className="faq-answer">
-                現時点で、{series.name} には {series.plays.length} 作品を掲載しています。
+                現時点で、{series.name}には{series.plays.length}作品を掲載しています。
               </p>
             </article>
             <article className="faq-card">
               <h3 className="faq-question">Q. どの順番で見ればよいですか？</h3>
               <p className="faq-answer">
-                公開順に見たい場合は {startYear ?? "初期"} 年ごろからの年表順で作品をたどるのがおすすめです。
+                公開順に見たい場合は{startYear ?? "初期"}年ごろからの年表順で作品をたどるのがおすすめです。
               </p>
             </article>
             <article className="faq-card">
@@ -314,4 +314,3 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
     </main>
   );
 }
-

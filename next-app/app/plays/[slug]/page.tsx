@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "../../../components/Breadcrumbs";
@@ -30,6 +30,7 @@ type GroupedCast = {
 };
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
+
 export const revalidate = 3600;
 export const dynamicParams = true;
 
@@ -42,7 +43,7 @@ const splitSlashList = (value?: string | null) =>
 const summarizeRoleName = (value?: string | null) => {
   const roles = splitSlashList(value);
   if (roles.length <= 3) return value ?? null;
-  return `${roles.slice(0, 3).join(" / ")} / 縺ｻ縺・{roles.length - 3}蠖ｹ`;
+  return `${roles.slice(0, 3).join(" / ")} / ほか${roles.length - 3}役`;
 };
 
 const parseScheduleEntries = (period?: string | null) =>
@@ -119,7 +120,7 @@ const summarizeVenues = (venue?: string | null) => {
   const venues = splitSlashList(venue);
   if (venues.length === 0) return null;
   if (venues.length <= 3) return venues.join(" / ");
-  return `${venues.slice(0, 2).join(" / ")} / 縺ｻ縺・{venues.length - 2}莨壼ｴ`;
+  return `${venues.slice(0, 2).join(" / ")} / ほか${venues.length - 2}会場`;
 };
 
 const groupCast = (
@@ -228,7 +229,7 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
   const creditItems = getCreditItems(play.credits);
   const breadcrumbJsonLd = buildBreadcrumbList([
     { name: "TOP", path: "/" },
-    { name: "菴懷刀荳隕ｧ", path: "/plays" },
+    { name: "作品一覧", path: "/plays" },
     { name: play.title, path: `/plays/${play.slug}` },
   ]);
   const castSummary = summarizeCast(play.cast);
@@ -275,14 +276,6 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
       },
       {
         "@type": "Question",
-        name: "どんなキャストが出演していますか？",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: `主な出演は${castSummary}です。作品ページの出演キャスト一覧で詳細を確認できます。`,
-        },
-      },
-      {
-        "@type": "Question",
         name: "公演情報やクレジットも見られますか？",
         acceptedAnswer: {
           "@type": "Answer",
@@ -295,22 +288,17 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
   return (
     <main className="container" style={{ paddingBlock: 32 }}>
       <StructuredData data={breadcrumbJsonLd} />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }} />
 
       <div className="stack-lg">
-        <Breadcrumbs items={[{ label: "\u4f5c\u54c1\u4e00\u89a7", href: "/plays" }]} />
+        <Breadcrumbs items={[{ label: "作品一覧", href: "/plays" }]} />
+
         <section className="hero-card stack-md">
           <div className="stack-sm detail-ledger-shell">
             {play.franchiseSlug && play.franchiseName ? (
               <Link className="pill series-pill" href={`/series/${play.franchiseSlug}`}>
-                繧ｷ繝ｪ繝ｼ繧ｺ: {play.franchiseName}
+                シリーズ: {play.franchiseName}
               </Link>
             ) : null}
 
@@ -320,7 +308,7 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
 
             <div className="detail-actions">
               <FavoriteButtonClient slug={play.slug} type="play" size="lg" />
-              <ShareButtonClient title={play.title} text={`${play.title}縺ｮ菴懷刀諠・ｱ | Stage Connect`} />
+              <ShareButtonClient title={play.title} text={`${play.title}の作品情報 | Stage Connect`} />
             </div>
 
             {play.tags.length > 0 ? (
@@ -330,28 +318,28 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
                     #{tag}
                   </span>
                 ))}
-                {hasVod ? <span className="pill accent-pill">驟堺ｿ｡縺ゅｊ</span> : null}
+                {hasVod ? <span className="pill accent-pill">配信あり</span> : null}
               </div>
             ) : hasVod ? (
               <div className="pill-row">
-                <span className="pill accent-pill">驟堺ｿ｡縺ゅｊ</span>
+                <span className="pill accent-pill">配信あり</span>
               </div>
             ) : null}
 
-              <div className="detail-ledger">
-                <div className="detail-ledger__item">
-                  <span className="detail-ledger__label">出演</span>
-                  <strong>{play.cast.length}</strong>
-                </div>
-                <div className="detail-ledger__item">
-                  <span className="detail-ledger__label">シリーズ</span>
-                  <strong>{play.franchiseName || "単独作品"}</strong>
-                </div>
-                <div className="detail-ledger__item">
-                  <span className="detail-ledger__label">配信</span>
-                  <strong>{hasVod ? "配信あり" : "未配信"}</strong>
-                </div>
+            <div className="detail-ledger">
+              <div className="detail-ledger__item">
+                <span className="detail-ledger__label">出演</span>
+                <strong>{play.cast.length}</strong>
               </div>
+              <div className="detail-ledger__item">
+                <span className="detail-ledger__label">シリーズ</span>
+                <strong>{play.franchiseName || "単独作品"}</strong>
+              </div>
+              <div className="detail-ledger__item">
+                <span className="detail-ledger__label">配信</span>
+                <strong>{hasVod ? "配信あり" : "未配信"}</strong>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -363,66 +351,51 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
             です。
             {hasVod
               ? " 配信ありの場合は、主要リンクから詳細を確認できます。"
-              : " 現時点では主要な配信情報は確認中です。DVD/Blu-rayや再演情報もあわせて確認してください。"}
+              : " 現時点では主要な配信情報は確認中です。DVD・Blu-rayや再演情報もあわせて確認してください。"}
           </p>
         </section>
 
         <section className="section-card stack-md">
           <h2 className="section-title">あらすじ</h2>
-          <div className="rich-text">
-            {play.summary || "あらすじ情報はまだありません。"}
-          </div>
+          <div className="rich-text">{play.summary || "あらすじ情報はまだありません。"}</div>
         </section>
 
         <section className="section-card stack-md">
-          <h2 className="section-title">蜈ｬ貍疲ュ蝣ｱ</h2>
+          <h2 className="section-title">公演情報</h2>
           <div className="meta-list roomy">
             {play.period ? (
               <div className="meta-row">
-                <div className="meta-label accent-label">譛滄俣</div>
+                <div className="meta-label accent-label">日程</div>
                 <div className="meta-value">
                   <div>{scheduleSummary || play.period}</div>
                   {scheduleCities.length > 0 ? (
                     <div className="subtle-line">
-                      {scheduleCities.length}驛ｽ蟶・/ {scheduleCities.slice(0, 5).join(" / ")}
+                      {scheduleCities.length}都市 / {scheduleCities.slice(0, 5).join(" / ")}
                       {scheduleCities.length > 5 ? " / ..." : ""}
                     </div>
                   ) : null}
-                  {false && (
-                    <details className="detail-block">
-                      <summary>隧ｳ邏ｰ繧定ｦ九ｋ</summary>
-                      <div className="detail-panel">{play?.period}</div>
-                    </details>
-                  )}
                 </div>
               </div>
             ) : null}
-
             {play.venue ? (
               <div className="meta-row">
-                <div className="meta-label accent-label">蜉・ｴ</div>
+                <div className="meta-label accent-label">会場</div>
                 <div className="meta-value">
                   <div>{compactVenueSummary || play.venue}</div>
-                  {venueList.length > 0 ? <div className="subtle-line">{venueList.length}莨壼ｴ</div> : null}
-                  {false && (
-                    <details className="detail-block">
-                      <summary>隧ｳ邏ｰ繧定ｦ九ｋ</summary>
-                      <div className="detail-panel">{play?.venue}</div>
-                    </details>
-                  )}
+                  {venueList.length > 0 ? <div className="subtle-line">{venueList.length}会場</div> : null}
                 </div>
               </div>
             ) : null}
             {shouldShowScheduleDetailToggle ? (
               <div className="meta-row">
-                <div className="meta-label accent-label">隧ｳ邏ｰ</div>
+                <div className="meta-label accent-label">詳細</div>
                 <div className="meta-value">
-                  <DetailToggleClient summary="隧ｳ邏ｰ繧定ｦ九ｋ">
+                  <DetailToggleClient summary="詳細を見る">
                     <div className="stack-sm">
                       {play.period ? (
                         <div className="stack-sm">
                           <div className="muted" style={{ fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase" }}>
-                            譛滄俣
+                            日程
                           </div>
                           <div>{play.period}</div>
                         </div>
@@ -431,7 +404,7 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
                       {play.venue ? (
                         <div className="stack-sm">
                           <div className="muted" style={{ fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase" }}>
-                            蜉・ｴ
+                            会場
                           </div>
                           <div>{play.venue}</div>
                         </div>
@@ -446,14 +419,14 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
 
         {creditItems.length > 0 ? (
           <section className="section-card stack-md">
-            <h2 className="section-title">繧ｹ繧ｿ繝・ヵ / 繧ｯ繝ｬ繧ｸ繝・ヨ</h2>
+            <h2 className="section-title">スタッフ / クレジット</h2>
             <div className="meta-list roomy">
               {creditItems.slice(0, 3).map((item) => (
-                  <div className="meta-row" key={`${item.role}-${item.names.join("-")}`}>
-                    <div className="meta-label accent-label">{item.role}</div>
-                    <div className="meta-value">{item.names.join(" / ")}</div>
-                  </div>
-                ))}
+                <div className="meta-row" key={`${item.role}-${item.names.join("-")}`}>
+                  <div className="meta-label accent-label">{item.role}</div>
+                  <div className="meta-value">{item.names.join(" / ")}</div>
+                </div>
+              ))}
             </div>
             {creditItems.length > 3 ? (
               <DetailToggleClient summary={`続きを読む（残り${creditItems.length - 3}項目）`}>
@@ -475,19 +448,17 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
           {hasVod ? (
             <p className="muted">DMM TV など主要な配信リンクを作品ごとに確認できます。</p>
           ) : (
-            <p className="muted">
-              現時点では主要な配信情報は確認中です。シリーズ作品や関連作品もあわせて確認してください。
-            </p>
+            <p className="muted">現時点では主要な配信情報は確認中です。シリーズ作品や関連作品もあわせて確認してください。</p>
           )}
           <div className="action-row">
             {play.vod?.dmm ? (
               <a className="action-button action-button-primary" href={play.vod.dmm} target="_blank" rel="noopener noreferrer">
-                DMM TV縺ｧ隕九ｋ
+                DMM TVで見る
               </a>
             ) : null}
             {play.vod?.unext ? (
               <a className="action-button" href={play.vod.unext} target="_blank" rel="noopener noreferrer">
-                U-NEXT縺ｧ隕九ｋ
+                U-NEXTで見る
               </a>
             ) : null}
             {play.vod?.danime ? (
@@ -515,12 +486,6 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
                 {hasVod
                   ? "配信対応がある場合は、作品詳細ページでDMM TVなどの配信リンクを確認できます。"
                   : "現時点では主要な配信情報は確認中です。DVD・Blu-rayや再演情報もあわせて確認してください。"}
-              </p>
-            </article>
-            <article className="faq-card">
-              <h3 className="faq-question">どんなキャストが出演していますか？</h3>
-              <p className="faq-answer">
-                主な出演は{castSummary}です。作品ページの出演キャスト一覧で詳細を確認できます。
               </p>
             </article>
             <article className="faq-card">
@@ -561,4 +526,3 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
     </main>
   );
 }
-
