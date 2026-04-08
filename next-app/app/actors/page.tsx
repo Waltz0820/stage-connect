@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { FavoriteButtonClient } from "../../components/FavoriteButtonClient";
@@ -37,12 +37,14 @@ const buildHref = (params: Record<string, string | number | null | undefined>) =
 
 export const metadata: Metadata = {
   title: "俳優一覧 | Stage Connect（ステコネ）",
-  description:
-    "Stage Connect（ステコネ）で、2.5次元舞台・ミュージカルに出演する俳優を一覧で整理。プロフィール、出演作品年表、共演ネットワークへの入口として使えます。",
-};
-
-metadata.alternates = {
-  canonical: `${siteUrl}/actors`,
+  description: "2.5次元舞台・ミュージカルに出演する俳優を、プロフィールや出演履歴とあわせて一覧できます。",
+  alternates: {
+    canonical: `${siteUrl}/actors`,
+    languages: {
+      ja: `${siteUrl}/actors`,
+      en: `${siteUrl}/en/actors`,
+    },
+  },
 };
 
 export default async function ActorsPage({
@@ -54,12 +56,11 @@ export default async function ActorsPage({
   const allActors = await getActorList();
   const breadcrumbJsonLd = buildBreadcrumbList([
     { name: "TOP", path: "/" },
-    { name: "俳優一覧", path: "/actors" },
+    { name: "菫ｳ蜆ｪ荳隕ｧ", path: "/actors" },
   ]);
   const collectionJsonLd = buildCollectionPageStructuredData({
     name: "俳優一覧",
-    description:
-      "2.5次元舞台・ミュージカルに出演する俳優を、プロフィールや出演履歴とあわせて一覧できるページです。",
+    description: "2.5次元舞台・ミュージカルに出演する俳優を、プロフィールや出演履歴とあわせて一覧できます。",
     path: "/actors",
   });
 
@@ -81,29 +82,28 @@ export default async function ActorsPage({
       <StructuredData data={breadcrumbJsonLd} />
       <StructuredData data={collectionJsonLd} />
       <div className="stack-lg">
-        <Breadcrumbs items={[{ label: "俳優一覧" }]} />
+        <Breadcrumbs items={[{ label: "菫ｳ蜆ｪ荳隕ｧ" }]} />
         <section className="hero-card stack-md">
           <div className="stack-sm">
             <span className="eyebrow">Actors</span>
-            <h1 className="page-title">俳優一覧</h1>
+            <h1 className="page-title">菫ｳ蜆ｪ荳隕ｧ</h1>
             <p className="lead">
-              2.5次元舞台・ミュージカルに出演する俳優を、プロフィールや出演作品とあわせて一覧で確認できます。
-            </p>
+              2.5谺｡蜈・・蜿ｰ繝ｻ繝溘Η繝ｼ繧ｸ繧ｫ繝ｫ縺ｫ蜃ｺ貍斐☆繧倶ｿｳ蜆ｪ繧偵√・繝ｭ繝輔ぅ繝ｼ繝ｫ繧・・貍比ｽ懷刀縺ｨ縺ゅｏ縺帙※荳隕ｧ縺ｧ遒ｺ隱阪〒縺阪∪縺吶・            </p>
           </div>
 
           <div className="catalog-summary catalog-summary--ledger">
-            <span className="catalog-chip">表示中の俳優 {filteredActors.length}人</span>
-            <span className="catalog-chip">登録俳優 {allActors.length}人</span>
+            <span className="catalog-chip">陦ｨ遉ｺ荳ｭ縺ｮ菫ｳ蜆ｪ {filteredActors.length}莠ｺ</span>
+            <span className="catalog-chip">逋ｻ骭ｲ菫ｳ蜆ｪ {allActors.length}莠ｺ</span>
             <span className="catalog-chip">Page {safePage}</span>
           </div>
         </section>
 
         <section className="section-card stack-md">
-          <h2 className="section-title">俳優データベース</h2>
+          <h2 className="section-title">菫ｳ蜆ｪ繝・・繧ｿ繝吶・繧ｹ</h2>
 
           <div className="filter-row filter-row--dense">
             <Link className={`filter-chip ${gender === "all" ? "is-active" : ""}`} href={buildHref({ page: 1, gender: "all" })}>
-              すべて
+              縺吶∋縺ｦ
             </Link>
             {Object.entries(GENDER_LABELS).map(([value, label]) => (
               <Link
@@ -136,7 +136,7 @@ export default async function ActorsPage({
                     {birthday ? (
                       <div className="catalog-card__sub">
                         {birthday}
-                        {age !== null ? ` (${age}歳)` : ""}
+                        {age !== null ? ` (${age}豁ｳ)` : ""}
                       </div>
                     ) : null}
                     {actor.gender && actor.gender in GENDER_LABELS ? (
@@ -164,7 +164,7 @@ export default async function ActorsPage({
                 className={`pagination-link ${safePage === 1 ? "is-disabled" : ""}`}
                 href={buildHref({ page: Math.max(1, safePage - 1), gender })}
               >
-                前へ
+                蜑阪∈
               </Link>
               <span className="catalog-note">
                 Page {safePage} / {totalPages}
@@ -173,7 +173,7 @@ export default async function ActorsPage({
                 className={`pagination-link ${safePage === totalPages ? "is-disabled" : ""}`}
                 href={buildHref({ page: Math.min(totalPages, safePage + 1), gender })}
               >
-                次へ
+                谺｡縺ｸ
               </Link>
             </div>
           ) : null}
@@ -182,3 +182,4 @@ export default async function ActorsPage({
     </main>
   );
 }
+

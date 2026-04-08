@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "../../../components/Breadcrumbs";
@@ -28,7 +28,7 @@ const getStartYear = (periods: Array<string | null>) => {
 };
 
 const compactTimelinePeriod = (period?: string | null) => {
-  if (!period) return "公演時期未定";
+  if (!period) return "公開時期未定";
 
   const slashDate = period.match(/(\d{4})\/(\d{1,2})\/(\d{1,2})/);
   if (slashDate) {
@@ -58,6 +58,28 @@ const compactTimelinePeriod = (period?: string | null) => {
 
 const hasVod = (vod?: Record<string, string> | null) => Boolean(vod?.dmm || vod?.danime || vod?.unext);
 
+const buildSeriesMetaDescriptionJa = (series: NonNullable<Awaited<ReturnType<typeof getSeriesDetailBySlug>>>) => {
+  const parts: string[] = [];
+  const overview = toPlainText(series.description || "").trim().replace(/[。．]\s*$/u, "");
+
+  if (overview) parts.push(`${overview}。`);
+
+  const factParts: string[] = [];
+  if (series.originType) factParts.push(series.originType);
+  if (series.plays.length > 0) factParts.push(`${series.plays.length}作`);
+  const startYear = getStartYear(series.plays.map((play) => play.period));
+  if (startYear) factParts.push(`開始年${startYear}年`);
+  if (factParts.length > 0) parts.push(`${factParts.join(" / ")}。`);
+
+  if (parts.length === 0) {
+    parts.push(`${series.name}のシリーズ一覧と出演キャストをまとめたページです。`);
+  } else {
+    parts.push("年表、出演キャスト・役柄一覧、関連シリーズを掲載。");
+  }
+
+  return truncate(parts.join(" "), 150);
+};
+
 export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
   const { slug } = await params;
   const series = await getSeriesDetailBySlug(slug);
@@ -69,17 +91,9 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
     };
   }
 
-  const description = truncate(
-    toPlainText(
-      series.description ||
-        `${series.name} のシリーズ一覧と出演キャスト、年表をまとめたページです。作品数は ${series.plays.length} 件です。`
-    ),
-    150
-  );
-
   return {
     title: `${series.name} | シリーズ詳細 | Stage Connect（ステコネ）`,
-    description,
+    description: buildSeriesMetaDescriptionJa(series),
     alternates: {
       canonical: `${siteUrl}/series/${series.slug ?? slug}`,
       languages: {
@@ -102,9 +116,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
     "@context": "https://schema.org",
     "@type": "CreativeWorkSeries",
     name: series.name,
-    description: toPlainText(
-      series.description || `${series.name} のシリーズ一覧と出演キャストをまとめたページです。`
-    ),
+    description: toPlainText(series.description || `${series.name}のシリーズ一覧と出演キャストをまとめたページです。`),
     url: `${siteUrl}/series/${series.slug ?? slug}`,
     hasPart: series.plays.slice(0, 50).map((play) => ({
       "@type": "CreativeWork",
@@ -119,10 +131,10 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
     mainEntity: [
       {
         "@type": "Question",
-        name: `${series.name} の関連作品はすべて見られますか？`,
+        name: `${series.name}の関連作品はすべて見られますか？`,
         acceptedAnswer: {
           "@type": "Answer",
-          text: `現時点で、${series.name} には ${series.plays.length} 作品が登録されています。`,
+          text: `現時点で、${series.name} には ${series.plays.length} 作品を掲載しています。`,
         },
       },
       {
@@ -130,7 +142,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
         name: "どの順番で見ればよいですか？",
         acceptedAnswer: {
           "@type": "Answer",
-          text: `基本的には公開年順に見るのがおすすめです。${startYear ?? "----"}年ごろからの年表順で作品を追えるよう、このページではシリーズ作品を時系列で掲載しています。`,
+          text: `公開順に見たい場合は ${startYear ?? "初期"} 年ごろからの年表順で作品をたどるのがおすすめです。`,
         },
       },
       {
@@ -138,14 +150,14 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
         name: "出演キャストも確認できますか？",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "はい。シリーズ内で出演回数の多いキャストと役柄を確認できます。気になる俳優がいれば、そのまま俳優詳細ページへ移動できます。",
+          text: "はい。シリーズ詳細では出演キャスト・役柄一覧を確認でき、気になる俳優詳細ページへ移動できます。",
         },
       },
     ],
   };
   const breadcrumbJsonLd = buildBreadcrumbList([
     { name: "TOP", path: "/" },
-    { name: "シリーズ一覧", path: "/series" },
+    { name: "繧ｷ繝ｪ繝ｼ繧ｺ荳隕ｧ", path: "/series" },
     { name: series.name, path: `/series/${series.slug ?? slug}` },
   ]);
 
@@ -161,20 +173,20 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
           <div className="stack-sm detail-ledger-shell">
             <h1 className="page-title">{series.name}</h1>
             <div className="pill-row">
-              <span className="pill accent-pill">作品数: {series.plays.length}</span>
-              {series.originType ? <span className="pill">種別: {series.originType}</span> : null}
+              <span className="pill accent-pill">菴懷刀謨ｰ: {series.plays.length}</span>
+              {series.originType ? <span className="pill">遞ｮ蛻･: {series.originType}</span> : null}
             </div>
             <div className="detail-ledger">
               <div className="detail-ledger__item">
-                <span className="detail-ledger__label">種別</span>
-                <strong>{series.originType || "シリーズ"}</strong>
+                <span className="detail-ledger__label">遞ｮ蛻･</span>
+                <strong>{series.originType || "繧ｷ繝ｪ繝ｼ繧ｺ"}</strong>
               </div>
               <div className="detail-ledger__item">
-                <span className="detail-ledger__label">作品数</span>
+                <span className="detail-ledger__label">菴懷刀謨ｰ</span>
                 <strong>{series.plays.length}</strong>
               </div>
               <div className="detail-ledger__item">
-                <span className="detail-ledger__label">開始年</span>
+                <span className="detail-ledger__label">髢句ｧ句ｹｴ</span>
                 <strong>{startYear ?? "--"}</strong>
               </div>
             </div>
@@ -191,13 +203,13 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
             <div className="meta-list roomy">
               {series.originNote ? (
                 <div className="meta-row">
-                  <div className="meta-label accent-label">原作・出典</div>
+                  <div className="meta-label accent-label">蜴滉ｽ懊・蜃ｺ蜈ｸ</div>
                   <div className="meta-value">{series.originNote}</div>
                 </div>
               ) : null}
               {series.productionCompanies.length > 0 ? (
                 <div className="meta-row">
-                  <div className="meta-label accent-label">主催・関連</div>
+                  <div className="meta-label accent-label">荳ｻ蛯ｬ繝ｻ髢｢騾｣</div>
                   <div className="meta-value">{series.productionCompanies.join(" / ")}</div>
                 </div>
               ) : null}
@@ -266,10 +278,10 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
           <section className="section-card stack-md">
             <div className="section-header-inline">
               <div className="stack-sm">
-                <h2 className="section-title">同作品の他シリーズ</h2>
-                <p className="catalog-note">同じ作品タイトルで派生・分岐しているシリーズをまとめています。</p>
+                <h2 className="section-title">蜷御ｽ懷刀縺ｮ莉悶す繝ｪ繝ｼ繧ｺ</h2>
+                <p className="catalog-note">同じ作品タイトルで派生しているシリーズをまとめています。</p>
               </div>
-              <span className="pill">{series.relatedSeries.length}件</span>
+              <span className="pill">{series.relatedSeries.length}莉ｶ</span>
             </div>
             <RelatedSeriesClient items={series.relatedSeries} />
           </section>
@@ -281,21 +293,19 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
             <article className="faq-card">
               <h3 className="faq-question">Q. {series.name} の関連作品はすべて見られますか？</h3>
               <p className="faq-answer">
-                現時点で、{series.name} には {series.plays.length} 作品が登録されています。
+                現時点で、{series.name} には {series.plays.length} 作品を掲載しています。
               </p>
             </article>
             <article className="faq-card">
               <h3 className="faq-question">Q. どの順番で見ればよいですか？</h3>
               <p className="faq-answer">
-                基本的には公開年順に見るのがおすすめです。{startYear ?? "----"}年ごろからの年表順で作品を追えるよう、
-                このページではシリーズ作品を時系列で掲載しています。
+                公開順に見たい場合は {startYear ?? "初期"} 年ごろからの年表順で作品をたどるのがおすすめです。
               </p>
             </article>
             <article className="faq-card">
               <h3 className="faq-question">Q. 出演キャストも確認できますか？</h3>
               <p className="faq-answer">
-                はい。シリーズ内で出演回数の多いキャストと役柄を確認できます。気になる俳優がいれば、
-                そのまま俳優詳細ページへ移動できます。
+                はい。シリーズ詳細では出演キャスト・役柄一覧を確認でき、気になる俳優詳細ページへ移動できます。
               </p>
             </article>
           </div>
@@ -304,3 +314,4 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
     </main>
   );
 }
+

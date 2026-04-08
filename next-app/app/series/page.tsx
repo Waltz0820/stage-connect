@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { StructuredData } from "../../components/StructuredData";
@@ -30,8 +30,7 @@ const buildHref = (params: Record<string, string | number | null | undefined>) =
 
 export const metadata: Metadata = {
   title: "シリーズ一覧 | Stage Connect（ステコネ）",
-  description:
-    "Stage Connect（ステコネ）で、2.5次元舞台・ミュージカルのシリーズやフランチャイズを一覧できます。舞台・ミュージカルや原作別に絞り込みできます。",
+  description: "2.5次元舞台・ミュージカルのシリーズを、作品数・上演形式・原作種別ごとに一覧できます。",
   alternates: {
     canonical: `${siteUrl}/series`,
     languages: {
@@ -50,12 +49,11 @@ export default async function SeriesPage({
   const allSeries = await getSeriesList();
   const breadcrumbJsonLd = buildBreadcrumbList([
     { name: "TOP", path: "/" },
-    { name: "シリーズ一覧", path: "/series" },
+    { name: "繧ｷ繝ｪ繝ｼ繧ｺ荳隕ｧ", path: "/series" },
   ]);
   const collectionJsonLd = buildCollectionPageStructuredData({
     name: "シリーズ一覧",
-    description:
-      "2.5次元舞台・ミュージカルのシリーズやフランチャイズを、作品数や原作ジャンルとあわせて一覧できるページです。",
+    description: "2.5次元舞台・ミュージカルのシリーズを、作品数・上演形式・原作種別ごとに一覧できます。",
     path: "/series",
   });
 
@@ -98,12 +96,12 @@ export default async function SeriesPage({
       <StructuredData data={breadcrumbJsonLd} />
       <StructuredData data={collectionJsonLd} />
       <div className="stack-lg">
-        <Breadcrumbs items={[{ label: "シリーズ一覧" }]} />
+        <Breadcrumbs items={[{ label: "繧ｷ繝ｪ繝ｼ繧ｺ荳隕ｧ" }]} />
         <section className="hero-card stack-md">
           <div className="stack-sm">
             <span className="eyebrow">Series</span>
             <h1 className="page-title">シリーズ一覧</h1>
-            <p className="lead">2.5次元舞台・ミュージカルのシリーズを、原作や上演形式とあわせて一覧できます。</p>
+            <p className="lead">2.5次元舞台・ミュージカルのシリーズを、作品数や原作種別とあわせて一覧できます。</p>
           </div>
 
           <div className="catalog-summary catalog-summary--ledger">
@@ -138,7 +136,7 @@ export default async function SeriesPage({
                 className={`filter-chip ${format === option ? "is-active" : ""}`}
                 href={buildHref({ page: 1, sort, format: option, origin })}
               >
-                {option === "all" ? "すべて" : FORMAT_LABELS[option]}
+                {option === "all" ? "縺吶∋縺ｦ" : FORMAT_LABELS[option]}
               </Link>
             ))}
           </div>
@@ -150,7 +148,7 @@ export default async function SeriesPage({
                 className={`filter-chip ${origin === option ? "is-active" : ""}`}
                 href={buildHref({ page: 1, sort, format, origin: option })}
               >
-                {option === "all" ? "すべて" : option}
+                {option === "all" ? "縺吶∋縺ｦ" : option}
               </Link>
             ))}
           </div>
@@ -165,7 +163,7 @@ export default async function SeriesPage({
                       {format === "all" && series.format ? (
                         <span className="catalog-card__badge">{FORMAT_LABELS[series.format] ?? series.format}</span>
                       ) : null}
-                      <span className="catalog-card__badge">{series.playCount}作品</span>
+                      <span className="catalog-card__badge">{series.playCount}菴懷刀</span>
                     </div>
                   </div>
 
@@ -174,7 +172,7 @@ export default async function SeriesPage({
                   {series.description ? (
                     <div className="catalog-card__text">{truncate(toPlainText(series.description), 140)}</div>
                   ) : (
-                    <div className="catalog-card__text">シリーズ説明は現在整理中です。</div>
+                    <div className="catalog-card__text">シリーズ説明は現在準備中です。</div>
                   )}
 
                   <div className="catalog-card__footer">
@@ -191,7 +189,7 @@ export default async function SeriesPage({
                 className={`pagination-link ${safePage === 1 ? "is-disabled" : ""}`}
                 href={buildHref({ page: Math.max(1, safePage - 1), sort, format, origin })}
               >
-                前へ
+                蜑阪∈
               </Link>
               <span className="catalog-note">
                 Page {safePage} / {totalPages}
@@ -200,7 +198,7 @@ export default async function SeriesPage({
                 className={`pagination-link ${safePage === totalPages ? "is-disabled" : ""}`}
                 href={buildHref({ page: Math.min(totalPages, safePage + 1), sort, format, origin })}
               >
-                次へ
+                谺｡縺ｸ
               </Link>
             </div>
           ) : null}
@@ -209,3 +207,4 @@ export default async function SeriesPage({
     </main>
   );
 }
+

@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
 export const metadata: Metadata = {
   title: "タグで探す | Stage Connect（ステコネ）",
   description:
-    "Stage Connect（ステコネ）で、2.5次元舞台・ミュージカル作品を世界観・観劇体験・原作ジャンルのタグから探せます。",
+    "2.5次元舞台・ミュージカル作品を、世界観・観劇タグ・原作ジャンルのタグから探せます。",
   robots: {
     index: false,
     follow: true,
@@ -27,13 +27,13 @@ const sectionMeta = [
   },
   {
     key: "experience",
-    title: "観劇体験タグ",
-    lead: "初見向き、泣ける、ライブ感など体験ベースで探せます。",
+    title: "観劇タグ",
+    lead: "泣ける、笑える、ライブ感など、観劇体験の軸で探せます。",
   },
   {
     key: "origin",
-    title: "原作・出典ジャンル",
-    lead: "漫画、ゲーム、アニメなど原作の入口から探せます。",
+    title: "原作・出自ジャンル",
+    lead: "漫画、ゲーム、アニメなど、原作の入口から探せます。",
   },
 ] as const;
 
@@ -42,7 +42,7 @@ export default async function TagsPage() {
   const collectionJsonLd = buildCollectionPageStructuredData({
     name: "タグで探す",
     description:
-      "2.5次元舞台・ミュージカル作品を、世界観・体験・原作ジャンルのタグから探せるページです。",
+      "2.5次元舞台・ミュージカル作品を、世界観・観劇体験・原作ジャンルのタグから探せるページです。",
     path: "/tags",
   });
 
@@ -55,14 +55,15 @@ export default async function TagsPage() {
             <span className="eyebrow">Tags</span>
             <h1 className="page-title">タグで探す</h1>
             <p className="lead">
-              作品名や俳優名ではなく、世界観・観劇体験・原作ジャンルといった切り口から、2.5次元舞台・ミュージカルを探せます。
+              作品名や俳優名ではなく、世界観・観劇タグ・原作ジャンルといった切り口から
+              2.5次元舞台・ミュージカルを探せます。
             </p>
           </div>
 
           <div className="catalog-summary catalog-summary--ledger">
             <span className="catalog-chip">登録タグ {tags.length}件</span>
-            <span className="catalog-chip">カテゴリ {sectionMeta.length}系統</span>
-            <span className="catalog-chip">タグ詳細から作品へ移動</span>
+            <span className="catalog-chip">カテゴリ {sectionMeta.length}種類</span>
+            <span className="catalog-chip">タグ経由で作品へ移動</span>
           </div>
         </section>
 
@@ -95,7 +96,9 @@ export default async function TagsPage() {
                       {tag.description ? (
                         <div className="tag-link-card__text">{tag.description}</div>
                       ) : (
-                        <div className="tag-link-card__text">このタグに関連する作品一覧へ進みます。</div>
+                        <div className="tag-link-card__text">
+                          このタグに関連する作品一覧へ移動できます。
+                        </div>
                       )}
                       <div className="catalog-card__footer">
                         <span className="catalog-link">タグ詳細を見る</span>

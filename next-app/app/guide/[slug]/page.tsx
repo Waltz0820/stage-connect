@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
     title: `${guide.title} | Stage Connect（ステコネ）`,
     description,
     alternates: {
-      canonical: `/guide/${guide.slug}`,
+      canonical: `${siteUrl}/guide/${guide.slug}`,
     },
   };
 }
@@ -92,7 +92,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<Para
 
         <section className="section-card stack-md">
           <h2 className="section-title">本文</h2>
-          <div className="prose-panel">{guide.content || "本文は準備中です。"}</div>
+          <div className="prose-panel">{guide.content || "本文は現在準備中です。"}</div>
         </section>
       </div>
     </main>

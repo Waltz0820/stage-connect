@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { FavoriteButtonClient } from "../../components/FavoriteButtonClient";
@@ -40,7 +40,7 @@ const compactListPeriod = (period?: string | null) => {
     return `${year}/${month.padStart(2, "0")}/${day.padStart(2, "0")}-`;
   }
 
-  const jpDate = period.match(/(\d{4})年\s*(\d{1,2})月\s*(\d{1,2})日/);
+  const jpDate = period.match(/(\d{4})蟷ｴ\s*(\d{1,2})譛・s*(\d{1,2})譌･/);
   if (jpDate) {
     const [, year, month, day] = jpDate;
     return `${year}/${month.padStart(2, "0")}/${day.padStart(2, "0")}-`;
@@ -74,8 +74,7 @@ const buildHref = (params: Record<string, string | number | null | undefined>) =
 
 export const metadata: Metadata = {
   title: "作品一覧 | Stage Connect（ステコネ）",
-  description:
-    "Stage Connect（ステコネ）で、2.5次元舞台・ミュージカル作品を一覧できます。舞台・ミュージカルやジャンル別に絞り込み、気になる作品詳細へそのまま移動できます。",
+  description: "2.5次元舞台・ミュージカル作品を、公演時期・上演形式・ジャンル別に一覧できます。",
   alternates: {
     canonical: `${siteUrl}/plays`,
     languages: {
@@ -94,12 +93,11 @@ export default async function PlaysPage({
   const allPlays = await getPlayList();
   const breadcrumbJsonLd = buildBreadcrumbList([
     { name: "TOP", path: "/" },
-    { name: "作品一覧", path: "/plays" },
+    { name: "菴懷刀荳隕ｧ", path: "/plays" },
   ]);
   const collectionJsonLd = buildCollectionPageStructuredData({
     name: "作品一覧",
-    description:
-      "2.5次元舞台・ミュージカル作品を、公演順・上演形式・ジャンル別に一覧できるページです。",
+    description: "2.5次元舞台・ミュージカル作品を、公演時期・上演形式・ジャンル別に一覧できます。",
     path: "/plays",
   });
 
@@ -140,7 +138,7 @@ export default async function PlaysPage({
           <div className="stack-sm">
             <span className="eyebrow">Plays</span>
             <h1 className="page-title">作品一覧</h1>
-            <p className="lead">2.5次元舞台・ミュージカル作品を、上演形式やジャンル別に一覧できます。</p>
+            <p className="lead">2.5次元舞台・ミュージカル作品を、公演時期やジャンルごとに一覧できます。</p>
           </div>
 
           <div className="catalog-summary catalog-summary--ledger">
@@ -151,21 +149,19 @@ export default async function PlaysPage({
         </section>
 
         <section className="section-card stack-md">
-          <h2 className="section-title">作品データベース</h2>
+          <h2 className="section-title">菴懷刀繝・・繧ｿ繝吶・繧ｹ</h2>
 
           <div className="filter-row filter-row--dense">
             <Link
               className={`filter-chip ${sort === "new" ? "is-active" : ""}`}
               href={buildHref({ page: 1, sort: "new", format, genre })}
             >
-              新しい順
-            </Link>
+              譁ｰ縺励＞鬆・            </Link>
             <Link
               className={`filter-chip ${sort === "old" ? "is-active" : ""}`}
               href={buildHref({ page: 1, sort: "old", format, genre })}
             >
-              古い順
-            </Link>
+              蜿､縺・・            </Link>
           </div>
 
           <div className="filter-row filter-row--dense genre-filter-row">
@@ -175,7 +171,7 @@ export default async function PlaysPage({
                 className={`filter-chip ${format === option ? "is-active" : ""}`}
                 href={buildHref({ page: 1, sort, format: option, genre })}
               >
-                {option === "all" ? "すべて" : FORMAT_LABELS[option]}
+                {option === "all" ? "縺吶∋縺ｦ" : FORMAT_LABELS[option]}
               </Link>
             ))}
           </div>
@@ -187,7 +183,7 @@ export default async function PlaysPage({
                 className={`filter-chip ${genre === option ? "is-active" : ""}`}
                 href={buildHref({ page: 1, sort, format, genre: option })}
               >
-                {option === "all" ? "すべて" : GENRE_LABELS[option]}
+                {option === "all" ? "縺吶∋縺ｦ" : GENRE_LABELS[option]}
               </Link>
             ))}
           </div>
@@ -214,7 +210,7 @@ export default async function PlaysPage({
                           {FORMAT_LABELS[play.franchiseFormat] ?? play.franchiseFormat}
                         </span>
                       ) : null}
-                      {play.franchiseName ? <span className="catalog-card__badge">シリーズ</span> : null}
+                      {play.franchiseName ? <span className="catalog-card__badge">繧ｷ繝ｪ繝ｼ繧ｺ</span> : null}
                     </div>
                   ) : null}
                 </div>
@@ -223,19 +219,19 @@ export default async function PlaysPage({
                   {play.franchiseName ? <div className="catalog-card__sub">{play.franchiseName}</div> : null}
                 {compactListPeriod(play.period) ? (
                   <div className="catalog-card__sub">
-                    日程: <span className="mono">{compactListPeriod(play.period)}</span>
+                    譌･遞・ <span className="mono">{compactListPeriod(play.period)}</span>
                   </div>
                 ) : null}
                 {play.genre ? (
                   <div className="catalog-card__sub">
-                    ジャンル: {GENRE_LABELS[play.genre] ?? play.genre}
+                    繧ｸ繝｣繝ｳ繝ｫ: {GENRE_LABELS[play.genre] ?? play.genre}
                   </div>
                 ) : null}
 
                   {play.summary ? (
                     <div className="catalog-card__text">{truncate(toPlainText(play.summary), 140)}</div>
                   ) : (
-                    <div className="catalog-card__text">作品情報は現在整理中です。</div>
+                    <div className="catalog-card__text">作品説明は現在準備中です。</div>
                   )}
 
                   <div className="catalog-card__footer">
@@ -252,7 +248,7 @@ export default async function PlaysPage({
                 className={`pagination-link ${safePage === 1 ? "is-disabled" : ""}`}
                 href={buildHref({ page: Math.max(1, safePage - 1), sort, format, genre })}
               >
-                前へ
+                蜑阪∈
               </Link>
               <span className="catalog-note">
                 Page {safePage} / {totalPages}
@@ -261,7 +257,7 @@ export default async function PlaysPage({
                 className={`pagination-link ${safePage === totalPages ? "is-disabled" : ""}`}
                 href={buildHref({ page: Math.min(totalPages, safePage + 1), sort, format, genre })}
               >
-                次へ
+                谺｡縺ｸ
               </Link>
             </div>
           ) : null}
@@ -270,3 +266,4 @@ export default async function PlaysPage({
     </main>
   );
 }
+

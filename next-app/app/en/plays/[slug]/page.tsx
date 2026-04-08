@@ -19,6 +19,27 @@ const splitSlashList = (value?: string | null) =>
     .map((item) => item.trim())
     .filter(Boolean);
 
+const buildPlayMetaDescriptionEn = (play: NonNullable<Awaited<ReturnType<typeof getPlayDetailBySlug>>>) => {
+  const parts: string[] = [];
+  const summary = toPlainText(play.summaryEn || play.summary || "").trim().replace(/[.。]\s*$/u, "");
+
+  if (summary) parts.push(`${summary}.`);
+
+  const factParts: string[] = [];
+  if (play.franchiseName) factParts.push(`Series: ${play.franchiseName}`);
+  if (play.cast.length > 0) factParts.push(`Cast: ${play.cast.length}`);
+  if (play.vod && Object.keys(play.vod).length > 0) factParts.push("Streaming available");
+  if (factParts.length > 0) parts.push(`${factParts.join(" / ")}.`);
+
+  if (parts.length === 0) {
+    parts.push(`${play.title} cast, series, and streaming archive page on Stage Connect.`);
+  } else {
+    parts.push("Includes cast, credits, and schedule details.");
+  }
+
+  return truncateText(parts.join(" "), 150);
+};
+
 export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
   const { slug } = await params;
   const play = await getPlayDetailBySlug(slug);
@@ -30,14 +51,9 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
     };
   }
 
-  const description = truncateText(
-    toPlainText(play.summaryEn || play.summary || `${play.title} cast and production archive page on Stage Connect.`),
-    150
-  );
-
   return {
     title: `${play.title} | Cast, series, and streaming info | Stage Connect`,
-    description,
+    description: buildPlayMetaDescriptionEn(play),
     alternates: {
       canonical: `${siteUrl}/en/plays/${play.slug}`,
       languages: {

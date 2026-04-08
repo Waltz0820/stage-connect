@@ -7,7 +7,8 @@ type SearchParams = {
 };
 
 export const metadata: Metadata = {
-  title: "検索 | Stage Connect",
+  title: "検索 | Stage Connect（ステコネ）",
+  description: "俳優、作品、シリーズを横断して検索できます。",
   robots: {
     index: false,
     follow: true,
@@ -24,7 +25,7 @@ export default async function SearchPage({ searchParams }: { searchParams?: Prom
     <main className="container" style={{ paddingBlock: 32 }}>
       <div className="stack-lg">
         <section className="hero-card stack-sm">
-          <span className="eyebrow">SEARCH</span>
+          <span className="eyebrow">Search</span>
           <h1 className="page-title">検索</h1>
           <p className="muted">キャスト、作品、シリーズを横断して探せます。</p>
         </section>
@@ -47,7 +48,7 @@ export default async function SearchPage({ searchParams }: { searchParams?: Prom
 
             {results.actors.length > 0 ? (
               <section className="section-card stack-md">
-                <h2 className="section-title">キャスト</h2>
+                <h2 className="section-title">俳優</h2>
                 <div className="results-grid">
                   {results.actors.map((actor) => (
                     <article key={actor.id} className="list-card">

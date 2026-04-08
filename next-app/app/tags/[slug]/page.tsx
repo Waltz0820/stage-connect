@@ -12,8 +12,8 @@ const ITEMS_PER_PAGE = 12;
 
 const TYPE_LABELS: Record<string, string> = {
   world: "世界観・ジャンル",
-  experience: "観劇体験タグ",
-  origin: "原作・出典ジャンル",
+  experience: "観劇タグ",
+  origin: "原作・出自ジャンル",
 };
 
 const getSingleParam = (value: SearchParamValue) => (Array.isArray(value) ? value[0] : value) ?? "";
@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   return {
     title: `${tag.name}の関連作品 | Stage Connect（ステコネ）`,
     description: truncate(
-      toPlainText(tag.description || `${tag.name} に関連する2.5次元舞台・ミュージカル作品を一覧で確認できます。`),
+      toPlainText(tag.description || `${tag.name} に関連する2.5次元舞台・ミュージカル作品を一覧できます。`),
       150
     ),
     robots: { index: false, follow: true },
@@ -93,7 +93,8 @@ export default async function TagDetailPage({
             <div className="stack-sm">
               <h2 className="section-title">関連作品</h2>
               <p className="catalog-note">
-                {tag.name} に紐づく作品を新しい順に表示しています。{tag.plays.length}件中 {visiblePlays.length}件を表示中です。
+                {tag.name} に紐づく作品を新しい順に表示しています。{tag.plays.length}件中{" "}
+                {visiblePlays.length}件を表示中です。
               </p>
             </div>
             <Link href="/tags" className="action-button">
@@ -106,7 +107,7 @@ export default async function TagDetailPage({
               <article key={play.id} className="catalog-card">
                 <div className="catalog-card__top">
                   <div className="catalog-card__title">{play.title}</div>
-                  <span className="catalog-card__badge">Play</span>
+                  <span className="catalog-card__badge">作品</span>
                 </div>
 
                 <Link href={`/plays/${play.slug}`} className="catalog-card__body-link">
@@ -123,7 +124,7 @@ export default async function TagDetailPage({
                   <div className="catalog-card__text">
                     {truncate(
                       toPlainText(
-                        `${play.title} の作品情報ページです。出演キャスト、公演情報、配信情報を確認できます。`
+                        `${play.title} の公演情報ページです。出演キャスト、配信情報、公演概要を確認できます。`
                       ),
                       110
                     )}

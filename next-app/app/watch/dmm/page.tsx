@@ -12,8 +12,8 @@ export const revalidate = 3600;
 export async function generateMetadata(): Promise<Metadata> {
   const overview = await getWatchOverview();
   return {
-    title: "DMM TVで観られる2.5次元舞台｜シリーズ一覧・配信ガイド | Stage Connect（ステコネ）",
-    description: `2.5次元舞台・ミュージカルをDMM TV（DMMプレミアム）で観るためのガイド。現在${overview.dmmSeriesCount}シリーズが確認済み。刀剣乱舞・ヒプステ・テニミュなど人気作品を網羅。月額550円・14日間無料トライアルあり。`,
+    title: "DMM TVで見られる2.5次元舞台 | Stage Connect（ステコネ）",
+    description: `DMM TVで見られる2.5次元舞台・ミュージカルの配信ガイドです。現在 ${overview.dmmSeriesCount.toLocaleString()} シリーズを確認しています。`,
     alternates: {
       canonical: `${siteUrl}/watch/dmm`,
     },
@@ -26,28 +26,16 @@ export default async function WatchDmmPage() {
 
   const faqItems = [
     {
-      q: "DMM TVで2.5次元舞台は何シリーズ観られますか？",
-      a: `現在、Stage Connectに登録されているDMM TV配信作品は${countLabel}シリーズです。刀剣乱舞、ヒプノシスマイク、テニスの王子様など主要な2.5次元舞台を網羅しています。`,
+      q: "DMM TVで2.5次元舞台はどれくらい見られますか？",
+      a: `Stage Connect では現在 ${countLabel} シリーズを確認しています。無料トライアルと低価格で始めやすく、2.5次元舞台をまとめて追いたい人に向いています。`,
     },
     {
-      q: "DMMプレミアムの料金と無料期間は？",
-      a: "DMMプレミアムは月額550円（税込）で、初回登録時は14日間の無料トライアルがあります。期間中は見放題対象の2.5次元舞台を追加料金なしで視聴できます。",
+      q: "DMM TVの料金と無料トライアルは？",
+      a: "月額550円で、14日間の無料トライアルがあります。まずは関連作品やシリーズを探してから試せるのが使いやすいポイントです。",
     },
     {
-      q: "DMM TVとU-NEXTはどちらがいい？",
-      a: "2.5次元舞台が最優先ならDMM TV。映画・ドラマも含めた総合VODならU-NEXT。Stage Connectでは2.5次元の充実度からDMM TVを主導線にしています。",
-    },
-    {
-      q: "DMM TVとdアニメストアはどちらがいい？",
-      a: "どちらも月額550円ですが、2.5次元舞台の見放題ラインナップはDMM TVが圧倒的に充実。アニメが主目的ならdアニメストア、2.5次元が主目的ならDMM TVがおすすめです。",
-    },
-    {
-      q: "ここに載っているシリーズは必ず見放題ですか？",
-      a: "Stage Connectに登録された配信リンクを元に整理しています。見放題対象か都度課金（レンタル）かは作品によって異なり、配信状況も変動します。最終確認はDMM TVの公式ページで行ってください。",
-    },
-    {
-      q: "シリーズ一覧にない作品を探すには？",
-      a: "配信リンクが未登録、または配信が終了している可能性があります。Stage Connectの検索機能から作品名やキャスト名で直接探すか、シリーズ一覧から関連作品を辿ってみてください。",
+      q: "U-NEXT や dアニメストアとの違いは？",
+      a: "2.5次元舞台の配信数では DMM TV が強く、シリーズ全体を追いたい場合に向いています。U-NEXT は総合VOD、dアニメストアはアニメ寄りの使い分けになります。",
     },
   ];
 
@@ -70,25 +58,31 @@ export default async function WatchDmmPage() {
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "ホーム", item: siteUrl },
       { "@type": "ListItem", position: 2, name: "配信ガイド", item: `${siteUrl}/watch` },
-      { "@type": "ListItem", position: 3, name: "DMM TV" },
+      { "@type": "ListItem", position: 3, name: "DMM TV", item: `${siteUrl}/watch/dmm` },
     ],
   };
 
   return (
     <main className="container" style={{ paddingBlock: 32 }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
 
       <div className="stack-lg">
-        {/* --- Breadcrumb --- */}
         <nav className="breadcrumbs" aria-label="パンくずリスト">
           <ol className="breadcrumbs__list">
             <li className="breadcrumbs__item">
-              <Link className="breadcrumbs__link" href="/">ホーム</Link>
+              <Link className="breadcrumbs__link" href="/">
+                ホーム
+              </Link>
               <span className="breadcrumbs__divider">/</span>
             </li>
             <li className="breadcrumbs__item">
-              <Link className="breadcrumbs__link" href="/watch">配信ガイド</Link>
+              <Link className="breadcrumbs__link" href="/watch">
+                配信ガイド
+              </Link>
               <span className="breadcrumbs__divider">/</span>
             </li>
             <li className="breadcrumbs__item">
@@ -97,29 +91,28 @@ export default async function WatchDmmPage() {
           </ol>
         </nav>
 
-        {/* --- HERO --- */}
         <section className="hero-card hero-card--center stack-md">
           <div className="stack-sm">
             <span className="eyebrow">DMM Premium × Stage Connect</span>
-            <h1 className="page-title">2.5次元舞台をDMM TVで観る</h1>
+            <h1 className="page-title">2.5次元舞台をDMM TVで見る</h1>
             <p className="lead">
-              DMM TV（DMMプレミアム）で視聴できる2.5次元舞台・ミュージカルを、シリーズ単位で整理しています。
-              刀剣乱舞・ヒプステ・テニミュなど、主要シリーズを網羅。
+              DMM TV は、2.5次元舞台・ミュージカルをまとめて見たい人に向いている配信サービスです。
+              料金、無料トライアル、強みを整理しました。
             </p>
           </div>
 
           <div className="watch-stat-grid">
             <div className="watch-stat-card">
-              <div className="watch-stat-label">月額</div>
+              <div className="watch-stat-label">確認シリーズ数</div>
+              <div className="watch-stat-value">{countLabel}</div>
+            </div>
+            <div className="watch-stat-card">
+              <div className="watch-stat-label">月額料金</div>
               <div className="watch-stat-value">550円</div>
             </div>
             <div className="watch-stat-card">
               <div className="watch-stat-label">無料トライアル</div>
               <div className="watch-stat-value">14日間</div>
-            </div>
-            <div className="watch-stat-card">
-              <div className="watch-stat-label">配信シリーズ</div>
-              <div className="watch-stat-value">国内最多級</div>
             </div>
           </div>
 
@@ -130,7 +123,7 @@ export default async function WatchDmmPage() {
               target="_blank"
               rel="sponsored noopener noreferrer"
             >
-              14日間無料で始める
+              14日間無料で試す
             </a>
             <Link className="action-button" href="/watch">
               配信ガイドTOPへ
@@ -138,23 +131,19 @@ export default async function WatchDmmPage() {
           </div>
         </section>
 
-        {/* --- なぜDMMが強いのか --- */}
         <section className="section-card stack-md">
-          <h2 className="section-title">なぜDMM TVが2.5次元に強いのか</h2>
+          <h2 className="section-title">DMM TVが向いている理由</h2>
           <div className="prose-panel">
-            2.5次元舞台・ミュージカルの配信サービスは複数ありますが、見放題で観られるラインナップの充実度ではDMM TVが圧倒的です。
-            刀剣乱舞、ヒプノシスマイク、テニスの王子様、あんさんぶるスターズ、ハイキュー!!、弱虫ペダルなど、
-            2.5次元ファンが押さえたい主要シリーズの多くがDMM TVで配信されています。
-            他のサービスでは都度課金やレンタルでしか観られない作品も、DMMプレミアムなら見放題対象に含まれていることが多いのが強みです。
+            2.5次元舞台・ミュージカルの配信数を重視するなら、まずは DMM TV を軸に考えるのが自然です。
+            月額550円で始めやすく、見放題で触れられる作品も多いため、シリーズの入口として扱いやすいサービスです。
           </div>
           <div className="catalog-summary">
-            <span className="catalog-chip">2.5次元 見放題が充実</span>
-            <span className="catalog-chip">月額550円（税込）</span>
-            <span className="catalog-chip">14日間無料トライアル</span>
+            <span className="catalog-chip">月額550円</span>
+            <span className="catalog-chip">14日間無料</span>
+            <span className="catalog-chip">国内最多クラスの配信数</span>
           </div>
         </section>
 
-        {/* --- 比較テーブル --- */}
         <section className="section-card stack-md">
           <h2 className="section-title">他サービスとの比較</h2>
           <div className="watch-compare-table">
@@ -167,14 +156,15 @@ export default async function WatchDmmPage() {
                 <span className="watch-compare-value is-strong">550円</span>
               </div>
               <div className="watch-compare-row">
-                <span className="watch-compare-label">無料期間</span>
+                <span className="watch-compare-label">無料トライアル</span>
                 <span className="watch-compare-value is-strong">14日間</span>
               </div>
               <div className="watch-compare-row">
-                <span className="watch-compare-label">2.5次元</span>
-                <span className="watch-compare-value is-strong">国内最多級</span>
+                <span className="watch-compare-label">2.5次元舞台</span>
+                <span className="watch-compare-value is-strong">国内最多クラス</span>
               </div>
             </div>
+
             <div className="watch-compare-col">
               <div className="watch-compare-col__name">U-NEXT</div>
               <div className="watch-compare-row">
@@ -182,14 +172,15 @@ export default async function WatchDmmPage() {
                 <span className="watch-compare-value is-weak">2,189円</span>
               </div>
               <div className="watch-compare-row">
-                <span className="watch-compare-label">無料期間</span>
+                <span className="watch-compare-label">無料トライアル</span>
                 <span className="watch-compare-value">31日間</span>
               </div>
               <div className="watch-compare-row">
-                <span className="watch-compare-label">2.5次元</span>
-                <span className="watch-compare-value is-weak">一部</span>
+                <span className="watch-compare-label">2.5次元舞台</span>
+                <span className="watch-compare-value is-weak">一部のみ</span>
               </div>
             </div>
+
             <div className="watch-compare-col">
               <div className="watch-compare-col__name">dアニメストア</div>
               <div className="watch-compare-row">
@@ -197,53 +188,20 @@ export default async function WatchDmmPage() {
                 <span className="watch-compare-value">550円</span>
               </div>
               <div className="watch-compare-row">
-                <span className="watch-compare-label">無料期間</span>
+                <span className="watch-compare-label">無料トライアル</span>
                 <span className="watch-compare-value">初月無料</span>
               </div>
               <div className="watch-compare-row">
-                <span className="watch-compare-label">2.5次元</span>
+                <span className="watch-compare-label">2.5次元舞台</span>
                 <span className="watch-compare-value is-weak">限定的</span>
               </div>
             </div>
           </div>
-          <div className="action-row">
-            <Link className="action-button" href="/watch/u-next">U-NEXTとの比較</Link>
-            <Link className="action-button" href="/watch/danime">dアニメストアとの比較</Link>
-          </div>
         </section>
 
-        {/* --- 使い方ステップ --- */}
-        <section className="section-card stack-md">
-          <h2 className="section-title">このページの使い方</h2>
-          <div className="compare-grid">
-            <article className="compare-card">
-              <div className="compare-card__eyebrow">Step 01</div>
-              <div className="compare-card__title">シリーズから入る</div>
-              <div className="compare-card__text">
-                気になるシリーズを選んで、シリーズ詳細ページで年表や作品一覧から履修順を把握します。
-              </div>
-            </article>
-            <article className="compare-card">
-              <div className="compare-card__eyebrow">Step 02</div>
-              <div className="compare-card__title">作品詳細で深掘る</div>
-              <div className="compare-card__text">
-                キャスト・公演情報を確認しながら、作品詳細ページの視聴リンクからDMM TVへ遷移できます。
-              </div>
-            </article>
-            <article className="compare-card">
-              <div className="compare-card__eyebrow">Step 03</div>
-              <div className="compare-card__title">キャストから回遊する</div>
-              <div className="compare-card__text">
-                気になる俳優の出演作品を芋づる式に辿って、次に観る一本を見つけられます。
-              </div>
-            </article>
-          </div>
-        </section>
-
-        {/* --- シリーズ一覧 --- */}
         <section className="section-card stack-md">
           <div className="section-header-inline">
-            <h2 className="section-title">DMM TVで見られるシリーズ</h2>
+            <h2 className="section-title">DMM TVで見られる主なシリーズ</h2>
             <span className="pill accent-pill">{countLabel}シリーズ</span>
           </div>
           <div className="catalog-grid">
@@ -265,37 +223,26 @@ export default async function WatchDmmPage() {
           </div>
         </section>
 
-        {/* --- CTA --- */}
         <section className="section-card stack-md">
           <div className="section-header-inline">
-            <h2 className="section-title">まずは無料で確認してみる</h2>
+            <h2 className="section-title">まずは無料で試す</h2>
             <a
               className="action-button action-button-primary"
               href={DMM_PREMIUM_URL}
               target="_blank"
               rel="sponsored noopener noreferrer"
             >
-              14日間無料で始める
+              14日間無料で試す
             </a>
           </div>
           <div className="prose-panel">
-            DMMプレミアムは14日間の無料トライアルがあり、期間中は見放題対象の2.5次元舞台を追加料金なしで視聴できます。
-            まずは気になるシリーズが見放題に含まれているか、トライアルで確認してみてください。
-            合わなければ期間中に解約すれば料金はかかりません。
-          </div>
-          <div className="action-row">
-            <Link className="action-button" href="/series">
-              シリーズ一覧を見る
-            </Link>
-            <Link className="action-button" href="/search">
-              作品名・俳優名で検索
-            </Link>
+            気になるシリーズがあるなら、まずは DMM TV の無料トライアルで配信状況を確認してみるのが手堅いです。
+            Stage Connect の作品ページやシリーズページとあわせて使うと、次に見る作品も選びやすくなります。
           </div>
         </section>
 
-        {/* --- FAQ --- */}
         <section className="section-card stack-md">
-          <h2 className="section-title">よくある質問（FAQ）</h2>
+          <h2 className="section-title">よくある質問</h2>
           <div className="faq-grid">
             {faqItems.map((faq) => (
               <article className="faq-card" key={faq.q}>

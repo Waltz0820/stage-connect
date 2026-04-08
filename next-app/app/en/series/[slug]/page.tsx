@@ -46,6 +46,31 @@ const compactTimelinePeriod = (period?: string | null) => {
 
 const hasVod = (vod?: Record<string, string> | null) => Boolean(vod?.dmm || vod?.danime || vod?.unext);
 
+const buildSeriesMetaDescriptionEn = (series: NonNullable<Awaited<ReturnType<typeof getSeriesDetailBySlug>>>) => {
+  const parts: string[] = [];
+  const overview = toPlainText(series.descriptionEn || series.description || "").trim().replace(/[.。]\s*$/u, "");
+
+  if (overview) parts.push(`${overview}.`);
+
+  const factParts: string[] = [];
+  if (series.originType) {
+    const originLabel = toEnglishOriginType(series.originType);
+    if (originLabel) factParts.push(originLabel);
+  }
+  if (series.plays.length > 0) factParts.push(`${series.plays.length} plays`);
+  const startYear = getStartYear(series.plays.map((play) => play.period));
+  if (startYear) factParts.push(`Started in ${startYear}`);
+  if (factParts.length > 0) parts.push(`${factParts.join(" / ")}.`);
+
+  if (parts.length === 0) {
+    parts.push(`${series.name} series archive page on Stage Connect.`);
+  } else {
+    parts.push("Includes timeline, cast ranking, and related series links.");
+  }
+
+  return truncateText(parts.join(" "), 150);
+};
+
 export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
   const { slug } = await params;
   const series = await getSeriesDetailBySlug(slug);
@@ -57,14 +82,9 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
     };
   }
 
-  const description = truncateText(
-    toPlainText(series.descriptionEn || series.description || `${series.name} series archive page on Stage Connect.`),
-    150
-  );
-
   return {
     title: `${series.name} | Series archive | Stage Connect`,
-    description,
+    description: buildSeriesMetaDescriptionEn(series),
     alternates: {
       canonical: `${siteUrl}/en/series/${series.slug ?? slug}`,
       languages: {
