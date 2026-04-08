@@ -98,9 +98,9 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
 
   const startYear = getStartYear(series.plays.map((play) => play.period));
 
-  const collectionJsonLd = {
+  const seriesJsonLd = {
     "@context": "https://schema.org",
-    "@type": "CollectionPage",
+    "@type": "CreativeWorkSeries",
     name: series.name,
     description: toPlainText(
       series.description || `${series.name} のシリーズ一覧と出演キャストをまとめたページです。`
@@ -152,10 +152,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
   return (
     <main className="container" style={{ paddingBlock: 32 }}>
       <StructuredData data={breadcrumbJsonLd} />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }}
-      />
+      <StructuredData data={seriesJsonLd} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       <div className="stack-lg">

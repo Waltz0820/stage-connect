@@ -88,6 +88,16 @@ export default async function EnglishActorDetailPage({ params }: { params: Promi
   const timeline = groupPlayTimelineByYear(actor.plays);
   const hasSns = Boolean(actor.sns && Object.values(actor.sns).some(Boolean));
   const statusLine = toPlainText(actor.profile || "") || `${actor.name} profile text is not available yet.`;
+  const personJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: actor.name,
+    alternateName: actor.kana || undefined,
+    description: statusLine,
+    url: `${siteUrl}/en/actors/${actor.slug}`,
+    birthDate: actor.birthday || undefined,
+    sameAs: Object.values(actor.sns || {}).filter(Boolean),
+  };
   const breadcrumbJsonLd = buildBreadcrumbList([
     { name: "HOME", path: "/en" },
     { name: "Actors", path: "/en/actors" },
@@ -97,6 +107,7 @@ export default async function EnglishActorDetailPage({ params }: { params: Promi
   return (
     <main className="container" style={{ paddingBlock: 32 }}>
       <StructuredData data={breadcrumbJsonLd} />
+      <StructuredData data={personJsonLd} />
       <div className="stack-lg">
         <Breadcrumbs items={[{ label: "Actors", href: "/en/actors" }]} />
 

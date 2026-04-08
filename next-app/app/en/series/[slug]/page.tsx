@@ -83,6 +83,21 @@ export default async function EnglishSeriesDetailPage({ params }: { params: Prom
 
   const startYear = getStartYear(series.plays.map((play) => play.period));
   const seriesOverview = series.descriptionEn || series.description;
+  const seriesJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CreativeWorkSeries",
+    name: series.name,
+    description: toPlainText(
+      seriesOverview || `${series.name} series archive page on Stage Connect.`
+    ),
+    url: `${siteUrl}/en/series/${series.slug ?? slug}`,
+    genre: toEnglishOriginType(series.originType) || undefined,
+    hasPart: series.plays.slice(0, 50).map((play) => ({
+      "@type": "CreativeWork",
+      name: play.title,
+      url: `${siteUrl}/en/plays/${play.slug}`,
+    })),
+  };
   const breadcrumbJsonLd = buildBreadcrumbList([
     { name: "HOME", path: "/en" },
     { name: "Series", path: "/en/series" },
@@ -92,6 +107,7 @@ export default async function EnglishSeriesDetailPage({ params }: { params: Prom
   return (
     <main className="container" style={{ paddingBlock: 32 }}>
       <StructuredData data={breadcrumbJsonLd} />
+      <StructuredData data={seriesJsonLd} />
       <div className="stack-lg">
         <Breadcrumbs items={[{ label: "Series", href: "/en/series" }]} />
 

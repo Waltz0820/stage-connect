@@ -60,6 +60,22 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
   const venues = splitSlashList(play.venue);
   const featuredCast = play.cast.slice(0, 12);
   const synopsis = play.summaryEn || play.summary;
+  const creativeWorkJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    name: play.title,
+    description: toPlainText(
+      synopsis || `${play.title} cast and production archive page on Stage Connect.`
+    ),
+    url: `${siteUrl}/en/plays/${play.slug}`,
+    keywords: play.tags.join(", "),
+    about: play.franchiseName || undefined,
+    actor: play.cast.slice(0, 20).map((item) => ({
+      "@type": "Person",
+      name: item.name,
+      url: `${siteUrl}/en/actors/${item.slug}`,
+    })),
+  };
   const breadcrumbJsonLd = buildBreadcrumbList([
     { name: "HOME", path: "/en" },
     { name: "Plays", path: "/en/plays" },
@@ -69,6 +85,7 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
   return (
     <main className="container" style={{ paddingBlock: 32 }}>
       <StructuredData data={breadcrumbJsonLd} />
+      <StructuredData data={creativeWorkJsonLd} />
       <div className="stack-lg">
         <Breadcrumbs items={[{ label: "Plays", href: "/en/plays" }]} />
 
