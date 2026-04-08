@@ -1307,6 +1307,14 @@ a {
   border-bottom: 0;
 }
 
+.top-series-list {
+  gap: 0;
+}
+
+.top-series-row {
+  padding-bottom: 12px;
+}
+
 .accent-label {
   color: var(--purple);
   font-size: 13px;

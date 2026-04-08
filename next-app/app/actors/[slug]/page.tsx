@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ActorCoStarsClient } from "../../../components/ActorCoStarsClient";
+import { ActorTopSeriesClient } from "../../../components/ActorTopSeriesClient";
 import { Breadcrumbs } from "../../../components/Breadcrumbs";
 import { ActorProfileClient } from "../../../components/ActorProfileClient";
 import { FavoriteButtonClient } from "../../../components/FavoriteButtonClient";
@@ -182,24 +183,7 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
           <ActorProfileClient text={profileText} collapsed={shouldCollapseProfile} />
         </section>
 
-        {actor.topSeries.length > 0 ? (
-          <section className="section-card stack-md">
-            <h2 className="section-title">主な出演シリーズ</h2>
-            <div className="meta-list">
-              {actor.topSeries.map((series) => (
-                <div key={series.slug} className="meta-row">
-                  <div className="meta-label">シリーズ</div>
-                  <div className="meta-value">
-                    <Link href={`/series/${series.slug}`} className="catalog-link">
-                      {series.name}
-                    </Link>
-                    <div className="subtle-line">{series.count}作品に出演</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-        ) : null}
+        {actor.topSeries.length > 0 ? <ActorTopSeriesClient items={actor.topSeries} /> : null}
 
         <section className="section-card stack-md">
           <h2 className="section-title">出演作品タイムライン</h2>

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ActorCoStarsClient } from "../../../../components/ActorCoStarsClient";
 import { ActorProfileClient } from "../../../../components/ActorProfileClient";
+import { ActorTopSeriesClient } from "../../../../components/ActorTopSeriesClient";
 import { Breadcrumbs } from "../../../../components/Breadcrumbs";
 import { FavoriteButtonClient } from "../../../../components/FavoriteButtonClient";
 import { ShareButtonClient } from "../../../../components/ShareButtonClient";
@@ -126,22 +127,7 @@ export default async function EnglishActorDetailPage({ params }: { params: Promi
         </section>
 
         {actor.topSeries.length > 0 ? (
-          <section className="section-card stack-md">
-            <h2 className="section-title">Major series</h2>
-            <div className="meta-list">
-              {actor.topSeries.map((series) => (
-                <div key={series.slug} className="meta-row">
-                  <div className="meta-label">Series</div>
-                  <div className="meta-value">
-                    <Link href={`/en/series/${series.slug}`} className="catalog-link">
-                      {series.name}
-                    </Link>
-                    <div className="subtle-line">{series.count} credited works</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
+          <ActorTopSeriesClient items={actor.topSeries} locale="en" />
         ) : null}
 
         <section className="section-card stack-md">
