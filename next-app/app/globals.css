@@ -2413,6 +2413,11 @@ a {
     align-items: start;
   }
 
+  .top-series-list .top-series-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+
   .cast-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
