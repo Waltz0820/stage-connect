@@ -1309,10 +1309,17 @@ a {
 
 .top-series-list {
   gap: 0;
+  width: 100%;
 }
 
 .top-series-row {
   padding-bottom: 12px;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.top-series-row .meta-value {
+  width: 100%;
+  min-width: 0;
 }
 
 .accent-label {
