@@ -5,6 +5,7 @@ import { Breadcrumbs } from "../../../components/Breadcrumbs";
 import { DetailToggleClient } from "../../../components/DetailToggleClient";
 import { FavoriteButtonClient } from "../../../components/FavoriteButtonClient";
 import { ShareButtonClient } from "../../../components/ShareButtonClient";
+import { StructuredData } from "../../../components/StructuredData";
 import {
   getCreditItems,
   getPlayDetailBySlug,
@@ -12,6 +13,7 @@ import {
   toPlainText,
   truncate,
 } from "../../../lib/stage-connect";
+import { buildBreadcrumbList } from "../../../lib/structured-data";
 
 type Params = {
   slug: string;
@@ -211,6 +213,11 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
   if (!play) notFound();
 
   const creditItems = getCreditItems(play.credits);
+  const breadcrumbJsonLd = buildBreadcrumbList([
+    { name: "TOP", path: "/" },
+    { name: "作品一覧", path: "/plays" },
+    { name: play.title, path: `/plays/${play.slug}` },
+  ]);
   const castSummary = summarizeCast(play.cast);
   const groupedCast = groupCast(play.cast);
   const hasVod = Boolean(play.vod && Object.keys(play.vod).length > 0);
@@ -301,6 +308,7 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
 
   return (
     <main className="container" style={{ paddingBlock: 32 }}>
+      <StructuredData data={breadcrumbJsonLd} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

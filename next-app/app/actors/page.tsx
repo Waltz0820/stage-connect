@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { FavoriteButtonClient } from "../../components/FavoriteButtonClient";
+import { StructuredData } from "../../components/StructuredData";
+import { buildBreadcrumbList, buildCollectionPageStructuredData } from "../../lib/structured-data";
 import {
   getDisplayBirthday,
   getActorList,
@@ -50,6 +52,16 @@ export default async function ActorsPage({
 }) {
   const params = (await searchParams) ?? {};
   const allActors = await getActorList();
+  const breadcrumbJsonLd = buildBreadcrumbList([
+    { name: "TOP", path: "/" },
+    { name: "俳優一覧", path: "/actors" },
+  ]);
+  const collectionJsonLd = buildCollectionPageStructuredData({
+    name: "俳優一覧",
+    description:
+      "2.5次元舞台・ミュージカルに出演する俳優を、プロフィールや出演履歴とあわせて一覧できるページです。",
+    path: "/actors",
+  });
 
   const requestedGender = getSingleParam(params.gender);
   const gender = requestedGender in GENDER_LABELS ? requestedGender : "all";
@@ -66,6 +78,8 @@ export default async function ActorsPage({
 
   return (
     <main className="container" style={{ paddingBlock: 32 }}>
+      <StructuredData data={breadcrumbJsonLd} />
+      <StructuredData data={collectionJsonLd} />
       <div className="stack-lg">
         <Breadcrumbs items={[{ label: "俳優一覧" }]} />
         <section className="hero-card stack-md">

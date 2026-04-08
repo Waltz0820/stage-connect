@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import { Breadcrumbs } from "../../../components/Breadcrumbs";
 import { RelatedSeriesClient } from "../../../components/RelatedSeriesClient";
 import { SeriesCastOverviewClient } from "../../../components/SeriesCastOverviewClient";
+import { StructuredData } from "../../../components/StructuredData";
+import { buildBreadcrumbList } from "../../../lib/structured-data";
 import { getSeriesDetailBySlug, toPlainText, truncate } from "../../../lib/stage-connect";
 
 type Params = {
@@ -141,9 +143,15 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
       },
     ],
   };
+  const breadcrumbJsonLd = buildBreadcrumbList([
+    { name: "TOP", path: "/" },
+    { name: "シリーズ一覧", path: "/series" },
+    { name: series.name, path: `/series/${series.slug ?? slug}` },
+  ]);
 
   return (
     <main className="container" style={{ paddingBlock: 32 }}>
+      <StructuredData data={breadcrumbJsonLd} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }}

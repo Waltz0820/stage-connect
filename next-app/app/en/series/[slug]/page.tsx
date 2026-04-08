@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "../../../../components/Breadcrumbs";
+import { StructuredData } from "../../../../components/StructuredData";
 import { toEnglishOriginType, truncateText } from "../../../../lib/en-copy";
+import { buildBreadcrumbList } from "../../../../lib/structured-data";
 import { getSeriesDetailBySlug, toPlainText } from "../../../../lib/stage-connect";
 
 type Params = { slug: string };
@@ -81,9 +83,15 @@ export default async function EnglishSeriesDetailPage({ params }: { params: Prom
 
   const startYear = getStartYear(series.plays.map((play) => play.period));
   const seriesOverview = series.descriptionEn || series.description;
+  const breadcrumbJsonLd = buildBreadcrumbList([
+    { name: "HOME", path: "/en" },
+    { name: "Series", path: "/en/series" },
+    { name: series.name, path: `/en/series/${series.slug ?? slug}` },
+  ]);
 
   return (
     <main className="container" style={{ paddingBlock: 32 }}>
+      <StructuredData data={breadcrumbJsonLd} />
       <div className="stack-lg">
         <Breadcrumbs items={[{ label: "Series", href: "/en/series" }]} />
 

@@ -6,8 +6,10 @@ import { ActorTopSeriesClient } from "../../../../components/ActorTopSeriesClien
 import { Breadcrumbs } from "../../../../components/Breadcrumbs";
 import { FavoriteButtonClient } from "../../../../components/FavoriteButtonClient";
 import { ShareButtonClient } from "../../../../components/ShareButtonClient";
+import { StructuredData } from "../../../../components/StructuredData";
 import { getActorDetailBySlug, getAgeFromBirthday, groupPlayTimelineByYear, toPlainText } from "../../../../lib/stage-connect";
 import { formatAgeEn, formatBirthdayEn, formatBirthdayLabelEn, truncateText } from "../../../../lib/en-copy";
+import { buildBreadcrumbList } from "../../../../lib/structured-data";
 
 type Params = {
   slug: string;
@@ -86,9 +88,15 @@ export default async function EnglishActorDetailPage({ params }: { params: Promi
   const timeline = groupPlayTimelineByYear(actor.plays);
   const hasSns = Boolean(actor.sns && Object.values(actor.sns).some(Boolean));
   const statusLine = toPlainText(actor.profile || "") || `${actor.name} profile text is not available yet.`;
+  const breadcrumbJsonLd = buildBreadcrumbList([
+    { name: "HOME", path: "/en" },
+    { name: "Actors", path: "/en/actors" },
+    { name: actor.name, path: `/en/actors/${actor.slug}` },
+  ]);
 
   return (
     <main className="container" style={{ paddingBlock: 32 }}>
+      <StructuredData data={breadcrumbJsonLd} />
       <div className="stack-lg">
         <Breadcrumbs items={[{ label: "Actors", href: "/en/actors" }]} />
 

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { FavoriteButtonClient } from "../../components/FavoriteButtonClient";
+import { StructuredData } from "../../components/StructuredData";
+import { buildBreadcrumbList, buildCollectionPageStructuredData } from "../../lib/structured-data";
 import { getPlayList, periodSortKey, toPlainText, truncate } from "../../lib/stage-connect";
 
 type SearchParamValue = string | string[] | undefined;
@@ -90,6 +92,16 @@ export default async function PlaysPage({
 }) {
   const params = (await searchParams) ?? {};
   const allPlays = await getPlayList();
+  const breadcrumbJsonLd = buildBreadcrumbList([
+    { name: "TOP", path: "/" },
+    { name: "作品一覧", path: "/plays" },
+  ]);
+  const collectionJsonLd = buildCollectionPageStructuredData({
+    name: "作品一覧",
+    description:
+      "2.5次元舞台・ミュージカル作品を、公演順・上演形式・ジャンル別に一覧できるページです。",
+    path: "/plays",
+  });
 
   const sort = getSingleParam(params.sort) === "old" ? "old" : "new";
   const requestedFormat = getSingleParam(params.format);
@@ -120,6 +132,8 @@ export default async function PlaysPage({
 
   return (
     <main className="container" style={{ paddingBlock: 32 }}>
+      <StructuredData data={breadcrumbJsonLd} />
+      <StructuredData data={collectionJsonLd} />
       <div className="stack-lg">
         <Breadcrumbs items={[{ label: "作品一覧" }]} />
         <section className="hero-card stack-md">

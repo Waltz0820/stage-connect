@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { StructuredData } from "../../components/StructuredData";
+import { buildCollectionPageStructuredData } from "../../lib/structured-data";
 import { getGuideList, toPlainText, truncate } from "../../lib/stage-connect";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
@@ -21,9 +23,16 @@ metadata.alternates = {
 
 export default async function GuidePage() {
   const guides = await getGuideList();
+  const collectionJsonLd = buildCollectionPageStructuredData({
+    name: "編集部ガイド",
+    description:
+      "シリーズの見方や作品理解に役立つ編集部ガイドをまとめたページです。",
+    path: "/guide",
+  });
 
   return (
     <main className="container" style={{ paddingBlock: 32 }}>
+      <StructuredData data={collectionJsonLd} />
       <div className="stack-lg">
         <section className="hero-card stack-md">
           <div className="stack-sm">

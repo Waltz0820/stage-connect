@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "../../../components/Breadcrumbs";
+import { StructuredData } from "../../../components/StructuredData";
 import { EN_FORMAT_LABELS, toEnglishOriginType, truncateText } from "../../../lib/en-copy";
+import { buildBreadcrumbList, buildCollectionPageStructuredData } from "../../../lib/structured-data";
 import { getSeriesList, toPlainText } from "../../../lib/stage-connect";
 
 type SearchParamValue = string | string[] | undefined;
@@ -42,6 +44,16 @@ export default async function EnglishSeriesPage({
 }) {
   const params = (await searchParams) ?? {};
   const allSeries = await getSeriesList();
+  const breadcrumbJsonLd = buildBreadcrumbList([
+    { name: "HOME", path: "/en" },
+    { name: "Series", path: "/en/series" },
+  ]);
+  const collectionJsonLd = buildCollectionPageStructuredData({
+    name: "2.5D Series",
+    description:
+      "Browse franchise lines, recurring stage adaptations, and long-running 2.5D projects.",
+    path: "/en/series",
+  });
 
   const requestedSort = getSingleParam(params.sort);
   const sort = requestedSort === "name_asc" ? "name_asc" : "play_count_desc";
@@ -78,6 +90,8 @@ export default async function EnglishSeriesPage({
 
   return (
     <main className="container" style={{ paddingBlock: 32 }}>
+      <StructuredData data={breadcrumbJsonLd} />
+      <StructuredData data={collectionJsonLd} />
       <div className="stack-lg">
         <Breadcrumbs items={[{ label: "Series", href: "/en/series" }]} />
 

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { StructuredData } from "../../components/StructuredData";
+import { buildCollectionPageStructuredData } from "../../lib/structured-data";
 import { getTagList } from "../../lib/stage-connect";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
@@ -37,9 +39,16 @@ const sectionMeta = [
 
 export default async function TagsPage() {
   const tags = await getTagList();
+  const collectionJsonLd = buildCollectionPageStructuredData({
+    name: "タグで探す",
+    description:
+      "2.5次元舞台・ミュージカル作品を、世界観・体験・原作ジャンルのタグから探せるページです。",
+    path: "/tags",
+  });
 
   return (
     <main className="container" style={{ paddingBlock: 32 }}>
+      <StructuredData data={collectionJsonLd} />
       <div className="stack-lg">
         <section className="hero-card stack-md">
           <div className="stack-sm">

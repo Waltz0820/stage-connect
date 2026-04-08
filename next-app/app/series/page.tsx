@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "../../components/Breadcrumbs";
+import { StructuredData } from "../../components/StructuredData";
+import { buildBreadcrumbList, buildCollectionPageStructuredData } from "../../lib/structured-data";
 import { getSeriesList, toPlainText, truncate } from "../../lib/stage-connect";
 
 type SearchParamValue = string | string[] | undefined;
@@ -46,6 +48,16 @@ export default async function SeriesPage({
 }) {
   const params = (await searchParams) ?? {};
   const allSeries = await getSeriesList();
+  const breadcrumbJsonLd = buildBreadcrumbList([
+    { name: "TOP", path: "/" },
+    { name: "シリーズ一覧", path: "/series" },
+  ]);
+  const collectionJsonLd = buildCollectionPageStructuredData({
+    name: "シリーズ一覧",
+    description:
+      "2.5次元舞台・ミュージカルのシリーズやフランチャイズを、作品数や原作ジャンルとあわせて一覧できるページです。",
+    path: "/series",
+  });
 
   const requestedSort = getSingleParam(params.sort);
   const sort = requestedSort === "name_asc" ? "name_asc" : "play_count_desc";
@@ -83,6 +95,8 @@ export default async function SeriesPage({
 
   return (
     <main className="container" style={{ paddingBlock: 32 }}>
+      <StructuredData data={breadcrumbJsonLd} />
+      <StructuredData data={collectionJsonLd} />
       <div className="stack-lg">
         <Breadcrumbs items={[{ label: "シリーズ一覧" }]} />
         <section className="hero-card stack-md">

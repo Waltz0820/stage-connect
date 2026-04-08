@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "../../../components/Breadcrumbs";
+import { StructuredData } from "../../../components/StructuredData";
 import { compactListPeriodEn, EN_FORMAT_LABELS, EN_GENRE_LABELS, truncateText } from "../../../lib/en-copy";
+import { buildBreadcrumbList, buildCollectionPageStructuredData } from "../../../lib/structured-data";
 import { getPlayList, periodSortKey, toPlainText } from "../../../lib/stage-connect";
 
 type SearchParamValue = string | string[] | undefined;
@@ -42,6 +44,16 @@ export default async function EnglishPlaysPage({
 }) {
   const params = (await searchParams) ?? {};
   const allPlays = await getPlayList();
+  const breadcrumbJsonLd = buildBreadcrumbList([
+    { name: "HOME", path: "/en" },
+    { name: "Plays", path: "/en/plays" },
+  ]);
+  const collectionJsonLd = buildCollectionPageStructuredData({
+    name: "2.5D Plays",
+    description:
+      "Browse 2.5D stage plays and musicals by release order, performance format, and genre.",
+    path: "/en/plays",
+  });
 
   const sort = getSingleParam(params.sort) === "old" ? "old" : "new";
   const requestedFormat = getSingleParam(params.format);
@@ -71,6 +83,8 @@ export default async function EnglishPlaysPage({
 
   return (
     <main className="container" style={{ paddingBlock: 32 }}>
+      <StructuredData data={breadcrumbJsonLd} />
+      <StructuredData data={collectionJsonLd} />
       <div className="stack-lg">
         <Breadcrumbs items={[{ label: "Plays", href: "/en/plays" }]} />
 

@@ -6,6 +6,7 @@ import { ActorTopSeriesClient } from "../../../components/ActorTopSeriesClient";
 import { Breadcrumbs } from "../../../components/Breadcrumbs";
 import { FavoriteButtonClient } from "../../../components/FavoriteButtonClient";
 import { ShareButtonClient } from "../../../components/ShareButtonClient";
+import { StructuredData } from "../../../components/StructuredData";
 import {
   getDisplayBirthday,
   getActorDetailBySlug,
@@ -14,6 +15,7 @@ import {
   toPlainText,
   truncate,
 } from "../../../lib/stage-connect";
+import { buildBreadcrumbList } from "../../../lib/structured-data";
 
 type Params = {
   slug: string;
@@ -132,9 +134,15 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
       },
     ],
   };
+  const breadcrumbJsonLd = buildBreadcrumbList([
+    { name: "TOP", path: "/" },
+    { name: "俳優一覧", path: "/actors" },
+    { name: actor.name, path: `/actors/${actor.slug}` },
+  ]);
 
   return (
     <main className="container" style={{ paddingBlock: 32 }}>
+      <StructuredData data={breadcrumbJsonLd} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}

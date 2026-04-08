@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "../../../components/Breadcrumbs";
 import { FavoriteButtonClient } from "../../../components/FavoriteButtonClient";
+import { StructuredData } from "../../../components/StructuredData";
 import { getActorList, getAgeFromBirthday, toPlainText } from "../../../lib/stage-connect";
 import { formatAgeEn, formatBirthdayEn, formatBirthdayLabelEn, truncateText } from "../../../lib/en-copy";
+import { buildBreadcrumbList, buildCollectionPageStructuredData } from "../../../lib/structured-data";
 
 type SearchParamValue = string | string[] | undefined;
 type SearchParams = Record<string, SearchParamValue>;
@@ -49,6 +51,16 @@ export default async function EnglishActorsPage({
 }) {
   const params = (await searchParams) ?? {};
   const allActors = await getActorList();
+  const breadcrumbJsonLd = buildBreadcrumbList([
+    { name: "HOME", path: "/en" },
+    { name: "Actors", path: "/en/actors" },
+  ]);
+  const collectionJsonLd = buildCollectionPageStructuredData({
+    name: "2.5D Cast",
+    description:
+      "Browse actors, profiles, and stage appearance history connected to 2.5D productions.",
+    path: "/en/actors",
+  });
 
   const requestedGender = getSingleParam(params.gender);
   const gender = requestedGender in GENDER_LABELS ? requestedGender : "all";
@@ -65,6 +77,8 @@ export default async function EnglishActorsPage({
 
   return (
     <main className="container" style={{ paddingBlock: 32 }}>
+      <StructuredData data={breadcrumbJsonLd} />
+      <StructuredData data={collectionJsonLd} />
       <div className="stack-lg">
         <Breadcrumbs items={[{ label: "Actors", href: "/en/actors" }]} />
 
