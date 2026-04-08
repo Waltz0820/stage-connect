@@ -25,6 +25,12 @@ export type ActorDetailData = {
     summary: string | null;
     roleName: string | null;
     franchiseName: string | null;
+    franchiseSlug: string | null;
+  }>;
+  topSeries: Array<{
+    slug: string;
+    name: string;
+    count: number;
   }>;
   coStars: Array<{
     slug: string;
@@ -474,7 +480,8 @@ export async function getActorDetailBySlug(slug: string): Promise<ActorDetailDat
         period,
         summary,
         franchise:franchises (
-          name
+          name,
+          slug
         )
       )
     `
@@ -492,6 +499,7 @@ export async function getActorDetailBySlug(slug: string): Promise<ActorDetailDat
       summary: string | null;
       roleName: string | null;
       franchiseName: string | null;
+      franchiseSlug: string | null;
     }
   >();
 
@@ -513,6 +521,7 @@ export async function getActorDetailBySlug(slug: string): Promise<ActorDetailDat
         summary: play?.summary ?? null,
         roleName,
         franchiseName: franchise?.name ?? null,
+        franchiseSlug: franchise?.slug ?? null,
       });
       continue;
     }
@@ -530,6 +539,23 @@ export async function getActorDetailBySlug(slug: string): Promise<ActorDetailDat
   }
 
   const plays = Array.from(byPlay.values()).sort((a, b) => periodSortKey(b.period) - periodSortKey(a.period));
+  const topSeries = Array.from(
+    plays.reduce(
+      (map, play) => {
+        const slug = String(play.franchiseSlug ?? "").trim();
+        const name = String(play.franchiseName ?? "").trim();
+        if (!slug || !name) return map;
+
+        const current = map.get(slug) ?? { slug, name, count: 0 };
+        current.count += 1;
+        map.set(slug, current);
+        return map;
+      },
+      new Map<string, { slug: string; name: string; count: number }>()
+    ).values()
+  )
+    .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name, "ja"))
+    .slice(0, 8);
   const playIds = uniq(((castRows ?? []) as any[]).map((row) => row?.play_id));
   let coStars: ActorDetailData["coStars"] = [];
 
@@ -602,6 +628,7 @@ export async function getActorDetailBySlug(slug: string): Promise<ActorDetailDat
     imageUrl: actor.image_url ?? null,
     sns: (actor.sns as Record<string, string> | null) ?? null,
     plays,
+    topSeries,
     coStars,
   };
 }

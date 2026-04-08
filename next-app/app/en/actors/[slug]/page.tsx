@@ -125,6 +125,25 @@ export default async function EnglishActorDetailPage({ params }: { params: Promi
           <ActorProfileClient text={profileText} collapsed={shouldCollapseProfile} />
         </section>
 
+        {actor.topSeries.length > 0 ? (
+          <section className="section-card stack-md">
+            <h2 className="section-title">Major series</h2>
+            <div className="meta-list">
+              {actor.topSeries.map((series) => (
+                <div key={series.slug} className="meta-row">
+                  <div className="meta-label">Series</div>
+                  <div className="meta-value">
+                    <Link href={`/en/series/${series.slug}`} className="catalog-link">
+                      {series.name}
+                    </Link>
+                    <div className="subtle-line">{series.count} credited works</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        ) : null}
+
         <section className="section-card stack-md">
           <h2 className="section-title">Appearance timeline</h2>
           <div className="timeline-shell">
