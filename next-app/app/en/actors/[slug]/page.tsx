@@ -97,7 +97,6 @@ export default async function EnglishActorDetailPage({ params }: { params: Promi
             </div>
 
             <div className="detail-hero-copy">
-              <div className="title-subtle">Actor profile</div>
               <h1 className="page-title">{actor.name}</h1>
               {actor.kana ? <div className="muted">{actor.kana}</div> : null}
               <p className="detail-status-line">{statusLine}</p>

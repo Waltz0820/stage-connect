@@ -154,7 +154,6 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
             </div>
 
             <div className="detail-hero-copy">
-              <div className="title-subtle">俳優プロフィール</div>
               <h1 className="page-title">{actor.name}</h1>
               {actor.kana ? <div className="muted">{actor.kana}</div> : null}
               <p className="detail-status-line">{statusLine}</p>
