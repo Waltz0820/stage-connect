@@ -1631,6 +1631,8 @@ a {
 
 .catalog-card__footer--cta {
   margin-top: 0;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .tag-cloud-grid {
