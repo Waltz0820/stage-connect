@@ -210,20 +210,34 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
 
                 <div className="cast-grid cast-grid-wide">
                   {group.plays.map((play) => (
-                    <Link className="cast-card cast-card-link" href={`/plays/${play.slug}`} key={play.slug}>
-                      <div className="cast-name">{play.title}</div>
-                      {play.franchiseName ? (
-                        <div className="muted" style={{ marginTop: 6, fontSize: 13 }}>
-                          {play.franchiseName}
+                    <article className="catalog-card" key={play.slug}>
+                      <Link className="catalog-card__body-link" href={`/plays/${play.slug}`}>
+                        <div className="cast-name">{play.title}</div>
+                        {play.franchiseName ? (
+                          <div className="muted" style={{ marginTop: 6, fontSize: 13 }}>
+                            {play.franchiseName}
+                          </div>
+                        ) : null}
+                        {play.roleName ? <div className="cast-role">{play.roleName}</div> : null}
+                        {formatTimelineLeadDate(play.period) ? (
+                          <div className="subtle-line" style={{ marginTop: 10 }}>
+                            {formatTimelineLeadDate(play.period)}
+                          </div>
+                        ) : null}
+                      </Link>
+                      {play.vod?.dmm ? (
+                        <div className="catalog-card__footer catalog-card__footer--cta">
+                          <a
+                            className="action-button action-button-primary action-button-inline"
+                            href={play.vod.dmm}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            DMM TVで見る
+                          </a>
                         </div>
                       ) : null}
-                      {play.roleName ? <div className="cast-role">{play.roleName}</div> : null}
-                      {formatTimelineLeadDate(play.period) ? (
-                        <div className="subtle-line" style={{ marginTop: 10 }}>
-                          {formatTimelineLeadDate(play.period)}
-                        </div>
-                      ) : null}
-                    </Link>
+                    </article>
                   ))}
                 </div>
               </section>

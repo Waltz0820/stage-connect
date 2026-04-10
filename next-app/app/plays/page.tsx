@@ -238,6 +238,18 @@ export default async function PlaysPage({
                     <span className="catalog-link">作品詳細を見る</span>
                   </div>
                 </Link>
+                {play.vod?.dmm ? (
+                  <div className="catalog-card__footer catalog-card__footer--cta">
+                    <a
+                      className="action-button action-button-primary action-button-inline"
+                      href={play.vod.dmm}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      DMM TVで見る
+                    </a>
+                  </div>
+                ) : null}
               </article>
             ))}
           </div>

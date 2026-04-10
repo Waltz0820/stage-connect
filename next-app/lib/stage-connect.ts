@@ -26,6 +26,7 @@ export type ActorDetailData = {
     title: string;
     period: string | null;
     summary: string | null;
+    vod: Record<string, string> | null;
     roleName: string | null;
     franchiseName: string | null;
     franchiseSlug: string | null;
@@ -87,6 +88,7 @@ export type PlayListItem = {
   summary: string | null;
   summaryEn: string | null;
   period: string | null;
+  vod: Record<string, string> | null;
   franchiseName: string | null;
   franchiseFormat: string | null;
   genre: string | null;
@@ -502,6 +504,7 @@ export async function getActorDetailBySlug(slug: string): Promise<ActorDetailDat
         title,
         period,
         summary,
+        vod,
         franchise:franchises (
           name,
           slug
@@ -520,6 +523,7 @@ export async function getActorDetailBySlug(slug: string): Promise<ActorDetailDat
       title: string;
       period: string | null;
       summary: string | null;
+      vod: Record<string, string> | null;
       roleName: string | null;
       franchiseName: string | null;
       franchiseSlug: string | null;
@@ -542,6 +546,7 @@ export async function getActorDetailBySlug(slug: string): Promise<ActorDetailDat
         title,
         period: play?.period ?? null,
         summary: play?.summary ?? null,
+        vod: play?.vod ?? null,
         roleName,
         franchiseName: franchise?.name ?? null,
         franchiseSlug: franchise?.slug ?? null,
@@ -971,6 +976,7 @@ export async function getPlayList(): Promise<PlayListItem[]> {
         summary,
         summary_en,
         period,
+        vod,
         genre,
         created_at,
         franchise:franchises (
@@ -992,6 +998,7 @@ export async function getPlayList(): Promise<PlayListItem[]> {
         title,
         summary,
         period,
+        vod,
         genre,
         created_at,
         franchise:franchises (
@@ -1017,6 +1024,7 @@ export async function getPlayList(): Promise<PlayListItem[]> {
         title,
         summary,
         period,
+        vod,
         genre,
         created_at,
         franchise:franchises (
@@ -1047,6 +1055,7 @@ export async function getPlayList(): Promise<PlayListItem[]> {
         summary: (row.summary as string | null) ?? null,
         summaryEn: (row.summary_en as string | null) ?? null,
         period: (row.period as string | null) ?? null,
+        vod: (row.vod as Record<string, string> | null) ?? null,
         franchiseName: franchise?.name ?? null,
         franchiseFormat: (franchise?.format as string | null) ?? null,
         genre: (row.genre as string | null) ?? null,

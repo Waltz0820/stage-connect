@@ -1399,6 +1399,13 @@ a {
   max-width: 100%;
 }
 
+.action-button-inline {
+  min-width: 0;
+  width: auto;
+  padding: 8px 12px;
+  font-size: 12px;
+}
+
 .action-button:hover {
   background: rgba(255, 255, 255, 0.065);
   border-color: rgba(243, 239, 232, 0.32);
@@ -1620,6 +1627,10 @@ a {
   margin-top: auto;
   padding-top: 12px;
   border-top: 1px solid var(--line);
+}
+
+.catalog-card__footer--cta {
+  margin-top: 0;
 }
 
 .tag-cloud-grid {
