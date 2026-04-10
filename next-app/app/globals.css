@@ -1401,7 +1401,7 @@ a {
 
 .action-button-inline {
   min-width: 0;
-  width: auto;
+  width: 100%;
   padding: 8px 12px;
   font-size: 12px;
 }
@@ -1632,7 +1632,7 @@ a {
 .catalog-card__footer--cta {
   margin-top: 0;
   display: flex;
-  justify-content: flex-end;
+  justify-content: stretch;
 }
 
 .tag-cloud-grid {
