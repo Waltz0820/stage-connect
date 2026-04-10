@@ -1100,6 +1100,15 @@ a {
   word-break: break-word;
 }
 
+.catalog-card .cast-name {
+  line-height: 1.45;
+  min-height: calc(1.45em * 2);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
 .cast-role {
   margin-top: 6px;
   color: var(--muted);
