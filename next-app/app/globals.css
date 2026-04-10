@@ -1533,6 +1533,7 @@ a {
 
 .catalog-card {
   display: grid;
+  grid-template-rows: auto 1fr auto;
   gap: 12px;
   min-height: 100%;
   padding: 18px;
@@ -1585,8 +1586,9 @@ a {
 
 .catalog-card__body-link {
   display: grid;
+  align-content: start;
   gap: 12px;
-  min-height: 100%;
+  min-height: 0;
 }
 
 .catalog-card__badge {
@@ -1624,7 +1626,6 @@ a {
 }
 
 .catalog-card__footer {
-  margin-top: auto;
   padding-top: 12px;
   border-top: 1px solid var(--line);
 }
