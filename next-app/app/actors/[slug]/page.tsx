@@ -225,8 +225,10 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
                           </div>
                         ) : null}
                       </Link>
-                      {play.vod?.dmm ? (
-                        <div className="catalog-card__footer catalog-card__footer--cta">
+                      <div
+                        className={`catalog-card__footer catalog-card__footer--cta${play.vod?.dmm ? "" : " is-empty"}`}
+                      >
+                        {play.vod?.dmm ? (
                           <a
                             className="action-button action-button-primary action-button-inline"
                             href={play.vod.dmm}
@@ -235,8 +237,8 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
                           >
                             DMM TVで見る
                           </a>
-                        </div>
-                      ) : null}
+                        ) : null}
+                      </div>
                     </article>
                   ))}
                 </div>

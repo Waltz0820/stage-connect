@@ -238,8 +238,10 @@ export default async function PlaysPage({
                     <span className="catalog-link">作品詳細を見る</span>
                   </div>
                 </Link>
-                {play.vod?.dmm ? (
-                  <div className="catalog-card__footer catalog-card__footer--cta">
+                <div
+                  className={`catalog-card__footer catalog-card__footer--cta${play.vod?.dmm ? "" : " is-empty"}`}
+                >
+                  {play.vod?.dmm ? (
                     <a
                       className="action-button action-button-primary action-button-inline"
                       href={play.vod.dmm}
@@ -248,8 +250,8 @@ export default async function PlaysPage({
                     >
                       DMM TVで見る
                     </a>
-                  </div>
-                ) : null}
+                  ) : null}
+                </div>
               </article>
             ))}
           </div>

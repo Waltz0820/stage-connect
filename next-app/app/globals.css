@@ -1633,6 +1633,11 @@ a {
   margin-top: 0;
   display: flex;
   justify-content: stretch;
+  min-height: 42px;
+}
+
+.catalog-card__footer--cta.is-empty {
+  visibility: hidden;
 }
 
 .tag-cloud-grid {
