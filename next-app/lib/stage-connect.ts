@@ -238,8 +238,15 @@ const buildLooseLike = (value: string) => {
     .join("%")}%`;
 };
 
-const normalizeDisplayRole = (value?: string | null) =>
+const normalizeDisplayText = (value?: string | null) =>
   String(value ?? "")
+    .normalize("NFKC")
+    .replace(/\u3000/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+const normalizeDisplayRole = (value?: string | null) =>
+  normalizeDisplayText(value)
     .split("※")[0]
     .split("【")[0]
     .trim();
@@ -858,7 +865,7 @@ export async function getSeriesDetailBySlug(slug: string): Promise<SeriesDetailD
 
   if (playIds.length > 0) {
     const stripSeriesCastNotes = (value?: string | null) =>
-      String(value ?? "")
+      normalizeDisplayText(value)
         .replace(/\u203B.*$/g, "")
         .replace(/\u3010.*?\u3011/g, "")
         .replace(/\u3010.*$/g, "")
