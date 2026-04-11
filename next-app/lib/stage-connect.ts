@@ -859,21 +859,32 @@ export async function getSeriesDetailBySlug(slug: string): Promise<SeriesDetailD
   if (playIds.length > 0) {
     const stripSeriesCastNotes = (value?: string | null) =>
       String(value ?? "")
-        .replace(/※.*$/g, "")
-        .replace(/【.*?】/g, "")
-        .replace(/【.*$/g, "")
+        .replace(/\u203B.*$/g, "")
+        .replace(/\u3010.*?\u3011/g, "")
+        .replace(/\u3010.*$/g, "")
+        .replace(/に出演$/g, "")
         .trim();
 
     const normalizeSeriesDisplayRole = (value?: string | null) =>
-      stripSeriesCastNotes(value).trim();
+      stripSeriesCastNotes(value)
+        .replace(/\u3000/g, " ")
+        .replace(/\s+/g, " ")
+        .replace(/\s*([\u30FB\uFF65/／])\s*/g, "$1")
+        .trim();
 
     const normalizeSeriesDisplayGroup = (value?: string | null) =>
-      stripSeriesCastNotes(value).trim();
+      stripSeriesCastNotes(value)
+        .replace(/\u3000/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
+
+    const makeSeriesRoleKey = (value?: string | null) =>
+      normalizeSeriesDisplayRole(value);
 
     const splitSeriesRoles = (value?: string | null) =>
       stripSeriesCastNotes(value)
-        .split("/")
-        .flatMap((item) => item.split(/[・･]/))
+        .split(/[／/]/)
+        .flatMap((item) => item.split(/[\u30FB\uFF65]/))
         .map((item) => normalizeSeriesDisplayRole(normalizeDisplayRole(item)))
         .filter(Boolean);
 
@@ -900,7 +911,9 @@ export async function getSeriesDetailBySlug(slug: string): Promise<SeriesDetailD
         actor: { slug: string; name: string };
         playSet: Set<string>;
         roles: string[];
+        roleKeys: Set<string>;
         groups: string[];
+        groupKeys: Set<string>;
       }
     >();
 
@@ -917,21 +930,30 @@ export async function getSeriesDetailBySlug(slug: string): Promise<SeriesDetailD
           actor: { slug: actorSlug, name: actorName },
           playSet: new Set<string>(),
           roles: [] as string[],
+          roleKeys: new Set<string>(),
           groups: [] as string[],
+          groupKeys: new Set<string>(),
         };
 
       existing.playSet.add(playId);
 
       for (const role of uniq(splitSeriesRoles(row?.role_name))) {
-        if (role && !existing.roles.includes(role)) existing.roles.push(role);
+        const roleKey = makeSeriesRoleKey(role);
+        if (roleKey && !existing.roleKeys.has(roleKey)) {
+          existing.roleKeys.add(roleKey);
+          existing.roles.push(role);
+        }
       }
 
       for (const group of uniq(
         String(row?.cast_group ?? "")
-          .split("/")
+          .split(/[／/]/)
           .map((item) => normalizeSeriesDisplayGroup(item))
       )) {
-        if (group && !existing.groups.includes(group)) existing.groups.push(group);
+        if (group && !existing.groupKeys.has(group)) {
+          existing.groupKeys.add(group);
+          existing.groups.push(group);
+        }
       }
 
       bucket.set(actorSlug, existing);
