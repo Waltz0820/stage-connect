@@ -871,7 +871,7 @@ export async function getSeriesDetailBySlug(slug: string): Promise<SeriesDetailD
       stripSeriesCastNotes(value).trim();
 
     const splitSeriesRoles = (value?: string | null) =>
-      String(value ?? "")
+      stripSeriesCastNotes(value)
         .split("/")
         .flatMap((item) => item.split(/[・･]/))
         .map((item) => normalizeSeriesDisplayRole(normalizeDisplayRole(item)))
