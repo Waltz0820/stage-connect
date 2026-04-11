@@ -857,17 +857,18 @@ export async function getSeriesDetailBySlug(slug: string): Promise<SeriesDetailD
   let topActors: SeriesDetailData["topActors"] = [];
 
   if (playIds.length > 0) {
-    const normalizeSeriesDisplayRole = (value?: string | null) =>
+    const stripSeriesCastNotes = (value?: string | null) =>
       String(value ?? "")
-        .replace(/※.*$/, "")
-        .replace(/【.*$/, "")
+        .replace(/※.*$/g, "")
+        .replace(/【.*?】/g, "")
+        .replace(/【.*$/g, "")
         .trim();
 
+    const normalizeSeriesDisplayRole = (value?: string | null) =>
+      stripSeriesCastNotes(value).trim();
+
     const normalizeSeriesDisplayGroup = (value?: string | null) =>
-      String(value ?? "")
-        .replace(/※.*$/, "")
-        .replace(/【.*$/, "")
-        .trim();
+      stripSeriesCastNotes(value).trim();
 
     const splitSeriesRoles = (value?: string | null) =>
       String(value ?? "")
