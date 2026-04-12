@@ -36,11 +36,15 @@ const parseInline = (text: string) => {
 const isTableLine = (line: string) => /^\|.*\|$/.test(line.trim());
 const isTableDivider = (line: string) => /^\|\s*:?-{3,}:?\s*(\|\s*:?-{3,}:?\s*)+\|?$/.test(line.trim());
 
+/**
+ * Aggressively normalize Japanese text for fuzzy matching.
+ * Strips brackets, quotes, whitespace, common suffixes, and normalizes to NFKC.
+ */
 const normalizeToken = (value: string) =>
   value
     .normalize("NFKC")
-    .replace(/[‘’'`]/g, "")
-    .replace(/[「」『』【】\[\]]/g, "")
+    .replace(/['''`]/g, "")
+    .replace(/[「」『』【】\[\]〜～〈〉《》]/g, "")
     .replace(/\s+/g, "")
     .trim();
 
@@ -50,7 +54,11 @@ const stripPlaceholder = (value: string) =>
     .replace(/`?\[.*?ボタン\]`?/g, "")
     .trim();
 
-const stripParenSuffix = (value: string) => value.replace(/（.*?）/g, "").trim();
+/**
+ * Strip parenthetical suffixes like （初演/再演）, (2020年公演) etc.
+ */
+const stripParenSuffix = (value: string) =>
+  value.replace(/[（(].*?[）)]/g, "").trim();
 
 const parseBlocks = (content: string): Block[] => {
   const lines = content.replace(/\r\n/g, "\n").split("\n");
@@ -131,17 +139,61 @@ const parseBlocks = (content: string): Block[] => {
 const findSeriesByFormat = (guide: GuideDetailData, format: "stage" | "musical") =>
   guide.relatedSeries.find((series) => series.format === format);
 
-const findMatchingPlays = (guide: GuideDetailData, rawLabel: string) => {
-  const query = normalizeToken(stripParenSuffix(stripPlaceholder(rawLabel)));
-  if (!query) return [];
+/**
+ * Flatten all plays from all sections, deduplicated by slug.
+ */
+const getAllPlays = (guide: GuideDetailData) => {
+  const seen = new Set<string>();
+  return guide.relatedPlaySections.flatMap((section) =>
+    section.plays.filter((play) => {
+      if (seen.has(play.slug)) return false;
+      seen.add(play.slug);
+      return true;
+    })
+  );
+};
 
-  return guide.relatedPlaySections
-    .flatMap((section) => section.plays)
-    .filter((play, index, all) => all.findIndex((item) => item.slug === play.slug) === index)
-    .filter((play) => {
-      const title = normalizeToken(play.title);
-      return title.includes(query) || query.includes(title);
-    });
+/**
+ * Find the best matching play for a label.
+ * Uses progressive fuzzy matching:
+ *  1. Exact normalized match
+ *  2. Normalized label includes normalized title
+ *  3. Normalized title includes normalized label (after stripping paren suffixes)
+ */
+const findBestPlay = (allPlays: ReturnType<typeof getAllPlays>, rawLabel: string) => {
+  const cleaned = stripPlaceholder(rawLabel);
+  const query = normalizeToken(cleaned);
+  const queryNoParen = normalizeToken(stripParenSuffix(cleaned));
+  if (!queryNoParen) return null;
+
+  // 1. Exact match (normalized)
+  const exact = allPlays.find((p) => normalizeToken(p.title) === query);
+  if (exact) return exact;
+
+  // 2. Exact match after stripping parens from both sides
+  const exactNoParen = allPlays.find(
+    (p) => normalizeToken(stripParenSuffix(p.title)) === queryNoParen
+  );
+  if (exactNoParen) return exactNoParen;
+
+  // 3. Label contains title OR title contains label
+  const partial = allPlays.filter((p) => {
+    const title = normalizeToken(p.title);
+    const titleNoParen = normalizeToken(stripParenSuffix(p.title));
+    return (
+      queryNoParen.includes(titleNoParen) ||
+      titleNoParen.includes(queryNoParen) ||
+      query.includes(title) ||
+      title.includes(query)
+    );
+  });
+
+  // If multiple partial matches, prefer the longest title (most specific)
+  if (partial.length > 0) {
+    return partial.sort((a, b) => b.title.length - a.title.length)[0];
+  }
+
+  return null;
 };
 
 const renderParagraphPlaceholder = (text: string, guide: GuideDetailData) => {
@@ -194,26 +246,99 @@ const renderParagraphPlaceholder = (text: string, guide: GuideDetailData) => {
   return null;
 };
 
+/**
+ * Check if a list is entirely composed of play-link items.
+ * If so, render as a catalog-grid instead of a <ul>.
+ */
+const isPlayLinkList = (items: string[]) =>
+  items.length > 0 && items.every((item) => item.includes(PLAY_LINK_PLACEHOLDER));
+
+const renderPlayGrid = (items: string[], guide: GuideDetailData, blockKey: number) => {
+  const allPlays = getAllPlays(guide);
+
+  // Filter out CMS notes like *(※CMS入稿時に...)*
+  const playItems = items.filter((item) => !item.startsWith("*(") && !item.startsWith("*（"));
+
+  const resolved = playItems
+    .map((item) => {
+      const label = stripPlaceholder(item);
+      const play = findBestPlay(allPlays, item);
+      return { label, play };
+    })
+    .filter((r) => r.play);
+
+  if (resolved.length === 0) {
+    // Fallback: render as plain list if nothing matched
+    return (
+      <ul className="guide-prose__list" key={blockKey}>
+        {items.map((item, i) => (
+          <li key={i}>{parseInline(stripPlaceholder(item))}</li>
+        ))}
+      </ul>
+    );
+  }
+
+  return (
+    <div className="catalog-grid" key={blockKey}>
+      {resolved.map(({ play }) => {
+        if (!play) return null;
+        return (
+          <article className="catalog-card" key={play.slug}>
+            <div className="catalog-card__top">
+              <Link className="catalog-card__title" href={`/plays/${play.slug}`}>
+                {play.title}
+              </Link>
+              {play.vod?.dmm ? <span className="catalog-card__badge">配信あり</span> : null}
+            </div>
+
+            {play.period ? <div className="catalog-card__sub">{play.period}</div> : null}
+
+            <div className="catalog-card__footer">
+              <Link className="catalog-link" href={`/plays/${play.slug}`}>
+                作品詳細を見る
+              </Link>
+            </div>
+
+            <div className={`catalog-card__footer catalog-card__footer--cta${play.vod?.dmm ? "" : " is-empty"}`}>
+              {play.vod?.dmm ? (
+                <a
+                  className="action-button action-button-inline"
+                  href={play.vod.dmm}
+                  target="_blank"
+                  rel="noopener noreferrer sponsored"
+                >
+                  DMM TVで見る
+                </a>
+              ) : null}
+            </div>
+          </article>
+        );
+      })}
+    </div>
+  );
+};
+
 const renderListItem = (item: string, guide: GuideDetailData, key: number) => {
   if (!item.includes(PLAY_LINK_PLACEHOLDER)) {
     return <li key={key}>{parseInline(item)}</li>;
   }
 
   const label = stripPlaceholder(item);
-  const matches = findMatchingPlays(guide, item);
+  const allPlays = getAllPlays(guide);
+  const play = findBestPlay(allPlays, item);
+
+  if (!play) {
+    return <li key={key}>{parseInline(label)}</li>;
+  }
 
   return (
     <li key={key} className="guide-linked-item">
       <div>{parseInline(label)}</div>
-      {matches.length > 0 ? (
-        <div className="guide-inline-links">
-          {matches.map((play) => (
-            <Link className="inline-link" href={`/plays/${play.slug}`} key={play.slug}>
-              {play.title}
-            </Link>
-          ))}
-        </div>
-      ) : null}
+      <div className="guide-inline-links">
+        <Link className="inline-link" href={`/plays/${play.slug}`}>
+          {play.title}
+        </Link>
+      </div>
     </li>
   );
 };
@@ -241,6 +366,11 @@ export function GuideContentRenderer({ content, guide }: Props) {
         }
 
         if (block.type === "ul") {
+          // If every item in the list is a play-link, render as a catalog grid
+          if (isPlayLinkList(block.items)) {
+            return renderPlayGrid(block.items, guide, index);
+          }
+
           return (
             <ul className="guide-prose__list" key={index}>
               {block.items.map((item, itemIndex) => renderListItem(item, guide, itemIndex))}
