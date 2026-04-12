@@ -28,6 +28,13 @@ const FORMAT_LABELS: Record<string, string> = {
   musical: "ミュージカル",
 };
 
+const summarizePeriod = (period?: string | null) => {
+  if (!period) return null;
+  const match = period.match(/(\d{4})\D{0,2}(\d{1,2})/);
+  if (!match) return period;
+  return `${match[1]}/${match[2].padStart(2, "0")}-`;
+};
+
 export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
   const { slug } = await params;
   const guide = await getGuideDetailBySlug(slug);
@@ -158,11 +165,11 @@ export default async function GuideDetailPage({ params }: { params: Promise<Para
               <p className="catalog-note">このガイドで扱っているシリーズ一覧です。各シリーズ詳細から関連作品や出演キャストを確認できます。</p>
             </div>
 
-            <div className="catalog-grid">
+            <div className="guide-series-grid">
               {guide.relatedSeries.map((series) => (
-                <article className="catalog-card" key={series.id}>
-                  <div className="catalog-card__top">
-                    <Link className="catalog-card__title" href={series.slug ? `/series/${series.slug}` : "/series"}>
+                <article className="guide-series-card" key={series.id}>
+                  <div className="guide-series-card__head">
+                    <Link className="guide-series-card__title" href={series.slug ? `/series/${series.slug}` : "/series"}>
                       {series.name}
                     </Link>
                     {series.format ? (
@@ -170,16 +177,16 @@ export default async function GuideDetailPage({ params }: { params: Promise<Para
                     ) : null}
                   </div>
 
-                  <div className="catalog-card__sub">
+                  <div className="guide-series-card__meta">
                     {series.playCount}作品
                     {series.originType ? ` / ${series.originType}` : ""}
                   </div>
 
-                  <div className="catalog-card__text">
-                    {truncate(toPlainText(series.description || series.name), 140)}
+                  <div className="guide-series-card__text">
+                    {truncate(toPlainText(series.description || series.name), 90)}
                   </div>
 
-                  <div className="catalog-card__footer">
+                  <div className="guide-series-card__footer">
                     <Link className="catalog-link" href={series.slug ? `/series/${series.slug}` : "/series"}>
                       シリーズ詳細を見る
                     </Link>
@@ -210,37 +217,38 @@ export default async function GuideDetailPage({ params }: { params: Promise<Para
                     ) : null}
                   </div>
 
-                  <div className="catalog-grid">
+                  <div className="guide-play-list">
                     {section.plays.map((play) => (
-                      <article className="catalog-card" key={play.id}>
-                        <div className="catalog-card__top">
-                          <Link className="catalog-card__title" href={`/plays/${play.slug}`}>
-                            {play.title}
-                          </Link>
-                          {play.vod?.dmm ? <span className="catalog-card__badge">配信あり</span> : null}
+                      <article className="guide-play-row" key={play.id}>
+                        <div className="guide-play-row__main">
+                          <div className="guide-play-row__head">
+                            <Link className="guide-play-row__title" href={`/plays/${play.slug}`}>
+                              {play.title}
+                            </Link>
+                            {play.vod?.dmm ? <span className="catalog-card__badge">配信あり</span> : null}
+                          </div>
+
+                          <div className="guide-play-row__meta">
+                            {summarizePeriod(play.period) ?? "公開時期未定"}
+                          </div>
+
+                          <div className="guide-play-row__summary">
+                            {truncate(toPlainText(play.summary || play.title), 80)}
+                          </div>
                         </div>
 
-                        {play.period ? <div className="catalog-card__sub">{play.period}</div> : null}
-
-                        <div className="catalog-card__text">
-                          {truncate(toPlainText(play.summary || play.title), 150)}
-                        </div>
-
-                        <div className="catalog-card__footer">
+                        <div className="guide-play-row__actions">
                           <Link className="catalog-link" href={`/plays/${play.slug}`}>
-                            作品詳細を見る
+                            作品詳細
                           </Link>
-                        </div>
-
-                        <div className={`catalog-card__footer catalog-card__footer--cta${play.vod?.dmm ? "" : " is-empty"}`}>
                           {play.vod?.dmm ? (
                             <a
-                              className="action-button action-button-inline"
+                              className="action-button action-button-inline guide-play-row__cta"
                               href={play.vod.dmm}
                               target="_blank"
                               rel="noopener noreferrer sponsored"
                             >
-                              DMM TVで見る
+                              DMM TV
                             </a>
                           ) : null}
                         </div>
