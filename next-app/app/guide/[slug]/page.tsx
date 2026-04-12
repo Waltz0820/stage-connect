@@ -112,7 +112,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<Para
         {guide.content ? (
           <section className="section-card stack-md">
             <h2 className="section-title">本文</h2>
-            <GuideContentRenderer content={guide.content} />
+            <GuideContentRenderer content={guide.content} guide={guide} />
           </section>
         ) : null}
 

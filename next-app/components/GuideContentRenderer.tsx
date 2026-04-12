@@ -1,4 +1,6 @@
 import React from "react";
+import Link from "next/link";
+import type { GuideDetailData } from "../lib/stage-connect";
 
 type Block =
   | { type: "h2"; text: string }
@@ -6,6 +8,17 @@ type Block =
   | { type: "p"; text: string }
   | { type: "ul"; items: string[] }
   | { type: "table"; rows: string[][] };
+
+type Props = {
+  content: string;
+  guide: GuideDetailData;
+};
+
+const PLAY_LINK_PLACEHOLDER = "[作品詳細ページへのリンク]";
+const STAGE_SERIES_PLACEHOLDER = "[刀ステ シリーズ一覧ページへのリンク]";
+const MUSICAL_SERIES_PLACEHOLDER = "[刀ミュ シリーズ一覧ページへのリンク]";
+const DMM_BUTTON_PLACEHOLDER = "[DMM TVで『刀剣乱舞』シリーズを見る（ボタン）]";
+const WATCH_BUTTON_PLACEHOLDER = "[Stage Connect 配信ステータス一覧を見る（ボタン）]";
 
 const parseInline = (text: string) => {
   const tokens = text.split(/(\*\*.*?\*\*|`.*?`)/g).filter(Boolean);
@@ -22,6 +35,22 @@ const parseInline = (text: string) => {
 
 const isTableLine = (line: string) => /^\|.*\|$/.test(line.trim());
 const isTableDivider = (line: string) => /^\|\s*:?-{3,}:?\s*(\|\s*:?-{3,}:?\s*)+\|?$/.test(line.trim());
+
+const normalizeToken = (value: string) =>
+  value
+    .normalize("NFKC")
+    .replace(/[‘’'`]/g, "")
+    .replace(/[「」『』【】\[\]]/g, "")
+    .replace(/\s+/g, "")
+    .trim();
+
+const stripPlaceholder = (value: string) =>
+  value
+    .replace(/`?\[.*?ページへのリンク\]`?/g, "")
+    .replace(/`?\[.*?ボタン\]`?/g, "")
+    .trim();
+
+const stripParenSuffix = (value: string) => value.replace(/（.*?）/g, "").trim();
 
 const parseBlocks = (content: string): Block[] => {
   const lines = content.replace(/\r\n/g, "\n").split("\n");
@@ -99,7 +128,97 @@ const parseBlocks = (content: string): Block[] => {
   return blocks;
 };
 
-export function GuideContentRenderer({ content }: { content: string }) {
+const findSeriesByFormat = (guide: GuideDetailData, format: "stage" | "musical") =>
+  guide.relatedSeries.find((series) => series.format === format);
+
+const findMatchingPlays = (guide: GuideDetailData, rawLabel: string) => {
+  const query = normalizeToken(stripParenSuffix(stripPlaceholder(rawLabel)));
+  if (!query) return [];
+
+  return guide.relatedPlaySections
+    .flatMap((section) => section.plays)
+    .filter((play, index, all) => all.findIndex((item) => item.slug === play.slug) === index)
+    .filter((play) => {
+      const title = normalizeToken(play.title);
+      return title.includes(query) || query.includes(title);
+    });
+};
+
+const renderParagraphPlaceholder = (text: string, guide: GuideDetailData) => {
+  const normalized = text.replace(/`/g, "").trim();
+
+  if (normalized === STAGE_SERIES_PLACEHOLDER) {
+    const target = findSeriesByFormat(guide, "stage");
+    if (!target?.slug) return null;
+    return (
+      <div className="guide-inline-actions">
+        <Link className="action-button" href={`/series/${target.slug}`}>
+          刀ステシリーズ一覧を見る
+        </Link>
+      </div>
+    );
+  }
+
+  if (normalized === MUSICAL_SERIES_PLACEHOLDER) {
+    const target = findSeriesByFormat(guide, "musical");
+    if (!target?.slug) return null;
+    return (
+      <div className="guide-inline-actions">
+        <Link className="action-button" href={`/series/${target.slug}`}>
+          刀ミュシリーズ一覧を見る
+        </Link>
+      </div>
+    );
+  }
+
+  if (normalized === DMM_BUTTON_PLACEHOLDER) {
+    return (
+      <div className="guide-inline-actions">
+        <a className="action-button" href="/watch/dmm">
+          DMM TVで『刀剣乱舞』シリーズを見る
+        </a>
+      </div>
+    );
+  }
+
+  if (normalized === WATCH_BUTTON_PLACEHOLDER) {
+    return (
+      <div className="guide-inline-actions">
+        <Link className="action-button" href="/watch">
+          Stage Connect 配信ステータス一覧を見る
+        </Link>
+      </div>
+    );
+  }
+
+  return null;
+};
+
+const renderListItem = (item: string, guide: GuideDetailData, key: number) => {
+  if (!item.includes(PLAY_LINK_PLACEHOLDER)) {
+    return <li key={key}>{parseInline(item)}</li>;
+  }
+
+  const label = stripPlaceholder(item);
+  const matches = findMatchingPlays(guide, item);
+
+  return (
+    <li key={key} className="guide-linked-item">
+      <div>{parseInline(label)}</div>
+      {matches.length > 0 ? (
+        <div className="guide-inline-links">
+          {matches.map((play) => (
+            <Link className="inline-link" href={`/plays/${play.slug}`} key={play.slug}>
+              {play.title}
+            </Link>
+          ))}
+        </div>
+      ) : null}
+    </li>
+  );
+};
+
+export function GuideContentRenderer({ content, guide }: Props) {
   const blocks = parseBlocks(content);
 
   return (
@@ -124,9 +243,7 @@ export function GuideContentRenderer({ content }: { content: string }) {
         if (block.type === "ul") {
           return (
             <ul className="guide-prose__list" key={index}>
-              {block.items.map((item, itemIndex) => (
-                <li key={itemIndex}>{parseInline(item)}</li>
-              ))}
+              {block.items.map((item, itemIndex) => renderListItem(item, guide, itemIndex))}
             </ul>
           );
         }
@@ -160,6 +277,9 @@ export function GuideContentRenderer({ content }: { content: string }) {
             </div>
           );
         }
+
+        const placeholder = renderParagraphPlaceholder(block.text, guide);
+        if (placeholder) return <React.Fragment key={index}>{placeholder}</React.Fragment>;
 
         return (
           <p className="guide-prose__p" key={index}>

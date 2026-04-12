@@ -1938,6 +1938,23 @@ a {
   line-height: 1.9;
 }
 
+.guide-linked-item {
+  display: grid;
+  gap: 6px;
+}
+
+.guide-inline-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+}
+
+.guide-inline-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
 .guide-prose code {
   display: inline-flex;
   align-items: center;
