@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Breadcrumbs } from "../../../components/Breadcrumbs";
 import { GuideContentRenderer } from "../../../components/GuideContentRenderer";
 import { StructuredData } from "../../../components/StructuredData";
 import { getGuideDetailBySlug, toPlainText, truncate } from "../../../lib/stage-connect";
@@ -10,6 +11,9 @@ type Params = {
 };
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
+
+const DMM_PREMIUM_URL =
+  "https://al.dmm.com/?lurl=https%3A%2F%2Fpremium.dmm.com%2F&af_id=stageconnect-001&ch=link_tool&ch_id=text";
 
 export const revalidate = 3600;
 export const dynamicParams = true;
@@ -56,14 +60,26 @@ export default async function GuideDetailPage({ params }: { params: Promise<Para
   const hasDmm = guide.relatedPlaySections.some((section) =>
     section.plays.some((play) => Boolean(play.vod?.dmm))
   );
+  const totalPlays = guide.relatedPlaySections.reduce(
+    (sum, section) => sum + section.plays.length,
+    0
+  );
+  const dmmPlayCount = guide.relatedPlaySections.reduce(
+    (sum, section) => sum + section.plays.filter((p) => Boolean(p.vod?.dmm)).length,
+    0
+  );
 
-  const jsonLd = {
+  const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: guide.title,
     description,
     url: `${siteUrl}/guide/${guide.slug}`,
     datePublished: guide.publishedAt || undefined,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${siteUrl}/guide/${guide.slug}`,
+    },
     author: {
       "@type": "Organization",
       name: "Stage Connect",
@@ -74,19 +90,33 @@ export default async function GuideDetailPage({ params }: { params: Promise<Para
     },
   };
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "ホーム", item: siteUrl },
+      { "@type": "ListItem", position: 2, name: "ガイド", item: `${siteUrl}/guide` },
+      { "@type": "ListItem", position: 3, name: guide.title },
+    ],
+  };
+
   return (
     <main className="container" style={{ paddingBlock: 32 }}>
-      <StructuredData data={jsonLd} />
+      <StructuredData data={articleJsonLd} />
+      <StructuredData data={breadcrumbJsonLd} />
 
       <div className="stack-lg">
+        {/* --- Breadcrumb --- */}
+        <Breadcrumbs
+          items={[
+            { label: "ガイド", href: "/guide" },
+            { label: guide.title },
+          ]}
+        />
+
+        {/* --- Hero --- */}
         <section className="hero-card stack-md">
           <div className="stack-sm">
-            <div className="inline-links">
-              <Link className="inline-link" href="/guide">
-                編集部ガイド
-              </Link>
-            </div>
-
             {guide.category ? (
               <div className="guide-category">{CATEGORY_LABELS[guide.category] ?? guide.category}</div>
             ) : null}
@@ -100,22 +130,27 @@ export default async function GuideDetailPage({ params }: { params: Promise<Para
             {guide.summary ? <p className="lead">{guide.summary}</p> : null}
           </div>
 
-          {guide.relatedSeries.length > 0 ? (
+          {(guide.relatedSeries.length > 0 || hasDmm) ? (
             <div className="catalog-summary catalog-summary--ledger">
-              <span className="catalog-chip">関連シリーズ {guide.relatedSeries.length}件</span>
-              <span className="catalog-chip">関連作品 {guide.relatedPlaySections.reduce((sum, section) => sum + section.plays.length, 0)}作</span>
-              {hasDmm ? <span className="catalog-chip">DMM TV配信作品あり</span> : null}
+              {guide.relatedSeries.length > 0 ? (
+                <span className="catalog-chip">関連シリーズ {guide.relatedSeries.length}件</span>
+              ) : null}
+              {totalPlays > 0 ? (
+                <span className="catalog-chip">関連作品 {totalPlays}作</span>
+              ) : null}
+              {hasDmm ? <span className="catalog-chip">DMM TV配信 {dmmPlayCount}作品</span> : null}
             </div>
           ) : null}
         </section>
 
+        {/* --- 本文 --- */}
         {guide.content ? (
           <section className="section-card stack-md">
-            <h2 className="section-title">本文</h2>
             <GuideContentRenderer content={guide.content} guide={guide} />
           </section>
         ) : null}
 
+        {/* --- 関連シリーズ --- */}
         {guide.relatedSeries.length > 0 ? (
           <section className="section-card stack-md">
             <div className="stack-sm">
@@ -155,6 +190,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<Para
           </section>
         ) : null}
 
+        {/* --- 歴代作品一覧 --- */}
         {guide.relatedPlaySections.length > 0 ? (
           <section className="section-card stack-md">
             <div className="stack-sm">
@@ -217,17 +253,36 @@ export default async function GuideDetailPage({ params }: { params: Promise<Para
           </section>
         ) : null}
 
+        {/* --- 配信CTA --- */}
         {hasDmm ? (
           <section className="section-card stack-md">
-            <div className="stack-sm">
+            <div className="section-header-inline">
               <h2 className="section-title">配信で観る</h2>
-              <p className="catalog-note">配信状況は作品ごとに変動するため、視聴前に最新状況を確認してください。</p>
-            </div>
-
-            <div className="inline-links">
-              <a className="action-button" href="/watch">
-                配信ガイドを見る
+              <a
+                className="action-button action-button-primary"
+                href={DMM_PREMIUM_URL}
+                target="_blank"
+                rel="sponsored noopener noreferrer"
+              >
+                14日間無料で試す
               </a>
+            </div>
+            <div className="prose-panel">
+              このガイドで紹介している作品の多くはDMM TVで配信されています。
+              月額550円・14日間の無料トライアルで、気になる作品が見放題に含まれているか確認してみてください。
+            </div>
+            <div className="catalog-summary">
+              <span className="catalog-chip">DMM TV配信 {dmmPlayCount}作品</span>
+              <span className="catalog-chip">月額550円</span>
+              <span className="catalog-chip">14日間無料トライアル</span>
+            </div>
+            <div className="action-row">
+              <Link className="action-button" href="/watch/dmm">
+                DMM TV配信ガイド
+              </Link>
+              <Link className="action-button" href="/watch">
+                配信サービス比較
+              </Link>
             </div>
           </section>
         ) : null}
