@@ -133,6 +133,31 @@ export type GuideDetailData = {
   content: string | null;
   publishedAt: string | null;
   category: "series-guides" | "features" | null;
+  relatedFranchiseIds: string[];
+  relatedSeries: Array<{
+    id: string;
+    slug: string | null;
+    name: string;
+    description: string | null;
+    format: string | null;
+    originType: string | null;
+    playCount: number;
+  }>;
+  relatedPlaySections: Array<{
+    series: {
+      id: string;
+      slug: string | null;
+      name: string;
+    };
+    plays: Array<{
+      id: string;
+      slug: string;
+      title: string;
+      period: string | null;
+      summary: string | null;
+      vod: Record<string, string> | null;
+    }>;
+  }>;
 };
 
 export type TagListItem = {
@@ -1264,15 +1289,113 @@ export async function getGuideList(): Promise<GuideListItem[]> {
 export async function getGuideDetailBySlug(slug: string): Promise<GuideDetailData | null> {
   if (!hasSupabaseEnv) return null;
   const supabase = createSupabaseServerClient();
-  const { data, error } = await supabase
-    .from("editorials")
-    .select("id, slug, title, summary, content, published_at, category")
-    .eq("status", "published")
-    .eq("slug", slug)
-    .maybeSingle();
+  let data: any = null;
+  let error: any = null;
+
+  {
+    const res = await supabase
+      .from("editorials")
+      .select("id, slug, title, summary, content, published_at, category, related_franchise_ids")
+      .eq("status", "published")
+      .eq("slug", slug)
+      .maybeSingle();
+    data = res.data;
+    error = res.error;
+  }
+
+  if (error && /related_franchise_ids/i.test(String(error.message ?? ""))) {
+    const fallback = await supabase
+      .from("editorials")
+      .select("id, slug, title, summary, content, published_at, category")
+      .eq("status", "published")
+      .eq("slug", slug)
+      .maybeSingle();
+    data = fallback.data ? { ...fallback.data, related_franchise_ids: [] } : fallback.data;
+    error = fallback.error;
+  }
 
   if (error) throw error;
   if (!data?.id || !data?.slug || !data?.title) return null;
+
+  const relatedFranchiseIds = Array.isArray(data.related_franchise_ids)
+    ? data.related_franchise_ids.map((id: unknown) => String(id ?? "").trim()).filter(Boolean)
+    : [];
+
+  let relatedSeries: GuideDetailData["relatedSeries"] = [];
+  let relatedPlaySections: GuideDetailData["relatedPlaySections"] = [];
+
+  if (relatedFranchiseIds.length > 0) {
+    const [{ data: franchises, error: franchiseError }, { data: plays, error: playError }] = await Promise.all([
+      supabase
+        .from("franchises")
+        .select("id, slug, name, description, format, origin_type")
+        .in("id", relatedFranchiseIds),
+      supabase
+        .from("plays")
+        .select("id, slug, title, period, summary, vod, franchise_id")
+        .in("franchise_id", relatedFranchiseIds),
+    ]);
+
+    if (franchiseError) throw franchiseError;
+    if (playError) throw playError;
+
+    const playBuckets = new Map<string, GuideDetailData["relatedPlaySections"][number]["plays"]>();
+
+    for (const row of (plays ?? []) as any[]) {
+      const franchiseId = String(row?.franchise_id ?? "").trim();
+      const playId = String(row?.id ?? "").trim();
+      const playSlug = String(row?.slug ?? "").trim();
+      const title = String(row?.title ?? "").trim();
+      if (!franchiseId || !playId || !playSlug || !title) continue;
+
+      const bucket = playBuckets.get(franchiseId) ?? [];
+      bucket.push({
+        id: playId,
+        slug: playSlug,
+        title,
+        period: (row?.period as string | null) ?? null,
+        summary: (row?.summary as string | null) ?? null,
+        vod: (row?.vod as Record<string, string> | null) ?? null,
+      });
+      playBuckets.set(franchiseId, bucket);
+    }
+
+    const franchiseMap = new Map(
+      ((franchises ?? []) as any[])
+        .filter((row) => row?.id && row?.name)
+        .map((row) => [
+          String(row.id),
+          {
+            id: String(row.id),
+            slug: row.slug ? String(row.slug) : null,
+            name: String(row.name),
+            description: row.description ? String(row.description) : null,
+            format: row.format ? String(row.format) : null,
+            originType: row.origin_type ? String(row.origin_type) : null,
+            playCount: (playBuckets.get(String(row.id)) ?? []).length,
+          },
+        ])
+    );
+
+    relatedSeries = relatedFranchiseIds
+      .map((id: string) => franchiseMap.get(id))
+      .filter((item: GuideDetailData["relatedSeries"][number] | undefined): item is GuideDetailData["relatedSeries"][number] => Boolean(item));
+
+    relatedPlaySections = relatedSeries
+      .map((series) => ({
+        series: {
+          id: series.id,
+          slug: series.slug,
+          name: series.name,
+        },
+        plays: [...(playBuckets.get(series.id) ?? [])].sort(
+          (a, b) =>
+            periodStartSortKey(a.period) - periodStartSortKey(b.period) ||
+            a.title.localeCompare(b.title, "ja")
+        ),
+      }))
+      .filter((section) => section.plays.length > 0);
+  }
 
   return {
     id: data.id as string,
@@ -1282,6 +1405,9 @@ export async function getGuideDetailBySlug(slug: string): Promise<GuideDetailDat
     content: (data.content as string | null) ?? null,
     publishedAt: (data.published_at as string | null) ?? null,
     category: (data.category as "series-guides" | "features" | null) ?? null,
+    relatedFranchiseIds,
+    relatedSeries,
+    relatedPlaySections,
   };
 }
 
