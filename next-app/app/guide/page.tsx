@@ -5,6 +5,7 @@ import { buildCollectionPageStructuredData } from "../../lib/structured-data";
 import { getGuideList, toPlainText, truncate } from "../../lib/stage-connect";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
+export const revalidate = 3600;
 
 const CATEGORY_LABELS: Record<string, string> = {
   "series-guides": "シリーズガイド",
