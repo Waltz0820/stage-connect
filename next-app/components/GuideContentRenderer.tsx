@@ -59,10 +59,34 @@ const isTableDivider = (line: string) =>
 const normalizeToken = (value: string) =>
   value
     .normalize("NFKC")
-    .replace(/["'`]/g, "")
-    .replace(/[()［］\[\]「」『』【】]/g, "")
+    .replace(/['''`]/g, "")
+    .replace(/[「」『』【】\[\]〜～〈〉《》]/g, "")
     .replace(/\s+/g, "")
     .trim();
+
+/**
+ * Generate a URL-safe slug from a heading text for anchor IDs.
+ */
+export const headingToId = (text: string) =>
+  text
+    .replace(/[【】\[\]『』「」]/g, "")
+    .replace(/\s+/g, "-")
+    .replace(/[^\p{L}\p{N}\-]/gu, "")
+    .toLowerCase()
+    .slice(0, 60);
+
+/**
+ * Extract h2 headings from guide markdown content for TOC rendering.
+ */
+export const extractTocHeadings = (content: string): Array<{ id: string; text: string }> =>
+  content
+    .replace(/\r\n/g, "\n")
+    .split("\n")
+    .filter((line) => line.trim().startsWith("## "))
+    .map((line) => {
+      const text = line.trim().slice(3).trim();
+      return { id: headingToId(text), text };
+    });
 
 const escapeRegExp = (value: string) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
@@ -619,8 +643,9 @@ export function GuideContentRenderer({ content, guide }: Props) {
         if (block.type === "h2") {
           skipUntilNextHeading = false;
           currentH3 = null;
+          const id = headingToId(block.text);
           return (
-            <h2 className="guide-prose__h2" key={index}>
+            <h2 className="guide-prose__h2" id={id} key={index}>
               {block.text}
             </h2>
           );

@@ -31,6 +31,7 @@
 
 html {
   background: var(--bg);
+  scroll-behavior: smooth;
 }
 
 body {
@@ -1934,6 +1935,74 @@ a {
   color: var(--muted);
 }
 
+/* --- Guide TOC (table of contents) --- */
+.guide-toc {
+  scroll-margin-top: 80px;
+}
+
+.guide-toc__title {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.guide-toc__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: toc;
+  display: grid;
+  gap: 0;
+}
+
+.guide-toc__item {
+  counter-increment: toc;
+}
+
+.guide-toc__link {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.6;
+  transition: color 0.15s ease;
+}
+
+.guide-toc__link::before {
+  content: counter(toc, decimal-leading-zero);
+  flex-shrink: 0;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  min-width: 20px;
+}
+
+.guide-toc__link:hover {
+  color: rgba(248, 245, 239, 1);
+}
+
+.guide-toc__item:last-child .guide-toc__link {
+  border-bottom: 0;
+}
+
+.guide-toc__item--sub .guide-toc__link {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.guide-toc__item--sub .guide-toc__link::before {
+  content: "—";
+  letter-spacing: 0;
+}
+
 .guide-prose__h2 {
   margin: 0;
   padding-top: 20px;
@@ -1944,6 +2013,7 @@ a {
   font-weight: 800;
   line-height: 1.4;
   letter-spacing: -0.01em;
+  scroll-margin-top: 80px;
 }
 
 .guide-prose__h2:first-child {
