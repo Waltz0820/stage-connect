@@ -33,12 +33,10 @@ const VOD_SERVICE_LINKS: Record<string, string> = {
 };
 
 const VOD_SERVICE_DESCRIPTIONS: Record<string, string> = {
-  "DMM TV": "刀剣乱舞シリーズを追うなら、まず確認したい本命サービスです。",
-  "dアニメストア":
-    "一部作品は見られますが、刀剣乱舞シリーズをまとめて追うなら DMM TV との比較が自然です。",
-  "U-NEXT":
-    "総合VODとしては強い一方、刀剣乱舞をまとめて追うには DMM TV との比較確認が向いています。",
-  "Amazon Prime Video": "配信状況は変動しやすいため、最新状況の確認が必要です。",
+  "DMM TV": "刀剣乱舞シリーズを横断して視聴しやすい",
+  "dアニメストア": "一部作品に対応",
+  "U-NEXT": "総合VODとして優秀",
+  "Amazon Prime Video": "配信状況は作品ごとに異なる",
 };
 
 const parseInline = (text: string) => {
@@ -75,8 +73,7 @@ const stripGuidePlaceholders = (value: string) =>
     .replace(/`?\[Stage Connect 配信ステータス一覧を見る（ボタン）\]`?/g, "")
     .trim();
 
-const stripParenSuffix = (value: string) =>
-  value.replace(/[（(].*?[）)]/g, "").trim();
+const stripParenSuffix = (value: string) => value.replace(/[（(].*?[）)]/g, "").trim();
 
 const parseBlocks = (content: string): Block[] => {
   const lines = content.replace(/\r\n/g, "\n").split("\n");
@@ -236,14 +233,8 @@ const reorderSections = (blocks: Block[]) => {
       (section) => section.heading?.includes("上演形式") || section.heading?.includes("公演フォーマット")
     );
     const castSection = subSections.find((section) => section.heading?.includes("キャスト構成"));
-    const storySection = subSections.find(
-      (section) => section.heading?.includes("シリーズ構成") || section.heading?.includes("物語の展開方式")
-    );
-    const usedHeadings = new Set(
-      [formatSection?.heading, castSection?.heading, storySection?.heading].filter(Boolean)
-    );
     const remainingSections = subSections.filter(
-      (section) => !(section.heading && usedHeadings.has(section.heading))
+      (section) => section.heading !== formatSection?.heading && section.heading !== castSection?.heading
     );
 
     const mergedBlocks: Block[] = [
@@ -251,7 +242,7 @@ const reorderSections = (blocks: Block[]) => {
       ...(formatSection?.blocks ?? []),
       ...(castSection?.blocks ?? []),
       { type: "h3", text: "初めて観る場合の選び方" },
-      ...choiceSection.blocks.filter((block) => block.type !== "h2"),
+      ...choiceSection.blocks.filter((block) => block.type !== "h2" && block.type !== "p"),
       ...remainingSections.flatMap((section) => section.blocks),
     ];
 
@@ -450,6 +441,13 @@ const renderVodServiceGrid = (items: string[], blockKey: number) => (
   </div>
 );
 
+const summarizePeriod = (period?: string | null) => {
+  if (!period) return null;
+  const match = period.match(/(\d{4})\D{0,2}(\d{1,2})/);
+  if (!match) return period;
+  return `${match[1]}/${match[2].padStart(2, "0")}-`;
+};
+
 const renderPlayGrid = (items: string[], guide: GuideDetailData, blockKey: number) => {
   const allPlays = getAllPlays(guide);
   const resolved = items
@@ -467,41 +465,36 @@ const renderPlayGrid = (items: string[], guide: GuideDetailData, blockKey: numbe
   }
 
   return (
-    <div className="catalog-grid" key={blockKey}>
+    <div className="guide-play-grid" key={blockKey}>
       {resolved.map(({ play }) => {
         if (!play) return null;
+        const periodLabel = summarizePeriod(play.period);
+
         return (
-          <article className="catalog-card" key={play.slug}>
-            <div className="catalog-card__top">
-              <Link className="catalog-card__title" href={`/plays/${play.slug}`}>
+          <article className="guide-play-card" key={play.slug}>
+            <div className="guide-play-card__main">
+              <Link className="guide-play-card__title" href={`/plays/${play.slug}`}>
                 {play.title}
               </Link>
-              {play.vod?.dmm ? <span className="catalog-card__badge">配信あり</span> : null}
+              {periodLabel ? <div className="guide-play-card__meta">{periodLabel}</div> : null}
             </div>
 
-            {play.period ? <div className="catalog-card__sub">{play.period}</div> : null}
-
-            <div className="catalog-card__footer">
-              <Link className="catalog-link" href={`/plays/${play.slug}`}>
-                作品詳細を見る
+            <div className="guide-play-card__actions">
+              <Link className="catalog-link guide-play-card__link" href={`/plays/${play.slug}`}>
+                作品詳細
               </Link>
-            </div>
-
-            <div
-              className={`catalog-card__footer catalog-card__footer--cta${
-                play.vod?.dmm ? "" : " is-empty"
-              }`}
-            >
               {play.vod?.dmm ? (
                 <a
-                  className="action-button action-button-inline"
+                  className="action-button action-button-inline guide-play-card__cta"
                   href={play.vod.dmm}
                   target="_blank"
                   rel="noopener noreferrer sponsored"
                 >
-                  DMM TVで見る
+                  DMM TV
                 </a>
-              ) : null}
+              ) : (
+                <span className="guide-play-card__cta guide-play-card__cta--empty" aria-hidden="true" />
+              )}
             </div>
           </article>
         );

@@ -2160,6 +2160,63 @@ a {
   line-height: 1.35;
 }
 
+.guide-play-grid {
+  display: grid;
+  gap: 10px;
+}
+
+.guide-play-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: center;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.01);
+}
+
+.guide-play-card__main {
+  min-width: 0;
+  display: grid;
+  gap: 4px;
+}
+
+.guide-play-card__title {
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.55;
+  text-decoration: none;
+}
+
+.guide-play-card__meta {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.guide-play-card__actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.guide-play-card__link {
+  white-space: nowrap;
+}
+
+.guide-play-card__cta {
+  min-width: 86px;
+  justify-content: center;
+}
+
+.guide-play-card__cta--empty {
+  min-width: 86px;
+  min-height: 34px;
+}
+
 .guide-play-list {
   display: grid;
   gap: 10px;
@@ -2293,6 +2350,10 @@ a {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .guide-play-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .guide-play-row {
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
@@ -2333,8 +2394,21 @@ a {
 
   .guide-play-row,
   .guide-play-row__main,
-  .guide-play-row__actions {
+  .guide-play-row__actions,
+  .guide-play-card,
+  .guide-play-card__main,
+  .guide-play-card__actions {
     min-width: 0;
+  }
+
+  .guide-play-card {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .guide-play-card__actions {
+    width: 100%;
+    justify-content: flex-start;
   }
 
   .guide-play-row__actions {
