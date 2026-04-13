@@ -131,7 +131,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<Para
                 </li>
               ))}
               {(guide.topActorsByFormat.stage.length > 0 || guide.topActorsByFormat.musical.length > 0) ? (
-                <li className="guide-toc__item guide-toc__item--sub">
+                <li className="guide-toc__item">
                   <a className="guide-toc__link" href="#top-cast">
                     主な出演キャスト
                   </a>
