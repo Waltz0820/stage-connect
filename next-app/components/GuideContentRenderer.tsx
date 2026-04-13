@@ -245,6 +245,54 @@ const isPlayLinkList = (items: string[]) =>
 const isVodServiceList = (items: string[]) =>
   items.length > 0 && items.every((item) => Object.hasOwn(VOD_SERVICE_DESCRIPTIONS, item.trim()));
 
+const isChoiceList = (items: string[]) =>
+  items.length > 0 &&
+  items.every((item) => item.includes("→")) &&
+  items.some((item) => item.includes("刀ステ") || item.includes("刀ミュ"));
+
+const renderChoiceGrid = (items: string[], guide: GuideDetailData, blockKey: number) => {
+  const choices = items
+    .map((item) => {
+      const [hintPart, labelPart] = item.split("→").map((value) => value.trim());
+      if (!hintPart || !labelPart) return null;
+
+      const format =
+        labelPart.includes("刀ステ") ? "stage" : labelPart.includes("刀ミュ") ? "musical" : null;
+      if (!format) return null;
+
+      const series = findSeriesByFormat(guide, format);
+      if (!series?.slug) return null;
+
+      return {
+        hint: hintPart,
+        label: labelPart,
+        href: `/series/${series.slug}`,
+      };
+    })
+    .filter(Boolean) as Array<{ hint: string; label: string; href: string }>;
+
+  if (choices.length === 0) {
+    return (
+      <ul className="guide-prose__list" key={blockKey}>
+        {items.map((item, index) => (
+          <li key={index}>{parseInline(item)}</li>
+        ))}
+      </ul>
+    );
+  }
+
+  return (
+    <div className="guide-choice-grid" key={blockKey}>
+      {choices.map((choice) => (
+        <Link className="guide-choice-card" href={choice.href} key={choice.label}>
+          <div className="guide-choice-card__hint">{choice.hint}</div>
+          <div className="guide-choice-card__title">{choice.label}</div>
+        </Link>
+      ))}
+    </div>
+  );
+};
+
 const renderVodServiceGrid = (items: string[], blockKey: number) => (
   <div className="guide-service-grid" key={blockKey}>
     {items.map((item) => {
@@ -401,6 +449,10 @@ export function GuideContentRenderer({ content, guide }: Props) {
         if (block.type === "ul") {
           if (isPlayLinkList(block.items)) {
             return renderPlayGrid(block.items, guide, index);
+          }
+
+          if (isChoiceList(block.items)) {
+            return renderChoiceGrid(block.items, guide, index);
           }
 
           if (isVodServiceList(block.items)) {

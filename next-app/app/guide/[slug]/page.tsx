@@ -175,7 +175,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<Para
             <div className="stack-sm">
               <h2 className="section-title">主な出演キャスト</h2>
               <p className="catalog-note">
-                舞台 / ミュージカル それぞれの主な出演者を掲載しています。気になる俳優やシリーズ詳細への導線として使えます。
+                舞台 / ミュージカル それぞれの主な出演者を掲載しています。
               </p>
             </div>
 
