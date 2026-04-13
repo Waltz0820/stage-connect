@@ -39,6 +39,8 @@ export function GuideTopActorsClient({
     () => relatedSeries.filter((series) => series.slug && series.format === activeFormat),
     [activeFormat, relatedSeries]
   );
+  const activeSeriesLabel = activeFormat === "stage" ? "刀ステ" : "刀ミュ";
+  const primarySeries = activeSeries[0];
 
   return (
     <div className="stack-md">
@@ -74,13 +76,11 @@ export function GuideTopActorsClient({
         ))}
       </div>
 
-      {!hideSeriesLinks && activeSeries.length > 0 ? (
+      {!hideSeriesLinks && primarySeries?.slug ? (
         <div className="guide-inline-actions">
-          {activeSeries.map((series) => (
-            <Link className="action-button" href={`/series/${series.slug}`} key={`${activeFormat}-${series.id}`}>
-              {series.name}の全作品を見る
-            </Link>
-          ))}
+          <Link className="action-button" href={`/series/${primarySeries.slug}`}>
+            {activeSeriesLabel}の全出演者を確認する
+          </Link>
         </div>
       ) : null}
     </div>
