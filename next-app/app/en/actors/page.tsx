@@ -4,7 +4,7 @@ import { Breadcrumbs } from "../../../components/Breadcrumbs";
 import { FavoriteButtonClient } from "../../../components/FavoriteButtonClient";
 import { StructuredData } from "../../../components/StructuredData";
 import { getActorList, getAgeFromBirthday, toPlainText } from "../../../lib/stage-connect";
-import { formatAgeEn, formatBirthdayEn, formatBirthdayLabelEn, truncateText } from "../../../lib/en-copy";
+import { formatAgeEn, formatBirthdayEn, formatBirthdayLabelEn, getEnglishActorName, truncateText } from "../../../lib/en-copy";
 import { buildBreadcrumbList, buildCollectionPageStructuredData } from "../../../lib/structured-data";
 
 type SearchParamValue = string | string[] | undefined;
@@ -118,6 +118,7 @@ export default async function EnglishActorsPage({
 
           <div className="catalog-grid">
             {visibleActors.map((actor) => {
+              const displayName = getEnglishActorName(actor);
               const birthday = actor.birthdayLabel
                 ? formatBirthdayLabelEn(actor.birthdayLabel)
                 : formatBirthdayEn(actor.birthday);
@@ -127,10 +128,10 @@ export default async function EnglishActorsPage({
               return (
                 <article className="catalog-card" key={actor.slug}>
                   <div className="catalog-card__top">
-                    <div className="catalog-card__title">{actor.name}</div>
+                    <div className="catalog-card__title">{displayName}</div>
                     <div className="catalog-card__top-actions">
                       {birthday ? <span className="catalog-card__badge">Profile</span> : null}
-                      <FavoriteButtonClient slug={actor.slug} type="actor" size="sm" name={actor.name} kana={actor.kana} />
+                      <FavoriteButtonClient slug={actor.slug} type="actor" size="sm" name={displayName} kana={actor.kana} />
                     </div>
                   </div>
 

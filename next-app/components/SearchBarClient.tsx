@@ -3,12 +3,14 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
+import { getEnglishActorName } from "../lib/en-copy";
 import { getSupabaseBrowserClient } from "../lib/supabase-browser";
 
 type ActorRow = {
   id: string;
   slug: string;
   name: string;
+  nameEn?: string | null;
   kana?: string | null;
 };
 
@@ -191,7 +193,7 @@ export function SearchBarClient() {
                     }}
                   >
                     <span>
-                      <strong>{actor.name}</strong>
+                      <strong>{isEnglish ? getEnglishActorName(actor) : actor.name}</strong>
                       {actor.kana ? <span className="search-item-sub">{actor.kana}</span> : null}
                     </span>
                     <span className="search-item-arrow">→</span>

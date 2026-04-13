@@ -105,6 +105,42 @@ export const formatAgeEn = (age?: number | null) => {
   return `${age} y/o`;
 };
 
+const toTitleCaseToken = (value: string) =>
+  value
+    .split(/([-'`])/)
+    .map((part) => {
+      if (!part || /[-'`]/.test(part)) return part;
+      return part.charAt(0).toUpperCase() + part.slice(1).toLowerCase();
+    })
+    .join("");
+
+export const slugToEnglishActorName = (slug?: string | null) => {
+  const tokens = String(slug ?? "")
+    .trim()
+    .split("-")
+    .map((token) => token.trim())
+    .filter(Boolean);
+
+  if (tokens.length === 0) return "";
+
+  const ordered = tokens.length >= 2 ? [...tokens.slice(1), tokens[0]] : tokens;
+  return ordered.map(toTitleCaseToken).join(" ");
+};
+
+export const getEnglishActorName = (actor: {
+  slug?: string | null;
+  nameEn?: string | null;
+  name?: string | null;
+}) => {
+  const direct = String(actor.nameEn ?? "").trim();
+  if (direct) return direct;
+
+  const fromSlug = slugToEnglishActorName(actor.slug);
+  if (fromSlug) return fromSlug;
+
+  return String(actor.name ?? "").trim();
+};
+
 export const truncateText = (text: string, max: number) =>
   text.length <= max ? text : `${text.slice(0, Math.max(0, max - 1))}...`;
 

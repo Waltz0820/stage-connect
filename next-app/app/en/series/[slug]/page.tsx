@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "../../../../components/Breadcrumbs";
 import { StructuredData } from "../../../../components/StructuredData";
-import { toEnglishOriginType, truncateText } from "../../../../lib/en-copy";
+import { getEnglishActorName, toEnglishOriginType, truncateText } from "../../../../lib/en-copy";
 import { buildBreadcrumbList } from "../../../../lib/structured-data";
 import { getSeriesDetailBySlug, toPlainText } from "../../../../lib/stage-connect";
 
@@ -187,7 +187,7 @@ export default async function EnglishSeriesDetailPage({ params }: { params: Prom
                   href={`/en/actors/${item.actor.slug}`}
                   className="cast-card cast-card-link"
                 >
-                  <div className="cast-name">{item.actor.name}</div>
+                  <div className="cast-name">{getEnglishActorName(item.actor)}</div>
                   <div className="cast-role">
                     {item.count} appearances
                     {item.roles.length > 0 ? ` / ${item.roles.slice(0, 2).join(" / ")}` : ""}

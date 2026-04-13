@@ -8,6 +8,7 @@ type ActorRow = {
   id?: string;
   slug: string;
   name: string;
+  name_en?: string | null;
   kana?: string | null;
   birthday?: string | null;
   birthday_label?: string | null;
@@ -19,6 +20,7 @@ type ActorRow = {
 };
 
 type QuickDraft = {
+  nameEn: string;
   birthday: string;
   birthdayLabel: string;
   profile: string;
@@ -27,6 +29,7 @@ type QuickDraft = {
 };
 
 const buildDraft = (row: ActorRow): QuickDraft => ({
+  nameEn: row.name_en ?? "",
   birthday: row.birthday ?? "",
   birthdayLabel: row.birthday_label ?? "",
   profile: row.profile ?? "",
@@ -48,7 +51,7 @@ const AdminActors: React.FC = () => {
     try {
       const { data, error } = await supabase
         .from("actors")
-        .select("id,slug,name,kana,birthday,birthday_label,image_url,gender,profile,height_cm,blood_type")
+        .select("id,slug,name,name_en,kana,birthday,birthday_label,image_url,gender,profile,height_cm,blood_type")
         .order("name", { ascending: true });
       if (error) throw error;
       const nextRows = (data ?? []) as any as ActorRow[];
@@ -83,7 +86,7 @@ const AdminActors: React.FC = () => {
     setDrafts((current) => ({
       ...current,
       [slug]: {
-        ...(current[slug] ?? { birthday: "", birthdayLabel: "", profile: "", heightCm: "", bloodType: "" }),
+        ...(current[slug] ?? { nameEn: "", birthday: "", birthdayLabel: "", profile: "", heightCm: "", bloodType: "" }),
         ...patch,
       },
     }));
@@ -103,6 +106,7 @@ const AdminActors: React.FC = () => {
     setSavingSlug(row.slug);
     try {
       const payload = {
+        name_en: safeTrim(draft.nameEn) || null,
         birthday: safeTrim(draft.birthday) || null,
         birthday_label: safeTrim(draft.birthdayLabel) || null,
         profile: safeTrim(draft.profile) || null,
@@ -125,6 +129,7 @@ const AdminActors: React.FC = () => {
             ? {
                 ...item,
                 birthday: payload.birthday,
+                name_en: payload.name_en,
                 birthday_label: payload.birthday_label,
                 profile: payload.profile,
                 height_cm: payload.height_cm,
@@ -245,6 +250,16 @@ const AdminActors: React.FC = () => {
                 {isExpanded ? (
                   <div className="mt-4 ml-[52px] grid gap-4">
                     <div className="grid md:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-xs text-slate-400 mb-2">name_en</label>
+                        <input
+                          className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
+                          value={draft.nameEn}
+                          onChange={(e) => updateDraft(r.slug, { nameEn: e.target.value })}
+                          placeholder="空欄なら slug から自動生成"
+                        />
+                      </div>
+
                       <div>
                         <label className="block text-xs text-slate-400 mb-2">birthday</label>
                         <input

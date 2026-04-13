@@ -14,6 +14,7 @@ type ActorRow = {
   id?: string;
   slug: string;
   name: string;
+  name_en?: string | null;
   kana?: string | null;
   birthday?: string | null;
   birthday_label?: string | null;
@@ -48,6 +49,7 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
 
   const [row, setRow] = useState<ActorRow | null>(null);
   const [name, setName] = useState("");
+  const [nameEn, setNameEn] = useState("");
   const [slugText, setSlugText] = useState("");
   const [kana, setKana] = useState("");
   const [birthday, setBirthday] = useState("");
@@ -70,6 +72,7 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
     if (mode === "new") {
       setRow(null);
       setName("");
+      setNameEn("");
       setSlugText("");
       setKana("");
       setBirthday("");
@@ -91,7 +94,7 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         const { data, error } = await supabase
           .from("actors")
           // ✅ tags は読まない（廃止）
-          .select("id,slug,name,kana,birthday,birthday_label,profile,height_cm,blood_type,image_url,gender,sns,featured_play_slugs")
+          .select("id,slug,name,name_en,kana,birthday,birthday_label,profile,height_cm,blood_type,image_url,gender,sns,featured_play_slugs")
           .eq("slug", key)
           .maybeSingle();
 
@@ -101,6 +104,7 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         const r = data as any as ActorRow;
         setRow(r);
         setName(r.name ?? "");
+        setNameEn(r.name_en ?? "");
         setSlugText(r.slug ?? "");
         setKana(r.kana ?? "");
         setBirthday(r.birthday ?? "");
@@ -149,6 +153,7 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
     try {
       const payload: any = {
         name: safeTrim(name),
+        name_en: safeTrim(nameEn) || null,
         slug: safeTrim(slugText) || toSlug(name),
         kana: safeTrim(kana) || null,
         birthday: safeTrim(birthday) || null,
@@ -262,6 +267,14 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
 
       <div className="bg-white/5 border border-white/10 rounded-2xl p-6 space-y-6">
         <div className="grid md:grid-cols-2 gap-6">
+          <Field label="name_en" hint="空欄なら slug から自動生成">
+            <input
+              className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
+              value={nameEn}
+              onChange={(e) => setNameEn(e.target.value)}
+              placeholder="Taro Suzuki"
+            />
+          </Field>
           <Field label="name" hint="必須">
             <input
               className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"

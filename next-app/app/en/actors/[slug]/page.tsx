@@ -8,7 +8,7 @@ import { FavoriteButtonClient } from "../../../../components/FavoriteButtonClien
 import { ShareButtonClient } from "../../../../components/ShareButtonClient";
 import { StructuredData } from "../../../../components/StructuredData";
 import { getActorDetailBySlug, getAgeFromBirthday, groupPlayTimelineByYear, toPlainText } from "../../../../lib/stage-connect";
-import { formatAgeEn, formatBirthdayEn, formatBirthdayLabelEn, truncateText } from "../../../../lib/en-copy";
+import { formatAgeEn, formatBirthdayEn, formatBirthdayLabelEn, getEnglishActorName, truncateText } from "../../../../lib/en-copy";
 import { buildBreadcrumbList } from "../../../../lib/structured-data";
 
 type Params = {
@@ -76,8 +76,10 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
     };
   }
 
+  const displayName = getEnglishActorName(actor);
+
   return {
-    title: `${actor.name} | Actor archive | Stage Connect`,
+    title: `${displayName} | Actor archive | Stage Connect`,
     description: buildActorMetaDescriptionEn(actor),
     alternates: {
       canonical: `${siteUrl}/en/actors/${actor.slug}`,
@@ -95,6 +97,7 @@ export default async function EnglishActorDetailPage({ params }: { params: Promi
 
   if (!actor) notFound();
 
+  const displayName = getEnglishActorName(actor);
   const birthdayText = actor.birthdayLabel
     ? formatBirthdayLabelEn(actor.birthdayLabel)
     : formatBirthdayEn(actor.birthday);
@@ -102,12 +105,12 @@ export default async function EnglishActorDetailPage({ params }: { params: Promi
   const ageLabel = formatAgeEn(age);
   const timeline = groupPlayTimelineByYear(actor.plays);
   const hasSns = Boolean(actor.sns && Object.values(actor.sns).some(Boolean));
-  const statusLine = toPlainText(actor.profile || "") || `${actor.name} profile text is not available yet.`;
+  const statusLine = toPlainText(actor.profile || "") || `${displayName} profile text is not available yet.`;
   const personJsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: actor.name,
-    alternateName: actor.kana || undefined,
+    name: displayName,
+    alternateName: actor.name || actor.kana || undefined,
     description: statusLine,
     url: `${siteUrl}/en/actors/${actor.slug}`,
     birthDate: actor.birthday || undefined,
@@ -116,7 +119,7 @@ export default async function EnglishActorDetailPage({ params }: { params: Promi
   const breadcrumbJsonLd = buildBreadcrumbList([
     { name: "HOME", path: "/en" },
     { name: "Actors", path: "/en/actors" },
-    { name: actor.name, path: `/en/actors/${actor.slug}` },
+    { name: displayName, path: `/en/actors/${actor.slug}` },
   ]);
 
   return (
@@ -129,18 +132,18 @@ export default async function EnglishActorDetailPage({ params }: { params: Promi
         <section className="hero-card stack-md">
           <div className="detail-hero-grid">
             <div className="detail-monogram" aria-hidden="true">
-              {actor.name.trim().charAt(0)}
+              {displayName.trim().charAt(0)}
             </div>
 
             <div className="detail-hero-copy">
-              <h1 className="page-title">{actor.name}</h1>
+              <h1 className="page-title">{displayName}</h1>
               {actor.kana ? <div className="muted">{actor.kana}</div> : null}
               <p className="detail-status-line">{statusLine}</p>
             </div>
 
             <div className="detail-actions">
-              <FavoriteButtonClient slug={actor.slug} type="actor" size="lg" name={actor.name} kana={actor.kana} />
-              <ShareButtonClient title={actor.name} text={`${actor.name} | Stage Connect`} />
+              <FavoriteButtonClient slug={actor.slug} type="actor" size="lg" name={displayName} kana={actor.kana} />
+              <ShareButtonClient title={displayName} text={`${displayName} | Stage Connect`} />
             </div>
 
             <div className="pill-row">

@@ -4,6 +4,7 @@ import { createSupabaseServerClient } from "./supabase";
 export type ActorLink = {
   slug: string;
   name: string;
+  nameEn?: string | null;
   roleName: string | null;
   castGroup: string | null;
   isStarring: boolean | null;
@@ -13,6 +14,7 @@ export type ActorDetailData = {
   id: string;
   slug: string;
   name: string;
+  nameEn: string | null;
   kana: string | null;
   birthday: string | null;
   birthdayLabel: string | null;
@@ -39,6 +41,7 @@ export type ActorDetailData = {
   coStars: Array<{
     slug: string;
     name: string;
+    nameEn: string | null;
     kana: string | null;
     count: number;
   }>;
@@ -75,6 +78,7 @@ export type SeriesDetailData = {
     actor: {
       slug: string;
       name: string;
+      nameEn: string | null;
     };
     count: number;
     roles: string[];
@@ -98,6 +102,7 @@ export type PlayListItem = {
 export type ActorListItem = {
   slug: string;
   name: string;
+  nameEn: string | null;
   kana: string | null;
   birthday: string | null;
   birthdayLabel: string | null;
@@ -206,6 +211,7 @@ export type SearchResultBundle = {
     id: string;
     slug: string;
     name: string;
+    nameEn: string | null;
     kana: string | null;
   }>;
   plays: Array<{
@@ -443,24 +449,63 @@ export async function getPlayDetailBySlug(slug: string): Promise<PlayDetailData 
   if (playError) throw playError;
   if (!play?.id || !play?.slug || !play?.title) return null;
 
-  const { data: castRows, error: castError } = await supabase
-    .from("casts")
-    .select(
+  let castRows: any[] | null = null;
+  let castError: any = null;
+
+  {
+    const res = await supabase
+      .from("casts")
+      .select(
+        `
+        role_name,
+        cast_group,
+        is_starring,
+        billing_order,
+        created_at,
+        actor:actors (
+          slug,
+          name,
+          name_en
+        )
       `
-      role_name,
-      cast_group,
-      is_starring,
-      billing_order,
-      created_at,
-      actor:actors (
-        slug,
-        name
       )
-    `
-    )
-    .eq("play_id", play.id)
-    .order("billing_order", { ascending: true, nullsFirst: false })
-    .order("created_at", { ascending: true });
+      .eq("play_id", play.id)
+      .order("billing_order", { ascending: true, nullsFirst: false })
+      .order("created_at", { ascending: true });
+    castRows = res.data as any[] | null;
+    castError = res.error;
+  }
+
+  if (castError && /name_en/i.test(String(castError.message ?? ""))) {
+    const fallback = await supabase
+      .from("casts")
+      .select(
+        `
+        role_name,
+        cast_group,
+        is_starring,
+        billing_order,
+        created_at,
+        actor:actors (
+          slug,
+          name
+        )
+      `
+      )
+      .eq("play_id", play.id)
+      .order("billing_order", { ascending: true, nullsFirst: false })
+      .order("created_at", { ascending: true });
+    castRows =
+      (fallback.data as any[] | null)?.map((row) => ({
+        ...row,
+        actor: Array.isArray(row?.actor)
+          ? row.actor.map((item: any) => ({ ...item, name_en: null }))
+          : row?.actor
+            ? { ...row.actor, name_en: null }
+            : row?.actor,
+      })) ?? null;
+    castError = fallback.error;
+  }
 
   if (castError) throw castError;
 
@@ -468,6 +513,7 @@ export async function getPlayDetailBySlug(slug: string): Promise<PlayDetailData 
     .map((row) => ({
       slug: String(row?.actor?.slug ?? "").trim(),
       name: String(row?.actor?.name ?? "").trim(),
+      nameEn: String(row?.actor?.name_en ?? "").trim() || null,
       roleName: String(row?.role_name ?? "").trim() || null,
       castGroup: String(row?.cast_group ?? "").trim() || null,
       isStarring: typeof row?.is_starring === "boolean" ? row.is_starring : null,
@@ -517,21 +563,21 @@ export async function getActorDetailBySlug(slug: string): Promise<ActorDetailDat
   {
     const res = await supabase
       .from("actors")
-      .select("id, slug, name, kana, birthday, birthday_label, profile, height_cm, blood_type, image_url, sns")
+      .select("id, slug, name, name_en, kana, birthday, birthday_label, profile, height_cm, blood_type, image_url, sns")
       .eq("slug", slug)
       .maybeSingle();
     actor = res.data;
     actorError = res.error;
   }
 
-  if (actorError && /(height_cm|blood_type|birthday_label)/i.test(String(actorError.message ?? ""))) {
+  if (actorError && /(name_en|height_cm|blood_type|birthday_label)/i.test(String(actorError.message ?? ""))) {
     const fallback = await supabase
       .from("actors")
       .select("id, slug, name, kana, birthday, profile, image_url, sns")
       .eq("slug", slug)
       .maybeSingle();
     actor = fallback.data
-      ? { ...fallback.data, birthday_label: null, height_cm: null, blood_type: null }
+      ? { ...fallback.data, name_en: null, birthday_label: null, height_cm: null, blood_type: null }
       : fallback.data;
     actorError = fallback.error;
   }
@@ -634,20 +680,55 @@ export async function getActorDetailBySlug(slug: string): Promise<ActorDetailDat
   let coStars: ActorDetailData["coStars"] = [];
 
   if (playIds.length > 0) {
-    const { data: coStarRows, error: coStarError } = await supabase
-      .from("casts")
-      .select(
+    let coStarRows: any[] | null = null;
+    let coStarError: any = null;
+
+    {
+      const res = await supabase
+        .from("casts")
+        .select(
+          `
+          play_id,
+          actor:actors (
+            slug,
+            name,
+            name_en,
+            kana
+          )
         `
-        play_id,
-        actor:actors (
-          slug,
-          name,
-          kana
         )
-      `
-      )
-      .in("play_id", playIds)
-      .neq("actor_id", actor.id);
+        .in("play_id", playIds)
+        .neq("actor_id", actor.id);
+      coStarRows = res.data as any[] | null;
+      coStarError = res.error;
+    }
+
+    if (coStarError && /name_en/i.test(String(coStarError.message ?? ""))) {
+      const fallback = await supabase
+        .from("casts")
+        .select(
+          `
+          play_id,
+          actor:actors (
+            slug,
+            name,
+            kana
+          )
+        `
+        )
+        .in("play_id", playIds)
+        .neq("actor_id", actor.id);
+      coStarRows =
+        (fallback.data as any[] | null)?.map((row) => ({
+          ...row,
+          actor: Array.isArray(row?.actor)
+            ? row.actor.map((item: any) => ({ ...item, name_en: null }))
+            : row?.actor
+              ? { ...row.actor, name_en: null }
+              : row?.actor,
+        })) ?? null;
+      coStarError = fallback.error;
+    }
 
     if (coStarError) throw coStarError;
 
@@ -656,6 +737,7 @@ export async function getActorDetailBySlug(slug: string): Promise<ActorDetailDat
       {
         slug: string;
         name: string;
+        nameEn: string | null;
         kana: string | null;
         playSet: Set<string>;
       }
@@ -665,6 +747,7 @@ export async function getActorDetailBySlug(slug: string): Promise<ActorDetailDat
       const linkedActor = Array.isArray(row?.actor) ? row.actor[0] : row?.actor;
       const actorSlug = String(linkedActor?.slug ?? "").trim();
       const actorName = String(linkedActor?.name ?? "").trim();
+      const actorNameEn = String(linkedActor?.name_en ?? "").trim() || null;
       const actorKana = String(linkedActor?.kana ?? "").trim() || null;
       const playId = String(row?.play_id ?? "").trim();
       if (!actorSlug || !actorName || !playId) continue;
@@ -674,6 +757,7 @@ export async function getActorDetailBySlug(slug: string): Promise<ActorDetailDat
         {
           slug: actorSlug,
           name: actorName,
+          nameEn: actorNameEn,
           kana: actorKana,
           playSet: new Set<string>(),
         };
@@ -686,6 +770,7 @@ export async function getActorDetailBySlug(slug: string): Promise<ActorDetailDat
       .map((item) => ({
         slug: item.slug,
         name: item.name,
+        nameEn: item.nameEn,
         kana: item.kana,
         count: item.playSet.size,
       }))
@@ -696,6 +781,7 @@ export async function getActorDetailBySlug(slug: string): Promise<ActorDetailDat
     id: actor.id,
     slug: actor.slug,
     name: actor.name,
+    nameEn: actor.name_en ?? null,
     kana: actor.kana ?? null,
     birthday: actor.birthday ?? null,
     birthdayLabel: actor.birthday_label ?? null,
@@ -934,27 +1020,62 @@ export async function getSeriesDetailBySlug(slug: string): Promise<SeriesDetailD
         .map((item) => normalizeSeriesDisplayRole(normalizeDisplayRole(item)))
         .filter(Boolean);
 
-    const { data: castRows, error: castError } = await supabase
-      .from("casts")
-      .select(
+    let castRows: any[] | null = null;
+    let castError: any = null;
+
+    {
+      const res = await supabase
+        .from("casts")
+        .select(
+          `
+          play_id,
+          role_name,
+          cast_group,
+          actor:actors (
+            slug,
+            name,
+            name_en
+          )
         `
-        play_id,
-        role_name,
-        cast_group,
-        actor:actors (
-          slug,
-          name
         )
-      `
-      )
-      .in("play_id", playIds);
+        .in("play_id", playIds);
+      castRows = res.data as any[] | null;
+      castError = res.error;
+    }
+
+    if (castError && /name_en/i.test(String(castError.message ?? ""))) {
+      const fallback = await supabase
+        .from("casts")
+        .select(
+          `
+          play_id,
+          role_name,
+          cast_group,
+          actor:actors (
+            slug,
+            name
+          )
+        `
+        )
+        .in("play_id", playIds);
+      castRows =
+        (fallback.data as any[] | null)?.map((row) => ({
+          ...row,
+          actor: Array.isArray(row?.actor)
+            ? row.actor.map((item: any) => ({ ...item, name_en: null }))
+            : row?.actor
+              ? { ...row.actor, name_en: null }
+              : row?.actor,
+        })) ?? null;
+      castError = fallback.error;
+    }
 
     if (castError) throw castError;
 
     const bucket = new Map<
       string,
       {
-        actor: { slug: string; name: string };
+        actor: { slug: string; name: string; nameEn: string | null };
         playSet: Set<string>;
         roles: string[];
         roleKeys: Set<string>;
@@ -967,13 +1088,14 @@ export async function getSeriesDetailBySlug(slug: string): Promise<SeriesDetailD
       const actor = Array.isArray(row?.actor) ? row.actor[0] : row?.actor;
       const actorSlug = String(actor?.slug ?? "").trim();
       const actorName = String(actor?.name ?? "").trim();
+      const actorNameEn = String(actor?.name_en ?? "").trim() || null;
       const playId = String(row?.play_id ?? "").trim();
       if (!actorSlug || !actorName || !playId) continue;
 
       const existing =
         bucket.get(actorSlug) ??
         {
-          actor: { slug: actorSlug, name: actorName },
+          actor: { slug: actorSlug, name: actorName, nameEn: actorNameEn },
           playSet: new Set<string>(),
           roles: [] as string[],
           roleKeys: new Set<string>(),
@@ -1153,13 +1275,13 @@ export async function getActorList(): Promise<ActorListItem[]> {
   {
     const res = await supabase
       .from("actors")
-      .select("slug, name, kana, birthday, birthday_label, profile, gender")
+      .select("slug, name, name_en, kana, birthday, birthday_label, profile, gender")
       .order("name", { ascending: true });
     data = res.data as any[] | null;
     error = res.error;
   }
 
-  if (error && /birthday_label/i.test(String(error.message ?? ""))) {
+  if (error && /(name_en|birthday_label)/i.test(String(error.message ?? ""))) {
     const fallback = await supabase
       .from("actors")
       .select("slug, name, kana, birthday, profile, gender")
@@ -1167,6 +1289,7 @@ export async function getActorList(): Promise<ActorListItem[]> {
     data =
       (fallback.data as any[] | null)?.map((row) => ({
         ...row,
+        name_en: null,
         birthday_label: null,
       })) ?? null;
     error = fallback.error;
@@ -1179,6 +1302,7 @@ export async function getActorList(): Promise<ActorListItem[]> {
     .map((row) => ({
       slug: row.slug as string,
       name: row.name as string,
+      nameEn: (row.name_en as string | null) ?? null,
       kana: (row.kana as string | null) ?? null,
       birthday: (row.birthday as string | null) ?? null,
       birthdayLabel: (row.birthday_label as string | null) ?? null,
@@ -1417,19 +1541,53 @@ export async function getGuideDetailBySlug(slug: string): Promise<GuideDetailDat
     const playIds = uniq((plays ?? []).map((row: any) => row?.id));
 
     if (playIds.length > 0) {
-      const { data: castRows, error: castError } = await supabase
-        .from("casts")
-        .select(
+      let castRows: any[] | null = null;
+      let castError: any = null;
+
+      {
+        const res = await supabase
+          .from("casts")
+          .select(
+            `
+            play_id,
+            role_name,
+            actor:actors (
+              slug,
+              name,
+              name_en
+            )
           `
-          play_id,
-          role_name,
-          actor:actors (
-            slug,
-            name
           )
-        `
-        )
-        .in("play_id", playIds);
+          .in("play_id", playIds);
+        castRows = res.data as any[] | null;
+        castError = res.error;
+      }
+
+      if (castError && /name_en/i.test(String(castError.message ?? ""))) {
+        const fallback = await supabase
+          .from("casts")
+          .select(
+            `
+            play_id,
+            role_name,
+            actor:actors (
+              slug,
+              name
+            )
+          `
+          )
+          .in("play_id", playIds);
+        castRows =
+          (fallback.data as any[] | null)?.map((row) => ({
+            ...row,
+            actor: Array.isArray(row?.actor)
+              ? row.actor.map((item: any) => ({ ...item, name_en: null }))
+              : row?.actor
+                ? { ...row.actor, name_en: null }
+                : row?.actor,
+          })) ?? null;
+        castError = fallback.error;
+      }
 
       if (castError) throw castError;
 
@@ -1439,6 +1597,7 @@ export async function getGuideDetailBySlug(slug: string): Promise<GuideDetailDat
           {
             slug: string;
             name: string;
+            nameEn: string | null;
             playSet: Set<string>;
             roleCounts: Map<string, number>;
           }
@@ -1448,6 +1607,7 @@ export async function getGuideDetailBySlug(slug: string): Promise<GuideDetailDat
           {
             slug: string;
             name: string;
+            nameEn: string | null;
             playSet: Set<string>;
             roleCounts: Map<string, number>;
           }
@@ -1472,6 +1632,7 @@ export async function getGuideDetailBySlug(slug: string): Promise<GuideDetailDat
         const actor = Array.isArray(row?.actor) ? row.actor[0] : row?.actor;
         const actorSlug = String(actor?.slug ?? "").trim();
         const actorName = String(actor?.name ?? "").trim();
+        const actorNameEn = String(actor?.name_en ?? "").trim() || null;
         const playId = String(row?.play_id ?? "").trim();
         const format = playFormatById.get(playId);
         if (!actorSlug || !actorName || !playId || !format) continue;
@@ -1480,6 +1641,7 @@ export async function getGuideDetailBySlug(slug: string): Promise<GuideDetailDat
         const current = bucket.get(actorSlug) ?? {
           slug: actorSlug,
           name: actorName,
+          nameEn: actorNameEn,
           playSet: new Set<string>(),
           roleCounts: new Map<string, number>(),
         };
@@ -1497,6 +1659,7 @@ export async function getGuideDetailBySlug(slug: string): Promise<GuideDetailDat
           .map((item) => ({
             slug: item.slug,
             name: item.name,
+            nameEn: item.nameEn,
             count: item.playSet.size,
             mainRole:
               Array.from(item.roleCounts.entries()).sort(
@@ -1509,6 +1672,7 @@ export async function getGuideDetailBySlug(slug: string): Promise<GuideDetailDat
           .map((item) => ({
             slug: item.slug,
             name: item.name,
+            nameEn: item.nameEn,
             count: item.playSet.size,
             mainRole:
               Array.from(item.roleCounts.entries()).sort(
@@ -1659,10 +1823,10 @@ export async function searchSite(query: string, limit = 20): Promise<SearchResul
       ? `name.ilike.${like},kana.ilike.${like},name.ilike.${looseLike},kana.ilike.${looseLike}`
       : `name.ilike.${like},kana.ilike.${like}`;
 
-  const [actorsRes, playsRes, seriesRes] = await Promise.all([
+  const [actorsResRaw, playsRes, seriesRes] = await Promise.all([
     supabase
       .from("actors")
-      .select("id, slug, name, kana")
+      .select("id, slug, name, name_en, kana")
       .or(actorOr)
       .order("name", { ascending: true })
       .limit(limit),
@@ -1690,6 +1854,22 @@ export async function searchSite(query: string, limit = 20): Promise<SearchResul
       .limit(limit),
   ]);
 
+  let actorsRes = actorsResRaw;
+  if (actorsRes.error && /name_en/i.test(String(actorsRes.error.message ?? ""))) {
+    const fallback = await supabase
+      .from("actors")
+      .select("id, slug, name, kana")
+      .or(actorOr)
+      .order("name", { ascending: true })
+      .limit(limit);
+
+    if (fallback.error) throw fallback.error;
+    actorsRes = {
+      ...fallback,
+      data: (fallback.data ?? []).map((row: any) => ({ ...row, name_en: null })),
+    };
+  }
+
   if (actorsRes.error) throw actorsRes.error;
   if (playsRes.error) throw playsRes.error;
   if (seriesRes.error) throw seriesRes.error;
@@ -1699,6 +1879,7 @@ export async function searchSite(query: string, limit = 20): Promise<SearchResul
       id: String(row?.id ?? "").trim(),
       slug: String(row?.slug ?? "").trim(),
       name: String(row?.name ?? "").trim(),
+      nameEn: String(row?.name_en ?? "").trim() || null,
       kana: (row?.kana as string | null) ?? null,
     }))
     .filter((row) => row.id && row.slug && row.name);

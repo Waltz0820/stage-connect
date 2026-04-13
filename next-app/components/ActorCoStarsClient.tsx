@@ -3,10 +3,12 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { getEnglishActorName } from "../lib/en-copy";
 
 type CoStar = {
   slug: string;
   name: string;
+  nameEn?: string | null;
   kana: string | null;
   count: number;
 };
@@ -53,6 +55,9 @@ export function ActorCoStarsClient({ coStars }: Props) {
       {isMobile ? (
         <div className="card-carousel">
           {visible.map((coStar, index) => (
+            (() => {
+              const displayName = isEnglish ? getEnglishActorName(coStar) : coStar.name;
+              return (
             <Link className="cast-card cast-card-link card-carousel-item" href={`${actorHrefBase}/${coStar.slug}`} key={coStar.slug}>
               <div className="series-rank-row">
                 <span className="series-rank-badge">{index + 1}</span>
@@ -60,18 +65,23 @@ export function ActorCoStarsClient({ coStars }: Props) {
                   {isEnglish ? `${coStar.count} co-appearances` : `共演 ${coStar.count} 回`}
                 </div>
               </div>
-              <div className="cast-name">{coStar.name}</div>
+              <div className="cast-name">{displayName}</div>
               {coStar.kana ? (
                 <div className="muted" style={{ marginTop: 6, fontSize: 13 }}>
                   {coStar.kana}
                 </div>
               ) : null}
             </Link>
+              );
+            })()
           ))}
         </div>
       ) : (
         <div className="cast-grid cast-grid-wide">
           {visible.map((coStar, index) => (
+            (() => {
+              const displayName = isEnglish ? getEnglishActorName(coStar) : coStar.name;
+              return (
             <Link className="cast-card cast-card-link" href={`${actorHrefBase}/${coStar.slug}`} key={`desktop-${coStar.slug}`}>
               <div className="series-rank-row">
                 <span className="series-rank-badge">{index + 1}</span>
@@ -79,13 +89,15 @@ export function ActorCoStarsClient({ coStars }: Props) {
                   {isEnglish ? `${coStar.count} co-appearances` : `共演 ${coStar.count} 回`}
                 </div>
               </div>
-              <div className="cast-name">{coStar.name}</div>
+              <div className="cast-name">{displayName}</div>
               {coStar.kana ? (
                 <div className="muted" style={{ marginTop: 6, fontSize: 13 }}>
                   {coStar.kana}
                 </div>
               ) : null}
             </Link>
+              );
+            })()
           ))}
         </div>
       )}
@@ -123,6 +135,9 @@ export function ActorCoStarsClient({ coStars }: Props) {
               <div className="next-modal-body">
                 <div className="cast-grid cast-grid-wide">
                   {modalVisible.map((coStar, index) => (
+                    (() => {
+                      const displayName = isEnglish ? getEnglishActorName(coStar) : coStar.name;
+                      return (
                     <Link className="cast-card cast-card-link" href={`${actorHrefBase}/${coStar.slug}`} key={`${coStar.slug}-modal`}>
                       <div className="series-rank-row">
                         <span className="series-rank-badge">{index + 1}</span>
@@ -130,13 +145,15 @@ export function ActorCoStarsClient({ coStars }: Props) {
                           {isEnglish ? `${coStar.count} co-appearances` : `共演 ${coStar.count} 回`}
                         </div>
                       </div>
-                      <div className="cast-name">{coStar.name}</div>
+                      <div className="cast-name">{displayName}</div>
                       {coStar.kana ? (
                         <div className="muted" style={{ marginTop: 6, fontSize: 13 }}>
                           {coStar.kana}
                         </div>
                       ) : null}
                     </Link>
+                      );
+                    })()
                   ))}
                 </div>
 
@@ -152,7 +169,7 @@ export function ActorCoStarsClient({ coStars }: Props) {
                   <div className="seo-link-cluster" aria-hidden="true">
                     {hiddenSeoItems.map((coStar) => (
                       <Link href={`${actorHrefBase}/${coStar.slug}`} key={`${coStar.slug}-seo`}>
-                        {coStar.name}
+                        {isEnglish ? getEnglishActorName(coStar) : coStar.name}
                       </Link>
                     ))}
                   </div>

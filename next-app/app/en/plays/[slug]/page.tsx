@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "../../../../components/Breadcrumbs";
 import { StructuredData } from "../../../../components/StructuredData";
-import { compactListPeriodEn, truncateText } from "../../../../lib/en-copy";
+import { compactListPeriodEn, getEnglishActorName, truncateText } from "../../../../lib/en-copy";
 import { buildBreadcrumbList } from "../../../../lib/structured-data";
 import { getCreditItems, getPlayDetailBySlug, summarizeCast, toPlainText } from "../../../../lib/stage-connect";
 
@@ -88,7 +88,7 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
     about: play.franchiseName || undefined,
     actor: play.cast.slice(0, 20).map((item) => ({
       "@type": "Person",
-      name: item.name,
+      name: getEnglishActorName(item),
       url: `${siteUrl}/en/actors/${item.slug}`,
     })),
   };
@@ -222,7 +222,7 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
           <div className="cast-grid">
             {featuredCast.map((item) => (
               <Link href={`/en/actors/${item.slug}`} className="cast-card cast-card-link" key={`${item.slug}-${item.roleName ?? "cast"}`}>
-                <div className="cast-name">{item.name}</div>
+                <div className="cast-name">{getEnglishActorName(item)}</div>
                 {item.roleName ? <div className="cast-role">{item.roleName}</div> : null}
               </Link>
             ))}
