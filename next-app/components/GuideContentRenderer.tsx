@@ -252,7 +252,6 @@ const reorderSections = (blocks: Block[]) => {
       ...(castSection?.blocks ?? []),
       { type: "h3", text: "初めて観る場合の選び方" },
       ...choiceSection.blocks.filter((block) => block.type !== "h2"),
-      ...(storySection ? storySection.blocks.filter((block) => block.type === "h3") : []),
       ...remainingSections.flatMap((section) => section.blocks),
     ];
 
