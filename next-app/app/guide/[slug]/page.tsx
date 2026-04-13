@@ -202,7 +202,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<Para
               </a>
             </div>
             <div className="prose-panel">
-              このガイドで扱っている作品の多くは DMM TV で配信されています。まずは無料トライアルで、気になる作品の配信状況を確認してみてください。
+              舞台 / ミュージカル『刀剣乱舞』の作品の多くは DMM TV で配信されています。まずは無料トライアルで、気になる作品の配信状況を確認してみてください。
             </div>
             <div className="catalog-summary">
               <span className="catalog-chip">DMM TV配信 {dmmPlayCount} 作品</span>
