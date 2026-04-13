@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "../../../components/Breadcrumbs";
 import { GuideContentRenderer } from "../../../components/GuideContentRenderer";
+import { GuidePlaySectionsClient } from "../../../components/GuidePlaySectionsClient";
 import { StructuredData } from "../../../components/StructuredData";
 import { getGuideDetailBySlug, toPlainText, truncate } from "../../../lib/stage-connect";
 
@@ -26,13 +27,6 @@ const CATEGORY_LABELS: Record<string, string> = {
 const FORMAT_LABELS: Record<string, string> = {
   stage: "舞台",
   musical: "ミュージカル",
-};
-
-const summarizePeriod = (period?: string | null) => {
-  if (!period) return null;
-  const match = period.match(/(\d{4})\D{0,2}(\d{1,2})/);
-  if (!match) return period;
-  return `${match[1]}/${match[2].padStart(2, "0")}-`;
 };
 
 export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
@@ -67,26 +61,19 @@ export default async function GuideDetailPage({ params }: { params: Promise<Para
   const hasDmm = guide.relatedPlaySections.some((section) =>
     section.plays.some((play) => Boolean(play.vod?.dmm))
   );
-  const totalPlays = guide.relatedPlaySections.reduce(
-    (sum, section) => sum + section.plays.length,
-    0
-  );
+  const totalPlays = guide.relatedPlaySections.reduce((sum, section) => sum + section.plays.length, 0);
   const dmmPlayCount = guide.relatedPlaySections.reduce(
-    (sum, section) => sum + section.plays.filter((p) => Boolean(p.vod?.dmm)).length,
+    (sum, section) => sum + section.plays.filter((play) => Boolean(play.vod?.dmm)).length,
     0
   );
 
-  const articleJsonLd = {
+  const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: guide.title,
     description,
     url: `${siteUrl}/guide/${guide.slug}`,
     datePublished: guide.publishedAt || undefined,
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": `${siteUrl}/guide/${guide.slug}`,
-    },
     author: {
       "@type": "Organization",
       name: "Stage Connect",
@@ -97,31 +84,18 @@ export default async function GuideDetailPage({ params }: { params: Promise<Para
     },
   };
 
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "ホーム", item: siteUrl },
-      { "@type": "ListItem", position: 2, name: "ガイド", item: `${siteUrl}/guide` },
-      { "@type": "ListItem", position: 3, name: guide.title },
-    ],
-  };
-
   return (
     <main className="container" style={{ paddingBlock: 32 }}>
-      <StructuredData data={articleJsonLd} />
-      <StructuredData data={breadcrumbJsonLd} />
+      <StructuredData data={jsonLd} />
 
       <div className="stack-lg">
-        {/* --- Breadcrumb --- */}
         <Breadcrumbs
           items={[
-            { label: "ガイド", href: "/guide" },
+            { label: "編集部ガイド", href: "/guide" },
             { label: guide.title },
           ]}
         />
 
-        {/* --- Hero --- */}
         <section className="hero-card stack-md">
           <div className="stack-sm">
             {guide.category ? (
@@ -142,27 +116,25 @@ export default async function GuideDetailPage({ params }: { params: Promise<Para
               {guide.relatedSeries.length > 0 ? (
                 <span className="catalog-chip">関連シリーズ {guide.relatedSeries.length}件</span>
               ) : null}
-              {totalPlays > 0 ? (
-                <span className="catalog-chip">関連作品 {totalPlays}作</span>
-              ) : null}
+              {totalPlays > 0 ? <span className="catalog-chip">関連作品 {totalPlays}作</span> : null}
               {hasDmm ? <span className="catalog-chip">DMM TV配信 {dmmPlayCount}作品</span> : null}
             </div>
           ) : null}
         </section>
 
-        {/* --- 本文 --- */}
         {guide.content ? (
           <section className="section-card stack-md">
             <GuideContentRenderer content={guide.content} guide={guide} />
           </section>
         ) : null}
 
-        {/* --- 関連シリーズ --- */}
         {guide.relatedSeries.length > 0 ? (
           <section className="section-card stack-md">
             <div className="stack-sm">
               <h2 className="section-title">関連シリーズ</h2>
-              <p className="catalog-note">このガイドで扱っているシリーズ一覧です。各シリーズ詳細から関連作品や出演キャストを確認できます。</p>
+              <p className="catalog-note">
+                このガイドで扱っているシリーズ一覧です。シリーズ詳細から関連作品や出演キャストを確認できます。
+              </p>
             </div>
 
             <div className="guide-series-grid">
@@ -197,71 +169,19 @@ export default async function GuideDetailPage({ params }: { params: Promise<Para
           </section>
         ) : null}
 
-        {/* --- 歴代作品一覧 --- */}
         {guide.relatedPlaySections.length > 0 ? (
           <section className="section-card stack-md">
             <div className="stack-sm">
               <h2 className="section-title">歴代作品一覧</h2>
-              <p className="catalog-note">関連シリーズに紐づく作品を自動で整理しています。作品詳細ページから出演キャストや配信状況を確認できます。</p>
+              <p className="catalog-note">
+                関連シリーズに紐づく作品を公開順で並べています。初手は一部のみ表示し、必要に応じて展開できます。
+              </p>
             </div>
 
-            <div className="stack-lg">
-              {guide.relatedPlaySections.map((section) => (
-                <div className="stack-md" key={section.series.id}>
-                  <div className="section-header">
-                    <h3 className="section-title" style={{ fontSize: "1.1rem" }}>{section.series.name}</h3>
-                    {section.series.slug ? (
-                      <Link className="inline-link" href={`/series/${section.series.slug}`}>
-                        シリーズページへ
-                      </Link>
-                    ) : null}
-                  </div>
-
-                  <div className="guide-play-list">
-                    {section.plays.map((play) => (
-                      <article className="guide-play-row" key={play.id}>
-                        <div className="guide-play-row__main">
-                          <div className="guide-play-row__head">
-                            <Link className="guide-play-row__title" href={`/plays/${play.slug}`}>
-                              {play.title}
-                            </Link>
-                            {play.vod?.dmm ? <span className="catalog-card__badge">配信あり</span> : null}
-                          </div>
-
-                          <div className="guide-play-row__meta">
-                            {summarizePeriod(play.period) ?? "公開時期未定"}
-                          </div>
-
-                          <div className="guide-play-row__summary">
-                            {truncate(toPlainText(play.summary || play.title), 80)}
-                          </div>
-                        </div>
-
-                        <div className="guide-play-row__actions">
-                          <Link className="catalog-link" href={`/plays/${play.slug}`}>
-                            作品詳細
-                          </Link>
-                          {play.vod?.dmm ? (
-                            <a
-                              className="action-button action-button-inline guide-play-row__cta"
-                              href={play.vod.dmm}
-                              target="_blank"
-                              rel="noopener noreferrer sponsored"
-                            >
-                              DMM TV
-                            </a>
-                          ) : null}
-                        </div>
-                      </article>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
+            <GuidePlaySectionsClient sections={guide.relatedPlaySections} />
           </section>
         ) : null}
 
-        {/* --- 配信CTA --- */}
         {hasDmm ? (
           <section className="section-card stack-md">
             <div className="section-header-inline">
@@ -276,20 +196,17 @@ export default async function GuideDetailPage({ params }: { params: Promise<Para
               </a>
             </div>
             <div className="prose-panel">
-              このガイドで紹介している作品の多くはDMM TVで配信されています。
-              月額550円・14日間の無料トライアルで、気になる作品が見放題に含まれているか確認してみてください。
+              このガイドで取り上げている作品の多くは DMM TV で配信されています。
+              まずは無料トライアルで、気になる作品の配信状況を確認してみてください。
             </div>
             <div className="catalog-summary">
               <span className="catalog-chip">DMM TV配信 {dmmPlayCount}作品</span>
-              <span className="catalog-chip">月額550円</span>
               <span className="catalog-chip">14日間無料トライアル</span>
+              <span className="catalog-chip">月額 550円</span>
             </div>
-            <div className="action-row">
-              <Link className="action-button" href="/watch/dmm">
-                DMM TV配信ガイド
-              </Link>
+            <div className="inline-links">
               <Link className="action-button" href="/watch">
-                配信サービス比較
+                配信ステータス一覧を見る
               </Link>
             </div>
           </section>
