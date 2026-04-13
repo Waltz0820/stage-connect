@@ -234,6 +234,47 @@ export const extractTocHeadings = (content: string): Array<{ id: string; text: s
 const findSeriesByFormat = (guide: GuideDetailData, format: "stage" | "musical") =>
   guide.relatedSeries.find((series) => series.format === format);
 
+const getFormatFromHeading = (heading?: string | null): "stage" | "musical" | null => {
+  if (!heading) return null;
+  if (heading.includes("刀ステ") || heading.includes("舞台『刀剣乱舞』")) return "stage";
+  if (heading.includes("刀ミュ") || heading.includes("ミュージカル『刀剣乱舞』")) return "musical";
+  return null;
+};
+
+const periodListSortKey = (period?: string | null) => {
+  if (!period) return Number.MAX_SAFE_INTEGER;
+  const match = period.match(/(\d{4})\D{0,2}(\d{1,2})/);
+  if (!match) return Number.MAX_SAFE_INTEGER;
+  return Number(match[1]) * 100 + Number(match[2]);
+};
+
+const getPlayListBundleByFormat = (guide: GuideDetailData, format: "stage" | "musical") => {
+  const targetSeriesIds = new Set(
+    guide.relatedSeries
+      .filter((series) => series.format === format)
+      .map((series) => series.id)
+  );
+
+  const plays = guide.relatedPlaySections
+    .filter((section) => targetSeriesIds.has(section.series.id))
+    .flatMap((section) => section.plays);
+
+  const deduped = Array.from(
+    new Map(plays.map((play) => [play.slug, play])).values()
+  ).sort(
+    (a, b) =>
+      periodListSortKey(a.period) - periodListSortKey(b.period) ||
+      a.title.localeCompare(b.title, "ja")
+  );
+
+  if (deduped.length === 0) return null;
+
+  return {
+    plays: deduped,
+    series: findSeriesByFormat(guide, format),
+  };
+};
+
 const getAllPlays = (guide: GuideDetailData) => {
   const seen = new Set<string>();
   return guide.relatedPlaySections.flatMap((section) =>
@@ -515,7 +556,27 @@ const renderVodServiceGrid = (items: string[], blockKey: number) => (
   </div>
 );
 
-const renderPlayGrid = (items: string[], guide: GuideDetailData, blockKey: number) => {
+const renderPlayGrid = (
+  items: string[],
+  guide: GuideDetailData,
+  blockKey: number,
+  currentHeading: string | null
+) => {
+  const headingFormat = getFormatFromHeading(currentHeading);
+  const directSection = headingFormat ? getPlayListBundleByFormat(guide, headingFormat) : null;
+
+  if (directSection) {
+    return (
+      <GuidePlaySectionsClient
+        key={blockKey}
+        plays={directSection.plays}
+        allSeriesHref={directSection.series?.slug ? `/series/${directSection.series.slug}` : null}
+        allSeriesLabel={`${directSection.series?.name ?? "シリーズ"}の全作品を見る`}
+        initialVisible={6}
+      />
+    );
+  }
+
   const allPlays = getAllPlays(guide);
   const resolved = items
     .map((item) => findBestPlay(allPlays, item))
@@ -660,6 +721,7 @@ const renderParagraphBlock = (text: string, key: number, currentHeading: string 
 export function GuideContentRenderer({ content, guide }: Props) {
   const blocks = mergeGuidePlayLists(reorderSections(parseBlocks(content)));
   let skipUntilNextHeading = false;
+  let currentH2: string | null = null;
   let currentH3: string | null = null;
 
   return (
@@ -667,6 +729,7 @@ export function GuideContentRenderer({ content, guide }: Props) {
       {blocks.map((block, index) => {
         if (block.type === "h2") {
           skipUntilNextHeading = false;
+          currentH2 = block.text;
           currentH3 = null;
           return (
             <h2 className="guide-prose__h2" id={headingToId(block.text)} key={index}>
@@ -695,7 +758,7 @@ export function GuideContentRenderer({ content, guide }: Props) {
 
         if (block.type === "ul") {
           if (isPlayLinkList(block.items)) {
-            return renderPlayGrid(block.items, guide, index);
+            return renderPlayGrid(block.items, guide, index, currentH2);
           }
 
           if (isChoiceList(block.items)) {
