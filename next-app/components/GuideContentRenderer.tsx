@@ -512,6 +512,11 @@ const parseLabeledLines = (lines: string[]) => {
   return parsed.length >= 2 && parsed.length === lines.length ? parsed : null;
 };
 
+const isFeatureLines = (lines: string[]) =>
+  lines.length >= 3 &&
+  lines.length <= 6 &&
+  lines.every((line) => line.length <= 22 && !/[。.!?：:]/.test(line));
+
 const renderParagraphBlock = (text: string, key: number) => {
   const lines = splitParagraphLines(text);
   const labeledLines = parseLabeledLines(lines);
@@ -523,6 +528,18 @@ const renderParagraphBlock = (text: string, key: number) => {
           <div className="guide-compare-item" key={`${item.label}-${index}`}>
             <div className="guide-compare-item__label">{item.label}</div>
             <div className="guide-compare-item__body">{parseInline(item.body)}</div>
+          </div>
+        ))}
+      </div>
+    );
+  }
+
+  if (isFeatureLines(lines)) {
+    return (
+      <div className="guide-feature-grid" key={key}>
+        {lines.map((line, index) => (
+          <div className="guide-feature-chip" key={`${line}-${index}`}>
+            {parseInline(line)}
           </div>
         ))}
       </div>
