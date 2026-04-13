@@ -567,13 +567,19 @@ const renderPlayGrid = (
 
   if (directSection) {
     return (
-      <GuidePlaySectionsClient
-        key={blockKey}
-        plays={directSection.plays}
-        allSeriesHref={directSection.series?.slug ? `/series/${directSection.series.slug}` : null}
-        allSeriesLabel={`${directSection.series?.name ?? "シリーズ"}の全作品を見る`}
-        initialVisible={6}
-      />
+      <div className="stack-sm" key={blockKey}>
+        {headingFormat === "musical" ? (
+          <p className="guide-prose__p">
+            刀ミュは各作品の物語は独立していますが、大型ライブへ向けて登場キャラクターが蓄積されていくため、同じく「公演順」での視聴を推奨します。
+          </p>
+        ) : null}
+        <GuidePlaySectionsClient
+          plays={directSection.plays}
+          allSeriesHref={directSection.series?.slug ? `/series/${directSection.series.slug}` : null}
+          allSeriesLabel={`${directSection.series?.name ?? "シリーズ"}の全作品を見る`}
+          initialVisible={6}
+        />
+      </div>
     );
   }
 
