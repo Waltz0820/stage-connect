@@ -3,7 +3,6 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "../../../components/Breadcrumbs";
 import { GuideContentRenderer } from "../../../components/GuideContentRenderer";
-import { GuidePlaySectionsClient } from "../../../components/GuidePlaySectionsClient";
 import { StructuredData } from "../../../components/StructuredData";
 import { getGuideDetailBySlug, toPlainText, truncate } from "../../../lib/stage-connect";
 
@@ -187,19 +186,18 @@ export default async function GuideDetailPage({ params }: { params: Promise<Para
                 </Link>
               ))}
             </div>
-          </section>
-        ) : null}
 
-        {guide.relatedPlaySections.length > 0 ? (
-          <section className="section-card stack-md">
-            <div className="stack-sm">
-              <h2 className="section-title">関連作品一覧</h2>
-              <p className="catalog-note">
-                関連シリーズに沿って作品を公開順でまとめています。最初は一部のみ表示し、必要に応じて続きを確認できます。
-              </p>
-            </div>
-
-            <GuidePlaySectionsClient sections={guide.relatedPlaySections} />
+            {!hasInlineSeriesLinks && guide.relatedSeries.length > 0 ? (
+              <div className="guide-inline-actions">
+                {guide.relatedSeries
+                  .filter((series) => series.slug)
+                  .map((series) => (
+                    <Link className="action-button" href={`/series/${series.slug}`} key={series.id}>
+                      {series.name}の全作品を見る
+                    </Link>
+                  ))}
+              </div>
+            ) : null}
           </section>
         ) : null}
 
