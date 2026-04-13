@@ -29,6 +29,9 @@ const FORMAT_LABELS: Record<string, string> = {
   musical: "ミュージカル",
 };
 
+const STAGE_SERIES_PLACEHOLDER = "[刀ステ シリーズ一覧ページへのリンク]";
+const MUSICAL_SERIES_PLACEHOLDER = "[刀ミュ シリーズ一覧ページへのリンク]";
+
 export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
   const { slug } = await params;
   const guide = await getGuideDetailBySlug(slug);
@@ -60,6 +63,9 @@ export default async function GuideDetailPage({ params }: { params: Promise<Para
   const description = toPlainText(guide.summary || guide.content || guide.title);
   const hasDmm = guide.relatedPlaySections.some((section) =>
     section.plays.some((play) => Boolean(play.vod?.dmm))
+  );
+  const hasInlineSeriesLinks = Boolean(
+    guide.content?.includes(STAGE_SERIES_PLACEHOLDER) || guide.content?.includes(MUSICAL_SERIES_PLACEHOLDER)
   );
   const totalPlays = guide.relatedPlaySections.reduce((sum, section) => sum + section.plays.length, 0);
   const dmmPlayCount = guide.relatedPlaySections.reduce(
@@ -128,7 +134,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<Para
           </section>
         ) : null}
 
-        {guide.relatedSeries.length > 0 ? (
+        {guide.relatedSeries.length > 0 && !hasInlineSeriesLinks ? (
           <section className="section-card stack-md">
             <div className="stack-sm">
               <h2 className="section-title">関連シリーズ</h2>
