@@ -372,6 +372,75 @@ const isChoiceList = (items: string[]) =>
   items.every((item) => item.includes("→")) &&
   items.some((item) => item.includes("刀ステ") || item.includes("刀ミュ"));
 
+const dedupeStrings = (items: string[]) => {
+  const seen = new Set<string>();
+  return items.filter((item) => {
+    const key = item.trim();
+    if (!key || seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+};
+
+const isGuidePlayListHeading = (text: string) =>
+  (text.includes("刀ステ") || text.includes("舞台『刀剣乱舞』")) && text.includes("見る順番") ||
+  (text.includes("刀ミュ") || text.includes("ミュージカル『刀剣乱舞』")) && text.includes("見る順番");
+
+function mergeGuidePlayLists(blocks: Block[]): Block[] {
+  const merged: Block[] = [];
+
+  for (let index = 0; index < blocks.length; index += 1) {
+    const block = blocks[index];
+
+    if (block.type !== "h2" || !isGuidePlayListHeading(block.text)) {
+      merged.push(block);
+      continue;
+    }
+
+    merged.push(block);
+
+    const introBlocks: Block[] = [];
+    const playItems: string[] = [];
+    let cursor = index + 1;
+
+    while (cursor < blocks.length && blocks[cursor].type !== "h2") {
+      const current = blocks[cursor];
+
+      if (current.type === "ul" && isPlayLinkList(current.items)) {
+        playItems.push(...current.items);
+        cursor += 1;
+        continue;
+      }
+
+      if (
+        current.type === "h3" &&
+        (current.text.includes("本公演") ||
+          current.text.includes("特別公演") ||
+          current.text.includes("ライブ"))
+      ) {
+        cursor += 1;
+        continue;
+      }
+
+      introBlocks.push(current);
+      cursor += 1;
+    }
+
+    merged.push(...introBlocks);
+
+    if (playItems.length > 0) {
+      merged.push({
+        type: "ul",
+        items: dedupeStrings(playItems),
+      });
+    }
+
+    index = cursor - 1;
+  }
+
+  return merged;
+}
+
 const renderChoiceGrid = (items: string[], guide: GuideDetailData, blockKey: number) => {
   const choices = items
     .map((item) => {
@@ -465,11 +534,21 @@ const renderPlayGrid = (items: string[], guide: GuideDetailData, blockKey: numbe
   const matchedSection = guide.relatedPlaySections.find((section) =>
     resolved.some((play) => section.plays.some((candidate) => candidate.slug === play.slug))
   );
+  const playOrder = matchedSection
+    ? new Map(matchedSection.plays.map((play, index) => [play.slug, index]))
+    : null;
+  const orderedResolved = playOrder
+    ? [...resolved].sort(
+        (a, b) =>
+          (playOrder.get(a.slug) ?? Number.MAX_SAFE_INTEGER) -
+          (playOrder.get(b.slug) ?? Number.MAX_SAFE_INTEGER)
+      )
+    : resolved;
 
   return (
     <GuidePlaySectionsClient
       key={blockKey}
-      plays={resolved}
+      plays={orderedResolved}
       allSeriesHref={matchedSection?.series.slug ? `/series/${matchedSection.series.slug}` : null}
       allSeriesLabel={`${matchedSection?.series.name ?? "シリーズ"}の全作品を見る`}
       initialVisible={6}
@@ -579,7 +658,7 @@ const renderParagraphBlock = (text: string, key: number, currentHeading: string 
 };
 
 export function GuideContentRenderer({ content, guide }: Props) {
-  const blocks = reorderSections(parseBlocks(content));
+  const blocks = mergeGuidePlayLists(reorderSections(parseBlocks(content)));
   let skipUntilNextHeading = false;
   let currentH3: string | null = null;
 
