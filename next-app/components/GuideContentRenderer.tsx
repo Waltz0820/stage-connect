@@ -27,10 +27,10 @@ const VOD_SERVICE_LINKS: Record<string, string> = {
 };
 
 const VOD_SERVICE_DESCRIPTIONS: Record<string, string> = {
-  "DMM TV": "刀剣乱舞シリーズの配信状況を確認できます。",
-  "dアニメストア": "dアニメストアで見られる作品の傾向を整理しています。",
-  "U-NEXT": "U-NEXTでの配信状況と使い分けをまとめています。",
-  "Amazon Prime Video": "作品によって視聴可否が変わるため、最新状況の確認が必要です。",
+  "DMM TV": "刀剣乱舞シリーズを追うなら本命。配信本数の厚みとコスパの両方で強いサービスです。",
+  "dアニメストア": "一部作品は見られますが、刀剣乱舞を主目的にするならDMM TVとの比較確認が自然です。",
+  "U-NEXT": "総合VODとしては強い一方、刀剣乱舞をまとめて追うならDMM TVとの違い確認が近道です。",
+  "Amazon Prime Video": "作品によって視聴可否が変わりやすく、見放題状況も変動するため最新確認が必要です。",
 };
 
 const parseInline = (text: string) => {
