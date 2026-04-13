@@ -45,7 +45,7 @@ export function GuidePlaySectionsClient({
 
           <div className="guide-play-card__actions">
             <Link className="catalog-link guide-play-card__link" href={`/plays/${play.slug}`}>
-              作品詳細
+              詳細
             </Link>
             {play.vod?.dmm ? (
               <a
