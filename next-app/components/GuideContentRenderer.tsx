@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import type { GuideDetailData } from "../lib/stage-connect";
+import { GuidePlaySectionsClient } from "./GuidePlaySectionsClient";
 
 type Block =
   | { type: "h2"; text: string }
@@ -39,6 +40,8 @@ const VOD_SERVICE_DESCRIPTIONS: Record<string, string> = {
   "Amazon Prime Video": "配信状況は作品ごとに異なる",
 };
 
+const escapeRegExp = (value: string) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
 const parseInline = (text: string) => {
   const tokens = text.split(/(\*\*.*?\*\*|`.*?`)/g).filter(Boolean);
   return tokens.map((token, index) => {
@@ -59,31 +62,19 @@ const isTableDivider = (line: string) =>
 const normalizeToken = (value: string) =>
   value
     .normalize("NFKC")
-    .replace(/['''`]/g, "")
-    .replace(/[「」『』【】\[\]〜～〈〉《》]/g, "")
+    .replace(/["'`]/g, "")
+    .replace(/[()［］\[\]「」『』【】]/g, "")
     .replace(/\s+/g, "")
     .trim();
 
-/**
- * Generate a URL-safe slug from a heading text for anchor IDs.
- */
 export const headingToId = (text: string) =>
   text
-    .replace(/[【】\[\]『』「」]/g, "")
+    .normalize("NFKC")
+    .replace(/[「」『』【】]/g, "")
     .replace(/\s+/g, "-")
     .replace(/[^\p{L}\p{N}\-]/gu, "")
     .toLowerCase()
     .slice(0, 60);
-
-export const extractTocHeadings = (content: string): Array<{ id: string; text: string }> =>
-  reorderSections(parseBlocks(content))
-    .filter((block): block is Extract<Block, { type: "h2" }> => block.type === "h2")
-    .map((block) => ({
-      id: headingToId(block.text),
-      text: block.text,
-    }));
-
-const escapeRegExp = (value: string) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
 const stripGuidePlaceholders = (value: string) =>
   value
@@ -232,6 +223,14 @@ const reorderSections = (blocks: Block[]) => {
   return [...introBlocks, ...orderedSections.flatMap((section) => section.blocks)];
 };
 
+export const extractTocHeadings = (content: string): Array<{ id: string; text: string }> =>
+  reorderSections(parseBlocks(content))
+    .filter((block): block is Extract<Block, { type: "h2" }> => block.type === "h2")
+    .map((block) => ({
+      id: headingToId(block.text),
+      text: block.text,
+    }));
+
 const findSeriesByFormat = (guide: GuideDetailData, format: "stage" | "musical") =>
   guide.relatedSeries.find((series) => series.format === format);
 
@@ -274,13 +273,6 @@ const findBestPlay = (allPlays: ReturnType<typeof getAllPlays>, rawLabel: string
   return partial.sort((a, b) => b.title.length - a.title.length)[0] ?? null;
 };
 
-const summarizePeriod = (period?: string | null) => {
-  if (!period) return null;
-  const match = period.match(/(\d{4})\D{0,2}(\d{1,2})/);
-  if (!match) return period;
-  return `${match[1]}/${match[2].padStart(2, "0")}-`;
-};
-
 const splitParagraphLines = (text: string) =>
   text
     .split("\n")
@@ -303,6 +295,17 @@ const isFeatureLines = (lines: string[]) =>
   lines.length >= 3 &&
   lines.length <= 6 &&
   lines.every((line) => line.length <= 24 && !/[。！？!?]/.test(line));
+
+const isShortLabelList = (items: string[]) =>
+  items.length >= 2 &&
+  items.length <= 6 &&
+  items.every(
+    (item) =>
+      item.length <= 24 &&
+      !item.includes("[") &&
+      !item.includes("→") &&
+      !item.includes("http")
+  );
 
 const renderParagraphPlaceholder = (text: string, guide: GuideDetailData) => {
   const normalized = text.replace(/`/g, "").trim();
@@ -340,11 +343,7 @@ const renderParagraphPlaceholder = (text: string, guide: GuideDetailData) => {
 
   if (hasDmmButton) {
     actions.push(
-      <a
-        className="action-button"
-        href="/watch/dmm"
-        key="dmm"
-      >
+      <a className="action-button" href="/watch/dmm" key="dmm">
         DMM TVで『刀剣乱舞』シリーズを見る
       </a>
     );
@@ -373,29 +372,6 @@ const isChoiceList = (items: string[]) =>
   items.every((item) => item.includes("→")) &&
   items.some((item) => item.includes("刀ステ") || item.includes("刀ミュ"));
 
-/**
- * Detect short label lists: all items are brief (≤20 chars), no links/placeholders,
- * 2–6 items. These are rendered as visual chips instead of bullet points.
- */
-const isShortLabelList = (items: string[]) =>
-  items.length >= 2 &&
-  items.length <= 6 &&
-  items.every(
-    (item) =>
-      item.length <= 20 &&
-      !item.includes("[") &&
-      !item.includes("→") &&
-      !item.includes("http")
-  );
-
-const renderChipList = (items: string[], blockKey: number) => (
-  <div className="guide-chip-grid" key={blockKey}>
-    {items.map((item, i) => (
-      <span className="guide-chip" key={i}>{item}</span>
-    ))}
-  </div>
-);
-
 const renderChoiceGrid = (items: string[], guide: GuideDetailData, blockKey: number) => {
   const choices = items
     .map((item) => {
@@ -407,7 +383,6 @@ const renderChoiceGrid = (items: string[], guide: GuideDetailData, blockKey: num
         : labelPart.includes("刀ミュ")
           ? "musical"
           : null;
-
       if (!format) return null;
 
       const series = findSeriesByFormat(guide, format);
@@ -474,8 +449,8 @@ const renderVodServiceGrid = (items: string[], blockKey: number) => (
 const renderPlayGrid = (items: string[], guide: GuideDetailData, blockKey: number) => {
   const allPlays = getAllPlays(guide);
   const resolved = items
-    .map((item) => ({ play: findBestPlay(allPlays, item) }))
-    .filter((result) => result.play);
+    .map((item) => findBestPlay(allPlays, item))
+    .filter((play): play is NonNullable<ReturnType<typeof findBestPlay>> => Boolean(play));
 
   if (resolved.length === 0) {
     return (
@@ -487,42 +462,18 @@ const renderPlayGrid = (items: string[], guide: GuideDetailData, blockKey: numbe
     );
   }
 
+  const matchedSection = guide.relatedPlaySections.find((section) =>
+    resolved.some((play) => section.plays.some((candidate) => candidate.slug === play.slug))
+  );
+
   return (
-    <div className="guide-play-grid" key={blockKey}>
-      {resolved.map(({ play }) => {
-        if (!play) return null;
-        const periodLabel = summarizePeriod(play.period);
-
-        return (
-          <article className="guide-play-card" key={play.slug}>
-            <div className="guide-play-card__main">
-              <Link className="guide-play-card__title" href={`/plays/${play.slug}`}>
-                {play.title}
-              </Link>
-              {periodLabel ? <div className="guide-play-card__meta">{periodLabel}</div> : null}
-            </div>
-
-            <div className="guide-play-card__actions">
-              <Link className="catalog-link guide-play-card__link" href={`/plays/${play.slug}`}>
-                作品詳細
-              </Link>
-              {play.vod?.dmm ? (
-                <a
-                  className="action-button action-button-inline guide-play-card__cta"
-                  href={play.vod.dmm}
-                  target="_blank"
-                  rel="noopener noreferrer sponsored"
-                >
-                  DMM TV
-                </a>
-              ) : (
-                <span className="guide-play-card__cta guide-play-card__cta--empty" aria-hidden="true" />
-              )}
-            </div>
-          </article>
-        );
-      })}
-    </div>
+    <GuidePlaySectionsClient
+      key={blockKey}
+      plays={resolved}
+      allSeriesHref={matchedSection?.series.slug ? `/series/${matchedSection.series.slug}` : null}
+      allSeriesLabel={`${matchedSection?.series.name ?? "シリーズ"}の全作品を見る`}
+      initialVisible={6}
+    />
   );
 };
 
@@ -638,9 +589,8 @@ export function GuideContentRenderer({ content, guide }: Props) {
         if (block.type === "h2") {
           skipUntilNextHeading = false;
           currentH3 = null;
-          const id = headingToId(block.text);
           return (
-            <h2 className="guide-prose__h2" id={id} key={index}>
+            <h2 className="guide-prose__h2" id={headingToId(block.text)} key={index}>
               {block.text}
             </h2>
           );
@@ -678,7 +628,15 @@ export function GuideContentRenderer({ content, guide }: Props) {
           }
 
           if (isShortLabelList(block.items)) {
-            return renderChipList(block.items, index);
+            return (
+              <div className="guide-chip-grid" key={index}>
+                {block.items.map((item, itemIndex) => (
+                  <span className="guide-chip" key={`${item}-${itemIndex}`}>
+                    {item}
+                  </span>
+                ))}
+              </div>
+            );
           }
 
           return (

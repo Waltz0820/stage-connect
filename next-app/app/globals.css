@@ -2315,6 +2315,12 @@ a {
   min-height: 34px;
 }
 
+.guide-play-grid__more {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 4px;
+}
+
 .guide-play-list {
   display: grid;
   gap: 10px;
@@ -2450,6 +2456,10 @@ a {
 
   .guide-play-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .guide-play-grid__more {
+    grid-column: 1 / -1;
   }
 
   .guide-play-row {
