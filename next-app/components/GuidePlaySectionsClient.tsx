@@ -25,7 +25,7 @@ type Props = {
   sections: Section[];
 };
 
-const INITIAL_VISIBLE = 6;
+const INITIAL_VISIBLE = 5;
 
 const summarizePeriod = (period?: string | null) => {
   if (!period) return "公開時期未定";
