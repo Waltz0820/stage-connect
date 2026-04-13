@@ -20,6 +20,12 @@ const MUSICAL_SERIES_PLACEHOLDER = "[刀ミュ シリーズ一覧ページへの
 const DMM_BUTTON_PLACEHOLDER = "[DMM TVで『刀剣乱舞』シリーズを見る（ボタン）]";
 const WATCH_BUTTON_PLACEHOLDER = "[Stage Connect 配信ステータス一覧を見る（ボタン）]";
 
+const VOD_SERVICE_LINKS: Record<string, string> = {
+  "DMM TV": "/watch/dmm",
+  "dアニメストア": "/watch/danime",
+  "U-NEXT": "/watch/u-next",
+};
+
 const parseInline = (text: string) => {
   const tokens = text.split(/(\*\*.*?\*\*|`.*?`)/g).filter(Boolean);
   return tokens.map((token, index) => {
@@ -297,6 +303,18 @@ const renderPlayGrid = (items: string[], guide: GuideDetailData, blockKey: numbe
 
 const renderListItem = (item: string, guide: GuideDetailData, key: number) => {
   if (!item.includes(PLAY_LINK_PLACEHOLDER)) {
+    const trimmed = item.trim();
+    const vodHref = VOD_SERVICE_LINKS[trimmed];
+    if (vodHref) {
+      return (
+        <li key={key}>
+          <Link className="inline-link" href={vodHref}>
+            {trimmed}
+          </Link>
+        </li>
+      );
+    }
+
     return <li key={key}>{parseInline(item)}</li>;
   }
 
