@@ -81,8 +81,7 @@ const parseBlocks = (content: string): Block[] => {
   let index = 0;
 
   while (index < lines.length) {
-    const raw = lines[index];
-    const line = raw.trim();
+    const line = lines[index].trim();
 
     if (!line) {
       index += 1;
@@ -159,11 +158,7 @@ const splitSections = (blocks: Block[]) => {
   for (const block of blocks) {
     if (block.type === "h2") {
       if (current) sections.push(current);
-      current = {
-        heading: block.text,
-        blocks: [block],
-        originalIndex: sections.length,
-      };
+      current = { heading: block.text, blocks: [block], originalIndex: sections.length };
       continue;
     }
 
@@ -195,16 +190,16 @@ const getSectionPriority = (heading: string) => {
 };
 
 const shouldOmitSection = (heading: string) =>
-  heading.includes("配信状況") || heading.includes("刀剣乱舞シリーズの配信状況");
+  heading.includes("刀剣乱舞シリーズの配信状況") || heading === "配信状況";
 
 const reorderSections = (blocks: Block[]) => {
   const { introBlocks, sections } = splitSections(blocks);
   const orderedSections = [...sections]
     .filter((section) => !shouldOmitSection(section.heading))
     .sort((a, b) => {
-    const diff = getSectionPriority(a.heading) - getSectionPriority(b.heading);
-    if (diff !== 0) return diff;
-    return a.originalIndex - b.originalIndex;
+      const diff = getSectionPriority(a.heading) - getSectionPriority(b.heading);
+      if (diff !== 0) return diff;
+      return a.originalIndex - b.originalIndex;
     });
 
   const differenceIndex = orderedSections.findIndex((section) => getSectionPriority(section.heading) === 10);
@@ -213,26 +208,24 @@ const reorderSections = (blocks: Block[]) => {
   if (differenceIndex !== -1 && choiceIndex !== -1 && choiceIndex > differenceIndex) {
     const differenceSection = orderedSections[differenceIndex];
     const choiceSection = orderedSections[choiceIndex];
-    const differenceBlocks = differenceSection.blocks;
-    const differenceHeading = differenceBlocks[0];
     const subSections: Array<{ heading: string | null; blocks: Block[] }> = [];
-    let currentSubSection: { heading: string | null; blocks: Block[] } | null = null;
+    let current: { heading: string | null; blocks: Block[] } | null = null;
 
-    for (const block of differenceBlocks.slice(1)) {
+    for (const block of differenceSection.blocks.slice(1)) {
       if (block.type === "h3") {
-        if (currentSubSection) subSections.push(currentSubSection);
-        currentSubSection = { heading: block.text, blocks: [block] };
+        if (current) subSections.push(current);
+        current = { heading: block.text, blocks: [block] };
         continue;
       }
 
-      if (currentSubSection) {
-        currentSubSection.blocks.push(block);
+      if (current) {
+        current.blocks.push(block);
       } else {
-        currentSubSection = { heading: null, blocks: [block] };
+        current = { heading: null, blocks: [block] };
       }
     }
 
-    if (currentSubSection) subSections.push(currentSubSection);
+    if (current) subSections.push(current);
 
     const formatSection = subSections.find(
       (section) => section.heading?.includes("上演形式") || section.heading?.includes("公演フォーマット")
@@ -242,19 +235,18 @@ const reorderSections = (blocks: Block[]) => {
       (section) => section.heading !== formatSection?.heading && section.heading !== castSection?.heading
     );
 
-    const mergedBlocks: Block[] = [
-      differenceHeading,
-      ...(formatSection?.blocks ?? []),
-      ...(castSection?.blocks ?? []),
-      { type: "h3", text: "初めて観る場合の選び方" },
-      ...choiceSection.blocks.filter((block) => block.type !== "h2" && block.type !== "p"),
-      ...remainingSections.flatMap((section) => section.blocks),
-    ];
-
     orderedSections[differenceIndex] = {
       ...differenceSection,
-      blocks: mergedBlocks,
+      blocks: [
+        differenceSection.blocks[0],
+        ...(formatSection?.blocks ?? []),
+        ...(castSection?.blocks ?? []),
+        { type: "h3", text: "初めて観る場合の選び方" },
+        ...choiceSection.blocks.filter((block) => block.type === "ul"),
+        ...remainingSections.flatMap((section) => section.blocks),
+      ],
     };
+
     orderedSections.splice(choiceIndex, 1);
   }
 
@@ -300,11 +292,7 @@ const findBestPlay = (allPlays: ReturnType<typeof getAllPlays>, rawLabel: string
     );
   });
 
-  if (partial.length > 0) {
-    return partial.sort((a, b) => b.title.length - a.title.length)[0];
-  }
-
-  return null;
+  return partial.sort((a, b) => b.title.length - a.title.length)[0] ?? null;
 };
 
 const renderParagraphPlaceholder = (text: string, guide: GuideDetailData) => {
@@ -557,10 +545,7 @@ const parseLabeledLines = (lines: string[]) => {
     .map((line) => {
       const match = line.match(/^([^：]{1,24})：\s*(.+)$/);
       if (!match) return null;
-      return {
-        label: match[1].trim(),
-        body: match[2].trim(),
-      };
+      return { label: match[1].trim(), body: match[2].trim() };
     })
     .filter(Boolean) as Array<{ label: string; body: string }>;
 
@@ -571,6 +556,9 @@ const isFeatureLines = (lines: string[]) =>
   lines.length >= 3 &&
   lines.length <= 6 &&
   lines.every((line) => line.length <= 22 && !/[。.!?：:]/.test(line));
+
+const shouldOmitSubsectionHeading = (text: string) =>
+  text.includes("刀剣乱舞シリーズの配信状況") || text === "配信状況";
 
 const renderParagraphBlock = (text: string, key: number) => {
   const lines = splitParagraphLines(text);
@@ -615,11 +603,13 @@ const renderParagraphBlock = (text: string, key: number) => {
 
 export function GuideContentRenderer({ content, guide }: Props) {
   const blocks = reorderSections(parseBlocks(content));
+  let skipUntilHeading = false;
 
   return (
     <div className="guide-prose stack-md">
       {blocks.map((block, index) => {
         if (block.type === "h2") {
+          skipUntilHeading = false;
           return (
             <h2 className="guide-prose__h2" key={index}>
               {block.text}
@@ -628,12 +618,20 @@ export function GuideContentRenderer({ content, guide }: Props) {
         }
 
         if (block.type === "h3") {
+          if (shouldOmitSubsectionHeading(block.text)) {
+            skipUntilHeading = true;
+            return null;
+          }
+
+          skipUntilHeading = false;
           return (
             <h3 className="guide-prose__h3" key={index}>
               {block.text}
             </h3>
           );
         }
+
+        if (skipUntilHeading) return null;
 
         if (block.type === "ul") {
           if (isPlayLinkList(block.items)) {
