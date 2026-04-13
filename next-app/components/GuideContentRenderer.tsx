@@ -558,7 +558,9 @@ const isFeatureLines = (lines: string[]) =>
   lines.every((line) => line.length <= 22 && !/[。.!?：:]/.test(line));
 
 const shouldOmitSubsectionHeading = (text: string) =>
-  text.includes("刀剣乱舞シリーズの配信状況") || text === "配信状況";
+  text.includes("刀剣乱舞シリーズの配信状況") ||
+  text === "配信状況" ||
+  text.includes("シリーズ構成と物語の展開方式");
 
 const renderParagraphBlock = (text: string, key: number) => {
   const lines = splitParagraphLines(text);
