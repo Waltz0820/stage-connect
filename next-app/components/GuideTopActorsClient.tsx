@@ -7,6 +7,7 @@ type ActorItem = {
   slug: string;
   name: string;
   count: number;
+  mainRole: string | null;
 };
 
 type SeriesItem = {
@@ -71,6 +72,7 @@ export function GuideTopActorsClient({
         {activeActors.map((actor) => (
           <Link className="cast-card cast-card-link" href={`/actors/${actor.slug}`} key={`${activeFormat}-${actor.slug}`}>
             <div className="cast-name">{actor.name}</div>
+            {actor.mainRole ? <div className="cast-role">主な役: {actor.mainRole}</div> : null}
             <div className="cast-role">{actor.count}作品に出演</div>
           </Link>
         ))}

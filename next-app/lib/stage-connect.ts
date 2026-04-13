@@ -148,11 +148,13 @@ export type GuideDetailData = {
       slug: string;
       name: string;
       count: number;
+      mainRole: string | null;
     }>;
     musical: Array<{
       slug: string;
       name: string;
       count: number;
+      mainRole: string | null;
     }>;
   };
   relatedPlaySections: Array<{
@@ -1420,6 +1422,7 @@ export async function getGuideDetailBySlug(slug: string): Promise<GuideDetailDat
         .select(
           `
           play_id,
+          role_name,
           actor:actors (
             slug,
             name
@@ -1437,6 +1440,7 @@ export async function getGuideDetailBySlug(slug: string): Promise<GuideDetailDat
             slug: string;
             name: string;
             playSet: Set<string>;
+            roleCounts: Map<string, number>;
           }
         >(),
         musical: new Map<
@@ -1445,10 +1449,16 @@ export async function getGuideDetailBySlug(slug: string): Promise<GuideDetailDat
             slug: string;
             name: string;
             playSet: Set<string>;
+            roleCounts: Map<string, number>;
           }
         >(),
       };
       const playFormatById = new Map<string, "stage" | "musical">();
+      const splitGuideRoles = (value?: string | null) =>
+        normalizeDisplayRole(value)
+          .split(/[\/・･]/)
+          .map((item) => normalizeDisplayRole(item))
+          .filter(Boolean);
 
       for (const row of (plays ?? []) as any[]) {
         const playId = String(row?.id ?? "").trim();
@@ -1471,9 +1481,14 @@ export async function getGuideDetailBySlug(slug: string): Promise<GuideDetailDat
           slug: actorSlug,
           name: actorName,
           playSet: new Set<string>(),
+          roleCounts: new Map<string, number>(),
         };
 
         current.playSet.add(playId);
+
+        for (const role of uniq(splitGuideRoles(row?.role_name))) {
+          current.roleCounts.set(role, (current.roleCounts.get(role) ?? 0) + 1);
+        }
         bucket.set(actorSlug, current);
       }
 
@@ -1483,6 +1498,10 @@ export async function getGuideDetailBySlug(slug: string): Promise<GuideDetailDat
             slug: item.slug,
             name: item.name,
             count: item.playSet.size,
+            mainRole:
+              Array.from(item.roleCounts.entries()).sort(
+                (a, b) => b[1] - a[1] || a[0].localeCompare(b[0], "ja")
+              )[0]?.[0] ?? null,
           }))
           .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name, "ja"))
           .slice(0, 12),
@@ -1491,6 +1510,10 @@ export async function getGuideDetailBySlug(slug: string): Promise<GuideDetailDat
             slug: item.slug,
             name: item.name,
             count: item.playSet.size,
+            mainRole:
+              Array.from(item.roleCounts.entries()).sort(
+                (a, b) => b[1] - a[1] || a[0].localeCompare(b[0], "ja")
+              )[0]?.[0] ?? null,
           }))
           .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name, "ja"))
           .slice(0, 12),
