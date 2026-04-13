@@ -143,11 +143,18 @@ export type GuideDetailData = {
     originType: string | null;
     playCount: number;
   }>;
-  topActors: Array<{
-    slug: string;
-    name: string;
-    count: number;
-  }>;
+  topActorsByFormat: {
+    stage: Array<{
+      slug: string;
+      name: string;
+      count: number;
+    }>;
+    musical: Array<{
+      slug: string;
+      name: string;
+      count: number;
+    }>;
+  };
   relatedPlaySections: Array<{
     series: {
       id: string;
@@ -1327,7 +1334,10 @@ export async function getGuideDetailBySlug(slug: string): Promise<GuideDetailDat
     : [];
 
   let relatedSeries: GuideDetailData["relatedSeries"] = [];
-  let topActors: GuideDetailData["topActors"] = [];
+  let topActorsByFormat: GuideDetailData["topActorsByFormat"] = {
+    stage: [],
+    musical: [],
+  };
   let relatedPlaySections: GuideDetailData["relatedPlaySections"] = [];
 
   if (relatedFranchiseIds.length > 0) {
@@ -1420,40 +1430,71 @@ export async function getGuideDetailBySlug(slug: string): Promise<GuideDetailDat
 
       if (castError) throw castError;
 
-      const actorBuckets = new Map<
-        string,
-        {
-          slug: string;
-          name: string;
-          playSet: Set<string>;
-        }
-      >();
+      const actorBucketsByFormat = {
+        stage: new Map<
+          string,
+          {
+            slug: string;
+            name: string;
+            playSet: Set<string>;
+          }
+        >(),
+        musical: new Map<
+          string,
+          {
+            slug: string;
+            name: string;
+            playSet: Set<string>;
+          }
+        >(),
+      };
+      const playFormatById = new Map<string, "stage" | "musical">();
+
+      for (const row of (plays ?? []) as any[]) {
+        const playId = String(row?.id ?? "").trim();
+        const franchiseId = String(row?.franchise_id ?? "").trim();
+        const format = franchiseMap.get(franchiseId)?.format;
+        if (!playId || (format !== "stage" && format !== "musical")) continue;
+        playFormatById.set(playId, format);
+      }
 
       for (const row of (castRows ?? []) as any[]) {
         const actor = Array.isArray(row?.actor) ? row.actor[0] : row?.actor;
         const actorSlug = String(actor?.slug ?? "").trim();
         const actorName = String(actor?.name ?? "").trim();
         const playId = String(row?.play_id ?? "").trim();
-        if (!actorSlug || !actorName || !playId) continue;
+        const format = playFormatById.get(playId);
+        if (!actorSlug || !actorName || !playId || !format) continue;
 
-        const current = actorBuckets.get(actorSlug) ?? {
+        const bucket = actorBucketsByFormat[format];
+        const current = bucket.get(actorSlug) ?? {
           slug: actorSlug,
           name: actorName,
           playSet: new Set<string>(),
         };
 
         current.playSet.add(playId);
-        actorBuckets.set(actorSlug, current);
+        bucket.set(actorSlug, current);
       }
 
-      topActors = Array.from(actorBuckets.values())
-        .map((item) => ({
-          slug: item.slug,
-          name: item.name,
-          count: item.playSet.size,
-        }))
-        .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name, "ja"))
-        .slice(0, 12);
+      topActorsByFormat = {
+        stage: Array.from(actorBucketsByFormat.stage.values())
+          .map((item) => ({
+            slug: item.slug,
+            name: item.name,
+            count: item.playSet.size,
+          }))
+          .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name, "ja"))
+          .slice(0, 12),
+        musical: Array.from(actorBucketsByFormat.musical.values())
+          .map((item) => ({
+            slug: item.slug,
+            name: item.name,
+            count: item.playSet.size,
+          }))
+          .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name, "ja"))
+          .slice(0, 12),
+      };
     }
   }
 
@@ -1467,7 +1508,7 @@ export async function getGuideDetailBySlug(slug: string): Promise<GuideDetailDat
     category: (data.category as "series-guides" | "features" | null) ?? null,
     relatedFranchiseIds,
     relatedSeries,
-    topActors,
+    topActorsByFormat,
     relatedPlaySections,
   };
 }

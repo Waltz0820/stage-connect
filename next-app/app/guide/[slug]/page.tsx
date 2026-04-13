@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "../../../components/Breadcrumbs";
 import { GuideContentRenderer } from "../../../components/GuideContentRenderer";
+import { GuideTopActorsClient } from "../../../components/GuideTopActorsClient";
 import { StructuredData } from "../../../components/StructuredData";
 import { getGuideDetailBySlug, toPlainText, truncate } from "../../../lib/stage-connect";
 
@@ -169,7 +170,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<Para
           </section>
         ) : null}
 
-        {guide.topActors.length > 0 ? (
+        {guide.topActorsByFormat.stage.length > 0 || guide.topActorsByFormat.musical.length > 0 ? (
           <section className="section-card stack-md">
             <div className="stack-sm">
               <h2 className="section-title">主な出演キャスト</h2>
@@ -178,26 +179,12 @@ export default async function GuideDetailPage({ params }: { params: Promise<Para
               </p>
             </div>
 
-            <div className="cast-grid cast-grid-wide">
-              {guide.topActors.map((actor) => (
-                <Link className="cast-card cast-card-link" href={`/actors/${actor.slug}`} key={actor.slug}>
-                  <div className="cast-name">{actor.name}</div>
-                  <div className="cast-role">{actor.count}作品に出演</div>
-                </Link>
-              ))}
-            </div>
-
-            {!hasInlineSeriesLinks && guide.relatedSeries.length > 0 ? (
-              <div className="guide-inline-actions">
-                {guide.relatedSeries
-                  .filter((series) => series.slug)
-                  .map((series) => (
-                    <Link className="action-button" href={`/series/${series.slug}`} key={series.id}>
-                      {series.name}の全作品を見る
-                    </Link>
-                  ))}
-              </div>
-            ) : null}
+            <GuideTopActorsClient
+              stageActors={guide.topActorsByFormat.stage}
+              musicalActors={guide.topActorsByFormat.musical}
+              relatedSeries={guide.relatedSeries}
+              hideSeriesLinks={hasInlineSeriesLinks}
+            />
           </section>
         ) : null}
 
