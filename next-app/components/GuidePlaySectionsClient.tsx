@@ -28,7 +28,7 @@ type Props = {
 const INITIAL_VISIBLE = 5;
 
 const summarizePeriod = (period?: string | null) => {
-  if (!period) return "公開時期未定";
+  if (!period) return "公演時期未定";
   const match = period.match(/(\d{4})\D{0,2}(\d{1,2})/);
   if (!match) return period;
   return `${match[1]}/${match[2].padStart(2, "0")}-`;
@@ -93,7 +93,7 @@ export function GuidePlaySectionsClient({ sections }: Props) {
                     </div>
 
                     <div className="guide-play-row__actions">
-                      <Link className="catalog-link" href={`/plays/${play.slug}`}>
+                      <Link className="catalog-link guide-play-row__link" href={`/plays/${play.slug}`}>
                         作品詳細
                       </Link>
                       {play.vod?.dmm ? (
@@ -114,7 +114,7 @@ export function GuidePlaySectionsClient({ sections }: Props) {
 
             {hiddenCount > 0 ? (
               <button type="button" className="action-button" onClick={() => toggle(section.series.id)}>
-                {isOpen ? "折りたたむ" : `すべて見る（残り ${hiddenCount} 件）`}
+                {isOpen ? "閉じる" : `すべて見る（残り ${hiddenCount} 件）`}
               </button>
             ) : null}
           </div>
