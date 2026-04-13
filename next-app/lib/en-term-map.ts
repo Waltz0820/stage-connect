@@ -1,0 +1,167 @@
+// Touken Ranbu-first English fallback dictionary.
+// We keep this lightweight on purpose so we can expand it as more series are translated.
+
+export const EN_EXACT_TERM_MAP: Record<string, string> = {
+  // Companies / orgs
+  "ネルケプランニング": "Nelke Planning",
+  "マーベラス": "Marvelous",
+  "ニトロプラス": "Nitroplus",
+  "DMM GAMES": "DMM GAMES",
+  "ユークリッド・エージェンシー": "Euclid Agency",
+
+  // Common labels
+  "刀剣乱舞": "Touken Ranbu",
+  "刀ステ": "Touken Ranbu: The Stage",
+  "刀ミュ": "Touken Ranbu: The Musical",
+  "真剣乱舞祭": "Shinken Ranbu Festival",
+  "単独行": "Solo Performance",
+  "日替わり出演": "Rotating appearance",
+  "会場替わり出演": "Venue-specific appearance",
+  "複数役": "Multiple roles",
+  "再登場": "Returning appearance",
+
+  // Sword warriors / role names
+  "加州清光": "Kashu Kiyomitsu",
+  "三日月宗近": "Mikazuki Munechika",
+  "大和守安定": "Yamatonokami Yasusada",
+  "和泉守兼定": "Izuminokami Kanesada",
+  "堀川国広": "Horikawa Kunihiro",
+  "長曽祢虎徹": "Nagasone Kotetsu",
+  "蜂須賀虎徹": "Hachisuka Kotetsu",
+  "小狐丸": "Kogitsunemaru",
+  "大包平": "Okanehira",
+  "太閤左文字": "Taiko Samonji",
+  "石切丸": "Ishikirimaru",
+  "岩融": "Iwatooshi",
+  "今剣": "Imanotsurugi",
+  "にっかり青江": "Nikkari Aoe",
+  "千子村正": "Sengo Muramasa",
+  "蜻蛉切": "Tonbokiri",
+  "物吉貞宗": "Monoyoshi Sadamune",
+  "大倶利伽羅": "Ookurikara",
+  "陸奥守吉行": "Mutsunokami Yoshiyuki",
+  "巴形薙刀": "Tomoegata Naginata",
+  "明石国行": "Akashi Kuniyuki",
+  "鶴丸国永": "Tsurumaru Kuninaga",
+  "御手杵": "Otegine",
+  "篭手切江": "Kotegiri Gou",
+  "豊前江": "Buzen Gou",
+  "桑名江": "Kuwana Gou",
+  "松井江": "Matsui Gou",
+  "五月雨江": "Samidare Gou",
+  "村雲江": "Murakumo Gou",
+  "稲葉江": "Inaba Gou",
+  "日向正宗": "Hyuga Masamune",
+  "浦島虎徹": "Urashima Kotetsu",
+  "ソハヤノツルキ": "Sohayanotsurugi",
+  "大典太光世": "Oodenta Mitsuyo",
+  "水心子正秀": "Suishinshi Masahide",
+  "源清麿": "Minamoto Kiyomaro",
+  "鬼丸国綱": "Onimaru Kunitsuna",
+  "一期一振": "Ichigo Hitofuri",
+  "鯰尾藤四郎": "Namazuo Toushirou",
+  "骨喰藤四郎": "Honebami Toushirou",
+  "薬研藤四郎": "Yagen Toushirou",
+  "前田藤四郎": "Maeda Toushirou",
+  "平野藤四郎": "Hirano Toushirou",
+  "厚藤四郎": "Atsushi Toushirou",
+  "後藤藤四郎": "Gotou Toushirou",
+  "信濃藤四郎": "Shinano Toushirou",
+  "秋田藤四郎": "Akita Toushirou",
+  "博多藤四郎": "Hakata Toushirou",
+  "乱藤四郎": "Midare Toushirou",
+  "五虎退": "Gokotai",
+  "毛利藤四郎": "Mouri Toushirou",
+  "白山吉光": "Hakusan Yoshimitsu",
+  "山姥切国広": "Yamanbagiri Kunihiro",
+  "山姥切長義": "Yamanbagiri Chougi",
+  "へし切長谷部": "Heshikiri Hasebe",
+  "不動行光": "Fudou Yukimitsu",
+  "髭切": "Higekiri",
+  "膝丸": "Hizamaru",
+  "獅子王": "Shishiou",
+  "小烏丸": "Kogarasumaru",
+  "笹貫": "Sasanuki",
+  "後家兼光": "Goke Kanemitsu",
+  "大慶直胤": "Taikei Naotane",
+  "八丁念仏": "Hatchou Nenbutsu",
+  "肥前忠広": "Hizen Tadahiro",
+  "南海太郎朝尊": "Nankaitarou Chouson",
+  "大般若長光": "Daihannya Nagamitsu",
+  "燭台切光忠": "Shokudaikiri Mitsutada",
+  "福島光忠": "Fukushima Mitsutada",
+  "実休光忠": "Jikkyu Mitsutada",
+  "太鼓鐘貞宗": "Taikogane Sadamune",
+  "亀甲貞宗": "Kikkou Sadamune",
+  "千代金丸": "Chiyoganemaru",
+  "北谷菜切": "Chatanakiri",
+  "治金丸": "Chiganemaru",
+  "大千鳥十文字槍": "Oochidori Juumonjiyari",
+  "泛塵": "Hanjin",
+  "人間無骨": "Ningen Mukotsu",
+  "南泉一文字": "Nansen Ichimonji",
+  "山鳥毛": "Sanchoumou",
+  "日光一文字": "Nikko Ichimonji",
+  "姫鶴一文字": "Himetsuru Ichimonji",
+  "則宗": "Norimune",
+  "七星剣": "Shichiseiken",
+  "抜丸": "Nukemaru",
+  "石田正宗": "Ishida Masamune",
+  "京極正宗": "Kyogoku Masamune",
+  "孫六兼元": "Magoroku Kanemoto",
+  "火車切": "Kashagiri",
+  "九鬼正宗": "Kuki Masamune",
+  "雲生": "Unsho",
+  "太郎太刀": "Taroutachi",
+  "次郎太刀": "Jiroutachi",
+  "日本号": "Nihongou",
+  "同田貫正国": "Doudanuki Masakuni",
+  "数珠丸恒次": "Juzumaru Tsunetsugu",
+  "江雪左文字": "Kousetsu Samonji",
+  "宗三左文字": "Souza Samonji",
+  "小夜左文字": "Sayo Samonji",
+  "歌仙兼定": "Kasen Kanesada",
+  "鳴狐": "Nanakigitsune",
+  "蛍丸": "Hotarumaru",
+  "愛染国俊": "Aizen Kunitoshi",
+  "静形薙刀": "Shizukagata Naginata",
+  "祢々切丸": "Nenekirimaru",
+  "白雲木": "Shirakumogi",
+  "富田江": "Tomita Gou",
+  "大野剣": "Oonoken",
+};
+
+export const EN_PARTIAL_TERM_MAP: Array<[string, string]> = [
+  ["舞台『刀剣乱舞』", "Touken Ranbu: The Stage"],
+  ["ミュージカル『刀剣乱舞』", "Touken Ranbu: The Musical"],
+  ["『刀剣乱舞』", '"Touken Ranbu"'],
+  ["刀剣乱舞", "Touken Ranbu"],
+  ["真剣乱舞祭", "Shinken Ranbu Festival"],
+  ["歌合 乱舞狂乱", "Uta-awase Ranbu Kyouran"],
+  ["壽 乱舞音曲祭", "Kotobuki Ranbu Ongyokusai"],
+  ["単独行", "Solo Performance"],
+  ["阿津賀志山異聞", "Atsukashiyama Ibun"],
+  ["幕末天狼傳", "Bakumatsu Tenro Den"],
+  ["三百年の子守唄", "Three Hundred Years' Lullaby"],
+  ["つはものどもがゆめのあと", "Tsuwamonodomo ga Yume no Ato"],
+  ["結びの響、始まりの音", "The Sound of Ties, The First Note"],
+];
+
+export const translateExactTermEn = (value?: string | null) => {
+  const raw = String(value ?? "").trim();
+  if (!raw) return "";
+  return EN_EXACT_TERM_MAP[raw] ?? raw;
+};
+
+export const translateKnownTermsEn = (value?: string | null) => {
+  const raw = String(value ?? "").trim();
+  if (!raw) return "";
+
+  if (EN_EXACT_TERM_MAP[raw]) return EN_EXACT_TERM_MAP[raw];
+
+  let next = raw;
+  for (const [source, target] of EN_PARTIAL_TERM_MAP) {
+    next = next.replaceAll(source, target);
+  }
+  return next;
+};

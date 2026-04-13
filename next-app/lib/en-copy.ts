@@ -1,3 +1,5 @@
+import { translateKnownTermsEn } from "./en-term-map";
+
 export const EN_FORMAT_LABELS: Record<string, string> = {
   stage: "Stage",
   musical: "Musical",
@@ -147,7 +149,7 @@ export const getEnglishSeriesName = (series: {
 }) => {
   const direct = String(series.nameEn ?? "").trim();
   if (direct) return direct;
-  return String(series.name ?? "").trim();
+  return translateKnownTermsEn(series.name);
 };
 
 export const truncateText = (text: string, max: number) =>
