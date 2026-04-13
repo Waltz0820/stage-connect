@@ -148,7 +148,7 @@ const parseBlocks = (content: string): Block[] => {
       index += 1;
     }
 
-    blocks.push({ type: "p", text: paragraph.join(" ") });
+    blocks.push({ type: "p", text: paragraph.join("\n") });
   }
 
   return blocks;
@@ -491,6 +491,56 @@ const renderListItem = (item: string, guide: GuideDetailData, key: number) => {
   );
 };
 
+const splitParagraphLines = (text: string) =>
+  text
+    .split("\n")
+    .map((line) => line.trim())
+    .filter(Boolean);
+
+const parseLabeledLines = (lines: string[]) => {
+  const parsed = lines
+    .map((line) => {
+      const match = line.match(/^([^：]{1,24})：\s*(.+)$/);
+      if (!match) return null;
+      return {
+        label: match[1].trim(),
+        body: match[2].trim(),
+      };
+    })
+    .filter(Boolean) as Array<{ label: string; body: string }>;
+
+  return parsed.length >= 2 && parsed.length === lines.length ? parsed : null;
+};
+
+const renderParagraphBlock = (text: string, key: number) => {
+  const lines = splitParagraphLines(text);
+  const labeledLines = parseLabeledLines(lines);
+
+  if (labeledLines) {
+    return (
+      <div className="guide-compare-list" key={key}>
+        {labeledLines.map((item, index) => (
+          <div className="guide-compare-item" key={`${item.label}-${index}`}>
+            <div className="guide-compare-item__label">{item.label}</div>
+            <div className="guide-compare-item__body">{parseInline(item.body)}</div>
+          </div>
+        ))}
+      </div>
+    );
+  }
+
+  return (
+    <p className="guide-prose__p" key={key}>
+      {lines.map((line, index) => (
+        <React.Fragment key={index}>
+          {parseInline(line)}
+          {index < lines.length - 1 ? <br /> : null}
+        </React.Fragment>
+      ))}
+    </p>
+  );
+};
+
 export function GuideContentRenderer({ content, guide }: Props) {
   const blocks = reorderSections(parseBlocks(content));
 
@@ -568,11 +618,7 @@ export function GuideContentRenderer({ content, guide }: Props) {
           return <React.Fragment key={index}>{placeholder}</React.Fragment>;
         }
 
-        return (
-          <p className="guide-prose__p" key={index}>
-            {parseInline(block.text)}
-          </p>
-        );
+        return renderParagraphBlock(block.text, index);
       })}
     </div>
   );
