@@ -194,13 +194,18 @@ const getSectionPriority = (heading: string) => {
   return 100;
 };
 
+const shouldOmitSection = (heading: string) =>
+  heading.includes("配信状況") || heading.includes("刀剣乱舞シリーズの配信状況");
+
 const reorderSections = (blocks: Block[]) => {
   const { introBlocks, sections } = splitSections(blocks);
-  const orderedSections = [...sections].sort((a, b) => {
+  const orderedSections = [...sections]
+    .filter((section) => !shouldOmitSection(section.heading))
+    .sort((a, b) => {
     const diff = getSectionPriority(a.heading) - getSectionPriority(b.heading);
     if (diff !== 0) return diff;
     return a.originalIndex - b.originalIndex;
-  });
+    });
 
   const differenceIndex = orderedSections.findIndex((section) => getSectionPriority(section.heading) === 10);
   const choiceIndex = orderedSections.findIndex((section) => getSectionPriority(section.heading) === 20);
