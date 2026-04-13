@@ -211,10 +211,49 @@ const reorderSections = (blocks: Block[]) => {
   if (differenceIndex !== -1 && choiceIndex !== -1 && choiceIndex > differenceIndex) {
     const differenceSection = orderedSections[differenceIndex];
     const choiceSection = orderedSections[choiceIndex];
+    const differenceBlocks = differenceSection.blocks;
+    const differenceHeading = differenceBlocks[0];
+    const subSections: Array<{ heading: string | null; blocks: Block[] }> = [];
+    let currentSubSection: { heading: string | null; blocks: Block[] } | null = null;
+
+    for (const block of differenceBlocks.slice(1)) {
+      if (block.type === "h3") {
+        if (currentSubSection) subSections.push(currentSubSection);
+        currentSubSection = { heading: block.text, blocks: [block] };
+        continue;
+      }
+
+      if (currentSubSection) {
+        currentSubSection.blocks.push(block);
+      } else {
+        currentSubSection = { heading: null, blocks: [block] };
+      }
+    }
+
+    if (currentSubSection) subSections.push(currentSubSection);
+
+    const formatSection = subSections.find(
+      (section) => section.heading?.includes("上演形式") || section.heading?.includes("公演フォーマット")
+    );
+    const castSection = subSections.find((section) => section.heading?.includes("キャスト構成"));
+    const storySection = subSections.find(
+      (section) => section.heading?.includes("シリーズ構成") || section.heading?.includes("物語の展開方式")
+    );
+    const usedHeadings = new Set(
+      [formatSection?.heading, castSection?.heading, storySection?.heading].filter(Boolean)
+    );
+    const remainingSections = subSections.filter(
+      (section) => !(section.heading && usedHeadings.has(section.heading))
+    );
+
     const mergedBlocks: Block[] = [
-      ...differenceSection.blocks,
+      differenceHeading,
+      ...(formatSection?.blocks ?? []),
+      ...(castSection?.blocks ?? []),
+      ...(storySection?.blocks ?? []),
       { type: "h3", text: "初めて観る場合の選び方" },
       ...choiceSection.blocks.filter((block) => block.type !== "h2"),
+      ...remainingSections.flatMap((section) => section.blocks),
     ];
 
     orderedSections[differenceIndex] = {
