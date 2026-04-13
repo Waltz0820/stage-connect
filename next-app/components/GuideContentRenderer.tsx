@@ -75,18 +75,13 @@ export const headingToId = (text: string) =>
     .toLowerCase()
     .slice(0, 60);
 
-/**
- * Extract h2 headings from guide markdown content for TOC rendering.
- */
 export const extractTocHeadings = (content: string): Array<{ id: string; text: string }> =>
-  content
-    .replace(/\r\n/g, "\n")
-    .split("\n")
-    .filter((line) => line.trim().startsWith("## "))
-    .map((line) => {
-      const text = line.trim().slice(3).trim();
-      return { id: headingToId(text), text };
-    });
+  reorderSections(parseBlocks(content))
+    .filter((block): block is Extract<Block, { type: "h2" }> => block.type === "h2")
+    .map((block) => ({
+      id: headingToId(block.text),
+      text: block.text,
+    }));
 
 const escapeRegExp = (value: string) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 

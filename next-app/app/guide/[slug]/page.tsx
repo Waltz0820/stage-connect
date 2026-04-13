@@ -67,6 +67,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<Para
     (sum, section) => sum + section.plays.filter((play) => Boolean(play.vod?.dmm)).length,
     0
   );
+  const tocItems = guide.content ? extractTocHeadings(guide.content) : [];
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -118,37 +119,28 @@ export default async function GuideDetailPage({ params }: { params: Promise<Para
           ) : null}
         </section>
 
-        {/* --- 目次 --- */}
-        {guide.content ? (() => {
-          const tocItems = extractTocHeadings(guide.content);
-          if (tocItems.length < 2) return null;
-          return (
-            <nav className="section-card guide-toc" aria-label="目次">
-              <h2 className="guide-toc__title">目次</h2>
-              <ol className="guide-toc__list">
-                {tocItems.map((item) => (
-                  <li key={item.id} className="guide-toc__item">
-                    <a className="guide-toc__link" href={`#${item.id}`}>
-                      {item.text}
-                    </a>
-                  </li>
-                ))}
-                {guide.relatedSeries.length > 0 ? (
-                  <li className="guide-toc__item guide-toc__item--sub">
-                    <a className="guide-toc__link" href="#related-series">関連シリーズ</a>
-                  </li>
-                ) : null}
-                {(guide.topActorsByFormat.stage.length > 0 || guide.topActorsByFormat.musical.length > 0) ? (
-                  <li className="guide-toc__item guide-toc__item--sub">
-                    <a className="guide-toc__link" href="#top-cast">主な出演キャスト</a>
-                  </li>
-                ) : null}
-              </ol>
-            </nav>
-          );
-        })() : null}
+        {tocItems.length >= 2 ? (
+          <nav className="section-card guide-toc" aria-label="目次">
+            <h2 className="guide-toc__title">目次</h2>
+            <ol className="guide-toc__list">
+              {tocItems.map((item) => (
+                <li key={item.id} className="guide-toc__item">
+                  <a className="guide-toc__link" href={`#${item.id}`}>
+                    {item.text}
+                  </a>
+                </li>
+              ))}
+              {(guide.topActorsByFormat.stage.length > 0 || guide.topActorsByFormat.musical.length > 0) ? (
+                <li className="guide-toc__item guide-toc__item--sub">
+                  <a className="guide-toc__link" href="#top-cast">
+                    主な出演キャスト
+                  </a>
+                </li>
+              ) : null}
+            </ol>
+          </nav>
+        ) : null}
 
-        {/* --- 本文 --- */}
         {guide.content ? (
           <section className="section-card stack-md">
             <GuideContentRenderer content={guide.content} guide={guide} />
@@ -157,8 +149,10 @@ export default async function GuideDetailPage({ params }: { params: Promise<Para
 
         {guide.topActorsByFormat.stage.length > 0 || guide.topActorsByFormat.musical.length > 0 ? (
           <section className="section-card stack-md">
-           <div className="stack-sm">
-              <h2 className="section-title" id="top-cast">主な出演キャスト</h2>
+            <div className="stack-sm">
+              <h2 className="section-title" id="top-cast">
+                主な出演キャスト
+              </h2>
               <p className="catalog-note">舞台 / ミュージカル それぞれの主な出演者を掲載しています。</p>
             </div>
 
