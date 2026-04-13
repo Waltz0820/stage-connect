@@ -889,13 +889,35 @@ export async function getSeriesDetailBySlug(slug: string): Promise<SeriesDetailD
       .maybeSingle();
 
       if (res.error && /(related_franchise_ids|description_en|name_en)/i.test(String(res.error.message ?? ""))) {
+        const message = String(res.error.message ?? "");
+        const includeDescriptionEn = !/description_en/i.test(message);
         const fallback = await supabase
           .from("franchises")
-          .select("id, name, slug, description, description_en, origin_type, origin_note, production_companies")
+          .select(
+            [
+              "id",
+              "name",
+              "slug",
+              "description",
+              includeDescriptionEn ? "description_en" : null,
+              "origin_type",
+              "origin_note",
+              "production_companies",
+            ]
+              .filter(Boolean)
+              .join(", ")
+          )
           .eq("slug", slug)
           .maybeSingle();
       if (fallback.error) throw fallback.error;
-      franchise = fallback.data ? { ...fallback.data, name_en: null, related_franchise_ids: [] } : null;
+      franchise = fallback.data
+        ? {
+            ...(fallback.data as any),
+            name_en: null,
+            ...(includeDescriptionEn ? {} : { description_en: null }),
+            related_franchise_ids: [],
+          }
+        : null;
     } else {
       if (res.error) throw res.error;
       franchise = res.data;
@@ -911,13 +933,35 @@ export async function getSeriesDetailBySlug(slug: string): Promise<SeriesDetailD
       .eq("name", slug)
       .maybeSingle();
       if (res.error && /(related_franchise_ids|description_en|name_en)/i.test(String(res.error.message ?? ""))) {
+        const message = String(res.error.message ?? "");
+        const includeDescriptionEn = !/description_en/i.test(message);
         const fallback = await supabase
           .from("franchises")
-          .select("id, name, slug, description, description_en, origin_type, origin_note, production_companies")
+          .select(
+            [
+              "id",
+              "name",
+              "slug",
+              "description",
+              includeDescriptionEn ? "description_en" : null,
+              "origin_type",
+              "origin_note",
+              "production_companies",
+            ]
+              .filter(Boolean)
+              .join(", ")
+          )
           .eq("name", slug)
           .maybeSingle();
       if (fallback.error) throw fallback.error;
-      franchise = fallback.data ? { ...fallback.data, name_en: null, related_franchise_ids: [] } : null;
+      franchise = fallback.data
+        ? {
+            ...(fallback.data as any),
+            name_en: null,
+            ...(includeDescriptionEn ? {} : { description_en: null }),
+            related_franchise_ids: [],
+          }
+        : null;
     } else {
       if (res.error) throw res.error;
       franchise = res.data;
@@ -1026,15 +1070,28 @@ export async function getSeriesDetailBySlug(slug: string): Promise<SeriesDetailD
     }
 
     if (relatedError && /(description_en|name_en)/i.test(String(relatedError.message ?? ""))) {
+      const message = String(relatedError.message ?? "");
+      const includeDescriptionEn = !/description_en/i.test(message);
       const fallback = await supabase
         .from("franchises")
-        .select("id, slug, name, description, origin_type")
+        .select(
+          [
+            "id",
+            "slug",
+            "name",
+            includeDescriptionEn ? "description_en" : null,
+            "description",
+            "origin_type",
+          ]
+            .filter(Boolean)
+            .join(", ")
+        )
         .in("id", relatedFranchiseIds);
       relatedRows =
         (fallback.data as any[] | null)?.map((row) => ({
           ...row,
           name_en: null,
-          description_en: null,
+          ...(includeDescriptionEn ? {} : { description_en: null }),
         })) ?? null;
       relatedError = fallback.error;
     }
@@ -1419,15 +1476,29 @@ export async function getSeriesList(): Promise<SeriesListItem[]> {
   }
 
   if (franchiseError && /(description_en|name_en)/i.test(String(franchiseError.message ?? ""))) {
+    const message = String(franchiseError.message ?? "");
+    const includeDescriptionEn = !/description_en/i.test(message);
     const fallback = await supabase
       .from("franchises")
-      .select("id, slug, name, description, format, origin_type")
+      .select(
+        [
+          "id",
+          "slug",
+          "name",
+          "description",
+          includeDescriptionEn ? "description_en" : null,
+          "format",
+          "origin_type",
+        ]
+          .filter(Boolean)
+          .join(", ")
+      )
       .order("name", { ascending: true });
     franchises =
       (fallback.data as any[] | null)?.map((row) => ({
         ...row,
         name_en: null,
-        description_en: null,
+        ...(includeDescriptionEn ? {} : { description_en: null }),
       })) ?? null;
     franchiseError = fallback.error;
   }
