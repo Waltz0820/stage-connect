@@ -194,31 +194,39 @@ const findBestPlay = (allPlays: ReturnType<typeof getAllPlays>, rawLabel: string
 
 const renderParagraphPlaceholder = (text: string, guide: GuideDetailData) => {
   const normalized = text.replace(/`/g, "").trim();
+  const hasStageSeries = normalized.includes(STAGE_SERIES_PLACEHOLDER);
+  const hasMusicalSeries = normalized.includes(MUSICAL_SERIES_PLACEHOLDER);
+  const hasDmmButton = normalized.includes(DMM_BUTTON_PLACEHOLDER);
+  const hasWatchButton = normalized.includes(WATCH_BUTTON_PLACEHOLDER);
   const actions: React.ReactNode[] = [];
 
-  if (normalized.includes(STAGE_SERIES_PLACEHOLDER)) {
+  if (hasStageSeries && hasMusicalSeries && !hasDmmButton && !hasWatchButton) {
+    return null;
+  }
+
+  if (hasStageSeries) {
     const target = findSeriesByFormat(guide, "stage");
     if (target?.slug) {
       actions.push(
         <Link className="action-button" href={`/series/${target.slug}`} key="stage-series">
-          刀ステ シリーズ一覧を見る
+          刀ステ 作品一覧を見る
         </Link>
       );
     }
   }
 
-  if (normalized.includes(MUSICAL_SERIES_PLACEHOLDER)) {
+  if (hasMusicalSeries) {
     const target = findSeriesByFormat(guide, "musical");
     if (target?.slug) {
       actions.push(
         <Link className="action-button" href={`/series/${target.slug}`} key="musical-series">
-          刀ミュ シリーズ一覧を見る
+          刀ミュ 作品一覧を見る
         </Link>
       );
     }
   }
 
-  if (normalized.includes(DMM_BUTTON_PLACEHOLDER)) {
+  if (hasDmmButton) {
     actions.push(
       <a className="action-button" href="/watch/dmm" key="dmm">
         DMM TVで『刀剣乱舞』シリーズを見る
@@ -226,7 +234,7 @@ const renderParagraphPlaceholder = (text: string, guide: GuideDetailData) => {
     );
   }
 
-  if (normalized.includes(WATCH_BUTTON_PLACEHOLDER)) {
+  if (hasWatchButton) {
     actions.push(
       <Link className="action-button" href="/watch" key="watch">
         Stage Connect 配信ステータス一覧を見る
@@ -265,7 +273,7 @@ const renderChoiceGrid = (items: string[], guide: GuideDetailData, blockKey: num
 
       return {
         hint: hintPart,
-        label: labelPart,
+        label: format === "stage" ? "刀ステ 作品一覧" : "刀ミュ 作品一覧",
         href: `/series/${series.slug}`,
       };
     })
