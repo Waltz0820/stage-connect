@@ -428,6 +428,9 @@ export async function getPlayDetailBySlug(slug: string): Promise<PlayDetailData 
   }
 
   if (playError && /(summary_en|name_en)/i.test(String(playError.message ?? ""))) {
+    const message = String(playError.message ?? "");
+    const includeSummaryEn = !/summary_en/i.test(message);
+    const includeFranchiseNameEn = !/name_en/i.test(message);
     const fallback = await supabase
       .from("plays")
       .select(
@@ -436,12 +439,14 @@ export async function getPlayDetailBySlug(slug: string): Promise<PlayDetailData 
         slug,
         title,
         summary,
+        ${includeSummaryEn ? "summary_en," : ""}
         period,
         venue,
         vod,
         credits,
         franchise:franchises (
           name,
+          ${includeFranchiseNameEn ? "name_en," : ""}
           slug
         ),
         play_tags:play_tags (
@@ -453,17 +458,24 @@ export async function getPlayDetailBySlug(slug: string): Promise<PlayDetailData 
       )
       .eq("slug", slug)
       .maybeSingle();
-    play = fallback.data
+    const fallbackPlay = fallback.data as any;
+    play = fallbackPlay
       ? {
-          ...fallback.data,
-          summary_en: null,
-          franchise: Array.isArray(fallback.data?.franchise)
-            ? fallback.data.franchise.map((item: any) => ({ ...item, name_en: null }))
-            : fallback.data?.franchise
-              ? { ...(fallback.data.franchise as any), name_en: null }
-              : fallback.data?.franchise,
+          ...fallbackPlay,
+          ...(includeSummaryEn ? {} : { summary_en: null }),
+          franchise: Array.isArray(fallbackPlay?.franchise)
+            ? fallbackPlay.franchise.map((item: any) => ({
+                ...item,
+                ...(includeFranchiseNameEn ? {} : { name_en: null }),
+              }))
+            : fallbackPlay?.franchise
+              ? {
+                  ...(fallbackPlay.franchise as any),
+                  ...(includeFranchiseNameEn ? {} : { name_en: null }),
+                }
+              : fallbackPlay?.franchise,
         }
-      : fallback.data;
+      : fallbackPlay;
     playError = fallback.error;
   }
 
@@ -697,7 +709,7 @@ export async function getActorDetailBySlug(slug: string): Promise<ActorDetailDat
     }
   >();
 
-    for (const row of (castRows ?? []) as any[]) {
+  for (const row of (actorCastRows ?? []) as any[]) {
     const play = Array.isArray(row?.play) ? row.play[0] : row?.play;
     const playSlug = String(play?.slug ?? "").trim();
     const title = String(play?.title ?? "").trim();
@@ -891,12 +903,14 @@ export async function getSeriesDetailBySlug(slug: string): Promise<SeriesDetailD
       if (res.error && /(related_franchise_ids|description_en|name_en)/i.test(String(res.error.message ?? ""))) {
         const message = String(res.error.message ?? "");
         const includeDescriptionEn = !/description_en/i.test(message);
+        const includeNameEn = !/name_en/i.test(message);
         const fallback = await supabase
           .from("franchises")
           .select(
             [
               "id",
               "name",
+              includeNameEn ? "name_en" : null,
               "slug",
               "description",
               includeDescriptionEn ? "description_en" : null,
@@ -913,7 +927,7 @@ export async function getSeriesDetailBySlug(slug: string): Promise<SeriesDetailD
       franchise = fallback.data
         ? {
             ...(fallback.data as any),
-            name_en: null,
+            ...(includeNameEn ? {} : { name_en: null }),
             ...(includeDescriptionEn ? {} : { description_en: null }),
             related_franchise_ids: [],
           }
@@ -935,12 +949,14 @@ export async function getSeriesDetailBySlug(slug: string): Promise<SeriesDetailD
       if (res.error && /(related_franchise_ids|description_en|name_en)/i.test(String(res.error.message ?? ""))) {
         const message = String(res.error.message ?? "");
         const includeDescriptionEn = !/description_en/i.test(message);
+        const includeNameEn = !/name_en/i.test(message);
         const fallback = await supabase
           .from("franchises")
           .select(
             [
               "id",
               "name",
+              includeNameEn ? "name_en" : null,
               "slug",
               "description",
               includeDescriptionEn ? "description_en" : null,
@@ -957,7 +973,7 @@ export async function getSeriesDetailBySlug(slug: string): Promise<SeriesDetailD
       franchise = fallback.data
         ? {
             ...(fallback.data as any),
-            name_en: null,
+            ...(includeNameEn ? {} : { name_en: null }),
             ...(includeDescriptionEn ? {} : { description_en: null }),
             related_franchise_ids: [],
           }
@@ -1072,6 +1088,7 @@ export async function getSeriesDetailBySlug(slug: string): Promise<SeriesDetailD
     if (relatedError && /(description_en|name_en)/i.test(String(relatedError.message ?? ""))) {
       const message = String(relatedError.message ?? "");
       const includeDescriptionEn = !/description_en/i.test(message);
+      const includeNameEn = !/name_en/i.test(message);
       const fallback = await supabase
         .from("franchises")
         .select(
@@ -1079,6 +1096,7 @@ export async function getSeriesDetailBySlug(slug: string): Promise<SeriesDetailD
             "id",
             "slug",
             "name",
+            includeNameEn ? "name_en" : null,
             includeDescriptionEn ? "description_en" : null,
             "description",
             "origin_type",
@@ -1090,7 +1108,7 @@ export async function getSeriesDetailBySlug(slug: string): Promise<SeriesDetailD
       relatedRows =
         (fallback.data as any[] | null)?.map((row) => ({
           ...row,
-          name_en: null,
+          ...(includeNameEn ? {} : { name_en: null }),
           ...(includeDescriptionEn ? {} : { description_en: null }),
         })) ?? null;
       relatedError = fallback.error;
@@ -1322,6 +1340,9 @@ export async function getPlayList(): Promise<PlayListItem[]> {
   }
 
   if (error && /(summary_en|name_en)/i.test(String(error.message ?? ""))) {
+    const message = String(error.message ?? "");
+    const includeSummaryEn = !/summary_en/i.test(message);
+    const includeFranchiseNameEn = !/name_en/i.test(message);
     const fallback = await supabase
       .from("plays")
       .select(
@@ -1329,12 +1350,14 @@ export async function getPlayList(): Promise<PlayListItem[]> {
         slug,
         title,
         summary,
+        ${includeSummaryEn ? "summary_en," : ""}
         period,
         vod,
         genre,
         created_at,
         franchise:franchises (
           name,
+          ${includeFranchiseNameEn ? "name_en," : ""}
           format
         )
       `
@@ -1342,11 +1365,14 @@ export async function getPlayList(): Promise<PlayListItem[]> {
     data =
       (fallback.data as any[] | null)?.map((row) => ({
         ...row,
-        summary_en: null,
+        ...(includeSummaryEn ? {} : { summary_en: null }),
         franchise: Array.isArray(row?.franchise)
-          ? row.franchise.map((item: any) => ({ ...item, name_en: null }))
+          ? row.franchise.map((item: any) => ({
+              ...item,
+              ...(includeFranchiseNameEn ? {} : { name_en: null }),
+            }))
           : row?.franchise
-            ? { ...row.franchise, name_en: null }
+            ? { ...row.franchise, ...(includeFranchiseNameEn ? {} : { name_en: null }) }
             : row?.franchise,
       })) ?? null;
     error = fallback.error;

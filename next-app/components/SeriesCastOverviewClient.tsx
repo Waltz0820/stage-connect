@@ -8,6 +8,7 @@ type TopActor = {
   actor: {
     slug: string;
     name: string;
+    nameEn?: string | null;
   };
   count: number;
   roles: string[];
@@ -78,7 +79,7 @@ export function SeriesCastOverviewClient({ topActors }: Props) {
                 <span className="series-rank-badge">{index + 1}</span>
                 <div className="series-rank-count">{isEnglish ? `${item.count} plays` : `${item.count} 作品`}</div>
               </div>
-              <div className="cast-name">{item.actor.name}</div>
+              <div className="cast-name">{isEnglish ? item.actor.nameEn || item.actor.name : item.actor.name}</div>
               {summarizeGroups(item.groups, isEnglish) ? (
                 <div className="subtle-line" style={{ marginTop: 6 }}>
                   {summarizeGroups(item.groups, isEnglish)}
@@ -96,7 +97,7 @@ export function SeriesCastOverviewClient({ topActors }: Props) {
                 <span className="series-rank-badge">{index + 1}</span>
                 <div className="series-rank-count">{isEnglish ? `${item.count} plays` : `${item.count} 作品`}</div>
               </div>
-              <div className="cast-name">{item.actor.name}</div>
+              <div className="cast-name">{isEnglish ? item.actor.nameEn || item.actor.name : item.actor.name}</div>
               {summarizeGroups(item.groups, isEnglish) ? (
                 <div className="subtle-line" style={{ marginTop: 6 }}>
                   {summarizeGroups(item.groups, isEnglish)}
@@ -141,7 +142,7 @@ export function SeriesCastOverviewClient({ topActors }: Props) {
                         <span className="series-rank-badge">{index + 1}</span>
                         <div className="series-rank-count">{isEnglish ? `${item.count} plays` : `${item.count} 作品`}</div>
                       </div>
-                      <div className="cast-name">{item.actor.name}</div>
+                      <div className="cast-name">{isEnglish ? item.actor.nameEn || item.actor.name : item.actor.name}</div>
                       {summarizeGroups(item.groups, isEnglish) ? (
                         <div className="subtle-line" style={{ marginTop: 6 }}>
                           {summarizeGroups(item.groups, isEnglish)}
