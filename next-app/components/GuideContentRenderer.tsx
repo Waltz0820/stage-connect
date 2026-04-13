@@ -9,6 +9,12 @@ type Block =
   | { type: "ul"; items: string[] }
   | { type: "table"; rows: string[][] };
 
+type Section = {
+  heading: string;
+  blocks: Block[];
+  originalIndex: number;
+};
+
 type Props = {
   content: string;
   guide: GuideDetailData;
@@ -27,10 +33,12 @@ const VOD_SERVICE_LINKS: Record<string, string> = {
 };
 
 const VOD_SERVICE_DESCRIPTIONS: Record<string, string> = {
-  "DMM TV": "刀剣乱舞シリーズを追うなら本命。配信本数の厚みとコスパの両方で強いサービスです。",
-  "dアニメストア": "一部作品は見られますが、刀剣乱舞を主目的にするならDMM TVとの比較確認が自然です。",
-  "U-NEXT": "総合VODとしては強い一方、刀剣乱舞をまとめて追うならDMM TVとの違い確認が近道です。",
-  "Amazon Prime Video": "作品によって視聴可否が変わりやすく、見放題状況も変動するため最新確認が必要です。",
+  "DMM TV": "刀剣乱舞シリーズを追うなら、まず確認したい本命サービスです。",
+  "dアニメストア":
+    "一部作品は見られますが、刀剣乱舞シリーズをまとめて追うなら DMM TV との比較が自然です。",
+  "U-NEXT":
+    "総合VODとしては強い一方、刀剣乱舞をまとめて追うには DMM TV との比較確認が向いています。",
+  "Amazon Prime Video": "配信状況は変動しやすいため、最新状況の確認が必要です。",
 };
 
 const parseInline = (text: string) => {
@@ -54,7 +62,7 @@ const normalizeToken = (value: string) =>
   value
     .normalize("NFKC")
     .replace(/["'`]/g, "")
-    .replace(/[「」『』（）()[\]【】]/g, "")
+    .replace(/[「」『』（）()\[\]]/g, "")
     .replace(/\s+/g, "")
     .trim();
 
@@ -144,6 +152,60 @@ const parseBlocks = (content: string): Block[] => {
   }
 
   return blocks;
+};
+
+const splitSections = (blocks: Block[]) => {
+  const introBlocks: Block[] = [];
+  const sections: Section[] = [];
+  let current: Section | null = null;
+
+  for (const block of blocks) {
+    if (block.type === "h2") {
+      if (current) sections.push(current);
+      current = {
+        heading: block.text,
+        blocks: [block],
+        originalIndex: sections.length,
+      };
+      continue;
+    }
+
+    if (current) {
+      current.blocks.push(block);
+    } else {
+      introBlocks.push(block);
+    }
+  }
+
+  if (current) sections.push(current);
+  return { introBlocks, sections };
+};
+
+const getSectionPriority = (heading: string) => {
+  if (heading.includes("違い")) return 10;
+  if (heading.includes("初めて観る場合") || heading.includes("選び方")) return 20;
+  if ((heading.includes("刀ステ") || heading.includes("舞台『刀剣乱舞』")) && heading.includes("見る順番")) {
+    return 30;
+  }
+  if (
+    (heading.includes("刀ミュ") || heading.includes("ミュージカル『刀剣乱舞』")) &&
+    heading.includes("見る順番")
+  ) {
+    return 40;
+  }
+  if (heading.includes("配信")) return 50;
+  return 100;
+};
+
+const reorderSections = (blocks: Block[]) => {
+  const { introBlocks, sections } = splitSections(blocks);
+  const orderedSections = [...sections].sort((a, b) => {
+    const diff = getSectionPriority(a.heading) - getSectionPriority(b.heading);
+    if (diff !== 0) return diff;
+    return a.originalIndex - b.originalIndex;
+  });
+
+  return [...introBlocks, ...orderedSections.flatMap((section) => section.blocks)];
 };
 
 const findSeriesByFormat = (guide: GuideDetailData, format: "stage" | "musical") =>
@@ -243,7 +305,6 @@ const renderParagraphPlaceholder = (text: string, guide: GuideDetailData) => {
   }
 
   if (actions.length === 0) return null;
-
   return <div className="guide-inline-actions">{actions}</div>;
 };
 
@@ -264,8 +325,11 @@ const renderChoiceGrid = (items: string[], guide: GuideDetailData, blockKey: num
       const [hintPart, labelPart] = item.split("→").map((value) => value.trim());
       if (!hintPart || !labelPart) return null;
 
-      const format =
-        labelPart.includes("刀ステ") ? "stage" : labelPart.includes("刀ミュ") ? "musical" : null;
+      const format = labelPart.includes("刀ステ")
+        ? "stage"
+        : labelPart.includes("刀ミュ")
+          ? "musical"
+          : null;
       if (!format) return null;
 
       const series = findSeriesByFormat(guide, format);
@@ -292,7 +356,7 @@ const renderChoiceGrid = (items: string[], guide: GuideDetailData, blockKey: num
   return (
     <div className="guide-choice-grid" key={blockKey}>
       {choices.map((choice) => (
-        <Link className="guide-choice-card" href={choice.href} key={choice.label}>
+        <Link className="guide-choice-card" href={choice.href} key={`${choice.label}-${choice.href}`}>
           <div className="guide-choice-card__hint">{choice.hint}</div>
           <div className="guide-choice-card__title">{choice.label}</div>
         </Link>
@@ -331,13 +395,8 @@ const renderVodServiceGrid = (items: string[], blockKey: number) => (
 
 const renderPlayGrid = (items: string[], guide: GuideDetailData, blockKey: number) => {
   const allPlays = getAllPlays(guide);
-  const playItems = items.filter((item) => !item.startsWith("*("));
-
-  const resolved = playItems
-    .map((item) => {
-      const play = findBestPlay(allPlays, item);
-      return { play };
-    })
+  const resolved = items
+    .map((item) => ({ play: findBestPlay(allPlays, item) }))
     .filter((result) => result.play);
 
   if (resolved.length === 0) {
@@ -433,7 +492,7 @@ const renderListItem = (item: string, guide: GuideDetailData, key: number) => {
 };
 
 export function GuideContentRenderer({ content, guide }: Props) {
-  const blocks = parseBlocks(content);
+  const blocks = reorderSections(parseBlocks(content));
 
   return (
     <div className="guide-prose stack-md">
