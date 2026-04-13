@@ -2012,6 +2012,10 @@ a {
   background: rgba(255, 255, 255, 0.008);
 }
 
+.guide-play-row--collapsed {
+  display: none;
+}
+
 .guide-play-row__main {
   display: grid;
   gap: 6px;
