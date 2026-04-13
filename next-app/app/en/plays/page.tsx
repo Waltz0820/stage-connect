@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "../../../components/Breadcrumbs";
 import { StructuredData } from "../../../components/StructuredData";
-import { compactListPeriodEn, EN_FORMAT_LABELS, EN_GENRE_LABELS, truncateText } from "../../../lib/en-copy";
+import { compactListPeriodEn, EN_FORMAT_LABELS, EN_GENRE_LABELS, getEnglishSeriesName, truncateText } from "../../../lib/en-copy";
 import { buildBreadcrumbList, buildCollectionPageStructuredData } from "../../../lib/structured-data";
 import { getPlayList, periodSortKey, toPlainText } from "../../../lib/stage-connect";
 
@@ -161,7 +161,11 @@ export default async function EnglishPlaysPage({
                     </div>
                   </div>
 
-                  {play.franchiseName ? <div className="catalog-card__sub">{play.franchiseName}</div> : null}
+                  {play.franchiseName ? (
+                    <div className="catalog-card__sub">
+                      {getEnglishSeriesName({ name: play.franchiseName, nameEn: play.franchiseNameEn })}
+                    </div>
+                  ) : null}
                   {compactListPeriodEn(play.period) ? (
                     <div className="catalog-card__sub">Date: {compactListPeriodEn(play.period)}</div>
                   ) : null}

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "../../../../components/Breadcrumbs";
 import { StructuredData } from "../../../../components/StructuredData";
-import { getEnglishActorName, toEnglishOriginType, truncateText } from "../../../../lib/en-copy";
+import { getEnglishActorName, getEnglishSeriesName, toEnglishOriginType, truncateText } from "../../../../lib/en-copy";
 import { buildBreadcrumbList } from "../../../../lib/structured-data";
 import { getSeriesDetailBySlug, toPlainText } from "../../../../lib/stage-connect";
 
@@ -47,6 +47,7 @@ const compactTimelinePeriod = (period?: string | null) => {
 const hasVod = (vod?: Record<string, string> | null) => Boolean(vod?.dmm || vod?.danime || vod?.unext);
 
 const buildSeriesMetaDescriptionEn = (series: NonNullable<Awaited<ReturnType<typeof getSeriesDetailBySlug>>>) => {
+  const displayName = getEnglishSeriesName(series);
   const parts: string[] = [];
   const overview = toPlainText(series.descriptionEn || series.description || "").trim().replace(/[.。]\s*$/u, "");
 
@@ -63,7 +64,7 @@ const buildSeriesMetaDescriptionEn = (series: NonNullable<Awaited<ReturnType<typ
   if (factParts.length > 0) parts.push(`${factParts.join(" / ")}.`);
 
   if (parts.length === 0) {
-    parts.push(`${series.name} series archive page on Stage Connect.`);
+    parts.push(`${displayName} series archive page on Stage Connect.`);
   } else {
     parts.push("Includes timeline, cast ranking, and related series links.");
   }
@@ -74,6 +75,7 @@ const buildSeriesMetaDescriptionEn = (series: NonNullable<Awaited<ReturnType<typ
 export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
   const { slug } = await params;
   const series = await getSeriesDetailBySlug(slug);
+  const displayName = series ? getEnglishSeriesName(series) : "";
 
   if (!series) {
     return {
@@ -83,7 +85,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   }
 
   return {
-    title: `${series.name} | Series archive | Stage Connect`,
+    title: `${displayName} | Series archive | Stage Connect`,
     description: buildSeriesMetaDescriptionEn(series),
     alternates: {
       canonical: `${siteUrl}/en/series/${series.slug ?? slug}`,
@@ -100,15 +102,16 @@ export default async function EnglishSeriesDetailPage({ params }: { params: Prom
   const series = await getSeriesDetailBySlug(slug);
 
   if (!series) notFound();
+  const displayName = getEnglishSeriesName(series);
 
   const startYear = getStartYear(series.plays.map((play) => play.period));
   const seriesOverview = series.descriptionEn || series.description;
   const seriesJsonLd = {
     "@context": "https://schema.org",
     "@type": "CreativeWorkSeries",
-    name: series.name,
+    name: displayName,
     description: toPlainText(
-      seriesOverview || `${series.name} series archive page on Stage Connect.`
+      seriesOverview || `${displayName} series archive page on Stage Connect.`
     ),
     url: `${siteUrl}/en/series/${series.slug ?? slug}`,
     genre: toEnglishOriginType(series.originType) || undefined,
@@ -121,7 +124,7 @@ export default async function EnglishSeriesDetailPage({ params }: { params: Prom
   const breadcrumbJsonLd = buildBreadcrumbList([
     { name: "HOME", path: "/en" },
     { name: "Series", path: "/en/series" },
-    { name: series.name, path: `/en/series/${series.slug ?? slug}` },
+    { name: displayName, path: `/en/series/${series.slug ?? slug}` },
   ]);
 
   return (
@@ -133,7 +136,7 @@ export default async function EnglishSeriesDetailPage({ params }: { params: Prom
 
         <section className="hero-card stack-md">
           <div className="stack-sm detail-ledger-shell">
-            <h1 className="page-title">{series.name}</h1>
+            <h1 className="page-title">{displayName}</h1>
             <div className="pill-row">
               <span className="pill accent-pill">{series.plays.length} plays</span>
               {series.originType ? <span className="pill">Origin: {toEnglishOriginType(series.originType)}</span> : null}
@@ -250,7 +253,7 @@ export default async function EnglishSeriesDetailPage({ params }: { params: Prom
                 <article className="catalog-card" key={item.id}>
                   <Link className="catalog-card__body-link" href={item.slug ? `/en/series/${item.slug}` : "/en/series"}>
                     <div className="catalog-card__top">
-                      <div className="catalog-card__title">{item.name}</div>
+                      <div className="catalog-card__title">{getEnglishSeriesName(item)}</div>
                     </div>
                     {item.originType ? <div className="catalog-card__sub">{toEnglishOriginType(item.originType)}</div> : null}
                     <div className="catalog-card__text">

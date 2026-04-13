@@ -8,7 +8,14 @@ import { FavoriteButtonClient } from "../../../../components/FavoriteButtonClien
 import { ShareButtonClient } from "../../../../components/ShareButtonClient";
 import { StructuredData } from "../../../../components/StructuredData";
 import { getActorDetailBySlug, getAgeFromBirthday, groupPlayTimelineByYear, toPlainText } from "../../../../lib/stage-connect";
-import { formatAgeEn, formatBirthdayEn, formatBirthdayLabelEn, getEnglishActorName, truncateText } from "../../../../lib/en-copy";
+import {
+  formatAgeEn,
+  formatBirthdayEn,
+  formatBirthdayLabelEn,
+  getEnglishActorName,
+  getEnglishSeriesName,
+  truncateText,
+} from "../../../../lib/en-copy";
 import { buildBreadcrumbList } from "../../../../lib/structured-data";
 
 type Params = {
@@ -32,7 +39,9 @@ const buildActorMetaDescriptionEn = (actor: NonNullable<Awaited<ReturnType<typeo
   if (factParts.length > 0) parts.push(`${factParts.join(", ")}.`);
 
   if (actor.topSeries.length > 0) {
-    const topNames = actor.topSeries.slice(0, 2).map((item) => `"${item.name}"`);
+    const topNames = actor.topSeries
+      .slice(0, 2)
+      .map((item) => `"${getEnglishSeriesName({ name: item.name, nameEn: item.nameEn })}"`);
     parts.push(`Major series include ${topNames.join(" and ")}.`);
   }
 
@@ -181,7 +190,7 @@ export default async function EnglishActorDetailPage({ params }: { params: Promi
                       <div className="cast-name">{play.title}</div>
                       {play.franchiseName ? (
                         <div className="muted" style={{ marginTop: 6, fontSize: 13 }}>
-                          {play.franchiseName}
+                          {getEnglishSeriesName({ name: play.franchiseName, nameEn: play.franchiseNameEn })}
                         </div>
                       ) : null}
                       {play.roleName ? <div className="cast-role">{play.roleName}</div> : null}

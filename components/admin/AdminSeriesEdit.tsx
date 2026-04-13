@@ -32,6 +32,7 @@ const FORMAT_OPTIONS: { value: PerformanceFormat; label: string }[] = [
 type FranchiseRow = {
   id: string;
   name: string;
+  name_en?: string | null;
   slug?: string | null;
   description?: string | null;
   description_en?: string | null;
@@ -51,6 +52,7 @@ const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
   const [franchises, setFranchises] = useState<FranchiseRow[]>([]);
 
   const [name, setName] = useState("");
+  const [nameEn, setNameEn] = useState("");
   const [slugText, setSlugText] = useState("");
   const [desc, setDesc] = useState("");
   const [descEn, setDescEn] = useState("");
@@ -82,6 +84,7 @@ const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
     if (mode === "new") {
       setRow(null);
       setName("");
+      setNameEn("");
       setSlugText("");
       setDesc("");
       setDescEn("");
@@ -103,21 +106,21 @@ const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         {
           const res = await supabase
             .from("franchises")
-            .select("id,name,slug,description,description_en,format,origin_type,origin_note,production_companies,related_franchise_ids")
+            .select("id,name,name_en,slug,description,description_en,format,origin_type,origin_note,production_companies,related_franchise_ids")
             .or(`slug.eq.${key},name.eq.${key}`)
             .maybeSingle();
           data = res.data;
           error = res.error;
         }
 
-        if (error && /(related_franchise_ids|format|description_en)/i.test(String(error.message ?? ""))) {
+        if (error && /(related_franchise_ids|format|description_en|name_en)/i.test(String(error.message ?? ""))) {
           const fallback = await supabase
             .from("franchises")
             .select("id,name,slug,description,origin_type,origin_note,production_companies")
             .or(`slug.eq.${key},name.eq.${key}`)
             .maybeSingle();
           data = fallback.data
-            ? { ...fallback.data, description_en: null, format: null, related_franchise_ids: [] }
+            ? { ...fallback.data, name_en: null, description_en: null, format: null, related_franchise_ids: [] }
             : fallback.data;
           error = fallback.error;
         }
@@ -128,6 +131,7 @@ const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         const r = data as FranchiseRow;
         setRow(r);
         setName(r.name ?? "");
+        setNameEn(r.name_en ?? "");
         setSlugText(r.slug ?? "");
         setDesc(r.description ?? "");
         setDescEn(r.description_en ?? "");
@@ -174,6 +178,7 @@ const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
     try {
       const payload: any = {
         name: safeTrim(name),
+        name_en: safeTrim(nameEn) || null,
         slug: safeTrim(slugText) || toSlug(name),
         description: safeTrim(desc) || null,
         description_en: safeTrim(descEn) || null,
@@ -204,8 +209,8 @@ const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
           error = res.error;
         }
 
-        if (error && /(related_franchise_ids|format|description_en)/i.test(String(error.message ?? ""))) {
-          const { related_franchise_ids, format, description_en, ...fallbackPayload } = payload;
+        if (error && /(related_franchise_ids|format|description_en|name_en)/i.test(String(error.message ?? ""))) {
+          const { related_franchise_ids, format, description_en, name_en, ...fallbackPayload } = payload;
           const res = await supabase.from("franchises").insert(fallbackPayload);
           error = res.error;
         }
@@ -221,8 +226,8 @@ const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
           error = res.error;
         }
 
-        if (error && /(related_franchise_ids|format|description_en)/i.test(String(error.message ?? ""))) {
-          const { related_franchise_ids, format, description_en, ...fallbackPayload } = payload;
+        if (error && /(related_franchise_ids|format|description_en|name_en)/i.test(String(error.message ?? ""))) {
+          const { related_franchise_ids, format, description_en, name_en, ...fallbackPayload } = payload;
           const res = await supabase.from("franchises").update(fallbackPayload).eq("id", row.id);
           error = res.error;
         }
@@ -439,6 +444,15 @@ const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
             onChange={(e) => setDesc(e.target.value)}
             rows={10}
             placeholder="シリーズ説明や補足情報を記入"
+          />
+        </Field>
+
+        <Field label="name_en" hint="空欄なら日本語タイトルのまま /en に表示">
+          <input
+            className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
+            value={nameEn}
+            onChange={(e) => setNameEn(e.target.value)}
+            placeholder="Touken Ranbu: The Stage"
           />
         </Field>
 

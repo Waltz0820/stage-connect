@@ -5,6 +5,7 @@ import Link from "next/link";
 type TopSeriesItem = {
   slug: string;
   name: string;
+  nameEn?: string | null;
   count: number;
 };
 
@@ -40,7 +41,7 @@ export function ActorTopSeriesClient({
           <div key={series.slug} className="meta-row top-series-row">
             <div className="meta-value">
               <Link href={`${labels.hrefBase}/${series.slug}`} className="catalog-link">
-                {series.name}
+                {locale === "en" ? series.nameEn || series.name : series.name}
               </Link>
               <div className="subtle-line">
                 {series.count} {labels.itemSuffix}

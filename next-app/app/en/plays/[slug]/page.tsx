@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "../../../../components/Breadcrumbs";
 import { StructuredData } from "../../../../components/StructuredData";
-import { compactListPeriodEn, getEnglishActorName, truncateText } from "../../../../lib/en-copy";
+import { compactListPeriodEn, getEnglishActorName, getEnglishSeriesName, truncateText } from "../../../../lib/en-copy";
 import { buildBreadcrumbList } from "../../../../lib/structured-data";
 import { getCreditItems, getPlayDetailBySlug, summarizeCast, toPlainText } from "../../../../lib/stage-connect";
 
@@ -21,12 +21,15 @@ const splitSlashList = (value?: string | null) =>
 
 const buildPlayMetaDescriptionEn = (play: NonNullable<Awaited<ReturnType<typeof getPlayDetailBySlug>>>) => {
   const parts: string[] = [];
+  const displaySeriesName = play.franchiseName
+    ? getEnglishSeriesName({ name: play.franchiseName, nameEn: play.franchiseNameEn })
+    : null;
   const summary = toPlainText(play.summaryEn || play.summary || "").trim().replace(/[.。]\s*$/u, "");
 
   if (summary) parts.push(`${summary}.`);
 
   const factParts: string[] = [];
-  if (play.franchiseName) factParts.push(`Series: ${play.franchiseName}`);
+  if (displaySeriesName) factParts.push(`Series: ${displaySeriesName}`);
   if (play.cast.length > 0) factParts.push(`Cast: ${play.cast.length}`);
   if (play.vod && Object.keys(play.vod).length > 0) factParts.push("Streaming available");
   if (factParts.length > 0) parts.push(`${factParts.join(" / ")}.`);
@@ -76,6 +79,9 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
   const venues = splitSlashList(play.venue);
   const featuredCast = play.cast.slice(0, 12);
   const synopsis = play.summaryEn || play.summary;
+  const displaySeriesName = play.franchiseName
+    ? getEnglishSeriesName({ name: play.franchiseName, nameEn: play.franchiseNameEn })
+    : null;
   const creativeWorkJsonLd = {
     "@context": "https://schema.org",
     "@type": "CreativeWork",
@@ -85,7 +91,7 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
     ),
     url: `${siteUrl}/en/plays/${play.slug}`,
     keywords: play.tags.join(", "),
-    about: play.franchiseName || undefined,
+    about: displaySeriesName || undefined,
     actor: play.cast.slice(0, 20).map((item) => ({
       "@type": "Person",
       name: getEnglishActorName(item),
@@ -107,9 +113,9 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
 
         <section className="hero-card stack-md">
           <div className="stack-sm detail-ledger-shell">
-            {play.franchiseSlug && play.franchiseName ? (
+            {play.franchiseSlug && displaySeriesName ? (
               <Link className="pill series-pill" href={`/en/series/${play.franchiseSlug}`}>
-                Series: {play.franchiseName}
+                Series: {displaySeriesName}
               </Link>
             ) : null}
 
@@ -131,7 +137,7 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
               </div>
               <div className="detail-ledger__item">
                 <span className="detail-ledger__label">Series</span>
-                <strong>{play.franchiseName || "Standalone"}</strong>
+                <strong>{displaySeriesName || "Standalone"}</strong>
               </div>
               <div className="detail-ledger__item">
                 <span className="detail-ledger__label">Streaming</span>

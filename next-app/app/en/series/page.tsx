@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "../../../components/Breadcrumbs";
 import { StructuredData } from "../../../components/StructuredData";
-import { EN_FORMAT_LABELS, toEnglishOriginType, truncateText } from "../../../lib/en-copy";
+import { EN_FORMAT_LABELS, getEnglishSeriesName, toEnglishOriginType, truncateText } from "../../../lib/en-copy";
 import { buildBreadcrumbList, buildCollectionPageStructuredData } from "../../../lib/structured-data";
 import { getSeriesList, toPlainText } from "../../../lib/stage-connect";
 
@@ -79,8 +79,10 @@ export default async function EnglishSeriesPage({
       : formatFiltered.filter((series) => String(series.originType ?? "").trim() === origin);
 
   const sorted = [...filtered].sort((a, b) => {
-    if (sort === "name_asc") return a.name.localeCompare(b.name, "en");
-    return b.playCount - a.playCount || a.name.localeCompare(b.name, "en");
+    const aName = getEnglishSeriesName(a);
+    const bName = getEnglishSeriesName(b);
+    if (sort === "name_asc") return aName.localeCompare(bName, "en");
+    return b.playCount - a.playCount || aName.localeCompare(bName, "en");
   });
 
   const totalPages = Math.max(1, Math.ceil(sorted.length / ITEMS_PER_PAGE));
@@ -158,7 +160,7 @@ export default async function EnglishSeriesPage({
               <article className="catalog-card" key={series.slug}>
                 <Link className="catalog-card__body-link" href={`/en/series/${series.slug}`}>
                   <div className="catalog-card__top catalog-card__top--stack">
-                    <div className="catalog-card__title">{series.name}</div>
+                    <div className="catalog-card__title">{getEnglishSeriesName(series)}</div>
                     <div className="catalog-card__top-actions">
                       {format === "all" && series.format ? (
                         <span className="catalog-card__badge">{EN_FORMAT_LABELS[series.format] ?? series.format}</span>

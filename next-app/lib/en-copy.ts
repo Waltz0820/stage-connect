@@ -141,6 +141,15 @@ export const getEnglishActorName = (actor: {
   return String(actor.name ?? "").trim();
 };
 
+export const getEnglishSeriesName = (series: {
+  nameEn?: string | null;
+  name?: string | null;
+}) => {
+  const direct = String(series.nameEn ?? "").trim();
+  if (direct) return direct;
+  return String(series.name ?? "").trim();
+};
+
 export const truncateText = (text: string, max: number) =>
   text.length <= max ? text : `${text.slice(0, Math.max(0, max - 1))}...`;
 
