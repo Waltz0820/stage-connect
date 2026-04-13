@@ -205,6 +205,25 @@ const reorderSections = (blocks: Block[]) => {
     return a.originalIndex - b.originalIndex;
   });
 
+  const differenceIndex = orderedSections.findIndex((section) => getSectionPriority(section.heading) === 10);
+  const choiceIndex = orderedSections.findIndex((section) => getSectionPriority(section.heading) === 20);
+
+  if (differenceIndex !== -1 && choiceIndex !== -1 && choiceIndex > differenceIndex) {
+    const differenceSection = orderedSections[differenceIndex];
+    const choiceSection = orderedSections[choiceIndex];
+    const mergedBlocks: Block[] = [
+      ...differenceSection.blocks,
+      { type: "h3", text: "初めて観る場合の選び方" },
+      ...choiceSection.blocks.filter((block) => block.type !== "h2"),
+    ];
+
+    orderedSections[differenceIndex] = {
+      ...differenceSection,
+      blocks: mergedBlocks,
+    };
+    orderedSections.splice(choiceIndex, 1);
+  }
+
   return [...introBlocks, ...orderedSections.flatMap((section) => section.blocks)];
 };
 
