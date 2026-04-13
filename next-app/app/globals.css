@@ -952,6 +952,12 @@ a {
   font-weight: 700;
 }
 
+.page-title--guide {
+  font-size: clamp(24px, 3.6vw, 38px);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
 .title-subtle {
   color: var(--muted);
   font-size: 11px;
@@ -1534,6 +1540,23 @@ a {
   }
 }
 
+@media (max-width: 480px) {
+  .catalog-summary--ledger {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    border: 0;
+    background: transparent;
+  }
+
+  .catalog-summary--ledger .catalog-chip {
+    padding: 8px 12px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.03);
+  }
+}
+
 .catalog-grid {
   display: grid;
   gap: 16px;
@@ -1913,6 +1936,7 @@ a {
 
 .guide-prose__h2 {
   margin: 0;
+  padding-top: 8px;
   color: var(--text);
   font-size: 1.25rem;
   line-height: 1.45;
@@ -2080,7 +2104,7 @@ a {
 .guide-table {
   width: 100%;
   border-collapse: collapse;
-  min-width: 560px;
+  min-width: 360px;
 }
 
 .guide-table th,

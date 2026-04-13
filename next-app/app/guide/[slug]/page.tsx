@@ -108,7 +108,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<Para
               <div className="guide-category">{CATEGORY_LABELS[guide.category] ?? guide.category}</div>
             ) : null}
 
-            <h1 className="page-title">{guide.title}</h1>
+            <h1 className="page-title page-title--guide">{guide.title}</h1>
 
             {guide.publishedAt ? (
               <div className="catalog-note">{new Date(guide.publishedAt).toLocaleDateString("ja-JP")}</div>
