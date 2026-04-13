@@ -3,7 +3,13 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "../../../../components/Breadcrumbs";
 import { StructuredData } from "../../../../components/StructuredData";
-import { compactListPeriodEn, getEnglishActorName, getEnglishSeriesName, truncateText } from "../../../../lib/en-copy";
+import {
+  compactListPeriodEn,
+  getEnglishActorName,
+  getEnglishSeriesName,
+  translateDisplayTextEn,
+  truncateText,
+} from "../../../../lib/en-copy";
 import { buildBreadcrumbList } from "../../../../lib/structured-data";
 import { getCreditItems, getPlayDetailBySlug, summarizeCast, toPlainText } from "../../../../lib/stage-connect";
 
@@ -78,7 +84,7 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
   const hasVod = Boolean(play.vod && Object.keys(play.vod).length > 0);
   const venues = splitSlashList(play.venue);
   const featuredCast = play.cast.slice(0, 12);
-  const synopsis = play.summaryEn || play.summary;
+  const synopsis = play.summaryEn || translateDisplayTextEn(play.summary);
   const displaySeriesName = play.franchiseName
     ? getEnglishSeriesName({ name: play.franchiseName, nameEn: play.franchiseNameEn })
     : null;
@@ -189,8 +195,8 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
             <div className="meta-list roomy">
               {creditItems.slice(0, 6).map((item) => (
                 <div className="meta-row" key={`${item.role}-${item.names.join("-")}`}>
-                  <div className="meta-label accent-label">{item.role}</div>
-                  <div className="meta-value">{item.names.join(" / ")}</div>
+                  <div className="meta-label accent-label">{translateDisplayTextEn(item.role)}</div>
+                  <div className="meta-value">{item.names.map((name) => translateDisplayTextEn(name)).join(" / ")}</div>
                 </div>
               ))}
             </div>
@@ -229,7 +235,7 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
             {featuredCast.map((item) => (
               <Link href={`/en/actors/${item.slug}`} className="cast-card cast-card-link" key={`${item.slug}-${item.roleName ?? "cast"}`}>
                 <div className="cast-name">{getEnglishActorName(item)}</div>
-                {item.roleName ? <div className="cast-role">{item.roleName}</div> : null}
+                {item.roleName ? <div className="cast-role">{translateDisplayTextEn(item.roleName)}</div> : null}
               </Link>
             ))}
           </div>

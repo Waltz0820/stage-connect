@@ -4,7 +4,13 @@ import { notFound } from "next/navigation";
 import { Breadcrumbs } from "../../../../components/Breadcrumbs";
 import { SeriesCastOverviewClient } from "../../../../components/SeriesCastOverviewClient";
 import { StructuredData } from "../../../../components/StructuredData";
-import { getEnglishActorName, getEnglishSeriesName, toEnglishOriginType, truncateText } from "../../../../lib/en-copy";
+import {
+  getEnglishActorName,
+  getEnglishSeriesName,
+  toEnglishOriginType,
+  translateDisplayTextEn,
+  truncateText,
+} from "../../../../lib/en-copy";
 import { buildBreadcrumbList } from "../../../../lib/structured-data";
 import { getSeriesDetailBySlug, toPlainText } from "../../../../lib/stage-connect";
 
@@ -106,7 +112,7 @@ export default async function EnglishSeriesDetailPage({ params }: { params: Prom
   const displayName = getEnglishSeriesName(series);
 
   const startYear = getStartYear(series.plays.map((play) => play.period));
-  const seriesOverview = series.descriptionEn || series.description;
+  const seriesOverview = series.descriptionEn || translateDisplayTextEn(series.description);
   const seriesJsonLd = {
     "@context": "https://schema.org",
     "@type": "CreativeWorkSeries",
@@ -168,13 +174,15 @@ export default async function EnglishSeriesDetailPage({ params }: { params: Prom
               {series.originNote ? (
                 <div className="meta-row">
                   <div className="meta-label accent-label">Original work</div>
-                  <div className="meta-value">{series.originNote}</div>
+                  <div className="meta-value">{translateDisplayTextEn(series.originNote)}</div>
                 </div>
               ) : null}
               {series.productionCompanies.length > 0 ? (
                 <div className="meta-row">
                   <div className="meta-label accent-label">Production</div>
-                  <div className="meta-value">{series.productionCompanies.join(" / ")}</div>
+                  <div className="meta-value">
+                    {series.productionCompanies.map((item) => translateDisplayTextEn(item)).join(" / ")}
+                  </div>
                 </div>
               ) : null}
             </div>

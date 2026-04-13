@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { getEnglishActorName } from "../lib/en-copy";
+import { getEnglishActorName, translateDisplayTextEn } from "../lib/en-copy";
 
 type TopActor = {
   actor: {
@@ -22,18 +22,20 @@ type Props = {
 
 const summarizeRoles = (roles: string[], isEnglish: boolean) => {
   if (roles.length === 0) return null;
-  if (roles.length <= 3) return roles.join(" / ");
+  const normalized = isEnglish ? roles.map((role) => translateDisplayTextEn(role)) : roles;
+  if (normalized.length <= 3) return normalized.join(" / ");
   return isEnglish
-    ? `${roles.slice(0, 3).join(" / ")} / ${roles.length - 3} more`
-    : `${roles.slice(0, 3).join(" / ")} / ほか${roles.length - 3}役`;
+    ? `${normalized.slice(0, 3).join(" / ")} / ${normalized.length - 3} more`
+    : `${normalized.slice(0, 3).join(" / ")} / ほか${normalized.length - 3}役`;
 };
 
 const summarizeGroups = (groups: string[], isEnglish: boolean) => {
   if (groups.length === 0) return null;
-  if (groups.length <= 2) return groups.join(" / ");
+  const normalized = isEnglish ? groups.map((group) => translateDisplayTextEn(group)) : groups;
+  if (normalized.length <= 2) return normalized.join(" / ");
   return isEnglish
-    ? `${groups.slice(0, 2).join(" / ")} / ${groups.length - 2} more`
-    : `${groups.slice(0, 2).join(" / ")} / ほか${groups.length - 2}`;
+    ? `${normalized.slice(0, 2).join(" / ")} / ${normalized.length - 2} more`
+    : `${normalized.slice(0, 2).join(" / ")} / ほか${normalized.length - 2}`;
 };
 
 export function SeriesCastOverviewClient({ topActors }: Props) {
@@ -75,40 +77,48 @@ export function SeriesCastOverviewClient({ topActors }: Props) {
       {isMobile ? (
         <div className="card-carousel">
           {mobileVisible.map((item, index) => (
-            <Link className="cast-card cast-card-link card-carousel-item" href={`${actorHrefBase}/${item.actor.slug}`} key={item.actor.slug}>
+            <Link
+              className="cast-card cast-card-link card-carousel-item"
+              href={`${actorHrefBase}/${item.actor.slug}`}
+              key={item.actor.slug}
+            >
               <div className="series-rank-row">
                 <span className="series-rank-badge">{index + 1}</span>
                 <div className="series-rank-count">{isEnglish ? `${item.count} plays` : `${item.count} 作品`}</div>
               </div>
-              <div className="cast-name">
-                {isEnglish ? getEnglishActorName(item.actor) : item.actor.name}
-              </div>
+              <div className="cast-name">{isEnglish ? getEnglishActorName(item.actor) : item.actor.name}</div>
               {summarizeGroups(item.groups, isEnglish) ? (
                 <div className="subtle-line" style={{ marginTop: 6 }}>
                   {summarizeGroups(item.groups, isEnglish)}
                 </div>
               ) : null}
-              {summarizeRoles(item.roles, isEnglish) ? <div className="cast-role">{summarizeRoles(item.roles, isEnglish)}</div> : null}
+              {summarizeRoles(item.roles, isEnglish) ? (
+                <div className="cast-role">{summarizeRoles(item.roles, isEnglish)}</div>
+              ) : null}
             </Link>
           ))}
         </div>
       ) : (
         <div className="cast-grid cast-grid-wide">
           {desktopVisible.map((item, index) => (
-            <Link className="cast-card cast-card-link" href={`${actorHrefBase}/${item.actor.slug}`} key={`desktop-${item.actor.slug}`}>
+            <Link
+              className="cast-card cast-card-link"
+              href={`${actorHrefBase}/${item.actor.slug}`}
+              key={`desktop-${item.actor.slug}`}
+            >
               <div className="series-rank-row">
                 <span className="series-rank-badge">{index + 1}</span>
                 <div className="series-rank-count">{isEnglish ? `${item.count} plays` : `${item.count} 作品`}</div>
               </div>
-              <div className="cast-name">
-                {isEnglish ? getEnglishActorName(item.actor) : item.actor.name}
-              </div>
+              <div className="cast-name">{isEnglish ? getEnglishActorName(item.actor) : item.actor.name}</div>
               {summarizeGroups(item.groups, isEnglish) ? (
                 <div className="subtle-line" style={{ marginTop: 6 }}>
                   {summarizeGroups(item.groups, isEnglish)}
                 </div>
               ) : null}
-              {summarizeRoles(item.roles, isEnglish) ? <div className="cast-role">{summarizeRoles(item.roles, isEnglish)}</div> : null}
+              {summarizeRoles(item.roles, isEnglish) ? (
+                <div className="cast-role">{summarizeRoles(item.roles, isEnglish)}</div>
+              ) : null}
             </Link>
           ))}
         </div>
@@ -147,9 +157,7 @@ export function SeriesCastOverviewClient({ topActors }: Props) {
                         <span className="series-rank-badge">{index + 1}</span>
                         <div className="series-rank-count">{isEnglish ? `${item.count} plays` : `${item.count} 作品`}</div>
                       </div>
-                      <div className="cast-name">
-                        {isEnglish ? getEnglishActorName(item.actor) : item.actor.name}
-                      </div>
+                      <div className="cast-name">{isEnglish ? getEnglishActorName(item.actor) : item.actor.name}</div>
                       {summarizeGroups(item.groups, isEnglish) ? (
                         <div className="subtle-line" style={{ marginTop: 6 }}>
                           {summarizeGroups(item.groups, isEnglish)}
