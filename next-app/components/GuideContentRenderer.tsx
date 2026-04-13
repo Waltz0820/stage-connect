@@ -354,6 +354,29 @@ const isChoiceList = (items: string[]) =>
   items.every((item) => item.includes("→")) &&
   items.some((item) => item.includes("刀ステ") || item.includes("刀ミュ"));
 
+/**
+ * Detect short label lists: all items are brief (≤20 chars), no links/placeholders,
+ * 2–6 items. These are rendered as visual chips instead of bullet points.
+ */
+const isShortLabelList = (items: string[]) =>
+  items.length >= 2 &&
+  items.length <= 6 &&
+  items.every(
+    (item) =>
+      item.length <= 20 &&
+      !item.includes("[") &&
+      !item.includes("→") &&
+      !item.includes("http")
+  );
+
+const renderChipList = (items: string[], blockKey: number) => (
+  <div className="guide-chip-grid" key={blockKey}>
+    {items.map((item, i) => (
+      <span className="guide-chip" key={i}>{item}</span>
+    ))}
+  </div>
+);
+
 const renderChoiceGrid = (items: string[], guide: GuideDetailData, blockKey: number) => {
   const choices = items
     .map((item) => {
@@ -632,6 +655,10 @@ export function GuideContentRenderer({ content, guide }: Props) {
 
           if (isVodServiceList(block.items)) {
             return renderVodServiceGrid(block.items, index);
+          }
+
+          if (isShortLabelList(block.items)) {
+            return renderChipList(block.items, index);
           }
 
           return (
