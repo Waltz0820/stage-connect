@@ -468,6 +468,11 @@ function mergeGuidePlayLists(blocks: Block[]): Block[] {
         continue;
       }
 
+      if (current.type === "p" && current.text.trim().startsWith("以下では、")) {
+        cursor += 1;
+        continue;
+      }
+
       introBlocks.push(current);
       cursor += 1;
     }
