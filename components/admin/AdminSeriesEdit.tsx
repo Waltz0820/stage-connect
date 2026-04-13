@@ -29,6 +29,35 @@ const FORMAT_OPTIONS: { value: PerformanceFormat; label: string }[] = [
   { value: "musical", label: "ミュージカル" },
 ];
 
+const getUnsupportedSeriesColumns = (message: string) => ({
+  nameEn: /name_en/i.test(message),
+  descriptionEn: /description_en/i.test(message),
+  format: /format/i.test(message),
+  relatedSeries: /related_franchise_ids/i.test(message),
+});
+
+const buildSeriesSelectColumns = (unsupported?: {
+  nameEn?: boolean;
+  descriptionEn?: boolean;
+  format?: boolean;
+  relatedSeries?: boolean;
+}) =>
+  [
+    "id",
+    "name",
+    !unsupported?.nameEn ? "name_en" : null,
+    "slug",
+    "description",
+    !unsupported?.descriptionEn ? "description_en" : null,
+    !unsupported?.format ? "format" : null,
+    "origin_type",
+    "origin_note",
+    "production_companies",
+    !unsupported?.relatedSeries ? "related_franchise_ids" : null,
+  ]
+    .filter(Boolean)
+    .join(",");
+
 type FranchiseRow = {
   id: string;
   name: string;
@@ -106,7 +135,7 @@ const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         {
           const res = await supabase
             .from("franchises")
-            .select("id,name,name_en,slug,description,description_en,format,origin_type,origin_note,production_companies,related_franchise_ids")
+            .select(buildSeriesSelectColumns())
             .or(`slug.eq.${key},name.eq.${key}`)
             .maybeSingle();
           data = res.data;
@@ -114,13 +143,20 @@ const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         }
 
         if (error && /(related_franchise_ids|format|description_en|name_en)/i.test(String(error.message ?? ""))) {
+          const unsupported = getUnsupportedSeriesColumns(String(error.message ?? ""));
           const fallback = await supabase
             .from("franchises")
-            .select("id,name,slug,description,origin_type,origin_note,production_companies")
+            .select(buildSeriesSelectColumns(unsupported))
             .or(`slug.eq.${key},name.eq.${key}`)
             .maybeSingle();
           data = fallback.data
-            ? { ...fallback.data, name_en: null, description_en: null, format: null, related_franchise_ids: [] }
+            ? {
+                ...fallback.data,
+                ...(unsupported.nameEn ? { name_en: null } : {}),
+                ...(unsupported.descriptionEn ? { description_en: null } : {}),
+                ...(unsupported.format ? { format: null } : {}),
+                ...(unsupported.relatedSeries ? { related_franchise_ids: [] } : {}),
+              }
             : fallback.data;
           error = fallback.error;
         }
@@ -210,7 +246,12 @@ const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         }
 
         if (error && /(related_franchise_ids|format|description_en|name_en)/i.test(String(error.message ?? ""))) {
-          const { related_franchise_ids, format, description_en, name_en, ...fallbackPayload } = payload;
+          const unsupported = getUnsupportedSeriesColumns(String(error.message ?? ""));
+          const fallbackPayload = { ...payload };
+          if (unsupported.relatedSeries) delete fallbackPayload.related_franchise_ids;
+          if (unsupported.format) delete fallbackPayload.format;
+          if (unsupported.descriptionEn) delete fallbackPayload.description_en;
+          if (unsupported.nameEn) delete fallbackPayload.name_en;
           const res = await supabase.from("franchises").insert(fallbackPayload);
           error = res.error;
         }
@@ -227,7 +268,12 @@ const AdminSeriesEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         }
 
         if (error && /(related_franchise_ids|format|description_en|name_en)/i.test(String(error.message ?? ""))) {
-          const { related_franchise_ids, format, description_en, name_en, ...fallbackPayload } = payload;
+          const unsupported = getUnsupportedSeriesColumns(String(error.message ?? ""));
+          const fallbackPayload = { ...payload };
+          if (unsupported.relatedSeries) delete fallbackPayload.related_franchise_ids;
+          if (unsupported.format) delete fallbackPayload.format;
+          if (unsupported.descriptionEn) delete fallbackPayload.description_en;
+          if (unsupported.nameEn) delete fallbackPayload.name_en;
           const res = await supabase.from("franchises").update(fallbackPayload).eq("id", row.id);
           error = res.error;
         }
