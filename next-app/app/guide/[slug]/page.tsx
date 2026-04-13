@@ -24,11 +24,6 @@ const CATEGORY_LABELS: Record<string, string> = {
   features: "編集部ピックアップ",
 };
 
-const FORMAT_LABELS: Record<string, string> = {
-  stage: "舞台",
-  musical: "ミュージカル",
-};
-
 const STAGE_SERIES_PLACEHOLDER = "[刀ステ シリーズ一覧ページへのリンク]";
 const MUSICAL_SERIES_PLACEHOLDER = "[刀ミュ シリーズ一覧ページへのリンク]";
 
@@ -126,47 +121,6 @@ export default async function GuideDetailPage({ params }: { params: Promise<Para
         {guide.content ? (
           <section className="section-card stack-md">
             <GuideContentRenderer content={guide.content} guide={guide} />
-          </section>
-        ) : null}
-
-        {guide.relatedSeries.length > 0 && !hasInlineSeriesLinks ? (
-          <section className="section-card stack-md">
-            <div className="stack-sm">
-              <h2 className="section-title">関連シリーズ</h2>
-              <p className="catalog-note">
-                このガイドで扱っているシリーズです。シリーズ詳細から関連作品や出演キャストを確認できます。
-              </p>
-            </div>
-
-            <div className="guide-series-grid">
-              {guide.relatedSeries.map((series) => (
-                <article className="guide-series-card" key={series.id}>
-                  <div className="guide-series-card__head">
-                    <Link className="guide-series-card__title" href={series.slug ? `/series/${series.slug}` : "/series"}>
-                      {series.name}
-                    </Link>
-                    {series.format ? (
-                      <span className="catalog-card__badge">{FORMAT_LABELS[series.format] ?? series.format}</span>
-                    ) : null}
-                  </div>
-
-                  <div className="guide-series-card__meta">
-                    {series.playCount}作品
-                    {series.originType ? ` / ${series.originType}` : ""}
-                  </div>
-
-                  <div className="guide-series-card__text">
-                    {truncate(toPlainText(series.description || series.name), 90)}
-                  </div>
-
-                  <div className="guide-series-card__footer">
-                    <Link className="catalog-link" href={series.slug ? `/series/${series.slug}` : "/series"}>
-                      シリーズ詳細を見る
-                    </Link>
-                  </div>
-                </article>
-              ))}
-            </div>
           </section>
         ) : null}
 
