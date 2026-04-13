@@ -2035,6 +2035,54 @@ a {
   border-top: 1px solid var(--line);
 }
 
+.guide-service-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.guide-service-card {
+  display: grid;
+  gap: 6px;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.012);
+  color: var(--text);
+  text-decoration: none;
+  transition:
+    border-color 160ms ease,
+    background 160ms ease,
+    transform 160ms ease;
+}
+
+.guide-service-card:hover {
+  border-color: rgba(248, 245, 239, 0.26);
+  background: rgba(255, 255, 255, 0.022);
+  transform: translateY(-1px);
+}
+
+.guide-service-card--muted {
+  background: rgba(255, 255, 255, 0.008);
+}
+
+.guide-service-card__eyebrow {
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.guide-service-card__title {
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.guide-service-card__text {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
 .guide-play-list {
   display: grid;
   gap: 10px;
@@ -2157,6 +2205,10 @@ a {
 
 @media (min-width: 740px) {
   .guide-series-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .guide-service-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 

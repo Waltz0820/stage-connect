@@ -26,6 +26,13 @@ const VOD_SERVICE_LINKS: Record<string, string> = {
   "U-NEXT": "/watch/u-next",
 };
 
+const VOD_SERVICE_DESCRIPTIONS: Record<string, string> = {
+  "DMM TV": "刀剣乱舞シリーズの配信状況を確認できます。",
+  "dアニメストア": "dアニメストアで見られる作品の傾向を整理しています。",
+  "U-NEXT": "U-NEXTでの配信状況と使い分けをまとめています。",
+  "Amazon Prime Video": "作品によって視聴可否が変わるため、最新状況の確認が必要です。",
+};
+
 const parseInline = (text: string) => {
   const tokens = text.split(/(\*\*.*?\*\*|`.*?`)/g).filter(Boolean);
   return tokens.map((token, index) => {
@@ -235,15 +242,45 @@ const renderParagraphPlaceholder = (text: string, guide: GuideDetailData) => {
 const isPlayLinkList = (items: string[]) =>
   items.length > 0 && items.every((item) => item.includes(PLAY_LINK_PLACEHOLDER));
 
+const isVodServiceList = (items: string[]) =>
+  items.length > 0 && items.every((item) => Object.hasOwn(VOD_SERVICE_DESCRIPTIONS, item.trim()));
+
+const renderVodServiceGrid = (items: string[], blockKey: number) => (
+  <div className="guide-service-grid" key={blockKey}>
+    {items.map((item) => {
+      const label = item.trim();
+      const href = VOD_SERVICE_LINKS[label];
+      const description = VOD_SERVICE_DESCRIPTIONS[label] ?? "";
+
+      if (href) {
+        return (
+          <Link className="guide-service-card" href={href} key={label}>
+            <div className="guide-service-card__eyebrow">配信ガイド</div>
+            <div className="guide-service-card__title">{label}</div>
+            <div className="guide-service-card__text">{description}</div>
+          </Link>
+        );
+      }
+
+      return (
+        <div className="guide-service-card guide-service-card--muted" key={label}>
+          <div className="guide-service-card__eyebrow">配信サービス</div>
+          <div className="guide-service-card__title">{label}</div>
+          <div className="guide-service-card__text">{description}</div>
+        </div>
+      );
+    })}
+  </div>
+);
+
 const renderPlayGrid = (items: string[], guide: GuideDetailData, blockKey: number) => {
   const allPlays = getAllPlays(guide);
   const playItems = items.filter((item) => !item.startsWith("*("));
 
   const resolved = playItems
     .map((item) => {
-      const label = stripGuidePlaceholders(item);
       const play = findBestPlay(allPlays, item);
-      return { label, play };
+      return { play };
     })
     .filter((result) => result.play);
 
@@ -305,6 +342,7 @@ const renderListItem = (item: string, guide: GuideDetailData, key: number) => {
   if (!item.includes(PLAY_LINK_PLACEHOLDER)) {
     const trimmed = item.trim();
     const vodHref = VOD_SERVICE_LINKS[trimmed];
+
     if (vodHref) {
       return (
         <li key={key}>
@@ -363,6 +401,10 @@ export function GuideContentRenderer({ content, guide }: Props) {
         if (block.type === "ul") {
           if (isPlayLinkList(block.items)) {
             return renderPlayGrid(block.items, guide, index);
+          }
+
+          if (isVodServiceList(block.items)) {
+            return renderVodServiceGrid(block.items, index);
           }
 
           return (
