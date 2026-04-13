@@ -427,6 +427,12 @@ const isGuidePlayListHeading = (text: string) =>
   (text.includes("刀ステ") || text.includes("舞台『刀剣乱舞』")) && text.includes("見る順番") ||
   (text.includes("刀ミュ") || text.includes("ミュージカル『刀剣乱舞』")) && text.includes("見る順番");
 
+const isGuidePlaySubLabel = (text: string) =>
+  text.includes("本公演シリーズ") ||
+  text.includes("ライブ・特別公演") ||
+  text.includes("ライブ") ||
+  text.includes("特別公演");
+
 function mergeGuidePlayLists(blocks: Block[]): Block[] {
   const merged: Block[] = [];
 
@@ -443,6 +449,7 @@ function mergeGuidePlayLists(blocks: Block[]): Block[] {
     const introBlocks: Block[] = [];
     const playItems: string[] = [];
     let cursor = index + 1;
+    const headingFormat = getFormatFromHeading(block.text);
 
     while (cursor < blocks.length && blocks[cursor].type !== "h2") {
       const current = blocks[cursor];
@@ -454,10 +461,8 @@ function mergeGuidePlayLists(blocks: Block[]): Block[] {
       }
 
       if (
-        current.type === "h3" &&
-        (current.text.includes("本公演") ||
-          current.text.includes("特別公演") ||
-          current.text.includes("ライブ"))
+        (current.type === "h3" || current.type === "p") &&
+        isGuidePlaySubLabel(current.text)
       ) {
         cursor += 1;
         continue;
@@ -465,6 +470,13 @@ function mergeGuidePlayLists(blocks: Block[]): Block[] {
 
       introBlocks.push(current);
       cursor += 1;
+    }
+
+    if (headingFormat === "musical") {
+      introBlocks.unshift({
+        type: "p",
+        text: "刀ミュは各作品の物語は独立していますが、大型ライブへ向けて登場キャラクターが蓄積されていくため、同じく「公演順」での視聴を推奨します。",
+      });
     }
 
     merged.push(...introBlocks);
@@ -567,19 +579,13 @@ const renderPlayGrid = (
 
   if (directSection) {
     return (
-      <div className="stack-sm" key={blockKey}>
-        {headingFormat === "musical" ? (
-          <p className="guide-prose__p">
-            刀ミュは各作品の物語は独立していますが、大型ライブへ向けて登場キャラクターが蓄積されていくため、同じく「公演順」での視聴を推奨します。
-          </p>
-        ) : null}
-        <GuidePlaySectionsClient
-          plays={directSection.plays}
-          allSeriesHref={directSection.series?.slug ? `/series/${directSection.series.slug}` : null}
-          allSeriesLabel={`${directSection.series?.name ?? "シリーズ"}の全作品を見る`}
-          initialVisible={6}
-        />
-      </div>
+      <GuidePlaySectionsClient
+        key={blockKey}
+        plays={directSection.plays}
+        allSeriesHref={directSection.series?.slug ? `/series/${directSection.series.slug}` : null}
+        allSeriesLabel={`${directSection.series?.name ?? "シリーズ"}の全作品を見る`}
+        initialVisible={6}
+      />
     );
   }
 
