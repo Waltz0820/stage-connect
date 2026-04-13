@@ -143,6 +143,11 @@ export type GuideDetailData = {
     originType: string | null;
     playCount: number;
   }>;
+  topActors: Array<{
+    slug: string;
+    name: string;
+    count: number;
+  }>;
   relatedPlaySections: Array<{
     series: {
       id: string;
@@ -1322,6 +1327,7 @@ export async function getGuideDetailBySlug(slug: string): Promise<GuideDetailDat
     : [];
 
   let relatedSeries: GuideDetailData["relatedSeries"] = [];
+  let topActors: GuideDetailData["topActors"] = [];
   let relatedPlaySections: GuideDetailData["relatedPlaySections"] = [];
 
   if (relatedFranchiseIds.length > 0) {
@@ -1395,6 +1401,60 @@ export async function getGuideDetailBySlug(slug: string): Promise<GuideDetailDat
         ),
       }))
       .filter((section) => section.plays.length > 0);
+
+    const playIds = uniq((plays ?? []).map((row: any) => row?.id));
+
+    if (playIds.length > 0) {
+      const { data: castRows, error: castError } = await supabase
+        .from("casts")
+        .select(
+          `
+          play_id,
+          actor:actors (
+            slug,
+            name
+          )
+        `
+        )
+        .in("play_id", playIds);
+
+      if (castError) throw castError;
+
+      const actorBuckets = new Map<
+        string,
+        {
+          slug: string;
+          name: string;
+          playSet: Set<string>;
+        }
+      >();
+
+      for (const row of (castRows ?? []) as any[]) {
+        const actor = Array.isArray(row?.actor) ? row.actor[0] : row?.actor;
+        const actorSlug = String(actor?.slug ?? "").trim();
+        const actorName = String(actor?.name ?? "").trim();
+        const playId = String(row?.play_id ?? "").trim();
+        if (!actorSlug || !actorName || !playId) continue;
+
+        const current = actorBuckets.get(actorSlug) ?? {
+          slug: actorSlug,
+          name: actorName,
+          playSet: new Set<string>(),
+        };
+
+        current.playSet.add(playId);
+        actorBuckets.set(actorSlug, current);
+      }
+
+      topActors = Array.from(actorBuckets.values())
+        .map((item) => ({
+          slug: item.slug,
+          name: item.name,
+          count: item.playSet.size,
+        }))
+        .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name, "ja"))
+        .slice(0, 12);
+    }
   }
 
   return {
@@ -1407,6 +1467,7 @@ export async function getGuideDetailBySlug(slug: string): Promise<GuideDetailDat
     category: (data.category as "series-guides" | "features" | null) ?? null,
     relatedFranchiseIds,
     relatedSeries,
+    topActors,
     relatedPlaySections,
   };
 }

@@ -95,12 +95,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<Para
       <StructuredData data={jsonLd} />
 
       <div className="stack-lg">
-        <Breadcrumbs
-          items={[
-            { label: "編集部ガイド", href: "/guide" },
-            { label: guide.title },
-          ]}
-        />
+        <Breadcrumbs items={[{ label: "編集部ガイド", href: "/guide" }, { label: guide.title }]} />
 
         <section className="hero-card stack-md">
           <div className="stack-sm">
@@ -120,10 +115,10 @@ export default async function GuideDetailPage({ params }: { params: Promise<Para
           {(guide.relatedSeries.length > 0 || hasDmm) ? (
             <div className="catalog-summary catalog-summary--ledger">
               {guide.relatedSeries.length > 0 ? (
-                <span className="catalog-chip">関連シリーズ {guide.relatedSeries.length}件</span>
+                <span className="catalog-chip">関連シリーズ {guide.relatedSeries.length} 件</span>
               ) : null}
-              {totalPlays > 0 ? <span className="catalog-chip">関連作品 {totalPlays}作</span> : null}
-              {hasDmm ? <span className="catalog-chip">DMM TV配信 {dmmPlayCount}作品</span> : null}
+              {totalPlays > 0 ? <span className="catalog-chip">関連作品 {totalPlays} 件</span> : null}
+              {hasDmm ? <span className="catalog-chip">DMM TV配信 {dmmPlayCount} 作品</span> : null}
             </div>
           ) : null}
         </section>
@@ -139,7 +134,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<Para
             <div className="stack-sm">
               <h2 className="section-title">関連シリーズ</h2>
               <p className="catalog-note">
-                このガイドで扱っているシリーズ一覧です。シリーズ詳細から関連作品や出演キャストを確認できます。
+                このガイドで扱っているシリーズです。シリーズ詳細から関連作品や出演キャストを確認できます。
               </p>
             </div>
 
@@ -175,12 +170,32 @@ export default async function GuideDetailPage({ params }: { params: Promise<Para
           </section>
         ) : null}
 
+        {guide.topActors.length > 0 ? (
+          <section className="section-card stack-md">
+            <div className="stack-sm">
+              <h2 className="section-title">主な出演キャスト</h2>
+              <p className="catalog-note">
+                役柄一覧ではなく、このシリーズ群でよく出演する俳優を掲載しています。俳優詳細ページへの導線として使えます。
+              </p>
+            </div>
+
+            <div className="cast-grid cast-grid-wide">
+              {guide.topActors.map((actor) => (
+                <Link className="cast-card cast-card-link" href={`/actors/${actor.slug}`} key={actor.slug}>
+                  <div className="cast-name">{actor.name}</div>
+                  <div className="cast-role">{actor.count}作品に出演</div>
+                </Link>
+              ))}
+            </div>
+          </section>
+        ) : null}
+
         {guide.relatedPlaySections.length > 0 ? (
           <section className="section-card stack-md">
             <div className="stack-sm">
-              <h2 className="section-title">歴代作品一覧</h2>
+              <h2 className="section-title">関連作品一覧</h2>
               <p className="catalog-note">
-                関連シリーズに紐づく作品を公開順で並べています。初手は一部のみ表示し、必要に応じて展開できます。
+                関連シリーズに沿って作品を公開順でまとめています。最初は一部のみ表示し、必要に応じて続きを確認できます。
               </p>
             </div>
 
@@ -202,13 +217,12 @@ export default async function GuideDetailPage({ params }: { params: Promise<Para
               </a>
             </div>
             <div className="prose-panel">
-              このガイドで取り上げている作品の多くは DMM TV で配信されています。
-              まずは無料トライアルで、気になる作品の配信状況を確認してみてください。
+              このガイドで扱っている作品の多くは DMM TV で配信されています。まずは無料トライアルで、気になる作品の配信状況を確認してみてください。
             </div>
             <div className="catalog-summary">
-              <span className="catalog-chip">DMM TV配信 {dmmPlayCount}作品</span>
+              <span className="catalog-chip">DMM TV配信 {dmmPlayCount} 作品</span>
               <span className="catalog-chip">14日間無料トライアル</span>
-              <span className="catalog-chip">月額 550円</span>
+              <span className="catalog-chip">月額550円</span>
             </div>
             <div className="inline-links">
               <Link className="action-button" href="/watch">
