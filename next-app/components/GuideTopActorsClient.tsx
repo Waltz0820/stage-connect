@@ -46,7 +46,7 @@ export function GuideTopActorsClient({
   return (
     <div className="stack-md">
       {hasTabs ? (
-        <div className="favorite-tabs guide-tabs" role="tablist" aria-label="出演キャストの表示切替">
+        <div className="favorite-tabs guide-tabs" role="tablist" aria-label="主な出演キャストの表示切替">
           <button
             type="button"
             className={activeFormat === "stage" ? "is-active" : ""}

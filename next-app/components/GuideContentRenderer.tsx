@@ -34,8 +34,8 @@ const VOD_SERVICE_LINKS: Record<string, string> = {
 
 const VOD_SERVICE_DESCRIPTIONS: Record<string, string> = {
   "DMM TV": "刀剣乱舞シリーズを横断して視聴しやすい",
-  "dアニメストア": "一部作品に対応",
   "U-NEXT": "総合VODとして優秀",
+  "dアニメストア": "一部作品に対応",
   "Amazon Prime Video": "配信状況は作品ごとに異なる",
 };
 
@@ -60,20 +60,23 @@ const normalizeToken = (value: string) =>
   value
     .normalize("NFKC")
     .replace(/["'`]/g, "")
-    .replace(/[「」『』（）()\[\]]/g, "")
+    .replace(/[()［］\[\]「」『』【】]/g, "")
     .replace(/\s+/g, "")
     .trim();
 
+const escapeRegExp = (value: string) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
 const stripGuidePlaceholders = (value: string) =>
   value
-    .replace(/`?\[作品詳細ページへのリンク\]`?/g, "")
-    .replace(/`?\[刀ステ シリーズ一覧ページへのリンク\]`?/g, "")
-    .replace(/`?\[刀ミュ シリーズ一覧ページへのリンク\]`?/g, "")
-    .replace(/`?\[DMM TVで『刀剣乱舞』シリーズを見る（ボタン）\]`?/g, "")
-    .replace(/`?\[Stage Connect 配信ステータス一覧を見る（ボタン）\]`?/g, "")
+    .replace(new RegExp(escapeRegExp(PLAY_LINK_PLACEHOLDER), "g"), "")
+    .replace(new RegExp(escapeRegExp(STAGE_SERIES_PLACEHOLDER), "g"), "")
+    .replace(new RegExp(escapeRegExp(MUSICAL_SERIES_PLACEHOLDER), "g"), "")
+    .replace(new RegExp(escapeRegExp(DMM_BUTTON_PLACEHOLDER), "g"), "")
+    .replace(new RegExp(escapeRegExp(WATCH_BUTTON_PLACEHOLDER), "g"), "")
+    .replace(/`/g, "")
     .trim();
 
-const stripParenSuffix = (value: string) => value.replace(/[（(].*?[）)]/g, "").trim();
+const stripParenSuffix = (value: string) => value.replace(/[（(].*?[)）]/g, "").trim();
 
 const parseBlocks = (content: string): Block[] => {
   const lines = content.replace(/\r\n/g, "\n").split("\n");
@@ -192,6 +195,11 @@ const getSectionPriority = (heading: string) => {
 const shouldOmitSection = (heading: string) =>
   heading.includes("刀剣乱舞シリーズの配信状況") || heading === "配信状況";
 
+const shouldOmitSubsectionHeading = (text: string) =>
+  text.includes("刀剣乱舞シリーズの配信状況") ||
+  text === "配信状況" ||
+  text.includes("シリーズ構成と物語の展開方式");
+
 const reorderSections = (blocks: Block[]) => {
   const { introBlocks, sections } = splitSections(blocks);
   const orderedSections = [...sections]
@@ -201,54 +209,6 @@ const reorderSections = (blocks: Block[]) => {
       if (diff !== 0) return diff;
       return a.originalIndex - b.originalIndex;
     });
-
-  const differenceIndex = orderedSections.findIndex((section) => getSectionPriority(section.heading) === 10);
-  const choiceIndex = orderedSections.findIndex((section) => getSectionPriority(section.heading) === 20);
-
-  if (differenceIndex !== -1 && choiceIndex !== -1 && choiceIndex > differenceIndex) {
-    const differenceSection = orderedSections[differenceIndex];
-    const choiceSection = orderedSections[choiceIndex];
-    const subSections: Array<{ heading: string | null; blocks: Block[] }> = [];
-    let current: { heading: string | null; blocks: Block[] } | null = null;
-
-    for (const block of differenceSection.blocks.slice(1)) {
-      if (block.type === "h3") {
-        if (current) subSections.push(current);
-        current = { heading: block.text, blocks: [block] };
-        continue;
-      }
-
-      if (current) {
-        current.blocks.push(block);
-      } else {
-        current = { heading: null, blocks: [block] };
-      }
-    }
-
-    if (current) subSections.push(current);
-
-    const formatSection = subSections.find(
-      (section) => section.heading?.includes("上演形式") || section.heading?.includes("公演フォーマット")
-    );
-    const castSection = subSections.find((section) => section.heading?.includes("キャスト構成"));
-    const remainingSections = subSections.filter(
-      (section) => section.heading !== formatSection?.heading && section.heading !== castSection?.heading
-    );
-
-    orderedSections[differenceIndex] = {
-      ...differenceSection,
-      blocks: [
-        differenceSection.blocks[0],
-        ...(formatSection?.blocks ?? []),
-        ...(castSection?.blocks ?? []),
-        { type: "h3", text: "初めて観る場合の選び方" },
-        ...choiceSection.blocks.filter((block) => block.type === "ul"),
-        ...remainingSections.flatMap((section) => section.blocks),
-      ],
-    };
-
-    orderedSections.splice(choiceIndex, 1);
-  }
 
   return [...introBlocks, ...orderedSections.flatMap((section) => section.blocks)];
 };
@@ -295,6 +255,36 @@ const findBestPlay = (allPlays: ReturnType<typeof getAllPlays>, rawLabel: string
   return partial.sort((a, b) => b.title.length - a.title.length)[0] ?? null;
 };
 
+const summarizePeriod = (period?: string | null) => {
+  if (!period) return null;
+  const match = period.match(/(\d{4})\D{0,2}(\d{1,2})/);
+  if (!match) return period;
+  return `${match[1]}/${match[2].padStart(2, "0")}-`;
+};
+
+const splitParagraphLines = (text: string) =>
+  text
+    .split("\n")
+    .map((line) => line.trim())
+    .filter(Boolean);
+
+const parseLabeledLines = (lines: string[]) => {
+  const parsed = lines
+    .map((line) => {
+      const match = line.match(/^([^：]{1,24})：\s*(.+)$/);
+      if (!match) return null;
+      return { label: match[1].trim(), body: match[2].trim() };
+    })
+    .filter(Boolean) as Array<{ label: string; body: string }>;
+
+  return parsed.length >= 2 && parsed.length === lines.length ? parsed : null;
+};
+
+const isFeatureLines = (lines: string[]) =>
+  lines.length >= 3 &&
+  lines.length <= 6 &&
+  lines.every((line) => line.length <= 24 && !/[。！？!?]/.test(line));
+
 const renderParagraphPlaceholder = (text: string, guide: GuideDetailData) => {
   const normalized = text.replace(/`/g, "").trim();
   const hasStageSeries = normalized.includes(STAGE_SERIES_PLACEHOLDER);
@@ -312,7 +302,7 @@ const renderParagraphPlaceholder = (text: string, guide: GuideDetailData) => {
     if (target?.slug) {
       actions.push(
         <Link className="action-button" href={`/series/${target.slug}`} key="stage-series">
-          刀ステ 作品一覧を見る
+          刀ステ 作品一覧
         </Link>
       );
     }
@@ -323,7 +313,7 @@ const renderParagraphPlaceholder = (text: string, guide: GuideDetailData) => {
     if (target?.slug) {
       actions.push(
         <Link className="action-button" href={`/series/${target.slug}`} key="musical-series">
-          刀ミュ 作品一覧を見る
+          刀ミュ 作品一覧
         </Link>
       );
     }
@@ -331,7 +321,11 @@ const renderParagraphPlaceholder = (text: string, guide: GuideDetailData) => {
 
   if (hasDmmButton) {
     actions.push(
-      <a className="action-button" href="/watch/dmm" key="dmm">
+      <a
+        className="action-button"
+        href="/watch/dmm"
+        key="dmm"
+      >
         DMM TVで『刀剣乱舞』シリーズを見る
       </a>
     );
@@ -371,6 +365,7 @@ const renderChoiceGrid = (items: string[], guide: GuideDetailData, blockKey: num
         : labelPart.includes("刀ミュ")
           ? "musical"
           : null;
+
       if (!format) return null;
 
       const series = findSeriesByFormat(guide, format);
@@ -433,13 +428,6 @@ const renderVodServiceGrid = (items: string[], blockKey: number) => (
     })}
   </div>
 );
-
-const summarizePeriod = (period?: string | null) => {
-  if (!period) return null;
-  const match = period.match(/(\d{4})\D{0,2}(\d{1,2})/);
-  if (!match) return period;
-  return `${match[1]}/${match[2].padStart(2, "0")}-`;
-};
 
 const renderPlayGrid = (items: string[], guide: GuideDetailData, blockKey: number) => {
   const allPlays = getAllPlays(guide);
@@ -534,35 +522,7 @@ const renderListItem = (item: string, guide: GuideDetailData, key: number) => {
   );
 };
 
-const splitParagraphLines = (text: string) =>
-  text
-    .split("\n")
-    .map((line) => line.trim())
-    .filter(Boolean);
-
-const parseLabeledLines = (lines: string[]) => {
-  const parsed = lines
-    .map((line) => {
-      const match = line.match(/^([^：]{1,24})：\s*(.+)$/);
-      if (!match) return null;
-      return { label: match[1].trim(), body: match[2].trim() };
-    })
-    .filter(Boolean) as Array<{ label: string; body: string }>;
-
-  return parsed.length >= 2 && parsed.length === lines.length ? parsed : null;
-};
-
-const isFeatureLines = (lines: string[]) =>
-  lines.length >= 3 &&
-  lines.length <= 6 &&
-  lines.every((line) => line.length <= 22 && !/[。.!?：:]/.test(line));
-
-const shouldOmitSubsectionHeading = (text: string) =>
-  text.includes("刀剣乱舞シリーズの配信状況") ||
-  text === "配信状況" ||
-  text.includes("シリーズ構成と物語の展開方式");
-
-const renderParagraphBlock = (text: string, key: number) => {
+const renderParagraphBlock = (text: string, key: number, currentHeading: string | null) => {
   const lines = splitParagraphLines(text);
   const labeledLines = parseLabeledLines(lines);
 
@@ -577,6 +537,28 @@ const renderParagraphBlock = (text: string, key: number) => {
         ))}
       </div>
     );
+  }
+
+  if (currentHeading?.includes("キャスト構成と出演形式")) {
+    const intro = lines[0];
+    const note = lines[lines.length - 1];
+    const middle = lines.slice(1, lines.length - 1);
+
+    if (middle.length > 0 && isFeatureLines(middle)) {
+      return (
+        <div className="stack-sm" key={key}>
+          {intro ? <p className="guide-prose__p">{parseInline(intro)}</p> : null}
+          <div className="guide-feature-grid">
+            {middle.map((line, index) => (
+              <div className="guide-feature-chip" key={`${line}-${index}`}>
+                {parseInline(line)}
+              </div>
+            ))}
+          </div>
+          {note ? <p className="guide-prose__p">{parseInline(note)}</p> : null}
+        </div>
+      );
+    }
   }
 
   if (isFeatureLines(lines)) {
@@ -605,13 +587,15 @@ const renderParagraphBlock = (text: string, key: number) => {
 
 export function GuideContentRenderer({ content, guide }: Props) {
   const blocks = reorderSections(parseBlocks(content));
-  let skipUntilHeading = false;
+  let skipUntilNextHeading = false;
+  let currentH3: string | null = null;
 
   return (
     <div className="guide-prose stack-md">
       {blocks.map((block, index) => {
         if (block.type === "h2") {
-          skipUntilHeading = false;
+          skipUntilNextHeading = false;
+          currentH3 = null;
           return (
             <h2 className="guide-prose__h2" key={index}>
               {block.text}
@@ -621,11 +605,13 @@ export function GuideContentRenderer({ content, guide }: Props) {
 
         if (block.type === "h3") {
           if (shouldOmitSubsectionHeading(block.text)) {
-            skipUntilHeading = true;
+            skipUntilNextHeading = true;
+            currentH3 = null;
             return null;
           }
 
-          skipUntilHeading = false;
+          skipUntilNextHeading = false;
+          currentH3 = block.text;
           return (
             <h3 className="guide-prose__h3" key={index}>
               {block.text}
@@ -633,7 +619,7 @@ export function GuideContentRenderer({ content, guide }: Props) {
           );
         }
 
-        if (skipUntilHeading) return null;
+        if (skipUntilNextHeading) return null;
 
         if (block.type === "ul") {
           if (isPlayLinkList(block.items)) {
@@ -686,11 +672,9 @@ export function GuideContentRenderer({ content, guide }: Props) {
         }
 
         const placeholder = renderParagraphPlaceholder(block.text, guide);
-        if (placeholder) {
-          return <React.Fragment key={index}>{placeholder}</React.Fragment>;
-        }
+        if (placeholder) return <React.Fragment key={index}>{placeholder}</React.Fragment>;
 
-        return renderParagraphBlock(block.text, index);
+        return renderParagraphBlock(block.text, index, currentH3);
       })}
     </div>
   );

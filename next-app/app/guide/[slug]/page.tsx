@@ -113,7 +113,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<Para
                 <span className="catalog-chip">関連シリーズ {guide.relatedSeries.length} 件</span>
               ) : null}
               {totalPlays > 0 ? <span className="catalog-chip">関連作品 {totalPlays} 件</span> : null}
-              {hasDmm ? <span className="catalog-chip">DMM TV配信 {dmmPlayCount} 作品</span> : null}
+              {hasDmm ? <span className="catalog-chip">DMM TV対応 {dmmPlayCount} 作品</span> : null}
             </div>
           ) : null}
         </section>
@@ -128,9 +128,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<Para
           <section className="section-card stack-md">
             <div className="stack-sm">
               <h2 className="section-title">主な出演キャスト</h2>
-              <p className="catalog-note">
-                舞台 / ミュージカル それぞれの主な出演者を掲載しています。
-              </p>
+              <p className="catalog-note">舞台 / ミュージカル それぞれの主な出演者を掲載しています。</p>
             </div>
 
             <GuideTopActorsClient
@@ -156,12 +154,13 @@ export default async function GuideDetailPage({ params }: { params: Promise<Para
               </a>
             </div>
             <div className="prose-panel">
-              舞台 / ミュージカル『刀剣乱舞』の作品の多くは DMM TV で配信されています。まずは無料トライアルで、気になる作品の配信状況を確認してみてください。
+              舞台 / ミュージカル『刀剣乱舞』の作品の多くは DMM TV で配信されています。まずは無料トライアルで、
+              気になる作品の配信状況を確認してみてください。
             </div>
             <div className="catalog-summary">
-              <span className="catalog-chip">DMM TV配信 {dmmPlayCount} 作品</span>
+              <span className="catalog-chip">DMM TV対応 {dmmPlayCount} 作品</span>
               <span className="catalog-chip">14日間無料トライアル</span>
-              <span className="catalog-chip">月額550円</span>
+              <span className="catalog-chip">月額 550円</span>
             </div>
             <div className="inline-links">
               <Link className="action-button" href="/watch">
