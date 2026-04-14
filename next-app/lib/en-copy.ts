@@ -152,6 +152,15 @@ export const getEnglishSeriesName = (series: {
   return translateKnownTermsEn(series.name);
 };
 
+export const getEnglishPlayTitle = (play: {
+  titleEn?: string | null;
+  title?: string | null;
+}) => {
+  const direct = String(play.titleEn ?? "").trim();
+  if (direct) return direct;
+  return String(play.title ?? "").trim();
+};
+
 export const truncateText = (text: string, max: number) =>
   text.length <= max ? text : `${text.slice(0, Math.max(0, max - 1))}...`;
 

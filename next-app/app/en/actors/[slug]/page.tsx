@@ -13,6 +13,7 @@ import {
   formatBirthdayEn,
   formatBirthdayLabelEn,
   getEnglishActorName,
+  getEnglishPlayTitle,
   getEnglishSeriesName,
   translateAnnotatedDisplayTextEn,
   translateDisplayTextEn,
@@ -189,7 +190,7 @@ export default async function EnglishActorDetailPage({ params }: { params: Promi
                 <div className="cast-grid cast-grid-wide">
                   {group.plays.map((play) => (
                     <Link className="cast-card cast-card-link" href={`/en/plays/${play.slug}`} key={play.slug}>
-                      <div className="cast-name">{play.title}</div>
+                      <div className="cast-name">{getEnglishPlayTitle(play)}</div>
                       {play.franchiseName ? (
                         <div className="muted" style={{ marginTop: 6, fontSize: 13 }}>
                           {getEnglishSeriesName({ name: play.franchiseName, nameEn: play.franchiseNameEn })}

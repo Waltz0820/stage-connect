@@ -26,6 +26,7 @@ export type ActorDetailData = {
   plays: Array<{
     slug: string;
     title: string;
+    titleEn: string | null;
     period: string | null;
     summary: string | null;
     vod: Record<string, string> | null;
@@ -72,6 +73,7 @@ export type SeriesDetailData = {
     id: string;
     slug: string;
     title: string;
+    titleEn: string | null;
     period: string | null;
     summary: string | null;
     summaryEn: string | null;
@@ -93,6 +95,7 @@ export type SeriesDetailData = {
 export type PlayListItem = {
   slug: string;
   title: string;
+  titleEn: string | null;
   summary: string | null;
   summaryEn: string | null;
   period: string | null;
@@ -180,6 +183,7 @@ export type GuideDetailData = {
       id: string;
       slug: string;
       title: string;
+      titleEn: string | null;
       period: string | null;
       summary: string | null;
       vod: Record<string, string> | null;
@@ -260,6 +264,7 @@ export type PlayDetailData = {
   id: string;
   slug: string;
   title: string;
+  titleEn: string | null;
   summary: string | null;
   summaryEn: string | null;
   period: string | null;
@@ -403,6 +408,7 @@ export async function getPlayDetailBySlug(slug: string): Promise<PlayDetailData 
         id,
         slug,
         title,
+        title_en,
         summary,
         summary_en,
         period,
@@ -427,17 +433,19 @@ export async function getPlayDetailBySlug(slug: string): Promise<PlayDetailData 
     playError = res.error;
   }
 
-  if (playError && /(summary_en|name_en)/i.test(String(playError.message ?? ""))) {
+  if (playError && /(title_en|summary_en|name_en)/i.test(String(playError.message ?? ""))) {
     const message = String(playError.message ?? "");
+    const includeTitleEn = !/title_en/i.test(message);
     const includeSummaryEn = !/summary_en/i.test(message);
     const includeFranchiseNameEn = !/name_en/i.test(message);
-    const fallback = await supabase
+    const fallback = await (supabase as any)
       .from("plays")
       .select(
         `
         id,
         slug,
         title,
+        ${includeTitleEn ? "title_en," : ""}
         summary,
         ${includeSummaryEn ? "summary_en," : ""}
         period,
@@ -462,6 +470,7 @@ export async function getPlayDetailBySlug(slug: string): Promise<PlayDetailData 
     play = fallbackPlay
       ? {
           ...fallbackPlay,
+          ...(includeTitleEn ? {} : { title_en: null }),
           ...(includeSummaryEn ? {} : { summary_en: null }),
           franchise: Array.isArray(fallbackPlay?.franchise)
             ? fallbackPlay.franchise.map((item: any) => ({
@@ -510,7 +519,7 @@ export async function getPlayDetailBySlug(slug: string): Promise<PlayDetailData 
   }
 
   if (castError && /name_en/i.test(String(castError.message ?? ""))) {
-    const fallback = await supabase
+    const fallback = await (supabase as any)
       .from("casts")
       .select(
         `
@@ -573,6 +582,7 @@ export async function getPlayDetailBySlug(slug: string): Promise<PlayDetailData 
     id: play.id,
     slug: play.slug,
     title: play.title,
+    titleEn: play.title_en ?? null,
     summary: play.summary ?? null,
     summaryEn: play.summary_en ?? null,
     period: play.period ?? null,
@@ -628,6 +638,7 @@ export async function getActorDetailBySlug(slug: string): Promise<ActorDetailDat
       play:plays (
         slug,
         title,
+        title_en,
         period,
         summary,
         vod,
@@ -644,7 +655,10 @@ export async function getActorDetailBySlug(slug: string): Promise<ActorDetailDat
   let actorCastRows = castRows;
   let actorCastError = castError;
 
-  if (actorCastError && /name_en/i.test(String(actorCastError.message ?? ""))) {
+  if (actorCastError && /(title_en|name_en)/i.test(String(actorCastError.message ?? ""))) {
+    const message = String(actorCastError.message ?? "");
+    const includeTitleEn = !/title_en/i.test(message);
+    const includeFranchiseNameEn = !/name_en/i.test(message);
     const fallback = await supabase
       .from("casts")
       .select(
@@ -654,11 +668,13 @@ export async function getActorDetailBySlug(slug: string): Promise<ActorDetailDat
       play:plays (
         slug,
         title,
+        ${includeTitleEn ? "title_en," : ""}
         period,
         summary,
         vod,
         franchise:franchises (
           name,
+          ${includeFranchiseNameEn ? "name_en," : ""}
           slug
         )
       )
@@ -670,21 +686,29 @@ export async function getActorDetailBySlug(slug: string): Promise<ActorDetailDat
       (fallback.data as any[] | null)?.map((row) => ({
         ...row,
         play: Array.isArray(row?.play)
-          ? row.play.map((item: any) => ({
-              ...item,
-              franchise: Array.isArray(item?.franchise)
-                ? item.franchise.map((franchise: any) => ({ ...franchise, name_en: null }))
+            ? row.play.map((item: any) => ({
+                ...item,
+                ...(includeTitleEn ? {} : { title_en: null }),
+                franchise: Array.isArray(item?.franchise)
+                ? item.franchise.map((franchise: any) => ({
+                    ...franchise,
+                    ...(includeFranchiseNameEn ? {} : { name_en: null }),
+                  }))
                 : item?.franchise
-                  ? { ...(item.franchise as any), name_en: null }
+                  ? { ...(item.franchise as any), ...(includeFranchiseNameEn ? {} : { name_en: null }) }
                   : item?.franchise,
-            }))
+              }))
           : row?.play
             ? {
                 ...row.play,
+                ...(includeTitleEn ? {} : { title_en: null }),
                 franchise: Array.isArray(row.play?.franchise)
-                  ? row.play.franchise.map((franchise: any) => ({ ...franchise, name_en: null }))
+                  ? row.play.franchise.map((franchise: any) => ({
+                      ...franchise,
+                      ...(includeFranchiseNameEn ? {} : { name_en: null }),
+                    }))
                   : row.play?.franchise
-                    ? { ...(row.play.franchise as any), name_en: null }
+                    ? { ...(row.play.franchise as any), ...(includeFranchiseNameEn ? {} : { name_en: null }) }
                     : row.play?.franchise,
               }
             : row?.play,
@@ -699,6 +723,7 @@ export async function getActorDetailBySlug(slug: string): Promise<ActorDetailDat
     {
       slug: string;
       title: string;
+      titleEn: string | null;
       period: string | null;
       summary: string | null;
       vod: Record<string, string> | null;
@@ -723,6 +748,7 @@ export async function getActorDetailBySlug(slug: string): Promise<ActorDetailDat
       byPlay.set(playSlug, {
         slug: playSlug,
         title,
+        titleEn: (play?.title_en as string | null) ?? null,
         period: play?.period ?? null,
         summary: play?.summary ?? null,
         vod: play?.vod ?? null,
@@ -997,6 +1023,7 @@ export async function getSeriesDetailBySlug(slug: string): Promise<SeriesDetailD
         id,
         slug,
         title,
+        title_en,
         period,
         summary,
         summary_en,
@@ -1014,16 +1041,21 @@ export async function getSeriesDetailBySlug(slug: string): Promise<SeriesDetailD
     playError = res.error;
   }
 
-  if (playError && /summary_en/i.test(String(playError.message ?? ""))) {
-    const fallback = await supabase
+  if (playError && /(title_en|summary_en)/i.test(String(playError.message ?? ""))) {
+    const message = String(playError.message ?? "");
+    const includeTitleEn = !/title_en/i.test(message);
+    const includeSummaryEn = !/summary_en/i.test(message);
+    const fallback = await (supabase as any)
       .from("plays")
       .select(
         `
         id,
         slug,
         title,
+        ${includeTitleEn ? "title_en," : ""}
         period,
         summary,
+        ${includeSummaryEn ? "summary_en," : ""}
         vod,
         created_at,
         play_tags:play_tags (
@@ -1037,7 +1069,8 @@ export async function getSeriesDetailBySlug(slug: string): Promise<SeriesDetailD
     playRows =
       (fallback.data as any[] | null)?.map((row) => ({
         ...row,
-        summary_en: null,
+        ...(includeTitleEn ? {} : { title_en: null }),
+        ...(includeSummaryEn ? {} : { summary_en: null }),
       })) ?? null;
     playError = fallback.error;
   }
@@ -1050,6 +1083,7 @@ export async function getSeriesDetailBySlug(slug: string): Promise<SeriesDetailD
       id: row.id as string,
       slug: row.slug as string,
       title: row.title as string,
+      titleEn: (row.title_en as string | null) ?? null,
       period: (row.period as string | null) ?? null,
       summary: (row.summary as string | null) ?? null,
       summaryEn: (row.summary_en as string | null) ?? null,
@@ -1322,6 +1356,7 @@ export async function getPlayList(): Promise<PlayListItem[]> {
         `
         slug,
         title,
+        title_en,
         summary,
         summary_en,
         period,
@@ -1339,16 +1374,18 @@ export async function getPlayList(): Promise<PlayListItem[]> {
     error = res.error;
   }
 
-  if (error && /(summary_en|name_en)/i.test(String(error.message ?? ""))) {
+  if (error && /(title_en|summary_en|name_en)/i.test(String(error.message ?? ""))) {
     const message = String(error.message ?? "");
+    const includeTitleEn = !/title_en/i.test(message);
     const includeSummaryEn = !/summary_en/i.test(message);
     const includeFranchiseNameEn = !/name_en/i.test(message);
-    const fallback = await supabase
+    const fallback = await (supabase as any)
       .from("plays")
       .select(
         `
         slug,
         title,
+        ${includeTitleEn ? "title_en," : ""}
         summary,
         ${includeSummaryEn ? "summary_en," : ""}
         period,
@@ -1365,6 +1402,7 @@ export async function getPlayList(): Promise<PlayListItem[]> {
     data =
       (fallback.data as any[] | null)?.map((row) => ({
         ...row,
+        ...(includeTitleEn ? {} : { title_en: null }),
         ...(includeSummaryEn ? {} : { summary_en: null }),
         franchise: Array.isArray(row?.franchise)
           ? row.franchise.map((item: any) => ({
@@ -1415,6 +1453,7 @@ export async function getPlayList(): Promise<PlayListItem[]> {
       return {
         slug: row.slug as string,
         title: row.title as string,
+        titleEn: (row.title_en as string | null) ?? null,
         summary: (row.summary as string | null) ?? null,
         summaryEn: (row.summary_en as string | null) ?? null,
         period: (row.period as string | null) ?? null,
@@ -1661,7 +1700,7 @@ export async function getGuideDetailBySlug(slug: string): Promise<GuideDetailDat
         .in("id", relatedFranchiseIds),
       supabase
         .from("plays")
-        .select("id, slug, title, period, summary, vod, franchise_id")
+        .select("id, slug, title, title_en, period, summary, vod, franchise_id")
         .in("franchise_id", relatedFranchiseIds),
     ]);
 
@@ -1681,23 +1720,40 @@ export async function getGuideDetailBySlug(slug: string): Promise<GuideDetailDat
       relatedFranchiseError = fallback.error;
     }
 
+    let relatedPlays = plays as any[] | null;
+    let relatedPlayError = playError;
+
+    if (relatedPlayError && /title_en/i.test(String(relatedPlayError.message ?? ""))) {
+      const fallback = await supabase
+        .from("plays")
+        .select("id, slug, title, period, summary, vod, franchise_id")
+        .in("franchise_id", relatedFranchiseIds);
+      relatedPlays =
+        (fallback.data as any[] | null)?.map((row) => ({
+          ...row,
+          title_en: null,
+        })) ?? null;
+      relatedPlayError = fallback.error;
+    }
+
     if (relatedFranchiseError) throw relatedFranchiseError;
-    if (playError) throw playError;
+    if (relatedPlayError) throw relatedPlayError;
 
     const playBuckets = new Map<string, GuideDetailData["relatedPlaySections"][number]["plays"]>();
 
-    for (const row of (plays ?? []) as any[]) {
+    for (const row of (relatedPlays ?? []) as any[]) {
       const franchiseId = String(row?.franchise_id ?? "").trim();
       const playId = String(row?.id ?? "").trim();
-      const playSlug = String(row?.slug ?? "").trim();
-      const title = String(row?.title ?? "").trim();
-      if (!franchiseId || !playId || !playSlug || !title) continue;
+        const playSlug = String(row?.slug ?? "").trim();
+        const title = String(row?.title ?? "").trim();
+        if (!franchiseId || !playId || !playSlug || !title) continue;
 
       const bucket = playBuckets.get(franchiseId) ?? [];
       bucket.push({
         id: playId,
         slug: playSlug,
         title,
+        titleEn: (row?.title_en as string | null) ?? null,
         period: (row?.period as string | null) ?? null,
         summary: (row?.summary as string | null) ?? null,
         vod: (row?.vod as Record<string, string> | null) ?? null,

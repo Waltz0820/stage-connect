@@ -6,6 +6,7 @@ import { SeriesCastOverviewClient } from "../../../../components/SeriesCastOverv
 import { StructuredData } from "../../../../components/StructuredData";
 import {
   getEnglishActorName,
+  getEnglishPlayTitle,
   getEnglishSeriesName,
   toEnglishOriginType,
   translateDisplayTextEn,
@@ -124,7 +125,7 @@ export default async function EnglishSeriesDetailPage({ params }: { params: Prom
     genre: toEnglishOriginType(series.originType) || undefined,
     hasPart: series.plays.slice(0, 50).map((play) => ({
       "@type": "CreativeWork",
-      name: play.title,
+      name: getEnglishPlayTitle(play),
       url: `${siteUrl}/en/plays/${play.slug}`,
     })),
   };
@@ -209,7 +210,7 @@ export default async function EnglishSeriesDetailPage({ params }: { params: Prom
                 <article className="catalog-card">
                   <Link className="catalog-card__body-link" href={`/en/plays/${play.slug}`}>
                     <div className="catalog-card__top">
-                      <div className="catalog-card__title">{play.title}</div>
+                      <div className="catalog-card__title">{getEnglishPlayTitle(play)}</div>
                       {hasVod(play.vod) ? <span className="catalog-card__badge">Streaming</span> : null}
                     </div>
 

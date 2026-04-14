@@ -2,7 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "../../../components/Breadcrumbs";
 import { StructuredData } from "../../../components/StructuredData";
-import { compactListPeriodEn, EN_FORMAT_LABELS, EN_GENRE_LABELS, getEnglishSeriesName, truncateText } from "../../../lib/en-copy";
+import {
+  compactListPeriodEn,
+  EN_FORMAT_LABELS,
+  EN_GENRE_LABELS,
+  getEnglishPlayTitle,
+  getEnglishSeriesName,
+  truncateText,
+} from "../../../lib/en-copy";
 import { buildBreadcrumbList, buildCollectionPageStructuredData } from "../../../lib/structured-data";
 import { getPlayList, periodSortKey, toPlainText } from "../../../lib/stage-connect";
 
@@ -151,7 +158,7 @@ export default async function EnglishPlaysPage({
               <article className="catalog-card" key={play.slug}>
                 <Link className="catalog-card__body-link" href={`/en/plays/${play.slug}`}>
                   <div className="catalog-card__top catalog-card__top--stack">
-                    <div className="catalog-card__title">{play.title}</div>
+                    <div className="catalog-card__title">{getEnglishPlayTitle(play)}</div>
                     <div className="catalog-card__top-actions">
                       {format === "all" && play.franchiseFormat ? (
                         <span className="catalog-card__badge">

@@ -7,6 +7,7 @@ import { StructuredData } from "../../../../components/StructuredData";
 import {
   compactListPeriodEn,
   getEnglishActorName,
+  getEnglishPlayTitle,
   getEnglishSeriesName,
   translateAnnotatedDisplayTextEn,
   translateDisplayTextEn,
@@ -116,6 +117,7 @@ const groupCast = (
 };
 
 const buildPlayMetaDescriptionEn = (play: NonNullable<Awaited<ReturnType<typeof getPlayDetailBySlug>>>) => {
+  const displayTitle = getEnglishPlayTitle(play);
   const parts: string[] = [];
   const displaySeriesName = play.franchiseName
     ? getEnglishSeriesName({ name: play.franchiseName, nameEn: play.franchiseNameEn })
@@ -131,7 +133,7 @@ const buildPlayMetaDescriptionEn = (play: NonNullable<Awaited<ReturnType<typeof 
   if (factParts.length > 0) parts.push(`${factParts.join(" / ")}.`);
 
   if (parts.length === 0) {
-    parts.push(`${play.title} cast, series, and streaming archive page on Stage Connect.`);
+    parts.push(`${displayTitle} cast, series, and streaming archive page on Stage Connect.`);
   } else {
     parts.push("Includes cast, credits, and schedule details.");
   }
@@ -150,8 +152,10 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
     };
   }
 
+  const displayTitle = getEnglishPlayTitle(play);
+
   return {
-    title: `${play.title} | Cast, series, and streaming info | Stage Connect`,
+    title: `${displayTitle} | Cast, series, and streaming info | Stage Connect`,
     description: buildPlayMetaDescriptionEn(play),
     alternates: {
       canonical: `${siteUrl}/en/plays/${play.slug}`,
@@ -169,6 +173,7 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
 
   if (!play) notFound();
 
+  const displayTitle = getEnglishPlayTitle(play);
   const creditItems = getCreditItems(play.credits);
   const castSummary = summarizeCastEn(play.cast);
   const hasVod = Boolean(play.vod && Object.keys(play.vod).length > 0);
@@ -184,9 +189,9 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
   const creativeWorkJsonLd = {
     "@context": "https://schema.org",
     "@type": "CreativeWork",
-    name: play.title,
+    name: displayTitle,
     description: toPlainText(
-      synopsis || `${play.title} cast and production archive page on Stage Connect.`
+      synopsis || `${displayTitle} cast and production archive page on Stage Connect.`
     ),
     url: `${siteUrl}/en/plays/${play.slug}`,
     keywords: play.tags.join(", "),
@@ -200,7 +205,7 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
   const breadcrumbJsonLd = buildBreadcrumbList([
     { name: "HOME", path: "/en" },
     { name: "Plays", path: "/en/plays" },
-    { name: play.title, path: `/en/plays/${play.slug}` },
+    { name: displayTitle, path: `/en/plays/${play.slug}` },
   ]);
 
   return (
@@ -218,7 +223,7 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
               </Link>
             ) : null}
 
-            <h1 className="page-title">{play.title}</h1>
+            <h1 className="page-title">{displayTitle}</h1>
 
             <div className="pill-row">
               {play.tags.map((tag) => (
@@ -248,7 +253,7 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
 
         <section className="section-card stack-md">
           <p className="lead">
-            <strong className="strong-inline">{play.title}</strong> is listed with cast, series connection, public
+            <strong className="strong-inline">{displayTitle}</strong> is listed with cast, series connection, public
             schedule, venue, and streaming availability. Featured cast includes {castSummary}.
           </p>
         </section>

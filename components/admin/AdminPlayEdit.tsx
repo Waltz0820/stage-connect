@@ -23,6 +23,7 @@ type PlayRow = {
   id: string;
   slug: string;
   title: string;
+  title_en?: string | null;
   summary?: string | null;
   summary_en?: string | null;
   period?: string | null;
@@ -202,6 +203,7 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
   const [row, setRow] = useState<PlayRow | null>(null);
 
   const [title, setTitle] = useState("");
+  const [titleEn, setTitleEn] = useState("");
   const [slugText, setSlugText] = useState("");
   const [summary, setSummary] = useState("");
   const [summaryEn, setSummaryEn] = useState("");
@@ -338,20 +340,32 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         {
           const res = await supabase
             .from("plays")
-            .select("id,slug,title,summary,summary_en,period,venue,genre,vod,franchise_id,credits")
+            .select("id,slug,title,title_en,summary,summary_en,period,venue,genre,vod,franchise_id,credits")
             .eq("slug", key)
             .maybeSingle();
           data = res.data;
           error = res.error;
         }
 
-        if (error && /summary_en/i.test(String(error.message ?? ""))) {
+        if (error && /(title_en|summary_en)/i.test(String(error.message ?? ""))) {
+          const message = String(error.message ?? "");
+          const includeTitleEn = !/title_en/i.test(message);
+          const includeSummaryEn = !/summary_en/i.test(message);
           const fallback = await supabase
             .from("plays")
-            .select("id,slug,title,summary,period,venue,genre,vod,franchise_id,credits")
+            .select(
+              `id,slug,title,${includeTitleEn ? "title_en," : ""}summary,${includeSummaryEn ? "summary_en," : ""}period,venue,genre,vod,franchise_id,credits`
+            )
             .eq("slug", key)
             .maybeSingle();
-          data = fallback.data ? { ...fallback.data, summary_en: null } : fallback.data;
+          data =
+            fallback.data
+              ? {
+                  ...fallback.data,
+                  ...(includeTitleEn ? {} : { title_en: null }),
+                  ...(includeSummaryEn ? {} : { summary_en: null }),
+                }
+              : fallback.data;
           error = fallback.error;
         }
         if (error) throw error;
@@ -360,6 +374,7 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         const r = data as PlayRow;
         setRow(r);
         setTitle(r.title ?? "");
+        setTitleEn(r.title_en ?? "");
         setSlugText(r.slug ?? "");
         setSummary(r.summary ?? "");
         setSummaryEn(r.summary_en ?? "");
@@ -456,6 +471,7 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
 
       const payload: any = {
         title: safeTrim(title),
+        title_en: safeTrim(titleEn) || null,
         slug: safeTrim(slugText) || toSlug(title),
         summary: safeTrim(summary) || null,
         summary_en: safeTrim(summaryEn) || null,
@@ -485,8 +501,11 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
           created = res.data;
           error = res.error;
         }
-        if (error && /summary_en/i.test(String(error.message ?? ""))) {
-          const { summary_en, ...fallbackPayload } = payload;
+        if (error && /(title_en|summary_en)/i.test(String(error.message ?? ""))) {
+          const message = String(error.message ?? "");
+          const fallbackPayload = { ...payload };
+          if (/title_en/i.test(message)) delete fallbackPayload.title_en;
+          if (/summary_en/i.test(message)) delete fallbackPayload.summary_en;
           const res = await supabase.from("plays").insert(fallbackPayload).select("id,slug").single();
           created = res.data;
           error = res.error;
@@ -503,8 +522,11 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
           const res = await supabase.from("plays").update(payload).eq("id", row.id);
           error = res.error;
         }
-        if (error && /summary_en/i.test(String(error.message ?? ""))) {
-          const { summary_en, ...fallbackPayload } = payload;
+        if (error && /(title_en|summary_en)/i.test(String(error.message ?? ""))) {
+          const message = String(error.message ?? "");
+          const fallbackPayload = { ...payload };
+          if (/title_en/i.test(message)) delete fallbackPayload.title_en;
+          if (/summary_en/i.test(message)) delete fallbackPayload.summary_en;
           const res = await supabase.from("plays").update(fallbackPayload).eq("id", row.id);
           error = res.error;
         }
@@ -822,6 +844,14 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
             onChange={(e) => setSummaryEn(e.target.value)}
             rows={6}
             placeholder="Write an English synopsis for /en/plays pages."
+          />
+        </Field>
+        <Field label="title_en" hint="English title for /en/plays pages">
+          <input
+            className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
+            value={titleEn}
+            onChange={(e) => setTitleEn(e.target.value)}
+            placeholder="Write an English title for /en/plays pages."
           />
         </Field>
       </div>
