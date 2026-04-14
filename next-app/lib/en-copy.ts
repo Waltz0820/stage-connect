@@ -155,7 +155,30 @@ export const getEnglishSeriesName = (series: {
 export const truncateText = (text: string, max: number) =>
   text.length <= max ? text : `${text.slice(0, Math.max(0, max - 1))}...`;
 
-export const translateDisplayTextEn = (value?: string | null) => translateKnownTermsEn(value);
+const normalizeDisplaySegment = (value: string) =>
+  value
+    .normalize("NFKC")
+    .replace(/\u3000/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+const stripDisplayAnnotations = (value: string) => value.split("※")[0].split("【")[0].trim();
+
+export const translateDisplayTextEn = (value?: string | null) =>
+  String(value ?? "")
+    .split(/\s*\/\s*/)
+    .map((segment) => stripDisplayAnnotations(normalizeDisplaySegment(segment)))
+    .filter(Boolean)
+    .map((segment) => translateKnownTermsEn(segment))
+    .join(" / ");
+
+export const translateAnnotatedDisplayTextEn = (value?: string | null) =>
+  String(value ?? "")
+    .split(/\s*\/\s*/)
+    .map((segment) => normalizeDisplaySegment(segment))
+    .filter(Boolean)
+    .map((segment) => translateKnownTermsEn(segment))
+    .join(" / ");
 
 export const toEnglishOriginType = (value?: string | null) => {
   const raw = String(value ?? "").trim();

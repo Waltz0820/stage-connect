@@ -14,6 +14,7 @@ import {
   formatBirthdayLabelEn,
   getEnglishActorName,
   getEnglishSeriesName,
+  translateAnnotatedDisplayTextEn,
   translateDisplayTextEn,
   truncateText,
 } from "../../../../lib/en-copy";
@@ -194,7 +195,7 @@ export default async function EnglishActorDetailPage({ params }: { params: Promi
                           {getEnglishSeriesName({ name: play.franchiseName, nameEn: play.franchiseNameEn })}
                         </div>
                       ) : null}
-                      {play.roleName ? <div className="cast-role">{translateDisplayTextEn(play.roleName)}</div> : null}
+                      {play.roleName ? <div className="cast-role">{translateAnnotatedDisplayTextEn(play.roleName)}</div> : null}
                       {formatTimelineLeadDate(play.period) ? (
                         <div className="subtle-line" style={{ marginTop: 10 }}>
                           {formatTimelineLeadDate(play.period)}

@@ -7,6 +7,7 @@ import {
   compactListPeriodEn,
   getEnglishActorName,
   getEnglishSeriesName,
+  translateAnnotatedDisplayTextEn,
   translateDisplayTextEn,
   truncateText,
 } from "../../../../lib/en-copy";
@@ -302,7 +303,7 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
             <div className="stack-md">
               {groupedCast.map((group, index) => (
                 <div className="stack-sm" key={group.name ?? `ungrouped-${index}`}>
-                  {group.name ? <div className="group-chip">{translateDisplayTextEn(group.name)}</div> : null}
+                  {group.name ? <div className="group-chip">{translateAnnotatedDisplayTextEn(group.name)}</div> : null}
                   <div className="cast-grid">
                     {group.items.map((item) => (
                       <Link
@@ -312,7 +313,7 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
                       >
                         <div className="cast-name">{getEnglishActorName(item)}</div>
                         {item.roleName ? (
-                          <div className="cast-role">{summarizeRoleNameEn(translateDisplayTextEn(item.roleName))}</div>
+                          <div className="cast-role">{summarizeRoleNameEn(translateAnnotatedDisplayTextEn(item.roleName))}</div>
                         ) : null}
                         {item.isStarring ? <div className="cast-badge">MAIN CAST</div> : null}
                       </Link>
