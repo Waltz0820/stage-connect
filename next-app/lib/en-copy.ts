@@ -164,6 +164,25 @@ const normalizeDisplaySegment = (value: string) =>
 
 const stripDisplayAnnotations = (value: string) => value.split("※")[0].split("【")[0].trim();
 
+const translateAnnotatedSegmentEn = (value: string) => {
+  const normalized = normalizeDisplaySegment(value);
+  if (!normalized) return "";
+
+  const parts = normalized
+    .split("※")
+    .map((part) => part.trim())
+    .filter(Boolean);
+
+  if (parts.length === 0) return "";
+  if (parts.length === 1) return translateKnownTermsEn(parts[0]);
+
+  const [main, ...notes] = parts;
+  const translatedMain = translateKnownTermsEn(main);
+  const translatedNotes = notes.map((note) => translateKnownTermsEn(note)).filter(Boolean);
+
+  return [translatedMain, ...translatedNotes.map((note) => `※${note}`)].join(" ");
+};
+
 export const translateDisplayTextEn = (value?: string | null) =>
   String(value ?? "")
     .split(/\s*\/\s*/)
@@ -175,9 +194,8 @@ export const translateDisplayTextEn = (value?: string | null) =>
 export const translateAnnotatedDisplayTextEn = (value?: string | null) =>
   String(value ?? "")
     .split(/\s*\/\s*/)
-    .map((segment) => normalizeDisplaySegment(segment))
+    .map((segment) => translateAnnotatedSegmentEn(segment))
     .filter(Boolean)
-    .map((segment) => translateKnownTermsEn(segment))
     .join(" / ");
 
 export const toEnglishOriginType = (value?: string | null) => {
