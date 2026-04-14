@@ -14,9 +14,13 @@ export default function StageConnectLogo({ compact = false }: StageConnectLogoPr
         <rect x="1.25" y="1.25" width="33.5" height="33.5" fill="none" rx="2" />
         <path d="M9 8.75h18" />
         <path d="M9 27.25h18" />
-        <path d="M18 8.75v18.5" className="brand-lockup__mark-accent" />
-        <text x="18" y="22.2" textAnchor="middle">
-          SC
+        <path d="M18 8.75v10.2" className="brand-lockup__mark-accent" />
+        <path d="M18 23.1v4.15" className="brand-lockup__mark-accent" />
+        <text x="14.15" y="21.75" textAnchor="middle">
+          S
+        </text>
+        <text x="21.85" y="21.75" textAnchor="middle">
+          C
         </text>
       </svg>
 
