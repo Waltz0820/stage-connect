@@ -500,8 +500,11 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
           {play.cast.length > 0 ? (
             <div className="stack-md">
               {groupedCast.map((group, index) => (
-                <div className="stack-sm" key={group.name ?? `ungrouped-${index}`}>
-                  {group.name ? <div className="group-chip">{group.name}</div> : null}
+                <div
+                  className={`cast-group-block stack-sm${group.name ? "" : " is-ungrouped"}`}
+                  key={group.name ?? `ungrouped-${index}`}
+                >
+                  <div className="group-chip">{group.name ?? "その他キャスト"}</div>
                   <div className="cast-grid">
                     {group.items.map((item) => (
                       <Link

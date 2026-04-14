@@ -1450,6 +1450,17 @@ a {
   text-transform: uppercase;
 }
 
+.cast-group-block {
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+
+.cast-group-block.is-ungrouped {
+  margin-top: 4px;
+  padding-top: 14px;
+  border-top-style: dashed;
+}
+
 .cast-grid {
   display: grid;
   gap: 14px;

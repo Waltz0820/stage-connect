@@ -302,8 +302,13 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
           {play.cast.length > 0 ? (
             <div className="stack-md">
               {groupedCast.map((group, index) => (
-                <div className="stack-sm" key={group.name ?? `ungrouped-${index}`}>
-                  {group.name ? <div className="group-chip">{translateAnnotatedDisplayTextEn(group.name)}</div> : null}
+                <div
+                  className={`cast-group-block stack-sm${group.name ? "" : " is-ungrouped"}`}
+                  key={group.name ?? `ungrouped-${index}`}
+                >
+                  <div className="group-chip">
+                    {group.name ? translateAnnotatedDisplayTextEn(group.name) : "Additional cast"}
+                  </div>
                   <div className="cast-grid">
                     {group.items.map((item) => (
                       <Link
