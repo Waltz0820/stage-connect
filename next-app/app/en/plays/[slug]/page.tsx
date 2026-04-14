@@ -12,7 +12,7 @@ import {
   truncateText,
 } from "../../../../lib/en-copy";
 import { buildBreadcrumbList } from "../../../../lib/structured-data";
-import { getCreditItems, getPlayDetailBySlug, summarizeCast, toPlainText } from "../../../../lib/stage-connect";
+import { getCreditItems, getPlayDetailBySlug, toPlainText } from "../../../../lib/stage-connect";
 
 type Params = { slug: string };
 type GroupedCast = {
@@ -35,6 +35,27 @@ const splitSlashList = (value?: string | null) =>
     .split(" / ")
     .map((item) => item.trim())
     .filter(Boolean);
+
+const summarizeCastEn = (
+  cast: Array<{
+    slug?: string | null;
+    name?: string | null;
+    nameEn?: string | null;
+  }>
+) => {
+  const names = Array.from(
+    new Set(
+      cast
+        .map((item) => getEnglishActorName(item))
+        .map((name) => name.trim())
+        .filter(Boolean)
+    )
+  );
+
+  if (names.length === 0) return "cast not listed yet";
+  if (names.length <= 3) return names.join(", ");
+  return `${names.slice(0, 3).join(", ")}, and more`;
+};
 
 const summarizeRoleNameEn = (value?: string | null) => {
   const roles = splitSlashList(value);
@@ -148,7 +169,7 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
   if (!play) notFound();
 
   const creditItems = getCreditItems(play.credits);
-  const castSummary = summarizeCast(play.cast);
+  const castSummary = summarizeCastEn(play.cast);
   const hasVod = Boolean(play.vod && Object.keys(play.vod).length > 0);
   const venues = splitSlashList(play.venue);
   const groupedCast = groupCast(play.cast);
