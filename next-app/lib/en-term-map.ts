@@ -175,6 +175,8 @@ export const EN_EXACT_TERM_MAP: Record<string, string> = {
   藤原泰衡: "Fujiwara no Yasuhira",
   結城秀康: "Yuki Hideyasu",
   源義経: "Minamoto no Yoshitsune",
+  源頼朝: "Minamoto no Yoritomo",
+  源頼光: "Minamoto no Raiko",
   榎本武揚: "Enomoto Takeaki",
   足利尊氏: "Ashikaga Takauji",
   土方歳三: "Hijikata Toshizo",
