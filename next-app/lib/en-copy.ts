@@ -192,6 +192,25 @@ const translateCompoundDotSeparatedEn = (value: string) => {
   return translatedParts.join(" / ");
 };
 
+const translateLooseSegmentEn = (value: string) =>
+  translateCompoundDotSeparatedEn(value) ?? translateColonLabelsEn(translateKnownTermsEn(value));
+
+const translateBracketAnnotatedSegmentEn = (value: string) => {
+  if (!/[【】]/.test(value)) return null;
+
+  const notes = Array.from(value.matchAll(/【([^】]+)】/g))
+    .map((match) => match[1]?.trim() ?? "")
+    .filter(Boolean)
+    .map((note) => translateLooseSegmentEn(note))
+    .filter(Boolean);
+
+  const main = value.replace(/【[^】]+】/g, "").trim();
+  const translatedMain = main ? translateLooseSegmentEn(main) : "";
+
+  if (!translatedMain && notes.length === 0) return null;
+  return [translatedMain, ...notes.map((note) => `(${note})`)].filter(Boolean).join(" ");
+};
+
 const translateAnnotatedSegmentEn = (value: string) => {
   const normalized = normalizeDisplaySegment(value);
   if (!normalized) return "";
@@ -203,20 +222,13 @@ const translateAnnotatedSegmentEn = (value: string) => {
 
   if (parts.length === 0) return "";
   if (parts.length === 1) {
-    return (
-      translateCompoundDotSeparatedEn(parts[0]) ??
-      translateColonLabelsEn(translateKnownTermsEn(parts[0]))
-    );
+    return translateBracketAnnotatedSegmentEn(parts[0]) ?? translateLooseSegmentEn(parts[0]);
   }
 
   const [main, ...notes] = parts;
-  const translatedMain =
-    translateCompoundDotSeparatedEn(main) ?? translateColonLabelsEn(translateKnownTermsEn(main));
+  const translatedMain = translateBracketAnnotatedSegmentEn(main) ?? translateLooseSegmentEn(main);
   const translatedNotes = notes
-    .map(
-      (note) =>
-        translateCompoundDotSeparatedEn(note) ?? translateColonLabelsEn(translateKnownTermsEn(note)),
-    )
+    .map((note) => translateBracketAnnotatedSegmentEn(note) ?? translateLooseSegmentEn(note))
     .filter(Boolean);
 
   return [translatedMain, ...translatedNotes.map((note) => `※${note}`)].join(" ");
@@ -227,11 +239,7 @@ export const translateDisplayTextEn = (value?: string | null) =>
     .split(/\s*\/\s*/)
     .map((segment) => stripDisplayAnnotations(normalizeDisplaySegment(segment)))
     .filter(Boolean)
-    .map(
-      (segment) =>
-        translateCompoundDotSeparatedEn(segment) ??
-        translateColonLabelsEn(translateKnownTermsEn(segment)),
-    )
+    .map((segment) => translateLooseSegmentEn(segment))
     .join(" / ");
 
 export const translateAnnotatedDisplayTextEn = (value?: string | null) =>
