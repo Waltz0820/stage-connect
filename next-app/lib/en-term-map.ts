@@ -17,8 +17,16 @@ export const EN_EXACT_TERM_MAP: Record<string, string> = {
   "単独行": "Solo Performance",
   "日替わり出演": "Rotating appearance",
   "会場替わり出演": "Venue-specific appearance",
+  "のみ出演": "Appears only in selected performances",
   "複数役": "Multiple roles",
   "再登場": "Returning appearance",
+  "刀剣男士": "Sword warriors",
+  "歴史上人物": "Historical figures",
+  "その他": "Others",
+  "新選組": "Shinsengumi",
+  "真田十勇士": "Sanada Ten Braves",
+  "講談師": "Storyteller",
+  "源氏物語": "The Tale of Genji",
 
   // Sword warriors / role names
   "加州清光": "Kashu Kiyomitsu",
