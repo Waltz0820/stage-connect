@@ -14,6 +14,16 @@ import { buildBreadcrumbList } from "../../../../lib/structured-data";
 import { getCreditItems, getPlayDetailBySlug, summarizeCast, toPlainText } from "../../../../lib/stage-connect";
 
 type Params = { slug: string };
+type GroupedCast = {
+  name: string | null;
+  items: Array<{
+    slug: string;
+    name: string;
+    nameEn?: string | null;
+    roleName: string | null;
+    isStarring: boolean | null;
+  }>;
+};
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
 export const revalidate = 3600;
@@ -24,6 +34,63 @@ const splitSlashList = (value?: string | null) =>
     .split(" / ")
     .map((item) => item.trim())
     .filter(Boolean);
+
+const summarizeRoleNameEn = (value?: string | null) => {
+  const roles = splitSlashList(value);
+  if (roles.length <= 3) return value ?? null;
+  return `${roles.slice(0, 3).join(" / ")} / ${roles.length - 3} more`;
+};
+
+const groupCast = (
+  cast: Array<{
+    slug: string;
+    name: string;
+    nameEn?: string | null;
+    roleName: string | null;
+    castGroup: string | null;
+    isStarring: boolean | null;
+  }>
+): GroupedCast[] => {
+  const groups = new Map<string, GroupedCast>();
+
+  for (const item of cast) {
+    const groupName = item.castGroup?.trim() || null;
+    const groupKey = groupName ?? "__ungrouped__";
+    const currentGroup = groups.get(groupKey) ?? { name: groupName, items: [] };
+    const existingIndex = currentGroup.items.findIndex((entry) => entry.slug === item.slug);
+
+    if (existingIndex === -1) {
+      currentGroup.items.push({
+        slug: item.slug,
+        name: item.name,
+        nameEn: item.nameEn,
+        roleName: item.roleName,
+        isStarring: item.isStarring,
+      });
+      groups.set(groupKey, currentGroup);
+      continue;
+    }
+
+    const existing = currentGroup.items[existingIndex];
+    const mergedRoles = Array.from(
+      new Set(
+        `${existing.roleName ?? ""} / ${item.roleName ?? ""}`
+          .split("/")
+          .map((value) => value.trim())
+          .filter(Boolean)
+      )
+    );
+
+    currentGroup.items[existingIndex] = {
+      ...existing,
+      roleName: mergedRoles.length > 0 ? mergedRoles.join(" / ") : null,
+      isStarring: Boolean(existing.isStarring || item.isStarring),
+    };
+    groups.set(groupKey, currentGroup);
+  }
+
+  return Array.from(groups.values());
+};
 
 const buildPlayMetaDescriptionEn = (play: NonNullable<Awaited<ReturnType<typeof getPlayDetailBySlug>>>) => {
   const parts: string[] = [];
@@ -83,7 +150,7 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
   const castSummary = summarizeCast(play.cast);
   const hasVod = Boolean(play.vod && Object.keys(play.vod).length > 0);
   const venues = splitSlashList(play.venue);
-  const featuredCast = play.cast.slice(0, 12);
+  const groupedCast = groupCast(play.cast);
   const synopsis = play.summaryEn || translateDisplayTextEn(play.summary);
   const displaySeriesName = play.franchiseName
     ? getEnglishSeriesName({ name: play.franchiseName, nameEn: play.franchiseNameEn })
@@ -230,15 +297,33 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
         </section>
 
         <section className="section-card stack-md">
-          <h2 className="section-title">Featured cast</h2>
-          <div className="cast-grid">
-            {featuredCast.map((item) => (
-              <Link href={`/en/actors/${item.slug}`} className="cast-card cast-card-link" key={`${item.slug}-${item.roleName ?? "cast"}`}>
-                <div className="cast-name">{getEnglishActorName(item)}</div>
-                {item.roleName ? <div className="cast-role">{translateDisplayTextEn(item.roleName)}</div> : null}
-              </Link>
-            ))}
-          </div>
+          <h2 className="section-title">Cast</h2>
+          {play.cast.length > 0 ? (
+            <div className="stack-md">
+              {groupedCast.map((group, index) => (
+                <div className="stack-sm" key={group.name ?? `ungrouped-${index}`}>
+                  {group.name ? <div className="group-chip">{translateDisplayTextEn(group.name)}</div> : null}
+                  <div className="cast-grid">
+                    {group.items.map((item) => (
+                      <Link
+                        href={`/en/actors/${item.slug}`}
+                        className="cast-card cast-card-link"
+                        key={`${item.slug}-${item.roleName ?? "cast"}-${group.name ?? "ungrouped"}`}
+                      >
+                        <div className="cast-name">{getEnglishActorName(item)}</div>
+                        {item.roleName ? (
+                          <div className="cast-role">{summarizeRoleNameEn(translateDisplayTextEn(item.roleName))}</div>
+                        ) : null}
+                        {item.isStarring ? <div className="cast-badge">MAIN CAST</div> : null}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <p className="muted">Cast information is not available yet.</p>
+          )}
         </section>
       </div>
     </main>
