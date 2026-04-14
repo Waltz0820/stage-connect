@@ -9,6 +9,7 @@ export const EN_EXACT_TERM_MAP: Record<string, string> = {
   ニトロプラス: "Nitroplus",
   東宝: "TOHO",
   "DMM GAMES": "DMM GAMES",
+  "NITRO PLUS": "NITRO PLUS",
   "ユークリッド・エージェンシー": "Euclid Agency",
 
   // Common labels / concepts
@@ -505,6 +506,8 @@ export const EN_EXACT_TERM_MAP: Record<string, string> = {
 };
 
 export const EN_PARTIAL_TERM_MAP: Array<[string, string]> = [
+  ["「刀剣乱舞ONLINE」より", 'From "Touken Ranbu ONLINE"'],
+  ["刀剣乱舞ONLINE", "Touken Ranbu ONLINE"],
   ["原作 :", "Original Work:"],
   ["原作:", "Original Work:"],
   ["舞台『刀剣乱舞』", "Touken Ranbu: The Stage"],

@@ -175,6 +175,23 @@ const translateColonLabelsEn = (value: string) => {
   return next;
 };
 
+const translateCompoundDotSeparatedEn = (value: string) => {
+  if (!value.includes("・")) return null;
+
+  const parts = value
+    .split("・")
+    .map((part) => part.trim())
+    .filter(Boolean);
+
+  if (parts.length < 2) return null;
+
+  const translatedParts = parts.map((part) => translateColonLabelsEn(translateKnownTermsEn(part)));
+  const allTranslated = translatedParts.every((translated, index) => translated !== parts[index]);
+
+  if (!allTranslated) return null;
+  return translatedParts.join(" / ");
+};
+
 const translateAnnotatedSegmentEn = (value: string) => {
   const normalized = normalizeDisplaySegment(value);
   if (!normalized) return "";
@@ -185,12 +202,21 @@ const translateAnnotatedSegmentEn = (value: string) => {
     .filter(Boolean);
 
   if (parts.length === 0) return "";
-  if (parts.length === 1) return translateColonLabelsEn(translateKnownTermsEn(parts[0]));
+  if (parts.length === 1) {
+    return (
+      translateCompoundDotSeparatedEn(parts[0]) ??
+      translateColonLabelsEn(translateKnownTermsEn(parts[0]))
+    );
+  }
 
   const [main, ...notes] = parts;
-  const translatedMain = translateColonLabelsEn(translateKnownTermsEn(main));
+  const translatedMain =
+    translateCompoundDotSeparatedEn(main) ?? translateColonLabelsEn(translateKnownTermsEn(main));
   const translatedNotes = notes
-    .map((note) => translateColonLabelsEn(translateKnownTermsEn(note)))
+    .map(
+      (note) =>
+        translateCompoundDotSeparatedEn(note) ?? translateColonLabelsEn(translateKnownTermsEn(note)),
+    )
     .filter(Boolean);
 
   return [translatedMain, ...translatedNotes.map((note) => `※${note}`)].join(" ");
@@ -201,7 +227,11 @@ export const translateDisplayTextEn = (value?: string | null) =>
     .split(/\s*\/\s*/)
     .map((segment) => stripDisplayAnnotations(normalizeDisplaySegment(segment)))
     .filter(Boolean)
-    .map((segment) => translateKnownTermsEn(segment))
+    .map(
+      (segment) =>
+        translateCompoundDotSeparatedEn(segment) ??
+        translateColonLabelsEn(translateKnownTermsEn(segment)),
+    )
     .join(" / ");
 
 export const translateAnnotatedDisplayTextEn = (value?: string | null) =>
