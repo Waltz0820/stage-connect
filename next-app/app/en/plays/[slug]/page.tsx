@@ -172,6 +172,7 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
   const castSummary = summarizeCastEn(play.cast);
   const hasVod = Boolean(play.vod && Object.keys(play.vod).length > 0);
   const venues = splitSlashList(play.venue);
+  const translatedVenues = venues.map((item) => translateAnnotatedDisplayTextEn(item));
   const groupedCast = groupCast(play.cast);
   const synopsis = play.summaryEn || translateDisplayTextEn(play.summary);
   const displaySeriesName = play.franchiseName
@@ -270,8 +271,10 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
               <div className="meta-row">
                 <div className="meta-label accent-label">Venues</div>
                 <div className="meta-value">
-                  <div>{venues.slice(0, 3).join(" / ")}</div>
-                  {venues.length > 3 ? <div className="subtle-line">and {venues.length - 3} more venues</div> : null}
+                  <div>{translatedVenues.slice(0, 3).join(" / ")}</div>
+                  {translatedVenues.length > 3 ? (
+                    <div className="subtle-line">and {translatedVenues.length - 3} more venues</div>
+                  ) : null}
                 </div>
               </div>
             ) : null}
