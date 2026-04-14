@@ -192,8 +192,11 @@ const translateCompoundDotSeparatedEn = (value: string) => {
   return translatedParts.join(" / ");
 };
 
-const translateLooseSegmentEn = (value: string) =>
-  translateCompoundDotSeparatedEn(value) ?? translateColonLabelsEn(translateKnownTermsEn(value));
+const translateLooseSegmentEn = (value: string) => {
+  const direct = translateColonLabelsEn(translateKnownTermsEn(value));
+  if (direct !== value) return direct;
+  return translateCompoundDotSeparatedEn(value) ?? direct;
+};
 
 const translateBracketAnnotatedSegmentEn = (value: string) => {
   if (!/[【】]/.test(value)) return null;
