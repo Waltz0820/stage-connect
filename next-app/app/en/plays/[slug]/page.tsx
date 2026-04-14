@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "../../../../components/Breadcrumbs";
+import { DetailToggleClient } from "../../../../components/DetailToggleClient";
 import { StructuredData } from "../../../../components/StructuredData";
 import {
   compactListPeriodEn,
@@ -175,6 +176,7 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
   const translatedVenues = venues.map((item) => translateAnnotatedDisplayTextEn(item));
   const translatedPeriod = translateAnnotatedDisplayTextEn(play.period);
   const groupedCast = groupCast(play.cast);
+  const shouldShowPublicInfoDetail = Boolean(play.period || play.venue);
   const synopsis = play.summaryEn || translateDisplayTextEn(play.summary);
   const displaySeriesName = play.franchiseName
     ? getEnglishSeriesName({ name: play.franchiseName, nameEn: play.franchiseNameEn })
@@ -276,6 +278,34 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
                   {translatedVenues.length > 3 ? (
                     <div className="subtle-line">and {translatedVenues.length - 3} more venues</div>
                   ) : null}
+                </div>
+              </div>
+            ) : null}
+            {shouldShowPublicInfoDetail ? (
+              <div className="meta-row">
+                <div className="meta-label accent-label">Details</div>
+                <div className="meta-value">
+                  <DetailToggleClient summary="View details">
+                    <div className="stack-sm">
+                      {play.period ? (
+                        <div className="stack-sm">
+                          <div className="muted" style={{ fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase" }}>
+                            Schedule
+                          </div>
+                          <div>{translatedPeriod || play.period}</div>
+                        </div>
+                      ) : null}
+                      {play.period && play.venue ? <div style={{ height: 12 }} /> : null}
+                      {play.venue ? (
+                        <div className="stack-sm">
+                          <div className="muted" style={{ fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase" }}>
+                            Venues
+                          </div>
+                          <div>{translatedVenues.join(" / ") || play.venue}</div>
+                        </div>
+                      ) : null}
+                    </div>
+                  </DetailToggleClient>
                 </div>
               </div>
             ) : null}
