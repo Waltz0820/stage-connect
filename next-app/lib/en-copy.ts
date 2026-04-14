@@ -1,4 +1,4 @@
-import { translateKnownTermsEn } from "./en-term-map";
+import { EN_EXACT_TERM_MAP, translateKnownTermsEn } from "./en-term-map";
 
 export const EN_FORMAT_LABELS: Record<string, string> = {
   stage: "Stage",
@@ -164,6 +164,17 @@ const normalizeDisplaySegment = (value: string) =>
 
 const stripDisplayAnnotations = (value: string) => value.split("※")[0].split("【")[0].trim();
 
+const translateColonLabelsEn = (value: string) => {
+  let next = value;
+
+  for (const [source, target] of Object.entries(EN_EXACT_TERM_MAP)) {
+    next = next.replaceAll(`${source}:`, `${target}:`);
+    next = next.replaceAll(`${source}：`, `${target}:`);
+  }
+
+  return next;
+};
+
 const translateAnnotatedSegmentEn = (value: string) => {
   const normalized = normalizeDisplaySegment(value);
   if (!normalized) return "";
@@ -174,11 +185,13 @@ const translateAnnotatedSegmentEn = (value: string) => {
     .filter(Boolean);
 
   if (parts.length === 0) return "";
-  if (parts.length === 1) return translateKnownTermsEn(parts[0]);
+  if (parts.length === 1) return translateColonLabelsEn(translateKnownTermsEn(parts[0]));
 
   const [main, ...notes] = parts;
-  const translatedMain = translateKnownTermsEn(main);
-  const translatedNotes = notes.map((note) => translateKnownTermsEn(note)).filter(Boolean);
+  const translatedMain = translateColonLabelsEn(translateKnownTermsEn(main));
+  const translatedNotes = notes
+    .map((note) => translateColonLabelsEn(translateKnownTermsEn(note)))
+    .filter(Boolean);
 
   return [translatedMain, ...translatedNotes.map((note) => `※${note}`)].join(" ");
 };
