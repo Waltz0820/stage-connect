@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import FloatingCTA from "./FloatingCTA";
 import { SearchBarClient } from "./SearchBarClient";
+import StageConnectLogo from "./StageConnectLogo";
 
 const copy = {
   ja: {
@@ -191,7 +192,7 @@ export default function SiteChrome({ children }: { children: React.ReactNode }) 
         <div className="container site-header__inner">
           <div className="site-header__left">
             <Link href={locale === "en" ? "/en" : "/"} className="site-brand">
-              STAGE <span>CONNECT</span>
+              <StageConnectLogo />
             </Link>
             <nav className="site-nav desktop-nav" aria-label={labels.globalNavLabel}>
               {labels.primaryNav.map((item) => (
@@ -250,7 +251,9 @@ export default function SiteChrome({ children }: { children: React.ReactNode }) 
           </nav>
 
           <div className="mobile-menu__footer">
-            <p>Stage Connect</p>
+            <p>
+              <StageConnectLogo compact />
+            </p>
           </div>
         </div>
       </div>
