@@ -2776,14 +2776,18 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 26px;
+  min-width: 26px;
   height: 26px;
+  padding: 0 8px;
   border-radius: 0;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--line);
   color: var(--text);
   font-size: 12px;
   font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .series-rank-count {

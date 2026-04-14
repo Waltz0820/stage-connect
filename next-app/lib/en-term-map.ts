@@ -187,6 +187,7 @@ export const EN_EXACT_TERM_MAP: Record<string, string> = {
   勝海舟: "Katsu Kaishu",
   勝林太郎: "Katsu Rintaro",
   "勝 林太郎": "Katsu Rintaro",
+  "勝 麟太郎": "Katsu Rintaro",
   麟太郎: "Rintaro",
   坂上田村麻呂: "Sakanoue no Tamuramaro",
   虎哉宗乙: "Kosai Soitsu",
@@ -312,6 +313,7 @@ export const EN_EXACT_TERM_MAP: Record<string, string> = {
   瑣吉: "Sakichi",
   少年: "Boy",
   兄: "Brother",
+  弟: "Younger Brother",
   他: "Others",
   声: "Voice",
   特別協力: "Special Cooperation",
@@ -320,6 +322,8 @@ export const EN_EXACT_TERM_MAP: Record<string, string> = {
 };
 
 export const EN_PARTIAL_TERM_MAP: Array<[string, string]> = [
+  ["原作 :", "Original Work:"],
+  ["原作:", "Original Work:"],
   ["舞台『刀剣乱舞』", "Touken Ranbu: The Stage"],
   ["ミュージカル『刀剣乱舞』", "Touken Ranbu: The Musical"],
   ["『刀剣乱舞』", '"Touken Ranbu"'],
