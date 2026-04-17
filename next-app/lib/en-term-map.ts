@@ -55,6 +55,7 @@ export const EN_EXACT_TERM_MAP: Record<string, string> = {
   四天宝寺中: "Shitenhoji",
   "U-17": "U-17",
   日替わりゲスト: "Rotating Guest",
+  ゲスト出演: "Guest Appearance",
   友情出演: "Special Guest Appearance",
   "U-17コーチ": "U-17 Coaches",
   越前リョーマ: "Ryoma Echizen",
