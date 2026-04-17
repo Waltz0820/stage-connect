@@ -336,6 +336,10 @@ export const EN_EXACT_TERM_MAP: Record<string, string> = {
   "虹橋芸術センター": "Hongqiao Art Center",
   "Hongqiao Art Center": "Hongqiao Art Center",
 
+  "鬥吝ｷ晉恁逵梧ｰ代・繝ｼ繝ｫ 繧ｰ繝ｩ繝ｳ繝峨・繝ｼ繝ｫ": "Kagawa Prefectural Hall Grand Hall",
+  "遖丞ｲ｡蟶よｰ台ｼ夐､ｨ 螟ｧ繝帙・繝ｫ": "Fukuoka Civic Hall Main Hall",
+  "蟯宣・・ｰ台ｼ夐､ｨ 螟ｧ繝帙・繝ｫ": "Gifu Civic Hall Main Hall",
+
   // Sword warriors / role names
   加州清光: "Kashu Kiyomitsu",
   三日月宗近: "Mikazuki Munechika",
