@@ -12,6 +12,8 @@ export const EN_EXACT_TERM_MAP: Record<string, string> = {
   "NITRO PLUS": "NITRO PLUS",
   東京公演のみ: "Tokyo performances only",
   "※東京公演のみ": "※Tokyo performances only",
+  大阪公演のみ: "Osaka performances only",
+  "※大阪公演のみ": "※Osaka performances only",
   山田和也: "Kazuya Yamada",
   藤沢文翁: "Bun-O Fujisawa",
   笠浦静花: "Shizuka Kasaura",
