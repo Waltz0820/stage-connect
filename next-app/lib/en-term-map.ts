@@ -64,6 +64,7 @@ export const EN_EXACT_TERM_MAP: Record<string, string> = {
   堀尾聡史: "Satoshi Horio",
   加藤勝郎: "Katsuro Kato",
   水野カツオ: "Katsuo Mizuno",
+  樹希彦: "Marehiko Itsuki",
   荒井将史: "Masashi Arai",
   池田雅也: "Masaya Ikeda",
   林大介: "Daisuke Hayashi",
