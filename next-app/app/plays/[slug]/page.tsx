@@ -373,8 +373,8 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
                   <div>{scheduleSummary || play.period}</div>
                   {scheduleCities.length > 0 ? (
                     <div className="subtle-line">
-                      {scheduleCities.length}都市 / {scheduleCities.slice(0, 5).join(" / ")}
-                      {scheduleCities.length > 5 ? " / ..." : ""}
+                      {scheduleCities.length}都市 / {scheduleCities.slice(0, 3).join(" / ")}
+                      {scheduleCities.length > 3 ? " / ..." : ""}
                     </div>
                   ) : null}
                 </div>

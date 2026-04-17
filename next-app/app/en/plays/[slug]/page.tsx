@@ -9,6 +9,7 @@ import {
   getEnglishActorName,
   getEnglishPlayTitle,
   getEnglishSeriesName,
+  normalizePeriodDisplayEn,
   translateAnnotatedDisplayTextEn,
   translateDisplayTextEn,
   truncateText,
@@ -63,6 +64,35 @@ const summarizeRoleNameEn = (value?: string | null) => {
   const roles = splitSlashList(value);
   if (roles.length <= 3) return value ?? null;
   return `${roles.slice(0, 3).join(" / ")} / ${roles.length - 3} more`;
+};
+
+const parseScheduleEntries = (period?: string | null) =>
+  String(period ?? "")
+    .split(" / ")
+    .map((item) => item.trim())
+    .filter(Boolean);
+
+const normalizeScheduleCity = (city: string) =>
+  city
+    .normalize("NFKC")
+    .trim()
+    .replace(/[:：]\s*$/u, "")
+    .replace(/\s+/gu, " ")
+    .replace(/(?:公演|会場)$/u, "")
+    .trim();
+
+const extractScheduleCitiesEn = (period?: string | null) => {
+  const cities = parseScheduleEntries(period)
+    .map((entry) => {
+      const colonSplit = entry.split(/[:：]/);
+      if (colonSplit.length > 1) return normalizeScheduleCity(colonSplit[0]);
+      const direct = entry.match(/^([^\d]+?)\s+\d{4}\s*\/\s*\d{1,2}/);
+      return direct ? normalizeScheduleCity(direct[1]) : "";
+    })
+    .filter(Boolean)
+    .map((city) => translateAnnotatedDisplayTextEn(city));
+
+  return Array.from(new Set(cities));
 };
 
 const groupCast = (
@@ -179,7 +209,8 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
   const hasVod = Boolean(play.vod && Object.keys(play.vod).length > 0);
   const venues = splitSlashList(play.venue);
   const translatedVenues = venues.map((item) => translateAnnotatedDisplayTextEn(item));
-  const translatedPeriod = translateAnnotatedDisplayTextEn(play.period);
+  const translatedPeriod = normalizePeriodDisplayEn(translateAnnotatedDisplayTextEn(play.period));
+  const scheduleCities = extractScheduleCitiesEn(play.period);
   const groupedCast = groupCast(play.cast);
   const shouldShowPublicInfoDetail = Boolean(play.period || play.venue);
   const synopsis = play.summaryEn || translateDisplayTextEn(play.summary);
@@ -271,7 +302,12 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
                 <div className="meta-label accent-label">Schedule</div>
                 <div className="meta-value">
                   <div>{compactListPeriodEn(play.period) || translatedPeriod || play.period}</div>
-                  <div className="subtle-line">{translatedPeriod || play.period}</div>
+                  {scheduleCities.length > 0 ? (
+                    <div className="subtle-line">
+                      {scheduleCities.length} cities / {scheduleCities.slice(0, 3).join(" / ")}
+                      {scheduleCities.length > 3 ? " / ..." : ""}
+                    </div>
+                  ) : null}
                 </div>
               </div>
             ) : null}

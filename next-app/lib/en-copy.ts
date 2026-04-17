@@ -47,22 +47,24 @@ export const EN_GENRE_LABELS: Record<string, string> = {
 export const compactListPeriodEn = (period?: string | null) => {
   if (!period) return null;
 
-  const slashDate = period.match(/(\d{4})\/(\d{1,2})\/(\d{1,2})/);
+  const normalized = String(period).normalize("NFKC");
+
+  const slashDate = normalized.match(/(\d{4})\s*\/\s*(\d{1,2})\s*\/\s*(\d{1,2})/);
   if (slashDate) {
     const [, year, month, day] = slashDate;
     return `${year}/${month.padStart(2, "0")}/${day.padStart(2, "0")}-`;
   }
 
-  const yearMonth = period.match(/(\d{4})\D{0,2}(\d{1,2})/);
+  const yearMonth = normalized.match(/(\d{4})\D{0,2}(\d{1,2})/);
   if (yearMonth) {
     const [, year, month] = yearMonth;
     return `${year}/${month.padStart(2, "0")}-`;
   }
 
-  const yearOnly = period.match(/(\d{4})/);
+  const yearOnly = normalized.match(/(\d{4})/);
   if (yearOnly) return `${yearOnly[1]}-`;
 
-  return period;
+  return normalized.replace(/(\d)\s*\/\s*(\d)/g, "$1/$2");
 };
 
 export const formatBirthdayEn = (birthday?: string | null) => {
@@ -260,6 +262,13 @@ export const translateAnnotatedDisplayTextEn = (value?: string | null) =>
     .map((segment) => translateAnnotatedSegmentEn(segment))
     .filter(Boolean)
     .join(" / ");
+
+export const normalizePeriodDisplayEn = (value?: string | null) =>
+  String(value ?? "")
+    .normalize("NFKC")
+    .replace(/(\d)\s*\/\s*(\d)/g, "$1/$2")
+    .replace(/\s+/g, " ")
+    .trim();
 
 export const toEnglishOriginType = (value?: string | null) => {
   const raw = String(value ?? "").trim();
