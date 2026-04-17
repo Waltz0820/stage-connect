@@ -49,6 +49,7 @@ export const EN_EXACT_TERM_MAP: Record<string, string> = {
   立海大附属中: "Rikkai",
   立海大付属: "Rikkai",
   比嘉中: "Higa",
+  比嘉: "Higa",
   四天宝寺中: "Shitenhoji",
   "U-17": "U-17",
   日替わりゲスト: "Rotating Guest",

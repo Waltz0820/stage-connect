@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { getEnglishActorName } from "../lib/en-copy";
+import { getEnglishActorName, getEnglishPlayTitle, getEnglishSeriesName } from "../lib/en-copy";
 import { getSupabaseBrowserClient } from "../lib/supabase-browser";
 
 type ActorRow = {
@@ -18,11 +18,25 @@ type PlayRow = {
   id: string;
   slug: string;
   title: string;
-  franchise?: { name?: string | null } | { name?: string | null }[] | null;
+  titleEn?: string | null;
+  franchise?: { name?: string | null; nameEn?: string | null } | { name?: string | null; nameEn?: string | null }[] | null;
+};
+
+type SeriesRow = {
+  id: string;
+  slug: string;
+  name: string;
+  nameEn?: string | null;
 };
 
 const DEBOUNCE_MS = 180;
 const LIMIT = 5;
+
+const normalizeSearchQuery = (value: string) =>
+  value
+    .normalize("NFKC")
+    .replace(/\u3000/g, " ")
+    .trim();
 
 const sanitizeForOr = (value: string) => value.replace(/,/g, " ").trim();
 const escapeLike = (value: string) => value.replace(/[%_]/g, "\\$&").trim();
@@ -45,11 +59,13 @@ export function SearchBarClient() {
   const [plays, setPlays] = useState<Array<{ id: string; slug: string; title: string; franchise: string | null }>>(
     []
   );
+  const [series, setSeries] = useState<SeriesRow[]>([]);
 
   useEffect(() => {
     setQuery("");
     setActors([]);
     setPlays([]);
+    setSeries([]);
     setIsOpen(false);
     setIsMobileOpen(false);
   }, [pathname]);
@@ -67,10 +83,11 @@ export function SearchBarClient() {
   }, []);
 
   useEffect(() => {
-    const q = query.trim();
+    const q = normalizeSearchQuery(query);
     if (!q) {
       setActors([]);
       setPlays([]);
+      setSeries([]);
       setIsOpen(false);
       return;
     }
@@ -82,10 +99,18 @@ export function SearchBarClient() {
       const looseLike = buildLooseLike(q);
       const actorOr =
         looseLike && looseLike !== like
-          ? `name.ilike.${like},kana.ilike.${like},name.ilike.${looseLike},kana.ilike.${looseLike}`
-          : `name.ilike.${like},kana.ilike.${like}`;
+          ? `name.ilike.${like},kana.ilike.${like},slug.ilike.${like},name.ilike.${looseLike},kana.ilike.${looseLike},slug.ilike.${looseLike}`
+          : `name.ilike.${like},kana.ilike.${like},slug.ilike.${like}`;
+      const playOr =
+        looseLike && looseLike !== like
+          ? `title.ilike.${like},slug.ilike.${like},title.ilike.${looseLike},slug.ilike.${looseLike}`
+          : `title.ilike.${like},slug.ilike.${like}`;
+      const seriesOr =
+        looseLike && looseLike !== like
+          ? `name.ilike.${like},slug.ilike.${like},name.ilike.${looseLike},slug.ilike.${looseLike}`
+          : `name.ilike.${like},slug.ilike.${like}`;
 
-      const [actorRes, playRes] = await Promise.all([
+      const [actorRes, playRes, seriesRes] = await Promise.all([
         supabase
           .from("actors")
           .select("id, slug, name, kana")
@@ -94,9 +119,15 @@ export function SearchBarClient() {
           .limit(LIMIT),
         supabase
           .from("plays")
-          .select("id, slug, title, franchise:franchises(name)")
-          .ilike("title", like)
+          .select("id, slug, title, title_en, franchise:franchises(name,name_en)")
+          .or(playOr)
           .order("title", { ascending: true })
+          .limit(LIMIT),
+        supabase
+          .from("franchises")
+          .select("id, slug, name, name_en")
+          .or(seriesOr)
+          .order("name", { ascending: true })
           .limit(LIMIT),
       ]);
 
@@ -108,11 +139,14 @@ export function SearchBarClient() {
             return {
               id: row.id,
               slug: row.slug,
-              title: row.title,
-              franchise: franchise?.name ?? null,
+              title: getEnglishPlayTitle(row),
+              franchise: franchise ? getEnglishSeriesName(franchise) : null,
             };
           })
           .filter((row) => row.slug && row.title)
+      );
+      setSeries(
+        ((seriesRes.data ?? []) as SeriesRow[]).filter((row) => row.id && row.slug && row.name)
       );
       setIsOpen(true);
     }, DEBOUNCE_MS);
@@ -121,16 +155,17 @@ export function SearchBarClient() {
   }, [query]);
 
   const submit = () => {
-    const q = query.trim();
+    const q = normalizeSearchQuery(query);
     if (!q) return;
     router.push(`/search?q=${encodeURIComponent(q)}`);
     setIsOpen(false);
     setIsMobileOpen(false);
   };
 
-  const hasResults = actors.length > 0 || plays.length > 0;
+  const hasResults = actors.length > 0 || plays.length > 0 || series.length > 0;
   const playHrefBase = isEnglish ? "/en/plays" : "/plays";
   const actorHrefBase = isEnglish ? "/en/actors" : "/actors";
+  const seriesHrefBase = isEnglish ? "/en/series" : "/series";
 
   return (
     <div className="search-shell" ref={rootRef}>
@@ -218,6 +253,28 @@ export function SearchBarClient() {
                     <span>
                       <strong>{play.title}</strong>
                       {play.franchise ? <span className="search-item-sub">{play.franchise}</span> : null}
+                    </span>
+                    <span className="search-item-arrow">→</span>
+                  </Link>
+                ))}
+              </div>
+            ) : null}
+
+            {series.length > 0 ? (
+              <div className="search-group">
+                <div className="search-group-title">{isEnglish ? "Series" : "シリーズ"}</div>
+                {series.map((item) => (
+                  <Link
+                    key={item.id}
+                    href={`${seriesHrefBase}/${item.slug}`}
+                    className="search-item"
+                    onClick={() => {
+                      setIsOpen(false);
+                      setIsMobileOpen(false);
+                    }}
+                  >
+                    <span>
+                      <strong>{isEnglish ? getEnglishSeriesName(item) : item.name}</strong>
                     </span>
                     <span className="search-item-arrow">→</span>
                   </Link>

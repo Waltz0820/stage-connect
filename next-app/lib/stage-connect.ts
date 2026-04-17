@@ -2073,7 +2073,10 @@ export async function getTagDetailBySlug(slug: string): Promise<TagDetailData | 
 export async function searchSite(query: string, limit = 20): Promise<SearchResultBundle> {
   if (!hasSupabaseEnv) return { actors: [], plays: [], series: [] };
 
-  const q = String(query ?? "").trim();
+  const q = String(query ?? "")
+    .normalize("NFKC")
+    .replace(/\u3000/g, " ")
+    .trim();
   if (!q) return { actors: [], plays: [], series: [] };
 
   const supabase = createSupabaseServerClient();
@@ -2081,8 +2084,16 @@ export async function searchSite(query: string, limit = 20): Promise<SearchResul
   const looseLike = buildLooseLike(q);
   const actorOr =
     looseLike && looseLike !== like
-      ? `name.ilike.${like},kana.ilike.${like},name.ilike.${looseLike},kana.ilike.${looseLike}`
-      : `name.ilike.${like},kana.ilike.${like}`;
+      ? `name.ilike.${like},kana.ilike.${like},slug.ilike.${like},name.ilike.${looseLike},kana.ilike.${looseLike},slug.ilike.${looseLike}`
+      : `name.ilike.${like},kana.ilike.${like},slug.ilike.${like}`;
+  const playOr =
+    looseLike && looseLike !== like
+      ? `title.ilike.${like},slug.ilike.${like},title.ilike.${looseLike},slug.ilike.${looseLike}`
+      : `title.ilike.${like},slug.ilike.${like}`;
+  const seriesOr =
+    looseLike && looseLike !== like
+      ? `name.ilike.${like},slug.ilike.${like},name.ilike.${looseLike},slug.ilike.${looseLike}`
+      : `name.ilike.${like},slug.ilike.${like}`;
 
   const [actorsResRaw, playsRes, seriesRes] = await Promise.all([
     supabase
@@ -2104,13 +2115,13 @@ export async function searchSite(query: string, limit = 20): Promise<SearchResul
         )
       `
       )
-      .ilike("title", like)
+      .or(playOr)
       .order("title", { ascending: true })
       .limit(limit),
     supabase
       .from("franchises")
       .select("id, slug, name, name_en")
-      .or(`name.ilike.${like},slug.ilike.${like}`)
+      .or(seriesOr)
       .order("name", { ascending: true })
       .limit(limit),
   ]);
@@ -2138,7 +2149,7 @@ export async function searchSite(query: string, limit = 20): Promise<SearchResul
     const fallback = await supabase
       .from("franchises")
       .select("id, slug, name")
-      .or(`name.ilike.${like},slug.ilike.${like}`)
+      .or(seriesOr)
       .order("name", { ascending: true })
       .limit(limit);
 
