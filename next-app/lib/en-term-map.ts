@@ -632,6 +632,8 @@ export const EN_EXACT_TERM_MAP: Record<string, string> = {
   茅野イサム: "Isamu Kayano",
   末満健一: "Kenichi Suemitsu",
   上島雪夫: "Yukio Ueshima",
+  三井秀樹: "Hideki Mitsui",
+  本山新之助: "Shinnosuke Motoyama",
   浅井さやか: "Sayaka Asai",
   御笠ノ忠次: "Chuji Mikasano",
   三ツ矢雄二: "Yuji Mitsuya",
