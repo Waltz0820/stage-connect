@@ -54,8 +54,11 @@ const parseScheduleEntries = (period?: string | null) =>
 
 const normalizeScheduleCity = (city: string) =>
   city
+    .normalize("NFKC")
     .trim()
-    .replace(/(?:東京|大阪|京都|福岡)$/gu, "")
+    .replace(/[：:]\s*$/u, "")
+    .replace(/\s+/gu, " ")
+    .replace(/(?:公演|会場)$/u, "")
     .trim();
 
 const extractPeriodSummary = (period?: string | null) => {
