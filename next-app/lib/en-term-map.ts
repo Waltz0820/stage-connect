@@ -340,6 +340,10 @@ export const EN_EXACT_TERM_MAP: Record<string, string> = {
   "遖丞ｲ｡蟶よｰ台ｼ夐､ｨ 螟ｧ繝帙・繝ｫ": "Fukuoka Civic Hall Main Hall",
   "蟯宣・・ｰ台ｼ夐､ｨ 螟ｧ繝帙・繝ｫ": "Gifu Civic Hall Main Hall",
 
+  "香川県県民ホール グランドホール": "Kagawa Prefectural Hall Grand Hall",
+  "福岡市民会館 大ホール": "Fukuoka Civic Hall Main Hall",
+  "岐阜市民会館 大ホール": "Gifu Civic Hall Main Hall",
+
   // Sword warriors / role names
   加州清光: "Kashu Kiyomitsu",
   三日月宗近: "Mikazuki Munechika",
