@@ -357,13 +357,27 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
           <section className="section-card stack-md">
             <h2 className="section-title">Credits</h2>
             <div className="meta-list roomy">
-              {creditItems.slice(0, 6).map((item) => (
+              {creditItems.slice(0, 3).map((item) => (
                 <div className="meta-row" key={`${item.role}-${item.names.join("-")}`}>
                   <div className="meta-label accent-label">{translateDisplayTextEn(item.role)}</div>
                   <div className="meta-value">{item.names.map((name) => translateDisplayTextEn(name)).join(" / ")}</div>
                 </div>
               ))}
             </div>
+            {creditItems.length > 3 ? (
+              <DetailToggleClient summary={`Read more (${creditItems.length - 3} more)`}>
+                <div className="meta-list roomy detail-credit-list">
+                  {creditItems.slice(3).map((item) => (
+                    <div className="meta-row" key={`${item.role}-${item.names.join("-")}`}>
+                      <div className="meta-label accent-label">{translateDisplayTextEn(item.role)}</div>
+                      <div className="meta-value">
+                        {item.names.map((name) => translateDisplayTextEn(name)).join(" / ")}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </DetailToggleClient>
+            ) : null}
           </section>
         ) : null}
 
