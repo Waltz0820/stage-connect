@@ -696,6 +696,8 @@ export const EN_EXACT_TERM_MAP: Record<string, string> = {
   "『週刊少年ジャンプ』『ジャンプSQ.』編集部(集英社) / TTM / ティーワイエンタテインメント / NAS":
     "Weekly Shonen Jump / Jump SQ. Editorial Departments (Shueisha) / TTM / TY Entertainment / NAS",
   佐橋俊彦: "Toshihiko Sahashi",
+  イズミティ21: "Izumity 21",
+  "許斐 剛(集英社 ジャンプSQ.連載)": "Takeshi Konomi (serialized in Jump SQ.)",
 };
 
 export const EN_PARTIAL_TERM_MAP: Array<[string, string]> = [
