@@ -650,6 +650,7 @@ export const EN_EXACT_TERM_MAP: Record<string, string> = {
   弟: "Younger Brother",
   他: "Others",
   声: "Voice",
+  協力: "Cooperation",
   特別協力: "Special Cooperation",
   人間キャスト: "Human Cast",
   花組芝居: "Hanagumi Shibai",
@@ -686,6 +687,10 @@ export const EN_EXACT_TERM_MAP: Record<string, string> = {
   "許斐 剛": "Takeshi Konomi",
   "許斐 剛(集英社ジャンプ・コミックス刊)": "Takeshi Konomi (Shueisha Jump Comics)",
   "許斐 剛(集英社 ジャンプ・コミックス刊)": "Takeshi Konomi (Shueisha Jump Comics)",
+  "『週刊少年ジャンプ』編集部(集英社)": "Weekly Shonen Jump Editorial Department (Shueisha)",
+  "『週刊少年ジャンプ』『ジャンプSQ.』編集部(集英社)":
+    "Weekly Shonen Jump / Jump SQ. Editorial Departments (Shueisha)",
+  ティーワイエンタテインメント: "TY Entertainment",
   "『週刊少年ジャンプ』編集部(集英社) / TTM / ティーワイエンタテインメント / NAS":
     "Weekly Shonen Jump Editorial Department (Shueisha) / TTM / TY Entertainment / NAS",
   "『週刊少年ジャンプ』『ジャンプSQ.』編集部(集英社) / TTM / ティーワイエンタテインメント / NAS":
