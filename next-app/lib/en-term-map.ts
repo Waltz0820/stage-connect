@@ -12,6 +12,7 @@ export const EN_EXACT_TERM_MAP: Record<string, string> = {
   "NITRO PLUS": "NITRO PLUS",
   "4代目": "4th Generation",
   "5代目": "5th Generation",
+  初代: "1st Generation",
   "10月から": "from October",
   東京公演のみ: "Tokyo performances only",
   "※東京公演のみ": "※Tokyo performances only",
