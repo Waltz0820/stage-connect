@@ -688,6 +688,8 @@ export const EN_EXACT_TERM_MAP: Record<string, string> = {
   "許斐 剛(集英社 ジャンプ・コミックス刊)": "Takeshi Konomi (Shueisha Jump Comics)",
   "『週刊少年ジャンプ』編集部(集英社) / TTM / ティーワイエンタテインメント / NAS":
     "Weekly Shonen Jump Editorial Department (Shueisha) / TTM / TY Entertainment / NAS",
+  "『週刊少年ジャンプ』『ジャンプSQ.』編集部(集英社) / TTM / ティーワイエンタテインメント / NAS":
+    "Weekly Shonen Jump / Jump SQ. Editorial Departments (Shueisha) / TTM / TY Entertainment / NAS",
   佐橋俊彦: "Toshihiko Sahashi",
 };
 
