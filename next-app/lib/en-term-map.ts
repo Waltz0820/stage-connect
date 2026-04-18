@@ -25,6 +25,7 @@ export const EN_EXACT_TERM_MAP: Record<string, string> = {
   "梅田芸術劇場シアター・ドラマシティ": "Umeda Arts Theater Theater Drama City",
   博多座: "Hakataza Theater",
   東京体育館: "Tokyo Metropolitan Gymnasium",
+  東京芸術劇場: "Tokyo Metropolitan Theatre",
   "札幌文化芸術劇場 hitaru": "Sapporo Cultural Arts Theater hitaru",
   "東京建物 Brillia HALL": "Tokyo Tatemono Brillia HALL",
   サンシャイン劇場: "Sunshine Theater",
@@ -685,6 +686,8 @@ export const EN_EXACT_TERM_MAP: Record<string, string> = {
   "許斐 剛": "Takeshi Konomi",
   "許斐 剛(集英社ジャンプ・コミックス刊)": "Takeshi Konomi (Shueisha Jump Comics)",
   "許斐 剛(集英社 ジャンプ・コミックス刊)": "Takeshi Konomi (Shueisha Jump Comics)",
+  "『週刊少年ジャンプ』編集部(集英社) / TTM / ティーワイエンタテインメント / NAS":
+    "Weekly Shonen Jump Editorial Department (Shueisha) / TTM / TY Entertainment / NAS",
   佐橋俊彦: "Toshihiko Sahashi",
 };
 
