@@ -147,8 +147,10 @@ export default async function EnglishActorsPage({
                       <div className="catalog-card__sub">{GENDER_LABELS[actor.gender]}</div>
                     ) : null}
 
-                    {actor.profile ? (
-                      <div className="catalog-card__text">{truncateText(toPlainText(actor.profile), 160)}</div>
+                    {actor.profileEn || actor.profile ? (
+                      <div className="catalog-card__text">
+                        {truncateText(toPlainText(actor.profileEn || actor.profile), 160)}
+                      </div>
                     ) : (
                       <div className="catalog-card__text">Profile text is not available yet.</div>
                     )}
