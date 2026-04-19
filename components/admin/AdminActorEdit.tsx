@@ -19,6 +19,7 @@ type ActorRow = {
   birthday?: string | null;
   birthday_label?: string | null;
   profile?: string | null;
+  profile_en?: string | null;
   height_cm?: number | null;
   blood_type?: string | null;
   image_url?: string | null;
@@ -55,6 +56,7 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
   const [birthday, setBirthday] = useState("");
   const [birthdayLabel, setBirthdayLabel] = useState("");
   const [profile, setProfile] = useState("");
+  const [profileEn, setProfileEn] = useState("");
   const [heightCm, setHeightCm] = useState("");
   const [bloodType, setBloodType] = useState("");
   const [gender, setGender] = useState("male");
@@ -78,6 +80,7 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
       setBirthday("");
       setBirthdayLabel("");
       setProfile("");
+      setProfileEn("");
       setHeightCm("");
       setBloodType("");
       setGender("male");
@@ -94,7 +97,7 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         const { data, error } = await supabase
           .from("actors")
           // ✅ tags は読まない（廃止）
-          .select("id,slug,name,name_en,kana,birthday,birthday_label,profile,height_cm,blood_type,image_url,gender,sns,featured_play_slugs")
+          .select("id,slug,name,name_en,kana,birthday,birthday_label,profile,profile_en,height_cm,blood_type,image_url,gender,sns,featured_play_slugs")
           .eq("slug", key)
           .maybeSingle();
 
@@ -110,6 +113,7 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         setBirthday(r.birthday ?? "");
         setBirthdayLabel(r.birthday_label ?? "");
         setProfile(r.profile ?? "");
+        setProfileEn(r.profile_en ?? "");
         setHeightCm(r.height_cm != null ? String(r.height_cm) : "");
         setBloodType(r.blood_type ?? "");
         setGender((r.gender as any) ?? "male");
@@ -159,6 +163,7 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         birthday: safeTrim(birthday) || null,
         birthday_label: safeTrim(birthdayLabel) || null,
         profile: safeTrim(profile) || null,
+        profile_en: safeTrim(profileEn) || null,
         height_cm: safeTrim(heightCm) ? Number.parseInt(safeTrim(heightCm), 10) || null : null,
         blood_type: safeTrim(bloodType).toUpperCase() || null,
         gender: safeTrim(gender) || "male",
@@ -380,6 +385,16 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
             onChange={(e) => setProfile(e.target.value)}
             rows={6}
             placeholder="短めでOK（公開側は必要なら後で整形）"
+          />
+        </Field>
+
+        <Field label="profile_en" hint="英語版の1行ステータス。未入力なら英語ページでも日本語プロフィールを表示">
+          <textarea
+            className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
+            value={profileEn}
+            onChange={(e) => setProfileEn(e.target.value)}
+            rows={5}
+            placeholder="Tokyo-born actor and entrepreneur. CEO of Pasture Inc."
           />
         </Field>
 

@@ -15,6 +15,7 @@ type ActorRow = {
   image_url?: string | null;
   gender?: string | null;
   profile?: string | null;
+  profile_en?: string | null;
   height_cm?: number | null;
   blood_type?: string | null;
 };
@@ -24,6 +25,7 @@ type QuickDraft = {
   birthday: string;
   birthdayLabel: string;
   profile: string;
+  profileEn: string;
   heightCm: string;
   bloodType: string;
 };
@@ -33,6 +35,7 @@ const buildDraft = (row: ActorRow): QuickDraft => ({
   birthday: row.birthday ?? "",
   birthdayLabel: row.birthday_label ?? "",
   profile: row.profile ?? "",
+  profileEn: row.profile_en ?? "",
   heightCm: row.height_cm != null ? String(row.height_cm) : "",
   bloodType: row.blood_type ?? "",
 });
@@ -51,7 +54,7 @@ const AdminActors: React.FC = () => {
     try {
       const { data, error } = await supabase
         .from("actors")
-        .select("id,slug,name,name_en,kana,birthday,birthday_label,image_url,gender,profile,height_cm,blood_type")
+        .select("id,slug,name,name_en,kana,birthday,birthday_label,image_url,gender,profile,profile_en,height_cm,blood_type")
         .order("name", { ascending: true });
       if (error) throw error;
       const nextRows = (data ?? []) as any as ActorRow[];
@@ -86,7 +89,7 @@ const AdminActors: React.FC = () => {
     setDrafts((current) => ({
       ...current,
       [slug]: {
-        ...(current[slug] ?? { nameEn: "", birthday: "", birthdayLabel: "", profile: "", heightCm: "", bloodType: "" }),
+        ...(current[slug] ?? { nameEn: "", birthday: "", birthdayLabel: "", profile: "", profileEn: "", heightCm: "", bloodType: "" }),
         ...patch,
       },
     }));
@@ -110,6 +113,7 @@ const AdminActors: React.FC = () => {
         birthday: safeTrim(draft.birthday) || null,
         birthday_label: safeTrim(draft.birthdayLabel) || null,
         profile: safeTrim(draft.profile) || null,
+        profile_en: safeTrim(draft.profileEn) || null,
         height_cm: safeTrim(draft.heightCm)
           ? Number.parseInt(safeTrim(draft.heightCm), 10) || null
           : null,
@@ -132,6 +136,7 @@ const AdminActors: React.FC = () => {
                 name_en: payload.name_en,
                 birthday_label: payload.birthday_label,
                 profile: payload.profile,
+                profile_en: payload.profile_en,
                 height_cm: payload.height_cm,
                 blood_type: payload.blood_type,
               }
@@ -313,6 +318,19 @@ const AdminActors: React.FC = () => {
                         onChange={(e) => updateDraft(r.slug, { profile: e.target.value })}
                         rows={3}
                         placeholder="東京都出身の俳優・実業家。株式会社Pasture代表取締役社長。"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-xs text-slate-400 mb-2">
+                        profile_en（英語版の1行ステータス）
+                      </label>
+                      <textarea
+                        className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
+                        value={draft.profileEn}
+                        onChange={(e) => updateDraft(r.slug, { profileEn: e.target.value })}
+                        rows={3}
+                        placeholder="Tokyo-born actor and entrepreneur. CEO of Pasture Inc."
                       />
                     </div>
 

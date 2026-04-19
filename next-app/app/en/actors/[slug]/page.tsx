@@ -32,7 +32,7 @@ export const dynamicParams = true;
 
 const buildActorMetaDescriptionEn = (actor: NonNullable<Awaited<ReturnType<typeof getActorDetailBySlug>>>) => {
   const parts: string[] = [];
-  const statusLine = toPlainText(actor.profile || "").trim().replace(/[.。]\s*$/u, "");
+  const statusLine = toPlainText(actor.profileEn || actor.profile || "").trim().replace(/[.。]\s*$/u, "");
 
   if (statusLine) parts.push(`${statusLine}.`);
 
@@ -117,7 +117,7 @@ export default async function EnglishActorDetailPage({ params }: { params: Promi
   const ageLabel = formatAgeEn(age);
   const timeline = groupPlayTimelineByYear(actor.plays);
   const hasSns = Boolean(actor.sns && Object.values(actor.sns).some(Boolean));
-  const statusLine = toPlainText(actor.profile || "") || `${displayName} profile text is not available yet.`;
+  const statusLine = toPlainText(actor.profileEn || actor.profile || "") || `${displayName} profile text is not available yet.`;
   const personJsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
