@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
-const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "";
+const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "stageconnect2.5d@gmail.com";
 const contactX = process.env.NEXT_PUBLIC_CONTACT_X || "";
 
 export const metadata: Metadata = {
