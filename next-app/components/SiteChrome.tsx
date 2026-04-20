@@ -33,6 +33,7 @@ const copy = {
     guide: "ガイド / コラム",
     tags: "タグ一覧",
     watch: "配信サービス一覧",
+    contact: "お問い合わせ",
     privacy: "プライバシーポリシー",
     footerCopy: "2.5次元舞台とキャストをつなぐデジタルアーカイブ。",
     ctaLabel: "2.5次元舞台を今すぐ観る",
@@ -66,6 +67,7 @@ const copy = {
     guide: "Guides / Columns",
     tags: "Browse Tags",
     watch: "Streaming Guides",
+    contact: "Contact",
     privacy: "Privacy Policy",
     footerCopy: "A digital archive connecting 2.5D stage productions and cast history.",
     ctaLabel: "Watch 2.5D stage productions now",
@@ -286,6 +288,7 @@ export default function SiteChrome({ children }: { children: React.ReactNode }) 
                     {labels.ctaButton}
                   </a>
                 </li>
+                <li><Link href="/contact">{labels.contact}</Link></li>
                 <li><Link href="/privacy">{labels.privacy}</Link></li>
               </ul>
             </section>
