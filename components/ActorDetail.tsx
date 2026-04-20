@@ -515,7 +515,7 @@ const ActorDetail: React.FC = () => {
   }, [actor?.imageUrl, siteUrl]);
 
   const birthdayText = useMemo(() => formatBirthday(actor?.birthday), [actor?.birthday]);
-  const age = useMemo(() => getAgeFromBirthday(actor?.birthday), [actor?.birthday]);
+  const age = useMemo(() => getAgeFromBirthday(actor?.birthday, actor?.deathDate), [actor?.birthday, actor?.deathDate]);
   const profileText = useMemo(() => actor?.profile?.trim() || "", [actor?.profile]);
   const canCollapseProfile = useMemo(() => profileText.length > 220, [profileText]);
 

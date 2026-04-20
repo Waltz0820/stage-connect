@@ -120,7 +120,7 @@ export default async function ActorsPage({
           <div className="catalog-grid">
             {visibleActors.map((actor) => {
               const birthday = getDisplayBirthday(actor.birthday, actor.birthdayLabel);
-              const age = getAgeFromBirthday(actor.birthday);
+              const age = getAgeFromBirthday(actor.birthday, actor.deathDate);
 
               return (
                 <article className="catalog-card" key={actor.slug}>

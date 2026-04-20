@@ -102,7 +102,7 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
   if (!actor) notFound();
 
   const birthdayText = getDisplayBirthday(actor.birthday, actor.birthdayLabel);
-  const age = getAgeFromBirthday(actor.birthday);
+  const age = getAgeFromBirthday(actor.birthday, actor.deathDate);
   const timeline = groupPlayTimelineByYear(actor.plays);
   const hasSns = Boolean(actor.sns && Object.values(actor.sns).some(Boolean));
   const statusLine = toPlainText(actor.profile || "") || `${actor.name}のプロフィール情報はまだありません。`;

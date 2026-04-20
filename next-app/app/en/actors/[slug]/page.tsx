@@ -113,7 +113,7 @@ export default async function EnglishActorDetailPage({ params }: { params: Promi
   const birthdayText = actor.birthdayLabel
     ? formatBirthdayLabelEn(actor.birthdayLabel)
     : formatBirthdayEn(actor.birthday);
-  const age = getAgeFromBirthday(actor.birthday);
+  const age = getAgeFromBirthday(actor.birthday, actor.deathDate);
   const ageLabel = formatAgeEn(age);
   const timeline = groupPlayTimelineByYear(actor.plays);
   const hasSns = Boolean(actor.sns && Object.values(actor.sns).some(Boolean));

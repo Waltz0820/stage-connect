@@ -12,6 +12,7 @@ type ActorRow = {
   kana?: string | null;
   birthday?: string | null;
   birthday_label?: string | null;
+  death_date?: string | null;
   image_url?: string | null;
   gender?: string | null;
   profile?: string | null;
@@ -24,6 +25,8 @@ type QuickDraft = {
   nameEn: string;
   birthday: string;
   birthdayLabel: string;
+  isDeceased: boolean;
+  deathDate: string;
   profile: string;
   profileEn: string;
   heightCm: string;
@@ -34,6 +37,8 @@ const buildDraft = (row: ActorRow): QuickDraft => ({
   nameEn: row.name_en ?? "",
   birthday: row.birthday ?? "",
   birthdayLabel: row.birthday_label ?? "",
+  isDeceased: Boolean(row.death_date),
+  deathDate: row.death_date ?? "",
   profile: row.profile ?? "",
   profileEn: row.profile_en ?? "",
   heightCm: row.height_cm != null ? String(row.height_cm) : "",
@@ -54,7 +59,7 @@ const AdminActors: React.FC = () => {
     try {
       const { data, error } = await supabase
         .from("actors")
-        .select("id,slug,name,name_en,kana,birthday,birthday_label,image_url,gender,profile,profile_en,height_cm,blood_type")
+        .select("id,slug,name,name_en,kana,birthday,birthday_label,death_date,image_url,gender,profile,profile_en,height_cm,blood_type")
         .order("name", { ascending: true });
       if (error) throw error;
       const nextRows = (data ?? []) as any as ActorRow[];
@@ -89,7 +94,7 @@ const AdminActors: React.FC = () => {
     setDrafts((current) => ({
       ...current,
       [slug]: {
-        ...(current[slug] ?? { nameEn: "", birthday: "", birthdayLabel: "", profile: "", profileEn: "", heightCm: "", bloodType: "" }),
+        ...(current[slug] ?? { nameEn: "", birthday: "", birthdayLabel: "", isDeceased: false, deathDate: "", profile: "", profileEn: "", heightCm: "", bloodType: "" }),
         ...patch,
       },
     }));
@@ -112,6 +117,7 @@ const AdminActors: React.FC = () => {
         name_en: safeTrim(draft.nameEn) || null,
         birthday: safeTrim(draft.birthday) || null,
         birthday_label: safeTrim(draft.birthdayLabel) || null,
+        death_date: draft.isDeceased ? safeTrim(draft.deathDate) || null : null,
         profile: safeTrim(draft.profile) || null,
         profile_en: safeTrim(draft.profileEn) || null,
         height_cm: safeTrim(draft.heightCm)
@@ -135,6 +141,7 @@ const AdminActors: React.FC = () => {
                 birthday: payload.birthday,
                 name_en: payload.name_en,
                 birthday_label: payload.birthday_label,
+                death_date: payload.death_date,
                 profile: payload.profile,
                 profile_en: payload.profile_en,
                 height_cm: payload.height_cm,
@@ -284,6 +291,36 @@ const AdminActors: React.FC = () => {
                           placeholder="2月5日 / 非公表"
                         />
                       </div>
+
+                      <div className="md:col-span-2">
+                        <label className="block text-xs text-slate-400 mb-2">deceased</label>
+                        <label className="flex items-center gap-3 rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-slate-200">
+                          <input
+                            type="checkbox"
+                            className="h-4 w-4 accent-white"
+                            checked={draft.isDeceased}
+                            onChange={(e) =>
+                              updateDraft(r.slug, {
+                                isDeceased: e.target.checked,
+                                deathDate: e.target.checked ? draft.deathDate : "",
+                              })
+                            }
+                          />
+                          逝去済み
+                        </label>
+                      </div>
+
+                      {draft.isDeceased ? (
+                        <div>
+                          <label className="block text-xs text-slate-400 mb-2">death_date</label>
+                          <input
+                            type="date"
+                            className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
+                            value={draft.deathDate}
+                            onChange={(e) => updateDraft(r.slug, { deathDate: e.target.value })}
+                          />
+                        </div>
+                      ) : null}
 
                       <div>
                         <label className="block text-xs text-slate-400 mb-2">height_cm</label>

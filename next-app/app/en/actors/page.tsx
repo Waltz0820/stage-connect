@@ -122,7 +122,7 @@ export default async function EnglishActorsPage({
               const birthday = actor.birthdayLabel
                 ? formatBirthdayLabelEn(actor.birthdayLabel)
                 : formatBirthdayEn(actor.birthday);
-              const age = getAgeFromBirthday(actor.birthday);
+              const age = getAgeFromBirthday(actor.birthday, actor.deathDate);
               const ageLabel = formatAgeEn(age);
 
               return (

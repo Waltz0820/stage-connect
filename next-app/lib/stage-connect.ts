@@ -18,6 +18,7 @@ export type ActorDetailData = {
   kana: string | null;
   birthday: string | null;
   birthdayLabel: string | null;
+  deathDate: string | null;
   profile: string | null;
   profileEn: string | null;
   heightCm: number | null;
@@ -115,6 +116,7 @@ export type ActorListItem = {
   kana: string | null;
   birthday: string | null;
   birthdayLabel: string | null;
+  deathDate: string | null;
   profile: string | null;
   profileEn: string | null;
   gender: string | null;
@@ -609,21 +611,21 @@ export async function getActorDetailBySlug(slug: string): Promise<ActorDetailDat
   {
     const res = await supabase
       .from("actors")
-      .select("id, slug, name, name_en, kana, birthday, birthday_label, profile, profile_en, height_cm, blood_type, image_url, sns")
+      .select("id, slug, name, name_en, kana, birthday, birthday_label, death_date, profile, profile_en, height_cm, blood_type, image_url, sns")
       .eq("slug", slug)
       .maybeSingle();
     actor = res.data;
     actorError = res.error;
   }
 
-  if (actorError && /(name_en|profile_en|height_cm|blood_type|birthday_label)/i.test(String(actorError.message ?? ""))) {
+  if (actorError && /(name_en|profile_en|height_cm|blood_type|birthday_label|death_date)/i.test(String(actorError.message ?? ""))) {
     const fallback = await supabase
       .from("actors")
       .select("id, slug, name, kana, birthday, profile, image_url, sns")
       .eq("slug", slug)
       .maybeSingle();
     actor = fallback.data
-      ? { ...fallback.data, name_en: null, birthday_label: null, profile_en: null, height_cm: null, blood_type: null }
+      ? { ...fallback.data, name_en: null, birthday_label: null, death_date: null, profile_en: null, height_cm: null, blood_type: null }
       : fallback.data;
     actorError = fallback.error;
   }
@@ -902,6 +904,7 @@ export async function getActorDetailBySlug(slug: string): Promise<ActorDetailDat
     kana: actor.kana ?? null,
     birthday: actor.birthday ?? null,
     birthdayLabel: actor.birthday_label ?? null,
+    deathDate: actor.death_date ?? null,
     profile: actor.profile ?? null,
     profileEn: actor.profile_en ?? null,
     heightCm: typeof actor.height_cm === "number" ? actor.height_cm : null,
@@ -1487,13 +1490,13 @@ export async function getActorList(): Promise<ActorListItem[]> {
   {
     const res = await supabase
       .from("actors")
-      .select("slug, name, name_en, kana, birthday, birthday_label, profile, profile_en, gender")
+      .select("slug, name, name_en, kana, birthday, birthday_label, death_date, profile, profile_en, gender")
       .order("name", { ascending: true });
     data = res.data as any[] | null;
     error = res.error;
   }
 
-  if (error && /(name_en|profile_en|birthday_label)/i.test(String(error.message ?? ""))) {
+  if (error && /(name_en|profile_en|birthday_label|death_date)/i.test(String(error.message ?? ""))) {
     const fallback = await supabase
       .from("actors")
       .select("slug, name, kana, birthday, profile, gender")
@@ -1503,6 +1506,7 @@ export async function getActorList(): Promise<ActorListItem[]> {
         ...row,
         name_en: null,
         birthday_label: null,
+        death_date: null,
         profile_en: null,
       })) ?? null;
     error = fallback.error;
@@ -1519,6 +1523,7 @@ export async function getActorList(): Promise<ActorListItem[]> {
       kana: (row.kana as string | null) ?? null,
       birthday: (row.birthday as string | null) ?? null,
       birthdayLabel: (row.birthday_label as string | null) ?? null,
+      deathDate: (row.death_date as string | null) ?? null,
       profile: (row.profile as string | null) ?? null,
       profileEn: (row.profile_en as string | null) ?? null,
       gender: (row.gender as string | null) ?? null,
@@ -2288,7 +2293,8 @@ export const getDisplayBirthday = (
   return formatBirthday(birthday);
 };
 
-export const getAgeFromBirthday = (birthday?: string | null) => {
+export const getAgeFromBirthday = (birthday?: string | null, deathDate?: string | null) => {
+  if (String(deathDate ?? "").trim()) return null;
   const value = String(birthday ?? "").trim();
   const match = value.match(/^(\d{4})-(\d{2})-(\d{2})$/);
   if (!match) return null;

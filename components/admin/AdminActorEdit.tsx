@@ -18,6 +18,7 @@ type ActorRow = {
   kana?: string | null;
   birthday?: string | null;
   birthday_label?: string | null;
+  death_date?: string | null;
   profile?: string | null;
   profile_en?: string | null;
   height_cm?: number | null;
@@ -55,6 +56,8 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
   const [kana, setKana] = useState("");
   const [birthday, setBirthday] = useState("");
   const [birthdayLabel, setBirthdayLabel] = useState("");
+  const [deathDate, setDeathDate] = useState("");
+  const [isDeceased, setIsDeceased] = useState(false);
   const [profile, setProfile] = useState("");
   const [profileEn, setProfileEn] = useState("");
   const [heightCm, setHeightCm] = useState("");
@@ -79,6 +82,8 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
       setKana("");
       setBirthday("");
       setBirthdayLabel("");
+      setDeathDate("");
+      setIsDeceased(false);
       setProfile("");
       setProfileEn("");
       setHeightCm("");
@@ -97,7 +102,7 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         const { data, error } = await supabase
           .from("actors")
           // ✅ tags は読まない（廃止）
-          .select("id,slug,name,name_en,kana,birthday,birthday_label,profile,profile_en,height_cm,blood_type,image_url,gender,sns,featured_play_slugs")
+          .select("id,slug,name,name_en,kana,birthday,birthday_label,death_date,profile,profile_en,height_cm,blood_type,image_url,gender,sns,featured_play_slugs")
           .eq("slug", key)
           .maybeSingle();
 
@@ -112,6 +117,8 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         setKana(r.kana ?? "");
         setBirthday(r.birthday ?? "");
         setBirthdayLabel(r.birthday_label ?? "");
+        setDeathDate(r.death_date ?? "");
+        setIsDeceased(Boolean(r.death_date));
         setProfile(r.profile ?? "");
         setProfileEn(r.profile_en ?? "");
         setHeightCm(r.height_cm != null ? String(r.height_cm) : "");
@@ -162,6 +169,7 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         kana: safeTrim(kana) || null,
         birthday: safeTrim(birthday) || null,
         birthday_label: safeTrim(birthdayLabel) || null,
+        death_date: isDeceased ? safeTrim(deathDate) || null : null,
         profile: safeTrim(profile) || null,
         profile_en: safeTrim(profileEn) || null,
         height_cm: safeTrim(heightCm) ? Number.parseInt(safeTrim(heightCm), 10) || null : null,
@@ -324,6 +332,33 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
               placeholder="2月5日 / 非公表"
             />
           </Field>
+
+          <Field label="deceased" hint="逝去済みなら年齢表示を止めます。必要な時だけ死亡日を入力">
+            <label className="flex items-center gap-3 rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-slate-200">
+              <input
+                type="checkbox"
+                className="h-4 w-4 accent-white"
+                checked={isDeceased}
+                onChange={(e) => {
+                  const next = e.target.checked;
+                  setIsDeceased(next);
+                  if (!next) setDeathDate("");
+                }}
+              />
+              逝去済み
+            </label>
+          </Field>
+
+          {isDeceased ? (
+            <Field label="death_date" hint="YYYY-MM-DD">
+              <input
+                type="date"
+                className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
+                value={deathDate}
+                onChange={(e) => setDeathDate(e.target.value)}
+              />
+            </Field>
+          ) : null}
 
           <Field label="height_cm" hint="数字のみ">
             <input
