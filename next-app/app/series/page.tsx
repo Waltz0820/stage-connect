@@ -19,6 +19,16 @@ const FORMAT_LABELS: Record<string, string> = {
 
 const getSingleParam = (value: SearchParamValue) => (Array.isArray(value) ? value[0] : value) ?? "";
 
+const getSeriesCardTags = (series: { format: string | null; originType: string | null; playCount: number }) => {
+  const tags = [
+    series.format ? FORMAT_LABELS[series.format] ?? series.format : null,
+    series.originType,
+    series.playCount >= 10 ? "定番シリーズ" : null,
+  ].filter(Boolean) as string[];
+
+  return Array.from(new Set(tags)).slice(0, 4);
+};
+
 const buildHref = (params: Record<string, string | number | null | undefined>) => {
   const search = new URLSearchParams();
   Object.entries(params).forEach(([key, value]) => {
@@ -93,12 +103,12 @@ export default async function SeriesPage({
   const visibleSeries = sortedSeries.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 
   return (
-    <main className="container" style={{ paddingBlock: 32 }}>
+    <main className="container works-index-page" style={{ paddingBlock: 32 }}>
       <StructuredData data={breadcrumbJsonLd} />
       <StructuredData data={collectionJsonLd} />
       <div className="stack-lg">
         <Breadcrumbs items={[{ label: "シリーズ一覧" }]} />
-        <section className="hero-card stack-md">
+        <section className="hero-card stack-md works-index-hero">
           <div className="stack-sm">
             <span className="eyebrow">Series</span>
             <h1 className="page-title">シリーズ一覧</h1>
@@ -114,10 +124,10 @@ export default async function SeriesPage({
           </div>
         </section>
 
-        <section className="section-card stack-md">
+        <section className="section-card stack-md works-list-panel">
           <h2 className="section-title">シリーズ・フランチャイズ</h2>
 
-          <div className="filter-row filter-row--dense">
+          <div className="filter-row filter-row--dense works-filter-row">
             <Link
               className={`filter-chip ${sort === "play_count_desc" ? "is-active" : ""}`}
               href={buildHref({ page: 1, sort: "play_count_desc", format, origin })}
@@ -132,7 +142,7 @@ export default async function SeriesPage({
             </Link>
           </div>
 
-          <div className="filter-row filter-row--dense genre-filter-row">
+          <div className="filter-row filter-row--dense genre-filter-row works-filter-row">
             {formatOptions.map((option) => (
               <Link
                 key={option}
@@ -144,7 +154,7 @@ export default async function SeriesPage({
             ))}
           </div>
 
-          <div className="filter-row filter-row--dense genre-filter-row">
+          <div className="filter-row filter-row--dense genre-filter-row works-filter-row">
             {originOptions.map((option) => (
               <Link
                 key={option}
@@ -171,25 +181,62 @@ export default async function SeriesPage({
                 <div className="play-list-card__main">
                   <Link className="catalog-card__body-link" href={`/series/${series.slug}`}>
                     <div className="catalog-card__top catalog-card__top--stack">
-                      <div className="catalog-card__title">{series.name}</div>
-                      <div className="catalog-card__top-actions">
-                        {format === "all" && series.format ? (
-                          <span className="catalog-card__badge">{FORMAT_LABELS[series.format] ?? series.format}</span>
+                      <div className="play-list-card__status-row">
+                        <span className="play-list-card__status-badge play-list-card__status-badge--accent">
+                          シリーズ
+                        </span>
+                        {series.format ? (
+                          <span className="play-list-card__status-badge">
+                            {FORMAT_LABELS[series.format] ?? series.format}
+                          </span>
                         ) : null}
-                        <span className="catalog-card__badge">{series.playCount}作品</span>
                       </div>
+
+                      <div className="catalog-card__title">{series.name}</div>
                     </div>
 
-                    {series.originType ? <div className="catalog-card__sub">{series.originType}</div> : null}
-
                     {series.description ? (
-                      <div className="catalog-card__text">{truncate(toPlainText(series.description), 140)}</div>
+                      <div className="catalog-card__text play-list-card__summary">
+                        {truncate(toPlainText(series.description), 140)}
+                      </div>
                     ) : (
-                      <div className="catalog-card__text">シリーズ説明は現在準備中です。</div>
+                      <div className="catalog-card__text play-list-card__summary">シリーズ説明は現在準備中です。</div>
                     )}
 
-                    <div className="catalog-card__footer">
+                    <div className="play-list-card__facts">
+                      <div className="play-list-card__fact">
+                        <span className="play-list-card__fact-key">作品数</span>
+                        <span className="play-list-card__fact-value">{series.playCount}作品</span>
+                      </div>
+                      {series.format ? (
+                        <div className="play-list-card__fact">
+                          <span className="play-list-card__fact-key">上演形式</span>
+                          <span className="play-list-card__fact-value">
+                            {FORMAT_LABELS[series.format] ?? series.format}
+                          </span>
+                        </div>
+                      ) : null}
+                      {series.originType ? (
+                        <div className="play-list-card__fact">
+                          <span className="play-list-card__fact-key">原作</span>
+                          <span className="play-list-card__fact-value">{series.originType}</span>
+                        </div>
+                      ) : null}
+                    </div>
+
+                    <div className="play-list-card__tag-row">
+                      {getSeriesCardTags(series).map((tag) => (
+                        <span className="play-list-card__tag" key={tag}>
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+
+                    <div className="catalog-card__footer play-list-card__footer">
                       <span className="catalog-link">シリーズ詳細を見る</span>
+                      <span className="play-list-card__chevron" aria-hidden="true">
+                        ›
+                      </span>
                     </div>
                   </Link>
                 </div>
@@ -216,6 +263,19 @@ export default async function SeriesPage({
               </Link>
             </div>
           ) : null}
+
+          <div className="works-index-cta">
+            <div className="works-index-cta__icon" aria-hidden="true">
+              □
+            </div>
+            <div className="works-index-cta__copy">
+              <p className="works-index-cta__title">作品一覧から個別作品を探す</p>
+              <p className="works-index-cta__text">シリーズ内の各公演や配信作品を一覧で確認できます。</p>
+            </div>
+            <Link className="works-index-cta__link" href="/plays">
+              作品一覧へ
+            </Link>
+          </div>
         </section>
       </div>
     </main>

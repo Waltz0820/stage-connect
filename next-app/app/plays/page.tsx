@@ -61,6 +61,33 @@ const compactListPeriod = (period?: string | null) => {
   return period;
 };
 
+const getPlayYearLabel = (period?: string | null) => {
+  const match = period?.match(/(\d{4})/);
+  return match ? `${match[1]}年` : null;
+};
+
+const getPlayAvailabilityLabel = (vod?: Record<string, string> | null) => {
+  if (vod?.dmm) return "DMM TVで配信中";
+  if (vod && Object.keys(vod).length > 0) return "配信あり";
+  return "配信情報なし";
+};
+
+const getPlayCardTags = (play: {
+  franchiseFormat: string | null;
+  genre: string | null;
+  franchiseName: string | null;
+  vod: Record<string, string> | null;
+}) => {
+  const tags = [
+    play.vod?.dmm ? "配信あり" : null,
+    play.franchiseFormat ? FORMAT_LABELS[play.franchiseFormat] ?? play.franchiseFormat : null,
+    play.genre ? GENRE_LABELS[play.genre] ?? play.genre : null,
+    play.franchiseName ? "シリーズ作品" : null,
+  ].filter(Boolean) as string[];
+
+  return Array.from(new Set(tags)).slice(0, 4);
+};
+
 const getSingleParam = (value: SearchParamValue) => (Array.isArray(value) ? value[0] : value) ?? "";
 
 const buildHref = (params: Record<string, string | number | null | undefined>) => {
@@ -212,6 +239,19 @@ export default async function PlaysPage({
 
                 <div className="play-list-card__main">
                   <div className="catalog-card__top catalog-card__top--stack">
+                    <div className="play-list-card__status-row">
+                      {play.vod?.dmm ? (
+                        <span className="play-list-card__status-badge play-list-card__status-badge--accent">
+                          配信あり
+                        </span>
+                      ) : null}
+                      {play.franchiseFormat ? (
+                        <span className="play-list-card__status-badge">
+                          {FORMAT_LABELS[play.franchiseFormat] ?? play.franchiseFormat}
+                        </span>
+                      ) : null}
+                    </div>
+
                     <div className="catalog-card__top-title-row">
                       <div className="catalog-card__title">{play.title}</div>
                       <FavoriteButtonClient
@@ -222,38 +262,49 @@ export default async function PlaysPage({
                         franchiseName={play.franchiseName}
                       />
                     </div>
-
-                    {(format === "all" && play.franchiseFormat) || play.franchiseName ? (
-                      <div className="catalog-card__top-actions">
-                        {format === "all" && play.franchiseFormat ? (
-                          <span className="catalog-card__badge">
-                            {FORMAT_LABELS[play.franchiseFormat] ?? play.franchiseFormat}
-                          </span>
-                        ) : null}
-                        {play.franchiseName ? <span className="catalog-card__badge">シリーズ</span> : null}
-                      </div>
-                    ) : null}
                   </div>
 
                   <Link className="catalog-card__body-link" href={`/plays/${play.slug}`}>
-                    {play.franchiseName ? <div className="catalog-card__sub">{play.franchiseName}</div> : null}
-                    {compactListPeriod(play.period) ? (
-                      <div className="catalog-card__sub">
-                        日程: <span className="mono">{compactListPeriod(play.period)}</span>
-                      </div>
-                    ) : null}
-                    {play.genre ? (
-                      <div className="catalog-card__sub">ジャンル: {GENRE_LABELS[play.genre] ?? play.genre}</div>
-                    ) : null}
+                    {play.franchiseName ? <div className="catalog-card__sub play-list-card__series">{play.franchiseName}</div> : null}
 
                     {play.summary ? (
-                      <div className="catalog-card__text">{truncate(toPlainText(play.summary), 140)}</div>
-                    ) : (
-                      <div className="catalog-card__text">作品説明は現在準備中です。</div>
-                    )}
+                      <div className="catalog-card__text play-list-card__summary">
+                        {truncate(toPlainText(play.summary), 140)}
+                      </div>
+                    ) : null}
 
-                    <div className="catalog-card__footer">
+                    <div className="play-list-card__facts">
+                      {getPlayYearLabel(play.period) ? (
+                        <div className="play-list-card__fact">
+                          <span className="play-list-card__fact-key">公演年</span>
+                          <span className="play-list-card__fact-value">{getPlayYearLabel(play.period)}</span>
+                        </div>
+                      ) : null}
+                      {play.franchiseName ? (
+                        <div className="play-list-card__fact">
+                          <span className="play-list-card__fact-key">シリーズ</span>
+                          <span className="play-list-card__fact-value">{play.franchiseName}</span>
+                        </div>
+                      ) : null}
+                      <div className="play-list-card__fact">
+                        <span className="play-list-card__fact-key">配信</span>
+                        <span className="play-list-card__fact-value">{getPlayAvailabilityLabel(play.vod)}</span>
+                      </div>
+                    </div>
+
+                    <div className="play-list-card__tag-row">
+                      {getPlayCardTags(play).map((tag) => (
+                        <span className="play-list-card__tag" key={tag}>
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+
+                    <div className="catalog-card__footer play-list-card__footer">
                       <span className="catalog-link">作品詳細を見る</span>
+                      <span className="play-list-card__chevron" aria-hidden="true">
+                        ›
+                      </span>
                     </div>
                   </Link>
 
