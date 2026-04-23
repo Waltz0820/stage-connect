@@ -131,12 +131,12 @@ export default async function PlaysPage({
   const visiblePlays = sortedPlays.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 
   return (
-    <main className="container" style={{ paddingBlock: 32 }}>
+    <main className="container works-index-page" style={{ paddingBlock: 32 }}>
       <StructuredData data={breadcrumbJsonLd} />
       <StructuredData data={collectionJsonLd} />
       <div className="stack-lg">
         <Breadcrumbs items={[{ label: "作品一覧" }]} />
-        <section className="hero-card stack-md">
+        <section className="hero-card stack-md works-index-hero">
           <div className="stack-sm">
             <span className="eyebrow">Plays</span>
             <h1 className="page-title">作品一覧</h1>
@@ -152,10 +152,10 @@ export default async function PlaysPage({
           </div>
         </section>
 
-        <section className="section-card stack-md">
+        <section className="section-card stack-md works-list-panel">
           <h2 className="section-title">作品データベース</h2>
 
-          <div className="filter-row filter-row--dense">
+          <div className="filter-row filter-row--dense works-filter-row">
             <Link
               className={`filter-chip ${sort === "new" ? "is-active" : ""}`}
               href={buildHref({ page: 1, sort: "new", format, genre })}
@@ -170,7 +170,7 @@ export default async function PlaysPage({
             </Link>
           </div>
 
-          <div className="filter-row filter-row--dense genre-filter-row">
+          <div className="filter-row filter-row--dense genre-filter-row works-filter-row">
             {formatOptions.map((option) => (
               <Link
                 key={option}
@@ -182,7 +182,7 @@ export default async function PlaysPage({
             ))}
           </div>
 
-          <div className="filter-row filter-row--dense genre-filter-row">
+          <div className="filter-row filter-row--dense genre-filter-row works-filter-row">
             {genreOptions.map((option) => (
               <Link
                 key={option}
@@ -295,6 +295,19 @@ export default async function PlaysPage({
               </Link>
             </div>
           ) : null}
+
+          <div className="works-index-cta">
+            <div className="works-index-cta__icon" aria-hidden="true">
+              □
+            </div>
+            <div className="works-index-cta__copy">
+              <p className="works-index-cta__title">シリーズから作品を探す</p>
+              <p className="works-index-cta__text">人気シリーズや関連作品をまとめてチェックできます。</p>
+            </div>
+            <Link className="works-index-cta__link" href="/series">
+              シリーズ一覧へ
+            </Link>
+          </div>
         </section>
       </div>
     </main>
