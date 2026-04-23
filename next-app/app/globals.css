@@ -2362,10 +2362,9 @@ a {
   transform: translateX(-50%);
   pointer-events: none;
   background:
-    radial-gradient(circle at 20% 6%, rgba(161, 80, 210, 0.08), transparent 24%),
-    radial-gradient(circle at 80% 4%, rgba(52, 101, 214, 0.1), transparent 26%),
-    linear-gradient(180deg, rgba(15, 18, 36, 0.62), rgba(7, 8, 14, 0.2) 34%, rgba(7, 8, 14, 0.02) 68%, transparent 100%);
-  opacity: 0.9;
+    radial-gradient(circle at 50% 0%, rgba(96, 70, 170, 0.06), transparent 18%),
+    linear-gradient(180deg, rgba(10, 12, 24, 0.68), rgba(6, 7, 12, 0.16) 28%, rgba(6, 6, 10, 0.02) 62%, transparent 100%);
+  opacity: 0.84;
   z-index: -2;
 }
 
@@ -2379,7 +2378,7 @@ a {
   transform: translateX(-50%);
   pointer-events: none;
   background:
-    linear-gradient(90deg, rgba(6, 7, 11, 0.72) 0%, rgba(6, 7, 11, 0.18) 16%, rgba(6, 7, 11, 0.18) 84%, rgba(6, 7, 11, 0.72) 100%);
+    linear-gradient(90deg, rgba(5, 6, 10, 0.9) 0%, rgba(5, 6, 10, 0.34) 16%, rgba(5, 6, 10, 0.34) 84%, rgba(5, 6, 10, 0.9) 100%);
   z-index: -1;
 }
 
@@ -2389,24 +2388,24 @@ a {
   overflow: hidden;
   border-radius: 22px;
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.04),
-    0 18px 44px rgba(2, 4, 10, 0.34);
+    inset 0 1px 0 rgba(255, 255, 255, 0.025),
+    0 18px 44px rgba(2, 4, 10, 0.26);
 }
 
 .works-index-hero {
-  border-color: rgba(162, 94, 168, 0.18);
+  border-color: rgba(92, 88, 132, 0.16);
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.028), rgba(255, 255, 255, 0.008)),
-    radial-gradient(circle at 16% 0%, rgba(95, 32, 124, 0.16), transparent 34%),
-    radial-gradient(circle at 86% 14%, rgba(36, 74, 158, 0.14), transparent 30%),
-    linear-gradient(180deg, rgba(18, 18, 34, 0.96), rgba(7, 8, 15, 0.97));
+    linear-gradient(180deg, rgba(255, 255, 255, 0.018), rgba(255, 255, 255, 0.005)),
+    radial-gradient(circle at 20% -6%, rgba(88, 38, 124, 0.12), transparent 30%),
+    radial-gradient(circle at 80% 4%, rgba(42, 72, 152, 0.1), transparent 28%),
+    linear-gradient(180deg, rgba(15, 16, 30, 0.97), rgba(6, 7, 13, 0.99));
 }
 
 .works-list-panel {
   border-color: rgba(243, 240, 234, 0.1);
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.018), rgba(255, 255, 255, 0.006)),
-    linear-gradient(180deg, rgba(12, 13, 22, 0.96), rgba(7, 8, 14, 0.98));
+    linear-gradient(180deg, rgba(255, 255, 255, 0.012), rgba(255, 255, 255, 0.004)),
+    linear-gradient(180deg, rgba(9, 10, 18, 0.98), rgba(5, 6, 11, 0.99));
 }
 
 .works-index-hero::before {
@@ -2415,10 +2414,10 @@ a {
   inset: 0;
   pointer-events: none;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.022), transparent 58%),
-    radial-gradient(circle at 84% 10%, rgba(120, 158, 255, 0.16), transparent 20%),
-    radial-gradient(circle at 72% 16%, rgba(255, 255, 255, 0.07), transparent 13%),
-    radial-gradient(circle at 30% 12%, rgba(169, 84, 205, 0.08), transparent 26%);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.012), transparent 46%),
+    radial-gradient(circle at 84% 10%, rgba(120, 158, 255, 0.1), transparent 18%),
+    radial-gradient(circle at 72% 16%, rgba(255, 255, 255, 0.045), transparent 12%),
+    radial-gradient(circle at 30% 12%, rgba(169, 84, 205, 0.05), transparent 24%);
 }
 
 .works-index-hero::after {
@@ -2430,13 +2429,13 @@ a {
   height: 90%;
   pointer-events: none;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.08) 48%, transparent),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.05) 45%, transparent);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.04) 46%, transparent),
+    linear-gradient(180deg, rgba(183, 212, 255, 0.1), rgba(255, 255, 255, 0.02) 42%, transparent);
   background-size: 32% 100%, 32% 100%;
   background-position: 18% 0, 64% 0;
   background-repeat: no-repeat;
-  filter: blur(1px);
-  opacity: 0.28;
+  filter: blur(2px);
+  opacity: 0.18;
   transform: skewX(-16deg);
 }
 
@@ -2446,9 +2445,9 @@ a {
   inset: 0;
   pointer-events: none;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.012), transparent 24%),
-    radial-gradient(circle at 86% -4%, rgba(78, 121, 224, 0.05), transparent 24%),
-    radial-gradient(circle at 12% 0%, rgba(151, 68, 196, 0.04), transparent 26%);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.008), transparent 18%),
+    radial-gradient(circle at 86% -4%, rgba(78, 121, 224, 0.03), transparent 22%),
+    radial-gradient(circle at 12% 0%, rgba(151, 68, 196, 0.025), transparent 24%);
 }
 
 .works-list-panel::after {
@@ -2465,9 +2464,9 @@ a {
   background-size: 28% 100%, 28% 100%;
   background-position: 22% 0, 62% 0;
   background-repeat: no-repeat;
-  opacity: 0.12;
+  opacity: 0.06;
   transform: skewX(-18deg);
-  filter: blur(1px);
+  filter: blur(2px);
 }
 
 .works-index-hero > *,
@@ -2507,22 +2506,22 @@ a {
   border-radius: 999px;
   border-color: rgba(243, 240, 234, 0.12);
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.028), rgba(255, 255, 255, 0.008)),
-    rgba(14, 15, 24, 0.74);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.018), rgba(255, 255, 255, 0.005)),
+    rgba(10, 11, 18, 0.88);
 }
 
 .works-list-panel .filter-chip:hover {
   border-color: rgba(243, 240, 234, 0.2);
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.038), rgba(255, 255, 255, 0.012)),
-    rgba(18, 20, 30, 0.82);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.026), rgba(255, 255, 255, 0.008)),
+    rgba(12, 13, 22, 0.92);
 }
 
 .works-list-panel .filter-chip.is-active {
   border-color: rgba(186, 92, 152, 0.42);
   background:
-    linear-gradient(180deg, rgba(229, 72, 77, 0.14), rgba(87, 81, 180, 0.08)),
-    rgba(36, 20, 42, 0.82);
+    linear-gradient(180deg, rgba(229, 72, 77, 0.08), rgba(87, 81, 180, 0.04)),
+    rgba(24, 14, 28, 0.9);
   color: var(--text);
   box-shadow: inset 0 0 0 1px rgba(186, 92, 152, 0.2);
 }
@@ -2531,19 +2530,19 @@ a {
   border-radius: 22px;
   border-color: rgba(243, 240, 234, 0.11);
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.018), rgba(255, 255, 255, 0.006)),
-    radial-gradient(circle at 0% 0%, rgba(102, 36, 138, 0.035), transparent 42%),
-    radial-gradient(circle at 100% 0%, rgba(32, 58, 130, 0.035), transparent 38%),
-    rgba(8, 9, 16, 0.94);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.012), rgba(255, 255, 255, 0.004)),
+    radial-gradient(circle at 0% 0%, rgba(102, 36, 138, 0.025), transparent 42%),
+    radial-gradient(circle at 100% 0%, rgba(32, 58, 130, 0.025), transparent 38%),
+    rgba(7, 8, 14, 0.96);
 }
 
 .works-index-page .catalog-card--play-list:hover {
   border-color: rgba(243, 240, 234, 0.2);
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.034), rgba(255, 255, 255, 0.012)),
-    radial-gradient(circle at 0% 0%, rgba(116, 46, 158, 0.07), transparent 44%),
-    radial-gradient(circle at 100% 0%, rgba(40, 68, 148, 0.07), transparent 40%),
-    rgba(10, 11, 20, 0.98);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.018), rgba(255, 255, 255, 0.008)),
+    radial-gradient(circle at 0% 0%, rgba(116, 46, 158, 0.045), transparent 44%),
+    radial-gradient(circle at 100% 0%, rgba(40, 68, 148, 0.045), transparent 40%),
+    rgba(8, 9, 16, 0.98);
 }
 
 .works-index-page .play-poster-frame {
