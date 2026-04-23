@@ -20,6 +20,33 @@ type SearchParams = Record<string, SearchParamValue>;
 const ITEMS_PER_PAGE = 12;
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
 
+const getPlayYearLabelEn = (period?: string | null) => {
+  const match = period?.match(/(\d{4})/);
+  return match ? match[1] : null;
+};
+
+const getPlayAvailabilityLabelEn = (vod?: Record<string, string> | null) => {
+  if (vod?.dmm) return "Streaming on DMM TV";
+  if (vod && Object.keys(vod).length > 0) return "Streaming available";
+  return "No streaming info";
+};
+
+const getPlayCardTagsEn = (play: {
+  franchiseFormat: string | null;
+  genre: string | null;
+  franchiseName: string | null;
+  vod: Record<string, string> | null;
+}) => {
+  const tags = [
+    play.vod?.dmm ? "Streaming" : null,
+    play.franchiseFormat ? EN_FORMAT_LABELS[play.franchiseFormat] ?? play.franchiseFormat : null,
+    play.genre ? EN_GENRE_LABELS[play.genre] ?? play.genre : null,
+    play.franchiseName ? "Series title" : null,
+  ].filter(Boolean) as string[];
+
+  return Array.from(new Set(tags)).slice(0, 4);
+};
+
 const getSingleParam = (value: SearchParamValue) => (Array.isArray(value) ? value[0] : value) ?? "";
 
 const buildHref = (params: Record<string, string | number | null | undefined>) => {
@@ -90,13 +117,13 @@ export default async function EnglishPlaysPage({
   const visible = sorted.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 
   return (
-    <main className="container" style={{ paddingBlock: 32 }}>
+    <main className="container works-index-page" style={{ paddingBlock: 32 }}>
       <StructuredData data={breadcrumbJsonLd} />
       <StructuredData data={collectionJsonLd} />
       <div className="stack-lg">
         <Breadcrumbs items={[{ label: "Plays", href: "/en/plays" }]} />
 
-        <section className="hero-card stack-md">
+        <section className="hero-card stack-md works-index-hero">
           <div className="stack-sm">
             <span className="eyebrow">Plays</span>
             <h1 className="page-title">2.5D Plays</h1>
@@ -112,10 +139,10 @@ export default async function EnglishPlaysPage({
           </div>
         </section>
 
-        <section className="section-card stack-md">
+        <section className="section-card stack-md works-list-panel">
           <h2 className="section-title">Filters</h2>
 
-          <div className="filter-row filter-row--dense">
+          <div className="filter-row filter-row--dense works-filter-row">
             <Link
               className={`filter-chip ${sort === "new" ? "is-active" : ""}`}
               href={buildHref({ page: 1, sort: "new", format, genre })}
@@ -130,7 +157,7 @@ export default async function EnglishPlaysPage({
             </Link>
           </div>
 
-          <div className="filter-row filter-row--dense genre-filter-row">
+          <div className="filter-row filter-row--dense genre-filter-row works-filter-row">
             {formatOptions.map((option) => (
               <Link
                 key={option}
@@ -142,7 +169,7 @@ export default async function EnglishPlaysPage({
             ))}
           </div>
 
-          <div className="filter-row filter-row--dense genre-filter-row">
+          <div className="filter-row filter-row--dense genre-filter-row works-filter-row">
             {genreOptions.map((option) => (
               <Link
                 key={option}
@@ -175,40 +202,75 @@ export default async function EnglishPlaysPage({
                 </Link>
 
                 <div className="play-list-card__main">
-                  <Link className="catalog-card__body-link" href={`/en/plays/${play.slug}`}>
-                    <div className="catalog-card__top catalog-card__top--stack">
-                      <div className="catalog-card__title">{getEnglishPlayTitle(play)}</div>
-                      <div className="catalog-card__top-actions">
-                        {format === "all" && play.franchiseFormat ? (
-                          <span className="catalog-card__badge">
-                            {EN_FORMAT_LABELS[play.franchiseFormat] ?? play.franchiseFormat}
-                          </span>
-                        ) : null}
-                      </div>
+                  <div className="catalog-card__top catalog-card__top--stack">
+                    <div className="play-list-card__status-row">
+                      {play.vod?.dmm ? (
+                        <span className="play-list-card__status-badge play-list-card__status-badge--accent">
+                          Streaming
+                        </span>
+                      ) : null}
+                      {play.franchiseFormat ? (
+                        <span className="play-list-card__status-badge">
+                          {EN_FORMAT_LABELS[play.franchiseFormat] ?? play.franchiseFormat}
+                        </span>
+                      ) : null}
                     </div>
 
+                    <div className="catalog-card__title">{getEnglishPlayTitle(play)}</div>
+                  </div>
+
+                  <Link className="catalog-card__body-link" href={`/en/plays/${play.slug}`}>
                     {play.franchiseName ? (
-                      <div className="catalog-card__sub">
+                      <div className="catalog-card__sub play-list-card__series">
                         {getEnglishSeriesName({ name: play.franchiseName, nameEn: play.franchiseNameEn })}
                       </div>
                     ) : null}
-                    {compactListPeriodEn(play.period) ? (
-                      <div className="catalog-card__sub">Date: {compactListPeriodEn(play.period)}</div>
-                    ) : null}
-                    {play.genre ? (
-                      <div className="catalog-card__sub">
-                        Genre: {EN_GENRE_LABELS[play.genre] ?? play.genre}
-                      </div>
-                    ) : null}
 
-                    <div className="catalog-card__text">
+                    <div className="catalog-card__text play-list-card__summary">
                       {play.summaryEn || play.summary
                         ? truncateText(toPlainText(play.summaryEn || play.summary), 160)
                         : "Summary not available yet."}
                     </div>
 
-                    <div className="catalog-card__footer">
+                    <div className="play-list-card__facts">
+                      {getPlayYearLabelEn(play.period) ? (
+                        <div className="play-list-card__fact">
+                          <span className="play-list-card__fact-icon" aria-hidden="true">
+                            ○
+                          </span>
+                          <span className="play-list-card__fact-key">Release</span>
+                          <span className="play-list-card__fact-value">{getPlayYearLabelEn(play.period)}</span>
+                        </div>
+                      ) : null}
+                      <div className="play-list-card__fact">
+                        <span className="play-list-card__fact-icon" aria-hidden="true">
+                          ◎
+                        </span>
+                        <span className="play-list-card__fact-key">Main cast</span>
+                        <span className="play-list-card__fact-value">{play.mainCastSummaryEn || "Not listed"}</span>
+                      </div>
+                      <div className="play-list-card__fact">
+                        <span className="play-list-card__fact-icon" aria-hidden="true">
+                          ▷
+                        </span>
+                        <span className="play-list-card__fact-key">Streaming</span>
+                        <span className="play-list-card__fact-value">{getPlayAvailabilityLabelEn(play.vod)}</span>
+                      </div>
+                    </div>
+
+                    <div className="play-list-card__tag-row">
+                      {getPlayCardTagsEn(play).map((tag) => (
+                        <span className="play-list-card__tag" key={tag}>
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+
+                    <div className="catalog-card__footer play-list-card__footer">
                       <span className="catalog-link">View play details</span>
+                      <span className="play-list-card__chevron" aria-hidden="true">
+                        ›
+                      </span>
                     </div>
                   </Link>
                 </div>
@@ -235,6 +297,19 @@ export default async function EnglishPlaysPage({
               </Link>
             </div>
           ) : null}
+
+          <div className="works-index-cta">
+            <div className="works-index-cta__icon" aria-hidden="true">
+              □
+            </div>
+            <div className="works-index-cta__copy">
+              <p className="works-index-cta__title">Browse from series</p>
+              <p className="works-index-cta__text">Jump into popular franchise lines and connected productions.</p>
+            </div>
+            <Link className="works-index-cta__link" href="/en/series">
+              View series
+            </Link>
+          </div>
         </section>
       </div>
     </main>

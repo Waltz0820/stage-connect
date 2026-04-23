@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "../../components/Breadcrumbs";
-import { FavoriteButtonClient } from "../../components/FavoriteButtonClient";
 import { PlayPosterFrame } from "../../components/PlayPosterFrame";
 import { StructuredData } from "../../components/StructuredData";
 import { buildBreadcrumbList, buildCollectionPageStructuredData } from "../../lib/structured-data";
@@ -252,42 +251,46 @@ export default async function PlaysPage({
                       ) : null}
                     </div>
 
-                    <div className="catalog-card__top-title-row">
-                      <div className="catalog-card__title">{play.title}</div>
-                      <FavoriteButtonClient
-                        slug={play.slug}
-                        type="play"
-                        size="sm"
-                        title={play.title}
-                        franchiseName={play.franchiseName}
-                      />
-                    </div>
+                    <div className="catalog-card__title">{play.title}</div>
                   </div>
 
                   <Link className="catalog-card__body-link" href={`/plays/${play.slug}`}>
-                    {play.franchiseName ? <div className="catalog-card__sub play-list-card__series">{play.franchiseName}</div> : null}
+                    {play.franchiseName ? (
+                      <div className="catalog-card__sub play-list-card__series">{play.franchiseName}</div>
+                    ) : null}
 
                     {play.summary ? (
                       <div className="catalog-card__text play-list-card__summary">
                         {truncate(toPlainText(play.summary), 140)}
                       </div>
-                    ) : null}
+                    ) : (
+                      <div className="catalog-card__text play-list-card__summary">作品説明は現在準備中です。</div>
+                    )}
 
                     <div className="play-list-card__facts">
                       {getPlayYearLabel(play.period) ? (
                         <div className="play-list-card__fact">
-                          <span className="play-list-card__fact-key">公演年</span>
+                          <span className="play-list-card__fact-icon" aria-hidden="true">
+                            ○
+                          </span>
+                          <span className="play-list-card__fact-key">公開年月</span>
                           <span className="play-list-card__fact-value">{getPlayYearLabel(play.period)}</span>
                         </div>
                       ) : null}
-                      {play.franchiseName ? (
-                        <div className="play-list-card__fact">
-                          <span className="play-list-card__fact-key">シリーズ</span>
-                          <span className="play-list-card__fact-value">{play.franchiseName}</span>
-                        </div>
-                      ) : null}
                       <div className="play-list-card__fact">
-                        <span className="play-list-card__fact-key">配信</span>
+                        <span className="play-list-card__fact-icon" aria-hidden="true">
+                          ◎
+                        </span>
+                        <span className="play-list-card__fact-key">主要キャスト</span>
+                        <span className="play-list-card__fact-value">
+                          {play.mainCastSummary || "未登録"}
+                        </span>
+                      </div>
+                      <div className="play-list-card__fact">
+                        <span className="play-list-card__fact-icon" aria-hidden="true">
+                          ▷
+                        </span>
+                        <span className="play-list-card__fact-key">配信有無</span>
                         <span className="play-list-card__fact-value">{getPlayAvailabilityLabel(play.vod)}</span>
                       </div>
                     </div>
@@ -307,21 +310,6 @@ export default async function PlaysPage({
                       </span>
                     </div>
                   </Link>
-
-                  <div
-                    className={`catalog-card__footer catalog-card__footer--cta${play.vod?.dmm ? "" : " is-empty"}`}
-                  >
-                    {play.vod?.dmm ? (
-                      <a
-                        className="action-button action-button-primary action-button-inline"
-                        href={play.vod.dmm}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        DMM TVで見る
-                      </a>
-                    ) : null}
-                  </div>
                 </div>
               </article>
             ))}

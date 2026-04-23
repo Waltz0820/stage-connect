@@ -106,6 +106,8 @@ export type PlayListItem = {
   franchiseNameEn: string | null;
   franchiseFormat: string | null;
   genre: string | null;
+  mainCastSummary: string | null;
+  mainCastSummaryEn: string | null;
   createdAt: string | null;
 };
 
@@ -1360,6 +1362,7 @@ export async function getPlayList(): Promise<PlayListItem[]> {
       .from("plays")
       .select(
         `
+        id,
         slug,
         title,
         title_en,
@@ -1374,8 +1377,8 @@ export async function getPlayList(): Promise<PlayListItem[]> {
           name_en,
           format
         )
-      `
-      );
+        `
+        );
     data = res.data as any[] | null;
     error = res.error;
   }
@@ -1389,6 +1392,7 @@ export async function getPlayList(): Promise<PlayListItem[]> {
       .from("plays")
       .select(
         `
+        id,
         slug,
         title,
         ${includeTitleEn ? "title_en," : ""}
@@ -1403,8 +1407,8 @@ export async function getPlayList(): Promise<PlayListItem[]> {
           ${includeFranchiseNameEn ? "name_en," : ""}
           format
         )
-      `
-      );
+        `
+        );
     data =
       (fallback.data as any[] | null)?.map((row) => ({
         ...row,
@@ -1427,6 +1431,7 @@ export async function getPlayList(): Promise<PlayListItem[]> {
       .from("plays")
       .select(
         `
+        id,
         slug,
         title,
         summary,
@@ -1452,10 +1457,144 @@ export async function getPlayList(): Promise<PlayListItem[]> {
 
   if (error) throw error;
 
-  return ((data ?? []) as any[])
+  const playRows = ((data ?? []) as any[]).filter((row) => row?.slug && row?.title);
+  const playIds = playRows.map((row) => String(row?.id ?? "").trim()).filter(Boolean);
+  const castSummaryByPlayId = new Map<string, { ja: string | null; en: string | null }>();
+
+  if (playIds.length > 0) {
+    let castRows: any[] | null = null;
+    let castError: any = null;
+
+    {
+      const res = await supabase
+        .from("casts")
+        .select(
+          `
+          play_id,
+          is_starring,
+          billing_order,
+          created_at,
+          actor:actors (
+            name,
+            name_en
+          )
+        `
+        )
+        .in("play_id", playIds)
+        .order("billing_order", { ascending: true, nullsFirst: false })
+        .order("created_at", { ascending: true });
+      castRows = res.data as any[] | null;
+      castError = res.error;
+    }
+
+    if (castError && /name_en/i.test(String(castError.message ?? ""))) {
+      const fallback = await supabase
+        .from("casts")
+        .select(
+          `
+          play_id,
+          is_starring,
+          billing_order,
+          created_at,
+          actor:actors (
+            name
+          )
+        `
+        )
+        .in("play_id", playIds)
+        .order("billing_order", { ascending: true, nullsFirst: false })
+        .order("created_at", { ascending: true });
+      castRows =
+        (fallback.data as any[] | null)?.map((row) => ({
+          ...row,
+          actor: Array.isArray(row?.actor)
+            ? row.actor.map((item: any) => ({ ...item, name_en: null }))
+            : row?.actor
+              ? { ...row.actor, name_en: null }
+              : row?.actor,
+        })) ?? null;
+      castError = fallback.error;
+    }
+
+    if (castError) throw castError;
+
+    const grouped = new Map<
+      string,
+      Array<{
+        name: string;
+        nameEn: string | null;
+        isStarring: boolean;
+        billingOrder: number;
+        createdAt: number;
+      }>
+    >();
+
+    for (const row of (castRows ?? []) as any[]) {
+      const playId = String(row?.play_id ?? "").trim();
+      const actor = Array.isArray(row?.actor) ? row.actor[0] : row?.actor;
+      const name = String(actor?.name ?? "").trim();
+      const nameEn = String(actor?.name_en ?? "").trim() || null;
+      if (!playId || !name) continue;
+
+      const bucket = grouped.get(playId) ?? [];
+      bucket.push({
+        name,
+        nameEn,
+        isStarring: row?.is_starring === true,
+        billingOrder: typeof row?.billing_order === "number" ? row.billing_order : Number.MAX_SAFE_INTEGER,
+        createdAt: row?.created_at ? Date.parse(String(row.created_at)) : Number.MAX_SAFE_INTEGER,
+      });
+      grouped.set(playId, bucket);
+    }
+
+    for (const [playId, entries] of grouped.entries()) {
+      const unique = new Map<string, { ja: string; en: string | null; isStarring: boolean; billingOrder: number; createdAt: number }>();
+
+      for (const entry of entries) {
+        const key = normalizeDisplayText(entry.name);
+        if (!key) continue;
+        const existing = unique.get(key);
+        if (!existing) {
+          unique.set(key, {
+            ja: entry.name,
+            en: entry.nameEn,
+            isStarring: entry.isStarring,
+            billingOrder: entry.billingOrder,
+            createdAt: entry.createdAt,
+          });
+          continue;
+        }
+
+        unique.set(key, {
+          ja: existing.ja,
+          en: existing.en ?? entry.nameEn,
+          isStarring: existing.isStarring || entry.isStarring,
+          billingOrder: Math.min(existing.billingOrder, entry.billingOrder),
+          createdAt: Math.min(existing.createdAt, entry.createdAt),
+        });
+      }
+
+      const sorted = Array.from(unique.values()).sort((a, b) => {
+        if (a.isStarring !== b.isStarring) return a.isStarring ? -1 : 1;
+        if (a.billingOrder !== b.billingOrder) return a.billingOrder - b.billingOrder;
+        if (a.createdAt !== b.createdAt) return a.createdAt - b.createdAt;
+        return a.ja.localeCompare(b.ja, "ja");
+      });
+
+      const top = sorted.slice(0, 3);
+      castSummaryByPlayId.set(playId, {
+        ja: top.length > 0 ? top.map((item) => item.ja).join(" / ") : null,
+        en: top.length > 0 ? top.map((item) => item.en || item.ja).join(" / ") : null,
+      });
+    }
+  }
+
+  return playRows
     .filter((row) => row?.slug && row?.title)
     .map((row) => {
       const franchise = Array.isArray(row?.franchise) ? row.franchise[0] : row?.franchise;
+      const playId = String(row?.id ?? "").trim();
+      const castSummary = castSummaryByPlayId.get(playId);
       return {
         slug: row.slug as string,
         title: row.title as string,
@@ -1468,6 +1607,8 @@ export async function getPlayList(): Promise<PlayListItem[]> {
         franchiseNameEn: (franchise?.name_en as string | null) ?? null,
         franchiseFormat: (franchise?.format as string | null) ?? null,
         genre: (row.genre as string | null) ?? null,
+        mainCastSummary: castSummary?.ja ?? null,
+        mainCastSummaryEn: castSummary?.en ?? null,
         createdAt: (row.created_at as string | null) ?? null,
       };
     })
