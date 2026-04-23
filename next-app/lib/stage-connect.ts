@@ -1,4 +1,5 @@
 import { hasSupabaseEnv } from "./env";
+import { getEnglishActorName } from "./en-copy";
 import { createSupabaseServerClient } from "./supabase";
 
 export type ActorLink = {
@@ -1475,6 +1476,7 @@ export async function getPlayList(): Promise<PlayListItem[]> {
           billing_order,
           created_at,
           actor:actors (
+            slug,
             name,
             name_en
           )
@@ -1497,6 +1499,7 @@ export async function getPlayList(): Promise<PlayListItem[]> {
           billing_order,
           created_at,
           actor:actors (
+            slug,
             name
           )
         `
@@ -1521,6 +1524,7 @@ export async function getPlayList(): Promise<PlayListItem[]> {
     const grouped = new Map<
       string,
       Array<{
+        slug: string | null;
         name: string;
         nameEn: string | null;
         isStarring: boolean;
@@ -1532,12 +1536,18 @@ export async function getPlayList(): Promise<PlayListItem[]> {
     for (const row of (castRows ?? []) as any[]) {
       const playId = String(row?.play_id ?? "").trim();
       const actor = Array.isArray(row?.actor) ? row.actor[0] : row?.actor;
+      const slug = String(actor?.slug ?? "").trim() || null;
       const name = String(actor?.name ?? "").trim();
-      const nameEn = String(actor?.name_en ?? "").trim() || null;
+      const nameEn = getEnglishActorName({
+        slug,
+        name,
+        nameEn: String(actor?.name_en ?? "").trim() || null,
+      });
       if (!playId || !name) continue;
 
       const bucket = grouped.get(playId) ?? [];
       bucket.push({
+        slug,
         name,
         nameEn,
         isStarring: row?.is_starring === true,
@@ -1658,6 +1668,7 @@ export async function getPlayMainCastSummariesBySlug(
         billing_order,
         created_at,
         actor:actors (
+          slug,
           name,
           name_en
         )
@@ -1680,6 +1691,7 @@ export async function getPlayMainCastSummariesBySlug(
         billing_order,
         created_at,
         actor:actors (
+          slug,
           name
         )
       `
@@ -1704,6 +1716,7 @@ export async function getPlayMainCastSummariesBySlug(
   const grouped = new Map<
     string,
     Array<{
+      slug: string | null;
       name: string;
       nameEn: string | null;
       isStarring: boolean;
@@ -1715,12 +1728,18 @@ export async function getPlayMainCastSummariesBySlug(
   for (const row of (castRows ?? []) as any[]) {
     const playId = String(row?.play_id ?? "").trim();
     const actor = Array.isArray(row?.actor) ? row.actor[0] : row?.actor;
+    const slug = String(actor?.slug ?? "").trim() || null;
     const name = String(actor?.name ?? "").trim();
-    const nameEn = String(actor?.name_en ?? "").trim() || null;
+    const nameEn = getEnglishActorName({
+      slug,
+      name,
+      nameEn: String(actor?.name_en ?? "").trim() || null,
+    });
     if (!playId || !name) continue;
 
     const bucket = grouped.get(playId) ?? [];
     bucket.push({
+      slug,
       name,
       nameEn,
       isStarring: row?.is_starring === true,
