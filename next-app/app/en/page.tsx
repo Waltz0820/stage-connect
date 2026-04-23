@@ -126,7 +126,6 @@ export default async function EnglishHomePage() {
         <div className="home-stage__ambient" />
         <div className="home-stage__grid">
           <div className="home-stage__hero">
-            <p className="home-stage__eyebrow">Stage Connect</p>
             <h1 className="home-stage__title">
               Track 2.5D stage works
               <br />

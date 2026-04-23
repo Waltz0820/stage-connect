@@ -125,7 +125,6 @@ export default async function HomePage() {
         <div className="home-stage__ambient" />
         <div className="home-stage__grid">
           <div className="home-stage__hero">
-            <p className="home-stage__eyebrow">Stage Connect</p>
             <h1 className="home-stage__title">
               2.5次元舞台と
               <br />
