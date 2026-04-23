@@ -247,26 +247,12 @@ export default async function PlaysPage({
                 <Link className="play-list-card__poster-link" href={`/plays/${play.slug}`} aria-label={play.title}>
                   <PlayPosterFrame
                     title={play.title}
-                    meta={compactListPeriod(play.period)}
                     seed={`${play.slug}-${play.genre ?? ""}`}
                   />
                 </Link>
 
                 <div className="play-list-card__main">
                   <div className="catalog-card__top catalog-card__top--stack">
-                    <div className="play-list-card__status-row">
-                      {play.vod?.dmm ? (
-                        <span className="play-list-card__status-badge play-list-card__status-badge--accent">
-                          配信あり
-                        </span>
-                      ) : null}
-                      {play.franchiseFormat ? (
-                        <span className="play-list-card__status-badge">
-                          {FORMAT_LABELS[play.franchiseFormat] ?? play.franchiseFormat}
-                        </span>
-                      ) : null}
-                    </div>
-
                     <div className="catalog-card__title">{play.title}</div>
                   </div>
 

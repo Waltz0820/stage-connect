@@ -230,26 +230,12 @@ export default async function EnglishPlaysPage({
                 >
                   <PlayPosterFrame
                     title={getEnglishPlayTitle(play)}
-                    meta={compactListPeriodEn(play.period)}
                     seed={`${play.slug}-${play.genre ?? ""}`}
                   />
                 </Link>
 
                 <div className="play-list-card__main">
                   <div className="catalog-card__top catalog-card__top--stack">
-                    <div className="play-list-card__status-row">
-                      {play.vod?.dmm ? (
-                        <span className="play-list-card__status-badge play-list-card__status-badge--accent">
-                          Streaming
-                        </span>
-                      ) : null}
-                      {play.franchiseFormat ? (
-                        <span className="play-list-card__status-badge">
-                          {EN_FORMAT_LABELS[play.franchiseFormat] ?? play.franchiseFormat}
-                        </span>
-                      ) : null}
-                    </div>
-
                     <div className="catalog-card__title">{getEnglishPlayTitle(play)}</div>
                   </div>
 
