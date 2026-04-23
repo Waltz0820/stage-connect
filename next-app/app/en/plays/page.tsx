@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "../../../components/Breadcrumbs";
+import { PlayPosterFrame } from "../../../components/PlayPosterFrame";
 import { StructuredData } from "../../../components/StructuredData";
 import {
   compactListPeriodEn,
@@ -153,45 +154,64 @@ export default async function EnglishPlaysPage({
             ))}
           </div>
 
-          <div className="catalog-grid">
+          <div className="catalog-grid catalog-grid--play-list">
             {visible.map((play) => (
-              <article className="catalog-card" key={play.slug}>
-                <Link className="catalog-card__body-link" href={`/en/plays/${play.slug}`}>
-                  <div className="catalog-card__top catalog-card__top--stack">
-                    <div className="catalog-card__title">{getEnglishPlayTitle(play)}</div>
-                    <div className="catalog-card__top-actions">
-                      {format === "all" && play.franchiseFormat ? (
-                        <span className="catalog-card__badge">
-                          {EN_FORMAT_LABELS[play.franchiseFormat] ?? play.franchiseFormat}
-                        </span>
-                      ) : null}
-                    </div>
-                  </div>
-
-                  {play.franchiseName ? (
-                    <div className="catalog-card__sub">
-                      {getEnglishSeriesName({ name: play.franchiseName, nameEn: play.franchiseNameEn })}
-                    </div>
-                  ) : null}
-                  {compactListPeriodEn(play.period) ? (
-                    <div className="catalog-card__sub">Date: {compactListPeriodEn(play.period)}</div>
-                  ) : null}
-                  {play.genre ? (
-                    <div className="catalog-card__sub">
-                      Genre: {EN_GENRE_LABELS[play.genre] ?? play.genre}
-                    </div>
-                  ) : null}
-
-                  <div className="catalog-card__text">
-                    {play.summaryEn || play.summary
-                      ? truncateText(toPlainText(play.summaryEn || play.summary), 160)
-                      : "Summary not available yet."}
-                  </div>
-
-                  <div className="catalog-card__footer">
-                    <span className="catalog-link">View play details</span>
-                  </div>
+              <article className="catalog-card catalog-card--play-list" key={play.slug}>
+                <Link
+                  className="play-list-card__poster-link"
+                  href={`/en/plays/${play.slug}`}
+                  aria-label={getEnglishPlayTitle(play)}
+                >
+                  <PlayPosterFrame
+                    title={getEnglishPlayTitle(play)}
+                    subtitle={
+                      play.franchiseFormat
+                        ? EN_FORMAT_LABELS[play.franchiseFormat] ?? play.franchiseFormat
+                        : "Stage"
+                    }
+                    meta={compactListPeriodEn(play.period)}
+                    seed={`${play.slug}-${play.genre ?? ""}`}
+                  />
                 </Link>
+
+                <div className="play-list-card__main">
+                  <Link className="catalog-card__body-link" href={`/en/plays/${play.slug}`}>
+                    <div className="catalog-card__top catalog-card__top--stack">
+                      <div className="catalog-card__title">{getEnglishPlayTitle(play)}</div>
+                      <div className="catalog-card__top-actions">
+                        {format === "all" && play.franchiseFormat ? (
+                          <span className="catalog-card__badge">
+                            {EN_FORMAT_LABELS[play.franchiseFormat] ?? play.franchiseFormat}
+                          </span>
+                        ) : null}
+                      </div>
+                    </div>
+
+                    {play.franchiseName ? (
+                      <div className="catalog-card__sub">
+                        {getEnglishSeriesName({ name: play.franchiseName, nameEn: play.franchiseNameEn })}
+                      </div>
+                    ) : null}
+                    {compactListPeriodEn(play.period) ? (
+                      <div className="catalog-card__sub">Date: {compactListPeriodEn(play.period)}</div>
+                    ) : null}
+                    {play.genre ? (
+                      <div className="catalog-card__sub">
+                        Genre: {EN_GENRE_LABELS[play.genre] ?? play.genre}
+                      </div>
+                    ) : null}
+
+                    <div className="catalog-card__text">
+                      {play.summaryEn || play.summary
+                        ? truncateText(toPlainText(play.summaryEn || play.summary), 160)
+                        : "Summary not available yet."}
+                    </div>
+
+                    <div className="catalog-card__footer">
+                      <span className="catalog-link">View play details</span>
+                    </div>
+                  </Link>
+                </div>
               </article>
             ))}
           </div>

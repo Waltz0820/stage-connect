@@ -1593,6 +1593,140 @@ a {
   background: rgba(255, 255, 255, 0.04);
 }
 
+.catalog-grid--play-list {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.catalog-card--play-list {
+  position: relative;
+  grid-template-rows: auto;
+  gap: 14px;
+  overflow: hidden;
+}
+
+.play-list-card__poster-link,
+.play-list-card__main {
+  min-width: 0;
+}
+
+.play-list-card__poster-link {
+  display: block;
+}
+
+.play-list-card__main {
+  display: grid;
+  gap: 12px;
+}
+
+.play-poster-frame {
+  --poster-accent: #6c1f3d;
+  --poster-glow: #e54879;
+  position: relative;
+  min-height: 172px;
+  overflow: hidden;
+  border: 1px solid rgba(243, 240, 234, 0.16);
+  background:
+    radial-gradient(circle at 50% -12%, color-mix(in srgb, var(--poster-glow) 52%, transparent), transparent 42%),
+    radial-gradient(circle at 20% 18%, rgba(255, 255, 255, 0.12), transparent 24%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.08), transparent 38%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.78)),
+    var(--poster-accent);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04),
+    inset 0 -48px 80px rgba(0, 0, 0, 0.48);
+}
+
+.play-poster-frame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.8), transparent 75%);
+  opacity: 0.45;
+}
+
+.play-poster-frame::after {
+  content: "";
+  position: absolute;
+  inset: auto 16px 16px 16px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(243, 240, 234, 0.46), transparent);
+  opacity: 0.58;
+}
+
+.play-poster-frame__beam {
+  position: absolute;
+  top: -20%;
+  width: 38%;
+  height: 82%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.05) 52%, transparent);
+  filter: blur(1px);
+  opacity: 0.42;
+  transform-origin: top center;
+}
+
+.play-poster-frame__beam--left {
+  left: 18%;
+  transform: skewX(-15deg);
+}
+
+.play-poster-frame__beam--right {
+  right: 18%;
+  transform: skewX(15deg);
+}
+
+.play-poster-frame__grain {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 30% 70%, rgba(255, 255, 255, 0.08), transparent 2px),
+    radial-gradient(circle at 68% 28%, rgba(255, 255, 255, 0.06), transparent 2px),
+    linear-gradient(135deg, transparent 0 48%, rgba(255, 255, 255, 0.05) 49%, transparent 51% 100%);
+  background-size: 46px 46px, 62px 62px, 18px 18px;
+  opacity: 0.55;
+  mix-blend-mode: screen;
+}
+
+.play-poster-frame__content {
+  position: absolute;
+  z-index: 1;
+  inset: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.play-poster-frame__kicker {
+  color: rgba(243, 240, 234, 0.72);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.play-poster-frame__title {
+  display: -webkit-box;
+  overflow: hidden;
+  color: #fff;
+  font-family: var(--serif);
+  font-size: clamp(22px, 6vw, 34px);
+  font-weight: 800;
+  line-height: 1.22;
+  text-shadow: 0 0 22px rgba(255, 255, 255, 0.18);
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.play-poster-frame__meta {
+  color: rgba(243, 240, 234, 0.62);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+
 .catalog-card__top {
   display: flex;
   justify-content: space-between;
@@ -3190,5 +3324,27 @@ a {
 @media (min-width: 900px) {
   .compare-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 720px) {
+  .catalog-grid.catalog-grid--play-list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .catalog-card--play-list {
+    grid-template-columns: minmax(148px, 0.34fr) minmax(0, 1fr);
+    align-items: stretch;
+  }
+
+  .play-poster-frame {
+    min-height: 100%;
+    aspect-ratio: 4 / 5;
+  }
+}
+
+@media (min-width: 1040px) {
+  .catalog-card--play-list {
+    grid-template-columns: 190px minmax(0, 1fr);
   }
 }

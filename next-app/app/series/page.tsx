@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "../../components/Breadcrumbs";
+import { PlayPosterFrame } from "../../components/PlayPosterFrame";
 import { StructuredData } from "../../components/StructuredData";
 import { buildBreadcrumbList, buildCollectionPageStructuredData } from "../../lib/structured-data";
 import { getSeriesList, toPlainText, truncate } from "../../lib/stage-connect";
@@ -155,32 +156,43 @@ export default async function SeriesPage({
             ))}
           </div>
 
-          <div className="catalog-grid">
+          <div className="catalog-grid catalog-grid--play-list">
             {visibleSeries.map((series) => (
-              <article className="catalog-card" key={series.slug}>
-                <Link className="catalog-card__body-link" href={`/series/${series.slug}`}>
-                  <div className="catalog-card__top catalog-card__top--stack">
-                    <div className="catalog-card__title">{series.name}</div>
-                    <div className="catalog-card__top-actions">
-                      {format === "all" && series.format ? (
-                        <span className="catalog-card__badge">{FORMAT_LABELS[series.format] ?? series.format}</span>
-                      ) : null}
-                      <span className="catalog-card__badge">{series.playCount}作品</span>
-                    </div>
-                  </div>
-
-                  {series.originType ? <div className="catalog-card__sub">{series.originType}</div> : null}
-
-                  {series.description ? (
-                    <div className="catalog-card__text">{truncate(toPlainText(series.description), 140)}</div>
-                  ) : (
-                    <div className="catalog-card__text">シリーズ説明は現在準備中です。</div>
-                  )}
-
-                  <div className="catalog-card__footer">
-                    <span className="catalog-link">シリーズ詳細を見る</span>
-                  </div>
+              <article className="catalog-card catalog-card--play-list" key={series.slug}>
+                <Link className="play-list-card__poster-link" href={`/series/${series.slug}`} aria-label={series.name}>
+                  <PlayPosterFrame
+                    title={series.name}
+                    subtitle={series.format ? FORMAT_LABELS[series.format] ?? series.format : "Series"}
+                    meta={`${series.playCount}作品`}
+                    seed={`${series.slug}-${series.originType ?? ""}`}
+                  />
                 </Link>
+
+                <div className="play-list-card__main">
+                  <Link className="catalog-card__body-link" href={`/series/${series.slug}`}>
+                    <div className="catalog-card__top catalog-card__top--stack">
+                      <div className="catalog-card__title">{series.name}</div>
+                      <div className="catalog-card__top-actions">
+                        {format === "all" && series.format ? (
+                          <span className="catalog-card__badge">{FORMAT_LABELS[series.format] ?? series.format}</span>
+                        ) : null}
+                        <span className="catalog-card__badge">{series.playCount}作品</span>
+                      </div>
+                    </div>
+
+                    {series.originType ? <div className="catalog-card__sub">{series.originType}</div> : null}
+
+                    {series.description ? (
+                      <div className="catalog-card__text">{truncate(toPlainText(series.description), 140)}</div>
+                    ) : (
+                      <div className="catalog-card__text">シリーズ説明は現在準備中です。</div>
+                    )}
+
+                    <div className="catalog-card__footer">
+                      <span className="catalog-link">シリーズ詳細を見る</span>
+                    </div>
+                  </Link>
+                </div>
               </article>
             ))}
           </div>

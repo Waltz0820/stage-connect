@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "../../../components/Breadcrumbs";
+import { PlayPosterFrame } from "../../../components/PlayPosterFrame";
 import { StructuredData } from "../../../components/StructuredData";
 import { EN_FORMAT_LABELS, getEnglishSeriesName, toEnglishOriginType, truncateText } from "../../../lib/en-copy";
 import { buildBreadcrumbList, buildCollectionPageStructuredData } from "../../../lib/structured-data";
@@ -155,32 +156,51 @@ export default async function EnglishSeriesPage({
             ))}
           </div>
 
-          <div className="catalog-grid">
+          <div className="catalog-grid catalog-grid--play-list">
             {visible.map((series) => (
-              <article className="catalog-card" key={series.slug}>
-                <Link className="catalog-card__body-link" href={`/en/series/${series.slug}`}>
-                  <div className="catalog-card__top catalog-card__top--stack">
-                    <div className="catalog-card__title">{getEnglishSeriesName(series)}</div>
-                    <div className="catalog-card__top-actions">
-                      {format === "all" && series.format ? (
-                        <span className="catalog-card__badge">{EN_FORMAT_LABELS[series.format] ?? series.format}</span>
-                      ) : null}
-                      <span className="catalog-card__badge">{series.playCount} plays</span>
-                    </div>
-                  </div>
-
-                  {series.originType ? <div className="catalog-card__sub">{toEnglishOriginType(series.originType)}</div> : null}
-
-                  <div className="catalog-card__text">
-                    {series.descriptionEn || series.description
-                      ? truncateText(toPlainText(series.descriptionEn || series.description), 160)
-                      : "Series description not available yet."}
-                  </div>
-
-                  <div className="catalog-card__footer">
-                    <span className="catalog-link">View series details</span>
-                  </div>
+              <article className="catalog-card catalog-card--play-list" key={series.slug}>
+                <Link
+                  className="play-list-card__poster-link"
+                  href={`/en/series/${series.slug}`}
+                  aria-label={getEnglishSeriesName(series)}
+                >
+                  <PlayPosterFrame
+                    title={getEnglishSeriesName(series)}
+                    subtitle={series.format ? EN_FORMAT_LABELS[series.format] ?? series.format : "Series"}
+                    meta={`${series.playCount} plays`}
+                    seed={`${series.slug}-${series.originType ?? ""}`}
+                  />
                 </Link>
+
+                <div className="play-list-card__main">
+                  <Link className="catalog-card__body-link" href={`/en/series/${series.slug}`}>
+                    <div className="catalog-card__top catalog-card__top--stack">
+                      <div className="catalog-card__title">{getEnglishSeriesName(series)}</div>
+                      <div className="catalog-card__top-actions">
+                        {format === "all" && series.format ? (
+                          <span className="catalog-card__badge">
+                            {EN_FORMAT_LABELS[series.format] ?? series.format}
+                          </span>
+                        ) : null}
+                        <span className="catalog-card__badge">{series.playCount} plays</span>
+                      </div>
+                    </div>
+
+                    {series.originType ? (
+                      <div className="catalog-card__sub">{toEnglishOriginType(series.originType)}</div>
+                    ) : null}
+
+                    <div className="catalog-card__text">
+                      {series.descriptionEn || series.description
+                        ? truncateText(toPlainText(series.descriptionEn || series.description), 160)
+                        : "Series description not available yet."}
+                    </div>
+
+                    <div className="catalog-card__footer">
+                      <span className="catalog-link">View series details</span>
+                    </div>
+                  </Link>
+                </div>
               </article>
             ))}
           </div>

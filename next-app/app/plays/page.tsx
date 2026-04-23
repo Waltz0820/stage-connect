@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { FavoriteButtonClient } from "../../components/FavoriteButtonClient";
+import { PlayPosterFrame } from "../../components/PlayPosterFrame";
 import { StructuredData } from "../../components/StructuredData";
 import { buildBreadcrumbList, buildCollectionPageStructuredData } from "../../lib/structured-data";
 import { getPlayList, periodSortKey, toPlainText, truncate } from "../../lib/stage-connect";
@@ -73,8 +74,9 @@ const buildHref = (params: Record<string, string | number | null | undefined>) =
 };
 
 export const metadata: Metadata = {
-  title: "作品一覧 | Stage Connect（ステコネ）",
-  description: "2.5次元舞台・ミュージカル作品を、公演時期・上演形式・ジャンル別に一覧できます。",
+  title: "作品一覧 | Stage Connect",
+  description:
+    "2.5次元舞台・ミュージカル作品を、出演時期・上演形式・ジャンル別に一覧で確認できます。",
   alternates: {
     canonical: `${siteUrl}/plays`,
     languages: {
@@ -97,7 +99,8 @@ export default async function PlaysPage({
   ]);
   const collectionJsonLd = buildCollectionPageStructuredData({
     name: "作品一覧",
-    description: "2.5次元舞台・ミュージカル作品を、公演時期・上演形式・ジャンル別に一覧できます。",
+    description:
+      "2.5次元舞台・ミュージカル作品を、出演時期・上演形式・ジャンル別に一覧で確認できます。",
     path: "/plays",
   });
 
@@ -114,7 +117,6 @@ export default async function PlaysPage({
 
   const formatFilteredPlays =
     format === "all" ? allPlays : allPlays.filter((play) => String(play.franchiseFormat ?? "") === format);
-
   const filteredPlays =
     genre === "all" ? formatFilteredPlays : formatFilteredPlays.filter((play) => String(play.genre ?? "") === genre);
 
@@ -138,7 +140,9 @@ export default async function PlaysPage({
           <div className="stack-sm">
             <span className="eyebrow">Plays</span>
             <h1 className="page-title">作品一覧</h1>
-            <p className="lead">2.5次元舞台・ミュージカル作品を、公演時期やジャンルごとに一覧できます。</p>
+            <p className="lead">
+              2.5次元舞台・ミュージカル作品を、出演時期やジャンルごとに一覧で確認できます。
+            </p>
           </div>
 
           <div className="catalog-summary catalog-summary--ledger">
@@ -190,67 +194,83 @@ export default async function PlaysPage({
             ))}
           </div>
 
-          <div className="catalog-grid">
+          <div className="catalog-grid catalog-grid--play-list">
             {visiblePlays.map((play) => (
-              <article className="catalog-card" key={play.slug}>
-                <div className="catalog-card__top catalog-card__top--stack">
-                  <div className="catalog-card__top-title-row">
-                    <div className="catalog-card__title">{play.title}</div>
-                    <FavoriteButtonClient
-                      slug={play.slug}
-                      type="play"
-                      size="sm"
-                      title={play.title}
-                      franchiseName={play.franchiseName}
-                    />
-                  </div>
-
-                  {(format === "all" && play.franchiseFormat) || play.franchiseName ? (
-                    <div className="catalog-card__top-actions">
-                      {format === "all" && play.franchiseFormat ? (
-                        <span className="catalog-card__badge">
-                          {FORMAT_LABELS[play.franchiseFormat] ?? play.franchiseFormat}
-                        </span>
-                      ) : null}
-                      {play.franchiseName ? <span className="catalog-card__badge">シリーズ</span> : null}
-                    </div>
-                  ) : null}
-                </div>
-
-                <Link className="catalog-card__body-link" href={`/plays/${play.slug}`}>
-                  {play.franchiseName ? <div className="catalog-card__sub">{play.franchiseName}</div> : null}
-                  {compactListPeriod(play.period) ? (
-                    <div className="catalog-card__sub">
-                      日程: <span className="mono">{compactListPeriod(play.period)}</span>
-                    </div>
-                  ) : null}
-                  {play.genre ? (
-                    <div className="catalog-card__sub">ジャンル: {GENRE_LABELS[play.genre] ?? play.genre}</div>
-                  ) : null}
-
-                  {play.summary ? (
-                    <div className="catalog-card__text">{truncate(toPlainText(play.summary), 140)}</div>
-                  ) : (
-                    <div className="catalog-card__text">作品説明は現在準備中です。</div>
-                  )}
-
-                  <div className="catalog-card__footer">
-                    <span className="catalog-link">作品詳細を見る</span>
-                  </div>
+              <article className="catalog-card catalog-card--play-list" key={play.slug}>
+                <Link className="play-list-card__poster-link" href={`/plays/${play.slug}`} aria-label={play.title}>
+                  <PlayPosterFrame
+                    title={play.title}
+                    subtitle={
+                      play.franchiseFormat
+                        ? FORMAT_LABELS[play.franchiseFormat] ?? play.franchiseFormat
+                        : "Stage"
+                    }
+                    meta={compactListPeriod(play.period)}
+                    seed={`${play.slug}-${play.genre ?? ""}`}
+                  />
                 </Link>
-                <div
-                  className={`catalog-card__footer catalog-card__footer--cta${play.vod?.dmm ? "" : " is-empty"}`}
-                >
-                  {play.vod?.dmm ? (
-                    <a
-                      className="action-button action-button-primary action-button-inline"
-                      href={play.vod.dmm}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      DMM TVで見る
-                    </a>
-                  ) : null}
+
+                <div className="play-list-card__main">
+                  <div className="catalog-card__top catalog-card__top--stack">
+                    <div className="catalog-card__top-title-row">
+                      <div className="catalog-card__title">{play.title}</div>
+                      <FavoriteButtonClient
+                        slug={play.slug}
+                        type="play"
+                        size="sm"
+                        title={play.title}
+                        franchiseName={play.franchiseName}
+                      />
+                    </div>
+
+                    {(format === "all" && play.franchiseFormat) || play.franchiseName ? (
+                      <div className="catalog-card__top-actions">
+                        {format === "all" && play.franchiseFormat ? (
+                          <span className="catalog-card__badge">
+                            {FORMAT_LABELS[play.franchiseFormat] ?? play.franchiseFormat}
+                          </span>
+                        ) : null}
+                        {play.franchiseName ? <span className="catalog-card__badge">シリーズ</span> : null}
+                      </div>
+                    ) : null}
+                  </div>
+
+                  <Link className="catalog-card__body-link" href={`/plays/${play.slug}`}>
+                    {play.franchiseName ? <div className="catalog-card__sub">{play.franchiseName}</div> : null}
+                    {compactListPeriod(play.period) ? (
+                      <div className="catalog-card__sub">
+                        日程: <span className="mono">{compactListPeriod(play.period)}</span>
+                      </div>
+                    ) : null}
+                    {play.genre ? (
+                      <div className="catalog-card__sub">ジャンル: {GENRE_LABELS[play.genre] ?? play.genre}</div>
+                    ) : null}
+
+                    {play.summary ? (
+                      <div className="catalog-card__text">{truncate(toPlainText(play.summary), 140)}</div>
+                    ) : (
+                      <div className="catalog-card__text">作品説明は現在準備中です。</div>
+                    )}
+
+                    <div className="catalog-card__footer">
+                      <span className="catalog-link">作品詳細を見る</span>
+                    </div>
+                  </Link>
+
+                  <div
+                    className={`catalog-card__footer catalog-card__footer--cta${play.vod?.dmm ? "" : " is-empty"}`}
+                  >
+                    {play.vod?.dmm ? (
+                      <a
+                        className="action-button action-button-primary action-button-inline"
+                        href={play.vod.dmm}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        DMM TVで見る
+                      </a>
+                    ) : null}
+                  </div>
                 </div>
               </article>
             ))}
