@@ -20,9 +20,47 @@ type SearchParams = Record<string, SearchParamValue>;
 const ITEMS_PER_PAGE = 12;
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
 
-const getPlayYearLabelEn = (period?: string | null) => {
-  const match = period?.match(/(\d{4})/);
-  return match ? match[1] : null;
+const getPlayReleaseLabelEn = (period?: string | null) => {
+  if (!period) return null;
+
+  const monthNames = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+
+  const slashDate = period.match(/(\d{4})\/(\d{1,2})/);
+  if (slashDate) {
+    const [, year, month] = slashDate;
+    const monthIndex = Number(month) - 1;
+    return monthNames[monthIndex] ? `${monthNames[monthIndex]} ${year}` : year;
+  }
+
+  const jpDate = period.match(/(\d{4})年\s*(\d{1,2})月/);
+  if (jpDate) {
+    const [, year, month] = jpDate;
+    const monthIndex = Number(month) - 1;
+    return monthNames[monthIndex] ? `${monthNames[monthIndex]} ${year}` : year;
+  }
+
+  const yearMonth = period.match(/(\d{4})\D{0,2}(\d{1,2})/);
+  if (yearMonth) {
+    const [, year, month] = yearMonth;
+    const monthIndex = Number(month) - 1;
+    return monthNames[monthIndex] ? `${monthNames[monthIndex]} ${year}` : year;
+  }
+
+  const yearOnly = period.match(/(\d{4})/);
+  return yearOnly ? yearOnly[1] : null;
 };
 
 const getPlayAvailabilityLabelEn = (vod?: Record<string, string> | null) => {
@@ -191,11 +229,6 @@ export default async function EnglishPlaysPage({
                 >
                   <PlayPosterFrame
                     title={getEnglishPlayTitle(play)}
-                    subtitle={
-                      play.franchiseFormat
-                        ? EN_FORMAT_LABELS[play.franchiseFormat] ?? play.franchiseFormat
-                        : "Stage"
-                    }
                     meta={compactListPeriodEn(play.period)}
                     seed={`${play.slug}-${play.genre ?? ""}`}
                   />
@@ -233,25 +266,34 @@ export default async function EnglishPlaysPage({
                     </div>
 
                     <div className="play-list-card__facts">
-                      {getPlayYearLabelEn(play.period) ? (
+                      {getPlayReleaseLabelEn(play.period) ? (
                         <div className="play-list-card__fact">
                           <span className="play-list-card__fact-icon" aria-hidden="true">
-                            ○
+                            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4">
+                              <rect x="2.5" y="3.5" width="11" height="10" rx="2" />
+                              <path d="M5 2.5v2M11 2.5v2M2.5 6.5h11" />
+                            </svg>
                           </span>
                           <span className="play-list-card__fact-key">Release</span>
-                          <span className="play-list-card__fact-value">{getPlayYearLabelEn(play.period)}</span>
+                          <span className="play-list-card__fact-value">{getPlayReleaseLabelEn(play.period)}</span>
                         </div>
                       ) : null}
                       <div className="play-list-card__fact">
                         <span className="play-list-card__fact-icon" aria-hidden="true">
-                          ◎
+                          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4">
+                            <circle cx="8" cy="5" r="2.5" />
+                            <path d="M3.5 13c.5-2.6 2.5-4 4.5-4s4 1.4 4.5 4" />
+                          </svg>
                         </span>
                         <span className="play-list-card__fact-key">Main cast</span>
                         <span className="play-list-card__fact-value">{play.mainCastSummaryEn || "Not listed"}</span>
                       </div>
                       <div className="play-list-card__fact">
                         <span className="play-list-card__fact-icon" aria-hidden="true">
-                          ▷
+                          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4">
+                            <rect x="2.5" y="3.5" width="11" height="9" rx="2" />
+                            <path d="M7 6.4 10 8 7 9.6Z" fill="currentColor" stroke="none" />
+                          </svg>
                         </span>
                         <span className="play-list-card__fact-key">Streaming</span>
                         <span className="play-list-card__fact-value">{getPlayAvailabilityLabelEn(play.vod)}</span>

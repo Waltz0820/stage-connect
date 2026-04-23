@@ -1698,10 +1698,17 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: 16px;
   min-height: 1.65em;
   color: rgba(243, 240, 234, 0.5);
   font-size: 11px;
   line-height: 1;
+}
+
+.play-list-card__fact-icon svg {
+  width: 14px;
+  height: 14px;
+  overflow: visible;
 }
 
 .play-list-card__fact-key {

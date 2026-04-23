@@ -60,9 +60,29 @@ const compactListPeriod = (period?: string | null) => {
   return period;
 };
 
-const getPlayYearLabel = (period?: string | null) => {
-  const match = period?.match(/(\d{4})/);
-  return match ? `${match[1]}年` : null;
+const getPlayReleaseLabel = (period?: string | null) => {
+  if (!period) return null;
+
+  const slashDate = period.match(/(\d{4})\/(\d{1,2})/);
+  if (slashDate) {
+    const [, year, month] = slashDate;
+    return `${year}年${Number(month)}月`;
+  }
+
+  const jpDate = period.match(/(\d{4})年\s*(\d{1,2})月/);
+  if (jpDate) {
+    const [, year, month] = jpDate;
+    return `${year}年${Number(month)}月`;
+  }
+
+  const yearMonth = period.match(/(\d{4})\D{0,2}(\d{1,2})/);
+  if (yearMonth) {
+    const [, year, month] = yearMonth;
+    return `${year}年${Number(month)}月`;
+  }
+
+  const yearOnly = period.match(/(\d{4})/);
+  return yearOnly ? `${yearOnly[1]}年` : null;
 };
 
 const getPlayAvailabilityLabel = (vod?: Record<string, string> | null) => {
@@ -226,11 +246,6 @@ export default async function PlaysPage({
                 <Link className="play-list-card__poster-link" href={`/plays/${play.slug}`} aria-label={play.title}>
                   <PlayPosterFrame
                     title={play.title}
-                    subtitle={
-                      play.franchiseFormat
-                        ? FORMAT_LABELS[play.franchiseFormat] ?? play.franchiseFormat
-                        : "Stage"
-                    }
                     meta={compactListPeriod(play.period)}
                     seed={`${play.slug}-${play.genre ?? ""}`}
                   />
@@ -268,18 +283,24 @@ export default async function PlaysPage({
                     )}
 
                     <div className="play-list-card__facts">
-                      {getPlayYearLabel(play.period) ? (
+                      {getPlayReleaseLabel(play.period) ? (
                         <div className="play-list-card__fact">
                           <span className="play-list-card__fact-icon" aria-hidden="true">
-                            ○
+                            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4">
+                              <rect x="2.5" y="3.5" width="11" height="10" rx="2" />
+                              <path d="M5 2.5v2M11 2.5v2M2.5 6.5h11" />
+                            </svg>
                           </span>
                           <span className="play-list-card__fact-key">公開年月</span>
-                          <span className="play-list-card__fact-value">{getPlayYearLabel(play.period)}</span>
+                          <span className="play-list-card__fact-value">{getPlayReleaseLabel(play.period)}</span>
                         </div>
                       ) : null}
                       <div className="play-list-card__fact">
                         <span className="play-list-card__fact-icon" aria-hidden="true">
-                          ◎
+                          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4">
+                            <circle cx="8" cy="5" r="2.5" />
+                            <path d="M3.5 13c.5-2.6 2.5-4 4.5-4s4 1.4 4.5 4" />
+                          </svg>
                         </span>
                         <span className="play-list-card__fact-key">主要キャスト</span>
                         <span className="play-list-card__fact-value">
@@ -288,7 +309,10 @@ export default async function PlaysPage({
                       </div>
                       <div className="play-list-card__fact">
                         <span className="play-list-card__fact-icon" aria-hidden="true">
-                          ▷
+                          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4">
+                            <rect x="2.5" y="3.5" width="11" height="9" rx="2" />
+                            <path d="M7 6.4 10 8 7 9.6Z" fill="currentColor" stroke="none" />
+                          </svg>
                         </span>
                         <span className="play-list-card__fact-key">配信有無</span>
                         <span className="play-list-card__fact-value">{getPlayAvailabilityLabel(play.vod)}</span>
