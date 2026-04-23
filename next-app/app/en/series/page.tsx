@@ -25,10 +25,19 @@ const buildHref = (params: Record<string, string | number | null | undefined>) =
   return query ? `/en/series?${query}` : "/en/series";
 };
 
+const getSeriesCardTagsEn = (series: { format: string | null; originType: string | null; playCount: number }) => {
+  const tags = [
+    series.format ? EN_FORMAT_LABELS[series.format] ?? series.format : null,
+    series.originType ? toEnglishOriginType(series.originType) ?? series.originType : null,
+    series.playCount >= 10 ? "Major series" : null,
+  ].filter(Boolean) as string[];
+
+  return Array.from(new Set(tags)).slice(0, 4);
+};
+
 export const metadata: Metadata = {
   title: "2.5D Series | Stage Connect",
-  description:
-    "Browse 2.5D stage and musical series by title, origin, and release structure.",
+  description: "Browse 2.5D stage and musical series by title, origin, and release structure.",
   alternates: {
     canonical: `${siteUrl}/en/series`,
     languages: {
@@ -51,8 +60,7 @@ export default async function EnglishSeriesPage({
   ]);
   const collectionJsonLd = buildCollectionPageStructuredData({
     name: "2.5D Series",
-    description:
-      "Browse franchise lines, recurring stage adaptations, and long-running 2.5D projects.",
+    description: "Browse franchise lines, recurring stage adaptations, and long-running 2.5D projects.",
     path: "/en/series",
   });
 
@@ -92,13 +100,13 @@ export default async function EnglishSeriesPage({
   const visible = sorted.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 
   return (
-    <main className="container" style={{ paddingBlock: 32 }}>
+    <main className="container works-index-page" style={{ paddingBlock: 32 }}>
       <StructuredData data={breadcrumbJsonLd} />
       <StructuredData data={collectionJsonLd} />
       <div className="stack-lg">
         <Breadcrumbs items={[{ label: "Series", href: "/en/series" }]} />
 
-        <section className="hero-card stack-md">
+        <section className="hero-card stack-md works-index-hero">
           <div className="stack-sm">
             <span className="eyebrow">Series</span>
             <h1 className="page-title">2.5D Series</h1>
@@ -114,10 +122,10 @@ export default async function EnglishSeriesPage({
           </div>
         </section>
 
-        <section className="section-card stack-md">
-          <h2 className="section-title">Filters</h2>
+        <section className="section-card stack-md works-list-panel">
+          <h2 className="section-title">Series Filters</h2>
 
-          <div className="filter-row filter-row--dense">
+          <div className="filter-row filter-row--dense works-filter-row">
             <Link
               className={`filter-chip ${sort === "play_count_desc" ? "is-active" : ""}`}
               href={buildHref({ page: 1, sort: "play_count_desc", format, origin })}
@@ -132,7 +140,7 @@ export default async function EnglishSeriesPage({
             </Link>
           </div>
 
-          <div className="filter-row filter-row--dense genre-filter-row">
+          <div className="filter-row filter-row--dense genre-filter-row works-filter-row">
             {formatOptions.map((option) => (
               <Link
                 key={option}
@@ -144,7 +152,7 @@ export default async function EnglishSeriesPage({
             ))}
           </div>
 
-          <div className="filter-row filter-row--dense genre-filter-row">
+          <div className="filter-row filter-row--dense genre-filter-row works-filter-row">
             {originOptions.map((option) => (
               <Link
                 key={option}
@@ -164,40 +172,91 @@ export default async function EnglishSeriesPage({
                   href={`/en/series/${series.slug}`}
                   aria-label={getEnglishSeriesName(series)}
                 >
-                  <PlayPosterFrame
-                    title={getEnglishSeriesName(series)}
-                    subtitle={series.format ? EN_FORMAT_LABELS[series.format] ?? series.format : "Series"}
-                    meta={`${series.playCount} plays`}
-                    seed={`${series.slug}-${series.originType ?? ""}`}
-                  />
+                  <PlayPosterFrame title={getEnglishSeriesName(series)} seed={`${series.slug}-${series.originType ?? ""}`} />
                 </Link>
 
                 <div className="play-list-card__main">
                   <Link className="catalog-card__body-link" href={`/en/series/${series.slug}`}>
                     <div className="catalog-card__top catalog-card__top--stack">
                       <div className="catalog-card__title">{getEnglishSeriesName(series)}</div>
-                      <div className="catalog-card__top-actions">
-                        {format === "all" && series.format ? (
-                          <span className="catalog-card__badge">
-                            {EN_FORMAT_LABELS[series.format] ?? series.format}
-                          </span>
-                        ) : null}
-                        <span className="catalog-card__badge">{series.playCount} plays</span>
-                      </div>
                     </div>
 
-                    {series.originType ? (
-                      <div className="catalog-card__sub">{toEnglishOriginType(series.originType)}</div>
-                    ) : null}
-
-                    <div className="catalog-card__text">
+                    <div className="catalog-card__text play-list-card__summary">
                       {series.descriptionEn || series.description
                         ? truncateText(toPlainText(series.descriptionEn || series.description), 160)
                         : "Series description not available yet."}
                     </div>
 
-                    <div className="catalog-card__footer">
+                    <div className="play-list-card__facts">
+                      <div className="play-list-card__fact">
+                        <span className="play-list-card__fact-icon" aria-hidden="true">
+                          <svg viewBox="0 0 20 20" fill="none">
+                            <path
+                              d="M10 3 15.5 6v8L10 17l-5.5-3V6L10 3Z"
+                              stroke="currentColor"
+                              strokeWidth="1.5"
+                              strokeLinejoin="round"
+                            />
+                            <path d="M4.5 6 10 9l5.5-3" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+                            <path d="M10 9v8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                          </svg>
+                        </span>
+                        <span className="play-list-card__fact-key">Works</span>
+                        <span className="play-list-card__fact-value">{series.playCount} plays</span>
+                      </div>
+
+                      {series.format ? (
+                        <div className="play-list-card__fact">
+                          <span className="play-list-card__fact-icon" aria-hidden="true">
+                            <svg viewBox="0 0 20 20" fill="none">
+                              <path
+                                d="M3.5 6.5A2.5 2.5 0 0 1 6 4h8a2.5 2.5 0 0 1 2.5 2.5v7A2.5 2.5 0 0 1 14 16H6a2.5 2.5 0 0 1-2.5-2.5v-7Z"
+                                stroke="currentColor"
+                                strokeWidth="1.5"
+                              />
+                              <path d="M7 8.5h6M7 12h6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                            </svg>
+                          </span>
+                          <span className="play-list-card__fact-key">Format</span>
+                          <span className="play-list-card__fact-value">
+                            {EN_FORMAT_LABELS[series.format] ?? series.format}
+                          </span>
+                        </div>
+                      ) : null}
+
+                      {series.originType ? (
+                        <div className="play-list-card__fact">
+                          <span className="play-list-card__fact-icon" aria-hidden="true">
+                            <svg viewBox="0 0 20 20" fill="none">
+                              <path
+                                d="M10 3.5c2.3 0 4.2 1 5.4 2.7C16.8 8 17 10.4 15.8 12c-1.1 1.6-3.1 2.5-5.8 4.5-2.7-2-4.7-2.9-5.8-4.5C3 10.4 3.2 8 4.6 6.2 5.8 4.5 7.7 3.5 10 3.5Z"
+                                stroke="currentColor"
+                                strokeWidth="1.5"
+                                strokeLinejoin="round"
+                              />
+                            </svg>
+                          </span>
+                          <span className="play-list-card__fact-key">Origin</span>
+                          <span className="play-list-card__fact-value">
+                            {toEnglishOriginType(series.originType) ?? series.originType}
+                          </span>
+                        </div>
+                      ) : null}
+                    </div>
+
+                    <div className="play-list-card__tag-row">
+                      {getSeriesCardTagsEn(series).map((tag) => (
+                        <span className="play-list-card__tag" key={tag}>
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+
+                    <div className="catalog-card__footer play-list-card__footer">
                       <span className="catalog-link">View series details</span>
+                      <span className="play-list-card__chevron" aria-hidden="true">
+                        →
+                      </span>
                     </div>
                   </Link>
                 </div>
@@ -224,6 +283,19 @@ export default async function EnglishSeriesPage({
               </Link>
             </div>
           ) : null}
+
+          <div className="works-index-cta">
+            <div className="works-index-cta__icon" aria-hidden="true">
+              □
+            </div>
+            <div className="works-index-cta__copy">
+              <p className="works-index-cta__title">Browse related plays from each series</p>
+              <p className="works-index-cta__text">Jump from a franchise overview to its connected plays and streaming status.</p>
+            </div>
+            <Link className="works-index-cta__link" href="/en/plays">
+              View plays
+            </Link>
+          </div>
         </section>
       </div>
     </main>

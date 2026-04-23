@@ -23,7 +23,7 @@ const getSeriesCardTags = (series: { format: string | null; originType: string |
   const tags = [
     series.format ? FORMAT_LABELS[series.format] ?? series.format : null,
     series.originType,
-    series.playCount >= 10 ? "定番シリーズ" : null,
+    series.playCount >= 10 ? "人気シリーズ" : null,
   ].filter(Boolean) as string[];
 
   return Array.from(new Set(tags)).slice(0, 4);
@@ -40,8 +40,8 @@ const buildHref = (params: Record<string, string | number | null | undefined>) =
 };
 
 export const metadata: Metadata = {
-  title: "シリーズ一覧 | Stage Connect（ステコネ）",
-  description: "2.5次元舞台・ミュージカルのシリーズを、作品数・上演形式・原作種別ごとに一覧できます。",
+  title: "シリーズ一覧 | Stage Connect",
+  description: "2.5次元舞台・ミュージカルのシリーズを、作品数・上演形式・原作ジャンルごとに一覧で探せます。",
   alternates: {
     canonical: `${siteUrl}/series`,
     languages: {
@@ -64,7 +64,7 @@ export default async function SeriesPage({
   ]);
   const collectionJsonLd = buildCollectionPageStructuredData({
     name: "シリーズ一覧",
-    description: "2.5次元舞台・ミュージカルのシリーズを、作品数・上演形式・原作種別ごとに一覧できます。",
+    description: "2.5次元舞台・ミュージカルのシリーズを、作品数・上演形式・原作ジャンルごとに一覧で探せます。",
     path: "/series",
   });
 
@@ -108,24 +108,25 @@ export default async function SeriesPage({
       <StructuredData data={collectionJsonLd} />
       <div className="stack-lg">
         <Breadcrumbs items={[{ label: "シリーズ一覧" }]} />
+
         <section className="hero-card stack-md works-index-hero">
           <div className="stack-sm">
             <span className="eyebrow">Series</span>
             <h1 className="page-title">シリーズ一覧</h1>
             <p className="lead">
-              2.5次元舞台・ミュージカルのシリーズを、作品数や原作種別とあわせて一覧できます。
+              世界観や原作ごとに、2.5次元舞台・ミュージカルのシリーズを一覧で探せます。
             </p>
           </div>
 
           <div className="catalog-summary catalog-summary--ledger">
-            <span className="catalog-chip">表示中のシリーズ {filteredSeries.length}件</span>
-            <span className="catalog-chip">登録シリーズ {allSeries.length}件</span>
+            <span className="catalog-chip">表示中 {filteredSeries.length}件</span>
+            <span className="catalog-chip">全シリーズ {allSeries.length}件</span>
             <span className="catalog-chip">Page {safePage}</span>
           </div>
         </section>
 
         <section className="section-card stack-md works-list-panel">
-          <h2 className="section-title">シリーズ・フランチャイズ</h2>
+          <h2 className="section-title">シリーズ・フィルター</h2>
 
           <div className="filter-row filter-row--dense works-filter-row">
             <Link
@@ -170,28 +171,12 @@ export default async function SeriesPage({
             {visibleSeries.map((series) => (
               <article className="catalog-card catalog-card--play-list" key={series.slug}>
                 <Link className="play-list-card__poster-link" href={`/series/${series.slug}`} aria-label={series.name}>
-                  <PlayPosterFrame
-                    title={series.name}
-                    subtitle={series.format ? FORMAT_LABELS[series.format] ?? series.format : "Series"}
-                    meta={`${series.playCount}作品`}
-                    seed={`${series.slug}-${series.originType ?? ""}`}
-                  />
+                  <PlayPosterFrame title={series.name} seed={`${series.slug}-${series.originType ?? ""}`} />
                 </Link>
 
                 <div className="play-list-card__main">
                   <Link className="catalog-card__body-link" href={`/series/${series.slug}`}>
                     <div className="catalog-card__top catalog-card__top--stack">
-                      <div className="play-list-card__status-row">
-                        <span className="play-list-card__status-badge play-list-card__status-badge--accent">
-                          シリーズ
-                        </span>
-                        {series.format ? (
-                          <span className="play-list-card__status-badge">
-                            {FORMAT_LABELS[series.format] ?? series.format}
-                          </span>
-                        ) : null}
-                      </div>
-
                       <div className="catalog-card__title">{series.name}</div>
                     </div>
 
@@ -200,25 +185,61 @@ export default async function SeriesPage({
                         {truncate(toPlainText(series.description), 140)}
                       </div>
                     ) : (
-                      <div className="catalog-card__text play-list-card__summary">シリーズ説明は現在準備中です。</div>
+                      <div className="catalog-card__text play-list-card__summary">
+                        シリーズ説明は現在整備中です。
+                      </div>
                     )}
 
                     <div className="play-list-card__facts">
                       <div className="play-list-card__fact">
+                        <span className="play-list-card__fact-icon" aria-hidden="true">
+                          <svg viewBox="0 0 20 20" fill="none">
+                            <path
+                              d="M10 3 15.5 6v8L10 17l-5.5-3V6L10 3Z"
+                              stroke="currentColor"
+                              strokeWidth="1.5"
+                              strokeLinejoin="round"
+                            />
+                            <path d="M4.5 6 10 9l5.5-3" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+                            <path d="M10 9v8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                          </svg>
+                        </span>
                         <span className="play-list-card__fact-key">作品数</span>
                         <span className="play-list-card__fact-value">{series.playCount}作品</span>
                       </div>
+
                       {series.format ? (
                         <div className="play-list-card__fact">
+                          <span className="play-list-card__fact-icon" aria-hidden="true">
+                            <svg viewBox="0 0 20 20" fill="none">
+                              <path
+                                d="M3.5 6.5A2.5 2.5 0 0 1 6 4h8a2.5 2.5 0 0 1 2.5 2.5v7A2.5 2.5 0 0 1 14 16H6a2.5 2.5 0 0 1-2.5-2.5v-7Z"
+                                stroke="currentColor"
+                                strokeWidth="1.5"
+                              />
+                              <path d="M7 8.5h6M7 12h6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                            </svg>
+                          </span>
                           <span className="play-list-card__fact-key">上演形式</span>
                           <span className="play-list-card__fact-value">
                             {FORMAT_LABELS[series.format] ?? series.format}
                           </span>
                         </div>
                       ) : null}
+
                       {series.originType ? (
                         <div className="play-list-card__fact">
-                          <span className="play-list-card__fact-key">原作</span>
+                          <span className="play-list-card__fact-icon" aria-hidden="true">
+                            <svg viewBox="0 0 20 20" fill="none">
+                              <path
+                                d="M10 3.5c2.3 0 4.2 1 5.4 2.7C16.8 8 17 10.4 15.8 12c-1.1 1.6-3.1 2.5-5.8 4.5-2.7-2-4.7-2.9-5.8-4.5C3 10.4 3.2 8 4.6 6.2 5.8 4.5 7.7 3.5 10 3.5Z"
+                                stroke="currentColor"
+                                strokeWidth="1.5"
+                                strokeLinejoin="round"
+                              />
+                            </svg>
+                          </span>
+                          <span className="play-list-card__fact-key">原作区分</span>
                           <span className="play-list-card__fact-value">{series.originType}</span>
                         </div>
                       ) : null}
@@ -235,7 +256,7 @@ export default async function SeriesPage({
                     <div className="catalog-card__footer play-list-card__footer">
                       <span className="catalog-link">シリーズ詳細を見る</span>
                       <span className="play-list-card__chevron" aria-hidden="true">
-                        ›
+                        →
                       </span>
                     </div>
                   </Link>
@@ -269,8 +290,8 @@ export default async function SeriesPage({
               □
             </div>
             <div className="works-index-cta__copy">
-              <p className="works-index-cta__title">作品一覧から個別作品を探す</p>
-              <p className="works-index-cta__text">シリーズ内の各公演や配信作品を一覧で確認できます。</p>
+              <p className="works-index-cta__title">シリーズから関連作品をまとめて確認</p>
+              <p className="works-index-cta__text">気になるシリーズの詳細から、作品一覧や配信状況まで横断できます。</p>
             </div>
             <Link className="works-index-cta__link" href="/plays">
               作品一覧へ
