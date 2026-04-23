@@ -12,7 +12,7 @@ import {
   truncateText,
 } from "../../../lib/en-copy";
 import { buildBreadcrumbList, buildCollectionPageStructuredData } from "../../../lib/structured-data";
-import { getPlayList, periodSortKey, toPlainText } from "../../../lib/stage-connect";
+import { getPlayList, getPlayMainCastSummariesBySlug, periodSortKey, toPlainText } from "../../../lib/stage-connect";
 
 type SearchParamValue = string | string[] | undefined;
 type SearchParams = Record<string, SearchParamValue>;
@@ -153,6 +153,7 @@ export default async function EnglishPlaysPage({
   const safePage = Math.min(page, totalPages);
   const startIndex = (safePage - 1) * ITEMS_PER_PAGE;
   const visible = sorted.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+  const visibleCastSummaries = await getPlayMainCastSummariesBySlug(visible.map((play) => play.slug));
 
   return (
     <main className="container works-index-page" style={{ paddingBlock: 32 }}>
@@ -286,7 +287,9 @@ export default async function EnglishPlaysPage({
                           </svg>
                         </span>
                         <span className="play-list-card__fact-key">Main cast</span>
-                        <span className="play-list-card__fact-value">{play.mainCastSummaryEn || "Not listed"}</span>
+                        <span className="play-list-card__fact-value">
+                          {visibleCastSummaries[play.slug]?.en || play.mainCastSummaryEn || "Not listed"}
+                        </span>
                       </div>
                       <div className="play-list-card__fact">
                         <span className="play-list-card__fact-icon" aria-hidden="true">

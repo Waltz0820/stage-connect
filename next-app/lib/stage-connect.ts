@@ -1622,6 +1622,171 @@ export async function getPlayList(): Promise<PlayListItem[]> {
     .map((row) => row);
 }
 
+export async function getPlayMainCastSummariesBySlug(
+  slugs: string[]
+): Promise<Record<string, { ja: string | null; en: string | null }>> {
+  if (!hasSupabaseEnv) return {};
+
+  const normalizedSlugs = Array.from(new Set(slugs.map((slug) => String(slug ?? "").trim()).filter(Boolean)));
+  if (normalizedSlugs.length === 0) return {};
+
+  const supabase = createSupabaseServerClient();
+  const { data: plays, error: playError } = await supabase
+    .from("plays")
+    .select("id, slug")
+    .in("slug", normalizedSlugs);
+
+  if (playError) throw playError;
+
+  const playRows = (plays ?? []) as Array<{ id: string; slug: string }>;
+  const playIdBySlug = new Map(playRows.map((row) => [String(row.slug), String(row.id)]));
+  const slugByPlayId = new Map(playRows.map((row) => [String(row.id), String(row.slug)]));
+  const playIds = playRows.map((row) => String(row.id)).filter(Boolean);
+
+  if (playIds.length === 0) return {};
+
+  let castRows: any[] | null = null;
+  let castError: any = null;
+
+  {
+    const res = await supabase
+      .from("casts")
+      .select(
+        `
+        play_id,
+        is_starring,
+        billing_order,
+        created_at,
+        actor:actors (
+          name,
+          name_en
+        )
+      `
+      )
+      .in("play_id", playIds)
+      .order("billing_order", { ascending: true, nullsFirst: false })
+      .order("created_at", { ascending: true });
+    castRows = res.data as any[] | null;
+    castError = res.error;
+  }
+
+  if (castError && /name_en/i.test(String(castError.message ?? ""))) {
+    const fallback = await supabase
+      .from("casts")
+      .select(
+        `
+        play_id,
+        is_starring,
+        billing_order,
+        created_at,
+        actor:actors (
+          name
+        )
+      `
+      )
+      .in("play_id", playIds)
+      .order("billing_order", { ascending: true, nullsFirst: false })
+      .order("created_at", { ascending: true });
+    castRows =
+      (fallback.data as any[] | null)?.map((row) => ({
+        ...row,
+        actor: Array.isArray(row?.actor)
+          ? row.actor.map((item: any) => ({ ...item, name_en: null }))
+          : row?.actor
+            ? { ...row.actor, name_en: null }
+            : row?.actor,
+      })) ?? null;
+    castError = fallback.error;
+  }
+
+  if (castError) throw castError;
+
+  const grouped = new Map<
+    string,
+    Array<{
+      name: string;
+      nameEn: string | null;
+      isStarring: boolean;
+      billingOrder: number;
+      createdAt: number;
+    }>
+  >();
+
+  for (const row of (castRows ?? []) as any[]) {
+    const playId = String(row?.play_id ?? "").trim();
+    const actor = Array.isArray(row?.actor) ? row.actor[0] : row?.actor;
+    const name = String(actor?.name ?? "").trim();
+    const nameEn = String(actor?.name_en ?? "").trim() || null;
+    if (!playId || !name) continue;
+
+    const bucket = grouped.get(playId) ?? [];
+    bucket.push({
+      name,
+      nameEn,
+      isStarring: row?.is_starring === true,
+      billingOrder: typeof row?.billing_order === "number" ? row.billing_order : Number.MAX_SAFE_INTEGER,
+      createdAt: row?.created_at ? Date.parse(String(row.created_at)) : Number.MAX_SAFE_INTEGER,
+    });
+    grouped.set(playId, bucket);
+  }
+
+  const result: Record<string, { ja: string | null; en: string | null }> = {};
+
+  for (const [playId, entries] of grouped.entries()) {
+    const slug = slugByPlayId.get(playId);
+    if (!slug) continue;
+
+    const unique = new Map<
+      string,
+      { ja: string; en: string | null; isStarring: boolean; billingOrder: number; createdAt: number }
+    >();
+
+    for (const entry of entries) {
+      const key = normalizeDisplayText(entry.name);
+      if (!key) continue;
+      const existing = unique.get(key);
+      if (!existing) {
+        unique.set(key, {
+          ja: entry.name,
+          en: entry.nameEn,
+          isStarring: entry.isStarring,
+          billingOrder: entry.billingOrder,
+          createdAt: entry.createdAt,
+        });
+        continue;
+      }
+
+      unique.set(key, {
+        ja: existing.ja,
+        en: existing.en ?? entry.nameEn,
+        isStarring: existing.isStarring || entry.isStarring,
+        billingOrder: Math.min(existing.billingOrder, entry.billingOrder),
+        createdAt: Math.min(existing.createdAt, entry.createdAt),
+      });
+    }
+
+    const top = Array.from(unique.values())
+      .sort((a, b) => {
+        if (a.isStarring !== b.isStarring) return a.isStarring ? -1 : 1;
+        if (a.billingOrder !== b.billingOrder) return a.billingOrder - b.billingOrder;
+        if (a.createdAt !== b.createdAt) return a.createdAt - b.createdAt;
+        return a.ja.localeCompare(b.ja, "ja");
+      })
+      .slice(0, 3);
+
+    result[slug] = {
+      ja: top.length > 0 ? top.map((item) => item.ja).join(" / ") : null,
+      en: top.length > 0 ? top.map((item) => item.en || item.ja).join(" / ") : null,
+    };
+  }
+
+  for (const slug of normalizedSlugs) {
+    result[slug] = result[slug] ?? { ja: null, en: null };
+  }
+
+  return result;
+}
+
 export async function getActorList(): Promise<ActorListItem[]> {
   if (!hasSupabaseEnv) return [];
   const supabase = createSupabaseServerClient();

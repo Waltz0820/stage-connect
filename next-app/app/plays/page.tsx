@@ -4,7 +4,7 @@ import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { PlayPosterFrame } from "../../components/PlayPosterFrame";
 import { StructuredData } from "../../components/StructuredData";
 import { buildBreadcrumbList, buildCollectionPageStructuredData } from "../../lib/structured-data";
-import { getPlayList, periodSortKey, toPlainText, truncate } from "../../lib/stage-connect";
+import { getPlayList, getPlayMainCastSummariesBySlug, periodSortKey, toPlainText, truncate } from "../../lib/stage-connect";
 
 type SearchParamValue = string | string[] | undefined;
 type SearchParams = Record<string, SearchParamValue>;
@@ -175,6 +175,7 @@ export default async function PlaysPage({
   const safePage = Math.min(page, totalPages);
   const startIndex = (safePage - 1) * ITEMS_PER_PAGE;
   const visiblePlays = sortedPlays.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+  const visibleCastSummaries = await getPlayMainCastSummariesBySlug(visiblePlays.map((play) => play.slug));
 
   return (
     <main className="container works-index-page" style={{ paddingBlock: 32 }}>
@@ -304,7 +305,7 @@ export default async function PlaysPage({
                         </span>
                         <span className="play-list-card__fact-key">主要キャスト</span>
                         <span className="play-list-card__fact-value">
-                          {play.mainCastSummary || "未登録"}
+                          {visibleCastSummaries[play.slug]?.ja || play.mainCastSummary || "未登録"}
                         </span>
                       </div>
                       <div className="play-list-card__fact">
