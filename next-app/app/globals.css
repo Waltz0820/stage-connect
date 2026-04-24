@@ -1192,6 +1192,10 @@ a {
   border-radius: 16px;
 }
 
+.home-stage__series-card .play-poster-frame__content {
+  display: none;
+}
+
 .home-stage__series-copy {
   display: grid;
   gap: 4px;
