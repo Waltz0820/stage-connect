@@ -289,7 +289,7 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
   };
 
   return (
-    <main className="container" style={{ paddingBlock: 32 }}>
+    <main className="container works-index-page detail-stage-page play-detail-stage-page" style={{ paddingBlock: 32 }}>
       <StructuredData data={breadcrumbJsonLd} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }} />
@@ -297,7 +297,7 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
       <div className="stack-lg">
         <Breadcrumbs items={[{ label: "作品一覧", href: "/plays" }]} />
 
-        <section className="hero-card stack-md">
+        <section className="hero-card stack-md detail-stage-hero play-detail-stage-hero">
           <div className="stack-sm detail-ledger-shell">
             {play.franchiseSlug && play.franchiseName ? (
               <Link className="pill series-pill" href={`/series/${play.franchiseSlug}`}>
@@ -346,7 +346,7 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
           </div>
         </section>
 
-        <section className="section-card stack-md">
+        <section className="section-card stack-md detail-stage-section">
           <p className="lead">
             <strong className="strong-inline">{play.title}</strong>
             の配信情報（VOD）と公演データをまとめました。主な出演キャストは
@@ -358,12 +358,12 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
           </p>
         </section>
 
-        <section className="section-card stack-md">
+        <section className="section-card stack-md detail-stage-section">
           <h2 className="section-title">あらすじ</h2>
           <div className="rich-text">{play.summary || "あらすじ情報はまだありません。"}</div>
         </section>
 
-        <section className="section-card stack-md">
+        <section className="section-card stack-md detail-stage-section">
           <h2 className="section-title">公演情報</h2>
           <div className="meta-list roomy">
             {play.period ? (
@@ -421,7 +421,7 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
         </section>
 
         {creditItems.length > 0 ? (
-          <section className="section-card stack-md">
+          <section className="section-card stack-md detail-stage-section">
             <h2 className="section-title">スタッフ / クレジット</h2>
             <div className="meta-list roomy">
               {creditItems.slice(0, 3).map((item) => (
@@ -446,7 +446,7 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
           </section>
         ) : null}
 
-        <section className="section-card stack-md">
+        <section className="section-card stack-md detail-stage-section play-streaming-section">
           <h2 className="section-title">{hasVod ? "配信で見る" : "見る方法を確認"}</h2>
           {hasVod ? (
             <p className="muted">DMM TV など主要な配信リンクを作品ごとに確認できます。</p>
@@ -480,7 +480,7 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
           </div>
         </section>
 
-        <section className="section-card stack-md">
+        <section className="section-card stack-md detail-stage-section">
           <h2 className="section-title">よくある質問（FAQ）</h2>
           <div className="faq-grid">
             <article className="faq-card">
@@ -498,7 +498,7 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
           </div>
         </section>
 
-        <section className="section-card stack-md">
+        <section className="section-card stack-md detail-stage-section">
           <h2 className="section-title">出演キャスト</h2>
           {play.cast.length > 0 ? (
             <div className="stack-md">

@@ -4228,6 +4228,63 @@ a {
     0 0 24px rgba(180, 86, 140, 0.2);
 }
 
+.play-detail-stage-page .detail-ledger {
+  overflow: hidden;
+  border-radius: 16px;
+  border-color: rgba(243, 240, 234, 0.1);
+  background: rgba(243, 240, 234, 0.08);
+}
+
+.play-detail-stage-page .detail-ledger__item {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.014), rgba(255, 255, 255, 0.004)),
+    rgba(7, 8, 14, 0.9);
+}
+
+.play-detail-stage-page .detail-ledger__item strong {
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+}
+
+.play-detail-stage-page .series-pill {
+  border-color: rgba(188, 150, 92, 0.24);
+  background: rgba(188, 150, 92, 0.08);
+  color: rgba(244, 240, 233, 0.84);
+}
+
+.play-detail-stage-page .rich-text {
+  color: rgba(221, 215, 207, 0.82);
+}
+
+.play-detail-stage-page .meta-list.roomy {
+  gap: 12px;
+}
+
+.play-detail-stage-page .meta-row {
+  padding: 14px;
+}
+
+.play-detail-stage-page .group-chip {
+  border-radius: 10px;
+  border-color: rgba(243, 240, 234, 0.12);
+  background: rgba(255, 255, 255, 0.018);
+}
+
+.play-detail-stage-page .cast-group-block {
+  border-top-color: rgba(243, 240, 234, 0.08);
+}
+
+.play-detail-stage-page .play-streaming-section {
+  border-color: rgba(180, 86, 140, 0.22);
+  background:
+    linear-gradient(135deg, rgba(176, 56, 110, 0.08), rgba(68, 82, 170, 0.035)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.012), rgba(255, 255, 255, 0.004)),
+    rgba(8, 8, 14, 0.98);
+}
+
 .next-modal-body {
   overflow-y: auto;
   padding: 18px;

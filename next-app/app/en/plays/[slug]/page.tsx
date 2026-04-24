@@ -3,6 +3,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "../../../../components/Breadcrumbs";
 import { DetailToggleClient } from "../../../../components/DetailToggleClient";
+import { FavoriteButtonClient } from "../../../../components/FavoriteButtonClient";
+import { ShareButtonClient } from "../../../../components/ShareButtonClient";
 import { StructuredData } from "../../../../components/StructuredData";
 import {
   compactListPeriodEn,
@@ -240,13 +242,13 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
   ]);
 
   return (
-    <main className="container" style={{ paddingBlock: 32 }}>
+    <main className="container works-index-page detail-stage-page play-detail-stage-page" style={{ paddingBlock: 32 }}>
       <StructuredData data={breadcrumbJsonLd} />
       <StructuredData data={creativeWorkJsonLd} />
       <div className="stack-lg">
         <Breadcrumbs items={[{ label: "Plays", href: "/en/plays" }]} />
 
-        <section className="hero-card stack-md">
+        <section className="hero-card stack-md detail-stage-hero play-detail-stage-hero">
           <div className="stack-sm detail-ledger-shell">
             {play.franchiseSlug && displaySeriesName ? (
               <Link className="pill series-pill" href={`/en/series/${play.franchiseSlug}`}>
@@ -255,6 +257,11 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
             ) : null}
 
             <h1 className="page-title">{displayTitle}</h1>
+
+            <div className="detail-actions">
+              <FavoriteButtonClient slug={play.slug} type="play" size="lg" />
+              <ShareButtonClient title={displayTitle} text={`${displayTitle} | Stage Connect`} />
+            </div>
 
             <div className="pill-row">
               {play.tags.map((tag) => (
@@ -282,19 +289,19 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
           </div>
         </section>
 
-        <section className="section-card stack-md">
+        <section className="section-card stack-md detail-stage-section">
           <p className="lead">
             <strong className="strong-inline">{displayTitle}</strong> is listed with cast, series connection, public
             schedule, venue, and streaming availability. Featured cast includes {castSummary}.
           </p>
         </section>
 
-        <section className="section-card stack-md">
+        <section className="section-card stack-md detail-stage-section">
           <h2 className="section-title">Synopsis</h2>
           <div className="rich-text">{synopsis || "Synopsis not available yet."}</div>
         </section>
 
-        <section className="section-card stack-md">
+        <section className="section-card stack-md detail-stage-section">
           <h2 className="section-title">Public information</h2>
           <div className="meta-list roomy">
             {play.period ? (
@@ -354,7 +361,7 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
         </section>
 
         {creditItems.length > 0 ? (
-          <section className="section-card stack-md">
+          <section className="section-card stack-md detail-stage-section">
             <h2 className="section-title">Credits</h2>
             <div className="meta-list roomy">
               {creditItems.slice(0, 3).map((item) => (
@@ -381,7 +388,7 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
           </section>
         ) : null}
 
-        <section className="section-card stack-md">
+        <section className="section-card stack-md detail-stage-section play-streaming-section">
           <h2 className="section-title">Streaming</h2>
           <p className="muted">
             {hasVod
@@ -407,7 +414,7 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
           </div>
         </section>
 
-        <section className="section-card stack-md">
+        <section className="section-card stack-md detail-stage-section">
           <h2 className="section-title">Cast</h2>
           {play.cast.length > 0 ? (
             <div className="stack-md">
