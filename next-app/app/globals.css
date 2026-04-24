@@ -4285,6 +4285,51 @@ a {
     rgba(8, 8, 14, 0.98);
 }
 
+.series-detail-stage-page .detail-ledger {
+  overflow: hidden;
+  border-radius: 16px;
+  border-color: rgba(243, 240, 234, 0.1);
+  background: rgba(243, 240, 234, 0.08);
+}
+
+.series-detail-stage-page .detail-ledger__item {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.014), rgba(255, 255, 255, 0.004)),
+    rgba(7, 8, 14, 0.9);
+}
+
+.series-detail-stage-page .detail-ledger__item strong {
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+}
+
+.series-detail-stage-page .rich-text {
+  color: rgba(221, 215, 207, 0.82);
+}
+
+.series-detail-stage-page .meta-list.roomy {
+  gap: 12px;
+}
+
+.series-detail-stage-page .meta-row {
+  padding: 14px;
+}
+
+.series-detail-stage-page .series-timeline-section {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.012), rgba(255, 255, 255, 0.004)),
+    radial-gradient(circle at 100% 0%, rgba(54, 88, 176, 0.045), transparent 34%),
+    radial-gradient(circle at 0% 0%, rgba(118, 43, 128, 0.045), transparent 38%),
+    rgba(7, 8, 14, 0.98);
+}
+
+.series-detail-stage-page .catalog-card__badge {
+  border-radius: 999px;
+}
+
 .next-modal-body {
   overflow-y: auto;
   padding: 18px;
