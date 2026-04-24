@@ -270,7 +270,7 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
 
         <section className="hero-card stack-md detail-stage-hero play-detail-stage-hero">
           <div className="play-detail-hero-layout">
-            <div className="play-detail-hero-poster">
+            <div className="play-detail-hero-poster" aria-hidden="true">
               <PlayPosterFrame
                 title={displayTitle}
                 subtitle={displaySeriesName ?? undefined}
@@ -278,7 +278,7 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
               />
             </div>
 
-          <div className="stack-sm detail-ledger-shell">
+          <div className="stack-sm detail-ledger-shell play-detail-hero-content">
             {play.franchiseSlug && displaySeriesName ? (
               <Link className="pill series-pill" href={`/en/series/${play.franchiseSlug}`}>
                 Series: {displaySeriesName}
