@@ -69,6 +69,23 @@ const summarizeRoleNameEn = (value?: string | null) => {
   return `${roles.slice(0, 3).join(" / ")} / ${roles.length - 3} more`;
 };
 
+const getCastInitials = (name: string) => {
+  const parts = name
+    .split(/\s+/)
+    .map((part) => part.trim())
+    .filter(Boolean);
+
+  if (parts.length > 1) {
+    return parts
+      .slice(0, 2)
+      .map((part) => part.charAt(0))
+      .join("")
+      .toUpperCase();
+  }
+
+  return name.trim().slice(0, 2).toUpperCase() || "SC";
+};
+
 const parseScheduleEntries = (period?: string | null) =>
   String(period ?? "")
     .split(" / ")
@@ -459,11 +476,16 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
                         className="cast-card cast-card-link"
                         key={`${item.slug}-${item.roleName ?? "cast"}-${group.name ?? "ungrouped"}`}
                       >
-                        <div className="cast-name">{getEnglishActorName(item)}</div>
-                        {item.roleName ? (
-                          <div className="cast-role">{summarizeRoleNameEn(translateAnnotatedDisplayTextEn(item.roleName))}</div>
-                        ) : null}
-                        {item.isStarring ? <div className="cast-badge">MAIN CAST</div> : null}
+                        <div className="cast-card__monogram" aria-hidden="true">
+                          {getCastInitials(getEnglishActorName(item))}
+                        </div>
+                        <div className="cast-card__body">
+                          <div className="cast-name">{getEnglishActorName(item)}</div>
+                          {item.roleName ? (
+                            <div className="cast-role">{summarizeRoleNameEn(translateAnnotatedDisplayTextEn(item.roleName))}</div>
+                          ) : null}
+                          {item.isStarring ? <div className="cast-badge">MAIN CAST</div> : null}
+                        </div>
                       </Link>
                     ))}
                   </div>

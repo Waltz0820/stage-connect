@@ -176,6 +176,23 @@ const groupCast = (
   return Array.from(groups.values());
 };
 
+const getCastInitials = (item: { slug: string; name: string }) => {
+  const slugParts = item.slug
+    .split("-")
+    .map((part) => part.trim())
+    .filter(Boolean);
+
+  if (slugParts.length > 0) {
+    return slugParts
+      .slice(0, 2)
+      .map((part) => part.charAt(0))
+      .join("")
+      .toUpperCase();
+  }
+
+  return item.name.trim().slice(0, 1) || "S";
+};
+
 const buildPlayMetaDescriptionJa = (play: NonNullable<Awaited<ReturnType<typeof getPlayDetailBySlug>>>) => {
   const parts: string[] = [];
   const summary = toPlainText(play.summary || "").trim().replace(/[。．]\s*$/u, "");
@@ -541,9 +558,14 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
                         className="cast-card cast-card-link"
                         key={`${item.slug}-${item.roleName ?? "cast"}-${group.name ?? "ungrouped"}`}
                       >
-                        <div className="cast-name">{item.name}</div>
-                        {item.roleName ? <div className="cast-role">{summarizeRoleName(item.roleName)}</div> : null}
-                        {item.isStarring ? <div className="cast-badge">MAIN CAST</div> : null}
+                        <div className="cast-card__monogram" aria-hidden="true">
+                          {getCastInitials(item)}
+                        </div>
+                        <div className="cast-card__body">
+                          <div className="cast-name">{item.name}</div>
+                          {item.roleName ? <div className="cast-role">{summarizeRoleName(item.roleName)}</div> : null}
+                          {item.isStarring ? <div className="cast-badge">MAIN CAST</div> : null}
+                        </div>
                       </Link>
                     ))}
                   </div>
