@@ -36,7 +36,9 @@ export function PlayPosterFrame({ title, subtitle, meta, seed }: PlayPosterFrame
       aria-hidden="true"
     >
       <div className="play-poster-frame__beam play-poster-frame__beam--left" />
+      <div className="play-poster-frame__beam play-poster-frame__beam--center" />
       <div className="play-poster-frame__beam play-poster-frame__beam--right" />
+      <div className="play-poster-frame__floor" />
       <div className="play-poster-frame__grain" />
       <div className="play-poster-frame__content">
         {subtitle ? <span className="play-poster-frame__kicker">{subtitle}</span> : null}
