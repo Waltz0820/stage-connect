@@ -51,7 +51,7 @@ const HOME_ACTIONS: HomeAction[] = [
   },
 ];
 
-const renderIcon = (type: "person" | "ticket" | "box" | "play") => {
+const renderIcon = (type: "person" | "ticket" | "box") => {
   if (type === "person") {
     return (
       <svg viewBox="0 0 20 20" fill="none">
@@ -80,29 +80,16 @@ const renderIcon = (type: "person" | "ticket" | "box" | "play") => {
     );
   }
 
-  if (type === "box") {
-    return (
-      <svg viewBox="0 0 20 20" fill="none">
-        <path
-          d="M10 3 15.5 6v8L10 17l-5.5-3V6L10 3Z"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinejoin="round"
-        />
-        <path d="M4.5 6 10 9l5.5-3" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
-        <path d="M10 9v8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-      </svg>
-    );
-  }
-
   return (
     <svg viewBox="0 0 20 20" fill="none">
       <path
-        d="M4 5.5h12a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1Z"
+        d="M10 3 15.5 6v8L10 17l-5.5-3V6L10 3Z"
         stroke="currentColor"
         strokeWidth="1.5"
+        strokeLinejoin="round"
       />
-      <path d="m8.2 8 4.4 2-4.4 2V8Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+      <path d="M4.5 6 10 9l5.5-3" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+      <path d="M10 9v8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
     </svg>
   );
 };

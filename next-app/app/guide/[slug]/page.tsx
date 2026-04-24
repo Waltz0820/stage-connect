@@ -87,7 +87,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<Para
   };
 
   return (
-    <main className="container" style={{ paddingBlock: 32 }}>
+    <main className="container guide-stage-page">
       <StructuredData data={jsonLd} />
 
       <div className="stack-lg">

@@ -31,7 +31,7 @@ export default async function GuidePage() {
   });
 
   return (
-    <main className="container" style={{ paddingBlock: 32 }}>
+    <main className="container guide-stage-page">
       <StructuredData data={collectionJsonLd} />
       <div className="stack-lg">
         <section className="hero-card stack-md">
