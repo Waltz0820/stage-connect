@@ -135,13 +135,13 @@ export default async function EnglishActorDetailPage({ params }: { params: Promi
   ]);
 
   return (
-    <main className="container" style={{ paddingBlock: 32 }}>
+    <main className="container works-index-page detail-stage-page" style={{ paddingBlock: 32 }}>
       <StructuredData data={breadcrumbJsonLd} />
       <StructuredData data={personJsonLd} />
       <div className="stack-lg">
         <Breadcrumbs items={[{ label: "Actors", href: "/en/actors" }]} />
 
-        <section className="hero-card stack-md">
+        <section className="hero-card stack-md detail-stage-hero">
           <div className="detail-hero-grid">
             <div className="detail-monogram" aria-hidden="true">
               {displayName.trim().charAt(0)}
@@ -176,7 +176,7 @@ export default async function EnglishActorDetailPage({ params }: { params: Promi
           <ActorTopSeriesClient items={actor.topSeries} locale="en" />
         ) : null}
 
-        <section className="section-card stack-md">
+        <section className="section-card stack-md detail-stage-section">
           <h2 className="section-title">Appearance timeline</h2>
           <div className="timeline-shell">
             {timeline.map((group) => (
@@ -212,7 +212,7 @@ export default async function EnglishActorDetailPage({ params }: { params: Promi
 
         {actor.coStars.length > 0 ? <ActorCoStarsClient coStars={actor.coStars} /> : null}
 
-        <section className="section-card stack-md">
+        <section className="section-card stack-md detail-stage-section">
           <h2 className="section-title">Official links</h2>
           {hasSns ? (
             <div className="action-row">

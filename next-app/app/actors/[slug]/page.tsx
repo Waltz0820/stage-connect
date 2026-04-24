@@ -156,7 +156,7 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
   ]);
 
   return (
-    <main className="container" style={{ paddingBlock: 32 }}>
+    <main className="container works-index-page detail-stage-page" style={{ paddingBlock: 32 }}>
       <StructuredData data={breadcrumbJsonLd} />
       <StructuredData data={personJsonLd} />
       <StructuredData data={faqJsonLd} />
@@ -164,7 +164,7 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
       <div className="stack-lg">
         <Breadcrumbs items={[{ label: "俳優一覧", href: "/actors" }]} />
 
-        <section className="hero-card stack-md">
+        <section className="hero-card stack-md detail-stage-hero">
           <div className="detail-hero-grid">
             <div className="detail-monogram" aria-hidden="true">
               {actor.name.trim().charAt(0)}
@@ -197,7 +197,7 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
 
         {actor.topSeries.length > 0 ? <ActorTopSeriesClient items={actor.topSeries} /> : null}
 
-        <section className="section-card stack-md">
+        <section className="section-card stack-md detail-stage-section">
           <h2 className="section-title">出演作品タイムライン</h2>
           <div className="timeline-shell">
             {timeline.map((group) => (
@@ -249,7 +249,7 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
 
         {actor.coStars.length > 0 ? <ActorCoStarsClient coStars={actor.coStars} /> : null}
 
-        <section className="section-card stack-md">
+        <section className="section-card stack-md detail-stage-section">
           <h2 className="section-title">公式リンク</h2>
           {hasSns ? (
             <div className="action-row">
@@ -279,7 +279,7 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
           )}
         </section>
 
-        <section className="section-card stack-md">
+        <section className="section-card stack-md detail-stage-section">
           <h2 className="section-title">よくある質問（FAQ）</h2>
           <div className="faq-grid">
             <article className="faq-card">
