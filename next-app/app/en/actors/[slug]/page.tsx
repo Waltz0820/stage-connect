@@ -5,6 +5,7 @@ import { ActorCoStarsClient } from "../../../../components/ActorCoStarsClient";
 import { ActorTopSeriesClient } from "../../../../components/ActorTopSeriesClient";
 import { Breadcrumbs } from "../../../../components/Breadcrumbs";
 import { FavoriteButtonClient } from "../../../../components/FavoriteButtonClient";
+import { PlayPosterFrame } from "../../../../components/PlayPosterFrame";
 import { ShareButtonClient } from "../../../../components/ShareButtonClient";
 import { StructuredData } from "../../../../components/StructuredData";
 import { getActorDetailBySlug, getAgeFromBirthday, groupPlayTimelineByYear, toPlainText } from "../../../../lib/stage-connect";
@@ -187,21 +188,30 @@ export default async function EnglishActorDetailPage({ params }: { params: Promi
                   <span className="timeline-year-sub">release year</span>
                 </div>
 
-                <div className="cast-grid cast-grid-wide">
+                <div className="actor-timeline-list">
                   {group.plays.map((play) => (
-                    <Link className="cast-card cast-card-link" href={`/en/plays/${play.slug}`} key={play.slug}>
-                      <div className="cast-name">{getEnglishPlayTitle(play)}</div>
-                      {play.franchiseName ? (
-                        <div className="muted" style={{ marginTop: 6, fontSize: 13 }}>
-                          {getEnglishSeriesName({ name: play.franchiseName, nameEn: play.franchiseNameEn })}
-                        </div>
-                      ) : null}
-                      {play.roleName ? <div className="cast-role">{translateAnnotatedDisplayTextEn(play.roleName)}</div> : null}
-                      {formatTimelineLeadDate(play.period) ? (
-                        <div className="subtle-line" style={{ marginTop: 10 }}>
-                          {formatTimelineLeadDate(play.period)}
-                        </div>
-                      ) : null}
+                    <Link className="cast-card cast-card-link actor-timeline-card actor-timeline-card__link" href={`/en/plays/${play.slug}`} key={play.slug}>
+                      <div className="actor-timeline-card__poster" aria-hidden="true">
+                        <PlayPosterFrame
+                          title={getEnglishPlayTitle(play)}
+                          subtitle={play.franchiseName ? getEnglishSeriesName({ name: play.franchiseName, nameEn: play.franchiseNameEn }) : undefined}
+                          seed={`${play.slug}-${play.franchiseName ?? ""}`}
+                        />
+                      </div>
+                      <div className="actor-timeline-card__body">
+                        <div className="cast-name">{getEnglishPlayTitle(play)}</div>
+                        {play.franchiseName ? (
+                          <div className="actor-timeline-card__series">
+                            {getEnglishSeriesName({ name: play.franchiseName, nameEn: play.franchiseNameEn })}
+                          </div>
+                        ) : null}
+                        {play.roleName ? <div className="cast-role">{translateAnnotatedDisplayTextEn(play.roleName)}</div> : null}
+                        {formatTimelineLeadDate(play.period) ? (
+                          <div className="subtle-line" style={{ marginTop: 10 }}>
+                            {formatTimelineLeadDate(play.period)}
+                          </div>
+                        ) : null}
+                      </div>
                     </Link>
                   ))}
                 </div>

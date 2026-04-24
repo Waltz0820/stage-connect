@@ -5,6 +5,7 @@ import { ActorCoStarsClient } from "../../../components/ActorCoStarsClient";
 import { ActorTopSeriesClient } from "../../../components/ActorTopSeriesClient";
 import { Breadcrumbs } from "../../../components/Breadcrumbs";
 import { FavoriteButtonClient } from "../../../components/FavoriteButtonClient";
+import { PlayPosterFrame } from "../../../components/PlayPosterFrame";
 import { ShareButtonClient } from "../../../components/ShareButtonClient";
 import { StructuredData } from "../../../components/StructuredData";
 import {
@@ -208,22 +209,27 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
                   <span className="timeline-year-sub">公開年</span>
                 </div>
 
-                <div className="cast-grid cast-grid-wide">
+                <div className="actor-timeline-list">
                   {group.plays.map((play) => (
-                    <article className="catalog-card" key={play.slug}>
-                      <Link className="catalog-card__body-link" href={`/plays/${play.slug}`}>
-                        <div className="cast-name">{play.title}</div>
-                        {play.franchiseName ? (
-                          <div className="muted" style={{ marginTop: 6, fontSize: 13 }}>
-                            {play.franchiseName}
-                          </div>
-                        ) : null}
-                        {play.roleName ? <div className="cast-role">{play.roleName}</div> : null}
-                        {formatTimelineLeadDate(play.period) ? (
-                          <div className="subtle-line" style={{ marginTop: 10 }}>
-                            {formatTimelineLeadDate(play.period)}
-                          </div>
-                        ) : null}
+                    <article className="catalog-card actor-timeline-card" key={play.slug}>
+                      <Link className="catalog-card__body-link actor-timeline-card__link" href={`/plays/${play.slug}`}>
+                        <div className="actor-timeline-card__poster" aria-hidden="true">
+                          <PlayPosterFrame
+                            title={play.title}
+                            subtitle={play.franchiseName ?? undefined}
+                            seed={`${play.slug}-${play.franchiseName ?? ""}`}
+                          />
+                        </div>
+                        <div className="actor-timeline-card__body">
+                          <div className="cast-name">{play.title}</div>
+                          {play.franchiseName ? <div className="actor-timeline-card__series">{play.franchiseName}</div> : null}
+                          {play.roleName ? <div className="cast-role">{play.roleName}</div> : null}
+                          {formatTimelineLeadDate(play.period) ? (
+                            <div className="subtle-line" style={{ marginTop: 10 }}>
+                              {formatTimelineLeadDate(play.period)}
+                            </div>
+                          ) : null}
+                        </div>
                       </Link>
                       <div
                         className={`catalog-card__footer catalog-card__footer--cta${play.vod?.dmm ? "" : " is-empty"}`}
