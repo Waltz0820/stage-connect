@@ -4062,7 +4062,7 @@ a {
   position: fixed;
   inset: 0;
   z-index: 2147483647;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   padding: 16px;
@@ -4075,6 +4075,7 @@ a {
 }
 
 .next-modal-overlay.is-open {
+  display: flex;
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
@@ -4400,6 +4401,11 @@ a {
 
 .series-detail-stage-page .meta-row {
   padding: 14px;
+}
+
+.series-detail-stage-page .series-cast-overview-section {
+  gap: 14px;
+  padding-bottom: 20px;
 }
 
 .series-detail-stage-page .series-timeline-section {

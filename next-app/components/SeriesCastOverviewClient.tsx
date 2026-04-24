@@ -63,7 +63,7 @@ export function SeriesCastOverviewClient({ topActors }: Props) {
 
   if (topActors.length === 0) {
     return (
-      <section className="section-card stack-md">
+      <section className="section-card stack-md series-cast-overview-section">
         <h2 className="section-title">{isEnglish ? "Cast and role ranking" : "出演キャスト・役柄一覧"}</h2>
         <p className="muted">{isEnglish ? "Cast data is not available yet." : "出演キャスト情報はまだありません。"}</p>
       </section>
@@ -71,7 +71,7 @@ export function SeriesCastOverviewClient({ topActors }: Props) {
   }
 
   return (
-    <section className="section-card stack-md">
+    <section className="section-card stack-md series-cast-overview-section">
       <h2 className="section-title">{isEnglish ? "Cast and role ranking" : "出演キャスト・役柄一覧"}</h2>
 
       {isMobile ? (
