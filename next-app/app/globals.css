@@ -4713,6 +4713,120 @@ a {
   color: var(--accent);
 }
 
+.play-detail-stage-page .section-link {
+  color: rgba(247, 184, 211, 0.88);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+}
+
+.play-detail-related-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.play-detail-related-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 104px minmax(0, 1fr) auto;
+  gap: 14px;
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid rgba(243, 240, 234, 0.1);
+  border-radius: 14px;
+  padding: 10px 14px 10px 10px;
+  background:
+    linear-gradient(135deg, rgba(72, 82, 150, 0.08), transparent 48%),
+    rgba(7, 8, 14, 0.84);
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.play-detail-related-card:hover {
+  border-color: rgba(243, 240, 234, 0.2);
+  background:
+    linear-gradient(135deg, rgba(176, 56, 110, 0.1), rgba(72, 82, 150, 0.06)),
+    rgba(9, 10, 18, 0.94);
+  transform: translateY(-1px);
+}
+
+.play-detail-related-card__poster .play-poster-frame {
+  height: 62px;
+  min-height: 62px;
+  border-radius: 9px;
+}
+
+.play-detail-related-card__poster .play-poster-frame__content {
+  inset: 8px;
+}
+
+.play-detail-related-card__poster .play-poster-frame__title {
+  font-size: 13px;
+  line-height: 1.25;
+}
+
+.play-detail-related-card__poster .play-poster-frame__subtitle,
+.play-detail-related-card__poster .play-poster-frame__meta {
+  display: none;
+}
+
+.play-detail-related-card__body {
+  min-width: 0;
+}
+
+.play-detail-related-card__title {
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: 15px;
+  line-height: 1.5;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.play-detail-related-card__meta {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.play-detail-related-card__arrow {
+  color: rgba(243, 240, 234, 0.7);
+  font-size: 28px;
+  line-height: 1;
+}
+
+.play-detail-tag-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.play-detail-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  border: 1px solid rgba(211, 118, 176, 0.24);
+  border-radius: 999px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.018);
+  color: rgba(244, 240, 233, 0.78);
+  font-size: 13px;
+  letter-spacing: 0.05em;
+}
+
+.play-detail-bottom-cta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: center;
+  border-color: rgba(233, 68, 166, 0.28);
+  background:
+    radial-gradient(ellipse at 88% 40%, rgba(142, 36, 84, 0.18), transparent 52%),
+    linear-gradient(135deg, rgba(176, 56, 110, 0.1), rgba(68, 82, 170, 0.035)),
+    rgba(8, 8, 14, 0.98);
+}
+
 .play-detail-stage-page .play-streaming-section {
   border-color: rgba(180, 86, 140, 0.22);
   background:
@@ -4966,6 +5080,20 @@ a {
   .play-detail-hero-streaming .action-button {
     width: 100%;
     min-width: 0;
+  }
+
+  .play-detail-related-card {
+    grid-template-columns: 88px minmax(0, 1fr) auto;
+    gap: 10px;
+  }
+
+  .play-detail-related-card__poster .play-poster-frame {
+    height: 56px;
+    min-height: 56px;
+  }
+
+  .play-detail-bottom-cta {
+    grid-template-columns: 1fr;
   }
 
 }

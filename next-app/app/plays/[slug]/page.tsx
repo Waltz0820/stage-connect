@@ -10,6 +10,7 @@ import { StructuredData } from "../../../components/StructuredData";
 import {
   getCreditItems,
   getPlayDetailBySlug,
+  getSeriesDetailBySlug,
   summarizeCast,
   toPlainText,
   truncate,
@@ -265,6 +266,8 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
   const shouldShowScheduleDetailToggle =
     (Boolean(play.period) && (shouldCollapseSchedule || scheduleEntries.length > 1)) ||
     (Boolean(play.venue) && (shouldCollapseSchedule || venueList.length > 1));
+  const seriesDetail = play.franchiseSlug ? await getSeriesDetailBySlug(play.franchiseSlug) : null;
+  const relatedPlays = (seriesDetail?.plays ?? []).filter((item) => item.slug !== play.slug).slice(0, 3);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -375,12 +378,7 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
               <div className="play-detail-hero-streaming">
                 {play.vod?.dmm ? (
                   <a className="action-button action-button-primary" href={play.vod.dmm} target="_blank" rel="noopener noreferrer">
-                    DMM TV縺ｧ隕九ｋ
-                  </a>
-                ) : null}
-                {play.vod?.unext ? (
-                  <a className="action-button" href={play.vod.unext} target="_blank" rel="noopener noreferrer">
-                    U-NEXT縺ｧ隕九ｋ
+                    DMM TVで見る
                   </a>
                 ) : null}
               </div>
@@ -575,6 +573,67 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
           ) : (
             <p className="muted">出演キャスト情報はまだありません。</p>
           )}
+        </section>
+
+        {relatedPlays.length > 0 ? (
+          <section className="section-card stack-md detail-stage-section play-detail-related-section">
+            <div className="section-header-inline">
+              <h2 className="section-title">同シリーズの作品</h2>
+              {play.franchiseSlug ? (
+                <Link className="section-link" href={`/series/${play.franchiseSlug}`}>
+                  すべて見る
+                </Link>
+              ) : null}
+            </div>
+            <div className="play-detail-related-grid">
+              {relatedPlays.map((item) => (
+                <Link className="play-detail-related-card" href={`/plays/${item.slug}`} key={item.slug}>
+                  <div className="play-detail-related-card__poster">
+                    <PlayPosterFrame
+                      title={item.title}
+                      subtitle={play.franchiseName ?? undefined}
+                      seed={`${item.slug}-${play.franchiseName ?? ""}`}
+                    />
+                  </div>
+                  <div className="play-detail-related-card__body">
+                    <div className="play-detail-related-card__title">{item.title}</div>
+                    {item.period ? <div className="play-detail-related-card__meta">{extractPeriodSummary(item.period) || item.period}</div> : null}
+                  </div>
+                  <span className="play-detail-related-card__arrow">›</span>
+                </Link>
+              ))}
+            </div>
+          </section>
+        ) : null}
+
+        {play.tags.length > 0 ? (
+          <section className="section-card stack-md detail-stage-section play-detail-tags-section">
+            <h2 className="section-title">関連タグ</h2>
+            <div className="play-detail-tag-grid">
+              {play.tags.map((tag) => (
+                <span className="play-detail-tag" key={tag}>
+                  # {tag}
+                </span>
+              ))}
+            </div>
+          </section>
+        ) : null}
+
+        <section className="section-card detail-stage-section play-detail-bottom-cta">
+          <div>
+            <h2 className="section-title">キャストやシリーズ作品もチェック</h2>
+            <p className="muted">出演俳優のプロフィールや、同じシリーズの関連作品をご覧いただけます。</p>
+          </div>
+          <div className="action-row">
+            {play.franchiseSlug ? (
+              <Link className="action-button action-button-primary" href={`/series/${play.franchiseSlug}`}>
+                シリーズを見る
+              </Link>
+            ) : null}
+            <Link className="action-button" href="/actors">
+              俳優一覧を見る
+            </Link>
+          </div>
         </section>
       </div>
     </main>

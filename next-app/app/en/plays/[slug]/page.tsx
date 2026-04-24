@@ -18,7 +18,7 @@ import {
   truncateText,
 } from "../../../../lib/en-copy";
 import { buildBreadcrumbList } from "../../../../lib/structured-data";
-import { getCreditItems, getPlayDetailBySlug, toPlainText } from "../../../../lib/stage-connect";
+import { getCreditItems, getPlayDetailBySlug, getSeriesDetailBySlug, toPlainText } from "../../../../lib/stage-connect";
 
 type Params = { slug: string };
 type GroupedCast = {
@@ -237,6 +237,8 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
   const displaySeriesName = play.franchiseName
     ? getEnglishSeriesName({ name: play.franchiseName, nameEn: play.franchiseNameEn })
     : null;
+  const seriesDetail = play.franchiseSlug ? await getSeriesDetailBySlug(play.franchiseSlug) : null;
+  const relatedPlays = (seriesDetail?.plays ?? []).filter((item) => item.slug !== play.slug).slice(0, 3);
   const creativeWorkJsonLd = {
     "@context": "https://schema.org",
     "@type": "CreativeWork",
@@ -319,11 +321,6 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
                 {play.vod?.dmm ? (
                   <a className="action-button action-button-primary" href={play.vod.dmm} target="_blank" rel="noopener noreferrer">
                     Watch on DMM TV
-                  </a>
-                ) : null}
-                {play.vod?.unext ? (
-                  <a className="action-button" href={play.vod.unext} target="_blank" rel="noopener noreferrer">
-                    Watch on U-NEXT
                   </a>
                 ) : null}
               </div>
@@ -495,6 +492,72 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
           ) : (
             <p className="muted">Cast information is not available yet.</p>
           )}
+        </section>
+
+        {relatedPlays.length > 0 ? (
+          <section className="section-card stack-md detail-stage-section play-detail-related-section">
+            <div className="section-header-inline">
+              <h2 className="section-title">More from this series</h2>
+              {play.franchiseSlug ? (
+                <Link className="section-link" href={`/en/series/${play.franchiseSlug}`}>
+                  View all
+                </Link>
+              ) : null}
+            </div>
+            <div className="play-detail-related-grid">
+              {relatedPlays.map((item) => {
+                const itemTitle = getEnglishPlayTitle(item);
+                return (
+                  <Link className="play-detail-related-card" href={`/en/plays/${item.slug}`} key={item.slug}>
+                    <div className="play-detail-related-card__poster">
+                      <PlayPosterFrame
+                        title={itemTitle}
+                        subtitle={displaySeriesName ?? undefined}
+                        seed={`${item.slug}-${displaySeriesName ?? ""}`}
+                      />
+                    </div>
+                    <div className="play-detail-related-card__body">
+                      <div className="play-detail-related-card__title">{itemTitle}</div>
+                      {item.period ? (
+                        <div className="play-detail-related-card__meta">{compactListPeriodEn(item.period) || normalizePeriodDisplayEn(item.period)}</div>
+                      ) : null}
+                    </div>
+                    <span className="play-detail-related-card__arrow">›</span>
+                  </Link>
+                );
+              })}
+            </div>
+          </section>
+        ) : null}
+
+        {play.tags.length > 0 ? (
+          <section className="section-card stack-md detail-stage-section play-detail-tags-section">
+            <h2 className="section-title">Related tags</h2>
+            <div className="play-detail-tag-grid">
+              {play.tags.map((tag) => (
+                <span className="play-detail-tag" key={tag}>
+                  # {translateDisplayTextEn(tag)}
+                </span>
+              ))}
+            </div>
+          </section>
+        ) : null}
+
+        <section className="section-card detail-stage-section play-detail-bottom-cta">
+          <div>
+            <h2 className="section-title">Explore cast and related works</h2>
+            <p className="muted">Open actor profiles or continue through other productions in the same series.</p>
+          </div>
+          <div className="action-row">
+            {play.franchiseSlug ? (
+              <Link className="action-button action-button-primary" href={`/en/series/${play.franchiseSlug}`}>
+                View series
+              </Link>
+            ) : null}
+            <Link className="action-button" href="/en/actors">
+              Browse actors
+            </Link>
+          </div>
         </section>
       </div>
     </main>
