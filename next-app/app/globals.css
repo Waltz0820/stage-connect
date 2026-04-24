@@ -4588,11 +4588,37 @@ a {
 }
 
 .play-detail-stage-page .meta-list.roomy {
-  gap: 12px;
+  gap: 0;
+  overflow: hidden;
+  border: 1px solid rgba(243, 240, 234, 0.1);
+  border-radius: 16px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.012), rgba(255, 255, 255, 0.004)),
+    rgba(7, 8, 14, 0.86);
 }
 
 .play-detail-stage-page .meta-row {
-  padding: 14px;
+  border: 0;
+  border-bottom: 1px solid rgba(243, 240, 234, 0.08);
+  border-radius: 0;
+  padding: 14px 16px;
+  background: transparent;
+}
+
+.play-detail-stage-page .meta-row:last-child {
+  border-bottom: 0;
+}
+
+.play-detail-stage-page .meta-label {
+  color: rgba(244, 240, 233, 0.5);
+}
+
+.play-detail-stage-page .meta-value {
+  color: rgba(244, 240, 233, 0.84);
+}
+
+.play-detail-stage-page .detail-credit-list {
+  margin-top: 12px;
 }
 
 .play-detail-stage-page .group-chip {
