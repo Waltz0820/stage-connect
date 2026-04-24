@@ -183,7 +183,6 @@ export default async function HomePage() {
                 <Link key={item.slug} href={`/series/${item.slug}`} className="home-stage__series-card">
                   <PlayPosterFrame title={item.name} seed={`${item.slug}-${item.originType ?? ""}`} />
                   <div className="home-stage__series-copy">
-                    <strong>{item.name}</strong>
                     <span>
                       {item.format === "musical" ? "ミュージカル" : item.format === "stage" ? "舞台" : "シリーズ"} /{" "}
                       {item.playCount}作品

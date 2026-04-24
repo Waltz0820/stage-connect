@@ -1193,17 +1193,19 @@ a {
 }
 
 .home-stage__series-card .play-poster-frame__content {
-  display: none;
+  inset: 12px;
+  gap: 4px;
+}
+
+.home-stage__series-card .play-poster-frame__title {
+  font-size: clamp(15px, 1.6vw, 20px);
+  line-height: 1.25;
+  -webkit-line-clamp: 3;
 }
 
 .home-stage__series-copy {
   display: grid;
-  gap: 4px;
-}
-
-.home-stage__series-copy strong {
-  font-size: 16px;
-  line-height: 1.35;
+  gap: 0;
 }
 
 .home-stage__series-copy span {

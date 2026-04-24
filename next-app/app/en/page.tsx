@@ -184,7 +184,6 @@ export default async function EnglishHomePage() {
                 <Link key={item.slug} href={`/en/series/${item.slug}`} className="home-stage__series-card">
                   <PlayPosterFrame title={getEnglishSeriesName(item)} seed={`${item.slug}-${item.originType ?? ""}`} />
                   <div className="home-stage__series-copy">
-                    <strong>{getEnglishSeriesName(item)}</strong>
                     <span>
                       {item.format === "musical" ? "Musical" : item.format === "stage" ? "Stage" : "Series"} /{" "}
                       {item.playCount} works
