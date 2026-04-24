@@ -1154,12 +1154,26 @@ a {
   padding: 18px;
 }
 
+.home-stage__section--open {
+  overflow: visible;
+  padding: 10px 0 6px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.home-stage__section--open::before {
+  display: none;
+}
+
 .home-stage__section-head {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
   margin-bottom: 14px;
+  padding: 0 2px;
 }
 
 .home-stage__section-head h2,
@@ -1222,15 +1236,17 @@ a {
 .home-stage__tag {
   display: inline-flex;
   align-items: center;
-  min-height: 40px;
-  padding: 0 14px;
-  border-radius: 999px;
-  border: 1px solid rgba(186, 92, 152, 0.2);
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 22px;
+  border-radius: 14px;
+  border: 1px solid rgba(186, 92, 152, 0.32);
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.003)),
-    rgba(10, 11, 18, 0.9);
+    rgba(16, 13, 22, 0.78);
   color: rgba(243, 240, 234, 0.84);
-  font-size: 13px;
+  font-size: 15px;
+  letter-spacing: 0.08em;
 }
 
 .home-stage__watch {

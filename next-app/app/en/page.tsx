@@ -174,7 +174,7 @@ export default async function EnglishHomePage() {
             </div>
           </div>
 
-          <section className="home-stage__section">
+          <section className="home-stage__section home-stage__section--open">
             <div className="home-stage__section-head">
               <h2>Popular series</h2>
               <Link href="/en/series">View all</Link>
@@ -194,7 +194,7 @@ export default async function EnglishHomePage() {
             </div>
           </section>
 
-          <section className="home-stage__section">
+          <section className="home-stage__section home-stage__section--open">
             <div className="home-stage__section-head">
               <h2>Trending tags</h2>
               <Link href="/tags">View all</Link>

@@ -173,7 +173,7 @@ export default async function HomePage() {
             </div>
           </div>
 
-          <section className="home-stage__section">
+          <section className="home-stage__section home-stage__section--open">
             <div className="home-stage__section-head">
               <h2>人気シリーズ</h2>
               <Link href="/series">すべて見る</Link>
@@ -193,7 +193,7 @@ export default async function HomePage() {
             </div>
           </section>
 
-          <section className="home-stage__section">
+          <section className="home-stage__section home-stage__section--open">
             <div className="home-stage__section-head">
               <h2>注目タグ</h2>
               <Link href="/tags">すべて見る</Link>
