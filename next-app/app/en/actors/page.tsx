@@ -210,6 +210,19 @@ export default async function EnglishActorsPage({
               </Link>
             </div>
           ) : null}
+
+          <div className="works-index-cta">
+            <div className="works-index-cta__icon" aria-hidden="true">
+              ◌
+            </div>
+            <div className="works-index-cta__copy">
+              <p className="works-index-cta__title">Browse from plays and series</p>
+              <p className="works-index-cta__text">Start from a production or franchise line to discover cast connections.</p>
+            </div>
+            <Link className="works-index-cta__link" href="/en/plays">
+              View plays
+            </Link>
+          </div>
         </section>
       </div>
     </main>

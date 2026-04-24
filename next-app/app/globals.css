@@ -2759,17 +2759,17 @@ a {
 
 .works-index-page .catalog-card--actor-list {
   display: grid;
-  grid-template-columns: 92px minmax(0, 1fr);
-  gap: 14px;
+  grid-template-columns: 108px minmax(0, 1fr);
+  gap: 16px;
   align-items: stretch;
   min-height: 100%;
-  padding: 12px;
-  border-radius: 14px;
+  padding: 14px;
+  border-radius: 16px;
   border-color: rgba(243, 240, 234, 0.16);
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.012), rgba(255, 255, 255, 0.004)),
-    radial-gradient(circle at 0% 0%, rgba(122, 42, 116, 0.05), transparent 44%),
-    radial-gradient(circle at 100% 0%, rgba(36, 70, 148, 0.035), transparent 40%),
+    radial-gradient(circle at 14% 8%, rgba(122, 42, 116, 0.08), transparent 44%),
+    radial-gradient(circle at 100% 0%, rgba(36, 70, 148, 0.045), transparent 40%),
     rgba(7, 10, 17, 0.82);
   box-shadow: none;
 }
@@ -2789,23 +2789,51 @@ a {
 }
 
 .actor-list-card__monogram {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 92px;
+  min-height: 108px;
   height: 100%;
+  overflow: hidden;
   border-radius: 14px;
   border: 1px solid rgba(243, 240, 234, 0.12);
   background:
-    radial-gradient(circle at 50% 28%, rgba(255, 255, 255, 0.18), transparent 12%),
-    radial-gradient(circle at 50% 42%, rgba(190, 70, 150, 0.28), transparent 44%),
-    linear-gradient(145deg, rgba(96, 36, 98, 0.7), rgba(9, 10, 18, 0.94));
+    linear-gradient(180deg, rgba(255, 255, 255, 0.22), rgba(170, 190, 255, 0.06) 34%, transparent 72%),
+    radial-gradient(ellipse at 50% 82%, rgba(255, 230, 190, 0.16), rgba(172, 92, 170, 0.12) 42%, transparent 72%),
+    radial-gradient(circle at 50% 34%, rgba(190, 70, 150, 0.24), transparent 46%),
+    linear-gradient(145deg, rgba(52, 24, 58, 0.86), rgba(8, 10, 18, 0.96));
   color: rgba(255, 255, 255, 0.92);
   font-family: var(--serif);
-  font-size: clamp(28px, 5vw, 42px);
+  font-size: clamp(34px, 5vw, 52px);
   font-weight: 700;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.06em;
   text-shadow: 0 0 22px rgba(255, 255, 255, 0.22);
+}
+
+.actor-list-card__monogram::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.014) 1px, transparent 1px);
+  background-size: 28px 28px;
+  opacity: 0.42;
+}
+
+.actor-list-card__monogram::after {
+  content: "";
+  position: absolute;
+  left: 12%;
+  right: 12%;
+  bottom: 9%;
+  height: 22%;
+  border-radius: 999px;
+  background: radial-gradient(ellipse at center, rgba(255, 245, 220, 0.18), transparent 70%);
+  filter: blur(10px);
+  opacity: 0.8;
 }
 
 .actor-list-card__main {
@@ -2818,6 +2846,10 @@ a {
 .actor-list-card__top {
   align-items: flex-start;
   gap: 12px;
+}
+
+.actor-list-card__top .favorite-button {
+  flex: 0 0 auto;
 }
 
 .actor-list-card__kana {
@@ -2846,7 +2878,7 @@ a {
   min-height: 24px;
   padding: 4px 8px;
   border: 1px solid rgba(243, 240, 234, 0.1);
-  border-radius: 8px;
+  border-radius: 999px;
   background: rgba(255, 255, 255, 0.018);
   color: var(--muted);
   font-size: 11px;
@@ -2866,6 +2898,7 @@ a {
   justify-content: space-between;
   gap: 10px;
   margin-top: auto;
+  border-top-color: rgba(243, 240, 234, 0.08);
 }
 
 @media (min-width: 900px) {
@@ -2876,16 +2909,16 @@ a {
 
 @media (max-width: 679px) {
   .works-index-page .catalog-card--actor-list {
-    grid-template-columns: 76px minmax(0, 1fr);
+    grid-template-columns: 82px minmax(0, 1fr);
     gap: 12px;
     padding: 10px;
     border-radius: 16px;
   }
 
   .actor-list-card__monogram {
-    min-height: 76px;
+    min-height: 82px;
     border-radius: 12px;
-    font-size: 28px;
+    font-size: 30px;
   }
 
   .works-index-page .catalog-card--actor-list .catalog-card__title {
