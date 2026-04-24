@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "../../../../components/Breadcrumbs";
+import { PlayPosterFrame } from "../../../../components/PlayPosterFrame";
 import { SeriesCastOverviewClient } from "../../../../components/SeriesCastOverviewClient";
 import { StructuredData } from "../../../../components/StructuredData";
 import {
@@ -207,21 +208,28 @@ export default async function EnglishSeriesDetailPage({ params }: { params: Prom
                   <span className="timeline-year-sub">release</span>
                 </div>
 
-                <article className="catalog-card">
-                  <Link className="catalog-card__body-link" href={`/en/plays/${play.slug}`}>
-                    <div className="catalog-card__top">
-                      <div className="catalog-card__title">{getEnglishPlayTitle(play)}</div>
-                      {hasVod(play.vod) ? <span className="catalog-card__badge">Streaming</span> : null}
+                <article className="catalog-card actor-timeline-card series-timeline-card">
+                  <Link className="catalog-card__body-link actor-timeline-card__link" href={`/en/plays/${play.slug}`}>
+                    <div className="actor-timeline-card__poster" aria-hidden="true">
+                      <PlayPosterFrame
+                        title={getEnglishPlayTitle(play)}
+                        subtitle={getEnglishSeriesName(series)}
+                        seed={`${play.slug}-${series.name}`}
+                      />
                     </div>
-
-                    {play.summaryEn || play.summary ? (
-                      <div className="catalog-card__text catalog-card__text--clamped">
-                        {truncateText(toPlainText(play.summaryEn || play.summary), 220)}
+                    <div className="actor-timeline-card__body">
+                      <div className="catalog-card__top">
+                        <div className="cast-name">{getEnglishPlayTitle(play)}</div>
+                        {hasVod(play.vod) ? <span className="catalog-card__badge">Streaming</span> : null}
                       </div>
-                    ) : null}
 
-                    <div className="catalog-card__footer">
-                      <span className="catalog-link">View play details</span>
+                      {play.summaryEn || play.summary ? (
+                        <div className="catalog-card__text catalog-card__text--clamped">
+                          {truncateText(toPlainText(play.summaryEn || play.summary), 220)}
+                        </div>
+                      ) : null}
+
+                      <div className="catalog-link">View play details</div>
                     </div>
                   </Link>
                 </article>

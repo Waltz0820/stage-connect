@@ -4463,35 +4463,41 @@ a {
   gap: 12px;
 }
 
-.actor-detail-stage-page .actor-timeline-card {
+.actor-detail-stage-page .actor-timeline-card,
+.series-detail-stage-page .series-timeline-card {
   overflow: hidden;
   padding: 0;
 }
 
-.actor-detail-stage-page .actor-timeline-card__link {
+.actor-detail-stage-page .actor-timeline-card__link,
+.series-detail-stage-page .actor-timeline-card__link {
   display: grid;
   grid-template-columns: 124px minmax(0, 1fr);
   gap: 0;
   min-height: 112px;
 }
 
-.actor-detail-stage-page .actor-timeline-card__poster {
+.actor-detail-stage-page .actor-timeline-card__poster,
+.series-detail-stage-page .actor-timeline-card__poster {
   min-width: 0;
   border-right: 1px solid rgba(243, 240, 234, 0.08);
 }
 
-.actor-detail-stage-page .actor-timeline-card__poster .play-poster-frame {
+.actor-detail-stage-page .actor-timeline-card__poster .play-poster-frame,
+.series-detail-stage-page .actor-timeline-card__poster .play-poster-frame {
   height: 100%;
   min-height: 112px;
   border: 0;
   border-radius: 0;
 }
 
-.actor-detail-stage-page .actor-timeline-card__poster .play-poster-frame__content {
+.actor-detail-stage-page .actor-timeline-card__poster .play-poster-frame__content,
+.series-detail-stage-page .actor-timeline-card__poster .play-poster-frame__content {
   display: none;
 }
 
-.actor-detail-stage-page .actor-timeline-card__body {
+.actor-detail-stage-page .actor-timeline-card__body,
+.series-detail-stage-page .actor-timeline-card__body {
   min-width: 0;
   padding: 14px 16px;
 }
@@ -4503,7 +4509,8 @@ a {
   line-height: 1.5;
 }
 
-.actor-detail-stage-page .actor-timeline-card .catalog-card__footer {
+.actor-detail-stage-page .actor-timeline-card .catalog-card__footer,
+.series-detail-stage-page .series-timeline-card .catalog-card__footer {
   border-top-color: rgba(243, 240, 234, 0.08);
   padding: 10px 14px 14px;
 }
@@ -5167,16 +5174,19 @@ a {
     grid-template-columns: 1fr;
   }
 
-  .actor-detail-stage-page .actor-timeline-card__link {
+  .actor-detail-stage-page .actor-timeline-card__link,
+  .series-detail-stage-page .actor-timeline-card__link {
     grid-template-columns: 92px minmax(0, 1fr);
     min-height: 96px;
   }
 
-  .actor-detail-stage-page .actor-timeline-card__poster .play-poster-frame {
+  .actor-detail-stage-page .actor-timeline-card__poster .play-poster-frame,
+  .series-detail-stage-page .actor-timeline-card__poster .play-poster-frame {
     min-height: 96px;
   }
 
-  .actor-detail-stage-page .actor-timeline-card__body {
+  .actor-detail-stage-page .actor-timeline-card__body,
+  .series-detail-stage-page .actor-timeline-card__body {
     padding: 12px;
   }
 
