@@ -4410,6 +4410,8 @@ a {
 }
 
 .detail-stage-page .detail-monogram {
+  position: relative;
+  overflow: hidden;
   border-color: rgba(243, 240, 234, 0.14);
   border-radius: 20px;
   background:
@@ -4420,6 +4422,40 @@ a {
     inset 0 1px 0 rgba(255, 255, 255, 0.035),
     0 20px 42px rgba(0, 0, 0, 0.26);
   text-shadow: 0 0 22px rgba(255, 255, 255, 0.2);
+}
+
+.actor-detail-stage-page .detail-monogram {
+  border-radius: 22px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.22), rgba(170, 190, 255, 0.06) 34%, transparent 72%),
+    radial-gradient(ellipse at 50% 82%, rgba(255, 230, 190, 0.16), rgba(172, 92, 170, 0.12) 42%, transparent 72%),
+    radial-gradient(circle at 50% 34%, rgba(190, 70, 150, 0.24), transparent 46%),
+    linear-gradient(145deg, rgba(52, 24, 58, 0.9), rgba(8, 10, 18, 0.98));
+}
+
+.actor-detail-stage-page .detail-monogram::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.014) 1px, transparent 1px);
+  background-size: 30px 30px;
+  opacity: 0.42;
+}
+
+.actor-detail-stage-page .detail-monogram::after {
+  content: "";
+  position: absolute;
+  left: 12%;
+  right: 12%;
+  bottom: 9%;
+  height: 22%;
+  border-radius: 999px;
+  background: radial-gradient(ellipse at center, rgba(255, 245, 220, 0.18), transparent 70%);
+  filter: blur(10px);
+  opacity: 0.8;
 }
 
 .detail-stage-page .page-title {

@@ -172,7 +172,6 @@ export default async function ActorsPage({
                         {actor.gender && actor.gender in GENDER_LABELS ? (
                           <span className="actor-list-card__fact">{GENDER_LABELS[actor.gender]}</span>
                         ) : null}
-                        {birthday ? <span className="actor-list-card__fact">プロフィールあり</span> : null}
                       </div>
 
                       {actor.profile ? (

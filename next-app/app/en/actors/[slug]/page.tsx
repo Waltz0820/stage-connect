@@ -135,7 +135,7 @@ export default async function EnglishActorDetailPage({ params }: { params: Promi
   ]);
 
   return (
-    <main className="container works-index-page detail-stage-page" style={{ paddingBlock: 32 }}>
+    <main className="container works-index-page detail-stage-page actor-detail-stage-page" style={{ paddingBlock: 32 }}>
       <StructuredData data={breadcrumbJsonLd} />
       <StructuredData data={personJsonLd} />
       <div className="stack-lg">
