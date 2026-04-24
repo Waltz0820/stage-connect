@@ -913,8 +913,8 @@ a {
   transform: translateX(-50%);
   pointer-events: none;
   background:
-    radial-gradient(circle at 50% 0%, rgba(96, 70, 170, 0.08), transparent 20%),
-    linear-gradient(180deg, rgba(8, 10, 20, 0.76), rgba(6, 7, 12, 0.16) 28%, rgba(6, 6, 10, 0) 64%);
+    linear-gradient(180deg, rgba(5, 6, 10, 0.95) 0%, rgba(7, 8, 14, 0.72) 10%, rgba(8, 10, 20, 0.28) 34%, rgba(6, 6, 10, 0) 68%),
+    radial-gradient(circle at 50% 12%, rgba(96, 70, 170, 0.07), transparent 22%);
   z-index: -2;
 }
 
@@ -939,14 +939,14 @@ a {
 
 .home-stage__ambient {
   position: absolute;
-  inset: 0 auto auto 50%;
+  inset: 42px auto auto 50%;
   width: min(980px, 100vw);
   height: 280px;
   transform: translateX(-50%);
   pointer-events: none;
   background:
-    radial-gradient(circle at 50% 0%, rgba(118, 84, 196, 0.08), transparent 24%),
-    radial-gradient(circle at 66% 8%, rgba(84, 122, 230, 0.1), transparent 22%);
+    radial-gradient(circle at 50% 18%, rgba(118, 84, 196, 0.075), transparent 26%),
+    radial-gradient(circle at 66% 22%, rgba(84, 122, 230, 0.09), transparent 24%);
   filter: blur(22px);
 }
 
@@ -980,9 +980,9 @@ a {
   border: 0;
   border-radius: 0;
   background:
-    radial-gradient(circle at 22% -8%, rgba(88, 38, 124, 0.12), transparent 30%),
-    radial-gradient(circle at 78% 4%, rgba(42, 72, 152, 0.12), transparent 28%),
-    linear-gradient(180deg, rgba(15, 16, 30, 0.34), rgba(6, 7, 13, 0.04) 60%, transparent 100%);
+    linear-gradient(180deg, rgba(5, 6, 10, 0.22) 0%, rgba(10, 12, 22, 0.24) 18%, rgba(6, 7, 13, 0.04) 64%, transparent 100%),
+    radial-gradient(circle at 22% 16%, rgba(88, 38, 124, 0.1), transparent 30%),
+    radial-gradient(circle at 78% 18%, rgba(42, 72, 152, 0.1), transparent 28%);
   box-shadow: none;
 }
 
@@ -997,23 +997,23 @@ a {
 
 .home-stage__hero::before {
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.008), transparent 42%),
-    radial-gradient(circle at 84% 10%, rgba(120, 158, 255, 0.12), transparent 18%),
-    radial-gradient(circle at 72% 16%, rgba(255, 255, 255, 0.05), transparent 12%),
-    radial-gradient(circle at 30% 12%, rgba(169, 84, 205, 0.05), transparent 24%);
+    linear-gradient(180deg, rgba(5, 6, 10, 0.42) 0%, rgba(255, 255, 255, 0.006) 20%, transparent 48%),
+    radial-gradient(circle at 84% 22%, rgba(120, 158, 255, 0.1), transparent 20%),
+    radial-gradient(circle at 72% 26%, rgba(255, 255, 255, 0.04), transparent 14%),
+    radial-gradient(circle at 30% 24%, rgba(169, 84, 205, 0.04), transparent 26%);
 }
 
 .home-stage__hero::after {
   content: "";
   position: absolute;
-  top: -18%;
+  top: 0;
   right: 12%;
   width: 42%;
   height: 88%;
   pointer-events: none;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.035) 46%, transparent),
-    linear-gradient(180deg, rgba(183, 212, 255, 0.1), rgba(255, 255, 255, 0.02) 42%, transparent);
+    linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.13) 14%, rgba(255, 255, 255, 0.03) 48%, transparent),
+    linear-gradient(180deg, transparent 0%, rgba(183, 212, 255, 0.08) 16%, rgba(255, 255, 255, 0.018) 44%, transparent);
   background-size: 30% 100%, 30% 100%;
   background-position: 18% 0, 64% 0;
   background-repeat: no-repeat;
@@ -2368,8 +2368,8 @@ a {
   transform: translateX(-50%);
   pointer-events: none;
   background:
-    radial-gradient(circle at 50% 0%, rgba(96, 70, 170, 0.06), transparent 18%),
-    linear-gradient(180deg, rgba(10, 12, 24, 0.68), rgba(6, 7, 12, 0.16) 28%, rgba(6, 6, 10, 0.02) 62%, transparent 100%);
+    linear-gradient(180deg, rgba(5, 6, 10, 0.9) 0%, rgba(7, 8, 14, 0.66) 10%, rgba(10, 12, 24, 0.22) 32%, rgba(6, 6, 10, 0.02) 64%, transparent 100%),
+    radial-gradient(circle at 50% 14%, rgba(96, 70, 170, 0.05), transparent 20%);
   opacity: 0.84;
   z-index: -2;
 }
@@ -2401,9 +2401,9 @@ a {
 .works-index-hero {
   border-color: rgba(92, 88, 132, 0.16);
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.018), rgba(255, 255, 255, 0.005)),
-    radial-gradient(circle at 20% -6%, rgba(88, 38, 124, 0.12), transparent 30%),
-    radial-gradient(circle at 80% 4%, rgba(42, 72, 152, 0.1), transparent 28%),
+    linear-gradient(180deg, rgba(5, 6, 10, 0.2) 0%, rgba(255, 255, 255, 0.01) 18%, rgba(255, 255, 255, 0.004)),
+    radial-gradient(circle at 20% 14%, rgba(88, 38, 124, 0.1), transparent 30%),
+    radial-gradient(circle at 80% 18%, rgba(42, 72, 152, 0.08), transparent 28%),
     linear-gradient(180deg, rgba(15, 16, 30, 0.97), rgba(6, 7, 13, 0.99));
 }
 
@@ -2420,23 +2420,23 @@ a {
   inset: 0;
   pointer-events: none;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.012), transparent 46%),
-    radial-gradient(circle at 84% 10%, rgba(120, 158, 255, 0.1), transparent 18%),
-    radial-gradient(circle at 72% 16%, rgba(255, 255, 255, 0.045), transparent 12%),
-    radial-gradient(circle at 30% 12%, rgba(169, 84, 205, 0.05), transparent 24%);
+    linear-gradient(180deg, rgba(5, 6, 10, 0.34) 0%, rgba(255, 255, 255, 0.006) 20%, transparent 48%),
+    radial-gradient(circle at 84% 22%, rgba(120, 158, 255, 0.08), transparent 20%),
+    radial-gradient(circle at 72% 26%, rgba(255, 255, 255, 0.035), transparent 14%),
+    radial-gradient(circle at 30% 24%, rgba(169, 84, 205, 0.035), transparent 26%);
 }
 
 .works-index-hero::after {
   content: "";
   position: absolute;
-  top: -18%;
+  top: 0;
   right: 16%;
   width: 46%;
   height: 90%;
   pointer-events: none;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.04) 46%, transparent),
-    linear-gradient(180deg, rgba(183, 212, 255, 0.1), rgba(255, 255, 255, 0.02) 42%, transparent);
+    linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.13) 14%, rgba(255, 255, 255, 0.03) 46%, transparent),
+    linear-gradient(180deg, transparent 0%, rgba(183, 212, 255, 0.08) 16%, rgba(255, 255, 255, 0.018) 42%, transparent);
   background-size: 32% 100%, 32% 100%;
   background-position: 18% 0, 64% 0;
   background-repeat: no-repeat;
