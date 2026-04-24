@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "../../../components/Breadcrumbs";
-import { PlayPosterFrame } from "../../../components/PlayPosterFrame";
 import { RelatedSeriesClient } from "../../../components/RelatedSeriesClient";
 import { SeriesCastOverviewClient } from "../../../components/SeriesCastOverviewClient";
 import { StructuredData } from "../../../components/StructuredData";
@@ -235,9 +234,6 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
 
                 <article className="catalog-card actor-timeline-card series-timeline-card">
                   <Link className="catalog-card__body-link actor-timeline-card__link" href={`/plays/${play.slug}`}>
-                    <div className="actor-timeline-card__poster" aria-hidden="true">
-                      <PlayPosterFrame title={play.title} subtitle={series.name} seed={`${play.slug}-${series.name}`} />
-                    </div>
                     <div className="actor-timeline-card__body">
                       <div className="catalog-card__top">
                         <div className="cast-name">{play.title}</div>

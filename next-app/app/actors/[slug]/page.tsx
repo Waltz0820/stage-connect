@@ -5,7 +5,6 @@ import { ActorCoStarsClient } from "../../../components/ActorCoStarsClient";
 import { ActorTopSeriesClient } from "../../../components/ActorTopSeriesClient";
 import { Breadcrumbs } from "../../../components/Breadcrumbs";
 import { FavoriteButtonClient } from "../../../components/FavoriteButtonClient";
-import { PlayPosterFrame } from "../../../components/PlayPosterFrame";
 import { ShareButtonClient } from "../../../components/ShareButtonClient";
 import { StructuredData } from "../../../components/StructuredData";
 import {
@@ -213,13 +212,6 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
                   {group.plays.map((play) => (
                     <article className="catalog-card actor-timeline-card" key={play.slug}>
                       <Link className="catalog-card__body-link actor-timeline-card__link" href={`/plays/${play.slug}`}>
-                        <div className="actor-timeline-card__poster" aria-hidden="true">
-                          <PlayPosterFrame
-                            title={play.title}
-                            subtitle={play.franchiseName ?? undefined}
-                            seed={`${play.slug}-${play.franchiseName ?? ""}`}
-                          />
-                        </div>
                         <div className="actor-timeline-card__body">
                           <div className="cast-name">{play.title}</div>
                           {play.franchiseName ? <div className="actor-timeline-card__series">{play.franchiseName}</div> : null}

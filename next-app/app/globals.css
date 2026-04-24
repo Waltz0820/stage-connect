@@ -4471,10 +4471,8 @@ a {
 
 .actor-detail-stage-page .actor-timeline-card__link,
 .series-detail-stage-page .actor-timeline-card__link {
-  display: grid;
-  grid-template-columns: 124px minmax(0, 1fr);
-  gap: 0;
-  min-height: 112px;
+  display: block;
+  min-height: 0;
 }
 
 .actor-detail-stage-page .actor-timeline-card__poster,
@@ -4499,7 +4497,7 @@ a {
 .actor-detail-stage-page .actor-timeline-card__body,
 .series-detail-stage-page .actor-timeline-card__body {
   min-width: 0;
-  padding: 14px 16px;
+  padding: 16px 18px;
 }
 
 .actor-detail-stage-page .actor-timeline-card__series {
@@ -5176,8 +5174,7 @@ a {
 
   .actor-detail-stage-page .actor-timeline-card__link,
   .series-detail-stage-page .actor-timeline-card__link {
-    grid-template-columns: 92px minmax(0, 1fr);
-    min-height: 96px;
+    min-height: 0;
   }
 
   .actor-detail-stage-page .actor-timeline-card__poster .play-poster-frame,
