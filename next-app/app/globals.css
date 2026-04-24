@@ -4507,6 +4507,36 @@ a {
   line-height: 1.5;
 }
 
+.actor-detail-stage-page .actor-timeline-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.actor-detail-stage-page .actor-timeline-card__role,
+.actor-detail-stage-page .actor-timeline-card__date {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  border: 1px solid rgba(243, 240, 234, 0.1);
+  border-radius: 999px;
+  padding: 5px 10px;
+  color: rgba(244, 240, 233, 0.76);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.actor-detail-stage-page .actor-timeline-card__role {
+  border-color: rgba(233, 68, 166, 0.24);
+  background: rgba(233, 68, 166, 0.07);
+  color: rgba(247, 184, 211, 0.92);
+}
+
+.actor-detail-stage-page .actor-timeline-card__date {
+  background: rgba(255, 255, 255, 0.016);
+}
+
 .actor-detail-stage-page .actor-timeline-card .catalog-card__footer,
 .series-detail-stage-page .series-timeline-card .catalog-card__footer {
   border-top-color: rgba(243, 240, 234, 0.08);

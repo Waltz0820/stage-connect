@@ -197,12 +197,14 @@ export default async function EnglishActorDetailPage({ params }: { params: Promi
                             {getEnglishSeriesName({ name: play.franchiseName, nameEn: play.franchiseNameEn })}
                           </div>
                         ) : null}
-                        {play.roleName ? <div className="cast-role">{translateAnnotatedDisplayTextEn(play.roleName)}</div> : null}
-                        {formatTimelineLeadDate(play.period) ? (
-                          <div className="subtle-line" style={{ marginTop: 10 }}>
-                            {formatTimelineLeadDate(play.period)}
-                          </div>
-                        ) : null}
+                        <div className="actor-timeline-card__meta">
+                          {play.roleName ? (
+                            <span className="actor-timeline-card__role">Role: {translateAnnotatedDisplayTextEn(play.roleName)}</span>
+                          ) : null}
+                          {formatTimelineLeadDate(play.period) ? (
+                            <span className="actor-timeline-card__date">{formatTimelineLeadDate(play.period)}</span>
+                          ) : null}
+                        </div>
                       </div>
                     </Link>
                   ))}

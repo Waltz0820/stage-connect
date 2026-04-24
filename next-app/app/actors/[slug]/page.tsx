@@ -215,12 +215,12 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
                         <div className="actor-timeline-card__body">
                           <div className="cast-name">{play.title}</div>
                           {play.franchiseName ? <div className="actor-timeline-card__series">{play.franchiseName}</div> : null}
-                          {play.roleName ? <div className="cast-role">{play.roleName}</div> : null}
-                          {formatTimelineLeadDate(play.period) ? (
-                            <div className="subtle-line" style={{ marginTop: 10 }}>
-                              {formatTimelineLeadDate(play.period)}
-                            </div>
-                          ) : null}
+                          <div className="actor-timeline-card__meta">
+                            {play.roleName ? <span className="actor-timeline-card__role">役柄: {play.roleName}</span> : null}
+                            {formatTimelineLeadDate(play.period) ? (
+                              <span className="actor-timeline-card__date">{formatTimelineLeadDate(play.period)}</span>
+                            ) : null}
+                          </div>
                         </div>
                       </Link>
                       <div
