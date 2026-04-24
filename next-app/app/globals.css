@@ -4755,16 +4755,6 @@ a {
 }
 
 .play-detail-related-card__poster .play-poster-frame__content {
-  inset: 8px;
-}
-
-.play-detail-related-card__poster .play-poster-frame__title {
-  font-size: 13px;
-  line-height: 1.25;
-}
-
-.play-detail-related-card__poster .play-poster-frame__subtitle,
-.play-detail-related-card__poster .play-poster-frame__meta {
   display: none;
 }
 
