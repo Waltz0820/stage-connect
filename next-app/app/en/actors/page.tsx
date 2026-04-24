@@ -21,6 +21,23 @@ const GENDER_LABELS: Record<string, string> = {
 
 const getSingleParam = (value: SearchParamValue) => (Array.isArray(value) ? value[0] : value) ?? "";
 
+const getActorInitials = (name: string) => {
+  const parts = name
+    .split(/\s+/)
+    .map((part) => part.trim())
+    .filter(Boolean);
+
+  if (parts.length > 1) {
+    return parts
+      .slice(0, 2)
+      .map((part) => part.charAt(0))
+      .join("")
+      .toUpperCase();
+  }
+
+  return name.trim().slice(0, 2).toUpperCase() || "SC";
+};
+
 const buildHref = (params: Record<string, string | number | null | undefined>) => {
   const search = new URLSearchParams();
   Object.entries(params).forEach(([key, value]) => {
@@ -76,13 +93,13 @@ export default async function EnglishActorsPage({
   const visibleActors = filteredActors.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 
   return (
-    <main className="container" style={{ paddingBlock: 32 }}>
+    <main className="container works-index-page" style={{ paddingBlock: 32 }}>
       <StructuredData data={breadcrumbJsonLd} />
       <StructuredData data={collectionJsonLd} />
       <div className="stack-lg">
         <Breadcrumbs items={[{ label: "Actors", href: "/en/actors" }]} />
 
-        <section className="hero-card stack-md">
+        <section className="hero-card stack-md works-index-hero">
           <div className="stack-sm">
             <span className="eyebrow">Actors</span>
             <h1 className="page-title">2.5D Cast</h1>
@@ -98,10 +115,10 @@ export default async function EnglishActorsPage({
           </div>
         </section>
 
-        <section className="section-card stack-md">
+        <section className="section-card stack-md works-list-panel">
           <h2 className="section-title">Filters</h2>
 
-          <div className="filter-row filter-row--dense">
+          <div className="filter-row filter-row--dense works-filter-row">
             <Link className={`filter-chip ${gender === "all" ? "is-active" : ""}`} href={buildHref({ page: 1, gender: "all" })}>
               All
             </Link>
@@ -116,7 +133,7 @@ export default async function EnglishActorsPage({
             ))}
           </div>
 
-          <div className="catalog-grid">
+          <div className="catalog-grid catalog-grid--actor-list">
             {visibleActors.map((actor) => {
               const displayName = getEnglishActorName(actor);
               const birthday = actor.birthdayLabel
@@ -124,41 +141,51 @@ export default async function EnglishActorsPage({
                 : formatBirthdayEn(actor.birthday);
               const age = getAgeFromBirthday(actor.birthday, actor.deathDate);
               const ageLabel = formatAgeEn(age);
+              const initials = getActorInitials(displayName);
 
               return (
-                <article className="catalog-card" key={actor.slug}>
-                  <div className="catalog-card__top">
-                    <div className="catalog-card__title">{displayName}</div>
-                    <div className="catalog-card__top-actions">
-                      {birthday ? <span className="catalog-card__badge">Profile</span> : null}
+                <article className="catalog-card catalog-card--actor-list" key={actor.slug}>
+                  <Link className="actor-list-card__monogram-link" href={`/en/actors/${actor.slug}`} aria-label={`View ${displayName}`}>
+                    <span className="actor-list-card__monogram">{initials}</span>
+                  </Link>
+
+                  <div className="actor-list-card__main">
+                    <div className="catalog-card__top actor-list-card__top">
+                      <div>
+                        <div className="catalog-card__title">{displayName}</div>
+                        {actor.kana ? <div className="actor-list-card__kana">{actor.kana}</div> : null}
+                      </div>
                       <FavoriteButtonClient slug={actor.slug} type="actor" size="sm" name={displayName} kana={actor.kana} />
                     </div>
+
+                    <Link className="catalog-card__body-link actor-list-card__body" href={`/en/actors/${actor.slug}`}>
+                      <div className="actor-list-card__facts">
+                        {birthday ? (
+                          <span className="actor-list-card__fact">
+                            DOB: {birthday}
+                            {ageLabel ? ` / ${ageLabel}` : ""}
+                          </span>
+                        ) : null}
+                        {actor.gender && actor.gender in GENDER_LABELS ? (
+                          <span className="actor-list-card__fact">{GENDER_LABELS[actor.gender]}</span>
+                        ) : null}
+                        {birthday ? <span className="actor-list-card__fact">Profile</span> : null}
+                      </div>
+
+                      {actor.profileEn || actor.profile ? (
+                        <div className="catalog-card__text actor-list-card__summary">
+                          {truncateText(toPlainText(actor.profileEn || actor.profile), 160)}
+                        </div>
+                      ) : (
+                        <div className="catalog-card__text actor-list-card__summary">Profile text is not available yet.</div>
+                      )}
+
+                      <div className="catalog-card__footer actor-list-card__footer">
+                        <span className="catalog-link">View actor details</span>
+                        <span className="play-list-card__chevron">›</span>
+                      </div>
+                    </Link>
                   </div>
-
-                  <Link className="catalog-card__body-link" href={`/en/actors/${actor.slug}`}>
-                    {actor.kana ? <div className="catalog-card__sub">{actor.kana}</div> : null}
-                    {birthday ? (
-                      <div className="catalog-card__sub">
-                        DOB: {birthday}
-                        {ageLabel ? ` / ${ageLabel}` : ""}
-                      </div>
-                    ) : null}
-                    {actor.gender && actor.gender in GENDER_LABELS ? (
-                      <div className="catalog-card__sub">{GENDER_LABELS[actor.gender]}</div>
-                    ) : null}
-
-                    {actor.profileEn || actor.profile ? (
-                      <div className="catalog-card__text">
-                        {truncateText(toPlainText(actor.profileEn || actor.profile), 160)}
-                      </div>
-                    ) : (
-                      <div className="catalog-card__text">Profile text is not available yet.</div>
-                    )}
-
-                    <div className="catalog-card__footer">
-                      <span className="catalog-link">View actor details</span>
-                    </div>
-                  </Link>
                 </article>
               );
             })}

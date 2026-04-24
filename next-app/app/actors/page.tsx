@@ -25,6 +25,23 @@ const GENDER_LABELS: Record<string, string> = {
 
 const getSingleParam = (value: SearchParamValue) => (Array.isArray(value) ? value[0] : value) ?? "";
 
+const getActorInitials = (actor: { slug: string; name: string }) => {
+  const slugParts = actor.slug
+    .split("-")
+    .map((part) => part.trim())
+    .filter(Boolean);
+
+  if (slugParts.length > 0) {
+    return slugParts
+      .slice(0, 2)
+      .map((part) => part.charAt(0))
+      .join("")
+      .toUpperCase();
+  }
+
+  return actor.name.trim().slice(0, 1) || "S";
+};
+
 const buildHref = (params: Record<string, string | number | null | undefined>) => {
   const search = new URLSearchParams();
   Object.entries(params).forEach(([key, value]) => {
@@ -78,12 +95,12 @@ export default async function ActorsPage({
   const visibleActors = filteredActors.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 
   return (
-    <main className="container" style={{ paddingBlock: 32 }}>
+    <main className="container works-index-page" style={{ paddingBlock: 32 }}>
       <StructuredData data={breadcrumbJsonLd} />
       <StructuredData data={collectionJsonLd} />
       <div className="stack-lg">
         <Breadcrumbs items={[{ label: "俳優一覧" }]} />
-        <section className="hero-card stack-md">
+        <section className="hero-card stack-md works-index-hero">
           <div className="stack-sm">
             <span className="eyebrow">Actors</span>
             <h1 className="page-title">俳優一覧</h1>
@@ -99,10 +116,10 @@ export default async function ActorsPage({
           </div>
         </section>
 
-        <section className="section-card stack-md">
+        <section className="section-card stack-md works-list-panel">
           <h2 className="section-title">俳優データベース</h2>
 
-          <div className="filter-row filter-row--dense">
+          <div className="filter-row filter-row--dense works-filter-row">
             <Link className={`filter-chip ${gender === "all" ? "is-active" : ""}`} href={buildHref({ page: 1, gender: "all" })}>
               すべて
             </Link>
@@ -117,17 +134,24 @@ export default async function ActorsPage({
             ))}
           </div>
 
-          <div className="catalog-grid">
+          <div className="catalog-grid catalog-grid--actor-list">
             {visibleActors.map((actor) => {
               const birthday = getDisplayBirthday(actor.birthday, actor.birthdayLabel);
               const age = getAgeFromBirthday(actor.birthday, actor.deathDate);
+              const initials = getActorInitials(actor);
 
               return (
-                <article className="catalog-card" key={actor.slug}>
-                  <div className="catalog-card__top">
-                    <div className="catalog-card__title">{actor.name}</div>
-                    <div className="catalog-card__top-actions">
-                      {birthday ? <span className="catalog-card__badge">プロフィールあり</span> : null}
+                <article className="catalog-card catalog-card--actor-list" key={actor.slug}>
+                  <Link className="actor-list-card__monogram-link" href={`/actors/${actor.slug}`} aria-label={`${actor.name}の詳細を見る`}>
+                    <span className="actor-list-card__monogram">{initials}</span>
+                  </Link>
+
+                  <div className="actor-list-card__main">
+                    <div className="catalog-card__top actor-list-card__top">
+                      <div>
+                        <div className="catalog-card__title">{actor.name}</div>
+                        {actor.kana ? <div className="actor-list-card__kana">{actor.kana}</div> : null}
+                      </div>
                       <FavoriteButtonClient
                         slug={actor.slug}
                         type="actor"
@@ -136,30 +160,33 @@ export default async function ActorsPage({
                         kana={actor.kana}
                       />
                     </div>
-                  </div>
 
-                  <Link className="catalog-card__body-link" href={`/actors/${actor.slug}`}>
-                    {actor.kana ? <div className="catalog-card__sub">{actor.kana}</div> : null}
-                    {birthday ? (
-                      <div className="catalog-card__sub">
-                        {birthday}
-                        {age !== null ? ` (${age}歳)` : ""}
+                    <Link className="catalog-card__body-link actor-list-card__body" href={`/actors/${actor.slug}`}>
+                      <div className="actor-list-card__facts">
+                        {birthday ? (
+                          <span className="actor-list-card__fact">
+                            {birthday}
+                            {age !== null ? ` (${age}歳)` : ""}
+                          </span>
+                        ) : null}
+                        {actor.gender && actor.gender in GENDER_LABELS ? (
+                          <span className="actor-list-card__fact">{GENDER_LABELS[actor.gender]}</span>
+                        ) : null}
+                        {birthday ? <span className="actor-list-card__fact">プロフィールあり</span> : null}
                       </div>
-                    ) : null}
-                    {actor.gender && actor.gender in GENDER_LABELS ? (
-                      <div className="catalog-card__sub">{GENDER_LABELS[actor.gender]}</div>
-                    ) : null}
 
-                    {actor.profile ? (
-                      <div className="catalog-card__text">{truncate(toPlainText(actor.profile), 140)}</div>
-                    ) : (
-                      <div className="catalog-card__text">プロフィールは現在準備中です。</div>
-                    )}
+                      {actor.profile ? (
+                        <div className="catalog-card__text actor-list-card__summary">{truncate(toPlainText(actor.profile), 140)}</div>
+                      ) : (
+                        <div className="catalog-card__text actor-list-card__summary">プロフィールは現在準備中です。</div>
+                      )}
 
-                    <div className="catalog-card__footer">
-                      <span className="catalog-link">俳優詳細を見る</span>
-                    </div>
-                  </Link>
+                      <div className="catalog-card__footer actor-list-card__footer">
+                        <span className="catalog-link">俳優詳細を見る</span>
+                        <span className="play-list-card__chevron">›</span>
+                      </div>
+                    </Link>
+                  </div>
                 </article>
               );
             })}
