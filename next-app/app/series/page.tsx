@@ -58,6 +58,9 @@ export default async function SeriesPage({
 }) {
   const params = (await searchParams) ?? {};
   const allSeries = await getSeriesList();
+  const featuredSeries = [...allSeries].sort(
+    (a, b) => b.playCount - a.playCount || a.name.localeCompare(b.name, "ja")
+  )[0] ?? null;
   const breadcrumbJsonLd = buildBreadcrumbList([
     { name: "TOP", path: "/" },
     { name: "シリーズ一覧", path: "/series" },
@@ -124,6 +127,39 @@ export default async function SeriesPage({
             <span className="catalog-chip">Page {safePage}</span>
           </div>
         </section>
+
+        {featuredSeries ? (
+          <Link className="series-feature-card" href={`/series/${featuredSeries.slug}`}>
+            <div className="series-feature-card__poster">
+              <PlayPosterFrame
+                title={featuredSeries.name}
+                seed={`${featuredSeries.slug}-${featuredSeries.originType ?? ""}`}
+              />
+            </div>
+            <div className="series-feature-card__body">
+              <span className="series-feature-card__badge">注目のシリーズ</span>
+              <div className="series-feature-card__title">{featuredSeries.name}</div>
+              {featuredSeries.description ? (
+                <p className="series-feature-card__text">
+                  {truncate(toPlainText(featuredSeries.description), 120)}
+                </p>
+              ) : null}
+              <div className="series-feature-card__facts">
+                <span>作品数 {featuredSeries.playCount}作品</span>
+                {featuredSeries.format ? <span>{FORMAT_LABELS[featuredSeries.format] ?? featuredSeries.format}</span> : null}
+                {featuredSeries.originType ? <span>{featuredSeries.originType}</span> : null}
+              </div>
+              <div className="series-feature-card__tags">
+                {getSeriesCardTags(featuredSeries).map((tag) => (
+                  <span key={tag}>{tag}</span>
+                ))}
+              </div>
+            </div>
+            <span className="series-feature-card__arrow" aria-hidden="true">
+              ›
+            </span>
+          </Link>
+        ) : null}
 
         <section className="section-card stack-md works-list-panel">
           <h2 className="section-title">シリーズ・フィルター</h2>

@@ -54,6 +54,11 @@ export default async function EnglishSeriesPage({
 }) {
   const params = (await searchParams) ?? {};
   const allSeries = await getSeriesList();
+  const featuredSeries = [...allSeries].sort((a, b) => {
+    const aName = getEnglishSeriesName(a);
+    const bName = getEnglishSeriesName(b);
+    return b.playCount - a.playCount || aName.localeCompare(bName, "en");
+  })[0] ?? null;
   const breadcrumbJsonLd = buildBreadcrumbList([
     { name: "HOME", path: "/en" },
     { name: "Series", path: "/en/series" },
@@ -121,6 +126,43 @@ export default async function EnglishSeriesPage({
             <span className="catalog-chip">Page {safePage}</span>
           </div>
         </section>
+
+        {featuredSeries ? (
+          <Link className="series-feature-card" href={`/en/series/${featuredSeries.slug}`}>
+            <div className="series-feature-card__poster">
+              <PlayPosterFrame
+                title={getEnglishSeriesName(featuredSeries)}
+                seed={`${featuredSeries.slug}-${featuredSeries.originType ?? ""}`}
+              />
+            </div>
+            <div className="series-feature-card__body">
+              <span className="series-feature-card__badge">Featured series</span>
+              <div className="series-feature-card__title">{getEnglishSeriesName(featuredSeries)}</div>
+              {featuredSeries.descriptionEn || featuredSeries.description ? (
+                <p className="series-feature-card__text">
+                  {truncateText(toPlainText(featuredSeries.descriptionEn || featuredSeries.description), 130)}
+                </p>
+              ) : null}
+              <div className="series-feature-card__facts">
+                <span>{featuredSeries.playCount} plays</span>
+                {featuredSeries.format ? (
+                  <span>{EN_FORMAT_LABELS[featuredSeries.format] ?? featuredSeries.format}</span>
+                ) : null}
+                {featuredSeries.originType ? (
+                  <span>{toEnglishOriginType(featuredSeries.originType) ?? featuredSeries.originType}</span>
+                ) : null}
+              </div>
+              <div className="series-feature-card__tags">
+                {getSeriesCardTagsEn(featuredSeries).map((tag) => (
+                  <span key={tag}>{tag}</span>
+                ))}
+              </div>
+            </div>
+            <span className="series-feature-card__arrow" aria-hidden="true">
+              ›
+            </span>
+          </Link>
+        ) : null}
 
         <section className="section-card stack-md works-list-panel">
           <h2 className="section-title">Series Filters</h2>
