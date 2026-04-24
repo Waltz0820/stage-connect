@@ -207,26 +207,6 @@ export default async function EnglishHomePage() {
               ))}
             </div>
           </section>
-
-          <section className="home-stage__watch">
-            <div className="home-stage__watch-copy">
-              <span className="home-stage__watch-icon" aria-hidden="true">
-                {renderIcon("play")}
-              </span>
-              <div>
-                <h2>Watch by platform</h2>
-                <p>Check DMM TV and U-NEXT for works that are currently streaming.</p>
-              </div>
-            </div>
-            <div className="home-stage__watch-actions">
-              <Link href="/watch/dmm" className="home-stage__watch-button is-accent">
-                Watch on DMM TV
-              </Link>
-              <Link href="/watch/u-next" className="home-stage__watch-button">
-                Watch on U-NEXT
-              </Link>
-            </div>
-          </section>
         </div>
       </section>
     </main>

@@ -206,26 +206,6 @@ export default async function HomePage() {
               ))}
             </div>
           </section>
-
-          <section className="home-stage__watch">
-            <div className="home-stage__watch-copy">
-              <span className="home-stage__watch-icon" aria-hidden="true">
-                {renderIcon("play")}
-              </span>
-              <div>
-                <h2>配信で観る</h2>
-                <p>DMM TV・U-NEXTなど、配信中のある作品を横断チェック。</p>
-              </div>
-            </div>
-            <div className="home-stage__watch-actions">
-              <Link href="/watch/dmm" className="home-stage__watch-button is-accent">
-                DMM TVで観る
-              </Link>
-              <Link href="/watch/u-next" className="home-stage__watch-button">
-                U-NEXTで観る
-              </Link>
-            </div>
-          </section>
         </div>
       </section>
     </main>
