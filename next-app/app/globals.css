@@ -4588,7 +4588,7 @@ a {
 .play-detail-hero-poster {
   position: absolute;
   inset: 0;
-  z-index: -2;
+  z-index: 0;
   pointer-events: none;
 }
 
@@ -4606,7 +4606,7 @@ a {
   content: "";
   position: absolute;
   inset: 0;
-  z-index: -1;
+  z-index: 1;
   pointer-events: none;
   background:
     linear-gradient(90deg, rgba(5, 6, 10, 0.96) 0%, rgba(5, 6, 10, 0.74) 48%, rgba(5, 6, 10, 0.2) 100%),
@@ -4618,6 +4618,8 @@ a {
 }
 
 .play-detail-hero-content {
+  position: relative;
+  z-index: 2;
   width: min(100%, 720px);
 }
 
@@ -4796,7 +4798,7 @@ a {
 .play-detail-related-card {
   position: relative;
   display: grid;
-  grid-template-columns: 104px minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr) auto;
   gap: 14px;
   align-items: center;
   overflow: hidden;
@@ -4807,6 +4809,10 @@ a {
     linear-gradient(135deg, rgba(72, 82, 150, 0.08), transparent 48%),
     rgba(7, 8, 14, 0.84);
   transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.play-detail-related-card__poster {
+  display: none;
 }
 
 .play-detail-related-card:hover {
@@ -5142,7 +5148,7 @@ a {
   }
 
   .play-detail-related-card {
-    grid-template-columns: 88px minmax(0, 1fr) auto;
+    grid-template-columns: minmax(0, 1fr) auto;
     gap: 10px;
   }
 
