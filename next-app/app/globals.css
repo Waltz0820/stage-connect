@@ -4525,6 +4525,44 @@ a {
   background: rgba(243, 240, 234, 0.08);
 }
 
+.play-detail-hero-layout {
+  display: grid;
+  grid-template-columns: minmax(190px, 0.34fr) minmax(0, 1fr);
+  gap: 24px;
+  align-items: center;
+}
+
+.play-detail-hero-poster {
+  min-width: 0;
+}
+
+.play-detail-hero-poster .play-poster-frame {
+  min-height: 320px;
+  height: 320px;
+  border-radius: 18px;
+  border-color: rgba(243, 240, 234, 0.16);
+  box-shadow: 0 24px 54px rgba(0, 0, 0, 0.32);
+}
+
+.play-detail-hero-poster .play-poster-frame__content {
+  inset: 20px;
+}
+
+.play-detail-hero-poster .play-poster-frame__title {
+  font-size: clamp(24px, 3vw, 38px);
+}
+
+.play-detail-hero-streaming {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.play-detail-hero-streaming .action-button {
+  min-width: 168px;
+}
+
 .play-detail-stage-page .detail-ledger__item {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.014), rgba(255, 255, 255, 0.004)),
@@ -4801,6 +4839,25 @@ a {
     right: 16px;
     bottom: 14px;
     font-size: 26px;
+  }
+
+  .play-detail-hero-layout {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .play-detail-hero-poster .play-poster-frame {
+    min-height: 220px;
+    height: 220px;
+  }
+
+  .play-detail-hero-poster .play-poster-frame__content {
+    inset: 16px;
+  }
+
+  .play-detail-hero-streaming .action-button {
+    width: 100%;
+    min-width: 0;
   }
 
 }

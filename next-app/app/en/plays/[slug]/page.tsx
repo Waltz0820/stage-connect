@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { Breadcrumbs } from "../../../../components/Breadcrumbs";
 import { DetailToggleClient } from "../../../../components/DetailToggleClient";
 import { FavoriteButtonClient } from "../../../../components/FavoriteButtonClient";
+import { PlayPosterFrame } from "../../../../components/PlayPosterFrame";
 import { ShareButtonClient } from "../../../../components/ShareButtonClient";
 import { StructuredData } from "../../../../components/StructuredData";
 import {
@@ -249,6 +250,15 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
         <Breadcrumbs items={[{ label: "Plays", href: "/en/plays" }]} />
 
         <section className="hero-card stack-md detail-stage-hero play-detail-stage-hero">
+          <div className="play-detail-hero-layout">
+            <div className="play-detail-hero-poster">
+              <PlayPosterFrame
+                title={displayTitle}
+                subtitle={displaySeriesName ?? undefined}
+                seed={`${play.slug}-${displaySeriesName ?? ""}`}
+              />
+            </div>
+
           <div className="stack-sm detail-ledger-shell">
             {play.franchiseSlug && displaySeriesName ? (
               <Link className="pill series-pill" href={`/en/series/${play.franchiseSlug}`}>
@@ -286,6 +296,22 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
                 <strong>{hasVod ? "Available" : "Unavailable"}</strong>
               </div>
             </div>
+
+            {hasVod ? (
+              <div className="play-detail-hero-streaming">
+                {play.vod?.dmm ? (
+                  <a className="action-button action-button-primary" href={play.vod.dmm} target="_blank" rel="noopener noreferrer">
+                    Watch on DMM TV
+                  </a>
+                ) : null}
+                {play.vod?.unext ? (
+                  <a className="action-button" href={play.vod.unext} target="_blank" rel="noopener noreferrer">
+                    Watch on U-NEXT
+                  </a>
+                ) : null}
+              </div>
+            ) : null}
+          </div>
           </div>
         </section>
 
