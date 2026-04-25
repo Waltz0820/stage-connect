@@ -42,6 +42,7 @@ type UnmatchedActorQueueRow = {
   aliasFrom?: string | null;
   aliasTo?: string | null;
   note?: string | null;
+  sourceProfileFactsRaw?: string | null;
   sourceBirthdayRaw?: string | null;
   sourceBirthday?: string | null;
   sourceHeightCm?: number | null;
@@ -160,7 +161,7 @@ const AdminExternalKiraHai: React.FC = () => {
   const loadUnmatchedActorQueue = async () => {
     const { data: actors, error: actorError } = await supabase
       .from("external_actors")
-      .select("source_actor_name,source_actor_url,alias_from,alias_to,note,source_birthday_raw,source_birthday,source_height_cm,source_blood_type,source_affiliation_raw")
+      .select("source_actor_name,source_actor_url,alias_from,alias_to,note,source_profile_facts_raw,source_birthday_raw,source_birthday,source_height_cm,source_blood_type,source_affiliation_raw")
       .eq("source", "kira-hai")
       .is("matched_actor_id", null)
       .order("source_actor_name", { ascending: true })
@@ -207,6 +208,7 @@ const AdminExternalKiraHai: React.FC = () => {
           aliasFrom: actor.alias_from,
           aliasTo: actor.alias_to,
           note: actor.note,
+          sourceProfileFactsRaw: actor.source_profile_facts_raw,
           sourceBirthdayRaw: actor.source_birthday_raw,
           sourceBirthday: actor.source_birthday,
           sourceHeightCm: actor.source_height_cm,
@@ -716,6 +718,106 @@ const AdminExternalKiraHai: React.FC = () => {
     return `${normalizedBase}-${Date.now()}`;
   };
 
+  const buildUniqueActorSlug = async (row: UnmatchedActorQueueRow) => {
+    const sourceSlug = toSlug(getSourceSlug(row.sourceActorUrl));
+    const nameSlug = toSlug(row.sourceActorName);
+    const base = sourceSlug || nameSlug || "external-actor";
+    const normalizedBase = base.replace(/^-+|-+$/g, "") || `external-actor-${Date.now()}`;
+
+    for (let i = 0; i < 20; i += 1) {
+      const candidate = i === 0 ? normalizedBase : `${normalizedBase}-${i + 1}`;
+      const { data, error } = await supabase.from("actors").select("id").eq("slug", candidate).maybeSingle();
+      if (error) throw error;
+      if (!data) return candidate;
+    }
+
+    return `${normalizedBase}-${Date.now()}`;
+  };
+
+  const createSkeletonActor = async (row: UnmatchedActorQueueRow) => {
+    setBusyId(row.sourceActorUrl);
+    setMsg("");
+
+    try {
+      const slug = await buildUniqueActorSlug(row);
+      const birthday = normalizeText(row.sourceBirthday) || null;
+      const heightCm = row.sourceHeightCm ? Number(row.sourceHeightCm) : null;
+      const bloodType = normalizeText(row.sourceBloodType).toUpperCase() || null;
+
+      const { data: created, error: createError } = await supabase
+        .from("actors")
+        .insert({
+          name: row.sourceActorName,
+          slug,
+          kana: null,
+          birthday,
+          birthday_label: birthday ? null : normalizeText(row.sourceBirthdayRaw) || null,
+          death_date: null,
+          profile: null,
+          profile_en: null,
+          height_cm: heightCm,
+          blood_type: bloodType,
+          gender: "male",
+          image_url: null,
+          sns: {},
+          featured_play_slugs: [],
+        })
+        .select("id,name,slug")
+        .single();
+
+      if (createError) throw createError;
+
+      const actor = created as ActorRow;
+      const now = new Date().toISOString();
+
+      const { error: externalActorError } = await supabase
+        .from("external_actors")
+        .update({
+          matched_actor_id: actor.id,
+          match_status: "skeleton_created",
+          match_confidence: 70,
+          updated_at: now,
+        })
+        .eq("source", "kira-hai")
+        .eq("source_actor_url", row.sourceActorUrl);
+
+      if (externalActorError) throw externalActorError;
+
+      const { error: candidateError } = await supabase
+        .from("external_cast_candidates")
+        .update({
+          matched_actor_id: actor.id,
+          confidence: 55,
+          updated_at: now,
+        })
+        .eq("source", "kira-hai")
+        .eq("source_actor_url", row.sourceActorUrl)
+        .is("matched_actor_id", null);
+
+      if (candidateError) throw candidateError;
+
+      setActorsById((current) => ({ ...current, [actor.id]: actor }));
+      setCandidates((current) =>
+        current.map((item) =>
+          item.source_actor_url === row.sourceActorUrl ? { ...item, matched_actor_id: actor.id } : item
+        )
+      );
+      setUnmatchedActorQueue((current) => current.filter((item) => item.sourceActorUrl !== row.sourceActorUrl));
+      setActorStats((current) => ({ ...current, matched: current.matched + 1 }));
+      setMsg(
+        `俳優skeleton「${actor.name}」を作成しました。候補ファクト: ${
+          [row.sourceBirthdayRaw || row.sourceBirthday, row.sourceHeightCm ? `${row.sourceHeightCm}cm` : "", row.sourceBloodType ? `${row.sourceBloodType}型` : ""]
+            .filter(Boolean)
+            .join(" / ") || "なし"
+        }`
+      );
+    } catch (error: any) {
+      setMsg(error?.message ?? "create skeleton actor error");
+    } finally {
+      setBusyId(null);
+    }
+  };
+
   const createSkeletonPlayAndAccept = async (row: CandidateRow) => {
     if (!row.matched_actor_id) {
       setMsg("既存actorに一致している候補だけ作品skeletonを作成できます");
@@ -1142,6 +1244,12 @@ const AdminExternalKiraHai: React.FC = () => {
                       </div>
                     ) : null}
 
+                    {row.sourceProfileFactsRaw ? (
+                      <div className="mt-2 rounded-lg border border-white/10 bg-black/25 px-3 py-2 text-xs text-slate-300">
+                        {row.sourceProfileFactsRaw}
+                      </div>
+                    ) : null}
+
                     <div className="mt-3 flex flex-wrap gap-2 text-xs">
                       {row.sourceBirthdayRaw || row.sourceBirthday ? (
                         <span className="rounded-full border border-white/10 bg-black/30 px-2 py-1 text-slate-300">
@@ -1187,8 +1295,9 @@ const AdminExternalKiraHai: React.FC = () => {
                     </button>
                     <button
                       type="button"
-                      disabled
-                      className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs font-bold text-slate-500 opacity-50"
+                      onClick={() => void createSkeletonActor(row)}
+                      disabled={busyId === row.sourceActorUrl}
+                      className="rounded-full border border-sky-500/30 bg-sky-500/15 px-3 py-2 text-xs font-bold text-sky-100 hover:bg-sky-500/20 disabled:cursor-not-allowed disabled:opacity-40"
                     >
                       俳優skeleton作成
                     </button>
