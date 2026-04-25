@@ -36,6 +36,17 @@ type ExternalActorRow = {
 type ActorRow = { id: string; name: string; slug: string };
 type PlayRow = { id: string; title: string; slug: string };
 
+type UnmatchedActorQueueRow = {
+  sourceActorName: string;
+  sourceActorUrl: string;
+  aliasFrom?: string | null;
+  aliasTo?: string | null;
+  note?: string | null;
+  candidateCount: number;
+  matchedPlayCount: number;
+  latestYear?: number | null;
+};
+
 const PAGE_SIZE = 80;
 
 const statusLabels: Record<string, string> = {
@@ -57,6 +68,7 @@ const queueOptions = [
   { value: "ready", label: "すぐ採用" },
   { value: "skeleton", label: "作品作成候補" },
   { value: "actor_unmatched", label: "俳優未照合" },
+  { value: "actor_queue", label: "未照合俳優キュー" },
 ];
 
 const normalizeText = (value?: string | null) => (value ?? "").trim();
@@ -109,6 +121,7 @@ const AdminExternalKiraHai: React.FC = () => {
   const [actorMatchTarget, setActorMatchTarget] = useState<CandidateRow | null>(null);
   const [actorSearchText, setActorSearchText] = useState("");
   const [actorSearchResults, setActorSearchResults] = useState<ActorRow[]>([]);
+  const [unmatchedActorQueue, setUnmatchedActorQueue] = useState<UnmatchedActorQueueRow[]>([]);
   const [playMatchTarget, setPlayMatchTarget] = useState<CandidateRow | null>(null);
   const [playSearchText, setPlaySearchText] = useState("");
   const [playSearchResults, setPlaySearchResults] = useState<PlayRow[]>([]);
@@ -137,6 +150,76 @@ const AdminExternalKiraHai: React.FC = () => {
     } else {
       setPlaysById({});
     }
+  };
+
+  const loadUnmatchedActorQueue = async () => {
+    const { data: actors, error: actorError } = await supabase
+      .from("external_actors")
+      .select("source_actor_name,source_actor_url,alias_from,alias_to,note")
+      .eq("source", "kira-hai")
+      .is("matched_actor_id", null)
+      .order("source_actor_name", { ascending: true })
+      .limit(300);
+
+    if (actorError) throw actorError;
+
+    const actorUrls = ((actors ?? []) as ExternalActorRow[]).map((actor) => actor.source_actor_url);
+    if (actorUrls.length === 0) {
+      setUnmatchedActorQueue([]);
+      return;
+    }
+
+    const { data: candidates, error: candidateError } = await supabase
+      .from("external_cast_candidates")
+      .select("source_actor_url,source_year,matched_play_id")
+      .eq("source", "kira-hai")
+      .in("source_actor_url", actorUrls);
+
+    if (candidateError) throw candidateError;
+
+    const stats = new Map<string, { candidateCount: number; matchedPlayCount: number; latestYear: number | null }>();
+    for (const row of candidates ?? []) {
+      const url = row.source_actor_url;
+      const current = stats.get(url) ?? { candidateCount: 0, matchedPlayCount: 0, latestYear: null };
+      current.candidateCount += 1;
+      if (row.matched_play_id) current.matchedPlayCount += 1;
+      if (row.source_year && (!current.latestYear || row.source_year > current.latestYear)) {
+        current.latestYear = row.source_year;
+      }
+      stats.set(url, current);
+    }
+
+    const queueRows = ((actors ?? []) as any[])
+      .map((actor) => {
+        const stat = stats.get(actor.source_actor_url) ?? {
+          candidateCount: 0,
+          matchedPlayCount: 0,
+          latestYear: null,
+        };
+        return {
+          sourceActorName: actor.source_actor_name,
+          sourceActorUrl: actor.source_actor_url,
+          aliasFrom: actor.alias_from,
+          aliasTo: actor.alias_to,
+          note: actor.note,
+          candidateCount: stat.candidateCount,
+          matchedPlayCount: stat.matchedPlayCount,
+          latestYear: stat.latestYear,
+        } as UnmatchedActorQueueRow;
+      })
+      .sort((a, b) => {
+        const aAlias = a.aliasFrom || a.aliasTo ? 1 : 0;
+        const bAlias = b.aliasFrom || b.aliasTo ? 1 : 0;
+        return (
+          b.matchedPlayCount - a.matchedPlayCount ||
+          b.candidateCount - a.candidateCount ||
+          bAlias - aAlias ||
+          (b.latestYear ?? 0) - (a.latestYear ?? 0) ||
+          a.sourceActorName.localeCompare(b.sourceActorName, "ja")
+        );
+      });
+
+    setUnmatchedActorQueue(queueRows);
   };
 
   const load = async () => {
@@ -170,6 +253,9 @@ const AdminExternalKiraHai: React.FC = () => {
       const nextCandidates = (candidateData ?? []) as CandidateRow[];
       setCandidates(nextCandidates);
       await loadReferenceRows(nextCandidates);
+      if (queue === "actor_queue") {
+        await loadUnmatchedActorQueue();
+      }
 
       const { data: actorData, error: actorError } = await supabase
         .from("external_actors")
@@ -304,12 +390,24 @@ const AdminExternalKiraHai: React.FC = () => {
     }
   };
 
-  const openActorMatch = async (row: CandidateRow) => {
-    setActorMatchTarget(row);
-    setActorSearchText(row.source_actor_name ?? "");
+  const openActorMatch = async (row: CandidateRow | UnmatchedActorQueueRow) => {
+    const target =
+      "id" in row
+        ? row
+        : ({
+            id: row.sourceActorUrl,
+            source: "kira-hai",
+            source_actor_name: row.sourceActorName,
+            source_actor_url: row.sourceActorUrl,
+            source_work_title: "",
+            status: "pending",
+          } as CandidateRow);
+
+    setActorMatchTarget(target);
+    setActorSearchText(target.source_actor_name ?? "");
     setActorSearchResults([]);
     setMsg("");
-    await searchActors(row.source_actor_name ?? "");
+    await searchActors(target.source_actor_name ?? "");
   };
 
   const searchActors = async (value = actorSearchText) => {
@@ -374,6 +472,7 @@ const AdminExternalKiraHai: React.FC = () => {
           item.source_actor_url === sourceActorUrl ? { ...item, matched_actor_id: actor.id } : item
         )
       );
+      setUnmatchedActorQueue((current) => current.filter((item) => item.sourceActorUrl !== sourceActorUrl));
       setActorStats((current) => ({ ...current, matched: current.matched + 1 }));
       setActorMatchTarget(null);
       setActorSearchResults([]);
@@ -1002,6 +1101,82 @@ const AdminExternalKiraHai: React.FC = () => {
         </div>
       ) : null}
 
+      {queue === "actor_queue" ? (
+        <div className="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+          <div className="border-b border-white/10 px-6 py-3 text-xs text-slate-400">
+            未照合俳優キュー {unmatchedActorQueue.length}件表示
+          </div>
+
+          <div className="divide-y divide-white/5">
+            {unmatchedActorQueue.map((row) => (
+              <div key={row.sourceActorUrl} className="p-5">
+                <div className="flex flex-wrap items-start justify-between gap-4">
+                  <div className="min-w-0 flex-1">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <div className="text-lg font-extrabold text-white">{row.sourceActorName}</div>
+                      {row.sourceActorUrl ? (
+                        <a
+                          href={row.sourceActorUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-[11px] text-slate-300 hover:bg-white/10"
+                        >
+                          俳優元
+                        </a>
+                      ) : null}
+                    </div>
+
+                    {row.aliasFrom || row.aliasTo || row.note ? (
+                      <div className="mt-2 rounded-lg border border-amber-500/20 bg-amber-500/10 px-3 py-2 text-xs text-amber-100">
+                        {row.note || `${row.aliasFrom || "-"} → ${row.aliasTo || "-"}`}
+                      </div>
+                    ) : null}
+
+                    <div className="mt-3 flex flex-wrap gap-2 text-xs">
+                      <span className="rounded-full border border-white/10 bg-black/30 px-2 py-1 text-slate-300">
+                        出演候補 {row.candidateCount}件
+                      </span>
+                      <span className="rounded-full border border-white/10 bg-black/30 px-2 py-1 text-slate-300">
+                        既存作品ヒット {row.matchedPlayCount}件
+                      </span>
+                      {row.latestYear ? (
+                        <span className="rounded-full border border-white/10 bg-black/30 px-2 py-1 text-slate-400">
+                          最新 {row.latestYear}
+                        </span>
+                      ) : null}
+                    </div>
+                  </div>
+
+                  <div className="flex shrink-0 flex-wrap gap-2">
+                    <button
+                      type="button"
+                      onClick={() => void openActorMatch(row)}
+                      className="rounded-full border border-amber-500/30 bg-amber-500/15 px-3 py-2 text-xs font-bold text-amber-100 hover:bg-amber-500/20"
+                    >
+                      既存俳優にマッチ
+                    </button>
+                    <button
+                      type="button"
+                      disabled
+                      className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs font-bold text-slate-500 opacity-50"
+                    >
+                      俳優skeleton作成
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+
+            {!loading && unmatchedActorQueue.length === 0 ? (
+              <div className="px-6 py-12 text-center text-sm text-slate-500">
+                未照合俳優キューは空です。
+              </div>
+            ) : null}
+          </div>
+        </div>
+      ) : null}
+
+      {queue !== "actor_queue" ? (
       <div className="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
         <div className="border-b border-white/10 px-6 py-3 text-xs text-slate-400">
           {loading ? "Loading..." : `${visibleCandidates.length} 件表示 / 最大 ${PAGE_SIZE} 件`}
@@ -1177,6 +1352,7 @@ const AdminExternalKiraHai: React.FC = () => {
           ) : null}
         </div>
       </div>
+      ) : null}
     </div>
   );
 };
