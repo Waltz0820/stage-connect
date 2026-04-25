@@ -11,15 +11,15 @@ const USER_AGENT =
 
 const INDEX_PATHS = [
   "/a-actors-index",
-  "/k-actors-index",
-  "/s-actors-index",
-  "/t-actors-index",
-  "/n-actors-index",
-  "/h-actors-index",
-  "/m-actors-index",
-  "/y-actors-index",
-  "/r-actors-index",
-  "/w-actors-index",
+  "/ka-actors-index",
+  "/sa-actors-index",
+  "/ta-actors-index",
+  "/na-actors-index",
+  "/ha-actors-index",
+  "/ma-actors-index",
+  "/ya-actors-index",
+  "/ra-actors-index",
+  "/wa-actors-index",
 ];
 
 const BLOCKED_PATH_PARTS = [
@@ -37,16 +37,22 @@ function parseArgs(argv) {
   const args = {
     write: false,
     onlyIndex: false,
+    fromDb: false,
     limitActors: Number.POSITIVE_INFINITY,
+    offsetActors: 0,
     delayMs: DEFAULT_DELAY_MS,
   };
 
   for (const arg of argv) {
     if (arg === "--write") args.write = true;
     else if (arg === "--only-index") args.onlyIndex = true;
+    else if (arg === "--from-db") args.fromDb = true;
     else if (arg.startsWith("--limit-actors=")) {
       const value = Number(arg.split("=")[1]);
       if (Number.isFinite(value) && value > 0) args.limitActors = Math.trunc(value);
+    } else if (arg.startsWith("--offset-actors=")) {
+      const value = Number(arg.split("=")[1]);
+      if (Number.isFinite(value) && value >= 0) args.offsetActors = Math.trunc(value);
     } else if (arg.startsWith("--delay-ms=")) {
       const value = Number(arg.split("=")[1]);
       if (Number.isFinite(value) && value >= 1000) args.delayMs = Math.trunc(value);
@@ -367,6 +373,32 @@ async function loadExistingRows(supabase) {
   return { actorMap, playMap };
 }
 
+async function loadMatchedExternalActors(supabase, limitActors, offsetActors) {
+  let query = supabase
+    .from("external_actors")
+    .select("source_actor_name,source_actor_url,alias_from,alias_to,note")
+    .eq("source", SOURCE)
+    .not("matched_actor_id", "is", null)
+    .order("source_actor_name", { ascending: true });
+
+  if (Number.isFinite(limitActors)) {
+    query = query.range(offsetActors, offsetActors + limitActors - 1);
+  } else if (offsetActors > 0) {
+    query = query.range(offsetActors, offsetActors + 999);
+  }
+
+  const { data, error } = await query;
+  if (error) throw error;
+
+  return (data ?? []).map((row) => ({
+    sourceActorName: row.source_actor_name,
+    sourceActorUrl: row.source_actor_url,
+    aliasFrom: row.alias_from,
+    aliasTo: row.alias_to,
+    note: row.note,
+  }));
+}
+
 async function upsertExternalActor(supabase, actor, match) {
   const payload = {
     source: SOURCE,
@@ -390,6 +422,47 @@ async function upsertExternalActor(supabase, actor, match) {
 
   if (error) throw error;
   return data.id;
+}
+
+async function upsertExternalActorsBatch(supabase, actors, actorMap) {
+  const now = new Date().toISOString();
+  const payloads = actors.map((actor) => {
+    const match = actorMap.get(normalizeMatchText(actor.sourceActorName)) ?? null;
+    return {
+      source: SOURCE,
+      source_actor_name: actor.sourceActorName,
+      source_actor_url: actor.sourceActorUrl,
+      alias_from: actor.aliasFrom,
+      alias_to: actor.aliasTo,
+      note: actor.note,
+      matched_actor_id: match?.id ?? null,
+      match_status: match ? "matched" : "unmatched",
+      match_confidence: match ? 90 : 0,
+      scraped_at: now,
+      updated_at: now,
+    };
+  });
+
+  const chunkSize = 250;
+  const idsByUrl = new Map();
+
+  for (let i = 0; i < payloads.length; i += chunkSize) {
+    const chunk = payloads.slice(i, i + chunkSize);
+    const { data, error } = await supabase
+      .from("external_actors")
+      .upsert(chunk, { onConflict: "source,source_actor_url" })
+      .select("id,source_actor_url");
+
+    if (error) throw error;
+
+    for (const row of data ?? []) {
+      idsByUrl.set(row.source_actor_url, row.id);
+    }
+
+    console.log(`[db] external_actors ${Math.min(i + chunk.length, payloads.length)} / ${payloads.length}`);
+  }
+
+  return idsByUrl;
 }
 
 async function upsertExternalPlay(supabase, credit, match) {
@@ -501,7 +574,9 @@ async function main() {
   loadLocalEnv();
 
   const args = parseArgs(process.argv.slice(2));
-  console.log(`[mode] ${args.write ? "write" : "dry-run"} / delay=${args.delayMs}ms`);
+  console.log(
+    `[mode] ${args.write ? "write" : "dry-run"} / delay=${args.delayMs}ms / limit=${args.limitActors} / offset=${args.offsetActors}`
+  );
 
   await assertRobotsAllowed(["/robots.txt", ...INDEX_PATHS]);
 
@@ -514,25 +589,35 @@ async function main() {
     console.log(`[db] actors=${existing.actorMap.size} playKeys=${existing.playMap.size}`);
   }
 
-  const indexedActors = new Map();
+  let actors = [];
 
-  for (const path of INDEX_PATHS) {
-    const html = await fetchHtml(`${BASE_URL}${path}`, args.delayMs);
-    for (const actor of parseActorIndex(html)) {
-      indexedActors.set(actor.sourceActorUrl, actor);
+  if (args.fromDb) {
+    if (!args.write) {
+      throw new Error("--from-db requires --write so the script can read external_actors");
     }
-    console.log(`[index] ${path} totalActors=${indexedActors.size}`);
-  }
+    actors = await loadMatchedExternalActors(supabase, args.limitActors, args.offsetActors);
+    console.log(`[actors] loaded from external_actors matched=${actors.length}`);
+  } else {
+    const indexedActors = new Map();
 
-  const actors = Array.from(indexedActors.values()).slice(0, args.limitActors);
-  console.log(`[actors] selected=${actors.length} / indexed=${indexedActors.size}`);
-
-  if (args.write) {
-    for (const actor of actors) {
-      const match = existing.actorMap.get(normalizeMatchText(actor.sourceActorName)) ?? null;
-      await upsertExternalActor(supabase, actor, match);
+    for (const path of INDEX_PATHS) {
+      const html = await fetchHtml(`${BASE_URL}${path}`, args.delayMs);
+      for (const actor of parseActorIndex(html)) {
+        indexedActors.set(actor.sourceActorUrl, actor);
+      }
+      console.log(`[index] ${path} totalActors=${indexedActors.size}`);
     }
-    console.log("[db] external_actors upserted");
+
+    actors = Array.from(indexedActors.values()).slice(
+      args.offsetActors,
+      Number.isFinite(args.limitActors) ? args.offsetActors + args.limitActors : undefined
+    );
+    console.log(`[actors] selected=${actors.length} / indexed=${indexedActors.size}`);
+
+    if (args.write) {
+      await upsertExternalActorsBatch(supabase, actors, existing.actorMap);
+      console.log("[db] external_actors upserted");
+    }
   }
 
   if (args.onlyIndex) {

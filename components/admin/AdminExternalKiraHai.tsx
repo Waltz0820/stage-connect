@@ -2,12 +2,14 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "../../next-app/lib/admin-router-shim";
 import { supabase } from "../../next-app/lib/admin-supabase";
+import { toSlug } from "./widgets/utils";
 
 type CandidateRow = {
   id: string;
   source: string;
   source_actor_name: string;
   source_actor_url: string;
+  external_play_id?: string | null;
   source_work_title: string;
   source_work_url?: string | null;
   source_year?: number | null;
@@ -50,14 +52,36 @@ const statusOptions = [
   { value: "rejected", label: "無視" },
 ];
 
+const queueOptions = [
+  { value: "all", label: "すべて" },
+  { value: "ready", label: "すぐ採用" },
+  { value: "skeleton", label: "作品作成候補" },
+  { value: "actor_unmatched", label: "俳優未照合" },
+];
+
 const normalizeText = (value?: string | null) => (value ?? "").trim();
+
+const getSourceSlug = (url?: string | null) => {
+  if (!url) return "";
+  try {
+    const parsed = new URL(url);
+    const parts = parsed.pathname.split("/").map((part) => part.trim()).filter(Boolean);
+    return parts.at(-1) ?? "";
+  } catch {
+    return "";
+  }
+};
+
+const makeSkeletonPeriod = (year?: number | null) => (year ? `${year}年` : null);
 
 const AdminExternalKiraHai: React.FC = () => {
   const [candidates, setCandidates] = useState<CandidateRow[]>([]);
   const [externalActors, setExternalActors] = useState<ExternalActorRow[]>([]);
+  const [actorStats, setActorStats] = useState({ total: 0, matched: 0 });
   const [actorsById, setActorsById] = useState<Record<string, ActorRow>>({});
   const [playsById, setPlaysById] = useState<Record<string, PlayRow>>({});
   const [status, setStatus] = useState("pending");
+  const [queue, setQueue] = useState("all");
   const [q, setQ] = useState("");
   const [loading, setLoading] = useState(true);
   const [busyId, setBusyId] = useState<string | null>(null);
@@ -91,7 +115,7 @@ const AdminExternalKiraHai: React.FC = () => {
       const candidateQuery = supabase
         .from("external_cast_candidates")
         .select(
-          "id,source,source_actor_name,source_actor_url,source_work_title,source_work_url,source_year,source_role_raw,source_role_names,matched_actor_id,matched_play_id,accepted_cast_id,confidence,status,note,scraped_at"
+          "id,source,source_actor_name,source_actor_url,external_play_id,source_work_title,source_work_url,source_year,source_role_raw,source_role_names,matched_actor_id,matched_play_id,accepted_cast_id,confidence,status,note,scraped_at"
         )
         .eq("source", "kira-hai")
         .order("scraped_at", { ascending: false })
@@ -99,6 +123,14 @@ const AdminExternalKiraHai: React.FC = () => {
 
       if (status !== "all") {
         candidateQuery.eq("status", status);
+      }
+
+      if (queue === "ready") {
+        candidateQuery.not("matched_actor_id", "is", null).not("matched_play_id", "is", null);
+      } else if (queue === "skeleton") {
+        candidateQuery.not("matched_actor_id", "is", null).is("matched_play_id", null);
+      } else if (queue === "actor_unmatched") {
+        candidateQuery.is("matched_actor_id", null);
       }
 
       const { data: candidateData, error: candidateError } = await candidateQuery;
@@ -117,6 +149,23 @@ const AdminExternalKiraHai: React.FC = () => {
 
       if (actorError) throw actorError;
       setExternalActors((actorData ?? []) as ExternalActorRow[]);
+
+      const [{ count: actorTotal, error: actorTotalError }, { count: actorMatched, error: actorMatchedError }] =
+        await Promise.all([
+          supabase
+            .from("external_actors")
+            .select("id", { count: "exact", head: true })
+            .eq("source", "kira-hai"),
+          supabase
+            .from("external_actors")
+            .select("id", { count: "exact", head: true })
+            .eq("source", "kira-hai")
+            .not("matched_actor_id", "is", null),
+        ]);
+
+      if (actorTotalError) throw actorTotalError;
+      if (actorMatchedError) throw actorMatchedError;
+      setActorStats({ total: actorTotal ?? 0, matched: actorMatched ?? 0 });
     } catch (error: any) {
       setMsg(error?.message ?? "load error");
     } finally {
@@ -126,15 +175,16 @@ const AdminExternalKiraHai: React.FC = () => {
 
   useEffect(() => {
     void load();
-  }, [status]);
+  }, [queue, status]);
 
   const stats = useMemo(() => {
-    const actorTotal = externalActors.length;
-    const actorMatched = externalActors.filter((row) => row.matched_actor_id).length;
+    const actorTotal = actorStats.total || externalActors.length;
+    const actorMatched = actorStats.matched || externalActors.filter((row) => row.matched_actor_id).length;
     const canAccept = candidates.filter((row) => row.matched_actor_id && row.matched_play_id && row.status !== "accepted").length;
+    const canSkeleton = candidates.filter((row) => row.matched_actor_id && !row.matched_play_id && row.status !== "accepted").length;
 
-    return { actorTotal, actorMatched, canAccept };
-  }, [candidates, externalActors]);
+    return { actorTotal, actorMatched, canAccept, canSkeleton };
+  }, [actorStats, candidates, externalActors]);
 
   const visibleCandidates = useMemo(() => {
     const s = q.trim().toLowerCase();
@@ -249,6 +299,116 @@ const AdminExternalKiraHai: React.FC = () => {
     }
   };
 
+  const buildUniquePlaySlug = async (row: CandidateRow) => {
+    const sourceSlug = toSlug(getSourceSlug(row.source_work_url));
+    const titleSlug = toSlug(row.source_work_title);
+    const base = sourceSlug || titleSlug || `external-play-${row.source_year || "unknown"}`;
+    const normalizedBase = base.replace(/^-+|-+$/g, "") || `external-play-${Date.now()}`;
+
+    for (let i = 0; i < 20; i += 1) {
+      const candidate =
+        i === 0
+          ? normalizedBase
+          : row.source_year
+            ? `${normalizedBase}-${row.source_year}-${i + 1}`
+            : `${normalizedBase}-${i + 1}`;
+      const { data, error } = await supabase.from("plays").select("id").eq("slug", candidate).maybeSingle();
+      if (error) throw error;
+      if (!data) return candidate;
+    }
+
+    return `${normalizedBase}-${Date.now()}`;
+  };
+
+  const createSkeletonPlayAndAccept = async (row: CandidateRow) => {
+    if (!row.matched_actor_id) {
+      setMsg("既存actorに一致している候補だけ作品skeletonを作成できます");
+      return;
+    }
+
+    if (row.matched_play_id) {
+      await acceptCandidate(row);
+      return;
+    }
+
+    setBusyId(row.id);
+    setMsg("");
+    try {
+      const slug = await buildUniquePlaySlug(row);
+      const payload = {
+        title: row.source_work_title,
+        slug,
+        summary: null,
+        period: makeSkeletonPeriod(row.source_year),
+        venue: null,
+        genre: null,
+        franchise_id: null,
+        vod: {},
+        credits: null,
+      };
+
+      const { data: created, error: createError } = await supabase
+        .from("plays")
+        .insert(payload)
+        .select("id,title,slug")
+        .single();
+
+      if (createError) throw createError;
+
+      const now = new Date().toISOString();
+
+      if (row.external_play_id) {
+        const { error: externalPlayError } = await supabase
+          .from("external_plays")
+          .update({
+            matched_play_id: created.id,
+            skeleton_play_id: created.id,
+            match_status: "skeleton_created",
+            match_confidence: 70,
+            updated_at: now,
+          })
+          .eq("id", row.external_play_id);
+
+        if (externalPlayError) throw externalPlayError;
+      }
+
+      let candidateUpdate = supabase
+        .from("external_cast_candidates")
+        .update({
+          matched_play_id: created.id,
+          updated_at: now,
+        })
+        .eq("source", "kira-hai");
+
+      if (row.source_work_url) {
+        candidateUpdate = candidateUpdate.eq("source_work_url", row.source_work_url);
+      } else {
+        candidateUpdate = candidateUpdate.eq("source_work_title", row.source_work_title);
+      }
+
+      const { error: candidateUpdateError } = await candidateUpdate;
+      if (candidateUpdateError) throw candidateUpdateError;
+
+      const createdPlay = created as PlayRow;
+      setPlaysById((current) => ({ ...current, [createdPlay.id]: createdPlay }));
+      setCandidates((current) =>
+        current.map((item) =>
+          (row.source_work_url && item.source_work_url === row.source_work_url) ||
+          (!row.source_work_url && item.source_work_title === row.source_work_title)
+            ? { ...item, matched_play_id: createdPlay.id }
+            : item
+        )
+      );
+
+      await acceptCandidate({ ...row, matched_play_id: createdPlay.id });
+      setMsg(`作品skeleton「${createdPlay.title}」を作成して採用しました`);
+    } catch (error: any) {
+      setMsg(error?.message ?? "create skeleton play error");
+    } finally {
+      setBusyId(null);
+    }
+  };
+
   return (
     <div className="space-y-4">
       <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
@@ -269,7 +429,7 @@ const AdminExternalKiraHai: React.FC = () => {
           </button>
         </div>
 
-        <div className="mt-5 grid gap-3 sm:grid-cols-3">
+        <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           <div className="rounded-2xl border border-white/10 bg-black/30 p-4">
             <div className="text-xs text-slate-500">外部俳優候補</div>
             <div className="mt-1 text-2xl font-extrabold text-white">{stats.actorTotal}</div>
@@ -282,9 +442,13 @@ const AdminExternalKiraHai: React.FC = () => {
             <div className="text-xs text-slate-500">すぐ採用可能</div>
             <div className="mt-1 text-2xl font-extrabold text-white">{stats.canAccept}</div>
           </div>
+          <div className="rounded-2xl border border-white/10 bg-black/30 p-4">
+            <div className="text-xs text-slate-500">作品skeleton候補</div>
+            <div className="mt-1 text-2xl font-extrabold text-white">{stats.canSkeleton}</div>
+          </div>
         </div>
 
-        <div className="mt-5 grid gap-3 lg:grid-cols-[220px_1fr]">
+        <div className="mt-5 grid gap-3 lg:grid-cols-[220px_220px_1fr]">
           <select
             className="rounded-xl border border-white/10 bg-black/40 px-4 py-3 text-sm text-white outline-none"
             value={status}
@@ -292,6 +456,18 @@ const AdminExternalKiraHai: React.FC = () => {
           >
             <option value="all">すべて</option>
             {statusOptions.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </select>
+
+          <select
+            className="rounded-xl border border-white/10 bg-black/40 px-4 py-3 text-sm text-white outline-none"
+            value={queue}
+            onChange={(event) => setQueue(event.target.value)}
+          >
+            {queueOptions.map((option) => (
               <option key={option.value} value={option.value}>
                 {option.label}
               </option>
@@ -319,6 +495,7 @@ const AdminExternalKiraHai: React.FC = () => {
             const actor = row.matched_actor_id ? actorsById[row.matched_actor_id] : null;
             const play = row.matched_play_id ? playsById[row.matched_play_id] : null;
             const canAccept = Boolean(actor && play && row.status !== "accepted");
+            const canCreateSkeleton = Boolean(actor && !play && row.status !== "accepted");
 
             return (
               <div key={row.id} className="p-5">
@@ -339,8 +516,32 @@ const AdminExternalKiraHai: React.FC = () => {
                     <div className="mt-3 grid gap-3 lg:grid-cols-2">
                       <div className="rounded-xl border border-white/10 bg-black/25 p-4">
                         <div className="text-xs text-slate-500">外部候補</div>
-                        <div className="mt-2 font-bold text-white">{row.source_actor_name}</div>
-                        <div className="mt-1 text-sm text-slate-300">{row.source_work_title}</div>
+                        <div className="mt-2 flex flex-wrap items-center gap-2">
+                          <span className="font-bold text-white">{row.source_actor_name}</span>
+                          {row.source_actor_url ? (
+                            <a
+                              href={row.source_actor_url}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-[11px] text-slate-300 hover:bg-white/10"
+                            >
+                              俳優元
+                            </a>
+                          ) : null}
+                        </div>
+                        <div className="mt-2 flex flex-wrap items-center gap-2 text-sm text-slate-300">
+                          <span>{row.source_work_title}</span>
+                          {row.source_work_url ? (
+                            <a
+                              href={row.source_work_url}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-[11px] text-slate-300 hover:bg-white/10"
+                            >
+                              作品元
+                            </a>
+                          ) : null}
+                        </div>
                         <div className="mt-2 text-sm text-slate-400">
                           役名: {row.source_role_raw || "未登録"}
                         </div>
@@ -368,6 +569,16 @@ const AdminExternalKiraHai: React.FC = () => {
                             <span className="text-slate-500">未照合</span>
                           )}
                         </div>
+                        {!play && actor ? (
+                          <div className="mt-3 rounded-lg border border-sky-500/20 bg-sky-500/10 px-3 py-2 text-xs text-sky-100">
+                            既存俳優に一致済み。必要なら作品skeletonを作って出演線まで接続できます。
+                          </div>
+                        ) : null}
+                        {!actor ? (
+                          <div className="mt-3 rounded-lg border border-amber-500/20 bg-amber-500/10 px-3 py-2 text-xs text-amber-100">
+                            俳優未照合。まず既存俳優への一致確認、または俳優skeleton化の対象です。
+                          </div>
+                        ) : null}
                       </div>
                     </div>
                   </div>
@@ -380,6 +591,14 @@ const AdminExternalKiraHai: React.FC = () => {
                       className="rounded-full border border-emerald-500/30 bg-emerald-500/15 px-3 py-2 text-xs font-bold text-emerald-100 hover:bg-emerald-500/20 disabled:cursor-not-allowed disabled:opacity-35"
                     >
                       採用
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => void createSkeletonPlayAndAccept(row)}
+                      disabled={!canCreateSkeleton || busyId === row.id}
+                      className="rounded-full border border-sky-500/30 bg-sky-500/15 px-3 py-2 text-xs font-bold text-sky-100 hover:bg-sky-500/20 disabled:cursor-not-allowed disabled:opacity-35"
+                    >
+                      作品作成して採用
                     </button>
                     <button
                       type="button"
