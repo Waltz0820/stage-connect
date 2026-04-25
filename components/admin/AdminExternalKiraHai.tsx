@@ -83,6 +83,9 @@ const AdminExternalKiraHai: React.FC = () => {
   const [status, setStatus] = useState("pending");
   const [queue, setQueue] = useState("all");
   const [q, setQ] = useState("");
+  const [actorMatchTarget, setActorMatchTarget] = useState<CandidateRow | null>(null);
+  const [actorSearchText, setActorSearchText] = useState("");
+  const [actorSearchResults, setActorSearchResults] = useState<ActorRow[]>([]);
   const [loading, setLoading] = useState(true);
   const [busyId, setBusyId] = useState<string | null>(null);
   const [msg, setMsg] = useState("");
@@ -224,6 +227,87 @@ const AdminExternalKiraHai: React.FC = () => {
       setCandidates((current) => current.map((item) => (item.id === row.id ? { ...item, status: nextStatus } : item)));
     } catch (error: any) {
       setMsg(error?.message ?? "status update error");
+    } finally {
+      setBusyId(null);
+    }
+  };
+
+  const openActorMatch = async (row: CandidateRow) => {
+    setActorMatchTarget(row);
+    setActorSearchText(row.source_actor_name ?? "");
+    setActorSearchResults([]);
+    setMsg("");
+    await searchActors(row.source_actor_name ?? "");
+  };
+
+  const searchActors = async (value = actorSearchText) => {
+    const query = normalizeText(value);
+    if (!query) {
+      setActorSearchResults([]);
+      return;
+    }
+
+    const { data, error } = await supabase
+      .from("actors")
+      .select("id,name,slug")
+      .or(`name.ilike.%${query}%,kana.ilike.%${query}%,slug.ilike.%${query}%,profile.ilike.%${query}%`)
+      .limit(20);
+
+    if (error) {
+      setMsg(error.message ?? "actor search error");
+      return;
+    }
+
+    setActorSearchResults((data ?? []) as ActorRow[]);
+  };
+
+  const applyActorMatch = async (actor: ActorRow) => {
+    if (!actorMatchTarget) return;
+    setBusyId(actorMatchTarget.id);
+    setMsg("");
+
+    try {
+      const now = new Date().toISOString();
+      const sourceActorUrl = actorMatchTarget.source_actor_url;
+
+      const { error: externalActorError } = await supabase
+        .from("external_actors")
+        .update({
+          matched_actor_id: actor.id,
+          match_status: "matched",
+          match_confidence: 85,
+          updated_at: now,
+        })
+        .eq("source", "kira-hai")
+        .eq("source_actor_url", sourceActorUrl);
+
+      if (externalActorError) throw externalActorError;
+
+      const { error: candidatesError } = await supabase
+        .from("external_cast_candidates")
+        .update({
+          matched_actor_id: actor.id,
+          confidence: 60,
+          updated_at: now,
+        })
+        .eq("source", "kira-hai")
+        .eq("source_actor_url", sourceActorUrl)
+        .is("matched_actor_id", null);
+
+      if (candidatesError) throw candidatesError;
+
+      setActorsById((current) => ({ ...current, [actor.id]: actor }));
+      setCandidates((current) =>
+        current.map((item) =>
+          item.source_actor_url === sourceActorUrl ? { ...item, matched_actor_id: actor.id } : item
+        )
+      );
+      setActorStats((current) => ({ ...current, matched: current.matched + 1 }));
+      setActorMatchTarget(null);
+      setActorSearchResults([]);
+      setMsg(`${actorMatchTarget.source_actor_name} を ${actor.name} に手動マッチしました`);
+    } catch (error: any) {
+      setMsg(error?.message ?? "actor match error");
     } finally {
       setBusyId(null);
     }
@@ -485,6 +569,70 @@ const AdminExternalKiraHai: React.FC = () => {
         {msg ? <div className="mt-4 text-sm text-slate-300">{msg}</div> : null}
       </div>
 
+      {actorMatchTarget ? (
+        <div className="rounded-2xl border border-amber-500/20 bg-amber-500/10 p-6">
+          <div className="flex flex-wrap items-start justify-between gap-3">
+            <div>
+              <h2 className="text-lg font-extrabold text-white">既存俳優に手動マッチ</h2>
+              <p className="mt-1 text-sm text-amber-100">
+                外部候補: <b>{actorMatchTarget.source_actor_name}</b>
+              </p>
+              <p className="mt-1 text-xs text-slate-400">
+                旧芸名・プロフィール本文内の表記ゆれも検索対象にしています。
+              </p>
+            </div>
+            <button
+              type="button"
+              onClick={() => {
+                setActorMatchTarget(null);
+                setActorSearchResults([]);
+              }}
+              className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs font-bold text-slate-200 hover:bg-white/10"
+            >
+              閉じる
+            </button>
+          </div>
+
+          <div className="mt-4 flex gap-2">
+            <input
+              className="min-w-0 flex-1 rounded-xl border border-white/10 bg-black/40 px-4 py-3 text-sm text-white outline-none"
+              value={actorSearchText}
+              onChange={(event) => setActorSearchText(event.target.value)}
+              onKeyDown={(event) => {
+                if (event.key === "Enter") void searchActors();
+              }}
+              placeholder="俳優名 / かな / slug / プロフィール文で検索"
+            />
+            <button
+              type="button"
+              onClick={() => void searchActors()}
+              className="rounded-xl border border-white/10 bg-white/10 px-4 py-3 text-sm font-bold text-white hover:bg-white/15"
+            >
+              検索
+            </button>
+          </div>
+
+          <div className="mt-4 grid gap-2 md:grid-cols-2">
+            {actorSearchResults.map((actor) => (
+              <button
+                key={actor.id}
+                type="button"
+                onClick={() => void applyActorMatch(actor)}
+                disabled={busyId === actorMatchTarget.id}
+                className="rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-left hover:bg-black/40 disabled:opacity-40"
+              >
+                <div className="font-bold text-white">{actor.name}</div>
+                <div className="mt-1 text-xs text-slate-500">{actor.slug}</div>
+              </button>
+            ))}
+          </div>
+
+          {actorSearchResults.length === 0 ? (
+            <div className="mt-4 text-sm text-slate-500">検索候補がまだありません。</div>
+          ) : null}
+        </div>
+      ) : null}
+
       <div className="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
         <div className="border-b border-white/10 px-6 py-3 text-xs text-slate-400">
           {loading ? "Loading..." : `${visibleCandidates.length} 件表示 / 最大 ${PAGE_SIZE} 件`}
@@ -576,7 +724,14 @@ const AdminExternalKiraHai: React.FC = () => {
                         ) : null}
                         {!actor ? (
                           <div className="mt-3 rounded-lg border border-amber-500/20 bg-amber-500/10 px-3 py-2 text-xs text-amber-100">
-                            俳優未照合。まず既存俳優への一致確認、または俳優skeleton化の対象です。
+                            <div>俳優未照合。まず既存俳優への一致確認、または俳優skeleton化の対象です。</div>
+                            <button
+                              type="button"
+                              onClick={() => void openActorMatch(row)}
+                              className="mt-2 rounded-full border border-amber-300/20 bg-amber-300/10 px-3 py-1.5 text-[11px] font-bold text-amber-50 hover:bg-amber-300/15"
+                            >
+                              既存俳優にマッチ
+                            </button>
                           </div>
                         ) : null}
                       </div>

@@ -126,6 +126,15 @@ function normalizeMatchText(value) {
     .trim();
 }
 
+function findActorMatch(actorMap, actor) {
+  return (
+    actorMap.get(normalizeMatchText(actor.sourceActorName)) ??
+    actorMap.get(normalizeMatchText(actor.aliasTo)) ??
+    actorMap.get(normalizeMatchText(actor.aliasFrom)) ??
+    null
+  );
+}
+
 function normalizeTitleForStorage(value) {
   return normalizeWhitespace(value)
     .normalize("NFKC")
@@ -427,7 +436,7 @@ async function upsertExternalActor(supabase, actor, match) {
 async function upsertExternalActorsBatch(supabase, actors, actorMap) {
   const now = new Date().toISOString();
   const payloads = actors.map((actor) => {
-    const match = actorMap.get(normalizeMatchText(actor.sourceActorName)) ?? null;
+    const match = findActorMatch(actorMap, actor);
     return {
       source: SOURCE,
       source_actor_name: actor.sourceActorName,
@@ -629,7 +638,7 @@ async function main() {
   let writeCount = 0;
 
   for (const actor of actors) {
-    const actorMatch = existing.actorMap.get(normalizeMatchText(actor.sourceActorName)) ?? null;
+    const actorMatch = findActorMatch(existing.actorMap, actor);
     if (args.write && !actorMatch) {
       continue;
     }
