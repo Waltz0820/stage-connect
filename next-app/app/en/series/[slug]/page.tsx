@@ -215,15 +215,30 @@ export default async function EnglishSeriesDetailPage({ params }: { params: Prom
                         {hasVod(play.vod) ? <span className="catalog-card__badge">Streaming</span> : null}
                       </div>
 
+                      <div className="series-timeline-card__meta">
+                        <span>{compactTimelinePeriod(play.period)}</span>
+                      </div>
+
                       {play.summaryEn || play.summary ? (
                         <div className="catalog-card__text catalog-card__text--clamped">
                           {truncateText(toPlainText(play.summaryEn || play.summary), 220)}
                         </div>
                       ) : null}
-
-                      <div className="catalog-link">View play details</div>
                     </div>
                   </Link>
+
+                  <div className="catalog-card__footer">
+                    <div className="action-row">
+                      <Link className="action-button action-button-primary" href={`/en/plays/${play.slug}`}>
+                        View play details
+                      </Link>
+                      {play.vod?.dmm ? (
+                        <a className="action-button" href={play.vod.dmm} target="_blank" rel="noopener noreferrer">
+                          DMM TV
+                        </a>
+                      ) : null}
+                    </div>
+                  </div>
                 </article>
               </section>
             ))}

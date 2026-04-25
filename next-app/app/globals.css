@@ -4507,6 +4507,31 @@ a {
   line-height: 1.5;
 }
 
+.series-detail-stage-page .series-timeline-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.series-detail-stage-page .series-timeline-card__meta span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  border: 1px solid rgba(243, 240, 234, 0.1);
+  border-radius: 999px;
+  padding: 5px 10px;
+  background: rgba(255, 255, 255, 0.016);
+  color: rgba(244, 240, 233, 0.74);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.series-detail-stage-page .series-timeline-card .catalog-card__text--clamped {
+  margin-top: 12px;
+  -webkit-line-clamp: 2;
+}
+
 .actor-detail-stage-page .actor-timeline-card__meta {
   display: flex;
   flex-wrap: wrap;

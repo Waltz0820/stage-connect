@@ -240,6 +240,10 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
                         {hasVod(play.vod) ? <span className="catalog-card__badge">配信あり</span> : null}
                       </div>
 
+                      <div className="series-timeline-card__meta">
+                        <span>{compactTimelinePeriod(play.period)}</span>
+                      </div>
+
                       {play.summary ? (
                         <div className="catalog-card__text catalog-card__text--clamped">{play.summary}</div>
                       ) : null}
@@ -254,16 +258,6 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
                       {play.vod?.dmm ? (
                         <a className="action-button" href={play.vod.dmm} target="_blank" rel="noopener noreferrer">
                           DMM TV
-                        </a>
-                      ) : null}
-                      {play.vod?.unext ? (
-                        <a className="action-button" href={play.vod.unext} target="_blank" rel="noopener noreferrer">
-                          U-NEXT
-                        </a>
-                      ) : null}
-                      {play.vod?.danime ? (
-                        <a className="action-button" href={play.vod.danime} target="_blank" rel="noopener noreferrer">
-                          dアニメ
                         </a>
                       ) : null}
                     </div>
