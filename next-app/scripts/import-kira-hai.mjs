@@ -184,6 +184,45 @@ function parseRoleNames(roleRaw) {
   return parts.length > 1 ? parts : [cleaned];
 }
 
+function toIsoDate(year, month, day) {
+  const y = Number(year);
+  const m = Number(month);
+  const d = Number(day);
+  if (!Number.isFinite(y) || !Number.isFinite(m) || !Number.isFinite(d)) return null;
+  return `${String(y).padStart(4, "0")}-${String(m).padStart(2, "0")}-${String(d).padStart(2, "0")}`;
+}
+
+function parseActorProfileFacts(html) {
+  const $ = cheerio.load(html);
+  const bodyText = $("body").text();
+  const stageIndex = bodyText.indexOf("出演舞台");
+  const headText = stageIndex >= 0 ? bodyText.slice(0, stageIndex) : bodyText.slice(0, 5000);
+  const normalized = headText.normalize("NFKC");
+  const lines = normalized
+    .split(/\r?\n/)
+    .map((line) => normalizeWhitespace(line))
+    .filter(Boolean);
+
+  const joined = lines.join(" / ");
+  const birthdayMatch = joined.match(/((?:19|20)\d{2})年\s*(\d{1,2})月\s*(\d{1,2})日/);
+  const heightMatch = joined.match(/(\d{3})\s*cm/i);
+  const bloodMatch = joined.match(/\b(AB|A|B|O)\s*型\b/i);
+  const affiliationLine =
+    lines.find((line) => /(所属|事務所|劇団|プロダクション|エンタテインメント|エンターテイメント)/.test(line)) ?? null;
+
+  const factLines = lines.filter((line) => /(?:生まれ|誕生日|cm|血液型|[ABO]型)/i.test(line));
+  const sourceBirthdayRaw = birthdayMatch ? birthdayMatch[0] : null;
+
+  return {
+    sourceProfileFactsRaw: factLines.length > 0 ? factLines.slice(0, 5).join(" / ") : null,
+    sourceBirthdayRaw,
+    sourceBirthday: birthdayMatch ? toIsoDate(birthdayMatch[1], birthdayMatch[2], birthdayMatch[3]) : null,
+    sourceHeightCm: heightMatch ? Number(heightMatch[1]) : null,
+    sourceBloodType: bloodMatch ? bloodMatch[1].toUpperCase() : null,
+    sourceAffiliationRaw: affiliationLine,
+  };
+}
+
 async function fetchText(url) {
   const res = await fetch(url, {
     headers: {
@@ -423,6 +462,13 @@ async function upsertExternalActor(supabase, actor, match) {
     updated_at: new Date().toISOString(),
   };
 
+  if ("sourceProfileFactsRaw" in actor) payload.source_profile_facts_raw = actor.sourceProfileFactsRaw;
+  if ("sourceBirthdayRaw" in actor) payload.source_birthday_raw = actor.sourceBirthdayRaw;
+  if ("sourceBirthday" in actor) payload.source_birthday = actor.sourceBirthday;
+  if ("sourceHeightCm" in actor) payload.source_height_cm = actor.sourceHeightCm;
+  if ("sourceBloodType" in actor) payload.source_blood_type = actor.sourceBloodType;
+  if ("sourceAffiliationRaw" in actor) payload.source_affiliation_raw = actor.sourceAffiliationRaw;
+
   const { data, error } = await supabase
     .from("external_actors")
     .upsert(payload, { onConflict: "source,source_actor_url" })
@@ -437,7 +483,7 @@ async function upsertExternalActorsBatch(supabase, actors, actorMap) {
   const now = new Date().toISOString();
   const payloads = actors.map((actor) => {
     const match = findActorMatch(actorMap, actor);
-    return {
+    const payload = {
       source: SOURCE,
       source_actor_name: actor.sourceActorName,
       source_actor_url: actor.sourceActorUrl,
@@ -450,6 +496,15 @@ async function upsertExternalActorsBatch(supabase, actors, actorMap) {
       scraped_at: now,
       updated_at: now,
     };
+
+    if ("sourceProfileFactsRaw" in actor) payload.source_profile_facts_raw = actor.sourceProfileFactsRaw;
+    if ("sourceBirthdayRaw" in actor) payload.source_birthday_raw = actor.sourceBirthdayRaw;
+    if ("sourceBirthday" in actor) payload.source_birthday = actor.sourceBirthday;
+    if ("sourceHeightCm" in actor) payload.source_height_cm = actor.sourceHeightCm;
+    if ("sourceBloodType" in actor) payload.source_blood_type = actor.sourceBloodType;
+    if ("sourceAffiliationRaw" in actor) payload.source_affiliation_raw = actor.sourceAffiliationRaw;
+
+    return payload;
   });
 
   const chunkSize = 250;
@@ -644,13 +699,14 @@ async function main() {
     }
 
     const html = await fetchHtml(actor.sourceActorUrl, args.delayMs);
-    const credits = parseActorStageCredits(html, actor);
+    const actorWithFacts = { ...actor, ...parseActorProfileFacts(html) };
+    const credits = parseActorStageCredits(html, actorWithFacts);
     creditCount += credits.length;
     console.log(`[credits] ${actor.sourceActorName} ${credits.length}`);
 
     if (!args.write) continue;
 
-    const externalActorId = await upsertExternalActor(supabase, actor, actorMatch);
+    const externalActorId = await upsertExternalActor(supabase, actorWithFacts, actorMatch);
 
     for (const credit of credits) {
       const playMatch = existing.playMap.get(normalizeMatchText(credit.sourceWorkTitle)) ?? null;

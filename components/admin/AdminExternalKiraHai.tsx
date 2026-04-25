@@ -42,6 +42,11 @@ type UnmatchedActorQueueRow = {
   aliasFrom?: string | null;
   aliasTo?: string | null;
   note?: string | null;
+  sourceBirthdayRaw?: string | null;
+  sourceBirthday?: string | null;
+  sourceHeightCm?: number | null;
+  sourceBloodType?: string | null;
+  sourceAffiliationRaw?: string | null;
   candidateCount: number;
   matchedPlayCount: number;
   latestYear?: number | null;
@@ -155,7 +160,7 @@ const AdminExternalKiraHai: React.FC = () => {
   const loadUnmatchedActorQueue = async () => {
     const { data: actors, error: actorError } = await supabase
       .from("external_actors")
-      .select("source_actor_name,source_actor_url,alias_from,alias_to,note")
+      .select("source_actor_name,source_actor_url,alias_from,alias_to,note,source_birthday_raw,source_birthday,source_height_cm,source_blood_type,source_affiliation_raw")
       .eq("source", "kira-hai")
       .is("matched_actor_id", null)
       .order("source_actor_name", { ascending: true })
@@ -202,6 +207,11 @@ const AdminExternalKiraHai: React.FC = () => {
           aliasFrom: actor.alias_from,
           aliasTo: actor.alias_to,
           note: actor.note,
+          sourceBirthdayRaw: actor.source_birthday_raw,
+          sourceBirthday: actor.source_birthday,
+          sourceHeightCm: actor.source_height_cm,
+          sourceBloodType: actor.source_blood_type,
+          sourceAffiliationRaw: actor.source_affiliation_raw,
           candidateCount: stat.candidateCount,
           matchedPlayCount: stat.matchedPlayCount,
           latestYear: stat.latestYear,
@@ -1133,6 +1143,26 @@ const AdminExternalKiraHai: React.FC = () => {
                     ) : null}
 
                     <div className="mt-3 flex flex-wrap gap-2 text-xs">
+                      {row.sourceBirthdayRaw || row.sourceBirthday ? (
+                        <span className="rounded-full border border-white/10 bg-black/30 px-2 py-1 text-slate-300">
+                          生年月日 {row.sourceBirthdayRaw || row.sourceBirthday}
+                        </span>
+                      ) : null}
+                      {row.sourceHeightCm ? (
+                        <span className="rounded-full border border-white/10 bg-black/30 px-2 py-1 text-slate-300">
+                          {row.sourceHeightCm}cm
+                        </span>
+                      ) : null}
+                      {row.sourceBloodType ? (
+                        <span className="rounded-full border border-white/10 bg-black/30 px-2 py-1 text-slate-300">
+                          {row.sourceBloodType}型
+                        </span>
+                      ) : null}
+                      {row.sourceAffiliationRaw ? (
+                        <span className="rounded-full border border-white/10 bg-black/30 px-2 py-1 text-slate-300">
+                          {row.sourceAffiliationRaw}
+                        </span>
+                      ) : null}
                       <span className="rounded-full border border-white/10 bg-black/30 px-2 py-1 text-slate-300">
                         出演候補 {row.candidateCount}件
                       </span>
