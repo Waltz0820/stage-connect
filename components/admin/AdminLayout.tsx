@@ -49,6 +49,7 @@ const AdminLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             {item("/admin/series", "シリーズ")}
             {item("/admin/plays", "作品")}
             {item("/admin/actors", "俳優")}
+            {item("/admin/external/kira-hai", "外部候補")}
             {item("/admin/guides", "編集部ガイド")}
           </div>
         </aside>

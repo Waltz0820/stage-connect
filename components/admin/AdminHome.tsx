@@ -10,7 +10,7 @@ const AdminHome: React.FC = () => {
         作品・俳優・シリーズの更新と、編集部ガイドの追加をここから進められます。
       </p>
 
-      <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
         <Link className="rounded-2xl border border-white/10 bg-black/30 p-4 hover:bg-black/40" to="/admin/series">
           <div className="font-bold text-white">シリーズ</div>
           <div className="mt-1 text-xs text-slate-400">intro / description</div>
@@ -26,6 +26,10 @@ const AdminHome: React.FC = () => {
         <Link className="rounded-2xl border border-white/10 bg-black/30 p-4 hover:bg-black/40" to="/admin/guides">
           <div className="font-bold text-white">編集部ガイド</div>
           <div className="mt-1 text-xs text-slate-400">series-guides / features</div>
+        </Link>
+        <Link className="rounded-2xl border border-white/10 bg-black/30 p-4 hover:bg-black/40" to="/admin/external/kira-hai">
+          <div className="font-bold text-white">外部候補</div>
+          <div className="mt-1 text-xs text-slate-400">kira-hai / 空箱候補</div>
         </Link>
       </div>
     </div>

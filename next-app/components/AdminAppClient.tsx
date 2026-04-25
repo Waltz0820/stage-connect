@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import AdminActorEdit from "../../components/admin/AdminActorEdit";
 import AdminActors from "../../components/admin/AdminActors";
 import AdminCastsEdit from "../../components/admin/AdminCastsEdit";
+import AdminExternalKiraHai from "../../components/admin/AdminExternalKiraHai";
 import AdminGuard from "../../components/admin/AdminGuard";
 import AdminGuideEdit from "../../components/admin/AdminGuideEdit";
 import AdminGuides from "../../components/admin/AdminGuides";
@@ -68,6 +69,7 @@ function resolveRoute(pathname: string): RouteMatch | null {
     { pattern: "/admin/actors", element: <Wrapped><AdminActors /></Wrapped> },
     { pattern: "/admin/actors/new", element: <Wrapped><AdminActorEdit mode="new" /></Wrapped> },
     { pattern: "/admin/actors/:slug", element: <Wrapped><AdminActorEdit mode="edit" /></Wrapped> },
+    { pattern: "/admin/external/kira-hai", element: <Wrapped><AdminExternalKiraHai /></Wrapped> },
     { pattern: "/admin/guides", element: <Wrapped><AdminGuides /></Wrapped> },
     { pattern: "/admin/guides/new", element: <Wrapped><AdminGuideEdit mode="new" /></Wrapped> },
     { pattern: "/admin/guides/:slug", element: <Wrapped><AdminGuideEdit mode="edit" /></Wrapped> },
