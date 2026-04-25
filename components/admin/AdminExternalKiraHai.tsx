@@ -39,6 +39,7 @@ type PlayRow = { id: string; title: string; slug: string };
 type UnmatchedActorQueueRow = {
   sourceActorName: string;
   sourceActorUrl: string;
+  sourceActorKana?: string | null;
   aliasFrom?: string | null;
   aliasTo?: string | null;
   note?: string | null;
@@ -113,6 +114,94 @@ const getSourceSlug = (url?: string | null) => {
   }
 };
 
+const kanaDigraphMap: Record<string, string> = {
+  きゃ: "kya", きゅ: "kyu", きょ: "kyo",
+  しゃ: "sha", しゅ: "shu", しょ: "sho",
+  ちゃ: "cha", ちゅ: "chu", ちょ: "cho",
+  にゃ: "nya", にゅ: "nyu", にょ: "nyo",
+  ひゃ: "hya", ひゅ: "hyu", ひょ: "hyo",
+  みゃ: "mya", みゅ: "myu", みょ: "myo",
+  りゃ: "rya", りゅ: "ryu", りょ: "ryo",
+  ぎゃ: "gya", ぎゅ: "gyu", ぎょ: "gyo",
+  じゃ: "ja", じゅ: "ju", じょ: "jo",
+  びゃ: "bya", びゅ: "byu", びょ: "byo",
+  ぴゃ: "pya", ぴゅ: "pyu", ぴょ: "pyo",
+  ふぁ: "fa", ふぃ: "fi", ふぇ: "fe", ふぉ: "fo",
+  てぃ: "ti", でぃ: "di",
+  うぃ: "wi", うぇ: "we", うぉ: "wo",
+  ヴぁ: "va", ヴぃ: "vi", ヴ: "vu", ヴぇ: "ve", ヴぉ: "vo",
+};
+
+const kanaMap: Record<string, string> = {
+  あ: "a", い: "i", う: "u", え: "e", お: "o",
+  か: "ka", き: "ki", く: "ku", け: "ke", こ: "ko",
+  さ: "sa", し: "shi", す: "su", せ: "se", そ: "so",
+  た: "ta", ち: "chi", つ: "tsu", て: "te", と: "to",
+  な: "na", に: "ni", ぬ: "nu", ね: "ne", の: "no",
+  は: "ha", ひ: "hi", ふ: "fu", へ: "he", ほ: "ho",
+  ま: "ma", み: "mi", む: "mu", め: "me", も: "mo",
+  や: "ya", ゆ: "yu", よ: "yo",
+  ら: "ra", り: "ri", る: "ru", れ: "re", ろ: "ro",
+  わ: "wa", を: "wo", ん: "n",
+  が: "ga", ぎ: "gi", ぐ: "gu", げ: "ge", ご: "go",
+  ざ: "za", じ: "ji", ず: "zu", ぜ: "ze", ぞ: "zo",
+  だ: "da", ぢ: "ji", づ: "zu", で: "de", ど: "do",
+  ば: "ba", び: "bi", ぶ: "bu", べ: "be", ぼ: "bo",
+  ぱ: "pa", ぴ: "pi", ぷ: "pu", ぺ: "pe", ぽ: "po",
+  ぁ: "a", ぃ: "i", ぅ: "u", ぇ: "e", ぉ: "o",
+};
+
+const toHiragana = (value: string) =>
+  value
+    .normalize("NFKC")
+    .replace(/[ァ-ン]/g, (char) => String.fromCharCode(char.charCodeAt(0) - 0x60));
+
+const romanizeKanaPart = (part: string) => {
+  const chars = Array.from(toHiragana(part.replace(/[^\p{Script=Hiragana}\p{Script=Katakana}ー]/gu, "")));
+  let result = "";
+
+  for (let i = 0; i < chars.length; i += 1) {
+    const current = chars[i];
+
+    if (current === "っ") {
+      const pair = chars.slice(i + 1, i + 3).join("");
+      const next = kanaDigraphMap[pair] ?? kanaMap[chars[i + 1]] ?? "";
+      if (next) result += next[0];
+      continue;
+    }
+
+    if (current === "ー") {
+      const vowel = result.match(/[aeiou]$/)?.[0] ?? "";
+      result += vowel;
+      continue;
+    }
+
+    const pair = chars.slice(i, i + 2).join("");
+    if (kanaDigraphMap[pair]) {
+      result += kanaDigraphMap[pair];
+      i += 1;
+      continue;
+    }
+
+    result += kanaMap[current] ?? "";
+  }
+
+  return result;
+};
+
+const kanaToSlug = (value?: string | null) => {
+  const normalized = normalizeText(value);
+  if (!normalized) return "";
+
+  const parts = normalized
+    .split(/[\s　・･\/／]+/g)
+    .map((part) => romanizeKanaPart(part))
+    .filter(Boolean);
+
+  if (parts.length < 2) return "";
+  return toSlug(parts.join("-"));
+};
+
 const makeSkeletonPeriod = (year?: number | null) => (year ? `${year}年` : null);
 
 const AdminExternalKiraHai: React.FC = () => {
@@ -161,7 +250,7 @@ const AdminExternalKiraHai: React.FC = () => {
   const loadUnmatchedActorQueue = async () => {
     const { data: actors, error: actorError } = await supabase
       .from("external_actors")
-      .select("source_actor_name,source_actor_url,alias_from,alias_to,note,source_profile_facts_raw,source_birthday_raw,source_birthday,source_height_cm,source_blood_type,source_affiliation_raw")
+      .select("source_actor_name,source_actor_url,source_actor_kana,alias_from,alias_to,note,source_profile_facts_raw,source_birthday_raw,source_birthday,source_height_cm,source_blood_type,source_affiliation_raw")
       .eq("source", "kira-hai")
       .is("matched_actor_id", null)
       .order("source_actor_name", { ascending: true })
@@ -205,6 +294,7 @@ const AdminExternalKiraHai: React.FC = () => {
         return {
           sourceActorName: actor.source_actor_name,
           sourceActorUrl: actor.source_actor_url,
+          sourceActorKana: actor.source_actor_kana,
           aliasFrom: actor.alias_from,
           aliasTo: actor.alias_to,
           note: actor.note,
@@ -719,9 +809,10 @@ const AdminExternalKiraHai: React.FC = () => {
   };
 
   const buildUniqueActorSlug = async (row: UnmatchedActorQueueRow) => {
+    const kanaSlug = kanaToSlug(row.sourceActorKana);
     const sourceSlug = toSlug(getSourceSlug(row.sourceActorUrl));
     const nameSlug = toSlug(row.sourceActorName);
-    const base = sourceSlug || nameSlug || "external-actor";
+    const base = kanaSlug || sourceSlug || nameSlug || "external-actor";
     const normalizedBase = base.replace(/^-+|-+$/g, "") || `external-actor-${Date.now()}`;
 
     for (let i = 0; i < 20; i += 1) {
@@ -749,7 +840,7 @@ const AdminExternalKiraHai: React.FC = () => {
         .insert({
           name: row.sourceActorName,
           slug,
-          kana: null,
+          kana: normalizeText(row.sourceActorKana) || null,
           birthday,
           birthday_label: birthday ? null : normalizeText(row.sourceBirthdayRaw) || null,
           death_date: null,
@@ -1226,6 +1317,9 @@ const AdminExternalKiraHai: React.FC = () => {
                   <div className="min-w-0 flex-1">
                     <div className="flex flex-wrap items-center gap-2">
                       <div className="text-lg font-extrabold text-white">{row.sourceActorName}</div>
+                      {row.sourceActorKana ? (
+                        <span className="text-sm text-slate-400">{row.sourceActorKana}</span>
+                      ) : null}
                       {row.sourceActorUrl ? (
                         <a
                           href={row.sourceActorUrl}

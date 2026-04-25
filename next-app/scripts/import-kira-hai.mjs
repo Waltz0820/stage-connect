@@ -192,7 +192,31 @@ function toIsoDate(year, month, day) {
   return `${String(y).padStart(4, "0")}-${String(m).padStart(2, "0")}-${String(d).padStart(2, "0")}`;
 }
 
-function parseActorProfileFacts(html) {
+function extractActorKana(lines, actorName) {
+  const kanaPattern = /[ぁ-ゖァ-ヺー\s]+/g;
+  const isUsefulKana = (value) => {
+    const cleaned = normalizeWhitespace(value).replace(/\s+/g, "");
+    return cleaned.length >= 4 && !/(トップ|コメント|プロフィール|出演舞台|名前|俳優)/.test(cleaned);
+  };
+
+  const nameIndex = lines.findIndex((line) => actorName && line.includes(actorName));
+  const window =
+    nameIndex >= 0
+      ? lines.slice(Math.max(0, nameIndex - 2), Math.min(lines.length, nameIndex + 8))
+      : lines.slice(0, 20);
+
+  const candidates = [];
+  for (const line of window) {
+    for (const match of line.matchAll(kanaPattern)) {
+      const value = normalizeWhitespace(match[0]);
+      if (isUsefulKana(value)) candidates.push(value);
+    }
+  }
+
+  return candidates.sort((a, b) => b.replace(/\s+/g, "").length - a.replace(/\s+/g, "").length)[0] ?? null;
+}
+
+function parseActorProfileFacts(html, actor = {}) {
   const $ = cheerio.load(html);
   const bodyText = $("body").text();
   const stageIndex = bodyText.indexOf("出演舞台");
@@ -214,6 +238,7 @@ function parseActorProfileFacts(html) {
   const sourceBirthdayRaw = birthdayMatch ? birthdayMatch[0] : null;
 
   return {
+    sourceActorKana: extractActorKana(lines, actor.sourceActorName),
     sourceProfileFactsRaw: factLines.length > 0 ? factLines.slice(0, 5).join(" / ") : null,
     sourceBirthdayRaw,
     sourceBirthday: birthdayMatch ? toIsoDate(birthdayMatch[1], birthdayMatch[2], birthdayMatch[3]) : null,
@@ -424,7 +449,7 @@ async function loadExistingRows(supabase) {
 async function loadMatchedExternalActors(supabase, limitActors, offsetActors) {
   let query = supabase
     .from("external_actors")
-    .select("source_actor_name,source_actor_url,alias_from,alias_to,note")
+    .select("source_actor_name,source_actor_url,source_actor_kana,alias_from,alias_to,note")
     .eq("source", SOURCE)
     .not("matched_actor_id", "is", null)
     .order("source_actor_name", { ascending: true });
@@ -441,6 +466,7 @@ async function loadMatchedExternalActors(supabase, limitActors, offsetActors) {
   return (data ?? []).map((row) => ({
     sourceActorName: row.source_actor_name,
     sourceActorUrl: row.source_actor_url,
+    sourceActorKana: row.source_actor_kana,
     aliasFrom: row.alias_from,
     aliasTo: row.alias_to,
     note: row.note,
@@ -463,6 +489,7 @@ async function upsertExternalActor(supabase, actor, match) {
   };
 
   if ("sourceProfileFactsRaw" in actor) payload.source_profile_facts_raw = actor.sourceProfileFactsRaw;
+  if ("sourceActorKana" in actor) payload.source_actor_kana = actor.sourceActorKana;
   if ("sourceBirthdayRaw" in actor) payload.source_birthday_raw = actor.sourceBirthdayRaw;
   if ("sourceBirthday" in actor) payload.source_birthday = actor.sourceBirthday;
   if ("sourceHeightCm" in actor) payload.source_height_cm = actor.sourceHeightCm;
@@ -498,6 +525,7 @@ async function upsertExternalActorsBatch(supabase, actors, actorMap) {
     };
 
     if ("sourceProfileFactsRaw" in actor) payload.source_profile_facts_raw = actor.sourceProfileFactsRaw;
+    if ("sourceActorKana" in actor) payload.source_actor_kana = actor.sourceActorKana;
     if ("sourceBirthdayRaw" in actor) payload.source_birthday_raw = actor.sourceBirthdayRaw;
     if ("sourceBirthday" in actor) payload.source_birthday = actor.sourceBirthday;
     if ("sourceHeightCm" in actor) payload.source_height_cm = actor.sourceHeightCm;
@@ -699,7 +727,7 @@ async function main() {
     }
 
     const html = await fetchHtml(actor.sourceActorUrl, args.delayMs);
-    const actorWithFacts = { ...actor, ...parseActorProfileFacts(html) };
+    const actorWithFacts = { ...actor, ...parseActorProfileFacts(html, actor) };
     const credits = parseActorStageCredits(html, actorWithFacts);
     creditCount += credits.length;
     console.log(`[credits] ${actor.sourceActorName} ${credits.length}`);
