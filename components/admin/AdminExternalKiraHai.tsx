@@ -61,6 +61,29 @@ const queueOptions = [
 
 const normalizeText = (value?: string | null) => (value ?? "").trim();
 
+const normalizeLooseTitle = (value?: string | null) =>
+  normalizeText(value)
+    .normalize("NFKC")
+    .toLowerCase()
+    .replace(/[『』「」"'“”‘’【】\[\]（）()〈〉<>《》]/g, "")
+    .replace(/vs/gi, "対")
+    .replace(/[~〜～\-ー―–—\s・:：/／]/g, "")
+    .replace(/(?:初演|再演|振替公演|公演中止|公演延期|ライブ配信)/g, "")
+    .trim();
+
+const buildPlaySearchWords = (title: string) => {
+  const normalized = normalizeText(title).normalize("NFKC");
+  const words = normalized
+    .replace(/[『』「」"'“”‘’【】\[\]（）()〈〉<>《》]/g, " ")
+    .replace(/[~〜～\-ー―–—:：/／]/g, " ")
+    .split(/\s+/)
+    .map((word) => word.trim())
+    .filter((word) => word.length >= 2)
+    .slice(0, 6);
+
+  return Array.from(new Set(words));
+};
+
 const getSourceSlug = (url?: string | null) => {
   if (!url) return "";
   try {
@@ -86,6 +109,9 @@ const AdminExternalKiraHai: React.FC = () => {
   const [actorMatchTarget, setActorMatchTarget] = useState<CandidateRow | null>(null);
   const [actorSearchText, setActorSearchText] = useState("");
   const [actorSearchResults, setActorSearchResults] = useState<ActorRow[]>([]);
+  const [playMatchTarget, setPlayMatchTarget] = useState<CandidateRow | null>(null);
+  const [playSearchText, setPlaySearchText] = useState("");
+  const [playSearchResults, setPlaySearchResults] = useState<PlayRow[]>([]);
   const [selectedIds, setSelectedIds] = useState<Record<string, boolean>>({});
   const [bulkBusy, setBulkBusy] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -359,6 +385,136 @@ const AdminExternalKiraHai: React.FC = () => {
     }
   };
 
+  const openPlayMatch = async (row: CandidateRow) => {
+    setPlayMatchTarget(row);
+    setPlaySearchText(row.source_work_title ?? "");
+    setPlaySearchResults([]);
+    setMsg("");
+    await searchPlays(row.source_work_title ?? "");
+  };
+
+  const searchPlays = async (value = playSearchText) => {
+    const query = normalizeText(value);
+    if (!query) {
+      setPlaySearchResults([]);
+      return;
+    }
+
+    const words = buildPlaySearchWords(query);
+    const primary = words[0] ?? query.slice(0, 12);
+    const { data, error } = await supabase
+      .from("plays")
+      .select("id,title,slug")
+      .or(`title.ilike.%${primary}%,title_en.ilike.%${primary}%,slug.ilike.%${primary}%`)
+      .limit(50);
+
+    if (error) {
+      setMsg(error.message ?? "play search error");
+      return;
+    }
+
+    const targetKey = normalizeLooseTitle(query);
+    const sorted = ((data ?? []) as PlayRow[])
+      .map((play) => {
+        const key = normalizeLooseTitle(play.title);
+        let score = 0;
+        if (key === targetKey) score += 100;
+        else if (key.includes(targetKey) || targetKey.includes(key)) score += 70;
+        for (const word of words) {
+          if (normalizeLooseTitle(play.title).includes(normalizeLooseTitle(word))) score += 5;
+        }
+        return { play, score };
+      })
+      .sort((a, b) => b.score - a.score)
+      .map((item) => item.play);
+
+    setPlaySearchResults(sorted);
+  };
+
+  const findSimilarExistingPlays = async (title: string) => {
+    const words = buildPlaySearchWords(title);
+    const primary = words[0] ?? normalizeText(title).slice(0, 12);
+    if (!primary) return [];
+
+    const { data, error } = await supabase
+      .from("plays")
+      .select("id,title,slug")
+      .or(`title.ilike.%${primary}%,title_en.ilike.%${primary}%,slug.ilike.%${primary}%`)
+      .limit(50);
+
+    if (error) throw error;
+
+    const targetKey = normalizeLooseTitle(title);
+    return ((data ?? []) as PlayRow[]).filter((play) => {
+      const key = normalizeLooseTitle(play.title);
+      if (!key || !targetKey) return false;
+      if (key === targetKey) return true;
+      if (key.includes(targetKey) || targetKey.includes(key)) return true;
+      const hitWords = words.filter((word) => key.includes(normalizeLooseTitle(word)));
+      return words.length >= 2 && hitWords.length >= Math.min(3, words.length);
+    });
+  };
+
+  const applyPlayMatch = async (play: PlayRow) => {
+    if (!playMatchTarget) return;
+    setBusyId(playMatchTarget.id);
+    setMsg("");
+
+    try {
+      const now = new Date().toISOString();
+
+      if (playMatchTarget.external_play_id) {
+        const { error: externalPlayError } = await supabase
+          .from("external_plays")
+          .update({
+            matched_play_id: play.id,
+            match_status: "matched_manual",
+            match_confidence: 85,
+            updated_at: now,
+          })
+          .eq("id", playMatchTarget.external_play_id);
+
+        if (externalPlayError) throw externalPlayError;
+      }
+
+      let candidateUpdate = supabase
+        .from("external_cast_candidates")
+        .update({
+          matched_play_id: play.id,
+          confidence: 70,
+          updated_at: now,
+        })
+        .eq("source", "kira-hai");
+
+      if (playMatchTarget.source_work_url) {
+        candidateUpdate = candidateUpdate.eq("source_work_url", playMatchTarget.source_work_url);
+      } else {
+        candidateUpdate = candidateUpdate.eq("source_work_title", playMatchTarget.source_work_title);
+      }
+
+      const { error: candidateError } = await candidateUpdate;
+      if (candidateError) throw candidateError;
+
+      setPlaysById((current) => ({ ...current, [play.id]: play }));
+      setCandidates((current) =>
+        current.map((item) =>
+          (playMatchTarget.source_work_url && item.source_work_url === playMatchTarget.source_work_url) ||
+          (!playMatchTarget.source_work_url && item.source_work_title === playMatchTarget.source_work_title)
+            ? { ...item, matched_play_id: play.id }
+            : item
+        )
+      );
+
+      setPlayMatchTarget(null);
+      setPlaySearchResults([]);
+      setMsg(`「${playMatchTarget.source_work_title}」を既存作品「${play.title}」に紐づけました`);
+    } catch (error: any) {
+      setMsg(error?.message ?? "play match error");
+    } finally {
+      setBusyId(null);
+    }
+  };
+
   const acceptCandidate = async (row: CandidateRow) => {
     if (!row.matched_actor_id || !row.matched_play_id) {
       setMsg("既存actorと既存playの両方に一致している候補だけ採用できます");
@@ -479,6 +635,16 @@ const AdminExternalKiraHai: React.FC = () => {
       }
 
       const slug = await buildUniquePlaySlug(row);
+
+      const similar = await findSimilarExistingPlays(row.source_work_title);
+      if (similar.length > 0) {
+        setPlayMatchTarget(row);
+        setPlaySearchText(row.source_work_title);
+        setPlaySearchResults(similar);
+        setMsg("似ている既存作品があります。重複作成を避けるため、既存作品へ紐づけるか確認してください。");
+        return;
+      }
+
       const payload = {
         title: row.source_work_title,
         slug,
@@ -772,6 +938,70 @@ const AdminExternalKiraHai: React.FC = () => {
         </div>
       ) : null}
 
+      {playMatchTarget ? (
+        <div className="rounded-2xl border border-sky-500/20 bg-sky-500/10 p-6">
+          <div className="flex flex-wrap items-start justify-between gap-3">
+            <div>
+              <h2 className="text-lg font-extrabold text-white">既存作品に紐づけ</h2>
+              <p className="mt-1 text-sm text-sky-100">
+                外部候補: <b>{playMatchTarget.source_work_title}</b>
+              </p>
+              <p className="mt-1 text-xs text-slate-400">
+                スペース・記号・表記ゆれで重複作品を作らないため、似ている既存作品を確認します。
+              </p>
+            </div>
+            <button
+              type="button"
+              onClick={() => {
+                setPlayMatchTarget(null);
+                setPlaySearchResults([]);
+              }}
+              className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs font-bold text-slate-200 hover:bg-white/10"
+            >
+              閉じる
+            </button>
+          </div>
+
+          <div className="mt-4 flex gap-2">
+            <input
+              className="min-w-0 flex-1 rounded-xl border border-white/10 bg-black/40 px-4 py-3 text-sm text-white outline-none"
+              value={playSearchText}
+              onChange={(event) => setPlaySearchText(event.target.value)}
+              onKeyDown={(event) => {
+                if (event.key === "Enter") void searchPlays();
+              }}
+              placeholder="作品名 / slug で検索"
+            />
+            <button
+              type="button"
+              onClick={() => void searchPlays()}
+              className="rounded-xl border border-white/10 bg-white/10 px-4 py-3 text-sm font-bold text-white hover:bg-white/15"
+            >
+              検索
+            </button>
+          </div>
+
+          <div className="mt-4 grid gap-2">
+            {playSearchResults.map((play) => (
+              <button
+                key={play.id}
+                type="button"
+                onClick={() => void applyPlayMatch(play)}
+                disabled={busyId === playMatchTarget.id}
+                className="rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-left hover:bg-black/40 disabled:opacity-40"
+              >
+                <div className="font-bold text-white">{play.title}</div>
+                <div className="mt-1 text-xs text-slate-500">{play.slug}</div>
+              </button>
+            ))}
+          </div>
+
+          {playSearchResults.length === 0 ? (
+            <div className="mt-4 text-sm text-slate-500">似ている既存作品が見つかりません。</div>
+          ) : null}
+        </div>
+      ) : null}
+
       <div className="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
         <div className="border-b border-white/10 px-6 py-3 text-xs text-slate-400">
           {loading ? "Loading..." : `${visibleCandidates.length} 件表示 / 最大 ${PAGE_SIZE} 件`}
@@ -875,7 +1105,14 @@ const AdminExternalKiraHai: React.FC = () => {
                         </div>
                         {!play && actor ? (
                           <div className="mt-3 rounded-lg border border-sky-500/20 bg-sky-500/10 px-3 py-2 text-xs text-sky-100">
-                            既存俳優に一致済み。必要なら作品skeletonを作って出演線まで接続できます。
+                            <div>既存俳優に一致済み。必要なら既存作品に紐づけるか、作品skeletonを作って出演線まで接続できます。</div>
+                            <button
+                              type="button"
+                              onClick={() => void openPlayMatch(row)}
+                              className="mt-2 rounded-full border border-sky-300/20 bg-sky-300/10 px-3 py-1.5 text-[11px] font-bold text-sky-50 hover:bg-sky-300/15"
+                            >
+                              既存作品を探す
+                            </button>
                           </div>
                         ) : null}
                         {!actor ? (
