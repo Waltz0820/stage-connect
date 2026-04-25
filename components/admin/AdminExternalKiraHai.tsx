@@ -86,6 +86,8 @@ const AdminExternalKiraHai: React.FC = () => {
   const [actorMatchTarget, setActorMatchTarget] = useState<CandidateRow | null>(null);
   const [actorSearchText, setActorSearchText] = useState("");
   const [actorSearchResults, setActorSearchResults] = useState<ActorRow[]>([]);
+  const [selectedIds, setSelectedIds] = useState<Record<string, boolean>>({});
+  const [bulkBusy, setBulkBusy] = useState(false);
   const [loading, setLoading] = useState(true);
   const [busyId, setBusyId] = useState<string | null>(null);
   const [msg, setMsg] = useState("");
@@ -208,6 +210,47 @@ const AdminExternalKiraHai: React.FC = () => {
     });
   }, [actorsById, candidates, playsById, q]);
 
+  const selectedRows = useMemo(
+    () => visibleCandidates.filter((row) => selectedIds[row.id]),
+    [selectedIds, visibleCandidates]
+  );
+
+  const readySelectedRows = useMemo(
+    () => selectedRows.filter((row) => row.matched_actor_id && row.matched_play_id && row.status !== "accepted"),
+    [selectedRows]
+  );
+
+  const skeletonSelectedRows = useMemo(
+    () => selectedRows.filter((row) => row.matched_actor_id && !row.matched_play_id && row.status !== "accepted"),
+    [selectedRows]
+  );
+
+  const selectableVisibleRows = useMemo(
+    () => visibleCandidates.filter((row) => row.status !== "accepted" && row.matched_actor_id),
+    [visibleCandidates]
+  );
+
+  const allSelectableVisibleSelected =
+    selectableVisibleRows.length > 0 && selectableVisibleRows.every((row) => selectedIds[row.id]);
+
+  const toggleSelected = (id: string) => {
+    setSelectedIds((current) => ({ ...current, [id]: !current[id] }));
+  };
+
+  const toggleAllSelectableVisible = () => {
+    setSelectedIds((current) => {
+      const next = { ...current };
+      for (const row of selectableVisibleRows) {
+        next[row.id] = !allSelectableVisibleSelected;
+      }
+      return next;
+    });
+  };
+
+  const clearSelection = () => {
+    setSelectedIds({});
+  };
+
   const updateStatus = async (row: CandidateRow, nextStatus: string) => {
     setBusyId(row.id);
     setMsg("");
@@ -225,6 +268,9 @@ const AdminExternalKiraHai: React.FC = () => {
       if (error) throw error;
 
       setCandidates((current) => current.map((item) => (item.id === row.id ? { ...item, status: nextStatus } : item)));
+      if (nextStatus === "accepted" || nextStatus === "rejected") {
+        setSelectedIds((current) => ({ ...current, [row.id]: false }));
+      }
     } catch (error: any) {
       setMsg(error?.message ?? "status update error");
     } finally {
@@ -375,6 +421,7 @@ const AdminExternalKiraHai: React.FC = () => {
             : item
         )
       );
+      setSelectedIds((current) => ({ ...current, [row.id]: false }));
       setMsg(existingCast?.id ? "既存castsに紐づけて採用済みにしました" : "castsに採用しました");
     } catch (error: any) {
       setMsg(error?.message ?? "accept error");
@@ -418,6 +465,19 @@ const AdminExternalKiraHai: React.FC = () => {
     setBusyId(row.id);
     setMsg("");
     try {
+      const { data: latestCandidate, error: latestCandidateError } = await supabase
+        .from("external_cast_candidates")
+        .select("matched_play_id")
+        .eq("id", row.id)
+        .maybeSingle();
+
+      if (latestCandidateError) throw latestCandidateError;
+
+      if (latestCandidate?.matched_play_id) {
+        await acceptCandidate({ ...row, matched_play_id: latestCandidate.matched_play_id });
+        return;
+      }
+
       const slug = await buildUniquePlaySlug(row);
       const payload = {
         title: row.source_work_title,
@@ -485,11 +545,48 @@ const AdminExternalKiraHai: React.FC = () => {
       );
 
       await acceptCandidate({ ...row, matched_play_id: createdPlay.id });
+      setSelectedIds((current) => ({ ...current, [row.id]: false }));
       setMsg(`作品skeleton「${createdPlay.title}」を作成して採用しました`);
     } catch (error: any) {
       setMsg(error?.message ?? "create skeleton play error");
     } finally {
       setBusyId(null);
+    }
+  };
+
+  const bulkAcceptReady = async () => {
+    if (readySelectedRows.length === 0) {
+      setMsg("一括採用できる候補が選択されていません");
+      return;
+    }
+
+    setBulkBusy(true);
+    setMsg(`一括採用を開始します: ${readySelectedRows.length}件`);
+    try {
+      for (const row of readySelectedRows) {
+        await acceptCandidate(row);
+      }
+      setMsg(`一括採用が完了しました: ${readySelectedRows.length}件`);
+    } finally {
+      setBulkBusy(false);
+    }
+  };
+
+  const bulkCreateSkeleton = async () => {
+    if (skeletonSelectedRows.length === 0) {
+      setMsg("作品skeleton化できる候補が選択されていません");
+      return;
+    }
+
+    setBulkBusy(true);
+    setMsg(`作品skeleton作成を開始します: ${skeletonSelectedRows.length}件`);
+    try {
+      for (const row of skeletonSelectedRows) {
+        await createSkeletonPlayAndAccept(row);
+      }
+      setMsg(`作品skeleton作成が完了しました: ${skeletonSelectedRows.length}件`);
+    } finally {
+      setBulkBusy(false);
     }
   };
 
@@ -569,6 +666,48 @@ const AdminExternalKiraHai: React.FC = () => {
         {msg ? <div className="mt-4 text-sm text-slate-300">{msg}</div> : null}
       </div>
 
+      <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+        <div className="flex flex-wrap items-center gap-3">
+          <button
+            type="button"
+            onClick={toggleAllSelectableVisible}
+            disabled={selectableVisibleRows.length === 0 || loading || bulkBusy}
+            className="rounded-full border border-white/10 bg-black/30 px-3 py-2 text-xs font-bold text-slate-200 hover:bg-white/10 disabled:opacity-40"
+          >
+            {allSelectableVisibleSelected ? "表示中の選択を解除" : "表示中の採用対象を選択"}
+          </button>
+          <button
+            type="button"
+            onClick={clearSelection}
+            disabled={selectedRows.length === 0 || bulkBusy}
+            className="rounded-full border border-white/10 bg-black/30 px-3 py-2 text-xs font-bold text-slate-200 hover:bg-white/10 disabled:opacity-40"
+          >
+            選択クリア
+          </button>
+          <div className="text-xs text-slate-400">
+            選択 {selectedRows.length}件 / すぐ採用 {readySelectedRows.length}件 / 作品作成 {skeletonSelectedRows.length}件
+          </div>
+          <div className="ml-auto flex flex-wrap gap-2">
+            <button
+              type="button"
+              onClick={() => void bulkAcceptReady()}
+              disabled={readySelectedRows.length === 0 || bulkBusy}
+              className="rounded-full border border-emerald-500/30 bg-emerald-500/15 px-3 py-2 text-xs font-bold text-emerald-100 hover:bg-emerald-500/20 disabled:opacity-35"
+            >
+              選択を一括採用
+            </button>
+            <button
+              type="button"
+              onClick={() => void bulkCreateSkeleton()}
+              disabled={skeletonSelectedRows.length === 0 || bulkBusy}
+              className="rounded-full border border-sky-500/30 bg-sky-500/15 px-3 py-2 text-xs font-bold text-sky-100 hover:bg-sky-500/20 disabled:opacity-35"
+            >
+              選択を作品作成して採用
+            </button>
+          </div>
+        </div>
+      </div>
+
       {actorMatchTarget ? (
         <div className="rounded-2xl border border-amber-500/20 bg-amber-500/10 p-6">
           <div className="flex flex-wrap items-start justify-between gap-3">
@@ -644,12 +783,29 @@ const AdminExternalKiraHai: React.FC = () => {
             const play = row.matched_play_id ? playsById[row.matched_play_id] : null;
             const canAccept = Boolean(actor && play && row.status !== "accepted");
             const canCreateSkeleton = Boolean(actor && !play && row.status !== "accepted");
+            const canSelect = Boolean(actor && row.status !== "accepted");
 
             return (
               <div key={row.id} className="p-5">
                 <div className="flex flex-wrap items-start justify-between gap-3">
                   <div className="min-w-0 flex-1">
                     <div className="flex flex-wrap items-center gap-2 text-xs">
+                      <label
+                        className={`flex items-center gap-2 rounded-full border px-2 py-1 ${
+                          canSelect
+                            ? "border-white/10 bg-black/30 text-slate-300"
+                            : "border-white/5 bg-black/10 text-slate-600"
+                        }`}
+                      >
+                        <input
+                          type="checkbox"
+                          className="h-3.5 w-3.5 accent-white"
+                          checked={Boolean(selectedIds[row.id])}
+                          disabled={!canSelect || bulkBusy}
+                          onChange={() => toggleSelected(row.id)}
+                        />
+                        選択
+                      </label>
                       <span className="rounded-full border border-white/10 bg-black/30 px-2 py-1 text-slate-300">
                         {statusLabels[row.status] ?? row.status}
                       </span>
