@@ -54,6 +54,18 @@ type UnmatchedActorQueueRow = {
   latestYear?: number | null;
 };
 
+type WorkQueueRow = {
+  sourceWorkTitle: string;
+  sourceWorkUrl?: string | null;
+  sourceYear?: number | null;
+  matchedPlayId?: string | null;
+  candidateCount: number;
+  matchedActorCount: number;
+  acceptedCount: number;
+  roleSamples: string[];
+  actorSamples: string[];
+};
+
 const PAGE_SIZE = 80;
 
 const statusLabels: Record<string, string> = {
@@ -76,6 +88,7 @@ const queueOptions = [
   { value: "skeleton", label: "作品作成候補" },
   { value: "actor_unmatched", label: "俳優未照合" },
   { value: "actor_queue", label: "未照合俳優キュー" },
+  { value: "work_queue", label: "作品別キュー" },
 ];
 
 const normalizeText = (value?: string | null) => (value ?? "").trim();
@@ -217,6 +230,7 @@ const AdminExternalKiraHai: React.FC = () => {
   const [actorSearchText, setActorSearchText] = useState("");
   const [actorSearchResults, setActorSearchResults] = useState<ActorRow[]>([]);
   const [unmatchedActorQueue, setUnmatchedActorQueue] = useState<UnmatchedActorQueueRow[]>([]);
+  const [workQueue, setWorkQueue] = useState<WorkQueueRow[]>([]);
   const [playMatchTarget, setPlayMatchTarget] = useState<CandidateRow | null>(null);
   const [playSearchText, setPlaySearchText] = useState("");
   const [playSearchResults, setPlaySearchResults] = useState<PlayRow[]>([]);
@@ -324,6 +338,77 @@ const AdminExternalKiraHai: React.FC = () => {
     setUnmatchedActorQueue(queueRows);
   };
 
+  const loadWorkQueue = async () => {
+    const { data, error } = await supabase
+      .from("external_cast_candidates")
+      .select("source_work_title,source_work_url,source_year,source_actor_name,source_role_raw,matched_actor_id,matched_play_id,status")
+      .eq("source", "kira-hai")
+      .neq("status", "rejected")
+      .order("source_work_title", { ascending: true })
+      .limit(2000);
+
+    if (error) throw error;
+
+    const map = new Map<string, WorkQueueRow & { actorKeys: Set<string>; roleKeys: Set<string> }>();
+
+    for (const row of data ?? []) {
+      const title = normalizeText(row.source_work_title);
+      if (!title) continue;
+      const key = `${row.source_work_url || ""}::${title}`;
+      const current =
+        map.get(key) ??
+        ({
+          sourceWorkTitle: title,
+          sourceWorkUrl: row.source_work_url,
+          sourceYear: row.source_year,
+          matchedPlayId: row.matched_play_id,
+          candidateCount: 0,
+          matchedActorCount: 0,
+          acceptedCount: 0,
+          roleSamples: [],
+          actorSamples: [],
+          actorKeys: new Set<string>(),
+          roleKeys: new Set<string>(),
+        } as WorkQueueRow & { actorKeys: Set<string>; roleKeys: Set<string> });
+
+      current.candidateCount += 1;
+      if (row.matched_actor_id) current.matchedActorCount += 1;
+      if (row.status === "accepted") current.acceptedCount += 1;
+      if (!current.matchedPlayId && row.matched_play_id) current.matchedPlayId = row.matched_play_id;
+      if (!current.sourceYear && row.source_year) current.sourceYear = row.source_year;
+
+      const actorName = normalizeText(row.source_actor_name);
+      if (actorName && !current.actorKeys.has(actorName) && current.actorSamples.length < 6) {
+        current.actorKeys.add(actorName);
+        current.actorSamples.push(actorName);
+      }
+
+      const roleName = normalizeText(row.source_role_raw);
+      if (roleName && !current.roleKeys.has(roleName) && current.roleSamples.length < 6) {
+        current.roleKeys.add(roleName);
+        current.roleSamples.push(roleName);
+      }
+
+      map.set(key, current);
+    }
+
+    const rows = Array.from(map.values())
+      .map(({ actorKeys, roleKeys, ...row }) => row)
+      .sort((a, b) => {
+        const aUnmatchedPlay = a.matchedPlayId ? 0 : 1;
+        const bUnmatchedPlay = b.matchedPlayId ? 0 : 1;
+        return (
+          bUnmatchedPlay - aUnmatchedPlay ||
+          b.candidateCount - a.candidateCount ||
+          b.matchedActorCount - a.matchedActorCount ||
+          (b.sourceYear ?? 0) - (a.sourceYear ?? 0) ||
+          a.sourceWorkTitle.localeCompare(b.sourceWorkTitle, "ja")
+        );
+      });
+
+    setWorkQueue(rows);
+  };
+
   const load = async () => {
     setLoading(true);
     setMsg("");
@@ -357,6 +442,9 @@ const AdminExternalKiraHai: React.FC = () => {
       await loadReferenceRows(nextCandidates);
       if (queue === "actor_queue") {
         await loadUnmatchedActorQueue();
+      }
+      if (queue === "work_queue") {
+        await loadWorkQueue();
       }
 
       const { data: actorData, error: actorError } = await supabase
@@ -423,6 +511,22 @@ const AdminExternalKiraHai: React.FC = () => {
         .some((value) => String(value).toLowerCase().includes(s));
     });
   }, [actorsById, candidates, playsById, q]);
+
+  const visibleWorkQueue = useMemo(() => {
+    const s = q.trim().toLowerCase();
+    if (!s) return workQueue;
+
+    return workQueue.filter((row) =>
+      [
+        row.sourceWorkTitle,
+        row.sourceYear,
+        row.actorSamples.join(" "),
+        row.roleSamples.join(" "),
+      ]
+        .filter(Boolean)
+        .some((value) => String(value).toLowerCase().includes(s))
+    );
+  }, [q, workQueue]);
 
   const selectedRows = useMemo(
     () => visibleCandidates.filter((row) => selectedIds[row.id]),
@@ -1176,6 +1280,94 @@ const AdminExternalKiraHai: React.FC = () => {
         </div>
       </div>
 
+      {queue === "work_queue" ? (
+        <div className="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+          <div className="border-b border-white/10 px-6 py-3 text-xs text-slate-400">
+            作品別キュー {visibleWorkQueue.length}件表示 / 未登録作品から優先表示
+          </div>
+
+          <div className="divide-y divide-white/5">
+            {visibleWorkQueue.map((row) => (
+              <div key={`${row.sourceWorkUrl || ""}-${row.sourceWorkTitle}`} className="p-5">
+                <div className="flex flex-wrap items-start justify-between gap-4">
+                  <div className="min-w-0 flex-1">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <div className="text-lg font-extrabold text-white">{row.sourceWorkTitle}</div>
+                      {row.sourceYear ? (
+                        <span className="rounded-full border border-white/10 bg-black/30 px-2 py-1 text-[11px] text-slate-400">
+                          {row.sourceYear}
+                        </span>
+                      ) : null}
+                      {row.matchedPlayId ? (
+                        <span className="rounded-full border border-emerald-500/20 bg-emerald-500/10 px-2 py-1 text-[11px] text-emerald-100">
+                          既存作品あり
+                        </span>
+                      ) : (
+                        <span className="rounded-full border border-sky-500/20 bg-sky-500/10 px-2 py-1 text-[11px] text-sky-100">
+                          未登録作品候補
+                        </span>
+                      )}
+                      {row.sourceWorkUrl ? (
+                        <a
+                          href={row.sourceWorkUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-[11px] text-slate-300 hover:bg-white/10"
+                        >
+                          作品元
+                        </a>
+                      ) : null}
+                    </div>
+
+                    <div className="mt-3 flex flex-wrap gap-2 text-xs">
+                      <span className="rounded-full border border-white/10 bg-black/30 px-2 py-1 text-slate-300">
+                        出演候補 {row.candidateCount}件
+                      </span>
+                      <span className="rounded-full border border-white/10 bg-black/30 px-2 py-1 text-slate-300">
+                        俳優一致 {row.matchedActorCount}件
+                      </span>
+                      <span className="rounded-full border border-white/10 bg-black/30 px-2 py-1 text-slate-300">
+                        採用済み {row.acceptedCount}件
+                      </span>
+                    </div>
+
+                    {row.actorSamples.length > 0 ? (
+                      <div className="mt-3 text-xs text-slate-400">
+                        俳優候補: {row.actorSamples.join(" / ")}
+                      </div>
+                    ) : null}
+                    {row.roleSamples.length > 0 ? (
+                      <div className="mt-1 text-xs text-slate-500">
+                        役柄候補: {row.roleSamples.join(" / ")}
+                      </div>
+                    ) : null}
+                  </div>
+
+                  <div className="flex shrink-0 flex-wrap gap-2">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setQueue(row.matchedPlayId ? "ready" : "skeleton");
+                        setQ(row.sourceWorkTitle);
+                      }}
+                      className="rounded-full border border-sky-500/30 bg-sky-500/15 px-3 py-2 text-xs font-bold text-sky-100 hover:bg-sky-500/20"
+                    >
+                      この作品の候補を見る
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+
+            {!loading && visibleWorkQueue.length === 0 ? (
+              <div className="px-6 py-12 text-center text-sm text-slate-500">
+                作品別キューは空です。
+              </div>
+            ) : null}
+          </div>
+        </div>
+      ) : null}
+
       {actorMatchTarget ? (
         <div className="rounded-2xl border border-amber-500/20 bg-amber-500/10 p-6">
           <div className="flex flex-wrap items-start justify-between gap-3">
@@ -1409,7 +1601,7 @@ const AdminExternalKiraHai: React.FC = () => {
         </div>
       ) : null}
 
-      {queue !== "actor_queue" ? (
+      {queue !== "actor_queue" && queue !== "work_queue" ? (
       <div className="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
         <div className="border-b border-white/10 px-6 py-3 text-xs text-slate-400">
           {loading ? "Loading..." : `${visibleCandidates.length} 件表示 / 最大 ${PAGE_SIZE} 件`}
