@@ -193,7 +193,8 @@ function toIsoDate(year, month, day) {
 }
 
 function extractActorKana(lines, actorName) {
-  const kanaPattern = /[ぁ-ゖァ-ヺー\s]+/g;
+  const parenKanaPattern = /[（(]\s*([ぁ-ゖー\s　]+)\s*[）)]/;
+  const kanaPattern = /[ぁ-ゖー\s　]+/g;
   const isUsefulKana = (value) => {
     const cleaned = normalizeWhitespace(value).replace(/\s+/g, "");
     return cleaned.length >= 4 && !/(トップ|コメント|プロフィール|出演舞台|名前|俳優)/.test(cleaned);
@@ -207,6 +208,11 @@ function extractActorKana(lines, actorName) {
 
   const candidates = [];
   for (const line of window) {
+    const parenMatch = line.match(parenKanaPattern);
+    if (parenMatch && isUsefulKana(parenMatch[1])) {
+      return normalizeWhitespace(parenMatch[1]);
+    }
+
     for (const match of line.matchAll(kanaPattern)) {
       const value = normalizeWhitespace(match[0]);
       if (isUsefulKana(value)) candidates.push(value);

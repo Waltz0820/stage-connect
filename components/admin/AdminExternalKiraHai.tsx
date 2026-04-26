@@ -820,6 +820,93 @@ const AdminExternalKiraHai: React.FC = () => {
     }
   };
 
+  const loadWorkCandidateRows = async (row: WorkQueueRow) => {
+    let query = supabase
+      .from("external_cast_candidates")
+      .select("id,source,source_actor_name,source_actor_url,external_play_id,source_work_title,source_work_url,source_year,source_role_raw,source_role_names,matched_actor_id,matched_play_id,accepted_cast_id,confidence,status,note,scraped_at")
+      .eq("source", "kira-hai")
+      .neq("status", "rejected")
+      .order("source_year", { ascending: true })
+      .limit(300);
+
+    query = row.sourceWorkUrl
+      ? query.eq("source_work_url", row.sourceWorkUrl)
+      : query.eq("source_work_title", row.sourceWorkTitle);
+
+    const { data, error } = await query;
+    if (error) throw error;
+    return (data ?? []) as CandidateRow[];
+  };
+
+  const loadExternalActorFactsByUrl = async (urls: string[]) => {
+    const uniqueUrls = Array.from(new Set(urls.map((url) => normalizeText(url)).filter(Boolean)));
+    if (uniqueUrls.length === 0) return new Map<string, any>();
+
+    const { data, error } = await supabase
+      .from("external_actors")
+      .select("source_actor_name,source_actor_url,source_actor_kana,alias_from,alias_to,note,source_profile_facts_raw,source_birthday_raw,source_birthday,source_height_cm,source_blood_type,source_affiliation_raw,matched_actor_id")
+      .eq("source", "kira-hai")
+      .in("source_actor_url", uniqueUrls);
+
+    if (error) throw error;
+    return new Map((data ?? []).map((actor: any) => [actor.source_actor_url, actor]));
+  };
+
+  const copyWorkForGemini = async (row: WorkQueueRow) => {
+    setBusyId(`copy:${row.sourceWorkUrl || row.sourceWorkTitle}`);
+    setMsg("");
+
+    try {
+      const rows = await loadWorkCandidateRows(row);
+      const factsByUrl = await loadExternalActorFactsByUrl(rows.map((item) => item.source_actor_url));
+
+      const lines = [
+        "Stage Connect 外部候補チェック用",
+        "",
+        `作品名: ${row.sourceWorkTitle}`,
+        `年: ${row.sourceYear || "-"}`,
+        `外部URL: ${row.sourceWorkUrl || "-"}`,
+        `Stage Connect既存作品: ${row.matchedPlayId ? "あり" : "未登録候補"}`,
+        "",
+        "目的:",
+        "- 以下はキラハイ由来の出演フレーム候補です。本文や感想は取り込まず、俳優名・役名・年・URLだけを確認したいです。",
+        "- 公式情報と照合して、表記ゆれ、同一人物、役名の揺れ、足りないキャスト、不要そうな候補を指摘してください。",
+        "- Stage Connectに投入する前提で、客観的なファクトだけに絞ってください。",
+        "",
+        "候補一覧:",
+        ...rows.map((item, index) => {
+          const actor = factsByUrl.get(item.source_actor_url) ?? {};
+          const facts = [
+            actor.source_actor_kana ? `読み: ${actor.source_actor_kana}` : "",
+            actor.source_birthday_raw || actor.source_birthday ? `生年月日: ${actor.source_birthday_raw || actor.source_birthday}` : "",
+            actor.source_height_cm ? `身長: ${actor.source_height_cm}cm` : "",
+            actor.source_blood_type ? `血液型: ${actor.source_blood_type}型` : "",
+            actor.source_affiliation_raw ? `所属候補: ${actor.source_affiliation_raw}` : "",
+            actor.note ? `注記: ${actor.note}` : "",
+          ].filter(Boolean);
+
+          return [
+            `${index + 1}. ${item.source_actor_name} / 役名: ${item.source_role_raw || "-"} / 年: ${item.source_year || "-"}`,
+            `   俳優URL: ${item.source_actor_url || "-"}`,
+            `   作品URL: ${item.source_work_url || "-"}`,
+            `   照合: actor=${item.matched_actor_id ? "matched" : "unmatched"} / play=${item.matched_play_id ? "matched" : "unmatched"} / status=${item.status}`,
+            facts.length > 0 ? `   候補ファクト: ${facts.join(" / ")}` : "",
+          ]
+            .filter(Boolean)
+            .join("\n");
+        }),
+      ];
+
+      const text = lines.join("\n");
+      await navigator.clipboard.writeText(text);
+      setMsg(`Gemini用コピーを作成しました: ${row.sourceWorkTitle} / ${rows.length}件`);
+    } catch (error: any) {
+      setMsg(error?.message ?? "copy work prompt error");
+    } finally {
+      setBusyId(null);
+    }
+  };
+
   const acceptCandidate = async (row: CandidateRow) => {
     if (!row.matched_actor_id || !row.matched_play_id) {
       setMsg("既存actorと既存playの両方に一致している候補だけ採用できます");
@@ -1010,6 +1097,74 @@ const AdminExternalKiraHai: React.FC = () => {
       setMsg(error?.message ?? "create skeleton actor error");
     } finally {
       setBusyId(null);
+    }
+  };
+
+  const bulkCreateSkeletonActorsForWork = async (row: WorkQueueRow) => {
+    setBulkBusy(true);
+    setBusyId(`actors:${row.sourceWorkUrl || row.sourceWorkTitle}`);
+    setMsg("");
+
+    try {
+      const rows = await loadWorkCandidateRows(row);
+      const targetRows = rows.filter((item) => !item.matched_actor_id);
+      const factsByUrl = await loadExternalActorFactsByUrl(targetRows.map((item) => item.source_actor_url));
+      const statsByUrl = new Map<string, { candidateCount: number; matchedPlayCount: number; latestYear: number | null }>();
+
+      for (const item of rows) {
+        const url = item.source_actor_url;
+        const current = statsByUrl.get(url) ?? { candidateCount: 0, matchedPlayCount: 0, latestYear: null };
+        current.candidateCount += 1;
+        if (item.matched_play_id) current.matchedPlayCount += 1;
+        if (item.source_year && (!current.latestYear || item.source_year > current.latestYear)) {
+          current.latestYear = item.source_year;
+        }
+        statsByUrl.set(url, current);
+      }
+
+      const actorRows = Array.from(factsByUrl.values())
+        .filter((actor: any) => !actor.matched_actor_id)
+        .map((actor: any) => {
+          const stat = statsByUrl.get(actor.source_actor_url) ?? {
+            candidateCount: 0,
+            matchedPlayCount: 0,
+            latestYear: null,
+          };
+          return {
+            sourceActorName: actor.source_actor_name,
+            sourceActorUrl: actor.source_actor_url,
+            sourceActorKana: actor.source_actor_kana,
+            aliasFrom: actor.alias_from,
+            aliasTo: actor.alias_to,
+            note: actor.note,
+            sourceProfileFactsRaw: actor.source_profile_facts_raw,
+            sourceBirthdayRaw: actor.source_birthday_raw,
+            sourceBirthday: actor.source_birthday,
+            sourceHeightCm: actor.source_height_cm,
+            sourceBloodType: actor.source_blood_type,
+            sourceAffiliationRaw: actor.source_affiliation_raw,
+            candidateCount: stat.candidateCount,
+            matchedPlayCount: stat.matchedPlayCount,
+            latestYear: stat.latestYear,
+          } as UnmatchedActorQueueRow;
+        });
+
+      if (actorRows.length === 0) {
+        setMsg(`この作品に未照合俳優はありません: ${row.sourceWorkTitle}`);
+        return;
+      }
+
+      for (const actorRow of actorRows) {
+        await createSkeletonActor(actorRow);
+      }
+
+      setMsg(`未照合俳優skeletonを作成しました: ${row.sourceWorkTitle} / ${actorRows.length}人`);
+      await loadWorkQueue();
+    } catch (error: any) {
+      setMsg(error?.message ?? "bulk create skeleton actors error");
+    } finally {
+      setBusyId(null);
+      setBulkBusy(false);
     }
   };
 
@@ -1344,6 +1499,22 @@ const AdminExternalKiraHai: React.FC = () => {
                   </div>
 
                   <div className="flex shrink-0 flex-wrap gap-2">
+                    <button
+                      type="button"
+                      onClick={() => void copyWorkForGemini(row)}
+                      disabled={busyId === `copy:${row.sourceWorkUrl || row.sourceWorkTitle}`}
+                      className="rounded-full border border-fuchsia-500/30 bg-fuchsia-500/15 px-3 py-2 text-xs font-bold text-fuchsia-100 hover:bg-fuchsia-500/20 disabled:opacity-40"
+                    >
+                      Gemini用コピー
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => void bulkCreateSkeletonActorsForWork(row)}
+                      disabled={bulkBusy || busyId === `actors:${row.sourceWorkUrl || row.sourceWorkTitle}`}
+                      className="rounded-full border border-amber-500/30 bg-amber-500/15 px-3 py-2 text-xs font-bold text-amber-100 hover:bg-amber-500/20 disabled:opacity-40"
+                    >
+                      未登録俳優を空箱化
+                    </button>
                     <button
                       type="button"
                       onClick={() => {
