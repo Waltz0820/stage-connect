@@ -38,6 +38,7 @@ function parseArgs(argv) {
     write: false,
     onlyIndex: false,
     fromDb: false,
+    fetchWorkDetails: false,
     limitActors: Number.POSITIVE_INFINITY,
     offsetActors: 0,
     delayMs: DEFAULT_DELAY_MS,
@@ -47,6 +48,7 @@ function parseArgs(argv) {
     if (arg === "--write") args.write = true;
     else if (arg === "--only-index") args.onlyIndex = true;
     else if (arg === "--from-db") args.fromDb = true;
+    else if (arg === "--fetch-work-details") args.fetchWorkDetails = true;
     else if (arg.startsWith("--limit-actors=")) {
       const value = Number(arg.split("=")[1]);
       if (Number.isFinite(value) && value > 0) args.limitActors = Math.trunc(value);
@@ -184,12 +186,141 @@ function parseRoleNames(roleRaw) {
   return parts.length > 1 ? parts : [cleaned];
 }
 
+function uniqueValues(values) {
+  return Array.from(new Set(values.map((value) => normalizeWhitespace(value)).filter(Boolean)));
+}
+
 function toIsoDate(year, month, day) {
   const y = Number(year);
   const m = Number(month);
   const d = Number(day);
   if (!Number.isFinite(y) || !Number.isFinite(m) || !Number.isFinite(d)) return null;
   return `${String(y).padStart(4, "0")}-${String(m).padStart(2, "0")}-${String(d).padStart(2, "0")}`;
+}
+
+function formatStageDateRange(startDate, endDate) {
+  if (!startDate) return null;
+  const [startYear, startMonth, startDay] = startDate.split("-");
+  if (!endDate || endDate === startDate) {
+    return `${startYear}/${startMonth}/${startDay}`;
+  }
+
+  const [endYear, endMonth, endDay] = endDate.split("-");
+  const start = `${startYear}/${startMonth}/${startDay}`;
+  if (endYear === startYear) {
+    return `${start}-${endMonth}/${endDay}`;
+  }
+  return `${start}-${endYear}/${endMonth}/${endDay}`;
+}
+
+const areaRules = [
+  ["東京凱旋", [/東京凱旋/]],
+  ["東京", [/東京/, /日本青年館/, /JCB HALL/i, /TDC/i, /TOKYO DOME CITY HALL/i, /スペース・ゼロ/, /銀河劇場/, /明治座/, /EX THEATER/i, /シアター1010/, /有明/, /豊洲/, /品川/, /池袋/, /渋谷/, /新宿/, /代々木/]],
+  ["大阪", [/大阪/, /梅田/, /メルパルク/, /オリックス劇場/, /森ノ宮/, /新歌舞伎座/, /SkyシアターMBS/i, /COOL JAPAN PARK OSAKA/i]],
+  ["愛知", [/愛知/, /名古屋/, /中京/, /刈谷/, /御園座/, /日本ガイシ/]],
+  ["福岡", [/福岡/, /博多/, /北九州/]],
+  ["宮城", [/宮城/, /仙台/, /名取/, /多賀城/]],
+  ["神奈川", [/神奈川/, /横浜/, /KAAT/i, /パシフィコ横浜/]],
+  ["兵庫", [/兵庫/, /神戸/, /AiiA 2\.5 Theater Kobe/i, /新神戸/]],
+  ["新潟", [/新潟/]],
+  ["長崎", [/長崎/, /チトセピア/]],
+  ["石川", [/石川/, /金沢/, /本多の森/]],
+  ["広島", [/広島/]],
+  ["香川", [/香川/]],
+  ["岐阜", [/岐阜/]],
+  ["北海道", [/北海道/, /札幌/, /北海きたえーる/, /真駒内/]],
+  ["京都", [/京都/]],
+  ["熊本", [/熊本/]],
+  ["長野", [/長野/]],
+  ["福井", [/福井/]],
+  ["静岡", [/静岡/]],
+  ["岩手", [/岩手/, /盛岡/]],
+  ["山口", [/山口/, /下関/]],
+  ["台湾", [/台湾/, /Taiwan/i]],
+  ["タイ", [/タイ/, /Siam/i]],
+  ["フランス", [/フランス/, /Paris/i, /Palais/i]],
+  ["中国", [/中国/, /上海/, /Hongqiao/i]],
+];
+
+function inferAreaFromVenue(venue) {
+  const normalized = normalizeWhitespace(venue).normalize("NFKC");
+  for (const [area, patterns] of areaRules) {
+    if (patterns.some((pattern) => pattern.test(normalized))) return area;
+  }
+  return null;
+}
+
+function cleanVenueText(value) {
+  return normalizeWhitespace(value)
+    .replace(/^[：:／/・\-\s]+/, "")
+    .replace(/\s*(?:公演|上演)?\s*$/, "")
+    .trim();
+}
+
+function parseWorkScheduleDetails(html) {
+  const $ = cheerio.load(html);
+  const lines = $("body")
+    .text()
+    .normalize("NFKC")
+    .split(/\r?\n/)
+    .map((line) => normalizeWhitespace(line))
+    .filter(Boolean);
+
+  const scheduleLinePattern =
+    /^((?:19|20)\d{2})年\s*(\d{1,2})月\s*(\d{1,2})日\s*(?:[-‐‑‒–—―ー－~〜～]\s*(?:((?:19|20)\d{2})年\s*)?(?:(\d{1,2})月\s*)?(\d{1,2})日)?\s+(.+)$/;
+  const items = [];
+
+  for (const line of lines) {
+    const match = line.match(scheduleLinePattern);
+    if (!match) continue;
+
+    const startYear = Number(match[1]);
+    const startMonth = Number(match[2]);
+    const startDay = Number(match[3]);
+    let endYear = match[4] ? Number(match[4]) : startYear;
+    const endMonth = match[5] ? Number(match[5]) : startMonth;
+    const endDay = match[6] ? Number(match[6]) : null;
+    const venue = cleanVenueText(match[7]);
+    if (!venue) continue;
+
+    if (!match[4] && endDay && endMonth < startMonth) {
+      endYear = startYear + 1;
+    }
+
+    const startDate = toIsoDate(startYear, startMonth, startDay);
+    const endDate = endDay ? toIsoDate(endYear, endMonth, endDay) : startDate;
+    const area = inferAreaFromVenue(venue) ?? venue.split(/[／/]/)[0] ?? null;
+
+    items.push({
+      area,
+      startDate,
+      endDate,
+      venue,
+      sourceLine: line,
+    });
+  }
+
+  const periodParts = uniqueValues(
+    items.map((item) => {
+      const dateRange = formatStageDateRange(item.startDate, item.endDate);
+      return item.area && dateRange ? `${item.area}: ${dateRange}` : null;
+    })
+  );
+  const venues = uniqueValues(items.map((item) => item.venue));
+
+  return {
+    sourceScheduleRaw: items.length > 0 ? items.map((item) => item.sourceLine).join("\n") : null,
+    sourceVenueRaw: venues.length > 0 ? venues.join("\n") : null,
+    sourcePeriodText: periodParts.length > 0 ? periodParts.join(" / ") : null,
+    sourceVenueText: venues.length > 0 ? venues.join(" / ") : null,
+    sourceScheduleItems: items.map((item) => ({
+      area: item.area,
+      start_date: item.startDate,
+      end_date: item.endDate,
+      venue: item.venue,
+      source_line: item.sourceLine,
+    })),
+  };
 }
 
 function extractActorKana(lines, actorName) {
@@ -627,6 +758,11 @@ async function upsertExternalPlay(supabase, credit, match) {
     matched_play_id: match?.id ?? null,
     match_status: match ? "matched" : "unmatched",
     match_confidence: match ? 90 : 0,
+    source_schedule_raw: credit.sourceScheduleRaw ?? null,
+    source_venue_raw: credit.sourceVenueRaw ?? null,
+    source_period_text: credit.sourcePeriodText ?? null,
+    source_venue_text: credit.sourceVenueText ?? null,
+    source_schedule_items: credit.sourceScheduleItems ?? [],
     scraped_at: new Date().toISOString(),
     updated_at: new Date().toISOString(),
   };
@@ -726,7 +862,7 @@ async function main() {
 
   const args = parseArgs(process.argv.slice(2));
   console.log(
-    `[mode] ${args.write ? "write" : "dry-run"} / delay=${args.delayMs}ms / limit=${args.limitActors} / offset=${args.offsetActors}`
+    `[mode] ${args.write ? "write" : "dry-run"} / delay=${args.delayMs}ms / limit=${args.limitActors} / offset=${args.offsetActors} / workDetails=${args.fetchWorkDetails ? "on" : "off"}`
   );
 
   await assertRobotsAllowed(["/robots.txt", ...INDEX_PATHS]);
@@ -778,6 +914,7 @@ async function main() {
 
   let creditCount = 0;
   let writeCount = 0;
+  const workDetailCache = new Map();
 
   for (const actor of actors) {
     const actorMatch = findActorMatch(existing.actorMap, actor);
@@ -796,9 +933,27 @@ async function main() {
     const externalActorId = await upsertExternalActor(supabase, actorWithFacts, actorMatch);
 
     for (const credit of credits) {
+      let creditWithDetails = credit;
+      if (args.fetchWorkDetails && credit.sourceWorkUrl) {
+        if (!workDetailCache.has(credit.sourceWorkUrl)) {
+          try {
+            const workHtml = await fetchHtml(credit.sourceWorkUrl, args.delayMs);
+            workDetailCache.set(credit.sourceWorkUrl, parseWorkScheduleDetails(workHtml));
+          } catch (error) {
+            console.warn(`[work-details] failed ${credit.sourceWorkUrl}: ${error?.message ?? error}`);
+            workDetailCache.set(credit.sourceWorkUrl, {});
+          }
+        }
+
+        creditWithDetails = {
+          ...credit,
+          ...workDetailCache.get(credit.sourceWorkUrl),
+        };
+      }
+
       const playMatch = existing.playMap.get(normalizeMatchText(credit.sourceWorkTitle)) ?? null;
-      const externalPlayId = await upsertExternalPlay(supabase, credit, playMatch);
-      await upsertCastCandidate(supabase, credit, externalActorId, externalPlayId, actorMatch, playMatch);
+      const externalPlayId = await upsertExternalPlay(supabase, creditWithDetails, playMatch);
+      await upsertCastCandidate(supabase, creditWithDetails, externalActorId, externalPlayId, actorMatch, playMatch);
       writeCount += 1;
     }
   }

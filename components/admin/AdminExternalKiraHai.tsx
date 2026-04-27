@@ -35,6 +35,12 @@ type ExternalActorRow = {
 
 type ActorRow = { id: string; name: string; slug: string };
 type PlayRow = { id: string; title: string; slug: string };
+type ExternalPlayDetailRow = {
+  source_period_text?: string | null;
+  source_venue_text?: string | null;
+  source_schedule_raw?: string | null;
+  source_venue_raw?: string | null;
+};
 
 type UnmatchedActorQueueRow = {
   sourceActorName: string;
@@ -1296,6 +1302,22 @@ const AdminExternalKiraHai: React.FC = () => {
     return `${normalizedBase}-${Date.now()}`;
   };
 
+  const loadExternalPlayDetail = async (externalPlayId?: string | null): Promise<ExternalPlayDetailRow | null> => {
+    if (!externalPlayId) return null;
+    const { data, error } = await supabase
+      .from("external_plays")
+      .select("source_period_text,source_venue_text,source_schedule_raw,source_venue_raw")
+      .eq("id", externalPlayId)
+      .maybeSingle();
+
+    if (error) {
+      if (String(error.message ?? "").includes("source_period_text")) return null;
+      throw error;
+    }
+
+    return data as ExternalPlayDetailRow | null;
+  };
+
   const createSkeletonPlayFromCandidate = async (
     row: CandidateRow,
     options: { title?: string | null; acceptAfter?: boolean; closeMatchPanel?: boolean } = {}
@@ -1311,12 +1333,13 @@ const AdminExternalKiraHai: React.FC = () => {
     }
 
     const slug = await buildUniquePlaySlug(row, title);
+    const externalPlayDetail = await loadExternalPlayDetail(row.external_play_id);
     const payload = {
       title,
       slug,
       summary: null,
-      period: makeSkeletonPeriod(row.source_year),
-      venue: null,
+      period: normalizeText(externalPlayDetail?.source_period_text) || makeSkeletonPeriod(row.source_year),
+      venue: normalizeText(externalPlayDetail?.source_venue_text) || null,
       genre: null,
       franchise_id: null,
       vod: {},
@@ -1386,6 +1409,8 @@ const AdminExternalKiraHai: React.FC = () => {
         source_work_title: row.source_work_title,
         edited_title: title !== row.source_work_title ? title : null,
         source_year: row.source_year,
+        source_period_text: externalPlayDetail?.source_period_text ?? null,
+        source_venue_text: externalPlayDetail?.source_venue_text ?? null,
         accepted_after_create: Boolean(options.acceptAfter),
       },
     });
@@ -1611,6 +1636,7 @@ const AdminExternalKiraHai: React.FC = () => {
       }
 
       const slug = await buildUniquePlaySlug(row);
+      const externalPlayDetail = await loadExternalPlayDetail(row.external_play_id);
 
       const similar = await findSimilarExistingPlays(row.source_work_title);
       if (similar.length > 0) {
@@ -1626,8 +1652,8 @@ const AdminExternalKiraHai: React.FC = () => {
         title: row.source_work_title,
         slug,
         summary: null,
-        period: makeSkeletonPeriod(row.source_year),
-        venue: null,
+        period: normalizeText(externalPlayDetail?.source_period_text) || makeSkeletonPeriod(row.source_year),
+        venue: normalizeText(externalPlayDetail?.source_venue_text) || null,
         genre: null,
         franchise_id: null,
         vod: {},
@@ -1768,12 +1794,14 @@ const AdminExternalKiraHai: React.FC = () => {
       if (!ok) return;
 
       const slug = await buildUniquePlaySlug(seed);
+      const externalPlayDetail = await loadExternalPlayDetail(seed.external_play_id);
       const payload = {
         title: row.sourceWorkTitle,
         slug,
         summary: null,
-        period: makeSkeletonPeriod(row.sourceYear || seed.source_year),
-        venue: null,
+        period:
+          normalizeText(externalPlayDetail?.source_period_text) || makeSkeletonPeriod(row.sourceYear || seed.source_year),
+        venue: normalizeText(externalPlayDetail?.source_venue_text) || null,
         genre: null,
         franchise_id: null,
         vod: {},
