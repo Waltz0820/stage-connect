@@ -885,6 +885,80 @@ const AdminExternalKiraHai: React.FC = () => {
     }
   };
 
+  const clearPlayMatch = async (row: CandidateRow) => {
+    if (!row.matched_play_id) return;
+
+    const ok = window.confirm(
+      `作品の紐づけを解除します。\n\n外部候補: ${row.source_work_title}\n\n同じ外部作品URL/作品名の候補も未照合に戻ります。続行しますか？`
+    );
+    if (!ok) return;
+
+    setBusyId(row.id);
+    setMsg("");
+    try {
+      const now = new Date().toISOString();
+
+      if (row.external_play_id) {
+        const { error: externalPlayError } = await supabase
+          .from("external_plays")
+          .update({
+            matched_play_id: null,
+            match_status: "unmatched",
+            match_confidence: 0,
+            updated_at: now,
+          })
+          .eq("id", row.external_play_id);
+
+        if (externalPlayError) throw externalPlayError;
+      }
+
+      let candidateUpdate = supabase
+        .from("external_cast_candidates")
+        .update({
+          matched_play_id: null,
+          confidence: row.matched_actor_id ? 60 : 0,
+          updated_at: now,
+        })
+        .eq("source", "kira-hai");
+
+      if (row.source_work_url) {
+        candidateUpdate = candidateUpdate.eq("source_work_url", row.source_work_url);
+      } else {
+        candidateUpdate = candidateUpdate.eq("source_work_title", row.source_work_title);
+      }
+
+      const { error: candidateError } = await candidateUpdate;
+      if (candidateError) throw candidateError;
+
+      setCandidates((current) =>
+        current.map((item) =>
+          (row.source_work_url && item.source_work_url === row.source_work_url) ||
+          (!row.source_work_url && item.source_work_title === row.source_work_title)
+            ? { ...item, matched_play_id: null, confidence: item.matched_actor_id ? 60 : 0 }
+            : item
+        )
+      );
+
+      await writeImportLog({
+        action: "clear_play_match",
+        targetType: "play",
+        targetId: row.matched_play_id,
+        targetLabel: row.source_work_title,
+        sourceUrl: row.source_work_url,
+        details: {
+          source_work_title: row.source_work_title,
+          previous_matched_play_id: row.matched_play_id,
+        },
+      });
+
+      setMsg(`「${row.source_work_title}」の作品紐づけを解除しました。再検索できます。`);
+    } catch (error: any) {
+      setMsg(error?.message ?? "clear play match error");
+    } finally {
+      setBusyId(null);
+    }
+  };
+
   const loadWorkCandidateRows = async (row: WorkQueueRow) => {
     let query = supabase
       .from("external_cast_candidates")
@@ -2558,6 +2632,29 @@ const AdminExternalKiraHai: React.FC = () => {
                             <span className="text-slate-500">未照合</span>
                           )}
                         </div>
+                        {play && row.status !== "accepted" ? (
+                          <div className="mt-3 rounded-lg border border-sky-500/20 bg-sky-500/10 px-3 py-2 text-xs text-sky-100">
+                            <div>作品の紐づけを変更できます。誤クリック時は解除してから再検索できます。</div>
+                            <div className="mt-2 flex flex-wrap gap-2">
+                              <button
+                                type="button"
+                                onClick={() => void openPlayMatch(row)}
+                                disabled={busyId === row.id}
+                                className="rounded-full border border-sky-300/20 bg-sky-300/10 px-3 py-1.5 text-[11px] font-bold text-sky-50 hover:bg-sky-300/15 disabled:opacity-40"
+                              >
+                                作品を変更
+                              </button>
+                              <button
+                                type="button"
+                                onClick={() => void clearPlayMatch(row)}
+                                disabled={busyId === row.id}
+                                className="rounded-full border border-red-300/20 bg-red-300/10 px-3 py-1.5 text-[11px] font-bold text-red-50 hover:bg-red-300/15 disabled:opacity-40"
+                              >
+                                紐づけ解除
+                              </button>
+                            </div>
+                          </div>
+                        ) : null}
                         {!play && actor ? (
                           <div className="mt-3 rounded-lg border border-sky-500/20 bg-sky-500/10 px-3 py-2 text-xs text-sky-100">
                             <div>既存俳優に一致済み。必要なら既存作品に紐づけるか、作品skeletonを作って出演線まで接続できます。</div>

@@ -1632,6 +1632,39 @@ export async function getPlayList(): Promise<PlayListItem[]> {
     .map((row) => row);
 }
 
+export async function getHomeStats(): Promise<{ actorCount: number; playCount: number; vodCount: number }> {
+  if (!hasSupabaseEnv) return { actorCount: 0, playCount: 0, vodCount: 0 };
+
+  const supabase = createSupabaseServerClient();
+  const [actorRes, playRes] = await Promise.all([
+    supabase.from("actors").select("id", { count: "exact", head: true }),
+    supabase.from("plays").select("id", { count: "exact", head: true }),
+  ]);
+
+  if (actorRes.error) throw actorRes.error;
+  if (playRes.error) throw playRes.error;
+
+  let vodCount = 0;
+  const pageSize = 1000;
+  for (let from = 0; ; from += pageSize) {
+    const { data, error } = await supabase
+      .from("plays")
+      .select("vod")
+      .range(from, from + pageSize - 1);
+
+    if (error) throw error;
+    const rows = data ?? [];
+    vodCount += rows.filter((row: any) => row?.vod && Object.keys(row.vod).length > 0).length;
+    if (rows.length < pageSize) break;
+  }
+
+  return {
+    actorCount: actorRes.count ?? 0,
+    playCount: playRes.count ?? 0,
+    vodCount,
+  };
+}
+
 export async function getPlayMainCastSummariesBySlug(
   slugs: string[]
 ): Promise<Record<string, { ja: string | null; en: string | null }>> {

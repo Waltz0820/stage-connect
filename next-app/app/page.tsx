@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PlayPosterFrame } from "../components/PlayPosterFrame";
-import { getActorList, getPlayList, getSeriesList, getTrendingTags } from "../lib/stage-connect";
+import { getHomeStats, getSeriesList, getTrendingTags } from "../lib/stage-connect";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
 
@@ -94,17 +94,16 @@ const renderIcon = (type: "person" | "ticket" | "box") => {
 };
 
 export default async function HomePage() {
-  const [trendingTags, actors, plays, series] = await Promise.all([
+  const [trendingTags, stats, series] = await Promise.all([
     getTrendingTags(6),
-    getActorList(),
-    getPlayList(),
+    getHomeStats(),
     getSeriesList(),
   ]);
 
   const featuredSeries = series.slice(0, 4);
-  const actorsCount = actors.length;
-  const playsCount = plays.length;
-  const vodCount = plays.filter((play) => play.vod && Object.keys(play.vod).length > 0).length;
+  const actorsCount = stats.actorCount;
+  const playsCount = stats.playCount;
+  const vodCount = stats.vodCount;
 
   return (
     <main className="home-shell">
