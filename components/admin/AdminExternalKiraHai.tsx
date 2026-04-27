@@ -1351,6 +1351,113 @@ const AdminExternalKiraHai: React.FC = () => {
     }
   };
 
+  const createSkeletonPlayForWork = async (row: WorkQueueRow) => {
+    if (row.matchedPlayId) {
+      setMsg(`既に既存作品に紐づいています: ${row.sourceWorkTitle}`);
+      return;
+    }
+
+    setBusyId(`play:${row.sourceWorkUrl || row.sourceWorkTitle}`);
+    setMsg("");
+
+    try {
+      const rows = await loadWorkCandidateRows(row);
+      const seed = rows[0];
+
+      if (!seed) {
+        setMsg(`作品候補が見つかりません: ${row.sourceWorkTitle}`);
+        return;
+      }
+
+      const similar = await findSimilarExistingPlays(row.sourceWorkTitle);
+      if (similar.length > 0) {
+        setPlayMatchTarget(seed);
+        setPlaySearchText(row.sourceWorkTitle);
+        setPlaySearchResults(similar);
+        setMsg("似ている既存作品があります。重複作成を避けるため、既存作品へ紐づけるか確認してください。");
+        return;
+      }
+
+      const slug = await buildUniquePlaySlug(seed);
+      const payload = {
+        title: row.sourceWorkTitle,
+        slug,
+        summary: null,
+        period: makeSkeletonPeriod(row.sourceYear || seed.source_year),
+        venue: null,
+        genre: null,
+        franchise_id: null,
+        vod: {},
+        credits: null,
+      };
+
+      const { data: created, error: createError } = await supabase
+        .from("plays")
+        .insert(payload)
+        .select("id,title,slug")
+        .single();
+
+      if (createError) throw createError;
+
+      const now = new Date().toISOString();
+
+      if (seed.external_play_id) {
+        const { error: externalPlayError } = await supabase
+          .from("external_plays")
+          .update({
+            matched_play_id: created.id,
+            skeleton_play_id: created.id,
+            match_status: "skeleton_created",
+            match_confidence: 70,
+            updated_at: now,
+          })
+          .eq("id", seed.external_play_id);
+
+        if (externalPlayError) throw externalPlayError;
+      }
+
+      let candidateUpdate = supabase
+        .from("external_cast_candidates")
+        .update({
+          matched_play_id: created.id,
+          updated_at: now,
+        })
+        .eq("source", "kira-hai");
+
+      if (row.sourceWorkUrl) {
+        candidateUpdate = candidateUpdate.eq("source_work_url", row.sourceWorkUrl);
+      } else {
+        candidateUpdate = candidateUpdate.eq("source_work_title", row.sourceWorkTitle);
+      }
+
+      const { error: candidateUpdateError } = await candidateUpdate;
+      if (candidateUpdateError) throw candidateUpdateError;
+
+      const createdPlay = created as PlayRow;
+      setPlaysById((current) => ({ ...current, [createdPlay.id]: createdPlay }));
+      setWorkQueue((current) =>
+        current.map((item) =>
+          item.sourceWorkTitle === row.sourceWorkTitle && item.sourceWorkUrl === row.sourceWorkUrl
+            ? { ...item, matchedPlayId: createdPlay.id }
+            : item
+        )
+      );
+      setCandidates((current) =>
+        current.map((item) =>
+          (row.sourceWorkUrl && item.source_work_url === row.sourceWorkUrl) ||
+          (!row.sourceWorkUrl && item.source_work_title === row.sourceWorkTitle)
+            ? { ...item, matched_play_id: createdPlay.id }
+            : item
+        )
+      );
+      setMsg(`作品skeleton「${createdPlay.title}」を作成しました。次に「この作品の候補を見る」から出演線を採用できます。`);
+    } catch (error: any) {
+      setMsg(error?.message ?? "create skeleton play for work error");
+    } finally {
+      setBusyId(null);
+    }
+  };
+
   const bulkAcceptReady = async () => {
     if (readySelectedRows.length === 0) {
       setMsg("一括採用できる候補が選択されていません");
@@ -1512,7 +1619,13 @@ const AdminExternalKiraHai: React.FC = () => {
           </div>
 
           <div className="divide-y divide-white/5">
-            {visibleWorkQueue.map((row) => (
+            {visibleWorkQueue.map((row) => {
+              const acceptedPercent = row.candidateCount > 0 ? Math.round((row.acceptedCount / row.candidateCount) * 100) : 0;
+              const actorMatchedPercent =
+                row.candidateCount > 0 ? Math.round((row.matchedActorCount / row.candidateCount) * 100) : 0;
+              const workKey = row.sourceWorkUrl || row.sourceWorkTitle;
+
+              return (
               <div key={`${row.sourceWorkUrl || ""}-${row.sourceWorkTitle}`} className="p-5">
                 <div className="flex flex-wrap items-start justify-between gap-4">
                   <div className="min-w-0 flex-1">
@@ -1552,8 +1665,24 @@ const AdminExternalKiraHai: React.FC = () => {
                         俳優一致 {row.matchedActorCount}件
                       </span>
                       <span className="rounded-full border border-white/10 bg-black/30 px-2 py-1 text-slate-300">
-                        採用済み {row.acceptedCount}件
+                        採用済み {row.acceptedCount}件 / {acceptedPercent}%
                       </span>
+                      <span className="rounded-full border border-white/10 bg-black/30 px-2 py-1 text-slate-400">
+                        俳優一致率 {actorMatchedPercent}%
+                      </span>
+                    </div>
+
+                    <div className="mt-3 max-w-xl">
+                      <div className="mb-1 flex justify-between text-[11px] text-slate-500">
+                        <span>採用進捗</span>
+                        <span>{row.acceptedCount}/{row.candidateCount}</span>
+                      </div>
+                      <div className="h-2 overflow-hidden rounded-full bg-black/40 ring-1 ring-white/10">
+                        <div
+                          className="h-full rounded-full bg-gradient-to-r from-rose-500 to-fuchsia-400"
+                          style={{ width: `${acceptedPercent}%` }}
+                        />
+                      </div>
                     </div>
 
                     {row.actorSamples.length > 0 ? (
@@ -1572,18 +1701,26 @@ const AdminExternalKiraHai: React.FC = () => {
                     <button
                       type="button"
                       onClick={() => void copyWorkForGemini(row)}
-                      disabled={busyId === `copy:${row.sourceWorkUrl || row.sourceWorkTitle}`}
+                      disabled={busyId === `copy:${workKey}`}
                       className="rounded-full border border-fuchsia-500/30 bg-fuchsia-500/15 px-3 py-2 text-xs font-bold text-fuchsia-100 hover:bg-fuchsia-500/20 disabled:opacity-40"
                     >
-                      Gemini用コピー
+                      1. Gemini用コピー
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => void createSkeletonPlayForWork(row)}
+                      disabled={Boolean(row.matchedPlayId) || busyId === `play:${workKey}`}
+                      className="rounded-full border border-sky-500/30 bg-sky-500/15 px-3 py-2 text-xs font-bold text-sky-100 hover:bg-sky-500/20 disabled:cursor-not-allowed disabled:opacity-35"
+                    >
+                      2. 作品を空箱化
                     </button>
                     <button
                       type="button"
                       onClick={() => void bulkCreateSkeletonActorsForWork(row)}
-                      disabled={bulkBusy || busyId === `actors:${row.sourceWorkUrl || row.sourceWorkTitle}`}
+                      disabled={bulkBusy || busyId === `actors:${workKey}`}
                       className="rounded-full border border-amber-500/30 bg-amber-500/15 px-3 py-2 text-xs font-bold text-amber-100 hover:bg-amber-500/20 disabled:opacity-40"
                     >
-                      未登録俳優を空箱化
+                      3. 未登録俳優を空箱化
                     </button>
                     <button
                       type="button"
@@ -1593,12 +1730,13 @@ const AdminExternalKiraHai: React.FC = () => {
                       }}
                       className="rounded-full border border-sky-500/30 bg-sky-500/15 px-3 py-2 text-xs font-bold text-sky-100 hover:bg-sky-500/20"
                     >
-                      この作品の候補を見る
+                      4. 候補を見る
                     </button>
                   </div>
                 </div>
               </div>
-            ))}
+              );
+            })}
 
             {!loading && visibleWorkQueue.length === 0 ? (
               <div className="px-6 py-12 text-center text-sm text-slate-500">
