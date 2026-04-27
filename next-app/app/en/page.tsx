@@ -6,7 +6,7 @@ import { getHomeStats, getSeriesList, getTrendingTags } from "../../lib/stage-co
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
 
-export const revalidate = 3600;
+export const dynamic = "force-dynamic";
 
 type HomeAction = {
   href: string;
