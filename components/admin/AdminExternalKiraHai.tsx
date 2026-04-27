@@ -246,8 +246,10 @@ const AdminExternalKiraHai: React.FC = () => {
   const [workQueue, setWorkQueue] = useState<WorkQueueRow[]>([]);
   const [playMatchTarget, setPlayMatchTarget] = useState<CandidateRow | null>(null);
   const [playSearchText, setPlaySearchText] = useState("");
+  const [playCreateTitle, setPlayCreateTitle] = useState("");
   const [playSearchResults, setPlaySearchResults] = useState<PlayRow[]>([]);
   const [selectedIds, setSelectedIds] = useState<Record<string, boolean>>({});
+  const [roleEdits, setRoleEdits] = useState<Record<string, string>>({});
   const [workActorPreview, setWorkActorPreview] = useState<{
     key: string;
     title: string;
@@ -605,6 +607,21 @@ const AdminExternalKiraHai: React.FC = () => {
     setSelectedIds({});
   };
 
+  const getCandidateRoleName = (row: CandidateRow) =>
+    normalizeText(Object.prototype.hasOwnProperty.call(roleEdits, row.id) ? roleEdits[row.id] : row.source_role_raw) || null;
+
+  const setCandidateRoleEdit = (row: CandidateRow, value: string) => {
+    setRoleEdits((current) => ({ ...current, [row.id]: value }));
+  };
+
+  const resetCandidateRoleEdit = (row: CandidateRow) => {
+    setRoleEdits((current) => {
+      const next = { ...current };
+      delete next[row.id];
+      return next;
+    });
+  };
+
   const updateStatus = async (row: CandidateRow, nextStatus: string) => {
     setBusyId(row.id);
     setMsg("");
@@ -729,6 +746,7 @@ const AdminExternalKiraHai: React.FC = () => {
   const openPlayMatch = async (row: CandidateRow) => {
     setPlayMatchTarget(row);
     setPlaySearchText(row.source_work_title ?? "");
+    setPlayCreateTitle(row.source_work_title ?? "");
     setPlaySearchResults([]);
     setMsg("");
     await searchPlays(row.source_work_title ?? "");
@@ -846,8 +864,9 @@ const AdminExternalKiraHai: React.FC = () => {
         )
       );
 
-      setPlayMatchTarget(null);
-      setPlaySearchResults([]);
+        setPlayMatchTarget(null);
+        setPlaySearchResults([]);
+        setPlayCreateTitle("");
       await writeImportLog({
         action: "manual_match_play",
         targetType: "play",
@@ -1097,7 +1116,8 @@ const AdminExternalKiraHai: React.FC = () => {
       return;
     }
 
-    const roleName = normalizeText(row.source_role_raw) || null;
+    const roleName = getCandidateRoleName(row);
+    const roleWasEdited = Object.prototype.hasOwnProperty.call(roleEdits, row.id);
 
     setBusyId(row.id);
     setMsg("");
@@ -1154,6 +1174,9 @@ const AdminExternalKiraHai: React.FC = () => {
         )
       );
       setSelectedIds((current) => ({ ...current, [row.id]: false }));
+      if (roleWasEdited) {
+        resetCandidateRoleEdit(row);
+      }
       await writeImportLog({
         action: existingCast?.id ? "mark_existing_cast_accepted" : "create_cast",
         targetType: "cast",
@@ -1164,6 +1187,8 @@ const AdminExternalKiraHai: React.FC = () => {
           source_actor_name: row.source_actor_name,
           source_work_title: row.source_work_title,
           source_role_raw: row.source_role_raw,
+          accepted_role_name: roleName,
+          role_edited: roleWasEdited,
           matched_actor_id: row.matched_actor_id,
           matched_play_id: row.matched_play_id,
         },
@@ -1176,9 +1201,9 @@ const AdminExternalKiraHai: React.FC = () => {
     }
   };
 
-  const buildUniquePlaySlug = async (row: CandidateRow) => {
+  const buildUniquePlaySlug = async (row: CandidateRow, titleOverride?: string | null) => {
     const sourceSlug = toSlug(getSourceSlug(row.source_work_url));
-    const titleSlug = toSlug(row.source_work_title);
+    const titleSlug = toSlug(titleOverride || row.source_work_title);
     const base = sourceSlug || titleSlug || `external-play-${row.source_year || "unknown"}`;
     const normalizedBase = base.replace(/^-+|-+$/g, "") || `external-play-${Date.now()}`;
 
@@ -1195,6 +1220,114 @@ const AdminExternalKiraHai: React.FC = () => {
     }
 
     return `${normalizedBase}-${Date.now()}`;
+  };
+
+  const createSkeletonPlayFromCandidate = async (
+    row: CandidateRow,
+    options: { title?: string | null; acceptAfter?: boolean; closeMatchPanel?: boolean } = {}
+  ) => {
+    const title = normalizeText(options.title) || row.source_work_title;
+    if (!title) {
+      setMsg("作品タイトルが空です");
+      return null;
+    }
+    if (options.acceptAfter && !row.matched_actor_id) {
+      setMsg("既存actorに一致している候補だけ採用まで進められます");
+      return null;
+    }
+
+    const slug = await buildUniquePlaySlug(row, title);
+    const payload = {
+      title,
+      slug,
+      summary: null,
+      period: makeSkeletonPeriod(row.source_year),
+      venue: null,
+      genre: null,
+      franchise_id: null,
+      vod: {},
+      credits: null,
+    };
+
+    const { data: created, error: createError } = await supabase
+      .from("plays")
+      .insert(payload)
+      .select("id,title,slug")
+      .single();
+
+    if (createError) throw createError;
+
+    const now = new Date().toISOString();
+
+    if (row.external_play_id) {
+      const { error: externalPlayError } = await supabase
+        .from("external_plays")
+        .update({
+          matched_play_id: created.id,
+          skeleton_play_id: created.id,
+          match_status: "skeleton_created",
+          match_confidence: 70,
+          updated_at: now,
+        })
+        .eq("id", row.external_play_id);
+
+      if (externalPlayError) throw externalPlayError;
+    }
+
+    let candidateUpdate = supabase
+      .from("external_cast_candidates")
+      .update({
+        matched_play_id: created.id,
+        updated_at: now,
+      })
+      .eq("source", "kira-hai");
+
+    if (row.source_work_url) {
+      candidateUpdate = candidateUpdate.eq("source_work_url", row.source_work_url);
+    } else {
+      candidateUpdate = candidateUpdate.eq("source_work_title", row.source_work_title);
+    }
+
+    const { error: candidateUpdateError } = await candidateUpdate;
+    if (candidateUpdateError) throw candidateUpdateError;
+
+    const createdPlay = created as PlayRow;
+    setPlaysById((current) => ({ ...current, [createdPlay.id]: createdPlay }));
+    setCandidates((current) =>
+      current.map((item) =>
+        (row.source_work_url && item.source_work_url === row.source_work_url) ||
+        (!row.source_work_url && item.source_work_title === row.source_work_title)
+          ? { ...item, matched_play_id: createdPlay.id }
+          : item
+      )
+    );
+
+    await writeImportLog({
+      action: options.acceptAfter ? "create_play_skeleton_and_accept" : "create_play_skeleton",
+      targetType: "play",
+      targetId: createdPlay.id,
+      targetLabel: createdPlay.title,
+      sourceUrl: row.source_work_url,
+      details: {
+        source_work_title: row.source_work_title,
+        edited_title: title !== row.source_work_title ? title : null,
+        source_year: row.source_year,
+        accepted_after_create: Boolean(options.acceptAfter),
+      },
+    });
+
+    if (options.acceptAfter) {
+      await acceptCandidate({ ...row, matched_play_id: createdPlay.id });
+      setSelectedIds((current) => ({ ...current, [row.id]: false }));
+    }
+
+    if (options.closeMatchPanel) {
+      setPlayMatchTarget(null);
+      setPlaySearchResults([]);
+      setPlayCreateTitle("");
+    }
+
+    return createdPlay;
   };
 
   const buildUniqueActorSlug = async (row: UnmatchedActorQueueRow) => {
@@ -1409,6 +1542,7 @@ const AdminExternalKiraHai: React.FC = () => {
       if (similar.length > 0) {
         setPlayMatchTarget(row);
         setPlaySearchText(row.source_work_title);
+        setPlayCreateTitle(row.source_work_title);
         setPlaySearchResults(similar);
         setMsg("似ている既存作品があります。重複作成を避けるため、既存作品へ紐づけるか確認してください。");
         return;
@@ -1489,6 +1623,41 @@ const AdminExternalKiraHai: React.FC = () => {
     }
   };
 
+  const createEditedSkeletonFromPlayMatch = async () => {
+    if (!playMatchTarget) return;
+    const title = normalizeText(playCreateTitle);
+    if (!title) {
+      setMsg("作成する作品タイトルを入力してください");
+      return;
+    }
+
+    const ok = window.confirm(
+      `類似作品を無視して、新規作品skeletonを作成します。\n\n外部候補: ${playMatchTarget.source_work_title}\n作成タイトル: ${title}\n\n続行しますか？`
+    );
+    if (!ok) return;
+
+    setBusyId(playMatchTarget.id);
+    setMsg("");
+    try {
+      const createdPlay = await createSkeletonPlayFromCandidate(playMatchTarget, {
+        title,
+        acceptAfter: Boolean(playMatchTarget.matched_actor_id),
+        closeMatchPanel: true,
+      });
+      if (createdPlay) {
+        setMsg(
+          playMatchTarget.matched_actor_id
+            ? `作品skeleton「${createdPlay.title}」を作成して採用しました`
+            : `作品skeleton「${createdPlay.title}」を作成しました`
+        );
+      }
+    } catch (error: any) {
+      setMsg(error?.message ?? "create edited skeleton play error");
+    } finally {
+      setBusyId(null);
+    }
+  };
+
   const createSkeletonPlayForWork = async (row: WorkQueueRow) => {
     if (row.matchedPlayId) {
       setMsg(`既に既存作品に紐づいています: ${row.sourceWorkTitle}`);
@@ -1511,6 +1680,7 @@ const AdminExternalKiraHai: React.FC = () => {
       if (similar.length > 0) {
         setPlayMatchTarget(seed);
         setPlaySearchText(row.sourceWorkTitle);
+        setPlayCreateTitle(row.sourceWorkTitle);
         setPlaySearchResults(similar);
         setMsg("似ている既存作品があります。重複作成を避けるため、既存作品へ紐づけるか確認してください。");
         return;
@@ -2082,6 +2252,7 @@ const AdminExternalKiraHai: React.FC = () => {
               onClick={() => {
                 setPlayMatchTarget(null);
                 setPlaySearchResults([]);
+                setPlayCreateTitle("");
               }}
               className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs font-bold text-slate-200 hover:bg-white/10"
             >
@@ -2126,6 +2297,29 @@ const AdminExternalKiraHai: React.FC = () => {
           {playSearchResults.length === 0 ? (
             <div className="mt-4 text-sm text-slate-500">似ている既存作品が見つかりません。</div>
           ) : null}
+
+          <div className="mt-5 rounded-2xl border border-white/10 bg-black/25 p-4">
+            <div className="text-sm font-bold text-white">類似を無視して新規作品を作る</div>
+            <p className="mt-1 text-xs text-slate-400">
+              公式タイトルと外部候補が微妙に違う場合は、ここでタイトルを直してから作品skeletonを作成できます。
+            </p>
+            <div className="mt-3 flex flex-col gap-2 md:flex-row">
+              <input
+                className="min-w-0 flex-1 rounded-xl border border-white/10 bg-black/40 px-4 py-3 text-sm text-white outline-none"
+                value={playCreateTitle}
+                onChange={(event) => setPlayCreateTitle(event.target.value)}
+                placeholder="作成する作品タイトル"
+              />
+              <button
+                type="button"
+                onClick={() => void createEditedSkeletonFromPlayMatch()}
+                disabled={busyId === playMatchTarget.id || !normalizeText(playCreateTitle)}
+                className="rounded-xl border border-rose-500/30 bg-rose-500/15 px-4 py-3 text-sm font-bold text-rose-50 hover:bg-rose-500/20 disabled:opacity-40"
+              >
+                このタイトルで作成{playMatchTarget.matched_actor_id ? "して採用" : ""}
+              </button>
+            </div>
+          </div>
         </div>
       ) : null}
 
@@ -2318,7 +2512,27 @@ const AdminExternalKiraHai: React.FC = () => {
                           ) : null}
                         </div>
                         <div className="mt-2 text-sm text-slate-400">
-                          役名: {row.source_role_raw || "未登録"}
+                          <div className="mb-1 flex items-center justify-between gap-2">
+                            <span>採用時の役名</span>
+                            {Object.prototype.hasOwnProperty.call(roleEdits, row.id) ? (
+                              <button
+                                type="button"
+                                onClick={() => resetCandidateRoleEdit(row)}
+                                className="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-[11px] text-slate-300 hover:bg-white/10"
+                              >
+                                元に戻す
+                              </button>
+                            ) : null}
+                          </div>
+                          <input
+                            className="w-full rounded-lg border border-white/10 bg-black/35 px-3 py-2 text-sm text-white outline-none focus:border-sky-400/40"
+                            value={Object.prototype.hasOwnProperty.call(roleEdits, row.id) ? roleEdits[row.id] : row.source_role_raw || ""}
+                            onChange={(event) => setCandidateRoleEdit(row, event.target.value)}
+                            placeholder="役名なしで採用する場合は空欄"
+                          />
+                          {row.source_role_raw ? (
+                            <div className="mt-1 text-[11px] text-slate-500">元候補: {row.source_role_raw}</div>
+                          ) : null}
                         </div>
                       </div>
 
