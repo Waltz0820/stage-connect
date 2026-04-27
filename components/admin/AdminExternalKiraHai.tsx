@@ -66,6 +66,17 @@ type WorkQueueRow = {
   actorSamples: string[];
 };
 
+type ImportLogRow = {
+  id: string;
+  action: string;
+  target_type?: string | null;
+  target_id?: string | null;
+  target_label?: string | null;
+  source_url?: string | null;
+  details?: Record<string, any> | null;
+  created_at: string;
+};
+
 const PAGE_SIZE = 80;
 
 const statusLabels: Record<string, string> = {
@@ -217,6 +228,8 @@ const kanaToSlug = (value?: string | null) => {
 
 const makeSkeletonPeriod = (year?: number | null) => (year ? `${year}年` : null);
 
+const getWorkKey = (row: WorkQueueRow) => row.sourceWorkUrl || row.sourceWorkTitle;
+
 const AdminExternalKiraHai: React.FC = () => {
   const [candidates, setCandidates] = useState<CandidateRow[]>([]);
   const [externalActors, setExternalActors] = useState<ExternalActorRow[]>([]);
@@ -235,6 +248,12 @@ const AdminExternalKiraHai: React.FC = () => {
   const [playSearchText, setPlaySearchText] = useState("");
   const [playSearchResults, setPlaySearchResults] = useState<PlayRow[]>([]);
   const [selectedIds, setSelectedIds] = useState<Record<string, boolean>>({});
+  const [workActorPreview, setWorkActorPreview] = useState<{
+    key: string;
+    title: string;
+    rows: UnmatchedActorQueueRow[];
+  } | null>(null);
+  const [importLogs, setImportLogs] = useState<ImportLogRow[]>([]);
   const [bulkBusy, setBulkBusy] = useState(false);
   const [loading, setLoading] = useState(true);
   const [busyId, setBusyId] = useState<string | null>(null);
@@ -409,6 +428,22 @@ const AdminExternalKiraHai: React.FC = () => {
     setWorkQueue(rows);
   };
 
+  const loadImportLogs = async () => {
+    try {
+      const { data, error } = await supabase
+        .from("external_import_logs")
+        .select("id,action,target_type,target_id,target_label,source_url,details,created_at")
+        .eq("source", "kira-hai")
+        .order("created_at", { ascending: false })
+        .limit(12);
+
+      if (error) throw error;
+      setImportLogs((data ?? []) as ImportLogRow[]);
+    } catch {
+      setImportLogs([]);
+    }
+  };
+
   const load = async () => {
     setLoading(true);
     setMsg("");
@@ -446,6 +481,7 @@ const AdminExternalKiraHai: React.FC = () => {
       if (queue === "work_queue") {
         await loadWorkQueue();
       }
+      await loadImportLogs();
 
       const { data: actorData, error: actorError } = await supabase
         .from("external_actors")
@@ -812,6 +848,16 @@ const AdminExternalKiraHai: React.FC = () => {
 
       setPlayMatchTarget(null);
       setPlaySearchResults([]);
+      await writeImportLog({
+        action: "manual_match_play",
+        targetType: "play",
+        targetId: play.id,
+        targetLabel: play.title,
+        sourceUrl: playMatchTarget.source_work_url,
+        details: {
+          source_work_title: playMatchTarget.source_work_title,
+        },
+      });
       setMsg(`「${playMatchTarget.source_work_title}」を既存作品「${play.title}」に紐づけました`);
     } catch (error: any) {
       setMsg(error?.message ?? "play match error");
@@ -850,6 +896,74 @@ const AdminExternalKiraHai: React.FC = () => {
 
     if (error) throw error;
     return new Map((data ?? []).map((actor: any) => [actor.source_actor_url, actor]));
+  };
+
+  const buildUnmatchedActorRowsForWork = async (row: WorkQueueRow) => {
+    const rows = await loadWorkCandidateRows(row);
+    const targetRows = rows.filter((item) => !item.matched_actor_id);
+    const factsByUrl = await loadExternalActorFactsByUrl(targetRows.map((item) => item.source_actor_url));
+    const statsByUrl = new Map<string, { candidateCount: number; matchedPlayCount: number; latestYear: number | null }>();
+
+    for (const item of rows) {
+      const url = item.source_actor_url;
+      const current = statsByUrl.get(url) ?? { candidateCount: 0, matchedPlayCount: 0, latestYear: null };
+      current.candidateCount += 1;
+      if (item.matched_play_id) current.matchedPlayCount += 1;
+      if (item.source_year && (!current.latestYear || item.source_year > current.latestYear)) {
+        current.latestYear = item.source_year;
+      }
+      statsByUrl.set(url, current);
+    }
+
+    return Array.from(factsByUrl.values())
+      .filter((actor: any) => !actor.matched_actor_id)
+      .map((actor: any) => {
+        const stat = statsByUrl.get(actor.source_actor_url) ?? {
+          candidateCount: 0,
+          matchedPlayCount: 0,
+          latestYear: null,
+        };
+        return {
+          sourceActorName: actor.source_actor_name,
+          sourceActorUrl: actor.source_actor_url,
+          sourceActorKana: actor.source_actor_kana,
+          aliasFrom: actor.alias_from,
+          aliasTo: actor.alias_to,
+          note: actor.note,
+          sourceProfileFactsRaw: actor.source_profile_facts_raw,
+          sourceBirthdayRaw: actor.source_birthday_raw,
+          sourceBirthday: actor.source_birthday,
+          sourceHeightCm: actor.source_height_cm,
+          sourceBloodType: actor.source_blood_type,
+          sourceAffiliationRaw: actor.source_affiliation_raw,
+          candidateCount: stat.candidateCount,
+          matchedPlayCount: stat.matchedPlayCount,
+          latestYear: stat.latestYear,
+        } as UnmatchedActorQueueRow;
+      });
+  };
+
+  const writeImportLog = async (payload: {
+    action: string;
+    targetType?: string | null;
+    targetId?: string | null;
+    targetLabel?: string | null;
+    sourceUrl?: string | null;
+    details?: Record<string, any>;
+  }) => {
+    try {
+      await supabase.from("external_import_logs").insert({
+        source: "kira-hai",
+        action: payload.action,
+        target_type: payload.targetType ?? null,
+        target_id: payload.targetId ?? null,
+        target_label: payload.targetLabel ?? null,
+        source_url: payload.sourceUrl ?? null,
+        details: payload.details ?? {},
+      });
+    } catch {
+      // ログ用SQLが未適用でも、取り込み作業は止めない。
+    }
   };
 
   const loadActorCandidateRows = async (sourceActorUrl: string) => {
@@ -1040,6 +1154,20 @@ const AdminExternalKiraHai: React.FC = () => {
         )
       );
       setSelectedIds((current) => ({ ...current, [row.id]: false }));
+      await writeImportLog({
+        action: existingCast?.id ? "mark_existing_cast_accepted" : "create_cast",
+        targetType: "cast",
+        targetId: acceptedCastId,
+        targetLabel: `${row.source_work_title} / ${row.source_actor_name} / ${roleName || "-"}`,
+        sourceUrl: row.source_work_url || row.source_actor_url,
+        details: {
+          source_actor_name: row.source_actor_name,
+          source_work_title: row.source_work_title,
+          source_role_raw: row.source_role_raw,
+          matched_actor_id: row.matched_actor_id,
+          matched_play_id: row.matched_play_id,
+        },
+      });
       setMsg(existingCast?.id ? "既存castsに紐づけて採用済みにしました" : "castsに採用しました");
     } catch (error: any) {
       setMsg(error?.message ?? "accept error");
@@ -1156,6 +1284,20 @@ const AdminExternalKiraHai: React.FC = () => {
       );
       setUnmatchedActorQueue((current) => current.filter((item) => item.sourceActorUrl !== row.sourceActorUrl));
       setActorStats((current) => ({ ...current, matched: current.matched + 1 }));
+      await writeImportLog({
+        action: "create_actor_skeleton",
+        targetType: "actor",
+        targetId: actor.id,
+        targetLabel: actor.name,
+        sourceUrl: row.sourceActorUrl,
+        details: {
+          source_actor_kana: row.sourceActorKana,
+          source_birthday: row.sourceBirthday,
+          source_birthday_raw: row.sourceBirthdayRaw,
+          source_height_cm: row.sourceHeightCm,
+          source_blood_type: row.sourceBloodType,
+        },
+      });
       setMsg(
         `俳優skeleton「${actor.name}」を作成しました。候補ファクト: ${
           [row.sourceBirthdayRaw || row.sourceBirthday, row.sourceHeightCm ? `${row.sourceHeightCm}cm` : "", row.sourceBloodType ? `${row.sourceBloodType}型` : ""]
@@ -1176,58 +1318,35 @@ const AdminExternalKiraHai: React.FC = () => {
     setMsg("");
 
     try {
-      const rows = await loadWorkCandidateRows(row);
-      const targetRows = rows.filter((item) => !item.matched_actor_id);
-      const factsByUrl = await loadExternalActorFactsByUrl(targetRows.map((item) => item.source_actor_url));
-      const statsByUrl = new Map<string, { candidateCount: number; matchedPlayCount: number; latestYear: number | null }>();
-
-      for (const item of rows) {
-        const url = item.source_actor_url;
-        const current = statsByUrl.get(url) ?? { candidateCount: 0, matchedPlayCount: 0, latestYear: null };
-        current.candidateCount += 1;
-        if (item.matched_play_id) current.matchedPlayCount += 1;
-        if (item.source_year && (!current.latestYear || item.source_year > current.latestYear)) {
-          current.latestYear = item.source_year;
-        }
-        statsByUrl.set(url, current);
-      }
-
-      const actorRows = Array.from(factsByUrl.values())
-        .filter((actor: any) => !actor.matched_actor_id)
-        .map((actor: any) => {
-          const stat = statsByUrl.get(actor.source_actor_url) ?? {
-            candidateCount: 0,
-            matchedPlayCount: 0,
-            latestYear: null,
-          };
-          return {
-            sourceActorName: actor.source_actor_name,
-            sourceActorUrl: actor.source_actor_url,
-            sourceActorKana: actor.source_actor_kana,
-            aliasFrom: actor.alias_from,
-            aliasTo: actor.alias_to,
-            note: actor.note,
-            sourceProfileFactsRaw: actor.source_profile_facts_raw,
-            sourceBirthdayRaw: actor.source_birthday_raw,
-            sourceBirthday: actor.source_birthday,
-            sourceHeightCm: actor.source_height_cm,
-            sourceBloodType: actor.source_blood_type,
-            sourceAffiliationRaw: actor.source_affiliation_raw,
-            candidateCount: stat.candidateCount,
-            matchedPlayCount: stat.matchedPlayCount,
-            latestYear: stat.latestYear,
-          } as UnmatchedActorQueueRow;
-        });
+      const actorRows = await buildUnmatchedActorRowsForWork(row);
 
       if (actorRows.length === 0) {
         setMsg(`この作品に未照合俳優はありません: ${row.sourceWorkTitle}`);
         return;
       }
 
+      const preview = actorRows.slice(0, 10).map((item) => item.sourceActorName).join(" / ");
+      const ok = window.confirm(
+        `「${row.sourceWorkTitle}」の未照合俳優 ${actorRows.length}人を作成します。\n\n${preview}${
+          actorRows.length > 10 ? " / ..." : ""
+        }\n\n続行しますか？`
+      );
+      if (!ok) return;
+
       for (const actorRow of actorRows) {
         await createSkeletonActor(actorRow);
       }
 
+      await writeImportLog({
+        action: "bulk_create_actor_skeletons_for_work",
+        targetType: "work",
+        targetLabel: row.sourceWorkTitle,
+        sourceUrl: row.sourceWorkUrl,
+        details: {
+          actor_count: actorRows.length,
+          actors: actorRows.map((actor) => actor.sourceActorName),
+        },
+      });
       setMsg(`未照合俳優skeletonを作成しました: ${row.sourceWorkTitle} / ${actorRows.length}人`);
       await loadWorkQueue();
     } catch (error: any) {
@@ -1235,6 +1354,25 @@ const AdminExternalKiraHai: React.FC = () => {
     } finally {
       setBusyId(null);
       setBulkBusy(false);
+    }
+  };
+
+  const previewSkeletonActorsForWork = async (row: WorkQueueRow) => {
+    setBusyId(`preview:${getWorkKey(row)}`);
+    setMsg("");
+
+    try {
+      const actorRows = await buildUnmatchedActorRowsForWork(row);
+      setWorkActorPreview({
+        key: getWorkKey(row),
+        title: row.sourceWorkTitle,
+        rows: actorRows,
+      });
+      setMsg(`作成対象の未照合俳優を表示しました: ${row.sourceWorkTitle} / ${actorRows.length}人`);
+    } catch (error: any) {
+      setMsg(error?.message ?? "preview skeleton actors error");
+    } finally {
+      setBusyId(null);
     }
   };
 
@@ -1378,6 +1516,13 @@ const AdminExternalKiraHai: React.FC = () => {
         return;
       }
 
+      const ok = window.confirm(
+        `作品skeletonを作成します。\n\n作品名: ${row.sourceWorkTitle}\n年: ${row.sourceYear || seed.source_year || "-"}\n出演候補: ${
+          row.candidateCount
+        }件\n\n続行しますか？`
+      );
+      if (!ok) return;
+
       const slug = await buildUniquePlaySlug(seed);
       const payload = {
         title: row.sourceWorkTitle,
@@ -1450,6 +1595,18 @@ const AdminExternalKiraHai: React.FC = () => {
             : item
         )
       );
+      await writeImportLog({
+        action: "create_play_skeleton_for_work",
+        targetType: "play",
+        targetId: createdPlay.id,
+        targetLabel: createdPlay.title,
+        sourceUrl: row.sourceWorkUrl,
+        details: {
+          source_work_title: row.sourceWorkTitle,
+          source_year: row.sourceYear || seed.source_year,
+          candidate_count: row.candidateCount,
+        },
+      });
       setMsg(`作品skeleton「${createdPlay.title}」を作成しました。次に「この作品の候補を見る」から出演線を採用できます。`);
     } catch (error: any) {
       setMsg(error?.message ?? "create skeleton play for work error");
@@ -1461,6 +1618,10 @@ const AdminExternalKiraHai: React.FC = () => {
   const bulkAcceptReady = async () => {
     if (readySelectedRows.length === 0) {
       setMsg("一括採用できる候補が選択されていません");
+      return;
+    }
+
+    if (!window.confirm(`選択中の候補 ${readySelectedRows.length}件をcastsへ採用します。続行しますか？`)) {
       return;
     }
 
@@ -1479,6 +1640,10 @@ const AdminExternalKiraHai: React.FC = () => {
   const bulkCreateSkeleton = async () => {
     if (skeletonSelectedRows.length === 0) {
       setMsg("作品skeleton化できる候補が選択されていません");
+      return;
+    }
+
+    if (!window.confirm(`選択中の候補 ${skeletonSelectedRows.length}件について作品skeleton作成を試みます。続行しますか？`)) {
       return;
     }
 
@@ -1568,6 +1733,42 @@ const AdminExternalKiraHai: React.FC = () => {
         </div>
 
         {msg ? <div className="mt-4 text-sm text-slate-300">{msg}</div> : null}
+
+        {importLogs.length > 0 ? (
+          <div className="mt-5 rounded-2xl border border-white/10 bg-black/25 p-4">
+            <div className="mb-3 flex items-center justify-between gap-3">
+              <div className="text-xs font-bold uppercase tracking-[0.18em] text-slate-400">Recent import logs</div>
+              <div className="text-[11px] text-slate-500">latest {importLogs.length}</div>
+            </div>
+            <div className="grid gap-2 md:grid-cols-2 xl:grid-cols-3">
+              {importLogs.map((log) => (
+                <div key={log.id} className="rounded-xl border border-white/10 bg-white/[0.03] p-3">
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="rounded-full border border-white/10 bg-black/30 px-2 py-1 text-[11px] font-bold text-slate-200">
+                      {log.action}
+                    </span>
+                    <span className="text-[10px] text-slate-500">
+                      {new Date(log.created_at).toLocaleString("ja-JP")}
+                    </span>
+                  </div>
+                  <div className="mt-2 truncate text-xs font-bold text-white">
+                    {log.target_label || log.target_type || "-"}
+                  </div>
+                  {log.source_url ? (
+                    <a
+                      href={log.source_url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-1 block truncate text-[11px] text-slate-500 hover:text-slate-300"
+                    >
+                      {log.source_url}
+                    </a>
+                  ) : null}
+                </div>
+              ))}
+            </div>
+          </div>
+        ) : null}
       </div>
 
       <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
@@ -1623,7 +1824,8 @@ const AdminExternalKiraHai: React.FC = () => {
               const acceptedPercent = row.candidateCount > 0 ? Math.round((row.acceptedCount / row.candidateCount) * 100) : 0;
               const actorMatchedPercent =
                 row.candidateCount > 0 ? Math.round((row.matchedActorCount / row.candidateCount) * 100) : 0;
-              const workKey = row.sourceWorkUrl || row.sourceWorkTitle;
+              const workKey = getWorkKey(row);
+              const previewOpen = workActorPreview?.key === workKey;
 
               return (
               <div key={`${row.sourceWorkUrl || ""}-${row.sourceWorkTitle}`} className="p-5">
@@ -1724,6 +1926,14 @@ const AdminExternalKiraHai: React.FC = () => {
                     </button>
                     <button
                       type="button"
+                      onClick={() => void previewSkeletonActorsForWork(row)}
+                      disabled={busyId === `preview:${workKey}`}
+                      className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs font-bold text-slate-200 hover:bg-white/10 disabled:opacity-40"
+                    >
+                      作成対象を見る
+                    </button>
+                    <button
+                      type="button"
                       onClick={() => {
                         setQueue(row.matchedPlayId ? "ready" : "skeleton");
                         setQ(row.sourceWorkTitle);
@@ -1734,6 +1944,50 @@ const AdminExternalKiraHai: React.FC = () => {
                     </button>
                   </div>
                 </div>
+
+                {previewOpen ? (
+                  <div className="mt-4 rounded-2xl border border-white/10 bg-black/25 p-4">
+                    <div className="flex flex-wrap items-center justify-between gap-2">
+                      <div className="text-xs font-bold text-slate-300">
+                        作成対象の未照合俳優 {workActorPreview.rows.length}人
+                      </div>
+                      <button
+                        type="button"
+                        onClick={() => setWorkActorPreview(null)}
+                        className="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-[11px] text-slate-300 hover:bg-white/10"
+                      >
+                        閉じる
+                      </button>
+                    </div>
+
+                    {workActorPreview.rows.length > 0 ? (
+                      <div className="mt-3 grid gap-2 md:grid-cols-2 xl:grid-cols-3">
+                        {workActorPreview.rows.map((actor) => (
+                          <div key={actor.sourceActorUrl} className="rounded-xl border border-white/10 bg-black/30 p-3">
+                            <div className="font-bold text-white">{actor.sourceActorName}</div>
+                            <div className="mt-1 text-xs text-slate-400">{actor.sourceActorKana || "読み未取得"}</div>
+                            <div className="mt-2 flex flex-wrap gap-1 text-[11px] text-slate-400">
+                              {actor.sourceBirthdayRaw || actor.sourceBirthday ? (
+                                <span className="rounded-full bg-white/5 px-2 py-1">
+                                  {actor.sourceBirthdayRaw || actor.sourceBirthday}
+                                </span>
+                              ) : null}
+                              {actor.sourceHeightCm ? (
+                                <span className="rounded-full bg-white/5 px-2 py-1">{actor.sourceHeightCm}cm</span>
+                              ) : null}
+                              {actor.sourceBloodType ? (
+                                <span className="rounded-full bg-white/5 px-2 py-1">{actor.sourceBloodType}型</span>
+                              ) : null}
+                              <span className="rounded-full bg-white/5 px-2 py-1">候補 {actor.candidateCount}件</span>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    ) : (
+                      <div className="mt-3 text-sm text-slate-500">この作品に作成対象の未照合俳優はありません。</div>
+                    )}
+                  </div>
+                ) : null}
               </div>
               );
             })}
