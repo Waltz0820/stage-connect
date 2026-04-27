@@ -852,6 +852,76 @@ const AdminExternalKiraHai: React.FC = () => {
     return new Map((data ?? []).map((actor: any) => [actor.source_actor_url, actor]));
   };
 
+  const loadActorCandidateRows = async (sourceActorUrl: string) => {
+    const { data, error } = await supabase
+      .from("external_cast_candidates")
+      .select("id,source_work_title,source_work_url,source_year,source_role_raw,matched_play_id,status")
+      .eq("source", "kira-hai")
+      .eq("source_actor_url", sourceActorUrl)
+      .neq("status", "rejected")
+      .order("source_year", { ascending: false })
+      .limit(120);
+
+    if (error) throw error;
+    return (data ?? []) as CandidateRow[];
+  };
+
+  const copyActorProfileForGemini = async (row: UnmatchedActorQueueRow) => {
+    setBusyId(`profile:${row.sourceActorUrl}`);
+    setMsg("");
+
+    try {
+      const rows = await loadActorCandidateRows(row.sourceActorUrl);
+      const appearanceLines = rows.map((item, index) => {
+        const parts = [
+          `${index + 1}. ${item.source_year || "-"}年`,
+          item.source_work_title,
+          item.source_role_raw ? `役: ${item.source_role_raw}` : "役: -",
+          item.matched_play_id ? "SC作品一致あり" : "SC作品未照合",
+        ];
+        return parts.join(" / ");
+      });
+
+      const prompt = [
+        "Stage Connect 俳優プロフィール初稿作成用",
+        "",
+        "前提:",
+        "- 以下の情報だけを根拠にしてください。",
+        "- Web検索・推測・補完は禁止です。",
+        "- 不明な情報は書かないでください。",
+        "- 主観的な評価、誇張、人気の断定は避けてください。",
+        "- 2.5次元舞台・ミュージカルDB向けに、事実ベースで短く自然な文章にしてください。",
+        "",
+        "出力してほしいもの:",
+        "1. 日本語プロフィール文: 80〜140字程度",
+        "2. 英語プロフィール文: 1〜2文",
+        "3. 1行ステータス: 40〜70字程度",
+        "4. 注意点: 情報不足・確認が必要そうな点があれば箇条書き",
+        "",
+        "基本情報:",
+        `名前: ${row.sourceActorName}`,
+        `読み: ${row.sourceActorKana || "-"}`,
+        `生年月日: ${row.sourceBirthdayRaw || row.sourceBirthday || "-"}`,
+        `身長: ${row.sourceHeightCm ? `${row.sourceHeightCm}cm` : "-"}`,
+        `血液型: ${row.sourceBloodType ? `${row.sourceBloodType}型` : "-"}`,
+        `所属候補: ${row.sourceAffiliationRaw || "-"}`,
+        `外部URL: ${row.sourceActorUrl || "-"}`,
+        row.note ? `注記: ${row.note}` : "",
+        row.sourceProfileFactsRaw ? `raw基本情報: ${row.sourceProfileFactsRaw}` : "",
+        "",
+        "出演作候補:",
+        ...(appearanceLines.length > 0 ? appearanceLines : ["- 出演作候補なし"]),
+      ].filter(Boolean);
+
+      await navigator.clipboard.writeText(prompt.join("\n"));
+      setMsg(`プロフィール用コピーを作成しました: ${row.sourceActorName} / 出演候補 ${rows.length}件`);
+    } catch (error: any) {
+      setMsg(error?.message ?? "copy actor profile prompt error");
+    } finally {
+      setBusyId(null);
+    }
+  };
+
   const copyWorkForGemini = async (row: WorkQueueRow) => {
     setBusyId(`copy:${row.sourceWorkUrl || row.sourceWorkTitle}`);
     setMsg("");
@@ -1743,6 +1813,14 @@ const AdminExternalKiraHai: React.FC = () => {
                   </div>
 
                   <div className="flex shrink-0 flex-wrap gap-2">
+                    <button
+                      type="button"
+                      onClick={() => void copyActorProfileForGemini(row)}
+                      disabled={busyId === `profile:${row.sourceActorUrl}`}
+                      className="rounded-full border border-fuchsia-500/30 bg-fuchsia-500/15 px-3 py-2 text-xs font-bold text-fuchsia-100 hover:bg-fuchsia-500/20 disabled:opacity-40"
+                    >
+                      プロフィール用コピー
+                    </button>
                     <button
                       type="button"
                       onClick={() => void openActorMatch(row)}
