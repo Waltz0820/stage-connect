@@ -364,13 +364,57 @@ function extractYear(text, fallbackYear) {
   return fallbackYear ?? null;
 }
 
+function cleanRoleText(value) {
+  const cleaned = normalizeWhitespace(value)
+    .replace(/<img\b[^>]*>/gi, " ")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/[★☆]+/g, " ")
+    .replace(/[（(]\d{4}[）)]/g, "");
+
+  return normalizeWhitespace(cleaned) || null;
+}
+
 function parseRoleFromLine(lineText, title) {
   const normalizedLine = normalizeWhitespace(lineText);
   const titleIndex = normalizedLine.indexOf(title);
   const afterTitle = titleIndex >= 0 ? normalizedLine.slice(titleIndex + title.length) : normalizedLine;
   const colonMatch = afterTitle.match(/[：:]\s*(.+)$/);
   if (!colonMatch) return null;
-  return normalizeWhitespace(colonMatch[1].replace(/[（(]\d{4}[）)]/g, ""));
+  return cleanRoleText(colonMatch[1]);
+}
+
+function findWorkTitleSegments(lineText, workTitles) {
+  const normalizedLine = normalizeWhitespace(lineText);
+  const segments = [];
+  let cursor = 0;
+
+  for (const title of workTitles) {
+    const normalizedTitle = normalizeWhitespace(title);
+    if (!normalizedTitle) {
+      segments.push(null);
+      continue;
+    }
+
+    let start = normalizedLine.indexOf(normalizedTitle, cursor);
+    if (start < 0) start = normalizedLine.indexOf(normalizedTitle);
+    if (start < 0) {
+      segments.push(null);
+      continue;
+    }
+
+    const nextStart = workTitles
+      .map((nextTitle) => normalizeWhitespace(nextTitle))
+      .filter((nextTitle) => nextTitle && nextTitle !== normalizedTitle)
+      .map((nextTitle) => normalizedLine.indexOf(nextTitle, start + normalizedTitle.length))
+      .filter((index) => index > start)
+      .sort((a, b) => a - b)[0];
+
+    const end = nextStart ?? normalizedLine.length;
+    segments.push(normalizedLine.slice(start, end));
+    cursor = start + normalizedTitle.length;
+  }
+
+  return segments;
 }
 
 function parseActorStageCredits(html, actor) {
@@ -388,14 +432,23 @@ function parseActorStageCredits(html, actor) {
     if (yearFromNode) currentYear = yearFromNode;
 
     const links = node.find("a[href]").toArray();
-    for (const link of links) {
-      const linkNode = $(link);
-      const workUrl = toAbsoluteUrl(linkNode.attr("href"));
-      const workTitle = normalizeWhitespace(linkNode.text());
-      if (!workUrl || shouldSkipUrl(workUrl) || !workTitle) continue;
-      if (workTitle === actor.sourceActorName) continue;
+    const workLinks = links
+      .map((link) => {
+        const linkNode = $(link);
+        const workUrl = toAbsoluteUrl(linkNode.attr("href"));
+        const workTitle = normalizeWhitespace(linkNode.text());
+        return { workUrl, workTitle };
+      })
+      .filter(({ workUrl, workTitle }) => workUrl && !shouldSkipUrl(workUrl) && workTitle && workTitle !== actor.sourceActorName);
+    const titleSegments = findWorkTitleSegments(
+      text,
+      workLinks.map((item) => item.workTitle)
+    );
 
-      const roleRaw = parseRoleFromLine(text, workTitle);
+    for (const [linkIndex, link] of workLinks.entries()) {
+      const { workUrl, workTitle } = link;
+
+      const roleRaw = parseRoleFromLine(titleSegments[linkIndex] ?? text, workTitle);
       const year = extractYear(text, currentYear);
 
       credits.push({
