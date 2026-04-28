@@ -43,6 +43,8 @@ const AdminCastsEdit: React.FC = () => {
   const [starringDraft, setStarringDraft] = useState<Record<string, boolean>>({});
   const [billingDraft, setBillingDraft] = useState<Record<string, string>>({});
   const [saving, setSaving] = useState<Record<string, boolean>>({});
+  const [draggingCastId, setDraggingCastId] = useState<string | null>(null);
+  const [reorderBusy, setReorderBusy] = useState(false);
 
   const [onlyMissingRole, setOnlyMissingRole] = useState(false);
   const [onlyStarring, setOnlyStarring] = useState(false);
@@ -287,6 +289,53 @@ const AdminCastsEdit: React.FC = () => {
     }
   };
 
+  const reorderCasts = async (dragId: string, targetId: string) => {
+    if (dragId === targetId || reorderBusy || onlyMissingRole || onlyStarring) return;
+
+    const fromIndex = casts.findIndex((item) => item.id === dragId);
+    const toIndex = casts.findIndex((item) => item.id === targetId);
+    if (fromIndex < 0 || toIndex < 0) return;
+
+    const previous = casts;
+    const next = [...casts];
+    const [moved] = next.splice(fromIndex, 1);
+    next.splice(toIndex, 0, moved);
+
+    const ordered = next.map((item, index) => ({ ...item, billing_order: index + 1 }));
+    setCasts(ordered);
+    setBillingDraft((current) => {
+      const draft = { ...current };
+      for (const item of ordered) draft[item.id] = String(item.billing_order ?? "");
+      return draft;
+    });
+
+    setReorderBusy(true);
+    setMsg("");
+    try {
+      const results = await Promise.all(
+        ordered.map((item) =>
+          supabase.from("casts").update({ billing_order: item.billing_order }).eq("id", item.id)
+        )
+      );
+      const error = results.find((result) => result.error)?.error;
+      if (error) throw error;
+      setMsg("出演順を更新しました");
+    } catch (e: any) {
+      setCasts(previous);
+      setBillingDraft((current) => {
+        const draft = { ...current };
+        for (const item of previous) {
+          draft[item.id] = item.billing_order === null || item.billing_order === undefined ? "" : String(item.billing_order);
+        }
+        return draft;
+      });
+      setMsg(e?.message ?? "reorder casts error");
+    } finally {
+      setDraggingCastId(null);
+      setReorderBusy(false);
+    }
+  };
+
   const visibleCasts = useMemo(() => {
     return casts.filter((c) => {
       if (onlyStarring && !Boolean(starringDraft[c.id])) return false;
@@ -294,6 +343,8 @@ const AdminCastsEdit: React.FC = () => {
       return true;
     });
   }, [casts, onlyMissingRole, onlyStarring, roleDraft, starringDraft]);
+
+  const canDragReorder = !onlyMissingRole && !onlyStarring && casts.length > 1 && !busy && !reorderBusy;
 
   return (
     <div className="space-y-4">
@@ -356,16 +407,50 @@ const AdminCastsEdit: React.FC = () => {
             </div>
           </div>
 
+          {casts.length > 1 ? (
+            <div className="mb-3 rounded-xl border border-white/10 bg-black/20 px-3 py-2 text-xs text-slate-400">
+              {canDragReorder
+                ? "左のハンドルをドラッグすると出演順を入れ替え、billing_order を自動で振り直します。"
+                : "並び替えはフィルタ解除中のみ使えます。"}
+              {reorderBusy ? <span className="ml-2 text-slate-200">保存中...</span> : null}
+            </div>
+          ) : null}
+
           <div className="space-y-2">
             {visibleCasts.map((c) => (
               <div
                 key={c.id}
+                draggable={canDragReorder}
+                onDragStart={() => {
+                  if (!canDragReorder) return;
+                  setDraggingCastId(c.id);
+                }}
+                onDragOver={(event) => {
+                  if (!canDragReorder || !draggingCastId || draggingCastId === c.id) return;
+                  event.preventDefault();
+                }}
+                onDrop={(event) => {
+                  event.preventDefault();
+                  if (!draggingCastId) return;
+                  void reorderCasts(draggingCastId, c.id);
+                }}
+                onDragEnd={() => setDraggingCastId(null)}
                 className={`rounded-xl border px-4 py-3 ${
                   starringDraft[c.id] ? "border-emerald-500/20 bg-emerald-500/10" : "border-white/10 bg-black/30"
-                }`}
+                } ${draggingCastId === c.id ? "opacity-50" : ""} ${canDragReorder ? "cursor-grab active:cursor-grabbing" : ""}`}
               >
                 <div className="flex items-start justify-between gap-3">
                   <div className="flex min-w-0 items-start gap-3">
+                    <div
+                      className={`mt-1 flex h-10 w-7 shrink-0 items-center justify-center rounded-lg border text-sm ${
+                        canDragReorder
+                          ? "border-white/10 bg-white/5 text-slate-300"
+                          : "border-white/5 bg-black/20 text-slate-600"
+                      }`}
+                      title="ドラッグで並び替え"
+                    >
+                      ⋮⋮
+                    </div>
                     <div className="h-10 w-10 shrink-0 overflow-hidden rounded-full border border-white/10 bg-black/40">
                       {c.actor?.image_url ? <img src={c.actor.image_url} alt={c.actor.name} className="h-full w-full object-cover" /> : null}
                     </div>

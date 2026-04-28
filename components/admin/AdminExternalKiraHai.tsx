@@ -1,5 +1,5 @@
 // @ts-nocheck
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "../../next-app/lib/admin-router-shim";
 import { supabase } from "../../next-app/lib/admin-supabase";
 import { toSlug } from "./widgets/utils";
@@ -254,6 +254,7 @@ const AdminExternalKiraHai: React.FC = () => {
   const [playSearchText, setPlaySearchText] = useState("");
   const [playCreateTitle, setPlayCreateTitle] = useState("");
   const [playSearchResults, setPlaySearchResults] = useState<PlayRow[]>([]);
+  const playMatchPanelRef = useRef<HTMLDivElement | null>(null);
   const [selectedIds, setSelectedIds] = useState<Record<string, boolean>>({});
   const [roleEdits, setRoleEdits] = useState<Record<string, string>>({});
   const [workActorPreview, setWorkActorPreview] = useState<{
@@ -757,6 +758,13 @@ const AdminExternalKiraHai: React.FC = () => {
     setMsg("");
     await searchPlays(row.source_work_title ?? "");
   };
+
+  useEffect(() => {
+    if (!playMatchTarget) return;
+    window.requestAnimationFrame(() => {
+      playMatchPanelRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }, [playMatchTarget?.id]);
 
   const searchPlays = async (value = playSearchText) => {
     const query = normalizeText(value);
@@ -2338,7 +2346,7 @@ const AdminExternalKiraHai: React.FC = () => {
       ) : null}
 
       {playMatchTarget ? (
-        <div className="rounded-2xl border border-sky-500/20 bg-sky-500/10 p-6">
+        <div ref={playMatchPanelRef} className="rounded-2xl border border-sky-500/20 bg-sky-500/10 p-6">
           <div className="flex flex-wrap items-start justify-between gap-3">
             <div>
               <h2 className="text-lg font-extrabold text-white">既存作品に紐づけ</h2>
