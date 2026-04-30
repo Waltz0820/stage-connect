@@ -106,7 +106,7 @@ export default async function SeriesPage({
   const visibleSeries = sortedSeries.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 
   return (
-    <main className="container works-index-page" style={{ paddingBlock: 32 }}>
+    <main className="container works-index-page series-index-page" style={{ paddingBlock: 32 }}>
       <StructuredData data={breadcrumbJsonLd} />
       <StructuredData data={collectionJsonLd} />
       <div className="stack-lg">
