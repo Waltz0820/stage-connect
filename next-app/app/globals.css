@@ -1674,18 +1674,64 @@ a {
 }
 
 .top-series-list {
-  gap: 0;
+  gap: 10px;
   width: 100%;
 }
 
 .top-series-row {
-  padding-bottom: 12px;
+  position: relative;
+  overflow: hidden;
+  padding: 14px 16px;
   grid-template-columns: minmax(0, 1fr);
+  border: 1px solid rgba(243, 240, 234, 0.09);
+  border-radius: 14px;
+  background:
+    radial-gradient(ellipse at 12% 0%, rgba(135, 64, 170, 0.085), transparent 52%),
+    linear-gradient(135deg, rgba(72, 82, 150, 0.045), transparent 52%),
+    rgba(6, 8, 15, 0.76);
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.top-series-row::after {
+  content: "›";
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  color: rgba(243, 240, 234, 0.64);
+  font-size: 24px;
+  line-height: 1;
+  transform: translateY(-50%);
+}
+
+.top-series-row:hover {
+  border-color: rgba(243, 240, 234, 0.17);
+  background:
+    radial-gradient(ellipse at 12% 0%, rgba(155, 76, 190, 0.105), transparent 54%),
+    linear-gradient(135deg, rgba(176, 56, 110, 0.06), rgba(72, 82, 150, 0.04)),
+    rgba(8, 10, 18, 0.9);
+  transform: translateY(-1px);
 }
 
 .top-series-row .meta-value {
   width: 100%;
   min-width: 0;
+  padding-right: 26px;
+}
+
+.top-series-row .catalog-link {
+  display: inline-block;
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.top-series-row .subtle-line {
+  margin-top: 4px;
+  color: rgba(221, 215, 207, 0.58);
+  font-size: 11.5px;
+  letter-spacing: 0.04em;
 }
 
 .accent-label {
@@ -4421,25 +4467,25 @@ a {
 .detail-stage-page .detail-monogram {
   position: relative;
   overflow: hidden;
-  border-color: rgba(243, 240, 234, 0.14);
-  border-radius: 20px;
+  border-color: rgba(243, 240, 234, 0.11);
+  border-radius: 18px;
   background:
-    radial-gradient(circle at 50% 26%, rgba(255, 255, 255, 0.18), transparent 13%),
-    radial-gradient(circle at 50% 44%, rgba(186, 72, 154, 0.24), transparent 44%),
-    linear-gradient(145deg, rgba(74, 28, 82, 0.72), rgba(8, 9, 16, 0.96));
+    radial-gradient(circle at 50% 26%, rgba(255, 255, 255, 0.16), transparent 13%),
+    radial-gradient(circle at 50% 44%, rgba(186, 72, 154, 0.2), transparent 46%),
+    linear-gradient(145deg, rgba(58, 24, 70, 0.72), rgba(7, 9, 17, 0.96));
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.035),
-    0 20px 42px rgba(0, 0, 0, 0.26);
-  text-shadow: 0 0 22px rgba(255, 255, 255, 0.2);
+    inset 0 1px 0 rgba(255, 255, 255, 0.028),
+    0 18px 36px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 0 22px rgba(255, 255, 255, 0.16);
 }
 
 .actor-detail-stage-page .detail-monogram {
-  border-radius: 22px;
+  border-radius: 18px;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.22), rgba(170, 190, 255, 0.06) 34%, transparent 72%),
-    radial-gradient(ellipse at 50% 82%, rgba(255, 230, 190, 0.16), rgba(172, 92, 170, 0.12) 42%, transparent 72%),
-    radial-gradient(circle at 50% 34%, rgba(190, 70, 150, 0.24), transparent 46%),
-    linear-gradient(145deg, rgba(52, 24, 58, 0.9), rgba(8, 10, 18, 0.98));
+    linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(170, 190, 255, 0.045) 34%, transparent 74%),
+    radial-gradient(ellipse at 50% 84%, rgba(255, 230, 190, 0.14), rgba(172, 92, 170, 0.095) 42%, transparent 72%),
+    radial-gradient(circle at 50% 34%, rgba(190, 70, 150, 0.2), transparent 48%),
+    linear-gradient(145deg, rgba(44, 20, 52, 0.86), rgba(7, 9, 17, 0.98));
 }
 
 .actor-detail-stage-page .detail-monogram::before {
@@ -4597,14 +4643,16 @@ a {
 }
 
 .detail-stage-page .pill {
-  border-radius: 10px;
-  border-color: rgba(243, 240, 234, 0.12);
-  background: rgba(255, 255, 255, 0.018);
+  border-radius: 12px;
+  border-color: rgba(243, 240, 234, 0.1);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.012), transparent),
+    rgba(255, 255, 255, 0.014);
 }
 
 .detail-stage-page .accent-pill {
-  border-color: rgba(186, 92, 152, 0.34);
-  background: linear-gradient(135deg, rgba(176, 56, 110, 0.16), rgba(68, 82, 170, 0.08));
+  border-color: rgba(186, 92, 152, 0.28);
+  background: linear-gradient(135deg, rgba(176, 56, 110, 0.12), rgba(68, 82, 170, 0.055));
 }
 
 .detail-stage-page .catalog-card,
@@ -4626,9 +4674,180 @@ a {
     rgba(9, 10, 18, 0.94);
 }
 
+.actor-detail-stage-page .cast-grid-wide {
+  gap: 14px;
+}
+
+.actor-detail-stage-page .card-carousel {
+  gap: 12px;
+}
+
+.actor-detail-stage-page .card-carousel-item {
+  min-width: 168px;
+}
+
+.actor-detail-stage-page .section-header-inline .pill {
+  min-height: 28px;
+  padding: 5px 10px;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+}
+
+.actor-detail-stage-page .cast-card-link {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  align-content: start;
+  gap: 8px;
+  min-height: 156px;
+  padding: 18px 14px 14px;
+  border-color: rgba(243, 240, 234, 0.09);
+  border-radius: 18px;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(150, 170, 255, 0.06), transparent 46%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.012), rgba(255, 255, 255, 0.003)),
+    rgba(6, 8, 15, 0.74);
+}
+
+.actor-detail-stage-page .cast-card-link::before {
+  content: "";
+  width: 70px;
+  height: 70px;
+  border: 1px solid rgba(243, 240, 234, 0.14);
+  border-radius: 999px;
+  background:
+    radial-gradient(ellipse at 50% 80%, rgba(255, 230, 190, 0.12), transparent 70%),
+    radial-gradient(circle at 50% 34%, rgba(180, 80, 160, 0.16), transparent 48%),
+    linear-gradient(145deg, rgba(20, 18, 28, 0.96), rgba(7, 9, 17, 0.98));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.03),
+    0 0 0 6px rgba(255, 255, 255, 0.012);
+}
+
+.actor-detail-stage-page .cast-card-link:hover {
+  border-color: rgba(243, 240, 234, 0.17);
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(170, 190, 255, 0.08), transparent 48%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.018), rgba(255, 255, 255, 0.006)),
+    rgba(8, 10, 18, 0.88);
+}
+
+.actor-detail-stage-page .cast-card-link .series-rank-row {
+  order: 2;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 0;
+}
+
+.actor-detail-stage-page .cast-card-link .series-rank-badge {
+  min-width: 26px;
+  min-height: 22px;
+  border-radius: 999px;
+  font-size: 11px;
+}
+
+.actor-detail-stage-page .cast-card-link .series-rank-count {
+  color: rgba(221, 215, 207, 0.58);
+  font-size: 11.5px;
+}
+
+.actor-detail-stage-page .cast-card-link .cast-name {
+  order: 1;
+  min-height: 0;
+  margin-top: 0;
+  font-family: var(--serif);
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.actor-detail-stage-page .cast-card-link .muted {
+  order: 3;
+  margin-top: 0 !important;
+  color: rgba(221, 215, 207, 0.52);
+  font-size: 11px !important;
+}
+
+.actor-detail-stage-page .next-modal-body .cast-grid {
+  gap: 12px;
+}
+
+.actor-detail-stage-page .next-modal-body .cast-card-link {
+  min-height: 136px;
+  padding: 14px 12px 12px;
+}
+
+.actor-detail-stage-page .next-modal-body .cast-card-link::before {
+  width: 54px;
+  height: 54px;
+}
+
 .detail-stage-page .action-button {
   min-height: 40px;
   border-radius: 8px;
+}
+
+.actor-detail-stage-page .detail-stage-section .action-row {
+  gap: 10px;
+}
+
+.actor-detail-stage-page .detail-stage-section .action-row .action-button {
+  border-color: rgba(243, 240, 234, 0.13);
+  border-radius: 12px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.012), transparent),
+    rgba(255, 255, 255, 0.012);
+}
+
+.actor-detail-stage-page .detail-stage-section .action-row .action-button-primary {
+  border-color: rgba(255, 92, 132, 0.38);
+  background:
+    radial-gradient(ellipse at 0% 0%, rgba(255, 92, 132, 0.16), transparent 54%),
+    linear-gradient(135deg, rgba(123, 18, 45, 0.42), rgba(38, 15, 28, 0.82));
+}
+
+.detail-stage-page .faq-grid {
+  gap: 10px;
+}
+
+.detail-stage-page .faq-card {
+  padding: 16px;
+  background:
+    radial-gradient(ellipse at 0% 0%, rgba(150, 170, 255, 0.035), transparent 44%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.012), rgba(255, 255, 255, 0.003)),
+    rgba(6, 8, 15, 0.76);
+}
+
+.detail-stage-page .faq-question {
+  font-family: var(--serif);
+  font-size: 14.5px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.detail-stage-page .faq-answer {
+  color: rgba(221, 215, 207, 0.68);
+  font-size: 13.5px;
+  line-height: 1.85;
+}
+
+.actor-detail-stage-page .detail-actions .favorite-button,
+.actor-detail-stage-page .detail-actions .share-button,
+.detail-stage-page .detail-actions .action-button {
+  border-color: rgba(243, 240, 234, 0.13);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.012), transparent),
+    rgba(255, 255, 255, 0.012);
+}
+
+.actor-detail-stage-page .detail-actions .favorite-button:hover,
+.actor-detail-stage-page .detail-actions .share-button:hover,
+.detail-stage-page .detail-actions .action-button:hover {
+  border-color: rgba(243, 240, 234, 0.22);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent),
+    rgba(255, 255, 255, 0.022);
 }
 
 .detail-stage-page .timeline-shell::before {
@@ -4918,22 +5137,23 @@ a {
 
 .play-detail-related-grid {
   display: grid;
-  gap: 12px;
+  gap: 10px;
 }
 
 .play-detail-related-card {
   position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
-  gap: 14px;
+  gap: 12px;
   align-items: center;
   overflow: hidden;
-  border: 1px solid rgba(243, 240, 234, 0.1);
-  border-radius: 14px;
-  padding: 10px 14px 10px 10px;
+  border: 1px solid rgba(243, 240, 234, 0.09);
+  border-radius: 12px;
+  padding: 12px 14px;
   background:
-    linear-gradient(135deg, rgba(72, 82, 150, 0.08), transparent 48%),
-    rgba(7, 8, 14, 0.84);
+    radial-gradient(ellipse at 24% 0%, rgba(130, 150, 255, 0.055), transparent 48%),
+    linear-gradient(135deg, rgba(72, 82, 150, 0.05), transparent 50%),
+    rgba(6, 8, 15, 0.78);
   transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
 }
 
@@ -4942,10 +5162,11 @@ a {
 }
 
 .play-detail-related-card:hover {
-  border-color: rgba(243, 240, 234, 0.2);
+  border-color: rgba(243, 240, 234, 0.17);
   background:
-    linear-gradient(135deg, rgba(176, 56, 110, 0.1), rgba(72, 82, 150, 0.06)),
-    rgba(9, 10, 18, 0.94);
+    radial-gradient(ellipse at 24% 0%, rgba(160, 180, 255, 0.075), transparent 50%),
+    linear-gradient(135deg, rgba(176, 56, 110, 0.07), rgba(72, 82, 150, 0.045)),
+    rgba(8, 10, 18, 0.9);
   transform: translateY(-1px);
 }
 
@@ -4966,8 +5187,8 @@ a {
 .play-detail-related-card__title {
   color: var(--text);
   font-family: var(--serif);
-  font-size: 15px;
-  line-height: 1.5;
+  font-size: 14.5px;
+  line-height: 1.45;
   display: -webkit-box;
   overflow: hidden;
   -webkit-box-orient: vertical;
@@ -4975,34 +5196,37 @@ a {
 }
 
 .play-detail-related-card__meta {
-  margin-top: 4px;
+  margin-top: 5px;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 11.5px;
+  letter-spacing: 0.04em;
 }
 
 .play-detail-related-card__arrow {
-  color: rgba(243, 240, 234, 0.7);
-  font-size: 28px;
+  color: rgba(243, 240, 234, 0.64);
+  font-size: 24px;
   line-height: 1;
 }
 
 .play-detail-tag-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
 }
 
 .play-detail-tag {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 36px;
-  border: 1px solid rgba(211, 118, 176, 0.24);
-  border-radius: 999px;
-  padding: 8px 16px;
-  background: rgba(255, 255, 255, 0.018);
+  min-height: 34px;
+  border: 1px solid rgba(211, 118, 176, 0.2);
+  border-radius: 14px;
+  padding: 7px 14px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.012), transparent),
+    rgba(255, 255, 255, 0.014);
   color: rgba(244, 240, 233, 0.78);
-  font-size: 13px;
+  font-size: 12.5px;
   letter-spacing: 0.05em;
 }
 
@@ -5011,32 +5235,32 @@ a {
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 18px;
   align-items: center;
-  border-color: rgba(233, 68, 166, 0.28);
+  border-color: rgba(233, 68, 166, 0.24);
   background:
-    radial-gradient(ellipse at 88% 40%, rgba(142, 36, 84, 0.18), transparent 52%),
-    linear-gradient(135deg, rgba(176, 56, 110, 0.1), rgba(68, 82, 170, 0.035)),
-    rgba(8, 8, 14, 0.98);
+    radial-gradient(ellipse at 88% 40%, rgba(142, 36, 84, 0.14), transparent 52%),
+    linear-gradient(135deg, rgba(176, 56, 110, 0.075), rgba(68, 82, 170, 0.03)),
+    rgba(7, 8, 14, 0.92);
 }
 
 .play-detail-stage-page .play-streaming-section {
-  border-color: rgba(180, 86, 140, 0.22);
+  border-color: rgba(180, 86, 140, 0.2);
   background:
-    linear-gradient(135deg, rgba(176, 56, 110, 0.08), rgba(68, 82, 170, 0.035)),
+    linear-gradient(135deg, rgba(176, 56, 110, 0.065), rgba(68, 82, 170, 0.03)),
     linear-gradient(180deg, rgba(255, 255, 255, 0.012), rgba(255, 255, 255, 0.004)),
-    rgba(8, 8, 14, 0.98);
+    rgba(7, 8, 14, 0.92);
 }
 
 .series-detail-stage-page .detail-ledger {
   overflow: hidden;
-  border-radius: 16px;
-  border-color: rgba(243, 240, 234, 0.1);
-  background: rgba(243, 240, 234, 0.08);
+  border-radius: 14px;
+  border-color: rgba(243, 240, 234, 0.085);
+  background: rgba(243, 240, 234, 0.055);
 }
 
 .series-detail-stage-page .detail-ledger__item {
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.014), rgba(255, 255, 255, 0.004)),
-    rgba(7, 8, 14, 0.9);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.012), rgba(255, 255, 255, 0.003)),
+    rgba(6, 8, 15, 0.88);
 }
 
 .series-detail-stage-page .detail-ledger__item strong {
@@ -5052,24 +5276,24 @@ a {
 }
 
 .series-detail-stage-page .meta-list.roomy {
-  gap: 12px;
+  gap: 10px;
 }
 
 .series-detail-stage-page .meta-row {
-  padding: 14px;
+  padding: 12px 14px;
 }
 
 .series-detail-stage-page .series-cast-overview-section {
-  gap: 14px;
-  padding-bottom: 20px;
+  gap: 12px;
+  padding-bottom: 16px;
 }
 
 .series-detail-stage-page .series-timeline-section {
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.012), rgba(255, 255, 255, 0.004)),
-    radial-gradient(circle at 100% 0%, rgba(54, 88, 176, 0.045), transparent 34%),
-    radial-gradient(circle at 0% 0%, rgba(118, 43, 128, 0.045), transparent 38%),
-    rgba(7, 8, 14, 0.98);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.003)),
+    radial-gradient(ellipse at 100% 0%, rgba(54, 88, 176, 0.032), transparent 36%),
+    radial-gradient(ellipse at 0% 0%, rgba(118, 43, 128, 0.032), transparent 40%),
+    rgba(5, 7, 13, 0.92);
 }
 
 .series-detail-stage-page .catalog-card__badge {
