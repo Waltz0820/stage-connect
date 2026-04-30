@@ -26,6 +26,23 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
 export const revalidate = 3600;
 export const dynamicParams = true;
 
+const getActorInitials = (actor: { slug: string; name: string }) => {
+  const slugParts = actor.slug
+    .split("-")
+    .map((part) => part.trim())
+    .filter(Boolean);
+
+  if (slugParts.length > 0) {
+    return slugParts
+      .slice(0, 2)
+      .map((part) => part.charAt(0))
+      .join("")
+      .toUpperCase();
+  }
+
+  return actor.name.trim().slice(0, 1) || "S";
+};
+
 const buildActorMetaDescriptionJa = (actor: NonNullable<Awaited<ReturnType<typeof getActorDetailBySlug>>>) => {
   const parts: string[] = [];
   const statusLine = toPlainText(actor.profile || "").trim().replace(/[。．]\s*$/u, "");
@@ -167,7 +184,7 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
         <section className="hero-card stack-md detail-stage-hero">
           <div className="detail-hero-grid">
             <div className="detail-monogram" aria-hidden="true">
-              {actor.name.trim().charAt(0)}
+              {getActorInitials(actor)}
             </div>
 
             <div className="detail-hero-copy">

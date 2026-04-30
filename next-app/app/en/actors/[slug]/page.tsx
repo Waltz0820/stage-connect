@@ -30,6 +30,36 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
 export const revalidate = 3600;
 export const dynamicParams = true;
 
+const getActorInitials = (actor: { slug: string; name: string }, displayName: string) => {
+  const slugParts = actor.slug
+    .split("-")
+    .map((part) => part.trim())
+    .filter(Boolean);
+
+  if (slugParts.length > 0) {
+    return slugParts
+      .slice(0, 2)
+      .map((part) => part.charAt(0))
+      .join("")
+      .toUpperCase();
+  }
+
+  const nameParts = displayName
+    .split(/\s+/)
+    .map((part) => part.trim())
+    .filter(Boolean);
+
+  if (nameParts.length > 1) {
+    return nameParts
+      .slice(0, 2)
+      .map((part) => part.charAt(0))
+      .join("")
+      .toUpperCase();
+  }
+
+  return displayName.trim().slice(0, 2).toUpperCase() || "SC";
+};
+
 const buildActorMetaDescriptionEn = (actor: NonNullable<Awaited<ReturnType<typeof getActorDetailBySlug>>>) => {
   const parts: string[] = [];
   const statusLine = toPlainText(actor.profileEn || actor.profile || "").trim().replace(/[.。]\s*$/u, "");
@@ -144,7 +174,7 @@ export default async function EnglishActorDetailPage({ params }: { params: Promi
         <section className="hero-card stack-md detail-stage-hero">
           <div className="detail-hero-grid">
             <div className="detail-monogram" aria-hidden="true">
-              {displayName.trim().charAt(0)}
+              {getActorInitials(actor, displayName)}
             </div>
 
             <div className="detail-hero-copy">

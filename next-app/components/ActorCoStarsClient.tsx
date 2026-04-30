@@ -20,6 +20,36 @@ type Props = {
 const INITIAL_VISIBLE_COUNT = 5;
 const MAX_VISIBLE_COUNT = 30;
 
+const getCoStarInitials = (coStar: CoStar, displayName: string) => {
+  const slugParts = coStar.slug
+    .split("-")
+    .map((part) => part.trim())
+    .filter(Boolean);
+
+  if (slugParts.length > 0) {
+    return slugParts
+      .slice(0, 2)
+      .map((part) => part.charAt(0))
+      .join("")
+      .toUpperCase();
+  }
+
+  const nameParts = displayName
+    .split(/\s+/)
+    .map((part) => part.trim())
+    .filter(Boolean);
+
+  if (nameParts.length > 1) {
+    return nameParts
+      .slice(0, 2)
+      .map((part) => part.charAt(0))
+      .join("")
+      .toUpperCase();
+  }
+
+  return displayName.trim().slice(0, 2).toUpperCase() || "SC";
+};
+
 export function ActorCoStarsClient({ coStars }: Props) {
   const pathname = usePathname();
   const isEnglish = pathname?.startsWith("/en");
@@ -59,6 +89,7 @@ export function ActorCoStarsClient({ coStars }: Props) {
               const displayName = isEnglish ? getEnglishActorName(coStar) : coStar.name;
               return (
             <Link className="cast-card cast-card-link card-carousel-item" href={`${actorHrefBase}/${coStar.slug}`} key={coStar.slug}>
+              <span className="co-star-card__monogram" aria-hidden="true">{getCoStarInitials(coStar, displayName)}</span>
               <div className="series-rank-row">
                 <span className="series-rank-badge">{index + 1}</span>
                 <div className="series-rank-count">
@@ -83,6 +114,7 @@ export function ActorCoStarsClient({ coStars }: Props) {
               const displayName = isEnglish ? getEnglishActorName(coStar) : coStar.name;
               return (
             <Link className="cast-card cast-card-link" href={`${actorHrefBase}/${coStar.slug}`} key={`desktop-${coStar.slug}`}>
+              <span className="co-star-card__monogram" aria-hidden="true">{getCoStarInitials(coStar, displayName)}</span>
               <div className="series-rank-row">
                 <span className="series-rank-badge">{index + 1}</span>
                 <div className="series-rank-count">
@@ -139,6 +171,7 @@ export function ActorCoStarsClient({ coStars }: Props) {
                       const displayName = isEnglish ? getEnglishActorName(coStar) : coStar.name;
                       return (
                     <Link className="cast-card cast-card-link" href={`${actorHrefBase}/${coStar.slug}`} key={`${coStar.slug}-modal`}>
+                      <span className="co-star-card__monogram" aria-hidden="true">{getCoStarInitials(coStar, displayName)}</span>
                       <div className="series-rank-row">
                         <span className="series-rank-badge">{index + 1}</span>
                         <div className="series-rank-count">
