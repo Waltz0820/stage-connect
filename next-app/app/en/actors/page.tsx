@@ -21,8 +21,21 @@ const GENDER_LABELS: Record<string, string> = {
 
 const getSingleParam = (value: SearchParamValue) => (Array.isArray(value) ? value[0] : value) ?? "";
 
-const getActorInitials = (name: string) => {
-  const parts = name
+const getActorInitials = (actor: { slug: string }, displayName: string) => {
+  const slugParts = actor.slug
+    .split("-")
+    .map((part) => part.trim())
+    .filter(Boolean);
+
+  if (slugParts.length > 0) {
+    return slugParts
+      .slice(0, 2)
+      .map((part) => part.charAt(0))
+      .join("")
+      .toUpperCase();
+  }
+
+  const parts = displayName
     .split(/\s+/)
     .map((part) => part.trim())
     .filter(Boolean);
@@ -35,7 +48,7 @@ const getActorInitials = (name: string) => {
       .toUpperCase();
   }
 
-  return name.trim().slice(0, 2).toUpperCase() || "SC";
+  return displayName.trim().slice(0, 2).toUpperCase() || "SC";
 };
 
 const buildHref = (params: Record<string, string | number | null | undefined>) => {
@@ -141,7 +154,7 @@ export default async function EnglishActorsPage({
                 : formatBirthdayEn(actor.birthday);
               const age = getAgeFromBirthday(actor.birthday, actor.deathDate);
               const ageLabel = formatAgeEn(age);
-              const initials = getActorInitials(displayName);
+              const initials = getActorInitials(actor, displayName);
 
               return (
                 <article className="catalog-card catalog-card--actor-list" key={actor.slug}>

@@ -2908,10 +2908,10 @@ a {
 .works-index-page .catalog-card--actor-list {
   display: grid;
   grid-template-columns: 108px minmax(0, 1fr);
-  gap: 16px;
+  gap: 14px;
   align-items: stretch;
   min-height: 100%;
-  padding: 14px;
+  padding: 12px;
   border-radius: 15px;
   border-color: rgba(243, 240, 234, 0.115);
   background:
@@ -2999,7 +2999,7 @@ a {
 }
 
 .actor-list-card__top .favorite-button {
-  flex: 0 0 auto;
+  display: none;
 }
 
 .actor-list-card__kana {
@@ -3045,10 +3045,21 @@ a {
 .actor-list-card__footer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 10px;
   margin-top: auto;
-  border-top-color: rgba(243, 240, 234, 0.08);
+  border-top: 0;
+  padding-top: 0;
+}
+
+.actor-list-card__footer .catalog-link {
+  display: none;
+}
+
+.actor-list-card__footer .play-list-card__chevron {
+  color: rgba(243, 240, 234, 0.64);
+  font-size: 23px;
+  line-height: 1;
 }
 
 @media (min-width: 900px) {
@@ -3061,8 +3072,8 @@ a {
   .works-index-page .catalog-card--actor-list {
     grid-template-columns: 82px minmax(0, 1fr);
     gap: 12px;
-    padding: 10px;
-    border-radius: 16px;
+    padding: 9px;
+    border-radius: 14px;
   }
 
   .actor-list-card__monogram {
@@ -5365,6 +5376,68 @@ a {
   background: rgba(243, 240, 234, 0.055);
 }
 
+.series-detail-stage-page .series-detail-stage-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 330px;
+  padding: clamp(26px, 5vw, 54px);
+  background:
+    radial-gradient(ellipse at 76% 24%, rgba(150, 120, 255, 0.18), transparent 32%),
+    radial-gradient(ellipse at 72% 48%, rgba(255, 245, 225, 0.06), transparent 28%),
+    linear-gradient(90deg, rgba(4, 6, 11, 0.98) 0%, rgba(5, 7, 13, 0.78) 48%, rgba(6, 8, 16, 0.5) 100%),
+    linear-gradient(180deg, rgba(18, 12, 32, 0.72), rgba(4, 6, 11, 0.96));
+}
+
+.series-detail-stage-page .series-detail-stage-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.014) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.01) 1px, transparent 1px),
+    radial-gradient(ellipse at 76% 18%, rgba(255, 255, 255, 0.18), rgba(170, 175, 255, 0.06) 26%, transparent 58%),
+    radial-gradient(ellipse at 74% 74%, rgba(255, 230, 190, 0.09), transparent 38%);
+  background-size: 32px 32px, 32px 32px, auto, auto;
+  opacity: 0.86;
+}
+
+.series-detail-stage-page .series-detail-stage-hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 10%;
+  z-index: -1;
+  width: 44%;
+  height: 78%;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(190, 200, 255, 0.07) 34%, transparent 74%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.13), rgba(150, 170, 255, 0.05) 38%, transparent 76%);
+  background-size: 24% 92%, 34% 82%;
+  background-position: 18% 0, 68% 4%;
+  background-repeat: no-repeat;
+  clip-path: polygon(18% 0, 88% 0, 100% 100%, 0 100%);
+  opacity: 0.34;
+  filter: blur(5px);
+  mix-blend-mode: screen;
+}
+
+.series-detail-stage-page .series-detail-stage-hero .detail-ledger-shell {
+  width: min(100%, 720px);
+}
+
+.series-detail-stage-page .series-detail-stage-hero .page-title {
+  max-width: 680px;
+  text-shadow: 0 2px 28px rgba(0, 0, 0, 0.42);
+}
+
+.series-detail-stage-page .series-detail-stage-hero .pill-row {
+  margin-top: 2px;
+}
+
 .series-detail-stage-page .detail-ledger__item {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.012), rgba(255, 255, 255, 0.003)),
@@ -5402,6 +5475,44 @@ a {
     radial-gradient(ellipse at 100% 0%, rgba(54, 88, 176, 0.032), transparent 36%),
     radial-gradient(ellipse at 0% 0%, rgba(118, 43, 128, 0.032), transparent 40%),
     rgba(5, 7, 13, 0.92);
+}
+
+.series-detail-stage-page .series-timeline-card {
+  border-radius: 12px;
+  background:
+    radial-gradient(ellipse at 18% 0%, rgba(140, 70, 170, 0.04), transparent 44%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.002)),
+    rgba(6, 8, 15, 0.72);
+}
+
+.series-detail-stage-page .series-timeline-card .catalog-card__top {
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.series-detail-stage-page .series-timeline-card .cast-name {
+  font-family: var(--serif);
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.series-detail-stage-page .series-timeline-card__meta {
+  margin-top: -2px;
+}
+
+.series-detail-stage-page .series-timeline-card .catalog-card__footer {
+  padding-top: 8px;
+}
+
+.series-detail-stage-page .series-timeline-card .action-row {
+  gap: 8px;
+}
+
+.series-detail-stage-page .series-timeline-card .action-button {
+  min-height: 34px;
+  border-radius: 10px;
+  padding-inline: 12px;
+  font-size: 11px;
 }
 
 .series-detail-stage-page .catalog-card__badge {
@@ -5603,6 +5714,17 @@ a {
   .play-detail-hero-streaming .action-button {
     width: 100%;
     min-width: 0;
+  }
+
+  .series-detail-stage-page .series-detail-stage-hero {
+    min-height: 280px;
+    padding: 22px;
+  }
+
+  .series-detail-stage-page .series-detail-stage-hero::after {
+    right: -10%;
+    width: 70%;
+    opacity: 0.22;
   }
 
   .play-detail-related-card {
