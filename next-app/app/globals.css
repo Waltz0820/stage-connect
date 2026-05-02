@@ -5379,6 +5379,58 @@ a {
     rgba(7, 8, 14, 0.92);
 }
 
+.play-detail-stage-page .detail-stage-section {
+  order: 20;
+}
+
+.play-detail-stage-page .play-detail-lead-section {
+  order: 1;
+}
+
+.play-detail-stage-page .play-detail-cast-section {
+  order: 2;
+}
+
+.play-detail-stage-page .play-streaming-section {
+  order: 3;
+}
+
+.play-detail-stage-page .play-detail-synopsis-section {
+  order: 4;
+}
+
+.play-detail-stage-page .play-detail-info-section {
+  order: 5;
+}
+
+.play-detail-stage-page .play-detail-credits-section {
+  order: 6;
+}
+
+.play-detail-stage-page .play-detail-related-section {
+  order: 7;
+}
+
+.play-detail-stage-page .play-detail-tags-section {
+  order: 8;
+}
+
+.play-detail-stage-page .play-detail-faq-section {
+  order: 9;
+}
+
+.play-detail-stage-page .play-detail-bottom-cta {
+  order: 10;
+}
+
+.play-detail-stage-page .play-detail-cast-section {
+  border-color: rgba(243, 240, 234, 0.13);
+  background:
+    radial-gradient(ellipse at 0% 0%, rgba(150, 170, 255, 0.04), transparent 42%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.012), rgba(255, 255, 255, 0.003)),
+    rgba(5, 7, 13, 0.86);
+}
+
 .series-detail-stage-page .detail-ledger {
   overflow: hidden;
   border-radius: 14px;

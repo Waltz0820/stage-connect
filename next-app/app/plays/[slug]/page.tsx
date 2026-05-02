@@ -387,7 +387,7 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
           </div>
         </section>
 
-        <section className="section-card stack-md detail-stage-section">
+        <section className="section-card stack-md detail-stage-section play-detail-lead-section">
           <p className="lead">
             <strong className="strong-inline">{play.title}</strong>
             の配信情報（VOD）と公演データをまとめました。主な出演キャストは
@@ -399,12 +399,12 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
           </p>
         </section>
 
-        <section className="section-card stack-md detail-stage-section">
+        <section className="section-card stack-md detail-stage-section play-detail-synopsis-section">
           <h2 className="section-title">あらすじ</h2>
           <div className="rich-text">{play.summary || "あらすじ情報はまだありません。"}</div>
         </section>
 
-        <section className="section-card stack-md detail-stage-section">
+        <section className="section-card stack-md detail-stage-section play-detail-info-section">
           <h2 className="section-title">公演情報</h2>
           <div className="meta-list roomy">
             {play.period ? (
@@ -462,7 +462,7 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
         </section>
 
         {creditItems.length > 0 ? (
-          <section className="section-card stack-md detail-stage-section">
+          <section className="section-card stack-md detail-stage-section play-detail-credits-section">
             <h2 className="section-title">スタッフ / クレジット</h2>
             <div className="meta-list roomy">
               {creditItems.slice(0, 3).map((item) => (
@@ -521,7 +521,7 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
           </div>
         </section>
 
-        <section className="section-card stack-md detail-stage-section">
+        <section className="section-card stack-md detail-stage-section play-detail-faq-section">
           <h2 className="section-title">よくある質問（FAQ）</h2>
           <div className="faq-grid">
             <article className="faq-card">
@@ -539,7 +539,7 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
           </div>
         </section>
 
-        <section className="section-card stack-md detail-stage-section">
+        <section className="section-card stack-md detail-stage-section play-detail-cast-section">
           <h2 className="section-title">出演キャスト</h2>
           {play.cast.length > 0 ? (
             <div className="stack-md">

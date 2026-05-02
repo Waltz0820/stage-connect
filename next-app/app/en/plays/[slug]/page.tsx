@@ -329,19 +329,19 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
           </div>
         </section>
 
-        <section className="section-card stack-md detail-stage-section">
+        <section className="section-card stack-md detail-stage-section play-detail-lead-section">
           <p className="lead">
             <strong className="strong-inline">{displayTitle}</strong> is listed with cast, series connection, public
             schedule, venue, and streaming availability. Featured cast includes {castSummary}.
           </p>
         </section>
 
-        <section className="section-card stack-md detail-stage-section">
+        <section className="section-card stack-md detail-stage-section play-detail-synopsis-section">
           <h2 className="section-title">Synopsis</h2>
           <div className="rich-text">{synopsis || "Synopsis not available yet."}</div>
         </section>
 
-        <section className="section-card stack-md detail-stage-section">
+        <section className="section-card stack-md detail-stage-section play-detail-info-section">
           <h2 className="section-title">Public information</h2>
           <div className="meta-list roomy">
             {play.period ? (
@@ -401,7 +401,7 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
         </section>
 
         {creditItems.length > 0 ? (
-          <section className="section-card stack-md detail-stage-section">
+          <section className="section-card stack-md detail-stage-section play-detail-credits-section">
             <h2 className="section-title">Credits</h2>
             <div className="meta-list roomy">
               {creditItems.slice(0, 3).map((item) => (
@@ -454,7 +454,7 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
           </div>
         </section>
 
-        <section className="section-card stack-md detail-stage-section">
+        <section className="section-card stack-md detail-stage-section play-detail-cast-section">
           <h2 className="section-title">Cast</h2>
           {play.cast.length > 0 ? (
             <div className="stack-md">
