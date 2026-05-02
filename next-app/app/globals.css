@@ -5025,9 +5025,10 @@ a {
 
 .play-detail-stage-page .detail-ledger {
   overflow: hidden;
-  border-radius: 16px;
-  border-color: rgba(243, 240, 234, 0.1);
-  background: rgba(243, 240, 234, 0.08);
+  gap: 12px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
 }
 
 .play-detail-stage-page .play-detail-stage-hero {
@@ -5099,9 +5100,13 @@ a {
 }
 
 .play-detail-stage-page .detail-ledger__item {
+  min-height: 82px;
+  border: 1px solid rgba(243, 240, 234, 0.11);
+  border-radius: 13px;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.014), rgba(255, 255, 255, 0.004)),
-    rgba(7, 8, 14, 0.9);
+    radial-gradient(ellipse at 0% 0%, rgba(188, 150, 92, 0.045), transparent 48%),
+    rgba(7, 8, 14, 0.76);
 }
 
 .play-detail-stage-page .detail-ledger__item strong {
@@ -5166,13 +5171,18 @@ a {
   border-top-color: rgba(243, 240, 234, 0.08);
 }
 
+.play-detail-stage-page .cast-grid {
+  gap: 10px;
+}
+
 .play-detail-stage-page .cast-card {
   display: grid;
-  grid-template-columns: 64px minmax(0, 1fr);
-  gap: 12px;
+  grid-template-columns: 56px minmax(0, 1fr);
+  gap: 10px;
   align-items: center;
-  min-height: 86px;
-  padding: 10px 12px;
+  min-height: 78px;
+  padding: 9px 10px;
+  border-radius: 12px;
 }
 
 .play-detail-stage-page .cast-card__monogram {
@@ -5228,14 +5238,14 @@ a {
 
 .play-detail-stage-page .cast-name {
   font-family: var(--serif);
-  font-size: 16px;
+  font-size: 15px;
   letter-spacing: 0.03em;
 }
 
 .play-detail-stage-page .cast-role {
   margin-top: 4px;
-  font-size: 12.5px;
-  line-height: 1.55;
+  font-size: 12px;
+  line-height: 1.5;
 }
 
 .play-detail-stage-page .cast-badge {
@@ -5716,6 +5726,14 @@ a {
   .play-detail-hero-streaming .action-button {
     width: 100%;
     min-width: 0;
+  }
+
+  .play-detail-stage-page .detail-ledger {
+    gap: 8px;
+  }
+
+  .play-detail-stage-page .detail-ledger__item {
+    min-height: 72px;
   }
 
   .series-detail-stage-page .series-detail-stage-hero {
