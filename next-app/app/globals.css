@@ -5417,15 +5417,15 @@ a {
   order: 1;
 }
 
-.play-detail-stage-page .play-detail-cast-section {
+.play-detail-stage-page .play-detail-synopsis-section {
   order: 2;
 }
 
-.play-detail-stage-page .play-streaming-section {
+.play-detail-stage-page .play-detail-cast-section {
   order: 3;
 }
 
-.play-detail-stage-page .play-detail-synopsis-section {
+.play-detail-stage-page .play-streaming-section {
   order: 4;
 }
 
@@ -6269,5 +6269,81 @@ body {
   .site-footer__locale {
     position: static;
     margin-left: 0;
+  }
+}
+
+@media (max-width: 719px) {
+  .actor-detail-stage-page .top-series-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+  }
+
+  .actor-detail-stage-page .top-series-row {
+    min-height: 92px;
+    padding: 14px 30px 13px 13px;
+  }
+
+  .actor-detail-stage-page .top-series-row::after {
+    right: 11px;
+    font-size: 20px;
+  }
+
+  .actor-detail-stage-page .top-series-row .catalog-link {
+    font-size: 14.5px;
+    line-height: 1.45;
+  }
+
+  .actor-detail-stage-page .top-series-row .subtle-line {
+    font-size: 10.5px;
+  }
+
+  .play-detail-stage-page .play-detail-cast-section {
+    padding-inline: 16px;
+  }
+
+  .play-detail-stage-page .play-detail-cast-section .section-title {
+    font-size: 21px;
+  }
+
+  .play-detail-stage-page .cast-group-block {
+    margin-inline: -16px;
+    padding-inline: 16px;
+  }
+
+  .play-detail-stage-page .cast-grid {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(210px, 78vw);
+    grid-template-columns: none;
+    grid-template-rows: repeat(2, minmax(74px, auto));
+    gap: 9px;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    padding: 2px 16px 10px 0;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+  }
+
+  .play-detail-stage-page .cast-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .play-detail-stage-page .cast-card {
+    min-height: 74px;
+    grid-template-columns: 50px minmax(0, 1fr);
+    scroll-snap-align: start;
+  }
+
+  .play-detail-stage-page .cast-card__monogram {
+    font-size: 20px;
+  }
+
+  .play-detail-stage-page .cast-name {
+    font-size: 14px;
+  }
+
+  .play-detail-stage-page .cast-role {
+    font-size: 11.5px;
+    line-height: 1.45;
   }
 }
