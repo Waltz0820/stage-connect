@@ -1734,6 +1734,34 @@ a {
   letter-spacing: 0.04em;
 }
 
+.actor-detail-stage-page .top-series-row::after {
+  content: ">";
+}
+
+.actor-detail-stage-page .top-series-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.actor-detail-stage-page .top-series-row {
+  min-height: 112px;
+  align-content: end;
+  padding: 18px 38px 16px 16px;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(160, 180, 255, 0.075), transparent 52%),
+    radial-gradient(ellipse at 16% 100%, rgba(255, 220, 170, 0.05), transparent 48%),
+    linear-gradient(145deg, rgba(46, 25, 56, 0.42), rgba(7, 9, 17, 0.92));
+}
+
+.actor-detail-stage-page .top-series-row .catalog-link {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-size: 17px;
+}
+
 .accent-label {
   color: var(--purple);
   font-size: 13px;
@@ -5169,10 +5197,12 @@ a {
 
 .play-detail-stage-page .cast-group-block {
   border-top-color: rgba(243, 240, 234, 0.08);
+  padding-top: 12px;
 }
 
 .play-detail-stage-page .cast-grid {
   gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(188px, 1fr));
 }
 
 .play-detail-stage-page .cast-card {
@@ -5429,6 +5459,14 @@ a {
     radial-gradient(ellipse at 0% 0%, rgba(150, 170, 255, 0.04), transparent 42%),
     linear-gradient(180deg, rgba(255, 255, 255, 0.012), rgba(255, 255, 255, 0.003)),
     rgba(5, 7, 13, 0.86);
+}
+
+.play-detail-stage-page .play-detail-cast-section .stack-md {
+  gap: 14px;
+}
+
+.play-detail-stage-page .play-detail-cast-section .section-title {
+  font-size: clamp(22px, 3vw, 28px);
 }
 
 .series-detail-stage-page .detail-ledger {
