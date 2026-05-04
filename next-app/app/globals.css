@@ -5026,7 +5026,7 @@ a {
 
   .detail-stage-page .timeline-year-heading {
     grid-column: 1;
-    min-height: 44px;
+    min-height: 58px;
     padding: 10px 12px;
     border: 1px solid rgba(243, 240, 234, 0.09);
     border-radius: 12px;
@@ -5037,8 +5037,9 @@ a {
 
   .detail-stage-page .timeline-year {
     font-family: var(--serif);
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 700;
+    line-height: 1.2;
   }
 
   .detail-stage-page .timeline-year-sub {
@@ -5588,7 +5589,9 @@ a {
 }
 
 .series-detail-stage-page .series-timeline-card {
+  position: relative;
   border-radius: 12px;
+  border-left: 1px solid rgba(180, 86, 140, 0.28);
   background:
     radial-gradient(ellipse at 18% 0%, rgba(140, 70, 170, 0.04), transparent 44%),
     linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.002)),
@@ -5611,18 +5614,28 @@ a {
 }
 
 .series-detail-stage-page .series-timeline-card .catalog-card__footer {
-  padding-top: 8px;
+  border-top: 0;
+  padding: 0 14px 12px;
 }
 
 .series-detail-stage-page .series-timeline-card .action-row {
   gap: 8px;
+  justify-content: flex-start;
 }
 
 .series-detail-stage-page .series-timeline-card .action-button {
-  min-height: 34px;
+  min-height: 30px;
   border-radius: 10px;
-  padding-inline: 12px;
+  padding-inline: 10px;
   font-size: 11px;
+}
+
+.series-detail-stage-page .series-timeline-card .action-button:not(.action-button-primary) {
+  display: none;
+}
+
+.series-detail-stage-page .series-timeline-card .catalog-card__text--clamped {
+  display: none;
 }
 
 .series-detail-stage-page .catalog-card__badge {
