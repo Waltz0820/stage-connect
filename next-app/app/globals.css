@@ -6306,8 +6306,20 @@ body {
   }
 
   .play-detail-stage-page .cast-group-block {
+    position: relative;
     margin-inline: -16px;
     padding-inline: 16px;
+  }
+
+  .play-detail-stage-page .cast-group-block::after {
+    content: "";
+    position: absolute;
+    top: 36px;
+    right: 0;
+    bottom: 0;
+    width: 42px;
+    pointer-events: none;
+    background: linear-gradient(90deg, transparent, rgba(5, 7, 13, 0.92));
   }
 
   .play-detail-stage-page .cast-grid {
@@ -6319,7 +6331,7 @@ body {
     gap: 9px;
     overflow-x: auto;
     overscroll-behavior-inline: contain;
-    padding: 2px 16px 10px 0;
+    padding: 2px 32px 10px 0;
     scroll-snap-type: x proximity;
     scrollbar-width: none;
   }
