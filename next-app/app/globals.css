@@ -5302,13 +5302,13 @@ a {
 .play-detail-related-card {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: minmax(58px, 0.22fr) minmax(0, 1fr) auto;
   gap: 12px;
   align-items: center;
   overflow: hidden;
   border: 1px solid rgba(243, 240, 234, 0.09);
   border-radius: 12px;
-  padding: 12px 14px;
+  padding: 0 14px 0 0;
   background:
     radial-gradient(ellipse at 24% 0%, rgba(130, 150, 255, 0.055), transparent 48%),
     linear-gradient(135deg, rgba(72, 82, 150, 0.05), transparent 50%),
@@ -5317,7 +5317,13 @@ a {
 }
 
 .play-detail-related-card__poster {
-  display: none;
+  display: block;
+  align-self: stretch;
+  min-width: 0;
+  border-right: 1px solid rgba(243, 240, 234, 0.08);
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(160, 110, 210, 0.12), transparent 62%),
+    rgba(255, 255, 255, 0.012);
 }
 
 .play-detail-related-card:hover {
@@ -5330,9 +5336,10 @@ a {
 }
 
 .play-detail-related-card__poster .play-poster-frame {
-  height: 62px;
-  min-height: 62px;
-  border-radius: 9px;
+  height: 100%;
+  min-height: 78px;
+  border: 0;
+  border-radius: 0;
 }
 
 .play-detail-related-card__poster .play-poster-frame__content {
@@ -5341,6 +5348,7 @@ a {
 
 .play-detail-related-card__body {
   min-width: 0;
+  padding: 12px 0;
 }
 
 .play-detail-related-card__title {
@@ -5842,13 +5850,12 @@ a {
   }
 
   .play-detail-related-card {
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: 10px;
+    grid-template-columns: 54px minmax(0, 1fr) auto;
+    gap: 9px;
   }
 
   .play-detail-related-card__poster .play-poster-frame {
-    height: 56px;
-    min-height: 56px;
+    min-height: 70px;
   }
 
   .play-detail-bottom-cta {
