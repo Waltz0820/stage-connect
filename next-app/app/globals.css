@@ -4663,6 +4663,23 @@ a {
     rgba(6, 8, 15, 0.86);
 }
 
+.actor-detail-stage-page .actor-timeline-card {
+  position: relative;
+  border-left: 1px solid rgba(180, 86, 140, 0.24);
+}
+
+.actor-detail-stage-page .actor-timeline-card::after {
+  content: ">";
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  color: rgba(243, 240, 234, 0.58);
+  font-size: 22px;
+  line-height: 1;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
 .actor-detail-stage-page .actor-timeline-card__link,
 .series-detail-stage-page .actor-timeline-card__link {
   display: block;
@@ -4694,11 +4711,25 @@ a {
   padding: 14px 16px;
 }
 
+.actor-detail-stage-page .actor-timeline-card__body {
+  padding-right: 42px;
+}
+
 .actor-detail-stage-page .actor-timeline-card__series {
   margin-top: 5px;
   color: var(--muted);
   font-size: 12.5px;
   line-height: 1.5;
+}
+
+.actor-detail-stage-page .actor-timeline-card .cast-name {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-family: var(--serif);
+  font-size: 15.5px;
+  line-height: 1.45;
 }
 
 .series-detail-stage-page .series-timeline-card__meta {
@@ -4760,6 +4791,10 @@ a {
 .series-detail-stage-page .series-timeline-card .catalog-card__footer {
   border-top-color: rgba(243, 240, 234, 0.08);
   padding: 8px 14px 12px;
+}
+
+.actor-detail-stage-page .actor-timeline-card .catalog-card__footer {
+  display: none;
 }
 
 .detail-stage-page .actor-timeline-card .catalog-card__footer--cta.is-empty,
@@ -5049,6 +5084,38 @@ a {
   .detail-stage-page .actor-timeline-list,
   .detail-stage-page .series-timeline-card {
     grid-column: 2;
+  }
+}
+
+@media (max-width: 719px) {
+  .actor-detail-stage-page .actor-timeline-card__body {
+    padding: 12px 36px 12px 13px;
+  }
+
+  .actor-detail-stage-page .actor-timeline-card::after {
+    right: 11px;
+    font-size: 20px;
+  }
+
+  .actor-detail-stage-page .actor-timeline-card .cast-name {
+    font-size: 14.5px;
+  }
+
+  .actor-detail-stage-page .actor-timeline-card__series {
+    margin-top: 3px;
+    font-size: 11.5px;
+  }
+
+  .actor-detail-stage-page .actor-timeline-card__meta {
+    gap: 6px;
+    margin-top: 8px;
+  }
+
+  .actor-detail-stage-page .actor-timeline-card__role,
+  .actor-detail-stage-page .actor-timeline-card__date {
+    min-height: 24px;
+    padding: 4px 8px;
+    font-size: 11px;
   }
 }
 
