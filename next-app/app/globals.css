@@ -6442,6 +6442,49 @@ body {
 }
 
 @media (max-width: 719px) {
+  .series-index-page .catalog-card--play-list {
+    grid-template-columns: minmax(98px, 32%) minmax(0, 1fr);
+    min-height: 132px;
+  }
+
+  .series-index-page .play-list-card__poster-link .play-poster-frame {
+    min-height: 132px;
+  }
+
+  .series-index-page .play-list-card__main {
+    gap: 6px;
+    padding: 12px 13px;
+  }
+
+  .series-index-page .catalog-card__title {
+    font-size: clamp(17px, 5.2vw, 22px);
+    line-height: 1.22;
+  }
+
+  .series-index-page .play-list-card__summary {
+    font-size: 12px;
+    line-height: 1.55;
+    -webkit-line-clamp: 2;
+  }
+
+  .series-index-page .play-list-card__facts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 7px;
+    padding-top: 8px;
+  }
+
+  .series-index-page .play-list-card__fact {
+    padding-inline: 8px;
+  }
+
+  .series-index-page .play-list-card__fact:nth-child(3) {
+    display: none;
+  }
+
+  .series-index-page .play-list-card__tag-row {
+    display: none;
+  }
+
   .series-detail-stage-page .series-cast-overview-section .card-carousel {
     grid-auto-columns: minmax(210px, 78vw);
   }
