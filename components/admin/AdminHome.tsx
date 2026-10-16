@@ -21,7 +21,7 @@ const AdminHome: React.FC = () => {
         </Link>
         <Link className="rounded-2xl border border-white/10 bg-black/30 p-4 hover:bg-black/40" to="/admin/actors">
           <div className="font-bold text-white">俳優</div>
-          <div className="mt-1 text-xs text-slate-400">画像 / SNS / タグ</div>
+          <div className="mt-1 text-xs text-slate-400">画像 / SNS / プロフィール</div>
         </Link>
         <Link className="rounded-2xl border border-white/10 bg-black/30 p-4 hover:bg-black/40" to="/admin/guides">
           <div className="font-bold text-white">編集部ガイド</div>

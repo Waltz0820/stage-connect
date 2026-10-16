@@ -29,7 +29,6 @@ const getSeriesCardTagsEn = (series: { format: string | null; originType: string
   const tags = [
     series.format ? EN_FORMAT_LABELS[series.format] ?? series.format : null,
     series.originType ? toEnglishOriginType(series.originType) ?? series.originType : null,
-    series.playCount >= 10 ? "Major series" : null,
   ].filter(Boolean) as string[];
 
   return Array.from(new Set(tags)).slice(0, 4);
@@ -54,11 +53,6 @@ export default async function EnglishSeriesPage({
 }) {
   const params = (await searchParams) ?? {};
   const allSeries = await getSeriesList();
-  const featuredSeries = [...allSeries].sort((a, b) => {
-    const aName = getEnglishSeriesName(a);
-    const bName = getEnglishSeriesName(b);
-    return b.playCount - a.playCount || aName.localeCompare(bName, "en");
-  })[0] ?? null;
   const breadcrumbJsonLd = buildBreadcrumbList([
     { name: "HOME", path: "/en" },
     { name: "Series", path: "/en/series" },
@@ -69,13 +63,16 @@ export default async function EnglishSeriesPage({
     path: "/en/series",
   });
 
+  const q = getSingleParam(params.q).trim().slice(0,200);
+  const normalize = (value: string) => value.normalize("NFKC").toLowerCase().replace(/[\s\u3000]+/g, "");
+  const matchingSeries = allSeries.filter(item => !q || normalize([item.name,item.nameEn].join(" ")).includes(normalize(q)));
   const requestedSort = getSingleParam(params.sort);
   const sort = requestedSort === "name_asc" ? "name_asc" : "play_count_desc";
   const requestedFormat = getSingleParam(params.format);
   const format = requestedFormat && requestedFormat in EN_FORMAT_LABELS ? requestedFormat : "all";
   const origin = getSingleParam(params.origin) || "all";
   const requestedPage = Number(getSingleParam(params.page));
-  const page = Number.isFinite(requestedPage) && requestedPage > 0 ? requestedPage : 1;
+  const page = Number.isFinite(requestedPage) && requestedPage > 0 ? Math.floor(requestedPage) : 1;
 
   const formatOptions = ["all", ...Object.keys(EN_FORMAT_LABELS)];
   const originOptions = [
@@ -86,7 +83,7 @@ export default async function EnglishSeriesPage({
   ];
 
   const formatFiltered =
-    format === "all" ? allSeries : allSeries.filter((series) => String(series.format ?? "") === format);
+    format === "all" ? matchingSeries : matchingSeries.filter((series) => String(series.format ?? "") === format);
   const filtered =
     origin === "all"
       ? formatFiltered
@@ -120,57 +117,22 @@ export default async function EnglishSeriesPage({
             </p>
           </div>
 
-          <div className="catalog-summary catalog-summary--ledger">
-            <span className="catalog-chip">Showing {filtered.length}</span>
-            <span className="catalog-chip">All series {allSeries.length}</span>
-            <span className="catalog-chip">Page {safePage}</span>
-          </div>
         </section>
-
-        {featuredSeries ? (
-          <Link className="series-feature-card" href={`/en/series/${featuredSeries.slug}`}>
-            <div className="series-feature-card__poster">
-              <PlayPosterFrame
-                title={getEnglishSeriesName(featuredSeries)}
-                seed={`${featuredSeries.slug}-${featuredSeries.originType ?? ""}`}
-              />
-            </div>
-            <div className="series-feature-card__body">
-              <span className="series-feature-card__badge">Featured series</span>
-              <div className="series-feature-card__title">{getEnglishSeriesName(featuredSeries)}</div>
-              {featuredSeries.descriptionEn || featuredSeries.description ? (
-                <p className="series-feature-card__text">
-                  {truncateText(toPlainText(featuredSeries.descriptionEn || featuredSeries.description), 130)}
-                </p>
-              ) : null}
-              <div className="series-feature-card__facts">
-                <span>{featuredSeries.playCount} plays</span>
-                {featuredSeries.format ? (
-                  <span>{EN_FORMAT_LABELS[featuredSeries.format] ?? featuredSeries.format}</span>
-                ) : null}
-                {featuredSeries.originType ? (
-                  <span>{toEnglishOriginType(featuredSeries.originType) ?? featuredSeries.originType}</span>
-                ) : null}
-              </div>
-              <div className="series-feature-card__tags">
-                {getSeriesCardTagsEn(featuredSeries).map((tag) => (
-                  <span key={tag}>{tag}</span>
-                ))}
-              </div>
-            </div>
-            <span className="series-feature-card__arrow" aria-hidden="true">
-              ›
-            </span>
-          </Link>
-        ) : null}
 
         <section className="section-card stack-md works-list-panel">
           <h2 className="section-title">Series Filters</h2>
 
+          <form className="v2-search" action="/en/series">
+            <label className="sr-only" htmlFor="series-query">Search series</label>
+            <input id="series-query" name="q" defaultValue={q} placeholder="Search by series name"/>
+            <input type="hidden" name="sort" value={sort}/><input type="hidden" name="format" value={format}/><input type="hidden" name="origin" value={origin}/>
+            <button type="submit" aria-label="Search">→</button>
+          </form>
+
           <div className="filter-row filter-row--dense works-filter-row">
             <Link
               className={`filter-chip ${sort === "play_count_desc" ? "is-active" : ""}`}
-              href={buildHref({ page: 1, sort: "play_count_desc", format, origin })}
+              href={buildHref({ q, page: 1, sort: "play_count_desc", format, origin })}
             >
               Most plays
             </Link>
@@ -205,6 +167,8 @@ export default async function EnglishSeriesPage({
               </Link>
             ))}
           </div>
+
+          <p className="catalog-count"><strong>{filtered.length.toLocaleString()}</strong> series</p>
 
           <div className="catalog-grid catalog-grid--play-list">
             {visible.map((series) => (

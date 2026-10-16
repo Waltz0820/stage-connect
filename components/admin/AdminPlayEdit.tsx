@@ -4,7 +4,6 @@ import { Link, useNavigate, useParams } from "../../next-app/lib/admin-router-sh
 import { supabase } from "../../next-app/lib/admin-supabase";
 import Field from "./widgets/Field";
 import JsonArea from "./widgets/JsonArea";
-import TagMultiSelect, { TagRow } from "./widgets/TagMultiSelect";
 import { parseJsonOr, safeTrim, stringifyPretty, toSlug } from "./widgets/utils";
 import { GENRE_LABELS, type PlayGenre } from "../../lib/types";
 
@@ -186,7 +185,6 @@ const creditsStats = (credits: CreditItem[] | null | undefined) => {
 };
 // ===== /credits helpers =====
 
-const MAX_TAGS = 4;
 const PLAY_GENRES = Object.keys(GENRE_LABELS) as PlayGenre[];
 const pickVod = (value: any): VodValue => ({
   dmm: safeTrim(value?.dmm) || undefined,
@@ -215,11 +213,6 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
   const [vodText, setVodText] = useState("");
   const [vodForm, setVodForm] = useState<VodValue>({});
 
-  // ★ tags（公式）: tags/play_tags を正として運用。plays.tags は触らない。
-  const [allTags, setAllTags] = useState<TagRow[]>([]);
-  const [selectedTagIds, setSelectedTagIds] = useState<Set<string>>(new Set());
-  const [tagsErr, setTagsErr] = useState<string>("");
-
   // ★ creditsは「貼り付けテキスト」だけを編集対象にする（ミスらない）
   const [creditsPaste, setCreditsPaste] = useState("");
   const [creditsPreview, setCreditsPreview] = useState<CreditItem[]>([]);
@@ -238,45 +231,6 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
     loadFr();
   }, []);
 
-  useEffect(() => {
-    const loadTags = async () => {
-      setTagsErr("");
-
-      // ① is_active ありで試す
-      let res = await supabase
-        .from("tags")
-        .select("id,slug,name,type,description,is_active")
-        .order("type", { ascending: true })
-        .order("name", { ascending: true });
-
-      // ② is_active が無い環境ならフォールバック
-      if (res.error && /is_active/i.test(res.error.message)) {
-        res = await supabase
-          .from("tags")
-          .select("id,slug,name,type,description")
-          .order("type", { ascending: true })
-          .order("name", { ascending: true });
-      }
-
-      if (res.error) {
-        console.warn("[admin plays] load tags error", res.error);
-        setTagsErr(res.error.message);
-        setAllTags([]);
-        return;
-      }
-
-      const rows = ((res.data ?? []) as any) as TagRow[];
-
-      // is_active がある場合だけ効かせる（無い場合は全部OK）
-      const active = rows.filter((t) =>
-        typeof (t as any).is_active === "boolean" ? (t as any).is_active !== false : true
-      );
-      setAllTags(active);
-    };
-
-    loadTags();
-  }, []);
-
   // creditsプレビューはリアルタイム生成（保存前に気づける）
   useEffect(() => {
     try {
@@ -288,23 +242,6 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
       setCreditsPreview([]);
     }
   }, [creditsPaste]);
-
-  const syncPlayTags = async (playId: string, ids: Set<string>) => {
-    const picked = Array.from(ids).slice(0, MAX_TAGS);
-
-    const delRes = await supabase.from("play_tags").delete().eq("play_id", playId);
-    if (delRes.error) throw delRes.error;
-
-    if (picked.length > 0) {
-      const insRes = await supabase.from("play_tags").insert(
-        picked.map((tagId) => ({
-          play_id: playId,
-          tag_id: tagId,
-        }))
-      );
-      if (insRes.error) throw insRes.error;
-    }
-  };
 
   useEffect(() => {
     if (mode === "new") {
@@ -321,8 +258,6 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
       setVodText(stringifyPretty({}));
       setVodForm({});
 
-      // tags
-      setSelectedTagIds(new Set());
 
       // credits
       setCreditsPaste("");
@@ -386,16 +321,6 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         const nextVod = pickVod(r.vod ?? {});
         setVodText(stringifyPretty(nextVod));
         setVodForm(nextVod);
-
-        // tags（play_tags）
-        const { data: pt, error: ptErr } = await supabase.from("play_tags").select("tag_id").eq("play_id", r.id);
-        if (ptErr) {
-          console.warn("[admin plays] load play_tags error", ptErr);
-          setSelectedTagIds(new Set());
-        } else {
-          const s = new Set<string>((pt ?? []).map((x: any) => x.tag_id).filter(Boolean));
-          setSelectedTagIds(s);
-        }
 
         // credits
         const paste = creditsArrayToPaste(r.credits);
@@ -512,7 +437,6 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         }
         if (error) throw error;
 
-        await syncPlayTags(created.id, selectedTagIds);
         nav(`/admin/plays/${encodeURIComponent(created.slug)}`);
       } else {
         if (!row?.id) return;
@@ -532,7 +456,6 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         }
         if (error) throw error;
 
-        await syncPlayTags(row.id, selectedTagIds);
         setMsg("保存しました");
       }
     } catch (e: any) {
@@ -733,19 +656,6 @@ const AdminPlayEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
           />
         </Field>
 
-        {/* tags（公式） */}
-        <Field label="tags（公式）" hint={`最大${MAX_TAGS}つ。横断テーマだけ（ジャンル/シリーズと被らせない）`}>
-          <div className="space-y-2">
-            {tagsErr && <div className="text-xs text-red-300">tags の読み込みに失敗：{tagsErr}</div>}
-            <TagMultiSelect
-              allTags={allTags}
-              selectedIds={selectedTagIds}
-              onChange={(next) => setSelectedTagIds(new Set(next))}
-              max={MAX_TAGS}
-              hint="検索→クリックで追加。上のチップをクリックで解除。"
-            />
-          </div>
-        </Field>
 
         {/* credits */}
         <Field

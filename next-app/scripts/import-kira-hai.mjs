@@ -2,6 +2,8 @@ import { createClient } from "@supabase/supabase-js";
 import * as cheerio from "cheerio";
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
+import { buildSourceLookup, readAllRows, resolveSourceActor, resolveSourcePlay, sourceNameKey, sourceTitleKey } from "../lib/source-match.mjs";
+import { refreshExternalRow } from "../lib/external-refresh.mjs";
 
 const SOURCE = "kira-hai";
 const BASE_URL = "https://kira-hai.net";
@@ -118,23 +120,8 @@ function normalizeWhitespace(value) {
   return String(value ?? "").replace(/\s+/g, " ").trim();
 }
 
-function normalizeMatchText(value) {
-  return normalizeWhitespace(value)
-    .normalize("NFKC")
-    .toLowerCase()
-    .replace(/[『』「」"'“”‘’【】\[\]（）()〈〉<>《》]/g, "")
-    .replace(/[~〜～\-ー―–—\s・:：/／]/g, "")
-    .replace(/(?:初演|再演|振替公演|公演中止|公演延期|ライブ配信)/g, "")
-    .trim();
-}
-
 function findActorMatch(actorMap, actor) {
-  return (
-    actorMap.get(normalizeMatchText(actor.sourceActorName)) ??
-    actorMap.get(normalizeMatchText(actor.aliasTo)) ??
-    actorMap.get(normalizeMatchText(actor.aliasFrom)) ??
-    null
-  );
+  return resolveSourceActor(actorMap, actor).match;
 }
 
 function normalizeTitleForStorage(value) {
@@ -609,51 +596,21 @@ function parseActorStageCredits(html, actor) {
 }
 
 async function loadExistingRows(supabase) {
-  const [actorsRes, playsRes] = await Promise.all([
-    supabase.from("actors").select("id,name,kana,slug,name_en").limit(10000),
-    supabase.from("plays").select("id,title,title_en,slug").limit(10000),
+  const [actors, plays] = await Promise.all([
+    readAllRows(supabase, "actors", "id,name,kana,slug,name_en"),
+    readAllRows(supabase, "plays", "id,title,title_en,slug,period"),
   ]);
-
-  if (actorsRes.error) throw actorsRes.error;
-  if (playsRes.error) throw playsRes.error;
-
-  const actorMap = new Map();
-  for (const actor of actorsRes.data ?? []) {
-    for (const value of [actor.name, actor.kana, actor.slug, actor.name_en]) {
-      const key = normalizeMatchText(value);
-      if (key && !actorMap.has(key)) actorMap.set(key, actor);
-    }
-  }
-
-  const playMap = new Map();
-  for (const play of playsRes.data ?? []) {
-    for (const value of [play.title, play.title_en, play.slug]) {
-      const key = normalizeMatchText(value);
-      if (key && !playMap.has(key)) playMap.set(key, play);
-    }
-  }
-
+  const actorMap = buildSourceLookup(actors, ["name", "kana", "slug", "name_en"], sourceNameKey);
+  const playMap = buildSourceLookup(plays, ["title", "title_en", "slug"], sourceTitleKey);
   return { actorMap, playMap };
 }
 
 async function loadMatchedExternalActors(supabase, limitActors, offsetActors) {
-  let query = supabase
-    .from("external_actors")
-    .select("source_actor_name,source_actor_url,source_actor_kana,alias_from,alias_to,note")
-    .eq("source", SOURCE)
-    .not("matched_actor_id", "is", null)
-    .order("source_actor_name", { ascending: true });
-
-  if (Number.isFinite(limitActors)) {
-    query = query.range(offsetActors, offsetActors + limitActors - 1);
-  } else if (offsetActors > 0) {
-    query = query.range(offsetActors, offsetActors + 999);
-  }
-
-  const { data, error } = await query;
-  if (error) throw error;
-
-  return (data ?? []).map((row) => ({
+  const data = await readAllRows(supabase, "external_actors", "id,source_actor_name,source_actor_url,source_actor_kana,alias_from,alias_to,note", {
+    offset: offsetActors, limit: limitActors,
+    configure: (query) => query.eq("source", SOURCE).not("matched_actor_id", "is", null),
+  });
+  return data.map((row) => ({
     sourceActorName: row.source_actor_name,
     sourceActorUrl: row.source_actor_url,
     sourceActorKana: row.source_actor_kana,
@@ -686,62 +643,21 @@ async function upsertExternalActor(supabase, actor, match) {
   if ("sourceBloodType" in actor) payload.source_blood_type = actor.sourceBloodType;
   if ("sourceAffiliationRaw" in actor) payload.source_affiliation_raw = actor.sourceAffiliationRaw;
 
-  const { data, error } = await supabase
-    .from("external_actors")
-    .upsert(payload, { onConflict: "source,source_actor_url" })
-    .select("id")
-    .single();
-
-  if (error) throw error;
-  return data.id;
+  return refreshExternalRow(supabase, "external_actors", payload, { source: SOURCE, source_actor_url: actor.sourceActorUrl });
 }
 
 async function upsertExternalActorsBatch(supabase, actors, actorMap) {
-  const now = new Date().toISOString();
-  const payloads = actors.map((actor) => {
-    const match = findActorMatch(actorMap, actor);
-    const payload = {
-      source: SOURCE,
-      source_actor_name: actor.sourceActorName,
-      source_actor_url: actor.sourceActorUrl,
-      alias_from: actor.aliasFrom,
-      alias_to: actor.aliasTo,
-      note: actor.note,
-      matched_actor_id: match?.id ?? null,
-      match_status: match ? "matched" : "unmatched",
-      match_confidence: match ? 90 : 0,
-      scraped_at: now,
-      updated_at: now,
-    };
-
-    if ("sourceProfileFactsRaw" in actor) payload.source_profile_facts_raw = actor.sourceProfileFactsRaw;
-    if ("sourceActorKana" in actor) payload.source_actor_kana = actor.sourceActorKana;
-    if ("sourceBirthdayRaw" in actor) payload.source_birthday_raw = actor.sourceBirthdayRaw;
-    if ("sourceBirthday" in actor) payload.source_birthday = actor.sourceBirthday;
-    if ("sourceHeightCm" in actor) payload.source_height_cm = actor.sourceHeightCm;
-    if ("sourceBloodType" in actor) payload.source_blood_type = actor.sourceBloodType;
-    if ("sourceAffiliationRaw" in actor) payload.source_affiliation_raw = actor.sourceAffiliationRaw;
-
-    return payload;
-  });
-
-  const chunkSize = 250;
+  const chunkSize = 5;
   const idsByUrl = new Map();
 
-  for (let i = 0; i < payloads.length; i += chunkSize) {
-    const chunk = payloads.slice(i, i + chunkSize);
-    const { data, error } = await supabase
-      .from("external_actors")
-      .upsert(chunk, { onConflict: "source,source_actor_url" })
-      .select("id,source_actor_url");
-
-    if (error) throw error;
-
-    for (const row of data ?? []) {
+  for (let i = 0; i < actors.length; i += chunkSize) {
+    const chunk = actors.slice(i, i + chunkSize);
+    const rows = await Promise.all(chunk.map((actor) => upsertExternalActor(supabase, actor, findActorMatch(actorMap, actor))));
+    for (const row of rows) {
       idsByUrl.set(row.source_actor_url, row.id);
     }
 
-    console.log(`[db] external_actors ${Math.min(i + chunk.length, payloads.length)} / ${payloads.length}`);
+    console.log(`[db] external_actors ${Math.min(i + chunk.length, actors.length)} / ${actors.length}`);
   }
 
   return idsByUrl;
@@ -758,38 +674,14 @@ async function upsertExternalPlay(supabase, credit, match) {
     matched_play_id: match?.id ?? null,
     match_status: match ? "matched" : "unmatched",
     match_confidence: match ? 90 : 0,
-    source_schedule_raw: credit.sourceScheduleRaw ?? null,
-    source_venue_raw: credit.sourceVenueRaw ?? null,
-    source_period_text: credit.sourcePeriodText ?? null,
-    source_venue_text: credit.sourceVenueText ?? null,
-    source_schedule_items: credit.sourceScheduleItems ?? [],
     scraped_at: new Date().toISOString(),
     updated_at: new Date().toISOString(),
   };
 
-  const existing = await supabase
-    .from("external_plays")
-    .select("id")
-    .eq("source", SOURCE)
-    .eq("source_work_url", credit.sourceWorkUrl)
-    .maybeSingle();
-
-  if (existing.error) throw existing.error;
-
-  if (existing.data?.id) {
-    const { data, error } = await supabase
-      .from("external_plays")
-      .update(payload)
-      .eq("id", existing.data.id)
-      .select("id")
-      .single();
-    if (error) throw error;
-    return data.id;
+  for (const [key, column] of Object.entries({ sourceScheduleRaw: "source_schedule_raw", sourceVenueRaw: "source_venue_raw", sourcePeriodText: "source_period_text", sourceVenueText: "source_venue_text", sourceScheduleItems: "source_schedule_items" })) {
+    if (Object.hasOwn(credit, key)) payload[column] = credit[key];
   }
-
-  const { data, error } = await supabase.from("external_plays").insert(payload).select("id").single();
-  if (error) throw error;
-  return data.id;
+  return refreshExternalRow(supabase, "external_plays", payload, { source: SOURCE, source_work_url: credit.sourceWorkUrl });
 }
 
 async function upsertCastCandidate(supabase, credit, externalActorId, externalPlayId, actorMatch, playMatch) {
@@ -812,33 +704,11 @@ async function upsertCastCandidate(supabase, credit, externalActorId, externalPl
     updated_at: new Date().toISOString(),
   };
 
-  let query = supabase
-    .from("external_cast_candidates")
-    .select("id,status")
-    .eq("source", SOURCE)
-    .eq("source_actor_url", credit.sourceActorUrl)
-    .eq("source_work_title", credit.sourceWorkTitle);
-
-  if (credit.sourceYear == null) query = query.is("source_year", null);
-  else query = query.eq("source_year", credit.sourceYear);
-
-  if (credit.sourceRoleRaw == null) query = query.is("source_role_raw", null);
-  else query = query.eq("source_role_raw", credit.sourceRoleRaw);
-
-  const existing = await query.maybeSingle();
-  if (existing.error) throw existing.error;
-
-  if (existing.data?.id) {
-    const patch = { ...payload };
-    if (existing.data.status !== "pending") delete patch.status;
-    const { error } = await supabase.from("external_cast_candidates").update(patch).eq("id", existing.data.id);
-    if (error) throw error;
-    return existing.data.id;
-  }
-
-  const { data, error } = await supabase.from("external_cast_candidates").insert(payload).select("id").single();
-  if (error) throw error;
-  return data.id;
+  const row = await refreshExternalRow(supabase, "external_cast_candidates", payload, {
+    source: SOURCE, source_actor_url: credit.sourceActorUrl, source_work_title: credit.sourceWorkTitle,
+    source_year: credit.sourceYear ?? null, source_role_raw: credit.sourceRoleRaw ?? null,
+  });
+  return row.id;
 }
 
 function createSupabaseClient() {
@@ -870,18 +740,15 @@ async function main() {
   let supabase = null;
   let existing = { actorMap: new Map(), playMap: new Map() };
 
-  if (args.write) {
+  if (args.write || args.fromDb) {
     supabase = createSupabaseClient();
     existing = await loadExistingRows(supabase);
-    console.log(`[db] actors=${existing.actorMap.size} playKeys=${existing.playMap.size}`);
+    console.log(`[db] actorKeys=${existing.actorMap.size} playKeys=${existing.playMap.size}`);
   }
 
   let actors = [];
 
   if (args.fromDb) {
-    if (!args.write) {
-      throw new Error("--from-db requires --write so the script can read external_actors");
-    }
     actors = await loadMatchedExternalActors(supabase, args.limitActors, args.offsetActors);
     console.log(`[actors] loaded from external_actors matched=${actors.length}`);
   } else {
@@ -917,9 +784,10 @@ async function main() {
   const workDetailCache = new Map();
 
   for (const actor of actors) {
-    const actorMatch = findActorMatch(existing.actorMap, actor);
-    if (args.write && !actorMatch) {
-      continue;
+    const automaticActorMatch = findActorMatch(existing.actorMap, actor);
+    if (args.write) {
+      const saved = await upsertExternalActor(supabase, actor, automaticActorMatch);
+      if (!saved.matched_actor_id || saved.match_status === "ignored") continue;
     }
 
     const html = await fetchHtml(actor.sourceActorUrl, args.delayMs);
@@ -930,7 +798,10 @@ async function main() {
 
     if (!args.write) continue;
 
-    const externalActorId = await upsertExternalActor(supabase, actorWithFacts, actorMatch);
+    const savedActor = await upsertExternalActor(supabase, actorWithFacts, automaticActorMatch);
+    if (!savedActor.matched_actor_id || savedActor.match_status === "ignored") continue;
+    const actorMatch = { id: savedActor.matched_actor_id };
+    const externalActorId = savedActor.id;
 
     for (const credit of credits) {
       let creditWithDetails = credit;
@@ -951,9 +822,11 @@ async function main() {
         };
       }
 
-      const playMatch = existing.playMap.get(normalizeMatchText(credit.sourceWorkTitle)) ?? null;
-      const externalPlayId = await upsertExternalPlay(supabase, creditWithDetails, playMatch);
-      await upsertCastCandidate(supabase, creditWithDetails, externalActorId, externalPlayId, actorMatch, playMatch);
+      const automaticPlayMatch = resolveSourcePlay(existing.playMap, credit).match;
+      const savedPlay = await upsertExternalPlay(supabase, creditWithDetails, automaticPlayMatch);
+      if (savedPlay.match_status === "ignored") continue;
+      const playMatch = savedPlay.matched_play_id ? { id: savedPlay.matched_play_id } : null;
+      await upsertCastCandidate(supabase, creditWithDetails, externalActorId, savedPlay.id, actorMatch, playMatch);
       writeCount += 1;
     }
   }

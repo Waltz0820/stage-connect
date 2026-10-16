@@ -1,3 +1,6 @@
+import PlayDiscoveryForm from "../../../components/PlayDiscoveryForm";
+import { isOshiPoint } from "../../../lib/oshi-points.mjs";
+import { getOshiDiscovery } from "../../../lib/oshi-server";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "../../../components/Breadcrumbs";
@@ -128,23 +131,46 @@ export default async function EnglishPlaysPage({
     path: "/en/plays",
   });
 
-  const sort = getSingleParam(params.sort) === "old" ? "old" : "new";
+  const requestedSort = getSingleParam(params.sort);
+  const sort = ["old", "support"].includes(requestedSort) ? requestedSort : "new";
+  const q = getSingleParam(params.q).trim().slice(0, 200);
+  const point = isOshiPoint(getSingleParam(params.point)) ? getSingleParam(params.point) : "";
+  const series = getSingleParam(params.series);
+  const streaming = getSingleParam(params.streaming) === "available" ? "available" : "";
+  const discovery = point ? await getOshiDiscovery(point) : { available: false, rows: [] };
+  const supportBySlug = new Map(discovery.rows.map((row) => [row.play_slug, row]));
+  const seriesOptions = Array.from(new Set(allPlays.map((play) => play.franchiseName).filter(Boolean))).map((name) => ({ value: name!, label: allPlays.find((play) => play.franchiseName === name)?.franchiseNameEn || name! })).sort((a,b) => a.label.localeCompare(b.label, "en"));
+  const discoveryMatches = (play: (typeof allPlays)[number]) => {
+    const normalize = (value: string) => value.normalize("NFKC").toLocaleLowerCase().replace(/[\s\u3000]+/g, "");
+    return (!q || normalize([play.title, play.titleEn, play.franchiseName, play.franchiseNameEn].join(" ")).includes(normalize(q)))
+      && (!series || play.franchiseName === series)
+      && (!streaming || Boolean(play.vod && Object.keys(play.vod).some((key) => play.vod?.[key])))
+      && (!point || !discovery.available || supportBySlug.has(play.slug));
+  };
+  const pageHref = (changes: Record<string, string | number>) => buildHref({ q, point, series, streaming, sort, format, genre, ...changes });
   const requestedFormat = getSingleParam(params.format);
   const format = requestedFormat && requestedFormat in EN_FORMAT_LABELS ? requestedFormat : "all";
   const requestedGenre = getSingleParam(params.genre);
   const genre = requestedGenre && requestedGenre in EN_GENRE_LABELS ? requestedGenre : "all";
   const requestedPage = Number(getSingleParam(params.page));
-  const page = Number.isFinite(requestedPage) && requestedPage > 0 ? requestedPage : 1;
+  const page = Number.isFinite(requestedPage) && requestedPage > 0 ? Math.floor(requestedPage) : 1;
 
-  const formatOptions = ["all", ...Object.keys(EN_FORMAT_LABELS)];
-  const genreOptions = ["all", ...Object.keys(EN_GENRE_LABELS)];
 
   const formatFiltered =
     format === "all" ? allPlays : allPlays.filter((play) => String(play.franchiseFormat ?? "") === format);
-  const filtered =
+  const objectiveFiltered =
     genre === "all" ? formatFiltered : formatFiltered.filter((play) => String(play.genre ?? "") === genre);
 
+  const filtered = objectiveFiltered.filter(discoveryMatches);
+
   const sorted = [...filtered].sort((a, b) => {
+    if (sort === "support" && point && discovery.available) {
+      const aScore = supportBySlug.get(a.slug); const bScore = supportBySlug.get(b.slug);
+      const diff = (bScore ? Number(bScore.votes) / Number(bScore.participants) : 0) - (aScore ? Number(aScore.votes) / Number(aScore.participants) : 0);
+      if (diff) return diff;
+      const votersDiff = Number(bScore?.participants ?? 0) - Number(aScore?.participants ?? 0);
+      if (votersDiff) return votersDiff;
+    }
     if (sort === "old") return periodSortKey(a.period) - periodSortKey(b.period);
     return periodSortKey(b.period) - periodSortKey(a.period);
   });
@@ -171,54 +197,13 @@ export default async function EnglishPlaysPage({
             </p>
           </div>
 
-          <div className="catalog-summary catalog-summary--ledger">
-            <span className="catalog-chip">Showing {filtered.length}</span>
-            <span className="catalog-chip">All plays {allPlays.length}</span>
-            <span className="catalog-chip">Page {safePage}</span>
-          </div>
         </section>
 
         <section className="section-card stack-md works-list-panel">
-          <h2 className="section-title">Filters</h2>
+          <PlayDiscoveryForm locale="en" values={{ q, point, series, streaming, sort, format, genre }} formats={EN_FORMAT_LABELS} genres={EN_GENRE_LABELS} seriesOptions={seriesOptions} pointAvailable={discovery.available} />
+          {filtered.length === 0 ? <p className="catalog-note">No productions match yet. Try other filters or share what you love on a production page.</p> : null}
 
-          <div className="filter-row filter-row--dense works-filter-row">
-            <Link
-              className={`filter-chip ${sort === "new" ? "is-active" : ""}`}
-              href={buildHref({ page: 1, sort: "new", format, genre })}
-            >
-              Newest first
-            </Link>
-            <Link
-              className={`filter-chip ${sort === "old" ? "is-active" : ""}`}
-              href={buildHref({ page: 1, sort: "old", format, genre })}
-            >
-              Oldest first
-            </Link>
-          </div>
-
-          <div className="filter-row filter-row--dense genre-filter-row works-filter-row">
-            {formatOptions.map((option) => (
-              <Link
-                key={option}
-                className={`filter-chip ${format === option ? "is-active" : ""}`}
-                href={buildHref({ page: 1, sort, format: option, genre })}
-              >
-                {option === "all" ? "All formats" : EN_FORMAT_LABELS[option]}
-              </Link>
-            ))}
-          </div>
-
-          <div className="filter-row filter-row--dense genre-filter-row works-filter-row">
-            {genreOptions.map((option) => (
-              <Link
-                key={option}
-                className={`filter-chip ${genre === option ? "is-active" : ""}`}
-                href={buildHref({ page: 1, sort, format, genre: option })}
-              >
-                {option === "all" ? "All genres" : EN_GENRE_LABELS[option]}
-              </Link>
-            ))}
-          </div>
+          <p className="catalog-count"><strong>{filtered.length.toLocaleString()}</strong> productions</p>
 
           <div className="catalog-grid catalog-grid--play-list">
             {visible.map((play) => (
@@ -236,7 +221,7 @@ export default async function EnglishPlaysPage({
 
                 <div className="play-list-card__main">
                   <div className="catalog-card__top catalog-card__top--stack">
-                    <div className="catalog-card__title">{getEnglishPlayTitle(play)}</div>
+                    <Link className="catalog-card__title" href={`/en/plays/${play.slug}`}>{getEnglishPlayTitle(play)}</Link>
                   </div>
 
                   <Link className="catalog-card__body-link" href={`/en/plays/${play.slug}`}>
@@ -289,6 +274,7 @@ export default async function EnglishPlaysPage({
                       </div>
                     </div>
 
+                    {point && supportBySlug.has(play.slug) ? <p className="point-support">{"Support "}{Math.round(Number(supportBySlug.get(play.slug)!.votes) / Number(supportBySlug.get(play.slug)!.participants) * 100)}% · {supportBySlug.get(play.slug)!.participants} participants</p> : null}
                     <div className="play-list-card__tag-row">
                       {getPlayCardTagsEn(play).map((tag) => (
                         <span className="play-list-card__tag" key={tag}>
@@ -313,7 +299,7 @@ export default async function EnglishPlaysPage({
             <div className="pagination-row">
               <Link
                 className={`pagination-link ${safePage === 1 ? "is-disabled" : ""}`}
-                href={buildHref({ page: Math.max(1, safePage - 1), sort, format, genre })}
+                href={pageHref({ page: Math.max(1, safePage - 1) })}
               >
                 Previous
               </Link>
@@ -322,7 +308,7 @@ export default async function EnglishPlaysPage({
               </span>
               <Link
                 className={`pagination-link ${safePage === totalPages ? "is-disabled" : ""}`}
-                href={buildHref({ page: Math.min(totalPages, safePage + 1), sort, format, genre })}
+                href={pageHref({ page: Math.min(totalPages, safePage + 1) })}
               >
                 Next
               </Link>

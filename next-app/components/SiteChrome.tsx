@@ -3,8 +3,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
-import FloatingCTA from "./FloatingCTA";
 import { SearchBarClient } from "./SearchBarClient";
+import { getLanguageTargets, isAdminPath } from "../lib/locale-routing";
 
 const copy = {
   ja: {
@@ -18,7 +18,6 @@ const copy = {
     ],
     mobileNavExtra: [
       { href: "/favorites", label: "お気に入り" },
-      { href: "/tags", label: "タグ" },
     ],
     favorites: "お気に入り",
     globalNavLabel: "グローバルナビゲーション",
@@ -31,13 +30,10 @@ const copy = {
     actors: "俳優一覧",
     series: "シリーズ一覧",
     guide: "ガイド / コラム",
-    tags: "タグ一覧",
     watch: "配信サービス一覧",
     contact: "お問い合わせ",
     privacy: "プライバシーポリシー",
     footerCopy: "2.5次元舞台とキャストをつなぐデジタルアーカイブ。",
-    ctaLabel: "2.5次元舞台を今すぐ観る",
-    ctaSubText: "POPULAR",
     ctaButton: "DMMプレミアム",
     localeLabel: "言語切替",
   },
@@ -52,7 +48,6 @@ const copy = {
     ],
     mobileNavExtra: [
       { href: "/favorites", label: "Favorites" },
-      { href: "/tags", label: "Tags" },
     ],
     favorites: "Favorites",
     globalNavLabel: "Global navigation",
@@ -65,61 +60,23 @@ const copy = {
     actors: "Browse Actors",
     series: "Browse Series",
     guide: "Guides / Columns",
-    tags: "Browse Tags",
     watch: "Streaming Guides",
     contact: "Contact",
     privacy: "Privacy Policy",
     footerCopy: "A digital archive connecting 2.5D stage productions and cast history.",
-    ctaLabel: "Watch 2.5D stage productions now",
-    ctaSubText: "POPULAR",
     ctaButton: "DMM Premium",
     localeLabel: "Language switcher",
   },
 } as const;
 
-type LocaleKey = keyof typeof copy;
-
-function getLanguageTargets(pathname: string | null) {
-  if (!pathname) {
-    return { locale: "ja" as const, jaHref: "/", enHref: "/en", enAvailable: true };
-  }
-
-  if (pathname === "/en") {
-    return { locale: "en" as const, jaHref: "/", enHref: "/en", enAvailable: true };
-  }
-
-  if (pathname.startsWith("/en/")) {
-    return {
-      locale: "en" as const,
-      jaHref: pathname.replace(/^\/en/, "") || "/",
-      enHref: pathname,
-      enAvailable: true,
-    };
-  }
-
-  const englishCompatible =
-    pathname === "/" ||
-    pathname === "/plays" ||
-    pathname.startsWith("/plays/") ||
-    pathname === "/series" ||
-    pathname.startsWith("/series/");
-
-  return {
-    locale: "ja" as const,
-    jaHref: pathname,
-    enHref: pathname === "/" ? "/en" : `/en${pathname}`,
-    enAvailable: englishCompatible,
-  };
-}
-
 export default function SiteChrome({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [showCTA, setShowCTA] = useState(false);
+  if (isAdminPath(pathname)) return <>{children}</>;
+  return <PublicSiteChrome pathname={pathname}>{children}</PublicSiteChrome>;
+}
 
-  if (pathname?.startsWith("/admin")) {
-    return <>{children}</>;
-  }
+function PublicSiteChrome({ pathname, children }: { pathname: string | null; children: React.ReactNode }) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const { locale, jaHref, enHref, enAvailable } = getLanguageTargets(pathname);
   const labels = copy[locale];
@@ -131,34 +88,13 @@ export default function SiteChrome({ children }: { children: React.ReactNode }) 
 
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? "hidden" : "";
+    const closeOnEscape = (event: KeyboardEvent) => { if (event.key === 'Escape') setIsMenuOpen(false); };
+    document.addEventListener('keydown', closeOnEscape);
     return () => {
       document.body.style.overflow = "";
+      document.removeEventListener('keydown', closeOnEscape);
     };
   }, [isMenuOpen]);
-
-  useEffect(() => {
-    let timer: ReturnType<typeof setTimeout> | null = null;
-    const idleMs = 1500;
-    const minScroll = 80;
-
-    const handleScroll = () => {
-      setShowCTA(false);
-
-      if (timer) clearTimeout(timer);
-
-      timer = setTimeout(() => {
-        if (window.scrollY > minScroll) {
-          setShowCTA(true);
-        }
-      }, idleMs);
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      if (timer) clearTimeout(timer);
-    };
-  }, []);
 
   const mobileFooterYear = useMemo(() => new Date().getFullYear(), []);
   const isActive = (href: string) => (href === "/" || href === "/en" ? pathname === href : Boolean(pathname?.startsWith(href)));
@@ -188,12 +124,13 @@ export default function SiteChrome({ children }: { children: React.ReactNode }) 
   );
 
   return (
-    <div className="page-shell">
+    <div className="page-shell stage-v2">
       <header className="site-header">
         <div className="container site-header__inner">
           <div className="site-header__left">
             <Link href={locale === "en" ? "/en" : "/"} className="site-brand">
-              STAGE <span>CONNECT</span>
+              STAGE CONNECT
+              <span className="site-brand__tagline">{locale === "ja" ? "2.5次元舞台とキャストをつなぐ" : "Connecting 2.5D stage and cast"}</span>
             </Link>
             <nav className="site-nav desktop-nav" aria-label={labels.globalNavLabel}>
               {labels.primaryNav.map((item) => (
@@ -217,6 +154,8 @@ export default function SiteChrome({ children }: { children: React.ReactNode }) 
             className="site-menu-button"
             onClick={() => setIsMenuOpen(true)}
             aria-label={labels.openMenu}
+            aria-expanded={isMenuOpen}
+            aria-controls="site-navigation"
           >
             <svg fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -225,7 +164,7 @@ export default function SiteChrome({ children }: { children: React.ReactNode }) 
         </div>
       </header>
 
-      <div className={`mobile-menu ${isMenuOpen ? "is-open" : ""}`}>
+      <div id="site-navigation" className={`mobile-menu ${isMenuOpen ? "is-open" : ""}`}>
         <div className="container mobile-menu__inner">
           <div className="mobile-menu__header">
             <span className="mobile-menu__title">MENU</span>
@@ -257,7 +196,7 @@ export default function SiteChrome({ children }: { children: React.ReactNode }) 
         </div>
       </div>
 
-      <main>{children}</main>
+      <div className="site-content">{children}</div>
 
       <footer className="site-footer">
         <div className="container site-footer__upper">
@@ -269,7 +208,6 @@ export default function SiteChrome({ children }: { children: React.ReactNode }) 
                 <li><Link href={locale === "en" ? "/en/actors" : "/actors"}>{labels.actors}</Link></li>
                 <li><Link href={locale === "en" ? "/en/series" : "/series"}>{labels.series}</Link></li>
                 <li><Link href="/guide">{labels.guide}</Link></li>
-                <li><Link href="/tags">{labels.tags}</Link></li>
                 <li><Link href="/favorites">{labels.favorites}</Link></li>
               </ul>
             </section>
@@ -306,13 +244,6 @@ export default function SiteChrome({ children }: { children: React.ReactNode }) 
         </div>
       </footer>
 
-      <FloatingCTA
-        url="https://al.dmm.com/?lurl=https%3A%2F%2Fpremium.dmm.com%2F&af_id=stageconnect-001&ch=link_tool&ch_id=text"
-        label={labels.ctaLabel}
-        subText={labels.ctaSubText}
-        buttonText={labels.ctaButton}
-        visible={locale === "ja" && showCTA}
-      />
     </div>
   );
 }

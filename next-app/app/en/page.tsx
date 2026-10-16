@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PlayPosterFrame } from "../../components/PlayPosterFrame";
 import { getEnglishSeriesName } from "../../lib/en-copy";
-import { getHomeStats, getSeriesList, getTrendingTags } from "../../lib/stage-connect";
+import { getHomeStats, getSeriesList } from "../../lib/stage-connect";
+
+import { OshiDiscoveryLinks } from "../../components/OshiPoints";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
 
@@ -95,8 +97,7 @@ const renderIcon = (type: "person" | "ticket" | "box") => {
 };
 
 export default async function EnglishHomePage() {
-  const [trendingTags, stats, series] = await Promise.all([
-    getTrendingTags(6),
+  const [stats, series] = await Promise.all([
     getHomeStats(),
     getSeriesList(),
   ]);
@@ -104,7 +105,7 @@ export default async function EnglishHomePage() {
   const featuredSeries = series.slice(0, 4);
   const actorsCount = stats.actorCount;
   const playsCount = stats.playCount;
-  const vodCount = stats.vodCount;
+
 
   return (
     <main className="home-shell">
@@ -120,9 +121,15 @@ export default async function EnglishHomePage() {
             <p className="home-stage__lead">
               Browse productions, series lines, cast history, and streaming availability
               <br />
-              from one dark, stage-inspired archive.
+              from one connected archive.
             </p>
           </div>
+
+          <form className="v2-search home-search" action="/en/search">
+            <label className="sr-only" htmlFor="home-query">Search plays, actors and series</label>
+            <span aria-hidden="true">⌕</span><input id="home-query" name="q" placeholder="Search plays, actors and series" />
+            <button type="submit" aria-label="Search">→</button>
+          </form>
 
           <div className="home-stage__actions">
             {HOME_ACTIONS.map((item) => (
@@ -148,21 +155,21 @@ export default async function EnglishHomePage() {
           <div className="home-stage__stats">
             <div className="home-stage__stat">
               <span className="home-stage__stat-label">Actors</span>
-              <strong>{actorsCount.toLocaleString()}+</strong>
+              <strong>{actorsCount.toLocaleString()}</strong>
             </div>
             <div className="home-stage__stat">
               <span className="home-stage__stat-label">Works</span>
-              <strong>{playsCount.toLocaleString()}+</strong>
+              <strong>{playsCount.toLocaleString()}</strong>
             </div>
             <div className="home-stage__stat">
-              <span className="home-stage__stat-label">Streaming</span>
-              <strong>{vodCount.toLocaleString()}+</strong>
+              <span className="home-stage__stat-label">Series</span>
+              <strong>{series.length.toLocaleString()}</strong>
             </div>
           </div>
 
           <section className="home-stage__section home-stage__section--open">
             <div className="home-stage__section-head">
-              <h2>Popular series</h2>
+              <h2>Explore series</h2>
               <Link href="/en/series">View all</Link>
             </div>
             <div className="home-stage__series-grid">
@@ -170,6 +177,7 @@ export default async function EnglishHomePage() {
                 <Link key={item.slug} href={`/en/series/${item.slug}`} className="home-stage__series-card">
                   <PlayPosterFrame title={getEnglishSeriesName(item)} seed={`${item.slug}-${item.originType ?? ""}`} />
                   <div className="home-stage__series-copy">
+                    <strong>{getEnglishSeriesName(item)}</strong>
                     <span>
                       {item.format === "musical" ? "Musical" : item.format === "stage" ? "Stage" : "Series"} /{" "}
                       {item.playCount} works
@@ -180,19 +188,15 @@ export default async function EnglishHomePage() {
             </div>
           </section>
 
-          <section className="home-stage__section home-stage__section--open">
-            <div className="home-stage__section-head">
-              <h2>Trending tags</h2>
-              <Link href="/tags">View all</Link>
-            </div>
-            <div className="home-stage__tag-grid">
-              {trendingTags.map((item) => (
-                <Link key={item.slug} href={`/tags/${encodeURIComponent(item.slug)}`} className="home-stage__tag">
-                  #{item.tag}
-                </Link>
-              ))}
-            </div>
+          <section className="home-streaming">
+            <h2>Explore streaming options</h2>
+            <Link className="home-streaming__banner" href="/watch/dmm">
+              <span className="home-streaming__play" aria-hidden="true">▶</span><strong>DMM TV</strong>
+              <span>Check streaming information for your next production</span><span aria-hidden="true">→</span>
+            </Link>
           </section>
+
+          <OshiDiscoveryLinks locale="en" />
         </div>
       </section>
     </main>

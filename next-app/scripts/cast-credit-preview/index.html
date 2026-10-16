@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>配役の整理プレビュー | Stage Connect</title>
+  <style>/* PREVIEW_CSS */</style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">STAGE CONNECT <span>WORKSPACE</span></div>
+    <span class="local-label">ローカル検討用</span>
+  </header>
+  <main>
+    <section class="intro">
+      <div><p class="eyebrow">CAST CREDIT REVIEW</p><h1>細かな出演情報を、残す。</h1><p class="lead">原文と整理案を見比べて、配役の持ち方を確認するプレビュー。</p></div>
+      <div class="intro-note">本番DBへの書き込みはありません。<br>変更はこのブラウザーに下書き保存されます。<br><span id="snapshot-date"></span></div>
+    </section>
+    <section class="metrics" aria-label="確認対象の件数" id="metrics"></section>
+    <div class="toolbar">
+      <div class="tabs" role="group" aria-label="対象の切り替え">
+        <button data-mode="featured" aria-pressed="true">代表例</button>
+        <button data-mode="review" aria-pressed="false">要確認</button>
+        <button data-mode="annotated" aria-pressed="false">補足あり</button>
+        <button data-mode="all" aria-pressed="false">全配役</button>
+        <button data-mode="synthetic" aria-pressed="false">架空の兼役例</button>
+      </div>
+      <button id="export" class="button secondary">下書きを書き出す <span aria-hidden="true">↗</span></button>
+    </div>
+    <div class="filters">
+      <label class="search"><span>検索</span><input id="search" type="search" placeholder="俳優・作品・役名・補足を検索" autocomplete="off"></label>
+      <label><span>シリーズ</span><select id="series"><option value="">すべてのシリーズ</option></select></label>
+      <span id="result-count" role="status" aria-live="polite"></span>
+    </div>
+    <section class="workspace" aria-label="配役の比較">
+      <aside class="record-list"><div class="list-title">確認する配役 <span id="list-count"></span></div><div id="records"></div></aside>
+      <article class="record-detail" id="detail"></article>
+    </section>
+    <footer><span>実データの整理案は、資料での事実確認が済んだ情報ではありません。</span><span id="save-status" role="status" aria-live="polite"></span></footer>
+  </main>
+  <dialog id="export-dialog">
+    <div class="dialog-header"><h2>下書きの書き出し</h2><button id="close-export" class="button secondary">閉じる</button></div>
+    <p>原文・整理案・確認メモを含むJSONです。架空例は別枠に分けています。</p>
+    <label>下書きJSON<textarea id="export-json" readonly spellcheck="false"></textarea></label>
+    <a id="download" class="button primary" download="stage-connect-cast-review.json">JSONをダウンロード</a>
+  </dialog>
+  <script id="preview-data" type="application/json">/* PREVIEW_DATA */</script>
+  <script>/* PREVIEW_JS */</script>
+</body>
+</html>

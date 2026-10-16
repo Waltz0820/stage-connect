@@ -1,3 +1,4 @@
+import OshiVotingClient from "../../../../components/OshiVotingClient";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -247,7 +248,6 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
       synopsis || `${displayTitle} cast and production archive page on Stage Connect.`
     ),
     url: `${siteUrl}/en/plays/${play.slug}`,
-    keywords: play.tags.join(", "),
     about: displaySeriesName || undefined,
     actor: play.cast.slice(0, 20).map((item) => ({
       "@type": "Person",
@@ -293,11 +293,6 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
             </div>
 
             <div className="pill-row">
-              {play.tags.map((tag) => (
-                <span className="pill" key={tag}>
-                  #{tag}
-                </span>
-              ))}
               {hasVod ? <span className="pill accent-pill">Streaming available</span> : null}
             </div>
 
@@ -329,6 +324,10 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
           </div>
         </section>
 
+        <nav className="detail-contents-nav" aria-label="Production contents">
+          <a href="#overview">Overview</a><a href="#cast">Cast</a><a href="#performances">Performances</a><a href="#streaming">Streaming</a><a href="#fan-points">Fan favorites</a>
+        </nav>
+
         <section className="section-card stack-md detail-stage-section play-detail-lead-section">
           <p className="lead">
             <strong className="strong-inline">{displayTitle}</strong> is listed with cast, series connection, public
@@ -336,12 +335,12 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
           </p>
         </section>
 
-        <section className="section-card stack-md detail-stage-section play-detail-synopsis-section">
+        <section id="overview" className="section-card stack-md detail-stage-section play-detail-synopsis-section">
           <h2 className="section-title">Synopsis</h2>
           <div className="rich-text">{synopsis || "Synopsis not available yet."}</div>
         </section>
 
-        <section className="section-card stack-md detail-stage-section play-detail-info-section">
+        <section id="performances" className="section-card stack-md detail-stage-section play-detail-info-section">
           <h2 className="section-title">Public information</h2>
           <div className="meta-list roomy">
             {play.period ? (
@@ -428,7 +427,7 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
           </section>
         ) : null}
 
-        <section className="section-card stack-md detail-stage-section play-streaming-section">
+        <section id="streaming" className="section-card stack-md detail-stage-section play-streaming-section">
           <h2 className="section-title">Streaming</h2>
           <p className="muted">
             {hasVod
@@ -454,7 +453,7 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
           </div>
         </section>
 
-        <section className="section-card stack-md detail-stage-section play-detail-cast-section">
+        <section id="cast" className="section-card stack-md detail-stage-section play-detail-cast-section">
           <h2 className="section-title">Cast</h2>
           {play.cast.length > 0 ? (
             <div className="stack-md">
@@ -494,6 +493,8 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
           )}
         </section>
 
+        <OshiVotingClient playId={play.id} locale="en" />
+
         {relatedPlays.length > 0 ? (
           <section className="section-card stack-md detail-stage-section play-detail-related-section">
             <div className="section-header-inline">
@@ -530,18 +531,6 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
           </section>
         ) : null}
 
-        {play.tags.length > 0 ? (
-          <section className="section-card stack-md detail-stage-section play-detail-tags-section">
-            <h2 className="section-title">Related tags</h2>
-            <div className="play-detail-tag-grid">
-              {play.tags.map((tag) => (
-                <span className="play-detail-tag" key={tag}>
-                  # {translateDisplayTextEn(tag)}
-                </span>
-              ))}
-            </div>
-          </section>
-        ) : null}
 
         <section className="section-card detail-stage-section play-detail-bottom-cta">
           <div>

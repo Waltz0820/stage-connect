@@ -3,12 +3,19 @@ import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "../../next-app/lib/admin-router-shim";
 import { supabase } from "../../next-app/lib/admin-supabase";
 import { toSlug } from "./widgets/utils";
+import { acceptCandidateWithHistory } from "../../next-app/lib/accept-external-candidate.mjs";
+import { actorQueueKey, filterCandidateActor, sameCandidateActor, buildCandidateActorQueue } from "../../next-app/lib/candidate-actor-scope.mjs";
+import { readAllRows } from "../../next-app/lib/source-match.mjs";
 
 type CandidateRow = {
   id: string;
   source: string;
   source_actor_name: string;
-  source_actor_url: string;
+  source_actor_url: string | null;
+  source_cast_group?: string | null;
+  source_credit_key?: string | null;
+  source_order?: number | null;
+  updated_at?: string | null;
   external_play_id?: string | null;
   source_work_title: string;
   source_work_url?: string | null;
@@ -44,7 +51,9 @@ type ExternalPlayDetailRow = {
 
 type UnmatchedActorQueueRow = {
   sourceActorName: string;
-  sourceActorUrl: string;
+  sourceActorUrl: string | null;
+  candidateId?: string;
+  sourceWorkUrl?: string | null;
   sourceActorKana?: string | null;
   aliasFrom?: string | null;
   aliasTo?: string | null;
@@ -301,8 +310,12 @@ const AdminExternalKiraHai: React.FC = () => {
     if (actorError) throw actorError;
 
     const actorUrls = ((actors ?? []) as ExternalActorRow[]).map((actor) => actor.source_actor_url);
+    const profilelessCandidates = await readAllRows(supabase, "external_cast_candidates", "*", {
+      configure: (query) => query.eq("source", "kira-hai").is("source_actor_url", null).is("matched_actor_id", null),
+    });
+    const profilelessQueue = buildCandidateActorQueue(profilelessCandidates);
     if (actorUrls.length === 0) {
-      setUnmatchedActorQueue([]);
+      setUnmatchedActorQueue(profilelessQueue);
       return;
     }
 
@@ -363,13 +376,13 @@ const AdminExternalKiraHai: React.FC = () => {
         );
       });
 
-    setUnmatchedActorQueue(queueRows);
+    setUnmatchedActorQueue([...queueRows, ...profilelessQueue]);
   };
 
   const loadWorkQueue = async () => {
     const { data, error } = await supabase
       .from("external_cast_candidates")
-      .select("source_work_title,source_work_url,source_year,source_actor_name,source_role_raw,matched_actor_id,matched_play_id,status")
+      .select("*")
       .eq("source", "kira-hai")
       .neq("status", "rejected")
       .order("source_work_title", { ascending: true })
@@ -411,7 +424,7 @@ const AdminExternalKiraHai: React.FC = () => {
         current.actorSamples.push(actorName);
       }
 
-      const roleName = normalizeText(row.source_role_raw);
+      const roleName = normalizeText(row.source_role_raw) || normalizeText(row.source_cast_group);
       if (roleName && !current.roleKeys.has(roleName) && current.roleSamples.length < 6) {
         current.roleKeys.add(roleName);
         current.roleSamples.push(roleName);
@@ -460,7 +473,7 @@ const AdminExternalKiraHai: React.FC = () => {
       const candidateQuery = supabase
         .from("external_cast_candidates")
         .select(
-          "id,source,source_actor_name,source_actor_url,external_play_id,source_work_title,source_work_url,source_year,source_role_raw,source_role_names,matched_actor_id,matched_play_id,accepted_cast_id,confidence,status,note,scraped_at"
+          "*"
         )
         .eq("source", "kira-hai")
         .order("scraped_at", { ascending: false })
@@ -532,7 +545,7 @@ const AdminExternalKiraHai: React.FC = () => {
   const stats = useMemo(() => {
     const actorTotal = actorStats.total || externalActors.length;
     const actorMatched = actorStats.matched || externalActors.filter((row) => row.matched_actor_id).length;
-    const canAccept = candidates.filter((row) => row.matched_actor_id && row.matched_play_id && row.status !== "accepted").length;
+    const canAccept = candidates.filter((row) => row.matched_actor_id && row.matched_play_id && row.status === "pending" && !row.accepted_cast_id).length;
     const canSkeleton = candidates.filter((row) => row.matched_actor_id && !row.matched_play_id && row.status !== "accepted").length;
 
     return { actorTotal, actorMatched, canAccept, canSkeleton };
@@ -549,6 +562,7 @@ const AdminExternalKiraHai: React.FC = () => {
         row.source_actor_name,
         row.source_work_title,
         row.source_role_raw,
+        row.source_cast_group,
         actor?.name,
         play?.title,
       ]
@@ -579,7 +593,7 @@ const AdminExternalKiraHai: React.FC = () => {
   );
 
   const readySelectedRows = useMemo(
-    () => selectedRows.filter((row) => row.matched_actor_id && row.matched_play_id && row.status !== "accepted"),
+    () => selectedRows.filter((row) => row.matched_actor_id && row.matched_play_id && row.status === "pending" && !row.accepted_cast_id),
     [selectedRows]
   );
 
@@ -630,6 +644,14 @@ const AdminExternalKiraHai: React.FC = () => {
   };
 
   const updateStatus = async (row: CandidateRow, nextStatus: string) => {
+    if (nextStatus === "accepted") {
+      await acceptCandidate(row);
+      return;
+    }
+    if (row.status === "accepted" || row.accepted_cast_id) {
+      setMsg("採用済みの候補は履歴と配役の整合性を保つため、状態だけを変更できません。");
+      return;
+    }
     setBusyId(row.id);
     setMsg("");
     try {
@@ -642,10 +664,12 @@ const AdminExternalKiraHai: React.FC = () => {
         patch.rejected_at = new Date().toISOString();
       }
 
-      const { error } = await supabase.from("external_cast_candidates").update(patch).eq("id", row.id);
+      const { data: changed, error } = await supabase.from("external_cast_candidates").update(patch)
+        .eq("id", row.id).neq("status", "accepted").is("accepted_cast_id", null).select("id,updated_at").maybeSingle();
       if (error) throw error;
+      if (!changed) throw new Error("候補が更新されています。再読み込みして状態を確認してください。");
 
-      setCandidates((current) => current.map((item) => (item.id === row.id ? { ...item, status: nextStatus } : item)));
+      setCandidates((current) => current.map((item) => (item.id === row.id ? { ...item, status: nextStatus, updated_at: changed.updated_at } : item)));
       if (nextStatus === "accepted" || nextStatus === "rejected") {
         setSelectedIds((current) => ({ ...current, [row.id]: false }));
       }
@@ -661,11 +685,12 @@ const AdminExternalKiraHai: React.FC = () => {
       "id" in row
         ? row
         : ({
-            id: row.sourceActorUrl,
+            id: row.candidateId || row.sourceActorUrl,
             source: "kira-hai",
             source_actor_name: row.sourceActorName,
             source_actor_url: row.sourceActorUrl,
             source_work_title: "",
+            source_work_url: row.sourceWorkUrl,
             status: "pending",
           } as CandidateRow);
 
@@ -706,20 +731,22 @@ const AdminExternalKiraHai: React.FC = () => {
       const now = new Date().toISOString();
       const sourceActorUrl = actorMatchTarget.source_actor_url;
 
-      const { error: externalActorError } = await supabase
-        .from("external_actors")
-        .update({
-          matched_actor_id: actor.id,
-          match_status: "matched",
-          match_confidence: 85,
-          updated_at: now,
-        })
-        .eq("source", "kira-hai")
-        .eq("source_actor_url", sourceActorUrl);
+      if (sourceActorUrl) {
+        const { error: externalActorError } = await supabase
+          .from("external_actors")
+          .update({
+            matched_actor_id: actor.id,
+            match_status: "matched_manual",
+            match_confidence: 85,
+            updated_at: now,
+          })
+          .eq("source", "kira-hai")
+          .eq("source_actor_url", sourceActorUrl);
 
-      if (externalActorError) throw externalActorError;
+        if (externalActorError) throw externalActorError;
+      }
 
-      const { error: candidatesError } = await supabase
+      const candidateUpdate = supabase
         .from("external_cast_candidates")
         .update({
           matched_actor_id: actor.id,
@@ -727,19 +754,23 @@ const AdminExternalKiraHai: React.FC = () => {
           updated_at: now,
         })
         .eq("source", "kira-hai")
-        .eq("source_actor_url", sourceActorUrl)
+        .in("status", ["pending", "needs_review"])
+        .is("accepted_cast_id", null)
         .is("matched_actor_id", null);
+      const { data: changedCandidates, error: candidatesError } = await filterCandidateActor(candidateUpdate, actorMatchTarget).select("id,updated_at");
 
       if (candidatesError) throw candidatesError;
+      if (!changedCandidates?.length) throw new Error("候補が更新されています。再読み込みして照合先を確認してください。");
+      const changedById = new Map(changedCandidates.map((item) => [item.id, item]));
 
       setActorsById((current) => ({ ...current, [actor.id]: actor }));
       setCandidates((current) =>
         current.map((item) =>
-          item.source_actor_url === sourceActorUrl ? { ...item, matched_actor_id: actor.id } : item
+          changedById.has(item.id) ? { ...item, matched_actor_id: actor.id, updated_at: changedById.get(item.id).updated_at } : item
         )
       );
-      setUnmatchedActorQueue((current) => current.filter((item) => item.sourceActorUrl !== sourceActorUrl));
-      setActorStats((current) => ({ ...current, matched: current.matched + 1 }));
+      setUnmatchedActorQueue((current) => current.filter((item) => !sameCandidateActor(item, actorMatchTarget)));
+      if (sourceActorUrl) setActorStats((current) => ({ ...current, matched: current.matched + 1 }));
       setActorMatchTarget(null);
       setActorSearchResults([]);
       setMsg(`${actorMatchTarget.source_actor_name} を ${actor.name} に手動マッチしました`);
@@ -857,7 +888,9 @@ const AdminExternalKiraHai: React.FC = () => {
           confidence: 70,
           updated_at: now,
         })
-        .eq("source", "kira-hai");
+        .eq("source", "kira-hai")
+        .in("status", ["pending", "needs_review"])
+        .is("accepted_cast_id", null);
 
       if (playMatchTarget.source_work_url) {
         candidateUpdate = candidateUpdate.eq("source_work_url", playMatchTarget.source_work_url);
@@ -871,9 +904,9 @@ const AdminExternalKiraHai: React.FC = () => {
       setPlaysById((current) => ({ ...current, [play.id]: play }));
       setCandidates((current) =>
         current.map((item) =>
-          (playMatchTarget.source_work_url && item.source_work_url === playMatchTarget.source_work_url) ||
-          (!playMatchTarget.source_work_url && item.source_work_title === playMatchTarget.source_work_title)
-            ? { ...item, matched_play_id: play.id }
+          !item.accepted_cast_id && ["pending", "needs_review"].includes(item.status) && ((playMatchTarget.source_work_url && item.source_work_url === playMatchTarget.source_work_url) ||
+          (!playMatchTarget.source_work_url && item.source_work_title === playMatchTarget.source_work_title))
+            ? { ...item, matched_play_id: play.id, updated_at: now }
             : item
         )
       );
@@ -903,7 +936,7 @@ const AdminExternalKiraHai: React.FC = () => {
     if (!row.matched_play_id) return;
 
     const ok = window.confirm(
-      `作品の紐づけを解除します。\n\n外部候補: ${row.source_work_title}\n\n同じ外部作品URL/作品名の候補も未照合に戻ります。続行しますか？`
+      `作品の紐づけを解除します。\n\n外部候補: ${row.source_work_title}\n\n同じ外部作品URL/作品名の未採用候補を保留に戻します。続行しますか？`
     );
     if (!ok) return;
 
@@ -917,7 +950,7 @@ const AdminExternalKiraHai: React.FC = () => {
           .from("external_plays")
           .update({
             matched_play_id: null,
-            match_status: "unmatched",
+            match_status: "unmatched_manual",
             match_confidence: 0,
             updated_at: now,
           })
@@ -930,10 +963,13 @@ const AdminExternalKiraHai: React.FC = () => {
         .from("external_cast_candidates")
         .update({
           matched_play_id: null,
+          status: "needs_review",
           confidence: row.matched_actor_id ? 60 : 0,
           updated_at: now,
         })
-        .eq("source", "kira-hai");
+        .eq("source", "kira-hai")
+        .in("status", ["pending", "needs_review"])
+        .is("accepted_cast_id", null);
 
       if (row.source_work_url) {
         candidateUpdate = candidateUpdate.eq("source_work_url", row.source_work_url);
@@ -946,9 +982,9 @@ const AdminExternalKiraHai: React.FC = () => {
 
       setCandidates((current) =>
         current.map((item) =>
-          (row.source_work_url && item.source_work_url === row.source_work_url) ||
-          (!row.source_work_url && item.source_work_title === row.source_work_title)
-            ? { ...item, matched_play_id: null, confidence: item.matched_actor_id ? 60 : 0 }
+          !item.accepted_cast_id && ["pending", "needs_review"].includes(item.status) && ((row.source_work_url && item.source_work_url === row.source_work_url) ||
+          (!row.source_work_url && item.source_work_title === row.source_work_title))
+            ? { ...item, status: "needs_review", matched_play_id: null, confidence: item.matched_actor_id ? 60 : 0, updated_at: now }
             : item
         )
       );
@@ -976,7 +1012,7 @@ const AdminExternalKiraHai: React.FC = () => {
   const loadWorkCandidateRows = async (row: WorkQueueRow) => {
     let query = supabase
       .from("external_cast_candidates")
-      .select("id,source,source_actor_name,source_actor_url,external_play_id,source_work_title,source_work_url,source_year,source_role_raw,source_role_names,matched_actor_id,matched_play_id,accepted_cast_id,confidence,status,note,scraped_at")
+      .select("*")
       .eq("source", "kira-hai")
       .neq("status", "rejected")
       .order("source_year", { ascending: true })
@@ -1009,45 +1045,7 @@ const AdminExternalKiraHai: React.FC = () => {
     const rows = await loadWorkCandidateRows(row);
     const targetRows = rows.filter((item) => !item.matched_actor_id);
     const factsByUrl = await loadExternalActorFactsByUrl(targetRows.map((item) => item.source_actor_url));
-    const statsByUrl = new Map<string, { candidateCount: number; matchedPlayCount: number; latestYear: number | null }>();
-
-    for (const item of rows) {
-      const url = item.source_actor_url;
-      const current = statsByUrl.get(url) ?? { candidateCount: 0, matchedPlayCount: 0, latestYear: null };
-      current.candidateCount += 1;
-      if (item.matched_play_id) current.matchedPlayCount += 1;
-      if (item.source_year && (!current.latestYear || item.source_year > current.latestYear)) {
-        current.latestYear = item.source_year;
-      }
-      statsByUrl.set(url, current);
-    }
-
-    return Array.from(factsByUrl.values())
-      .filter((actor: any) => !actor.matched_actor_id)
-      .map((actor: any) => {
-        const stat = statsByUrl.get(actor.source_actor_url) ?? {
-          candidateCount: 0,
-          matchedPlayCount: 0,
-          latestYear: null,
-        };
-        return {
-          sourceActorName: actor.source_actor_name,
-          sourceActorUrl: actor.source_actor_url,
-          sourceActorKana: actor.source_actor_kana,
-          aliasFrom: actor.alias_from,
-          aliasTo: actor.alias_to,
-          note: actor.note,
-          sourceProfileFactsRaw: actor.source_profile_facts_raw,
-          sourceBirthdayRaw: actor.source_birthday_raw,
-          sourceBirthday: actor.source_birthday,
-          sourceHeightCm: actor.source_height_cm,
-          sourceBloodType: actor.source_blood_type,
-          sourceAffiliationRaw: actor.source_affiliation_raw,
-          candidateCount: stat.candidateCount,
-          matchedPlayCount: stat.matchedPlayCount,
-          latestYear: stat.latestYear,
-        } as UnmatchedActorQueueRow;
-      });
+    return buildCandidateActorQueue(targetRows, factsByUrl) as UnmatchedActorQueueRow[];
   };
 
   const writeImportLog = async (payload: {
@@ -1073,69 +1071,77 @@ const AdminExternalKiraHai: React.FC = () => {
     }
   };
 
-  const loadActorCandidateRows = async (sourceActorUrl: string) => {
-    const { data, error } = await supabase
+  const loadActorCandidateRows = async (row: UnmatchedActorQueueRow) => {
+    const query = supabase
       .from("external_cast_candidates")
-      .select("id,source_work_title,source_work_url,source_year,source_role_raw,matched_play_id,status")
+      .select("*")
       .eq("source", "kira-hai")
-      .eq("source_actor_url", sourceActorUrl)
       .neq("status", "rejected")
       .order("source_year", { ascending: false })
       .limit(120);
+    const { data, error } = await filterCandidateActor(query, row);
 
     if (error) throw error;
     return (data ?? []) as CandidateRow[];
   };
 
   const copyActorProfileForGemini = async (row: UnmatchedActorQueueRow) => {
-    setBusyId(`profile:${row.sourceActorUrl}`);
+    setBusyId(`profile:${actorQueueKey(row)}`);
     setMsg("");
 
     try {
-      const rows = await loadActorCandidateRows(row.sourceActorUrl);
+      const rows = await loadActorCandidateRows(row);
       const appearanceLines = rows.map((item, index) => {
         const parts = [
           `${index + 1}. ${item.source_year || "-"}年`,
           item.source_work_title,
           item.source_role_raw ? `役: ${item.source_role_raw}` : "役: -",
+          item.source_cast_group ? `出演区分: ${item.source_cast_group}` : "",
+          `作品出典: ${item.source_work_url || "未取得"}`,
+          `配役候補ID: ${item.id}`,
           item.matched_play_id ? "SC作品一致あり" : "SC作品未照合",
         ];
         return parts.join(" / ");
       });
 
       const prompt = [
-        "Stage Connect 俳優プロフィール初稿作成用",
+        "Stage Connect 俳優の人物調査用",
         "",
         "前提:",
-        "- 以下の情報だけを根拠にしてください。",
-        "- Web検索・推測・補完は禁止です。",
-        "- 不明な情報は書かないでください。",
+        "- 以下は外部サイトから抽出した候補で、本人との接続・プロフィール各項目は未確認です。",
+        "- 作品出典を起点に公式公演サイト・本人・事務所等を確認し、同じ出演者と結び付く根拠を残してください。",
+        "- 同名、同じ読み、同じURL文字列だけで別のプロフィールを採用しないでください。出演者とスタッフも区別してください。",
+        "- かな・ローマ字・生年月日・性別・経歴は推測しないでください。見つからない項目は未確認としてください。",
+        "- 出演記録が確認できても、プロフィールや現在の所属を確認できたとは扱わないでください。",
+        "- 調査で見つからなかったことを、人物の不在・引退・別人確定と解釈しないでください。",
         "- 主観的な評価、誇張、人気の断定は避けてください。",
-        "- 2.5次元舞台・ミュージカルDB向けに、事実ベースで短く自然な文章にしてください。",
+        "- 公開プロフィールは基本情報と出演関係を中心にした最小限の表示です。一般的な紹介文や経歴の長文要約は作らないでください。",
+        "- 元宝塚など、人物を理解するうえで重要な経歴は、本人との接点と根拠を確認できた場合だけ短い補足として提案してください。",
+        "- 情報が少ない場合は出演記録だけで構いません。文章の長さを満たすために補完しないでください。",
         "",
         "出力してほしいもの:",
-        "1. 日本語プロフィール文: 80〜140字程度",
-        "2. 英語プロフィール文: 1〜2文",
-        "3. 1行ステータス: 40〜70字程度",
-        "4. 注意点: 情報不足・確認が必要そうな点があれば箇条書き",
+        "1. 出演者とプロフィールの接点: 確認済み / 未確認。確認済みなら根拠URL・確認日・接点を記載",
+        "2. 項目別の調査結果: 読み、英語表記、生年月日、身長、血液型、性別。各項目に値・確認済み/未確認/不一致・根拠URL・確認日",
+        "3. 同名候補・情報の不一致・取得できないページ・実行した検索を記録",
+        "4. 特記する経歴があれば、根拠URL・確認日を付けて短い補足を任意提案。一般的なプロフィール文は不要",
         "",
-        "基本情報:",
+        "抽出された基本情報候補（未確認）:",
         `名前: ${row.sourceActorName}`,
         `読み: ${row.sourceActorKana || "-"}`,
         `生年月日: ${row.sourceBirthdayRaw || row.sourceBirthday || "-"}`,
         `身長: ${row.sourceHeightCm ? `${row.sourceHeightCm}cm` : "-"}`,
         `血液型: ${row.sourceBloodType ? `${row.sourceBloodType}型` : "-"}`,
         `所属候補: ${row.sourceAffiliationRaw || "-"}`,
-        `外部URL: ${row.sourceActorUrl || "-"}`,
+        `俳優個別ページ: ${row.sourceActorUrl || "なし。作品の配役行単位で人物確認が必要"}`,
         row.note ? `注記: ${row.note}` : "",
         row.sourceProfileFactsRaw ? `raw基本情報: ${row.sourceProfileFactsRaw}` : "",
         "",
-        "出演作候補:",
+        "出演作候補（最大120件。完全な出演歴ではありません）:",
         ...(appearanceLines.length > 0 ? appearanceLines : ["- 出演作候補なし"]),
       ].filter(Boolean);
 
       await navigator.clipboard.writeText(prompt.join("\n"));
-      setMsg(`プロフィール用コピーを作成しました: ${row.sourceActorName} / 出演候補 ${rows.length}件`);
+      setMsg(`人物調査用コピーを作成しました: ${row.sourceActorName} / 出演候補 ${rows.length}件`);
     } catch (error: any) {
       setMsg(error?.message ?? "copy actor profile prompt error");
     } finally {
@@ -1177,7 +1183,7 @@ const AdminExternalKiraHai: React.FC = () => {
           ].filter(Boolean);
 
           return [
-            `${index + 1}. ${item.source_actor_name} / 役名: ${item.source_role_raw || "-"} / 年: ${item.source_year || "-"}`,
+            `${index + 1}. ${item.source_actor_name} / 役名: ${item.source_role_raw || "-"} / 区分: ${item.source_cast_group || "-"} / 年: ${item.source_year || "-"}`,
             `   俳優URL: ${item.source_actor_url || "-"}`,
             `   作品URL: ${item.source_work_url || "-"}`,
             `   照合: actor=${item.matched_actor_id ? "matched" : "unmatched"} / play=${item.matched_play_id ? "matched" : "unmatched"} / status=${item.status}`,
@@ -1201,7 +1207,7 @@ const AdminExternalKiraHai: React.FC = () => {
   const acceptCandidate = async (row: CandidateRow) => {
     if (!row.matched_actor_id || !row.matched_play_id) {
       setMsg("既存actorと既存playの両方に一致している候補だけ採用できます");
-      return;
+      return false;
     }
 
     const roleName = getCandidateRoleName(row);
@@ -1210,80 +1216,19 @@ const AdminExternalKiraHai: React.FC = () => {
     setBusyId(row.id);
     setMsg("");
     try {
-      let existingQuery = supabase
-        .from("casts")
-        .select("id")
-        .eq("actor_id", row.matched_actor_id)
-        .eq("play_id", row.matched_play_id)
-        .is("cast_group", null)
-        .limit(1);
-
-      existingQuery = roleName ? existingQuery.eq("role_name", roleName) : existingQuery.is("role_name", null);
-
-      const { data: existingCast, error: existingError } = await existingQuery.maybeSingle();
-      if (existingError) throw existingError;
-
-      let acceptedCastId = existingCast?.id ?? null;
-
-      if (!acceptedCastId) {
-        const { data: inserted, error: insertError } = await supabase
-          .from("casts")
-          .insert({
-            actor_id: row.matched_actor_id,
-            play_id: row.matched_play_id,
-            role_name: roleName,
-            cast_group: null,
-          })
-          .select("id")
-          .single();
-
-        if (insertError) throw insertError;
-        acceptedCastId = inserted?.id ?? null;
-      }
-
-      const acceptedAt = new Date().toISOString();
-      const { error: updateError } = await supabase
-        .from("external_cast_candidates")
-        .update({
-          status: "accepted",
-          accepted_cast_id: acceptedCastId,
-          accepted_at: acceptedAt,
-          updated_at: acceptedAt,
-        })
-        .eq("id", row.id);
-
-      if (updateError) throw updateError;
-
-      setCandidates((current) =>
-        current.map((item) =>
-          item.id === row.id
-            ? { ...item, status: "accepted", accepted_cast_id: acceptedCastId }
-            : item
-        )
-      );
+      const result = await acceptCandidateWithHistory(supabase, row, roleName);
+      setCandidates((current) => current.map((item) => item.id === row.id
+        ? { ...item, status: "accepted", accepted_cast_id: result.accepted_cast_id } : item));
       setSelectedIds((current) => ({ ...current, [row.id]: false }));
-      if (roleWasEdited) {
-        resetCandidateRoleEdit(row);
-      }
-      await writeImportLog({
-        action: existingCast?.id ? "mark_existing_cast_accepted" : "create_cast",
-        targetType: "cast",
-        targetId: acceptedCastId,
-        targetLabel: `${row.source_work_title} / ${row.source_actor_name} / ${roleName || "-"}`,
-        sourceUrl: row.source_work_url || row.source_actor_url,
-        details: {
-          source_actor_name: row.source_actor_name,
-          source_work_title: row.source_work_title,
-          source_role_raw: row.source_role_raw,
-          accepted_role_name: roleName,
-          role_edited: roleWasEdited,
-          matched_actor_id: row.matched_actor_id,
-          matched_play_id: row.matched_play_id,
-        },
-      });
-      setMsg(existingCast?.id ? "既存castsに紐づけて採用済みにしました" : "castsに採用しました");
+      if (roleWasEdited) resetCandidateRoleEdit(row);
+      await loadImportLogs();
+      setMsg(result.already_accepted ? "採用済みの配役を確認しました"
+        : result.history_saved ? "配役・採用状態・履歴を保存しました"
+        : "配役と採用状態は保存しましたが、履歴の保存に失敗しました。登録内容を確認してください。");
+      return result.history_saved !== false;
     } catch (error: any) {
       setMsg(error?.message ?? "accept error");
+      return false;
     } finally {
       setBusyId(null);
     }
@@ -1402,7 +1347,7 @@ const AdminExternalKiraHai: React.FC = () => {
       current.map((item) =>
         (row.source_work_url && item.source_work_url === row.source_work_url) ||
         (!row.source_work_url && item.source_work_title === row.source_work_title)
-          ? { ...item, matched_play_id: createdPlay.id }
+          ? { ...item, matched_play_id: createdPlay.id, updated_at: now }
           : item
       )
     );
@@ -1424,7 +1369,7 @@ const AdminExternalKiraHai: React.FC = () => {
     });
 
     if (options.acceptAfter) {
-      await acceptCandidate({ ...row, matched_play_id: createdPlay.id });
+      await acceptCandidate({ ...row, matched_play_id: createdPlay.id, updated_at: now });
       setSelectedIds((current) => ({ ...current, [row.id]: false }));
     }
 
@@ -1455,6 +1400,10 @@ const AdminExternalKiraHai: React.FC = () => {
   };
 
   const createSkeletonActor = async (row: UnmatchedActorQueueRow) => {
+    if (!row.sourceActorUrl) {
+      setMsg("俳優ページのない候補です。人物情報を確認して俳優を作成し、この候補に紐付けてください。");
+      return;
+    }
     setBusyId(row.sourceActorUrl);
     setMsg("");
 
@@ -1477,7 +1426,7 @@ const AdminExternalKiraHai: React.FC = () => {
           profile_en: null,
           height_cm: heightCm,
           blood_type: bloodType,
-          gender: "male",
+          gender: null,
           image_url: null,
           sns: {},
           featured_play_slugs: [],
@@ -1519,7 +1468,7 @@ const AdminExternalKiraHai: React.FC = () => {
       setActorsById((current) => ({ ...current, [actor.id]: actor }));
       setCandidates((current) =>
         current.map((item) =>
-          item.source_actor_url === row.sourceActorUrl ? { ...item, matched_actor_id: actor.id } : item
+          item.source_actor_url === row.sourceActorUrl ? { ...item, matched_actor_id: actor.id, updated_at: now } : item
         )
       );
       setUnmatchedActorQueue((current) => current.filter((item) => item.sourceActorUrl !== row.sourceActorUrl));
@@ -1558,10 +1507,10 @@ const AdminExternalKiraHai: React.FC = () => {
     setMsg("");
 
     try {
-      const actorRows = await buildUnmatchedActorRowsForWork(row);
+      const actorRows = (await buildUnmatchedActorRowsForWork(row)).filter((actor) => actor.sourceActorUrl);
 
       if (actorRows.length === 0) {
-        setMsg(`この作品に未照合俳優はありません: ${row.sourceWorkTitle}`);
+        setMsg(`俳優ページ付きの作成対象はありません。ページのない候補は人物情報を確認して個別に紐付けてください: ${row.sourceWorkTitle}`);
         return;
       }
 
@@ -1632,13 +1581,17 @@ const AdminExternalKiraHai: React.FC = () => {
     try {
       const { data: latestCandidate, error: latestCandidateError } = await supabase
         .from("external_cast_candidates")
-        .select("matched_play_id")
+        .select("matched_play_id,updated_at")
         .eq("id", row.id)
         .maybeSingle();
 
       if (latestCandidateError) throw latestCandidateError;
 
       if (latestCandidate?.matched_play_id) {
+        if (row.source_credit_key || row.source_cast_group) {
+          setMsg("作品の照合先が更新されています。候補を再読み込みして確認してください。");
+          return;
+        }
         await acceptCandidate({ ...row, matched_play_id: latestCandidate.matched_play_id });
         return;
       }
@@ -1716,12 +1669,12 @@ const AdminExternalKiraHai: React.FC = () => {
         current.map((item) =>
           (row.source_work_url && item.source_work_url === row.source_work_url) ||
           (!row.source_work_url && item.source_work_title === row.source_work_title)
-            ? { ...item, matched_play_id: createdPlay.id }
+            ? { ...item, matched_play_id: createdPlay.id, updated_at: now }
             : item
         )
       );
 
-      await acceptCandidate({ ...row, matched_play_id: createdPlay.id });
+      await acceptCandidate({ ...row, matched_play_id: createdPlay.id, updated_at: now });
       setSelectedIds((current) => ({ ...current, [row.id]: false }));
       setMsg(`作品skeleton「${createdPlay.title}」を作成して採用しました`);
     } catch (error: any) {
@@ -1871,7 +1824,7 @@ const AdminExternalKiraHai: React.FC = () => {
         current.map((item) =>
           (row.sourceWorkUrl && item.source_work_url === row.sourceWorkUrl) ||
           (!row.sourceWorkUrl && item.source_work_title === row.sourceWorkTitle)
-            ? { ...item, matched_play_id: createdPlay.id }
+            ? { ...item, matched_play_id: createdPlay.id, updated_at: now }
             : item
         )
       );
@@ -1908,8 +1861,13 @@ const AdminExternalKiraHai: React.FC = () => {
     setBulkBusy(true);
     setMsg(`一括採用を開始します: ${readySelectedRows.length}件`);
     try {
+      let completed = 0;
       for (const row of readySelectedRows) {
-        await acceptCandidate(row);
+        if (!(await acceptCandidate(row))) {
+          setMsg((message) => `一括採用を停止しました。完了 ${completed}/${readySelectedRows.length}件。${message}`);
+          return;
+        }
+        completed += 1;
       }
       setMsg(`一括採用が完了しました: ${readySelectedRows.length}件`);
     } finally {
@@ -2229,7 +2187,7 @@ const AdminExternalKiraHai: React.FC = () => {
                   <div className="mt-4 rounded-2xl border border-white/10 bg-black/25 p-4">
                     <div className="flex flex-wrap items-center justify-between gap-2">
                       <div className="text-xs font-bold text-slate-300">
-                        作成対象の未照合俳優 {workActorPreview.rows.length}人
+                        未照合俳優 {workActorPreview.rows.length}人（個別ページなしの候補は人物確認が必要）
                       </div>
                       <button
                         type="button"
@@ -2243,9 +2201,10 @@ const AdminExternalKiraHai: React.FC = () => {
                     {workActorPreview.rows.length > 0 ? (
                       <div className="mt-3 grid gap-2 md:grid-cols-2 xl:grid-cols-3">
                         {workActorPreview.rows.map((actor) => (
-                          <div key={actor.sourceActorUrl} className="rounded-xl border border-white/10 bg-black/30 p-3">
+                          <div key={actorQueueKey(actor)} className="rounded-xl border border-white/10 bg-black/30 p-3">
                             <div className="font-bold text-white">{actor.sourceActorName}</div>
                             <div className="mt-1 text-xs text-slate-400">{actor.sourceActorKana || "読み未取得"}</div>
+                            {!actor.sourceActorUrl ? <div className="mt-1 text-xs text-amber-200">俳優個別ページなし・一括作成の対象外</div> : null}
                             <div className="mt-2 flex flex-wrap gap-1 text-[11px] text-slate-400">
                               {actor.sourceBirthdayRaw || actor.sourceBirthday ? (
                                 <span className="rounded-full bg-white/5 px-2 py-1">
@@ -2441,7 +2400,7 @@ const AdminExternalKiraHai: React.FC = () => {
 
           <div className="divide-y divide-white/5">
             {unmatchedActorQueue.map((row) => (
-              <div key={row.sourceActorUrl} className="p-5">
+              <div key={actorQueueKey(row)} className="p-5">
                 <div className="flex flex-wrap items-start justify-between gap-4">
                   <div className="min-w-0 flex-1">
                     <div className="flex flex-wrap items-center gap-2">
@@ -2512,10 +2471,10 @@ const AdminExternalKiraHai: React.FC = () => {
                     <button
                       type="button"
                       onClick={() => void copyActorProfileForGemini(row)}
-                      disabled={busyId === `profile:${row.sourceActorUrl}`}
+                      disabled={busyId === `profile:${actorQueueKey(row)}`}
                       className="rounded-full border border-fuchsia-500/30 bg-fuchsia-500/15 px-3 py-2 text-xs font-bold text-fuchsia-100 hover:bg-fuchsia-500/20 disabled:opacity-40"
                     >
-                      プロフィール用コピー
+                      人物調査用コピー
                     </button>
                     <button
                       type="button"
@@ -2527,7 +2486,7 @@ const AdminExternalKiraHai: React.FC = () => {
                     <button
                       type="button"
                       onClick={() => void createSkeletonActor(row)}
-                      disabled={busyId === row.sourceActorUrl}
+                      disabled={!row.sourceActorUrl || busyId === row.sourceActorUrl}
                       className="rounded-full border border-sky-500/30 bg-sky-500/15 px-3 py-2 text-xs font-bold text-sky-100 hover:bg-sky-500/20 disabled:cursor-not-allowed disabled:opacity-40"
                     >
                       俳優skeleton作成
@@ -2556,7 +2515,7 @@ const AdminExternalKiraHai: React.FC = () => {
           {visibleCandidates.map((row) => {
             const actor = row.matched_actor_id ? actorsById[row.matched_actor_id] : null;
             const play = row.matched_play_id ? playsById[row.matched_play_id] : null;
-            const canAccept = Boolean(actor && play && row.status !== "accepted");
+            const canAccept = Boolean(actor && play && row.status === "pending" && !row.accepted_cast_id);
             const canCreateSkeleton = Boolean(actor && !play && row.status !== "accepted");
             const canSelect = Boolean(actor && row.status !== "accepted");
 
@@ -2607,6 +2566,7 @@ const AdminExternalKiraHai: React.FC = () => {
                               俳優元
                             </a>
                           ) : null}
+                          {!row.source_actor_url ? <span className="text-xs text-slate-500">俳優個別ページなし</span> : null}
                         </div>
                         <div className="mt-2 flex flex-wrap items-center gap-2 text-sm text-slate-300">
                           <span>{row.source_work_title}</span>
@@ -2643,6 +2603,8 @@ const AdminExternalKiraHai: React.FC = () => {
                           {row.source_role_raw ? (
                             <div className="mt-1 text-[11px] text-slate-500">元候補: {row.source_role_raw}</div>
                           ) : null}
+                          {row.source_cast_group ? <div className="mt-2 text-sm text-slate-300">出演区分: {row.source_cast_group}</div> : null}
+                          {row.source_order ? <div className="mt-1 text-[11px] text-slate-500">出典での順番: {row.source_order}（掲載順は未確定）</div> : null}
                         </div>
                       </div>
 

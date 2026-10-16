@@ -50,7 +50,7 @@ const normalizeActorRow = (row: any): Actor => {
     birthday: row.birthday ?? "",
     profile: row.profile ?? "",
     imageUrl: row.image_url ?? row.imageUrl ?? "",
-    gender: (row.gender ?? "male") as Gender,
+    gender: (row.gender ?? undefined) as Gender | undefined,
     sns: (row.sns as Actor["sns"]) ?? {},
     featuredPlaySlugs: (row.featured_play_slugs as string[] | undefined) ?? [],
     tags: (row.tags as string[] | undefined) ?? [],

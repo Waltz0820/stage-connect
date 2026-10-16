@@ -62,7 +62,7 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
   const [profileEn, setProfileEn] = useState("");
   const [heightCm, setHeightCm] = useState("");
   const [bloodType, setBloodType] = useState("");
-  const [gender, setGender] = useState("male");
+  const [gender, setGender] = useState("");
   const [imageUrl, setImageUrl] = useState("");
   const [featured, setFeatured] = useState("");
   const [snsText, setSnsText] = useState("");
@@ -88,7 +88,7 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
       setProfileEn("");
       setHeightCm("");
       setBloodType("");
-      setGender("male");
+      setGender("");
       setImageUrl("");
       setFeatured("");
       setSnsText(stringifyPretty({}));
@@ -123,7 +123,7 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         setProfileEn(r.profile_en ?? "");
         setHeightCm(r.height_cm != null ? String(r.height_cm) : "");
         setBloodType(r.blood_type ?? "");
-        setGender((r.gender as any) ?? "male");
+        setGender((r.gender as any) ?? "");
         setImageUrl(r.image_url ?? "");
         setFeatured((r.featured_play_slugs ?? []).join(", "));
         const nextSns = pickSns(r.sns ?? {});
@@ -174,7 +174,7 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
         profile_en: safeTrim(profileEn) || null,
         height_cm: safeTrim(heightCm) ? Number.parseInt(safeTrim(heightCm), 10) || null : null,
         blood_type: safeTrim(bloodType).toUpperCase() || null,
-        gender: safeTrim(gender) || "male",
+        gender: safeTrim(gender) || null,
         image_url: safeTrim(imageUrl) || null,
 
         // ✅ tags は送らない（俳優タグ廃止）
@@ -380,12 +380,13 @@ const AdminActorEdit: React.FC<{ mode: Mode }> = ({ mode }) => {
             />
           </Field>
 
-          <Field label="gender">
+          <Field label="gender" hint="確認できない場合は未確認のまま保存できます">
             <select
               className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none"
               value={gender}
               onChange={(e) => setGender(e.target.value)}
             >
+              <option value="">未確認</option>
               <option value="male">male</option>
               <option value="female">female</option>
               <option value="other">other</option>

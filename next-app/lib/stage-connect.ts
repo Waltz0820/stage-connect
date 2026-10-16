@@ -81,7 +81,7 @@ export type SeriesDetailData = {
     summary: string | null;
     summaryEn: string | null;
     vod: Record<string, string> | null;
-    tags: string[];
+
   }>;
   topActors: Array<{
     actor: {
@@ -198,16 +198,6 @@ export type GuideDetailData = {
   }>;
 };
 
-export type TagListItem = {
-  id: string;
-  slug: string;
-  name: string;
-  type: "world" | "experience" | "origin";
-  description: string;
-  playsCount: number;
-  priority: number;
-};
-
 export type TagDetailData = {
   id: string;
   slug: string;
@@ -260,13 +250,6 @@ export type WatchOverviewData = {
   dmmTopFranchises: WatchFranchiseItem[];
 };
 
-export type TrendingTag = {
-  tag: string;
-  slug: string;
-  rank: number;
-  count: number;
-};
-
 export type PlayDetailData = {
   id: string;
   slug: string;
@@ -280,7 +263,7 @@ export type PlayDetailData = {
   franchiseName: string | null;
   franchiseNameEn: string | null;
   franchiseSlug: string | null;
-  tags: string[];
+
   credits: unknown;
   cast: ActorLink[];
 };
@@ -426,11 +409,6 @@ export async function getPlayDetailBySlug(slug: string): Promise<PlayDetailData 
           name,
           name_en,
           slug
-        ),
-        play_tags:play_tags (
-          tag:tags (
-            name
-          )
         )
       `
       )
@@ -463,11 +441,6 @@ export async function getPlayDetailBySlug(slug: string): Promise<PlayDetailData 
           name,
           ${includeFranchiseNameEn ? "name_en," : ""}
           slug
-        ),
-        play_tags:play_tags (
-          tag:tags (
-            name
-          )
         )
       `
       )
@@ -582,7 +555,6 @@ export async function getPlayDetailBySlug(slug: string): Promise<PlayDetailData 
     })
     .map(({ billingOrder, createdAt, ...row }) => row);
 
-  const tags = uniq(((play.play_tags ?? []) as any[]).map((item) => item?.tag?.name));
   const franchise = Array.isArray(play.franchise) ? play.franchise[0] : play.franchise;
 
   return {
@@ -599,7 +571,6 @@ export async function getPlayDetailBySlug(slug: string): Promise<PlayDetailData 
     franchiseName: franchise?.name ?? null,
     franchiseNameEn: franchise?.name_en ?? null,
     franchiseSlug: franchise?.slug ?? null,
-    tags,
     cast,
   };
 }
@@ -1037,12 +1008,7 @@ export async function getSeriesDetailBySlug(slug: string): Promise<SeriesDetailD
         summary,
         summary_en,
         vod,
-        created_at,
-        play_tags:play_tags (
-          tag:tags (
-            name
-          )
-        )
+        created_at
       `
       )
       .eq("franchise_id", franchise.id);
@@ -1066,12 +1032,7 @@ export async function getSeriesDetailBySlug(slug: string): Promise<SeriesDetailD
         summary,
         ${includeSummaryEn ? "summary_en," : ""}
         vod,
-        created_at,
-        play_tags:play_tags (
-          tag:tags (
-            name
-          )
-        )
+        created_at
       `
       )
       .eq("franchise_id", franchise.id);
@@ -1098,7 +1059,6 @@ export async function getSeriesDetailBySlug(slug: string): Promise<SeriesDetailD
       summaryEn: (row.summary_en as string | null) ?? null,
       vod: (row.vod as Record<string, string> | null) ?? null,
       createdAt: (row.created_at as string | null) ?? null,
-      tags: uniq(((row.play_tags ?? []) as any[]).map((item) => item?.tag?.name)),
     }))
     .sort((a, b) => {
       const diff = periodStartSortKey(b.period) - periodStartSortKey(a.period);
@@ -2329,41 +2289,6 @@ export async function getGuideDetailBySlug(slug: string): Promise<GuideDetailDat
   };
 }
 
-export async function getTagList(): Promise<TagListItem[]> {
-  if (!hasSupabaseEnv) return [];
-  const supabase = createSupabaseServerClient();
-  const { data, error } = await supabase
-    .from("public_tags_min2")
-    .select("tag_id, slug, name, type, description, plays_count, priority")
-    .order("priority", { ascending: false })
-    .order("plays_count", { ascending: false })
-    .order("name", { ascending: true });
-
-  if (error) throw error;
-
-  return ((data ?? []) as any[])
-    .map((row) => {
-      const id = String(row?.tag_id ?? "").trim();
-      const slug = String(row?.slug ?? "").trim();
-      const name = String(row?.name ?? "").trim();
-      const type = row?.type;
-
-      if (!id || !slug || !name) return null;
-      if (type !== "world" && type !== "experience" && type !== "origin") return null;
-
-      return {
-        id,
-        slug,
-        name,
-        type,
-        description: String(row?.description ?? "").trim(),
-        playsCount: typeof row?.plays_count === "number" ? row.plays_count : 0,
-        priority: typeof row?.priority === "number" ? row.priority : 0,
-      } satisfies TagListItem;
-    })
-    .filter((item): item is TagListItem => Boolean(item));
-}
-
 export async function getTagDetailBySlug(slug: string): Promise<TagDetailData | null> {
   if (!hasSupabaseEnv) return null;
   const supabase = createSupabaseServerClient();
@@ -2597,27 +2522,6 @@ export async function getWatchOverview(): Promise<WatchOverviewData> {
     dmmSeriesCount: typeof count === "number" ? count : 0,
     dmmTopFranchises,
   };
-}
-
-export async function getTrendingTags(limit = 25): Promise<TrendingTag[]> {
-  if (!hasSupabaseEnv) return [];
-  const supabase = createSupabaseServerClient();
-  const { data, error } = await supabase.rpc("get_trending_tags", { p_limit: limit });
-
-  if (error) throw error;
-
-  const rows = (data ?? []) as Array<{
-    name: string;
-    slug: string | null;
-    usage_count: number | string | null;
-  }>;
-
-  return rows.map((row, index) => ({
-    tag: row.name,
-    slug: row.slug ?? row.name,
-    count: Number(row.usage_count ?? 0),
-    rank: index + 1,
-  }));
 }
 
 export const toPlainText = (value: unknown) =>

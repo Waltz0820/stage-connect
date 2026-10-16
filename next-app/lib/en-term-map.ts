@@ -750,17 +750,21 @@ export const EN_PARTIAL_TERM_MAP: Array<[string, string]> = [
 export const translateExactTermEn = (value?: string | null) => {
   const raw = String(value ?? "").trim();
   if (!raw) return "";
-  return EN_EXACT_TERM_MAP[raw] ?? raw;
+  return Object.hasOwn(EN_EXACT_TERM_MAP, raw) ? EN_EXACT_TERM_MAP[raw] : raw;
 };
+
+// Specific phrases must win before a shorter rule consumes part of the source.
+// Sort a copy so the editable dictionary keeps its original organization.
+const orderedPartialTerms = [...EN_PARTIAL_TERM_MAP].sort(([a], [b]) => b.length - a.length);
 
 export const translateKnownTermsEn = (value?: string | null) => {
   const raw = String(value ?? "").trim();
   if (!raw) return "";
 
-  if (EN_EXACT_TERM_MAP[raw]) return EN_EXACT_TERM_MAP[raw];
+  if (Object.hasOwn(EN_EXACT_TERM_MAP, raw)) return EN_EXACT_TERM_MAP[raw];
 
   let next = raw;
-  for (const [source, target] of EN_PARTIAL_TERM_MAP) {
+  for (const [source, target] of orderedPartialTerms) {
     next = next.replaceAll(source, target);
   }
   return next;

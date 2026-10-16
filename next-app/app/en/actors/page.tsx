@@ -92,13 +92,16 @@ export default async function EnglishActorsPage({
     path: "/en/actors",
   });
 
+  const q = getSingleParam(params.q).trim().slice(0,200);
+  const normalize = (value: string) => value.normalize("NFKC").toLowerCase().replace(/[\s\u3000]+/g, "");
+  const matchingActors = allActors.filter(actor => !q || normalize([actor.name,actor.nameEn,actor.kana,actor.slug].join(" ")).includes(normalize(q)));
   const requestedGender = getSingleParam(params.gender);
   const gender = requestedGender in GENDER_LABELS ? requestedGender : "all";
   const requestedPage = Number(getSingleParam(params.page));
-  const page = Number.isFinite(requestedPage) && requestedPage > 0 ? requestedPage : 1;
+  const page = Number.isFinite(requestedPage) && requestedPage > 0 ? Math.floor(requestedPage) : 1;
 
   const filteredActors =
-    gender === "all" ? allActors : allActors.filter((actor) => String(actor.gender ?? "") === gender);
+    gender === "all" ? matchingActors : matchingActors.filter((actor) => String(actor.gender ?? "") === gender);
 
   const totalPages = Math.max(1, Math.ceil(filteredActors.length / ITEMS_PER_PAGE));
   const safePage = Math.min(page, totalPages);
@@ -121,18 +124,20 @@ export default async function EnglishActorsPage({
             </p>
           </div>
 
-          <div className="catalog-summary catalog-summary--ledger">
-            <span className="catalog-chip">Showing {filteredActors.length}</span>
-            <span className="catalog-chip">All actors {allActors.length}</span>
-            <span className="catalog-chip">Page {safePage}</span>
-          </div>
         </section>
 
         <section className="section-card stack-md works-list-panel">
           <h2 className="section-title">Filters</h2>
 
+          <form className="v2-search" action="/en/actors">
+            <label className="sr-only" htmlFor="actor-query">Search actors</label>
+            <input id="actor-query" name="q" defaultValue={q} placeholder="Search by actor name"/>
+            <input type="hidden" name="gender" value={gender}/><button type="submit" aria-label="Search">→</button>
+          </form>
+          {filteredActors.length === 0 ? <p className="muted">No actors matched your search.</p> : null}
+
           <div className="filter-row filter-row--dense works-filter-row">
-            <Link className={`filter-chip ${gender === "all" ? "is-active" : ""}`} href={buildHref({ page: 1, gender: "all" })}>
+            <Link className={`filter-chip ${gender === "all" ? "is-active" : ""}`} href={buildHref({ q, page: 1, gender: "all" })}>
               All
             </Link>
             {Object.entries(GENDER_LABELS).map(([value, label]) => (
@@ -145,6 +150,8 @@ export default async function EnglishActorsPage({
               </Link>
             ))}
           </div>
+
+          <p className="catalog-count"><strong>{filteredActors.length.toLocaleString()}</strong> actors</p>
 
           <div className="catalog-grid catalog-grid--actor-list">
             {visibleActors.map((actor) => {
@@ -165,7 +172,7 @@ export default async function EnglishActorsPage({
                   <div className="actor-list-card__main">
                     <div className="catalog-card__top actor-list-card__top">
                       <div>
-                        <div className="catalog-card__title">{displayName}</div>
+                        <Link className="catalog-card__title" href={`/en/actors/${actor.slug}`}>{displayName}</Link>
                         {actor.kana ? <div className="actor-list-card__kana">{actor.kana}</div> : null}
                       </div>
                       <FavoriteButtonClient slug={actor.slug} type="actor" size="sm" name={displayName} kana={actor.kana} />

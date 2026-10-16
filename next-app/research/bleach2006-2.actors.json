@@ -1,0 +1,183 @@
+{
+  "version": 1,
+  "sourceUrl": "https://kira-hai.net/bleach2006-2",
+  "sourceFingerprint": "5340ba514071a7023c0eb4da1deeda9807346aab225b783209f8ebafa934bee4",
+  "actors": [
+    {
+      "sourceCreditKey": "90d4d38c64e8b2b3b680", "sourceActorName": "佐藤美貴",
+      "identity": { "status": "profile_linked", "profileUrl": "https://www.jspro.jp/prof/satou.html", "evidence": [
+        { "url": "https://www.jspro.jp/prof/satou.html", "note": "芸能事務所の業務提携プロフィールにBLEACHの朽木ルキア役の経歴があり、出演者との接点を確認。2006年夏の個別項目はないため当該公演の配役根拠は作品出典に残す。", "checkedAt": "2026-10-16T10:17:01Z" }
+      ] },
+      "facts": {
+        "kana": { "status": "confirmed", "value": "さとう みき", "evidence": [{ "url": "https://www.jspro.jp/prof/satou.html", "note": "プロフィール上部の読みを確認。", "checkedAt": "2026-10-16T10:17:01Z" }] },
+        "birthday": { "status": "confirmed", "value": "1980-04-15", "evidence": [{ "url": "https://www.jspro.jp/prof/satou.html", "note": "生年月日の明記を確認。", "checkedAt": "2026-10-16T10:17:01Z" }] },
+        "height_cm": { "status": "confirmed", "value": 156, "evidence": [{ "url": "https://www.jspro.jp/prof/satou.html", "note": "サイズ欄の身長を確認。確認時点の資料値。", "checkedAt": "2026-10-16T10:17:01Z" }] },
+        "blood_type": { "status": "confirmed", "value": "AB", "evidence": [{ "url": "https://www.jspro.jp/prof/satou.html", "note": "血液型欄を確認。", "checkedAt": "2026-10-16T10:17:01Z" }] }
+      },
+      "notes": ["古いプロフィールの業務提携表記を現在の所属として転記しない。英語表記・性別は今回採用せず空欄。"],
+      "searchHistory": [{ "query": "佐藤美貴 公式 プロフィール BLEACH", "checkedAt": "2026-10-16T10:17:01Z", "outcome": "profile_connection_found" }]
+    },
+    {
+      "sourceCreditKey": "6ee3c16b2b6b5e0d5f6a", "sourceActorName": "林修司",
+      "identity": { "status": "profile_linked", "profileUrl": "https://www.ameba.jp/profile/general/syuji-hayashi/", "evidence": [
+        { "url": "https://kira-hai.net/hayashi-shuji", "note": "当該公演の朽木白哉役と、本人のsyuji-hayashiブログ・プロフィールへのリンクを確認。", "checkedAt": "2026-10-16T13:31:24Z" },
+        { "url": "https://ameblo.jp/contonk/entry-11498860566.html", "note": "公演側の2013年キャスト紹介にも同じ本人ブログURLがあり、林修司の読み・生年月日等を明記。隣接する別俳優の項目と区別。", "checkedAt": "2026-10-16T13:31:24Z" },
+        { "url": "https://www.ameba.jp/profile/general/syuji-hayashi/", "note": "閲覧ツールでは取得不可だったが通常HTTPは200。修司、男性、O型、京都府と同じ本人ブログ名への接続を本文で確認。", "checkedAt": "2026-10-16T13:31:24Z" }
+      ] },
+      "facts": {
+        "kana": { "status": "confirmed", "value": "はやししゅうじ", "evidence": [{ "url": "https://ameblo.jp/contonk/entry-11498860566.html", "note": "公演側の本人紹介で氏名横の読みを確認。", "checkedAt": "2026-10-16T13:31:24Z" }] },
+        "birthday": { "status": "confirmed", "value": "1979-11-27", "evidence": [{ "url": "https://ameblo.jp/contonk/entry-11498860566.html", "note": "本人の紹介区間の生年月日を確認。", "checkedAt": "2026-10-16T13:31:24Z" }] },
+        "height_cm": { "status": "confirmed", "value": 174, "evidence": [{ "url": "https://ameblo.jp/contonk/entry-11498860566.html", "note": "本人の紹介区間の身長。2013年の資料値であり現在の再測定値ではない。", "checkedAt": "2026-10-16T13:31:24Z" }] },
+        "blood_type": { "status": "confirmed", "value": "O", "evidence": [{ "url": "https://www.ameba.jp/profile/general/syuji-hayashi/", "note": "本人プロフィールの血液型欄をHTTP本文で確認。公演側紹介も一致。", "checkedAt": "2026-10-16T13:31:24Z" }] },
+        "gender": { "status": "confirmed", "value": "male", "evidence": [{ "url": "https://www.ameba.jp/profile/general/syuji-hayashi/", "note": "本人プロフィールの男性との明記をHTTP本文で確認。", "checkedAt": "2026-10-16T13:31:24Z" }] }
+      },
+      "notes": ["本人ブログは2014年の最終更新告知で更新終了を記載。古い所属・告知を現在情報として扱わない。英語表記は空欄。"],
+      "searchHistory": [
+        { "query": "林修司 公式 プロフィール BLEACH", "checkedAt": "2026-10-16T10:17:01Z", "outcome": "leads_found_not_completed" },
+        { "query": "林修司 本人プロフィール 公演側キャスト紹介のブログURLを照合", "checkedAt": "2026-10-16T13:31:24Z", "outcome": "profile_connection_found_via_matching_blog_links" }
+      ]
+    },
+    {
+      "sourceCreditKey": "378a34d35db5e4f56f67", "sourceActorName": "齊藤来未子",
+      "identity": { "status": "profile_linked", "profileUrl": "https://www.ameba.jp/profile/ameba/kumiko-saito/", "evidence": [
+        { "url": "https://ameblo.jp/kumiko-saito/entry-11346096981.html", "note": "本人公式ブログの2012年記事でBLEACH初演時の自分を振り返る記載を確認。同じアカウントの人物プロフィールへ接続する。2006年夏の配役自体は作品出典に保持。", "checkedAt": "2026-10-16T13:31:24Z" },
+        { "url": "https://www.ameba.jp/profile/ameba/kumiko-saito/", "note": "同一アカウントの本人プロフィールが同じ公式ブログを参照することを確認。", "checkedAt": "2026-10-16T13:31:24Z" }
+      ] },
+      "facts": {
+        "gender": { "status": "confirmed", "value": "female", "evidence": [{ "url": "https://www.ameba.jp/profile/ameba/kumiko-saito/", "note": "本人プロフィールに女性と明記。", "checkedAt": "2026-10-16T13:31:24Z" }] }
+      },
+      "notes": ["齋藤久美子とは別の配役行。漢字の揺れと決めつけて統合しない。", "読み・生年月日は非一次の検索結果にあるが未採用。アカウント名から読みを逆算せず、登録用URLの確定も次工程に残す。"],
+      "searchHistory": [
+        { "query": "齊藤来未子 公式 プロフィール", "checkedAt": "2026-10-16T10:17:01Z", "outcome": "profile_lead_only" },
+        { "query": "齊藤来未子 BLEACH site:ameblo.jp/kumiko-saito", "checkedAt": "2026-10-16T13:31:24Z", "outcome": "self_authored_stage_recollection_found" }
+      ]
+    },
+    {
+      "sourceCreditKey": "f5acacef79f76b0ba321", "sourceActorName": "臼井琢也",
+      "identity": { "status": "profile_linked", "profileUrl": "https://bqmap.jimdoweb.com/member/%E8%87%BC%E4%BA%95%E7%90%A2%E4%B9%9F/", "evidence": [
+        { "url": "https://bqmap.jimdoweb.com/member/%E8%87%BC%E4%BA%95%E7%90%A2%E4%B9%9F/", "note": "劇団公式の本人欄に斑目一角役の履歴。原文の作品綴りはBREACH。人物の接点として確認し、公演年はこの欄から推定しない。", "checkedAt": "2026-10-16T10:17:01Z" }
+      ] },
+      "facts": {
+        "name_en": { "status": "confirmed", "value": "Takuya Usui", "evidence": [{ "url": "https://bqmap.jimdoweb.com/member/%E8%87%BC%E4%BA%95%E7%90%A2%E4%B9%9F/", "note": "氏名横の英語表記を確認。", "checkedAt": "2026-10-16T10:17:01Z" }] },
+        "birthday": { "status": "confirmed", "value": "1975-02-13", "evidence": [{ "url": "https://bqmap.jimdoweb.com/member/%E8%87%BC%E4%BA%95%E7%90%A2%E4%B9%9F/", "note": "生年月日の明記を確認。", "checkedAt": "2026-10-16T10:17:01Z" }] },
+        "height_cm": { "status": "confirmed", "value": 169, "evidence": [{ "url": "https://bqmap.jimdoweb.com/member/%E8%87%BC%E4%BA%95%E7%90%A2%E4%B9%9F/", "note": "身長欄を確認。確認時点の資料値。", "checkedAt": "2026-10-16T10:17:01Z" }] },
+        "blood_type": { "status": "confirmed", "value": "O", "evidence": [{ "url": "https://bqmap.jimdoweb.com/member/%E8%87%BC%E4%BA%95%E7%90%A2%E4%B9%9F/", "note": "血液型欄を確認。", "checkedAt": "2026-10-16T10:17:01Z" }] }
+      },
+      "notes": ["かなはブログ名から逆算せず今回は空欄。性別も推測で補完しない。"],
+      "searchHistory": [{ "query": "臼井琢也 BQMAP プロフィール", "checkedAt": "2026-10-16T10:17:01Z", "outcome": "profile_connection_found" }]
+    },
+    {
+      "sourceCreditKey": "8b4f4b1e0653b180e6c0", "sourceActorName": "村上耕平",
+      "identity": { "status": "appearance_only", "evidence": [] }, "facts": {},
+      "notes": ["bleach2006-2.review.jsonに村上幸平との別人判断を保持。slug murakami-koheiが重なる既存IDへ紐付けない。", "第一参照先とWEBザテレビジョンで1986年5月19日生の記載は確認済みだが、今回は公式プロフィールとの接続を未完了として残す。", "https://thetv.jp/person/2090011396/"],
+      "searchHistory": [{ "query": "村上耕平 生年月日 プロフィール", "checkedAt": "2026-10-16T09:32:00Z", "outcome": "homophone_collision_recorded" }]
+    },
+    {
+      "sourceCreditKey": "204650279651933bc202", "sourceActorName": "齋藤久美子",
+      "identity": { "status": "appearance_only", "evidence": [] }, "facts": {},
+      "notes": ["同名の企業関係者・フルート奏者等が検索に現れる。四楓院夜一役との接点を確認できないプロフィールを採用しない。", "齊藤来未子と同じ読みを根拠に統合しない。"],
+      "searchHistory": [{ "query": "齋藤久美子 公式 BLEACH プロフィール", "checkedAt": "2026-10-16T10:17:01Z", "outcome": "no_verified_profile_connection_in_this_pass" }]
+    },
+    {
+      "sourceCreditKey": "03ad6cc91b4681113b4a", "sourceActorName": "鈴木省吾",
+      "distinctActors": [
+        { "actorId": "d9b2e659-3fc1-49be-a56f-80989b0908e8", "expectedName": "鈴木 勝吾", "expectedBirthday": "1989-02-04", "expectedUpdatedAt": "2025-12-13T04:41:02.052969+00:00", "evidence": [
+          { "url": "https://hirata-office.jp/talent_profile/men/shogo_suzuki.html", "note": "既存の鈴木勝吾の事務所プロフィールで1989年2月4日生を確認。鈴木省吾の事務所の1963年4月12日生と氏名・生年月日が異なり、同じ読みでも別人として扱う。", "checkedAt": "2026-10-16T13:31:24Z" },
+          { "url": "https://ishii-mitsuzo.com/talentlist/%E9%88%B4%E6%9C%A8%E7%9C%81%E5%90%BE.html", "note": "今回の出演者は鈴木省吾であり1963年4月12日生。既存の鈴木勝吾の人物ID・URLを使わない。", "checkedAt": "2026-10-16T13:31:24Z" }
+        ] }
+      ],
+      "identity": { "status": "profile_linked", "profileUrl": "https://ishii-mitsuzo.com/talentlist/%E9%88%B4%E6%9C%A8%E7%9C%81%E5%90%BE.html", "evidence": [
+        { "url": "https://ishii-mitsuzo.com/talentlist/%E9%88%B4%E6%9C%A8%E7%9C%81%E5%90%BE.html", "note": "事務所の本人紹介で当該2006年公演の経歴と生年月日・身長を確認。", "checkedAt": "2026-10-16T13:31:24Z" },
+        { "url": "https://www.axto.jp/narrators/suzuki/", "note": "上記事務所の本人紹介からナレーション窓口として直接リンクされる本人欄。読みを確認。", "checkedAt": "2026-10-16T13:31:24Z" }
+      ] },
+      "facts": {
+        "kana": { "status": "confirmed", "value": "すずき しょうご", "evidence": [{ "url": "https://www.axto.jp/narrators/suzuki/", "note": "連携事務所の本人プロフィールの読みを確認。", "checkedAt": "2026-10-16T13:31:24Z" }] },
+        "name_en": { "status": "confirmed", "value": "Shogo Suzuki", "evidence": [{ "url": "https://ishii-mitsuzo.com/talentlist/%E9%88%B4%E6%9C%A8%E7%9C%81%E5%90%BE.html", "note": "本人見出しのsuzuki shogoの綴りを確認。サイトの英語表示向けに名-姓順と大文字始まりへ整えた表示。綴りを推測で追加していない。", "checkedAt": "2026-10-16T13:31:24Z" }] },
+        "birthday": { "status": "confirmed", "value": "1963-04-12", "evidence": [{ "url": "https://ishii-mitsuzo.com/talentlist/%E9%88%B4%E6%9C%A8%E7%9C%81%E5%90%BE.html", "note": "本人プロフィールの年を含む生年月日を確認。ナレーター欄は月日のみなので、そちらから年を補わない。", "checkedAt": "2026-10-16T13:31:24Z" }] },
+        "height_cm": { "status": "confirmed", "value": 178, "evidence": [{ "url": "https://ishii-mitsuzo.com/talentlist/%E9%88%B4%E6%9C%A8%E7%9C%81%E5%90%BE.html", "note": "事務所本人欄の178cmを確認。別媒体の180cmと差があるため一次資料の値を使い、不一致も記録。", "checkedAt": "2026-10-16T13:31:24Z" }] }
+      },
+      "notes": ["https://narrow.jp/talent/1442 には180cmとの記載があり、事務所の178cmとの差を保持。多数決や平均値にはしない。", "性別は声の宣伝文や写真から推定せず空欄。", "既存の鈴木勝吾は同じ読みでsuzuki-shogoを使用済み。今回のURLは生年で区別し、英語名はURLの数字から生成せず確認した綴りを明示保存する。"],
+      "searchHistory": [
+        { "query": "鈴木省吾 プロフィール 石井光三オフィス", "checkedAt": "2026-10-16T10:17:01Z", "outcome": "profile_lead_and_height_discrepancy" },
+        { "query": "キラハイの事務所プロフィールリンクを辿り、出演歴とナレーション窓口を照合", "checkedAt": "2026-10-16T13:31:24Z", "outcome": "exact_production_profile_connection_found" }
+      ]
+    },
+    {
+      "sourceCreditKey": "c802cc261ed8ee53acdc", "sourceActorName": "井上晴美",
+      "identity": { "status": "profile_linked", "profileUrl": "https://www.vip-times.co.jp/?talent_id=W93-0398", "evidence": [
+        { "url": "https://www.vip-times.co.jp/?talent_id=W93-0398", "note": "日本タレント名鑑の本人欄にBLEACH DXの芸歴。個別の2006年夏公演への出演は作品出典と別媒体でも照合する。", "checkedAt": "2026-10-16T10:17:01Z" },
+        { "url": "https://thetv.jp/person/0000005946/", "note": "編集部プロフィールに2006年The Dark of The Bleeding Moonの出演記載。名鑑と氏名・生年月日が一致。", "checkedAt": "2026-10-16T10:17:01Z" }
+      ] },
+      "facts": {
+        "kana": { "status": "confirmed", "value": "イノウエハルミ", "evidence": [{ "url": "https://www.vip-times.co.jp/?talent_id=W93-0398", "note": "氏名横の読みを確認。", "checkedAt": "2026-10-16T10:17:01Z" }] },
+        "birthday": { "status": "confirmed", "value": "1974-09-23", "evidence": [{ "url": "https://www.vip-times.co.jp/?talent_id=W93-0398", "note": "生年月日の明記を確認。", "checkedAt": "2026-10-16T10:17:01Z" }] },
+        "height_cm": { "status": "confirmed", "value": 164, "evidence": [{ "url": "https://www.vip-times.co.jp/?talent_id=W93-0398", "note": "身長欄を確認。確認時点の資料値。", "checkedAt": "2026-10-16T10:17:01Z" }] },
+        "blood_type": { "status": "confirmed", "value": "B", "evidence": [{ "url": "https://www.vip-times.co.jp/?talent_id=W93-0398", "note": "血液型欄を確認。", "checkedAt": "2026-10-16T10:17:01Z" }] },
+        "gender": { "status": "confirmed", "value": "female", "evidence": [{ "url": "https://www.vip-times.co.jp/?talent_id=W93-0398", "note": "女性との明記を確認。写真や役名から推定しない。", "checkedAt": "2026-10-16T10:17:01Z" }] }
+      },
+      "notes": ["同名の音楽家の情報を混ぜない。今回英語表記は確定していない。"],
+      "searchHistory": [{ "query": "井上晴美 公式 プロフィール 松本乱菊", "checkedAt": "2026-10-16T10:17:01Z", "outcome": "profile_connection_found" }]
+    },
+    {
+      "sourceCreditKey": "9a06550544ef1a3d5791", "sourceActorName": "立花拓也",
+      "identity": { "status": "appearance_only", "evidence": [] }, "facts": {},
+      "notes": ["検索には同名のIT企業経営者やモデルのプロフィールが現れる。今回の出演者へ結び付ける根拠は未確認。", "候補を別人と断定する作業も未完了。氏名・読み・URLの一致だけではプロフィールを採らない。"],
+      "searchHistory": [{ "query": "立花拓也 プロフィール BLEACH", "checkedAt": "2026-10-16T10:17:01Z", "outcome": "namesake_results_no_connection" }]
+    },
+    {
+      "sourceCreditKey": "78d277a1870fa954a2c7", "sourceActorName": "加藤学",
+      "identity": { "status": "appearance_only", "evidence": [] }, "facts": {},
+      "notes": ["同名で俳優・アクション担当・照明スタッフ等の結果が出る。公式公演サイト内の一致でも出演者かスタッフかを区別する。", "別作品の同名クレジットから今回の人物へ経歴を接続しない。"],
+      "searchHistory": [{ "query": "加藤学 BLEACH 公式 プロフィール", "checkedAt": "2026-10-16T10:17:01Z", "outcome": "namesake_and_staff_results_no_connection" }]
+    },
+    {
+      "sourceCreditKey": "666997199d7200831150", "sourceActorName": "末吉司弥",
+      "identity": { "status": "appearance_only", "evidence": [] }, "facts": {},
+      "notes": ["公式アニメサイトで知念寛の声の出演を確認。舞台プロフィールとの接続は次回。", "https://www.tv-tokyo.co.jp/anime/tenipri-zenkoku/staff/", "旧事務所PDFは検索に本文の抜粋が残るが、通常HTTPでも404を確認。生年月日・英語表記等は抜粋から採用しない。", "https://www.orionsbelt.co.jp/wp/wp-content/uploads/Kazuya_Sueyoshi.pdf", "現在の事務所一覧で見つからないことを退所・引退の証明にはしない。"],
+      "searchHistory": [
+        { "query": "末吉司弥 公式 所属", "checkedAt": "2026-10-16T10:17:01Z", "outcome": "official_leads_pdf_fetch_failed" },
+        { "query": "旧事務所PDFのHTTP取得と現在の公式一覧確認", "checkedAt": "2026-10-16T13:31:24Z", "outcome": "old_pdf_http_404_no_profile_values_adopted" }
+      ]
+    },
+    {
+      "sourceCreditKey": "4ee1860b2d84e296f36e", "sourceActorName": "安田裕",
+      "identity": { "status": "profile_linked", "profileUrl": "https://www.set1979.com/member/profile.php?id=13", "evidence": [
+        { "url": "https://www.set1979.com/member/profile.php?id=13", "note": "劇団公式プロフィールにBLEACHシリーズの2005年・2006年再炎・2007年・2008年の出演歴。2006年夏の個別行はなく、その配役は作品出典に残す。", "checkedAt": "2026-10-16T10:17:01Z" }
+      ] },
+      "facts": {
+        "name_en": { "status": "confirmed", "value": "Hiroshi Yasuda", "evidence": [{ "url": "https://www.set1979.com/member/profile.php?id=13", "note": "プロフィールの英語表記を確認。", "checkedAt": "2026-10-16T10:17:01Z" }] },
+        "birthday": { "status": "confirmed", "value": "1981-04-29", "evidence": [{ "url": "https://www.set1979.com/member/profile.php?id=13", "note": "生年月日の明記を確認。", "checkedAt": "2026-10-16T10:17:01Z" }] },
+        "height_cm": { "status": "confirmed", "value": 181, "evidence": [{ "url": "https://www.set1979.com/member/profile.php?id=13", "note": "身長欄を確認。確認時点の資料値。", "checkedAt": "2026-10-16T10:17:01Z" }] }
+      },
+      "notes": ["ローマ字からかなを作らない。血液型・性別も今回のページには明記がないため空欄。"],
+      "searchHistory": [{ "query": "安田裕 BLEACH 公式 プロフィール", "checkedAt": "2026-10-16T10:17:01Z", "outcome": "profile_connection_found" }]
+    },
+    {
+      "sourceCreditKey": "36c6b4622c67f549a126", "sourceActorName": "岩下政之",
+      "identity": { "status": "appearance_only", "evidence": [] }, "facts": {},
+      "notes": ["二次プロフィールに生年月日等、百科事典系に当該公演の記載がある。今回一次プロフィールとの接点は確認できていない。"],
+      "searchHistory": [{ "query": "岩下政之 BLEACH プロフィール", "checkedAt": "2026-10-16T10:17:01Z", "outcome": "secondary_leads_only" }]
+    },
+    {
+      "sourceCreditKey": "031a473d7c9cb04d67a6", "sourceActorName": "篠原辰也",
+      "identity": { "status": "appearance_only", "evidence": [] }, "facts": {},
+      "notes": ["イープラスの舞台俳優一覧に氏名と読みの候補あり。当該公演出演者との人物接続は未確認。", "https://eplus.jp/sf/word/play/performer-actor/p61"],
+      "searchHistory": [{ "query": "篠原辰也 BLEACH プロフィール", "checkedAt": "2026-10-16T10:17:01Z", "outcome": "listing_lead_only" }]
+    },
+    {
+      "sourceCreditKey": "741f69fca4a3cda0fbb5", "sourceActorName": "岩間健児",
+      "identity": { "status": "profile_linked", "profileUrl": "https://sunny-arch.work/user/iwamakenji/", "evidence": [
+        { "url": "https://sunny-arch.work/user/iwamakenji/", "note": "芸能事務所の本人プロフィールにThe Dark of The Bleeding Moonのアンサンブル出演を明記。当該公演の出演者とプロフィールを接続できる。", "checkedAt": "2026-10-16T10:17:01Z" }
+      ] },
+      "facts": {
+        "kana": { "status": "confirmed", "value": "イワマ ケンジ", "evidence": [{ "url": "https://sunny-arch.work/user/iwamakenji/", "note": "フリガナ欄を確認。", "checkedAt": "2026-10-16T10:17:01Z" }] },
+        "birthday": { "status": "confirmed", "value": "1980-10-29", "evidence": [{ "url": "https://sunny-arch.work/user/iwamakenji/", "note": "生年月日の明記を確認。", "checkedAt": "2026-10-16T10:17:01Z" }] },
+        "height_cm": { "status": "confirmed", "value": 174, "evidence": [{ "url": "https://sunny-arch.work/user/iwamakenji/", "note": "身長欄を確認。確認時点の資料値。", "checkedAt": "2026-10-16T10:17:01Z" }] },
+        "blood_type": { "status": "confirmed", "value": "O", "evidence": [{ "url": "https://sunny-arch.work/user/iwamakenji/", "note": "血液型欄を確認。", "checkedAt": "2026-10-16T10:17:01Z" }] },
+        "gender": { "status": "confirmed", "value": "male", "evidence": [{ "url": "https://sunny-arch.work/user/iwamakenji/", "note": "性別欄の男性表記を確認。", "checkedAt": "2026-10-16T10:17:01Z" }] }
+      },
+      "notes": ["事務所の同名一覧にはローマ字があるが、その一覧だけでは同一人物の接続を確認していないため英語表記は今回保留。", "公式経歴のテニミュの記者・審判の声は、具体的な公演が確定するまで全作品へ一律登録しない。"],
+      "searchHistory": [{ "query": "岩間健児 BLEACH プロフィール", "checkedAt": "2026-10-16T10:17:01Z", "outcome": "exact_production_profile_connection_found" }]
+    }
+  ]
+}

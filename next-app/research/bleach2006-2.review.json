@@ -1,0 +1,48 @@
+{
+  "sourceUrl": "https://kira-hai.net/bleach2006-2",
+  "scope": {
+    "decision": "include",
+    "reason": "久保帯人の漫画『BLEACH』を舞台化したROCK MUSICAL BLEACHの2006年夏公演。2006年1月の『再炎』や後年のライブとは別公演として扱う。",
+    "evidence": [
+      { "url": "https://www.tv-tokyo.co.jp/anime/info_event/details/bleach.html", "note": "放送局公式の過去イベント欄に当該タイトルと東京・大阪の会場、2006年夏の日程がある。大阪の年は元ページで200と欠けているため、その文字列だけを年月日の確定値に使わない。", "checkedAt": "2026-10-16T09:32:00Z" },
+      { "url": "https://www.aniplex.co.jp/bleach/cd/cd04.html", "note": "権利元の公式商品情報に同公演の音源商品があり、舞台シリーズの同定を補完する。CD発売年2007年を公演年と混同しない。", "checkedAt": "2026-10-16T09:32:00Z" }
+    ]
+  },
+  "play": {
+    "id": "20c39daf-31ce-4a56-b892-7e58f6741c7a",
+    "slug": "bleach2006-2",
+    "expectedUpdatedAt": "2026-04-30T16:43:16.396129+00:00",
+    "evidence": [
+      { "url": "https://kira-hai.net/bleach2006-2", "note": "タイトル・2006年の公演日程・黒崎一護役の伊阪達也が、既存の同名作品とその唯一の登録済み配役に一致する。", "checkedAt": "2026-10-16T09:32:00Z" }
+    ]
+  },
+  "actors": [
+    {
+      "sourceActorName": "土屋裕一",
+      "action": "link",
+      "actorId": "8ae8ecdb-55ec-4f9e-b977-57ac48dc3aa2",
+      "expectedName": "土屋 佑壱",
+      "expectedUpdatedAt": "2026-03-16T16:20:11.964332+00:00",
+      "evidence": [
+        { "url": "https://ameblo.jp/pnish-tuti/entry-12125902238.html", "note": "2016年2月7日の本人公式ブログで土屋裕一から土屋佑壱への改名を確認。取得した記事本文にも両表記がある。", "checkedAt": "2026-10-16T09:32:00Z" },
+        { "url": "https://kira-hai.net/tsuchiya-yuichi", "note": "現名の俳優ページに当該公演の市丸ギン役が載る。ページ上部の旧名は土屋佑一と記載されており、本人告知との差を残す。旧名欄の文字だけで自動照合しない。", "checkedAt": "2026-10-16T09:32:00Z" }
+      ]
+    },
+    {
+      "sourceActorName": "臼井琢也",
+      "action": "new",
+      "evidence": [
+        { "url": "https://bqmap.jimdoweb.com/member/%E8%87%BC%E4%BA%95%E7%90%A2%E4%B9%9F/", "note": "劇団BQMAP公式の団員紹介で臼井琢也、英語表記Takuya Usui、1975年2月13日生まれを確認。出演歴にもROCK MUSICALの斑目一角役があり、当該出演者の人物確認に使える。原ページの作品綴りBREACHはそのままの記録とし、別作品とは解釈しない。", "checkedAt": "2026-10-16T09:39:00Z" }
+      ]
+    },
+    {
+      "sourceActorName": "村上耕平",
+      "action": "new",
+      "excludeActorIds": ["e522c807-a7a7-4cd1-8974-88ce326eac35"],
+      "evidence": [
+        { "url": "https://kira-hai.net/murakami-kohei", "note": "山田花太郎役の人物は1986年5月19日生まれと記載。既存の村上幸平は1976年6月1日生まれ。名前・生年月日とも一致しないため既存IDへ紐付けない。同じslugを新規俳優に再利用しない。", "checkedAt": "2026-10-16T09:32:00Z" },
+        { "url": "https://thetv.jp/person/2090011396/", "note": "村上耕平の氏名・読み・1986年5月19日生まれを別媒体で確認。新規登録時の公式プロフィール確認と衝突しないURL設計は別途必要。", "checkedAt": "2026-10-16T09:32:00Z" }
+      ]
+    }
+  ]
+}

@@ -5,6 +5,22 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "test:locale": "node --test scripts/localization.test.mjs",
+    "test:voting": "node --test scripts/oshi-voting.test.mjs",
+    "preview:voting": "node scripts/serve-voting-preview.mjs",
+    "verify:voting-preview": "node scripts/verify-voting-preview.mjs",
+    "test:v2-pages": "node scripts/check-v2-pages.mjs",
+    "test:work-import": "node --test scripts/work-import-plan.test.mjs",
+    "test:work-storage": "node --test scripts/work-candidate-storage.test.mjs",
+    "test:actor-research": "node --test scripts/actor-research.test.mjs",
+    "test:actor-registration": "node --test scripts/reviewed-actor-registration.test.mjs",
+    "research:actors": "node scripts/prepare-actor-research.mjs",
+    "research:actors-register": "node scripts/register-reviewed-actors.mjs",
+    "research:work-plan": "node scripts/prepare-work-import.mjs",
+    "research:work-stage": "node scripts/stage-work-import.mjs",
+    "test:research": "node --test scripts/cast-credit.test.mjs scripts/cast-credit-preview.test.mjs scripts/source-match.test.mjs scripts/kira-hai-work.test.mjs scripts/external-refresh.test.mjs scripts/atomic-candidate-accept.test.mjs scripts/work-import-plan.test.mjs scripts/work-candidate-storage.test.mjs scripts/actor-research.test.mjs scripts/reviewed-actor-registration.test.mjs",
+    "preview:casts": "node scripts/build-cast-credit-preview.mjs",
+    "preview:casts:serve": "node scripts/serve-cast-credit-preview.mjs",
     "import:kira-hai": "node scripts/import-kira-hai.mjs",
     "start": "next start"
   },
@@ -17,11 +33,17 @@
     "react-router-dom": "^7.10.1"
   },
   "devDependencies": {
+    "@electric-sql/pglite": "^0.5.10",
     "@tailwindcss/postcss": "^4.2.1",
     "@types/node": "^22.14.0",
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
     "tailwindcss": "^4.2.1",
     "typescript": "~5.8.2"
+  },
+  "overrides": {
+    "next": {
+      "postcss": "^8.5.30"
+    }
   }
 }

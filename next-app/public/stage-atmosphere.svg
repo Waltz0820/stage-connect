@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="600" viewBox="0 0 1400 600" fill="none">
+  <defs>
+    <linearGradient id="back" x2="1400" y2="600" gradientUnits="userSpaceOnUse"><stop stop-color="#e8eaf8"/><stop offset=".5" stop-color="#f7f5fb"/><stop offset="1" stop-color="#b2b5d3"/></linearGradient>
+    <linearGradient id="curtain" x2="400" y2="400" gradientUnits="userSpaceOnUse"><stop stop-color="#a4a5c6"/><stop offset=".45" stop-color="#e5dff0"/><stop offset="1" stop-color="#8f94b7"/></linearGradient>
+    <radialGradient id="light"><stop stop-color="white"/><stop offset="1" stop-color="white" stop-opacity="0"/></radialGradient>
+    <linearGradient id="fade" x2="0" y2="600" gradientUnits="userSpaceOnUse"><stop stop-color="white" stop-opacity="0"/><stop offset="1" stop-color="#fff"/></linearGradient>
+  </defs>
+  <path fill="url(#back)" d="M0 0h1400v600H0z"/>
+  <g stroke="#fff" stroke-opacity=".45"><path d="M140 0v600M270 0v600M1130 0v600M1260 0v600" stroke-width="10"/><path d="M100 490h1200M100 510h1200M40 550h1320" stroke-width="3"/></g>
+  <path d="M0 0h410C370 140 215 190 0 270Z" fill="url(#curtain)"/><path d="M1400 0H990c40 140 195 190 410 270Z" fill="url(#curtain)"/>
+  <g stroke="#fff9e8" stroke-opacity=".55" stroke-width="2"><path d="M0 90C160 100 300 45 350 0M0 130C160 140 320 60 380 0M1400 90C1240 100 1100 45 1050 0M1400 130C1240 140 1080 60 1020 0"/></g>
+  <g fill="#fff" fill-opacity=".35"><path d="m310 5 280 550H180Z"/><path d="m1080 5-280 550h410Z"/><path d="m700 10-280 580h560Z"/></g>
+  <ellipse cx="700" cy="185" rx="600" ry="430" fill="url(#light)"/>
+  <path fill="url(#fade)" d="M0 0h1400v600H0z"/>
+</svg>

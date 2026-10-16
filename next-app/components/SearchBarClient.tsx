@@ -157,7 +157,7 @@ export function SearchBarClient() {
   const submit = () => {
     const q = normalizeSearchQuery(query);
     if (!q) return;
-    router.push(`/search?q=${encodeURIComponent(q)}`);
+    router.push(`${isEnglish ? '/en' : ''}/search?q=${encodeURIComponent(q)}`);
     setIsOpen(false);
     setIsMobileOpen(false);
   };
@@ -202,6 +202,7 @@ export function SearchBarClient() {
               }
             }}
             placeholder={isEnglish ? "Search actors or plays..." : "キャスト・作品を検索..."}
+            aria-label={isEnglish ? "Search actors, plays and series" : "俳優・作品・シリーズを検索"}
             className="search-input"
           />
         </div>

@@ -4,6 +4,8 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   experimental: {
     externalDir: true,
+    // Multiple root layouts need a standalone document for a server-rendered 404.
+    globalNotFound: true,
   },
   outputFileTracingRoot: path.join(__dirname, ".."),
   webpack: (config) => {
