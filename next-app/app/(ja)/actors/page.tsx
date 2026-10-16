@@ -1,3 +1,4 @@
+import { matchesSearch, normalizeSearchQuery } from '../../../lib/search-query';
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "../../../components/Breadcrumbs";
@@ -81,9 +82,8 @@ export default async function ActorsPage({
     path: "/actors",
   });
 
-  const q = getSingleParam(params.q).trim().slice(0,200);
-  const normalize = (value: string) => value.normalize("NFKC").toLowerCase().replace(/[\s\u3000]+/g, "");
-  const matchingActors = allActors.filter(actor => !q || normalize([actor.name,actor.nameEn,actor.kana,actor.slug].join(" ")).includes(normalize(q)));
+  const q = normalizeSearchQuery(getSingleParam(params.q));
+  const matchingActors = allActors.filter(actor => matchesSearch([actor.name,actor.nameEn,actor.kana,actor.slug],q));
   const requestedGender = getSingleParam(params.gender);
   const gender = requestedGender in GENDER_LABELS ? requestedGender : "all";
   const requestedPage = Number(getSingleParam(params.page));
@@ -132,7 +132,7 @@ export default async function ActorsPage({
               <Link
                 key={value}
                 className={`filter-chip ${gender === value ? "is-active" : ""}`}
-                href={buildHref({ page: 1, gender: value })}
+                href={buildHref({ q, page: 1, gender: value })}
               >
                 {label}
               </Link>
@@ -202,7 +202,7 @@ export default async function ActorsPage({
             <div className="pagination-row">
               <Link
                 className={`pagination-link ${safePage === 1 ? "is-disabled" : ""}`}
-                href={buildHref({ page: Math.max(1, safePage - 1), gender })}
+                href={buildHref({ q, page: Math.max(1, safePage - 1), gender })}
               >
                 前へ
               </Link>
@@ -211,7 +211,7 @@ export default async function ActorsPage({
               </span>
               <Link
                 className={`pagination-link ${safePage === totalPages ? "is-disabled" : ""}`}
-                href={buildHref({ page: Math.min(totalPages, safePage + 1), gender })}
+                href={buildHref({ q, page: Math.min(totalPages, safePage + 1), gender })}
               >
                 次へ
               </Link>

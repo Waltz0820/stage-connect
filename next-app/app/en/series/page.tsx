@@ -1,3 +1,4 @@
+import { matchesSearch, normalizeSearchQuery } from '../../../lib/search-query';
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "../../../components/Breadcrumbs";
@@ -63,9 +64,8 @@ export default async function EnglishSeriesPage({
     path: "/en/series",
   });
 
-  const q = getSingleParam(params.q).trim().slice(0,200);
-  const normalize = (value: string) => value.normalize("NFKC").toLowerCase().replace(/[\s\u3000]+/g, "");
-  const matchingSeries = allSeries.filter(item => !q || normalize([item.name,item.nameEn].join(" ")).includes(normalize(q)));
+  const q = normalizeSearchQuery(getSingleParam(params.q));
+  const matchingSeries = allSeries.filter(item => matchesSearch([item.name,item.nameEn,item.slug],q));
   const requestedSort = getSingleParam(params.sort);
   const sort = requestedSort === "name_asc" ? "name_asc" : "play_count_desc";
   const requestedFormat = getSingleParam(params.format);
@@ -138,7 +138,7 @@ export default async function EnglishSeriesPage({
             </Link>
             <Link
               className={`filter-chip ${sort === "name_asc" ? "is-active" : ""}`}
-              href={buildHref({ page: 1, sort: "name_asc", format, origin })}
+              href={buildHref({ q, page: 1, sort: "name_asc", format, origin })}
             >
               Name A-Z
             </Link>
@@ -149,7 +149,7 @@ export default async function EnglishSeriesPage({
               <Link
                 key={option}
                 className={`filter-chip ${format === option ? "is-active" : ""}`}
-                href={buildHref({ page: 1, sort, format: option, origin })}
+                href={buildHref({ q, page: 1, sort, format: option, origin })}
               >
                 {option === "all" ? "All formats" : EN_FORMAT_LABELS[option]}
               </Link>
@@ -161,7 +161,7 @@ export default async function EnglishSeriesPage({
               <Link
                 key={option}
                 className={`filter-chip ${origin === option ? "is-active" : ""}`}
-                href={buildHref({ page: 1, sort, format, origin: option })}
+                href={buildHref({ q, page: 1, sort, format, origin: option })}
               >
                 {option === "all" ? "All origins" : toEnglishOriginType(option) ?? option}
               </Link>
@@ -274,7 +274,7 @@ export default async function EnglishSeriesPage({
             <div className="pagination-row">
               <Link
                 className={`pagination-link ${safePage === 1 ? "is-disabled" : ""}`}
-                href={buildHref({ page: Math.max(1, safePage - 1), sort, format, origin })}
+                href={buildHref({ q, page: Math.max(1, safePage - 1), sort, format, origin })}
               >
                 Previous
               </Link>
@@ -283,7 +283,7 @@ export default async function EnglishSeriesPage({
               </span>
               <Link
                 className={`pagination-link ${safePage === totalPages ? "is-disabled" : ""}`}
-                href={buildHref({ page: Math.min(totalPages, safePage + 1), sort, format, origin })}
+                href={buildHref({ q, page: Math.min(totalPages, safePage + 1), sort, format, origin })}
               >
                 Next
               </Link>

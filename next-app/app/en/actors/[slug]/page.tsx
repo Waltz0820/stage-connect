@@ -169,7 +169,7 @@ export default async function EnglishActorDetailPage({ params }: { params: Promi
       <StructuredData data={breadcrumbJsonLd} />
       <StructuredData data={personJsonLd} />
       <div className="stack-lg">
-        <Breadcrumbs items={[{ label: "Actors", href: "/en/actors" }]} />
+        <Breadcrumbs items={[{ label: "Actors", href: "/en/actors" }, { label: displayName }]} />
 
         <section className="hero-card stack-md detail-stage-hero">
           <div className="detail-hero-grid">

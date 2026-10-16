@@ -1,3 +1,4 @@
+import { matchesSearch, normalizeSearchQuery } from '../../../lib/search-query';
 import PlayDiscoveryForm from "../../../components/PlayDiscoveryForm";
 import { isOshiPoint } from "../../../lib/oshi-points.mjs";
 import { getOshiDiscovery } from "../../../lib/oshi-server";
@@ -142,7 +143,7 @@ export default async function EnglishPlaysPage({
   const seriesOptions = Array.from(new Set(allPlays.map((play) => play.franchiseName).filter(Boolean))).map((name) => ({ value: name!, label: allPlays.find((play) => play.franchiseName === name)?.franchiseNameEn || name! })).sort((a,b) => a.label.localeCompare(b.label, "en"));
   const discoveryMatches = (play: (typeof allPlays)[number]) => {
     const normalize = (value: string) => value.normalize("NFKC").toLocaleLowerCase().replace(/[\s\u3000]+/g, "");
-    return (!q || normalize([play.title, play.titleEn, play.franchiseName, play.franchiseNameEn].join(" ")).includes(normalize(q)))
+    return (matchesSearch([play.title, play.titleEn, play.franchiseName, play.franchiseNameEn, play.slug],q))
       && (!series || play.franchiseName === series)
       && (!streaming || Boolean(play.vod && Object.keys(play.vod).some((key) => play.vod?.[key])))
       && (!point || !discovery.available || supportBySlug.has(play.slug));

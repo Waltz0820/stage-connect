@@ -141,7 +141,7 @@ export default async function EnglishSeriesDetailPage({ params }: { params: Prom
       <StructuredData data={breadcrumbJsonLd} />
       <StructuredData data={seriesJsonLd} />
       <div className="stack-lg">
-        <Breadcrumbs items={[{ label: "Series", href: "/en/series" }]} />
+        <Breadcrumbs items={[{ label: "Series", href: "/en/series" }, { label: displayName }]} />
 
         <section className="hero-card stack-md detail-stage-hero series-detail-stage-hero">
           <div className="stack-sm detail-ledger-shell">

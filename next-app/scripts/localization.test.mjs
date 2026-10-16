@@ -86,3 +86,16 @@ test('locale and admin boundaries do not swallow similarly prefixed paths', () =
   assert.equal(routing.isAdminPath('/admin/actors'), true);
   assert.equal(routing.isAdminPath('/administrator'), false);
 });
+
+test('language switches retain catalogue filters and section anchors, without tracking parameters', () => {
+  const search = '?q=刀剣&format=stage&point=cast&sort=support&page=2&utm_source=test';
+  const en = routing.getLanguageTargets('/plays', search, '#fan-points');
+  const url = new URL(en.enHref, 'https://stageconnect.jp');
+  assert.equal(url.pathname, '/en/plays');
+  for (const key of ['q','format','point','sort','page']) assert.equal(url.searchParams.get(key), new URLSearchParams(search).get(key));
+  assert.equal(url.searchParams.has('utm_source'), false);
+  assert.equal(url.hash, '#fan-points');
+  assert.equal(routing.getLanguageTargets('/en/plays', url.search, url.hash).jaHref, '/plays'+url.search+url.hash);
+  assert.equal(routing.getLanguageTargets('/search', '?q=sato&gender=male').enHref, '/en/search?q=sato');
+  assert.equal(routing.getLanguageTargets('/actors', '?q=sato&page=2&gender=male').enHref, '/en/actors?q=sato&gender=male&page=2');
+});

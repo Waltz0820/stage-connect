@@ -1,6 +1,7 @@
 import { hasSupabaseEnv } from "./env";
 import { getEnglishActorName } from "./en-copy";
 import { createSupabaseServerClient } from "./supabase";
+import { buildSearchFilter, normalizeSearchQuery } from "./search-query";
 
 export type ActorLink = {
   slug: string;
@@ -227,7 +228,9 @@ export type SearchResultBundle = {
     id: string;
     slug: string;
     title: string;
+    titleEn: string | null;
     franchiseName: string | null;
+    franchiseNameEn: string | null;
     franchiseSlug: string | null;
   }>;
   series: Array<{
@@ -276,17 +279,6 @@ export type CreditItem = {
 
 const uniq = (values: Array<string | null | undefined>) =>
   Array.from(new Set(values.map((value) => String(value ?? "").trim()).filter(Boolean)));
-
-const sanitizeForLike = (value: string) => value.replace(/[%_]/g, "\\$&").trim();
-const stripSearchSpaces = (value: string) => value.replace(/[\s\u3000]+/g, "");
-const buildLooseLike = (value: string) => {
-  const compact = stripSearchSpaces(value);
-  if (!compact) return "";
-  return `%${compact
-    .split("")
-    .map((char) => sanitizeForLike(char))
-    .join("%")}%`;
-};
 
 const normalizeDisplayText = (value?: string | null) =>
   String(value ?? "")
@@ -2366,27 +2358,13 @@ export async function getTagDetailBySlug(slug: string): Promise<TagDetailData | 
 export async function searchSite(query: string, limit = 20): Promise<SearchResultBundle> {
   if (!hasSupabaseEnv) return { actors: [], plays: [], series: [] };
 
-  const q = String(query ?? "")
-    .normalize("NFKC")
-    .replace(/\u3000/g, " ")
-    .trim();
+  const q = normalizeSearchQuery(String(query ?? ""));
   if (!q) return { actors: [], plays: [], series: [] };
 
   const supabase = createSupabaseServerClient();
-  const like = `%${sanitizeForLike(q)}%`;
-  const looseLike = buildLooseLike(q);
-  const actorOr =
-    looseLike && looseLike !== like
-      ? `name.ilike.${like},kana.ilike.${like},slug.ilike.${like},name.ilike.${looseLike},kana.ilike.${looseLike},slug.ilike.${looseLike}`
-      : `name.ilike.${like},kana.ilike.${like},slug.ilike.${like}`;
-  const playOr =
-    looseLike && looseLike !== like
-      ? `title.ilike.${like},slug.ilike.${like},title.ilike.${looseLike},slug.ilike.${looseLike}`
-      : `title.ilike.${like},slug.ilike.${like}`;
-  const seriesOr =
-    looseLike && looseLike !== like
-      ? `name.ilike.${like},slug.ilike.${like},name.ilike.${looseLike},slug.ilike.${looseLike}`
-      : `name.ilike.${like},slug.ilike.${like}`;
+  const actorOr = buildSearchFilter(['name', 'name_en', 'kana', 'slug'], q);
+  const playOr = buildSearchFilter(['title', 'title_en', 'slug'], q);
+  const seriesOr = buildSearchFilter(['name', 'name_en', 'slug'], q);
 
   const [actorsResRaw, playsRes, seriesRes] = await Promise.all([
     supabase
@@ -2402,8 +2380,10 @@ export async function searchSite(query: string, limit = 20): Promise<SearchResul
         id,
         slug,
         title,
+        title_en,
         franchise:franchises (
           name,
+          name_en,
           slug
         )
       `
@@ -2424,7 +2404,7 @@ export async function searchSite(query: string, limit = 20): Promise<SearchResul
     const fallback = await supabase
       .from("actors")
       .select("id, slug, name, kana")
-      .or(actorOr)
+      .or(buildSearchFilter(['name', 'kana', 'slug'], q))
       .order("name", { ascending: true })
       .limit(limit);
 
@@ -2442,7 +2422,7 @@ export async function searchSite(query: string, limit = 20): Promise<SearchResul
     const fallback = await supabase
       .from("franchises")
       .select("id, slug, name")
-      .or(seriesOr)
+      .or(buildSearchFilter(['name', 'slug'], q))
       .order("name", { ascending: true })
       .limit(limit);
 
@@ -2472,7 +2452,9 @@ export async function searchSite(query: string, limit = 20): Promise<SearchResul
         id: String(row?.id ?? "").trim(),
         slug: String(row?.slug ?? "").trim(),
         title: String(row?.title ?? "").trim(),
+        titleEn: String(row?.title_en ?? "").trim() || null,
         franchiseName: franchise?.name ?? null,
+        franchiseNameEn: franchise?.name_en ?? null,
         franchiseSlug: franchise?.slug ?? null,
       };
     })

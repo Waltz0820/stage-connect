@@ -316,7 +316,7 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }} />
 
       <div className="stack-lg">
-        <Breadcrumbs items={[{ label: "作品一覧", href: "/plays" }]} />
+        <Breadcrumbs items={[{ label: "作品一覧", href: "/plays" }, { label: play.title }]} />
 
         <section className="hero-card stack-md detail-stage-hero play-detail-stage-hero">
           <div className="play-detail-hero-layout">
@@ -336,7 +336,7 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
             </div>
 
             <div className="detail-actions">
-              <FavoriteButtonClient slug={play.slug} type="play" size="lg" />
+              <FavoriteButtonClient slug={play.slug} type="play" size="lg" title={play.title} franchiseName={play.franchiseName} />
               <ShareButtonClient title={play.title} text={`${play.title}の作品情報 | Stage Connect`} />
             </div>
 

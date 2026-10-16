@@ -107,6 +107,7 @@ export function FavoriteButtonClient({
       type="button"
       onClick={onToggle}
       aria-label={label}
+      aria-pressed={isActive}
       title={label}
       className={["favorite-button", sizeClassMap[size], isActive ? "is-active" : "", className].filter(Boolean).join(" ")}
     >

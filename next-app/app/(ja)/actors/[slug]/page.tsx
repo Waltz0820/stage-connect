@@ -179,7 +179,7 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
       <StructuredData data={faqJsonLd} />
 
       <div className="stack-lg">
-        <Breadcrumbs items={[{ label: "俳優一覧", href: "/actors" }]} />
+        <Breadcrumbs items={[{ label: "俳優一覧", href: "/actors" }, { label: actor.name }]} />
 
         <section className="hero-card stack-md detail-stage-hero">
           <div className="detail-hero-grid">

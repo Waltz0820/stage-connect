@@ -266,7 +266,7 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
       <StructuredData data={breadcrumbJsonLd} />
       <StructuredData data={creativeWorkJsonLd} />
       <div className="stack-lg">
-        <Breadcrumbs items={[{ label: "Plays", href: "/en/plays" }]} />
+        <Breadcrumbs items={[{ label: "Plays", href: "/en/plays" }, { label: displayTitle }]} />
 
         <section className="hero-card stack-md detail-stage-hero play-detail-stage-hero">
           <div className="play-detail-hero-layout">
@@ -284,7 +284,7 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
             <h1 className="page-title play-detail-hero-title">{displayTitle}</h1>
 
             <div className="detail-actions">
-              <FavoriteButtonClient slug={play.slug} type="play" size="lg" />
+              <FavoriteButtonClient slug={play.slug} type="play" size="lg" title={displayTitle} franchiseName={play.franchiseName} />
               <ShareButtonClient title={displayTitle} text={`${displayTitle} | Stage Connect`} />
             </div>
 

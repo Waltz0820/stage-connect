@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { SearchBarClient } from "./SearchBarClient";
+import { LocaleSwitcher } from "./LocaleSwitcher";
 import { getLanguageTargets, isAdminPath } from "../lib/locale-routing";
 
 const copy = {
@@ -77,8 +78,11 @@ export default function SiteChrome({ children }: { children: React.ReactNode }) 
 
 function PublicSiteChrome({ pathname, children }: { pathname: string | null; children: React.ReactNode }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
 
-  const { locale, jaHref, enHref, enAvailable } = getLanguageTargets(pathname);
+  const { locale } = getLanguageTargets(pathname);
   const labels = copy[locale];
   const mobileNav = [labels.home, ...labels.primaryNav, ...labels.mobileNavExtra];
 
@@ -87,44 +91,36 @@ function PublicSiteChrome({ pathname, children }: { pathname: string | null; chi
   }, [pathname]);
 
   useEffect(() => {
-    document.body.style.overflow = isMenuOpen ? "hidden" : "";
-    const closeOnEscape = (event: KeyboardEvent) => { if (event.key === 'Escape') setIsMenuOpen(false); };
-    document.addEventListener('keydown', closeOnEscape);
+    if (!isMenuOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    const focusFrame = window.requestAnimationFrame(() => closeButtonRef.current?.focus());
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') { setIsMenuOpen(false); menuButtonRef.current?.focus(); }
+      if (event.key !== 'Tab') return;
+      const items = menuRef.current?.querySelectorAll<HTMLElement>('a[href], button:not(:disabled)');
+      if (!items?.length) return;
+      const first = items[0], last = items[items.length - 1];
+      if (!menuRef.current?.contains(document.activeElement)) { event.preventDefault(); first.focus(); }
+      else if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+      else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+    };
+    document.addEventListener('keydown', onKeyDown);
     return () => {
-      document.body.style.overflow = "";
-      document.removeEventListener('keydown', closeOnEscape);
+      document.body.style.overflow = previousOverflow;
+      window.cancelAnimationFrame(focusFrame);
+      document.removeEventListener('keydown', onKeyDown);
     };
   }, [isMenuOpen]);
 
   const mobileFooterYear = useMemo(() => new Date().getFullYear(), []);
   const isActive = (href: string) => (href === "/" || href === "/en" ? pathname === href : Boolean(pathname?.startsWith(href)));
 
-  const localeSwitcher = (
-    <div className="locale-switcher" aria-label={labels.localeLabel}>
-      {locale === "en" ? (
-        <Link href={jaHref} className="locale-switcher__link">
-          JP
-        </Link>
-      ) : (
-        <span className="locale-switcher__current">JP</span>
-      )}
-
-      {enAvailable ? (
-        locale === "en" ? (
-          <span className="locale-switcher__current">EN</span>
-        ) : (
-          <Link href={enHref} className="locale-switcher__link">
-            EN
-          </Link>
-        )
-      ) : (
-        <span className="locale-switcher__disabled">EN</span>
-      )}
-    </div>
-  );
+  const localeSwitcher = <LocaleSwitcher pathname={pathname}/>;
 
   return (
     <div className="page-shell stage-v2">
+      <a className="skip-link" href="#main-content">{locale === 'en' ? 'Skip to content' : '本文へ移動'}</a>
       <header className="site-header">
         <div className="container site-header__inner">
           <div className="site-header__left">
@@ -134,7 +130,7 @@ function PublicSiteChrome({ pathname, children }: { pathname: string | null; chi
             </Link>
             <nav className="site-nav desktop-nav" aria-label={labels.globalNavLabel}>
               {labels.primaryNav.map((item) => (
-                <Link key={item.href} href={item.href} className={isActive(item.href) ? "is-active" : undefined}>
+                <Link key={item.href} href={item.href} onClick={() => setIsMenuOpen(false)} className={isActive(item.href) ? "is-active" : undefined}>
                   {item.label}
                 </Link>
               ))}
@@ -150,6 +146,7 @@ function PublicSiteChrome({ pathname, children }: { pathname: string | null; chi
           </div>
 
           <button
+            ref={menuButtonRef}
             type="button"
             className="site-menu-button"
             onClick={() => setIsMenuOpen(true)}
@@ -164,14 +161,18 @@ function PublicSiteChrome({ pathname, children }: { pathname: string | null; chi
         </div>
       </header>
 
-      <div id="site-navigation" className={`mobile-menu ${isMenuOpen ? "is-open" : ""}`}>
+      <div ref={menuRef} id="site-navigation" className={`mobile-menu ${isMenuOpen ? "is-open" : ""}`} role="dialog" aria-modal={isMenuOpen ? true : undefined} aria-label={labels.mobileNavLabel} aria-hidden={!isMenuOpen} inert={!isMenuOpen}
+        onTransitionEnd={event => {
+          if (isMenuOpen && event.target === event.currentTarget && !menuRef.current?.contains(document.activeElement)) closeButtonRef.current?.focus();
+        }}>
         <div className="container mobile-menu__inner">
           <div className="mobile-menu__header">
             <span className="mobile-menu__title">MENU</span>
             <button
+              ref={closeButtonRef}
               type="button"
               className="mobile-menu__close"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={() => { setIsMenuOpen(false); menuButtonRef.current?.focus(); }}
               aria-label={labels.closeMenu}
             >
               <svg fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
@@ -184,7 +185,7 @@ function PublicSiteChrome({ pathname, children }: { pathname: string | null; chi
 
           <nav className="mobile-menu__nav" aria-label={labels.mobileNavLabel}>
             {mobileNav.map((item) => (
-              <Link key={item.href} href={item.href} className={isActive(item.href) ? "is-active" : undefined}>
+              <Link key={item.href} href={item.href} onClick={() => setIsMenuOpen(false)} className={isActive(item.href) ? "is-active" : undefined}>
                 {item.label}
               </Link>
             ))}
@@ -196,7 +197,7 @@ function PublicSiteChrome({ pathname, children }: { pathname: string | null; chi
         </div>
       </div>
 
-      <div className="site-content">{children}</div>
+      <div id="main-content" className="site-content" tabIndex={-1}>{children}</div>
 
       <footer className="site-footer">
         <div className="container site-footer__upper">
