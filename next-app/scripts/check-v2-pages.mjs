@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import * as cheerio from 'cheerio';
 
-const base='http://127.0.0.1:8139';
+const base=process.env.STAGE_VERIFY_BASE_URL || 'http://127.0.0.1:8139';
 const pairs=['/','/actors','/plays','/series','/actors/sato-ryuji','/plays/tennimu-1st-final-rikkai-second','/plays/touken-ranbu-stage-tandokugyo','/series/tennimu','/series/butai-touken-ranbu'];
 const paths=pairs.flatMap(path=>[path,path==='/'?'/en':'/en'+path]);
 paths.push('/search?q=佐藤','/en/search?q=sato','/plays?q=刀剣&format=musical','/actors?q=佐藤流司','/series?q=テニス','/watch/dmm','/tags','/privacy','/tags/tag_style_sharp','/watch','/watch/u-next','/guide');
