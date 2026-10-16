@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "../../../components/Breadcrumbs";
-import { PlayPosterFrame } from "../../../components/PlayPosterFrame";
+import { ProductionMark } from "../../../components/ProductionMark";
 import { StructuredData } from "../../../components/StructuredData";
 import { buildBreadcrumbList, buildCollectionPageStructuredData } from "../../../lib/structured-data";
 import { getSeriesList, toPlainText, truncate } from "../../../lib/stage-connect";
@@ -176,8 +176,8 @@ export default async function SeriesPage({
           <div className="catalog-grid catalog-grid--play-list">
             {visibleSeries.map((series) => (
               <article className="catalog-card catalog-card--play-list" key={series.slug}>
-                <Link className="play-list-card__poster-link" href={`/series/${series.slug}`} aria-label={series.name}>
-                  <PlayPosterFrame title={series.name} seed={`${series.slug}-${series.originType ?? ""}`} />
+                <Link className="play-list-card__mark-link" href={`/series/${series.slug}`} aria-label={series.name}>
+                  <ProductionMark kind="series" seriesSlug={series.slug} format={series.format}/>
                 </Link>
 
                 <div className="play-list-card__main">

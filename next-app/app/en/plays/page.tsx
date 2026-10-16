@@ -4,7 +4,7 @@ import { getOshiDiscovery } from "../../../lib/oshi-server";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "../../../components/Breadcrumbs";
-import { PlayPosterFrame } from "../../../components/PlayPosterFrame";
+import { ProductionMark } from "../../../components/ProductionMark";
 import { StructuredData } from "../../../components/StructuredData";
 import {
   compactListPeriodEn,
@@ -209,14 +209,11 @@ export default async function EnglishPlaysPage({
             {visible.map((play) => (
               <article className="catalog-card catalog-card--play-list" key={play.slug}>
                 <Link
-                  className="play-list-card__poster-link"
+                  className="play-list-card__mark-link"
                   href={`/en/plays/${play.slug}`}
                   aria-label={getEnglishPlayTitle(play)}
                 >
-                  <PlayPosterFrame
-                    title={getEnglishPlayTitle(play)}
-                    seed={`${play.slug}-${play.genre ?? ""}`}
-                  />
+                  <ProductionMark seriesSlug={play.slug} format={play.franchiseFormat}/>
                 </Link>
 
                 <div className="play-list-card__main">

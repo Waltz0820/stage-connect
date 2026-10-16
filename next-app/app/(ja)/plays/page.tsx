@@ -4,7 +4,7 @@ import { getOshiDiscovery } from "../../../lib/oshi-server";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "../../../components/Breadcrumbs";
-import { PlayPosterFrame } from "../../../components/PlayPosterFrame";
+import { ProductionMark } from "../../../components/ProductionMark";
 import { StructuredData } from "../../../components/StructuredData";
 import { buildBreadcrumbList, buildCollectionPageStructuredData } from "../../../lib/structured-data";
 import { getPlayList, getPlayMainCastSummariesBySlug, periodSortKey, toPlainText, truncate } from "../../../lib/stage-connect";
@@ -229,11 +229,8 @@ export default async function PlaysPage({
           <div className="catalog-grid catalog-grid--play-list">
             {visiblePlays.map((play) => (
               <article className="catalog-card catalog-card--play-list" key={play.slug}>
-                <Link className="play-list-card__poster-link" href={`/plays/${play.slug}`} aria-label={play.title}>
-                  <PlayPosterFrame
-                    title={play.title}
-                    seed={`${play.slug}-${play.genre ?? ""}`}
-                  />
+                <Link className="play-list-card__mark-link" href={`/plays/${play.slug}`} aria-label={play.title}>
+                  <ProductionMark seriesSlug={play.slug} format={play.franchiseFormat}/>
                 </Link>
 
                 <div className="play-list-card__main">

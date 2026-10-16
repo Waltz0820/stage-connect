@@ -16,11 +16,11 @@ export function ArchiveIcon({ name }: { name: ArchiveIconName }) {
 
 // A few explicit motifs for identified series families; other series use their recorded format.
 // These are decorative symbols, not official artwork, logos, or user-voted tags.
-export function SeriesMotif({ slug, format }: { slug: string; format: string | null }) {
+export function SeriesMotif({ slug, format, fallback = 'series' }: { slug: string; format: string | null; fallback?: 'play' | 'series' }) {
   const name: ArchiveIconName = slug.startsWith('touken-ranbu') || slug === 'butai-touken-ranbu'
     ? 'swords'
     : slug.startsWith('tennimu') ? 'tennis'
     : format === 'musical' ? 'music'
-    : format === 'stage' ? 'theatre' : 'series';
+    : format === 'stage' ? 'theatre' : fallback;
   return <ArchiveIcon name={name}/>;
 }

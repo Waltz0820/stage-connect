@@ -5,6 +5,7 @@ const base=process.env.STAGE_VERIFY_BASE_URL || 'http://127.0.0.1:8139';
 const pairs=['/','/actors','/plays','/series','/actors/sato-ryuji','/plays/tennimu-1st-final-rikkai-second','/plays/touken-ranbu-stage-tandokugyo','/series/tennimu','/series/butai-touken-ranbu'];
 const paths=pairs.flatMap(path=>[path,path==='/'?'/en':'/en'+path]);
 paths.push('/search?q=佐藤','/en/search?q=sato','/plays?q=刀剣&format=musical','/actors?q=佐藤流司','/series?q=テニス','/watch/dmm','/tags','/privacy','/tags/tag_style_sharp','/watch','/watch/u-next','/guide');
+paths.push('/favorites','/guide/touken-ranbu-complete-guide','/watch/danime','/contact');
 const report=[];
 for(const path of paths){
   const response=await fetch(base+path);assert.equal(response.status,200,path);
@@ -16,6 +17,7 @@ for(const path of paths){
   assert.equal($('meta[name="viewport"]').length,1,path);
   assert.equal($('a[href^="/tags"]').length,0,path+' old tag navigation');
   assert.equal($('.play-detail-tags-section').length,0,path);
+  assert.equal($('.play-poster-frame').length,0,path+' synthetic poster removed');
   if(/^\/(en\/)?plays\//.test(path)){
     assert.equal($('.oshi-choice').length,10,path);
     assert.ok($('#cast a[href*="/actors/"]').length>0,path+' cast links');

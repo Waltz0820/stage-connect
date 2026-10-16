@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { Breadcrumbs } from "../../../../components/Breadcrumbs";
 import { DetailToggleClient } from "../../../../components/DetailToggleClient";
 import { FavoriteButtonClient } from "../../../../components/FavoriteButtonClient";
-import { PlayPosterFrame } from "../../../../components/PlayPosterFrame";
+import { ProductionMark } from "../../../../components/ProductionMark";
 import { ShareButtonClient } from "../../../../components/ShareButtonClient";
 import { StructuredData } from "../../../../components/StructuredData";
 import {
@@ -270,12 +270,8 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
 
         <section className="hero-card stack-md detail-stage-hero play-detail-stage-hero">
           <div className="play-detail-hero-layout">
-            <div className="play-detail-hero-poster" aria-hidden="true">
-              <PlayPosterFrame
-                title={displayTitle}
-                subtitle={displaySeriesName ?? undefined}
-                seed={`${play.slug}-${displaySeriesName ?? ""}`}
-              />
+            <div className="play-detail-hero-mark" aria-hidden="true">
+              <ProductionMark seriesSlug={play.franchiseSlug ?? play.slug}/>
             </div>
 
           <div className="stack-sm detail-ledger-shell play-detail-hero-content">
@@ -285,7 +281,7 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
               </Link>
             ) : null}
 
-            <h1 className="page-title">{displayTitle}</h1>
+            <h1 className="page-title play-detail-hero-title">{displayTitle}</h1>
 
             <div className="detail-actions">
               <FavoriteButtonClient slug={play.slug} type="play" size="lg" />
@@ -510,12 +506,8 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
                 const itemTitle = getEnglishPlayTitle(item);
                 return (
                   <Link className="play-detail-related-card" href={`/en/plays/${item.slug}`} key={item.slug}>
-                    <div className="play-detail-related-card__poster">
-                      <PlayPosterFrame
-                        title={itemTitle}
-                        subtitle={displaySeriesName ?? undefined}
-                        seed={`${item.slug}-${displaySeriesName ?? ""}`}
-                      />
+                    <div className="play-detail-related-card__mark">
+                      <ProductionMark seriesSlug={play.franchiseSlug ?? play.slug}/>
                     </div>
                     <div className="play-detail-related-card__body">
                       <div className="play-detail-related-card__title">{itemTitle}</div>

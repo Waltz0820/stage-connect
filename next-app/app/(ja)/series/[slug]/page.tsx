@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ProductionMark } from "../../../../components/ProductionMark";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "../../../../components/Breadcrumbs";
@@ -171,7 +172,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
 
         <section className="hero-card stack-md detail-stage-hero series-detail-stage-hero">
           <div className="stack-sm detail-ledger-shell">
-            <h1 className="page-title">{series.name}</h1>
+            <div className="detail-title-row"><ProductionMark kind="series" seriesSlug={series.slug}/><h1 className="page-title">{series.name}</h1></div>
             <div className="pill-row">
               <span className="pill accent-pill">作品数: {series.plays.length}</span>
               {series.originType ? <span className="pill">種別: {series.originType}</span> : null}

@@ -108,10 +108,10 @@ export function FavoritesClient() {
       </div>
 
       <div className="favorite-tabs">
-        <button type="button" className={tab === "actors" ? "is-active" : ""} onClick={() => setTab("actors")}>
+        <button type="button" aria-pressed={tab === "actors"} className={tab === "actors" ? "is-active" : ""} onClick={() => setTab("actors")}>
           キャスト <span>{actors.length}</span>
         </button>
-        <button type="button" className={tab === "plays" ? "is-active" : ""} onClick={() => setTab("plays")}>
+        <button type="button" aria-pressed={tab === "plays"} className={tab === "plays" ? "is-active" : ""} onClick={() => setTab("plays")}>
           作品 <span>{plays.length}</span>
         </button>
       </div>
