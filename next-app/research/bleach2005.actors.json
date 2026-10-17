@@ -73,6 +73,72 @@
           "outcome": "official_profile_connection_confirmed"
         }
       ]
+    },
+    {
+      "sourceCreditKey": "004ebd49b3a1c247cd84",
+      "sourceActorName": "伊藤陽佑",
+      "identity": {
+        "status": "profile_linked",
+        "profileUrl": "https://actoli.jp/actor/",
+        "evidence": [
+          {
+            "url": "https://actoli.jp/actor/",
+            "checkedAt": "2026-10-17T06:35:59.445Z",
+            "note": "公式本人ページから宣材資料PDFへ直接リンク。氏名・英語名・生年月日・身長がPDF1ページ目と一致する。"
+          },
+          {
+            "url": "https://actoli.jp/assets/yosuke-ito-profile.pdf",
+            "checkedAt": "2026-10-17T06:36:00.283Z",
+            "note": "PDF2ページ目のStage欄に2005年BLEACHと2006年BLEACH再炎をそれぞれ明記。紙面上の欄を確認し、作品出典の浦原喜助役と本人プロフィールを接続する。PDFには役名の明記はないため配役の根拠は作品出典に保持。"
+          }
+        ]
+      },
+      "facts": {
+        "name_en": {
+          "status": "confirmed",
+          "value": "Yosuke Ito",
+          "evidence": [
+            {
+              "url": "https://actoli.jp/actor/",
+              "checkedAt": "2026-10-17T06:35:59.445Z",
+              "note": "本人ページの主見出しの英語表記。宣材PDF1ページ目でも一致。"
+            }
+          ]
+        },
+        "birthday": {
+          "status": "confirmed",
+          "value": "1984-07-07",
+          "evidence": [
+            {
+              "url": "https://actoli.jp/actor/",
+              "checkedAt": "2026-10-17T06:35:59.445Z",
+              "note": "本人ページに生年月日1984年7月7日。宣材PDF1ページ目と一致。"
+            }
+          ]
+        },
+        "height_cm": {
+          "status": "confirmed",
+          "value": 184,
+          "evidence": [
+            {
+              "url": "https://actoli.jp/actor/",
+              "checkedAt": "2026-10-17T06:35:59.445Z",
+              "note": "本人ページの身長184cm。宣材PDF1ページ目と一致。"
+            }
+          ]
+        }
+      },
+      "notes": [
+        "読みは公式ページ・宣材PDFに明記がないためローマ字から逆算せずnull。血液型・性別も推定しない。プロフィール文章は作成しない。",
+        "主催公演側の別ページ見出しにある伊藤陽祐という誤記を芸名・別名として登録しない。"
+      ],
+      "searchHistory": [
+        {
+          "query": "伊藤陽佑 公式プロフィール BLEACH 出演歴",
+          "checkedAt": "2026-10-17T06:38:10.020Z",
+          "outcome": "official_profile_and_production_connection_confirmed"
+        }
+      ]
     }
   ]
 }

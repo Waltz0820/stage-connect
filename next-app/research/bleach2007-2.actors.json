@@ -62,6 +62,55 @@
           "outcome": "official_profile_connection_confirmed"
         }
       ]
+    },
+    {
+      "sourceCreditKey": "43f64e8d23819f1cefaf",
+      "sourceActorName": "倉貫匡弘",
+      "identity": {
+        "status": "profile_linked",
+        "profileUrl": "https://gmbp.co.jp/profile/kuranuki-sasahiro",
+        "evidence": [
+          {
+            "url": "https://gmbp.co.jp/profile/kuranuki-sasahiro",
+            "checkedAt": "2026-10-17T06:38:08.221Z",
+            "note": "所属事務所の本人プロフィールに2007年3月No Clouds in the Blue Heavensの東仙要役を明記。作品出典と公演名・役名が一致。公式ページURLのsasahiroを氏名の綴りとは扱わず主見出しを確認する。"
+          }
+        ]
+      },
+      "facts": {
+        "name_en": {
+          "status": "confirmed",
+          "value": "Masahiro Kuranuki",
+          "evidence": [
+            {
+              "url": "https://gmbp.co.jp/profile/kuranuki-sasahiro",
+              "checkedAt": "2026-10-17T06:38:08.221Z",
+              "note": "主見出しのKuranuki Masahiroを名・姓の表示順に整形。綴りをURLから推定しない。"
+            }
+          ]
+        },
+        "birthday": {
+          "status": "confirmed",
+          "value": "1982-12-20",
+          "evidence": [
+            {
+              "url": "https://gmbp.co.jp/profile/kuranuki-sasahiro",
+              "checkedAt": "2026-10-17T06:38:08.221Z",
+              "note": "生年月日の年・月・日の明記を採用。自動計算される年齢は保存しない。"
+            }
+          ]
+        }
+      },
+      "notes": [
+        "読み・身長・血液型・性別は今回の公式ページに根拠を確認できないためnull。キラハイの176cm等を公式確認済みの値へ格上げしない。プロフィール文章は作成しない。"
+      ],
+      "searchHistory": [
+        {
+          "query": "倉貫匡弘 公式プロフィール BLEACH 出演歴",
+          "checkedAt": "2026-10-17T06:38:11.047Z",
+          "outcome": "official_profile_and_production_connection_confirmed"
+        }
+      ]
     }
   ]
 }
