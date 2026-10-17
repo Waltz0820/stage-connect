@@ -139,6 +139,159 @@
           "outcome": "official_profile_and_production_connection_confirmed"
         }
       ]
+    },
+    {
+      "sourceCreditKey": "d180b33adf230ca5540b",
+      "sourceActorName": "吉田直史",
+      "identity": {
+        "status": "profile_linked",
+        "profileUrl": "https://mixi.jp/view_community.pl?id=669498",
+        "evidence": [
+          {
+            "url": "https://mixi.jp/view_community.pl?id=669498",
+            "checkedAt": "2026-10-17T06:52:56.756Z",
+            "note": "ファンコミュニティのプロフィール転載に1981年10月24日生まれと2005年8月・2006年1月のBLEACH茶渡泰虎役を確認。元の事務所・本人ブログの値を一次確認できたものではない。作品出典と両公演・配役が一致する人物資料として採用。"
+          },
+          {
+            "url": "https://seuiyutyatgei.seesaa.net/article/11434071.html",
+            "checkedAt": "2026-10-17T06:52:57.432Z",
+            "note": "2006年再炎を観た当時の記録に、茶渡泰虎役・吉田直史と読みよしだなおふみが同じキャスト行にある。"
+          },
+          {
+            "url": "https://natalie.mu/comic/news/221349",
+            "checkedAt": "2026-10-17T06:52:57.976Z",
+            "note": "編集媒体の過去公演放送案内でも2006年再炎の出演者に吉田直史を確認。"
+          }
+        ]
+      },
+      "facts": {
+        "kana": {
+          "status": "confirmed",
+          "value": "よしだ なおふみ",
+          "evidence": [
+            {
+              "url": "https://seuiyutyatgei.seesaa.net/article/11434071.html",
+              "checkedAt": "2026-10-17T06:52:57.432Z",
+              "note": "2006年再炎の当時の観劇記録にある本人の配役行の読み。ファン記録であり公式の読み確認とは区別。"
+            }
+          ]
+        },
+        "birthday": {
+          "status": "confirmed",
+          "value": "1981-10-24",
+          "evidence": [
+            {
+              "url": "https://mixi.jp/view_community.pl?id=669498",
+              "checkedAt": "2026-10-17T06:52:56.756Z",
+              "note": "本人ブログよりと記されたファン側の転載値。原資料の現存確認は未完了で、後日の監査優先対象。"
+            }
+          ]
+        }
+      },
+      "notes": [
+        "人物接点は両公演の茶渡泰虎役を軸に判断。医師・研究者・企業関係者の同名人物の読みや生年月日は流用しない。",
+        "生年月日はファンによる転載資料への依存が残る。一次資料の再確認を後日の総合監査に残す。身長192cmも記載があるが今回は採用しない。英語名・性別・血液型もnull。紹介文は作成しない。"
+      ],
+      "searchHistory": [
+        {
+          "query": "BLEACH 吉田直史",
+          "checkedAt": "2026-10-17T06:54:12.282Z",
+          "outcome": "source_crosschecked_for_adoption"
+        },
+        {
+          "query": "吉田直史 生年月日・他の出演作で人物を照合",
+          "checkedAt": "2026-10-17T06:54:12.282Z",
+          "outcome": "source_tiers_and_audit_limits_recorded"
+        }
+      ]
+    },
+    {
+      "sourceCreditKey": "2b70266efc82ed02fa00",
+      "sourceActorName": "熊倉功",
+      "identity": {
+        "status": "profile_linked",
+        "profileUrl": "https://www.excite.co.jp/news/dictionary/person/PEaa58483252b5fad95062c9e5d267d975042443ed/",
+        "evidence": [
+          {
+            "url": "https://mixi.jp/view_community.pl?from=cross_search&id=1750011",
+            "checkedAt": "2026-10-17T06:52:58.331Z",
+            "note": "BLEACHの熊倉功を扱うファン資料にアンサンブル出演、7月15日・AB型・栃木県・SET所属の当時情報を確認。媒体人物辞典の同名俳優の月日・血液型・出身地・過去のSET所属が一致。"
+          },
+          {
+            "url": "https://www.excite.co.jp/news/dictionary/person/PEaa58483252b5fad95062c9e5d267d975042443ed/",
+            "checkedAt": "2026-10-17T06:52:56.617Z",
+            "note": "媒体人物辞典の氏名・生年月日・血液型・出身地・俳優経歴を照合。同名の美容師プロフィールを採用しない。"
+          },
+          {
+            "url": "https://www1.gcenter-hyogo.jp/contents_parts/ConcertDetail.aspx?kid=4196112501&sid=0000000005",
+            "checkedAt": "2026-10-17T06:50:51.993Z",
+            "note": "会場公式の2007年4月7日BLEACH出演者一覧にも熊倉功。候補の当該春公演への出演を補強する。"
+          }
+        ]
+      },
+      "facts": {
+        "kana": {
+          "status": "confirmed",
+          "value": "くまくら いさお",
+          "evidence": [
+            {
+              "url": "https://actionclub.world.coocan.jp/service.html",
+              "checkedAt": "2026-10-17T06:52:56.836Z",
+              "note": "アクションクラブの本人区間で熊倉功の読みを確認。媒体プロフィールとも一致。隣接する別人の項目を混ぜない。"
+            }
+          ]
+        },
+        "name_en": {
+          "status": "confirmed",
+          "value": "Isao Kumakura",
+          "evidence": [
+            {
+              "url": "https://e-stagetopia.com/alternative/",
+              "checkedAt": "2026-10-17T06:52:58.044Z",
+              "note": "公演公式の本人カードの英語表記。氏名・BRATS表記の同じカードから確認。"
+            }
+          ]
+        },
+        "birthday": {
+          "status": "confirmed",
+          "value": "1980-07-15",
+          "evidence": [
+            {
+              "url": "https://www.excite.co.jp/news/dictionary/person/PEaa58483252b5fad95062c9e5d267d975042443ed/",
+              "checkedAt": "2026-10-17T06:52:56.617Z",
+              "note": "媒体人物辞典に明記された生年月日。ファン資料の月日とも一致。本人ブログの年齢から計算した値ではない。"
+            }
+          ]
+        },
+        "blood_type": {
+          "status": "confirmed",
+          "value": "AB",
+          "evidence": [
+            {
+              "url": "https://www.excite.co.jp/news/dictionary/person/PEaa58483252b5fad95062c9e5d267d975042443ed/",
+              "checkedAt": "2026-10-17T06:52:56.617Z",
+              "note": "媒体人物辞典のAB型。BLEACHファン資料にも一致する記載。"
+            }
+          ]
+        }
+      },
+      "notes": [
+        "人物接点の判断にファン資料と媒体プロフィールを併用。事務所一次資料だけで全項目を確認したとは扱わない。",
+        "本人を名乗る古いブログはHTTPS証明書エラー、HTTPでは取得できた。公開登録の直接の根拠URLには使わず、探索記録に保持。BRATS公式トップは取得量と時間の上限で本文確認未完了。",
+        "身長174cmはファン資料にあるが今回は未採用。性別も推測せずnull。プロフィール文章は作らない。"
+      ],
+      "searchHistory": [
+        {
+          "query": "BLEACH 熊倉功",
+          "checkedAt": "2026-10-17T06:54:12.282Z",
+          "outcome": "source_crosschecked_for_adoption"
+        },
+        {
+          "query": "熊倉功 生年月日・他の出演作で人物を照合",
+          "checkedAt": "2026-10-17T06:54:12.282Z",
+          "outcome": "source_tiers_and_audit_limits_recorded"
+        }
+      ]
     }
   ]
 }

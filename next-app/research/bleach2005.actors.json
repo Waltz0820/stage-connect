@@ -139,6 +139,153 @@
           "outcome": "official_profile_and_production_connection_confirmed"
         }
       ]
+    },
+    {
+      "sourceCreditKey": "6ff74f3a449511dfb4b4",
+      "sourceActorName": "坂田鉄平",
+      "identity": {
+        "status": "profile_linked",
+        "profileUrl": "https://www.ameba.jp/profile/general/s-teppei/",
+        "evidence": [
+          {
+            "url": "https://www.excite.co.jp/news/dictionary/person/PE90e79a39cc638149180a0a4ee7a78b7e40add62e/",
+            "checkedAt": "2026-10-17T06:50:14.426Z",
+            "note": "媒体人物辞典のBLEACH出演歴と氏名・生年月日1977年7月21日・血液型A型を確認。本人Amebaプロフィールの氏名・年月日・血液型が一致し、作品出典の出演者と接続する。媒体プロフィールであり事務所一次資料とは区別する。"
+          },
+          {
+            "url": "https://www.ameba.jp/profile/general/s-teppei/",
+            "checkedAt": "2026-10-17T06:45:54.125Z",
+            "note": "同名の本人ブログに接続するプロフィール。生年月日・血液型・性別の明記を確認。"
+          }
+        ]
+      },
+      "facts": {
+        "kana": {
+          "status": "confirmed",
+          "value": "さかたてっぺい",
+          "evidence": [
+            {
+              "url": "https://thetv.jp/person/1000021068/",
+              "checkedAt": "2026-10-17T06:50:14.689Z",
+              "note": "編集部プロフィールの氏名直下の読み。氏名・生年月日・血液型が本人プロフィールと一致。"
+            }
+          ]
+        },
+        "birthday": {
+          "status": "confirmed",
+          "value": "1977-07-21",
+          "evidence": [
+            {
+              "url": "https://www.ameba.jp/profile/general/s-teppei/",
+              "checkedAt": "2026-10-17T06:45:54.125Z",
+              "note": "本人プロフィールの生年月日欄。"
+            }
+          ]
+        },
+        "blood_type": {
+          "status": "confirmed",
+          "value": "A",
+          "evidence": [
+            {
+              "url": "https://www.ameba.jp/profile/general/s-teppei/",
+              "checkedAt": "2026-10-17T06:45:54.125Z",
+              "note": "本人プロフィールの血液型欄。"
+            }
+          ]
+        },
+        "gender": {
+          "status": "confirmed",
+          "value": "male",
+          "evidence": [
+            {
+              "url": "https://www.ameba.jp/profile/general/s-teppei/",
+              "checkedAt": "2026-10-17T06:45:54.125Z",
+              "note": "本人プロフィールの男性との明記。"
+            }
+          ]
+        }
+      },
+      "notes": [
+        "英語名と身長は今回採用せずnull。古い所属を現在の所属へ転記しない。プロフィール文章は作らない。",
+        "2026-10-17のユーザー方針：一次資料が欠けても、出演歴・氏名・生年月日など複数の一致を根拠に採用し、媒体の種別と懸念を残して後日の総合監査へ渡す。"
+      ],
+      "searchHistory": [
+        {
+          "query": "BLEACH 坂田鉄平",
+          "checkedAt": "2026-10-17T06:54:11.564Z",
+          "outcome": "source_crosschecked_for_adoption"
+        },
+        {
+          "query": "坂田鉄平 生年月日・他の出演作で人物を照合",
+          "checkedAt": "2026-10-17T06:54:11.564Z",
+          "outcome": "source_tiers_and_audit_limits_recorded"
+        }
+      ]
+    },
+    {
+      "sourceCreditKey": "d180b33adf230ca5540b",
+      "sourceActorName": "吉田直史",
+      "identity": {
+        "status": "profile_linked",
+        "profileUrl": "https://mixi.jp/view_community.pl?id=669498",
+        "evidence": [
+          {
+            "url": "https://mixi.jp/view_community.pl?id=669498",
+            "checkedAt": "2026-10-17T06:52:56.756Z",
+            "note": "ファンコミュニティのプロフィール転載に1981年10月24日生まれと2005年8月・2006年1月のBLEACH茶渡泰虎役を確認。元の事務所・本人ブログの値を一次確認できたものではない。作品出典と両公演・配役が一致する人物資料として採用。"
+          },
+          {
+            "url": "https://seuiyutyatgei.seesaa.net/article/11434071.html",
+            "checkedAt": "2026-10-17T06:52:57.432Z",
+            "note": "2006年再炎を観た当時の記録に、茶渡泰虎役・吉田直史と読みよしだなおふみが同じキャスト行にある。"
+          },
+          {
+            "url": "https://natalie.mu/comic/news/221349",
+            "checkedAt": "2026-10-17T06:52:57.976Z",
+            "note": "編集媒体の過去公演放送案内でも2006年再炎の出演者に吉田直史を確認。"
+          }
+        ]
+      },
+      "facts": {
+        "kana": {
+          "status": "confirmed",
+          "value": "よしだ なおふみ",
+          "evidence": [
+            {
+              "url": "https://seuiyutyatgei.seesaa.net/article/11434071.html",
+              "checkedAt": "2026-10-17T06:52:57.432Z",
+              "note": "2006年再炎の当時の観劇記録にある本人の配役行の読み。ファン記録であり公式の読み確認とは区別。"
+            }
+          ]
+        },
+        "birthday": {
+          "status": "confirmed",
+          "value": "1981-10-24",
+          "evidence": [
+            {
+              "url": "https://mixi.jp/view_community.pl?id=669498",
+              "checkedAt": "2026-10-17T06:52:56.756Z",
+              "note": "本人ブログよりと記されたファン側の転載値。原資料の現存確認は未完了で、後日の監査優先対象。"
+            }
+          ]
+        }
+      },
+      "notes": [
+        "人物接点は両公演の茶渡泰虎役を軸に判断。医師・研究者・企業関係者の同名人物の読みや生年月日は流用しない。",
+        "生年月日はファンによる転載資料への依存が残る。一次資料の再確認を後日の総合監査に残す。身長192cmも記載があるが今回は採用しない。英語名・性別・血液型もnull。紹介文は作成しない。"
+      ],
+      "searchHistory": [
+        {
+          "query": "BLEACH 吉田直史",
+          "checkedAt": "2026-10-17T06:54:11.564Z",
+          "outcome": "source_crosschecked_for_adoption"
+        },
+        {
+          "query": "吉田直史 生年月日・他の出演作で人物を照合",
+          "checkedAt": "2026-10-17T06:54:11.564Z",
+          "outcome": "source_tiers_and_audit_limits_recorded"
+        }
+      ]
     }
   ]
 }

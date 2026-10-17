@@ -111,6 +111,152 @@
           "outcome": "official_profile_and_production_connection_confirmed"
         }
       ]
+    },
+    {
+      "sourceCreditKey": "2b70266efc82ed02fa00",
+      "sourceActorName": "熊倉功",
+      "identity": {
+        "status": "profile_linked",
+        "profileUrl": "https://www.excite.co.jp/news/dictionary/person/PEaa58483252b5fad95062c9e5d267d975042443ed/",
+        "evidence": [
+          {
+            "url": "https://mixi.jp/view_community.pl?from=cross_search&id=1750011",
+            "checkedAt": "2026-10-17T06:52:58.331Z",
+            "note": "BLEACHの熊倉功を扱うファン資料にアンサンブル出演、7月15日・AB型・栃木県・SET所属の当時情報を確認。媒体人物辞典の同名俳優の月日・血液型・出身地・過去のSET所属が一致。"
+          },
+          {
+            "url": "https://www.excite.co.jp/news/dictionary/person/PEaa58483252b5fad95062c9e5d267d975042443ed/",
+            "checkedAt": "2026-10-17T06:52:56.617Z",
+            "note": "媒体人物辞典の氏名・生年月日・血液型・出身地・俳優経歴を照合。同名の美容師プロフィールを採用しない。"
+          },
+          {
+            "url": "https://www1.gcenter-hyogo.jp/contents_parts/ConcertDetail.aspx?kid=4196112501&sid=0000000005",
+            "checkedAt": "2026-10-17T06:50:51.993Z",
+            "note": "会場公式の2007年4月7日BLEACH出演者一覧にも熊倉功。候補の当該春公演への出演を補強する。"
+          }
+        ]
+      },
+      "facts": {
+        "kana": {
+          "status": "confirmed",
+          "value": "くまくら いさお",
+          "evidence": [
+            {
+              "url": "https://actionclub.world.coocan.jp/service.html",
+              "checkedAt": "2026-10-17T06:52:56.836Z",
+              "note": "アクションクラブの本人区間で熊倉功の読みを確認。媒体プロフィールとも一致。隣接する別人の項目を混ぜない。"
+            }
+          ]
+        },
+        "name_en": {
+          "status": "confirmed",
+          "value": "Isao Kumakura",
+          "evidence": [
+            {
+              "url": "https://e-stagetopia.com/alternative/",
+              "checkedAt": "2026-10-17T06:52:58.044Z",
+              "note": "公演公式の本人カードの英語表記。氏名・BRATS表記の同じカードから確認。"
+            }
+          ]
+        },
+        "birthday": {
+          "status": "confirmed",
+          "value": "1980-07-15",
+          "evidence": [
+            {
+              "url": "https://www.excite.co.jp/news/dictionary/person/PEaa58483252b5fad95062c9e5d267d975042443ed/",
+              "checkedAt": "2026-10-17T06:52:56.617Z",
+              "note": "媒体人物辞典に明記された生年月日。ファン資料の月日とも一致。本人ブログの年齢から計算した値ではない。"
+            }
+          ]
+        },
+        "blood_type": {
+          "status": "confirmed",
+          "value": "AB",
+          "evidence": [
+            {
+              "url": "https://www.excite.co.jp/news/dictionary/person/PEaa58483252b5fad95062c9e5d267d975042443ed/",
+              "checkedAt": "2026-10-17T06:52:56.617Z",
+              "note": "媒体人物辞典のAB型。BLEACHファン資料にも一致する記載。"
+            }
+          ]
+        }
+      },
+      "notes": [
+        "人物接点の判断にファン資料と媒体プロフィールを併用。事務所一次資料だけで全項目を確認したとは扱わない。",
+        "本人を名乗る古いブログはHTTPS証明書エラー、HTTPでは取得できた。公開登録の直接の根拠URLには使わず、探索記録に保持。BRATS公式トップは取得量と時間の上限で本文確認未完了。",
+        "身長174cmはファン資料にあるが今回は未採用。性別も推測せずnull。プロフィール文章は作らない。"
+      ],
+      "searchHistory": [
+        {
+          "query": "BLEACH 熊倉功",
+          "checkedAt": "2026-10-17T06:54:12.896Z",
+          "outcome": "source_crosschecked_for_adoption"
+        },
+        {
+          "query": "熊倉功 生年月日・他の出演作で人物を照合",
+          "checkedAt": "2026-10-17T06:54:12.896Z",
+          "outcome": "source_tiers_and_audit_limits_recorded"
+        }
+      ]
+    },
+    {
+      "sourceCreditKey": "9595c45ac58ce2609a55",
+      "sourceActorName": "関根あすか",
+      "identity": {
+        "status": "profile_linked",
+        "profileUrl": "https://eplus.jp/sf/word/0000040130",
+        "evidence": [
+          {
+            "url": "https://www1.gcenter-hyogo.jp/contents_parts/ConcertDetail.aspx?kid=4196112501&sid=0000000005",
+            "checkedAt": "2026-10-17T06:50:51.993Z",
+            "note": "会場公式に2007年春BLEACHの出演者として氏名を確認。砕蜂役の根拠は作品出典に保持。"
+          },
+          {
+            "url": "https://eplus.jp/sf/word/0000040130",
+            "checkedAt": "2026-10-17T06:50:51.392Z",
+            "note": "プレイガイドの人物ページが関根あすか(G-Rockets)と明記。"
+          },
+          {
+            "url": "https://g-rockets.jp/category/information/y2011/",
+            "checkedAt": "2026-10-17T06:50:15.357Z",
+            "note": "団体公式の過去公演記録に本人氏名を確認。現在の所属を示す資料としては使わない。"
+          },
+          {
+            "url": "https://www.amuse.co.jp/about/stage/?k=EVIL+DEAD+THE+MUSICAL&y1=2009&y2=2009",
+            "checkedAt": "2026-10-17T06:50:51.780Z",
+            "note": "主催・製作側の2009年公演記録にも関根あすか(G-Rockets)があり、プレイガイドの所属付き人物ページと照合。"
+          }
+        ]
+      },
+      "facts": {
+        "kana": {
+          "status": "confirmed",
+          "value": "セキネアスカ",
+          "evidence": [
+            {
+              "url": "https://eplus.jp/sf/word/play/theater/p70",
+              "checkedAt": "2026-10-17T06:50:16.198Z",
+              "note": "プレイガイドの人物一覧の関根あすか(G-Rockets)の読み。本人詳細ページへのリンク先も照合。"
+            }
+          ]
+        }
+      },
+      "notes": [
+        "生年月日・身長・血液型・性別・英語名は今回根拠がないためnull。架空のプロフィール文章は作らない。過去のG-Rockets所属を現在の所属と断定しない。"
+      ],
+      "searchHistory": [
+        {
+          "query": "BLEACH 関根あすか",
+          "checkedAt": "2026-10-17T06:54:12.896Z",
+          "outcome": "source_crosschecked_for_adoption"
+        },
+        {
+          "query": "関根あすか 生年月日・他の出演作で人物を照合",
+          "checkedAt": "2026-10-17T06:54:12.896Z",
+          "outcome": "source_tiers_and_audit_limits_recorded"
+        }
+      ]
     }
   ]
 }
