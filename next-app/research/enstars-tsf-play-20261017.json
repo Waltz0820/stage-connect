@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "batchId": "enstars-tsf-play-20261017-01",
+  "expectedFranchise": {
+    "id": "b2af04db-b92c-4545-84a5-09f307a5c1ff",
+    "name": "『あんさんぶるスターズ！オン・ステージ / THE STAGE』（あんステ）",
+    "slug": "enstars",
+    "updatedAt": "2025-12-13T04:58:27.220101+00:00"
+  },
+  "plays": [
+    {
+      "key": "tsf",
+      "play": {
+        "id": "42d02d2d-a928-460a-992b-6168fe848101",
+        "slug": "enstars-stage-to-the-shining-future",
+        "title": "『あんさんぶるスターズ！オン・ステージ』～To the shining future～",
+        "franchise_id": "b2af04db-b92c-4545-84a5-09f307a5c1ff",
+        "period": "2018年1月19日〜21日（大阪）／1月25日〜2月5日（東京）",
+        "venue": "梅田芸術劇場シアター・ドラマシティ／シアター1010",
+        "genre": "idol",
+        "summary": null,
+        "summary_en": null,
+        "title_en": null,
+        "vod": null,
+        "credits": null,
+        "tags": [],
+        "related_franchise_ids": []
+      },
+      "evidence": {
+        "version": 1,
+        "reviewStatus": "work_identity_and_cast_cross_checked",
+        "sourceUrl": "https://kira-hai.net/ensta2018",
+        "sourceFingerprint": "384976ad6a60ead96eb423c98ff637cb69c80e554ea7dedbce1de25ffe65db7d",
+        "sourceTitle": "『あんさんぶるスターズ!オン・ステージ』~To the shining future~",
+        "scope": {
+          "decision": "include",
+          "reason": "Happy Elementsのゲーム原作の2.5次元舞台。初演や別副題の公演と区別して新規登録。"
+        },
+        "sources": [
+          {
+            "name": "work-tsf",
+            "url": "https://kira-hai.net/ensta2018",
+            "status": 200,
+            "checkedAt": "2026-10-17T13:52:53.040Z",
+            "sha256": "384976ad6a60ead96eb423c98ff637cb69c80e554ea7dedbce1de25ffe65db7d",
+            "bytes": 59474
+          },
+          {
+            "name": "official-release",
+            "url": "https://prtimes.jp/main/html/rd/p/000000307.000016719.html",
+            "status": 200,
+            "checkedAt": "2026-10-17T13:54:11.229Z",
+            "sha256": "fcab447fecb06bbb3036b15ac7184e8d3d4f90cbdadc6d3db587201da3148951",
+            "bytes": 253399
+          }
+        ],
+        "scheduleLines": [
+          "2018年1月19日-21日 梅田芸術劇場シアター・ドラマシティ",
+          "2018年1月25日-2月25日 シアター1010"
+        ],
+        "scheduleCorrections": [
+          {
+            "field": "Tokyo end date",
+            "sourceValue": "2018-02-25",
+            "acceptedValue": "2018-02-05",
+            "sourceUrl": "https://kira-hai.net/ensta2018",
+            "evidenceUrl": "https://prtimes.jp/main/html/rd/p/000000307.000016719.html",
+            "reason": "主催者マーベラスの当時の公式発表に東京2018年1/25〜2/5と明記。キラハイの誤記をそのまま公開しない。"
+          }
+        ],
+        "unavailableSources": [
+          {
+            "name": "official-top",
+            "url": "https://ensemble-stage.jp/ensemble_stage-4th/",
+            "status": 404,
+            "checkedAt": "2026-10-17T13:53:31.385Z",
+            "sha256": "e55da9b68907eae3b65f70fd4cece2860b8e6d8a8c5e6cbca5553a9ada702ac5",
+            "bytes": 19157
+          }
+        ],
+        "castCount": 30,
+        "notes": [
+          "全役名・出演者の組をキラハイと公式キャストで相互照合。",
+          "公演日程・会場を記録。曜日は転記しない。",
+          "あらすじ・現在配信・公式英題は未確認のため空欄。過去の配信告知を現在配信として登録しない。",
+          "主観タグは付けない。配役の掲載順は出典順として別途候補へ保存し、billing_orderには推測で書かない。"
+        ]
+      },
+      "requestKey": "7fac3085831baba06761d7802213c4ee35c0aec3d4ea5bd7c57b83ecd25f69e8"
+    }
+  ]
+}

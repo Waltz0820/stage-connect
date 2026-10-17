@@ -1,0 +1,57 @@
+{
+  "sourceUrl": "https://kira-hai.net/ensta2018",
+  "scope": {
+    "decision": "include",
+    "reason": "ゲーム「あんさんぶるスターズ！」原作の2.5次元舞台。副題・会期・会場から同一公演を確定。",
+    "evidence": [
+      {
+        "url": "https://kira-hai.net/ensta2018",
+        "checkedAt": "2026-10-17T13:52:53.040Z",
+        "note": "第一参照先の公演名・ユニット別配役を確認。日程の東京終演日は誤記があるため主催者発表を採用。"
+      },
+      {
+        "url": "https://prtimes.jp/main/html/rd/p/000000307.000016719.html",
+        "checkedAt": "2026-10-17T13:54:11.229Z",
+        "note": "主催者マーベラスの当時の公式発表。原作・副題・大阪2018年1月19〜21日/東京1月25日〜2月5日と30組の配役を照合。キラハイの東京2月25日という誤記は採用しない。"
+      }
+    ]
+  },
+  "play": {
+    "id": "42d02d2d-a928-460a-992b-6168fe848101",
+    "slug": "enstars-stage-to-the-shining-future",
+    "expectedUpdatedAt": "2026-10-17T13:57:13.275479+00:00",
+    "evidence": [
+      {
+        "url": "https://kira-hai.net/ensta2018",
+        "checkedAt": "2026-10-17T13:52:53.040Z",
+        "note": "第一参照先の公演名・ユニット別配役を確認。日程の東京終演日は誤記があるため主催者発表を採用。"
+      },
+      {
+        "url": "https://prtimes.jp/main/html/rd/p/000000307.000016719.html",
+        "checkedAt": "2026-10-17T13:54:11.229Z",
+        "note": "主催者マーベラスの当時の公式発表。原作・副題・大阪2018年1月19〜21日/東京1月25日〜2月5日と30組の配役を照合。キラハイの東京2月25日という誤記は採用しない。"
+      }
+    ]
+  },
+  "actors": [
+    {
+      "sourceActorName": "瑛",
+      "action": "link",
+      "actorId": "508ba664-f644-4c55-a98e-4ac0d87778e3",
+      "expectedName": "百成瑛",
+      "expectedUpdatedAt": "2026-10-17T08:22:48.968908+00:00",
+      "evidence": [
+        {
+          "url": "https://kira-hai.net/akira",
+          "checkedAt": "2026-10-17T08:15:59.963Z",
+          "note": "人物ページの現在名・百成瑛と旧名・瑛の明記を確認。別人物は作成しない。"
+        },
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000307.000016719.html",
+          "checkedAt": "2026-10-17T13:54:11.229Z",
+          "note": "2018年1〜2月公演の乙狩アドニス役は当時名の瑛。現在名の百成瑛の同一IDへ紐づける。"
+        }
+      ]
+    }
+  ]
+}
