@@ -1,0 +1,148 @@
+{
+  "version": 1,
+  "batchId": "enstars-followup-plays-20261017-01",
+  "expectedFranchise": {
+    "id": "b2af04db-b92c-4545-84a5-09f307a5c1ff",
+    "name": "『あんさんぶるスターズ！オン・ステージ / THE STAGE』（あんステ）",
+    "slug": "enstars",
+    "updatedAt": "2025-12-13T04:58:27.220101+00:00"
+  },
+  "plays": [
+    {
+      "key": "tym",
+      "play": {
+        "id": "a5635900-c603-4aab-9455-805a6fc83ed4",
+        "slug": "enstars-stage-take-your-marks",
+        "title": "『あんさんぶるスターズ！オン・ステージ』～Take your marks!～",
+        "franchise_id": "b2af04db-b92c-4545-84a5-09f307a5c1ff",
+        "period": "2017年1月5日〜15日（東京）／1月25日〜29日（大阪）",
+        "venue": "AiiA 2.5 Theater Tokyo／梅田芸術劇場 シアター・ドラマシティ",
+        "genre": "idol",
+        "summary": null,
+        "summary_en": null,
+        "title_en": null,
+        "vod": null,
+        "credits": null,
+        "tags": [],
+        "related_franchise_ids": []
+      },
+      "evidence": {
+        "version": 1,
+        "reviewStatus": "work_identity_and_cast_cross_checked",
+        "sourceUrl": "https://kira-hai.net/ensta2017",
+        "sourceFingerprint": "d63760761cc0a2da281dc2e1af7cd0f150b95a08b5003a4e623976e776333d82",
+        "sourceTitle": "『あんさんぶるスターズ!オン・ステージ』~Take your marks!~",
+        "scope": {
+          "decision": "include",
+          "reason": "Happy Elementsのゲーム原作の2.5次元舞台。初演や別副題の公演と区別して新規登録。"
+        },
+        "sources": [
+          {
+            "name": "work-tym",
+            "url": "https://kira-hai.net/ensta2017",
+            "status": 200,
+            "checkedAt": "2026-10-17T13:17:09.405Z",
+            "sha256": "d63760761cc0a2da281dc2e1af7cd0f150b95a08b5003a4e623976e776333d82",
+            "bytes": 58085
+          },
+          {
+            "name": "official-tym",
+            "url": "https://www.marv.jp/special/ensemble_stage-second/cast.html",
+            "status": 200,
+            "checkedAt": "2026-10-17T13:18:36.718Z",
+            "sha256": "e4ded1988095c0d19486d2c484b0fd6f5e0a54c3af4357b6b717b982ca6dc002",
+            "bytes": 19884
+          },
+          {
+            "name": "schedule-tym",
+            "url": "https://www.marv.jp/special/ensemble_stage-second/stage.html",
+            "status": 200,
+            "checkedAt": "2026-10-17T13:18:39.394Z",
+            "sha256": "919a1c9b05fe4670aa4a9cf2d79d65857e9106537daf1869ab14ab0f43f007bd",
+            "bytes": 10030
+          }
+        ],
+        "scheduleLines": [
+          "2017年1月5日-15日 AiiA 2.5 Theater Tokyo",
+          "2017年1月25日-29日 梅田芸術劇場 シアター・ドラマシティ"
+        ],
+        "castCount": 22,
+        "notes": [
+          "全役名・出演者の組をキラハイと公式キャストで相互照合。",
+          "公演日程・会場を記録。曜日は転記しない。",
+          "あらすじ・現在配信・公式英題は未確認のため空欄。過去の配信告知を現在配信として登録しない。",
+          "主観タグは付けない。配役の掲載順は出典順として別途候補へ保存し、billing_orderには推測で書かない。"
+        ]
+      },
+      "requestKey": "9e661a0e779fe59028d717be0b8bf9ca2f223242fd4b42a3277d4868d3f39e1a"
+    },
+    {
+      "key": "jok",
+      "play": {
+        "id": "45754887-e395-4c26-9414-8e55d46ba574",
+        "slug": "enstars-extra-stage-judge-of-knights",
+        "title": "『あんさんぶるスターズ！エクストラ・ステージ』～Judge of Knights～",
+        "franchise_id": "b2af04db-b92c-4545-84a5-09f307a5c1ff",
+        "period": "2017年9月7日〜18日（東京）／9月22日〜24日（神戸）",
+        "venue": "シアター1010／新神戸オリエンタル劇場",
+        "genre": "idol",
+        "summary": null,
+        "summary_en": null,
+        "title_en": null,
+        "vod": null,
+        "credits": null,
+        "tags": [],
+        "related_franchise_ids": []
+      },
+      "evidence": {
+        "version": 1,
+        "reviewStatus": "work_identity_and_cast_cross_checked",
+        "sourceUrl": "https://kira-hai.net/ensta2017-2",
+        "sourceFingerprint": "cc05ab4a8a7faae8f2f787837d26d25d1506d4a6b1709cd1295562f40ca7c323",
+        "sourceTitle": "『あんさんぶるスターズ!エクストラ・ステージ』~Judge of Knights~",
+        "scope": {
+          "decision": "include",
+          "reason": "Happy Elementsのゲーム原作の2.5次元舞台。初演や別副題の公演と区別して新規登録。"
+        },
+        "sources": [
+          {
+            "name": "work-jok",
+            "url": "https://kira-hai.net/ensta2017-2",
+            "status": 200,
+            "checkedAt": "2026-10-17T13:17:12.346Z",
+            "sha256": "cc05ab4a8a7faae8f2f787837d26d25d1506d4a6b1709cd1295562f40ca7c323",
+            "bytes": 59572
+          },
+          {
+            "name": "official-jok",
+            "url": "https://www.marv.jp/special/ensemble_stage-third/cast.html",
+            "status": 200,
+            "checkedAt": "2026-10-17T13:18:42.008Z",
+            "sha256": "00f583d24543fa44b2f74626350a9902209d308dfddf2b41c9e0728f5b591a5e",
+            "bytes": 18887
+          },
+          {
+            "name": "schedule-jok",
+            "url": "https://www.marv.jp/special/ensemble_stage-third/stage.html",
+            "status": 200,
+            "checkedAt": "2026-10-17T13:18:44.634Z",
+            "sha256": "963c2fa28da1a6fda24ef6a35c6030f6737174054788d5ba24b28600c18cc990",
+            "bytes": 13276
+          }
+        ],
+        "scheduleLines": [
+          "2017年9月7日-18日 シアター1010",
+          "2017年9月22日-24日 新神戸オリエンタル劇場"
+        ],
+        "castCount": 16,
+        "notes": [
+          "全役名・出演者の組をキラハイと公式キャストで相互照合。",
+          "公演日程・会場を記録。曜日は転記しない。",
+          "あらすじ・現在配信・公式英題は未確認のため空欄。過去の配信告知を現在配信として登録しない。",
+          "主観タグは付けない。配役の掲載順は出典順として別途候補へ保存し、billing_orderには推測で書かない。"
+        ]
+      },
+      "requestKey": "37fdb9305540eb248c546819661b39344de3f30fbd4672c82fe920ade4080028"
+    }
+  ]
+}
