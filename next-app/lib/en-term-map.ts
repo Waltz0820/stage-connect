@@ -2,6 +2,29 @@
 // We keep this lightweight on purpose so we can expand it as more series are translated.
 
 export const EN_EXACT_TERM_MAP: Record<string, string> = {
+  // BLEACH roles: official JP/EN character pages, checked 2026-10-17.
+  // Provenance and spellings: research/bleach-role-translations.json.
+  黒崎一護: "Ichigo Kurosaki",
+  朽木ルキア: "Rukia Kuchiki",
+  阿散井恋次: "Renji Abarai",
+  日番谷冬獅郎: "Toshiro Hitsugaya",
+  藍染惣右介: "Sosuke Aizen",
+  浦原喜助: "Kisuke Urahara",
+  市丸ギン: "Gin Ichimaru",
+  井上織姫: "Orihime Inoue",
+  茶渡泰虎: "Yasutora Sado (Chad)",
+  朽木白哉: "Byakuya Kuchiki",
+  雛森桃: "Momo Hinamori",
+  吉良イヅル: "Izuru Kira",
+  斑目一角: "Ikkaku Madarame",
+  山田花太郎: "Hanataro Yamada",
+  四楓院夜一: "Yoruichi Shihoin",
+  更木剣八: "Kenpachi Zaraki",
+  松本乱菊: "Rangiku Matsumoto",
+  卯ノ花烈: "Retsu Unohana",
+  砕蜂: "Soi Fon",
+  檜佐木修兵: "Shuhei Hisagi",
+  東仙要: "Kaname Tosen",
   // Companies / orgs
   ネルケプランニング: "Nelke Planning",
   マーベラスエンターテイメント: "Marvelous Entertainment",

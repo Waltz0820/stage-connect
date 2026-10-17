@@ -25,7 +25,7 @@ const copy = require(join(directory, 'en-copy.js'));
 const routing = require(join(directory, 'locale-routing.js'));
 
 test('every existing exact dictionary entry retains its translation', () => {
-  assert.equal(Object.keys(terms.EN_EXACT_TERM_MAP).length, 686);
+  assert.equal(Object.keys(terms.EN_EXACT_TERM_MAP).length, 707);
   for (const [source, target] of Object.entries(terms.EN_EXACT_TERM_MAP)) {
     assert.equal(terms.translateExactTermEn(source), target, source);
     assert.equal(terms.translateKnownTermsEn(source), target, source);
@@ -59,6 +59,20 @@ test('annotated role display retains multiple roles and unresolved conditions', 
   const result = copy.translateAnnotatedDisplayTextEn('役名A / 役名B※福岡公演・日替わりゲスト【声のみ】');
   for (const part of ['役名A', '役名B', '福岡公演', '日替わりゲスト', '声のみ']) assert.ok(result.includes(part), result);
   assert.equal(copy.translateAnnotatedDisplayTextEn('役名※大阪・福岡公演のみ'), '役名 ※Osaka and Fukuoka performances only');
+});
+
+test('reviewed BLEACH role names translate without dropping dual roles or appearance conditions', async () => {
+  const reviewed = JSON.parse(await readFile(new URL('../research/bleach-role-translations.json', import.meta.url), 'utf8'));
+  assert.equal(reviewed.roles.length, 21);
+  for (const role of reviewed.roles) {
+    assert.equal(copy.translateAnnotatedDisplayTextEn(role.ja), role.en, role.ja);
+    assert.ok(role.jaUrl.startsWith('https://www.bleach-bravesouls.com/character/'));
+    assert.ok(role.enUrl.startsWith('https://www.bleach-bravesouls.com/en/character/'));
+  }
+  assert.equal(copy.translateAnnotatedDisplayTextEn('黒崎一護 / 朽木ルキア※東京公演のみ'),
+    'Ichigo Kurosaki / Rukia Kuchiki ※Tokyo performances only');
+  assert.equal(copy.translateAnnotatedDisplayTextEn('市丸ギン【声のみ】 / 未確認の役名※日替わりゲスト'),
+    'Gin Ichimaru (声のみ) / 未確認の役名 ※Rotating Guest');
 });
 
 test('supported pages have reciprocal Japanese and English routes', () => {
