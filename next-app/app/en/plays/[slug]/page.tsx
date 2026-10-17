@@ -446,6 +446,7 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
                 Watch on d Anime Store
               </a>
             ) : null}
+            <Link className="action-button" href="/en/watch">Browse streaming services</Link>
           </div>
           {hasVod ? <p className="streaming-note">Check the provider’s title page for current availability, subscription or rental terms, and pricing.</p> : null}
         </section>

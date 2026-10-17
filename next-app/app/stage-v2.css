@@ -1,5 +1,60 @@
 /* Public V2 only. Administration retains its existing theme. */
 body:has(.stage-v2), html:has(.stage-v2) { background: #f4f5fb; }
+
+.stage-v2 .streaming-guide { display: grid; gap: 24px; padding-block: 28px 48px; }
+.stage-v2 .streaming-guide__hero { padding: 36px 28px; border: 1px solid var(--line); border-radius: 18px; background: linear-gradient(120deg,#faf8ff,#fff 70%); }
+.stage-v2 .streaming-guide__hero h1 { margin: 12px 0; font-family: var(--serif); font-size: clamp(27px,3.2vw,40px); line-height: 1.5; color: var(--text); }
+.stage-v2 .streaming-guide__hero > p { max-width: 760px; margin: 0; color: var(--muted); line-height: 1.9; font-size: 14px; }
+.stage-v2 .streaming-guide__search { display: grid; grid-template-columns: minmax(0,1fr) 180px 48px; gap: 8px; margin-top: 24px; background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 8px; box-shadow: 0 4px 15px #25234708; }
+.stage-v2 .streaming-guide__search :is(input,select) { min-width: 0; border: 0; background: transparent; color: var(--text); padding: 10px; font: inherit; font-size: 13px; }
+.stage-v2 .streaming-guide__search select { border-left: 1px solid var(--line); }
+.stage-v2 .streaming-guide__search button { width: 44px; min-height: 44px; border: 0; border-radius: 10px; background: #78649f; color: #fff; font-size: 24px; cursor: pointer; }
+.stage-v2 .streaming-guide__tabs { display: flex; flex-wrap: wrap; gap: 8px; }
+.stage-v2 .streaming-guide__tabs a { padding: 11px 18px; font-size: 12px; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); background: #fff; }
+.stage-v2 .streaming-guide__tabs a[aria-current] { background: var(--v2-soft); color: #665183; border-color: #bcb0d1; }
+.stage-v2 .streaming-guide__services { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; }
+.stage-v2 .streaming-guide__services.is-single { grid-template-columns: 1fr; }
+.stage-v2 .streaming-service-card { display: flex; flex-direction: column; align-items: flex-start; min-width: 0; gap: 14px; padding: 24px; border: 1px solid var(--line); border-radius: 14px; background: #fff; }
+.stage-v2 .streaming-service-card__heading { display: flex; gap: 12px; align-items: center; }
+.stage-v2 .streaming-service-card__heading svg { width: 24px; height: 24px; color: #8d79b0; }
+.stage-v2 .streaming-service-card h3 { margin: 0; color: var(--text); font-family: var(--serif); font-size: 21px; }
+.stage-v2 .streaming-service-card > p { margin: 0; font-size: 12px; color: var(--muted); line-height: 1.9; }
+.stage-v2 .streaming-service-card .streaming-service-card__price { font-family: var(--serif); color: var(--text); font-size: 34px; line-height: 1.4; }
+.stage-v2 .streaming-service-card__price small { font-family: var(--sans); font-size: 12px; color: var(--muted); }
+.stage-v2 .streaming-service-card__trial { padding: 6px 10px; border-radius: 8px; color: #665183; background: var(--v2-soft); font-size: 12px; }
+.stage-v2 .streaming-service-card__actions { margin-top: auto; display: grid; gap: 14px; font-size: 12px; }
+.stage-v2 .streaming-guide__productions { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 24px; }
+.stage-v2 .streaming-production { min-width: 0; display: grid; grid-template-columns: 38px minmax(0,1fr) 14px; align-items: center; gap: 12px; padding: 18px 0; border-bottom: 1px solid var(--line); }
+.stage-v2 .streaming-production__icon { display: grid; place-items: center; width: 38px; height: 38px; background: var(--v2-soft); color: #8d79b0; border-radius: 10px; }
+.stage-v2 .streaming-production__icon svg { width: 22px; height: 22px; }
+.stage-v2 .streaming-production strong { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; color: var(--text); font-family: var(--serif); font-size: 15px; line-height: 1.7; }
+.stage-v2 .streaming-production small { display: block; margin-top: 5px; font-size: 11px; color: var(--muted); }
+.stage-v2 .streaming-guide__empty { display: flex; align-items: center; gap: 18px; padding: 24px; background: #f8f7fc; border-radius: 12px; color: var(--muted); font-size: 13px; line-height: 1.9; }
+.stage-v2 .streaming-guide__empty svg { width: 30px; height: 30px; flex-shrink: 0; color: #8d79b0; }
+.stage-v2 .streaming-guide__signup { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px; padding: 26px; background: #f4f1fa; border: 1px solid var(--line); border-radius: 14px; }
+.stage-v2 .streaming-guide__signup h2 { margin: 0 0 8px; font-family: var(--serif); font-size: 22px; }
+.stage-v2 .streaming-guide__signup p, .stage-v2 .streaming-guide__signup small { margin: 0; font-size: 12px; line-height: 1.8; color: var(--muted); }
+.stage-v2 .streaming-guide__signup small { flex-basis: 100%; }
+.stage-v2 .streaming-guide__sources { color: var(--muted); font-size: 11px; line-height: 1.9; padding: 0 12px; }
+.stage-v2 .streaming-guide__sources h2 { font-size: 13px; font-weight: 500; margin: 0; }
+.stage-v2 .streaming-guide__sources ul { list-style: none; display: flex; flex-wrap: wrap; gap: 5px 18px; padding: 0; }
+.stage-v2 .streaming-guide__sources a { text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 899px) { .stage-v2 .streaming-guide__services { grid-template-columns: 1fr; } }
+@media (max-width: 599px) {
+  .stage-v2 .streaming-guide { gap: 20px; padding-top: 18px; }
+  .stage-v2 .streaming-guide__hero { padding: 24px 18px; }
+  .stage-v2 .streaming-guide__hero > p { font-size: 12px; }
+  .stage-v2 .streaming-guide__search { grid-template-columns: minmax(0,1fr) 44px; }
+  .stage-v2 .streaming-guide__search input:not([type=hidden]) { grid-column: 1/-1; }
+  .stage-v2 .streaming-guide__search select { border-left: 0; border-top: 1px solid var(--line); }
+  .stage-v2 .streaming-guide__tabs { gap: 6px; }
+  .stage-v2 .streaming-guide__tabs a { padding: 10px 12px; font-size: 11px; }
+  .stage-v2 .streaming-service-card { padding: 20px; }
+  .stage-v2 .streaming-guide__productions { grid-template-columns: 1fr; }
+  .stage-v2 .streaming-guide__signup { padding: 22px 18px; }
+  .stage-v2 .streaming-guide__signup h2 { font-size: 20px; }
+  .stage-v2 .streaming-guide__signup .action-button { width: 100%; text-align: center; }
+}
 .stage-v2 {
   --bg: #fcfcff; --surface: #fff; --surface-2: #f4f2fa;
   --text: #161c3c; --muted: #666d8d; --line: #e4e7f3;

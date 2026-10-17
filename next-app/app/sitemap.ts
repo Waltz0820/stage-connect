@@ -25,6 +25,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/watch/dmm",
     "/watch/u-next",
     "/watch/danime",
+    "/en/watch",
+    "/en/watch/dmm",
+    "/en/watch/u-next",
+    "/en/watch/danime",
   ].map((path) => ({
     url: `${siteUrl}${path}`,
     changeFrequency: "weekly",

@@ -1,3 +1,4 @@
+import { isStreamingService, matchesStreamingService } from '../../../lib/streaming-guide';
 import { matchesSearch, normalizeSearchQuery } from '../../../lib/search-query';
 import PlayDiscoveryForm from "../../../components/PlayDiscoveryForm";
 import { isOshiPoint } from "../../../lib/oshi-points.mjs";
@@ -160,16 +161,19 @@ export default async function PlaysPage({
   const point = isOshiPoint(getSingleParam(params.point)) ? getSingleParam(params.point) : "";
   const series = getSingleParam(params.series);
   const streaming = getSingleParam(params.streaming) === "available" ? "available" : "";
+  const requestedService = getSingleParam(params.service);
+  const service = isStreamingService(requestedService) ? requestedService : "";
   const discovery = point ? await getOshiDiscovery(point) : { available: false, rows: [] };
   const supportBySlug = new Map(discovery.rows.map((row) => [row.play_slug, row]));
   const seriesOptions = Array.from(new Set(allPlays.map((play) => play.franchiseName).filter(Boolean))).map((name) => ({ value: name!, label: name! })).sort((a,b) => a.label.localeCompare(b.label, "ja"));
   const discoveryMatches = (play: (typeof allPlays)[number]) => {
     return (matchesSearch([play.title, play.titleEn, play.franchiseName, play.franchiseNameEn, play.slug],q))
+      && matchesStreamingService(play.vod, service)
       && (!series || play.franchiseName === series)
       && (!streaming || Boolean(play.vod && Object.keys(play.vod).some((key) => play.vod?.[key])))
       && (!point || !discovery.available || supportBySlug.has(play.slug));
   };
-  const pageHref = (changes: Record<string, string | number>) => buildHref({ q, point, series, streaming, sort, format, genre, ...changes });
+  const pageHref = (changes: Record<string, string | number>) => buildHref({ q, point, series, streaming, service, sort, format, genre, ...changes });
   const requestedFormat = getSingleParam(params.format);
   const format = requestedFormat && requestedFormat in FORMAT_LABELS ? requestedFormat : "all";
   const requestedGenre = getSingleParam(params.genre);
@@ -221,7 +225,7 @@ export default async function PlaysPage({
         </section>
 
         <section className="section-card stack-md works-list-panel">
-          <PlayDiscoveryForm locale="ja" values={{ q, point, series, streaming, sort, format, genre }} formats={FORMAT_LABELS} genres={GENRE_LABELS} seriesOptions={seriesOptions} pointAvailable={discovery.available} />
+          <PlayDiscoveryForm locale="ja" values={{ q, point, series, streaming, service, sort, format, genre }} formats={FORMAT_LABELS} genres={GENRE_LABELS} seriesOptions={seriesOptions} pointAvailable={discovery.available} />
           {filteredPlays.length === 0 ? <p className="catalog-note">この条件に合う作品はまだありません。条件を変えるか、作品ページで推しポイントを教えてね。</p> : null}
 
           <p className="catalog-count"><strong>{filteredPlays.length.toLocaleString()}</strong>件の作品</p>

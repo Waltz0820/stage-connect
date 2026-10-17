@@ -1,8 +1,10 @@
 import { OSHI_POINTS, OSHI_MIN_PARTICIPANTS } from '../lib/oshi-points.mjs';
+import { STREAMING_GUIDES } from '../lib/streaming-guide';
+import Link from 'next/link';
 
 type Props = {
   locale: 'ja' | 'en';
-  values: { q: string; sort: string; format: string; genre: string; point: string; series: string; streaming: string };
+  values: { q: string; sort: string; format: string; genre: string; point: string; series: string; streaming: string; service: string };
   formats: Record<string, string>; genres: Record<string, string>;
   seriesOptions: { value: string; label: string }[];
   pointAvailable: boolean;
@@ -21,6 +23,7 @@ export default function PlayDiscoveryForm({ locale, values, formats, genres, ser
       <label><span>{ja ? 'シリーズ' : 'Series'}</span><select name="series" defaultValue={values.series}><option value="">{ja ? 'すべてのシリーズ' : 'All series'}</option>{seriesOptions.map((item) => <option key={item.value} value={item.value}>{item.label}</option>)}</select></label>
       <label><span>{ja ? '推しポイント' : 'Fan favorites'}</span><select name="point" defaultValue={values.point}><option value="">{ja ? 'すべてのポイント' : 'All points'}</option>{OSHI_POINTS.map((point) => <option key={point.id} value={point.id}>{point[locale]}</option>)}</select></label>
       <label><span>{ja ? '配信情報' : 'Streaming'}</span><select name="streaming" defaultValue={values.streaming}><option value="">{ja ? 'すべて' : 'All'}</option><option value="available">{ja ? '配信リンクあり' : 'With streaming links'}</option></select></label>
+      <label><span>{ja ? '配信サービス' : 'Streaming service'}</span><select name="service" defaultValue={values.service}><option value="">{ja ? 'すべてのサービス' : 'All services'}</option>{STREAMING_GUIDES.map(item=><option key={item.id} value={item.id}>{!ja && item.id==='danime' ? 'd Anime Store' : item.name}</option>)}</select></label>
       <label><span>{ja ? '並び順' : 'Sort by'}</span><select name="sort" defaultValue={values.sort}>
         <option value="new">{ja ? '公演が新しい順' : 'Newest first'}</option><option value="old">{ja ? '公演が古い順' : 'Oldest first'}</option>
         <option value="support">{ja ? '選択したポイントの支持率順' : 'Support for selected point'}</option>
@@ -28,6 +31,7 @@ export default function PlayDiscoveryForm({ locale, values, formats, genres, ser
     </div>
     <div className="discovery-actions"><button type="submit" className="action-button">{ja ? '条件を適用' : 'Apply filters'}</button>
       <a href={ja ? '/plays' : '/en/plays'}>{ja ? 'リセット' : 'Reset'}</a></div>
+    {values.service ? <p className="catalog-note">{ja ? 'Stage Connectに作品リンクがあるものを表示しています。未登録の作品は、' : 'Showing production links recorded in Stage Connect. For titles not listed, visit the '}<Link href={`${ja?'':'/en'}/watch/${values.service==='unext'?'u-next':values.service}`}>{ja ? 'サービス別ガイド' : 'service guide'}</Link>{ja ? 'から公式サイトも確認できます。' : ' and check the official catalogue.'}</p> : null}
     {values.point ? <p className="catalog-note" role="status">{!pointAvailable
       ? ja ? '推しポイント検索はただいま準備中です。ほかの条件はご利用いただけます。' : 'Fan-favorite search is being prepared. Other filters are available.'
       : ja ? `投票参加者が${OSHI_MIN_PARTICIPANTS}人以上で、この項目に支持がある作品を表示します。` : `Showing productions with at least ${OSHI_MIN_PARTICIPANTS} participants and support for this point.`}</p>

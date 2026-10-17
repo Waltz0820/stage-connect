@@ -62,7 +62,7 @@ test('annotated role display retains multiple roles and unresolved conditions', 
 });
 
 test('supported pages have reciprocal Japanese and English routes', () => {
-  for (const path of ['/', '/actors', '/actors/sato-ryuji', '/plays', '/plays/test', '/series', '/series/test']) {
+  for (const path of ['/', '/actors', '/actors/sato-ryuji', '/plays', '/plays/test', '/series', '/series/test','/watch','/watch/dmm','/watch/u-next','/watch/danime']) {
     const ja = routing.getLanguageTargets(path);
     const en = routing.getLanguageTargets(ja.enHref);
     assert.equal(ja.locale, 'ja');
@@ -80,7 +80,7 @@ test('locale and admin boundaries do not swallow similarly prefixed paths', () =
   assert.equal(routing.getLanguageTargets('/guide').enAvailable, false);
   assert.equal(routing.getLanguageTargets('/search').enAvailable, true);
   assert.equal(routing.getLanguageTargets('/en/search').jaHref, '/search');
-  assert.equal(routing.getLanguageTargets('/watch/dmm').enAvailable, false);
+  assert.equal(routing.getLanguageTargets('/watch/unknown').enAvailable, false);
   assert.equal(routing.getLanguageTargets('/actors/a/extra').enAvailable, false);
   assert.equal(routing.isAdminPath('/admin'), true);
   assert.equal(routing.isAdminPath('/admin/actors'), true);
@@ -88,11 +88,11 @@ test('locale and admin boundaries do not swallow similarly prefixed paths', () =
 });
 
 test('language switches retain catalogue filters and section anchors, without tracking parameters', () => {
-  const search = '?q=刀剣&format=stage&point=cast&sort=support&page=2&utm_source=test';
+  const search = '?q=刀剣&format=stage&point=cast&sort=support&service=dmm&streaming=available&page=2&utm_source=test';
   const en = routing.getLanguageTargets('/plays', search, '#fan-points');
   const url = new URL(en.enHref, 'https://stageconnect.jp');
   assert.equal(url.pathname, '/en/plays');
-  for (const key of ['q','format','point','sort','page']) assert.equal(url.searchParams.get(key), new URLSearchParams(search).get(key));
+  for (const key of ['q','format','point','sort','service','streaming','page']) assert.equal(url.searchParams.get(key), new URLSearchParams(search).get(key));
   assert.equal(url.searchParams.has('utm_source'), false);
   assert.equal(url.hash, '#fan-points');
   assert.equal(routing.getLanguageTargets('/en/plays', url.search, url.hash).jaHref, '/plays'+url.search+url.hash);

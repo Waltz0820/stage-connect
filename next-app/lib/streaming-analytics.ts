@@ -6,7 +6,7 @@ export function describeStreamingClick(href: string, context: StreamingClickCont
   if (!placement || !/^[a-z_]{1,40}$/.test(placement) || /^\/admin(?:\/|$)/.test(pathname)) return null;
   try {
     const url = new URL(href, origin);
-    const guide = url.origin === origin && /^\/watch(?:\/(dmm|u-next|danime))?\/?$/.exec(url.pathname);
+    const guide = url.origin === origin && /^(?:\/en)?\/watch(?:\/(dmm|u-next|danime))?\/?$/.exec(url.pathname);
     const service = guide ? ({ dmm: 'dmm', 'u-next': 'unext', danime: 'danime' }[guide[1]] ?? 'all') : getStreamingService(url.href);
     if (!service) return null;
     const localPath = pathname.replace(/^\/en(?:\/|$)/, '/') || '/';

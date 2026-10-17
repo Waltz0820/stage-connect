@@ -45,7 +45,7 @@ const copy = {
       { href: "/en/actors", label: "Actors" },
       { href: "/en/plays", label: "Plays" },
       { href: "/en/series", label: "Series" },
-      { href: "/watch", label: "Streaming" },
+      { href: "/en/watch", label: "Streaming" },
       { href: "/guide", label: "Guides" },
     ],
     mobileNavExtra: [
@@ -218,8 +218,8 @@ function PublicSiteChrome({ pathname, children }: { pathname: string | null; chi
             <section className="site-footer__column">
               <h3>{labels.footerWatch}</h3>
               <ul>
-                <li><Link href="/watch">{labels.watch}</Link></li>
-                <li><Link href="/watch/dmm">DMM TV</Link></li>
+                <li><Link href={locale === 'en' ? '/en/watch' : '/watch'}>{labels.watch}</Link></li>
+                <li><Link href={locale === 'en' ? '/en/watch/dmm' : '/watch/dmm'}>DMM TV</Link></li>
                 <li>
                   <a
                     href="https://al.dmm.com/?lurl=https%3A%2F%2Fpremium.dmm.com%2F&af_id=stageconnect-001&ch=link_tool&ch_id=text"

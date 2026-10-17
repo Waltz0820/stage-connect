@@ -8,6 +8,8 @@ paths.push('/search?q=佐藤','/en/search?q=sato','/plays?q=刀剣&format=musica
 paths.push('/favorites','/guide/touken-ranbu-complete-guide','/watch/danime','/contact');
 paths.push('/search','/en/search','/search?q=サトウリュウジ','/en/search?q=Final%20Match%20Rikkai','/actors?q=a&gender=male&page=2','/en/actors?q=a&gender=male&page=2','/series?q=舞台&format=stage&sort=name_asc&page=2','/en/series?q=stage&format=stage&sort=name_asc&page=2');
 paths.push('/series/touken-ranbu-musical','/en/series/touken-ranbu-musical','/series/tennimu-2nd','/en/series/tennimu-2nd','/plays/ace-stage-aw','/en/plays/ace-stage-aw','/plays?streaming=available','/en/plays?streaming=available');
+paths.push('/en/watch','/en/watch/dmm','/en/watch/u-next','/en/watch/danime');
+for(const prefix of ['', '/en']) paths.push(`${prefix}/plays?service=dmm&streaming=available&q=刀剣&format=stage&page=2`,`${prefix}/plays?service=unext`,`${prefix}/plays?service=danime`);
 const report=[];
 for(const path of paths){
   const response=await fetch(base+path);assert.equal(response.status,200,path);
@@ -20,6 +22,28 @@ for(const path of paths){
   assert.equal($('a[href^="/tags"]').length,0,path+' old tag navigation');
   assert.equal($('.play-detail-tags-section').length,0,path);
   assert.equal($('.play-poster-frame').length,0,path+' synthetic poster removed');
+  if(/^\/(en\/)?watch(?:\/|$)/.test(path)) {
+    assert.equal($('main form input[name="q"]').length,1,path+' search for a production');
+    assert.ok($('main time[datetime]').length,path+' reviewed date');
+    assert.equal($('link[rel="canonical"]').attr('href'),'https://stageconnect.jp'+path,path+' canonical');
+    assert.equal($('link[rel="alternate"][hreflang="en"]').attr('href'),'https://stageconnect.jp'+(en?path:'/en'+path),path+' English alternate');
+    const faq=JSON.parse($('script[type="application/ld+json"]').toArray().map(node=>$(node).text()).find(text=>text.includes('FAQPage')));
+    for(const question of faq.mainEntity) assert.ok($('.faq-card').text().includes(question.acceptedAnswer.text),path+' visible FAQ equals structured FAQ');
+    assert.ok(!/国内最多クラス|かなり限定的|一部のみ/.test($('main').text()),path+' no unverified catalogue comparison');
+    if(path.endsWith('/danime')) assert.ok($('.streaming-service-card__price').text().includes('660'),path+' current Web price');
+    if(path.endsWith('/u-next')||path.endsWith('/danime')) {
+      assert.equal($('.streaming-guide__signup').length,0,path+' no unrelated DMM signup');
+      assert.ok($('#productions a[target="_blank"]').length,path+' official catalogue access');
+    }
+  }
+  if(/^\/(en\/)?plays\?.*service=/.test(path)) {
+    const current=new URL(path,base);
+    assert.equal($('select[name="service"] option[selected]').attr('value'),current.searchParams.get('service'),path+' selected provider');
+    for(const node of $('.filter-chip,.pagination-link').toArray()) {
+      const target=new URL($(node).attr('href'),base);
+      for(const key of ['service','streaming','q','format']) assert.equal(target.searchParams.get(key),current.searchParams.get(key),path+' preserve '+key);
+    }
+  }
   if(/^\/(en\/)?series\/(tennimu|butai-touken-ranbu|touken-ranbu-musical)$/.test(path)) assert.ok($('.timeline-excerpt').length>0,path+' existing synopsis excerpt');
   if(path.endsWith('/series/tennimu-2nd')) assert.equal($('.timeline-excerpt').length,0,path+' no empty excerpt boxes');
   if(path.includes('/plays/ace-stage-aw')) {

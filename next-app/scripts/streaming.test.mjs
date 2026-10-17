@@ -8,14 +8,16 @@ import vm from 'node:vm';
 import ts from 'typescript';
 
 const dir = await mkdtemp(join(tmpdir(), 'stage-streaming-'));
-for (const name of ['streaming-links','streaming-analytics']) {
+const modules=['streaming-links','streaming-analytics','streaming-guide'];
+for (const name of modules) {
   const src = await readFile(new URL(`../lib/${name}.ts`, import.meta.url), 'utf8');
   await writeFile(join(dir, name+'.js'), ts.transpileModule(src,{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText);
 }
-after(async()=>{for(const name of ['streaming-links','streaming-analytics'])await unlink(join(dir,name+'.js'));await rmdir(dir);});
+after(async()=>{for(const name of modules)await unlink(join(dir,name+'.js'));await rmdir(dir);});
 const require = createRequire(import.meta.url);
 const { normalizeVod, getStreamingService } = require(join(dir,'streaming-links.js'));
 const { describeStreamingClick, observeStreamingClick } = require(join(dir,'streaming-analytics.js'));
+const { matchesStreamingService, streamingGuidePath } = require(join(dir,'streaming-guide.js'));
 const affiliate = 'https://al.dmm.com/?lurl=https%3A%2F%2Ftv.dmm.com%2Fvod%2Fdetail%2F%3Fseason%3Dknown&af_id=stageconnect-001&ch=link_tool&ch_id=link';
 const context = { origin:'https://stageconnect.jp',pathname:'/en/plays/example',placement:'play_streaming',playId:'2030b49a-e943-4042-b3f8-c83e478e4261' };
 
@@ -41,6 +43,17 @@ test('guide navigation is separate from outbound visits and does not manufacture
   assert.equal(data.play_id,undefined); assert.ok(!('value' in data)); assert.ok(!('transaction_id' in data));
   assert.equal(describeStreamingClick('/actors/example',context),null);
   assert.equal(describeStreamingClick(affiliate,{...context,pathname:'/admin/plays'}),null);
+  assert.equal(describeStreamingClick('/en/watch/u-next',{...context,placement:'header'}).streaming_service,'unext');
+  assert.equal(describeStreamingClick('/en/watch/unknown',context),null);
+});
+
+test('provider filters combine without admitting another provider or a missing link',()=>{
+  const entries=[{slug:'one',vod:normalizeVod({dmm:affiliate})},{slug:'two',vod:normalizeVod({unext:'https://video.unext.jp/title/two'})},{slug:'three',vod:normalizeVod({dmm:'#'})}];
+  assert.deepEqual(entries.filter(item=>matchesStreamingService(item.vod,'dmm')).map(item=>item.slug),['one']);
+  assert.deepEqual(entries.filter(item=>matchesStreamingService(item.vod,'unext')).map(item=>item.slug),['two']);
+  assert.equal(entries.filter(item=>matchesStreamingService(item.vod,'danime')).length,0);
+  assert.equal(entries.filter(item=>matchesStreamingService(item.vod,'invalid')).length,3);
+  assert.equal(streamingGuidePath('en','unext'),'/en/watch/u-next');
 });
 test('left, middle, keyboard-style clicks use one event, without preventing navigation',()=>{
   const priorElement=globalThis.Element, priorWindow=globalThis.window;
