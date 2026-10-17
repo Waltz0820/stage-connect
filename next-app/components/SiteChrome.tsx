@@ -6,6 +6,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { SearchBarClient } from "./SearchBarClient";
 import { LocaleSwitcher } from "./LocaleSwitcher";
 import { StreamingClickTracker } from "./StreamingClickTracker";
+import { BrandLogo } from './BrandLogo';
 import { getLanguageTargets, isAdminPath } from "../lib/locale-routing";
 
 const copy = {
@@ -127,8 +128,7 @@ function PublicSiteChrome({ pathname, children }: { pathname: string | null; chi
         <div className="container site-header__inner">
           <div className="site-header__left">
             <Link href={locale === "en" ? "/en" : "/"} className="site-brand">
-              STAGE CONNECT
-              <span className="site-brand__tagline">{locale === "ja" ? "2.5次元舞台とキャストをつなぐ" : "Connecting 2.5D stage and cast"}</span>
+              <BrandLogo locale={locale}/>
             </Link>
             <nav className="site-nav desktop-nav" aria-label={labels.globalNavLabel} data-streaming-placement="header">
               {labels.primaryNav.map((item) => (
@@ -194,7 +194,7 @@ function PublicSiteChrome({ pathname, children }: { pathname: string | null; chi
           </nav>
 
           <div className="mobile-menu__footer">
-            <p>Stage Connect</p>
+            <BrandLogo locale={locale}/>
           </div>
         </div>
       </div>
