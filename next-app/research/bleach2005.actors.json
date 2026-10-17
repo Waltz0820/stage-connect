@@ -286,6 +286,236 @@
           "outcome": "source_tiers_and_audit_limits_recorded"
         }
       ]
+    },
+    {
+      "sourceCreditKey": "378a34d35db5e4f56f67",
+      "sourceActorName": "齊藤来未子",
+      "identity": {
+        "status": "profile_linked",
+        "profileUrl": "https://www.ameba.jp/profile/ameba/kumiko-saito/",
+        "evidence": [
+          {
+            "url": "https://ameblo.jp/kumiko-saito/entry-11346096981.html",
+            "checkedAt": "2026-10-17T07:22:28.447Z",
+            "note": "本人の公式ブログで、2012年に七年前のBLEACH初演の自分を振り返っている。同じアカウントの本人プロフィールへ接続。"
+          },
+          {
+            "url": "https://mixi.jp/view_community.pl?id=966418",
+            "checkedAt": "2026-10-17T07:22:28.835Z",
+            "note": "ファンコミュニティが氏名・さいとうくみこ・雛森桃役を同じ人物として紹介。当時の再炎観劇記録と配役・読みが一致する。"
+          },
+          {
+            "url": "https://www1.gcenter-hyogo.jp/contents_parts/ConcertDetail.aspx?kid=4196112501&sid=0000000005",
+            "checkedAt": "2026-10-17T07:22:29.391Z",
+            "note": "会場公式の2007年公演出演者に齊藤来未子と齋藤久美子が別々に掲載。名前の異体字として統合しない。"
+          }
+        ]
+      },
+      "facts": {
+        "kana": {
+          "status": "confirmed",
+          "value": "さいとう くみこ",
+          "evidence": [
+            {
+              "url": "https://seuiyutyatgei.seesaa.net/article/11434071.html",
+              "checkedAt": "2026-10-17T07:22:27.860Z",
+              "note": "当時の再炎観劇記録に斉藤来未子（さいとう くみこ）・雛森桃役と併記。ファンコミュニティの齊藤来未子・同じ役名・読みとも一致。公式の読み確認とは区別。"
+            }
+          ]
+        },
+        "gender": {
+          "status": "confirmed",
+          "value": "female",
+          "evidence": [
+            {
+              "url": "https://www.ameba.jp/profile/ameba/kumiko-saito/",
+              "checkedAt": "2026-10-17T07:22:28.199Z",
+              "note": "本人プロフィールの性別・女性の明記。"
+            }
+          ]
+        }
+      },
+      "notes": [
+        "今回確認：生年月日・身長・血液型・英語名は未採用。読みは当時のファン記録による確認で、一次の読み確認は後日監査へ。齋藤久美子との別人判断を維持。"
+      ],
+      "searchHistory": [
+        {
+          "query": "BLEACH 齊藤来未子 読み・出演歴・人物資料の相互照合",
+          "checkedAt": "2026-10-17T07:25:01.570Z",
+          "outcome": "cross_source_identity_reviewed_for_registration"
+        }
+      ]
+    },
+    {
+      "sourceCreditKey": "9a06550544ef1a3d5791",
+      "sourceActorName": "立花拓也",
+      "identity": {
+        "status": "profile_linked",
+        "profileUrl": "https://seuiyutyatgei.seesaa.net/article/11434071.html",
+        "evidence": [
+          {
+            "url": "https://seuiyutyatgei.seesaa.net/article/11434071.html",
+            "checkedAt": "2026-10-17T07:22:27.860Z",
+            "note": "2006年再炎を観た当時の記録の他の出演者の行に立花拓也（たちばなたくや）。作品出典の氏名・公演が一致し、当該出演者の読みを確認。個人の公式プロフィールではない。"
+          },
+          {
+            "url": "https://www1.gcenter-hyogo.jp/contents_parts/ConcertDetail.aspx?kid=4196112501&sid=0000000005",
+            "checkedAt": "2026-10-17T07:22:29.391Z",
+            "note": "会場公式の2007年春BLEACHの出演者にも氏名がある。"
+          },
+          {
+            "url": "https://www.ameba.jp/profile/general/iwaslight/",
+            "checkedAt": "2026-10-17T07:22:29.247Z",
+            "note": "公演側の2014年舞台告知に立花拓也（BQMAP）。俳優としての活動資料として参照し、同名の企業経営者・モデル等の基本情報は採用しない。"
+          }
+        ]
+      },
+      "facts": {
+        "kana": {
+          "status": "confirmed",
+          "value": "たちばな たくや",
+          "evidence": [
+            {
+              "url": "https://seuiyutyatgei.seesaa.net/article/11434071.html",
+              "checkedAt": "2026-10-17T07:22:27.860Z",
+              "note": "再炎の当時の観劇記録の本人キャスト行の読み。ファン記録による確認であり、事務所一次資料の読み確認とは区別。"
+            }
+          ]
+        }
+      },
+      "notes": [
+        "今回確認：生年月日・性別・身長・血液型・英語名は不明のまま。企業経営者や介護職の同名人物の値を流用しない。公式個人プロフィールが欠けるため、読みの一次再確認を監査項目に残す。"
+      ],
+      "searchHistory": [
+        {
+          "query": "BLEACH 立花拓也 読み・出演歴・人物資料の相互照合",
+          "checkedAt": "2026-10-17T07:25:01.570Z",
+          "outcome": "cross_source_identity_reviewed_for_registration"
+        }
+      ]
+    },
+    {
+      "sourceCreditKey": "78d277a1870fa954a2c7",
+      "sourceActorName": "加藤学",
+      "identity": {
+        "status": "profile_linked",
+        "profileUrl": "https://eplus.jp/sf/word/0000040132",
+        "evidence": [
+          {
+            "url": "https://eplus.jp/sf/word/0000040132",
+            "checkedAt": "2026-10-17T07:27:47.482Z",
+            "note": "プレイガイドの加藤学（俳優）の個人人物ページ。複数人が登場する観劇記録は人物IDの根拠URLとして兼用せず、配役と読みの照合資料に残す。"
+          },
+          {
+            "url": "https://seuiyutyatgei.seesaa.net/article/11434071.html",
+            "checkedAt": "2026-10-17T07:22:27.860Z",
+            "note": "当時の再炎観劇記録に加藤学（かとうまなぶ）が他の出演者として掲載。今回の作品出典と公演・氏名が一致。"
+          },
+          {
+            "url": "https://actionclub.world.coocan.jp/service.html",
+            "checkedAt": "2026-10-17T07:22:29.101Z",
+            "note": "アクションクラブの本人区間は加藤学（かとう まなぶ）・俳優/殺陣師と記載。出演者の読みと一致。"
+          },
+          {
+            "url": "https://www.ameba.jp/profile/general/iwaslight/",
+            "checkedAt": "2026-10-17T07:22:29.247Z",
+            "note": "公演側の2014年舞台告知に加藤学（Kitty-Guys）。"
+          },
+          {
+            "url": "https://www1.gcenter-hyogo.jp/contents_parts/ConcertDetail.aspx?kid=4196112501&sid=0000000005",
+            "checkedAt": "2026-10-17T07:22:29.391Z",
+            "note": "会場公式の2007年春BLEACHの出演者にも加藤学。照明スタッフなど同名の別職種へ接続しない。"
+          }
+        ]
+      },
+      "facts": {
+        "kana": {
+          "status": "confirmed",
+          "value": "かとう まなぶ",
+          "evidence": [
+            {
+              "url": "https://seuiyutyatgei.seesaa.net/article/11434071.html",
+              "checkedAt": "2026-10-17T07:22:27.860Z",
+              "note": "当時の再炎観劇記録にある本人のキャスト行の読み。アクションクラブの俳優・殺陣師の氏名と読みも一致。"
+            }
+          ]
+        }
+      },
+      "notes": [
+        "今回確認：今回は読み以外の人物基本情報は採用しない。過去のKitty-Guys表記を現在の所属として紹介文へ転記しない。"
+      ],
+      "searchHistory": [
+        {
+          "query": "BLEACH 加藤学 読み・出演歴・人物資料の相互照合",
+          "checkedAt": "2026-10-17T07:25:01.570Z",
+          "outcome": "cross_source_identity_reviewed_for_registration"
+        }
+      ]
+    },
+    {
+      "sourceCreditKey": "666997199d7200831150",
+      "sourceActorName": "末吉司弥",
+      "identity": {
+        "status": "profile_linked",
+        "profileUrl": "https://thetv.jp/person/1000066019/",
+        "evidence": [
+          {
+            "url": "https://kira-hai.net/sueyoshi-kazuya",
+            "checkedAt": "2026-10-17T07:22:27.365Z",
+            "note": "第一参照先の人物ページに読み・生年月日1978年5月26日・B型と、BLEACH初演/再炎/2006年夏/2007年春のアンサンブル出演。"
+          },
+          {
+            "url": "https://thetv.jp/person/1000066019/",
+            "checkedAt": "2026-10-17T07:22:27.550Z",
+            "note": "編集部プロフィールに氏名・読み・生年月日・B型とロックミュージカルBLEACHの出演歴があり、第一参照先の人物と照合。"
+          }
+        ]
+      },
+      "facts": {
+        "kana": {
+          "status": "confirmed",
+          "value": "すえよし かずや",
+          "evidence": [
+            {
+              "url": "https://thetv.jp/person/1000066019/",
+              "checkedAt": "2026-10-17T07:22:27.550Z",
+              "note": "編集部プロフィールの本人見出しの読み。第一参照先とも一致。"
+            }
+          ]
+        },
+        "birthday": {
+          "status": "confirmed",
+          "value": "1978-05-26",
+          "evidence": [
+            {
+              "url": "https://thetv.jp/person/1000066019/",
+              "checkedAt": "2026-10-17T07:22:27.550Z",
+              "note": "編集部プロフィールの誕生日欄。第一参照先の生年月日と一致。"
+            }
+          ]
+        },
+        "blood_type": {
+          "status": "confirmed",
+          "value": "B",
+          "evidence": [
+            {
+              "url": "https://thetv.jp/person/1000066019/",
+              "checkedAt": "2026-10-17T07:22:27.550Z",
+              "note": "編集部プロフィールの血液型欄。第一参照先とも一致。"
+            }
+          ]
+        }
+      },
+      "notes": [
+        "今回確認：媒体プロフィールと第一参照先の一致を採用。以前404だった旧事務所PDFの検索抜粋は使わず、現在の所属や公式英語名を断定しない。身長・性別・紹介文は今回採用しない。"
+      ],
+      "searchHistory": [
+        {
+          "query": "BLEACH 末吉司弥 読み・出演歴・人物資料の相互照合",
+          "checkedAt": "2026-10-17T07:25:01.571Z",
+          "outcome": "cross_source_identity_reviewed_for_registration"
+        }
+      ]
     }
   ]
 }

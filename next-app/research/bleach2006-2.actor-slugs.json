@@ -2,13 +2,77 @@
   "version": 1,
   "sourceUrl": "https://kira-hai.net/bleach2006-2",
   "actors": [
-    { "sourceCreditKey": "8b4f4b1e0653b180e6c0", "sourceActorName": "村上耕平", "slug": "murakami-kouhei", "reason": "公式英語版に明記されたKouhei Murakamiを姓-名形式へ整えたURL。既存の村上幸平が使うmurakami-koheiを維持し、同じ人物として統合しない。年を補ってURLへ使うこともしない。" },
-    { "sourceCreditKey": "6ee3c16b2b6b5e0d5f6a", "sourceActorName": "林修司", "slug": "hayashi-shuji", "reason": "公演側の本人紹介で確認した読み・はやししゅうじを、既存サイトの姓-名形式でローマ字化したURL。公式英語表記の確認とは区別する。" },
-    { "sourceCreditKey": "03ad6cc91b4681113b4a", "sourceActorName": "鈴木省吾", "slug": "suzuki-shogo-1963", "reason": "同音の鈴木勝吾がsuzuki-shogoを使用済み。両事務所で別人と確認し、今回の省吾は確認済みの生年1963を加えて明示的に区別する。既存URLの変更や自動的な連番付加は行わない。" },
-    { "sourceCreditKey": "90d4d38c64e8b2b3b680", "sourceActorName": "佐藤美貴", "slug": "sato-miki", "reason": "確認済みの読み・さとうみきを既存サイトの姓-名形式でローマ字化したURL。公式の英語表記の確認を意味しない。" },
-    { "sourceCreditKey": "f5acacef79f76b0ba321", "sourceActorName": "臼井琢也", "slug": "usui-takuya", "reason": "劇団公式の英語表記Takuya Usuiを既存サイトの姓-名形式へ合わせたURL。" },
-    { "sourceCreditKey": "c802cc261ed8ee53acdc", "sourceActorName": "井上晴美", "slug": "inoue-harumi", "reason": "確認済みの読み・イノウエハルミを既存サイトの姓-名形式でローマ字化したURL。公式の英語表記の確認を意味しない。" },
-    { "sourceCreditKey": "4ee1860b2d84e296f36e", "sourceActorName": "安田裕", "slug": "yasuda-hiroshi", "reason": "劇団公式の英語表記Hiroshi Yasudaを既存サイトの姓-名形式へ合わせたURL。" },
-    { "sourceCreditKey": "741f69fca4a3cda0fbb5", "sourceActorName": "岩間健児", "slug": "iwama-kenji", "reason": "確認済みの読み・イワマケンジを既存サイトの姓-名形式でローマ字化したURL。公式の英語表記の確認を意味しない。" }
+    {
+      "sourceCreditKey": "8b4f4b1e0653b180e6c0",
+      "sourceActorName": "村上耕平",
+      "slug": "murakami-kouhei",
+      "reason": "公式英語版に明記されたKouhei Murakamiを姓-名形式へ整えたURL。既存の村上幸平が使うmurakami-koheiを維持し、同じ人物として統合しない。年を補ってURLへ使うこともしない。"
+    },
+    {
+      "sourceCreditKey": "6ee3c16b2b6b5e0d5f6a",
+      "sourceActorName": "林修司",
+      "slug": "hayashi-shuji",
+      "reason": "公演側の本人紹介で確認した読み・はやししゅうじを、既存サイトの姓-名形式でローマ字化したURL。公式英語表記の確認とは区別する。"
+    },
+    {
+      "sourceCreditKey": "03ad6cc91b4681113b4a",
+      "sourceActorName": "鈴木省吾",
+      "slug": "suzuki-shogo-1963",
+      "reason": "同音の鈴木勝吾がsuzuki-shogoを使用済み。両事務所で別人と確認し、今回の省吾は確認済みの生年1963を加えて明示的に区別する。既存URLの変更や自動的な連番付加は行わない。"
+    },
+    {
+      "sourceCreditKey": "90d4d38c64e8b2b3b680",
+      "sourceActorName": "佐藤美貴",
+      "slug": "sato-miki",
+      "reason": "確認済みの読み・さとうみきを既存サイトの姓-名形式でローマ字化したURL。公式の英語表記の確認を意味しない。"
+    },
+    {
+      "sourceCreditKey": "f5acacef79f76b0ba321",
+      "sourceActorName": "臼井琢也",
+      "slug": "usui-takuya",
+      "reason": "劇団公式の英語表記Takuya Usuiを既存サイトの姓-名形式へ合わせたURL。"
+    },
+    {
+      "sourceCreditKey": "c802cc261ed8ee53acdc",
+      "sourceActorName": "井上晴美",
+      "slug": "inoue-harumi",
+      "reason": "確認済みの読み・イノウエハルミを既存サイトの姓-名形式でローマ字化したURL。公式の英語表記の確認を意味しない。"
+    },
+    {
+      "sourceCreditKey": "4ee1860b2d84e296f36e",
+      "sourceActorName": "安田裕",
+      "slug": "yasuda-hiroshi",
+      "reason": "劇団公式の英語表記Hiroshi Yasudaを既存サイトの姓-名形式へ合わせたURL。"
+    },
+    {
+      "sourceCreditKey": "741f69fca4a3cda0fbb5",
+      "sourceActorName": "岩間健児",
+      "slug": "iwama-kenji",
+      "reason": "確認済みの読み・イワマケンジを既存サイトの姓-名形式でローマ字化したURL。公式の英語表記の確認を意味しない。"
+    },
+    {
+      "sourceCreditKey": "378a34d35db5e4f56f67",
+      "sourceActorName": "齊藤来未子",
+      "slug": "saito-kumiko",
+      "reason": "当時のBLEACH観劇記録と本人を扱うファン資料で一致する読み・さいとうくみこを姓-名形式へ整えたURL。公式英語表記ではない。別人の齋藤久美子にこのURLを再利用しない。"
+    },
+    {
+      "sourceCreditKey": "9a06550544ef1a3d5791",
+      "sourceActorName": "立花拓也",
+      "slug": "tachibana-takuya",
+      "reason": "BLEACH再炎の当時の観劇記録で氏名と併記された読み・たちばなたくやから作成。別分野の同名人物から綴りや生年月日を取得しない。"
+    },
+    {
+      "sourceCreditKey": "78d277a1870fa954a2c7",
+      "sourceActorName": "加藤学",
+      "slug": "kato-manabu",
+      "reason": "当時の再炎観劇記録とアクションクラブの俳優欄で一致する読み・かとうまなぶを姓-名形式でローマ字化。公式英語名とは区別。"
+    },
+    {
+      "sourceCreditKey": "666997199d7200831150",
+      "sourceActorName": "末吉司弥",
+      "slug": "sueyoshi-kazuya",
+      "reason": "第一参照先の人物URLと媒体プロフィールの読み・すえよしかずやが一致。既存サイトの姓-名形式のURLを採用。公式英語表記の確認を意味しない。"
+    }
   ]
 }

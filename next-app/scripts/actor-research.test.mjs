@@ -113,8 +113,13 @@ test('the checked-in BLEACH research keeps all 15 distinct cast occurrences and 
   copy.actors.forEach((record, index) => { record.sourceCreditKey = rows[index].id; });
   const actors = copy.actors.flatMap((record) => (record.distinctActors ?? []).map((item) => ({ id: item.actorId, name: item.expectedName, birthday: item.expectedBirthday, updated_at: item.expectedUpdatedAt })));
   const result = buildActorResearch({ plan: { version: 1, source: { url: copy.sourceUrl, fingerprint: copy.sourceFingerprint }, rows }, actors, research: copy });
-  assert.deepEqual(result.counts, { total: 15, profileLinked: 9, appearanceOnly: 6, confirmedFacts: 34, needsReview: 0 });
+  assert.deepEqual(result.counts, { total: 15, profileLinked: 12, appearanceOnly: 3, confirmedFacts: 40, needsReview: 0 });
   assert.equal(result.rows.find((row) => row.sourceActorName === '立花拓也').profileDraft.birthday, null);
+  const saito = result.rows.find((row) => row.sourceActorName === '齊藤来未子').profileDraft;
+  assert.equal(saito.kana, 'さいとう くみこ');
+  assert.equal(saito.birthday, null, 'the other Kumiko Saito must not supply this performer\'s birthday');
+  assert.equal(result.rows.find((row) => row.sourceActorName === '加藤学').profileDraft.birthday, null);
+  assert.equal(result.rows.find((row) => row.sourceActorName === '末吉司弥').profileDraft.birthday, '1978-05-26');
   assert.equal(result.rows.find((row) => row.sourceActorName === '岩間健児').profileDraft.birthday, '1980-10-29');
   const murakami = result.rows.find((row) => row.sourceActorName === '村上耕平').profileDraft;
   assert.equal(murakami.name_en, 'Kouhei Murakami');
