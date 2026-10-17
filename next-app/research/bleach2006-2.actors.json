@@ -46,11 +46,11 @@
       "facts": {
         "gender": { "status": "confirmed", "value": "female", "evidence": [{ "url": "https://www.ameba.jp/profile/ameba/kumiko-saito/", "note": "本人プロフィールに女性と明記。", "checkedAt": "2026-10-16T13:31:24Z" }] }
       },
-      "notes": ["齋藤久美子とは別の配役行。漢字の揺れと決めつけて統合しない。", "読み・生年月日は非一次の検索結果にあるが未採用。アカウント名から読みを逆算せず、登録用URLの確定も次工程に残す。"],
+      "notes": ["齋藤久美子とは別の配役行。漢字の揺れと決めつけて統合しない。", "読み・生年月日は非一次の検索結果にあるが未採用。アカウント名から読みを逆算せず、登録用URLの確定も次工程に残す。", "2026-10-17追加調査：本人プロフィールは取得できるが読みの明記は未確認。ファンコミュニティのさいとうくみこは手掛かりとして保持し、一次で確認した読みへ格上げしない。"],
       "searchHistory": [
         { "query": "齊藤来未子 公式 プロフィール", "checkedAt": "2026-10-16T10:17:01Z", "outcome": "profile_lead_only" },
         { "query": "齊藤来未子 BLEACH site:ameblo.jp/kumiko-saito", "checkedAt": "2026-10-16T13:31:24Z", "outcome": "self_authored_stage_recollection_found" }
-      ]
+      , {"query":"本人プロフィールと読みの明記を追加調査","checkedAt":"2026-10-17T02:39:35.707Z","outcome":"profile_connected_reading_and_slug_still_unconfirmed","urls":["https://www.ameba.jp/profile/ameba/kumiko-saito/","https://mixi.jp/view_community.pl?id=966418"]}]
     },
     {
       "sourceCreditKey": "f5acacef79f76b0ba321", "sourceActorName": "臼井琢也",
@@ -67,16 +67,88 @@
       "searchHistory": [{ "query": "臼井琢也 BQMAP プロフィール", "checkedAt": "2026-10-16T10:17:01Z", "outcome": "profile_connection_found" }]
     },
     {
-      "sourceCreditKey": "8b4f4b1e0653b180e6c0", "sourceActorName": "村上耕平",
-      "identity": { "status": "appearance_only", "evidence": [] }, "facts": {},
-      "notes": ["bleach2006-2.review.jsonに村上幸平との別人判断を保持。slug murakami-koheiが重なる既存IDへ紐付けない。", "第一参照先とWEBザテレビジョンで1986年5月19日生の記載は確認済みだが、今回は公式プロフィールとの接続を未完了として残す。", "https://thetv.jp/person/2090011396/"],
-      "searchHistory": [{ "query": "村上耕平 生年月日 プロフィール", "checkedAt": "2026-10-16T09:32:00Z", "outcome": "homophone_collision_recorded" }]
+      "sourceCreditKey": "8b4f4b1e0653b180e6c0",
+      "sourceActorName": "村上耕平",
+      "identity": {
+        "status": "profile_linked",
+        "profileUrl": "https://realpiece.jp/profile/kope.php",
+        "evidence": [
+          {
+            "url": "https://kira-hai.net/murakami-kohei",
+            "note": "当該公演の山田花太郎役と、リアルピースこぺの公式個人プロフィールへの直接リンクを確認。俳優ページの旧芸名欄は既存の村上幸平との統合根拠にはしない。",
+            "checkedAt": "2026-10-17T02:32:00Z"
+          },
+          {
+            "url": "https://realpiece.jp/profile/kope.php",
+            "note": "公式個人プロフィールの主見出しがこぺ/村上耕平。リンク先の別メンバーの項目を本人の値へ混ぜない。",
+            "checkedAt": "2026-10-17T02:32:00Z"
+          },
+          {
+            "url": "https://www.ameba.jp/profile/ameba/kope519/",
+            "note": "同名の本人公式プロフィールにもロックミュージカルBLEACHの経歴。第一参照先が参照する本人ブログとも接続する。",
+            "checkedAt": "2026-10-17T02:32:00Z"
+          }
+        ]
+      },
+      "facts": {
+        "name_en": {
+          "status": "confirmed",
+          "value": "Kouhei Murakami",
+          "evidence": [
+            {
+              "url": "https://realpiece.jp/en/member.php",
+              "note": "公式英語版の本人見出しKope/Kouhei Murakamiを確認。旧本人ブログのKOHEIとは綴りが異なるため、現在の公式英語版の表記を採用する。",
+              "checkedAt": "2026-10-17T02:32:00Z"
+            }
+          ]
+        },
+        "height_cm": {
+          "status": "confirmed",
+          "value": 170,
+          "evidence": [
+            {
+              "url": "https://realpiece.jp/profile/kope.php",
+              "note": "公式の本人欄に170cmと明記。名鑑を参照するnarrowの172cmとの差を記録し、一次資料の値を採用。",
+              "checkedAt": "2026-10-17T02:32:00Z"
+            }
+          ]
+        },
+        "blood_type": {
+          "status": "confirmed",
+          "value": "A",
+          "evidence": [
+            {
+              "url": "https://www.ameba.jp/profile/ameba/kope519/",
+              "note": "BLEACHの経歴を記す本人公式プロフィールの血液型Aを確認。",
+              "checkedAt": "2026-10-17T02:32:00Z"
+            }
+          ]
+        }
+      },
+      "notes": [
+        "bleach2006-2.review.jsonに村上幸平との別人判断を保持。既存の人物ID・murakami-koheiのURLを変更しない。",
+        "公式プロフィールの誕生日は5月19日のみ。二次情報の1986年を足してbirthdayへ保存せず、今回はnullのまま。",
+        "https://narrow.jp/talent/78084 の172cmと公式170cmの差を保持。",
+        "かな・性別は推測せずnull。公式英語版に明記されたKouhei Murakamiをname_enと登録用URLの綴りに用いる。旧名のグローバル辞書置換は追加しない。"
+      ],
+      "searchHistory": [
+        {
+          "query": "村上耕平 生年月日 プロフィール",
+          "checkedAt": "2026-10-16T09:32:00Z",
+          "outcome": "homophone_collision_recorded"
+        },
+        {
+          "query": "キラハイから公式こぺプロフィールを辿り、本人ブログと公式英語版を照合",
+          "checkedAt": "2026-10-17T02:32:00Z",
+          "outcome": "profile_connection_and_three_facts_confirmed_full_birth_date_unconfirmed"
+        }
+      ]
     },
     {
       "sourceCreditKey": "204650279651933bc202", "sourceActorName": "齋藤久美子",
       "identity": { "status": "appearance_only", "evidence": [] }, "facts": {},
-      "notes": ["同名の企業関係者・フルート奏者等が検索に現れる。四楓院夜一役との接点を確認できないプロフィールを採用しない。", "齊藤来未子と同じ読みを根拠に統合しない。"],
-      "searchHistory": [{ "query": "齋藤久美子 公式 BLEACH プロフィール", "checkedAt": "2026-10-16T10:17:01Z", "outcome": "no_verified_profile_connection_in_this_pass" }]
+      "notes": ["同名の企業関係者・フルート奏者等が検索に現れる。四楓院夜一役との接点を確認できないプロフィールを採用しない。", "齊藤来未子と同じ読みを根拠に統合しない。", "2026-10-17追加調査：G-Rockets公式の2011年・2015年等の出演者名は確認できた。現在のメンバー一覧にないことを退所の根拠にせず、ファンサイトのブログURL https://blog.livedoor.jp/saikumi614/ もHTTP取得失敗のため人物基本情報へ使わない。"],
+      "searchHistory": [{ "query": "齋藤久美子 公式 BLEACH プロフィール", "checkedAt": "2026-10-16T10:17:01Z", "outcome": "no_verified_profile_connection_in_this_pass" }, {"query":"G-Rockets公式・本人ブログ候補を照合","checkedAt":"2026-10-17T02:39:35.707Z","outcome":"official_performance_credits_found_person_profile_unconfirmed","urls":["https://g-rockets.jp/information/grockets2011/","https://g-rockets.jp/information/grockets2015/","https://g-rockets.jp/category/performer/"]}]
     },
     {
       "sourceCreditKey": "03ad6cc91b4681113b4a", "sourceActorName": "鈴木省吾",
@@ -121,23 +193,23 @@
     {
       "sourceCreditKey": "9a06550544ef1a3d5791", "sourceActorName": "立花拓也",
       "identity": { "status": "appearance_only", "evidence": [] }, "facts": {},
-      "notes": ["検索には同名のIT企業経営者やモデルのプロフィールが現れる。今回の出演者へ結び付ける根拠は未確認。", "候補を別人と断定する作業も未完了。氏名・読み・URLの一致だけではプロフィールを採らない。"],
-      "searchHistory": [{ "query": "立花拓也 プロフィール BLEACH", "checkedAt": "2026-10-16T10:17:01Z", "outcome": "namesake_results_no_connection" }]
+      "notes": ["検索には同名のIT企業経営者やモデルのプロフィールが現れる。今回の出演者へ結び付ける根拠は未確認。", "候補を別人と断定する作業も未完了。氏名・読み・URLの一致だけではプロフィールを採らない。", "2026-10-17追加調査：公演側の2014年キャスト告知に立花拓也（BQMAP）がある。現在の劇団一覧にいないことは引退の根拠にしない。当該BLEACH出演者と基本情報への接続は未完了で、同名の経営者の値は使わない。"],
+      "searchHistory": [{ "query": "立花拓也 プロフィール BLEACH", "checkedAt": "2026-10-16T10:17:01Z", "outcome": "namesake_results_no_connection" }, {"query":"BQMAPの公式メンバー一覧・過去公演と他団体キャスト告知を確認","checkedAt":"2026-10-17T02:39:35.707Z","outcome":"bqmap_performer_lead_found_no_bleach_profile_anchor","urls":["https://www.ameba.jp/profile/general/iwaslight/","https://bqmap.jimdoweb.com/member/"]}]
     },
     {
       "sourceCreditKey": "78d277a1870fa954a2c7", "sourceActorName": "加藤学",
       "identity": { "status": "appearance_only", "evidence": [] }, "facts": {},
-      "notes": ["同名で俳優・アクション担当・照明スタッフ等の結果が出る。公式公演サイト内の一致でも出演者かスタッフかを区別する。", "別作品の同名クレジットから今回の人物へ経歴を接続しない。"],
-      "searchHistory": [{ "query": "加藤学 BLEACH 公式 プロフィール", "checkedAt": "2026-10-16T10:17:01Z", "outcome": "namesake_and_staff_results_no_connection" }]
+      "notes": ["同名で俳優・アクション担当・照明スタッフ等の結果が出る。公式公演サイト内の一致でも出演者かスタッフかを区別する。", "別作品の同名クレジットから今回の人物へ経歴を接続しない。", "2026-10-17追加調査：公演側の告知に加藤学（Kitty-Guys）がある。別公演でのアクション担当表記や名前一致だけで人物を接続せず、同名のコンサルタント・将棋指導者のプロフィールも採らない。"],
+      "searchHistory": [{ "query": "加藤学 BLEACH 公式 プロフィール", "checkedAt": "2026-10-16T10:17:01Z", "outcome": "namesake_and_staff_results_no_connection" }, {"query":"Kitty-Guys表記と舞台側告知・本人SNS候補を調査","checkedAt":"2026-10-17T02:39:35.707Z","outcome":"performance_group_lead_found_no_verified_profile_anchor","urls":["https://www.ameba.jp/profile/general/iwaslight/","https://sakaikana.officialblog.jp/archives/1771377.html"]}]
     },
     {
       "sourceCreditKey": "666997199d7200831150", "sourceActorName": "末吉司弥",
       "identity": { "status": "appearance_only", "evidence": [] }, "facts": {},
-      "notes": ["公式アニメサイトで知念寛の声の出演を確認。舞台プロフィールとの接続は次回。", "https://www.tv-tokyo.co.jp/anime/tenipri-zenkoku/staff/", "旧事務所PDFは検索に本文の抜粋が残るが、通常HTTPでも404を確認。生年月日・英語表記等は抜粋から採用しない。", "https://www.orionsbelt.co.jp/wp/wp-content/uploads/Kazuya_Sueyoshi.pdf", "現在の事務所一覧で見つからないことを退所・引退の証明にはしない。"],
+      "notes": ["公式アニメサイトで知念寛の声の出演を確認。舞台プロフィールとの接続は次回。", "https://www.tv-tokyo.co.jp/anime/tenipri-zenkoku/staff/", "旧事務所PDFは検索に本文の抜粋が残るが、通常HTTPでも404を確認。生年月日・英語表記等は抜粋から採用しない。", "https://www.orionsbelt.co.jp/wp/wp-content/uploads/Kazuya_Sueyoshi.pdf", "現在の事務所一覧で見つからないことを退所・引退の証明にはしない。", "2026-10-17追加確認：旧事務所PDFは再びHTTP404。検索結果に本文風の情報が表示されても取得成功とは扱わず、追加プロフィール値は採用していない。"],
       "searchHistory": [
         { "query": "末吉司弥 公式 所属", "checkedAt": "2026-10-16T10:17:01Z", "outcome": "official_leads_pdf_fetch_failed" },
         { "query": "旧事務所PDFのHTTP取得と現在の公式一覧確認", "checkedAt": "2026-10-16T13:31:24Z", "outcome": "old_pdf_http_404_no_profile_values_adopted" }
-      ]
+      , {"query":"旧オリオンズベルトPDFの再取得と現存プロフィールを追加調査","checkedAt":"2026-10-17T02:39:35.707Z","outcome":"pdf_still_http_404_cached_search_excerpt_not_adopted","urls":["https://www.orionsbelt.co.jp/wp/wp-content/uploads/Kazuya_Sueyoshi.pdf"]}]
     },
     {
       "sourceCreditKey": "4ee1860b2d84e296f36e", "sourceActorName": "安田裕",
@@ -155,14 +227,14 @@
     {
       "sourceCreditKey": "36c6b4622c67f549a126", "sourceActorName": "岩下政之",
       "identity": { "status": "appearance_only", "evidence": [] }, "facts": {},
-      "notes": ["二次プロフィールに生年月日等、百科事典系に当該公演の記載がある。今回一次プロフィールとの接点は確認できていない。"],
-      "searchHistory": [{ "query": "岩下政之 BLEACH プロフィール", "checkedAt": "2026-10-16T10:17:01Z", "outcome": "secondary_leads_only" }]
+      "notes": ["二次プロフィールに生年月日等、百科事典系に当該公演の記載がある。今回一次プロフィールとの接点は確認できていない。", "2026-10-17追加調査：本人名を冠するSPICE BIRD RADIOの配信情報は見つかったが、BLEACH出演者の基本情報との接続は未完了。二次プロフィールや生成的な紹介サイトの値は今回採用しない。"],
+      "searchHistory": [{ "query": "岩下政之 BLEACH プロフィール", "checkedAt": "2026-10-16T10:17:01Z", "outcome": "secondary_leads_only" }, {"query":"公式SPICE BIRD RADIOと人物プロフィールへの接続を調査","checkedAt":"2026-10-17T02:39:35.707Z","outcome":"official_radio_lead_found_no_bleach_profile_anchor","urls":["https://blog.livedoor.jp/spice_bird_radio/"]}]
     },
     {
       "sourceCreditKey": "031a473d7c9cb04d67a6", "sourceActorName": "篠原辰也",
       "identity": { "status": "appearance_only", "evidence": [] }, "facts": {},
-      "notes": ["イープラスの舞台俳優一覧に氏名と読みの候補あり。当該公演出演者との人物接続は未確認。", "https://eplus.jp/sf/word/play/performer-actor/p61"],
-      "searchHistory": [{ "query": "篠原辰也 BLEACH プロフィール", "checkedAt": "2026-10-16T10:17:01Z", "outcome": "listing_lead_only" }]
+      "notes": ["イープラスの舞台俳優一覧に氏名と読みの候補あり。当該公演出演者との人物接続は未確認。", "https://eplus.jp/sf/word/play/performer-actor/p61", "2026-10-17追加調査：出演者一覧以外に同名の企業関係者や創作小説の人物が検索へ現れる。氏名や読みが一致しても今回の出演者へ接続せず、追加の基本情報は未採用。"],
+      "searchHistory": [{ "query": "篠原辰也 BLEACH プロフィール", "checkedAt": "2026-10-16T10:17:01Z", "outcome": "listing_lead_only" }, {"query":"氏名完全一致で俳優プロフィール・出演歴・公式情報を追加調査","checkedAt":"2026-10-17T02:39:35.707Z","outcome":"listing_and_namesake_leads_only","urls":["https://eplus.jp/sf/word/play/performer-actor/p61"]}]
     },
     {
       "sourceCreditKey": "741f69fca4a3cda0fbb5", "sourceActorName": "岩間健児",

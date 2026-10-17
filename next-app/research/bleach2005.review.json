@@ -1,0 +1,47 @@
+{
+  "sourceUrl": "https://kira-hai.net/bleach2005",
+  "scope": {
+    "decision": "include",
+    "reason": "久保帯人の漫画BLEACHを舞台化した2005年8月の初演。2006年再炎・同年夏の別公演と区別する。",
+    "evidence": [
+      {
+        "url": "https://www.t1010.jp/html/calender/2009/117/117.htm",
+        "note": "劇場公式の大口兼悟紹介区間に2005年8月17日〜28日・全労済ホール/スペースゼロの初演出演歴を確認。",
+        "checkedAt": "2026-10-17T02:34:45.108Z"
+      },
+      {
+        "url": "https://kira-hai.net/bleach2005",
+        "note": "第一参照先の公演名・日程・キャスト欄を確認。漫画原作の同シリーズの公演として選別。",
+        "checkedAt": "2026-10-17T02:34:45.108Z"
+      }
+    ]
+  },
+  "play": {
+    "id": "da8cc329-7725-432b-bffa-d5bbeeed2f5d",
+    "slug": "bleach2005",
+    "expectedUpdatedAt": "2026-04-30T16:44:27.346605+00:00",
+    "evidence": [
+      {
+        "url": "https://kira-hai.net/bleach2005",
+        "note": "公演名・年と既存公演の伊阪達也=黒崎一護の配役・シリーズを照合。同じシリーズの別年/別公演へ付け替えない。",
+        "checkedAt": "2026-10-17T02:34:45.108Z"
+      }
+    ]
+  },
+  "actors": [
+    {
+      "sourceActorName": "土屋裕一",
+      "action": "link",
+      "actorId": "8ae8ecdb-55ec-4f9e-b977-57ac48dc3aa2",
+      "expectedName": "土屋 佑壱",
+      "expectedUpdatedAt": "2026-03-16T16:20:11.964332+00:00",
+      "evidence": [
+        {
+          "url": "https://ameblo.jp/pnish-tuti/entry-12125902238.html",
+          "note": "2016年2月7日の本人公式ブログで土屋裕一から土屋佑壱への改名を確認。取得した記事本文にも両表記がある。",
+          "checkedAt": "2026-10-16T09:32:00Z"
+        }
+      ]
+    }
+  ]
+}

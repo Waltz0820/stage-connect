@@ -113,7 +113,12 @@ test('the checked-in BLEACH research keeps all 15 distinct cast occurrences and 
   copy.actors.forEach((record, index) => { record.sourceCreditKey = rows[index].id; });
   const actors = copy.actors.flatMap((record) => (record.distinctActors ?? []).map((item) => ({ id: item.actorId, name: item.expectedName, birthday: item.expectedBirthday, updated_at: item.expectedUpdatedAt })));
   const result = buildActorResearch({ plan: { version: 1, source: { url: copy.sourceUrl, fingerprint: copy.sourceFingerprint }, rows }, actors, research: copy });
-  assert.deepEqual(result.counts, { total: 15, profileLinked: 8, appearanceOnly: 7, confirmedFacts: 31, needsReview: 0 });
+  assert.deepEqual(result.counts, { total: 15, profileLinked: 9, appearanceOnly: 6, confirmedFacts: 34, needsReview: 0 });
   assert.equal(result.rows.find((row) => row.sourceActorName === '立花拓也').profileDraft.birthday, null);
   assert.equal(result.rows.find((row) => row.sourceActorName === '岩間健児').profileDraft.birthday, '1980-10-29');
+  const murakami = result.rows.find((row) => row.sourceActorName === '村上耕平').profileDraft;
+  assert.equal(murakami.name_en, 'Kouhei Murakami');
+  assert.equal(murakami.height_cm, 170);
+  assert.equal(murakami.birthday, null, 'a month/day plus a secondary-source year must not become a verified birthday');
+  assert.equal(murakami.kana, null);
 });
