@@ -1,0 +1,111 @@
+{
+  "version": 1,
+  "batchId": "enstars-sample-correction-20261017",
+  "evidence": {
+    "batchId": "enstars-sample-correction-20261017",
+    "sources": [
+      {
+        "name": "official",
+        "url": "https://www.marv.jp/special/ensemble_stage-first/cast.html",
+        "status": 200,
+        "checkedAt": "2026-10-17T08:15:51.377Z",
+        "sha256": "f8e83ab6de37a159807ccabaef9e046843322e87e63285aadae077fb6944ceaf",
+        "bytes": 28197
+      },
+      {
+        "name": "work",
+        "url": "https://kira-hai.net/ensta2016",
+        "status": 200,
+        "checkedAt": "2026-10-17T08:15:48.526Z",
+        "sha256": "eb478bc1182009e835da51670a215e54e3b3643903dd3b1a640cae51b1c47ce7",
+        "bytes": 53607
+      },
+      {
+        "name": "okutani-thetv",
+        "url": "https://thetv.jp/person/2090005705/",
+        "status": 200,
+        "checkedAt": "2026-10-17T08:16:11.403Z",
+        "sha256": "c8d9c607e9689099461e89fc1001369bfd2b28c2448e093d9bb8f982b095209d",
+        "bytes": 54469
+      }
+    ],
+    "reason": "2016初演の公式17名およびキラハイの配役と照合。旧ハードコードサンプルlib/data/plays.tsの荒牧慶彦・北村諒の紐づけと一致する初期行を是正。奥谷知弘の誕生日は公式12月26日と媒体1994年12月26日で訂正。"
+  },
+  "corrections": [
+    {
+      "kind": "correct_sample_cast",
+      "before": {
+        "id": "068bca79-db77-4ce1-a2de-4a51b97956b7",
+        "play_id": "4290c7ee-490b-4b22-80a8-808520e7a3a0",
+        "actor_id": "853dd8bc-bb1d-41e4-b9b9-978ecb70fbb9",
+        "role_name": null,
+        "is_starring": true,
+        "created_at": "2025-12-13T05:18:03.3201+00:00",
+        "billing_order": null,
+        "cast_group": null,
+        "role_name_kana": null,
+        "role_type": null,
+        "note": null,
+        "updated_at": "2025-12-16T17:25:29.486976+00:00"
+      },
+      "after": {
+        "id": "068bca79-db77-4ce1-a2de-4a51b97956b7",
+        "play_id": "4290c7ee-490b-4b22-80a8-808520e7a3a0",
+        "actor_id": "853dd8bc-bb1d-41e4-b9b9-978ecb70fbb9",
+        "role_name": "鳴上嵐",
+        "is_starring": false,
+        "created_at": "2025-12-13T05:18:03.3201+00:00",
+        "billing_order": null,
+        "cast_group": null,
+        "role_name_kana": null,
+        "role_type": null,
+        "note": null,
+        "updated_at": "2026-10-17T08:26:10.466959+00:00"
+      }
+    },
+    {
+      "kind": "remove_sample_cast",
+      "before": {
+        "id": "2f474976-a2f1-4aa6-b020-6cc73200ae36",
+        "play_id": "4290c7ee-490b-4b22-80a8-808520e7a3a0",
+        "actor_id": "929888ac-3f6a-40d0-a856-41dd028b2753",
+        "role_name": null,
+        "is_starring": true,
+        "created_at": "2025-12-13T05:18:03.3201+00:00",
+        "billing_order": null,
+        "cast_group": null,
+        "role_name_kana": null,
+        "role_type": null,
+        "note": null,
+        "updated_at": "2025-12-16T17:25:29.486976+00:00"
+      },
+      "after": null
+    },
+    {
+      "kind": "correct_source_actor_fact",
+      "actorId": "4c706c63-3b21-4f32-8676-c4b7b740a483",
+      "actorName": "奥谷知弘",
+      "field": "birthday",
+      "before": "1994-12-24",
+      "after": "1994-12-26"
+    }
+  ],
+  "verification": {
+    "checkedAt": "2026-10-17T08:31:29.398Z",
+    "counts": {
+      "actors": 691,
+      "plays": 312,
+      "franchises": 198,
+      "casts": 2224
+    },
+    "newActors": 6,
+    "newCastRows": 16,
+    "removedSampleCastRows": 1,
+    "correctedCastRows": 1,
+    "correctedBirthdays": 1,
+    "sourceCastRows": 17,
+    "acceptedCandidates": 17,
+    "logDelta": 28,
+    "protectedAndUnrelatedDataPreserved": true
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "sourceUrl": "https://kira-hai.net/ensta2016",
+  "scope": {
+    "decision": "include",
+    "reason": "ゲーム「あんさんぶるスターズ！」原作の2.5次元舞台。2016年6月の初演で、2017年の続編とは別作品。",
+    "evidence": [
+      {
+        "url": "https://kira-hai.net/ensta2016",
+        "checkedAt": "2026-10-17T08:15:48.526Z",
+        "note": "第一参照先の作品名・公演日程・全17名の配役を確認。"
+      },
+      {
+        "url": "https://www.marv.jp/special/ensemble_stage-first/cast.html",
+        "checkedAt": "2026-10-17T08:15:51.377Z",
+        "note": "公式初演ページの原作・会期・全17名の配役と一致。"
+      }
+    ]
+  },
+  "play": {
+    "id": "4290c7ee-490b-4b22-80a8-808520e7a3a0",
+    "slug": "enstars-stage",
+    "expectedUpdatedAt": "2025-12-13T05:12:12.983557+00:00",
+    "evidence": [
+      {
+        "url": "https://www.marv.jp/special/ensemble_stage-first/cast.html",
+        "checkedAt": "2026-10-17T08:15:51.377Z",
+        "note": "2016年6月18日〜26日、AiiA 2.5 Theater Tokyoの初演として照合。タイトル・年月・会場・シリーズが既存登録と一致。"
+      }
+    ]
+  },
+  "actors": [
+    {
+      "sourceActorName": "瑛",
+      "action": "link",
+      "actorId": "508ba664-f644-4c55-a98e-4ac0d87778e3",
+      "expectedName": "百成瑛",
+      "expectedUpdatedAt": "2026-10-17T08:22:48.968908+00:00",
+      "evidence": [
+        {
+          "url": "https://kira-hai.net/akira",
+          "checkedAt": "2026-10-17T08:15:59.963Z",
+          "note": "人物ページの現在名・百成瑛と旧名・瑛の明記を確認。別人物は作成しない。"
+        },
+        {
+          "url": "https://www.marv.jp/special/ensemble_stage-first/cast.html",
+          "checkedAt": "2026-10-17T08:15:51.377Z",
+          "note": "2016初演の乙狩アドニス役は瑛。改名後の同一俳優IDへ紐づけ、公演原文は候補に保持。"
+        }
+      ]
+    }
+  ]
+}
