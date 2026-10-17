@@ -208,22 +208,22 @@ export default async function EnglishSeriesDetailPage({ params }: { params: Prom
                   <span className="timeline-year-sub">release</span>
                 </div>
 
-                <article className="catalog-card actor-timeline-card series-timeline-card">
+                <article className="catalog-card actor-timeline-card series-timeline-card" data-streaming-placement="series_timeline" data-play-id={play.id} data-play-slug={play.slug}>
                   <Link className="catalog-card__body-link actor-timeline-card__link" href={`/en/plays/${play.slug}`}>
                     <div className="actor-timeline-card__body">
                       <div className="catalog-card__top">
                         <div className="cast-name">{getEnglishPlayTitle(play)}</div>
-                        {hasVod(play.vod) ? <span className="catalog-card__badge">Streaming</span> : null}
+                        {hasVod(play.vod) ? <span className="catalog-card__badge">Streaming links</span> : null}
                       </div>
 
                       <div className="series-timeline-card__meta">
                         <span>{compactTimelinePeriod(play.period)}</span>
                       </div>
 
-                      {play.summaryEn || play.summary ? (
-                        <div className="catalog-card__text catalog-card__text--clamped">
+                      {toPlainText(play.summaryEn || play.summary) ? (
+                        <p className="timeline-excerpt">
                           {truncateText(toPlainText(play.summaryEn || play.summary), 220)}
-                        </div>
+                        </p>
                       ) : null}
                     </div>
                   </Link>
@@ -234,7 +234,7 @@ export default async function EnglishSeriesDetailPage({ params }: { params: Prom
                         View play details
                       </Link>
                       {play.vod?.dmm ? (
-                        <a className="action-button" href={play.vod.dmm} target="_blank" rel="noopener noreferrer">
+                        <a className="action-button" href={play.vod.dmm} target="_blank" rel="sponsored noopener noreferrer">
                           DMM TV
                         </a>
                       ) : null}

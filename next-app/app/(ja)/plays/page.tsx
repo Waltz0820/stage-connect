@@ -90,8 +90,8 @@ const getPlayReleaseLabel = (period?: string | null) => {
 };
 
 const getPlayAvailabilityLabel = (vod?: Record<string, string> | null) => {
-  if (vod?.dmm) return "DMM TVで配信中";
-  if (vod && Object.keys(vod).length > 0) return "配信あり";
+  if (vod?.dmm) return "DMM TVリンクあり";
+  if (vod && Object.keys(vod).length > 0) return "配信リンクあり";
   return "配信情報なし";
 };
 
@@ -164,7 +164,6 @@ export default async function PlaysPage({
   const supportBySlug = new Map(discovery.rows.map((row) => [row.play_slug, row]));
   const seriesOptions = Array.from(new Set(allPlays.map((play) => play.franchiseName).filter(Boolean))).map((name) => ({ value: name!, label: name! })).sort((a,b) => a.label.localeCompare(b.label, "ja"));
   const discoveryMatches = (play: (typeof allPlays)[number]) => {
-    const normalize = (value: string) => value.normalize("NFKC").toLocaleLowerCase().replace(/[\s\u3000]+/g, "");
     return (matchesSearch([play.title, play.titleEn, play.franchiseName, play.franchiseNameEn, play.slug],q))
       && (!series || play.franchiseName === series)
       && (!streaming || Boolean(play.vod && Object.keys(play.vod).some((key) => play.vod?.[key])))

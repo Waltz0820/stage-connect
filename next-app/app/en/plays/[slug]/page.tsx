@@ -180,7 +180,7 @@ const buildPlayMetaDescriptionEn = (play: NonNullable<Awaited<ReturnType<typeof 
   const factParts: string[] = [];
   if (displaySeriesName) factParts.push(`Series: ${displaySeriesName}`);
   if (play.cast.length > 0) factParts.push(`Cast: ${play.cast.length}`);
-  if (play.vod && Object.keys(play.vod).length > 0) factParts.push("Streaming available");
+  if (play.vod && Object.keys(play.vod).length > 0) factParts.push("Streaming links listed");
   if (factParts.length > 0) parts.push(`${factParts.join(" / ")}.`);
 
   if (parts.length === 0) {
@@ -262,7 +262,7 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
   ]);
 
   return (
-    <main className="container works-index-page detail-stage-page play-detail-stage-page" style={{ paddingBlock: 32 }}>
+    <main data-play-id={play.id} data-play-slug={play.slug} className="container works-index-page detail-stage-page play-detail-stage-page" style={{ paddingBlock: 32 }}>
       <StructuredData data={breadcrumbJsonLd} />
       <StructuredData data={creativeWorkJsonLd} />
       <div className="stack-lg">
@@ -289,7 +289,7 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
             </div>
 
             <div className="pill-row">
-              {hasVod ? <span className="pill accent-pill">Streaming available</span> : null}
+              {hasVod ? <span className="pill accent-pill">Streaming links listed</span> : null}
             </div>
 
             <div className="detail-ledger">
@@ -302,15 +302,15 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
                 <strong>{displaySeriesName || "Standalone"}</strong>
               </div>
               <div className="detail-ledger__item">
-                <span className="detail-ledger__label">Streaming</span>
-                <strong>{hasVod ? "Available" : "Unavailable"}</strong>
+                <span className="detail-ledger__label">Streaming links</span>
+                <strong>{hasVod ? "Links listed" : "Not confirmed"}</strong>
               </div>
             </div>
 
             {hasVod ? (
-              <div className="play-detail-hero-streaming">
+              <div className="play-detail-hero-streaming" data-streaming-placement="play_hero">
                 {play.vod?.dmm ? (
-                  <a className="action-button action-button-primary" href={play.vod.dmm} target="_blank" rel="noopener noreferrer">
+                  <a className="action-button action-button-primary" href={play.vod.dmm} target="_blank" rel="sponsored noopener noreferrer">
                     Watch on DMM TV
                   </a>
                 ) : null}
@@ -321,7 +321,7 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
         </section>
 
         <nav className="detail-contents-nav" aria-label="Production contents">
-          <a href="#overview">Overview</a><a href="#cast">Cast</a><a href="#performances">Performances</a><a href="#streaming">Streaming</a><a href="#fan-points">Fan favorites</a>
+          <a href="#overview">Overview</a><a href="#cast">Cast</a><a href="#performances">Performances</a><a href="#streaming">Streaming links</a><a href="#fan-points">Fan favorites</a>
         </nav>
 
         <section className="section-card stack-md detail-stage-section play-detail-lead-section">
@@ -423,16 +423,16 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
           </section>
         ) : null}
 
-        <section id="streaming" className="section-card stack-md detail-stage-section play-streaming-section">
-          <h2 className="section-title">Streaming</h2>
+        <section data-streaming-placement="play_streaming" id="streaming" className="section-card stack-md detail-stage-section play-streaming-section">
+          <h2 className="section-title">Streaming links</h2>
           <p className="muted">
             {hasVod
-              ? "This production currently has streaming availability listed on Stage Connect."
+              ? "Stage Connect lists streaming links for this production."
               : "No streaming platform is listed for this production at the moment."}
           </p>
           <div className="action-row">
             {play.vod?.dmm ? (
-              <a className="action-button action-button-primary" href={play.vod.dmm} target="_blank" rel="noopener noreferrer">
+              <a className="action-button action-button-primary" href={play.vod.dmm} target="_blank" rel="sponsored noopener noreferrer">
                 Watch on DMM TV
               </a>
             ) : null}
@@ -447,6 +447,7 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
               </a>
             ) : null}
           </div>
+          {hasVod ? <p className="streaming-note">Check the provider’s title page for current availability, subscription or rental terms, and pricing.</p> : null}
         </section>
 
         <section id="cast" className="section-card stack-md detail-stage-section play-detail-cast-section">

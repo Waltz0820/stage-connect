@@ -91,6 +91,7 @@ body:has(.stage-v2), html:has(.stage-v2) { background: #f4f5fb; }
 .stage-v2 .detail-stage-page :is(.action-button,.favorite-button,.share-button) { border-radius: 999px; border-color: var(--line); background: #fff; color: var(--v2-accent); }
 .stage-v2 .detail-stage-page .action-row .action-button { border-color: var(--line); background: #fff; }
 .stage-v2 :is(.action-button-primary,.pagination-link.is-active), .stage-v2 .detail-stage-page .action-button-primary { background: #78649f; border-color: #78649f; color: #fff; }
+.stage-v2 .detail-stage-page .action-row .action-button.action-button-primary { background: #78649f; border-color: #78649f; color: #fff; }
 .stage-v2 .favorite-button.is-active { color: #7566a7; background: var(--v2-soft); border-color: #b4a7d6; }
 .stage-v2 :is(.catalog-link,.section-link,.section-header-inline > a) { color: var(--v2-accent); }
 .stage-v2 .detail-stage-page .section-link { color: var(--v2-accent); }
@@ -137,6 +138,9 @@ body:has(.stage-v2), html:has(.stage-v2) { background: #f4f5fb; }
 .stage-v2 .detail-stage-page .cast-card-link .cast-name { color: var(--text); }
 .stage-v2 .detail-stage-page .timeline-dot { background: #a899cb; box-shadow: none; }
 .stage-v2 .detail-stage-page .timeline-shell::before { background: var(--line); }
+.stage-v2 .timeline-excerpt { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; margin: 10px 0 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
+.stage-v2 .series-timeline-card .action-button:not(.action-button-primary) { display: inline-flex; }
+.stage-v2 .streaming-note { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.8; }
 .stage-v2 .detail-stage-page .timeline-year-heading { border-color: var(--line); background: #f8f7fc; }
 .stage-v2 .detail-stage-page :is(.actor-timeline-card__series,.actor-timeline-card__role,.actor-timeline-card__date,.series-timeline-card__meta span,.series-rank-badge) { color: var(--muted); border-color: var(--line); background: #f6f4fb; }
 .stage-v2 .detail-stage-page .actor-timeline-card::after { color: var(--v2-accent); }

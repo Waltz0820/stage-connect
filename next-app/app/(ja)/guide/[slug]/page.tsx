@@ -87,7 +87,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<Para
   };
 
   return (
-    <main className="container guide-stage-page">
+    <main data-streaming-placement="guide_content" className="container guide-stage-page">
       <StructuredData data={jsonLd} />
 
       <div className="stack-lg">

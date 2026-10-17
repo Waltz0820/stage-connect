@@ -35,7 +35,7 @@ export function GuidePlaySectionsClient({
   return (
     <div className="guide-play-grid">
       {visiblePlays.map((play) => (
-        <article className="guide-play-card" key={play.id}>
+        <article className="guide-play-card" key={play.id} data-streaming-placement="guide_play" data-play-id={play.id} data-play-slug={play.slug}>
           <div className="guide-play-card__main">
             <Link className="guide-play-card__title" href={`/plays/${play.slug}`}>
               {play.title}

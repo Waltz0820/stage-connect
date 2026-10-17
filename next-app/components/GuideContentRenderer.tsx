@@ -742,7 +742,7 @@ export function GuideContentRenderer({ content, guide }: Props) {
   let currentH3: string | null = null;
 
   return (
-    <div className="guide-prose stack-md">
+    <div className="guide-prose stack-md" data-streaming-placement="guide_content">
       {blocks.map((block, index) => {
         if (block.type === "h2") {
           skipUntilNextHeading = false;

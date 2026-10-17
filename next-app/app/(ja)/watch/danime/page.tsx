@@ -63,7 +63,7 @@ export default async function WatchDanimePage() {
   };
 
   return (
-    <main className="container" style={{ paddingBlock: 32 }}>
+    <main data-streaming-placement="watch_content" className="container" style={{ paddingBlock: 32 }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <script
         type="application/ld+json"
@@ -91,7 +91,7 @@ export default async function WatchDanimePage() {
           </ol>
         </nav>
 
-        <section className="hero-card hero-card--center stack-md">
+        <section className="hero-card hero-card--center stack-md" data-streaming-placement="watch_hero">
           <div className="stack-sm">
             <span className="eyebrow">VOD Compare</span>
             <h1 className="page-title">dアニメストアで2.5次元舞台は見られる？</h1>

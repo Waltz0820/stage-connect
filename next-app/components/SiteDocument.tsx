@@ -12,13 +12,18 @@ export default function SiteDocument({ locale, children }: { locale: SiteLocale;
     <html lang={locale}>
       <head>
         <script async crossOrigin="anonymous" src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClient}`} />
-        <Script async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} strategy="afterInteractive" />
-        <Script id="ga4-init" strategy="afterInteractive">{`
+        <Script id="ga4-init" strategy="beforeInteractive">{`
+          if (['stageconnect.jp', 'www.stageconnect.jp'].includes(window.location.hostname) && !/^\\/admin(?:\\/|$)/.test(window.location.pathname)) {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           window.gtag = gtag;
           gtag('js', new Date());
-          gtag('config', '${gaId}', { send_page_view: false });
+          gtag('config', '${gaId}', { send_page_view: false, page_location: window.location.origin + window.location.pathname });
+          var tag = document.createElement('script');
+          tag.async = true;
+          tag.src = 'https://www.googletagmanager.com/gtag/js?id=${gaId}';
+          document.head.appendChild(tag);
+          }
         `}</Script>
       </head>
       <body>

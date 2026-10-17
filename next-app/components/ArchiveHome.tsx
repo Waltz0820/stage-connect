@@ -74,7 +74,7 @@ export default async function ArchiveHome({ locale }: { locale: 'ja' | 'en' }) {
         </section>
 
         <section className="home-streaming" aria-label={en ? 'Explore streaming options' : '配信で観られる作品'}>
-          <Link className="home-streaming__banner" href="/watch/dmm">
+          <Link className="home-streaming__banner" data-streaming-placement="home_banner" href="/watch/dmm">
             <span className="home-streaming__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m9 5 11 7-11 7Z"/></svg></span>
             <strong>DMM TV</strong>
             <span className="home-streaming__copy"><span>{en ? 'Find streaming information for your next production' : '気になる作品の配信情報をチェック'}</span><small>{en ? 'Explore 2.5D theatre, whenever you like.' : '2.5次元舞台作品を、いつでもどこでも。'}</small></span>

@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { SearchBarClient } from "./SearchBarClient";
 import { LocaleSwitcher } from "./LocaleSwitcher";
+import { StreamingClickTracker } from "./StreamingClickTracker";
 import { getLanguageTargets, isAdminPath } from "../lib/locale-routing";
 
 const copy = {
@@ -120,6 +121,7 @@ function PublicSiteChrome({ pathname, children }: { pathname: string | null; chi
 
   return (
     <div className="page-shell stage-v2">
+      <StreamingClickTracker/>
       <a className="skip-link" href="#main-content">{locale === 'en' ? 'Skip to content' : '本文へ移動'}</a>
       <header className="site-header">
         <div className="container site-header__inner">
@@ -128,7 +130,7 @@ function PublicSiteChrome({ pathname, children }: { pathname: string | null; chi
               STAGE CONNECT
               <span className="site-brand__tagline">{locale === "ja" ? "2.5次元舞台とキャストをつなぐ" : "Connecting 2.5D stage and cast"}</span>
             </Link>
-            <nav className="site-nav desktop-nav" aria-label={labels.globalNavLabel}>
+            <nav className="site-nav desktop-nav" aria-label={labels.globalNavLabel} data-streaming-placement="header">
               {labels.primaryNav.map((item) => (
                 <Link key={item.href} href={item.href} onClick={() => setIsMenuOpen(false)} className={isActive(item.href) ? "is-active" : undefined}>
                   {item.label}
@@ -183,7 +185,7 @@ function PublicSiteChrome({ pathname, children }: { pathname: string | null; chi
 
           <div className="mobile-menu__locale">{localeSwitcher}</div>
 
-          <nav className="mobile-menu__nav" aria-label={labels.mobileNavLabel}>
+          <nav className="mobile-menu__nav" aria-label={labels.mobileNavLabel} data-streaming-placement="mobile_menu">
             {mobileNav.map((item) => (
               <Link key={item.href} href={item.href} onClick={() => setIsMenuOpen(false)} className={isActive(item.href) ? "is-active" : undefined}>
                 {item.label}
@@ -199,7 +201,7 @@ function PublicSiteChrome({ pathname, children }: { pathname: string | null; chi
 
       <div id="main-content" className="site-content" tabIndex={-1}>{children}</div>
 
-      <footer className="site-footer">
+      <footer className="site-footer" data-streaming-placement="footer">
         <div className="container site-footer__upper">
           <div className="site-footer__grid">
             <section className="site-footer__column">

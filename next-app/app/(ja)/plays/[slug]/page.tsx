@@ -204,7 +204,7 @@ const buildPlayMetaDescriptionJa = (play: NonNullable<Awaited<ReturnType<typeof 
   const factParts: string[] = [];
   if (play.franchiseName) factParts.push(`シリーズ: ${play.franchiseName}`);
   if (play.cast.length > 0) factParts.push(`出演${play.cast.length}人`);
-  if (play.vod && Object.keys(play.vod).length > 0) factParts.push("配信あり");
+  if (play.vod && Object.keys(play.vod).length > 0) factParts.push("配信リンクあり");
   if (factParts.length > 0) parts.push(`${factParts.join(" / ")}。`);
 
   if (parts.length === 0) {
@@ -310,7 +310,7 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
   };
 
   return (
-    <main className="container works-index-page detail-stage-page play-detail-stage-page" style={{ paddingBlock: 32 }}>
+    <main data-play-id={play.id} data-play-slug={play.slug} className="container works-index-page detail-stage-page play-detail-stage-page" style={{ paddingBlock: 32 }}>
       <StructuredData data={breadcrumbJsonLd} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }} />
@@ -342,7 +342,7 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
 
             {hasVod ? (
               <div className="pill-row">
-                <span className="pill accent-pill">配信あり</span>
+                <span className="pill accent-pill">配信リンクあり</span>
               </div>
             ) : null}
 
@@ -357,14 +357,14 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
               </div>
               <div className="detail-ledger__item">
                 <span className="detail-ledger__label">配信</span>
-                <strong>{hasVod ? "配信あり" : "未配信"}</strong>
+                <strong>{hasVod ? "配信リンクあり" : "未確認"}</strong>
               </div>
             </div>
 
             {hasVod ? (
-              <div className="play-detail-hero-streaming">
+              <div className="play-detail-hero-streaming" data-streaming-placement="play_hero">
                 {play.vod?.dmm ? (
-                  <a className="action-button action-button-primary" href={play.vod.dmm} target="_blank" rel="noopener noreferrer">
+                  <a className="action-button action-button-primary" href={play.vod.dmm} target="_blank" rel="sponsored noopener noreferrer">
                     DMM TVで見る
                   </a>
                 ) : null}
@@ -478,7 +478,7 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
           </section>
         ) : null}
 
-        <section id="streaming" className="section-card stack-md detail-stage-section play-streaming-section">
+        <section data-streaming-placement="play_streaming" id="streaming" className="section-card stack-md detail-stage-section play-streaming-section">
           <h2 className="section-title">{hasVod ? "配信で見る" : "見る方法を確認"}</h2>
           {hasVod ? (
             <p className="muted">DMM TV など主要な配信リンクを作品ごとに確認できます。</p>
@@ -487,7 +487,7 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
           )}
           <div className="action-row">
             {play.vod?.dmm ? (
-              <a className="action-button action-button-primary" href={play.vod.dmm} target="_blank" rel="noopener noreferrer">
+              <a className="action-button action-button-primary" href={play.vod.dmm} target="_blank" rel="sponsored noopener noreferrer">
                 DMM TVで見る
               </a>
             ) : null}
@@ -502,7 +502,7 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
               </a>
             ) : null}
             <Link className="action-button" href="/watch">
-              {hasVod ? "配信ガイドを見る" : "DMMで関連作品を探す"}
+              {hasVod ? "配信ガイドを見る" : "配信サービスを確認"}
             </Link>
             {!hasVod && play.franchiseSlug ? (
               <Link className="action-button" href={`/series/${play.franchiseSlug}`}>
@@ -510,6 +510,7 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
               </Link>
             ) : null}
           </div>
+          {hasVod ? <p className="streaming-note">配信期間・見放題／レンタルの区分・料金は、リンク先の作品ページでご確認ください。</p> : null}
         </section>
 
         <section className="section-card stack-md detail-stage-section play-detail-faq-section">

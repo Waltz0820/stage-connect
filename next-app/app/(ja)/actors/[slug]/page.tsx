@@ -227,7 +227,7 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
 
                 <div className="actor-timeline-list">
                   {group.plays.map((play) => (
-                    <article className="catalog-card actor-timeline-card" key={play.slug}>
+                    <article className="catalog-card actor-timeline-card" key={play.slug} data-streaming-placement="actor_timeline" data-play-id={play.id} data-play-slug={play.slug}>
                       <Link className="catalog-card__body-link actor-timeline-card__link" href={`/plays/${play.slug}`}>
                         <div className="actor-timeline-card__body">
                           <div className="cast-name">{play.title}</div>
@@ -248,7 +248,7 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
                             className="action-button action-button-primary action-button-inline"
                             href={play.vod.dmm}
                             target="_blank"
-                            rel="noopener noreferrer"
+                            rel="sponsored noopener noreferrer"
                           >
                             DMM TVで見る
                           </a>

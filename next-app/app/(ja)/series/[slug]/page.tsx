@@ -233,20 +233,20 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
                   <span className="timeline-year-sub">公開時期</span>
                 </div>
 
-                <article className="catalog-card actor-timeline-card series-timeline-card">
+                <article className="catalog-card actor-timeline-card series-timeline-card" data-streaming-placement="series_timeline" data-play-id={play.id} data-play-slug={play.slug}>
                   <Link className="catalog-card__body-link actor-timeline-card__link" href={`/plays/${play.slug}`}>
                     <div className="actor-timeline-card__body">
                       <div className="catalog-card__top">
                         <div className="cast-name">{play.title}</div>
-                        {hasVod(play.vod) ? <span className="catalog-card__badge">配信あり</span> : null}
+                        {hasVod(play.vod) ? <span className="catalog-card__badge">配信リンクあり</span> : null}
                       </div>
 
                       <div className="series-timeline-card__meta">
                         <span>{compactTimelinePeriod(play.period)}</span>
                       </div>
 
-                      {play.summary ? (
-                        <div className="catalog-card__text catalog-card__text--clamped">{play.summary}</div>
+                      {toPlainText(play.summary) ? (
+                        <p className="timeline-excerpt">{truncate(toPlainText(play.summary), 220)}</p>
                       ) : null}
                     </div>
                   </Link>
@@ -257,7 +257,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
                         作品詳細を見る
                       </Link>
                       {play.vod?.dmm ? (
-                        <a className="action-button" href={play.vod.dmm} target="_blank" rel="noopener noreferrer">
+                        <a className="action-button" href={play.vod.dmm} target="_blank" rel="sponsored noopener noreferrer">
                           DMM TV
                         </a>
                       ) : null}

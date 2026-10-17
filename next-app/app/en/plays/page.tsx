@@ -68,8 +68,8 @@ const getPlayReleaseLabelEn = (period?: string | null) => {
 };
 
 const getPlayAvailabilityLabelEn = (vod?: Record<string, string> | null) => {
-  if (vod?.dmm) return "Streaming on DMM TV";
-  if (vod && Object.keys(vod).length > 0) return "Streaming available";
+  if (vod?.dmm) return "DMM TV link listed";
+  if (vod && Object.keys(vod).length > 0) return "Streaming links listed";
   return "No streaming info";
 };
 
@@ -142,7 +142,6 @@ export default async function EnglishPlaysPage({
   const supportBySlug = new Map(discovery.rows.map((row) => [row.play_slug, row]));
   const seriesOptions = Array.from(new Set(allPlays.map((play) => play.franchiseName).filter(Boolean))).map((name) => ({ value: name!, label: allPlays.find((play) => play.franchiseName === name)?.franchiseNameEn || name! })).sort((a,b) => a.label.localeCompare(b.label, "en"));
   const discoveryMatches = (play: (typeof allPlays)[number]) => {
-    const normalize = (value: string) => value.normalize("NFKC").toLocaleLowerCase().replace(/[\s\u3000]+/g, "");
     return (matchesSearch([play.title, play.titleEn, play.franchiseName, play.franchiseNameEn, play.slug],q))
       && (!series || play.franchiseName === series)
       && (!streaming || Boolean(play.vod && Object.keys(play.vod).some((key) => play.vod?.[key])))

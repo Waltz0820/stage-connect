@@ -7,6 +7,7 @@ const paths=pairs.flatMap(path=>[path,path==='/'?'/en':'/en'+path]);
 paths.push('/search?q=佐藤','/en/search?q=sato','/plays?q=刀剣&format=musical','/actors?q=佐藤流司','/series?q=テニス','/watch/dmm','/tags','/privacy','/tags/tag_style_sharp','/watch','/watch/u-next','/guide');
 paths.push('/favorites','/guide/touken-ranbu-complete-guide','/watch/danime','/contact');
 paths.push('/search','/en/search','/search?q=サトウリュウジ','/en/search?q=Final%20Match%20Rikkai','/actors?q=a&gender=male&page=2','/en/actors?q=a&gender=male&page=2','/series?q=舞台&format=stage&sort=name_asc&page=2','/en/series?q=stage&format=stage&sort=name_asc&page=2');
+paths.push('/series/touken-ranbu-musical','/en/series/touken-ranbu-musical','/series/tennimu-2nd','/en/series/tennimu-2nd','/plays/ace-stage-aw','/en/plays/ace-stage-aw','/plays?streaming=available','/en/plays?streaming=available');
 const report=[];
 for(const path of paths){
   const response=await fetch(base+path);assert.equal(response.status,200,path);
@@ -19,6 +20,16 @@ for(const path of paths){
   assert.equal($('a[href^="/tags"]').length,0,path+' old tag navigation');
   assert.equal($('.play-detail-tags-section').length,0,path);
   assert.equal($('.play-poster-frame').length,0,path+' synthetic poster removed');
+  if(/^\/(en\/)?series\/(tennimu|butai-touken-ranbu|touken-ranbu-musical)$/.test(path)) assert.ok($('.timeline-excerpt').length>0,path+' existing synopsis excerpt');
+  if(path.endsWith('/series/tennimu-2nd')) assert.equal($('.timeline-excerpt').length,0,path+' no empty excerpt boxes');
+  if(path.includes('/plays/ace-stage-aw')) {
+    assert.equal($('#streaming a[target="_blank"]').length,0,path+' placeholders are not destinations');
+    assert.ok($('.detail-ledger').text().includes(en?'Not confirmed':'未確認'),path+' missing links are unconfirmed');
+  }
+  for(const node of $('a[href*="al.dmm.com"]').toArray()) {
+    assert.ok($(node).closest('[data-streaming-placement]').length,path+' streaming click context');
+    assert.ok(!['#',''].includes($(node).attr('href')),path+' no placeholder link');
+  }
   if(/^\/(en\/)?(actors|plays|series)\//.test(path)) {
     const section=path.replace(/^\/en/,'').split('/')[1];
     assert.equal($(`.breadcrumbs a[href="${en?'/en':''}/${section}"]`).length,1,path+' return to list');

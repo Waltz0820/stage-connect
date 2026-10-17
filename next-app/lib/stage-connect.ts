@@ -1,3 +1,4 @@
+import { normalizeVod } from './streaming-links';
 import { hasSupabaseEnv } from "./env";
 import { getEnglishActorName } from "./en-copy";
 import { createSupabaseServerClient } from "./supabase";
@@ -28,6 +29,7 @@ export type ActorDetailData = {
   imageUrl: string | null;
   sns: Record<string, string> | null;
   plays: Array<{
+    id: string;
     slug: string;
     title: string;
     titleEn: string | null;
@@ -558,7 +560,7 @@ export async function getPlayDetailBySlug(slug: string): Promise<PlayDetailData 
     summaryEn: play.summary_en ?? null,
     period: play.period ?? null,
     venue: play.venue ?? null,
-    vod: (play.vod as Record<string, string> | null) ?? null,
+    vod: normalizeVod(play.vod),
     credits: play.credits ?? null,
     franchiseName: franchise?.name ?? null,
     franchiseNameEn: franchise?.name_en ?? null,
@@ -691,6 +693,7 @@ export async function getActorDetailBySlug(slug: string): Promise<ActorDetailDat
   const byPlay = new Map<
     string,
     {
+      id: string;
       slug: string;
       title: string;
       titleEn: string | null;
@@ -716,12 +719,13 @@ export async function getActorDetailBySlug(slug: string): Promise<ActorDetailDat
     const existing = byPlay.get(playSlug);
     if (!existing) {
       byPlay.set(playSlug, {
+        id: String(row.play_id),
         slug: playSlug,
         title,
         titleEn: (play?.title_en as string | null) ?? null,
         period: play?.period ?? null,
         summary: play?.summary ?? null,
-        vod: play?.vod ?? null,
+        vod: normalizeVod(play?.vod),
         roleName,
         franchiseName: franchise?.name ?? null,
         franchiseNameEn: franchise?.name_en ?? null,
@@ -1049,7 +1053,7 @@ export async function getSeriesDetailBySlug(slug: string): Promise<SeriesDetailD
       period: (row.period as string | null) ?? null,
       summary: (row.summary as string | null) ?? null,
       summaryEn: (row.summary_en as string | null) ?? null,
-      vod: (row.vod as Record<string, string> | null) ?? null,
+      vod: normalizeVod(row.vod),
       createdAt: (row.created_at as string | null) ?? null,
     }))
     .sort((a, b) => {
@@ -1564,7 +1568,7 @@ export async function getPlayList(): Promise<PlayListItem[]> {
         summary: (row.summary as string | null) ?? null,
         summaryEn: (row.summary_en as string | null) ?? null,
         period: (row.period as string | null) ?? null,
-        vod: (row.vod as Record<string, string> | null) ?? null,
+        vod: normalizeVod(row.vod),
         franchiseName: franchise?.name ?? null,
         franchiseNameEn: (franchise?.name_en as string | null) ?? null,
         franchiseFormat: (franchise?.format as string | null) ?? null,
@@ -1606,7 +1610,7 @@ export async function getHomeStats(): Promise<{ actorCount: number; playCount: n
 
     if (error) throw error;
     const rows = data ?? [];
-    vodCount += rows.filter((row: any) => row?.vod && Object.keys(row.vod).length > 0).length;
+    vodCount += rows.filter((row: any) => normalizeVod(row?.vod)).length;
     if (rows.length < pageSize) break;
   }
 
@@ -2076,7 +2080,7 @@ export async function getGuideDetailBySlug(slug: string): Promise<GuideDetailDat
         titleEn: (row?.title_en as string | null) ?? null,
         period: (row?.period as string | null) ?? null,
         summary: (row?.summary as string | null) ?? null,
-        vod: (row?.vod as Record<string, string> | null) ?? null,
+        vod: normalizeVod(row?.vod),
       });
       playBuckets.set(franchiseId, bucket);
     }
