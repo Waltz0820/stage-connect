@@ -88,6 +88,7 @@ body:has(.stage-v2), html:has(.stage-v2) { background: #f4f5fb; }
 .stage-v2 .brand-logo__mark { display: block; width: 38px; height: 42px; flex: 0 0 auto; object-fit: contain; }
 .stage-v2 .brand-logo__copy { display: flex; flex-direction: column; gap: 5px; }
 .stage-v2 .brand-logo__wordmark { display: block; font-family: Georgia, 'Times New Roman', var(--serif); font-size: 23px; line-height: 1.1; letter-spacing: -.045em; font-weight: 400; color: #0b1536; }
+.stage-v2 .brand-logo__last-letter { margin-inline-start: .075em; color: inherit; }
 .stage-v2 .brand-logo__tagline { display: block; font-family: var(--sans); font-size: 8px; font-weight: 400; line-height: 1.5; letter-spacing: .08em; color: #666d8d; }
 .stage-v2 .mobile-menu__footer .brand-logo__wordmark { font-size: 20px; }
 .stage-v2 :is(.site-nav a,.header-utility) { color: var(--muted); font-size: 12px; letter-spacing: .03em; }
