@@ -1,0 +1,58 @@
+{
+  "sourceUrl": "https://kira-hai.net/ensta2018-3",
+  "scope": {
+    "decision": "include",
+    "reason": "ゲーム「あんさんぶるスターズ！」原作の2.5次元舞台。副題・会期・会場から同一公演を確定。",
+    "evidence": [
+      {
+        "url": "https://kira-hai.net/ensta2018-3",
+        "checkedAt": "2026-10-18T09:01:42.961Z",
+        "note": "第一参照先の公演名・日程・ユニット別配役を確認。"
+      },
+      {
+        "url": "https://www.marv.jp/special/ensemble_stage-6th/cast.html",
+        "checkedAt": "2026-10-18T09:03:07.449Z",
+        "note": "公式の原作・公演副題・会期と全役名/出演者の組を相互照合。初演や他の副題へ混同しない。"
+      }
+    ]
+  },
+  "play": {
+    "id": "5fb79b6f-e962-400c-a1ef-11b33a240dc4",
+    "slug": "enstars-extra-stage-memory-of-marionette",
+    "expectedUpdatedAt": "2026-10-18T09:16:16.00352+00:00",
+    "evidence": [
+      {
+        "url": "https://kira-hai.net/ensta2018-3",
+        "checkedAt": "2026-10-18T09:01:42.961Z",
+        "note": "第一参照先の公演名・日程・ユニット別配役を確認。"
+      },
+      {
+        "url": "https://www.marv.jp/special/ensemble_stage-6th/cast.html",
+        "checkedAt": "2026-10-18T09:03:07.449Z",
+        "note": "公式の原作・公演副題・会期と全役名/出演者の組を相互照合。初演や他の副題へ混同しない。"
+      }
+    ]
+  },
+  "actors": [],
+  "performanceExceptions": [
+    {
+      "actor": "栁川瑠衣",
+      "role": "鬼龍紅郎",
+      "from": "2019-01-31T19:00:00+09:00",
+      "through": "2019-02-03T13:00:00+09:00",
+      "kind": "absence_notice",
+      "sourceUrl": "https://ameblo.jp/en-sta-stage/entry-12436833496.html",
+      "note": "公式は1月31日19時〜2月3日13時の5公演への欠場と、本人以外のキャストで上演すると告知。代役の氏名は記載されていない。後続の中止告知と併せて読む。"
+    },
+    {
+      "kind": "cancelled_performances",
+      "dates": [
+        "2019-02-02T13:00:00+09:00",
+        "2019-02-02T18:00:00+09:00",
+        "2019-02-03T13:00:00+09:00"
+      ],
+      "sourceUrl": "https://ameblo.jp/en-sta-stage/entry-12437232976.html",
+      "note": "大阪の上記3公演は中止。計画日程の期間に注記し、通常の上演実績として数えない。"
+    }
+  ]
+}

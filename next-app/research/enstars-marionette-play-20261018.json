@@ -1,0 +1,121 @@
+{
+  "version": 1,
+  "batchId": "enstars-marionette-play-20261018-01",
+  "expectedFranchise": {
+    "id": "b2af04db-b92c-4545-84a5-09f307a5c1ff",
+    "name": "『あんさんぶるスターズ！オン・ステージ / THE STAGE』（あんステ）",
+    "slug": "enstars",
+    "updatedAt": "2025-12-13T04:58:27.220101+00:00"
+  },
+  "plays": [
+    {
+      "key": "mom",
+      "play": {
+        "id": "5fb79b6f-e962-400c-a1ef-11b33a240dc4",
+        "slug": "enstars-extra-stage-memory-of-marionette",
+        "title": "『あんさんぶるスターズ！エクストラ・ステージ』～Memory of Marionette～",
+        "franchise_id": "b2af04db-b92c-4545-84a5-09f307a5c1ff",
+        "period": "2018年12月28日〜30日（東京・銀河劇場）／2019年1月10日〜14日（東京・日本青年館）／1月18日〜20日（京都）／1月25日〜2月3日（大阪・2月2〜3日の3公演は中止）／2月6日〜7日（福岡）／2月14日〜15日（宮城）",
+        "venue": "天王洲 銀河劇場／日本青年館ホール／京都劇場／梅田芸術劇場メインホール／アルモニーサンク北九州ソレイユホール／仙台国際センター大ホール",
+        "genre": "idol",
+        "summary": null,
+        "summary_en": null,
+        "title_en": null,
+        "vod": null,
+        "credits": null,
+        "tags": [],
+        "related_franchise_ids": []
+      },
+      "evidence": {
+        "version": 1,
+        "reviewStatus": "work_identity_and_cast_cross_checked",
+        "sourceUrl": "https://kira-hai.net/ensta2018-3",
+        "sourceFingerprint": "cd890bf99cb9114ed3ea1d2bb5dd384d546fa60d613b0f33f2a2a4cde97f0eae",
+        "sourceTitle": "『あんさんぶるスターズ!エクストラ・ステージ』~Memory of Marionette~",
+        "scope": {
+          "decision": "include",
+          "reason": "Happy Elementsのゲーム原作の2.5次元舞台。初演や別副題の公演と区別して新規登録。"
+        },
+        "sources": [
+          {
+            "name": "work-mom",
+            "url": "https://kira-hai.net/ensta2018-3",
+            "status": 200,
+            "checkedAt": "2026-10-18T09:01:42.961Z",
+            "sha256": "cd890bf99cb9114ed3ea1d2bb5dd384d546fa60d613b0f33f2a2a4cde97f0eae",
+            "bytes": 57961
+          },
+          {
+            "name": "official-mom",
+            "url": "https://www.marv.jp/special/ensemble_stage-6th/cast.html",
+            "status": 200,
+            "checkedAt": "2026-10-18T09:03:07.449Z",
+            "sha256": "69977f724ed77ad576443ad48403be317fc22b08b0f0ee19b2aa8fc1050325e4",
+            "bytes": 13971
+          },
+          {
+            "name": "schedule-mom",
+            "url": "https://www.marv.jp/special/ensemble_stage-6th/stage.html",
+            "status": 200,
+            "checkedAt": "2026-10-18T09:08:30.858Z",
+            "sha256": "2d0a8165af5a713932142204393dcb819cbe34d40ffe3ff969d38690eee0963b",
+            "bytes": 22899
+          },
+          {
+            "name": "absence-mom",
+            "url": "https://ameblo.jp/en-sta-stage/entry-12436833496.html",
+            "status": 200,
+            "checkedAt": "2026-10-18T09:08:33.845Z",
+            "sha256": "c9c94d98610b62278da3511eccac621c85da98edc16ea124a1247961c48377d2",
+            "bytes": 88840
+          },
+          {
+            "name": "cancel-mom",
+            "url": "https://ameblo.jp/en-sta-stage/entry-12437232976.html",
+            "status": 200,
+            "checkedAt": "2026-10-18T09:08:36.641Z",
+            "sha256": "82285c51b067207ce1d0c91f7e1534d6bfa882f2f46dd540915a85e2b22c7d58",
+            "bytes": 89137
+          }
+        ],
+        "scheduleLines": [
+          "2018年12月28日-30日 天王洲 銀河劇場",
+          "2019年1月10日-14日 日本青年館ホール",
+          "2019年1月18日-20日 京都劇場",
+          "2019年1月25日-2月3日 梅田芸術劇場メインホール",
+          "2019年2月6日-7日 アルモニーサンク北九州ソレイユホール",
+          "2019年2月14日-15日 仙台国際センター大ホール"
+        ],
+        "castCount": 13,
+        "performanceExceptions": [
+          {
+            "actor": "栁川瑠衣",
+            "role": "鬼龍紅郎",
+            "from": "2019-01-31T19:00:00+09:00",
+            "through": "2019-02-03T13:00:00+09:00",
+            "kind": "absence_notice",
+            "sourceUrl": "https://ameblo.jp/en-sta-stage/entry-12436833496.html",
+            "note": "公式は1月31日19時〜2月3日13時の5公演への欠場と、本人以外のキャストで上演すると告知。代役の氏名は記載されていない。後続の中止告知と併せて読む。"
+          },
+          {
+            "kind": "cancelled_performances",
+            "dates": [
+              "2019-02-02T13:00:00+09:00",
+              "2019-02-02T18:00:00+09:00",
+              "2019-02-03T13:00:00+09:00"
+            ],
+            "sourceUrl": "https://ameblo.jp/en-sta-stage/entry-12437232976.html",
+            "note": "大阪の上記3公演は中止。計画日程の期間に注記し、通常の上演実績として数えない。"
+          }
+        ],
+        "notes": [
+          "全役名・出演者の組をキラハイと公式キャストで相互照合。",
+          "公演日程・会場を記録。曜日は転記しない。",
+          "あらすじ・現在配信・公式英題は未確認のため空欄。過去の配信告知を現在配信として登録しない。",
+          "主観タグは付けない。配役の掲載順は出典順として別途候補へ保存し、billing_orderには推測で書かない。"
+        ]
+      },
+      "requestKey": "01a505a7c0de0c966972e7f47d93714f8cff91106ff44ccff17310885a968db9"
+    }
+  ]
+}
