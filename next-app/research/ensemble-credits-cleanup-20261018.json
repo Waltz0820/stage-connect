@@ -629,5 +629,20 @@
       "replay": "no_duplicates"
     }
   },
-  "fullPreimages": "Preserved in external_import_logs and private ensemble-credits-20261018/reviewed-batch.json; original research records remain historical."
+  "fullPreimages": "Preserved in external_import_logs and private ensemble-credits-20261018/reviewed-batch.json; original research records remain historical.",
+  "publicVerification": {
+    "checkedAt": "2026-10-18T13:11:35.511Z",
+    "pages": 48,
+    "sitemap": true
+  },
+  "release": {
+    "commit": "70e512653ab85613d9eba429dee8f9e99f1ac0cf",
+    "deploymentId": "dpl_HUPr7Qj4kbbKLiqe7kCWiBLYr3JN",
+    "target": "production",
+    "state": "READY",
+    "domain": "stageconnect.jp",
+    "sitemapRevalidateSeconds": 3600,
+    "errorFatalLogRecordsInLast30Minutes": 0,
+    "drains": 0
+  }
 }

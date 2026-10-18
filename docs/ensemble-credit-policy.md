@@ -28,3 +28,11 @@ BLEACH初演・再炎・The Dark of The Bleeding Moon・No Clouds in the Blue He
 関連55テストが成功。[変更記録](../next-app/research/ensemble-credits-cleanup-20261018.json)を参照。SQL・変更前後の全件保存・詳細な実行記録は、Git管理外の`ensemble-credits-20261018/`へ保存。スキーマ・権限変更とマイグレーションはない。
 
 サイトマップは更新間隔がなく、28時間以上前の人物URLを返していたため、`next-app/app/sitemap.ts`へ1時間の再検証間隔を追加した。生成サイトマップが既定でキャッシュされる点は[Next.js公式仕様](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/sitemap)に従う。
+
+## 公開後の確認
+
+コミット`70e512653ab85613d9eba429dee8f9e99f1ac0cf`をGitHubのmainへfast-forward反映。本番デプロイ`dpl_HUPr7Qj4kbbKLiqe7kCWiBLYr3JN`のREADY、production対象、stageconnect.jpへの割当てを確認した。ローカルのNext.js本番ビルドでもサイトマップのRevalidateが1hとなることを確認。
+
+日英48ページを確認：作品12ページはクレジットの全32件の氏名、残す配役カードと構造化データの人数、投票導線、削除人物へのリンクがないことを検証。削除人物34ページは404、残す栗原功平の2ページは200。公開サイトマップも200で削除17人の日英URLが消えていることを確認した。
+
+本番デプロイの直近30分のerror/fatalログは該当0件。外部Drainsは未設定。公開チェック、DB全件比較、デプロイ情報をGit管理外の実行記録に保存した。
