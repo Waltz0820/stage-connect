@@ -1,0 +1,151 @@
+{
+  "version": 1,
+  "batchId": "enstars-2019-plays-20261018-01",
+  "expectedFranchise": {
+    "id": "b2af04db-b92c-4545-84a5-09f307a5c1ff",
+    "name": "『あんさんぶるスターズ！オン・ステージ / THE STAGE』（あんステ）",
+    "slug": "enstars",
+    "updatedAt": "2025-12-13T04:58:27.220101+00:00"
+  },
+  "plays": [
+    {
+      "key": "dr",
+      "play": {
+        "id": "7020675d-fe0d-4269-b553-e8fd5d51355f",
+        "slug": "enstars-extra-stage-destruction-road",
+        "title": "『あんさんぶるスターズ！エクストラ・ステージ』～Destruction × Road～",
+        "franchise_id": "b2af04db-b92c-4545-84a5-09f307a5c1ff",
+        "period": "2019年8月22日〜23日（大阪）／8月30日〜9月10日（東京・ステラボール）／9月14日〜29日（東京・銀河劇場）",
+        "venue": "梅田芸術劇場メインホール／品川プリンスホテル ステラボール／天王洲 銀河劇場",
+        "genre": "idol",
+        "summary": null,
+        "summary_en": null,
+        "title_en": null,
+        "vod": null,
+        "credits": null,
+        "tags": [],
+        "related_franchise_ids": []
+      },
+      "evidence": {
+        "version": 1,
+        "reviewStatus": "work_identity_and_cast_cross_checked",
+        "sourceUrl": "https://kira-hai.net/ensta2019",
+        "sourceFingerprint": "bb0df4ad6f135836af29a6751cfadd7e8887e88ee5d9794c8a27c40819c6bb10",
+        "sourceTitle": "『あんさんぶるスターズ!エクストラ・ステージ』~Destruction × Road~",
+        "scope": {
+          "decision": "include",
+          "reason": "Happy Elementsのゲーム原作の2.5次元舞台。初演や別副題の公演と区別して新規登録。"
+        },
+        "sources": [
+          {
+            "name": "work-dr",
+            "url": "https://kira-hai.net/ensta2019",
+            "status": 200,
+            "checkedAt": "2026-10-18T09:32:02.518Z",
+            "sha256": "bb0df4ad6f135836af29a6751cfadd7e8887e88ee5d9794c8a27c40819c6bb10",
+            "bytes": 54166
+          },
+          {
+            "name": "official-dr",
+            "url": "https://www.marv.jp/special/ensemble_stage-7th/cast.html",
+            "status": 200,
+            "checkedAt": "2026-10-18T09:32:08.213Z",
+            "sha256": "6c35af5c8bf73348d5b9a41b9f1206b74bf77cc01f2b55572cc2042f8d3e18e5",
+            "bytes": 10804
+          },
+          {
+            "name": "schedule-dr",
+            "url": "https://www.marv.jp/special/ensemble_stage-7th/stage.html",
+            "status": 200,
+            "checkedAt": "2026-10-18T09:33:27.398Z",
+            "sha256": "100497b4d7e35f6c69f4364db06e7ef68f0c3b42652e31404cd1ae8b6af93c6c",
+            "bytes": 16749
+          }
+        ],
+        "scheduleLines": [
+          "2019年8月22日-23日 梅田芸術劇場メインホール",
+          "2019年8月30日-9月10日 品川プリンスホテル ステラボール",
+          "2019年9月14日-29日 天王洲 銀河劇場"
+        ],
+        "castCount": 12,
+        "notes": [
+          "全役名・出演者の組をキラハイと公式キャストで相互照合。",
+          "公演日程・会場を記録。曜日は転記しない。",
+          "あらすじ・現在配信・公式英題は未確認のため空欄。過去の配信告知を現在配信として登録しない。",
+          "主観タグは付けない。配役の掲載順は出典順として別途候補へ保存し、billing_orderには推測で書かない。"
+        ]
+      },
+      "requestKey": "7d9772498f5c10b6c6d767fcf9a14280a48667669b79da392b76a63369069ac7"
+    },
+    {
+      "key": "nbs",
+      "play": {
+        "id": "074a7195-93c3-437b-8867-75c297959ead",
+        "slug": "enstars-extra-stage-night-of-blossoming-stars",
+        "title": "『あんさんぶるスターズ！エクストラ・ステージ』～Night of Blossoming Stars～",
+        "franchise_id": "b2af04db-b92c-4545-84a5-09f307a5c1ff",
+        "period": "2019年12月28日〜29日（福岡）／2020年1月9日〜13日（東京）／1月16日〜24日（大阪）／1月31日〜2月1日（名古屋）",
+        "venue": "福岡サンパレス ホテル＆ホール／日本青年館ホール／大阪メルパルクホール／名古屋市公会堂",
+        "genre": "idol",
+        "summary": null,
+        "summary_en": null,
+        "title_en": null,
+        "vod": null,
+        "credits": null,
+        "tags": [],
+        "related_franchise_ids": []
+      },
+      "evidence": {
+        "version": 1,
+        "reviewStatus": "work_identity_and_cast_cross_checked",
+        "sourceUrl": "https://kira-hai.net/ensta2019-2",
+        "sourceFingerprint": "607f0f14cf0abe2d504f18b0c303b0c35e0fbaa1bfa838dbf6fdb72526f9a952",
+        "sourceTitle": "『あんさんぶるスターズ!エクストラ・ステージ』~Night of Blossoming Stars~",
+        "scope": {
+          "decision": "include",
+          "reason": "Happy Elementsのゲーム原作の2.5次元舞台。初演や別副題の公演と区別して新規登録。"
+        },
+        "sources": [
+          {
+            "name": "work-nbs",
+            "url": "https://kira-hai.net/ensta2019-2",
+            "status": 200,
+            "checkedAt": "2026-10-18T09:32:05.329Z",
+            "sha256": "607f0f14cf0abe2d504f18b0c303b0c35e0fbaa1bfa838dbf6fdb72526f9a952",
+            "bytes": 54184
+          },
+          {
+            "name": "official-nbs",
+            "url": "https://www.marv.jp/special/ensemble_stage-8th/cast.html",
+            "status": 200,
+            "checkedAt": "2026-10-18T09:32:10.875Z",
+            "sha256": "d51e49b45b1a1958e230d5f10a7ed8a7ca5aa9f529c97201017cbf37b3c5c921",
+            "bytes": 11648
+          },
+          {
+            "name": "schedule-nbs",
+            "url": "https://www.marv.jp/special/ensemble_stage-8th/stage.html",
+            "status": 200,
+            "checkedAt": "2026-10-18T09:33:30.060Z",
+            "sha256": "48be125add68625028f8c2a5fa7e5394f5f27883232eb6699dc98a1b9e42a586",
+            "bytes": 23976
+          }
+        ],
+        "scheduleLines": [
+          "2019年12月28日-29日 福岡サンパレス ホテル&ホール",
+          "2020年1月9日-13日 日本青年館ホール",
+          "2020年1月16日-24日 大阪メルパルクホール",
+          "2020年1月31日-2月1日 名古屋市公会堂"
+        ],
+        "castCount": 11,
+        "notes": [
+          "全役名・出演者の組をキラハイと公式キャストで相互照合。",
+          "公演日程・会場を記録。曜日は転記しない。",
+          "あらすじ・現在配信・公式英題は未確認のため空欄。過去の配信告知を現在配信として登録しない。",
+          "主観タグは付けない。配役の掲載順は出典順として別途候補へ保存し、billing_orderには推測で書かない。"
+        ]
+      },
+      "requestKey": "dc5fea5209a66899681e7814475b1fcc45b7628e21aed425812e84d5ba31d9a4"
+    }
+  ]
+}

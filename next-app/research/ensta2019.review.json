@@ -1,0 +1,57 @@
+{
+  "sourceUrl": "https://kira-hai.net/ensta2019",
+  "scope": {
+    "decision": "include",
+    "reason": "ゲーム「あんさんぶるスターズ！」原作の2.5次元舞台。副題・会期・会場から同一公演を確定。",
+    "evidence": [
+      {
+        "url": "https://kira-hai.net/ensta2019",
+        "checkedAt": "2026-10-18T09:32:02.518Z",
+        "note": "第一参照先の公演名・日程・ユニット別配役を確認。"
+      },
+      {
+        "url": "https://www.marv.jp/special/ensemble_stage-7th/cast.html",
+        "checkedAt": "2026-10-18T09:32:08.213Z",
+        "note": "公式の原作・公演副題・会期と全役名/出演者の組を相互照合。初演や他の副題へ混同しない。"
+      }
+    ]
+  },
+  "play": {
+    "id": "7020675d-fe0d-4269-b553-e8fd5d51355f",
+    "slug": "enstars-extra-stage-destruction-road",
+    "expectedUpdatedAt": "2026-10-18T09:39:00.490383+00:00",
+    "evidence": [
+      {
+        "url": "https://kira-hai.net/ensta2019",
+        "checkedAt": "2026-10-18T09:32:02.518Z",
+        "note": "第一参照先の公演名・日程・ユニット別配役を確認。"
+      },
+      {
+        "url": "https://www.marv.jp/special/ensemble_stage-7th/cast.html",
+        "checkedAt": "2026-10-18T09:32:08.213Z",
+        "note": "公式の原作・公演副題・会期と全役名/出演者の組を相互照合。初演や他の副題へ混同しない。"
+      }
+    ]
+  },
+  "actors": [
+    {
+      "sourceActorName": "瑛",
+      "action": "link",
+      "actorId": "508ba664-f644-4c55-a98e-4ac0d87778e3",
+      "expectedName": "百成瑛",
+      "expectedUpdatedAt": "2026-10-17T08:22:48.968908+00:00",
+      "evidence": [
+        {
+          "url": "https://kira-hai.net/akira",
+          "checkedAt": "2026-10-18T09:33:41.324Z",
+          "note": "人物ページに現在名・百成瑛と旧名・瑛を確認。この公演の出演歴にも接続。別人物を作らない。"
+        },
+        {
+          "url": "https://www.marv.jp/special/ensemble_stage-7th/cast.html",
+          "checkedAt": "2026-10-18T09:32:08.213Z",
+          "note": "2019年Destruction × Roadの乙狩アドニス役は当時名の瑛（あきら）。確認済みの改名後IDへ接続し、公演原文を保持。"
+        }
+      ]
+    }
+  ]
+}
