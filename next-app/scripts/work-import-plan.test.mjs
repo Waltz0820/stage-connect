@@ -37,11 +37,41 @@ test('multiple roles and ensemble credits are kept as distinct source facts', ()
   const input = fixture();
   input.source.cast.push({ ...credit, role_name: '役B※声' }, { ...credit, role_name: null, cast_group: 'アンサンブル' });
   const result = plan(input);
-  assert.equal(result.counts.add_cast, 3);
+  assert.equal(result.counts.add_cast, 2);
   assert.equal(result.rows[1].proposedCast.role_name, '役B※声');
   assert.deepEqual(result.rows[1].analysis.appearances, ['voice']);
   assert.equal(result.rows[2].proposedCast.role_name, null);
   assert.equal(result.rows[2].proposedCast.cast_group, 'アンサンブル');
+  assert.equal(result.rows[2].action, 'hold');
+  assert.equal(result.rows[2].storageRecommendation, 'play_credits');
+  assert.ok(result.rows[2].issues.includes('ensemble_belongs_in_play_credits'));
+});
+
+test('ensemble-only names never request new actor pages, including an explicit new-actor decision', () => {
+  for (const group of ['アンサンブル', 'バックダンサー', 'あんステダンサー']) {
+    const input = fixture();
+    input.source.cast = [{ ...credit, sourceActorName: '未登録の出演者', role_name: null, cast_group: group }];
+    for (const actors of [[], [{ sourceActorName: '未登録の出演者', action: 'new', evidence }]]) {
+      input.review.actors = actors;
+      const result = plan(input);
+      assert.equal(result.rows[0].action, 'hold');
+      assert.equal(result.rows[0].newActor, null);
+      assert.equal(result.counts.prepare_actor, 0);
+      assert.deepEqual(result.rows[0].source, input.source.cast[0]);
+    }
+  }
+});
+
+test('ensemble policy preserves existing cast records and does not swallow named or voice roles', () => {
+  const input = fixture();
+  input.source.cast[0] = { ...credit, role_name: null, cast_group: 'アンサンブル' };
+  input.snapshot.casts = [{ id: 'cast-a', play_id: play.id, actor_id: actor.id, role_name: null, cast_group: 'アンサンブル', note: '既存の補足', billing_order: 8 }];
+  assert.equal(plan(input).rows[0].action, 'keep');
+  assert.deepEqual(plan(input).rows[0].existingCast, input.snapshot.casts[0]);
+  input.source.cast[0].role_name = '役A※声';
+  const result = plan(input);
+  assert.equal(result.rows[0].storageRecommendation, 'casts');
+  assert.ok(!result.rows[0].issues.includes('ensemble_belongs_in_play_credits'));
 });
 
 test('a homophone slug is never sufficient and a separate new actor needs explicit exclusions', () => {

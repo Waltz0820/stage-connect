@@ -3,6 +3,9 @@ import { getActorList, getGuideList, getPlayList, getSeriesList } from "../lib/s
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
 
+// Actor/work data also changes between deployments during archive imports.
+export const revalidate = 3600;
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const [plays, actors, seriesList, guides] = await Promise.all([
     getPlayList(),

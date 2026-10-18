@@ -15,6 +15,8 @@ const validEvidence = (evidence) => Array.isArray(evidence) && evidence.length >
 // A verified alias never becomes a global string replacement for other people.
 export function sourceCreditId(credit) { return hash(JSON.parse(rawKey(credit))).slice(0, 20); }
 
+export const isEnsembleOnlyCredit = (credit) => !normalizeCreditText(credit.role_name) && /^(?:アンサンブル|バックダンサー|あんステダンサー)$/u.test(normalizeCreditText(credit.cast_group));
+
 export function buildWorkImportPlan({ source, snapshot, review = {} }) {
   if (!Array.isArray(source?.cast) || !Array.isArray(source?.unparsed)) throw new Error('Expected a parsed work source.');
   if (!['actors', 'plays', 'casts'].every((table) => Array.isArray(snapshot?.[table]))) throw new Error('Expected complete actor/play/cast snapshots.');
@@ -65,6 +67,9 @@ export function buildWorkImportPlan({ source, snapshot, review = {} }) {
     if (analysis.needsReview) issues.push('unresolved_credit_annotation');
     if (!normalizeCreditText(credit.role_name) && !normalizeCreditText(credit.cast_group)) issues.push('missing_role_and_group');
     const matched = resolveSourceActor(actorLookup, credit);
+    // Ensemble-only credits belong on the work. Do not turn an unmatched
+    // ensemble name into a task to create a thin individual profile.
+    const creditOnly = isEnsembleOnlyCredit(credit);
     let actor = matched.match;
     let identity = actor ? 'exact_name' : matched.status;
     const decision = decisionByName.get(credit.sourceActorName);
@@ -89,14 +94,15 @@ export function buildWorkImportPlan({ source, snapshot, review = {} }) {
         }
       } else issues.push('unknown_identity_action');
     }
-    if (!actor && !newActor && !decision && matched.status === 'unmatched') {
+    if (!creditOnly && !actor && !newActor && !decision && matched.status === 'unmatched') {
       // An unmatched source name starts a research task, never an actor insert.
       newActor = { name: credit.sourceActorName, sourceActorUrl: credit.sourceActorUrl ?? null,
         evidence: [{ url: source.sourceUrl, note: '出演者名は作品のキャスト欄で確認。人物プロフィールは未確認。', checkedAt: source.checkedAt ?? null }],
         requiredBeforeCreation: ['verified_identity', 'available_slug', 'english_display_check'] };
       identity = 'new_actor_candidate';
     }
-    if (!actor && !newActor) issues.push('actor_identity_not_resolved');
+    if (creditOnly) newActor = null;
+    if (!creditOnly && !actor && !newActor) issues.push('actor_identity_not_resolved');
     const sameActor = play && actor ? snapshot.casts.filter((row) => row.play_id === play.id && row.actor_id === actor.id) : [];
     const exact = sameActor.filter((row) => creditKey(row) === creditKey(credit));
     if (exact.length > 1) issues.push('multiple_existing_credits');
@@ -109,6 +115,7 @@ export function buildWorkImportPlan({ source, snapshot, review = {} }) {
     ));
     if (!exact.length && conditioned.length) issues.push('existing_credit_has_different_conditions');
     if (exact.length === 1) usedCastIds.add(exact[0].id);
+    if (creditOnly && !exact.length) issues.push('ensemble_belongs_in_play_credits');
     if (play?.credits && sourceNameKey(JSON.stringify(play.credits)).includes(sourceNameKey(credit.sourceActorName))) {
       warnings.push({ code: 'also_in_legacy_credits', rowId: id, name: credit.sourceActorName });
       if (!exact.length) issues.push('legacy_credit_requires_review');
@@ -117,6 +124,7 @@ export function buildWorkImportPlan({ source, snapshot, review = {} }) {
     return { id, sourceOrder: index + 1, source: { ...credit }, analysis, identity, actor: actor ? reference(actor) : null,
       actorCandidates: matched.candidates.map(reference), newActor, action, issues,
       existingCast: exact.length === 1 ? { ...exact[0] } : null,
+      storageRecommendation: creditOnly ? 'play_credits' : 'casts',
       // Source order is recorded for review, not asserted to be official billing.
       proposedCast: { play_id: play?.id ?? null, actor_id: actor?.id ?? null, role_name: credit.role_name ?? null, cast_group: credit.cast_group ?? null },
       evidence: [{ url: source.sourceUrl, note: '作品ページのキャスト欄' }, ...(decision?.evidence ?? [])] };

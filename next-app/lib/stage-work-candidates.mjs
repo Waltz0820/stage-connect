@@ -1,8 +1,9 @@
 import { createHash } from 'node:crypto';
-import { sourceCreditId } from './work-import-plan.mjs';
+import { isEnsembleOnlyCredit, sourceCreditId } from './work-import-plan.mjs';
 
 export function buildWorkCandidateBatch(plan) {
   if (plan?.version !== 1 || plan.mode !== 'review_only' || plan.blockers?.length || !plan.play?.id || !plan.rows?.length) throw new Error('作品の照合を完了してから候補を保存してください。');
+  if (plan.rows.some((row) => row.action !== 'keep' && isEnsembleOnlyCredit(row.source))) throw new Error('役名のないアンサンブル・ダンサーは作品クレジットへ転記してください。');
   if (plan.rows.some((row) => row.action === 'hold' || row.issues?.length)) throw new Error('保留の配役があります。確認してから候補を保存してください。');
   const url = new URL(plan.source.url);
   if (url.origin !== 'https://kira-hai.net' || !/^\/[a-z0-9_-]+\/?$/u.test(url.pathname)) throw new Error('キラハイの作品URLを指定してください。');

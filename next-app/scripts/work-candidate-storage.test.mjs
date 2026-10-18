@@ -19,8 +19,8 @@ function fixture() {
   return buildWorkImportPlan({
     source: { sourceUrl: 'https://kira-hai.net/work-a', title: '作品A (2006)', checkedAt: '2026-10-16T00:00:00Z', unparsed: [], cast: [
       { sourceActorName: '俳優A', sourceActorUrl: 'https://kira-hai.net/actor-a', role_name: '役A', cast_group: null },
-      { sourceActorName: '俳優B', sourceActorUrl: null, role_name: null, cast_group: 'アンサンブル' },
-      { sourceActorName: '新人C', sourceActorUrl: null, role_name: null, cast_group: 'アンサンブル' },
+      { sourceActorName: '俳優B', sourceActorUrl: null, role_name: null, cast_group: '特別出演' },
+      { sourceActorName: '新人C', sourceActorUrl: null, role_name: null, cast_group: '特別出演' },
     ] },
     snapshot: { actors: [{ id: actorId, name: '俳優A' }, { id: otherActorId, name: '俳優B' }], plays: [{ id: playId, title: '作品A', period: '2006年' }], casts: [] },
     review: { sourceUrl: 'https://kira-hai.net/work-a', scope: { decision: 'include', reason: '漫画原作', evidence } },
@@ -31,6 +31,14 @@ const rows = async () => (await db.query('select * from external_cast_candidates
 const stage = (plan = fixture()) => stageWorkCandidates(client(), plan, { write: true });
 const counts = async () => (await db.query('select (select count(*)::int from external_cast_candidates) as candidates, (select count(*)::int from casts) as casts, (select count(*)::int from external_import_logs) as logs')).rows[0];
 
+test('pre-policy ensemble plans cannot stage new cast or actor candidates', async () => {
+  const plan = fixture();
+  plan.rows[1].source.cast_group = 'アンサンブル';
+  assert.throws(() => buildWorkCandidateBatch(plan), /作品クレジット/);
+  await assert.rejects(stageWorkCandidates(null, plan, { write: true }), /作品クレジット/);
+  assert.deepEqual(await counts(), { candidates: 0, casts: 0, logs: 0 });
+});
+
 test('migration is repeatable and a default dry run cannot call any database API', async () => {
   await db.exec(await readMigration('2026-10-16_work_cast_candidate_fields.sql'));
   const result = await stageWorkCandidates(null, fixture());
@@ -39,12 +47,12 @@ test('migration is repeatable and a default dry run cannot call any database API
   assert.deepEqual(await counts(), { candidates: 0, casts: 0, logs: 0 });
 });
 
-test('work staging stores profileless actors, ensemble group, source order and evidence separately', async () => {
+test('work staging stores profileless actors, guest group, source order and evidence separately', async () => {
   const result = await stage(); const saved = await rows();
   assert.equal(result.created, 3);
   assert.equal(saved[1].source_actor_url, null);
   assert.equal(saved[1].source_role_raw, null);
-  assert.equal(saved[1].source_cast_group, 'アンサンブル');
+  assert.equal(saved[1].source_cast_group, '特別出演');
   assert.equal(saved[1].source_order, 2);
   assert.equal(saved[1].source_evidence.links[0].url, 'https://kira-hai.net/work-a');
   assert.equal(saved[2].matched_actor_id, null);
@@ -98,29 +106,29 @@ test('a malformed later row also rolls back earlier rows, and duplicate keys are
   assert.match(duplicate.error.message, /duplicate_source_credit/);
 });
 
-test('adoption preserves a roleless ensemble credit and is repeatable', async () => {
+test('adoption preserves a roleless guest credit and is repeatable', async () => {
   await stage(); const row = (await rows())[1];
   const first = await acceptCandidateWithHistory(client(), row, null);
   const again = await acceptCandidateWithHistory(client(), row, null);
   assert.equal(first.atomic, true); assert.equal(again.already_accepted, true);
   const { rows: [cast] } = await db.query('select * from casts');
-  assert.equal(cast.role_name, null); assert.equal(cast.cast_group, 'アンサンブル');
+  assert.equal(cast.role_name, null); assert.equal(cast.cast_group, '特別出演');
   assert.equal(cast.billing_order, null);
   const { rows: [log] } = await db.query("select * from external_import_logs where target_type='cast'");
   assert.equal(log.source_url, 'https://kira-hai.net/work-a');
-  assert.equal(log.details.source_cast_group, 'アンサンブル');
+  assert.equal(log.details.source_cast_group, '特別出演');
   assert.equal(log.details.source_order, 2);
   assert.deepEqual(await counts(), { candidates: 3, casts: 1, logs: 2 });
 });
 
-test('an existing ensemble is linked while retaining handwritten metadata', async () => {
+test('an existing guest is linked while retaining handwritten metadata', async () => {
   await stage(); const row = (await rows())[1];
-  await db.query("insert into casts(actor_id,play_id,cast_group,billing_order,is_starring) values($1,$2,'アンサンブル',8,true)", [otherActorId, playId]);
+  await db.query("insert into casts(actor_id,play_id,cast_group,billing_order,is_starring) values($1,$2,'特別出演',8,true)", [otherActorId, playId]);
   assert.equal((await acceptCandidateWithHistory(client(), row, null)).cast_created, false);
   assert.equal((await db.query('select billing_order from casts')).rows[0].billing_order, 8);
 });
 
-test('an adoption log failure rolls back the ensemble cast and status together', async () => {
+test('an adoption log failure rolls back the guest cast and status together', async () => {
   await stage(); const row = (await rows())[1];
   await db.exec("create function test_reject_adoption_log() returns trigger language plpgsql as $$ begin raise exception 'adoption log failure'; end $$; create trigger test_fail_adoption_log before insert on external_import_logs for each row execute function test_reject_adoption_log();");
   try {
