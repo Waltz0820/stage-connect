@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "batchId": "enstars-festival-play-20261018-01",
+  "expectedFranchise": {
+    "id": "b2af04db-b92c-4545-84a5-09f307a5c1ff",
+    "name": "『あんさんぶるスターズ！オン・ステージ / THE STAGE』（あんステ）",
+    "slug": "enstars",
+    "updatedAt": "2025-12-13T04:58:27.220101+00:00"
+  },
+  "plays": [
+    {
+      "key": "fes",
+      "play": {
+        "id": "6d8d4ddd-5096-4330-a7f1-f1a252abbb5e",
+        "slug": "enstars-festival-2018",
+        "title": "あんステフェスティバル",
+        "franchise_id": "b2af04db-b92c-4545-84a5-09f307a5c1ff",
+        "period": "2018年9月22日〜24日（横浜）／9月26日〜27日（神戸）",
+        "venue": "横浜文化体育館／神戸ワールド記念ホール",
+        "genre": "idol",
+        "summary": null,
+        "summary_en": null,
+        "title_en": null,
+        "vod": null,
+        "credits": null,
+        "tags": [],
+        "related_franchise_ids": []
+      },
+      "evidence": {
+        "version": 1,
+        "reviewStatus": "work_identity_and_cast_cross_checked",
+        "sourceUrl": "https://kira-hai.net/ensta2018-2",
+        "sourceFingerprint": "0502f332eee483943b8d441c0ed3594faf06e355b4c99d9fbc485412a3c91c06",
+        "sourceTitle": "あんステフェスティバル",
+        "scope": {
+          "decision": "include",
+          "reason": "Happy Elementsのゲーム原作の2.5次元舞台。初演や別副題の公演と区別して新規登録。"
+        },
+        "sources": [
+          {
+            "name": "work-fes",
+            "url": "https://kira-hai.net/ensta2018-2",
+            "status": 200,
+            "checkedAt": "2026-10-18T08:34:27.232Z",
+            "sha256": "0502f332eee483943b8d441c0ed3594faf06e355b4c99d9fbc485412a3c91c06",
+            "bytes": 57021
+          },
+          {
+            "name": "official-fes",
+            "url": "https://www.marv.jp/special/ensemble_stage-5th/cast.html",
+            "status": 200,
+            "checkedAt": "2026-10-18T08:34:30.100Z",
+            "sha256": "5f0c15ec62ff4f8941c48f666b966c4d3fc6fce8eea4f82ecfbd23932aa763ef",
+            "bytes": 22672
+          },
+          {
+            "name": "schedule-detail",
+            "url": "https://www.marv.jp/special/ensemble_stage-5th/stage.html",
+            "status": 200,
+            "checkedAt": "2026-10-18T08:41:39.862Z",
+            "sha256": "8efd8e49308342878fcccbae4a24df08707f8389435a6bbec0d4af5c784fceb2",
+            "bytes": 16157
+          }
+        ],
+        "scheduleLines": [
+          "2018年9月22日-24日 横浜文化体育館",
+          "2018年9月26日-27日 神戸ワールド記念ホール"
+        ],
+        "castCount": 37,
+        "notes": [
+          "役付き31名と、役名を持たないあんステダンサー6名を公式とキラハイで相互照合。",
+          "公演日程・会場を記録。曜日は転記しない。",
+          "あらすじ・現在配信・公式英題は未確認のため空欄。過去の配信告知を現在配信として登録しない。",
+          "主観タグは付けない。配役の掲載順は出典順として別途候補へ保存し、billing_orderには推測で書かない。"
+        ]
+      },
+      "requestKey": "111af9a23db1f6a991cb4be5edecec2d18712026341921e40b430c089dd6eaa7"
+    }
+  ]
+}

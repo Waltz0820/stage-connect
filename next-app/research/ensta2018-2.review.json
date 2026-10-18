@@ -1,0 +1,57 @@
+{
+  "sourceUrl": "https://kira-hai.net/ensta2018-2",
+  "scope": {
+    "decision": "include",
+    "reason": "ゲーム「あんさんぶるスターズ！」原作の2.5次元舞台。副題・会期・会場から同一公演を確定。",
+    "evidence": [
+      {
+        "url": "https://kira-hai.net/ensta2018-2",
+        "checkedAt": "2026-10-18T08:34:27.232Z",
+        "note": "第一参照先の公演名・日程・ユニット別配役を確認。"
+      },
+      {
+        "url": "https://www.marv.jp/special/ensemble_stage-5th/cast.html",
+        "checkedAt": "2026-10-18T08:34:30.100Z",
+        "note": "公式の原作・公演副題・会期と全役名/出演者の組を相互照合。初演や他の副題へ混同しない。"
+      }
+    ]
+  },
+  "play": {
+    "id": "6d8d4ddd-5096-4330-a7f1-f1a252abbb5e",
+    "slug": "enstars-festival-2018",
+    "expectedUpdatedAt": "2026-10-18T08:47:20.336006+00:00",
+    "evidence": [
+      {
+        "url": "https://kira-hai.net/ensta2018-2",
+        "checkedAt": "2026-10-18T08:34:27.232Z",
+        "note": "第一参照先の公演名・日程・ユニット別配役を確認。"
+      },
+      {
+        "url": "https://www.marv.jp/special/ensemble_stage-5th/cast.html",
+        "checkedAt": "2026-10-18T08:34:30.100Z",
+        "note": "公式の原作・公演副題・会期と全役名/出演者の組を相互照合。初演や他の副題へ混同しない。"
+      }
+    ]
+  },
+  "actors": [
+    {
+      "sourceActorName": "瑛",
+      "action": "link",
+      "actorId": "508ba664-f644-4c55-a98e-4ac0d87778e3",
+      "expectedName": "百成瑛",
+      "expectedUpdatedAt": "2026-10-17T08:22:48.968908+00:00",
+      "evidence": [
+        {
+          "url": "https://kira-hai.net/akira",
+          "checkedAt": "2026-10-17T08:15:59.963Z",
+          "note": "人物ページの現在名・百成瑛と旧名・瑛の明記を確認。別人物は作成しない。"
+        },
+        {
+          "url": "https://www.marv.jp/special/ensemble_stage-5th/cast.html",
+          "checkedAt": "2026-10-18T08:34:30.100Z",
+          "note": "2018年9月公演の乙狩アドニス役は当時名の瑛。現在名の百成瑛の同一IDへ紐づける。"
+        }
+      ]
+    }
+  ]
+}

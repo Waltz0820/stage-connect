@@ -26,3 +26,19 @@ test('back dancers remain a separate group with no invented character roles', ()
   assert.equal(result.cast[1].role_name, null);
   assert.deepEqual(result.unparsed, []);
 });
+
+test('festival dancers keep their exact group, missing profile links and null roles', () => {
+  const result = parseKiraHaiWork(`<h3>キャスト</h3>
+    <p>＜fine＞<br>伏見弓弦：<a href="/watanabe-takaki">渡邉駿輝</a><br>
+    ＜あんステダンサー＞<br>木本雄<br><a href="/nakada-shoji">仲田祥司</a><br>岡本笙<br>
+    ＜未確認区分＞<br>補足の文章</p><h3>関連商品</h3><p>商品名</p>`, 'https://kira-hai.net/ensta2018-2');
+  assert.equal(result.cast.length, 4);
+  assert.deepEqual(result.cast.slice(1), [
+    { sourceActorName: '木本雄', sourceActorUrl: null, role_name: null, cast_group: 'あんステダンサー' },
+    { sourceActorName: '仲田祥司', sourceActorUrl: 'https://kira-hai.net/nakada-shoji', role_name: null, cast_group: 'あんステダンサー' },
+    { sourceActorName: '岡本笙', sourceActorUrl: null, role_name: null, cast_group: 'あんステダンサー' },
+  ]);
+  assert.equal(result.cast[0].role_name, '伏見弓弦');
+  assert.equal(result.cast[0].cast_group, 'fine');
+  assert.deepEqual(result.unparsed, ['補足の文章']);
+});

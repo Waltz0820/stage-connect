@@ -39,7 +39,7 @@ export function parseKiraHaiWork(html, sourceUrl) {
       const name = normalizeCreditText(match[2]);
       cast.push({ sourceActorName: name, sourceActorUrl: anchors.get(name) ?? null,
         role_name: normalizeCreditText(match[1]), cast_group: group });
-    } else if (['アンサンブル', 'バックダンサー'].includes(group) && !/[：:]/u.test(line)) {
+    } else if (['アンサンブル', 'バックダンサー', 'あんステダンサー'].includes(group) && !/[：:]/u.test(line)) {
       cast.push({ sourceActorName: line, sourceActorUrl: anchors.get(line) ?? null, role_name: null, cast_group: group });
     } else {
       unparsed.push(line);
