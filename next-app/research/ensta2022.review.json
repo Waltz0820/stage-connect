@@ -1,0 +1,37 @@
+{
+  "sourceUrl": "https://kira-hai.net/ensta2022",
+  "scope": {
+    "decision": "include",
+    "reason": "ゲーム「あんさんぶるスターズ！」原作の2.5次元舞台。副題・会期・会場から同一公演を確定。",
+    "evidence": [
+      {
+        "url": "https://kira-hai.net/ensta2022",
+        "checkedAt": "2026-10-18T10:48:37.625Z",
+        "note": "第一参照先の公演名・日程・ユニット別配役を確認。"
+      },
+      {
+        "url": "https://www.fwinc.co.jp/ensemble-stage/the_stage-first/cast/",
+        "checkedAt": "2026-10-18T10:48:40.624Z",
+        "note": "公式の原作・公演副題・会期と全役名/出演者およびアンサンブルを相互照合。Adam後の3名は空行を越えた抽出の誤分類を修正し、公式の別枠掲載に従って分類を空欄にした。初演や他の副題へ混同しない。"
+      }
+    ]
+  },
+  "play": {
+    "id": "cd8ba5ab-d037-4ea9-b030-48ca931e480e",
+    "slug": "enstars-the-stage-track-to-miracle",
+    "expectedUpdatedAt": "2026-10-18T11:04:25.43233+00:00",
+    "evidence": [
+      {
+        "url": "https://kira-hai.net/ensta2022",
+        "checkedAt": "2026-10-18T10:48:37.625Z",
+        "note": "第一参照先の公演名・日程・ユニット別配役を確認。"
+      },
+      {
+        "url": "https://www.fwinc.co.jp/ensemble-stage/the_stage-first/cast/",
+        "checkedAt": "2026-10-18T10:48:40.624Z",
+        "note": "公式の原作・公演副題・会期と全役名/出演者およびアンサンブルを相互照合。Adam後の3名は空行を越えた抽出の誤分類を修正し、公式の別枠掲載に従って分類を空欄にした。初演や他の副題へ混同しない。"
+      }
+    ]
+  },
+  "actors": []
+}

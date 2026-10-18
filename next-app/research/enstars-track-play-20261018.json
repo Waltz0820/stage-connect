@@ -1,0 +1,129 @@
+{
+  "version": 1,
+  "batchId": "enstars-track-play-20261018-01",
+  "expectedFranchise": {
+    "id": "b2af04db-b92c-4545-84a5-09f307a5c1ff",
+    "name": "『あんさんぶるスターズ！オン・ステージ / THE STAGE』（あんステ）",
+    "slug": "enstars",
+    "updatedAt": "2025-12-13T04:58:27.220101+00:00"
+  },
+  "plays": [
+    {
+      "key": "tm",
+      "play": {
+        "id": "cd8ba5ab-d037-4ea9-b030-48ca931e480e",
+        "slug": "enstars-the-stage-track-to-miracle",
+        "title": "『あんさんぶるスターズ！THE STAGE』-Track to Miracle-",
+        "franchise_id": "b2af04db-b92c-4545-84a5-09f307a5c1ff",
+        "period": "2022年2月19日〜27日（東京）／3月4日〜13日（兵庫）",
+        "venue": "日本青年館ホール／AiiA 2.5 Theater Kobe",
+        "genre": "idol",
+        "summary": null,
+        "summary_en": null,
+        "title_en": null,
+        "vod": null,
+        "credits": null,
+        "tags": [],
+        "related_franchise_ids": []
+      },
+      "evidence": {
+        "version": 1,
+        "reviewStatus": "work_identity_and_cast_cross_checked",
+        "sourceUrl": "https://kira-hai.net/ensta2022",
+        "sourceFingerprint": "4ad7f10153ecc377aa0241c766c6cbde9717ad2b76727e6406893a4ec69ac147",
+        "reviewedExtractionFingerprint": "61d1b30aee3f5f2995944149eea3330167b42d0db6e8f4e8fd90cb7f78a8d379",
+        "sourceTitle": "『あんさんぶるスターズ!THE STAGE』-Track to Miracle-",
+        "scope": {
+          "decision": "include",
+          "reason": "Happy Elementsのゲーム原作の2.5次元舞台。THE STAGE初作を別副題の公演と区別して新規登録。"
+        },
+        "sources": [
+          {
+            "name": "work-tm",
+            "url": "https://kira-hai.net/ensta2022",
+            "status": 200,
+            "checkedAt": "2026-10-18T10:48:37.625Z",
+            "sha256": "4ad7f10153ecc377aa0241c766c6cbde9717ad2b76727e6406893a4ec69ac147",
+            "bytes": 53450
+          },
+          {
+            "name": "official-tm",
+            "url": "https://www.fwinc.co.jp/ensemble-stage/the_stage-first/cast/",
+            "status": 200,
+            "checkedAt": "2026-10-18T10:48:40.624Z",
+            "sha256": "c93b12dc7df7234f290bfad92664b8ee70f856a72560db0adc6062d967b38a3f",
+            "bytes": 38515
+          },
+          {
+            "name": "schedule-tm",
+            "url": "https://www.fwinc.co.jp/ensemble-stage/the_stage-first/schedule/",
+            "status": 200,
+            "checkedAt": "2026-10-18T10:52:50.250Z",
+            "sha256": "b4220aea030ae751125780f6f931eabf99ba732665b894519b4bddf30d70bd8f",
+            "bytes": 56886
+          },
+          {
+            "name": "schedule-detail",
+            "url": "https://www.fwinc.co.jp/news/72192/",
+            "status": 200,
+            "checkedAt": "2026-10-18T10:52:53.157Z",
+            "sha256": "ab61a2571c08c2cf26d3c9397de9f8d42875830fe047c4a9a0e7f676597e4f4d",
+            "bytes": 63664
+          },
+          {
+            "name": "notices-tm",
+            "url": "https://www.fwinc.co.jp/ensemble-stage/the_stage-first/information/",
+            "status": 200,
+            "checkedAt": "2026-10-18T10:52:56.020Z",
+            "sha256": "cf99199f1e2a43541e97acd3dbfefaa0b38fb88c93392f633b7de78f65cc03ee",
+            "bytes": 60582
+          }
+        ],
+        "sourceCorrections": {
+          "sourceUrl": "https://kira-hai.net/ensta2022",
+          "officialUrl": "https://www.fwinc.co.jp/ensemble-stage/the_stage-first/cast/",
+          "corrections": [
+            {
+              "name": "笹森裕貴",
+              "role": "天祥院英智",
+              "before": "Adam",
+              "after": null
+            },
+            {
+              "name": "飯山裕太",
+              "role": "伏見弓弦",
+              "before": "Adam",
+              "after": null
+            },
+            {
+              "name": "工藤大夢",
+              "role": "青葉つむぎ",
+              "before": "Adam",
+              "after": null
+            }
+          ],
+          "reason": "キラハイの空行区切りを抽出器が見出しの継続と解釈していた。公式でこの3名はAdamの2名と別枠に掲載。所属ユニットは推測で追加せず、公演上の分類を空欄にする。",
+          "rawExtraction": "tm-raw-source.json",
+          "reviewedExtraction": "tm-source.json",
+          "rawSourceSha256": "4ad7f10153ecc377aa0241c766c6cbde9717ad2b76727e6406893a4ec69ac147"
+        },
+        "scheduleLines": [
+          "2022年2月19日-27日 日本青年館ホール",
+          "2022年3月4日-13日 AiiA 2.5 Theater Kobe"
+        ],
+        "castCount": 15,
+        "roleCount": 11,
+        "ensembleCount": 4,
+        "notes": [
+          "全役名・出演者の組とアンサンブル氏名をキラハイと公式で照合。",
+          "公演期間は公式ニュースの本文で照合。スケジュール画像からの推測はしない。",
+          "7月の宮城紘大のDVDイベント欠席・次公演後の卒業告知を2〜3月公演の降板と誤認しない。",
+          "あらすじ・現在配信・公式英題は未確認のため空欄。旧タグは付けない。",
+          "掲載順は出典順で候補に保存するがbilling_orderや主演フラグは推測しない。",
+          "後続のWitness of Miracleはキラハイのシリーズ一覧に見当たらないため、公式を使って別途収録する。Party Liveへ飛んでシリーズ完成とは扱わない。"
+        ]
+      },
+      "requestKey": "1785de2979ca31b27b4657143ec6a990b6fef1dc1c8914b3fb6e84298303cc83"
+    }
+  ]
+}
