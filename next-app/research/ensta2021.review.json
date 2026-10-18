@@ -1,0 +1,88 @@
+{
+  "sourceUrl": "https://kira-hai.net/ensta2021",
+  "scope": {
+    "decision": "include",
+    "reason": "ゲーム「あんさんぶるスターズ！」原作の2.5次元舞台。副題・会期・会場から同一公演を確定。",
+    "evidence": [
+      {
+        "url": "https://kira-hai.net/ensta2021",
+        "checkedAt": "2026-10-18T10:18:45.782Z",
+        "note": "第一参照先の公演名・日程・ユニット別配役を確認。"
+      },
+      {
+        "url": "https://www.fwinc.co.jp/ensemble-stage/ensemble_stage-9th/cast.html",
+        "checkedAt": "2026-10-18T10:18:48.538Z",
+        "note": "公式の原作・公演副題・会期と全役名/出演者の組を相互照合。初演や他の副題へ混同しない。"
+      }
+    ]
+  },
+  "play": {
+    "id": "488aa5f3-dd48-4a8b-8d5f-de40edea21b3",
+    "slug": "enstars-extra-stage-meteor-lights",
+    "expectedUpdatedAt": "2026-10-18T10:25:13.748723+00:00",
+    "evidence": [
+      {
+        "url": "https://kira-hai.net/ensta2021",
+        "checkedAt": "2026-10-18T10:18:45.782Z",
+        "note": "第一参照先の公演名・日程・ユニット別配役を確認。"
+      },
+      {
+        "url": "https://www.fwinc.co.jp/ensemble-stage/ensemble_stage-9th/cast.html",
+        "checkedAt": "2026-10-18T10:18:48.538Z",
+        "note": "公式の原作・公演副題・会期と全役名/出演者の組を相互照合。初演や他の副題へ混同しない。"
+      }
+    ]
+  },
+  "actors": [
+    {
+      "sourceActorName": "松井勇歩 (劇団Patch)",
+      "action": "link",
+      "actorId": "04667c45-07d7-475b-ac16-f47d3f853398",
+      "expectedName": "松井 勇歩",
+      "expectedUpdatedAt": "2026-03-31T15:55:31.66044+00:00",
+      "evidence": [
+        {
+          "url": "https://kira-hai.net/matsui-yuho",
+          "checkedAt": "2026-10-18T10:21:04.105Z",
+          "note": "人物ページの松井勇歩と、この公演の高峯翠の出演歴を確認。既存の同名・同じ読みの人物IDへ接続。"
+        },
+        {
+          "url": "https://www.fwinc.co.jp/ensemble-stage/ensemble_stage-9th/cast.html",
+          "checkedAt": "2026-10-18T10:18:48.538Z",
+          "note": "公式の高峯翠役・松井勇歩（劇団Patch）と照合。括弧内は公演当時の所属補足として保持し、別人物・役名・ユニット名にしない。"
+        }
+      ]
+    }
+  ],
+  "performanceExceptions": [
+    {
+      "kind": "cancelled_leg",
+      "location": "兵庫",
+      "venue": "AiiA 2.5 Theater Kobe",
+      "plannedStart": "2021-04-29",
+      "plannedEnd": "2021-05-09",
+      "cancelledPerformances": 16,
+      "sourceUrl": "https://www.fwinc.co.jp/ensemble-stage/ensemble_stage-9th/info.html",
+      "note": "兵庫全16公演は中止。4月25日の東京公演や5月13〜16日の東京凱旋についての希望者向け払い戻しを、公演自体の中止と混同しない。"
+    },
+    {
+      "kind": "confirmed_return_run",
+      "location": "東京凱旋",
+      "venue": "品川プリンスホテル ステラボール",
+      "start": "2021-05-13",
+      "end": "2021-05-16",
+      "sourceUrl": "https://www.fwinc.co.jp/ensemble-stage/ensemble_stage-9th/info.html",
+      "note": "準備中の告知に続く開催決定告知を確認。現在の配信可否はこの過去告知から推測しない。"
+    }
+  ],
+  "sourceAnnotations": [
+    {
+      "sourceActorName": "松井勇歩 (劇団Patch)",
+      "name": "松井勇歩",
+      "text": "劇団Patch",
+      "kind": "production_time_affiliation",
+      "sourceUrl": "https://www.fwinc.co.jp/ensemble-stage/ensemble_stage-9th/cast.html",
+      "note": "劇団Patchは公演当時の所属補足。氏名・役名・ユニット名に結合しない。原文は候補に保持し、人物IDへ個別に接続する。"
+    }
+  ]
+}

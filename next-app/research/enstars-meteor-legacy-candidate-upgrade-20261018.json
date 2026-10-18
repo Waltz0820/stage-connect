@@ -1,0 +1,164 @@
+{
+  "version": 1,
+  "batchId": "enstars-meteor-legacy-candidate-upgrade-20261018-01",
+  "items": [
+    {
+      "before": {
+        "id": "0f0d3e02-a9ff-4608-b410-95496dfb9afd",
+        "source": "kira-hai",
+        "external_actor_id": "2ef5761b-bbbc-4e8f-8e01-9b0a32beda79",
+        "external_play_id": "3308ff3c-1fb0-4f42-9b7e-bf29d802079d",
+        "source_actor_name": "中西智也",
+        "source_actor_url": "https://kira-hai.net/nakanishi-tomoya",
+        "source_work_title": "『あんさんぶるスターズ!エクストラ・ステージ』～Meteor Lights～",
+        "source_work_url": "https://kira-hai.net/ensta2021",
+        "source_year": 2021,
+        "source_role_raw": "南雲鉄虎",
+        "source_role_names": [
+          "南雲鉄虎"
+        ],
+        "matched_actor_id": "14eb7849-874e-49ad-8729-793890561b40",
+        "matched_play_id": null,
+        "accepted_cast_id": null,
+        "confidence": 60,
+        "status": "pending",
+        "note": null,
+        "scraped_at": "2026-04-27T17:57:15.65+00:00",
+        "created_at": "2026-04-27T17:57:14.88342+00:00",
+        "updated_at": "2026-04-27T17:57:15.65+00:00",
+        "accepted_at": null,
+        "rejected_at": null,
+        "source_cast_group": null,
+        "source_order": null,
+        "source_credit_key": null,
+        "source_evidence": null
+      },
+      "desired": {
+        "id": "0f0d3e02-a9ff-4608-b410-95496dfb9afd",
+        "source": "kira-hai",
+        "external_actor_id": "2ef5761b-bbbc-4e8f-8e01-9b0a32beda79",
+        "external_play_id": "3308ff3c-1fb0-4f42-9b7e-bf29d802079d",
+        "source_actor_name": "中西智也",
+        "source_actor_url": "https://kira-hai.net/nakanishi-tomoya",
+        "source_work_title": "『あんさんぶるスターズ!エクストラ・ステージ』～Meteor Lights～",
+        "source_work_url": "https://kira-hai.net/ensta2021",
+        "source_year": 2021,
+        "source_role_raw": "南雲鉄虎",
+        "source_role_names": [
+          "南雲鉄虎"
+        ],
+        "matched_actor_id": "14eb7849-874e-49ad-8729-793890561b40",
+        "matched_play_id": "488aa5f3-dd48-4a8b-8d5f-de40edea21b3",
+        "accepted_cast_id": null,
+        "confidence": 60,
+        "status": "pending",
+        "note": null,
+        "scraped_at": "2026-04-27T17:57:15.65+00:00",
+        "created_at": "2026-04-27T17:57:14.88342+00:00",
+        "updated_at": "2026-04-27T17:57:15.65+00:00",
+        "accepted_at": null,
+        "rejected_at": null,
+        "source_cast_group": "流星隊",
+        "source_order": 3,
+        "source_credit_key": "b669532d1ef3abc2696b",
+        "source_evidence": {
+          "links": [
+            {
+              "url": "https://kira-hai.net/ensta2021",
+              "note": "作品ページのキャスト欄"
+            }
+          ],
+          "source_fingerprint": "67a47890ffe8384df5ef4014db6128f123ea8ffa84e6a1d157f1d62af29bdbc8",
+          "review_fingerprint": "4f23069d697c2cb37c19e3cf5b67adbab75a196e116cbf8234e2a8032672093d",
+          "snapshot_fingerprint": "3d4a426c67ecf5e4a852177128cde2b9f98cd3d75b4a72111e2e0c1a5f24503e",
+          "identity": "exact_name"
+        }
+      },
+      "evidence": {
+        "workUrl": "https://kira-hai.net/ensta2021",
+        "officialUrl": "https://www.fwinc.co.jp/ensemble-stage/ensemble_stage-9th/cast.html",
+        "note": "作品URL・氏名・個人URL・役名・照合済み俳優IDが一致する未採用旧候補2件を作品単位候補へ引き継ぐ。流星隊区分と出典キーを追加する。既存の確度・外部ID・メモ・作成日を保持し、旧状態を履歴に保存。"
+      },
+      "requestKey": "bc3644de5008035b160ff4efd2279b28f0e22f1566f4102e176995d2c8566032"
+    },
+    {
+      "before": {
+        "id": "ec71af39-e469-446c-92bd-319eef69828d",
+        "source": "kira-hai",
+        "external_actor_id": "9f38809b-f189-498d-bc27-2ce259a3de47",
+        "external_play_id": "3308ff3c-1fb0-4f42-9b7e-bf29d802079d",
+        "source_actor_name": "井澤巧麻",
+        "source_actor_url": "https://kira-hai.net/isawa-takuma",
+        "source_work_title": "『あんさんぶるスターズ!エクストラ・ステージ』～Meteor Lights～",
+        "source_work_url": "https://kira-hai.net/ensta2021",
+        "source_year": 2021,
+        "source_role_raw": "深海奏汰",
+        "source_role_names": [
+          "深海奏汰"
+        ],
+        "matched_actor_id": "65b64a27-eaa7-4fbc-83a5-8b9caee4c407",
+        "matched_play_id": null,
+        "accepted_cast_id": null,
+        "confidence": 60,
+        "status": "pending",
+        "note": null,
+        "scraped_at": "2026-04-27T18:10:28.061+00:00",
+        "created_at": "2026-04-27T18:10:27.256949+00:00",
+        "updated_at": "2026-04-27T18:10:28.061+00:00",
+        "accepted_at": null,
+        "rejected_at": null,
+        "source_cast_group": null,
+        "source_order": null,
+        "source_credit_key": null,
+        "source_evidence": null
+      },
+      "desired": {
+        "id": "ec71af39-e469-446c-92bd-319eef69828d",
+        "source": "kira-hai",
+        "external_actor_id": "9f38809b-f189-498d-bc27-2ce259a3de47",
+        "external_play_id": "3308ff3c-1fb0-4f42-9b7e-bf29d802079d",
+        "source_actor_name": "井澤巧麻",
+        "source_actor_url": "https://kira-hai.net/isawa-takuma",
+        "source_work_title": "『あんさんぶるスターズ!エクストラ・ステージ』～Meteor Lights～",
+        "source_work_url": "https://kira-hai.net/ensta2021",
+        "source_year": 2021,
+        "source_role_raw": "深海奏汰",
+        "source_role_names": [
+          "深海奏汰"
+        ],
+        "matched_actor_id": "65b64a27-eaa7-4fbc-83a5-8b9caee4c407",
+        "matched_play_id": "488aa5f3-dd48-4a8b-8d5f-de40edea21b3",
+        "accepted_cast_id": null,
+        "confidence": 60,
+        "status": "pending",
+        "note": null,
+        "scraped_at": "2026-04-27T18:10:28.061+00:00",
+        "created_at": "2026-04-27T18:10:27.256949+00:00",
+        "updated_at": "2026-04-27T18:10:28.061+00:00",
+        "accepted_at": null,
+        "rejected_at": null,
+        "source_cast_group": "流星隊",
+        "source_order": 2,
+        "source_credit_key": "639f446942482cee600f",
+        "source_evidence": {
+          "links": [
+            {
+              "url": "https://kira-hai.net/ensta2021",
+              "note": "作品ページのキャスト欄"
+            }
+          ],
+          "source_fingerprint": "67a47890ffe8384df5ef4014db6128f123ea8ffa84e6a1d157f1d62af29bdbc8",
+          "review_fingerprint": "4f23069d697c2cb37c19e3cf5b67adbab75a196e116cbf8234e2a8032672093d",
+          "snapshot_fingerprint": "3d4a426c67ecf5e4a852177128cde2b9f98cd3d75b4a72111e2e0c1a5f24503e",
+          "identity": "exact_name"
+        }
+      },
+      "evidence": {
+        "workUrl": "https://kira-hai.net/ensta2021",
+        "officialUrl": "https://www.fwinc.co.jp/ensemble-stage/ensemble_stage-9th/cast.html",
+        "note": "作品URL・氏名・個人URL・役名・照合済み俳優IDが一致する未採用旧候補2件を作品単位候補へ引き継ぐ。流星隊区分と出典キーを追加する。既存の確度・外部ID・メモ・作成日を保持し、旧状態を履歴に保存。"
+      },
+      "requestKey": "809a895116a5047efab378336b3adf24f6f7d750cc7318cd41f8416eb43f4670"
+    }
+  ]
+}

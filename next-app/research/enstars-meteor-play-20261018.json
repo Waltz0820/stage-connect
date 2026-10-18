@@ -1,0 +1,120 @@
+{
+  "version": 1,
+  "batchId": "enstars-meteor-play-20261018-01",
+  "expectedFranchise": {
+    "id": "b2af04db-b92c-4545-84a5-09f307a5c1ff",
+    "name": "『あんさんぶるスターズ！オン・ステージ / THE STAGE』（あんステ）",
+    "slug": "enstars",
+    "updatedAt": "2025-12-13T04:58:27.220101+00:00"
+  },
+  "plays": [
+    {
+      "key": "ml",
+      "play": {
+        "id": "488aa5f3-dd48-4a8b-8d5f-de40edea21b3",
+        "slug": "enstars-extra-stage-meteor-lights",
+        "title": "『あんさんぶるスターズ！エクストラ・ステージ』～Meteor Lights～",
+        "franchise_id": "b2af04db-b92c-4545-84a5-09f307a5c1ff",
+        "period": "2021年4月10日〜25日（東京・銀河劇場）／4月29日〜5月9日（兵庫・全16公演中止）／5月13日〜16日（東京凱旋・ステラボール）",
+        "venue": "天王洲 銀河劇場／AiiA 2.5 Theater Kobe（兵庫公演中止）／品川プリンスホテル ステラボール",
+        "genre": "idol",
+        "summary": null,
+        "summary_en": null,
+        "title_en": null,
+        "vod": null,
+        "credits": null,
+        "tags": [],
+        "related_franchise_ids": []
+      },
+      "evidence": {
+        "version": 1,
+        "reviewStatus": "work_identity_and_cast_cross_checked",
+        "sourceUrl": "https://kira-hai.net/ensta2021",
+        "sourceFingerprint": "5d98b3166c0887e4e54e43fd92fc0a043aae67c15a3f8bd5471bc9d8191baa85",
+        "sourceTitle": "『あんさんぶるスターズ!エクストラ・ステージ』~Meteor Lights~",
+        "scope": {
+          "decision": "include",
+          "reason": "Happy Elementsのゲーム原作の2.5次元舞台。初演や別副題の公演と区別して新規登録。"
+        },
+        "sources": [
+          {
+            "name": "work-ml",
+            "url": "https://kira-hai.net/ensta2021",
+            "status": 200,
+            "checkedAt": "2026-10-18T10:18:45.782Z",
+            "sha256": "5d98b3166c0887e4e54e43fd92fc0a043aae67c15a3f8bd5471bc9d8191baa85",
+            "bytes": 55662
+          },
+          {
+            "name": "official-ml",
+            "url": "https://www.fwinc.co.jp/ensemble-stage/ensemble_stage-9th/cast.html",
+            "status": 200,
+            "checkedAt": "2026-10-18T10:18:48.538Z",
+            "sha256": "8103297d2f77a94cddfc3b07b2adc36f0a359d9c3b379b2f9ff319bb88d1ff9a",
+            "bytes": 14210
+          },
+          {
+            "name": "schedule-ml",
+            "url": "https://www.fwinc.co.jp/ensemble-stage/ensemble_stage-9th/stage.html",
+            "status": 200,
+            "checkedAt": "2026-10-18T10:18:51.150Z",
+            "sha256": "19d6d8d96db793a4a03c86850e31f721f18439c000fab84d1c757722b9f3c455",
+            "bytes": 40917
+          },
+          {
+            "name": "notices-ml",
+            "url": "https://www.fwinc.co.jp/ensemble-stage/ensemble_stage-9th/info.html",
+            "status": 200,
+            "checkedAt": "2026-10-18T10:18:53.839Z",
+            "sha256": "1f55e364324553b117860a84e5d9334663585ec640ace61dc62a83453cdbd40b",
+            "bytes": 40399
+          }
+        ],
+        "scheduleLines": [
+          "2021年4月10日-25日 天王洲 銀河劇場",
+          "2021年4月29日-5月9日 AiiA 2.5 Theater Kobe",
+          "2021年5月13日-16日 品川プリンスホテル ステラボール"
+        ],
+        "castCount": 9,
+        "performanceExceptions": [
+          {
+            "kind": "cancelled_leg",
+            "location": "兵庫",
+            "venue": "AiiA 2.5 Theater Kobe",
+            "plannedStart": "2021-04-29",
+            "plannedEnd": "2021-05-09",
+            "cancelledPerformances": 16,
+            "sourceUrl": "https://www.fwinc.co.jp/ensemble-stage/ensemble_stage-9th/info.html",
+            "note": "兵庫全16公演は中止。4月25日の東京公演や5月13〜16日の東京凱旋についての希望者向け払い戻しを、公演自体の中止と混同しない。"
+          },
+          {
+            "kind": "confirmed_return_run",
+            "location": "東京凱旋",
+            "venue": "品川プリンスホテル ステラボール",
+            "start": "2021-05-13",
+            "end": "2021-05-16",
+            "sourceUrl": "https://www.fwinc.co.jp/ensemble-stage/ensemble_stage-9th/info.html",
+            "note": "準備中の告知に続く開催決定告知を確認。現在の配信可否はこの過去告知から推測しない。"
+          }
+        ],
+        "sourceAnnotations": [
+          {
+            "sourceActorName": "松井勇歩 (劇団Patch)",
+            "name": "松井勇歩",
+            "text": "劇団Patch",
+            "kind": "production_time_affiliation",
+            "sourceUrl": "https://www.fwinc.co.jp/ensemble-stage/ensemble_stage-9th/cast.html",
+            "note": "劇団Patchは公演当時の所属補足。氏名・役名・ユニット名に結合しない。原文は候補に保持し、人物IDへ個別に接続する。"
+          }
+        ],
+        "notes": [
+          "全役名・出演者の組をキラハイと公式キャストで相互照合。",
+          "公演日程・会場を記録。曜日は転記しない。",
+          "あらすじ・現在配信・公式英題は未確認のため空欄。過去の配信告知を現在配信として登録しない。",
+          "主観タグは付けない。配役の掲載順は出典順として別途候補へ保存し、billing_orderには推測で書かない。"
+        ]
+      },
+      "requestKey": "fca7ff13264ef30ec90dd3fb262c7d12f95f5b226cccdab753f790d83cae9170"
+    }
+  ]
+}
