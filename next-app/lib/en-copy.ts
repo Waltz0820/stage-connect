@@ -119,8 +119,11 @@ const toTitleCaseToken = (value: string) =>
     .join("");
 
 export const slugToEnglishActorName = (slug?: string | null) => {
-  const tokens = String(slug ?? "")
-    .trim()
+  const value = String(slug ?? "").trim();
+  // Opaque identifiers are URLs, not evidence of a person's romanized name.
+  if (/(?:^|-)[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(value)) return "";
+
+  const tokens = value
     .split("-")
     .map((token) => token.trim())
     .filter(Boolean);

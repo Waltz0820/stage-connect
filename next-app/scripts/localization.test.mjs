@@ -55,6 +55,16 @@ test('explicit database English values keep precedence over fallback rules', () 
   assert.equal(copy.getEnglishPlayTitle({ title: '刀剣乱舞', titleEn: 'Verified Production' }), 'Verified Production');
 });
 
+test('opaque actor URLs never become invented English names', () => {
+  const id = 'c2245aaf-85e6-46b1-82ab-5256dee56efe';
+  for (const slug of [id, `performer-${id}`, `actor-${id}`]) {
+    assert.equal(copy.slugToEnglishActorName(slug), '');
+    assert.equal(copy.getEnglishActorName({ slug, name: '齋藤久美子' }), '齋藤久美子');
+    assert.equal(copy.getEnglishActorName({ slug, name: '齋藤久美子', nameEn: 'Verified Name' }), 'Verified Name');
+  }
+  assert.equal(copy.getEnglishActorName({ slug: 'sato-ryuji', name: '佐藤流司' }), 'Ryuji Sato');
+});
+
 test('annotated role display retains multiple roles and unresolved conditions', () => {
   const result = copy.translateAnnotatedDisplayTextEn('役名A / 役名B※福岡公演・日替わりゲスト【声のみ】');
   for (const part of ['役名A', '役名B', '福岡公演', '日替わりゲスト', '声のみ']) assert.ok(result.includes(part), result);

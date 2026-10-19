@@ -1,0 +1,4345 @@
+{
+  "version": 1,
+  "batchId": "bleach-live-dx-20261019-01",
+  "newActor": {
+    "id": "c2245aaf-85e6-46b1-82ab-5256dee56efe",
+    "slug": "performer-c2245aaf-85e6-46b1-82ab-5256dee56efe",
+    "name": "齋藤久美子",
+    "kana": null,
+    "profile": null,
+    "image_url": null,
+    "sns": {},
+    "gender": null,
+    "tags": [],
+    "featured_play_slugs": [],
+    "birthday": null,
+    "height_cm": null,
+    "blood_type": null,
+    "birthday_label": null,
+    "name_en": null,
+    "profile_en": null,
+    "death_date": null
+  },
+  "newActorEvidence": [
+    {
+      "url": "https://kira-hai.net/bleach2007",
+      "checkedAt": "2026-10-18T18:13:41.484Z",
+      "note": "2007年1月公演の四楓院夜一役。"
+    },
+    {
+      "url": "https://kira-hai.net/bleach2008",
+      "checkedAt": "2026-10-18T18:13:44.261Z",
+      "note": "2008年3月THE ALLの四楓院夜一役。"
+    },
+    {
+      "url": "https://kira-hai.net/bleach2008-2",
+      "checkedAt": "2026-10-18T18:13:46.952Z",
+      "note": "2008年3月code:002の四楓院夜一役。"
+    },
+    {
+      "url": "https://www1.gcenter-hyogo.jp/contents_parts/ConcertDetail.aspx?kid=4196112501&sid=0000000005",
+      "checkedAt": "2026-10-18T18:16:03.020Z",
+      "note": "2007年春公演の会場公式は齊藤来未子と齋藤久美子を別々に掲載。別人として維持。"
+    },
+    {
+      "url": "https://g-rockets.jp/information/grockets2015/",
+      "checkedAt": "2026-10-18T18:16:16.721Z",
+      "note": "G-Rocketsの2015年自主公演に同名のパフォーマー。基本属性や現在所属の採用根拠にはしない。"
+    }
+  ],
+  "expectedFranchise": {
+    "id": "01e50fbd-8947-43b7-add7-f39c5f990046",
+    "name": "ROCK MUSICAL BLEACH（ブリミュ）",
+    "created_at": "2026-02-08T16:26:41.990203+00:00",
+    "updated_at": "2026-02-08T16:26:41.990203+00:00",
+    "slug": "bleach",
+    "intro": null,
+    "description": "久保帯人による大ヒット剣戟バトルアクション漫画『BLEACH』を原作としたミュージカル作品。通称および公式ハッシュタグは「ブリミュ」。2005年に初演され、2.5次元ミュージカルの歴史において黎明期からジャンルを牽引してきた金字塔的な親シリーズ。主人公の死神代行・黒崎一護（初代：伊阪達也）が、仲間たちと共に尸魂界（ソウル・ソサエティ）などで激闘を繰り広げる姿を、熱いロックサウンドとダイナミックな殺陣、そして圧倒的な歌唱力で描き出す。原作のスタイリッシュな世界観と舞台ならではのライブ感が融合し、長年にわたり多くの熱狂的なファンを生み出し続けている。",
+    "origin_type": "漫画原作",
+    "origin_note": "久保帯人（集英社「週刊少年ジャンプ」連載）",
+    "production_companies": [
+      "ネルケプランニング",
+      "ぴえろ"
+    ],
+    "related_franchise_ids": [],
+    "format": "musical",
+    "description_en": "A pioneering rock musical adaptation based on the internationally acclaimed sword-fighting battle action manga \"BLEACH\" by Tite Kubo. Commonly known as \"BuriMyu,\" it premiered in 2005 and played a monumental role in establishing and leading the 2.5D musical genre from its early days. The stage production vividly brings to life the epic battles of Substitute Soul Reaper Ichigo Kurosaki (originally played by Tatsuya Isaka) and his comrades through heavy rock music, dynamic sword-fighting choreography, and powerful vocal performances. Renowned for its seamless fusion of the manga's stylish aesthetic with high-energy live theater, the series continues to captivate a deeply passionate fanbase.",
+    "name_en": "ROCK MUSICAL BLEACH"
+  },
+  "works": [
+    {
+      "oldPlay": {
+        "id": "c484654f-e2e0-4b8e-ad9a-de2b367f4a1f",
+        "slug": "bleach2007",
+        "title": "ROCK MUSICAL BLEACH the LIVE “卍解SHOW code：001”",
+        "franchise_id": "01e50fbd-8947-43b7-add7-f39c5f990046",
+        "summary": null,
+        "period": "2007年",
+        "venue": null,
+        "vod": {},
+        "genre": null,
+        "created_at": "2026-04-30T16:42:49.037152+00:00",
+        "updated_at": "2026-04-30T16:42:49.037152+00:00",
+        "tags": [],
+        "credits": null,
+        "related_franchise_ids": [],
+        "summary_en": null,
+        "title_en": null
+      },
+      "patch": {
+        "period": "2007年1月10日〜14日",
+        "venue": "青山劇場",
+        "credits": [
+          {
+            "role": "アンサンブル",
+            "names": [
+              "立花拓也",
+              "末吉司弥",
+              "安田裕",
+              "熊倉功",
+              "栗原功平"
+            ],
+            "is_core": false,
+            "sort_order": 1
+          }
+        ]
+      },
+      "rawSource": {
+        "sourceUrl": "https://kira-hai.net/bleach2007",
+        "title": "ROCK MUSICAL BLEACH the LIVE “卍解SHOW code:001” (2007)",
+        "scheduleLines": [
+          "2007年1月10日-14日 青山劇場"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "伊阪達也",
+            "sourceActorUrl": "https://kira-hai.net/isaka-tatsuya",
+            "role_name": "黒崎一護",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "佐藤美貴",
+            "sourceActorUrl": null,
+            "role_name": "朽木ルキア",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "森山栄治",
+            "sourceActorUrl": "https://kira-hai.net/moriyama-eiji",
+            "role_name": "阿散井恋次",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "永山たかし",
+            "sourceActorUrl": "https://kira-hai.net/nagayama-takashi",
+            "role_name": "日番谷冬獅郎",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "大口兼悟",
+            "sourceActorUrl": "https://kira-hai.net/oguchi-kengo",
+            "role_name": "藍染惣右介",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "土屋裕一",
+            "sourceActorUrl": "https://kira-hai.net/tsuchiya-yuichi",
+            "role_name": "市丸ギン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "林修司",
+            "sourceActorUrl": "https://kira-hai.net/hayashi-shuji",
+            "role_name": "朽木白哉",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "齊藤来未子",
+            "sourceActorUrl": null,
+            "role_name": "雛森桃",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "北村栄基",
+            "sourceActorUrl": "https://kira-hai.net/kitamura-eiki",
+            "role_name": "吉良イヅル",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "臼井琢也",
+            "sourceActorUrl": "https://kira-hai.net/usui-takuya",
+            "role_name": "斑目一角",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "村上耕平",
+            "sourceActorUrl": "https://kira-hai.net/murakami-kohei",
+            "role_name": "山田花太郎",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "齋藤久美子",
+            "sourceActorUrl": null,
+            "role_name": "四楓院夜一",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "鈴木省吾 (ゲスト出演)",
+            "sourceActorUrl": null,
+            "role_name": "更木剣八",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "立花拓也",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "末吉司弥",
+            "sourceActorUrl": "https://kira-hai.net/sueyoshi-kazuya",
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "安田裕",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "熊倉功",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "栗原功平",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          }
+        ],
+        "unparsed": []
+      },
+      "source": {
+        "sourceUrl": "https://kira-hai.net/bleach2007",
+        "title": "ROCK MUSICAL BLEACH the LIVE “卍解SHOW code:001” (2007)",
+        "scheduleLines": [
+          "2007年1月10日-14日 青山劇場"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "伊阪達也",
+            "sourceActorUrl": "https://kira-hai.net/isaka-tatsuya",
+            "role_name": "黒崎一護",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "佐藤美貴",
+            "sourceActorUrl": null,
+            "role_name": "朽木ルキア",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "森山栄治",
+            "sourceActorUrl": "https://kira-hai.net/moriyama-eiji",
+            "role_name": "阿散井恋次",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "永山たかし",
+            "sourceActorUrl": "https://kira-hai.net/nagayama-takashi",
+            "role_name": "日番谷冬獅郎",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "大口兼悟",
+            "sourceActorUrl": "https://kira-hai.net/oguchi-kengo",
+            "role_name": "藍染惣右介",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "土屋裕一",
+            "sourceActorUrl": "https://kira-hai.net/tsuchiya-yuichi",
+            "role_name": "市丸ギン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "林修司",
+            "sourceActorUrl": "https://kira-hai.net/hayashi-shuji",
+            "role_name": "朽木白哉",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "齊藤来未子",
+            "sourceActorUrl": null,
+            "role_name": "雛森桃",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "北村栄基",
+            "sourceActorUrl": "https://kira-hai.net/kitamura-eiki",
+            "role_name": "吉良イヅル",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "臼井琢也",
+            "sourceActorUrl": "https://kira-hai.net/usui-takuya",
+            "role_name": "斑目一角",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "村上耕平",
+            "sourceActorUrl": "https://kira-hai.net/murakami-kohei",
+            "role_name": "山田花太郎",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "齋藤久美子",
+            "sourceActorUrl": null,
+            "role_name": "四楓院夜一",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "鈴木省吾",
+            "sourceActorUrl": null,
+            "role_name": "更木剣八",
+            "cast_group": "ゲスト出演（1月11日のみ）"
+          }
+        ],
+        "unparsed": [],
+        "creditOnly": {
+          "group": "アンサンブル",
+          "names": [
+            "立花拓也",
+            "末吉司弥",
+            "安田裕",
+            "熊倉功",
+            "栗原功平"
+          ]
+        }
+      },
+      "transformations": [
+        {
+          "before": {
+            "sourceActorName": "鈴木省吾 (ゲスト出演)",
+            "sourceActorUrl": null,
+            "role_name": "更木剣八",
+            "cast_group": null
+          },
+          "after": {
+            "sourceActorName": "鈴木省吾",
+            "sourceActorUrl": null,
+            "role_name": "更木剣八",
+            "cast_group": "ゲスト出演（1月11日のみ）"
+          },
+          "reason": "氏名に付いたゲスト注記を出演区分へ分離。当時の告知転載で1月11日のみを照合。",
+          "evidence": [
+            {
+              "url": "https://mixi.jp/view_community.pl?from=cross_search&id=1518372",
+              "checkedAt": "2026-10-18T18:16:08.835Z",
+              "note": "鈴木省吾（11日ゲスト出演）と明記。二次資料として採用し一次確認済みとは扱わない。"
+            }
+          ]
+        }
+      ],
+      "stage": {
+        "workUrl": "https://kira-hai.net/bleach2007",
+        "key": "8ab9d4e66f8756692d71aa4f78bedad5ad9b39b4fd88a1acb928fde1a4b3b97f",
+        "items": [
+          {
+            "source_actor_name": "佐藤美貴",
+            "source_actor_url": null,
+            "source_work_title": "ROCK MUSICAL BLEACH the LIVE “卍解SHOW code:001” (2007)",
+            "source_year": 2007,
+            "source_role_raw": "朽木ルキア",
+            "source_role_names": [
+              "朽木ルキア"
+            ],
+            "source_cast_group": null,
+            "source_order": 2,
+            "source_credit_key": "90d4d38c64e8b2b3b680",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bleach2007",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "ec1560f561f6ab7e703b202b8a05fcc7076337b8943b6a399140d61d60695e58",
+              "review_fingerprint": "23ec0e7ef7aad8f5a4751bf234dee75334c09cb2d6e20ca1f10027423523220d",
+              "snapshot_fingerprint": "8e36b78416d771a3eda3cda45a836a50d1291e2d5a514f1ed33ab9b2ec601f62",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "b1daf3bd-532c-4716-855e-450f1b4c14f9",
+            "matched_play_id": "c484654f-e2e0-4b8e-ad9a-de2b367f4a1f",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "森山栄治",
+            "source_actor_url": "https://kira-hai.net/moriyama-eiji",
+            "source_work_title": "ROCK MUSICAL BLEACH the LIVE “卍解SHOW code:001” (2007)",
+            "source_year": 2007,
+            "source_role_raw": "阿散井恋次",
+            "source_role_names": [
+              "阿散井恋次"
+            ],
+            "source_cast_group": null,
+            "source_order": 3,
+            "source_credit_key": "4a3a66f6ee8253582072",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bleach2007",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "ec1560f561f6ab7e703b202b8a05fcc7076337b8943b6a399140d61d60695e58",
+              "review_fingerprint": "23ec0e7ef7aad8f5a4751bf234dee75334c09cb2d6e20ca1f10027423523220d",
+              "snapshot_fingerprint": "8e36b78416d771a3eda3cda45a836a50d1291e2d5a514f1ed33ab9b2ec601f62",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "ef829c1f-3584-4e63-982c-d66981097c6c",
+            "matched_play_id": "c484654f-e2e0-4b8e-ad9a-de2b367f4a1f",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "永山たかし",
+            "source_actor_url": "https://kira-hai.net/nagayama-takashi",
+            "source_work_title": "ROCK MUSICAL BLEACH the LIVE “卍解SHOW code:001” (2007)",
+            "source_year": 2007,
+            "source_role_raw": "日番谷冬獅郎",
+            "source_role_names": [
+              "日番谷冬獅郎"
+            ],
+            "source_cast_group": null,
+            "source_order": 4,
+            "source_credit_key": "b2afd9529987f8b4d860",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bleach2007",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "ec1560f561f6ab7e703b202b8a05fcc7076337b8943b6a399140d61d60695e58",
+              "review_fingerprint": "23ec0e7ef7aad8f5a4751bf234dee75334c09cb2d6e20ca1f10027423523220d",
+              "snapshot_fingerprint": "8e36b78416d771a3eda3cda45a836a50d1291e2d5a514f1ed33ab9b2ec601f62",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "b969d00a-d2db-483c-994c-c1339fad5048",
+            "matched_play_id": "c484654f-e2e0-4b8e-ad9a-de2b367f4a1f",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "大口兼悟",
+            "source_actor_url": "https://kira-hai.net/oguchi-kengo",
+            "source_work_title": "ROCK MUSICAL BLEACH the LIVE “卍解SHOW code:001” (2007)",
+            "source_year": 2007,
+            "source_role_raw": "藍染惣右介",
+            "source_role_names": [
+              "藍染惣右介"
+            ],
+            "source_cast_group": null,
+            "source_order": 5,
+            "source_credit_key": "c21e729d310f43471ae7",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bleach2007",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "ec1560f561f6ab7e703b202b8a05fcc7076337b8943b6a399140d61d60695e58",
+              "review_fingerprint": "23ec0e7ef7aad8f5a4751bf234dee75334c09cb2d6e20ca1f10027423523220d",
+              "snapshot_fingerprint": "8e36b78416d771a3eda3cda45a836a50d1291e2d5a514f1ed33ab9b2ec601f62",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "ca5d2e02-dda6-425a-9944-ae55e5363e94",
+            "matched_play_id": "c484654f-e2e0-4b8e-ad9a-de2b367f4a1f",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "土屋裕一",
+            "source_actor_url": "https://kira-hai.net/tsuchiya-yuichi",
+            "source_work_title": "ROCK MUSICAL BLEACH the LIVE “卍解SHOW code:001” (2007)",
+            "source_year": 2007,
+            "source_role_raw": "市丸ギン",
+            "source_role_names": [
+              "市丸ギン"
+            ],
+            "source_cast_group": null,
+            "source_order": 6,
+            "source_credit_key": "49146c4e4599f7eb61ba",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bleach2007",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://ameblo.jp/pnish-tuti/entry-12125902238.html",
+                  "checkedAt": "2026-10-18T18:16:00.213Z",
+                  "note": "本人の2016年の改名告知で土屋裕一から土屋佑壱への変更を確認。"
+                }
+              ],
+              "source_fingerprint": "ec1560f561f6ab7e703b202b8a05fcc7076337b8943b6a399140d61d60695e58",
+              "review_fingerprint": "23ec0e7ef7aad8f5a4751bf234dee75334c09cb2d6e20ca1f10027423523220d",
+              "snapshot_fingerprint": "8e36b78416d771a3eda3cda45a836a50d1291e2d5a514f1ed33ab9b2ec601f62",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "8ae8ecdb-55ec-4f9e-b977-57ac48dc3aa2",
+            "matched_play_id": "c484654f-e2e0-4b8e-ad9a-de2b367f4a1f",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "林修司",
+            "source_actor_url": "https://kira-hai.net/hayashi-shuji",
+            "source_work_title": "ROCK MUSICAL BLEACH the LIVE “卍解SHOW code:001” (2007)",
+            "source_year": 2007,
+            "source_role_raw": "朽木白哉",
+            "source_role_names": [
+              "朽木白哉"
+            ],
+            "source_cast_group": null,
+            "source_order": 7,
+            "source_credit_key": "6ee3c16b2b6b5e0d5f6a",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bleach2007",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "ec1560f561f6ab7e703b202b8a05fcc7076337b8943b6a399140d61d60695e58",
+              "review_fingerprint": "23ec0e7ef7aad8f5a4751bf234dee75334c09cb2d6e20ca1f10027423523220d",
+              "snapshot_fingerprint": "8e36b78416d771a3eda3cda45a836a50d1291e2d5a514f1ed33ab9b2ec601f62",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "bb3ca19c-569f-4f18-8f7b-06ab8580dd67",
+            "matched_play_id": "c484654f-e2e0-4b8e-ad9a-de2b367f4a1f",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "齊藤来未子",
+            "source_actor_url": null,
+            "source_work_title": "ROCK MUSICAL BLEACH the LIVE “卍解SHOW code:001” (2007)",
+            "source_year": 2007,
+            "source_role_raw": "雛森桃",
+            "source_role_names": [
+              "雛森桃"
+            ],
+            "source_cast_group": null,
+            "source_order": 8,
+            "source_credit_key": "378a34d35db5e4f56f67",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bleach2007",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "ec1560f561f6ab7e703b202b8a05fcc7076337b8943b6a399140d61d60695e58",
+              "review_fingerprint": "23ec0e7ef7aad8f5a4751bf234dee75334c09cb2d6e20ca1f10027423523220d",
+              "snapshot_fingerprint": "8e36b78416d771a3eda3cda45a836a50d1291e2d5a514f1ed33ab9b2ec601f62",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "e59c35c6-c196-45a5-8a42-25ccef5ab1d9",
+            "matched_play_id": "c484654f-e2e0-4b8e-ad9a-de2b367f4a1f",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "北村栄基",
+            "source_actor_url": "https://kira-hai.net/kitamura-eiki",
+            "source_work_title": "ROCK MUSICAL BLEACH the LIVE “卍解SHOW code:001” (2007)",
+            "source_year": 2007,
+            "source_role_raw": "吉良イヅル",
+            "source_role_names": [
+              "吉良イヅル"
+            ],
+            "source_cast_group": null,
+            "source_order": 9,
+            "source_credit_key": "b22caf3f210f5899d273",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bleach2007",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "ec1560f561f6ab7e703b202b8a05fcc7076337b8943b6a399140d61d60695e58",
+              "review_fingerprint": "23ec0e7ef7aad8f5a4751bf234dee75334c09cb2d6e20ca1f10027423523220d",
+              "snapshot_fingerprint": "8e36b78416d771a3eda3cda45a836a50d1291e2d5a514f1ed33ab9b2ec601f62",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "af3d1394-3568-4e36-8656-1ef1e7ecc6c8",
+            "matched_play_id": "c484654f-e2e0-4b8e-ad9a-de2b367f4a1f",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "臼井琢也",
+            "source_actor_url": "https://kira-hai.net/usui-takuya",
+            "source_work_title": "ROCK MUSICAL BLEACH the LIVE “卍解SHOW code:001” (2007)",
+            "source_year": 2007,
+            "source_role_raw": "斑目一角",
+            "source_role_names": [
+              "斑目一角"
+            ],
+            "source_cast_group": null,
+            "source_order": 10,
+            "source_credit_key": "f5acacef79f76b0ba321",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bleach2007",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "ec1560f561f6ab7e703b202b8a05fcc7076337b8943b6a399140d61d60695e58",
+              "review_fingerprint": "23ec0e7ef7aad8f5a4751bf234dee75334c09cb2d6e20ca1f10027423523220d",
+              "snapshot_fingerprint": "8e36b78416d771a3eda3cda45a836a50d1291e2d5a514f1ed33ab9b2ec601f62",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "649de813-db1a-422b-82c0-8a483456108e",
+            "matched_play_id": "c484654f-e2e0-4b8e-ad9a-de2b367f4a1f",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "村上耕平",
+            "source_actor_url": "https://kira-hai.net/murakami-kohei",
+            "source_work_title": "ROCK MUSICAL BLEACH the LIVE “卍解SHOW code:001” (2007)",
+            "source_year": 2007,
+            "source_role_raw": "山田花太郎",
+            "source_role_names": [
+              "山田花太郎"
+            ],
+            "source_cast_group": null,
+            "source_order": 11,
+            "source_credit_key": "8b4f4b1e0653b180e6c0",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bleach2007",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "ec1560f561f6ab7e703b202b8a05fcc7076337b8943b6a399140d61d60695e58",
+              "review_fingerprint": "23ec0e7ef7aad8f5a4751bf234dee75334c09cb2d6e20ca1f10027423523220d",
+              "snapshot_fingerprint": "8e36b78416d771a3eda3cda45a836a50d1291e2d5a514f1ed33ab9b2ec601f62",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "8c9aa53e-b649-4b0b-8a9f-234972fbf974",
+            "matched_play_id": "c484654f-e2e0-4b8e-ad9a-de2b367f4a1f",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "齋藤久美子",
+            "source_actor_url": null,
+            "source_work_title": "ROCK MUSICAL BLEACH the LIVE “卍解SHOW code:001” (2007)",
+            "source_year": 2007,
+            "source_role_raw": "四楓院夜一",
+            "source_role_names": [
+              "四楓院夜一"
+            ],
+            "source_cast_group": null,
+            "source_order": 12,
+            "source_credit_key": "204650279651933bc202",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bleach2007",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bleach2007",
+                  "checkedAt": "2026-10-18T18:13:41.484Z",
+                  "note": "2007年1月公演の四楓院夜一役。"
+                },
+                {
+                  "url": "https://kira-hai.net/bleach2008",
+                  "checkedAt": "2026-10-18T18:13:44.261Z",
+                  "note": "2008年3月THE ALLの四楓院夜一役。"
+                },
+                {
+                  "url": "https://kira-hai.net/bleach2008-2",
+                  "checkedAt": "2026-10-18T18:13:46.952Z",
+                  "note": "2008年3月code:002の四楓院夜一役。"
+                },
+                {
+                  "url": "https://www1.gcenter-hyogo.jp/contents_parts/ConcertDetail.aspx?kid=4196112501&sid=0000000005",
+                  "checkedAt": "2026-10-18T18:16:03.020Z",
+                  "note": "2007年春公演の会場公式は齊藤来未子と齋藤久美子を別々に掲載。別人として維持。"
+                },
+                {
+                  "url": "https://g-rockets.jp/information/grockets2015/",
+                  "checkedAt": "2026-10-18T18:16:16.721Z",
+                  "note": "G-Rocketsの2015年自主公演に同名のパフォーマー。基本属性や現在所属の採用根拠にはしない。"
+                }
+              ],
+              "source_fingerprint": "ec1560f561f6ab7e703b202b8a05fcc7076337b8943b6a399140d61d60695e58",
+              "review_fingerprint": "23ec0e7ef7aad8f5a4751bf234dee75334c09cb2d6e20ca1f10027423523220d",
+              "snapshot_fingerprint": "8e36b78416d771a3eda3cda45a836a50d1291e2d5a514f1ed33ab9b2ec601f62",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "c2245aaf-85e6-46b1-82ab-5256dee56efe",
+            "matched_play_id": "c484654f-e2e0-4b8e-ad9a-de2b367f4a1f",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "鈴木省吾",
+            "source_actor_url": null,
+            "source_work_title": "ROCK MUSICAL BLEACH the LIVE “卍解SHOW code:001” (2007)",
+            "source_year": 2007,
+            "source_role_raw": "更木剣八",
+            "source_role_names": [
+              "更木剣八"
+            ],
+            "source_cast_group": "ゲスト出演（1月11日のみ）",
+            "source_order": 13,
+            "source_credit_key": "7bb903bbbd6bd71fcbc1",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bleach2007",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "ec1560f561f6ab7e703b202b8a05fcc7076337b8943b6a399140d61d60695e58",
+              "review_fingerprint": "23ec0e7ef7aad8f5a4751bf234dee75334c09cb2d6e20ca1f10027423523220d",
+              "snapshot_fingerprint": "8e36b78416d771a3eda3cda45a836a50d1291e2d5a514f1ed33ab9b2ec601f62",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "ffaf1f30-7aa9-46f5-bb74-66a9a0253cdb",
+            "matched_play_id": "c484654f-e2e0-4b8e-ad9a-de2b367f4a1f",
+            "status": "pending"
+          }
+        ]
+      },
+      "records": [
+        {
+          "actor": {
+            "id": "b1daf3bd-532c-4716-855e-450f1b4c14f9",
+            "slug": "sato-miki",
+            "name": "佐藤美貴",
+            "kana": "さとう みき",
+            "profile": null,
+            "image_url": null,
+            "sns": null,
+            "gender": null,
+            "created_at": "2026-10-17T02:16:15.194411+00:00",
+            "updated_at": "2026-10-17T02:16:15.194411+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1980-04-15",
+            "height_cm": 156,
+            "blood_type": "AB",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "佐藤美貴",
+            "sourceActorUrl": null,
+            "role_name": "朽木ルキア",
+            "cast_group": null
+          },
+          "sourceCreditKey": "90d4d38c64e8b2b3b680",
+          "sourceOrder": 2
+        },
+        {
+          "actor": {
+            "id": "ef829c1f-3584-4e63-982c-d66981097c6c",
+            "slug": "moriyama-eiji",
+            "name": "森山 栄治",
+            "kana": "もりやま えいじ",
+            "profile": "長崎県出身の俳優・声優。演劇ユニットpnish副リーダー。",
+            "image_url": null,
+            "sns": {
+              "official": "https://ameblo.jp/pnish-sexyboy/entrylist.html"
+            },
+            "gender": "male",
+            "created_at": "2026-03-15T15:01:28.132163+00:00",
+            "updated_at": "2026-03-15T15:01:28.132163+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1976-10-03",
+            "height_cm": 177,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "森山栄治",
+            "sourceActorUrl": "https://kira-hai.net/moriyama-eiji",
+            "role_name": "阿散井恋次",
+            "cast_group": null
+          },
+          "sourceCreditKey": "4a3a66f6ee8253582072",
+          "sourceOrder": 3
+        },
+        {
+          "actor": {
+            "id": "b969d00a-d2db-483c-994c-c1339fad5048",
+            "slug": "nagayama-takashi",
+            "name": "永山 たかし",
+            "kana": "ながやま たかし",
+            "profile": "神奈川県出身の俳優・歌手。芸映プロダクション所属。",
+            "image_url": null,
+            "sns": {},
+            "gender": "male",
+            "created_at": "2026-03-16T16:52:24.467093+00:00",
+            "updated_at": "2026-03-16T16:52:24.467093+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1978-11-16",
+            "height_cm": 170,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "永山たかし",
+            "sourceActorUrl": "https://kira-hai.net/nagayama-takashi",
+            "role_name": "日番谷冬獅郎",
+            "cast_group": null
+          },
+          "sourceCreditKey": "b2afd9529987f8b4d860",
+          "sourceOrder": 4
+        },
+        {
+          "actor": {
+            "id": "ca5d2e02-dda6-425a-9944-ae55e5363e94",
+            "slug": "ohkuchi-kengo",
+            "name": "大口 兼悟",
+            "kana": "おおくち けんご",
+            "profile": "鹿児島県出身の元俳優。",
+            "image_url": null,
+            "sns": {},
+            "gender": "male",
+            "created_at": "2026-03-18T17:11:07.016071+00:00",
+            "updated_at": "2026-03-18T17:11:07.016071+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1981-11-09",
+            "height_cm": 180,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "大口兼悟",
+            "sourceActorUrl": "https://kira-hai.net/oguchi-kengo",
+            "role_name": "藍染惣右介",
+            "cast_group": null
+          },
+          "sourceCreditKey": "c21e729d310f43471ae7",
+          "sourceOrder": 5
+        },
+        {
+          "actor": {
+            "id": "8ae8ecdb-55ec-4f9e-b977-57ac48dc3aa2",
+            "slug": "tsuchiya-yuichi",
+            "name": "土屋 佑壱",
+            "kana": "つちや ゆういち",
+            "profile": "山梨県出身の俳優。演劇ユニットpnishメンバー。過去に土屋裕一名義での活動あり。",
+            "image_url": null,
+            "sns": {},
+            "gender": "male",
+            "created_at": "2026-03-16T16:20:11.964332+00:00",
+            "updated_at": "2026-03-16T16:20:11.964332+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1979-02-06",
+            "height_cm": 178,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "土屋裕一",
+            "sourceActorUrl": "https://kira-hai.net/tsuchiya-yuichi",
+            "role_name": "市丸ギン",
+            "cast_group": null
+          },
+          "sourceCreditKey": "49146c4e4599f7eb61ba",
+          "sourceOrder": 6
+        },
+        {
+          "actor": {
+            "id": "bb3ca19c-569f-4f18-8f7b-06ab8580dd67",
+            "slug": "hayashi-shuji",
+            "name": "林修司",
+            "kana": "はやししゅうじ",
+            "profile": null,
+            "image_url": null,
+            "sns": null,
+            "gender": "male",
+            "created_at": "2026-10-17T02:16:14.682867+00:00",
+            "updated_at": "2026-10-17T02:16:14.682867+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1979-11-27",
+            "height_cm": 174,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "林修司",
+            "sourceActorUrl": "https://kira-hai.net/hayashi-shuji",
+            "role_name": "朽木白哉",
+            "cast_group": null
+          },
+          "sourceCreditKey": "6ee3c16b2b6b5e0d5f6a",
+          "sourceOrder": 7
+        },
+        {
+          "actor": {
+            "id": "e59c35c6-c196-45a5-8a42-25ccef5ab1d9",
+            "slug": "saito-kumiko",
+            "name": "齊藤来未子",
+            "kana": "さいとう くみこ",
+            "profile": null,
+            "image_url": null,
+            "sns": null,
+            "gender": "female",
+            "created_at": "2026-10-17T07:26:25.598518+00:00",
+            "updated_at": "2026-10-17T07:26:25.598518+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": null,
+            "height_cm": null,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "齊藤来未子",
+            "sourceActorUrl": null,
+            "role_name": "雛森桃",
+            "cast_group": null
+          },
+          "sourceCreditKey": "378a34d35db5e4f56f67",
+          "sourceOrder": 8
+        },
+        {
+          "actor": {
+            "id": "af3d1394-3568-4e36-8656-1ef1e7ecc6c8",
+            "slug": "kitamura-eiki",
+            "name": "北村 栄基",
+            "kana": "きたむら えいき",
+            "profile": "熊本県出身の元俳優。実姉は女優・タレントの井上晴美。",
+            "image_url": null,
+            "sns": {},
+            "gender": "male",
+            "created_at": "2026-03-18T17:29:10.297703+00:00",
+            "updated_at": "2026-03-18T17:29:10.297703+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1981-02-03",
+            "height_cm": 178,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "北村栄基",
+            "sourceActorUrl": "https://kira-hai.net/kitamura-eiki",
+            "role_name": "吉良イヅル",
+            "cast_group": null
+          },
+          "sourceCreditKey": "b22caf3f210f5899d273",
+          "sourceOrder": 9
+        },
+        {
+          "actor": {
+            "id": "649de813-db1a-422b-82c0-8a483456108e",
+            "slug": "usui-takuya",
+            "name": "臼井琢也",
+            "kana": null,
+            "profile": null,
+            "image_url": null,
+            "sns": null,
+            "gender": null,
+            "created_at": "2026-10-17T02:16:15.386753+00:00",
+            "updated_at": "2026-10-17T02:16:15.386753+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1975-02-13",
+            "height_cm": 169,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": "Takuya Usui",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "臼井琢也",
+            "sourceActorUrl": "https://kira-hai.net/usui-takuya",
+            "role_name": "斑目一角",
+            "cast_group": null
+          },
+          "sourceCreditKey": "f5acacef79f76b0ba321",
+          "sourceOrder": 10
+        },
+        {
+          "actor": {
+            "id": "8c9aa53e-b649-4b0b-8a9f-234972fbf974",
+            "slug": "murakami-kouhei",
+            "name": "村上耕平",
+            "kana": null,
+            "profile": null,
+            "image_url": null,
+            "sns": null,
+            "gender": null,
+            "created_at": "2026-10-17T02:33:40.946535+00:00",
+            "updated_at": "2026-10-17T02:33:40.946535+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": null,
+            "height_cm": 170,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": "Kouhei Murakami",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "村上耕平",
+            "sourceActorUrl": "https://kira-hai.net/murakami-kohei",
+            "role_name": "山田花太郎",
+            "cast_group": null
+          },
+          "sourceCreditKey": "8b4f4b1e0653b180e6c0",
+          "sourceOrder": 11
+        },
+        {
+          "actor": {
+            "id": "c2245aaf-85e6-46b1-82ab-5256dee56efe",
+            "slug": "performer-c2245aaf-85e6-46b1-82ab-5256dee56efe",
+            "name": "齋藤久美子",
+            "kana": null,
+            "profile": null,
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": null,
+            "height_cm": null,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "齋藤久美子",
+            "sourceActorUrl": null,
+            "role_name": "四楓院夜一",
+            "cast_group": null
+          },
+          "sourceCreditKey": "204650279651933bc202",
+          "sourceOrder": 12
+        },
+        {
+          "actor": {
+            "id": "ffaf1f30-7aa9-46f5-bb74-66a9a0253cdb",
+            "slug": "suzuki-shogo-1963",
+            "name": "鈴木省吾",
+            "kana": "すずき しょうご",
+            "profile": null,
+            "image_url": null,
+            "sns": null,
+            "gender": null,
+            "created_at": "2026-10-17T02:16:14.93465+00:00",
+            "updated_at": "2026-10-17T02:16:14.93465+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1963-04-12",
+            "height_cm": 178,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Shogo Suzuki",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "鈴木省吾",
+            "sourceActorUrl": null,
+            "role_name": "更木剣八",
+            "cast_group": "ゲスト出演（1月11日のみ）"
+          },
+          "sourceCreditKey": "7bb903bbbd6bd71fcbc1",
+          "sourceOrder": 13
+        }
+      ],
+      "keptCasts": [
+        {
+          "id": "e3fce35e-81e9-4bb2-97fb-3797d922b7a2",
+          "play_id": "c484654f-e2e0-4b8e-ad9a-de2b367f4a1f",
+          "actor_id": "f3b51663-9038-4d0f-a643-7a6a3f1aafca",
+          "role_name": "黒崎一護",
+          "is_starring": false,
+          "created_at": "2026-04-30T16:42:50.7931+00:00",
+          "billing_order": null,
+          "cast_group": null,
+          "role_name_kana": null,
+          "role_type": null,
+          "note": null,
+          "updated_at": "2026-04-30T16:42:50.7931+00:00"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://kira-hai.net/bleach2007",
+          "checkedAt": "2026-10-18T18:13:41.484Z",
+          "note": "第一参照先の当該公演の配役・日程・アンサンブル名を採用。"
+        },
+        {
+          "url": "https://mixi.jp/view_community.pl?from=cross_search&id=1518372",
+          "checkedAt": "2026-10-18T18:16:08.835Z",
+          "note": "当時の告知転載に13名、ゲスト1月11日の条件、5名の役名なし出演を照合。"
+        },
+        {
+          "url": "https://geiei.co.jp/talent/nagayamatakashi/",
+          "checkedAt": "2026-10-18T18:16:05.971Z",
+          "note": "事務所公式の永山たかし出演歴に2007年1月code:001と2008年3月THE ALL/code:002。"
+        }
+      ],
+      "sourceFingerprint": "ec1560f561f6ab7e703b202b8a05fcc7076337b8943b6a399140d61d60695e58"
+    },
+    {
+      "oldPlay": {
+        "id": "9c345299-82e6-4758-ba34-5add3d6cd79c",
+        "slug": "bleach2008",
+        "title": "ROCK MUSICAL BLEACH THE ALL",
+        "franchise_id": "01e50fbd-8947-43b7-add7-f39c5f990046",
+        "summary": null,
+        "period": "2008年",
+        "venue": null,
+        "vod": {},
+        "genre": null,
+        "created_at": "2026-04-30T16:41:43.753582+00:00",
+        "updated_at": "2026-04-30T16:41:43.753582+00:00",
+        "tags": [],
+        "credits": null,
+        "related_franchise_ids": [],
+        "summary_en": null,
+        "title_en": null
+      },
+      "patch": {
+        "period": "2008年3月24日〜26日・30日",
+        "venue": "新宿コマ劇場",
+        "credits": [
+          {
+            "role": "アンサンブル",
+            "names": [
+              "立花拓也",
+              "加藤学",
+              "末吉司弥",
+              "安田裕",
+              "栗原功平",
+              "熊倉功",
+              "岩下政之",
+              "篠原辰也"
+            ],
+            "is_core": false,
+            "sort_order": 1
+          }
+        ]
+      },
+      "rawSource": {
+        "sourceUrl": "https://kira-hai.net/bleach2008",
+        "title": "ROCK MUSICAL BLEACH THE ALL (2008)",
+        "scheduleLines": [
+          "2008年3月24日-30日 新宿コマ劇場"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "伊阪達也",
+            "sourceActorUrl": "https://kira-hai.net/isaka-tatsuya",
+            "role_name": "黒崎一護",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "佐藤美貴",
+            "sourceActorUrl": null,
+            "role_name": "朽木ルキア",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "森山栄治",
+            "sourceActorUrl": "https://kira-hai.net/moriyama-eiji",
+            "role_name": "阿散井恋次",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "永山たかし",
+            "sourceActorUrl": "https://kira-hai.net/nagayama-takashi",
+            "role_name": "日番谷冬獅郎",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "大口兼悟",
+            "sourceActorUrl": "https://kira-hai.net/oguchi-kengo",
+            "role_name": "藍染惣右介",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "土屋裕一",
+            "sourceActorUrl": "https://kira-hai.net/tsuchiya-yuichi",
+            "role_name": "市丸ギン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "林修司",
+            "sourceActorUrl": "https://kira-hai.net/hayashi-shuji",
+            "role_name": "朽木白哉",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "齊藤来未子",
+            "sourceActorUrl": null,
+            "role_name": "雛森桃",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "北村栄基",
+            "sourceActorUrl": "https://kira-hai.net/kitamura-eiki",
+            "role_name": "吉良イヅル",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "臼井琢也",
+            "sourceActorUrl": "https://kira-hai.net/usui-takuya",
+            "role_name": "斑目一角",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "齋藤久美子",
+            "sourceActorUrl": null,
+            "role_name": "四楓院夜一",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "鈴木省吾",
+            "sourceActorUrl": "https://kira-hai.net/shogo-suzuki",
+            "role_name": "更木剣八",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "笠原弘子",
+            "sourceActorUrl": null,
+            "role_name": "卯ノ花烈",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "関根あすか",
+            "sourceActorUrl": null,
+            "role_name": "砕蜂",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "郷本直也",
+            "sourceActorUrl": "https://kira-hai.net/gomoto-naoya",
+            "role_name": "檜佐木修兵",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "倉貫匡弘",
+            "sourceActorUrl": "https://kira-hai.net/kuranuki-masahiro",
+            "role_name": "東仙要",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "井上晴美",
+            "sourceActorUrl": null,
+            "role_name": "松本乱菊",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "村上耕平",
+            "sourceActorUrl": "https://kira-hai.net/murakami-kohei",
+            "role_name": "山田花太郎",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "立花拓也",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "加藤学",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "末吉司弥",
+            "sourceActorUrl": "https://kira-hai.net/sueyoshi-kazuya",
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "安田裕",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "栗原功平",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "熊倉功",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "岩下政之",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "篠原辰也",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          }
+        ],
+        "unparsed": []
+      },
+      "source": {
+        "sourceUrl": "https://kira-hai.net/bleach2008",
+        "title": "ROCK MUSICAL BLEACH THE ALL (2008)",
+        "scheduleLines": [
+          "2008年3月24日-30日 新宿コマ劇場"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "伊阪達也",
+            "sourceActorUrl": "https://kira-hai.net/isaka-tatsuya",
+            "role_name": "黒崎一護",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "佐藤美貴",
+            "sourceActorUrl": null,
+            "role_name": "朽木ルキア",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "森山栄治",
+            "sourceActorUrl": "https://kira-hai.net/moriyama-eiji",
+            "role_name": "阿散井恋次",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "永山たかし",
+            "sourceActorUrl": "https://kira-hai.net/nagayama-takashi",
+            "role_name": "日番谷冬獅郎",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "大口兼悟",
+            "sourceActorUrl": "https://kira-hai.net/oguchi-kengo",
+            "role_name": "藍染惣右介",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "土屋裕一",
+            "sourceActorUrl": "https://kira-hai.net/tsuchiya-yuichi",
+            "role_name": "市丸ギン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "林修司",
+            "sourceActorUrl": "https://kira-hai.net/hayashi-shuji",
+            "role_name": "朽木白哉",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "齊藤来未子",
+            "sourceActorUrl": null,
+            "role_name": "雛森桃",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "北村栄基",
+            "sourceActorUrl": "https://kira-hai.net/kitamura-eiki",
+            "role_name": "吉良イヅル",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "臼井琢也",
+            "sourceActorUrl": "https://kira-hai.net/usui-takuya",
+            "role_name": "斑目一角",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "齋藤久美子",
+            "sourceActorUrl": null,
+            "role_name": "四楓院夜一",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "鈴木省吾",
+            "sourceActorUrl": "https://kira-hai.net/shogo-suzuki",
+            "role_name": "更木剣八",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "笠原弘子",
+            "sourceActorUrl": null,
+            "role_name": "卯ノ花烈",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "関根あすか",
+            "sourceActorUrl": null,
+            "role_name": "砕蜂",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "郷本直也",
+            "sourceActorUrl": "https://kira-hai.net/gomoto-naoya",
+            "role_name": "檜佐木修兵",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "倉貫匡弘",
+            "sourceActorUrl": "https://kira-hai.net/kuranuki-masahiro",
+            "role_name": "東仙要",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "井上晴美",
+            "sourceActorUrl": null,
+            "role_name": "松本乱菊",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "村上耕平",
+            "sourceActorUrl": "https://kira-hai.net/murakami-kohei",
+            "role_name": "山田花太郎",
+            "cast_group": null
+          }
+        ],
+        "unparsed": [],
+        "creditOnly": {
+          "group": "アンサンブル",
+          "names": [
+            "立花拓也",
+            "加藤学",
+            "末吉司弥",
+            "安田裕",
+            "栗原功平",
+            "熊倉功",
+            "岩下政之",
+            "篠原辰也"
+          ]
+        }
+      },
+      "transformations": [],
+      "stage": {
+        "workUrl": "https://kira-hai.net/bleach2008",
+        "key": "3f48629844315482951fdf08b5a61ef28e93309b4d41cbdf588f5560e7024375",
+        "items": [
+          {
+            "source_actor_name": "佐藤美貴",
+            "source_actor_url": null,
+            "source_work_title": "ROCK MUSICAL BLEACH THE ALL (2008)",
+            "source_year": 2008,
+            "source_role_raw": "朽木ルキア",
+            "source_role_names": [
+              "朽木ルキア"
+            ],
+            "source_cast_group": null,
+            "source_order": 2,
+            "source_credit_key": "90d4d38c64e8b2b3b680",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bleach2008",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "ec8fc44126efd14b417785d7505d0049e779792ed4afa35f77f7b73208962297",
+              "review_fingerprint": "0cf541ac1a5a8dab4f6edf0b42b3d37ff1033ca0c33a289bd74a65b35a7dfa95",
+              "snapshot_fingerprint": "8e36b78416d771a3eda3cda45a836a50d1291e2d5a514f1ed33ab9b2ec601f62",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "b1daf3bd-532c-4716-855e-450f1b4c14f9",
+            "matched_play_id": "9c345299-82e6-4758-ba34-5add3d6cd79c",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "森山栄治",
+            "source_actor_url": "https://kira-hai.net/moriyama-eiji",
+            "source_work_title": "ROCK MUSICAL BLEACH THE ALL (2008)",
+            "source_year": 2008,
+            "source_role_raw": "阿散井恋次",
+            "source_role_names": [
+              "阿散井恋次"
+            ],
+            "source_cast_group": null,
+            "source_order": 3,
+            "source_credit_key": "4a3a66f6ee8253582072",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bleach2008",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "ec8fc44126efd14b417785d7505d0049e779792ed4afa35f77f7b73208962297",
+              "review_fingerprint": "0cf541ac1a5a8dab4f6edf0b42b3d37ff1033ca0c33a289bd74a65b35a7dfa95",
+              "snapshot_fingerprint": "8e36b78416d771a3eda3cda45a836a50d1291e2d5a514f1ed33ab9b2ec601f62",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "ef829c1f-3584-4e63-982c-d66981097c6c",
+            "matched_play_id": "9c345299-82e6-4758-ba34-5add3d6cd79c",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "永山たかし",
+            "source_actor_url": "https://kira-hai.net/nagayama-takashi",
+            "source_work_title": "ROCK MUSICAL BLEACH THE ALL (2008)",
+            "source_year": 2008,
+            "source_role_raw": "日番谷冬獅郎",
+            "source_role_names": [
+              "日番谷冬獅郎"
+            ],
+            "source_cast_group": null,
+            "source_order": 4,
+            "source_credit_key": "b2afd9529987f8b4d860",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bleach2008",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "ec8fc44126efd14b417785d7505d0049e779792ed4afa35f77f7b73208962297",
+              "review_fingerprint": "0cf541ac1a5a8dab4f6edf0b42b3d37ff1033ca0c33a289bd74a65b35a7dfa95",
+              "snapshot_fingerprint": "8e36b78416d771a3eda3cda45a836a50d1291e2d5a514f1ed33ab9b2ec601f62",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "b969d00a-d2db-483c-994c-c1339fad5048",
+            "matched_play_id": "9c345299-82e6-4758-ba34-5add3d6cd79c",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "大口兼悟",
+            "source_actor_url": "https://kira-hai.net/oguchi-kengo",
+            "source_work_title": "ROCK MUSICAL BLEACH THE ALL (2008)",
+            "source_year": 2008,
+            "source_role_raw": "藍染惣右介",
+            "source_role_names": [
+              "藍染惣右介"
+            ],
+            "source_cast_group": null,
+            "source_order": 5,
+            "source_credit_key": "c21e729d310f43471ae7",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bleach2008",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "ec8fc44126efd14b417785d7505d0049e779792ed4afa35f77f7b73208962297",
+              "review_fingerprint": "0cf541ac1a5a8dab4f6edf0b42b3d37ff1033ca0c33a289bd74a65b35a7dfa95",
+              "snapshot_fingerprint": "8e36b78416d771a3eda3cda45a836a50d1291e2d5a514f1ed33ab9b2ec601f62",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "ca5d2e02-dda6-425a-9944-ae55e5363e94",
+            "matched_play_id": "9c345299-82e6-4758-ba34-5add3d6cd79c",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "土屋裕一",
+            "source_actor_url": "https://kira-hai.net/tsuchiya-yuichi",
+            "source_work_title": "ROCK MUSICAL BLEACH THE ALL (2008)",
+            "source_year": 2008,
+            "source_role_raw": "市丸ギン",
+            "source_role_names": [
+              "市丸ギン"
+            ],
+            "source_cast_group": null,
+            "source_order": 6,
+            "source_credit_key": "49146c4e4599f7eb61ba",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bleach2008",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://ameblo.jp/pnish-tuti/entry-12125902238.html",
+                  "checkedAt": "2026-10-18T18:16:00.213Z",
+                  "note": "本人の2016年の改名告知で土屋裕一から土屋佑壱への変更を確認。"
+                }
+              ],
+              "source_fingerprint": "ec8fc44126efd14b417785d7505d0049e779792ed4afa35f77f7b73208962297",
+              "review_fingerprint": "0cf541ac1a5a8dab4f6edf0b42b3d37ff1033ca0c33a289bd74a65b35a7dfa95",
+              "snapshot_fingerprint": "8e36b78416d771a3eda3cda45a836a50d1291e2d5a514f1ed33ab9b2ec601f62",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "8ae8ecdb-55ec-4f9e-b977-57ac48dc3aa2",
+            "matched_play_id": "9c345299-82e6-4758-ba34-5add3d6cd79c",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "林修司",
+            "source_actor_url": "https://kira-hai.net/hayashi-shuji",
+            "source_work_title": "ROCK MUSICAL BLEACH THE ALL (2008)",
+            "source_year": 2008,
+            "source_role_raw": "朽木白哉",
+            "source_role_names": [
+              "朽木白哉"
+            ],
+            "source_cast_group": null,
+            "source_order": 7,
+            "source_credit_key": "6ee3c16b2b6b5e0d5f6a",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bleach2008",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "ec8fc44126efd14b417785d7505d0049e779792ed4afa35f77f7b73208962297",
+              "review_fingerprint": "0cf541ac1a5a8dab4f6edf0b42b3d37ff1033ca0c33a289bd74a65b35a7dfa95",
+              "snapshot_fingerprint": "8e36b78416d771a3eda3cda45a836a50d1291e2d5a514f1ed33ab9b2ec601f62",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "bb3ca19c-569f-4f18-8f7b-06ab8580dd67",
+            "matched_play_id": "9c345299-82e6-4758-ba34-5add3d6cd79c",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "齊藤来未子",
+            "source_actor_url": null,
+            "source_work_title": "ROCK MUSICAL BLEACH THE ALL (2008)",
+            "source_year": 2008,
+            "source_role_raw": "雛森桃",
+            "source_role_names": [
+              "雛森桃"
+            ],
+            "source_cast_group": null,
+            "source_order": 8,
+            "source_credit_key": "378a34d35db5e4f56f67",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bleach2008",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "ec8fc44126efd14b417785d7505d0049e779792ed4afa35f77f7b73208962297",
+              "review_fingerprint": "0cf541ac1a5a8dab4f6edf0b42b3d37ff1033ca0c33a289bd74a65b35a7dfa95",
+              "snapshot_fingerprint": "8e36b78416d771a3eda3cda45a836a50d1291e2d5a514f1ed33ab9b2ec601f62",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "e59c35c6-c196-45a5-8a42-25ccef5ab1d9",
+            "matched_play_id": "9c345299-82e6-4758-ba34-5add3d6cd79c",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "北村栄基",
+            "source_actor_url": "https://kira-hai.net/kitamura-eiki",
+            "source_work_title": "ROCK MUSICAL BLEACH THE ALL (2008)",
+            "source_year": 2008,
+            "source_role_raw": "吉良イヅル",
+            "source_role_names": [
+              "吉良イヅル"
+            ],
+            "source_cast_group": null,
+            "source_order": 9,
+            "source_credit_key": "b22caf3f210f5899d273",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bleach2008",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "ec8fc44126efd14b417785d7505d0049e779792ed4afa35f77f7b73208962297",
+              "review_fingerprint": "0cf541ac1a5a8dab4f6edf0b42b3d37ff1033ca0c33a289bd74a65b35a7dfa95",
+              "snapshot_fingerprint": "8e36b78416d771a3eda3cda45a836a50d1291e2d5a514f1ed33ab9b2ec601f62",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "af3d1394-3568-4e36-8656-1ef1e7ecc6c8",
+            "matched_play_id": "9c345299-82e6-4758-ba34-5add3d6cd79c",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "臼井琢也",
+            "source_actor_url": "https://kira-hai.net/usui-takuya",
+            "source_work_title": "ROCK MUSICAL BLEACH THE ALL (2008)",
+            "source_year": 2008,
+            "source_role_raw": "斑目一角",
+            "source_role_names": [
+              "斑目一角"
+            ],
+            "source_cast_group": null,
+            "source_order": 10,
+            "source_credit_key": "f5acacef79f76b0ba321",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bleach2008",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "ec8fc44126efd14b417785d7505d0049e779792ed4afa35f77f7b73208962297",
+              "review_fingerprint": "0cf541ac1a5a8dab4f6edf0b42b3d37ff1033ca0c33a289bd74a65b35a7dfa95",
+              "snapshot_fingerprint": "8e36b78416d771a3eda3cda45a836a50d1291e2d5a514f1ed33ab9b2ec601f62",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "649de813-db1a-422b-82c0-8a483456108e",
+            "matched_play_id": "9c345299-82e6-4758-ba34-5add3d6cd79c",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "齋藤久美子",
+            "source_actor_url": null,
+            "source_work_title": "ROCK MUSICAL BLEACH THE ALL (2008)",
+            "source_year": 2008,
+            "source_role_raw": "四楓院夜一",
+            "source_role_names": [
+              "四楓院夜一"
+            ],
+            "source_cast_group": null,
+            "source_order": 11,
+            "source_credit_key": "204650279651933bc202",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bleach2008",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bleach2007",
+                  "checkedAt": "2026-10-18T18:13:41.484Z",
+                  "note": "2007年1月公演の四楓院夜一役。"
+                },
+                {
+                  "url": "https://kira-hai.net/bleach2008",
+                  "checkedAt": "2026-10-18T18:13:44.261Z",
+                  "note": "2008年3月THE ALLの四楓院夜一役。"
+                },
+                {
+                  "url": "https://kira-hai.net/bleach2008-2",
+                  "checkedAt": "2026-10-18T18:13:46.952Z",
+                  "note": "2008年3月code:002の四楓院夜一役。"
+                },
+                {
+                  "url": "https://www1.gcenter-hyogo.jp/contents_parts/ConcertDetail.aspx?kid=4196112501&sid=0000000005",
+                  "checkedAt": "2026-10-18T18:16:03.020Z",
+                  "note": "2007年春公演の会場公式は齊藤来未子と齋藤久美子を別々に掲載。別人として維持。"
+                },
+                {
+                  "url": "https://g-rockets.jp/information/grockets2015/",
+                  "checkedAt": "2026-10-18T18:16:16.721Z",
+                  "note": "G-Rocketsの2015年自主公演に同名のパフォーマー。基本属性や現在所属の採用根拠にはしない。"
+                }
+              ],
+              "source_fingerprint": "ec8fc44126efd14b417785d7505d0049e779792ed4afa35f77f7b73208962297",
+              "review_fingerprint": "0cf541ac1a5a8dab4f6edf0b42b3d37ff1033ca0c33a289bd74a65b35a7dfa95",
+              "snapshot_fingerprint": "8e36b78416d771a3eda3cda45a836a50d1291e2d5a514f1ed33ab9b2ec601f62",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "c2245aaf-85e6-46b1-82ab-5256dee56efe",
+            "matched_play_id": "9c345299-82e6-4758-ba34-5add3d6cd79c",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "鈴木省吾",
+            "source_actor_url": "https://kira-hai.net/shogo-suzuki",
+            "source_work_title": "ROCK MUSICAL BLEACH THE ALL (2008)",
+            "source_year": 2008,
+            "source_role_raw": "更木剣八",
+            "source_role_names": [
+              "更木剣八"
+            ],
+            "source_cast_group": null,
+            "source_order": 12,
+            "source_credit_key": "03ad6cc91b4681113b4a",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bleach2008",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "ec8fc44126efd14b417785d7505d0049e779792ed4afa35f77f7b73208962297",
+              "review_fingerprint": "0cf541ac1a5a8dab4f6edf0b42b3d37ff1033ca0c33a289bd74a65b35a7dfa95",
+              "snapshot_fingerprint": "8e36b78416d771a3eda3cda45a836a50d1291e2d5a514f1ed33ab9b2ec601f62",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "ffaf1f30-7aa9-46f5-bb74-66a9a0253cdb",
+            "matched_play_id": "9c345299-82e6-4758-ba34-5add3d6cd79c",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "笠原弘子",
+            "source_actor_url": null,
+            "source_work_title": "ROCK MUSICAL BLEACH THE ALL (2008)",
+            "source_year": 2008,
+            "source_role_raw": "卯ノ花烈",
+            "source_role_names": [
+              "卯ノ花烈"
+            ],
+            "source_cast_group": null,
+            "source_order": 13,
+            "source_credit_key": "241cd39dd237a5da1f38",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bleach2008",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "ec8fc44126efd14b417785d7505d0049e779792ed4afa35f77f7b73208962297",
+              "review_fingerprint": "0cf541ac1a5a8dab4f6edf0b42b3d37ff1033ca0c33a289bd74a65b35a7dfa95",
+              "snapshot_fingerprint": "8e36b78416d771a3eda3cda45a836a50d1291e2d5a514f1ed33ab9b2ec601f62",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "1ad06b98-35e0-4f56-84b1-945760da617e",
+            "matched_play_id": "9c345299-82e6-4758-ba34-5add3d6cd79c",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "関根あすか",
+            "source_actor_url": null,
+            "source_work_title": "ROCK MUSICAL BLEACH THE ALL (2008)",
+            "source_year": 2008,
+            "source_role_raw": "砕蜂",
+            "source_role_names": [
+              "砕蜂"
+            ],
+            "source_cast_group": null,
+            "source_order": 14,
+            "source_credit_key": "9595c45ac58ce2609a55",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bleach2008",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "ec8fc44126efd14b417785d7505d0049e779792ed4afa35f77f7b73208962297",
+              "review_fingerprint": "0cf541ac1a5a8dab4f6edf0b42b3d37ff1033ca0c33a289bd74a65b35a7dfa95",
+              "snapshot_fingerprint": "8e36b78416d771a3eda3cda45a836a50d1291e2d5a514f1ed33ab9b2ec601f62",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "d1f7d25f-27ee-43b7-9455-056cfcb063c5",
+            "matched_play_id": "9c345299-82e6-4758-ba34-5add3d6cd79c",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "郷本直也",
+            "source_actor_url": "https://kira-hai.net/gomoto-naoya",
+            "source_work_title": "ROCK MUSICAL BLEACH THE ALL (2008)",
+            "source_year": 2008,
+            "source_role_raw": "檜佐木修兵",
+            "source_role_names": [
+              "檜佐木修兵"
+            ],
+            "source_cast_group": null,
+            "source_order": 15,
+            "source_credit_key": "937efaa5d7c39097dea6",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bleach2008",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "ec8fc44126efd14b417785d7505d0049e779792ed4afa35f77f7b73208962297",
+              "review_fingerprint": "0cf541ac1a5a8dab4f6edf0b42b3d37ff1033ca0c33a289bd74a65b35a7dfa95",
+              "snapshot_fingerprint": "8e36b78416d771a3eda3cda45a836a50d1291e2d5a514f1ed33ab9b2ec601f62",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "e57de3c5-d324-477b-b323-6009311c2ca3",
+            "matched_play_id": "9c345299-82e6-4758-ba34-5add3d6cd79c",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "倉貫匡弘",
+            "source_actor_url": "https://kira-hai.net/kuranuki-masahiro",
+            "source_work_title": "ROCK MUSICAL BLEACH THE ALL (2008)",
+            "source_year": 2008,
+            "source_role_raw": "東仙要",
+            "source_role_names": [
+              "東仙要"
+            ],
+            "source_cast_group": null,
+            "source_order": 16,
+            "source_credit_key": "43f64e8d23819f1cefaf",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bleach2008",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "ec8fc44126efd14b417785d7505d0049e779792ed4afa35f77f7b73208962297",
+              "review_fingerprint": "0cf541ac1a5a8dab4f6edf0b42b3d37ff1033ca0c33a289bd74a65b35a7dfa95",
+              "snapshot_fingerprint": "8e36b78416d771a3eda3cda45a836a50d1291e2d5a514f1ed33ab9b2ec601f62",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "7e34cb6c-8a3e-4185-b594-1fd35ebf482e",
+            "matched_play_id": "9c345299-82e6-4758-ba34-5add3d6cd79c",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "井上晴美",
+            "source_actor_url": null,
+            "source_work_title": "ROCK MUSICAL BLEACH THE ALL (2008)",
+            "source_year": 2008,
+            "source_role_raw": "松本乱菊",
+            "source_role_names": [
+              "松本乱菊"
+            ],
+            "source_cast_group": null,
+            "source_order": 17,
+            "source_credit_key": "c802cc261ed8ee53acdc",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bleach2008",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "ec8fc44126efd14b417785d7505d0049e779792ed4afa35f77f7b73208962297",
+              "review_fingerprint": "0cf541ac1a5a8dab4f6edf0b42b3d37ff1033ca0c33a289bd74a65b35a7dfa95",
+              "snapshot_fingerprint": "8e36b78416d771a3eda3cda45a836a50d1291e2d5a514f1ed33ab9b2ec601f62",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "9221709a-f34f-4aeb-a2e5-b9c73c39a652",
+            "matched_play_id": "9c345299-82e6-4758-ba34-5add3d6cd79c",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "村上耕平",
+            "source_actor_url": "https://kira-hai.net/murakami-kohei",
+            "source_work_title": "ROCK MUSICAL BLEACH THE ALL (2008)",
+            "source_year": 2008,
+            "source_role_raw": "山田花太郎",
+            "source_role_names": [
+              "山田花太郎"
+            ],
+            "source_cast_group": null,
+            "source_order": 18,
+            "source_credit_key": "8b4f4b1e0653b180e6c0",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bleach2008",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "ec8fc44126efd14b417785d7505d0049e779792ed4afa35f77f7b73208962297",
+              "review_fingerprint": "0cf541ac1a5a8dab4f6edf0b42b3d37ff1033ca0c33a289bd74a65b35a7dfa95",
+              "snapshot_fingerprint": "8e36b78416d771a3eda3cda45a836a50d1291e2d5a514f1ed33ab9b2ec601f62",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "8c9aa53e-b649-4b0b-8a9f-234972fbf974",
+            "matched_play_id": "9c345299-82e6-4758-ba34-5add3d6cd79c",
+            "status": "pending"
+          }
+        ]
+      },
+      "records": [
+        {
+          "actor": {
+            "id": "b1daf3bd-532c-4716-855e-450f1b4c14f9",
+            "slug": "sato-miki",
+            "name": "佐藤美貴",
+            "kana": "さとう みき",
+            "profile": null,
+            "image_url": null,
+            "sns": null,
+            "gender": null,
+            "created_at": "2026-10-17T02:16:15.194411+00:00",
+            "updated_at": "2026-10-17T02:16:15.194411+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1980-04-15",
+            "height_cm": 156,
+            "blood_type": "AB",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "佐藤美貴",
+            "sourceActorUrl": null,
+            "role_name": "朽木ルキア",
+            "cast_group": null
+          },
+          "sourceCreditKey": "90d4d38c64e8b2b3b680",
+          "sourceOrder": 2
+        },
+        {
+          "actor": {
+            "id": "ef829c1f-3584-4e63-982c-d66981097c6c",
+            "slug": "moriyama-eiji",
+            "name": "森山 栄治",
+            "kana": "もりやま えいじ",
+            "profile": "長崎県出身の俳優・声優。演劇ユニットpnish副リーダー。",
+            "image_url": null,
+            "sns": {
+              "official": "https://ameblo.jp/pnish-sexyboy/entrylist.html"
+            },
+            "gender": "male",
+            "created_at": "2026-03-15T15:01:28.132163+00:00",
+            "updated_at": "2026-03-15T15:01:28.132163+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1976-10-03",
+            "height_cm": 177,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "森山栄治",
+            "sourceActorUrl": "https://kira-hai.net/moriyama-eiji",
+            "role_name": "阿散井恋次",
+            "cast_group": null
+          },
+          "sourceCreditKey": "4a3a66f6ee8253582072",
+          "sourceOrder": 3
+        },
+        {
+          "actor": {
+            "id": "b969d00a-d2db-483c-994c-c1339fad5048",
+            "slug": "nagayama-takashi",
+            "name": "永山 たかし",
+            "kana": "ながやま たかし",
+            "profile": "神奈川県出身の俳優・歌手。芸映プロダクション所属。",
+            "image_url": null,
+            "sns": {},
+            "gender": "male",
+            "created_at": "2026-03-16T16:52:24.467093+00:00",
+            "updated_at": "2026-03-16T16:52:24.467093+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1978-11-16",
+            "height_cm": 170,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "永山たかし",
+            "sourceActorUrl": "https://kira-hai.net/nagayama-takashi",
+            "role_name": "日番谷冬獅郎",
+            "cast_group": null
+          },
+          "sourceCreditKey": "b2afd9529987f8b4d860",
+          "sourceOrder": 4
+        },
+        {
+          "actor": {
+            "id": "ca5d2e02-dda6-425a-9944-ae55e5363e94",
+            "slug": "ohkuchi-kengo",
+            "name": "大口 兼悟",
+            "kana": "おおくち けんご",
+            "profile": "鹿児島県出身の元俳優。",
+            "image_url": null,
+            "sns": {},
+            "gender": "male",
+            "created_at": "2026-03-18T17:11:07.016071+00:00",
+            "updated_at": "2026-03-18T17:11:07.016071+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1981-11-09",
+            "height_cm": 180,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "大口兼悟",
+            "sourceActorUrl": "https://kira-hai.net/oguchi-kengo",
+            "role_name": "藍染惣右介",
+            "cast_group": null
+          },
+          "sourceCreditKey": "c21e729d310f43471ae7",
+          "sourceOrder": 5
+        },
+        {
+          "actor": {
+            "id": "8ae8ecdb-55ec-4f9e-b977-57ac48dc3aa2",
+            "slug": "tsuchiya-yuichi",
+            "name": "土屋 佑壱",
+            "kana": "つちや ゆういち",
+            "profile": "山梨県出身の俳優。演劇ユニットpnishメンバー。過去に土屋裕一名義での活動あり。",
+            "image_url": null,
+            "sns": {},
+            "gender": "male",
+            "created_at": "2026-03-16T16:20:11.964332+00:00",
+            "updated_at": "2026-03-16T16:20:11.964332+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1979-02-06",
+            "height_cm": 178,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "土屋裕一",
+            "sourceActorUrl": "https://kira-hai.net/tsuchiya-yuichi",
+            "role_name": "市丸ギン",
+            "cast_group": null
+          },
+          "sourceCreditKey": "49146c4e4599f7eb61ba",
+          "sourceOrder": 6
+        },
+        {
+          "actor": {
+            "id": "bb3ca19c-569f-4f18-8f7b-06ab8580dd67",
+            "slug": "hayashi-shuji",
+            "name": "林修司",
+            "kana": "はやししゅうじ",
+            "profile": null,
+            "image_url": null,
+            "sns": null,
+            "gender": "male",
+            "created_at": "2026-10-17T02:16:14.682867+00:00",
+            "updated_at": "2026-10-17T02:16:14.682867+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1979-11-27",
+            "height_cm": 174,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "林修司",
+            "sourceActorUrl": "https://kira-hai.net/hayashi-shuji",
+            "role_name": "朽木白哉",
+            "cast_group": null
+          },
+          "sourceCreditKey": "6ee3c16b2b6b5e0d5f6a",
+          "sourceOrder": 7
+        },
+        {
+          "actor": {
+            "id": "e59c35c6-c196-45a5-8a42-25ccef5ab1d9",
+            "slug": "saito-kumiko",
+            "name": "齊藤来未子",
+            "kana": "さいとう くみこ",
+            "profile": null,
+            "image_url": null,
+            "sns": null,
+            "gender": "female",
+            "created_at": "2026-10-17T07:26:25.598518+00:00",
+            "updated_at": "2026-10-17T07:26:25.598518+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": null,
+            "height_cm": null,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "齊藤来未子",
+            "sourceActorUrl": null,
+            "role_name": "雛森桃",
+            "cast_group": null
+          },
+          "sourceCreditKey": "378a34d35db5e4f56f67",
+          "sourceOrder": 8
+        },
+        {
+          "actor": {
+            "id": "af3d1394-3568-4e36-8656-1ef1e7ecc6c8",
+            "slug": "kitamura-eiki",
+            "name": "北村 栄基",
+            "kana": "きたむら えいき",
+            "profile": "熊本県出身の元俳優。実姉は女優・タレントの井上晴美。",
+            "image_url": null,
+            "sns": {},
+            "gender": "male",
+            "created_at": "2026-03-18T17:29:10.297703+00:00",
+            "updated_at": "2026-03-18T17:29:10.297703+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1981-02-03",
+            "height_cm": 178,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "北村栄基",
+            "sourceActorUrl": "https://kira-hai.net/kitamura-eiki",
+            "role_name": "吉良イヅル",
+            "cast_group": null
+          },
+          "sourceCreditKey": "b22caf3f210f5899d273",
+          "sourceOrder": 9
+        },
+        {
+          "actor": {
+            "id": "649de813-db1a-422b-82c0-8a483456108e",
+            "slug": "usui-takuya",
+            "name": "臼井琢也",
+            "kana": null,
+            "profile": null,
+            "image_url": null,
+            "sns": null,
+            "gender": null,
+            "created_at": "2026-10-17T02:16:15.386753+00:00",
+            "updated_at": "2026-10-17T02:16:15.386753+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1975-02-13",
+            "height_cm": 169,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": "Takuya Usui",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "臼井琢也",
+            "sourceActorUrl": "https://kira-hai.net/usui-takuya",
+            "role_name": "斑目一角",
+            "cast_group": null
+          },
+          "sourceCreditKey": "f5acacef79f76b0ba321",
+          "sourceOrder": 10
+        },
+        {
+          "actor": {
+            "id": "c2245aaf-85e6-46b1-82ab-5256dee56efe",
+            "slug": "performer-c2245aaf-85e6-46b1-82ab-5256dee56efe",
+            "name": "齋藤久美子",
+            "kana": null,
+            "profile": null,
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": null,
+            "height_cm": null,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "齋藤久美子",
+            "sourceActorUrl": null,
+            "role_name": "四楓院夜一",
+            "cast_group": null
+          },
+          "sourceCreditKey": "204650279651933bc202",
+          "sourceOrder": 11
+        },
+        {
+          "actor": {
+            "id": "ffaf1f30-7aa9-46f5-bb74-66a9a0253cdb",
+            "slug": "suzuki-shogo-1963",
+            "name": "鈴木省吾",
+            "kana": "すずき しょうご",
+            "profile": null,
+            "image_url": null,
+            "sns": null,
+            "gender": null,
+            "created_at": "2026-10-17T02:16:14.93465+00:00",
+            "updated_at": "2026-10-17T02:16:14.93465+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1963-04-12",
+            "height_cm": 178,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Shogo Suzuki",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "鈴木省吾",
+            "sourceActorUrl": "https://kira-hai.net/shogo-suzuki",
+            "role_name": "更木剣八",
+            "cast_group": null
+          },
+          "sourceCreditKey": "03ad6cc91b4681113b4a",
+          "sourceOrder": 12
+        },
+        {
+          "actor": {
+            "id": "1ad06b98-35e0-4f56-84b1-945760da617e",
+            "slug": "kasahara-hiroko",
+            "name": "笠原弘子",
+            "kana": "かさはら ひろこ",
+            "profile": null,
+            "image_url": null,
+            "sns": null,
+            "gender": null,
+            "created_at": "2026-10-17T06:21:57.323707+00:00",
+            "updated_at": "2026-10-17T06:21:57.323707+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": null,
+            "height_cm": 155,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Hiroko Kasahara",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "笠原弘子",
+            "sourceActorUrl": null,
+            "role_name": "卯ノ花烈",
+            "cast_group": null
+          },
+          "sourceCreditKey": "241cd39dd237a5da1f38",
+          "sourceOrder": 13
+        },
+        {
+          "actor": {
+            "id": "d1f7d25f-27ee-43b7-9455-056cfcb063c5",
+            "slug": "sekine-asuka",
+            "name": "関根あすか",
+            "kana": "セキネアスカ",
+            "profile": null,
+            "image_url": null,
+            "sns": null,
+            "gender": null,
+            "created_at": "2026-10-17T06:55:10.459314+00:00",
+            "updated_at": "2026-10-17T06:55:10.459314+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": null,
+            "height_cm": null,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "関根あすか",
+            "sourceActorUrl": null,
+            "role_name": "砕蜂",
+            "cast_group": null
+          },
+          "sourceCreditKey": "9595c45ac58ce2609a55",
+          "sourceOrder": 14
+        },
+        {
+          "actor": {
+            "id": "e57de3c5-d324-477b-b323-6009311c2ca3",
+            "slug": "gomoto-naoya",
+            "name": "郷本 直也",
+            "kana": "ごうもと なおや",
+            "profile": "大阪府出身の俳優。芸能事務所ナノスクエア代表取締役社長。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/GomotoNaoya",
+              "official": "https://ameblo.jp/naoya-g-sanpo/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-15T15:02:38.988564+00:00",
+            "updated_at": "2026-03-15T15:02:38.988564+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1980-04-25",
+            "height_cm": 186,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "郷本直也",
+            "sourceActorUrl": "https://kira-hai.net/gomoto-naoya",
+            "role_name": "檜佐木修兵",
+            "cast_group": null
+          },
+          "sourceCreditKey": "937efaa5d7c39097dea6",
+          "sourceOrder": 15
+        },
+        {
+          "actor": {
+            "id": "7e34cb6c-8a3e-4185-b594-1fd35ebf482e",
+            "slug": "kuranuki-masahiro",
+            "name": "倉貫匡弘",
+            "kana": null,
+            "profile": null,
+            "image_url": null,
+            "sns": null,
+            "gender": null,
+            "created_at": "2026-10-17T06:38:51.450225+00:00",
+            "updated_at": "2026-10-17T06:38:51.450225+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1982-12-20",
+            "height_cm": null,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Masahiro Kuranuki",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "倉貫匡弘",
+            "sourceActorUrl": "https://kira-hai.net/kuranuki-masahiro",
+            "role_name": "東仙要",
+            "cast_group": null
+          },
+          "sourceCreditKey": "43f64e8d23819f1cefaf",
+          "sourceOrder": 16
+        },
+        {
+          "actor": {
+            "id": "9221709a-f34f-4aeb-a2e5-b9c73c39a652",
+            "slug": "inoue-harumi",
+            "name": "井上晴美",
+            "kana": "イノウエハルミ",
+            "profile": null,
+            "image_url": null,
+            "sns": null,
+            "gender": "female",
+            "created_at": "2026-10-17T02:16:15.605779+00:00",
+            "updated_at": "2026-10-17T02:16:15.605779+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1974-09-23",
+            "height_cm": 164,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "井上晴美",
+            "sourceActorUrl": null,
+            "role_name": "松本乱菊",
+            "cast_group": null
+          },
+          "sourceCreditKey": "c802cc261ed8ee53acdc",
+          "sourceOrder": 17
+        },
+        {
+          "actor": {
+            "id": "8c9aa53e-b649-4b0b-8a9f-234972fbf974",
+            "slug": "murakami-kouhei",
+            "name": "村上耕平",
+            "kana": null,
+            "profile": null,
+            "image_url": null,
+            "sns": null,
+            "gender": null,
+            "created_at": "2026-10-17T02:33:40.946535+00:00",
+            "updated_at": "2026-10-17T02:33:40.946535+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": null,
+            "height_cm": 170,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": "Kouhei Murakami",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "村上耕平",
+            "sourceActorUrl": "https://kira-hai.net/murakami-kohei",
+            "role_name": "山田花太郎",
+            "cast_group": null
+          },
+          "sourceCreditKey": "8b4f4b1e0653b180e6c0",
+          "sourceOrder": 18
+        }
+      ],
+      "keptCasts": [
+        {
+          "id": "592a8512-31c5-425c-8c83-db678aed6e71",
+          "play_id": "9c345299-82e6-4758-ba34-5add3d6cd79c",
+          "actor_id": "f3b51663-9038-4d0f-a643-7a6a3f1aafca",
+          "role_name": "黒崎一護",
+          "is_starring": false,
+          "created_at": "2026-04-30T16:41:45.156778+00:00",
+          "billing_order": null,
+          "cast_group": null,
+          "role_name_kana": null,
+          "role_type": null,
+          "note": null,
+          "updated_at": "2026-04-30T16:41:45.156778+00:00"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://kira-hai.net/bleach2008",
+          "checkedAt": "2026-10-18T18:13:44.261Z",
+          "note": "第一参照先の当該公演の配役・日程・アンサンブル名を採用。"
+        },
+        {
+          "url": "https://mixi.jp/view_bbs.pl?comm_id=966418&id=7377975",
+          "checkedAt": "2026-10-18T18:16:11.956Z",
+          "note": "当時の告知転載に18名、THE ALLとライブの上演日が別々に掲載。アンサンブルの安田裕はキラハイを採用し、転載には記載がない差を残す。"
+        },
+        {
+          "url": "https://geiei.co.jp/talent/nagayamatakashi/",
+          "checkedAt": "2026-10-18T18:16:05.971Z",
+          "note": "事務所公式の永山たかし出演歴に2007年1月code:001と2008年3月THE ALL/code:002。"
+        }
+      ],
+      "sourceFingerprint": "ec8fc44126efd14b417785d7505d0049e779792ed4afa35f77f7b73208962297"
+    },
+    {
+      "oldPlay": {
+        "id": "81e875c3-d68c-4b83-a807-7a2b9bda80fe",
+        "slug": "bleach2008-2",
+        "title": "ROCK MUSICAL BLEACH the LIVE “卍解SHOW code：002”",
+        "franchise_id": "01e50fbd-8947-43b7-add7-f39c5f990046",
+        "summary": null,
+        "period": "2008年",
+        "venue": null,
+        "vod": {},
+        "genre": null,
+        "created_at": "2026-04-30T16:41:28.386371+00:00",
+        "updated_at": "2026-04-30T16:41:28.386371+00:00",
+        "tags": [],
+        "credits": null,
+        "related_franchise_ids": [],
+        "summary_en": null,
+        "title_en": null
+      },
+      "patch": {
+        "period": "2008年3月27日〜29日・31日",
+        "venue": "新宿コマ劇場",
+        "credits": [
+          {
+            "role": "アンサンブル",
+            "names": [
+              "立花拓也",
+              "加藤学",
+              "末吉司弥",
+              "安田裕",
+              "栗原功平",
+              "熊倉功",
+              "岩下政之",
+              "篠原辰也"
+            ],
+            "is_core": false,
+            "sort_order": 1
+          }
+        ]
+      },
+      "rawSource": {
+        "sourceUrl": "https://kira-hai.net/bleach2008-2",
+        "title": "ROCK MUSICAL BLEACH the LIVE “卍解SHOW code:002” (2008)",
+        "scheduleLines": [
+          "2008年3月27日-31日 新宿コマ劇場"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "伊阪達也",
+            "sourceActorUrl": "https://kira-hai.net/isaka-tatsuya",
+            "role_name": "黒崎一護",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "佐藤美貴",
+            "sourceActorUrl": null,
+            "role_name": "朽木ルキア",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "森山栄治",
+            "sourceActorUrl": "https://kira-hai.net/moriyama-eiji",
+            "role_name": "阿散井恋次",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "永山たかし",
+            "sourceActorUrl": "https://kira-hai.net/nagayama-takashi",
+            "role_name": "日番谷冬獅郎",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "大口兼悟",
+            "sourceActorUrl": "https://kira-hai.net/oguchi-kengo",
+            "role_name": "藍染惣右介",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "土屋裕一",
+            "sourceActorUrl": "https://kira-hai.net/tsuchiya-yuichi",
+            "role_name": "市丸ギン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "林修司",
+            "sourceActorUrl": "https://kira-hai.net/hayashi-shuji",
+            "role_name": "朽木白哉",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "齊藤来未子",
+            "sourceActorUrl": null,
+            "role_name": "雛森桃",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "北村栄基",
+            "sourceActorUrl": "https://kira-hai.net/kitamura-eiki",
+            "role_name": "吉良イヅル",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "臼井琢也",
+            "sourceActorUrl": "https://kira-hai.net/usui-takuya",
+            "role_name": "斑目一角",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "齋藤久美子",
+            "sourceActorUrl": null,
+            "role_name": "四楓院夜一",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "鈴木省吾",
+            "sourceActorUrl": "https://kira-hai.net/shogo-suzuki",
+            "role_name": "更木剣八",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "笠原弘子",
+            "sourceActorUrl": null,
+            "role_name": "卯ノ花烈",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "関根あすか",
+            "sourceActorUrl": null,
+            "role_name": "砕蜂",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "郷本直也",
+            "sourceActorUrl": "https://kira-hai.net/gomoto-naoya",
+            "role_name": "檜佐木修兵",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "倉貫匡弘",
+            "sourceActorUrl": "https://kira-hai.net/kuranuki-masahiro",
+            "role_name": "東仙要",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "井上晴美",
+            "sourceActorUrl": null,
+            "role_name": "松本乱菊",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "村上耕平",
+            "sourceActorUrl": "https://kira-hai.net/murakami-kohei",
+            "role_name": "山田花太郎",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "立花拓也",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "加藤学",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "末吉司弥",
+            "sourceActorUrl": "https://kira-hai.net/sueyoshi-kazuya",
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "安田裕",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "栗原功平",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "熊倉功",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "岩下政之",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "篠原辰也",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          }
+        ],
+        "unparsed": []
+      },
+      "source": {
+        "sourceUrl": "https://kira-hai.net/bleach2008-2",
+        "title": "ROCK MUSICAL BLEACH the LIVE “卍解SHOW code:002” (2008)",
+        "scheduleLines": [
+          "2008年3月27日-31日 新宿コマ劇場"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "伊阪達也",
+            "sourceActorUrl": "https://kira-hai.net/isaka-tatsuya",
+            "role_name": "黒崎一護",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "佐藤美貴",
+            "sourceActorUrl": null,
+            "role_name": "朽木ルキア",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "森山栄治",
+            "sourceActorUrl": "https://kira-hai.net/moriyama-eiji",
+            "role_name": "阿散井恋次",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "永山たかし",
+            "sourceActorUrl": "https://kira-hai.net/nagayama-takashi",
+            "role_name": "日番谷冬獅郎",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "大口兼悟",
+            "sourceActorUrl": "https://kira-hai.net/oguchi-kengo",
+            "role_name": "藍染惣右介",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "土屋裕一",
+            "sourceActorUrl": "https://kira-hai.net/tsuchiya-yuichi",
+            "role_name": "市丸ギン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "林修司",
+            "sourceActorUrl": "https://kira-hai.net/hayashi-shuji",
+            "role_name": "朽木白哉",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "齊藤来未子",
+            "sourceActorUrl": null,
+            "role_name": "雛森桃",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "北村栄基",
+            "sourceActorUrl": "https://kira-hai.net/kitamura-eiki",
+            "role_name": "吉良イヅル",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "臼井琢也",
+            "sourceActorUrl": "https://kira-hai.net/usui-takuya",
+            "role_name": "斑目一角",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "齋藤久美子",
+            "sourceActorUrl": null,
+            "role_name": "四楓院夜一",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "鈴木省吾",
+            "sourceActorUrl": "https://kira-hai.net/shogo-suzuki",
+            "role_name": "更木剣八",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "笠原弘子",
+            "sourceActorUrl": null,
+            "role_name": "卯ノ花烈",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "関根あすか",
+            "sourceActorUrl": null,
+            "role_name": "砕蜂",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "郷本直也",
+            "sourceActorUrl": "https://kira-hai.net/gomoto-naoya",
+            "role_name": "檜佐木修兵",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "倉貫匡弘",
+            "sourceActorUrl": "https://kira-hai.net/kuranuki-masahiro",
+            "role_name": "東仙要",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "井上晴美",
+            "sourceActorUrl": null,
+            "role_name": "松本乱菊",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "村上耕平",
+            "sourceActorUrl": "https://kira-hai.net/murakami-kohei",
+            "role_name": "山田花太郎",
+            "cast_group": null
+          }
+        ],
+        "unparsed": [],
+        "creditOnly": {
+          "group": "アンサンブル",
+          "names": [
+            "立花拓也",
+            "加藤学",
+            "末吉司弥",
+            "安田裕",
+            "栗原功平",
+            "熊倉功",
+            "岩下政之",
+            "篠原辰也"
+          ]
+        }
+      },
+      "transformations": [],
+      "stage": {
+        "workUrl": "https://kira-hai.net/bleach2008-2",
+        "key": "d4498515e2d2839ef414000c5a01e87623c859e73e45e40d4bddedc51ee41630",
+        "items": [
+          {
+            "source_actor_name": "佐藤美貴",
+            "source_actor_url": null,
+            "source_work_title": "ROCK MUSICAL BLEACH the LIVE “卍解SHOW code:002” (2008)",
+            "source_year": 2008,
+            "source_role_raw": "朽木ルキア",
+            "source_role_names": [
+              "朽木ルキア"
+            ],
+            "source_cast_group": null,
+            "source_order": 2,
+            "source_credit_key": "90d4d38c64e8b2b3b680",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bleach2008-2",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "f094a4769b40b7a5207f1749463ff851263b3f8cbe9cb55124a821f52bf12e4c",
+              "review_fingerprint": "0abf2d8d250185f5912db0b152951786093af7c03bcf996749c836fbc9f13237",
+              "snapshot_fingerprint": "8e36b78416d771a3eda3cda45a836a50d1291e2d5a514f1ed33ab9b2ec601f62",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "b1daf3bd-532c-4716-855e-450f1b4c14f9",
+            "matched_play_id": "81e875c3-d68c-4b83-a807-7a2b9bda80fe",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "森山栄治",
+            "source_actor_url": "https://kira-hai.net/moriyama-eiji",
+            "source_work_title": "ROCK MUSICAL BLEACH the LIVE “卍解SHOW code:002” (2008)",
+            "source_year": 2008,
+            "source_role_raw": "阿散井恋次",
+            "source_role_names": [
+              "阿散井恋次"
+            ],
+            "source_cast_group": null,
+            "source_order": 3,
+            "source_credit_key": "4a3a66f6ee8253582072",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bleach2008-2",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "f094a4769b40b7a5207f1749463ff851263b3f8cbe9cb55124a821f52bf12e4c",
+              "review_fingerprint": "0abf2d8d250185f5912db0b152951786093af7c03bcf996749c836fbc9f13237",
+              "snapshot_fingerprint": "8e36b78416d771a3eda3cda45a836a50d1291e2d5a514f1ed33ab9b2ec601f62",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "ef829c1f-3584-4e63-982c-d66981097c6c",
+            "matched_play_id": "81e875c3-d68c-4b83-a807-7a2b9bda80fe",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "永山たかし",
+            "source_actor_url": "https://kira-hai.net/nagayama-takashi",
+            "source_work_title": "ROCK MUSICAL BLEACH the LIVE “卍解SHOW code:002” (2008)",
+            "source_year": 2008,
+            "source_role_raw": "日番谷冬獅郎",
+            "source_role_names": [
+              "日番谷冬獅郎"
+            ],
+            "source_cast_group": null,
+            "source_order": 4,
+            "source_credit_key": "b2afd9529987f8b4d860",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bleach2008-2",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "f094a4769b40b7a5207f1749463ff851263b3f8cbe9cb55124a821f52bf12e4c",
+              "review_fingerprint": "0abf2d8d250185f5912db0b152951786093af7c03bcf996749c836fbc9f13237",
+              "snapshot_fingerprint": "8e36b78416d771a3eda3cda45a836a50d1291e2d5a514f1ed33ab9b2ec601f62",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "b969d00a-d2db-483c-994c-c1339fad5048",
+            "matched_play_id": "81e875c3-d68c-4b83-a807-7a2b9bda80fe",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "大口兼悟",
+            "source_actor_url": "https://kira-hai.net/oguchi-kengo",
+            "source_work_title": "ROCK MUSICAL BLEACH the LIVE “卍解SHOW code:002” (2008)",
+            "source_year": 2008,
+            "source_role_raw": "藍染惣右介",
+            "source_role_names": [
+              "藍染惣右介"
+            ],
+            "source_cast_group": null,
+            "source_order": 5,
+            "source_credit_key": "c21e729d310f43471ae7",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bleach2008-2",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "f094a4769b40b7a5207f1749463ff851263b3f8cbe9cb55124a821f52bf12e4c",
+              "review_fingerprint": "0abf2d8d250185f5912db0b152951786093af7c03bcf996749c836fbc9f13237",
+              "snapshot_fingerprint": "8e36b78416d771a3eda3cda45a836a50d1291e2d5a514f1ed33ab9b2ec601f62",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "ca5d2e02-dda6-425a-9944-ae55e5363e94",
+            "matched_play_id": "81e875c3-d68c-4b83-a807-7a2b9bda80fe",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "土屋裕一",
+            "source_actor_url": "https://kira-hai.net/tsuchiya-yuichi",
+            "source_work_title": "ROCK MUSICAL BLEACH the LIVE “卍解SHOW code:002” (2008)",
+            "source_year": 2008,
+            "source_role_raw": "市丸ギン",
+            "source_role_names": [
+              "市丸ギン"
+            ],
+            "source_cast_group": null,
+            "source_order": 6,
+            "source_credit_key": "49146c4e4599f7eb61ba",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bleach2008-2",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://ameblo.jp/pnish-tuti/entry-12125902238.html",
+                  "checkedAt": "2026-10-18T18:16:00.213Z",
+                  "note": "本人の2016年の改名告知で土屋裕一から土屋佑壱への変更を確認。"
+                }
+              ],
+              "source_fingerprint": "f094a4769b40b7a5207f1749463ff851263b3f8cbe9cb55124a821f52bf12e4c",
+              "review_fingerprint": "0abf2d8d250185f5912db0b152951786093af7c03bcf996749c836fbc9f13237",
+              "snapshot_fingerprint": "8e36b78416d771a3eda3cda45a836a50d1291e2d5a514f1ed33ab9b2ec601f62",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "8ae8ecdb-55ec-4f9e-b977-57ac48dc3aa2",
+            "matched_play_id": "81e875c3-d68c-4b83-a807-7a2b9bda80fe",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "林修司",
+            "source_actor_url": "https://kira-hai.net/hayashi-shuji",
+            "source_work_title": "ROCK MUSICAL BLEACH the LIVE “卍解SHOW code:002” (2008)",
+            "source_year": 2008,
+            "source_role_raw": "朽木白哉",
+            "source_role_names": [
+              "朽木白哉"
+            ],
+            "source_cast_group": null,
+            "source_order": 7,
+            "source_credit_key": "6ee3c16b2b6b5e0d5f6a",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bleach2008-2",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "f094a4769b40b7a5207f1749463ff851263b3f8cbe9cb55124a821f52bf12e4c",
+              "review_fingerprint": "0abf2d8d250185f5912db0b152951786093af7c03bcf996749c836fbc9f13237",
+              "snapshot_fingerprint": "8e36b78416d771a3eda3cda45a836a50d1291e2d5a514f1ed33ab9b2ec601f62",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "bb3ca19c-569f-4f18-8f7b-06ab8580dd67",
+            "matched_play_id": "81e875c3-d68c-4b83-a807-7a2b9bda80fe",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "齊藤来未子",
+            "source_actor_url": null,
+            "source_work_title": "ROCK MUSICAL BLEACH the LIVE “卍解SHOW code:002” (2008)",
+            "source_year": 2008,
+            "source_role_raw": "雛森桃",
+            "source_role_names": [
+              "雛森桃"
+            ],
+            "source_cast_group": null,
+            "source_order": 8,
+            "source_credit_key": "378a34d35db5e4f56f67",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bleach2008-2",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "f094a4769b40b7a5207f1749463ff851263b3f8cbe9cb55124a821f52bf12e4c",
+              "review_fingerprint": "0abf2d8d250185f5912db0b152951786093af7c03bcf996749c836fbc9f13237",
+              "snapshot_fingerprint": "8e36b78416d771a3eda3cda45a836a50d1291e2d5a514f1ed33ab9b2ec601f62",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "e59c35c6-c196-45a5-8a42-25ccef5ab1d9",
+            "matched_play_id": "81e875c3-d68c-4b83-a807-7a2b9bda80fe",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "北村栄基",
+            "source_actor_url": "https://kira-hai.net/kitamura-eiki",
+            "source_work_title": "ROCK MUSICAL BLEACH the LIVE “卍解SHOW code:002” (2008)",
+            "source_year": 2008,
+            "source_role_raw": "吉良イヅル",
+            "source_role_names": [
+              "吉良イヅル"
+            ],
+            "source_cast_group": null,
+            "source_order": 9,
+            "source_credit_key": "b22caf3f210f5899d273",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bleach2008-2",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "f094a4769b40b7a5207f1749463ff851263b3f8cbe9cb55124a821f52bf12e4c",
+              "review_fingerprint": "0abf2d8d250185f5912db0b152951786093af7c03bcf996749c836fbc9f13237",
+              "snapshot_fingerprint": "8e36b78416d771a3eda3cda45a836a50d1291e2d5a514f1ed33ab9b2ec601f62",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "af3d1394-3568-4e36-8656-1ef1e7ecc6c8",
+            "matched_play_id": "81e875c3-d68c-4b83-a807-7a2b9bda80fe",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "臼井琢也",
+            "source_actor_url": "https://kira-hai.net/usui-takuya",
+            "source_work_title": "ROCK MUSICAL BLEACH the LIVE “卍解SHOW code:002” (2008)",
+            "source_year": 2008,
+            "source_role_raw": "斑目一角",
+            "source_role_names": [
+              "斑目一角"
+            ],
+            "source_cast_group": null,
+            "source_order": 10,
+            "source_credit_key": "f5acacef79f76b0ba321",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bleach2008-2",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "f094a4769b40b7a5207f1749463ff851263b3f8cbe9cb55124a821f52bf12e4c",
+              "review_fingerprint": "0abf2d8d250185f5912db0b152951786093af7c03bcf996749c836fbc9f13237",
+              "snapshot_fingerprint": "8e36b78416d771a3eda3cda45a836a50d1291e2d5a514f1ed33ab9b2ec601f62",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "649de813-db1a-422b-82c0-8a483456108e",
+            "matched_play_id": "81e875c3-d68c-4b83-a807-7a2b9bda80fe",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "齋藤久美子",
+            "source_actor_url": null,
+            "source_work_title": "ROCK MUSICAL BLEACH the LIVE “卍解SHOW code:002” (2008)",
+            "source_year": 2008,
+            "source_role_raw": "四楓院夜一",
+            "source_role_names": [
+              "四楓院夜一"
+            ],
+            "source_cast_group": null,
+            "source_order": 11,
+            "source_credit_key": "204650279651933bc202",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bleach2008-2",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bleach2007",
+                  "checkedAt": "2026-10-18T18:13:41.484Z",
+                  "note": "2007年1月公演の四楓院夜一役。"
+                },
+                {
+                  "url": "https://kira-hai.net/bleach2008",
+                  "checkedAt": "2026-10-18T18:13:44.261Z",
+                  "note": "2008年3月THE ALLの四楓院夜一役。"
+                },
+                {
+                  "url": "https://kira-hai.net/bleach2008-2",
+                  "checkedAt": "2026-10-18T18:13:46.952Z",
+                  "note": "2008年3月code:002の四楓院夜一役。"
+                },
+                {
+                  "url": "https://www1.gcenter-hyogo.jp/contents_parts/ConcertDetail.aspx?kid=4196112501&sid=0000000005",
+                  "checkedAt": "2026-10-18T18:16:03.020Z",
+                  "note": "2007年春公演の会場公式は齊藤来未子と齋藤久美子を別々に掲載。別人として維持。"
+                },
+                {
+                  "url": "https://g-rockets.jp/information/grockets2015/",
+                  "checkedAt": "2026-10-18T18:16:16.721Z",
+                  "note": "G-Rocketsの2015年自主公演に同名のパフォーマー。基本属性や現在所属の採用根拠にはしない。"
+                }
+              ],
+              "source_fingerprint": "f094a4769b40b7a5207f1749463ff851263b3f8cbe9cb55124a821f52bf12e4c",
+              "review_fingerprint": "0abf2d8d250185f5912db0b152951786093af7c03bcf996749c836fbc9f13237",
+              "snapshot_fingerprint": "8e36b78416d771a3eda3cda45a836a50d1291e2d5a514f1ed33ab9b2ec601f62",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "c2245aaf-85e6-46b1-82ab-5256dee56efe",
+            "matched_play_id": "81e875c3-d68c-4b83-a807-7a2b9bda80fe",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "鈴木省吾",
+            "source_actor_url": "https://kira-hai.net/shogo-suzuki",
+            "source_work_title": "ROCK MUSICAL BLEACH the LIVE “卍解SHOW code:002” (2008)",
+            "source_year": 2008,
+            "source_role_raw": "更木剣八",
+            "source_role_names": [
+              "更木剣八"
+            ],
+            "source_cast_group": null,
+            "source_order": 12,
+            "source_credit_key": "03ad6cc91b4681113b4a",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bleach2008-2",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "f094a4769b40b7a5207f1749463ff851263b3f8cbe9cb55124a821f52bf12e4c",
+              "review_fingerprint": "0abf2d8d250185f5912db0b152951786093af7c03bcf996749c836fbc9f13237",
+              "snapshot_fingerprint": "8e36b78416d771a3eda3cda45a836a50d1291e2d5a514f1ed33ab9b2ec601f62",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "ffaf1f30-7aa9-46f5-bb74-66a9a0253cdb",
+            "matched_play_id": "81e875c3-d68c-4b83-a807-7a2b9bda80fe",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "笠原弘子",
+            "source_actor_url": null,
+            "source_work_title": "ROCK MUSICAL BLEACH the LIVE “卍解SHOW code:002” (2008)",
+            "source_year": 2008,
+            "source_role_raw": "卯ノ花烈",
+            "source_role_names": [
+              "卯ノ花烈"
+            ],
+            "source_cast_group": null,
+            "source_order": 13,
+            "source_credit_key": "241cd39dd237a5da1f38",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bleach2008-2",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "f094a4769b40b7a5207f1749463ff851263b3f8cbe9cb55124a821f52bf12e4c",
+              "review_fingerprint": "0abf2d8d250185f5912db0b152951786093af7c03bcf996749c836fbc9f13237",
+              "snapshot_fingerprint": "8e36b78416d771a3eda3cda45a836a50d1291e2d5a514f1ed33ab9b2ec601f62",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "1ad06b98-35e0-4f56-84b1-945760da617e",
+            "matched_play_id": "81e875c3-d68c-4b83-a807-7a2b9bda80fe",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "関根あすか",
+            "source_actor_url": null,
+            "source_work_title": "ROCK MUSICAL BLEACH the LIVE “卍解SHOW code:002” (2008)",
+            "source_year": 2008,
+            "source_role_raw": "砕蜂",
+            "source_role_names": [
+              "砕蜂"
+            ],
+            "source_cast_group": null,
+            "source_order": 14,
+            "source_credit_key": "9595c45ac58ce2609a55",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bleach2008-2",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "f094a4769b40b7a5207f1749463ff851263b3f8cbe9cb55124a821f52bf12e4c",
+              "review_fingerprint": "0abf2d8d250185f5912db0b152951786093af7c03bcf996749c836fbc9f13237",
+              "snapshot_fingerprint": "8e36b78416d771a3eda3cda45a836a50d1291e2d5a514f1ed33ab9b2ec601f62",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "d1f7d25f-27ee-43b7-9455-056cfcb063c5",
+            "matched_play_id": "81e875c3-d68c-4b83-a807-7a2b9bda80fe",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "郷本直也",
+            "source_actor_url": "https://kira-hai.net/gomoto-naoya",
+            "source_work_title": "ROCK MUSICAL BLEACH the LIVE “卍解SHOW code:002” (2008)",
+            "source_year": 2008,
+            "source_role_raw": "檜佐木修兵",
+            "source_role_names": [
+              "檜佐木修兵"
+            ],
+            "source_cast_group": null,
+            "source_order": 15,
+            "source_credit_key": "937efaa5d7c39097dea6",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bleach2008-2",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "f094a4769b40b7a5207f1749463ff851263b3f8cbe9cb55124a821f52bf12e4c",
+              "review_fingerprint": "0abf2d8d250185f5912db0b152951786093af7c03bcf996749c836fbc9f13237",
+              "snapshot_fingerprint": "8e36b78416d771a3eda3cda45a836a50d1291e2d5a514f1ed33ab9b2ec601f62",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "e57de3c5-d324-477b-b323-6009311c2ca3",
+            "matched_play_id": "81e875c3-d68c-4b83-a807-7a2b9bda80fe",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "倉貫匡弘",
+            "source_actor_url": "https://kira-hai.net/kuranuki-masahiro",
+            "source_work_title": "ROCK MUSICAL BLEACH the LIVE “卍解SHOW code:002” (2008)",
+            "source_year": 2008,
+            "source_role_raw": "東仙要",
+            "source_role_names": [
+              "東仙要"
+            ],
+            "source_cast_group": null,
+            "source_order": 16,
+            "source_credit_key": "43f64e8d23819f1cefaf",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bleach2008-2",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "f094a4769b40b7a5207f1749463ff851263b3f8cbe9cb55124a821f52bf12e4c",
+              "review_fingerprint": "0abf2d8d250185f5912db0b152951786093af7c03bcf996749c836fbc9f13237",
+              "snapshot_fingerprint": "8e36b78416d771a3eda3cda45a836a50d1291e2d5a514f1ed33ab9b2ec601f62",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "7e34cb6c-8a3e-4185-b594-1fd35ebf482e",
+            "matched_play_id": "81e875c3-d68c-4b83-a807-7a2b9bda80fe",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "井上晴美",
+            "source_actor_url": null,
+            "source_work_title": "ROCK MUSICAL BLEACH the LIVE “卍解SHOW code:002” (2008)",
+            "source_year": 2008,
+            "source_role_raw": "松本乱菊",
+            "source_role_names": [
+              "松本乱菊"
+            ],
+            "source_cast_group": null,
+            "source_order": 17,
+            "source_credit_key": "c802cc261ed8ee53acdc",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bleach2008-2",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "f094a4769b40b7a5207f1749463ff851263b3f8cbe9cb55124a821f52bf12e4c",
+              "review_fingerprint": "0abf2d8d250185f5912db0b152951786093af7c03bcf996749c836fbc9f13237",
+              "snapshot_fingerprint": "8e36b78416d771a3eda3cda45a836a50d1291e2d5a514f1ed33ab9b2ec601f62",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "9221709a-f34f-4aeb-a2e5-b9c73c39a652",
+            "matched_play_id": "81e875c3-d68c-4b83-a807-7a2b9bda80fe",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "村上耕平",
+            "source_actor_url": "https://kira-hai.net/murakami-kohei",
+            "source_work_title": "ROCK MUSICAL BLEACH the LIVE “卍解SHOW code:002” (2008)",
+            "source_year": 2008,
+            "source_role_raw": "山田花太郎",
+            "source_role_names": [
+              "山田花太郎"
+            ],
+            "source_cast_group": null,
+            "source_order": 18,
+            "source_credit_key": "8b4f4b1e0653b180e6c0",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bleach2008-2",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "f094a4769b40b7a5207f1749463ff851263b3f8cbe9cb55124a821f52bf12e4c",
+              "review_fingerprint": "0abf2d8d250185f5912db0b152951786093af7c03bcf996749c836fbc9f13237",
+              "snapshot_fingerprint": "8e36b78416d771a3eda3cda45a836a50d1291e2d5a514f1ed33ab9b2ec601f62",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "8c9aa53e-b649-4b0b-8a9f-234972fbf974",
+            "matched_play_id": "81e875c3-d68c-4b83-a807-7a2b9bda80fe",
+            "status": "pending"
+          }
+        ]
+      },
+      "records": [
+        {
+          "actor": {
+            "id": "b1daf3bd-532c-4716-855e-450f1b4c14f9",
+            "slug": "sato-miki",
+            "name": "佐藤美貴",
+            "kana": "さとう みき",
+            "profile": null,
+            "image_url": null,
+            "sns": null,
+            "gender": null,
+            "created_at": "2026-10-17T02:16:15.194411+00:00",
+            "updated_at": "2026-10-17T02:16:15.194411+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1980-04-15",
+            "height_cm": 156,
+            "blood_type": "AB",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "佐藤美貴",
+            "sourceActorUrl": null,
+            "role_name": "朽木ルキア",
+            "cast_group": null
+          },
+          "sourceCreditKey": "90d4d38c64e8b2b3b680",
+          "sourceOrder": 2
+        },
+        {
+          "actor": {
+            "id": "ef829c1f-3584-4e63-982c-d66981097c6c",
+            "slug": "moriyama-eiji",
+            "name": "森山 栄治",
+            "kana": "もりやま えいじ",
+            "profile": "長崎県出身の俳優・声優。演劇ユニットpnish副リーダー。",
+            "image_url": null,
+            "sns": {
+              "official": "https://ameblo.jp/pnish-sexyboy/entrylist.html"
+            },
+            "gender": "male",
+            "created_at": "2026-03-15T15:01:28.132163+00:00",
+            "updated_at": "2026-03-15T15:01:28.132163+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1976-10-03",
+            "height_cm": 177,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "森山栄治",
+            "sourceActorUrl": "https://kira-hai.net/moriyama-eiji",
+            "role_name": "阿散井恋次",
+            "cast_group": null
+          },
+          "sourceCreditKey": "4a3a66f6ee8253582072",
+          "sourceOrder": 3
+        },
+        {
+          "actor": {
+            "id": "b969d00a-d2db-483c-994c-c1339fad5048",
+            "slug": "nagayama-takashi",
+            "name": "永山 たかし",
+            "kana": "ながやま たかし",
+            "profile": "神奈川県出身の俳優・歌手。芸映プロダクション所属。",
+            "image_url": null,
+            "sns": {},
+            "gender": "male",
+            "created_at": "2026-03-16T16:52:24.467093+00:00",
+            "updated_at": "2026-03-16T16:52:24.467093+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1978-11-16",
+            "height_cm": 170,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "永山たかし",
+            "sourceActorUrl": "https://kira-hai.net/nagayama-takashi",
+            "role_name": "日番谷冬獅郎",
+            "cast_group": null
+          },
+          "sourceCreditKey": "b2afd9529987f8b4d860",
+          "sourceOrder": 4
+        },
+        {
+          "actor": {
+            "id": "ca5d2e02-dda6-425a-9944-ae55e5363e94",
+            "slug": "ohkuchi-kengo",
+            "name": "大口 兼悟",
+            "kana": "おおくち けんご",
+            "profile": "鹿児島県出身の元俳優。",
+            "image_url": null,
+            "sns": {},
+            "gender": "male",
+            "created_at": "2026-03-18T17:11:07.016071+00:00",
+            "updated_at": "2026-03-18T17:11:07.016071+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1981-11-09",
+            "height_cm": 180,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "大口兼悟",
+            "sourceActorUrl": "https://kira-hai.net/oguchi-kengo",
+            "role_name": "藍染惣右介",
+            "cast_group": null
+          },
+          "sourceCreditKey": "c21e729d310f43471ae7",
+          "sourceOrder": 5
+        },
+        {
+          "actor": {
+            "id": "8ae8ecdb-55ec-4f9e-b977-57ac48dc3aa2",
+            "slug": "tsuchiya-yuichi",
+            "name": "土屋 佑壱",
+            "kana": "つちや ゆういち",
+            "profile": "山梨県出身の俳優。演劇ユニットpnishメンバー。過去に土屋裕一名義での活動あり。",
+            "image_url": null,
+            "sns": {},
+            "gender": "male",
+            "created_at": "2026-03-16T16:20:11.964332+00:00",
+            "updated_at": "2026-03-16T16:20:11.964332+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1979-02-06",
+            "height_cm": 178,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "土屋裕一",
+            "sourceActorUrl": "https://kira-hai.net/tsuchiya-yuichi",
+            "role_name": "市丸ギン",
+            "cast_group": null
+          },
+          "sourceCreditKey": "49146c4e4599f7eb61ba",
+          "sourceOrder": 6
+        },
+        {
+          "actor": {
+            "id": "bb3ca19c-569f-4f18-8f7b-06ab8580dd67",
+            "slug": "hayashi-shuji",
+            "name": "林修司",
+            "kana": "はやししゅうじ",
+            "profile": null,
+            "image_url": null,
+            "sns": null,
+            "gender": "male",
+            "created_at": "2026-10-17T02:16:14.682867+00:00",
+            "updated_at": "2026-10-17T02:16:14.682867+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1979-11-27",
+            "height_cm": 174,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "林修司",
+            "sourceActorUrl": "https://kira-hai.net/hayashi-shuji",
+            "role_name": "朽木白哉",
+            "cast_group": null
+          },
+          "sourceCreditKey": "6ee3c16b2b6b5e0d5f6a",
+          "sourceOrder": 7
+        },
+        {
+          "actor": {
+            "id": "e59c35c6-c196-45a5-8a42-25ccef5ab1d9",
+            "slug": "saito-kumiko",
+            "name": "齊藤来未子",
+            "kana": "さいとう くみこ",
+            "profile": null,
+            "image_url": null,
+            "sns": null,
+            "gender": "female",
+            "created_at": "2026-10-17T07:26:25.598518+00:00",
+            "updated_at": "2026-10-17T07:26:25.598518+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": null,
+            "height_cm": null,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "齊藤来未子",
+            "sourceActorUrl": null,
+            "role_name": "雛森桃",
+            "cast_group": null
+          },
+          "sourceCreditKey": "378a34d35db5e4f56f67",
+          "sourceOrder": 8
+        },
+        {
+          "actor": {
+            "id": "af3d1394-3568-4e36-8656-1ef1e7ecc6c8",
+            "slug": "kitamura-eiki",
+            "name": "北村 栄基",
+            "kana": "きたむら えいき",
+            "profile": "熊本県出身の元俳優。実姉は女優・タレントの井上晴美。",
+            "image_url": null,
+            "sns": {},
+            "gender": "male",
+            "created_at": "2026-03-18T17:29:10.297703+00:00",
+            "updated_at": "2026-03-18T17:29:10.297703+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1981-02-03",
+            "height_cm": 178,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "北村栄基",
+            "sourceActorUrl": "https://kira-hai.net/kitamura-eiki",
+            "role_name": "吉良イヅル",
+            "cast_group": null
+          },
+          "sourceCreditKey": "b22caf3f210f5899d273",
+          "sourceOrder": 9
+        },
+        {
+          "actor": {
+            "id": "649de813-db1a-422b-82c0-8a483456108e",
+            "slug": "usui-takuya",
+            "name": "臼井琢也",
+            "kana": null,
+            "profile": null,
+            "image_url": null,
+            "sns": null,
+            "gender": null,
+            "created_at": "2026-10-17T02:16:15.386753+00:00",
+            "updated_at": "2026-10-17T02:16:15.386753+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1975-02-13",
+            "height_cm": 169,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": "Takuya Usui",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "臼井琢也",
+            "sourceActorUrl": "https://kira-hai.net/usui-takuya",
+            "role_name": "斑目一角",
+            "cast_group": null
+          },
+          "sourceCreditKey": "f5acacef79f76b0ba321",
+          "sourceOrder": 10
+        },
+        {
+          "actor": {
+            "id": "c2245aaf-85e6-46b1-82ab-5256dee56efe",
+            "slug": "performer-c2245aaf-85e6-46b1-82ab-5256dee56efe",
+            "name": "齋藤久美子",
+            "kana": null,
+            "profile": null,
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": null,
+            "height_cm": null,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "齋藤久美子",
+            "sourceActorUrl": null,
+            "role_name": "四楓院夜一",
+            "cast_group": null
+          },
+          "sourceCreditKey": "204650279651933bc202",
+          "sourceOrder": 11
+        },
+        {
+          "actor": {
+            "id": "ffaf1f30-7aa9-46f5-bb74-66a9a0253cdb",
+            "slug": "suzuki-shogo-1963",
+            "name": "鈴木省吾",
+            "kana": "すずき しょうご",
+            "profile": null,
+            "image_url": null,
+            "sns": null,
+            "gender": null,
+            "created_at": "2026-10-17T02:16:14.93465+00:00",
+            "updated_at": "2026-10-17T02:16:14.93465+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1963-04-12",
+            "height_cm": 178,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Shogo Suzuki",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "鈴木省吾",
+            "sourceActorUrl": "https://kira-hai.net/shogo-suzuki",
+            "role_name": "更木剣八",
+            "cast_group": null
+          },
+          "sourceCreditKey": "03ad6cc91b4681113b4a",
+          "sourceOrder": 12
+        },
+        {
+          "actor": {
+            "id": "1ad06b98-35e0-4f56-84b1-945760da617e",
+            "slug": "kasahara-hiroko",
+            "name": "笠原弘子",
+            "kana": "かさはら ひろこ",
+            "profile": null,
+            "image_url": null,
+            "sns": null,
+            "gender": null,
+            "created_at": "2026-10-17T06:21:57.323707+00:00",
+            "updated_at": "2026-10-17T06:21:57.323707+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": null,
+            "height_cm": 155,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Hiroko Kasahara",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "笠原弘子",
+            "sourceActorUrl": null,
+            "role_name": "卯ノ花烈",
+            "cast_group": null
+          },
+          "sourceCreditKey": "241cd39dd237a5da1f38",
+          "sourceOrder": 13
+        },
+        {
+          "actor": {
+            "id": "d1f7d25f-27ee-43b7-9455-056cfcb063c5",
+            "slug": "sekine-asuka",
+            "name": "関根あすか",
+            "kana": "セキネアスカ",
+            "profile": null,
+            "image_url": null,
+            "sns": null,
+            "gender": null,
+            "created_at": "2026-10-17T06:55:10.459314+00:00",
+            "updated_at": "2026-10-17T06:55:10.459314+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": null,
+            "height_cm": null,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "関根あすか",
+            "sourceActorUrl": null,
+            "role_name": "砕蜂",
+            "cast_group": null
+          },
+          "sourceCreditKey": "9595c45ac58ce2609a55",
+          "sourceOrder": 14
+        },
+        {
+          "actor": {
+            "id": "e57de3c5-d324-477b-b323-6009311c2ca3",
+            "slug": "gomoto-naoya",
+            "name": "郷本 直也",
+            "kana": "ごうもと なおや",
+            "profile": "大阪府出身の俳優。芸能事務所ナノスクエア代表取締役社長。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/GomotoNaoya",
+              "official": "https://ameblo.jp/naoya-g-sanpo/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-15T15:02:38.988564+00:00",
+            "updated_at": "2026-03-15T15:02:38.988564+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1980-04-25",
+            "height_cm": 186,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "郷本直也",
+            "sourceActorUrl": "https://kira-hai.net/gomoto-naoya",
+            "role_name": "檜佐木修兵",
+            "cast_group": null
+          },
+          "sourceCreditKey": "937efaa5d7c39097dea6",
+          "sourceOrder": 15
+        },
+        {
+          "actor": {
+            "id": "7e34cb6c-8a3e-4185-b594-1fd35ebf482e",
+            "slug": "kuranuki-masahiro",
+            "name": "倉貫匡弘",
+            "kana": null,
+            "profile": null,
+            "image_url": null,
+            "sns": null,
+            "gender": null,
+            "created_at": "2026-10-17T06:38:51.450225+00:00",
+            "updated_at": "2026-10-17T06:38:51.450225+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1982-12-20",
+            "height_cm": null,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Masahiro Kuranuki",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "倉貫匡弘",
+            "sourceActorUrl": "https://kira-hai.net/kuranuki-masahiro",
+            "role_name": "東仙要",
+            "cast_group": null
+          },
+          "sourceCreditKey": "43f64e8d23819f1cefaf",
+          "sourceOrder": 16
+        },
+        {
+          "actor": {
+            "id": "9221709a-f34f-4aeb-a2e5-b9c73c39a652",
+            "slug": "inoue-harumi",
+            "name": "井上晴美",
+            "kana": "イノウエハルミ",
+            "profile": null,
+            "image_url": null,
+            "sns": null,
+            "gender": "female",
+            "created_at": "2026-10-17T02:16:15.605779+00:00",
+            "updated_at": "2026-10-17T02:16:15.605779+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1974-09-23",
+            "height_cm": 164,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "井上晴美",
+            "sourceActorUrl": null,
+            "role_name": "松本乱菊",
+            "cast_group": null
+          },
+          "sourceCreditKey": "c802cc261ed8ee53acdc",
+          "sourceOrder": 17
+        },
+        {
+          "actor": {
+            "id": "8c9aa53e-b649-4b0b-8a9f-234972fbf974",
+            "slug": "murakami-kouhei",
+            "name": "村上耕平",
+            "kana": null,
+            "profile": null,
+            "image_url": null,
+            "sns": null,
+            "gender": null,
+            "created_at": "2026-10-17T02:33:40.946535+00:00",
+            "updated_at": "2026-10-17T02:33:40.946535+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": null,
+            "height_cm": 170,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": "Kouhei Murakami",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "村上耕平",
+            "sourceActorUrl": "https://kira-hai.net/murakami-kohei",
+            "role_name": "山田花太郎",
+            "cast_group": null
+          },
+          "sourceCreditKey": "8b4f4b1e0653b180e6c0",
+          "sourceOrder": 18
+        }
+      ],
+      "keptCasts": [
+        {
+          "id": "2efd9f79-f618-4737-a46f-7e9142eb7e0b",
+          "play_id": "81e875c3-d68c-4b83-a807-7a2b9bda80fe",
+          "actor_id": "f3b51663-9038-4d0f-a643-7a6a3f1aafca",
+          "role_name": "黒崎一護",
+          "is_starring": false,
+          "created_at": "2026-04-30T16:41:29.759491+00:00",
+          "billing_order": null,
+          "cast_group": null,
+          "role_name_kana": null,
+          "role_type": null,
+          "note": null,
+          "updated_at": "2026-04-30T16:41:29.759491+00:00"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://kira-hai.net/bleach2008-2",
+          "checkedAt": "2026-10-18T18:13:46.952Z",
+          "note": "第一参照先の当該公演の配役・日程・アンサンブル名を採用。"
+        },
+        {
+          "url": "https://mixi.jp/view_bbs.pl?comm_id=966418&id=7377975",
+          "checkedAt": "2026-10-18T18:16:11.956Z",
+          "note": "当時の告知転載に18名、THE ALLとライブの上演日が別々に掲載。アンサンブルの安田裕はキラハイを採用し、転載には記載がない差を残す。"
+        },
+        {
+          "url": "https://geiei.co.jp/talent/nagayamatakashi/",
+          "checkedAt": "2026-10-18T18:16:05.971Z",
+          "note": "事務所公式の永山たかし出演歴に2007年1月code:001と2008年3月THE ALL/code:002。"
+        }
+      ],
+      "sourceFingerprint": "f094a4769b40b7a5207f1749463ff851263b3f8cbe9cb55124a821f52bf12e4c"
+    }
+  ],
+  "prior": [
+    {
+      "oldCandidate": {
+        "id": "ae122d9d-350b-4d5d-9228-1f7d2a4926ea",
+        "source": "kira-hai",
+        "external_actor_id": null,
+        "external_play_id": null,
+        "source_actor_name": "齋藤久美子",
+        "source_actor_url": null,
+        "source_work_title": "ROCK MUSICAL BLEACH -The Dark of The Bleeding Moon- (2006)",
+        "source_work_url": "https://kira-hai.net/bleach2006-2",
+        "source_year": 2006,
+        "source_role_raw": "四楓院夜一",
+        "source_role_names": [
+          "四楓院夜一"
+        ],
+        "matched_actor_id": null,
+        "matched_play_id": "20c39daf-31ce-4a56-b892-7e58f6741c7a",
+        "accepted_cast_id": null,
+        "confidence": 0,
+        "status": "needs_review",
+        "note": null,
+        "scraped_at": "2026-10-17T02:15:45.301635+00:00",
+        "created_at": "2026-10-17T02:15:45.301635+00:00",
+        "updated_at": "2026-10-17T02:15:45.301635+00:00",
+        "accepted_at": null,
+        "rejected_at": null,
+        "source_cast_group": null,
+        "source_order": 12,
+        "source_credit_key": "204650279651933bc202",
+        "source_evidence": {
+          "links": [
+            {
+              "url": "https://kira-hai.net/bleach2006-2",
+              "note": "作品ページのキャスト欄"
+            }
+          ],
+          "identity": "new_actor_candidate",
+          "review_fingerprint": "4487a7257aad4292c4805c391ad921d9e185d324291b6310c532296d3fdd9230",
+          "source_fingerprint": "5340ba514071a7023c0eb4da1deeda9807346aab225b783209f8ebafa934bee4",
+          "snapshot_fingerprint": "a1f30679d4451c594092fef658bb03ebdcd3876381bc2ea6f7adb1447d24e8b2"
+        }
+      },
+      "play": {
+        "id": "20c39daf-31ce-4a56-b892-7e58f6741c7a",
+        "slug": "bleach2006-2",
+        "title": "ROCK MUSICAL BLEACH -The Dark of The Bleeding Moon-",
+        "franchise_id": "01e50fbd-8947-43b7-add7-f39c5f990046",
+        "summary": null,
+        "period": "2006年",
+        "venue": null,
+        "vod": {},
+        "genre": null,
+        "created_at": "2026-04-30T16:43:16.396129+00:00",
+        "updated_at": "2026-10-18T12:54:31.172512+00:00",
+        "tags": [],
+        "credits": [
+          {
+            "role": "アンサンブル",
+            "names": [
+              "立花拓也",
+              "加藤学",
+              "末吉司弥",
+              "安田裕",
+              "栗原功平",
+              "岩間健児"
+            ],
+            "is_core": false,
+            "sort_order": 1
+          }
+        ],
+        "related_franchise_ids": [],
+        "summary_en": null,
+        "title_en": null
+      },
+      "source": {
+        "sourceActorName": "齋藤久美子",
+        "sourceActorUrl": null,
+        "role_name": "四楓院夜一",
+        "cast_group": null
+      },
+      "evidence": [
+        {
+          "url": "https://kira-hai.net/bleach2006-2",
+          "checkedAt": "2026-10-18T18:16:33.285Z",
+          "note": "当該公演にも四楓院夜一役として掲載。新規俳優を接続し既存の候補IDを再利用。"
+        },
+        {
+          "url": "https://kira-hai.net/bleach2007",
+          "checkedAt": "2026-10-18T18:13:41.484Z",
+          "note": "2007年1月公演の四楓院夜一役。"
+        },
+        {
+          "url": "https://kira-hai.net/bleach2008",
+          "checkedAt": "2026-10-18T18:13:44.261Z",
+          "note": "2008年3月THE ALLの四楓院夜一役。"
+        },
+        {
+          "url": "https://kira-hai.net/bleach2008-2",
+          "checkedAt": "2026-10-18T18:13:46.952Z",
+          "note": "2008年3月code:002の四楓院夜一役。"
+        },
+        {
+          "url": "https://www1.gcenter-hyogo.jp/contents_parts/ConcertDetail.aspx?kid=4196112501&sid=0000000005",
+          "checkedAt": "2026-10-18T18:16:03.020Z",
+          "note": "2007年春公演の会場公式は齊藤来未子と齋藤久美子を別々に掲載。別人として維持。"
+        },
+        {
+          "url": "https://g-rockets.jp/information/grockets2015/",
+          "checkedAt": "2026-10-18T18:16:16.721Z",
+          "note": "G-Rocketsの2015年自主公演に同名のパフォーマー。基本属性や現在所属の採用根拠にはしない。"
+        }
+      ]
+    },
+    {
+      "oldCandidate": {
+        "id": "dca14918-14e9-40a0-94af-5c2b6d831491",
+        "source": "kira-hai",
+        "external_actor_id": null,
+        "external_play_id": null,
+        "source_actor_name": "齋藤久美子",
+        "source_actor_url": null,
+        "source_work_title": "ROCK MUSICAL BLEACH -No Clouds in the Blue Heavens- (2007)",
+        "source_work_url": "https://kira-hai.net/bleach2007-2",
+        "source_year": 2007,
+        "source_role_raw": "四楓院夜一",
+        "source_role_names": [
+          "四楓院夜一"
+        ],
+        "matched_actor_id": null,
+        "matched_play_id": "987cd0cc-f10c-4766-be8d-9031f6a0ce4a",
+        "accepted_cast_id": null,
+        "confidence": 0,
+        "status": "needs_review",
+        "note": null,
+        "scraped_at": "2026-10-17T02:36:11.286064+00:00",
+        "created_at": "2026-10-17T02:36:11.286064+00:00",
+        "updated_at": "2026-10-17T02:36:11.286064+00:00",
+        "accepted_at": null,
+        "rejected_at": null,
+        "source_cast_group": null,
+        "source_order": 11,
+        "source_credit_key": "204650279651933bc202",
+        "source_evidence": {
+          "links": [
+            {
+              "url": "https://kira-hai.net/bleach2007-2",
+              "note": "作品ページのキャスト欄"
+            }
+          ],
+          "identity": "new_actor_candidate",
+          "review_fingerprint": "741a955b35a7b9ff60e8fa845a317c9114835960d5ce4496cdd2810ee9f7ec77",
+          "source_fingerprint": "e6a3a6e7727318da5d5ba862804690dfed1386921ceda744d3a86028689f6689",
+          "snapshot_fingerprint": "d2d362d5fbea57a88d553b9ecb7e30ca9a4d02936d4908326d8792e5d134d706"
+        }
+      },
+      "play": {
+        "id": "987cd0cc-f10c-4766-be8d-9031f6a0ce4a",
+        "slug": "bleach2007-2",
+        "title": "ROCK MUSICAL BLEACH -No Clouds in the Blue Heavens-",
+        "franchise_id": "01e50fbd-8947-43b7-add7-f39c5f990046",
+        "summary": null,
+        "period": "2007年",
+        "venue": null,
+        "vod": {},
+        "genre": null,
+        "created_at": "2026-04-30T16:42:26.415229+00:00",
+        "updated_at": "2026-10-18T12:54:31.172512+00:00",
+        "tags": [],
+        "credits": [
+          {
+            "role": "アンサンブル",
+            "names": [
+              "立花拓也",
+              "加藤学",
+              "末吉司弥",
+              "安田裕",
+              "栗原功平",
+              "熊倉功"
+            ],
+            "is_core": false,
+            "sort_order": 1
+          }
+        ],
+        "related_franchise_ids": [],
+        "summary_en": null,
+        "title_en": null
+      },
+      "source": {
+        "sourceActorName": "齋藤久美子",
+        "sourceActorUrl": null,
+        "role_name": "四楓院夜一",
+        "cast_group": null
+      },
+      "evidence": [
+        {
+          "url": "https://kira-hai.net/bleach2007-2",
+          "checkedAt": "2026-10-18T18:16:36.025Z",
+          "note": "当該公演にも四楓院夜一役として掲載。新規俳優を接続し既存の候補IDを再利用。"
+        },
+        {
+          "url": "https://kira-hai.net/bleach2007",
+          "checkedAt": "2026-10-18T18:13:41.484Z",
+          "note": "2007年1月公演の四楓院夜一役。"
+        },
+        {
+          "url": "https://kira-hai.net/bleach2008",
+          "checkedAt": "2026-10-18T18:13:44.261Z",
+          "note": "2008年3月THE ALLの四楓院夜一役。"
+        },
+        {
+          "url": "https://kira-hai.net/bleach2008-2",
+          "checkedAt": "2026-10-18T18:13:46.952Z",
+          "note": "2008年3月code:002の四楓院夜一役。"
+        },
+        {
+          "url": "https://www1.gcenter-hyogo.jp/contents_parts/ConcertDetail.aspx?kid=4196112501&sid=0000000005",
+          "checkedAt": "2026-10-18T18:16:03.020Z",
+          "note": "2007年春公演の会場公式は齊藤来未子と齋藤久美子を別々に掲載。別人として維持。"
+        },
+        {
+          "url": "https://g-rockets.jp/information/grockets2015/",
+          "checkedAt": "2026-10-18T18:16:16.721Z",
+          "note": "G-Rocketsの2015年自主公演に同名のパフォーマー。基本属性や現在所属の採用根拠にはしない。"
+        }
+      ]
+    }
+  ],
+  "evidence": {
+    "sources": [
+      {
+        "name": "live",
+        "url": "https://kira-hai.net/bleach2007",
+        "status": 200,
+        "checkedAt": "2026-10-18T18:13:41.484Z",
+        "sha256": "e2878523351f7ea39a0af73c4555c46df4c4e4624b2327719dbcc5fbb65060fe",
+        "bytes": 54712
+      },
+      {
+        "name": "all",
+        "url": "https://kira-hai.net/bleach2008",
+        "status": 200,
+        "checkedAt": "2026-10-18T18:13:44.261Z",
+        "sha256": "855c45d42ded4bfc684a1215362ab3fe8c3df297d04e198c2dd8b1754cc4c855",
+        "bytes": 52308
+      },
+      {
+        "name": "dx",
+        "url": "https://kira-hai.net/bleach2008-2",
+        "status": 200,
+        "checkedAt": "2026-10-18T18:13:46.952Z",
+        "sha256": "a3b13837e24995ff3c7b0c49259d56b9308ee79e8c83210260f9e7b90b5f8405",
+        "bytes": 52802
+      },
+      {
+        "name": "official-live",
+        "url": "https://www.nelke.co.jp/stage/bleach_live_001/index.html",
+        "status": 404,
+        "checkedAt": "2026-10-18T18:13:49.698Z",
+        "sha256": "9f459ffdc60b703e4e911d97dd04208d3663913e61c039daf60b55ebf495d065",
+        "bytes": 17731
+      },
+      {
+        "name": "official-dx",
+        "url": "https://www.nelke.co.jp/stage/bleach_dx/index.html",
+        "status": 404,
+        "checkedAt": "2026-10-18T18:13:52.480Z",
+        "sha256": "9f459ffdc60b703e4e911d97dd04208d3663913e61c039daf60b55ebf495d065",
+        "bytes": 17731
+      },
+      {
+        "name": "changelog",
+        "url": "https://supabase.com/changelog.md",
+        "status": 200,
+        "checkedAt": "2026-10-18T18:13:55.807Z",
+        "sha256": "15b3d0d1a7dc3b3f2c0af4788e49acfdf2d2edbd2613f22de0705fa43b1cf58b",
+        "bytes": 102319
+      },
+      {
+        "name": "robots-kira",
+        "url": "https://kira-hai.net/robots.txt",
+        "status": 200,
+        "checkedAt": "2026-10-18T18:13:58.529Z",
+        "sha256": "f6ed0322f0e3df8c3b42b14df3254a90cca7b94a4172de91812952b3c7060b03",
+        "bytes": 231
+      },
+      {
+        "name": "robots-nelke",
+        "url": "https://www.nelke.co.jp/robots.txt",
+        "status": 404,
+        "checkedAt": "2026-10-18T18:14:01.233Z",
+        "sha256": "9f459ffdc60b703e4e911d97dd04208d3663913e61c039daf60b55ebf495d065",
+        "bytes": 17731
+      },
+      {
+        "name": "rename",
+        "url": "https://ameblo.jp/pnish-tuti/entry-12125902238.html",
+        "status": 200,
+        "checkedAt": "2026-10-18T18:16:00.213Z",
+        "sha256": "b52271a4e07d939e59380b0e3943f1009c02736b5fbf65cc93a97eb214f02c8b",
+        "bytes": 90094
+      },
+      {
+        "name": "venue",
+        "url": "https://www1.gcenter-hyogo.jp/contents_parts/ConcertDetail.aspx?kid=4196112501&sid=0000000005",
+        "status": 200,
+        "checkedAt": "2026-10-18T18:16:03.020Z",
+        "sha256": "4c9d0b359304396aa1968e41ec4776f1cbf54ff59487f3c48d10b2e3855d248c",
+        "bytes": 14301
+      },
+      {
+        "name": "geiei",
+        "url": "https://geiei.co.jp/talent/nagayamatakashi/",
+        "status": 200,
+        "checkedAt": "2026-10-18T18:16:05.971Z",
+        "sha256": "bce19e1cdd0af953bd101458eb00cc7de123596dbc73aed9441461cf34f8b442",
+        "bytes": 79372
+      },
+      {
+        "name": "guest",
+        "url": "https://mixi.jp/view_community.pl?from=cross_search&id=1518372",
+        "status": 200,
+        "checkedAt": "2026-10-18T18:16:08.835Z",
+        "sha256": "bdce09074d2f4d46317d7ed20fa5d5a0d89706f47b186b36c18394350462e513",
+        "bytes": 86745
+      },
+      {
+        "name": "dx-announcement",
+        "url": "https://mixi.jp/view_bbs.pl?comm_id=966418&id=7377975",
+        "status": 200,
+        "checkedAt": "2026-10-18T18:16:11.956Z",
+        "sha256": "cd4e4c4cc1643e73beb41a85551df99c02355d3e46a8cbbabe0da39e185b5b00",
+        "bytes": 93875
+      },
+      {
+        "name": "rockets",
+        "url": "https://g-rockets.jp/information/grockets2015/",
+        "status": 200,
+        "checkedAt": "2026-10-18T18:16:16.721Z",
+        "sha256": "390f6f87af894657c6dc19eced68955367fb8d10e1e499203d33fffd19011fb2",
+        "bytes": 56411
+      },
+      {
+        "name": "prior-dark",
+        "url": "https://kira-hai.net/bleach2006-2",
+        "status": 200,
+        "checkedAt": "2026-10-18T18:16:33.285Z",
+        "sha256": "b821d75614c9cb8c690f36519c9508b79d285e361580c3caa10b882edc13c901",
+        "bytes": 52467
+      },
+      {
+        "name": "prior-clouds",
+        "url": "https://kira-hai.net/bleach2007-2",
+        "status": 200,
+        "checkedAt": "2026-10-18T18:16:36.025Z",
+        "sha256": "68fc02522852a2d7ec9d7bd85a92f308e19d9cc5dab3be6145e6c82ad1370bd2",
+        "bytes": 52585
+      }
+    ],
+    "reviewStatus": "kira_hai_based_cross_checked_with_archived_announcements",
+    "notes": [
+      "3公演の元のID・URL・タイトル・主役フラグ・配役を保全。旧候補3件は採用済みとして全項目保全し再ステージしない。",
+      "齋藤久美子は四楓院夜一役として5公演へ同一の人物IDを接続。齊藤来未子と統合しない。",
+      "齋藤久美子の読み・生年月日・所属・英語名・紹介文は未確認のためnull。URLは読みを推測せず永続的なUUIDを使用。出演情報を人物確認の土台とする収録優先方針に基づく登録。",
+      "アンサンブルは5名・8名・8名を作品クレジットへ。既存の個人ページを削除・再作成しない。",
+      "旧ネルケ公演URLは404。一次資料で全員の役名まで確認済みとは主張しない。キラハイと当時のファン告知転載を照合し、後日の監査に出典差を保持。",
+      "日程の両端だけで連日出演と見せず、THE ALLは3月24〜26日・30日、code:002は3月27〜29日・31日。",
+      "今回あらすじ・英訳・現行VOD・プロフィール補完は対象外。"
+    ],
+    "unresolved": [
+      "齋藤久美子の人物基本情報と現在の活動。",
+      "DXアンサンブルの安田裕はキラハイにあり当時の転載にない。削除せず一次の公演プログラム等で後日監査。",
+      "2008年公演の全役名・001ゲスト出演日の一次資料による再確認。"
+    ]
+  },
+  "requestKey": "c8cf93fc2e1e8a04a8ffbeb583c33babb0f0648875ce99b28cf6dbf11e9f4b3d"
+}
