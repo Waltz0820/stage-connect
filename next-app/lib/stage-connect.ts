@@ -1,3 +1,4 @@
+import { performanceStartSortKey } from "./performance-period";
 import { normalizeVod } from './streaming-links';
 import { hasSupabaseEnv } from "./env";
 import { getEnglishActorName } from "./en-copy";
@@ -351,31 +352,7 @@ export const periodSortKey = (period?: string | null) => {
   return -1;
 };
 
-export const periodStartSortKey = (period?: string | null) => {
-  if (!period) return -1;
-
-  const fullDate = period.match(/(\d{4})\D{0,2}(\d{1,2})\D{0,2}(\d{1,2})/);
-  if (fullDate) {
-    const year = Number(fullDate[1]);
-    const month = Number(fullDate[2]);
-    const day = Number(fullDate[3]);
-    return year * 10000 + month * 100 + day;
-  }
-
-  const yearMonth = period.match(/(\d{4})\D{0,2}(\d{1,2})/);
-  if (yearMonth) {
-    const year = Number(yearMonth[1]);
-    const month = Number(yearMonth[2]);
-    return year * 10000 + month * 100;
-  }
-
-  const yearOnly = period.match(/(\d{4})/);
-  if (yearOnly) {
-    return Number(yearOnly[1]) * 10000;
-  }
-
-  return -1;
-};
+export const periodStartSortKey = performanceStartSortKey;
 
 export async function getPlayDetailBySlug(slug: string): Promise<PlayDetailData | null> {
   if (!hasSupabaseEnv) return null;

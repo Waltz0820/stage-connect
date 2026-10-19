@@ -2,6 +2,9 @@
 // We keep this lightweight on purpose so we can expand it as more series are translated.
 
 export const EN_EXACT_TERM_MAP: Record<string, string> = {
+  // BLEACH series metadata; spellings checked against VIZ and Studio Pierrot.
+  "久保帯人(集英社「週刊少年ジャンプ」連載)": "Tite Kubo (serialized in Shueisha's Weekly Shonen Jump)",
+  ぴえろ: "Pierrot",
   // BLEACH roles: official JP/EN character pages, checked 2026-10-17.
   // Provenance and spellings: research/bleach-role-translations.json.
   黒崎一護: "Ichigo Kurosaki",

@@ -1,3 +1,4 @@
+import { compactPerformancePeriod, getPerformanceStart } from "../../../../lib/performance-period";
 import type { Metadata } from "next";
 import { ProductionMark } from "../../../../components/ProductionMark";
 import Link from "next/link";
@@ -20,7 +21,7 @@ export const dynamicParams = true;
 
 const getStartYear = (periods: Array<string | null>) => {
   const years = periods
-    .map((period) => String(period ?? "").match(/(\d{4})/)?.[1])
+    .map((period) => getPerformanceStart(period)?.year)
     .filter(Boolean)
     .map((year) => Number(year));
 
@@ -28,32 +29,7 @@ const getStartYear = (periods: Array<string | null>) => {
   return Math.min(...years);
 };
 
-const compactTimelinePeriod = (period?: string | null) => {
-  if (!period) return "公開時期未定";
-
-  const slashDate = period.match(/(\d{4})\/(\d{1,2})\/(\d{1,2})/);
-  if (slashDate) {
-    const [, year, month] = slashDate;
-    return `${year}/${month.padStart(2, "0")}-`;
-  }
-
-  const jpDate = period.match(/(\d{4})年\s*(\d{1,2})月\s*(\d{1,2})日/);
-  if (jpDate) {
-    const [, year, month] = jpDate;
-    return `${year}/${month.padStart(2, "0")}-`;
-  }
-
-  const yearMonth = period.match(/(\d{4})\D{0,2}(\d{1,2})/);
-  if (yearMonth) {
-    const [, year, month] = yearMonth;
-    return `${year}/${month.padStart(2, "0")}-`;
-  }
-
-  const yearOnly = period.match(/(\d{4})/);
-  if (yearOnly) return `${yearOnly[1]}-`;
-
-  return period;
-};
+const compactTimelinePeriod = (period?: string | null) => compactPerformancePeriod(period, "ja");
 
 const hasVod = (vod?: Record<string, string> | null) => Boolean(vod?.dmm || vod?.danime || vod?.unext);
 
@@ -230,7 +206,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
                 <div className="timeline-dot" />
                 <div className="timeline-year-heading">
                   <span className="timeline-year">{compactTimelinePeriod(play.period)}</span>
-                  <span className="timeline-year-sub">公開時期</span>
+                  <span className="timeline-year-sub">公演時期</span>
                 </div>
 
                 <article className="catalog-card actor-timeline-card series-timeline-card" data-streaming-placement="series_timeline" data-play-id={play.id} data-play-slug={play.slug}>

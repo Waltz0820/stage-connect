@@ -24,8 +24,13 @@ const terms = require(join(directory, 'en-term-map.js'));
 const copy = require(join(directory, 'en-copy.js'));
 const routing = require(join(directory, 'locale-routing.js'));
 
+test('BLEACH series attribution and production company translate through the display pipeline', () => {
+  assert.equal(copy.translateDisplayTextEn('久保帯人（集英社「週刊少年ジャンプ」連載）'), "Tite Kubo (serialized in Shueisha's Weekly Shonen Jump)");
+  assert.equal(copy.translateDisplayTextEn('ぴえろ'), 'Pierrot');
+});
+
 test('every existing exact dictionary entry retains its translation', () => {
-  assert.equal(Object.keys(terms.EN_EXACT_TERM_MAP).length, 707);
+  assert.equal(Object.keys(terms.EN_EXACT_TERM_MAP).length, 709);
   for (const [source, target] of Object.entries(terms.EN_EXACT_TERM_MAP)) {
     assert.equal(terms.translateExactTermEn(source), target, source);
     assert.equal(terms.translateKnownTermsEn(source), target, source);
