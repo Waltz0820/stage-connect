@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checkedAt": "2026-10-19T14:24:23.872Z",
+  "checkedAt": "2026-10-19T14:52:12.058Z",
   "dateBasis": "created_at converted to Asia/Tokyo; updated_at has no automatic update trigger",
   "series": [
     {
@@ -1348,8 +1348,10 @@
       "slug": "moriarty-stage",
       "name": "舞台「憂国のモリアーティ」（モリステ）",
       "registeredDay": "2026-04-03",
-      "plays": 0,
-      "protected": false
+      "plays": 2,
+      "protected": false,
+      "castRows": 21,
+      "castCoverageNote": "初演2020年とcase 2 2021年の主要13人・21配役を当該公式で照合して収録。新規俳優4人、既存9人。初演の別枠8人は役名を保持して「その他出演」へ保存し、根拠なくアンサンブルと分類しない。case 2のアンサンブルは公式から書川勇輝を補完して7人。各公演のDancer4人も作品クレジット。モリステの未設定formatをstageへ補完。モリミュとは独立したIDを維持。総合監査・あらすじ・翻訳・配信等は後続。"
     },
     {
       "id": "def83f64-c1c3-48d4-82d6-d785af1b2eda",
