@@ -1,0 +1,1430 @@
+{
+  "version": 1,
+  "batchId": "moriarty2020-20261019-01",
+  "expectedFranchise": {
+    "id": "0ed0cd85-f73c-443e-a2d1-1321b00dff3d",
+    "name": "ミュージカル『憂国のモリアーティ』（モリミュ）",
+    "created_at": "2025-12-13T04:58:27.220101+00:00",
+    "updated_at": "2026-10-19T11:12:32.816674+00:00",
+    "slug": "moriarty",
+    "intro": null,
+    "description": "竹内良輔（構成）・三好輝（漫画）による人気サスペンス漫画を原作としたミュージカル作品。通称「モリミュ」。2019年に初演。コナン・ドイルの「シャーロック・ホームズ」シリーズを原案とし、ホームズの最大の宿敵であるモリアーティ教授を主人公に据え、階級制度に縛られた19世紀末の大英帝国を舞台に理想の国を作るための壮大な犯罪計画を描く。最大の魅力は、ピアノとヴァイオリンの生演奏という贅沢な音楽環境と、実力派キャスト陣による圧倒的な歌唱力。ダークで退廃的な世界観を極上の音楽劇として昇華させており、熱狂的な支持を集め続けている芸術性の高い大人気シリーズ。",
+    "origin_type": "漫画原作",
+    "origin_note": "原作：構成／竹内良輔 漫画／三好 輝「憂国のモリアーティ」（集英社「ジャンプSQ.」連載）",
+    "production_companies": [
+      "マーベラス"
+    ],
+    "related_franchise_ids": [
+      "de2dd05e-e2ae-461c-9c20-42de1dc019aa"
+    ],
+    "format": "musical",
+    "description_en": null,
+    "name_en": null
+  },
+  "actors": [
+    {
+      "actor": {
+        "id": "b6492062-c63d-4dea-99dd-de9e43a3a96e",
+        "slug": "daigo-cecile",
+        "name": "大湖せしる",
+        "kana": "だいご せしる",
+        "profile": "兵庫県出身の俳優。元宝塚歌劇団雪組。男役を経て2012年に女役へ転向し、2016年に退団。ミュージカル『憂国のモリアーティ』のアイリーン・アドラー役、ライブ・スペクタクル『NARUTO-ナルト-』の綱手役などを務める。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1983-03-08",
+        "height_cm": 166,
+        "blood_type": "A",
+        "birthday_label": null,
+        "name_en": "Daigo Cecile",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "大湖せしる",
+      "profileUrl": "https://www.orionsbelt.co.jp/wp/wp-content/uploads/7301b5c7ab0214f7a4b99cb7016e1226.pdf",
+      "evidence": [
+        {
+          "url": "https://www.orionsbelt.co.jp/wp/wp-content/uploads/7301b5c7ab0214f7a4b99cb7016e1226.pdf",
+          "checkedAt": "2026-10-19T11:26:05.118Z",
+          "note": "事務所に保存された本人プロフィールPDF。氏名・英字名・生年月日・出身地・身長・宝塚の経歴・当該配役を目視とテキストで照合。"
+        },
+        {
+          "url": "https://kira-hai.net/daigo-cecile",
+          "checkedAt": "2026-10-19T11:24:37.280Z",
+          "note": "第一参照先の読み・生年月日・血液型・出演歴。旧公式ドメインはDNS失効。"
+        }
+      ],
+      "notes": [
+        "身長は第一参照先167cmと事務所PDF166cmが不一致。本人を特定できる事務所PDFの166cmを採用し差を記録。",
+        "英字名はPDFのdaigo cecileを語頭のみ大文字に整形。姓名順はそのまま。",
+        "PDFは過去資料の可能性があるため現在所属を断定しない。第一参照先のフリーランスも現況として採用しない。性別は未登録。"
+      ]
+    }
+  ],
+  "works": [
+    {
+      "year": 2020,
+      "play": {
+        "id": "ca48d97c-412c-4944-8f7d-04e3fc56d19e",
+        "slug": "moriarty-musical-op2",
+        "title": "ミュージカル『憂国のモリアーティ』Op.2 -大英帝国の醜聞-",
+        "franchise_id": "0ed0cd85-f73c-443e-a2d1-1321b00dff3d",
+        "summary": null,
+        "period": "東京：2020年7月31日〜8月10日／京都：2020年8月14日〜16日",
+        "venue": "天王洲 銀河劇場／京都劇場",
+        "vod": null,
+        "genre": null,
+        "tags": [],
+        "credits": [
+          {
+            "role": "原作",
+            "names": [
+              "構成／竹内良輔・漫画／三好輝『憂国のモリアーティ』（集英社「ジャンプSQ.」連載）"
+            ],
+            "is_core": true,
+            "sort_order": 1
+          },
+          {
+            "role": "脚本・演出",
+            "names": [
+              "西森英行"
+            ],
+            "is_core": true,
+            "sort_order": 2
+          },
+          {
+            "role": "音楽",
+            "names": [
+              "ただすけ"
+            ],
+            "is_core": true,
+            "sort_order": 3
+          },
+          {
+            "role": "Piano",
+            "names": [
+              "境田桃子"
+            ],
+            "is_core": true,
+            "sort_order": 4
+          },
+          {
+            "role": "Violin",
+            "names": [
+              "林周雅"
+            ],
+            "is_core": true,
+            "sort_order": 5
+          },
+          {
+            "role": "アンサンブル",
+            "names": [
+              "安島萌",
+              "荒木栄人",
+              "伊地華鈴",
+              "大澤信児",
+              "上條駿",
+              "熊田愛里",
+              "佐々木駿也",
+              "白崎誠也",
+              "桃原華恋",
+              "永咲友梨",
+              "堀部佑介",
+              "松谷嵐"
+            ],
+            "is_core": false,
+            "sort_order": 6
+          }
+        ],
+        "related_franchise_ids": [],
+        "summary_en": null,
+        "title_en": null
+      },
+      "rawSource": {
+        "sourceUrl": "https://kira-hai.net/moriartymusical2020",
+        "title": "ミュージカル『憂国のモリアーティ』Op.2 -大英帝国の醜聞-",
+        "scheduleLines": [
+          "2020年7月31日-8月10日 天王洲 銀河劇場",
+          "2020年8月14日-16日 京都劇場"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "鈴木勝吾",
+            "sourceActorUrl": "https://kira-hai.net/suzuki-shogo",
+            "role_name": "ウィリアム・ジェームズ・モリアーティ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "平野良",
+            "sourceActorUrl": "https://kira-hai.net/hirano-ryo",
+            "role_name": "シャーロック・ホームズ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "久保田秀敏",
+            "sourceActorUrl": "https://kira-hai.net/kubota-hidetoshi",
+            "role_name": "アルバート・ジェームズ・モリアーティ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "山本一慶",
+            "sourceActorUrl": "https://kira-hai.net/yamamoto-ikkei",
+            "role_name": "ルイス・ジェームズ・モリアーティ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "井澤勇貴",
+            "sourceActorUrl": "https://kira-hai.net/izawa-yuki",
+            "role_name": "セバスチャン・モラン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "赤澤遼太郎",
+            "sourceActorUrl": "https://kira-hai.net/akazawa-ryotaro",
+            "role_name": "フレッド・ポーロック",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "鎌苅健太",
+            "sourceActorUrl": "https://kira-hai.net/kamakari-kenta",
+            "role_name": "ジョン・H・ワトソン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "七木奏音",
+            "sourceActorUrl": "https://kira-hai.net/nanaki-kanon",
+            "role_name": "ミス・ハドソン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "髙木俊",
+            "sourceActorUrl": "https://kira-hai.net/takagi-shun",
+            "role_name": "ジョージ・レストレード",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "大湖せしる",
+            "sourceActorUrl": "https://kira-hai.net/daigo-cecile",
+            "role_name": "アイリーン・アドラー",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "根本正勝",
+            "sourceActorUrl": "https://kira-hai.net/nemoto-masakazu",
+            "role_name": "マイクロフト・ホームズ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "境田桃子",
+            "sourceActorUrl": null,
+            "role_name": "Piano",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "林周雅",
+            "sourceActorUrl": null,
+            "role_name": "Violin",
+            "cast_group": null
+          }
+        ],
+        "unparsed": [
+          "安島萌",
+          "荒木栄人",
+          "伊地華鈴",
+          "大澤信児",
+          "上條駿",
+          "熊田愛里",
+          "佐々木駿也",
+          "白崎誠也",
+          "桃原華恋",
+          "永咲友梨",
+          "堀部佑介",
+          "松谷嵐"
+        ]
+      },
+      "source": {
+        "sourceUrl": "https://kira-hai.net/moriartymusical2020",
+        "title": "ミュージカル『憂国のモリアーティ』Op.2 -大英帝国の醜聞-",
+        "scheduleLines": [
+          "2020年7月31日-8月10日 天王洲 銀河劇場",
+          "2020年8月14日-16日 京都劇場"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "鈴木勝吾",
+            "sourceActorUrl": "https://kira-hai.net/suzuki-shogo",
+            "role_name": "ウィリアム・ジェームズ・モリアーティ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "平野良",
+            "sourceActorUrl": "https://kira-hai.net/hirano-ryo",
+            "role_name": "シャーロック・ホームズ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "久保田秀敏",
+            "sourceActorUrl": "https://kira-hai.net/kubota-hidetoshi",
+            "role_name": "アルバート・ジェームズ・モリアーティ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "山本一慶",
+            "sourceActorUrl": "https://kira-hai.net/yamamoto-ikkei",
+            "role_name": "ルイス・ジェームズ・モリアーティ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "井澤勇貴",
+            "sourceActorUrl": "https://kira-hai.net/izawa-yuki",
+            "role_name": "セバスチャン・モラン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "赤澤遼太郎",
+            "sourceActorUrl": "https://kira-hai.net/akazawa-ryotaro",
+            "role_name": "フレッド・ポーロック",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "鎌苅健太",
+            "sourceActorUrl": "https://kira-hai.net/kamakari-kenta",
+            "role_name": "ジョン・H・ワトソン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "七木奏音",
+            "sourceActorUrl": "https://kira-hai.net/nanaki-kanon",
+            "role_name": "ミス・ハドソン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "髙木俊",
+            "sourceActorUrl": "https://kira-hai.net/takagi-shun",
+            "role_name": "ジョージ・レストレード",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "大湖せしる",
+            "sourceActorUrl": "https://kira-hai.net/daigo-cecile",
+            "role_name": "アイリーン・アドラー",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "根本正勝",
+            "sourceActorUrl": "https://kira-hai.net/nemoto-masakazu",
+            "role_name": "マイクロフト・ホームズ",
+            "cast_group": null
+          }
+        ],
+        "unparsed": [],
+        "creditOnly": {
+          "ensemble": [
+            "安島萌",
+            "荒木栄人",
+            "伊地華鈴",
+            "大澤信児",
+            "上條駿",
+            "熊田愛里",
+            "佐々木駿也",
+            "白崎誠也",
+            "桃原華恋",
+            "永咲友梨",
+            "堀部佑介",
+            "松谷嵐"
+          ],
+          "musicians": [
+            {
+              "sourceActorName": "境田桃子",
+              "sourceActorUrl": null,
+              "role_name": "Piano",
+              "cast_group": null
+            },
+            {
+              "sourceActorName": "林周雅",
+              "sourceActorUrl": null,
+              "role_name": "Violin",
+              "cast_group": null
+            }
+          ],
+          "decision": "アンサンブルと明記された12人は作品クレジット。生演奏2人もクレジット。俳優ページや役名配役を作らない。"
+        }
+      },
+      "records": [
+        {
+          "actor": {
+            "id": "d9b2e659-3fc1-49be-a56f-80989b0908e8",
+            "slug": "suzuki-shogo",
+            "name": "鈴木 勝吾",
+            "kana": "すずき しょうご",
+            "profile": "1989年2月4日生まれ、神奈川県出身。『侍戦隊シンケンジャー』でデビュー。ミュージカル『薄桜鬼』風間千景役や『憂国のモリアーティ』ウィリアム役など、圧倒的な歌唱力と存在感を誇る。",
+            "image_url": "/actors/suzuki-shogo.jpg",
+            "sns": {
+              "x": "https://twitter.com/Shogo_Suzuki_",
+              "official": "https://smiling-days.com/"
+            },
+            "gender": "male",
+            "created_at": "2025-12-13T04:41:02.052969+00:00",
+            "updated_at": "2025-12-13T04:41:02.052969+00:00",
+            "tags": [
+              "歌唱力",
+              "熱演"
+            ],
+            "featured_play_slugs": [
+              "hakuoki-musical-saito",
+              "moriarty-musical"
+            ],
+            "birthday": "1989-02-04",
+            "height_cm": null,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "鈴木勝吾",
+            "sourceActorUrl": "https://kira-hai.net/suzuki-shogo",
+            "role_name": "ウィリアム・ジェームズ・モリアーティ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "d829f2950372ccabf693",
+          "sourceOrder": 1
+        },
+        {
+          "actor": {
+            "id": "3c446ea3-b325-40be-9ddd-7cf70a02d9a8",
+            "slug": "hirano-ryo",
+            "name": "平野 良",
+            "kana": "ひらの りょう",
+            "profile": "神奈川県出身の俳優・演出家。ウェーブマスター所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://twitter.com/hiraryo0520",
+              "official": "https://ameblo.jp/hirano-ryo/"
+            },
+            "gender": "male",
+            "created_at": "2025-12-13T04:41:02.052969+00:00",
+            "updated_at": "2025-12-13T04:41:02.052969+00:00",
+            "tags": [
+              "カメレオン俳優",
+              "脚本・演出"
+            ],
+            "featured_play_slugs": [],
+            "birthday": "1984-05-20",
+            "height_cm": 174,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "平野良",
+            "sourceActorUrl": "https://kira-hai.net/hirano-ryo",
+            "role_name": "シャーロック・ホームズ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "b61a7f2cae6e6816ecc2",
+          "sourceOrder": 2
+        },
+        {
+          "actor": {
+            "id": "8d56fd1c-aac4-4dab-8a9a-97ce29a68263",
+            "slug": "kubota-hidetoshi",
+            "name": "久保田 秀敏",
+            "kana": "くぼた ひでとし",
+            "profile": "福岡県出身の俳優。エイベックス・マネジメント所属。ミュージカル『テニスの王子様』2ndシーズン（仁王雅治役）や舞台『文豪とアルケミスト』（芥川龍之介役）、舞台『憂国のモリアーティ』（アルバート・ジェームズ・モリアーティ役）等に出演。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/kubotahidetoshi",
+              "official": "https://avexnet.jp/contents/KBTHT-XXXX-XXXX/profile",
+              "instagram": "https://www.instagram.com/hidetoshi_kubota"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:03:44.295565+00:00",
+            "updated_at": "2026-03-21T15:03:44.295565+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1987-01-12",
+            "height_cm": 175,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Fukuoka Prefecture. Affiliated with Avex Management. He appeared in the musical \"The Prince of Tennis\" 2nd season (as Masaharu Niou), the stage play \"Bungo and Alchemist\" (as Ryunosuke Akutagawa), and the stage play \"Moriarty the Patriot\" (as Albert James Moriarty).",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "久保田秀敏",
+            "sourceActorUrl": "https://kira-hai.net/kubota-hidetoshi",
+            "role_name": "アルバート・ジェームズ・モリアーティ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "a0885d29aa77a584fa48",
+          "sourceOrder": 3
+        },
+        {
+          "actor": {
+            "id": "4ae64c45-7503-468a-9771-c761c5bc785b",
+            "slug": "yamamoto-ikkei",
+            "name": "山本 一慶",
+            "kana": "やまもと いっけい",
+            "profile": "東京都出身の俳優・声優。アーティストジャパン所属。ミュージカル『テニスの王子様』2ndシーズン（大石秀一郎役）や、劇団『ドラマティカ』（氷鷹北斗役）、舞台『ジョーカー・ゲーム』シリーズ等に幅広く出演。近年では演出家としても活動の幅を広げ、同『ドラマティカ』シリーズ等の演出も手掛けている。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/IKKEI_YAMAMOTO",
+              "official": "https://ikkei-fc.jp/",
+              "instagram": "https://www.instagram.com/yamamoto_ikkei/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:03:44.295565+00:00",
+            "updated_at": "2026-03-21T15:03:44.295565+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1989-06-01",
+            "height_cm": 176,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor and voice actor from Tokyo. Affiliated with Artist Japan. He appeared in the musical \"The Prince of Tennis\" 2nd season (as Shuichiro Oishi), Gekidan \"Dramatica\" (as Hokuto Hidaka), and the stage play \"Joker Game\" series. In recent years, he has expanded his activities as a stage director, including directing for the \"Dramatica\" series.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "山本一慶",
+            "sourceActorUrl": "https://kira-hai.net/yamamoto-ikkei",
+            "role_name": "ルイス・ジェームズ・モリアーティ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "0d89586f54382ba76361",
+          "sourceOrder": 4
+        },
+        {
+          "actor": {
+            "id": "6500a821-d525-4ae7-921d-65ae5e1507dc",
+            "slug": "izawa-yuki",
+            "name": "井澤 勇貴",
+            "kana": "いざわ ゆうき",
+            "profile": "東京都出身の俳優。株式会社オレンジ所属。ミュージカル『新テニスの王子様』にて越前リョーガ役を務めている。その他の主な出演作として、舞台『おそ松さん on STAGE』（F6 おそ松役）、ミュージカル『憂国のモリアーティ』（セバスチャン・モラン役）、舞台『ブルーロック』（馬狼照英役）等の舞台作品がある。",
+            "image_url": null,
+            "sns": {
+              "x": "https://www.instagram.com/130yuki/",
+              "official": "https://orange-company.co.jp/actor/yukiuzawa/",
+              "instagram": "https://www.instagram.com/130yuki/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:15:49.295117+00:00",
+            "updated_at": "2026-03-21T15:15:49.295117+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1992-11-26",
+            "height_cm": 181,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Tokyo. Affiliated with Orange Co., Ltd. He plays the role of Ryoga Echizen in the musical \"The New Prince of Tennis\". His other major appearances include stage works such as the stage play \"Osomatsu-san on STAGE\" (as F6 Osomatsu), the musical \"Moriarty the Patriot\" (as Sebastian Moran), and the stage play \"BLUE LOCK\" (as Shoei Baro).",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "井澤勇貴",
+            "sourceActorUrl": "https://kira-hai.net/izawa-yuki",
+            "role_name": "セバスチャン・モラン",
+            "cast_group": null
+          },
+          "sourceCreditKey": "e6783bc6fe689b98f0bf",
+          "sourceOrder": 5
+        },
+        {
+          "actor": {
+            "id": "5d7c1452-21f1-4835-859d-d2319a9db2c6",
+            "slug": "akazawa-ryotaro",
+            "name": "赤澤遼太郎",
+            "kana": "あかざわりょうたろう",
+            "profile": null,
+            "image_url": null,
+            "sns": null,
+            "gender": null,
+            "created_at": "2026-10-17T08:00:21.084443+00:00",
+            "updated_at": "2026-10-17T08:00:21.084443+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1997-01-11",
+            "height_cm": 173,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "赤澤遼太郎",
+            "sourceActorUrl": "https://kira-hai.net/akazawa-ryotaro",
+            "role_name": "フレッド・ポーロック",
+            "cast_group": null
+          },
+          "sourceCreditKey": "a1ea081d251bbb6bd999",
+          "sourceOrder": 6
+        },
+        {
+          "actor": {
+            "id": "4cd1fc6f-6d9a-447c-8c06-a82626a6eb7a",
+            "slug": "kamakari-kenta",
+            "name": "鎌苅 健太",
+            "kana": "かまかり けんた",
+            "profile": "大阪府出身の俳優・声優・歌手。ドルチェスター所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/kenta_kamakari",
+              "instagram": "https://www.instagram.com/kenta_kamakari0217/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-20T20:04:56.888138+00:00",
+            "updated_at": "2026-03-20T20:04:56.888138+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1984-02-17",
+            "height_cm": 172,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "鎌苅健太",
+            "sourceActorUrl": "https://kira-hai.net/kamakari-kenta",
+            "role_name": "ジョン・H・ワトソン",
+            "cast_group": null
+          },
+          "sourceCreditKey": "d3b7febf1b299daf03cf",
+          "sourceOrder": 7
+        },
+        {
+          "actor": {
+            "id": "1a89e568-64d6-4826-9f8d-7b2836edf974",
+            "slug": "nanaki-kanon",
+            "name": "七木奏音",
+            "kana": "ななき かのん",
+            "profile": "俳優・声優。fennec所属。ミュージカル『憂国のモリアーティ』のミス・ハドソン役、『D4DJ』の新島衣舞紀役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-19T11:12:32.816674+00:00",
+            "updated_at": "2026-10-19T11:12:32.816674+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1997-02-07",
+            "height_cm": 162,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": "Nanaki Kanon",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "七木奏音",
+            "sourceActorUrl": "https://kira-hai.net/nanaki-kanon",
+            "role_name": "ミス・ハドソン",
+            "cast_group": null
+          },
+          "sourceCreditKey": "777ed96981c87bd02b1c",
+          "sourceOrder": 8
+        },
+        {
+          "actor": {
+            "id": "a0d65dd5-5e62-4b1d-89eb-25b4308e6eb3",
+            "slug": "takagi-shun",
+            "name": "髙木 俊",
+            "kana": "たかぎ しゅん",
+            "profile": "石川県育ちの俳優・声優。アメリカ・シカゴ生まれ。ドルチェスター所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/takagi__shun"
+            },
+            "gender": "male",
+            "created_at": "2026-03-16T17:04:17.31432+00:00",
+            "updated_at": "2026-03-16T17:04:17.31432+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1981-03-17",
+            "height_cm": 179,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "髙木俊",
+            "sourceActorUrl": "https://kira-hai.net/takagi-shun",
+            "role_name": "ジョージ・レストレード",
+            "cast_group": null
+          },
+          "sourceCreditKey": "ff70e8eccbcf26879352",
+          "sourceOrder": 9
+        },
+        {
+          "actor": {
+            "id": "b6492062-c63d-4dea-99dd-de9e43a3a96e",
+            "slug": "daigo-cecile",
+            "name": "大湖せしる",
+            "kana": "だいご せしる",
+            "profile": "兵庫県出身の俳優。元宝塚歌劇団雪組。男役を経て2012年に女役へ転向し、2016年に退団。ミュージカル『憂国のモリアーティ』のアイリーン・アドラー役、ライブ・スペクタクル『NARUTO-ナルト-』の綱手役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1983-03-08",
+            "height_cm": 166,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": "Daigo Cecile",
+            "profile_en": null,
+            "death_date": null,
+            "updated_at": "prepared-not-yet-inserted",
+            "created_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "大湖せしる",
+            "sourceActorUrl": "https://kira-hai.net/daigo-cecile",
+            "role_name": "アイリーン・アドラー",
+            "cast_group": null
+          },
+          "sourceCreditKey": "586fa6da1c2ffb0a85f4",
+          "sourceOrder": 10
+        },
+        {
+          "actor": {
+            "id": "5c69f634-6161-4e09-87b3-f1f0fd2386fd",
+            "slug": "nemoto-masakazu",
+            "name": "根本正勝",
+            "kana": "ねもと まさかず",
+            "profile": "俳優。『ROCK MUSICAL BLEACH』の浦原喜助役など、舞台・ミュージカルに出演。2024年の『Arrancar the Beginning』では志波海燕役も務めた。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-19T10:45:26.548927+00:00",
+            "updated_at": "2026-10-19T10:45:26.548927+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1979-04-27",
+            "height_cm": 173,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "根本正勝",
+            "sourceActorUrl": "https://kira-hai.net/nemoto-masakazu",
+            "role_name": "マイクロフト・ホームズ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "6e8976384c846143f2b4",
+          "sourceOrder": 11
+        }
+      ],
+      "stage": {
+        "workUrl": "https://kira-hai.net/moriartymusical2020",
+        "key": "0bc660202a10511308fd255cbd2e508c9614e2e264af5970cc0c516bc558369c",
+        "items": [
+          {
+            "source_actor_name": "鈴木勝吾",
+            "source_actor_url": "https://kira-hai.net/suzuki-shogo",
+            "source_work_title": "ミュージカル『憂国のモリアーティ』Op.2 -大英帝国の醜聞-",
+            "source_year": 2020,
+            "source_role_raw": "ウィリアム・ジェームズ・モリアーティ",
+            "source_role_names": [
+              "ウィリアム・ジェームズ・モリアーティ"
+            ],
+            "source_cast_group": null,
+            "source_order": 1,
+            "source_credit_key": "d829f2950372ccabf693",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/moriartymusical2020",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/moriartymusical2020",
+                  "checkedAt": "2026-10-19T11:24:22.706Z",
+                  "note": "第一参照先の当該公演から役付き11人・演奏2人・役名未記載12人・日程を抽出。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/moriarty/moriarty-2/cast.html",
+                  "checkedAt": "2026-10-19T11:24:25.571Z",
+                  "note": "公式の最終キャスト欄で11人と役名の組、演奏者、役名未記載12人の氏名と順序を確認。"
+                }
+              ],
+              "source_fingerprint": "57fc1c26e809e626c4fe6ff182198d29d73bae3b978ade060845c219d0621dce",
+              "review_fingerprint": "1f6a8473e5bacf95ba1e6741eaef0b1ccbf9a8c789782346774449d88174cb93",
+              "snapshot_fingerprint": "3b3f0b97305f295ed956752cd25feb64ed3ba179e49a3f30aadf65f16e72458c",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "d9b2e659-3fc1-49be-a56f-80989b0908e8",
+            "matched_play_id": "ca48d97c-412c-4944-8f7d-04e3fc56d19e",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "平野良",
+            "source_actor_url": "https://kira-hai.net/hirano-ryo",
+            "source_work_title": "ミュージカル『憂国のモリアーティ』Op.2 -大英帝国の醜聞-",
+            "source_year": 2020,
+            "source_role_raw": "シャーロック・ホームズ",
+            "source_role_names": [
+              "シャーロック・ホームズ"
+            ],
+            "source_cast_group": null,
+            "source_order": 2,
+            "source_credit_key": "b61a7f2cae6e6816ecc2",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/moriartymusical2020",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/moriartymusical2020",
+                  "checkedAt": "2026-10-19T11:24:22.706Z",
+                  "note": "第一参照先の当該公演から役付き11人・演奏2人・役名未記載12人・日程を抽出。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/moriarty/moriarty-2/cast.html",
+                  "checkedAt": "2026-10-19T11:24:25.571Z",
+                  "note": "公式の最終キャスト欄で11人と役名の組、演奏者、役名未記載12人の氏名と順序を確認。"
+                }
+              ],
+              "source_fingerprint": "57fc1c26e809e626c4fe6ff182198d29d73bae3b978ade060845c219d0621dce",
+              "review_fingerprint": "1f6a8473e5bacf95ba1e6741eaef0b1ccbf9a8c789782346774449d88174cb93",
+              "snapshot_fingerprint": "3b3f0b97305f295ed956752cd25feb64ed3ba179e49a3f30aadf65f16e72458c",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "3c446ea3-b325-40be-9ddd-7cf70a02d9a8",
+            "matched_play_id": "ca48d97c-412c-4944-8f7d-04e3fc56d19e",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "久保田秀敏",
+            "source_actor_url": "https://kira-hai.net/kubota-hidetoshi",
+            "source_work_title": "ミュージカル『憂国のモリアーティ』Op.2 -大英帝国の醜聞-",
+            "source_year": 2020,
+            "source_role_raw": "アルバート・ジェームズ・モリアーティ",
+            "source_role_names": [
+              "アルバート・ジェームズ・モリアーティ"
+            ],
+            "source_cast_group": null,
+            "source_order": 3,
+            "source_credit_key": "a0885d29aa77a584fa48",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/moriartymusical2020",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/moriartymusical2020",
+                  "checkedAt": "2026-10-19T11:24:22.706Z",
+                  "note": "第一参照先の当該公演から役付き11人・演奏2人・役名未記載12人・日程を抽出。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/moriarty/moriarty-2/cast.html",
+                  "checkedAt": "2026-10-19T11:24:25.571Z",
+                  "note": "公式の最終キャスト欄で11人と役名の組、演奏者、役名未記載12人の氏名と順序を確認。"
+                }
+              ],
+              "source_fingerprint": "57fc1c26e809e626c4fe6ff182198d29d73bae3b978ade060845c219d0621dce",
+              "review_fingerprint": "1f6a8473e5bacf95ba1e6741eaef0b1ccbf9a8c789782346774449d88174cb93",
+              "snapshot_fingerprint": "3b3f0b97305f295ed956752cd25feb64ed3ba179e49a3f30aadf65f16e72458c",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "8d56fd1c-aac4-4dab-8a9a-97ce29a68263",
+            "matched_play_id": "ca48d97c-412c-4944-8f7d-04e3fc56d19e",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "山本一慶",
+            "source_actor_url": "https://kira-hai.net/yamamoto-ikkei",
+            "source_work_title": "ミュージカル『憂国のモリアーティ』Op.2 -大英帝国の醜聞-",
+            "source_year": 2020,
+            "source_role_raw": "ルイス・ジェームズ・モリアーティ",
+            "source_role_names": [
+              "ルイス・ジェームズ・モリアーティ"
+            ],
+            "source_cast_group": null,
+            "source_order": 4,
+            "source_credit_key": "0d89586f54382ba76361",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/moriartymusical2020",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/moriartymusical2020",
+                  "checkedAt": "2026-10-19T11:24:22.706Z",
+                  "note": "第一参照先の当該公演から役付き11人・演奏2人・役名未記載12人・日程を抽出。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/moriarty/moriarty-2/cast.html",
+                  "checkedAt": "2026-10-19T11:24:25.571Z",
+                  "note": "公式の最終キャスト欄で11人と役名の組、演奏者、役名未記載12人の氏名と順序を確認。"
+                }
+              ],
+              "source_fingerprint": "57fc1c26e809e626c4fe6ff182198d29d73bae3b978ade060845c219d0621dce",
+              "review_fingerprint": "1f6a8473e5bacf95ba1e6741eaef0b1ccbf9a8c789782346774449d88174cb93",
+              "snapshot_fingerprint": "3b3f0b97305f295ed956752cd25feb64ed3ba179e49a3f30aadf65f16e72458c",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "4ae64c45-7503-468a-9771-c761c5bc785b",
+            "matched_play_id": "ca48d97c-412c-4944-8f7d-04e3fc56d19e",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "井澤勇貴",
+            "source_actor_url": "https://kira-hai.net/izawa-yuki",
+            "source_work_title": "ミュージカル『憂国のモリアーティ』Op.2 -大英帝国の醜聞-",
+            "source_year": 2020,
+            "source_role_raw": "セバスチャン・モラン",
+            "source_role_names": [
+              "セバスチャン・モラン"
+            ],
+            "source_cast_group": null,
+            "source_order": 5,
+            "source_credit_key": "e6783bc6fe689b98f0bf",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/moriartymusical2020",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/moriartymusical2020",
+                  "checkedAt": "2026-10-19T11:24:22.706Z",
+                  "note": "第一参照先の当該公演から役付き11人・演奏2人・役名未記載12人・日程を抽出。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/moriarty/moriarty-2/cast.html",
+                  "checkedAt": "2026-10-19T11:24:25.571Z",
+                  "note": "公式の最終キャスト欄で11人と役名の組、演奏者、役名未記載12人の氏名と順序を確認。"
+                }
+              ],
+              "source_fingerprint": "57fc1c26e809e626c4fe6ff182198d29d73bae3b978ade060845c219d0621dce",
+              "review_fingerprint": "1f6a8473e5bacf95ba1e6741eaef0b1ccbf9a8c789782346774449d88174cb93",
+              "snapshot_fingerprint": "3b3f0b97305f295ed956752cd25feb64ed3ba179e49a3f30aadf65f16e72458c",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "6500a821-d525-4ae7-921d-65ae5e1507dc",
+            "matched_play_id": "ca48d97c-412c-4944-8f7d-04e3fc56d19e",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "赤澤遼太郎",
+            "source_actor_url": "https://kira-hai.net/akazawa-ryotaro",
+            "source_work_title": "ミュージカル『憂国のモリアーティ』Op.2 -大英帝国の醜聞-",
+            "source_year": 2020,
+            "source_role_raw": "フレッド・ポーロック",
+            "source_role_names": [
+              "フレッド・ポーロック"
+            ],
+            "source_cast_group": null,
+            "source_order": 6,
+            "source_credit_key": "a1ea081d251bbb6bd999",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/moriartymusical2020",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/moriartymusical2020",
+                  "checkedAt": "2026-10-19T11:24:22.706Z",
+                  "note": "第一参照先の当該公演から役付き11人・演奏2人・役名未記載12人・日程を抽出。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/moriarty/moriarty-2/cast.html",
+                  "checkedAt": "2026-10-19T11:24:25.571Z",
+                  "note": "公式の最終キャスト欄で11人と役名の組、演奏者、役名未記載12人の氏名と順序を確認。"
+                }
+              ],
+              "source_fingerprint": "57fc1c26e809e626c4fe6ff182198d29d73bae3b978ade060845c219d0621dce",
+              "review_fingerprint": "1f6a8473e5bacf95ba1e6741eaef0b1ccbf9a8c789782346774449d88174cb93",
+              "snapshot_fingerprint": "3b3f0b97305f295ed956752cd25feb64ed3ba179e49a3f30aadf65f16e72458c",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "5d7c1452-21f1-4835-859d-d2319a9db2c6",
+            "matched_play_id": "ca48d97c-412c-4944-8f7d-04e3fc56d19e",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "鎌苅健太",
+            "source_actor_url": "https://kira-hai.net/kamakari-kenta",
+            "source_work_title": "ミュージカル『憂国のモリアーティ』Op.2 -大英帝国の醜聞-",
+            "source_year": 2020,
+            "source_role_raw": "ジョン・H・ワトソン",
+            "source_role_names": [
+              "ジョン・H・ワトソン"
+            ],
+            "source_cast_group": null,
+            "source_order": 7,
+            "source_credit_key": "d3b7febf1b299daf03cf",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/moriartymusical2020",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/moriartymusical2020",
+                  "checkedAt": "2026-10-19T11:24:22.706Z",
+                  "note": "第一参照先の当該公演から役付き11人・演奏2人・役名未記載12人・日程を抽出。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/moriarty/moriarty-2/cast.html",
+                  "checkedAt": "2026-10-19T11:24:25.571Z",
+                  "note": "公式の最終キャスト欄で11人と役名の組、演奏者、役名未記載12人の氏名と順序を確認。"
+                }
+              ],
+              "source_fingerprint": "57fc1c26e809e626c4fe6ff182198d29d73bae3b978ade060845c219d0621dce",
+              "review_fingerprint": "1f6a8473e5bacf95ba1e6741eaef0b1ccbf9a8c789782346774449d88174cb93",
+              "snapshot_fingerprint": "3b3f0b97305f295ed956752cd25feb64ed3ba179e49a3f30aadf65f16e72458c",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "4cd1fc6f-6d9a-447c-8c06-a82626a6eb7a",
+            "matched_play_id": "ca48d97c-412c-4944-8f7d-04e3fc56d19e",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "七木奏音",
+            "source_actor_url": "https://kira-hai.net/nanaki-kanon",
+            "source_work_title": "ミュージカル『憂国のモリアーティ』Op.2 -大英帝国の醜聞-",
+            "source_year": 2020,
+            "source_role_raw": "ミス・ハドソン",
+            "source_role_names": [
+              "ミス・ハドソン"
+            ],
+            "source_cast_group": null,
+            "source_order": 8,
+            "source_credit_key": "777ed96981c87bd02b1c",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/moriartymusical2020",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/moriartymusical2020",
+                  "checkedAt": "2026-10-19T11:24:22.706Z",
+                  "note": "第一参照先の当該公演から役付き11人・演奏2人・役名未記載12人・日程を抽出。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/moriarty/moriarty-2/cast.html",
+                  "checkedAt": "2026-10-19T11:24:25.571Z",
+                  "note": "公式の最終キャスト欄で11人と役名の組、演奏者、役名未記載12人の氏名と順序を確認。"
+                }
+              ],
+              "source_fingerprint": "57fc1c26e809e626c4fe6ff182198d29d73bae3b978ade060845c219d0621dce",
+              "review_fingerprint": "1f6a8473e5bacf95ba1e6741eaef0b1ccbf9a8c789782346774449d88174cb93",
+              "snapshot_fingerprint": "3b3f0b97305f295ed956752cd25feb64ed3ba179e49a3f30aadf65f16e72458c",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "1a89e568-64d6-4826-9f8d-7b2836edf974",
+            "matched_play_id": "ca48d97c-412c-4944-8f7d-04e3fc56d19e",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "髙木俊",
+            "source_actor_url": "https://kira-hai.net/takagi-shun",
+            "source_work_title": "ミュージカル『憂国のモリアーティ』Op.2 -大英帝国の醜聞-",
+            "source_year": 2020,
+            "source_role_raw": "ジョージ・レストレード",
+            "source_role_names": [
+              "ジョージ・レストレード"
+            ],
+            "source_cast_group": null,
+            "source_order": 9,
+            "source_credit_key": "ff70e8eccbcf26879352",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/moriartymusical2020",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/moriartymusical2020",
+                  "checkedAt": "2026-10-19T11:24:22.706Z",
+                  "note": "第一参照先の当該公演から役付き11人・演奏2人・役名未記載12人・日程を抽出。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/moriarty/moriarty-2/cast.html",
+                  "checkedAt": "2026-10-19T11:24:25.571Z",
+                  "note": "公式の最終キャスト欄で11人と役名の組、演奏者、役名未記載12人の氏名と順序を確認。"
+                }
+              ],
+              "source_fingerprint": "57fc1c26e809e626c4fe6ff182198d29d73bae3b978ade060845c219d0621dce",
+              "review_fingerprint": "1f6a8473e5bacf95ba1e6741eaef0b1ccbf9a8c789782346774449d88174cb93",
+              "snapshot_fingerprint": "3b3f0b97305f295ed956752cd25feb64ed3ba179e49a3f30aadf65f16e72458c",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "a0d65dd5-5e62-4b1d-89eb-25b4308e6eb3",
+            "matched_play_id": "ca48d97c-412c-4944-8f7d-04e3fc56d19e",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "大湖せしる",
+            "source_actor_url": "https://kira-hai.net/daigo-cecile",
+            "source_work_title": "ミュージカル『憂国のモリアーティ』Op.2 -大英帝国の醜聞-",
+            "source_year": 2020,
+            "source_role_raw": "アイリーン・アドラー",
+            "source_role_names": [
+              "アイリーン・アドラー"
+            ],
+            "source_cast_group": null,
+            "source_order": 10,
+            "source_credit_key": "586fa6da1c2ffb0a85f4",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/moriartymusical2020",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://www.orionsbelt.co.jp/wp/wp-content/uploads/7301b5c7ab0214f7a4b99cb7016e1226.pdf",
+                  "checkedAt": "2026-10-19T11:26:05.118Z",
+                  "note": "事務所に保存された本人プロフィールPDF。氏名・英字名・生年月日・出身地・身長・宝塚の経歴・当該配役を目視とテキストで照合。"
+                },
+                {
+                  "url": "https://kira-hai.net/daigo-cecile",
+                  "checkedAt": "2026-10-19T11:24:37.280Z",
+                  "note": "第一参照先の読み・生年月日・血液型・出演歴。旧公式ドメインはDNS失効。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/moriarty/moriarty-2/cast.html",
+                  "checkedAt": "2026-10-19T11:24:25.571Z",
+                  "note": "公式の最終キャスト欄で11人と役名の組、演奏者、役名未記載12人の氏名と順序を確認。"
+                }
+              ],
+              "source_fingerprint": "57fc1c26e809e626c4fe6ff182198d29d73bae3b978ade060845c219d0621dce",
+              "review_fingerprint": "1f6a8473e5bacf95ba1e6741eaef0b1ccbf9a8c789782346774449d88174cb93",
+              "snapshot_fingerprint": "3b3f0b97305f295ed956752cd25feb64ed3ba179e49a3f30aadf65f16e72458c",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "b6492062-c63d-4dea-99dd-de9e43a3a96e",
+            "matched_play_id": "ca48d97c-412c-4944-8f7d-04e3fc56d19e",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "根本正勝",
+            "source_actor_url": "https://kira-hai.net/nemoto-masakazu",
+            "source_work_title": "ミュージカル『憂国のモリアーティ』Op.2 -大英帝国の醜聞-",
+            "source_year": 2020,
+            "source_role_raw": "マイクロフト・ホームズ",
+            "source_role_names": [
+              "マイクロフト・ホームズ"
+            ],
+            "source_cast_group": null,
+            "source_order": 11,
+            "source_credit_key": "6e8976384c846143f2b4",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/moriartymusical2020",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/moriartymusical2020",
+                  "checkedAt": "2026-10-19T11:24:22.706Z",
+                  "note": "第一参照先の当該公演から役付き11人・演奏2人・役名未記載12人・日程を抽出。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/moriarty/moriarty-2/cast.html",
+                  "checkedAt": "2026-10-19T11:24:25.571Z",
+                  "note": "公式の最終キャスト欄で11人と役名の組、演奏者、役名未記載12人の氏名と順序を確認。"
+                }
+              ],
+              "source_fingerprint": "57fc1c26e809e626c4fe6ff182198d29d73bae3b978ade060845c219d0621dce",
+              "review_fingerprint": "1f6a8473e5bacf95ba1e6741eaef0b1ccbf9a8c789782346774449d88174cb93",
+              "snapshot_fingerprint": "3b3f0b97305f295ed956752cd25feb64ed3ba179e49a3f30aadf65f16e72458c",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "5c69f634-6161-4e09-87b3-f1f0fd2386fd",
+            "matched_play_id": "ca48d97c-412c-4944-8f7d-04e3fc56d19e",
+            "status": "pending"
+          }
+        ]
+      },
+      "legacyCandidates": [
+        {
+          "id": "ca53abee-ee78-47b6-a927-a4812c2f981b",
+          "source": "kira-hai",
+          "external_actor_id": "e8790a52-b193-49f7-b727-e2cb510afff1",
+          "external_play_id": "16108d88-539a-4128-b190-0f839403c826",
+          "source_actor_name": "井澤勇貴",
+          "source_actor_url": "https://kira-hai.net/izawa-yuki",
+          "source_work_title": "ミュージカル『憂国のモリアーティ』Op.2 -大英帝国の醜聞-",
+          "source_work_url": "https://kira-hai.net/moriartymusical2020",
+          "source_year": 2021,
+          "source_role_raw": "セバスチャン・モラン",
+          "source_role_names": [
+            "セバスチャン・モラン"
+          ],
+          "matched_actor_id": "6500a821-d525-4ae7-921d-65ae5e1507dc",
+          "matched_play_id": null,
+          "accepted_cast_id": null,
+          "confidence": 60,
+          "status": "pending",
+          "note": null,
+          "scraped_at": "2026-04-27T18:09:06.47+00:00",
+          "created_at": "2026-04-27T18:09:05.783929+00:00",
+          "updated_at": "2026-04-27T18:09:06.47+00:00",
+          "accepted_at": null,
+          "rejected_at": null,
+          "source_cast_group": null,
+          "source_order": null,
+          "source_credit_key": null,
+          "source_evidence": null
+        },
+        {
+          "id": "dc50b136-f815-43dd-98be-38b1f62b304b",
+          "source": "kira-hai",
+          "external_actor_id": "7cd266e6-81a0-4951-a57c-9739858ef25a",
+          "external_play_id": "16108d88-539a-4128-b190-0f839403c826",
+          "source_actor_name": "久保田秀敏",
+          "source_actor_url": "https://kira-hai.net/kubota-hidetoshi",
+          "source_work_title": "ミュージカル『憂国のモリアーティ』Op.2 -大英帝国の醜聞-",
+          "source_work_url": "https://kira-hai.net/moriartymusical2020",
+          "source_year": 2021,
+          "source_role_raw": "アルバート・ジェームズ・モリアーティ",
+          "source_role_names": [
+            "アルバート・ジェームズ・モリアーティ"
+          ],
+          "matched_actor_id": "8d56fd1c-aac4-4dab-8a9a-97ce29a68263",
+          "matched_play_id": null,
+          "accepted_cast_id": null,
+          "confidence": 60,
+          "status": "pending",
+          "note": null,
+          "scraped_at": "2026-04-27T18:02:31.682+00:00",
+          "created_at": "2026-04-27T18:02:30.90045+00:00",
+          "updated_at": "2026-04-27T18:02:31.682+00:00",
+          "accepted_at": null,
+          "rejected_at": null,
+          "source_cast_group": null,
+          "source_order": null,
+          "source_credit_key": null,
+          "source_evidence": null
+        }
+      ],
+      "sourceFingerprint": "57fc1c26e809e626c4fe6ff182198d29d73bae3b978ade060845c219d0621dce",
+      "evidence": [
+        {
+          "url": "https://kira-hai.net/moriartymusical2020",
+          "checkedAt": "2026-10-19T11:24:22.706Z",
+          "note": "第一参照先の当該公演から役付き11人・演奏2人・役名未記載12人・日程を抽出。"
+        },
+        {
+          "url": "https://www.marv.jp/special/moriarty/moriarty-2/cast.html",
+          "checkedAt": "2026-10-19T11:24:25.571Z",
+          "note": "公式の最終キャスト欄で11人と役名の組、演奏者、役名未記載12人の氏名と順序を確認。"
+        },
+        {
+          "url": "https://www.marv.jp/special/moriarty/moriarty-2/stage.html",
+          "checkedAt": "2026-10-19T11:24:28.219Z",
+          "note": "公演公式の日程と会場。来場自粛への任意払い戻し、座席変更、チケット受付延期は公演中止や日程変更と解釈しない。"
+        },
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000130.000027285.html",
+          "checkedAt": "2026-10-19T11:24:33.807Z",
+          "note": "出演者の所属校自身の発表にアンサンブルキャスト12人を明記。公式キャストの氏名と一致。"
+        },
+        {
+          "url": "https://www.marv.jp/special/moriarty/moriarty-2/",
+          "checkedAt": "2026-10-19T11:24:30.842Z",
+          "note": "原作・脚本演出・音楽、公式日程と公演中に公開された舞台写真・ダイジェストの告知を確認。"
+        }
+      ],
+      "exceptions": [
+        {
+          "kind": "source_year_correction",
+          "legacyBefore": [
+            {
+              "id": "ca53abee-ee78-47b6-a927-a4812c2f981b",
+              "source": "kira-hai",
+              "external_actor_id": "e8790a52-b193-49f7-b727-e2cb510afff1",
+              "external_play_id": "16108d88-539a-4128-b190-0f839403c826",
+              "source_actor_name": "井澤勇貴",
+              "source_actor_url": "https://kira-hai.net/izawa-yuki",
+              "source_work_title": "ミュージカル『憂国のモリアーティ』Op.2 -大英帝国の醜聞-",
+              "source_work_url": "https://kira-hai.net/moriartymusical2020",
+              "source_year": 2021,
+              "source_role_raw": "セバスチャン・モラン",
+              "source_role_names": [
+                "セバスチャン・モラン"
+              ],
+              "matched_actor_id": "6500a821-d525-4ae7-921d-65ae5e1507dc",
+              "matched_play_id": null,
+              "accepted_cast_id": null,
+              "confidence": 60,
+              "status": "pending",
+              "note": null,
+              "scraped_at": "2026-04-27T18:09:06.47+00:00",
+              "created_at": "2026-04-27T18:09:05.783929+00:00",
+              "updated_at": "2026-04-27T18:09:06.47+00:00",
+              "accepted_at": null,
+              "rejected_at": null,
+              "source_cast_group": null,
+              "source_order": null,
+              "source_credit_key": null,
+              "source_evidence": null
+            },
+            {
+              "id": "dc50b136-f815-43dd-98be-38b1f62b304b",
+              "source": "kira-hai",
+              "external_actor_id": "7cd266e6-81a0-4951-a57c-9739858ef25a",
+              "external_play_id": "16108d88-539a-4128-b190-0f839403c826",
+              "source_actor_name": "久保田秀敏",
+              "source_actor_url": "https://kira-hai.net/kubota-hidetoshi",
+              "source_work_title": "ミュージカル『憂国のモリアーティ』Op.2 -大英帝国の醜聞-",
+              "source_work_url": "https://kira-hai.net/moriartymusical2020",
+              "source_year": 2021,
+              "source_role_raw": "アルバート・ジェームズ・モリアーティ",
+              "source_role_names": [
+                "アルバート・ジェームズ・モリアーティ"
+              ],
+              "matched_actor_id": "8d56fd1c-aac4-4dab-8a9a-97ce29a68263",
+              "matched_play_id": null,
+              "accepted_cast_id": null,
+              "confidence": 60,
+              "status": "pending",
+              "note": null,
+              "scraped_at": "2026-04-27T18:02:31.682+00:00",
+              "created_at": "2026-04-27T18:02:30.90045+00:00",
+              "updated_at": "2026-04-27T18:02:31.682+00:00",
+              "accepted_at": null,
+              "rejected_at": null,
+              "source_cast_group": null,
+              "source_order": null,
+              "source_credit_key": null,
+              "source_evidence": null
+            }
+          ],
+          "adoptedYear": 2020
+        },
+        {
+          "kind": "credit_only",
+          "message": "アンサンブルと明記された12人は作品クレジット。生演奏2人もクレジット。俳優ページや役名配役を作らない。"
+        },
+        {
+          "kind": "covid_notice_interpretation",
+          "message": "来場自粛者への払い戻し・チケット販売受付の延期・座席変更が記載されている。公演自体の中止・延期やキャスト交代の根拠は確認されない。公式日程を収録し、公演ダイジェスト告知も確認。"
+        }
+      ]
+    }
+  ],
+  "evidence": {
+    "sources": [
+      {
+        "name": "work",
+        "url": "https://kira-hai.net/moriartymusical2020",
+        "status": 200,
+        "checkedAt": "2026-10-19T11:24:22.706Z",
+        "sha256": "6ae44af36221339462b0589e3a15093aa90953d4e4e6840f65681274697aae0a",
+        "bytes": 54546,
+        "note": "取得成功直後のファイルから回収。後続の旧公式ドメインDNS失効により最終manifest保存前に停止したため。"
+      },
+      {
+        "name": "cast",
+        "url": "https://www.marv.jp/special/moriarty/moriarty-2/cast.html",
+        "status": 200,
+        "checkedAt": "2026-10-19T11:24:25.571Z",
+        "sha256": "3b0fdd634669508af82d5464b4004f712a9fe8233829f40e5819c9f19fdb0c69",
+        "bytes": 9030,
+        "note": "取得成功直後のファイルから回収。後続の旧公式ドメインDNS失効により最終manifest保存前に停止したため。"
+      },
+      {
+        "name": "stage",
+        "url": "https://www.marv.jp/special/moriarty/moriarty-2/stage.html",
+        "status": 200,
+        "checkedAt": "2026-10-19T11:24:28.219Z",
+        "sha256": "f3afc7fb0bf621e4c2f668f23dd330cdb2961147b074df751985946300cfb731",
+        "bytes": 29078,
+        "note": "取得成功直後のファイルから回収。後続の旧公式ドメインDNS失効により最終manifest保存前に停止したため。"
+      },
+      {
+        "name": "official",
+        "url": "https://www.marv.jp/special/moriarty/moriarty-2/",
+        "status": 200,
+        "checkedAt": "2026-10-19T11:24:30.842Z",
+        "sha256": "7f4e440ca7659e09e5d266a90a4d42014655287089a3ccd664965b96715bb2f0",
+        "bytes": 17933,
+        "note": "取得成功直後のファイルから回収。後続の旧公式ドメインDNS失効により最終manifest保存前に停止したため。"
+      },
+      {
+        "name": "ensemble",
+        "url": "https://prtimes.jp/main/html/rd/p/000000130.000027285.html",
+        "status": 200,
+        "checkedAt": "2026-10-19T11:24:33.807Z",
+        "sha256": "9f6c42eeec70f00694013ef6b37bbbf73eb8278b1f48fd08e643d409ebf1835d",
+        "bytes": 238753,
+        "note": "取得成功直後のファイルから回収。後続の旧公式ドメインDNS失効により最終manifest保存前に停止したため。"
+      },
+      {
+        "name": "daigo",
+        "url": "https://kira-hai.net/daigo-cecile",
+        "status": 200,
+        "checkedAt": "2026-10-19T11:24:37.280Z",
+        "sha256": "4f8011273c089c7f6a0138442b8670fe8b2a80207bd1de845333c6cb55c2ed1d",
+        "bytes": 100294,
+        "note": "取得成功直後のファイルから回収。後続の旧公式ドメインDNS失効により最終manifest保存前に停止したため。"
+      },
+      {
+        "name": "daigo-pdf",
+        "url": "https://www.orionsbelt.co.jp/wp/wp-content/uploads/7301b5c7ab0214f7a4b99cb7016e1226.pdf",
+        "status": 200,
+        "checkedAt": "2026-10-19T11:26:05.118Z",
+        "sha256": "433965c868b79bb0e16f43795d1b2261046cbcc5126368984d7487fa57114ef8",
+        "bytes": 918388,
+        "file": "daigo-profile.pdf"
+      },
+      {
+        "name": "robots-kira",
+        "url": "https://kira-hai.net/robots.txt",
+        "status": 200,
+        "checkedAt": "2026-10-19T11:26:06.616Z",
+        "sha256": "f6ed0322f0e3df8c3b42b14df3254a90cca7b94a4172de91812952b3c7060b03",
+        "bytes": 231
+      },
+      {
+        "name": "changelog",
+        "url": "https://supabase.com/changelog.md",
+        "status": 200,
+        "checkedAt": "2026-10-19T11:26:09.439Z",
+        "sha256": "15b3d0d1a7dc3b3f2c0af4788e49acfdf2d2edbd2613f22de0705fa43b1cf58b",
+        "bytes": 102319
+      },
+      {
+        "name": "product",
+        "url": "https://www.tc-ent.co.jp/products/detail/TCBD-0988",
+        "status": 404,
+        "checkedAt": "2026-10-19T11:26:12.442Z",
+        "sha256": "c948df70394a7a7f417ecfdea5fad4764b4124aaffea57a4ed525396e3fc60d7",
+        "bytes": 61419
+      }
+    ],
+    "reviewStatus": "kira_hai_based_official_casts_dates_checked",
+    "notes": [
+      "主要11人を公式の役名と個別に照合。既存10人は名前・ID・プロフィール・旧出演を維持。新規は大湖せしる1人。",
+      "アンサンブル12人と生演奏2人は作品クレジット。役付き俳優に混ぜない。",
+      "過去のpending候補2件の年2021を実際の2020へ訂正し同じIDで採用。外部ID・確度・原文・作成日時は保持。",
+      "身長の食い違い・旧公式DNS失効を記録。現在所属・英訳・性別を推測しない。"
+    ],
+    "unresolved": [
+      "あらすじ・英訳・プロフィール英訳・現在の配信URLは後続。過去のライブ配信を現在見放題と解釈しない。",
+      "人物・作品の総合監査は未完了。役柄の表示順・主演フラグは未指定のまま。モリミュ後続公演の収録は継続。"
+    ]
+  },
+  "requestKey": "4281b635f78e2af0d5eeca89c7524fb5c4c60cb52ec37ac8950ec70a928d951a"
+}
