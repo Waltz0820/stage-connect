@@ -31,8 +31,17 @@ lib/performance-period.tsを追加し、公演の開始年月日をJP/ENと並�
 
 DBは13作品のtitle_en、うち4作品のperiod／venueと更新日時だけを更新。ID・slug・日本語タイトル・全配役・人物・既存翻訳・配信URL・クレジット・他シリーズは保全。1トランザクションのロールバック試行、本番適用、再実行を行い、主要8テーブルを全行比較。履歴14件を追加し、再実行の追加・変更は0件。スキーマ変更・マイグレーションはない。
 
-開始日処理4テストと翻訳11テストを確認。ブラウザで2011/07と位置、全13件の英語タイトルと初期年月を確認。日英28ページ（シリーズ1＋作品13の各言語）のSSR出力で順序・タイトル・canonical・言語・配役カード・構造化データ・投票導線・シリーズ導線を検証する。
+開始日処理4テストと翻訳11テストを確認。ブラウザで2011/07と位置、全13件の英語タイトルと初期年月を確認。日英28ページ（シリーズ1＋作品13の各言語）の本番SSR出力で順序・タイトル・canonical・言語・配役カード・構造化データ・投票導線・シリーズ導線を検証済み。全339作品の期間を新処理で読めること、刀剣乱舞・テニミュ・血界戦線の追加8シリーズページの件数と年月表示も確認した。
 
 変更ファイルは日英シリーズページ、lib/stage-connect.ts、新規lib/performance-period.ts、lib/en-term-map.ts、回帰テストscripts/performance-period.test.mjsとscripts/localization.test.mjs、採用記録research/bleach-timeline-20261020.json、本資料と監査メモ。全公開ページの一般的な期間末日ソート（periodSortKey）は今回変更していない。
 
 あらすじ・プロフィール英訳・詳細内の全会場／スタッフ表記・総合監査は後続。モリステの別枠役付き出演の再点検も継続する。原文、SHA-256、適用SQL、変更前後の全行スナップショット、検証結果は非公開成果物bleach-timeline-20261020/に保存。
+
+## 本番リリース
+
+- URL：https://stageconnect.jp/series/bleach ／ https://stageconnect.jp/en/series/bleach
+- 対象：Stage connectチームのstage-connect-ggdd、production、READY。
+- 公開コミット：ad8ab6b5e41964de8d8504d9ebd8642b6942145f。GitHub mainへfast-forward反映。
+- デプロイ：dpl_5ZbquJMLxsZFynGQGnKPyzSqbCwk。Next.js 15.5.28、ビルド約31秒、stageconnect.jpの割当を確認。
+- 当該デプロイの直近15分のerror／fatalログは0件。外部Drainsは今回変更していない。
+- 前回本番：dpl_HPU4PTnVwmPNN35LTyxFnfXkG3Bf。DB変更前の全行スナップショットと各行のbeforeを別途保全。
