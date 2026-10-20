@@ -815,8 +815,24 @@
       "slug": "noragami",
       "name": "舞台「ノラガミ」",
       "registeredDay": "2026-02-09",
-      "plays": 0,
-      "protected": false
+      "plays": 2,
+      "protected": false,
+      "castRows": 23,
+      "castCoverageNote": "2016年『神と願い』10配役と2017年『神と絆』13配役を追加。人物5・作品2・配役23、公式アンサンブル7名と8名はクレジットへ。丸目は初演アンサンブルと続編瑞丸役を区別し旧候補2件の誤年を補正して同IDで処理。公式画像altの誤役名は画像本体・役名発表・第一参照先が一致する颯丸／禄丸／瑞丸を採用。日程・会場・短い日英概要・英語表示名・シリーズ説明・年表を点検。人物総合監査・詳細英訳・現在配信・主演指定は後続。",
+      "seriesAudit": {
+        "checkedAt": "2026-10-20T14:44:05.528Z",
+        "scope": "2016年と2017年の劇場公演2作品。関連イベント・将来公演の完全網羅を意味しない。",
+        "works": 2,
+        "castRows": 23,
+        "originalCharacterCasts": 4,
+        "ensembleCreditNames": 15,
+        "reusedLegacyCandidates": 1,
+        "creditCandidateReconciled": 1,
+        "publicPages": 34,
+        "report": "docs/noragami2016-2017-2026-10-20.md",
+        "research": "next-app/research/noragami2016-2017-20261020.json",
+        "pendingWorks": []
+      }
     },
     {
       "id": "866856fe-7e6f-4410-836e-5ea80d673348",
