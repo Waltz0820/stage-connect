@@ -1,0 +1,1043 @@
+{
+  "version": 1,
+  "batchId": "moriarty-musical-audit-20261020-01",
+  "franchise": {
+    "before": {
+      "id": "0ed0cd85-f73c-443e-a2d1-1321b00dff3d",
+      "name": "ミュージカル『憂国のモリアーティ』（モリミュ）",
+      "created_at": "2025-12-13T04:58:27.220101+00:00",
+      "updated_at": "2026-10-19T11:12:32.816674+00:00",
+      "slug": "moriarty",
+      "intro": null,
+      "description": "竹内良輔（構成）・三好輝（漫画）による人気サスペンス漫画を原作としたミュージカル作品。通称「モリミュ」。2019年に初演。コナン・ドイルの「シャーロック・ホームズ」シリーズを原案とし、ホームズの最大の宿敵であるモリアーティ教授を主人公に据え、階級制度に縛られた19世紀末の大英帝国を舞台に理想の国を作るための壮大な犯罪計画を描く。最大の魅力は、ピアノとヴァイオリンの生演奏という贅沢な音楽環境と、実力派キャスト陣による圧倒的な歌唱力。ダークで退廃的な世界観を極上の音楽劇として昇華させており、熱狂的な支持を集め続けている芸術性の高い大人気シリーズ。",
+      "origin_type": "漫画原作",
+      "origin_note": "原作：構成／竹内良輔 漫画／三好 輝「憂国のモリアーティ」（集英社「ジャンプSQ.」連載）",
+      "production_companies": [
+        "マーベラス"
+      ],
+      "related_franchise_ids": [
+        "de2dd05e-e2ae-461c-9c20-42de1dc019aa"
+      ],
+      "format": "musical",
+      "description_en": null,
+      "name_en": null
+    },
+    "patch": {
+      "name_en": "Moriarty the Patriot: The Musical (MoriMyu)",
+      "description": "竹内良輔（構成）・三好輝（漫画）の『憂国のモリアーティ』を原作とするミュージカルシリーズ。2019年に初演。脚本・演出は西森英行、音楽はただすけ。ピアノとヴァイオリンの生演奏を伴う。",
+      "description_en": "A musical series based on Moriarty the Patriot, originally written by Ryosuke Takeuchi and illustrated by Hikaru Miyoshi. First staged in 2019, it combines the story of Moriarty and Sherlock Holmes with live piano and violin accompaniment."
+    }
+  },
+  "rows": [
+    {
+      "before": {
+        "id": "2a124974-926e-4cd7-8708-db3a80fcd043",
+        "slug": "moriarty-musical",
+        "title": "ミュージカル「憂国のモリアーティ」",
+        "franchise_id": "0ed0cd85-f73c-443e-a2d1-1321b00dff3d",
+        "summary": "コナン・ドイルの「シャーロック・ホームズ」を原案とした人気漫画のミュージカル化。ウィリアムとホームズの頭脳戦をピアノとヴァイオリンの生演奏に乗せて描く。",
+        "period": "東京：2019年5月10日〜19日／大阪：2019年5月25日〜26日",
+        "venue": "天王洲 銀河劇場／柏原市民文化会館リビエールホール 大ホール",
+        "vod": {},
+        "genre": "mystery_suspense",
+        "created_at": "2025-12-13T05:12:12.983557+00:00",
+        "updated_at": "2026-10-19T11:12:32.816674+00:00",
+        "tags": [
+          "ミステリー",
+          "生演奏",
+          "W主演"
+        ],
+        "credits": [
+          {
+            "role": "原作",
+            "names": [
+              "構成／竹内良輔・漫画／三好輝『憂国のモリアーティ』（集英社「ジャンプSQ.」連載）"
+            ],
+            "is_core": true,
+            "sort_order": 1
+          },
+          {
+            "role": "脚本・演出",
+            "names": [
+              "西森英行"
+            ],
+            "is_core": true,
+            "sort_order": 2
+          },
+          {
+            "role": "音楽",
+            "names": [
+              "ただすけ"
+            ],
+            "is_core": true,
+            "sort_order": 3
+          },
+          {
+            "role": "Piano",
+            "names": [
+              "境田桃子"
+            ],
+            "is_core": true,
+            "sort_order": 4
+          },
+          {
+            "role": "Violin",
+            "names": [
+              "林周雅"
+            ],
+            "is_core": true,
+            "sort_order": 5
+          },
+          {
+            "role": "出演（役名未記載）",
+            "names": [
+              "安島萌",
+              "荒木栄人",
+              "伊地華鈴",
+              "大澤信児",
+              "貴嶋美愛",
+              "今野晶乃",
+              "佐々木駿也",
+              "下道純一",
+              "白崎誠也",
+              "藤井竜也",
+              "堀部佑介",
+              "松谷嵐"
+            ],
+            "is_core": false,
+            "sort_order": 6
+          }
+        ],
+        "related_franchise_ids": [],
+        "summary_en": null,
+        "title_en": null
+      },
+      "patch": {
+        "title_en": "Moriarty the Patriot: The Musical",
+        "summary_en": "A musical adaptation of the manga inspired by Arthur Conan Doyle’s Sherlock Holmes stories. William and Holmes engage in a battle of wits, accompanied by live piano and violin."
+      },
+      "summarySource": "op1-intro"
+    },
+    {
+      "before": {
+        "id": "ca48d97c-412c-4944-8f7d-04e3fc56d19e",
+        "slug": "moriarty-musical-op2",
+        "title": "ミュージカル『憂国のモリアーティ』Op.2 -大英帝国の醜聞-",
+        "franchise_id": "0ed0cd85-f73c-443e-a2d1-1321b00dff3d",
+        "summary": null,
+        "period": "東京：2020年7月31日〜8月10日／京都：2020年8月14日〜16日",
+        "venue": "天王洲 銀河劇場／京都劇場",
+        "vod": null,
+        "genre": null,
+        "created_at": "2026-10-19T11:32:01.936927+00:00",
+        "updated_at": "2026-10-19T11:32:01.936927+00:00",
+        "tags": [],
+        "credits": [
+          {
+            "role": "原作",
+            "names": [
+              "構成／竹内良輔・漫画／三好輝『憂国のモリアーティ』（集英社「ジャンプSQ.」連載）"
+            ],
+            "is_core": true,
+            "sort_order": 1
+          },
+          {
+            "role": "脚本・演出",
+            "names": [
+              "西森英行"
+            ],
+            "is_core": true,
+            "sort_order": 2
+          },
+          {
+            "role": "音楽",
+            "names": [
+              "ただすけ"
+            ],
+            "is_core": true,
+            "sort_order": 3
+          },
+          {
+            "role": "Piano",
+            "names": [
+              "境田桃子"
+            ],
+            "is_core": true,
+            "sort_order": 4
+          },
+          {
+            "role": "Violin",
+            "names": [
+              "林周雅"
+            ],
+            "is_core": true,
+            "sort_order": 5
+          },
+          {
+            "role": "アンサンブル",
+            "names": [
+              "安島萌",
+              "荒木栄人",
+              "伊地華鈴",
+              "大澤信児",
+              "上條駿",
+              "熊田愛里",
+              "佐々木駿也",
+              "白崎誠也",
+              "桃原華恋",
+              "永咲友梨",
+              "堀部佑介",
+              "松谷嵐"
+            ],
+            "is_core": false,
+            "sort_order": 6
+          }
+        ],
+        "related_franchise_ids": [],
+        "summary_en": null,
+        "title_en": null
+      },
+      "patch": {
+        "title_en": "Moriarty the Patriot: The Musical Op.2 -A Scandal in the British Empire-",
+        "summary_en": "Three stories follow child abductions, a murder aboard a train, and secret documents stolen from the royal family. William, Sherlock and Irene Adler pursue their own plans.",
+        "summary": "子供の誘拐事件、列車内で起きた殺人事件、王室から盗まれた機密文書をめぐる三つの物語。ウィリアムとシャーロック、アイリーン・アドラーの思惑が交錯する。"
+      },
+      "summarySource": "op2-intro"
+    },
+    {
+      "before": {
+        "id": "42ae764a-6ffd-4dfc-8007-4f5860935020",
+        "slug": "moriarty-musical-op3",
+        "title": "ミュージカル『憂国のモリアーティ』Op.3 -ホワイトチャペルの亡霊-",
+        "franchise_id": "0ed0cd85-f73c-443e-a2d1-1321b00dff3d",
+        "summary": null,
+        "period": "東京：2021年8月5日〜15日（8月8日13:00・18:00、8月9日13:00は中止）／大阪：2021年8月19日〜22日",
+        "venue": "品川プリンスホテル ステラボール／サンケイホールブリーゼ",
+        "vod": null,
+        "genre": null,
+        "created_at": "2026-10-19T11:58:51.362329+00:00",
+        "updated_at": "2026-10-19T11:58:51.362329+00:00",
+        "tags": [],
+        "credits": [
+          {
+            "role": "原作",
+            "names": [
+              "構成／竹内良輔・漫画／三好輝『憂国のモリアーティ』（集英社「ジャンプSQ.」連載）"
+            ],
+            "is_core": true,
+            "sort_order": 1
+          },
+          {
+            "role": "脚本・演出",
+            "names": [
+              "西森英行"
+            ],
+            "is_core": true,
+            "sort_order": 2
+          },
+          {
+            "role": "音楽",
+            "names": [
+              "ただすけ"
+            ],
+            "is_core": true,
+            "sort_order": 3
+          },
+          {
+            "role": "Piano",
+            "names": [
+              "広田圭美"
+            ],
+            "is_core": true,
+            "sort_order": 4
+          },
+          {
+            "role": "Violin",
+            "names": [
+              "林周雅"
+            ],
+            "is_core": true,
+            "sort_order": 5
+          },
+          {
+            "role": "アンサンブル",
+            "names": [
+              "荒川湧太（8月11日18:00・12日13:00／18:00は休演、8月13日18:00より復帰）",
+              "荒木浩介",
+              "伊地華鈴",
+              "大澤信児",
+              "木村優希",
+              "熊田愛里",
+              "白崎誠也",
+              "田上颯志",
+              "永咲友梨",
+              "蓮井佑麻",
+              "福冨玄刀",
+              "若林佑太"
+            ],
+            "is_core": false,
+            "sort_order": 6
+          }
+        ],
+        "related_franchise_ids": [],
+        "summary_en": null,
+        "title_en": null
+      },
+      "patch": {
+        "title_en": "Moriarty the Patriot: The Musical Op.3 -The Phantom of Whitechapel-",
+        "summary_en": "Murders attributed to Jack the Ripper fuel conflict between the police and Whitechapel’s vigilantes. William receives a request from his former mentor Renfield, while Sherlock investigates.",
+        "summary": "ホワイトチャペルに現れた「切り裂きジャック」の犯行が、市警と自警団の対立を招く。ウィリアムには旧師レンフィールドから依頼が届き、シャーロックも事件を追う。"
+      },
+      "summarySource": "op3-intro"
+    },
+    {
+      "before": {
+        "id": "cedd24f1-5ee7-4ac9-9e5d-a079b4fbd860",
+        "slug": "moriarty-musical-op4",
+        "title": "ミュージカル『憂国のモリアーティ』Op.4 -犯人は二人-",
+        "franchise_id": "0ed0cd85-f73c-443e-a2d1-1321b00dff3d",
+        "summary": null,
+        "period": "大阪：2023年1月27日〜29日／東京：2023年2月2日〜12日",
+        "venue": "新歌舞伎座／天王洲 銀河劇場",
+        "vod": null,
+        "genre": null,
+        "created_at": "2026-10-19T12:13:27.742892+00:00",
+        "updated_at": "2026-10-19T12:13:27.742892+00:00",
+        "tags": [],
+        "credits": [
+          {
+            "role": "原作",
+            "names": [
+              "構成／竹内良輔・漫画／三好輝『憂国のモリアーティ』（集英社「ジャンプSQ.」連載）"
+            ],
+            "is_core": true,
+            "sort_order": 1
+          },
+          {
+            "role": "脚本・演出",
+            "names": [
+              "西森英行"
+            ],
+            "is_core": true,
+            "sort_order": 2
+          },
+          {
+            "role": "音楽",
+            "names": [
+              "ただすけ"
+            ],
+            "is_core": true,
+            "sort_order": 3
+          },
+          {
+            "role": "Piano",
+            "names": [
+              "境田桃子"
+            ],
+            "is_core": true,
+            "sort_order": 4
+          },
+          {
+            "role": "Violin",
+            "names": [
+              "林周雅"
+            ],
+            "is_core": true,
+            "sort_order": 5
+          },
+          {
+            "role": "アンサンブル",
+            "names": [
+              "伊地華鈴",
+              "大澤信児",
+              "甲斐祐次",
+              "木村優希",
+              "熊田愛里",
+              "白崎誠也",
+              "竹内一喜",
+              "永咲友梨",
+              "蓮井佑麻",
+              "林田龍弥",
+              "吉高志音（ミルヴァートンの側近）",
+              "若林佑太"
+            ],
+            "is_core": false,
+            "sort_order": 6
+          }
+        ],
+        "related_franchise_ids": [],
+        "summary_en": null,
+        "title_en": null
+      },
+      "patch": {
+        "title_en": "Moriarty the Patriot: The Musical Op.4 -The Two Culprits-",
+        "summary_en": "MP Whiteley campaigns for equality, while John’s fiancée Mary brings an unresolved mystery. Milverton schemes behind the cases, drawing William and Sherlock into their unfolding consequences.",
+        "summary": "平等を求めるホワイトリー議員と、謎を抱えるジョンの婚約者メアリー。それぞれの事件の背後でミルヴァートンが暗躍し、ウィリアムとシャーロックの思惑が交差する。"
+      },
+      "summarySource": "op4-intro"
+    },
+    {
+      "before": {
+        "id": "24fb2c52-091a-4281-9e93-c04f68984b9d",
+        "slug": "moriarty-musical-op5",
+        "title": "ミュージカル『憂国のモリアーティ』 Op.5 -最後の事件-",
+        "franchise_id": "0ed0cd85-f73c-443e-a2d1-1321b00dff3d",
+        "summary": null,
+        "period": "大阪：2023年8月24日〜27日／東京：2023年9月1日〜10日",
+        "venue": "メルパルクホール／天王洲 銀河劇場",
+        "vod": null,
+        "genre": null,
+        "created_at": "2026-10-19T12:24:21.806808+00:00",
+        "updated_at": "2026-10-19T12:24:21.806808+00:00",
+        "tags": [],
+        "credits": [
+          {
+            "role": "原作",
+            "names": [
+              "構成／竹内良輔・漫画／三好輝『憂国のモリアーティ』（集英社「ジャンプSQ.」連載）"
+            ],
+            "is_core": true,
+            "sort_order": 1
+          },
+          {
+            "role": "脚本・演出",
+            "names": [
+              "西森英行"
+            ],
+            "is_core": true,
+            "sort_order": 2
+          },
+          {
+            "role": "音楽",
+            "names": [
+              "ただすけ"
+            ],
+            "is_core": true,
+            "sort_order": 3
+          },
+          {
+            "role": "Piano",
+            "names": [
+              "境田桃子"
+            ],
+            "is_core": true,
+            "sort_order": 4
+          },
+          {
+            "role": "Violin",
+            "names": [
+              "林周雅"
+            ],
+            "is_core": true,
+            "sort_order": 5
+          },
+          {
+            "role": "アンサンブル",
+            "names": [
+              "伊地華鈴",
+              "大澤信児",
+              "木村優希",
+              "熊田愛里",
+              "柴野瞭",
+              "白崎誠也",
+              "高間淳平",
+              "竹内一喜",
+              "永咲友梨",
+              "中村祐輔",
+              "蓮井佑麻",
+              "山下真人"
+            ],
+            "is_core": false,
+            "sort_order": 6
+          }
+        ],
+        "related_franchise_ids": [],
+        "summary_en": null,
+        "title_en": null
+      },
+      "patch": {
+        "title_en": "Moriarty the Patriot: The Musical Op.5 -The Final Problem-",
+        "summary_en": "The fifth production adapts the climax of the manga’s first part, continuing William and Sherlock’s story with live piano and violin accompaniment.",
+        "summary": "原作第1部のクライマックスを描くシリーズ第5弾。ウィリアムとシャーロックの物語を、ピアノとヴァイオリンの生演奏とともに上演する。"
+      },
+      "summarySource": "re2025-intro"
+    },
+    {
+      "before": {
+        "id": "05bffd5a-8696-4063-a153-453e65f2d9fe",
+        "slug": "moriarty-musical-concert-2024",
+        "title": "ミュージカル『憂国のモリアーティ』コンサート",
+        "franchise_id": "0ed0cd85-f73c-443e-a2d1-1321b00dff3d",
+        "summary": null,
+        "period": "東京：2024年7月11日〜15日",
+        "venue": "シアターH",
+        "vod": null,
+        "genre": null,
+        "created_at": "2026-10-19T13:29:42.847869+00:00",
+        "updated_at": "2026-10-19T13:29:42.847869+00:00",
+        "tags": [],
+        "credits": [
+          {
+            "role": "原作",
+            "names": [
+              "構成／竹内良輔・漫画／三好輝『憂国のモリアーティ』（集英社「ジャンプSQ.」連載）"
+            ],
+            "is_core": true,
+            "sort_order": 1
+          },
+          {
+            "role": "構成・演出",
+            "names": [
+              "西森英行"
+            ],
+            "is_core": true,
+            "sort_order": 2
+          },
+          {
+            "role": "音楽監督",
+            "names": [
+              "ただすけ"
+            ],
+            "is_core": true,
+            "sort_order": 3
+          },
+          {
+            "role": "Piano",
+            "names": [
+              "ただすけ"
+            ],
+            "is_core": true,
+            "sort_order": 4
+          },
+          {
+            "role": "Violin",
+            "names": [
+              "林周雅"
+            ],
+            "is_core": true,
+            "sort_order": 5
+          },
+          {
+            "role": "Guitar",
+            "names": [
+              "伊藤ハルトシ",
+              "野口亮（7月14日のみ）"
+            ],
+            "is_core": true,
+            "sort_order": 6
+          },
+          {
+            "role": "Percussion",
+            "names": [
+              "notch"
+            ],
+            "is_core": true,
+            "sort_order": 7
+          },
+          {
+            "role": "出演（役名未記載）",
+            "names": [
+              "熊田愛里",
+              "柴野瞭",
+              "高間淳平",
+              "永咲友梨"
+            ],
+            "is_core": false,
+            "sort_order": 8
+          },
+          {
+            "role": "ゲスト出演日程",
+            "names": [
+              "藤田玲：7月11日14:00／18:30公演。",
+              "川原一馬：7月11日14:00／18:30公演。",
+              "七木奏音：7月12日14:00／18:30、7月14日12:30／17:00公演。",
+              "大湖せしる：7月12日14:00／18:30、7月13日14:00／18:30公演。",
+              "根本正勝：7月13日14:00／18:30公演。",
+              "山内優花：7月14日12:30／17:00公演。",
+              "赤澤遼太郎：7月15日12:00公演。",
+              "小南光司：7月15日12:00公演。"
+            ],
+            "is_core": false,
+            "sort_order": 9
+          },
+          {
+            "role": "公演について",
+            "names": [
+              "コンサート（キャラクター扮装なし）",
+              "7月15日17:00公演はゲスト出演なし"
+            ],
+            "is_core": false,
+            "sort_order": 10
+          }
+        ],
+        "related_franchise_ids": [],
+        "summary_en": null,
+        "title_en": null
+      },
+      "patch": {
+        "title_en": "Moriarty the Patriot: The Musical Concert",
+        "summary_en": "A concert celebrating the series’ fifth anniversary, with rotating guests and live piano, violin, guitar and percussion. Performers appear without character costumes.",
+        "summary": "シリーズ5周年を記念したコンサート。キャストが日替わりゲストとともに出演し、ピアノ、ヴァイオリン、ギター、パーカッションの生演奏を伴う。キャラクター扮装での上演は行わない。"
+      },
+      "summarySource": "concert-home"
+    },
+    {
+      "before": {
+        "id": "ead5d586-f935-4245-9af1-585296675971",
+        "slug": "moriarty-musical-scandal-reprise-2025",
+        "title": "ミュージカル『憂国のモリアーティ』大英帝国の醜聞 Reprise",
+        "franchise_id": "0ed0cd85-f73c-443e-a2d1-1321b00dff3d",
+        "summary": null,
+        "period": "東京：2025年5月16日〜18日／京都：2025年5月23日〜25日／東京凱旋：2025年5月30日〜6月8日",
+        "venue": "シアターH／京都劇場／天王洲 銀河劇場",
+        "vod": null,
+        "genre": null,
+        "created_at": "2026-10-19T13:45:25.564455+00:00",
+        "updated_at": "2026-10-19T13:45:25.564455+00:00",
+        "tags": [],
+        "credits": [
+          {
+            "role": "原作",
+            "names": [
+              "三好輝『憂国のモリアーティ』（集英社「ジャンプSQ.」連載）"
+            ],
+            "is_core": true,
+            "sort_order": 1
+          },
+          {
+            "role": "脚本・演出",
+            "names": [
+              "西森英行"
+            ],
+            "is_core": true,
+            "sort_order": 2
+          },
+          {
+            "role": "音楽",
+            "names": [
+              "ただすけ"
+            ],
+            "is_core": true,
+            "sort_order": 3
+          },
+          {
+            "role": "Piano",
+            "names": [
+              "境田桃子"
+            ],
+            "is_core": true,
+            "sort_order": 4
+          },
+          {
+            "role": "Violin",
+            "names": [
+              "林周雅"
+            ],
+            "is_core": true,
+            "sort_order": 5
+          },
+          {
+            "role": "アンサンブル",
+            "names": [
+              "井口大地",
+              "伊佐旺起",
+              "伊地華鈴",
+              "梅原ことは",
+              "大澤信児",
+              "小山雲母",
+              "木村優希",
+              "熊田愛里",
+              "白崎誠也",
+              "Taichi",
+              "永咲友梨",
+              "若林佑太"
+            ],
+            "is_core": false,
+            "sort_order": 6
+          },
+          {
+            "role": "スウィング",
+            "names": [
+              "光由"
+            ],
+            "is_core": false,
+            "sort_order": 7
+          },
+          {
+            "role": "アンダーキャスト",
+            "names": [
+              "小野伯月"
+            ],
+            "is_core": false,
+            "sort_order": 8
+          }
+        ],
+        "related_franchise_ids": [],
+        "summary_en": null,
+        "title_en": null
+      },
+      "patch": {
+        "title_en": "Moriarty the Patriot: The Musical -A Scandal in the British Empire Reprise-",
+        "summary_en": "A reworked staging of the “A Scandal in the British Empire” arc from 2020’s Op.2, with a renewed cast. William and Sherlock become entangled in Irene Adler’s theft of royal secrets.",
+        "summary": "2020年のOp.2「大英帝国の醜聞」編を新たなキャストと再構成。王室の機密文書を盗んだアイリーン・アドラーをめぐり、ウィリアムとシャーロックの計略が交錯する。"
+      },
+      "summarySource": "re2025-intro"
+    },
+    {
+      "before": {
+        "id": "8921536e-e58f-4bb1-8099-51b6e643da69",
+        "slug": "moriarty-musical-scarlet-reprise-2026",
+        "title": "ミュージカル『憂国のモリアーティ』緋色の研究 Reprise",
+        "franchise_id": "0ed0cd85-f73c-443e-a2d1-1321b00dff3d",
+        "summary": null,
+        "period": "2026年6月27日〜7月19日",
+        "venue": "天王洲 銀河劇場",
+        "vod": null,
+        "genre": null,
+        "created_at": "2026-10-19T14:17:43.360705+00:00",
+        "updated_at": "2026-10-19T14:17:43.360705+00:00",
+        "tags": [],
+        "credits": [
+          {
+            "role": "原作",
+            "names": [
+              "三好輝『憂国のモリアーティ』（集英社「ジャンプSQ.」連載）"
+            ],
+            "is_core": true,
+            "sort_order": 1
+          },
+          {
+            "role": "脚本・作詞・演出",
+            "names": [
+              "西森英行"
+            ],
+            "is_core": true,
+            "sort_order": 2
+          },
+          {
+            "role": "音楽",
+            "names": [
+              "ただすけ"
+            ],
+            "is_core": true,
+            "sort_order": 3
+          },
+          {
+            "role": "Piano",
+            "names": [
+              "境田桃子",
+              "ただすけ"
+            ],
+            "is_core": true,
+            "sort_order": 4
+          },
+          {
+            "role": "Violin",
+            "names": [
+              "林周雅"
+            ],
+            "is_core": true,
+            "sort_order": 5
+          },
+          {
+            "role": "アンサンブル",
+            "names": [
+              "伊地華鈴",
+              "大澤信児",
+              "川島大典",
+              "木村優希",
+              "熊田愛里",
+              "白崎誠也",
+              "高間淳平",
+              "竹内一喜",
+              "田中奏",
+              "蓮井佑麻",
+              "若林佑太",
+              "渡辺里佳"
+            ],
+            "is_core": false,
+            "sort_order": 6
+          },
+          {
+            "role": "スウィング",
+            "names": [
+              "岡本拓也",
+              "友松克太",
+              "本田桃萌"
+            ],
+            "is_core": false,
+            "sort_order": 7
+          },
+          {
+            "role": "配役補足",
+            "names": [
+              "Op.チーム／Repriseチームの2チーム制。配役欄は通常編成を記載。陣営シャッフル公演では下記の組み合わせで出演。"
+            ],
+            "is_core": false,
+            "sort_order": 8
+          },
+          {
+            "role": "陣営シャッフル公演",
+            "names": [
+              "2026年7月7日14:00：モリアーティ陣営＝Reprise／ホームズ陣営＝Op.",
+              "2026年7月15日18:00：モリアーティ陣営＝Op.／ホームズ陣営＝Reprise"
+            ],
+            "is_core": false,
+            "sort_order": 9
+          },
+          {
+            "role": "ただすけ演奏公演",
+            "names": [
+              "2026年7月1日13:00（Reprise）・18:00（Op.）",
+              "2026年7月8日13:00（Op.）・18:00（Reprise）"
+            ],
+            "is_core": false,
+            "sort_order": 10
+          }
+        ],
+        "related_franchise_ids": [],
+        "summary_en": null,
+        "title_en": null
+      },
+      "patch": {
+        "title_en": "Moriarty the Patriot: The Musical -A Study in Scarlet Reprise-",
+        "summary_en": "A two-team restaging of the original 2019 Op.1 production for the manga’s tenth anniversary. It revisits Moriarty’s beginnings as the Lord of Crime and his encounter with Sherlock Holmes.",
+        "summary": "原作連載10周年に、2019年初演のOp.1を2チーム体制で再演。「犯罪卿」モリアーティの始まりと、シャーロック・ホームズとの出会いを描く。"
+      },
+      "summarySource": "re2026-intro"
+    }
+  ],
+  "sources": [
+    {
+      "name": "series",
+      "url": "https://kira-hai.net/moriartymusical",
+      "status": 200,
+      "finalUrl": "https://kira-hai.net/moriartymusical",
+      "checkedAt": "2026-10-20T05:34:02.064Z",
+      "sha256": "f2384b9151bb1f1fc050b7bb556456806fe41f5d883d75c36c5b27c7882f4804"
+    },
+    {
+      "name": "current",
+      "url": "https://www.marv.jp/special/moriarty/",
+      "status": 200,
+      "finalUrl": "https://www.marv.jp/special/moriarty/",
+      "checkedAt": "2026-10-20T05:34:04.581Z",
+      "sha256": "0048abae60abbbb0af6e39dfd98ef6b73ae1396621c1c390d27a4cdccd28975d"
+    },
+    {
+      "name": "op1-cast",
+      "url": "https://www.marv.jp/special/moriarty-1/cast.html",
+      "status": 200,
+      "finalUrl": "https://www.marv.jp/special/moriarty-1/cast.html",
+      "checkedAt": "2026-10-20T05:34:07.249Z",
+      "sha256": "4f6ac3f44c4624a9a3e59c5485f6c31644f655594d321020f4e8c95620f4309e"
+    },
+    {
+      "name": "op1-stage",
+      "url": "https://www.marv.jp/special/moriarty-1/stage.html",
+      "status": 200,
+      "finalUrl": "https://www.marv.jp/special/moriarty-1/stage.html",
+      "checkedAt": "2026-10-20T05:34:09.590Z",
+      "sha256": "7459dfdd2fc60494460a751bf1875edf987ac8fca5a97e6416d0d3cdd84eed57"
+    },
+    {
+      "name": "op2-cast",
+      "url": "https://www.marv.jp/special/moriarty/moriarty-2/cast.html",
+      "status": 200,
+      "finalUrl": "https://www.marv.jp/special/moriarty/moriarty-2/cast.html",
+      "checkedAt": "2026-10-20T05:34:11.883Z",
+      "sha256": "3b0fdd634669508af82d5464b4004f712a9fe8233829f40e5819c9f19fdb0c69"
+    },
+    {
+      "name": "op2-stage",
+      "url": "https://www.marv.jp/special/moriarty/moriarty-2/stage.html",
+      "status": 200,
+      "finalUrl": "https://www.marv.jp/special/moriarty/moriarty-2/stage.html",
+      "checkedAt": "2026-10-20T05:34:14.489Z",
+      "sha256": "f3afc7fb0bf621e4c2f668f23dd330cdb2961147b074df751985946300cfb731"
+    },
+    {
+      "name": "op3-cast",
+      "url": "https://www.marv.jp/special/moriarty/moriarty-3/cast.html",
+      "status": 200,
+      "finalUrl": "https://www.marv.jp/special/moriarty/moriarty-3/cast.html",
+      "checkedAt": "2026-10-20T05:34:17.185Z",
+      "sha256": "9f2abd8e916fd50d6d5e4860337f429447616557045da048de013e0493ea69ef"
+    },
+    {
+      "name": "op3-stage",
+      "url": "https://www.marv.jp/special/moriarty/moriarty-3/stage.html",
+      "status": 200,
+      "finalUrl": "https://www.marv.jp/special/moriarty/moriarty-3/stage.html",
+      "checkedAt": "2026-10-20T05:34:19.918Z",
+      "sha256": "1b9e7eea0dc64d074147bfbcf16ef9f98e3b24c1608e568c5e712d768cd224a1"
+    },
+    {
+      "name": "op4-cast",
+      "url": "https://www.marv.jp/special/moriarty/moriarty-4/cast.html",
+      "status": 200,
+      "finalUrl": "https://www.marv.jp/special/moriarty/moriarty-4/cast.html",
+      "checkedAt": "2026-10-20T05:34:22.206Z",
+      "sha256": "4e737be30997e94eb7c90a063733a724d8c2fb136dc1fafbb92f8761aaf603c3"
+    },
+    {
+      "name": "op4-stage",
+      "url": "https://www.marv.jp/special/moriarty/moriarty-4/stage.html",
+      "status": 200,
+      "finalUrl": "https://www.marv.jp/special/moriarty/moriarty-4/stage.html",
+      "checkedAt": "2026-10-20T05:34:24.555Z",
+      "sha256": "2ab917506bd278681ad1cfcd57a4a83913b08cbfae8cdaa287d30324c7c86714"
+    },
+    {
+      "name": "op5-cast",
+      "url": "https://www.marv.jp/special/moriarty/moriarty-5/cast.html",
+      "status": 200,
+      "finalUrl": "https://www.marv.jp/special/moriarty/moriarty-5/cast.html",
+      "checkedAt": "2026-10-20T05:34:26.873Z",
+      "sha256": "be1169ab4da6ea1ef82b69ad463b227cc52b77aec3f585fc86ad3f27922dac3e"
+    },
+    {
+      "name": "op5-stage",
+      "url": "https://www.marv.jp/special/moriarty/moriarty-5/stage.html",
+      "status": 200,
+      "finalUrl": "https://www.marv.jp/special/moriarty/moriarty-5/stage.html",
+      "checkedAt": "2026-10-20T05:34:29.174Z",
+      "sha256": "5b791cd59b3faa5ae46cd0e0c98c3d1b3229a48ad71b0364e5d1565a249ad570"
+    },
+    {
+      "name": "concert-cast",
+      "url": "https://www.marv.jp/special/moriarty/moriarty-concert/cast.html",
+      "status": 200,
+      "finalUrl": "https://www.marv.jp/special/moriarty/moriarty-concert/cast.html",
+      "checkedAt": "2026-10-20T05:34:31.445Z",
+      "sha256": "5d0dbf80c5574718f8e04634079750782bf61e8c4a95d4c73e1f461b77e4d45d"
+    },
+    {
+      "name": "concert-stage",
+      "url": "https://www.marv.jp/special/moriarty/moriarty-concert/stage.html",
+      "status": 200,
+      "finalUrl": "https://www.marv.jp/special/moriarty/moriarty-concert/stage.html",
+      "checkedAt": "2026-10-20T05:34:33.732Z",
+      "sha256": "9325978c685d7829ab0b5c8062212b4509c1a67403fb643ded1d0db6b5462ab9"
+    },
+    {
+      "name": "re2025-cast",
+      "url": "https://www.marv.jp/special/moriarty/moriarty-re1/cast.html",
+      "status": 200,
+      "finalUrl": "https://www.marv.jp/special/moriarty/moriarty-re1/cast.html",
+      "checkedAt": "2026-10-20T05:34:36.062Z",
+      "sha256": "7c471fb0fc9993c0f9fb345fdfe96ce488e8ad4f51ccc96660b606883651338c"
+    },
+    {
+      "name": "re2025-stage",
+      "url": "https://www.marv.jp/special/moriarty/moriarty-re1/stage.html",
+      "status": 200,
+      "finalUrl": "https://www.marv.jp/special/moriarty/moriarty-re1/stage.html",
+      "checkedAt": "2026-10-20T05:34:38.390Z",
+      "sha256": "3f7f77cad2887533c02e0aecc8625e21fc7c78e319c41e276f77e4bdff427908"
+    },
+    {
+      "name": "re2026-cast",
+      "url": "https://www.marv.jp/special/moriarty/cast.html",
+      "status": 200,
+      "finalUrl": "https://www.marv.jp/special/moriarty/cast.html",
+      "checkedAt": "2026-10-20T05:34:40.701Z",
+      "sha256": "be81fec2a03fc6042099572f2cc3ebba6e975d44c3478c9c9178a13cc710b57b"
+    },
+    {
+      "name": "re2026-stage",
+      "url": "https://www.marv.jp/special/moriarty/stage.html",
+      "status": 200,
+      "finalUrl": "https://www.marv.jp/special/moriarty/stage.html",
+      "checkedAt": "2026-10-20T05:34:43.041Z",
+      "sha256": "7db3168ab54d9fb36457bada03e20233d9f4dbe6290ce38d8f06bafabafb0496"
+    },
+    {
+      "name": "re2026-castsche",
+      "url": "https://www.marv.jp/special/moriarty/castsche.html",
+      "status": 200,
+      "finalUrl": "https://www.marv.jp/special/moriarty/castsche.html",
+      "checkedAt": "2026-10-20T05:34:45.399Z",
+      "sha256": "b7985493bb8953f551ce8ce448e332a5ba13c36f1597df0402c805bad2401026"
+    },
+    {
+      "name": "re2026-intro",
+      "url": "https://www.marv.jp/special/moriarty/intro.html",
+      "status": 200,
+      "finalUrl": "https://www.marv.jp/special/moriarty/intro.html",
+      "checkedAt": "2026-10-20T05:34:47.668Z",
+      "sha256": "ace83af68086142c21f6ed75758efc5258882bd2f4d596b1b23fcf7dff47aca3"
+    },
+    {
+      "name": "op1-intro",
+      "url": "https://www.marv.jp/special/moriarty-1/intro.html",
+      "status": 200,
+      "finalUrl": "https://www.marv.jp/special/moriarty-1/intro.html",
+      "checkedAt": "2026-10-20T05:35:20.622Z",
+      "sha256": "e9042ada5889cf9c38966719c958482256f6ac17199d8f244691a99ddffcd9b0"
+    },
+    {
+      "name": "op2-intro",
+      "url": "https://www.marv.jp/special/moriarty/moriarty-2/intro.html",
+      "status": 200,
+      "finalUrl": "https://www.marv.jp/special/moriarty/moriarty-2/intro.html",
+      "checkedAt": "2026-10-20T05:35:22.949Z",
+      "sha256": "95a06cfdc45df1d66bba5bc62e8c296335bb7c203a78b4eb681cf538c3f16511"
+    },
+    {
+      "name": "op3-intro",
+      "url": "https://www.marv.jp/special/moriarty/moriarty-3/intro.html",
+      "status": 200,
+      "finalUrl": "https://www.marv.jp/special/moriarty/moriarty-3/intro.html",
+      "checkedAt": "2026-10-20T05:35:25.249Z",
+      "sha256": "7880bca98fba8a0ac657a5a0295dde21d021a859561b8e09385b149018fc3c11"
+    },
+    {
+      "name": "op4-intro",
+      "url": "https://www.marv.jp/special/moriarty/moriarty-4/intro.html",
+      "status": 200,
+      "finalUrl": "https://www.marv.jp/special/moriarty/moriarty-4/intro.html",
+      "checkedAt": "2026-10-20T05:35:27.557Z",
+      "sha256": "02ab6baef025452d40ecc1404de0c4cf8cf59d1a2374e05897da7407078295a6"
+    },
+    {
+      "name": "op5-intro",
+      "url": "https://www.marv.jp/special/moriarty/moriarty-5/intro.html",
+      "status": 200,
+      "finalUrl": "https://www.marv.jp/special/moriarty/moriarty-5/intro.html",
+      "checkedAt": "2026-10-20T05:35:29.865Z",
+      "sha256": "57a15beb168881ac06387f59b3bab63920a8369e5c82f30c1ebe16f9e96343aa"
+    },
+    {
+      "name": "re2025-intro",
+      "url": "https://www.marv.jp/special/moriarty/moriarty-re1/intro.html",
+      "status": 200,
+      "finalUrl": "https://www.marv.jp/special/moriarty/moriarty-re1/intro.html",
+      "checkedAt": "2026-10-20T05:35:32.450Z",
+      "sha256": "4f567f1d4d2285cbf0255bf23f562da109e995c0527220a23a729374eb0c36c7"
+    },
+    {
+      "name": "concert-home",
+      "url": "https://www.marv.jp/special/moriarty/moriarty-concert/",
+      "status": 200,
+      "finalUrl": "https://www.marv.jp/special/moriarty/moriarty-concert/",
+      "checkedAt": "2026-10-20T05:35:35.113Z",
+      "sha256": "a4912e5b84dbac52e20b08501059d7f33e16bc4fe1740fb65ebe54d2e3106137"
+    },
+    {
+      "name": "op3-info",
+      "url": "https://www.marv.jp/special/moriarty/moriarty-3/info01.html",
+      "status": 200,
+      "finalUrl": "https://www.marv.jp/special/moriarty/moriarty-3/info01.html",
+      "checkedAt": "2026-10-20T05:35:37.823Z",
+      "sha256": "bf280e19524d54c957c110c5d0af4c42d24aa7efa6d222d7db1ba0e2ed14b98e"
+    }
+  ],
+  "notes": [
+    "104 cast relationships and 113 credit names rechecked against production-specific official pages. Existing cast, credits, cancellation, guest and team conditions preserved.",
+    "Existing first-production Japanese summary preserved. Seven empty Japanese summaries and eight empty English summaries filled from official introductions and production facts; Op.5 climax confirmed by official 2025 introduction. No invented plot detail where a detailed synopsis is unavailable.",
+    "English display titles and summaries are editorial translations. Official 2024/2025/2026 overseas-ticket notices support Moriarty the Patriot / Concert / A Scandal in British Empire Reprise / A Study in Scarlet Reprise wording; punctuation and series-title order normalized for display.",
+    "Franchise description replaces promotional claims with concise production facts. No actor profile or cast changes; other franchise attributes, identifiers, periods, venue, VOD and protected data retained."
+  ],
+  "requestKey": "c33626079c05aea84fea5304f08eed8667294072a49903e57ea4fd9e9de512c7"
+}
