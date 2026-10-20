@@ -1445,8 +1445,29 @@
       "slug": "diabolik-lovers",
       "name": "舞台「DIABOLIK LOVERS」（ディアステ）",
       "registeredDay": "2026-02-09",
-      "plays": 0,
-      "protected": false
+      "plays": 3,
+      "protected": false,
+      "castRows": 29,
+      "castCoverageNote": "2015年初演9配役・2016年re:requiem9配役・2018年MORE,BLOOD11配役を追加。人物14・作品3・主要配役29、再演アンサンブル5名はクレジットへ。初演と2018年の未記名出演者は未特定。ユイへの無神兄弟区分継続を補正。雨宮優／加藤千尋は同名別人と混同せず属性未確認、将来も名前一致のみで自動接続しない。日程・会場・短い日英概要・英語表示名・シリーズ説明・年表を点検。人物総合監査・詳細英訳・現在配信・主演指定・原作区分の整理は後続。",
+      "seriesAudit": {
+        "checkedAt": "2026-10-20T15:15:37.880Z",
+        "scope": "2015年・2016年・2018年の劇場公演3作品の主要配役。初演／2018年の未記名出演者、関連イベント・将来作品の完全網羅を意味しない。",
+        "works": 3,
+        "castRows": 29,
+        "ensembleCreditNames": 5,
+        "unidentifiedContributors": [
+          "2015年初演のアンサンブル名",
+          "2018年MORE,BLOODの「他」に含まれる出演者"
+        ],
+        "identityCautions": [
+          "雨宮優（初演コーデリア）：同名の別職種へ自動接続しない",
+          "加藤千尋（再演コーデリア）：後年同名で活動する他人物へ自動接続しない"
+        ],
+        "publicPages": 50,
+        "report": "docs/diabolik2015-2018-2026-10-21.md",
+        "research": "next-app/research/diabolik2015-2018-20261020.json",
+        "pendingWorks": []
+      }
     },
     {
       "id": "e35a6e74-da17-475a-8980-739021523d1a",
