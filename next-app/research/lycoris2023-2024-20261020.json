@@ -1,0 +1,3538 @@
+{
+  "version": 1,
+  "batchId": "lycoris2023-2024-20261020-01",
+  "expectedFranchise": {
+    "id": "f4eeea2c-7c6a-4417-90c7-228305812950",
+    "name": "舞台「リコリス・リコイル」",
+    "created_at": "2026-02-08T16:26:41.990203+00:00",
+    "updated_at": "2026-02-08T16:26:41.990203+00:00",
+    "slug": "lycoris-recoil",
+    "intro": null,
+    "description": "Spider Lily原作の人気アニメ『リコリス・リコイル』を舞台化した2.5次元作品。犯罪を未然に防ぐ秘密組織「DA」のエージェントである少女たちの成長と絆を描く。リアルなガンアクションとキャラクターの魅力が融合したステージが特徴であり、脚本をほさかよう、演出を山崎彬が手掛ける。",
+    "origin_type": "アニメ原作",
+    "origin_note": "原作：Spider Lily/アニプレックス『リコリス・リコイル』",
+    "production_companies": null,
+    "related_franchise_ids": [],
+    "format": null,
+    "description_en": null,
+    "name_en": null
+  },
+  "franchisePatch": {
+    "format": "stage",
+    "name_en": "Lycoris Recoil: The Stage",
+    "description": "Spider Lily原作のアニメ『リコリス・リコイル』を舞台化したシリーズ。2023年に初演、2024年に第2弾「Life wonʼt wait.」を上演。脚本はほさかよう、演出は山崎彬。錦木千束と井ノ上たきなを中心に、少女たちの任務と日常を描く。",
+    "description_en": "A stage series based on the anime Lycoris Recoil, originally created by Spider Lily. The first production opened in 2023, followed by Life won’t wait. in 2024. It follows the missions and everyday lives of Chisato Nishikigi, Takina Inoue and their fellow operatives."
+  },
+  "actors": [
+    {
+      "actor": {
+        "id": "0a910388-2832-4955-969f-e67b9f4a0832",
+        "slug": "kawauchi-misato",
+        "name": "河内美里",
+        "kana": "かわうち みさと",
+        "profile": "千葉県出身の俳優・声優。舞台「リコリス・リコイル」の錦木千束役、舞台「やがて君になる」の小糸侑役などを務める。ミスiD2014佐武宇綺賞を受賞。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1997-10-11",
+        "height_cm": 156,
+        "blood_type": "B",
+        "birthday_label": null,
+        "name_en": "Misato Kawauchi",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "河内美里",
+      "profileUrl": "https://misato-kawauchi.net/profiles",
+      "evidence": [
+        {
+          "url": "https://misato-kawauchi.net/profiles",
+          "checkedAt": "2026-10-20T06:42:55.479Z",
+          "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+        },
+        {
+          "url": "https://kira-hai.net/kawauchi-misato",
+          "checkedAt": "2026-10-20T06:40:56.499Z",
+          "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+        },
+        {
+          "url": "https://lycoris-recoil.com/stage/1st/",
+          "checkedAt": "2026-10-20T06:39:44.288Z",
+          "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+        },
+        {
+          "url": "https://lycoris-recoil.com/stage/",
+          "checkedAt": "2026-10-20T06:38:24.774Z",
+          "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+        }
+      ],
+      "notes": [
+        "基本情報と略歴は本人公式、読みは第一参照先。英字名は公式フッターのMISATO KAWAUCHIを大文字小文字のみ整えた。現在所属は紹介文に断定しない。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "b8cb3cc6-a83b-4030-bc87-1adf956b84ff",
+        "slug": "motonishi-sakiho",
+        "name": "本西彩希帆",
+        "kana": "もとにし さきほ",
+        "profile": "千葉県出身の俳優。オフィス・メイ所属。舞台「リコリス・リコイル」の井ノ上たきな役などを務め、舞台『結城友奈は勇者である』にも出演。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1998-05-27",
+        "height_cm": 158,
+        "blood_type": "AB",
+        "birthday_label": null,
+        "name_en": "Sakiho Motonishi",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "本西彩希帆",
+      "profileUrl": "https://cast-may.com/artist/sakiho-motonishi",
+      "evidence": [
+        {
+          "url": "https://cast-may.com/artist/sakiho-motonishi",
+          "checkedAt": "2026-10-20T06:41:32.054Z",
+          "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+        },
+        {
+          "url": "https://kira-hai.net/motonishi-sakiho",
+          "checkedAt": "2026-10-20T06:41:00.305Z",
+          "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+        },
+        {
+          "url": "https://lycoris-recoil.com/stage/1st/",
+          "checkedAt": "2026-10-20T06:39:44.288Z",
+          "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+        },
+        {
+          "url": "https://lycoris-recoil.com/stage/",
+          "checkedAt": "2026-10-20T06:38:24.774Z",
+          "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+        }
+      ],
+      "notes": [
+        "現所属公式で生年月日・158cm・AB型・出身・英字名・両年出演を確認。読みは第一参照先。2023年の劇団4ドル50セント表記は当時の所属注記として原文保持し、人物名・役名・現在所属には混入させない。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "54b63a77-a923-457e-ab68-1dec7062e1f8",
+        "slug": "ishii-mikako",
+        "name": "石井美絵子",
+        "kana": "いしい みかこ",
+        "profile": "茨城県出身の俳優・モデル。舞台「リコリス・リコイル」の中原ミズキ役、ミュージカル「美少女戦士セーラームーン」のセーラープルート役などを務める。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1990-04-17",
+        "height_cm": null,
+        "blood_type": "O",
+        "birthday_label": null,
+        "name_en": null,
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "石井美絵子",
+      "profileUrl": "https://thetv.jp/person/1000064675/",
+      "evidence": [
+        {
+          "url": "https://thetv.jp/person/1000064675/",
+          "checkedAt": "2026-10-20T06:43:23.606Z",
+          "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+        },
+        {
+          "url": "https://lycoris-recoil.com/stage/1st/",
+          "checkedAt": "2026-10-20T06:39:44.288Z",
+          "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+        },
+        {
+          "url": "https://lycoris-recoil.com/stage/",
+          "checkedAt": "2026-10-20T06:38:24.774Z",
+          "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+        },
+        {
+          "url": "https://www.oursongs-creative.jp/profile/archives/1",
+          "checkedAt": "2026-10-20T06:48:32.597Z",
+          "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+        }
+      ],
+      "notes": [
+        "読み・生年月日・出身・血液型と過去配役はWEBザテレビジョン編集部の人物紹介。旧所属公式URLは業務終了告知に変わっているため現在所属は採用しない。身長・英字名も今回未採用。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "78e88f2d-f766-4bc7-8fce-0d1c589100d0",
+        "slug": "obuchi-nonoka",
+        "name": "大渕野々花",
+        "kana": "おおぶち ののか",
+        "profile": "埼玉県出身の声優・歌手・俳優。舞台「リコリス・リコイル」のクルミ役、「文豪ストレイドッグス 黒の時代」のエリス役などを務める。アニメ『怪異と乙女と神隠し』の主題歌「朱く染めて心臓」でメジャーデビュー。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": null,
+        "height_cm": null,
+        "blood_type": "A",
+        "birthday_label": "3月13日",
+        "name_en": "Nonoka Obuchi",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "大渕野々花",
+      "profileUrl": "https://e-stonemusic.com/nonoka/biography",
+      "evidence": [
+        {
+          "url": "https://e-stonemusic.com/nonoka/biography",
+          "checkedAt": "2026-10-20T06:48:35.892Z",
+          "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+        },
+        {
+          "url": "https://www.jvcmusic.co.jp/flyingdog/-/Link/A028551.html",
+          "checkedAt": "2026-10-20T06:41:47.400Z",
+          "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+        },
+        {
+          "url": "https://lycoris-recoil.com/stage/1st/",
+          "checkedAt": "2026-10-20T06:39:44.288Z",
+          "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+        },
+        {
+          "url": "https://lycoris-recoil.com/stage/",
+          "checkedAt": "2026-10-20T06:38:24.774Z",
+          "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+        }
+      ],
+      "notes": [
+        "公式が公開する誕生日は3月13日のみ。検索結果等で見かける生年2000や身長147cmは今回未採用。birthday=null、birthday_label=3月13日。英字名はレーベル公式。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "eb2f2496-7082-4d84-a7a7-80b75f8798f0",
+        "slug": "kitamura-keigo",
+        "name": "北村圭吾",
+        "kana": "きたむら けいご",
+        "profile": "俳優。GMBプロダクション所属。舞台「リコリス・リコイル」のミカ役、「HUNTER×HUNTER」THE STAGEのシルバ役、ライブ・スペクタクル「NARUTO-ナルト-」のエー役などを務める。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1982-08-08",
+        "height_cm": 181,
+        "blood_type": null,
+        "birthday_label": null,
+        "name_en": "Kitamura Keigo",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "北村圭吾",
+      "profileUrl": "https://gmbp.co.jp/profile/kitamura-keigo",
+      "evidence": [
+        {
+          "url": "https://gmbp.co.jp/profile/kitamura-keigo",
+          "checkedAt": "2026-10-20T06:41:39.614Z",
+          "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+        },
+        {
+          "url": "https://kira-hai.net/kitamura-keigo",
+          "checkedAt": "2026-10-20T06:41:03.502Z",
+          "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+        },
+        {
+          "url": "https://lycoris-recoil.com/stage/1st/",
+          "checkedAt": "2026-10-20T06:39:44.288Z",
+          "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+        },
+        {
+          "url": "https://lycoris-recoil.com/stage/",
+          "checkedAt": "2026-10-20T06:38:24.774Z",
+          "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+        }
+      ],
+      "notes": [
+        "現在所属・生年月日・別作品の役はGMB公式。読み・181cmは第一参照先。公式のKitamura keigoは順序を維持して大文字小文字のみ整理。旧World Code所属を現在所属として使わない。血液型は空欄を補わない。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "97006ee3-4d49-46c2-ae35-92e8d37b3a9e",
+        "slug": "mieda-natsuki",
+        "name": "三枝奈都紀",
+        "kana": "みえだ なつき",
+        "profile": "長野県出身の俳優・モデル。ベローナモデルエージェンシー所属。舞台「リコリス・リコイル」の楠木役、舞台「からくりサーカス」のあるるかん役などを務める。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1978-08-13",
+        "height_cm": 175,
+        "blood_type": null,
+        "birthday_label": null,
+        "name_en": "Natsuki Mieda",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "三枝奈都紀",
+      "profileUrl": "https://www.sos-model.com/entertainments/903",
+      "evidence": [
+        {
+          "url": "https://www.sos-model.com/entertainments/903",
+          "checkedAt": "2026-10-20T06:48:38.805Z",
+          "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+        },
+        {
+          "url": "https://www.bellona-model.net/model_women/60",
+          "checkedAt": "2026-10-20T06:41:44.556Z",
+          "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+        },
+        {
+          "url": "https://eiga.com/person/299748/",
+          "checkedAt": "2026-10-20T06:43:26.637Z",
+          "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+        },
+        {
+          "url": "https://lycoris-recoil.com/stage/1st/",
+          "checkedAt": "2026-10-20T06:39:44.288Z",
+          "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+        },
+        {
+          "url": "https://lycoris-recoil.com/stage/",
+          "checkedAt": "2026-10-20T06:38:24.774Z",
+          "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+        }
+      ],
+      "notes": [
+        "SOS MODEL AGENCY公式の提携プロフィールに生年月日・175cm・長野県・英字名・ベローナ所属・両作品の役を明記。ベローナ自身の現行人物ページとも照合。読みは映画.com。血液型は未採用。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "4118b781-01da-4ba5-a79c-d60a34634f68",
+        "slug": "ayaki-sakura",
+        "name": "彩木咲良",
+        "kana": "あやき さくら",
+        "profile": "兵庫県出身の俳優・歌手。フリーで活動。元たこやきレインボーのメンバー。舞台「リコリス・リコイル」では乙女サクラ役を演じる。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "2002-03-26",
+        "height_cm": null,
+        "blood_type": "B",
+        "birthday_label": null,
+        "name_en": null,
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "彩木咲良",
+      "profileUrl": "https://twitcasting.tv/ayakisakura_326",
+      "evidence": [
+        {
+          "url": "https://twitcasting.tv/ayakisakura_326",
+          "checkedAt": "2026-10-20T06:43:12.009Z",
+          "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+        },
+        {
+          "url": "https://note.com/sakura_official/n/n924f1db21e44",
+          "checkedAt": "2026-10-20T06:43:16.635Z",
+          "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+        },
+        {
+          "url": "https://thetv.jp/person/1000093604/",
+          "checkedAt": "2026-10-20T06:48:45.249Z",
+          "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+        },
+        {
+          "url": "https://lycoris-recoil.com/stage/1st/",
+          "checkedAt": "2026-10-20T06:39:44.288Z",
+          "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+        },
+        {
+          "url": "https://lycoris-recoil.com/stage/",
+          "checkedAt": "2026-10-20T06:38:24.774Z",
+          "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+        }
+      ],
+      "notes": [
+        "本人の現行配信プロフィールに読み・フリー・乙女サクラ役。自身のnoteで10歳からのアイドル歴とソロライブを確認。生年月日・出身・B型・元グループはWEBザテレビジョン編集部。身長・英字名は未採用。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "75c85ab6-9e76-4355-87de-c84dc85945e0",
+        "slug": "ijiri-anna",
+        "name": "井尻晏菜",
+        "kana": "いじり あんな",
+        "profile": "京都府出身の俳優。オムニア所属。元NMB48の3期生で、2012年から2020年まで活動。舞台「リコリス・リコイル」の蛇ノ目エリカ役などを務める。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1995-01-20",
+        "height_cm": 159,
+        "blood_type": null,
+        "birthday_label": null,
+        "name_en": "Ijiri Anna",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "井尻晏菜",
+      "profileUrl": "https://omnia.co.jp/talent/ijiri/",
+      "evidence": [
+        {
+          "url": "https://omnia.co.jp/talent/ijiri/",
+          "checkedAt": "2026-10-20T06:43:02.599Z",
+          "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+        },
+        {
+          "url": "https://ameblo.jp/nmb48/entry-12375076602.html",
+          "checkedAt": "2026-10-20T06:48:49.833Z",
+          "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+        },
+        {
+          "url": "https://lycoris-recoil.com/stage/1st/",
+          "checkedAt": "2026-10-20T06:39:44.288Z",
+          "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+        },
+        {
+          "url": "https://lycoris-recoil.com/stage/",
+          "checkedAt": "2026-10-20T06:38:24.774Z",
+          "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+        }
+      ],
+      "notes": [
+        "現在所属公式で生年月日・159cm・京都府・英字名・NMB48の活動年と蛇ノ目エリカ役を確認。読みは在籍時の本人公式ブログ。英字名の順序は公式のIJIRI ANNAを維持。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "1aaa3735-433f-4d6f-ad10-27c481cc32d6",
+        "slug": "araya-himeka",
+        "name": "新谷姫加",
+        "kana": "あらや ひめか",
+        "profile": "青森県出身の俳優・モデル。オスカープロモーション所属。舞台「リコリス・リコイル」の姫蒲役、舞台「かげきしょうじょ！！」の星野薫役などを務める。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1998-05-30",
+        "height_cm": 164,
+        "blood_type": "A",
+        "birthday_label": null,
+        "name_en": "Himeka Araya",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "新谷姫加",
+      "profileUrl": "https://catalog.oscarpro.co.jp/search/talent/1000035638",
+      "evidence": [
+        {
+          "url": "https://catalog.oscarpro.co.jp/search/talent/1000035638",
+          "checkedAt": "2026-10-20T06:43:05.525Z",
+          "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+        },
+        {
+          "url": "https://magazine.younganimal.com/gravure/?id=91",
+          "checkedAt": "2026-10-20T06:43:08.009Z",
+          "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+        },
+        {
+          "url": "https://lycoris-recoil.com/stage/1st/",
+          "checkedAt": "2026-10-20T06:39:44.288Z",
+          "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+        },
+        {
+          "url": "https://lycoris-recoil.com/stage/",
+          "checkedAt": "2026-10-20T06:38:24.774Z",
+          "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+        }
+      ],
+      "notes": [
+        "現在のオスカー公式で生年月日・出身・164cm・A型・英字名・両年姫蒲役と星野薫役を確認。読みは白泉社ヤングアニマル人物紹介。旧ゼロイチ所属の記載を現在所属にしない。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "77e88b94-dfb0-4098-bbef-0c246361a087",
+        "slug": "takeuchi-rintaro",
+        "name": "竹内凜太郎",
+        "kana": "たけうち りんたろう",
+        "profile": "茨城県出身の俳優。2018年にデビュー。舞台「リコリス・リコイル」ではロボ太役を演じる。殺陣やダンスを特技とする。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1998-07-29",
+        "height_cm": null,
+        "blood_type": "O",
+        "birthday_label": null,
+        "name_en": null,
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "竹内凜太郎",
+      "profileUrl": "https://thetv.jp/person/2000076347/",
+      "evidence": [
+        {
+          "url": "https://thetv.jp/person/2000076347/",
+          "checkedAt": "2026-10-20T06:43:21.208Z",
+          "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+        },
+        {
+          "url": "https://lycoris-recoil.com/stage/1st/",
+          "checkedAt": "2026-10-20T06:39:44.288Z",
+          "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+        },
+        {
+          "url": "https://lycoris-recoil.com/stage/",
+          "checkedAt": "2026-10-20T06:38:24.774Z",
+          "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+        }
+      ],
+      "notes": [
+        "WEBザテレビジョン編集部の俳優ページで読み・生年月日・出身・O型・デビュー年を確認。公演公式2作品の同名ロボ太役と照合。掲載されたSUI個人URLは404。現在所属・身長・英字名は推測せず未採用。同姓同名の会社員・若年スポーツ選手を採用しない。"
+      ]
+    }
+  ],
+  "works": [
+    {
+      "year": 2023,
+      "before": {
+        "id": "cb84fe95-f11a-442a-852c-44f7f021a7a1",
+        "slug": "lycorisrecoil2023",
+        "title": "舞台「リコリス・リコイル」",
+        "franchise_id": "f4eeea2c-7c6a-4417-90c7-228305812950",
+        "summary": null,
+        "period": "2023年",
+        "venue": null,
+        "vod": {},
+        "genre": null,
+        "created_at": "2026-05-14T16:05:25.684041+00:00",
+        "updated_at": "2026-05-14T16:05:25.684041+00:00",
+        "tags": [],
+        "credits": null,
+        "related_franchise_ids": [],
+        "summary_en": null,
+        "title_en": null
+      },
+      "patch": {
+        "period": "2023年1月7日〜15日",
+        "venue": "天王洲 銀河劇場",
+        "credits": [
+          {
+            "role": "原作",
+            "names": [
+              "Spider Lily"
+            ],
+            "is_core": true,
+            "sort_order": 1
+          },
+          {
+            "role": "脚本",
+            "names": [
+              "ほさかよう"
+            ],
+            "is_core": true,
+            "sort_order": 2
+          },
+          {
+            "role": "演出",
+            "names": [
+              "山崎彬"
+            ],
+            "is_core": true,
+            "sort_order": 3
+          },
+          {
+            "role": "音楽",
+            "names": [
+              "坂本弦"
+            ],
+            "is_core": true,
+            "sort_order": 4
+          },
+          {
+            "role": "アクション",
+            "names": [
+              "新田健太"
+            ],
+            "is_core": true,
+            "sort_order": 5
+          },
+          {
+            "role": "振付",
+            "names": [
+              "富田彩"
+            ],
+            "is_core": true,
+            "sort_order": 6
+          },
+          {
+            "role": "出演（役名未記載）",
+            "names": [
+              "亀井英樹",
+              "瑞野史人",
+              "青木素姫",
+              "高間淳平",
+              "野中遥月",
+              "速川大弥",
+              "すぎやまみやび"
+            ],
+            "is_core": false,
+            "sort_order": 7
+          }
+        ],
+        "title_en": "Lycoris Recoil: The Stage",
+        "summary": "犯罪を未然に防ぐ秘密組織「DA」のエージェントである少女たち「リコリス」。喫茶リコリコを拠点とする錦木千束と井ノ上たきなを中心に、任務と日常を描くアニメの舞台化第1弾。",
+        "summary_en": "The first stage adaptation of the anime Lycoris Recoil follows Chisato Nishikigi and Takina Inoue, young agents who carry out missions while working from Café LycoReco."
+      },
+      "rawSource": {
+        "sourceUrl": "https://kira-hai.net/lycorisrecoil2023",
+        "title": "舞台「リコリス・リコイル」",
+        "scheduleLines": [
+          "2023年1月7日-15日 天王洲 銀河劇場"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "河内美里",
+            "sourceActorUrl": "https://kira-hai.net/kawauchi-misato",
+            "role_name": "錦木千束",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "本西彩希帆 (劇団4ドル50セント)",
+            "sourceActorUrl": null,
+            "role_name": "井ノ上たきな",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "石井美絵子",
+            "sourceActorUrl": null,
+            "role_name": "中原ミズキ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "大渕野々花",
+            "sourceActorUrl": null,
+            "role_name": "クルミ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "北村圭吾",
+            "sourceActorUrl": "https://kira-hai.net/kitamura-keigo",
+            "role_name": "ミカ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "三枝奈都紀",
+            "sourceActorUrl": null,
+            "role_name": "楠木",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "田上真里奈",
+            "sourceActorUrl": "https://kira-hai.net/tanoue-marina",
+            "role_name": "春川フキ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "彩木咲良",
+            "sourceActorUrl": null,
+            "role_name": "乙女サクラ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "井尻晏菜",
+            "sourceActorUrl": null,
+            "role_name": "蛇ノ目エリカ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "小野健斗",
+            "sourceActorUrl": "https://kira-hai.net/ono-kento",
+            "role_name": "吉松シンジ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "新谷姫加",
+            "sourceActorUrl": null,
+            "role_name": "姫蒲",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "竹内凜太郎",
+            "sourceActorUrl": null,
+            "role_name": "ロボ太",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "仲田博喜",
+            "sourceActorUrl": "https://kira-hai.net/nakada-hiroki",
+            "role_name": "真島",
+            "cast_group": null
+          }
+        ],
+        "unparsed": [
+          "亀井英樹",
+          "瑞野史人",
+          "青木素姫",
+          "高間淳平",
+          "野中遥月",
+          "速川大弥",
+          "すぎやまみやび"
+        ]
+      },
+      "source": {
+        "sourceUrl": "https://kira-hai.net/lycorisrecoil2023",
+        "title": "舞台「リコリス・リコイル」",
+        "scheduleLines": [
+          "2023年1月7日-15日 天王洲 銀河劇場"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "河内美里",
+            "sourceActorUrl": "https://kira-hai.net/kawauchi-misato",
+            "role_name": "錦木千束",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "本西彩希帆",
+            "sourceActorUrl": "https://kira-hai.net/motonishi-sakiho",
+            "role_name": "井ノ上たきな",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "石井美絵子",
+            "sourceActorUrl": null,
+            "role_name": "中原ミズキ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "大渕野々花",
+            "sourceActorUrl": null,
+            "role_name": "クルミ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "北村圭吾",
+            "sourceActorUrl": "https://kira-hai.net/kitamura-keigo",
+            "role_name": "ミカ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "三枝奈都紀",
+            "sourceActorUrl": null,
+            "role_name": "楠木",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "田上真里奈",
+            "sourceActorUrl": "https://kira-hai.net/tanoue-marina",
+            "role_name": "春川フキ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "彩木咲良",
+            "sourceActorUrl": null,
+            "role_name": "乙女サクラ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "井尻晏菜",
+            "sourceActorUrl": null,
+            "role_name": "蛇ノ目エリカ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "小野健斗",
+            "sourceActorUrl": "https://kira-hai.net/ono-kento",
+            "role_name": "吉松シンジ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "新谷姫加",
+            "sourceActorUrl": null,
+            "role_name": "姫蒲",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "竹内凜太郎",
+            "sourceActorUrl": null,
+            "role_name": "ロボ太",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "仲田博喜",
+            "sourceActorUrl": "https://kira-hai.net/nakada-hiroki",
+            "role_name": "真島",
+            "cast_group": null
+          }
+        ],
+        "unparsed": [],
+        "checkedAt": "2026-10-20T06:39:39.312Z",
+        "creditOnly": {
+          "rawCast": [],
+          "unparsed": [
+            "亀井英樹",
+            "瑞野史人",
+            "青木素姫",
+            "高間淳平",
+            "野中遥月",
+            "速川大弥",
+            "すぎやまみやび"
+          ],
+          "decision": "公式で役名の記載がない7名を作品クレジットへ保存。アンサンブルとは断定しない。"
+        },
+        "normalizations": [
+          {
+            "raw": {
+              "sourceActorName": "本西彩希帆 (劇団4ドル50セント)",
+              "sourceActorUrl": null,
+              "role_name": "井ノ上たきな",
+              "cast_group": null
+            },
+            "normalized": {
+              "sourceActorName": "本西彩希帆",
+              "sourceActorUrl": "https://kira-hai.net/motonishi-sakiho",
+              "role_name": "井ノ上たきな",
+              "cast_group": null
+            },
+            "reason": "DOMの本人リンクを確認し、公演当時の所属注記と人物名を分離。原文はrawSourceで保持。"
+          }
+        ]
+      },
+      "stage": {
+        "workUrl": "https://kira-hai.net/lycorisrecoil2023",
+        "key": "1ebb6c3b10bce5cf9f0102de0eff74ddf6b39ee45dd537f45b0fd542bf8a7d8d",
+        "items": [
+          {
+            "source_actor_name": "河内美里",
+            "source_actor_url": "https://kira-hai.net/kawauchi-misato",
+            "source_work_title": "舞台「リコリス・リコイル」",
+            "source_year": 2023,
+            "source_role_raw": "錦木千束",
+            "source_role_names": [
+              "錦木千束"
+            ],
+            "source_cast_group": null,
+            "source_order": 1,
+            "source_credit_key": "f95986636e112bc223fb",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/lycorisrecoil2023",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://misato-kawauchi.net/profiles",
+                  "checkedAt": "2026-10-20T06:42:55.479Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://kira-hai.net/kawauchi-misato",
+                  "checkedAt": "2026-10-20T06:40:56.499Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://lycoris-recoil.com/stage/1st/",
+                  "checkedAt": "2026-10-20T06:39:44.288Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://lycoris-recoil.com/stage/",
+                  "checkedAt": "2026-10-20T06:38:24.774Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                }
+              ],
+              "source_fingerprint": "c595034f4344219a9eb278e38ef512f6826d16e1f93a27f986f6da95b7af4780",
+              "review_fingerprint": "5f310204777c78d2fc2406729802f97de24a707cd7554775a030e24bc3db1f97",
+              "snapshot_fingerprint": "ef02887521ff0fd8947e4659ccb698eb5f53925f37145822689c2e824c6b53b0",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "0a910388-2832-4955-969f-e67b9f4a0832",
+            "matched_play_id": "cb84fe95-f11a-442a-852c-44f7f021a7a1",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "本西彩希帆",
+            "source_actor_url": "https://kira-hai.net/motonishi-sakiho",
+            "source_work_title": "舞台「リコリス・リコイル」",
+            "source_year": 2023,
+            "source_role_raw": "井ノ上たきな",
+            "source_role_names": [
+              "井ノ上たきな"
+            ],
+            "source_cast_group": null,
+            "source_order": 2,
+            "source_credit_key": "a029d8b93ca54c53db21",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/lycorisrecoil2023",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://cast-may.com/artist/sakiho-motonishi",
+                  "checkedAt": "2026-10-20T06:41:32.054Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://kira-hai.net/motonishi-sakiho",
+                  "checkedAt": "2026-10-20T06:41:00.305Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://lycoris-recoil.com/stage/1st/",
+                  "checkedAt": "2026-10-20T06:39:44.288Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://lycoris-recoil.com/stage/",
+                  "checkedAt": "2026-10-20T06:38:24.774Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                }
+              ],
+              "source_fingerprint": "c595034f4344219a9eb278e38ef512f6826d16e1f93a27f986f6da95b7af4780",
+              "review_fingerprint": "5f310204777c78d2fc2406729802f97de24a707cd7554775a030e24bc3db1f97",
+              "snapshot_fingerprint": "ef02887521ff0fd8947e4659ccb698eb5f53925f37145822689c2e824c6b53b0",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "b8cb3cc6-a83b-4030-bc87-1adf956b84ff",
+            "matched_play_id": "cb84fe95-f11a-442a-852c-44f7f021a7a1",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "石井美絵子",
+            "source_actor_url": null,
+            "source_work_title": "舞台「リコリス・リコイル」",
+            "source_year": 2023,
+            "source_role_raw": "中原ミズキ",
+            "source_role_names": [
+              "中原ミズキ"
+            ],
+            "source_cast_group": null,
+            "source_order": 3,
+            "source_credit_key": "e6107840aee226bccad9",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/lycorisrecoil2023",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://thetv.jp/person/1000064675/",
+                  "checkedAt": "2026-10-20T06:43:23.606Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://lycoris-recoil.com/stage/1st/",
+                  "checkedAt": "2026-10-20T06:39:44.288Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://lycoris-recoil.com/stage/",
+                  "checkedAt": "2026-10-20T06:38:24.774Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://www.oursongs-creative.jp/profile/archives/1",
+                  "checkedAt": "2026-10-20T06:48:32.597Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                }
+              ],
+              "source_fingerprint": "c595034f4344219a9eb278e38ef512f6826d16e1f93a27f986f6da95b7af4780",
+              "review_fingerprint": "5f310204777c78d2fc2406729802f97de24a707cd7554775a030e24bc3db1f97",
+              "snapshot_fingerprint": "ef02887521ff0fd8947e4659ccb698eb5f53925f37145822689c2e824c6b53b0",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "54b63a77-a923-457e-ab68-1dec7062e1f8",
+            "matched_play_id": "cb84fe95-f11a-442a-852c-44f7f021a7a1",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "大渕野々花",
+            "source_actor_url": null,
+            "source_work_title": "舞台「リコリス・リコイル」",
+            "source_year": 2023,
+            "source_role_raw": "クルミ",
+            "source_role_names": [
+              "クルミ"
+            ],
+            "source_cast_group": null,
+            "source_order": 4,
+            "source_credit_key": "ce552d45c99cc3969def",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/lycorisrecoil2023",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://e-stonemusic.com/nonoka/biography",
+                  "checkedAt": "2026-10-20T06:48:35.892Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://www.jvcmusic.co.jp/flyingdog/-/Link/A028551.html",
+                  "checkedAt": "2026-10-20T06:41:47.400Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://lycoris-recoil.com/stage/1st/",
+                  "checkedAt": "2026-10-20T06:39:44.288Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://lycoris-recoil.com/stage/",
+                  "checkedAt": "2026-10-20T06:38:24.774Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                }
+              ],
+              "source_fingerprint": "c595034f4344219a9eb278e38ef512f6826d16e1f93a27f986f6da95b7af4780",
+              "review_fingerprint": "5f310204777c78d2fc2406729802f97de24a707cd7554775a030e24bc3db1f97",
+              "snapshot_fingerprint": "ef02887521ff0fd8947e4659ccb698eb5f53925f37145822689c2e824c6b53b0",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "78e88f2d-f766-4bc7-8fce-0d1c589100d0",
+            "matched_play_id": "cb84fe95-f11a-442a-852c-44f7f021a7a1",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "北村圭吾",
+            "source_actor_url": "https://kira-hai.net/kitamura-keigo",
+            "source_work_title": "舞台「リコリス・リコイル」",
+            "source_year": 2023,
+            "source_role_raw": "ミカ",
+            "source_role_names": [
+              "ミカ"
+            ],
+            "source_cast_group": null,
+            "source_order": 5,
+            "source_credit_key": "b6b66b5d493359a76221",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/lycorisrecoil2023",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://gmbp.co.jp/profile/kitamura-keigo",
+                  "checkedAt": "2026-10-20T06:41:39.614Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://kira-hai.net/kitamura-keigo",
+                  "checkedAt": "2026-10-20T06:41:03.502Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://lycoris-recoil.com/stage/1st/",
+                  "checkedAt": "2026-10-20T06:39:44.288Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://lycoris-recoil.com/stage/",
+                  "checkedAt": "2026-10-20T06:38:24.774Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                }
+              ],
+              "source_fingerprint": "c595034f4344219a9eb278e38ef512f6826d16e1f93a27f986f6da95b7af4780",
+              "review_fingerprint": "5f310204777c78d2fc2406729802f97de24a707cd7554775a030e24bc3db1f97",
+              "snapshot_fingerprint": "ef02887521ff0fd8947e4659ccb698eb5f53925f37145822689c2e824c6b53b0",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "eb2f2496-7082-4d84-a7a7-80b75f8798f0",
+            "matched_play_id": "cb84fe95-f11a-442a-852c-44f7f021a7a1",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "三枝奈都紀",
+            "source_actor_url": null,
+            "source_work_title": "舞台「リコリス・リコイル」",
+            "source_year": 2023,
+            "source_role_raw": "楠木",
+            "source_role_names": [
+              "楠木"
+            ],
+            "source_cast_group": null,
+            "source_order": 6,
+            "source_credit_key": "a22408581507b615396c",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/lycorisrecoil2023",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://www.sos-model.com/entertainments/903",
+                  "checkedAt": "2026-10-20T06:48:38.805Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://www.bellona-model.net/model_women/60",
+                  "checkedAt": "2026-10-20T06:41:44.556Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://eiga.com/person/299748/",
+                  "checkedAt": "2026-10-20T06:43:26.637Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://lycoris-recoil.com/stage/1st/",
+                  "checkedAt": "2026-10-20T06:39:44.288Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://lycoris-recoil.com/stage/",
+                  "checkedAt": "2026-10-20T06:38:24.774Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                }
+              ],
+              "source_fingerprint": "c595034f4344219a9eb278e38ef512f6826d16e1f93a27f986f6da95b7af4780",
+              "review_fingerprint": "5f310204777c78d2fc2406729802f97de24a707cd7554775a030e24bc3db1f97",
+              "snapshot_fingerprint": "ef02887521ff0fd8947e4659ccb698eb5f53925f37145822689c2e824c6b53b0",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "97006ee3-4d49-46c2-ae35-92e8d37b3a9e",
+            "matched_play_id": "cb84fe95-f11a-442a-852c-44f7f021a7a1",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "田上真里奈",
+            "source_actor_url": "https://kira-hai.net/tanoue-marina",
+            "source_work_title": "舞台「リコリス・リコイル」",
+            "source_year": 2023,
+            "source_role_raw": "春川フキ",
+            "source_role_names": [
+              "春川フキ"
+            ],
+            "source_cast_group": null,
+            "source_order": 7,
+            "source_credit_key": "5e516111c04e710d661e",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/lycorisrecoil2023",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "c595034f4344219a9eb278e38ef512f6826d16e1f93a27f986f6da95b7af4780",
+              "review_fingerprint": "5f310204777c78d2fc2406729802f97de24a707cd7554775a030e24bc3db1f97",
+              "snapshot_fingerprint": "ef02887521ff0fd8947e4659ccb698eb5f53925f37145822689c2e824c6b53b0",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "573ef8c0-7d7b-4bc1-855b-519453181f28",
+            "matched_play_id": "cb84fe95-f11a-442a-852c-44f7f021a7a1",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "彩木咲良",
+            "source_actor_url": null,
+            "source_work_title": "舞台「リコリス・リコイル」",
+            "source_year": 2023,
+            "source_role_raw": "乙女サクラ",
+            "source_role_names": [
+              "乙女サクラ"
+            ],
+            "source_cast_group": null,
+            "source_order": 8,
+            "source_credit_key": "db0c1246ab98837bbf3b",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/lycorisrecoil2023",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://twitcasting.tv/ayakisakura_326",
+                  "checkedAt": "2026-10-20T06:43:12.009Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://note.com/sakura_official/n/n924f1db21e44",
+                  "checkedAt": "2026-10-20T06:43:16.635Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://thetv.jp/person/1000093604/",
+                  "checkedAt": "2026-10-20T06:48:45.249Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://lycoris-recoil.com/stage/1st/",
+                  "checkedAt": "2026-10-20T06:39:44.288Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://lycoris-recoil.com/stage/",
+                  "checkedAt": "2026-10-20T06:38:24.774Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                }
+              ],
+              "source_fingerprint": "c595034f4344219a9eb278e38ef512f6826d16e1f93a27f986f6da95b7af4780",
+              "review_fingerprint": "5f310204777c78d2fc2406729802f97de24a707cd7554775a030e24bc3db1f97",
+              "snapshot_fingerprint": "ef02887521ff0fd8947e4659ccb698eb5f53925f37145822689c2e824c6b53b0",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "4118b781-01da-4ba5-a79c-d60a34634f68",
+            "matched_play_id": "cb84fe95-f11a-442a-852c-44f7f021a7a1",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "井尻晏菜",
+            "source_actor_url": null,
+            "source_work_title": "舞台「リコリス・リコイル」",
+            "source_year": 2023,
+            "source_role_raw": "蛇ノ目エリカ",
+            "source_role_names": [
+              "蛇ノ目エリカ"
+            ],
+            "source_cast_group": null,
+            "source_order": 9,
+            "source_credit_key": "3db5e08f4c1b0a5cf994",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/lycorisrecoil2023",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://omnia.co.jp/talent/ijiri/",
+                  "checkedAt": "2026-10-20T06:43:02.599Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://ameblo.jp/nmb48/entry-12375076602.html",
+                  "checkedAt": "2026-10-20T06:48:49.833Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://lycoris-recoil.com/stage/1st/",
+                  "checkedAt": "2026-10-20T06:39:44.288Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://lycoris-recoil.com/stage/",
+                  "checkedAt": "2026-10-20T06:38:24.774Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                }
+              ],
+              "source_fingerprint": "c595034f4344219a9eb278e38ef512f6826d16e1f93a27f986f6da95b7af4780",
+              "review_fingerprint": "5f310204777c78d2fc2406729802f97de24a707cd7554775a030e24bc3db1f97",
+              "snapshot_fingerprint": "ef02887521ff0fd8947e4659ccb698eb5f53925f37145822689c2e824c6b53b0",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "75c85ab6-9e76-4355-87de-c84dc85945e0",
+            "matched_play_id": "cb84fe95-f11a-442a-852c-44f7f021a7a1",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "小野健斗",
+            "source_actor_url": "https://kira-hai.net/ono-kento",
+            "source_work_title": "舞台「リコリス・リコイル」",
+            "source_year": 2023,
+            "source_role_raw": "吉松シンジ",
+            "source_role_names": [
+              "吉松シンジ"
+            ],
+            "source_cast_group": null,
+            "source_order": 10,
+            "source_credit_key": "5d480acbc49e1d1ed4a3",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/lycorisrecoil2023",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "c595034f4344219a9eb278e38ef512f6826d16e1f93a27f986f6da95b7af4780",
+              "review_fingerprint": "5f310204777c78d2fc2406729802f97de24a707cd7554775a030e24bc3db1f97",
+              "snapshot_fingerprint": "ef02887521ff0fd8947e4659ccb698eb5f53925f37145822689c2e824c6b53b0",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "6e2be005-e320-4dd1-90f2-bee991a3db3c",
+            "matched_play_id": "cb84fe95-f11a-442a-852c-44f7f021a7a1",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "新谷姫加",
+            "source_actor_url": null,
+            "source_work_title": "舞台「リコリス・リコイル」",
+            "source_year": 2023,
+            "source_role_raw": "姫蒲",
+            "source_role_names": [
+              "姫蒲"
+            ],
+            "source_cast_group": null,
+            "source_order": 11,
+            "source_credit_key": "079060ad323635f312c5",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/lycorisrecoil2023",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://catalog.oscarpro.co.jp/search/talent/1000035638",
+                  "checkedAt": "2026-10-20T06:43:05.525Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://magazine.younganimal.com/gravure/?id=91",
+                  "checkedAt": "2026-10-20T06:43:08.009Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://lycoris-recoil.com/stage/1st/",
+                  "checkedAt": "2026-10-20T06:39:44.288Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://lycoris-recoil.com/stage/",
+                  "checkedAt": "2026-10-20T06:38:24.774Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                }
+              ],
+              "source_fingerprint": "c595034f4344219a9eb278e38ef512f6826d16e1f93a27f986f6da95b7af4780",
+              "review_fingerprint": "5f310204777c78d2fc2406729802f97de24a707cd7554775a030e24bc3db1f97",
+              "snapshot_fingerprint": "ef02887521ff0fd8947e4659ccb698eb5f53925f37145822689c2e824c6b53b0",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "1aaa3735-433f-4d6f-ad10-27c481cc32d6",
+            "matched_play_id": "cb84fe95-f11a-442a-852c-44f7f021a7a1",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "竹内凜太郎",
+            "source_actor_url": null,
+            "source_work_title": "舞台「リコリス・リコイル」",
+            "source_year": 2023,
+            "source_role_raw": "ロボ太",
+            "source_role_names": [
+              "ロボ太"
+            ],
+            "source_cast_group": null,
+            "source_order": 12,
+            "source_credit_key": "f118aa3e0c9884279170",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/lycorisrecoil2023",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://thetv.jp/person/2000076347/",
+                  "checkedAt": "2026-10-20T06:43:21.208Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://lycoris-recoil.com/stage/1st/",
+                  "checkedAt": "2026-10-20T06:39:44.288Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://lycoris-recoil.com/stage/",
+                  "checkedAt": "2026-10-20T06:38:24.774Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                }
+              ],
+              "source_fingerprint": "c595034f4344219a9eb278e38ef512f6826d16e1f93a27f986f6da95b7af4780",
+              "review_fingerprint": "5f310204777c78d2fc2406729802f97de24a707cd7554775a030e24bc3db1f97",
+              "snapshot_fingerprint": "ef02887521ff0fd8947e4659ccb698eb5f53925f37145822689c2e824c6b53b0",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "77e88b94-dfb0-4098-bbef-0c246361a087",
+            "matched_play_id": "cb84fe95-f11a-442a-852c-44f7f021a7a1",
+            "status": "pending"
+          }
+        ]
+      },
+      "records": [
+        {
+          "actor": {
+            "id": "0a910388-2832-4955-969f-e67b9f4a0832",
+            "slug": "kawauchi-misato",
+            "name": "河内美里",
+            "kana": "かわうち みさと",
+            "profile": "千葉県出身の俳優・声優。舞台「リコリス・リコイル」の錦木千束役、舞台「やがて君になる」の小糸侑役などを務める。ミスiD2014佐武宇綺賞を受賞。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1997-10-11",
+            "height_cm": 156,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": "Misato Kawauchi",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "河内美里",
+            "sourceActorUrl": "https://kira-hai.net/kawauchi-misato",
+            "role_name": "錦木千束",
+            "cast_group": null
+          },
+          "sourceCreditKey": "f95986636e112bc223fb",
+          "sourceOrder": 1
+        },
+        {
+          "actor": {
+            "id": "b8cb3cc6-a83b-4030-bc87-1adf956b84ff",
+            "slug": "motonishi-sakiho",
+            "name": "本西彩希帆",
+            "kana": "もとにし さきほ",
+            "profile": "千葉県出身の俳優。オフィス・メイ所属。舞台「リコリス・リコイル」の井ノ上たきな役などを務め、舞台『結城友奈は勇者である』にも出演。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1998-05-27",
+            "height_cm": 158,
+            "blood_type": "AB",
+            "birthday_label": null,
+            "name_en": "Sakiho Motonishi",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "本西彩希帆",
+            "sourceActorUrl": "https://kira-hai.net/motonishi-sakiho",
+            "role_name": "井ノ上たきな",
+            "cast_group": null
+          },
+          "sourceCreditKey": "a029d8b93ca54c53db21",
+          "sourceOrder": 2
+        },
+        {
+          "actor": {
+            "id": "54b63a77-a923-457e-ab68-1dec7062e1f8",
+            "slug": "ishii-mikako",
+            "name": "石井美絵子",
+            "kana": "いしい みかこ",
+            "profile": "茨城県出身の俳優・モデル。舞台「リコリス・リコイル」の中原ミズキ役、ミュージカル「美少女戦士セーラームーン」のセーラープルート役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1990-04-17",
+            "height_cm": null,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "石井美絵子",
+            "sourceActorUrl": null,
+            "role_name": "中原ミズキ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "e6107840aee226bccad9",
+          "sourceOrder": 3
+        },
+        {
+          "actor": {
+            "id": "78e88f2d-f766-4bc7-8fce-0d1c589100d0",
+            "slug": "obuchi-nonoka",
+            "name": "大渕野々花",
+            "kana": "おおぶち ののか",
+            "profile": "埼玉県出身の声優・歌手・俳優。舞台「リコリス・リコイル」のクルミ役、「文豪ストレイドッグス 黒の時代」のエリス役などを務める。アニメ『怪異と乙女と神隠し』の主題歌「朱く染めて心臓」でメジャーデビュー。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": null,
+            "height_cm": null,
+            "blood_type": "A",
+            "birthday_label": "3月13日",
+            "name_en": "Nonoka Obuchi",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "大渕野々花",
+            "sourceActorUrl": null,
+            "role_name": "クルミ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "ce552d45c99cc3969def",
+          "sourceOrder": 4
+        },
+        {
+          "actor": {
+            "id": "eb2f2496-7082-4d84-a7a7-80b75f8798f0",
+            "slug": "kitamura-keigo",
+            "name": "北村圭吾",
+            "kana": "きたむら けいご",
+            "profile": "俳優。GMBプロダクション所属。舞台「リコリス・リコイル」のミカ役、「HUNTER×HUNTER」THE STAGEのシルバ役、ライブ・スペクタクル「NARUTO-ナルト-」のエー役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1982-08-08",
+            "height_cm": 181,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Kitamura Keigo",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "北村圭吾",
+            "sourceActorUrl": "https://kira-hai.net/kitamura-keigo",
+            "role_name": "ミカ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "b6b66b5d493359a76221",
+          "sourceOrder": 5
+        },
+        {
+          "actor": {
+            "id": "97006ee3-4d49-46c2-ae35-92e8d37b3a9e",
+            "slug": "mieda-natsuki",
+            "name": "三枝奈都紀",
+            "kana": "みえだ なつき",
+            "profile": "長野県出身の俳優・モデル。ベローナモデルエージェンシー所属。舞台「リコリス・リコイル」の楠木役、舞台「からくりサーカス」のあるるかん役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1978-08-13",
+            "height_cm": 175,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Natsuki Mieda",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "三枝奈都紀",
+            "sourceActorUrl": null,
+            "role_name": "楠木",
+            "cast_group": null
+          },
+          "sourceCreditKey": "a22408581507b615396c",
+          "sourceOrder": 6
+        },
+        {
+          "actor": {
+            "id": "573ef8c0-7d7b-4bc1-855b-519453181f28",
+            "slug": "tanoue-marina",
+            "name": "田上真里奈",
+            "kana": "たのうえ まりな",
+            "profile": "俳優。2016年まで声優ユニットTrefleで活動。舞台『血界戦線』のルシアナ・エステヴェス役を務め、『炎炎ノ消防隊』『ロミオの青い空』『モノノ怪』などの舞台にも出演する。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-19T15:35:18.355815+00:00",
+            "updated_at": "2026-10-19T15:35:18.355815+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1991-09-28",
+            "height_cm": 155,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Marina Tanoue",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "田上真里奈",
+            "sourceActorUrl": "https://kira-hai.net/tanoue-marina",
+            "role_name": "春川フキ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "5e516111c04e710d661e",
+          "sourceOrder": 7
+        },
+        {
+          "actor": {
+            "id": "4118b781-01da-4ba5-a79c-d60a34634f68",
+            "slug": "ayaki-sakura",
+            "name": "彩木咲良",
+            "kana": "あやき さくら",
+            "profile": "兵庫県出身の俳優・歌手。フリーで活動。元たこやきレインボーのメンバー。舞台「リコリス・リコイル」では乙女サクラ役を演じる。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "2002-03-26",
+            "height_cm": null,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "彩木咲良",
+            "sourceActorUrl": null,
+            "role_name": "乙女サクラ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "db0c1246ab98837bbf3b",
+          "sourceOrder": 8
+        },
+        {
+          "actor": {
+            "id": "75c85ab6-9e76-4355-87de-c84dc85945e0",
+            "slug": "ijiri-anna",
+            "name": "井尻晏菜",
+            "kana": "いじり あんな",
+            "profile": "京都府出身の俳優。オムニア所属。元NMB48の3期生で、2012年から2020年まで活動。舞台「リコリス・リコイル」の蛇ノ目エリカ役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1995-01-20",
+            "height_cm": 159,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Ijiri Anna",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "井尻晏菜",
+            "sourceActorUrl": null,
+            "role_name": "蛇ノ目エリカ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "3db5e08f4c1b0a5cf994",
+          "sourceOrder": 9
+        },
+        {
+          "actor": {
+            "id": "6e2be005-e320-4dd1-90f2-bee991a3db3c",
+            "slug": "ono-kento",
+            "name": "小野 健斗",
+            "kana": "おの けんと",
+            "profile": "神奈川県横浜市生まれ、東京都育ちの俳優・モデル。フロムファーストプロダクション所属",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/kento_leo9",
+              "instagram": "https://www.instagram.com/kento_ono/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T14:53:11.103962+00:00",
+            "updated_at": "2026-03-21T14:53:11.103962+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1989-08-09",
+            "height_cm": 187,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "小野健斗",
+            "sourceActorUrl": "https://kira-hai.net/ono-kento",
+            "role_name": "吉松シンジ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "5d480acbc49e1d1ed4a3",
+          "sourceOrder": 10
+        },
+        {
+          "actor": {
+            "id": "1aaa3735-433f-4d6f-ad10-27c481cc32d6",
+            "slug": "araya-himeka",
+            "name": "新谷姫加",
+            "kana": "あらや ひめか",
+            "profile": "青森県出身の俳優・モデル。オスカープロモーション所属。舞台「リコリス・リコイル」の姫蒲役、舞台「かげきしょうじょ！！」の星野薫役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1998-05-30",
+            "height_cm": 164,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": "Himeka Araya",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "新谷姫加",
+            "sourceActorUrl": null,
+            "role_name": "姫蒲",
+            "cast_group": null
+          },
+          "sourceCreditKey": "079060ad323635f312c5",
+          "sourceOrder": 11
+        },
+        {
+          "actor": {
+            "id": "77e88b94-dfb0-4098-bbef-0c246361a087",
+            "slug": "takeuchi-rintaro",
+            "name": "竹内凜太郎",
+            "kana": "たけうち りんたろう",
+            "profile": "茨城県出身の俳優。2018年にデビュー。舞台「リコリス・リコイル」ではロボ太役を演じる。殺陣やダンスを特技とする。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1998-07-29",
+            "height_cm": null,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "竹内凜太郎",
+            "sourceActorUrl": null,
+            "role_name": "ロボ太",
+            "cast_group": null
+          },
+          "sourceCreditKey": "f118aa3e0c9884279170",
+          "sourceOrder": 12
+        }
+      ],
+      "keptCasts": [
+        {
+          "id": "aa4c49e1-b12e-44aa-b3e2-61a5d74cc4fc",
+          "play_id": "cb84fe95-f11a-442a-852c-44f7f021a7a1",
+          "actor_id": "bfa3b811-ab92-4044-818b-82244d2746e5",
+          "role_name": "真島",
+          "is_starring": false,
+          "created_at": "2026-05-14T16:05:26.753509+00:00",
+          "billing_order": null,
+          "cast_group": null,
+          "role_name_kana": null,
+          "role_type": null,
+          "note": null,
+          "updated_at": "2026-05-14T16:05:26.753509+00:00"
+        }
+      ],
+      "legacyCandidates": [
+        {
+          "id": "df58c930-3e0f-47d1-b81e-3824b95eb12c",
+          "source": "kira-hai",
+          "external_actor_id": "9fea349b-e488-4b80-9c79-d95929686c69",
+          "external_play_id": "f8f3c2c6-8e8e-4338-93df-adb6298faaed",
+          "source_actor_name": "仲田博喜",
+          "source_actor_url": "https://kira-hai.net/nakada-hiroki",
+          "source_work_title": "舞台「リコリス・リコイル」",
+          "source_work_url": "https://kira-hai.net/lycorisrecoil2023",
+          "source_year": 2021,
+          "source_role_raw": "真島",
+          "source_role_names": [
+            "真島"
+          ],
+          "matched_actor_id": "bfa3b811-ab92-4044-818b-82244d2746e5",
+          "matched_play_id": "cb84fe95-f11a-442a-852c-44f7f021a7a1",
+          "accepted_cast_id": "aa4c49e1-b12e-44aa-b3e2-61a5d74cc4fc",
+          "confidence": 60,
+          "status": "accepted",
+          "note": null,
+          "scraped_at": "2026-04-27T18:14:55.601+00:00",
+          "created_at": "2026-04-27T18:14:54.882871+00:00",
+          "updated_at": "2026-05-14T16:05:33.96+00:00",
+          "accepted_at": "2026-05-14T16:05:33.96+00:00",
+          "rejected_at": null,
+          "source_cast_group": null,
+          "source_order": null,
+          "source_credit_key": null,
+          "source_evidence": null
+        }
+      ],
+      "keptActors": [
+        {
+          "id": "bfa3b811-ab92-4044-818b-82244d2746e5",
+          "slug": "nakada-hiroki",
+          "name": "仲田 博喜",
+          "kana": "なかだ ひろき",
+          "profile": "大阪府出身の俳優。現在はフリーで活動している。",
+          "image_url": null,
+          "sns": {
+            "x": "https://x.com/nakadahiroki",
+            "official": "https://hiroki-nakada.com/",
+            "instagram": "https://www.instagram.com/nakadahiroki1017/"
+          },
+          "gender": "male",
+          "created_at": "2026-04-07T21:09:40.839143+00:00",
+          "updated_at": "2026-04-07T21:09:40.839143+00:00",
+          "tags": [],
+          "featured_play_slugs": [],
+          "birthday": "1987-10-17",
+          "height_cm": 181,
+          "blood_type": "A",
+          "birthday_label": null,
+          "name_en": null,
+          "profile_en": null,
+          "death_date": null
+        }
+      ],
+      "sourceFingerprint": "c595034f4344219a9eb278e38ef512f6826d16e1f93a27f986f6da95b7af4780",
+      "expectedCastCount": 13
+    },
+    {
+      "year": 2024,
+      "before": {
+        "id": "b5e5190b-2145-4f78-bed9-a67be24675f2",
+        "slug": "lycorisrecoil2024",
+        "title": "舞台「リコリス・リコイル」Life wonʼt wait.",
+        "franchise_id": "f4eeea2c-7c6a-4417-90c7-228305812950",
+        "summary": null,
+        "period": "2024年",
+        "venue": null,
+        "vod": {},
+        "genre": null,
+        "created_at": "2026-05-14T15:58:02.551861+00:00",
+        "updated_at": "2026-05-14T15:58:02.551861+00:00",
+        "tags": [],
+        "credits": null,
+        "related_franchise_ids": [],
+        "summary_en": null,
+        "title_en": null
+      },
+      "patch": {
+        "period": "2024年6月7日〜16日",
+        "venue": "東京ドームシティ シアターGロッソ",
+        "credits": [
+          {
+            "role": "原作",
+            "names": [
+              "Spider Lily"
+            ],
+            "is_core": true,
+            "sort_order": 1
+          },
+          {
+            "role": "脚本",
+            "names": [
+              "ほさかよう"
+            ],
+            "is_core": true,
+            "sort_order": 2
+          },
+          {
+            "role": "演出",
+            "names": [
+              "山崎彬"
+            ],
+            "is_core": true,
+            "sort_order": 3
+          },
+          {
+            "role": "音楽",
+            "names": [
+              "坂本弦"
+            ],
+            "is_core": true,
+            "sort_order": 4
+          },
+          {
+            "role": "アクション",
+            "names": [
+              "新田健太"
+            ],
+            "is_core": true,
+            "sort_order": 5
+          },
+          {
+            "role": "振付",
+            "names": [
+              "富田彩"
+            ],
+            "is_core": true,
+            "sort_order": 6
+          },
+          {
+            "role": "アンサンブル",
+            "names": [
+              "塚田知紀",
+              "及川崇治",
+              "望月祐治",
+              "松本竜一",
+              "寒川祥吾",
+              "高間淳平",
+              "青木素姫",
+              "北野瑠那",
+              "野中遥月",
+              "すぎやまみやび"
+            ],
+            "is_core": false,
+            "sort_order": 7
+          }
+        ],
+        "title_en": "Lycoris Recoil: The Stage — Life won’t wait.",
+        "summary": "喫茶リコリコを拠点とする錦木千束と井ノ上たきな。2人と仲間たちの任務や日常を描くアニメ『リコリス・リコイル』の舞台化第2弾。初演の主要キャストが続投する。",
+        "summary_en": "The second stage adaptation of Lycoris Recoil follows Chisato Nishikigi, Takina Inoue and their companions at Café LycoReco, with the principal cast returning from the first production."
+      },
+      "rawSource": {
+        "sourceUrl": "https://kira-hai.net/lycorisrecoil2024",
+        "title": "舞台「リコリス・リコイル」Life wonʼt wait.",
+        "scheduleLines": [
+          "2024年6月7日-16日 東京ドームシティ シアターGロッソ"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "河内美里",
+            "sourceActorUrl": "https://kira-hai.net/kawauchi-misato",
+            "role_name": "錦木千束",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "本西彩希帆",
+            "sourceActorUrl": "https://kira-hai.net/motonishi-sakiho",
+            "role_name": "井ノ上たきな",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "石井美絵子",
+            "sourceActorUrl": null,
+            "role_name": "中原ミズキ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "大渕野々花",
+            "sourceActorUrl": null,
+            "role_name": "クルミ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "北村圭吾",
+            "sourceActorUrl": "https://kira-hai.net/kitamura-keigo",
+            "role_name": "ミカ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "三枝奈都紀",
+            "sourceActorUrl": null,
+            "role_name": "楠木",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "田上真里奈",
+            "sourceActorUrl": "https://kira-hai.net/tanoue-marina",
+            "role_name": "春川フキ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "彩木咲良",
+            "sourceActorUrl": null,
+            "role_name": "乙女サクラ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "井尻晏菜",
+            "sourceActorUrl": null,
+            "role_name": "蛇ノ目エリカ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "小野健斗",
+            "sourceActorUrl": "https://kira-hai.net/ono-kento",
+            "role_name": "吉松シンジ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "新谷姫加",
+            "sourceActorUrl": null,
+            "role_name": "姫蒲",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "竹内凜太郎",
+            "sourceActorUrl": null,
+            "role_name": "ロボ太",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "仲田博喜",
+            "sourceActorUrl": "https://kira-hai.net/nakada-hiroki",
+            "role_name": "真島",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "塚田知紀",
+            "sourceActorUrl": "https://kira-hai.net/tsukada-tomoki",
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "及川崇治",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "望月祐治",
+            "sourceActorUrl": "https://kira-hai.net/mochizuki-yuji",
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "松本竜一",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "寒川祥吾",
+            "sourceActorUrl": "https://kira-hai.net/samukawa-shogo",
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "高間淳平",
+            "sourceActorUrl": "https://kira-hai.net/takama-junpei",
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "青木素姫",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "北野瑠那",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "野中遥月",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "すぎやまみやび",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          }
+        ],
+        "unparsed": []
+      },
+      "source": {
+        "sourceUrl": "https://kira-hai.net/lycorisrecoil2024",
+        "title": "舞台「リコリス・リコイル」Life wonʼt wait.",
+        "scheduleLines": [
+          "2024年6月7日-16日 東京ドームシティ シアターGロッソ"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "河内美里",
+            "sourceActorUrl": "https://kira-hai.net/kawauchi-misato",
+            "role_name": "錦木千束",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "本西彩希帆",
+            "sourceActorUrl": "https://kira-hai.net/motonishi-sakiho",
+            "role_name": "井ノ上たきな",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "石井美絵子",
+            "sourceActorUrl": null,
+            "role_name": "中原ミズキ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "大渕野々花",
+            "sourceActorUrl": null,
+            "role_name": "クルミ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "北村圭吾",
+            "sourceActorUrl": "https://kira-hai.net/kitamura-keigo",
+            "role_name": "ミカ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "三枝奈都紀",
+            "sourceActorUrl": null,
+            "role_name": "楠木",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "田上真里奈",
+            "sourceActorUrl": "https://kira-hai.net/tanoue-marina",
+            "role_name": "春川フキ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "彩木咲良",
+            "sourceActorUrl": null,
+            "role_name": "乙女サクラ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "井尻晏菜",
+            "sourceActorUrl": null,
+            "role_name": "蛇ノ目エリカ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "小野健斗",
+            "sourceActorUrl": "https://kira-hai.net/ono-kento",
+            "role_name": "吉松シンジ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "新谷姫加",
+            "sourceActorUrl": null,
+            "role_name": "姫蒲",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "竹内凜太郎",
+            "sourceActorUrl": null,
+            "role_name": "ロボ太",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "仲田博喜",
+            "sourceActorUrl": "https://kira-hai.net/nakada-hiroki",
+            "role_name": "真島",
+            "cast_group": null
+          }
+        ],
+        "unparsed": [],
+        "checkedAt": "2026-10-20T06:39:41.764Z",
+        "creditOnly": {
+          "rawCast": [
+            {
+              "sourceActorName": "塚田知紀",
+              "sourceActorUrl": "https://kira-hai.net/tsukada-tomoki",
+              "role_name": null,
+              "cast_group": "アンサンブル"
+            },
+            {
+              "sourceActorName": "及川崇治",
+              "sourceActorUrl": null,
+              "role_name": null,
+              "cast_group": "アンサンブル"
+            },
+            {
+              "sourceActorName": "望月祐治",
+              "sourceActorUrl": "https://kira-hai.net/mochizuki-yuji",
+              "role_name": null,
+              "cast_group": "アンサンブル"
+            },
+            {
+              "sourceActorName": "松本竜一",
+              "sourceActorUrl": null,
+              "role_name": null,
+              "cast_group": "アンサンブル"
+            },
+            {
+              "sourceActorName": "寒川祥吾",
+              "sourceActorUrl": "https://kira-hai.net/samukawa-shogo",
+              "role_name": null,
+              "cast_group": "アンサンブル"
+            },
+            {
+              "sourceActorName": "高間淳平",
+              "sourceActorUrl": "https://kira-hai.net/takama-junpei",
+              "role_name": null,
+              "cast_group": "アンサンブル"
+            },
+            {
+              "sourceActorName": "青木素姫",
+              "sourceActorUrl": null,
+              "role_name": null,
+              "cast_group": "アンサンブル"
+            },
+            {
+              "sourceActorName": "北野瑠那",
+              "sourceActorUrl": null,
+              "role_name": null,
+              "cast_group": "アンサンブル"
+            },
+            {
+              "sourceActorName": "野中遥月",
+              "sourceActorUrl": null,
+              "role_name": null,
+              "cast_group": "アンサンブル"
+            },
+            {
+              "sourceActorName": "すぎやまみやび",
+              "sourceActorUrl": null,
+              "role_name": null,
+              "cast_group": "アンサンブル"
+            }
+          ],
+          "unparsed": [],
+          "decision": "公式アンサンブル10名を作品クレジットへ保存。"
+        },
+        "normalizations": []
+      },
+      "stage": {
+        "workUrl": "https://kira-hai.net/lycorisrecoil2024",
+        "key": "35433d2b2a3d7868768dd5a91bc00271267741bc0603039486ef134468a3a761",
+        "items": [
+          {
+            "source_actor_name": "河内美里",
+            "source_actor_url": "https://kira-hai.net/kawauchi-misato",
+            "source_work_title": "舞台「リコリス・リコイル」Life wonʼt wait.",
+            "source_year": 2024,
+            "source_role_raw": "錦木千束",
+            "source_role_names": [
+              "錦木千束"
+            ],
+            "source_cast_group": null,
+            "source_order": 1,
+            "source_credit_key": "f95986636e112bc223fb",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/lycorisrecoil2024",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://misato-kawauchi.net/profiles",
+                  "checkedAt": "2026-10-20T06:42:55.479Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://kira-hai.net/kawauchi-misato",
+                  "checkedAt": "2026-10-20T06:40:56.499Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://lycoris-recoil.com/stage/1st/",
+                  "checkedAt": "2026-10-20T06:39:44.288Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://lycoris-recoil.com/stage/",
+                  "checkedAt": "2026-10-20T06:38:24.774Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                }
+              ],
+              "source_fingerprint": "027cf06cacef8b9a01586c53be72b2d40385b19aba824c3336ad4cbe091343da",
+              "review_fingerprint": "dda3c41a31175e2b04e5ff8948165f1ad7e0e669ef24154d05df00c0763996cc",
+              "snapshot_fingerprint": "6c9ba59a518d420aba068a89e5c701d822da9bda004f4880b32c24a83d5973eb",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "0a910388-2832-4955-969f-e67b9f4a0832",
+            "matched_play_id": "b5e5190b-2145-4f78-bed9-a67be24675f2",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "本西彩希帆",
+            "source_actor_url": "https://kira-hai.net/motonishi-sakiho",
+            "source_work_title": "舞台「リコリス・リコイル」Life wonʼt wait.",
+            "source_year": 2024,
+            "source_role_raw": "井ノ上たきな",
+            "source_role_names": [
+              "井ノ上たきな"
+            ],
+            "source_cast_group": null,
+            "source_order": 2,
+            "source_credit_key": "a029d8b93ca54c53db21",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/lycorisrecoil2024",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://cast-may.com/artist/sakiho-motonishi",
+                  "checkedAt": "2026-10-20T06:41:32.054Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://kira-hai.net/motonishi-sakiho",
+                  "checkedAt": "2026-10-20T06:41:00.305Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://lycoris-recoil.com/stage/1st/",
+                  "checkedAt": "2026-10-20T06:39:44.288Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://lycoris-recoil.com/stage/",
+                  "checkedAt": "2026-10-20T06:38:24.774Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                }
+              ],
+              "source_fingerprint": "027cf06cacef8b9a01586c53be72b2d40385b19aba824c3336ad4cbe091343da",
+              "review_fingerprint": "dda3c41a31175e2b04e5ff8948165f1ad7e0e669ef24154d05df00c0763996cc",
+              "snapshot_fingerprint": "6c9ba59a518d420aba068a89e5c701d822da9bda004f4880b32c24a83d5973eb",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "b8cb3cc6-a83b-4030-bc87-1adf956b84ff",
+            "matched_play_id": "b5e5190b-2145-4f78-bed9-a67be24675f2",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "石井美絵子",
+            "source_actor_url": null,
+            "source_work_title": "舞台「リコリス・リコイル」Life wonʼt wait.",
+            "source_year": 2024,
+            "source_role_raw": "中原ミズキ",
+            "source_role_names": [
+              "中原ミズキ"
+            ],
+            "source_cast_group": null,
+            "source_order": 3,
+            "source_credit_key": "e6107840aee226bccad9",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/lycorisrecoil2024",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://thetv.jp/person/1000064675/",
+                  "checkedAt": "2026-10-20T06:43:23.606Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://lycoris-recoil.com/stage/1st/",
+                  "checkedAt": "2026-10-20T06:39:44.288Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://lycoris-recoil.com/stage/",
+                  "checkedAt": "2026-10-20T06:38:24.774Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://www.oursongs-creative.jp/profile/archives/1",
+                  "checkedAt": "2026-10-20T06:48:32.597Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                }
+              ],
+              "source_fingerprint": "027cf06cacef8b9a01586c53be72b2d40385b19aba824c3336ad4cbe091343da",
+              "review_fingerprint": "dda3c41a31175e2b04e5ff8948165f1ad7e0e669ef24154d05df00c0763996cc",
+              "snapshot_fingerprint": "6c9ba59a518d420aba068a89e5c701d822da9bda004f4880b32c24a83d5973eb",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "54b63a77-a923-457e-ab68-1dec7062e1f8",
+            "matched_play_id": "b5e5190b-2145-4f78-bed9-a67be24675f2",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "大渕野々花",
+            "source_actor_url": null,
+            "source_work_title": "舞台「リコリス・リコイル」Life wonʼt wait.",
+            "source_year": 2024,
+            "source_role_raw": "クルミ",
+            "source_role_names": [
+              "クルミ"
+            ],
+            "source_cast_group": null,
+            "source_order": 4,
+            "source_credit_key": "ce552d45c99cc3969def",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/lycorisrecoil2024",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://e-stonemusic.com/nonoka/biography",
+                  "checkedAt": "2026-10-20T06:48:35.892Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://www.jvcmusic.co.jp/flyingdog/-/Link/A028551.html",
+                  "checkedAt": "2026-10-20T06:41:47.400Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://lycoris-recoil.com/stage/1st/",
+                  "checkedAt": "2026-10-20T06:39:44.288Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://lycoris-recoil.com/stage/",
+                  "checkedAt": "2026-10-20T06:38:24.774Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                }
+              ],
+              "source_fingerprint": "027cf06cacef8b9a01586c53be72b2d40385b19aba824c3336ad4cbe091343da",
+              "review_fingerprint": "dda3c41a31175e2b04e5ff8948165f1ad7e0e669ef24154d05df00c0763996cc",
+              "snapshot_fingerprint": "6c9ba59a518d420aba068a89e5c701d822da9bda004f4880b32c24a83d5973eb",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "78e88f2d-f766-4bc7-8fce-0d1c589100d0",
+            "matched_play_id": "b5e5190b-2145-4f78-bed9-a67be24675f2",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "北村圭吾",
+            "source_actor_url": "https://kira-hai.net/kitamura-keigo",
+            "source_work_title": "舞台「リコリス・リコイル」Life wonʼt wait.",
+            "source_year": 2024,
+            "source_role_raw": "ミカ",
+            "source_role_names": [
+              "ミカ"
+            ],
+            "source_cast_group": null,
+            "source_order": 5,
+            "source_credit_key": "b6b66b5d493359a76221",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/lycorisrecoil2024",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://gmbp.co.jp/profile/kitamura-keigo",
+                  "checkedAt": "2026-10-20T06:41:39.614Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://kira-hai.net/kitamura-keigo",
+                  "checkedAt": "2026-10-20T06:41:03.502Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://lycoris-recoil.com/stage/1st/",
+                  "checkedAt": "2026-10-20T06:39:44.288Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://lycoris-recoil.com/stage/",
+                  "checkedAt": "2026-10-20T06:38:24.774Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                }
+              ],
+              "source_fingerprint": "027cf06cacef8b9a01586c53be72b2d40385b19aba824c3336ad4cbe091343da",
+              "review_fingerprint": "dda3c41a31175e2b04e5ff8948165f1ad7e0e669ef24154d05df00c0763996cc",
+              "snapshot_fingerprint": "6c9ba59a518d420aba068a89e5c701d822da9bda004f4880b32c24a83d5973eb",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "eb2f2496-7082-4d84-a7a7-80b75f8798f0",
+            "matched_play_id": "b5e5190b-2145-4f78-bed9-a67be24675f2",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "三枝奈都紀",
+            "source_actor_url": null,
+            "source_work_title": "舞台「リコリス・リコイル」Life wonʼt wait.",
+            "source_year": 2024,
+            "source_role_raw": "楠木",
+            "source_role_names": [
+              "楠木"
+            ],
+            "source_cast_group": null,
+            "source_order": 6,
+            "source_credit_key": "a22408581507b615396c",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/lycorisrecoil2024",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://www.sos-model.com/entertainments/903",
+                  "checkedAt": "2026-10-20T06:48:38.805Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://www.bellona-model.net/model_women/60",
+                  "checkedAt": "2026-10-20T06:41:44.556Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://eiga.com/person/299748/",
+                  "checkedAt": "2026-10-20T06:43:26.637Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://lycoris-recoil.com/stage/1st/",
+                  "checkedAt": "2026-10-20T06:39:44.288Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://lycoris-recoil.com/stage/",
+                  "checkedAt": "2026-10-20T06:38:24.774Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                }
+              ],
+              "source_fingerprint": "027cf06cacef8b9a01586c53be72b2d40385b19aba824c3336ad4cbe091343da",
+              "review_fingerprint": "dda3c41a31175e2b04e5ff8948165f1ad7e0e669ef24154d05df00c0763996cc",
+              "snapshot_fingerprint": "6c9ba59a518d420aba068a89e5c701d822da9bda004f4880b32c24a83d5973eb",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "97006ee3-4d49-46c2-ae35-92e8d37b3a9e",
+            "matched_play_id": "b5e5190b-2145-4f78-bed9-a67be24675f2",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "田上真里奈",
+            "source_actor_url": "https://kira-hai.net/tanoue-marina",
+            "source_work_title": "舞台「リコリス・リコイル」Life wonʼt wait.",
+            "source_year": 2024,
+            "source_role_raw": "春川フキ",
+            "source_role_names": [
+              "春川フキ"
+            ],
+            "source_cast_group": null,
+            "source_order": 7,
+            "source_credit_key": "5e516111c04e710d661e",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/lycorisrecoil2024",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "027cf06cacef8b9a01586c53be72b2d40385b19aba824c3336ad4cbe091343da",
+              "review_fingerprint": "dda3c41a31175e2b04e5ff8948165f1ad7e0e669ef24154d05df00c0763996cc",
+              "snapshot_fingerprint": "6c9ba59a518d420aba068a89e5c701d822da9bda004f4880b32c24a83d5973eb",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "573ef8c0-7d7b-4bc1-855b-519453181f28",
+            "matched_play_id": "b5e5190b-2145-4f78-bed9-a67be24675f2",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "彩木咲良",
+            "source_actor_url": null,
+            "source_work_title": "舞台「リコリス・リコイル」Life wonʼt wait.",
+            "source_year": 2024,
+            "source_role_raw": "乙女サクラ",
+            "source_role_names": [
+              "乙女サクラ"
+            ],
+            "source_cast_group": null,
+            "source_order": 8,
+            "source_credit_key": "db0c1246ab98837bbf3b",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/lycorisrecoil2024",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://twitcasting.tv/ayakisakura_326",
+                  "checkedAt": "2026-10-20T06:43:12.009Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://note.com/sakura_official/n/n924f1db21e44",
+                  "checkedAt": "2026-10-20T06:43:16.635Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://thetv.jp/person/1000093604/",
+                  "checkedAt": "2026-10-20T06:48:45.249Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://lycoris-recoil.com/stage/1st/",
+                  "checkedAt": "2026-10-20T06:39:44.288Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://lycoris-recoil.com/stage/",
+                  "checkedAt": "2026-10-20T06:38:24.774Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                }
+              ],
+              "source_fingerprint": "027cf06cacef8b9a01586c53be72b2d40385b19aba824c3336ad4cbe091343da",
+              "review_fingerprint": "dda3c41a31175e2b04e5ff8948165f1ad7e0e669ef24154d05df00c0763996cc",
+              "snapshot_fingerprint": "6c9ba59a518d420aba068a89e5c701d822da9bda004f4880b32c24a83d5973eb",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "4118b781-01da-4ba5-a79c-d60a34634f68",
+            "matched_play_id": "b5e5190b-2145-4f78-bed9-a67be24675f2",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "井尻晏菜",
+            "source_actor_url": null,
+            "source_work_title": "舞台「リコリス・リコイル」Life wonʼt wait.",
+            "source_year": 2024,
+            "source_role_raw": "蛇ノ目エリカ",
+            "source_role_names": [
+              "蛇ノ目エリカ"
+            ],
+            "source_cast_group": null,
+            "source_order": 9,
+            "source_credit_key": "3db5e08f4c1b0a5cf994",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/lycorisrecoil2024",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://omnia.co.jp/talent/ijiri/",
+                  "checkedAt": "2026-10-20T06:43:02.599Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://ameblo.jp/nmb48/entry-12375076602.html",
+                  "checkedAt": "2026-10-20T06:48:49.833Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://lycoris-recoil.com/stage/1st/",
+                  "checkedAt": "2026-10-20T06:39:44.288Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://lycoris-recoil.com/stage/",
+                  "checkedAt": "2026-10-20T06:38:24.774Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                }
+              ],
+              "source_fingerprint": "027cf06cacef8b9a01586c53be72b2d40385b19aba824c3336ad4cbe091343da",
+              "review_fingerprint": "dda3c41a31175e2b04e5ff8948165f1ad7e0e669ef24154d05df00c0763996cc",
+              "snapshot_fingerprint": "6c9ba59a518d420aba068a89e5c701d822da9bda004f4880b32c24a83d5973eb",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "75c85ab6-9e76-4355-87de-c84dc85945e0",
+            "matched_play_id": "b5e5190b-2145-4f78-bed9-a67be24675f2",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "小野健斗",
+            "source_actor_url": "https://kira-hai.net/ono-kento",
+            "source_work_title": "舞台「リコリス・リコイル」Life wonʼt wait.",
+            "source_year": 2024,
+            "source_role_raw": "吉松シンジ",
+            "source_role_names": [
+              "吉松シンジ"
+            ],
+            "source_cast_group": null,
+            "source_order": 10,
+            "source_credit_key": "5d480acbc49e1d1ed4a3",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/lycorisrecoil2024",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "027cf06cacef8b9a01586c53be72b2d40385b19aba824c3336ad4cbe091343da",
+              "review_fingerprint": "dda3c41a31175e2b04e5ff8948165f1ad7e0e669ef24154d05df00c0763996cc",
+              "snapshot_fingerprint": "6c9ba59a518d420aba068a89e5c701d822da9bda004f4880b32c24a83d5973eb",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "6e2be005-e320-4dd1-90f2-bee991a3db3c",
+            "matched_play_id": "b5e5190b-2145-4f78-bed9-a67be24675f2",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "新谷姫加",
+            "source_actor_url": null,
+            "source_work_title": "舞台「リコリス・リコイル」Life wonʼt wait.",
+            "source_year": 2024,
+            "source_role_raw": "姫蒲",
+            "source_role_names": [
+              "姫蒲"
+            ],
+            "source_cast_group": null,
+            "source_order": 11,
+            "source_credit_key": "079060ad323635f312c5",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/lycorisrecoil2024",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://catalog.oscarpro.co.jp/search/talent/1000035638",
+                  "checkedAt": "2026-10-20T06:43:05.525Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://magazine.younganimal.com/gravure/?id=91",
+                  "checkedAt": "2026-10-20T06:43:08.009Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://lycoris-recoil.com/stage/1st/",
+                  "checkedAt": "2026-10-20T06:39:44.288Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://lycoris-recoil.com/stage/",
+                  "checkedAt": "2026-10-20T06:38:24.774Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                }
+              ],
+              "source_fingerprint": "027cf06cacef8b9a01586c53be72b2d40385b19aba824c3336ad4cbe091343da",
+              "review_fingerprint": "dda3c41a31175e2b04e5ff8948165f1ad7e0e669ef24154d05df00c0763996cc",
+              "snapshot_fingerprint": "6c9ba59a518d420aba068a89e5c701d822da9bda004f4880b32c24a83d5973eb",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "1aaa3735-433f-4d6f-ad10-27c481cc32d6",
+            "matched_play_id": "b5e5190b-2145-4f78-bed9-a67be24675f2",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "竹内凜太郎",
+            "source_actor_url": null,
+            "source_work_title": "舞台「リコリス・リコイル」Life wonʼt wait.",
+            "source_year": 2024,
+            "source_role_raw": "ロボ太",
+            "source_role_names": [
+              "ロボ太"
+            ],
+            "source_cast_group": null,
+            "source_order": 12,
+            "source_credit_key": "f118aa3e0c9884279170",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/lycorisrecoil2024",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://thetv.jp/person/2000076347/",
+                  "checkedAt": "2026-10-20T06:43:21.208Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://lycoris-recoil.com/stage/1st/",
+                  "checkedAt": "2026-10-20T06:39:44.288Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                },
+                {
+                  "url": "https://lycoris-recoil.com/stage/",
+                  "checkedAt": "2026-10-20T06:38:24.774Z",
+                  "note": "人物と当該配役・採用した基本情報を照合。項目別の採否はnotesに記録。"
+                }
+              ],
+              "source_fingerprint": "027cf06cacef8b9a01586c53be72b2d40385b19aba824c3336ad4cbe091343da",
+              "review_fingerprint": "dda3c41a31175e2b04e5ff8948165f1ad7e0e669ef24154d05df00c0763996cc",
+              "snapshot_fingerprint": "6c9ba59a518d420aba068a89e5c701d822da9bda004f4880b32c24a83d5973eb",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "77e88b94-dfb0-4098-bbef-0c246361a087",
+            "matched_play_id": "b5e5190b-2145-4f78-bed9-a67be24675f2",
+            "status": "pending"
+          }
+        ]
+      },
+      "records": [
+        {
+          "actor": {
+            "id": "0a910388-2832-4955-969f-e67b9f4a0832",
+            "slug": "kawauchi-misato",
+            "name": "河内美里",
+            "kana": "かわうち みさと",
+            "profile": "千葉県出身の俳優・声優。舞台「リコリス・リコイル」の錦木千束役、舞台「やがて君になる」の小糸侑役などを務める。ミスiD2014佐武宇綺賞を受賞。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1997-10-11",
+            "height_cm": 156,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": "Misato Kawauchi",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "河内美里",
+            "sourceActorUrl": "https://kira-hai.net/kawauchi-misato",
+            "role_name": "錦木千束",
+            "cast_group": null
+          },
+          "sourceCreditKey": "f95986636e112bc223fb",
+          "sourceOrder": 1
+        },
+        {
+          "actor": {
+            "id": "b8cb3cc6-a83b-4030-bc87-1adf956b84ff",
+            "slug": "motonishi-sakiho",
+            "name": "本西彩希帆",
+            "kana": "もとにし さきほ",
+            "profile": "千葉県出身の俳優。オフィス・メイ所属。舞台「リコリス・リコイル」の井ノ上たきな役などを務め、舞台『結城友奈は勇者である』にも出演。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1998-05-27",
+            "height_cm": 158,
+            "blood_type": "AB",
+            "birthday_label": null,
+            "name_en": "Sakiho Motonishi",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "本西彩希帆",
+            "sourceActorUrl": "https://kira-hai.net/motonishi-sakiho",
+            "role_name": "井ノ上たきな",
+            "cast_group": null
+          },
+          "sourceCreditKey": "a029d8b93ca54c53db21",
+          "sourceOrder": 2
+        },
+        {
+          "actor": {
+            "id": "54b63a77-a923-457e-ab68-1dec7062e1f8",
+            "slug": "ishii-mikako",
+            "name": "石井美絵子",
+            "kana": "いしい みかこ",
+            "profile": "茨城県出身の俳優・モデル。舞台「リコリス・リコイル」の中原ミズキ役、ミュージカル「美少女戦士セーラームーン」のセーラープルート役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1990-04-17",
+            "height_cm": null,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "石井美絵子",
+            "sourceActorUrl": null,
+            "role_name": "中原ミズキ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "e6107840aee226bccad9",
+          "sourceOrder": 3
+        },
+        {
+          "actor": {
+            "id": "78e88f2d-f766-4bc7-8fce-0d1c589100d0",
+            "slug": "obuchi-nonoka",
+            "name": "大渕野々花",
+            "kana": "おおぶち ののか",
+            "profile": "埼玉県出身の声優・歌手・俳優。舞台「リコリス・リコイル」のクルミ役、「文豪ストレイドッグス 黒の時代」のエリス役などを務める。アニメ『怪異と乙女と神隠し』の主題歌「朱く染めて心臓」でメジャーデビュー。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": null,
+            "height_cm": null,
+            "blood_type": "A",
+            "birthday_label": "3月13日",
+            "name_en": "Nonoka Obuchi",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "大渕野々花",
+            "sourceActorUrl": null,
+            "role_name": "クルミ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "ce552d45c99cc3969def",
+          "sourceOrder": 4
+        },
+        {
+          "actor": {
+            "id": "eb2f2496-7082-4d84-a7a7-80b75f8798f0",
+            "slug": "kitamura-keigo",
+            "name": "北村圭吾",
+            "kana": "きたむら けいご",
+            "profile": "俳優。GMBプロダクション所属。舞台「リコリス・リコイル」のミカ役、「HUNTER×HUNTER」THE STAGEのシルバ役、ライブ・スペクタクル「NARUTO-ナルト-」のエー役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1982-08-08",
+            "height_cm": 181,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Kitamura Keigo",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "北村圭吾",
+            "sourceActorUrl": "https://kira-hai.net/kitamura-keigo",
+            "role_name": "ミカ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "b6b66b5d493359a76221",
+          "sourceOrder": 5
+        },
+        {
+          "actor": {
+            "id": "97006ee3-4d49-46c2-ae35-92e8d37b3a9e",
+            "slug": "mieda-natsuki",
+            "name": "三枝奈都紀",
+            "kana": "みえだ なつき",
+            "profile": "長野県出身の俳優・モデル。ベローナモデルエージェンシー所属。舞台「リコリス・リコイル」の楠木役、舞台「からくりサーカス」のあるるかん役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1978-08-13",
+            "height_cm": 175,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Natsuki Mieda",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "三枝奈都紀",
+            "sourceActorUrl": null,
+            "role_name": "楠木",
+            "cast_group": null
+          },
+          "sourceCreditKey": "a22408581507b615396c",
+          "sourceOrder": 6
+        },
+        {
+          "actor": {
+            "id": "573ef8c0-7d7b-4bc1-855b-519453181f28",
+            "slug": "tanoue-marina",
+            "name": "田上真里奈",
+            "kana": "たのうえ まりな",
+            "profile": "俳優。2016年まで声優ユニットTrefleで活動。舞台『血界戦線』のルシアナ・エステヴェス役を務め、『炎炎ノ消防隊』『ロミオの青い空』『モノノ怪』などの舞台にも出演する。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-19T15:35:18.355815+00:00",
+            "updated_at": "2026-10-19T15:35:18.355815+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1991-09-28",
+            "height_cm": 155,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Marina Tanoue",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "田上真里奈",
+            "sourceActorUrl": "https://kira-hai.net/tanoue-marina",
+            "role_name": "春川フキ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "5e516111c04e710d661e",
+          "sourceOrder": 7
+        },
+        {
+          "actor": {
+            "id": "4118b781-01da-4ba5-a79c-d60a34634f68",
+            "slug": "ayaki-sakura",
+            "name": "彩木咲良",
+            "kana": "あやき さくら",
+            "profile": "兵庫県出身の俳優・歌手。フリーで活動。元たこやきレインボーのメンバー。舞台「リコリス・リコイル」では乙女サクラ役を演じる。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "2002-03-26",
+            "height_cm": null,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "彩木咲良",
+            "sourceActorUrl": null,
+            "role_name": "乙女サクラ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "db0c1246ab98837bbf3b",
+          "sourceOrder": 8
+        },
+        {
+          "actor": {
+            "id": "75c85ab6-9e76-4355-87de-c84dc85945e0",
+            "slug": "ijiri-anna",
+            "name": "井尻晏菜",
+            "kana": "いじり あんな",
+            "profile": "京都府出身の俳優。オムニア所属。元NMB48の3期生で、2012年から2020年まで活動。舞台「リコリス・リコイル」の蛇ノ目エリカ役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1995-01-20",
+            "height_cm": 159,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Ijiri Anna",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "井尻晏菜",
+            "sourceActorUrl": null,
+            "role_name": "蛇ノ目エリカ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "3db5e08f4c1b0a5cf994",
+          "sourceOrder": 9
+        },
+        {
+          "actor": {
+            "id": "6e2be005-e320-4dd1-90f2-bee991a3db3c",
+            "slug": "ono-kento",
+            "name": "小野 健斗",
+            "kana": "おの けんと",
+            "profile": "神奈川県横浜市生まれ、東京都育ちの俳優・モデル。フロムファーストプロダクション所属",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/kento_leo9",
+              "instagram": "https://www.instagram.com/kento_ono/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T14:53:11.103962+00:00",
+            "updated_at": "2026-03-21T14:53:11.103962+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1989-08-09",
+            "height_cm": 187,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "小野健斗",
+            "sourceActorUrl": "https://kira-hai.net/ono-kento",
+            "role_name": "吉松シンジ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "5d480acbc49e1d1ed4a3",
+          "sourceOrder": 10
+        },
+        {
+          "actor": {
+            "id": "1aaa3735-433f-4d6f-ad10-27c481cc32d6",
+            "slug": "araya-himeka",
+            "name": "新谷姫加",
+            "kana": "あらや ひめか",
+            "profile": "青森県出身の俳優・モデル。オスカープロモーション所属。舞台「リコリス・リコイル」の姫蒲役、舞台「かげきしょうじょ！！」の星野薫役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1998-05-30",
+            "height_cm": 164,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": "Himeka Araya",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "新谷姫加",
+            "sourceActorUrl": null,
+            "role_name": "姫蒲",
+            "cast_group": null
+          },
+          "sourceCreditKey": "079060ad323635f312c5",
+          "sourceOrder": 11
+        },
+        {
+          "actor": {
+            "id": "77e88b94-dfb0-4098-bbef-0c246361a087",
+            "slug": "takeuchi-rintaro",
+            "name": "竹内凜太郎",
+            "kana": "たけうち りんたろう",
+            "profile": "茨城県出身の俳優。2018年にデビュー。舞台「リコリス・リコイル」ではロボ太役を演じる。殺陣やダンスを特技とする。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1998-07-29",
+            "height_cm": null,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "竹内凜太郎",
+            "sourceActorUrl": null,
+            "role_name": "ロボ太",
+            "cast_group": null
+          },
+          "sourceCreditKey": "f118aa3e0c9884279170",
+          "sourceOrder": 12
+        }
+      ],
+      "keptCasts": [
+        {
+          "id": "573b281f-ae17-4c38-9f53-1c126a69f71d",
+          "play_id": "b5e5190b-2145-4f78-bed9-a67be24675f2",
+          "actor_id": "bfa3b811-ab92-4044-818b-82244d2746e5",
+          "role_name": "真島",
+          "is_starring": false,
+          "created_at": "2026-05-14T15:58:03.981686+00:00",
+          "billing_order": null,
+          "cast_group": null,
+          "role_name_kana": null,
+          "role_type": null,
+          "note": null,
+          "updated_at": "2026-05-14T15:58:03.981686+00:00"
+        }
+      ],
+      "legacyCandidates": [
+        {
+          "id": "06a86441-bd4c-4d77-b460-e131362c8ec1",
+          "source": "kira-hai",
+          "external_actor_id": "9fea349b-e488-4b80-9c79-d95929686c69",
+          "external_play_id": "cdb49ee0-9bed-4a71-8814-be3abb27a5d1",
+          "source_actor_name": "仲田博喜",
+          "source_actor_url": "https://kira-hai.net/nakada-hiroki",
+          "source_work_title": "舞台「リコリス・リコイル」Life wonʼt wait.",
+          "source_work_url": "https://kira-hai.net/lycorisrecoil2024",
+          "source_year": 2021,
+          "source_role_raw": "真島",
+          "source_role_names": [
+            "真島"
+          ],
+          "matched_actor_id": "bfa3b811-ab92-4044-818b-82244d2746e5",
+          "matched_play_id": "b5e5190b-2145-4f78-bed9-a67be24675f2",
+          "accepted_cast_id": "573b281f-ae17-4c38-9f53-1c126a69f71d",
+          "confidence": 60,
+          "status": "accepted",
+          "note": null,
+          "scraped_at": "2026-04-27T18:15:10.978+00:00",
+          "created_at": "2026-04-27T18:15:10.251279+00:00",
+          "updated_at": "2026-05-14T15:58:11.183+00:00",
+          "accepted_at": "2026-05-14T15:58:11.183+00:00",
+          "rejected_at": null,
+          "source_cast_group": null,
+          "source_order": null,
+          "source_credit_key": null,
+          "source_evidence": null
+        }
+      ],
+      "keptActors": [
+        {
+          "id": "bfa3b811-ab92-4044-818b-82244d2746e5",
+          "slug": "nakada-hiroki",
+          "name": "仲田 博喜",
+          "kana": "なかだ ひろき",
+          "profile": "大阪府出身の俳優。現在はフリーで活動している。",
+          "image_url": null,
+          "sns": {
+            "x": "https://x.com/nakadahiroki",
+            "official": "https://hiroki-nakada.com/",
+            "instagram": "https://www.instagram.com/nakadahiroki1017/"
+          },
+          "gender": "male",
+          "created_at": "2026-04-07T21:09:40.839143+00:00",
+          "updated_at": "2026-04-07T21:09:40.839143+00:00",
+          "tags": [],
+          "featured_play_slugs": [],
+          "birthday": "1987-10-17",
+          "height_cm": 181,
+          "blood_type": "A",
+          "birthday_label": null,
+          "name_en": null,
+          "profile_en": null,
+          "death_date": null
+        }
+      ],
+      "sourceFingerprint": "027cf06cacef8b9a01586c53be72b2d40385b19aba824c3336ad4cbe091343da",
+      "expectedCastCount": 13
+    }
+  ],
+  "evidence": {
+    "links": [
+      {
+        "url": "https://kira-hai.net/lycorisrecoil2023",
+        "checkedAt": "2026-10-20T06:39:39.312Z",
+        "note": "初演13役、役名未記載7名。本西の当時所属を原文保持。"
+      },
+      {
+        "url": "https://lycoris-recoil.com/stage/1st/",
+        "checkedAt": "2026-10-20T06:39:44.288Z",
+        "note": "初演13役と役名未記載7名、主要スタッフを照合。役名なしをアンサンブルと断定しない。"
+      },
+      {
+        "url": "https://lycoris-recoil.com/stage/1st/news/?id=61926",
+        "checkedAt": "2026-10-20T06:39:46.763Z",
+        "note": "初演の2023年1月7日〜15日、天王洲銀河劇場を確認。"
+      },
+      {
+        "url": "https://kira-hai.net/lycorisrecoil2024",
+        "checkedAt": "2026-10-20T06:39:41.764Z",
+        "note": "続編13役とアンサンブル10名。"
+      },
+      {
+        "url": "https://lycoris-recoil.com/stage/",
+        "checkedAt": "2026-10-20T06:38:24.774Z",
+        "note": "13役・アンサンブル10名・スタッフ・会場。画像altも含め6月7日〜16日を確認。"
+      },
+      {
+        "url": "https://www.aniplex.co.jp/lineup/lycoris-recoil_stage2/",
+        "checkedAt": "2026-10-20T06:38:27.487Z",
+        "note": "製作側の作品紹介で第2弾と日程を照合。"
+      }
+    ],
+    "sources": [
+      {
+        "name": "official2024",
+        "url": "https://lycoris-recoil.com/stage/",
+        "status": 200,
+        "finalUrl": "https://lycoris-recoil.com/stage/",
+        "checkedAt": "2026-10-20T06:38:24.774Z",
+        "sha256": "2c1b2d132f0bdaaa344d4a484c9ac3797420116b7b9c4e9edd810b6dabdd64fb"
+      },
+      {
+        "name": "aniplex2024",
+        "url": "https://www.aniplex.co.jp/lineup/lycoris-recoil_stage2/",
+        "status": 200,
+        "finalUrl": "https://www.aniplex.co.jp/lineup/lycoris-recoil_stage2/",
+        "checkedAt": "2026-10-20T06:38:27.487Z",
+        "sha256": "350f757e5c0dfd6df96dd4757ca8adcc381407adb4ae3fa5042b23e51755c5e4"
+      },
+      {
+        "name": "kira-tanoue",
+        "url": "https://kira-hai.net/tanoue-marina",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/tanoue-marina",
+        "checkedAt": "2026-10-20T06:38:30.145Z",
+        "sha256": "4fc7acda2ee1b57c26fe2832a018bfe603b52cdafaff9f4f18e880faf7894dba"
+      },
+      {
+        "name": "changelog",
+        "url": "https://supabase.com/changelog.md",
+        "status": 200,
+        "finalUrl": "https://supabase.com/changelog.md",
+        "checkedAt": "2026-10-20T06:38:32.718Z",
+        "sha256": "15b3d0d1a7dc3b3f2c0af4788e49acfdf2d2edbd2613f22de0705fa43b1cf58b"
+      },
+      {
+        "name": "kira2023",
+        "url": "https://kira-hai.net/lycorisrecoil2023",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/lycorisrecoil2023",
+        "checkedAt": "2026-10-20T06:39:39.312Z",
+        "sha256": "924e215faee4a2605d42c67db5f9f1dce65f8173e54f72b9c6fc943b2ea0c355"
+      },
+      {
+        "name": "kira2024",
+        "url": "https://kira-hai.net/lycorisrecoil2024",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/lycorisrecoil2024",
+        "checkedAt": "2026-10-20T06:39:41.764Z",
+        "sha256": "076ac9470dff272723d5f7d4ccc0cf8241b91108e6a6118c841945b78236ea13"
+      },
+      {
+        "name": "official2023",
+        "url": "https://lycoris-recoil.com/stage/1st/",
+        "status": 200,
+        "finalUrl": "https://lycoris-recoil.com/stage/1st/",
+        "checkedAt": "2026-10-20T06:39:44.288Z",
+        "sha256": "0bf019a6dd30cff847000546001c6076e5a814ab7cae54f62c29eea89064560e"
+      },
+      {
+        "name": "news2023",
+        "url": "https://lycoris-recoil.com/stage/1st/news/?id=61926",
+        "status": 200,
+        "finalUrl": "https://lycoris-recoil.com/stage/1st/news/?id=61926",
+        "checkedAt": "2026-10-20T06:39:46.763Z",
+        "sha256": "b823b197a252734a1c69fd555fad2e9a6e7de853dd6011ba095b581761e277e5"
+      },
+      {
+        "name": "robots-kira",
+        "url": "https://kira-hai.net/robots.txt",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/robots.txt",
+        "checkedAt": "2026-10-20T06:39:49.223Z",
+        "sha256": "f6ed0322f0e3df8c3b42b14df3254a90cca7b94a4172de91812952b3c7060b03"
+      },
+      {
+        "name": "kira-kawauchi",
+        "url": "https://kira-hai.net/kawauchi-misato",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/kawauchi-misato",
+        "checkedAt": "2026-10-20T06:40:56.499Z",
+        "sha256": "cf25bfdf372aa3d5f4eb1f1e96f35f431c5e78053616e3525e9c280bc2ff4d93"
+      },
+      {
+        "name": "kira-motonishi",
+        "url": "https://kira-hai.net/motonishi-sakiho",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/motonishi-sakiho",
+        "checkedAt": "2026-10-20T06:41:00.305Z",
+        "sha256": "21af63cd62678d04eb666eb14004f762a9689e7e459a0ec5cca8aacb96811d53"
+      },
+      {
+        "name": "kira-kitamura",
+        "url": "https://kira-hai.net/kitamura-keigo",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/kitamura-keigo",
+        "checkedAt": "2026-10-20T06:41:03.502Z",
+        "sha256": "277ed6b219928a92a1ca52a638e3d59e746035fd254b9dcef3c0ec28a48cc9f6"
+      },
+      {
+        "name": "kawauchi",
+        "url": "https://misato-kawauchi.net/",
+        "status": 200,
+        "finalUrl": "https://misato-kawauchi.net/",
+        "checkedAt": "2026-10-20T06:41:19.309Z",
+        "sha256": "01d0ff35b23b90d9a6b805c2a24d1ad427176755245926e2b8e6118bf712337a"
+      },
+      {
+        "name": "motonishi",
+        "url": "https://cast-may.com/artist/sakiho-motonishi",
+        "status": 200,
+        "finalUrl": "https://cast-may.com/artist/sakiho-motonishi",
+        "checkedAt": "2026-10-20T06:41:32.054Z",
+        "sha256": "3b5c878f43a60769ed01bb138b328392fef69e5eba9715b7549d55fe579d0147"
+      },
+      {
+        "name": "kitamura",
+        "url": "https://gmbp.co.jp/profile/kitamura-keigo",
+        "status": 200,
+        "finalUrl": "https://gmbp.co.jp/profile/kitamura-keigo",
+        "checkedAt": "2026-10-20T06:41:39.614Z",
+        "sha256": "56d478082d132008f1f479bbc5146ff931866f909745c83db3e9a9dce3a6fd7d"
+      },
+      {
+        "name": "mieda",
+        "url": "https://www.bellona-model.net/model_women/60",
+        "status": 200,
+        "finalUrl": "https://www.bellona-model.net/model_women/60",
+        "checkedAt": "2026-10-20T06:41:44.556Z",
+        "sha256": "f3142287d978cb4d5dbf2722fee17504da050da39be140f9aa65ee2af77e4c84"
+      },
+      {
+        "name": "obuchi-links",
+        "url": "https://www.jvcmusic.co.jp/flyingdog/-/Link/A028551.html",
+        "status": 200,
+        "finalUrl": "https://www.jvcmusic.co.jp/flyingdog/-/Link/A028551.html",
+        "checkedAt": "2026-10-20T06:41:47.400Z",
+        "sha256": "fa9eb1ba8bb9da4ce94e418ca695653ec2cc5a45fddef00fb631be01ba016d48"
+      },
+      {
+        "name": "kawauchi-profile",
+        "url": "https://misato-kawauchi.net/profiles",
+        "status": 200,
+        "finalUrl": "https://misato-kawauchi.net/profiles",
+        "checkedAt": "2026-10-20T06:42:55.479Z",
+        "sha256": "2ae7831631ab25e372d7d87f0e63db1b043b698617586c0df7de86f6243cf95d"
+      },
+      {
+        "name": "obuchi",
+        "url": "https://e-stonemusic.com/nonoka",
+        "status": 200,
+        "finalUrl": "https://e-stonemusic.com/nonoka",
+        "checkedAt": "2026-10-20T06:42:58.793Z",
+        "sha256": "6f3a288620f0445c380ba4aa11319c936b03072ae3188b4f7f9c8e2569d85878"
+      },
+      {
+        "name": "ijiri",
+        "url": "https://omnia.co.jp/talent/ijiri/",
+        "status": 200,
+        "finalUrl": "https://omnia.co.jp/talent/ijiri/",
+        "checkedAt": "2026-10-20T06:43:02.599Z",
+        "sha256": "95af0e938236e07efe994e41e683dfbda3e530273bdfaaed624050cb3826b75c"
+      },
+      {
+        "name": "araya",
+        "url": "https://catalog.oscarpro.co.jp/search/talent/1000035638",
+        "status": 200,
+        "finalUrl": "https://catalog.oscarpro.co.jp/search/talent/1000035638",
+        "checkedAt": "2026-10-20T06:43:05.525Z",
+        "sha256": "891bd195fe1169790ceadca15d31f77a73a9b6e2ec0ca3458712753d392bd223"
+      },
+      {
+        "name": "araya-reading",
+        "url": "https://magazine.younganimal.com/gravure/?id=91",
+        "status": 200,
+        "finalUrl": "https://magazine.younganimal.com/gravure/?id=91",
+        "checkedAt": "2026-10-20T06:43:08.009Z",
+        "sha256": "83d4eda86da395875d30e000e4200315354ec2c966aa6184e95b13a34fae0bf5"
+      },
+      {
+        "name": "ayaki",
+        "url": "https://twitcasting.tv/ayakisakura_326",
+        "status": 200,
+        "finalUrl": "https://twitcasting.tv/ayakisakura_326",
+        "checkedAt": "2026-10-20T06:43:12.009Z",
+        "sha256": "03606ae6b886b40c5b566efc83c0e4ffc842565e4034cdcca760bb7c165bf93c"
+      },
+      {
+        "name": "ayaki-note",
+        "url": "https://note.com/sakura_official/n/n924f1db21e44",
+        "status": 200,
+        "finalUrl": "https://note.com/sakura_official/n/n924f1db21e44",
+        "checkedAt": "2026-10-20T06:43:16.635Z",
+        "sha256": "bfef2e97aa1f4d572273c53bbb83d8e5f49994a6706df4901c895e9db7661c22"
+      },
+      {
+        "name": "takeuchi-thetv",
+        "url": "https://thetv.jp/person/2000076347/",
+        "status": 200,
+        "finalUrl": "https://thetv.jp/person/2000076347/",
+        "checkedAt": "2026-10-20T06:43:21.208Z",
+        "sha256": "a5388275d3fd88bf426dab111df3df1a75fa41258e00d499e6618703405a1f1e"
+      },
+      {
+        "name": "ishii-thetv",
+        "url": "https://thetv.jp/person/1000064675/",
+        "status": 200,
+        "finalUrl": "https://thetv.jp/person/1000064675/",
+        "checkedAt": "2026-10-20T06:43:23.606Z",
+        "sha256": "98f3d60c9bb3bfe3074b8f09f1cddf6444a8d617b4c9e8a9cef5e50681e06538"
+      },
+      {
+        "name": "mieda-eiga",
+        "url": "https://eiga.com/person/299748/",
+        "status": 200,
+        "finalUrl": "https://eiga.com/person/299748/",
+        "checkedAt": "2026-10-20T06:43:26.637Z",
+        "sha256": "69f89d2219892f586fc8f4208421dc436b672b5386af71b6b0ab26ba936f2783"
+      },
+      {
+        "name": "ishii",
+        "url": "https://www.oursongs-creative.jp/profile/archives/1",
+        "status": 200,
+        "finalUrl": "https://www.oursongs-creative.jp/",
+        "checkedAt": "2026-10-20T06:48:32.597Z",
+        "sha256": "0c987659e7dcbb536afc5e522250d1b88e3a16fb9b018c06fb3eb3dd1e817134"
+      },
+      {
+        "name": "obuchi-profile",
+        "url": "https://e-stonemusic.com/nonoka/biography",
+        "status": 200,
+        "finalUrl": "https://e-stonemusic.com/nonoka/biography",
+        "checkedAt": "2026-10-20T06:48:35.892Z",
+        "sha256": "13c767820e31710337f16549b386056c7b33190e354361a0ccde8aa41ddf8961"
+      },
+      {
+        "name": "mieda-sos",
+        "url": "https://www.sos-model.com/entertainments/903",
+        "status": 200,
+        "finalUrl": "https://www.sos-model.com/entertainments/903",
+        "checkedAt": "2026-10-20T06:48:38.805Z",
+        "sha256": "4bc356197593200687d3fb28f6e309a13771e01ab40e88ed0164446279d69398"
+      },
+      {
+        "name": "takeuchi",
+        "url": "https://www.sui-inc.net/takeuchi-rintaro",
+        "status": 404,
+        "finalUrl": "https://www.sui-inc.net/takeuchi-rintaro",
+        "checkedAt": "2026-10-20T06:48:41.486Z",
+        "sha256": "c5b0eb0eb4e84a34252b67740c067481ba48ad105a3690416cf8b8fd29286bef"
+      },
+      {
+        "name": "ayaki-thetv",
+        "url": "https://thetv.jp/person/1000093604/",
+        "status": 200,
+        "finalUrl": "https://thetv.jp/person/1000093604/",
+        "checkedAt": "2026-10-20T06:48:45.249Z",
+        "sha256": "4bafb1e1a654f0b699c7bdcf677ea2ae9a3cc77a6e00c43dbdd6c9cbaa25f608"
+      },
+      {
+        "name": "ijiri-reading",
+        "url": "https://ameblo.jp/nmb48/entry-12375076602.html",
+        "status": 200,
+        "finalUrl": "https://ameblo.jp/nmb48/entry-12375076602.html",
+        "checkedAt": "2026-10-20T06:48:49.833Z",
+        "sha256": "66c6d7f17673178174c2ecd24fbb4e3c139de4856547a12d8cc5b4cded400a84"
+      }
+    ],
+    "notes": [
+      "2作品の既存ID・slug・日本語タイトル・配信設定・客観分類・関連ID・旧タグを保持。既存の仲田博喜＝真島の2配役は全項目保持。",
+      "既存の採用済み2候補は旧抽出年2021を含め全項目保持。今回の24新規候補のみ実際の2023/2024を設定。過去の採用履歴を書き換えない。",
+      "公式13役ずつと第一参照先を照合。本西彩希帆の2023年所属注記を本人名から分離し原文保持。",
+      "2023年役名なし7名・2024年アンサンブル10名は作品クレジット。既存の人物や他作品の役を削除しない。",
+      "スタッフの新田健太はアクションクレジットのみで、この2作品への俳優配役を作らない。",
+      "日本語は短いあらすじと客観的なシリーズ説明、英語は編集上のタイトル・概要・シリーズ説明を補完。"
+    ],
+    "unresolved": [
+      "人物全項目の総合監査、プロフィール英訳・全役名と会場・クレジットの英訳は後続。",
+      "大渕野々花の公式公開生日は月日だけ。生年・身長は補わず保持。",
+      "石井美絵子・竹内凜太郎の旧所属個人URLが業務終了告知/404のため現在所属は未採用。両名の基本情報は編集媒体由来で監査対象。",
+      "2023年役名未記載7名の具体的役柄、両公演の全技術スタッフ、配信の現在の契約・配信先は未補完。"
+    ]
+  },
+  "requestKey": "a32ccc821d7688d01982a638b949c3ab6ad9366cdc5200b673a2d3d214ea8ed5"
+}
