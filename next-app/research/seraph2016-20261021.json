@@ -1,0 +1,1727 @@
+{
+  "version": 1,
+  "batchId": "seraph2016-20261021-01",
+  "expectedFranchise": {
+    "id": "55e6dce1-2dc2-4eba-8091-c50d83a78322",
+    "name": "舞台「終わりのセラフ」",
+    "created_at": "2026-02-08T16:26:41.990203+00:00",
+    "updated_at": "2026-02-08T16:26:41.990203+00:00",
+    "slug": "owari-no-seraph",
+    "intro": null,
+    "description": "集英社から刊行されている鏡貴也・山本ヤマト原作のダークファンタジー漫画『終わりのセラフ』を舞台化したミュージカル作品。吸血鬼と人間の壮絶な戦いを、歌やダンス、そして迫力あるアクション（殺陣）を交えて描く。脚本は赤澤ムックと三浦香、演出は元吉庸泰が手掛けている。",
+    "origin_type": "漫画原作",
+    "origin_note": "原作：鏡貴也・山本ヤマト『終わりのセラフ』（集英社）",
+    "production_companies": null,
+    "related_franchise_ids": [],
+    "format": null,
+    "description_en": null,
+    "name_en": null
+  },
+  "franchisePatch": {
+    "name": "「終わりのセラフ」The Musical",
+    "format": "musical",
+    "name_en": "Seraph of the End: The Musical",
+    "origin_note": "原作：鏡貴也／漫画：山本ヤマト／コンテ構成：降矢大輔『終わりのセラフ』（集英社「ジャンプスクエア」連載）",
+    "description": "鏡貴也が原作、山本ヤマトが漫画、降矢大輔がコンテ構成を手がける『終わりのセラフ』のミュージカル。吸血鬼に支配された世界で、百夜優一郎と百夜ミカエラの運命を描く。2016年にAiiA 2.5 Theater Tokyoで上演。演出は元吉庸泰、脚本は赤澤ムックと三浦香、音楽は和田俊輔。",
+    "description_en": "A musical adaptation of Seraph of the End, written by Takaya Kagami, illustrated by Yamato Yamamoto, with storyboards by Daisuke Furuya. It follows Yuichiro Hyakuya and Mikaela Hyakuya in a world ruled by vampires. The 2016 production at AiiA 2.5 Theater Tokyo was directed by Tsuneyasu Motoyoshi, with a script by Muck Akazawa and Kaori Miura and music by Shunsuke Wada."
+  },
+  "actors": [
+    {
+      "actor": {
+        "id": "157ff4b2-e064-42fc-96af-f8c5a10d1742",
+        "slug": "sano-gaku",
+        "name": "佐野岳",
+        "kana": "さの がく",
+        "profile": "愛知県出身の俳優。エヴァーグリーン・エンタテイメント所属。2011年のジュノン・スーパーボーイ・コンテストでグランプリを受賞。『仮面ライダー鎧武／ガイム』の葛葉紘汰役で主演し、『終わりのセラフ』The Musicalでは百夜優一郎役を務めた。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1992-04-03",
+        "height_cm": 170,
+        "blood_type": "A",
+        "birthday_label": null,
+        "name_en": "Gaku Sano",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "佐野岳",
+      "profileUrl": "https://www.evergreen-e.com/feature/sano_gaku",
+      "evidence": [
+        {
+          "url": "https://www.evergreen-e.com/feature/sano_gaku",
+          "checkedAt": "2026-10-20T15:43:25.817Z",
+          "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+        },
+        {
+          "url": "https://kira-hai.net/sano-gaku",
+          "checkedAt": "2026-10-20T15:43:00.062Z",
+          "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+        },
+        {
+          "url": "https://www.nelke.co.jp/stage/owarino-seraph/index.html",
+          "checkedAt": "2026-10-20T15:29:29.481Z",
+          "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+        }
+      ],
+      "notes": [
+        "現行所属公式で生年月日・出身・170cm・英字綴り・経歴・当該舞台歴を確認。第一参照先169cmより現行公式170cmを優先。読みとA型は第一参照先。英字表示は公式綴りを名姓順に整えた。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "35ead43a-7f1a-4015-b709-3fef38d177bf",
+        "slug": "suzuki-katsuhiro",
+        "name": "鈴木勝大",
+        "kana": "すずき かつひろ",
+        "profile": "神奈川県出身の俳優。キューブ所属。2009年のジュノン・スーパーボーイ・コンテストで準グランプリを受賞。『特命戦隊ゴーバスターズ』の桜田ヒロム／レッドバスター役で主演し、『終わりのセラフ』The Musicalでは百夜ミカエラ役を務めた。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1992-12-29",
+        "height_cm": 175,
+        "blood_type": "O",
+        "birthday_label": null,
+        "name_en": "Katsuhiro Suzuki",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "鈴木勝大",
+      "profileUrl": "https://www.cubeinc.co.jp/archives/artist/suzukikatsuhiro",
+      "evidence": [
+        {
+          "url": "https://www.cubeinc.co.jp/archives/artist/suzukikatsuhiro",
+          "checkedAt": "2026-10-20T17:21:04.873Z",
+          "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+        },
+        {
+          "url": "https://kira-hai.net/suzuki-katsuhiro",
+          "checkedAt": "2026-10-20T15:43:00.080Z",
+          "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+        },
+        {
+          "url": "https://www.nelke.co.jp/stage/owarino-seraph/index.html",
+          "checkedAt": "2026-10-20T15:29:29.481Z",
+          "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+        }
+      ],
+      "notes": [
+        "現行所属公式で生年月日・出身・175cm・英字綴り・受賞歴・主演役・当該舞台歴を確認。キラハイの旧エヴァーグリーン所属を現在情報にしない。読み・O型は第一参照先。同名のスポーツ選手等とは生年月日・出演歴で区別。英字表示は公式綴りを名姓順に整えた。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "ad043aee-e47c-47eb-a44b-23d97fdf700e",
+        "slug": "chinen-saya",
+        "name": "知念紗耶",
+        "kana": null,
+        "profile": "俳優・アクロバットダンスパフォーマー。ラナハウス提携アーティスト。2025年にG-Rocketsを退団。『終わりのセラフ』The Musicalの阿朱羅丸役や、『ラブ・ネバー・ダイ』のフレック役などを務める。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": null,
+        "height_cm": null,
+        "blood_type": null,
+        "birthday_label": null,
+        "name_en": "Saya Chinen",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "知念紗耶",
+      "profileUrl": "https://g-rockets.jp/performer/chinen/",
+      "evidence": [
+        {
+          "url": "https://g-rockets.jp/performer/chinen/",
+          "checkedAt": "2026-10-20T17:21:47.785Z",
+          "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+        },
+        {
+          "url": "https://g-rockets.jp/news250410-3/",
+          "checkedAt": "2026-10-20T17:21:48.038Z",
+          "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+        },
+        {
+          "url": "https://ninja-agency.com/talents/f50/",
+          "checkedAt": "2026-10-20T15:43:25.544Z",
+          "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+        },
+        {
+          "url": "https://www.nelke.co.jp/stage/owarino-seraph/index.html",
+          "checkedAt": "2026-10-20T15:29:29.481Z",
+          "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+        }
+      ],
+      "notes": [
+        "元所属の現行人物紹介と退団告知で当該公演歴・2025年退団・現在のラナハウス提携と職種を確認。Ninja Agency掲載の英字名を採用。Ninjaの143cmは他の二次情報154cmと食い違い、独立確認できないため身長null。生年月日・出身・血液型・読みは未確認のまま、ウェブ上の推定生年や家族関係を転記しない。ダンサーという職種でも本作では主要な阿朱羅丸役なので通常配役として登録。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "76cf2869-f8f2-456c-ad0b-69e7041b302d",
+        "slug": "nagao-mariya",
+        "name": "永尾まりや",
+        "kana": "ながお まりや",
+        "profile": "神奈川県出身の俳優・モデル。合同会社mama所属。元AKB48メンバー。テレビドラマや映画、雑誌などで活動し、『終わりのセラフ』The Musicalではクルル・ツェペシ役を務めた。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1994-03-10",
+        "height_cm": 159,
+        "blood_type": "O",
+        "birthday_label": null,
+        "name_en": "Mariya Nagao",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "永尾まりや",
+      "profileUrl": "https://irving.co.jp/talents/mariya-nagao/",
+      "evidence": [
+        {
+          "url": "https://irving.co.jp/talents/mariya-nagao/",
+          "checkedAt": "2026-10-20T15:43:27.079Z",
+          "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+        },
+        {
+          "url": "https://www.city.saku.nagano.jp/kanko/kanko/kankoujyouhou/kankotaishi.html",
+          "checkedAt": "2026-10-20T17:21:47.404Z",
+          "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+        },
+        {
+          "url": "https://t.pia.jp/pia/artist/artists.do?artistsCd=CA050026",
+          "checkedAt": "2026-10-20T17:22:49.889Z",
+          "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+        },
+        {
+          "url": "https://ameblo.jp/akihabara48/entry-12119665243.html",
+          "checkedAt": "2026-10-20T17:22:49.766Z",
+          "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+        },
+        {
+          "url": "https://www.nelke.co.jp/stage/owarino-seraph/index.html",
+          "checkedAt": "2026-10-20T15:29:29.481Z",
+          "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+        }
+      ],
+      "notes": [
+        "アービング現行の業務提携mama表記と佐久市公式の合同会社mama所属を区別して確認し、アービング所属と断定しない。生年月日・159cm・O型・神奈川県・英字名はアービング現行公式。読み・元AKBはぴあ二次紹介、AKB公式卒業コンサート告知も照合。今回は卒業の具体的な日を採用しない。"
+      ]
+    }
+  ],
+  "works": [
+    {
+      "year": 2016,
+      "before": null,
+      "patch": null,
+      "play": {
+        "id": "abe80475-9958-45d2-926e-d61191f98161",
+        "slug": "owasera2016",
+        "title": "「終わりのセラフ」The Musical",
+        "franchise_id": "55e6dce1-2dc2-4eba-8091-c50d83a78322",
+        "summary": "未知のウイルスによって大人たちが死に、残された子どもたちは吸血鬼の地下都市で支配されていた。家族同然の仲間を失い、一人で地上へ逃れた百夜優一郎は、吸血鬼への復讐を誓う。一方、死んだはずの百夜ミカエラは吸血鬼として生きており、二人は異なる立場で再び向き合うことになる。",
+        "period": "2016年2月4日〜11日",
+        "venue": "AiiA 2.5 Theater Tokyo",
+        "vod": null,
+        "genre": null,
+        "tags": [],
+        "credits": [
+          {
+            "role": "原作",
+            "names": [
+              "鏡貴也"
+            ],
+            "is_core": true,
+            "sort_order": 1
+          },
+          {
+            "role": "漫画",
+            "names": [
+              "山本ヤマト"
+            ],
+            "is_core": true,
+            "sort_order": 2
+          },
+          {
+            "role": "コンテ構成",
+            "names": [
+              "降矢大輔"
+            ],
+            "is_core": true,
+            "sort_order": 3
+          },
+          {
+            "role": "演出",
+            "names": [
+              "元吉庸泰"
+            ],
+            "is_core": true,
+            "sort_order": 4
+          },
+          {
+            "role": "脚本",
+            "names": [
+              "赤澤ムック",
+              "三浦香"
+            ],
+            "is_core": true,
+            "sort_order": 5
+          },
+          {
+            "role": "音楽",
+            "names": [
+              "和田俊輔"
+            ],
+            "is_core": true,
+            "sort_order": 6
+          },
+          {
+            "role": "振付",
+            "names": [
+              "本山新之助"
+            ],
+            "is_core": false,
+            "sort_order": 7
+          },
+          {
+            "role": "出演（役名未記載）",
+            "names": [
+              "休徳竜也",
+              "西岡寛修",
+              "南條良輔",
+              "松ヶ谷ほのか",
+              "平井琴望",
+              "渡邉南"
+            ],
+            "is_core": false,
+            "sort_order": 8
+          },
+          {
+            "role": "主催",
+            "names": [
+              "「終わりのセラフ」The Musical製作委員会"
+            ],
+            "is_core": false,
+            "sort_order": 9
+          }
+        ],
+        "related_franchise_ids": [],
+        "summary_en": "After a mysterious virus kills the adults, the surviving children are held in an underground city ruled by vampires. Yuichiro Hyakuya escapes to the surface after losing the companions he considered family and vows revenge. Mikaela, whom he believed dead, has survived as a vampire, placing the two on opposite sides when their paths cross again.",
+        "title_en": "Seraph of the End: The Musical"
+      },
+      "rawSource": {
+        "sourceUrl": "https://kira-hai.net/owasera2016",
+        "title": "「終わりのセラフ」The Musical",
+        "scheduleLines": [
+          "2016年2月4日-11日 AiiA 2.5 Theater Tokyo"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "佐野岳",
+            "sourceActorUrl": "https://kira-hai.net/sano-gaku",
+            "role_name": "百夜優一郎",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "鈴木勝大",
+            "sourceActorUrl": "https://kira-hai.net/suzuki-katsuhiro",
+            "role_name": "百夜ミカエラ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "小野健斗",
+            "sourceActorUrl": "https://kira-hai.net/ono-kento",
+            "role_name": "一瀬グレン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "美山加恋",
+            "sourceActorUrl": null,
+            "role_name": "三宮三葉",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "水石亜飛夢",
+            "sourceActorUrl": "https://kira-hai.net/mizuishi-atomu",
+            "role_name": "君月士方",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "橋本真一",
+            "sourceActorUrl": "https://kira-hai.net/hashimoto-shinichi",
+            "role_name": "早乙女与一",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "甲斐千尋",
+            "sourceActorUrl": "https://kira-hai.net/kai-chihiro",
+            "role_name": "柊シノア",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "知念紗耶",
+            "sourceActorUrl": null,
+            "role_name": "阿朱羅丸",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "永尾まりや",
+            "sourceActorUrl": null,
+            "role_name": "クルル・ツェペシ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "中村誠治郎",
+            "sourceActorUrl": "https://kira-hai.net/nakamura-seijiro",
+            "role_name": "フェリド・バートリー",
+            "cast_group": null
+          }
+        ],
+        "unparsed": [
+          "休徳竜也",
+          "西岡寛修",
+          "南條良輔",
+          "松ヶ谷ほのか",
+          "平井琴望",
+          "渡邉南"
+        ]
+      },
+      "source": {
+        "sourceUrl": "https://kira-hai.net/owasera2016",
+        "title": "「終わりのセラフ」The Musical",
+        "scheduleLines": [
+          "2016年2月4日-11日 AiiA 2.5 Theater Tokyo"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "佐野岳",
+            "sourceActorUrl": "https://kira-hai.net/sano-gaku",
+            "role_name": "百夜優一郎",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "鈴木勝大",
+            "sourceActorUrl": "https://kira-hai.net/suzuki-katsuhiro",
+            "role_name": "百夜ミカエラ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "小野健斗",
+            "sourceActorUrl": "https://kira-hai.net/ono-kento",
+            "role_name": "一瀬グレン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "美山加恋",
+            "sourceActorUrl": null,
+            "role_name": "三宮三葉",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "水石亜飛夢",
+            "sourceActorUrl": "https://kira-hai.net/mizuishi-atomu",
+            "role_name": "君月士方",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "橋本真一",
+            "sourceActorUrl": "https://kira-hai.net/hashimoto-shinichi",
+            "role_name": "早乙女与一",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "甲斐千尋",
+            "sourceActorUrl": "https://kira-hai.net/kai-chihiro",
+            "role_name": "柊シノア",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "知念紗耶",
+            "sourceActorUrl": null,
+            "role_name": "阿朱羅丸",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "永尾まりや",
+            "sourceActorUrl": null,
+            "role_name": "クルル・ツェペシ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "中村誠治郎",
+            "sourceActorUrl": "https://kira-hai.net/nakamura-seijiro",
+            "role_name": "フェリド・バートリー",
+            "cast_group": null
+          }
+        ],
+        "unparsed": []
+      },
+      "stage": {
+        "workUrl": "https://kira-hai.net/owasera2016",
+        "key": "4226a8a896c554891853000b720a531d7823742a1fca61e1a9e03e907b3cb153",
+        "items": [
+          {
+            "source_actor_name": "佐野岳",
+            "source_actor_url": "https://kira-hai.net/sano-gaku",
+            "source_work_title": "「終わりのセラフ」The Musical",
+            "source_year": 2016,
+            "source_role_raw": "百夜優一郎",
+            "source_role_names": [
+              "百夜優一郎"
+            ],
+            "source_cast_group": null,
+            "source_order": 1,
+            "source_credit_key": "18ce25b97fe086d9ca08",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/owasera2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/owasera2016",
+                  "checkedAt": "2026-10-20T15:43:00.138Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/owarino-seraph/index.html",
+                  "checkedAt": "2026-10-20T15:29:29.481Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://l-tike.com/play/seraph-m/",
+                  "checkedAt": "2026-10-20T17:21:47.454Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.video.unext.jp/title/SID0026327",
+                  "checkedAt": "2026-10-20T15:29:29.616Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://owarino-seraph.jp/news/index.html",
+                  "checkedAt": "2026-10-20T15:42:59.821Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://ameblo.jp/karen-mi/entry-12127828755.html",
+                  "checkedAt": "2026-10-20T17:21:48.410Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                }
+              ],
+              "source_fingerprint": "173a500d284235cc80d143cb3859e7acdf955f5b2460e05562c75ce721750a4a",
+              "review_fingerprint": "6c8f5df0745bbdd6c52283e8bdd0bbf04550e7899053b44de1c8716b2e91bb23",
+              "snapshot_fingerprint": "1277c3c8275af5bcb1c5ff3320afcbc577c6ff8ac24a3ee70990c23b0f17c10b",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "157ff4b2-e064-42fc-96af-f8c5a10d1742",
+            "matched_play_id": "abe80475-9958-45d2-926e-d61191f98161",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "鈴木勝大",
+            "source_actor_url": "https://kira-hai.net/suzuki-katsuhiro",
+            "source_work_title": "「終わりのセラフ」The Musical",
+            "source_year": 2016,
+            "source_role_raw": "百夜ミカエラ",
+            "source_role_names": [
+              "百夜ミカエラ"
+            ],
+            "source_cast_group": null,
+            "source_order": 2,
+            "source_credit_key": "9b8b56e6f9856ac57d8a",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/owasera2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/owasera2016",
+                  "checkedAt": "2026-10-20T15:43:00.138Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/owarino-seraph/index.html",
+                  "checkedAt": "2026-10-20T15:29:29.481Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://l-tike.com/play/seraph-m/",
+                  "checkedAt": "2026-10-20T17:21:47.454Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.video.unext.jp/title/SID0026327",
+                  "checkedAt": "2026-10-20T15:29:29.616Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://owarino-seraph.jp/news/index.html",
+                  "checkedAt": "2026-10-20T15:42:59.821Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://ameblo.jp/karen-mi/entry-12127828755.html",
+                  "checkedAt": "2026-10-20T17:21:48.410Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                }
+              ],
+              "source_fingerprint": "173a500d284235cc80d143cb3859e7acdf955f5b2460e05562c75ce721750a4a",
+              "review_fingerprint": "6c8f5df0745bbdd6c52283e8bdd0bbf04550e7899053b44de1c8716b2e91bb23",
+              "snapshot_fingerprint": "1277c3c8275af5bcb1c5ff3320afcbc577c6ff8ac24a3ee70990c23b0f17c10b",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "35ead43a-7f1a-4015-b709-3fef38d177bf",
+            "matched_play_id": "abe80475-9958-45d2-926e-d61191f98161",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "小野健斗",
+            "source_actor_url": "https://kira-hai.net/ono-kento",
+            "source_work_title": "「終わりのセラフ」The Musical",
+            "source_year": 2016,
+            "source_role_raw": "一瀬グレン",
+            "source_role_names": [
+              "一瀬グレン"
+            ],
+            "source_cast_group": null,
+            "source_order": 3,
+            "source_credit_key": "ea744403c8f69b4e04e7",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/owasera2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/owasera2016",
+                  "checkedAt": "2026-10-20T15:43:00.138Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/owarino-seraph/index.html",
+                  "checkedAt": "2026-10-20T15:29:29.481Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://l-tike.com/play/seraph-m/",
+                  "checkedAt": "2026-10-20T17:21:47.454Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.video.unext.jp/title/SID0026327",
+                  "checkedAt": "2026-10-20T15:29:29.616Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://owarino-seraph.jp/news/index.html",
+                  "checkedAt": "2026-10-20T15:42:59.821Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://ameblo.jp/karen-mi/entry-12127828755.html",
+                  "checkedAt": "2026-10-20T17:21:48.410Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                }
+              ],
+              "source_fingerprint": "173a500d284235cc80d143cb3859e7acdf955f5b2460e05562c75ce721750a4a",
+              "review_fingerprint": "6c8f5df0745bbdd6c52283e8bdd0bbf04550e7899053b44de1c8716b2e91bb23",
+              "snapshot_fingerprint": "1277c3c8275af5bcb1c5ff3320afcbc577c6ff8ac24a3ee70990c23b0f17c10b",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "6e2be005-e320-4dd1-90f2-bee991a3db3c",
+            "matched_play_id": "abe80475-9958-45d2-926e-d61191f98161",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "美山加恋",
+            "source_actor_url": null,
+            "source_work_title": "「終わりのセラフ」The Musical",
+            "source_year": 2016,
+            "source_role_raw": "三宮三葉",
+            "source_role_names": [
+              "三宮三葉"
+            ],
+            "source_cast_group": null,
+            "source_order": 4,
+            "source_credit_key": "63454d39ed09d5619101",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/owasera2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/owasera2016",
+                  "checkedAt": "2026-10-20T15:43:00.138Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/owarino-seraph/index.html",
+                  "checkedAt": "2026-10-20T15:29:29.481Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://l-tike.com/play/seraph-m/",
+                  "checkedAt": "2026-10-20T17:21:47.454Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.video.unext.jp/title/SID0026327",
+                  "checkedAt": "2026-10-20T15:29:29.616Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://owarino-seraph.jp/news/index.html",
+                  "checkedAt": "2026-10-20T15:42:59.821Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://ameblo.jp/karen-mi/entry-12127828755.html",
+                  "checkedAt": "2026-10-20T17:21:48.410Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                }
+              ],
+              "source_fingerprint": "173a500d284235cc80d143cb3859e7acdf955f5b2460e05562c75ce721750a4a",
+              "review_fingerprint": "6c8f5df0745bbdd6c52283e8bdd0bbf04550e7899053b44de1c8716b2e91bb23",
+              "snapshot_fingerprint": "1277c3c8275af5bcb1c5ff3320afcbc577c6ff8ac24a3ee70990c23b0f17c10b",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "485f95f2-14f6-4254-b398-a14e67ecc247",
+            "matched_play_id": "abe80475-9958-45d2-926e-d61191f98161",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "水石亜飛夢",
+            "source_actor_url": "https://kira-hai.net/mizuishi-atomu",
+            "source_work_title": "「終わりのセラフ」The Musical",
+            "source_year": 2016,
+            "source_role_raw": "君月士方",
+            "source_role_names": [
+              "君月士方"
+            ],
+            "source_cast_group": null,
+            "source_order": 5,
+            "source_credit_key": "b12d905e028635d51629",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/owasera2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/owasera2016",
+                  "checkedAt": "2026-10-20T15:43:00.138Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/owarino-seraph/index.html",
+                  "checkedAt": "2026-10-20T15:29:29.481Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://l-tike.com/play/seraph-m/",
+                  "checkedAt": "2026-10-20T17:21:47.454Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.video.unext.jp/title/SID0026327",
+                  "checkedAt": "2026-10-20T15:29:29.616Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://owarino-seraph.jp/news/index.html",
+                  "checkedAt": "2026-10-20T15:42:59.821Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://ameblo.jp/karen-mi/entry-12127828755.html",
+                  "checkedAt": "2026-10-20T17:21:48.410Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                }
+              ],
+              "source_fingerprint": "173a500d284235cc80d143cb3859e7acdf955f5b2460e05562c75ce721750a4a",
+              "review_fingerprint": "6c8f5df0745bbdd6c52283e8bdd0bbf04550e7899053b44de1c8716b2e91bb23",
+              "snapshot_fingerprint": "1277c3c8275af5bcb1c5ff3320afcbc577c6ff8ac24a3ee70990c23b0f17c10b",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "a80bfb79-1379-48cd-a3af-65fd5f566d3d",
+            "matched_play_id": "abe80475-9958-45d2-926e-d61191f98161",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "橋本真一",
+            "source_actor_url": "https://kira-hai.net/hashimoto-shinichi",
+            "source_work_title": "「終わりのセラフ」The Musical",
+            "source_year": 2016,
+            "source_role_raw": "早乙女与一",
+            "source_role_names": [
+              "早乙女与一"
+            ],
+            "source_cast_group": null,
+            "source_order": 6,
+            "source_credit_key": "e9892097eccc3991a993",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/owasera2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/owasera2016",
+                  "checkedAt": "2026-10-20T15:43:00.138Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/owarino-seraph/index.html",
+                  "checkedAt": "2026-10-20T15:29:29.481Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://l-tike.com/play/seraph-m/",
+                  "checkedAt": "2026-10-20T17:21:47.454Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.video.unext.jp/title/SID0026327",
+                  "checkedAt": "2026-10-20T15:29:29.616Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://owarino-seraph.jp/news/index.html",
+                  "checkedAt": "2026-10-20T15:42:59.821Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://ameblo.jp/karen-mi/entry-12127828755.html",
+                  "checkedAt": "2026-10-20T17:21:48.410Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                }
+              ],
+              "source_fingerprint": "173a500d284235cc80d143cb3859e7acdf955f5b2460e05562c75ce721750a4a",
+              "review_fingerprint": "6c8f5df0745bbdd6c52283e8bdd0bbf04550e7899053b44de1c8716b2e91bb23",
+              "snapshot_fingerprint": "1277c3c8275af5bcb1c5ff3320afcbc577c6ff8ac24a3ee70990c23b0f17c10b",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "231d0fed-4876-4ff7-ab9a-a91fac87652f",
+            "matched_play_id": "abe80475-9958-45d2-926e-d61191f98161",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "甲斐千尋",
+            "source_actor_url": "https://kira-hai.net/kai-chihiro",
+            "source_work_title": "「終わりのセラフ」The Musical",
+            "source_year": 2016,
+            "source_role_raw": "柊シノア",
+            "source_role_names": [
+              "柊シノア"
+            ],
+            "source_cast_group": null,
+            "source_order": 7,
+            "source_credit_key": "9e80459e042686aec89b",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/owasera2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/owasera2016",
+                  "checkedAt": "2026-10-20T15:43:00.138Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/owarino-seraph/index.html",
+                  "checkedAt": "2026-10-20T15:29:29.481Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://l-tike.com/play/seraph-m/",
+                  "checkedAt": "2026-10-20T17:21:47.454Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.video.unext.jp/title/SID0026327",
+                  "checkedAt": "2026-10-20T15:29:29.616Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://owarino-seraph.jp/news/index.html",
+                  "checkedAt": "2026-10-20T15:42:59.821Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://ameblo.jp/karen-mi/entry-12127828755.html",
+                  "checkedAt": "2026-10-20T17:21:48.410Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                }
+              ],
+              "source_fingerprint": "173a500d284235cc80d143cb3859e7acdf955f5b2460e05562c75ce721750a4a",
+              "review_fingerprint": "6c8f5df0745bbdd6c52283e8bdd0bbf04550e7899053b44de1c8716b2e91bb23",
+              "snapshot_fingerprint": "1277c3c8275af5bcb1c5ff3320afcbc577c6ff8ac24a3ee70990c23b0f17c10b",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "591fd3ca-6bfa-4fb8-a1fd-e9cb1da215ee",
+            "matched_play_id": "abe80475-9958-45d2-926e-d61191f98161",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "知念紗耶",
+            "source_actor_url": null,
+            "source_work_title": "「終わりのセラフ」The Musical",
+            "source_year": 2016,
+            "source_role_raw": "阿朱羅丸",
+            "source_role_names": [
+              "阿朱羅丸"
+            ],
+            "source_cast_group": null,
+            "source_order": 8,
+            "source_credit_key": "f2384ddca61172306b62",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/owasera2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/owasera2016",
+                  "checkedAt": "2026-10-20T15:43:00.138Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/owarino-seraph/index.html",
+                  "checkedAt": "2026-10-20T15:29:29.481Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://l-tike.com/play/seraph-m/",
+                  "checkedAt": "2026-10-20T17:21:47.454Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.video.unext.jp/title/SID0026327",
+                  "checkedAt": "2026-10-20T15:29:29.616Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://owarino-seraph.jp/news/index.html",
+                  "checkedAt": "2026-10-20T15:42:59.821Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://ameblo.jp/karen-mi/entry-12127828755.html",
+                  "checkedAt": "2026-10-20T17:21:48.410Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                }
+              ],
+              "source_fingerprint": "173a500d284235cc80d143cb3859e7acdf955f5b2460e05562c75ce721750a4a",
+              "review_fingerprint": "6c8f5df0745bbdd6c52283e8bdd0bbf04550e7899053b44de1c8716b2e91bb23",
+              "snapshot_fingerprint": "1277c3c8275af5bcb1c5ff3320afcbc577c6ff8ac24a3ee70990c23b0f17c10b",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "ad043aee-e47c-47eb-a44b-23d97fdf700e",
+            "matched_play_id": "abe80475-9958-45d2-926e-d61191f98161",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "永尾まりや",
+            "source_actor_url": null,
+            "source_work_title": "「終わりのセラフ」The Musical",
+            "source_year": 2016,
+            "source_role_raw": "クルル・ツェペシ",
+            "source_role_names": [
+              "クルル・ツェペシ"
+            ],
+            "source_cast_group": null,
+            "source_order": 9,
+            "source_credit_key": "00a6d97b14f745ae47d4",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/owasera2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/owasera2016",
+                  "checkedAt": "2026-10-20T15:43:00.138Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/owarino-seraph/index.html",
+                  "checkedAt": "2026-10-20T15:29:29.481Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://l-tike.com/play/seraph-m/",
+                  "checkedAt": "2026-10-20T17:21:47.454Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.video.unext.jp/title/SID0026327",
+                  "checkedAt": "2026-10-20T15:29:29.616Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://owarino-seraph.jp/news/index.html",
+                  "checkedAt": "2026-10-20T15:42:59.821Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://ameblo.jp/karen-mi/entry-12127828755.html",
+                  "checkedAt": "2026-10-20T17:21:48.410Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                }
+              ],
+              "source_fingerprint": "173a500d284235cc80d143cb3859e7acdf955f5b2460e05562c75ce721750a4a",
+              "review_fingerprint": "6c8f5df0745bbdd6c52283e8bdd0bbf04550e7899053b44de1c8716b2e91bb23",
+              "snapshot_fingerprint": "1277c3c8275af5bcb1c5ff3320afcbc577c6ff8ac24a3ee70990c23b0f17c10b",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "76cf2869-f8f2-456c-ad0b-69e7041b302d",
+            "matched_play_id": "abe80475-9958-45d2-926e-d61191f98161",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "中村誠治郎",
+            "source_actor_url": "https://kira-hai.net/nakamura-seijiro",
+            "source_work_title": "「終わりのセラフ」The Musical",
+            "source_year": 2016,
+            "source_role_raw": "フェリド・バートリー",
+            "source_role_names": [
+              "フェリド・バートリー"
+            ],
+            "source_cast_group": null,
+            "source_order": 10,
+            "source_credit_key": "0b2bb841f44d19fe94ec",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/owasera2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/owasera2016",
+                  "checkedAt": "2026-10-20T15:43:00.138Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/owarino-seraph/index.html",
+                  "checkedAt": "2026-10-20T15:29:29.481Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://l-tike.com/play/seraph-m/",
+                  "checkedAt": "2026-10-20T17:21:47.454Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.video.unext.jp/title/SID0026327",
+                  "checkedAt": "2026-10-20T15:29:29.616Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://owarino-seraph.jp/news/index.html",
+                  "checkedAt": "2026-10-20T15:42:59.821Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                },
+                {
+                  "url": "https://ameblo.jp/karen-mi/entry-12127828755.html",
+                  "checkedAt": "2026-10-20T17:21:48.410Z",
+                  "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+                }
+              ],
+              "source_fingerprint": "173a500d284235cc80d143cb3859e7acdf955f5b2460e05562c75ce721750a4a",
+              "review_fingerprint": "6c8f5df0745bbdd6c52283e8bdd0bbf04550e7899053b44de1c8716b2e91bb23",
+              "snapshot_fingerprint": "1277c3c8275af5bcb1c5ff3320afcbc577c6ff8ac24a3ee70990c23b0f17c10b",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "06b49664-0bd4-4c32-bb16-f3bc0f96f886",
+            "matched_play_id": "abe80475-9958-45d2-926e-d61191f98161",
+            "status": "pending"
+          }
+        ]
+      },
+      "records": [
+        {
+          "actor": {
+            "id": "157ff4b2-e064-42fc-96af-f8c5a10d1742",
+            "slug": "sano-gaku",
+            "name": "佐野岳",
+            "kana": "さの がく",
+            "profile": "愛知県出身の俳優。エヴァーグリーン・エンタテイメント所属。2011年のジュノン・スーパーボーイ・コンテストでグランプリを受賞。『仮面ライダー鎧武／ガイム』の葛葉紘汰役で主演し、『終わりのセラフ』The Musicalでは百夜優一郎役を務めた。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1992-04-03",
+            "height_cm": 170,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": "Gaku Sano",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "佐野岳",
+            "sourceActorUrl": "https://kira-hai.net/sano-gaku",
+            "role_name": "百夜優一郎",
+            "cast_group": null
+          },
+          "sourceCreditKey": "18ce25b97fe086d9ca08",
+          "sourceOrder": 1,
+          "billingOrder": 1,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "35ead43a-7f1a-4015-b709-3fef38d177bf",
+            "slug": "suzuki-katsuhiro",
+            "name": "鈴木勝大",
+            "kana": "すずき かつひろ",
+            "profile": "神奈川県出身の俳優。キューブ所属。2009年のジュノン・スーパーボーイ・コンテストで準グランプリを受賞。『特命戦隊ゴーバスターズ』の桜田ヒロム／レッドバスター役で主演し、『終わりのセラフ』The Musicalでは百夜ミカエラ役を務めた。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1992-12-29",
+            "height_cm": 175,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": "Katsuhiro Suzuki",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "鈴木勝大",
+            "sourceActorUrl": "https://kira-hai.net/suzuki-katsuhiro",
+            "role_name": "百夜ミカエラ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "9b8b56e6f9856ac57d8a",
+          "sourceOrder": 2,
+          "billingOrder": 2,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "6e2be005-e320-4dd1-90f2-bee991a3db3c",
+            "slug": "ono-kento",
+            "name": "小野 健斗",
+            "kana": "おの けんと",
+            "profile": "神奈川県横浜市生まれ、東京都育ちの俳優・モデル。フロムファーストプロダクション所属",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/kento_leo9",
+              "instagram": "https://www.instagram.com/kento_ono/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T14:53:11.103962+00:00",
+            "updated_at": "2026-03-21T14:53:11.103962+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1989-08-09",
+            "height_cm": 187,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "小野健斗",
+            "sourceActorUrl": "https://kira-hai.net/ono-kento",
+            "role_name": "一瀬グレン",
+            "cast_group": null
+          },
+          "sourceCreditKey": "ea744403c8f69b4e04e7",
+          "sourceOrder": 3,
+          "billingOrder": 3,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "485f95f2-14f6-4254-b398-a14e67ecc247",
+            "slug": "miyama-karen",
+            "name": "美山加恋",
+            "kana": "みやま かれん",
+            "profile": "東京都出身の俳優・声優。ホリプロ所属。『キラキラ☆プリキュアアラモード』の宇佐美いちか／キュアホイップの声を担当。舞台『ROCK MUSICAL BLEACH』では雛森桃役を務めた。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-19T09:07:56.196763+00:00",
+            "updated_at": "2026-10-19T09:07:56.196763+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1996-12-12",
+            "height_cm": null,
+            "blood_type": "AB",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "美山加恋",
+            "sourceActorUrl": null,
+            "role_name": "三宮三葉",
+            "cast_group": null
+          },
+          "sourceCreditKey": "63454d39ed09d5619101",
+          "sourceOrder": 4,
+          "billingOrder": 4,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "a80bfb79-1379-48cd-a3af-65fd5f566d3d",
+            "slug": "mizuishi-atomu",
+            "name": "水石 亜飛夢",
+            "kana": "みずいし あとむ",
+            "profile": "神奈川県出身の俳優。デビューから所属していたSTRAIGHT entertainmentを経て、2024年7月よりenchanteに所属。ミュージカル『テニスの王子様』2ndシーズン（柳蓮二役）や『魔進戦隊キラメイジャー』（押切時雨 / キラメイブルー役）、映画『鋼の錬金術師』（アルフォンス・エルリックの声）等に出演。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/atom_mizuishi",
+              "official": "https://enchante-de.com/profile/mizuishi_atomu/",
+              "instagram": "https://www.instagram.com/atom_mizuishi/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:03:44.295565+00:00",
+            "updated_at": "2026-03-21T15:03:44.295565+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1996-01-01",
+            "height_cm": 181,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Kanagawa Prefecture. After working with his debut agency, STRAIGHT entertainment, he transferred to enchante in July 2024. He appeared in the musical \"The Prince of Tennis\" 2nd season (as Renji Yanagi), \"Mashin Sentai Kiramager\" (as Shiguru Oshikiri / Kiramai Blue), and the movie \"Fullmetal Alchemist\" (as the voice of Alphonse Elric).",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "水石亜飛夢",
+            "sourceActorUrl": "https://kira-hai.net/mizuishi-atomu",
+            "role_name": "君月士方",
+            "cast_group": null
+          },
+          "sourceCreditKey": "b12d905e028635d51629",
+          "sourceOrder": 5,
+          "billingOrder": 5,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "231d0fed-4876-4ff7-ab9a-a91fac87652f",
+            "slug": "hashimoto-shinichi",
+            "name": "橋本 真一",
+            "kana": "はしもと しんいち",
+            "profile": "大阪府出身の俳優・声優・ミュージシャン。マナセプロダクションを経て現在はフリーランスで活動中。メディアミックスプロジェクト『from ARGONAVIS』内のロックバンド「GYROAXIA」のギタリストとしても活動している。ミュージカル『テニスの王子様』2ndシーズン（樹希彦役）や『僕のヒーローアカデミア』The “Ultra” Stage（青山優雅役）、『あんさんぶるスターズ！THE STAGE』（七種茨役）等に出演。",
+            "image_url": null,
+            "sns": {
+              "x": "https://twitter.com/shinichi1109",
+              "official": "https://shinichi-h.bitfan.id/",
+              "instagram": "https://www.instagram.com/h.shinichi1009"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:03:44.295565+00:00",
+            "updated_at": "2026-03-21T15:03:44.295565+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1989-10-09",
+            "height_cm": 170,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor, voice actor, and musician from Osaka Prefecture. After working with Manase Productions, he is currently working freelance. He is also active as a guitarist for the rock band \"GYROAXIA\" in the media mix project \"from ARGONAVIS\". He appeared in the musical \"The Prince of Tennis\" 2nd season (as Marehiko Itsuki), \"My Hero Academia\" The \"Ultra\" Stage (as Yuga Aoyama), and \"Ensemble Stars! THE STAGE\" (as Ibara Saegusa).",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "橋本真一",
+            "sourceActorUrl": "https://kira-hai.net/hashimoto-shinichi",
+            "role_name": "早乙女与一",
+            "cast_group": null
+          },
+          "sourceCreditKey": "e9892097eccc3991a993",
+          "sourceOrder": 6,
+          "billingOrder": 6,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "591fd3ca-6bfa-4fb8-a1fd-e9cb1da215ee",
+            "slug": "kai-chihiro",
+            "name": "甲斐千尋",
+            "kana": "かい ちひろ",
+            "profile": "俳優。『ROCK MUSICAL BLEACH』の朽木ルキア役、『Fate/Grand Order THE STAGE』のモードレッド役など、舞台作品に出演。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-19T09:07:56.196763+00:00",
+            "updated_at": "2026-10-19T09:07:56.196763+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1990-01-23",
+            "height_cm": 153,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "甲斐千尋",
+            "sourceActorUrl": "https://kira-hai.net/kai-chihiro",
+            "role_name": "柊シノア",
+            "cast_group": null
+          },
+          "sourceCreditKey": "9e80459e042686aec89b",
+          "sourceOrder": 7,
+          "billingOrder": 7,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "ad043aee-e47c-47eb-a44b-23d97fdf700e",
+            "slug": "chinen-saya",
+            "name": "知念紗耶",
+            "kana": null,
+            "profile": "俳優・アクロバットダンスパフォーマー。ラナハウス提携アーティスト。2025年にG-Rocketsを退団。『終わりのセラフ』The Musicalの阿朱羅丸役や、『ラブ・ネバー・ダイ』のフレック役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": null,
+            "height_cm": null,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Saya Chinen",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "知念紗耶",
+            "sourceActorUrl": null,
+            "role_name": "阿朱羅丸",
+            "cast_group": null
+          },
+          "sourceCreditKey": "f2384ddca61172306b62",
+          "sourceOrder": 8,
+          "billingOrder": 8,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "76cf2869-f8f2-456c-ad0b-69e7041b302d",
+            "slug": "nagao-mariya",
+            "name": "永尾まりや",
+            "kana": "ながお まりや",
+            "profile": "神奈川県出身の俳優・モデル。合同会社mama所属。元AKB48メンバー。テレビドラマや映画、雑誌などで活動し、『終わりのセラフ』The Musicalではクルル・ツェペシ役を務めた。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1994-03-10",
+            "height_cm": 159,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": "Mariya Nagao",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "永尾まりや",
+            "sourceActorUrl": null,
+            "role_name": "クルル・ツェペシ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "00a6d97b14f745ae47d4",
+          "sourceOrder": 9,
+          "billingOrder": 9,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "06b49664-0bd4-4c32-bb16-f3bc0f96f886",
+            "slug": "nakamura-seijiro",
+            "name": "中村 誠治郎",
+            "kana": "なかむら せいじろう",
+            "profile": "福岡県出身の俳優・殺陣師。株式会社POTATO FRIES代表取締役。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/miso_jiro",
+              "official": "https://seijiro-nakamura.com/"
+            },
+            "gender": "male",
+            "created_at": "2026-04-10T00:13:56.070919+00:00",
+            "updated_at": "2026-04-10T00:13:56.070919+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1980-04-05",
+            "height_cm": 179,
+            "blood_type": "AB",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "中村誠治郎",
+            "sourceActorUrl": "https://kira-hai.net/nakamura-seijiro",
+            "role_name": "フェリド・バートリー",
+            "cast_group": null
+          },
+          "sourceCreditKey": "0b2bb841f44d19fe94ec",
+          "sourceOrder": 10,
+          "billingOrder": 10,
+          "expectedNote": null
+        }
+      ],
+      "castPatches": [],
+      "keptCasts": [],
+      "keptActors": [],
+      "legacyCandidates": [
+        {
+          "id": "88c49ee3-165d-4895-9d3a-4ca395b22140",
+          "source": "kira-hai",
+          "external_actor_id": "a0116015-48bb-48b7-95d2-dfb3244e7d05",
+          "external_play_id": "0981bc06-00ab-49d2-846f-139cbce121a0",
+          "source_actor_name": "中村誠治郎",
+          "source_actor_url": "https://kira-hai.net/nakamura-seijiro",
+          "source_work_title": "「終わりのセラフ」The Musical",
+          "source_work_url": "https://kira-hai.net/owasera2016",
+          "source_year": 2021,
+          "source_role_raw": "フェリド・バートリー",
+          "source_role_names": [
+            "フェリド・バートリー"
+          ],
+          "matched_actor_id": "06b49664-0bd4-4c32-bb16-f3bc0f96f886",
+          "matched_play_id": null,
+          "accepted_cast_id": null,
+          "confidence": 60,
+          "status": "pending",
+          "note": null,
+          "scraped_at": "2026-04-27T17:53:27.745+00:00",
+          "created_at": "2026-04-27T17:53:27.054002+00:00",
+          "updated_at": "2026-04-27T17:53:27.745+00:00",
+          "accepted_at": null,
+          "rejected_at": null,
+          "source_cast_group": null,
+          "source_order": null,
+          "source_credit_key": null,
+          "source_evidence": null
+        }
+      ],
+      "sourceFingerprint": "173a500d284235cc80d143cb3859e7acdf955f5b2460e05562c75ce721750a4a",
+      "expectedCastCount": 10,
+      "evidence": [
+        {
+          "url": "https://kira-hai.net/owasera2016",
+          "checkedAt": "2026-10-20T15:43:00.138Z",
+          "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+        },
+        {
+          "url": "https://www.nelke.co.jp/stage/owarino-seraph/index.html",
+          "checkedAt": "2026-10-20T15:29:29.481Z",
+          "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+        },
+        {
+          "url": "https://l-tike.com/play/seraph-m/",
+          "checkedAt": "2026-10-20T17:21:47.454Z",
+          "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+        },
+        {
+          "url": "https://www.video.unext.jp/title/SID0026327",
+          "checkedAt": "2026-10-20T15:29:29.616Z",
+          "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+        },
+        {
+          "url": "https://owarino-seraph.jp/news/index.html",
+          "checkedAt": "2026-10-20T15:42:59.821Z",
+          "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+        },
+        {
+          "url": "https://ameblo.jp/karen-mi/entry-12127828755.html",
+          "checkedAt": "2026-10-20T17:21:48.410Z",
+          "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+        }
+      ]
+    }
+  ],
+  "evidence": {
+    "links": [
+      {
+        "url": "https://kira-hai.net/owasera2016",
+        "checkedAt": "2026-10-20T15:43:00.138Z",
+        "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+      },
+      {
+        "url": "https://www.nelke.co.jp/stage/owarino-seraph/index.html",
+        "checkedAt": "2026-10-20T15:29:29.481Z",
+        "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+      },
+      {
+        "url": "https://l-tike.com/play/seraph-m/",
+        "checkedAt": "2026-10-20T17:21:47.454Z",
+        "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+      },
+      {
+        "url": "https://www.video.unext.jp/title/SID0026327",
+        "checkedAt": "2026-10-20T15:29:29.616Z",
+        "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+      },
+      {
+        "url": "https://owarino-seraph.jp/news/index.html",
+        "checkedAt": "2026-10-20T15:42:59.821Z",
+        "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+      },
+      {
+        "url": "https://ameblo.jp/karen-mi/entry-12127828755.html",
+        "checkedAt": "2026-10-20T17:21:48.410Z",
+        "note": "当該公演・人物資料を照合。項目別採用範囲はnotes。"
+      }
+    ],
+    "sources": [
+      {
+        "name": "kira-search",
+        "url": "https://kira-hai.net/?s=セラフ",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/?s=%E3%82%BB%E3%83%A9%E3%83%95",
+        "checkedAt": "2026-10-20T15:29:29.856Z",
+        "sha256": "a10beaafcba9012f918718e5207f407fd225b46c9a19b14fbf25553a50912d87"
+      },
+      {
+        "name": "official",
+        "url": "https://www.nelke.co.jp/stage/owarino-seraph/index.html",
+        "status": 200,
+        "finalUrl": "https://www.nelke.co.jp/stage/owarino-seraph/index.html",
+        "checkedAt": "2026-10-20T15:29:29.481Z",
+        "sha256": "7405494aea172fdc6a8dea4d89691d4fa2323f127fbe5879a2d87734d5d3d07d"
+      },
+      {
+        "name": "plot",
+        "url": "https://www.video.unext.jp/title/SID0026327",
+        "status": 200,
+        "finalUrl": "https://www.video.unext.jp/title/SID0026327",
+        "checkedAt": "2026-10-20T15:29:29.616Z",
+        "sha256": "f7cec45b6f40b64847b00ed7430c5003bd2d94c6731530666cba819e31224499"
+      },
+      {
+        "name": "robots",
+        "url": "https://kira-hai.net/robots.txt",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/robots.txt",
+        "checkedAt": "2026-10-20T15:29:29.489Z",
+        "sha256": "f6ed0322f0e3df8c3b42b14df3254a90cca7b94a4172de91812952b3c7060b03"
+      },
+      {
+        "name": "changelog",
+        "url": "https://supabase.com/changelog.md",
+        "status": 200,
+        "finalUrl": "https://supabase.com/changelog.md",
+        "checkedAt": "2026-10-20T15:29:30.403Z",
+        "sha256": "15b3d0d1a7dc3b3f2c0af4788e49acfdf2d2edbd2613f22de0705fa43b1cf58b"
+      },
+      {
+        "name": "work",
+        "url": "https://kira-hai.net/owasera2016",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/owasera2016",
+        "checkedAt": "2026-10-20T15:43:00.138Z",
+        "sha256": "b607baaa0433074037d54e36f49cc9a841b4025c52a4e17b2ce900d9b577ca03"
+      },
+      {
+        "name": "sano-kira",
+        "url": "https://kira-hai.net/sano-gaku",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/sano-gaku",
+        "checkedAt": "2026-10-20T15:43:00.062Z",
+        "sha256": "e221f3a0cb185dc57ceb05e59ead66f2fb0557c43c6d328f01974bff8b88f5b8"
+      },
+      {
+        "name": "suzuki-kira",
+        "url": "https://kira-hai.net/suzuki-katsuhiro",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/suzuki-katsuhiro",
+        "checkedAt": "2026-10-20T15:43:00.080Z",
+        "sha256": "d9eaf7156a47cf30014fb7cce5d0f25d2c5c9f41dc17cf2faf471884b121126a"
+      },
+      {
+        "name": "anime-news",
+        "url": "https://owarino-seraph.jp/news/index.html",
+        "status": 200,
+        "finalUrl": "https://owarino-seraph.jp/news/index.html",
+        "checkedAt": "2026-10-20T15:42:59.821Z",
+        "sha256": "c197db4ab827c1aedaed9dc9b1fe8d795b1417f632aff7f6bd121f3786788e86"
+      },
+      {
+        "name": "sano",
+        "url": "https://www.evergreen-e.com/feature/sano_gaku",
+        "status": 200,
+        "finalUrl": "https://www.evergreen-e.com/feature/sano_gaku",
+        "checkedAt": "2026-10-20T15:43:25.817Z",
+        "sha256": "55a8129458eb1208862419dd32ca5612f6ea8535371a6154cf5d3201f8299965"
+      },
+      {
+        "name": "nagao",
+        "url": "https://irving.co.jp/talents/mariya-nagao/",
+        "status": 200,
+        "finalUrl": "https://irving.co.jp/talents/mariya-nagao/",
+        "checkedAt": "2026-10-20T15:43:27.079Z",
+        "sha256": "2ad90c72cf647ff253bdd36a1bbecdb351c9fbbccc6e3c5a3dfb5ad2b023acd6"
+      },
+      {
+        "name": "chinen",
+        "url": "https://ninja-agency.com/talents/f50/",
+        "status": 200,
+        "finalUrl": "https://ninja-agency.com/talents/f50/",
+        "checkedAt": "2026-10-20T15:43:25.544Z",
+        "sha256": "2618bfa17f2b3087e54c562bbb94edadb30fcba90c88a0cf472d4201b5a8fc02"
+      },
+      {
+        "name": "suzuki",
+        "url": "https://www.cubeinc.co.jp/archives/artist/suzukikatsuhiro",
+        "status": 200,
+        "finalUrl": "https://www.cubeinc.co.jp/archives/artist/suzukikatsuhiro",
+        "checkedAt": "2026-10-20T17:21:04.873Z",
+        "sha256": "09830030a4f3867e84e5a919bb1b1d1a9b584bc4f7666afa1c45f2b7052d82a9"
+      },
+      {
+        "name": "ninja-home",
+        "url": "https://ninja-agency.com/",
+        "status": 200,
+        "finalUrl": "https://ninja-agency.com/",
+        "checkedAt": "2026-10-20T17:21:04.915Z",
+        "sha256": "9d78ecd78f1133c6a3d12b3aa03890a51e8caebda42705e7d9b0a031c7ed2e2c"
+      },
+      {
+        "name": "g-rockets",
+        "url": "https://www.g-rockets.jp/",
+        "status": 200,
+        "finalUrl": "https://g-rockets.jp/",
+        "checkedAt": "2026-10-20T17:21:04.940Z",
+        "sha256": "f872821fbcbefcc41de2fe1235cce1d5562622c90b5f0267eaef2a0762fc0072"
+      },
+      {
+        "name": "chinen-company",
+        "url": "https://g-rockets.jp/performer/chinen/",
+        "status": 200,
+        "finalUrl": "https://g-rockets.jp/performer/chinen/",
+        "checkedAt": "2026-10-20T17:21:47.785Z",
+        "sha256": "bcf2b0e56284ba67340ec869c92a9ef3d33bfa7f2ded173f33bb3f0b8fa129b9"
+      },
+      {
+        "name": "chinen-leave",
+        "url": "https://g-rockets.jp/news250410-3/",
+        "status": 200,
+        "finalUrl": "https://g-rockets.jp/news250410-3/",
+        "checkedAt": "2026-10-20T17:21:48.038Z",
+        "sha256": "1d804842fd0ac20f468265343b3c21f4fe20a16446bc2e8b0dd2eca3058d0e9a"
+      },
+      {
+        "name": "ticket",
+        "url": "https://l-tike.com/play/seraph-m/",
+        "status": 200,
+        "finalUrl": "https://l-tike.com/play/seraph-m/",
+        "checkedAt": "2026-10-20T17:21:47.454Z",
+        "sha256": "45aae4823f465be6f715053da5b76fa2b2c8b8eb8e7a67bb1e14707586430df4"
+      },
+      {
+        "name": "nagao-city",
+        "url": "https://www.city.saku.nagano.jp/kanko/kanko/kankoujyouhou/kankotaishi.html",
+        "status": 200,
+        "finalUrl": "https://www.city.saku.nagano.jp/kanko/kanko/kankoujyouhou/kankotaishi.html",
+        "checkedAt": "2026-10-20T17:21:47.404Z",
+        "sha256": "ae74bd2922bba2a20b1da08cf4208b52f0f3392aa65dcb16c5cfa4cd5127589f"
+      },
+      {
+        "name": "end-report",
+        "url": "https://ameblo.jp/karen-mi/entry-12127828755.html",
+        "status": 200,
+        "finalUrl": "https://ameblo.jp/karen-mi/entry-12127828755.html",
+        "checkedAt": "2026-10-20T17:21:48.410Z",
+        "sha256": "1241745ff6777d169be381aa56e0f040c8fe3416b9ba6c38fba1328fac9908b6"
+      },
+      {
+        "name": "nagao-reading",
+        "url": "https://t.pia.jp/pia/artist/artists.do?artistsCd=CA050026",
+        "status": 200,
+        "finalUrl": "https://t.pia.jp/pia/artist/artists.do?artistsCd=CA050026",
+        "checkedAt": "2026-10-20T17:22:49.889Z",
+        "sha256": "e6e8fa37d6459bb2294a64853def03e86fbcb2b52dbc27f498f7026a06fb72ff"
+      },
+      {
+        "name": "nagao-akb",
+        "url": "https://ameblo.jp/akihabara48/entry-12119665243.html",
+        "status": 200,
+        "finalUrl": "https://ameblo.jp/akihabara48/entry-12119665243.html",
+        "checkedAt": "2026-10-20T17:22:49.766Z",
+        "sha256": "b6f15d5accd686a27ba297644f3512b6772ccbdc5f103ab82c59e14da3bb4587"
+      },
+      {
+        "name": "anime-initial",
+        "url": "https://www.owarino-seraph.jp/news/list00010010.html",
+        "status": 200,
+        "finalUrl": "https://www.owarino-seraph.jp/news/list00010010.html",
+        "checkedAt": "2026-10-20T17:22:49.799Z",
+        "sha256": "4fb0b3e2a8d56415810c325e3b8d91c5a82d7c11af2b093a1705b243e85619a4"
+      },
+      {
+        "name": "docs-tables",
+        "url": "https://supabase.com/docs/guides/database/tables.md",
+        "status": 200,
+        "finalUrl": "https://supabase.com/docs/guides/database/tables.md",
+        "checkedAt": "2026-10-20T17:24:19.638Z",
+        "sha256": "fdcc9957da7b920de29201ebb0f0d37c05c3c05cd6b7893ecc19e64dc39febfa"
+      }
+    ],
+    "unavailable": [
+      {
+        "name": "producer",
+        "url": "https://www.nbcuni.co.jp/anime/owarino-seraph/musical/",
+        "status": 404,
+        "finalUrl": "https://www.nbcuni.co.jp/anime/owarino-seraph/musical/",
+        "checkedAt": "2026-10-20T15:43:00.360Z",
+        "sha256": "d6c223350a07b851871e280cfcf68a030f16645534a1f9c950f2e6438ba9b752"
+      },
+      {
+        "name": "docs-insert",
+        "url": "https://supabase.com/docs/reference/javascript/insert.md",
+        "status": 404,
+        "finalUrl": "https://supabase.com/docs/reference/javascript/insert.md",
+        "checkedAt": "2026-10-20T17:22:49.864Z",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ],
+    "notes": [
+      "主要10配役は第一参照先・最終主催公式・ローチケ・正規配信の一致を確認。役名未記載6名は全員作品クレジットへ転記し、rawSource.unparsedも保持。アンサンブルと明記されていないため区分を捏造しない。",
+      "原作サイト初報は赤澤ムック脚本・演出とするが、最終主催公式・ローチケ・映像作品の一致する元吉庸泰演出／赤澤ムック・三浦香脚本を採用。",
+      "既存シリーズ名を正式なミュージカル名へ整え、漫画原作区分を維持。原作注記に抜けていたコンテ構成・降矢大輔を役割別に補完。",
+      "既存人物6人の全項目を維持して接続、新規人物4人。知念は他作品でのダンサー職を理由に本作の主要役から除外しない。",
+      "佐野の169cmは現行公式170cmを優先。鈴木は現行キューブ所属、永尾はmama所属とアービングとの業務提携を区別。知念はG-Rockets退団後のラナハウス提携と確認。",
+      "英語タイトルと概要は編集表示。原資料の長い宣伝文・感想は転記しない。確認できない基本情報、現在配信リンクや主演フラグを推測で設定しない。"
+    ],
+    "unresolved": [
+      "知念の身長はNinja記載143cmと他資料154cmに差があり未採用。生年月日・出身・読み・血液型も未確認。",
+      "人物総合監査・未確認属性・プロフィール／全役名／クレジット等の英訳、現在配信URL、主演指定、役名未記載6人の役の特定と全技術スタッフは後続。",
+      "当該2016年の劇場公演1作品を対象。関連イベント・将来公演の完全網羅を意味しない。"
+    ]
+  },
+  "requestKey": "b6d2876b833339eb42a8f76364c2c65f4375c62e5a5652850a01f7454ed914b6"
+}

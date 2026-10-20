@@ -429,10 +429,24 @@
     {
       "id": "55e6dce1-2dc2-4eba-8091-c50d83a78322",
       "slug": "owari-no-seraph",
-      "name": "舞台「終わりのセラフ」",
+      "name": "「終わりのセラフ」The Musical",
       "registeredDay": "2026-02-09",
-      "plays": 0,
-      "protected": false
+      "plays": 1,
+      "protected": false,
+      "castRows": 10,
+      "castCoverageNote": "2016年ミュージカルの主要10配役を追加。人物4・作品1・配役10、役名未記載6名は作品クレジットへ保存しアンサンブルと断定しない。知念は主要な阿朱羅丸役として登録。中村の旧候補1件は誤年2021を2016へ訂正して同IDで採用。最終公式の演出／脚本、正式シリーズ名・ミュージカル形式・降矢大輔の原作注記を補完。短い日英概要・英語表示名・年表2016/02を点検。人物総合監査・知念等の未確認属性・詳細英訳・現在配信・主演指定・未記載者の具体的役は後続。",
+      "seriesAudit": {
+        "checkedAt": "2026-10-20T17:30:23.849Z",
+        "scope": "2016年の劇場公演1作品。関連イベント・将来公演の完全網羅を意味しない。",
+        "works": 1,
+        "castRows": 10,
+        "unnamedCreditNames": 6,
+        "reusedLegacyCandidates": 1,
+        "publicPages": 24,
+        "report": "docs/seraph2016-2026-10-21.md",
+        "research": "next-app/research/seraph2016-20261021.json",
+        "pendingWorks": []
+      }
     },
     {
       "id": "5d0d7649-8add-4423-b325-20ea62ce2fb7",
