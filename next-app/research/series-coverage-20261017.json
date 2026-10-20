@@ -992,7 +992,27 @@
       "name": "舞台「美男高校地球防衛部LOVE!」",
       "registeredDay": "2026-02-09",
       "plays": 1,
-      "protected": false
+      "protected": false,
+      "castRows": 13,
+      "castCoverageNote": "2016年『活劇！』の通常11役・声の出演2役を制作元公式で照合。人物6・配役11を追加し、アンサンブル2名はクレジットへ。3月10日〜13日、正式役名の錦史郎、最終スタッフ表記を公式で確認し、既存2配役は掲載順のみ補完。シリーズの原作者と2016/2025年の演出家の混同を修正。2025年『LOVE！LOVE！』on STAGEは別公演として未収録。全シリーズの収録完了とはしない。",
+      "seriesAudit": {
+        "checkedAt": "2026-10-20T09:21:22.425Z",
+        "scope": "2016年活劇のみ。2025年別公演は未収録。",
+        "works": 1,
+        "castRows": 13,
+        "voiceCasts": 2,
+        "ensembleCreditNames": 2,
+        "report": "docs/boueibu2016-2026-10-20.md",
+        "research": "next-app/research/boueibu2016-20261020.json",
+        "pendingWorks": [
+          {
+            "title": "『美男高校地球防衛部LOVE！LOVE！』on STAGE",
+            "year": 2025,
+            "officialUrl": "https://officeendless.com/sp/boueibu/",
+            "note": "箱根有基役が初報から変更されている。2025-09-16の最終発表と日替わりゲストの出演日時を確認して収録する。"
+          }
+        ]
+      }
     },
     {
       "id": "a7ad03e5-c6fa-40d8-a499-26ec8ce36a9b",
