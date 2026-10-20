@@ -1,0 +1,1809 @@
+{
+  "version": 1,
+  "batchId": "coderealize2018-20261021-01",
+  "expectedFranchise": {
+    "id": "11552dbb-bdcf-4f5c-ad44-a9c9aab7bf37",
+    "name": "ミュージカル「Code:Realize ～創世の姫君～」（コドミュ）",
+    "created_at": "2026-02-08T16:26:41.990203+00:00",
+    "updated_at": "2026-02-08T16:26:41.990203+00:00",
+    "slug": "code-realize",
+    "intro": null,
+    "description": "オトメイトから発売された大人気女性向け恋愛アドベンチャーゲーム（乙女ゲーム）『Code:Realize ～創世の姫君～』を原作としたミュージカル作品。通称「コドミュ」。2018年に上演。全身に猛毒を宿し「怪物」と呼ばれた少女カルディアが、泥棒紳士アルセーヌ・ルパンに導かれて機鋼都市ロンドンへと赴き、個性豊かな仲間たちと出会いながら自身の謎に迫っていくスチームパンク・ファンタジー。演出を吉谷光太郎が手掛け、原作の持つ重厚かつ美麗なスチームパンクの世界観と、ロマンティックな恋愛模様、そして手に汗握るアクションシーンをミュージカルというフォーマットで華麗に立体化。ヒロインであるカルディアを実際に舞台上に登場させ、彼女自身の成長や男性キャラクターたちとの深い絆を美しい歌唱とドラマで描き出した良作。",
+    "origin_type": "ゲーム原作",
+    "origin_note": "原作：オトメイト（アイディアファクトリー／デザインファクトリー）",
+    "production_companies": [
+      "ポリゴンマジック",
+      "4cu."
+    ],
+    "related_franchise_ids": [],
+    "format": "musical",
+    "description_en": null,
+    "name_en": null
+  },
+  "franchisePatch": {
+    "format": "musical",
+    "name_en": "Code:Realize — Guardian of Rebirth (Musical)",
+    "description": "オトメイト（アイディアファクトリー／デザインファクトリー）のゲーム『Code：Realize ～創世の姫君～』を原作とするミュージカル。猛毒を宿すカルディアとアルセーヌ・ルパンたちの冒険を描く。2018年に東京と大阪で上演され、演出は吉谷光太郎、脚本は浅井さやかが手がけた。",
+    "description_en": "A musical adaptation of the Code:Realize game from Otomate (Idea Factory and Design Factory). It follows Cardia, whose body carries a deadly poison, and her adventures with Arsène Lupin and his companions. The 2018 production was performed in Tokyo and Osaka."
+  },
+  "actors": [
+    {
+      "actor": {
+        "id": "82f21efb-ea5f-40a3-9e38-99b4dab7b9d7",
+        "slug": "rachi-shinji",
+        "name": "良知真次",
+        "kana": "らち しんじ",
+        "profile": "東京都出身の俳優・演出家・振付師。World Code代表取締役。ジャニーズJr.、劇団四季、東宝芸能での活動を経て2018年に同社を設立。ミュージカル『Code：Realize ～創世の姫君～』ではアルセーヌ・ルパン役を務めた。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1983-03-16",
+        "height_cm": 175,
+        "blood_type": "A",
+        "birthday_label": null,
+        "name_en": "Shinji Rachi",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "良知真次",
+      "profileUrl": "https://worldcode.co.jp/rachi-shinji/",
+      "evidence": [
+        {
+          "url": "https://worldcode.co.jp/rachi-shinji/",
+          "checkedAt": "2026-10-20T18:17:19.642Z",
+          "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+        },
+        {
+          "url": "https://rachi-shinji.officialsite.co/pages/1106/profile",
+          "checkedAt": "2026-10-20T18:15:34.502Z",
+          "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+        },
+        {
+          "url": "https://rachi-shinji.officialsite.co/",
+          "checkedAt": "2026-10-20T18:15:34.394Z",
+          "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+        },
+        {
+          "url": "https://kira-hai.net/rachi-shinji",
+          "checkedAt": "2026-10-20T18:16:00.761Z",
+          "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+        },
+        {
+          "url": "https://www.fwinc.co.jp/news/45669/",
+          "checkedAt": "2026-10-20T18:14:15.140Z",
+          "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+        }
+      ],
+      "notes": [
+        "現行World Code本人紹介で生年月日・出身・175cm・A型・英字名・職種と経歴を確認。読みは旧本人公式で照合。東宝芸能やサンカラーズを現在所属としない。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "d73262b8-f64b-4cf0-9561-7c20b8b8a770",
+        "slug": "hasegawa-ai",
+        "name": "長谷川愛",
+        "kana": "はせがわ あい",
+        "profile": "大阪府出身の俳優・歌手。2003年に『ピチレモン』専属モデルに起用された。ミュージカル『Code：Realize ～創世の姫君～』のカルディア役などを務め、音楽活動や配信ドラマへの出演も行っている。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1990-02-06",
+        "height_cm": 164,
+        "blood_type": "A",
+        "birthday_label": null,
+        "name_en": null,
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "長谷川愛",
+      "profileUrl": "https://ai-hasegawa.com/biography",
+      "evidence": [
+        {
+          "url": "https://ai-hasegawa.com/biography",
+          "checkedAt": "2026-10-20T18:15:34.477Z",
+          "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+        },
+        {
+          "url": "https://kira-hai.net/hasegawa-ai",
+          "checkedAt": "2026-10-20T18:14:59.107Z",
+          "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+        },
+        {
+          "url": "https://www.fwinc.co.jp/news/45669/",
+          "checkedAt": "2026-10-20T18:14:15.140Z",
+          "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+        }
+      ],
+      "notes": [
+        "本人現行公式で読み・生年月日・大阪出身・164cm・A型・モデル歴・俳優と音楽活動・当該公演役を確認。同名のアーティストやアニメ監督、作画スタッフ等を混ぜない。第一参照先の別名・愛刃健水を含め既存人物にないことを確認。現在所属と公式英字名は今回未採用。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "6dae98f7-0b1c-4016-8ebf-fb15d9c81d40",
+        "slug": "washio-shuto",
+        "name": "鷲尾修斗",
+        "kana": "わしお しゅうと",
+        "profile": "俳優。『ツキステ。』シリーズの葉月陽役、ミュージカル『忍たま乱太郎』の中在家長次役などを務めた。『Code：Realize ～創世の姫君～』ではインピー・バービケーン役で出演している。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1987-12-27",
+        "height_cm": 180,
+        "blood_type": "A",
+        "birthday_label": null,
+        "name_en": null,
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "鷲尾修斗",
+      "profileUrl": "https://kira-hai.net/washio-shuto",
+      "evidence": [
+        {
+          "url": "https://kira-hai.net/washio-shuto",
+          "checkedAt": "2026-10-20T18:16:00.799Z",
+          "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+        },
+        {
+          "url": "https://www.fwinc.co.jp/news/45669/",
+          "checkedAt": "2026-10-20T18:14:15.140Z",
+          "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+        }
+      ],
+      "notes": [
+        "読み・生年月日・180cm・A型・他作品の出演役は第一参照先ベース。旧スタービートの個別紹介は404。トキの推測個別URLも404で、現在サイトの名簿で本人紹介を確定できていないため現在所属・出身・英字名は補わない。既存の鷲尾昇とは別人。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "2365c891-30f1-479c-9642-c7b7a16ba0cd",
+        "slug": "takizawa-ryo",
+        "name": "滝澤諒",
+        "kana": "たきざわ りょう",
+        "profile": "俳優。ミュージカル『Code：Realize ～創世の姫君～』でサン・ジェルマン役を務めた。『ヒプノシスマイク』Rule the Stageの有栖川帝統役などにも出演している。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1998-02-14",
+        "height_cm": 173,
+        "blood_type": "O",
+        "birthday_label": null,
+        "name_en": null,
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "滝澤諒",
+      "profileUrl": "https://kira-hai.net/takizawa-ryo",
+      "evidence": [
+        {
+          "url": "https://kira-hai.net/takizawa-ryo",
+          "checkedAt": "2026-10-20T18:16:00.712Z",
+          "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+        },
+        {
+          "url": "https://www.fwinc.co.jp/news/45669/",
+          "checkedAt": "2026-10-20T18:14:15.140Z",
+          "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+        }
+      ],
+      "notes": [
+        "読み・生年月日・173cm・O型・ヒプステの役は第一参照先。旧rivaプロフィールと現在のアミュレートへの帰属は今回未確定、推測したアミュレート個別URLは404。所属・出身・公式英字名は補わない。同名の劇団員の自己紹介を本人情報として採らない。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "4a838028-500a-4d52-a483-df6832a3c209",
+        "slug": "coderealize2018-leonhard",
+        "name": "大力",
+        "kana": null,
+        "profile": "俳優。2018年のミュージカル『Code：Realize ～創世の姫君～』でランパール・レオンハルト役を務めた。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": null,
+        "height_cm": null,
+        "blood_type": null,
+        "birthday_label": null,
+        "name_en": null,
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "大力",
+      "profileUrl": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=22507",
+      "evidence": [
+        {
+          "url": "https://www.fwinc.co.jp/news/45669/",
+          "checkedAt": "2026-10-20T18:14:15.140Z",
+          "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+        },
+        {
+          "url": "https://www.fwinc.co.jp/news/45346/",
+          "checkedAt": "2026-10-20T18:14:15.195Z",
+          "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+        },
+        {
+          "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=22507",
+          "checkedAt": "2026-10-20T18:16:02.464Z",
+          "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+        }
+      ],
+      "notes": [
+        "制作元と正規配信元で当該役付き出演を照合。イベントの大力／Dairy紹介は存在するが、この公演人物と結ぶ独立根拠がないため読み・英字名・年齢・所属を流用しない。生年月日・出身・身長・血液型も未確認のまま。slugは公演と役による識別で読みを推測しない。"
+      ]
+    }
+  ],
+  "works": [
+    {
+      "year": 2018,
+      "before": null,
+      "patch": null,
+      "play": {
+        "id": "eba1c21c-8701-4ce2-a94d-79a336c62381",
+        "slug": "coderealize2018",
+        "title": "ミュージカル「Code：Realize ～創世の姫君～」",
+        "franchise_id": "11552dbb-bdcf-4f5c-ad44-a9c9aab7bf37",
+        "summary": "触れたものを溶かす猛毒を体に宿し、孤独に暮らしていた少女・カルディア。英国軍に連れ去られそうになった彼女を救ったのは、泥棒のアルセーヌ・ルパンだった。機鋼都市ロンドンへ導かれたカルディアは、ルパンや仲間たちと行動を共にしながら、自分の体と失われた記憶の謎を追っていく。",
+        "period": "東京：2018年5月17日〜20日／大阪：2018年5月26日〜27日",
+        "venue": "東京：シアター1010／大阪：森ノ宮ピロティホール",
+        "vod": null,
+        "genre": null,
+        "tags": [],
+        "credits": [
+          {
+            "role": "原作",
+            "names": [
+              "オトメイト（アイディアファクトリー／デザインファクトリー）"
+            ],
+            "is_core": true,
+            "sort_order": 1
+          },
+          {
+            "role": "原作協力",
+            "names": [
+              "Code：Realize PROJECT"
+            ],
+            "is_core": false,
+            "sort_order": 2
+          },
+          {
+            "role": "演出",
+            "names": [
+              "吉谷光太郎"
+            ],
+            "is_core": true,
+            "sort_order": 3
+          },
+          {
+            "role": "脚本",
+            "names": [
+              "浅井さやか"
+            ],
+            "is_core": true,
+            "sort_order": 4
+          },
+          {
+            "role": "音楽",
+            "names": [
+              "tak"
+            ],
+            "is_core": true,
+            "sort_order": 5
+          },
+          {
+            "role": "振付",
+            "names": [
+              "MAMORU"
+            ],
+            "is_core": false,
+            "sort_order": 6
+          },
+          {
+            "role": "アンサンブル",
+            "names": [
+              "仲田祥司",
+              "澤邊寧央",
+              "山口渓",
+              "多田滉",
+              "下村彩",
+              "熊田愛里",
+              "藤縄雄大",
+              "熊田健大朗"
+            ],
+            "is_core": false,
+            "sort_order": 7
+          },
+          {
+            "role": "企画・プロデュース",
+            "names": [
+              "4cu"
+            ],
+            "is_core": false,
+            "sort_order": 8
+          },
+          {
+            "role": "制作",
+            "names": [
+              "ポリゴンマジック"
+            ],
+            "is_core": false,
+            "sort_order": 9
+          },
+          {
+            "role": "主催",
+            "names": [
+              "MUSICAL Code：Realize PROJECT"
+            ],
+            "is_core": false,
+            "sort_order": 10
+          }
+        ],
+        "related_franchise_ids": [],
+        "summary_en": "Cardia lives in isolation because the poison in her body dissolves anything she touches. When the British army comes for her, the thief Arsène Lupin intervenes. He takes her to a mechanized London, where she joins him and his companions in a search for the truth about her body and her lost memories.",
+        "title_en": "Code:Realize — Guardian of Rebirth: The Musical"
+      },
+      "rawSource": {
+        "sourceUrl": "https://kira-hai.net/coderealize2018",
+        "title": "Code:Realize ~創世の姫君~",
+        "scheduleLines": [
+          "2018年5月17日-20日 シアター1010",
+          "2018年5月26日-27日 森ノ宮ピロティホール"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "良知真次",
+            "sourceActorUrl": "https://kira-hai.net/rachi-shinji",
+            "role_name": "アルセーヌ・ルパン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "長谷川愛",
+            "sourceActorUrl": "https://kira-hai.net/hasegawa-ai",
+            "role_name": "カルディア",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "秋沢健太朗",
+            "sourceActorUrl": "https://kira-hai.net/akisawa-kentaro",
+            "role_name": "エイブラハム・ヴァン・ヘルシング",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "仲田博喜",
+            "sourceActorUrl": "https://kira-hai.net/nakada-hiroki",
+            "role_name": "ヴィクター・フランケンシュタイン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "鷲尾修斗",
+            "sourceActorUrl": "https://kira-hai.net/washio-shuto",
+            "role_name": "インピー・バービケーン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "滝澤諒",
+            "sourceActorUrl": "https://kira-hai.net/takizawa-ryo",
+            "role_name": "サン・ジェルマン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "星元裕月",
+            "sourceActorUrl": "https://kira-hai.net/hoshimoto-yuzuki",
+            "role_name": "フィーニス",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "君沢ユウキ",
+            "sourceActorUrl": "https://kira-hai.net/kimisawa-yuki",
+            "role_name": "エルロック・ショルメ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "大力",
+            "sourceActorUrl": null,
+            "role_name": "ランパール・レオンハルト",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "仲田祥司",
+            "sourceActorUrl": "https://kira-hai.net/nakata-shoji",
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "澤邊寧央",
+            "sourceActorUrl": "https://kira-hai.net/sawabe-neo",
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "山口渓",
+            "sourceActorUrl": "https://kira-hai.net/yamaguchi-kei",
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "多田滉",
+            "sourceActorUrl": "https://kira-hai.net/tada-akira",
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "下村彩",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "熊田愛里",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "藤縄雄大",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "熊田健大朗",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          }
+        ],
+        "unparsed": []
+      },
+      "source": {
+        "sourceUrl": "https://kira-hai.net/coderealize2018",
+        "title": "ミュージカル「Code：Realize ～創世の姫君～」",
+        "scheduleLines": [
+          "2018年5月17日-20日 シアター1010",
+          "2018年5月26日-27日 森ノ宮ピロティホール"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "良知真次",
+            "sourceActorUrl": "https://kira-hai.net/rachi-shinji",
+            "role_name": "アルセーヌ・ルパン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "長谷川愛",
+            "sourceActorUrl": "https://kira-hai.net/hasegawa-ai",
+            "role_name": "カルディア",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "秋沢健太朗",
+            "sourceActorUrl": "https://kira-hai.net/akisawa-kentaro",
+            "role_name": "エイブラハム・ヴァン・ヘルシング",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "仲田博喜",
+            "sourceActorUrl": "https://kira-hai.net/nakada-hiroki",
+            "role_name": "ヴィクター・フランケンシュタイン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "鷲尾修斗",
+            "sourceActorUrl": "https://kira-hai.net/washio-shuto",
+            "role_name": "インピー・バービケーン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "滝澤諒",
+            "sourceActorUrl": "https://kira-hai.net/takizawa-ryo",
+            "role_name": "サン・ジェルマン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "星元裕月",
+            "sourceActorUrl": "https://kira-hai.net/hoshimoto-yuzuki",
+            "role_name": "フィーニス",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "君沢ユウキ",
+            "sourceActorUrl": "https://kira-hai.net/kimisawa-yuki",
+            "role_name": "エルロック・ショルメ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "大力",
+            "sourceActorUrl": null,
+            "role_name": "ランパール・レオンハルト",
+            "cast_group": null
+          }
+        ],
+        "unparsed": []
+      },
+      "stage": {
+        "workUrl": "https://kira-hai.net/coderealize2018",
+        "key": "b2e2bfbc820cb7c9e772725ce1f3b9b53c8403a2bf252bb384b9b15c77cf0da4",
+        "items": [
+          {
+            "source_actor_name": "良知真次",
+            "source_actor_url": "https://kira-hai.net/rachi-shinji",
+            "source_work_title": "ミュージカル「Code：Realize ～創世の姫君～」",
+            "source_year": 2018,
+            "source_role_raw": "アルセーヌ・ルパン",
+            "source_role_names": [
+              "アルセーヌ・ルパン"
+            ],
+            "source_cast_group": null,
+            "source_order": 1,
+            "source_credit_key": "9199956bf1286d3912b1",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/coderealize2018",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/coderealize2018",
+                  "checkedAt": "2026-10-20T18:14:59.073Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.fwinc.co.jp/news/45669/",
+                  "checkedAt": "2026-10-20T18:14:15.140Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.fwinc.co.jp/news/45346/",
+                  "checkedAt": "2026-10-20T18:14:15.195Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.video.unext.jp/title/SID0038692",
+                  "checkedAt": "2026-10-20T18:14:15.612Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=22507",
+                  "checkedAt": "2026-10-20T18:16:02.464Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.bs-log.com/news/stage/20180517_1287731.html",
+                  "checkedAt": "2026-10-20T18:15:35.108Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://ameblo.jp/rachi-shinji/entry-12386171127.html",
+                  "checkedAt": "2026-10-20T18:15:35.747Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                }
+              ],
+              "source_fingerprint": "434d8b0d30ea84a26949c86230c5c05459a80f89b8906e4685b72bebc87d580a",
+              "review_fingerprint": "d21754bc729378b430d9050bf27614153d5c0e6282fdbc6029375e0f24939d43",
+              "snapshot_fingerprint": "c75827d050070f0f54cceb46ee545a2f19563f9b99ce540c4d6276061a633d52",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "82f21efb-ea5f-40a3-9e38-99b4dab7b9d7",
+            "matched_play_id": "eba1c21c-8701-4ce2-a94d-79a336c62381",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "長谷川愛",
+            "source_actor_url": "https://kira-hai.net/hasegawa-ai",
+            "source_work_title": "ミュージカル「Code：Realize ～創世の姫君～」",
+            "source_year": 2018,
+            "source_role_raw": "カルディア",
+            "source_role_names": [
+              "カルディア"
+            ],
+            "source_cast_group": null,
+            "source_order": 2,
+            "source_credit_key": "2413457d78f49d59cecd",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/coderealize2018",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/coderealize2018",
+                  "checkedAt": "2026-10-20T18:14:59.073Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.fwinc.co.jp/news/45669/",
+                  "checkedAt": "2026-10-20T18:14:15.140Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.fwinc.co.jp/news/45346/",
+                  "checkedAt": "2026-10-20T18:14:15.195Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.video.unext.jp/title/SID0038692",
+                  "checkedAt": "2026-10-20T18:14:15.612Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=22507",
+                  "checkedAt": "2026-10-20T18:16:02.464Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.bs-log.com/news/stage/20180517_1287731.html",
+                  "checkedAt": "2026-10-20T18:15:35.108Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://ameblo.jp/rachi-shinji/entry-12386171127.html",
+                  "checkedAt": "2026-10-20T18:15:35.747Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                }
+              ],
+              "source_fingerprint": "434d8b0d30ea84a26949c86230c5c05459a80f89b8906e4685b72bebc87d580a",
+              "review_fingerprint": "d21754bc729378b430d9050bf27614153d5c0e6282fdbc6029375e0f24939d43",
+              "snapshot_fingerprint": "c75827d050070f0f54cceb46ee545a2f19563f9b99ce540c4d6276061a633d52",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "d73262b8-f64b-4cf0-9561-7c20b8b8a770",
+            "matched_play_id": "eba1c21c-8701-4ce2-a94d-79a336c62381",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "秋沢健太朗",
+            "source_actor_url": "https://kira-hai.net/akisawa-kentaro",
+            "source_work_title": "ミュージカル「Code：Realize ～創世の姫君～」",
+            "source_year": 2018,
+            "source_role_raw": "エイブラハム・ヴァン・ヘルシング",
+            "source_role_names": [
+              "エイブラハム・ヴァン・ヘルシング"
+            ],
+            "source_cast_group": null,
+            "source_order": 3,
+            "source_credit_key": "e9f0903d223aa6627aba",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/coderealize2018",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/coderealize2018",
+                  "checkedAt": "2026-10-20T18:14:59.073Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.fwinc.co.jp/news/45669/",
+                  "checkedAt": "2026-10-20T18:14:15.140Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.fwinc.co.jp/news/45346/",
+                  "checkedAt": "2026-10-20T18:14:15.195Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.video.unext.jp/title/SID0038692",
+                  "checkedAt": "2026-10-20T18:14:15.612Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=22507",
+                  "checkedAt": "2026-10-20T18:16:02.464Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.bs-log.com/news/stage/20180517_1287731.html",
+                  "checkedAt": "2026-10-20T18:15:35.108Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://ameblo.jp/rachi-shinji/entry-12386171127.html",
+                  "checkedAt": "2026-10-20T18:15:35.747Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                }
+              ],
+              "source_fingerprint": "434d8b0d30ea84a26949c86230c5c05459a80f89b8906e4685b72bebc87d580a",
+              "review_fingerprint": "d21754bc729378b430d9050bf27614153d5c0e6282fdbc6029375e0f24939d43",
+              "snapshot_fingerprint": "c75827d050070f0f54cceb46ee545a2f19563f9b99ce540c4d6276061a633d52",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "3e46141c-bb66-4e49-84b9-d342ffadf0f9",
+            "matched_play_id": "eba1c21c-8701-4ce2-a94d-79a336c62381",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "仲田博喜",
+            "source_actor_url": "https://kira-hai.net/nakada-hiroki",
+            "source_work_title": "ミュージカル「Code：Realize ～創世の姫君～」",
+            "source_year": 2018,
+            "source_role_raw": "ヴィクター・フランケンシュタイン",
+            "source_role_names": [
+              "ヴィクター・フランケンシュタイン"
+            ],
+            "source_cast_group": null,
+            "source_order": 4,
+            "source_credit_key": "89e5d2fd18ac04a5d2a7",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/coderealize2018",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/coderealize2018",
+                  "checkedAt": "2026-10-20T18:14:59.073Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.fwinc.co.jp/news/45669/",
+                  "checkedAt": "2026-10-20T18:14:15.140Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.fwinc.co.jp/news/45346/",
+                  "checkedAt": "2026-10-20T18:14:15.195Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.video.unext.jp/title/SID0038692",
+                  "checkedAt": "2026-10-20T18:14:15.612Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=22507",
+                  "checkedAt": "2026-10-20T18:16:02.464Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.bs-log.com/news/stage/20180517_1287731.html",
+                  "checkedAt": "2026-10-20T18:15:35.108Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://ameblo.jp/rachi-shinji/entry-12386171127.html",
+                  "checkedAt": "2026-10-20T18:15:35.747Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                }
+              ],
+              "source_fingerprint": "434d8b0d30ea84a26949c86230c5c05459a80f89b8906e4685b72bebc87d580a",
+              "review_fingerprint": "d21754bc729378b430d9050bf27614153d5c0e6282fdbc6029375e0f24939d43",
+              "snapshot_fingerprint": "c75827d050070f0f54cceb46ee545a2f19563f9b99ce540c4d6276061a633d52",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "bfa3b811-ab92-4044-818b-82244d2746e5",
+            "matched_play_id": "eba1c21c-8701-4ce2-a94d-79a336c62381",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "鷲尾修斗",
+            "source_actor_url": "https://kira-hai.net/washio-shuto",
+            "source_work_title": "ミュージカル「Code：Realize ～創世の姫君～」",
+            "source_year": 2018,
+            "source_role_raw": "インピー・バービケーン",
+            "source_role_names": [
+              "インピー・バービケーン"
+            ],
+            "source_cast_group": null,
+            "source_order": 5,
+            "source_credit_key": "3527e318206d0a4b4acd",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/coderealize2018",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/coderealize2018",
+                  "checkedAt": "2026-10-20T18:14:59.073Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.fwinc.co.jp/news/45669/",
+                  "checkedAt": "2026-10-20T18:14:15.140Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.fwinc.co.jp/news/45346/",
+                  "checkedAt": "2026-10-20T18:14:15.195Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.video.unext.jp/title/SID0038692",
+                  "checkedAt": "2026-10-20T18:14:15.612Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=22507",
+                  "checkedAt": "2026-10-20T18:16:02.464Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.bs-log.com/news/stage/20180517_1287731.html",
+                  "checkedAt": "2026-10-20T18:15:35.108Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://ameblo.jp/rachi-shinji/entry-12386171127.html",
+                  "checkedAt": "2026-10-20T18:15:35.747Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                }
+              ],
+              "source_fingerprint": "434d8b0d30ea84a26949c86230c5c05459a80f89b8906e4685b72bebc87d580a",
+              "review_fingerprint": "d21754bc729378b430d9050bf27614153d5c0e6282fdbc6029375e0f24939d43",
+              "snapshot_fingerprint": "c75827d050070f0f54cceb46ee545a2f19563f9b99ce540c4d6276061a633d52",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "6dae98f7-0b1c-4016-8ebf-fb15d9c81d40",
+            "matched_play_id": "eba1c21c-8701-4ce2-a94d-79a336c62381",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "滝澤諒",
+            "source_actor_url": "https://kira-hai.net/takizawa-ryo",
+            "source_work_title": "ミュージカル「Code：Realize ～創世の姫君～」",
+            "source_year": 2018,
+            "source_role_raw": "サン・ジェルマン",
+            "source_role_names": [
+              "サン・ジェルマン"
+            ],
+            "source_cast_group": null,
+            "source_order": 6,
+            "source_credit_key": "747befb996e47bf7391b",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/coderealize2018",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/coderealize2018",
+                  "checkedAt": "2026-10-20T18:14:59.073Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.fwinc.co.jp/news/45669/",
+                  "checkedAt": "2026-10-20T18:14:15.140Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.fwinc.co.jp/news/45346/",
+                  "checkedAt": "2026-10-20T18:14:15.195Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.video.unext.jp/title/SID0038692",
+                  "checkedAt": "2026-10-20T18:14:15.612Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=22507",
+                  "checkedAt": "2026-10-20T18:16:02.464Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.bs-log.com/news/stage/20180517_1287731.html",
+                  "checkedAt": "2026-10-20T18:15:35.108Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://ameblo.jp/rachi-shinji/entry-12386171127.html",
+                  "checkedAt": "2026-10-20T18:15:35.747Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                }
+              ],
+              "source_fingerprint": "434d8b0d30ea84a26949c86230c5c05459a80f89b8906e4685b72bebc87d580a",
+              "review_fingerprint": "d21754bc729378b430d9050bf27614153d5c0e6282fdbc6029375e0f24939d43",
+              "snapshot_fingerprint": "c75827d050070f0f54cceb46ee545a2f19563f9b99ce540c4d6276061a633d52",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "2365c891-30f1-479c-9642-c7b7a16ba0cd",
+            "matched_play_id": "eba1c21c-8701-4ce2-a94d-79a336c62381",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "星元裕月",
+            "source_actor_url": "https://kira-hai.net/hoshimoto-yuzuki",
+            "source_work_title": "ミュージカル「Code：Realize ～創世の姫君～」",
+            "source_year": 2018,
+            "source_role_raw": "フィーニス",
+            "source_role_names": [
+              "フィーニス"
+            ],
+            "source_cast_group": null,
+            "source_order": 7,
+            "source_credit_key": "dcdafe56177d9aa0ee0b",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/coderealize2018",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/coderealize2018",
+                  "checkedAt": "2026-10-20T18:14:59.073Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.fwinc.co.jp/news/45669/",
+                  "checkedAt": "2026-10-20T18:14:15.140Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.fwinc.co.jp/news/45346/",
+                  "checkedAt": "2026-10-20T18:14:15.195Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.video.unext.jp/title/SID0038692",
+                  "checkedAt": "2026-10-20T18:14:15.612Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=22507",
+                  "checkedAt": "2026-10-20T18:16:02.464Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.bs-log.com/news/stage/20180517_1287731.html",
+                  "checkedAt": "2026-10-20T18:15:35.108Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://ameblo.jp/rachi-shinji/entry-12386171127.html",
+                  "checkedAt": "2026-10-20T18:15:35.747Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                }
+              ],
+              "source_fingerprint": "434d8b0d30ea84a26949c86230c5c05459a80f89b8906e4685b72bebc87d580a",
+              "review_fingerprint": "d21754bc729378b430d9050bf27614153d5c0e6282fdbc6029375e0f24939d43",
+              "snapshot_fingerprint": "c75827d050070f0f54cceb46ee545a2f19563f9b99ce540c4d6276061a633d52",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "77ce0be2-b7f9-41b0-99eb-6d0654beb334",
+            "matched_play_id": "eba1c21c-8701-4ce2-a94d-79a336c62381",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "君沢ユウキ",
+            "source_actor_url": "https://kira-hai.net/kimisawa-yuki",
+            "source_work_title": "ミュージカル「Code：Realize ～創世の姫君～」",
+            "source_year": 2018,
+            "source_role_raw": "エルロック・ショルメ",
+            "source_role_names": [
+              "エルロック・ショルメ"
+            ],
+            "source_cast_group": null,
+            "source_order": 8,
+            "source_credit_key": "14b25bfa9c3badf2bf63",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/coderealize2018",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/coderealize2018",
+                  "checkedAt": "2026-10-20T18:14:59.073Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.fwinc.co.jp/news/45669/",
+                  "checkedAt": "2026-10-20T18:14:15.140Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.fwinc.co.jp/news/45346/",
+                  "checkedAt": "2026-10-20T18:14:15.195Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.video.unext.jp/title/SID0038692",
+                  "checkedAt": "2026-10-20T18:14:15.612Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=22507",
+                  "checkedAt": "2026-10-20T18:16:02.464Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.bs-log.com/news/stage/20180517_1287731.html",
+                  "checkedAt": "2026-10-20T18:15:35.108Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://ameblo.jp/rachi-shinji/entry-12386171127.html",
+                  "checkedAt": "2026-10-20T18:15:35.747Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                }
+              ],
+              "source_fingerprint": "434d8b0d30ea84a26949c86230c5c05459a80f89b8906e4685b72bebc87d580a",
+              "review_fingerprint": "d21754bc729378b430d9050bf27614153d5c0e6282fdbc6029375e0f24939d43",
+              "snapshot_fingerprint": "c75827d050070f0f54cceb46ee545a2f19563f9b99ce540c4d6276061a633d52",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "189ea368-c895-4564-b87d-f6bb287972dc",
+            "matched_play_id": "eba1c21c-8701-4ce2-a94d-79a336c62381",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "大力",
+            "source_actor_url": null,
+            "source_work_title": "ミュージカル「Code：Realize ～創世の姫君～」",
+            "source_year": 2018,
+            "source_role_raw": "ランパール・レオンハルト",
+            "source_role_names": [
+              "ランパール・レオンハルト"
+            ],
+            "source_cast_group": null,
+            "source_order": 9,
+            "source_credit_key": "304fd716fb6756eccfe9",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/coderealize2018",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/coderealize2018",
+                  "checkedAt": "2026-10-20T18:14:59.073Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.fwinc.co.jp/news/45669/",
+                  "checkedAt": "2026-10-20T18:14:15.140Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.fwinc.co.jp/news/45346/",
+                  "checkedAt": "2026-10-20T18:14:15.195Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.video.unext.jp/title/SID0038692",
+                  "checkedAt": "2026-10-20T18:14:15.612Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=22507",
+                  "checkedAt": "2026-10-20T18:16:02.464Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.bs-log.com/news/stage/20180517_1287731.html",
+                  "checkedAt": "2026-10-20T18:15:35.108Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://ameblo.jp/rachi-shinji/entry-12386171127.html",
+                  "checkedAt": "2026-10-20T18:15:35.747Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                }
+              ],
+              "source_fingerprint": "434d8b0d30ea84a26949c86230c5c05459a80f89b8906e4685b72bebc87d580a",
+              "review_fingerprint": "d21754bc729378b430d9050bf27614153d5c0e6282fdbc6029375e0f24939d43",
+              "snapshot_fingerprint": "c75827d050070f0f54cceb46ee545a2f19563f9b99ce540c4d6276061a633d52",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "4a838028-500a-4d52-a483-df6832a3c209",
+            "matched_play_id": "eba1c21c-8701-4ce2-a94d-79a336c62381",
+            "status": "pending"
+          }
+        ]
+      },
+      "records": [
+        {
+          "actor": {
+            "id": "82f21efb-ea5f-40a3-9e38-99b4dab7b9d7",
+            "slug": "rachi-shinji",
+            "name": "良知真次",
+            "kana": "らち しんじ",
+            "profile": "東京都出身の俳優・演出家・振付師。World Code代表取締役。ジャニーズJr.、劇団四季、東宝芸能での活動を経て2018年に同社を設立。ミュージカル『Code：Realize ～創世の姫君～』ではアルセーヌ・ルパン役を務めた。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1983-03-16",
+            "height_cm": 175,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": "Shinji Rachi",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "良知真次",
+            "sourceActorUrl": "https://kira-hai.net/rachi-shinji",
+            "role_name": "アルセーヌ・ルパン",
+            "cast_group": null
+          },
+          "sourceCreditKey": "9199956bf1286d3912b1",
+          "sourceOrder": 1,
+          "billingOrder": 1,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "d73262b8-f64b-4cf0-9561-7c20b8b8a770",
+            "slug": "hasegawa-ai",
+            "name": "長谷川愛",
+            "kana": "はせがわ あい",
+            "profile": "大阪府出身の俳優・歌手。2003年に『ピチレモン』専属モデルに起用された。ミュージカル『Code：Realize ～創世の姫君～』のカルディア役などを務め、音楽活動や配信ドラマへの出演も行っている。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1990-02-06",
+            "height_cm": 164,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "長谷川愛",
+            "sourceActorUrl": "https://kira-hai.net/hasegawa-ai",
+            "role_name": "カルディア",
+            "cast_group": null
+          },
+          "sourceCreditKey": "2413457d78f49d59cecd",
+          "sourceOrder": 2,
+          "billingOrder": 2,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "3e46141c-bb66-4e49-84b9-d342ffadf0f9",
+            "slug": "akisawa-kentaro",
+            "name": "秋沢 健太朗",
+            "kana": "あきさわ けんたろう",
+            "profile": "秋田県出身の俳優。ミュージカル『新テニスの王子様』にてU-17（アンダーセブンティーン）日本代表の種ヶ島修二役を務めている。その他の主な出演作として、ハイパープロジェクション演劇「ハイキュー!!」（澤村大地役）、ミュージカル『忍たま乱太郎』（食満留三郎役）などの舞台作品がある。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/de___javu",
+              "official": "https://kentaro-akisawa.biz/",
+              "instagram": "https://www.instagram.com/kenonetaro.akisawa"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:15:49.295117+00:00",
+            "updated_at": "2026-03-21T15:15:49.295117+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1988-09-14",
+            "height_cm": 180,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Akita Prefecture. He plays the role of Shuji Tanegashima of the U-17 Japan Representatives in the musical \"The New Prince of Tennis\". His other major appearances include stage works such as the Hyper Projection Engeki \"Haikyu!!\" (as Daichi Sawamura) and the musical \"Nintama Rantaro\" (as Tomesaburo Kema).",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "秋沢健太朗",
+            "sourceActorUrl": "https://kira-hai.net/akisawa-kentaro",
+            "role_name": "エイブラハム・ヴァン・ヘルシング",
+            "cast_group": null
+          },
+          "sourceCreditKey": "e9f0903d223aa6627aba",
+          "sourceOrder": 3,
+          "billingOrder": 3,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "bfa3b811-ab92-4044-818b-82244d2746e5",
+            "slug": "nakada-hiroki",
+            "name": "仲田 博喜",
+            "kana": "なかだ ひろき",
+            "profile": "大阪府出身の俳優。現在はフリーで活動している。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/nakadahiroki",
+              "official": "https://hiroki-nakada.com/",
+              "instagram": "https://www.instagram.com/nakadahiroki1017/"
+            },
+            "gender": "male",
+            "created_at": "2026-04-07T21:09:40.839143+00:00",
+            "updated_at": "2026-04-07T21:09:40.839143+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1987-10-17",
+            "height_cm": 181,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "仲田博喜",
+            "sourceActorUrl": "https://kira-hai.net/nakada-hiroki",
+            "role_name": "ヴィクター・フランケンシュタイン",
+            "cast_group": null
+          },
+          "sourceCreditKey": "89e5d2fd18ac04a5d2a7",
+          "sourceOrder": 4,
+          "billingOrder": 4,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "6dae98f7-0b1c-4016-8ebf-fb15d9c81d40",
+            "slug": "washio-shuto",
+            "name": "鷲尾修斗",
+            "kana": "わしお しゅうと",
+            "profile": "俳優。『ツキステ。』シリーズの葉月陽役、ミュージカル『忍たま乱太郎』の中在家長次役などを務めた。『Code：Realize ～創世の姫君～』ではインピー・バービケーン役で出演している。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1987-12-27",
+            "height_cm": 180,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "鷲尾修斗",
+            "sourceActorUrl": "https://kira-hai.net/washio-shuto",
+            "role_name": "インピー・バービケーン",
+            "cast_group": null
+          },
+          "sourceCreditKey": "3527e318206d0a4b4acd",
+          "sourceOrder": 5,
+          "billingOrder": 5,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "2365c891-30f1-479c-9642-c7b7a16ba0cd",
+            "slug": "takizawa-ryo",
+            "name": "滝澤諒",
+            "kana": "たきざわ りょう",
+            "profile": "俳優。ミュージカル『Code：Realize ～創世の姫君～』でサン・ジェルマン役を務めた。『ヒプノシスマイク』Rule the Stageの有栖川帝統役などにも出演している。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1998-02-14",
+            "height_cm": 173,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "滝澤諒",
+            "sourceActorUrl": "https://kira-hai.net/takizawa-ryo",
+            "role_name": "サン・ジェルマン",
+            "cast_group": null
+          },
+          "sourceCreditKey": "747befb996e47bf7391b",
+          "sourceOrder": 6,
+          "billingOrder": 6,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "77ce0be2-b7f9-41b0-99eb-6d0654beb334",
+            "slug": "hoshimoto-yuzuki",
+            "name": "星元 裕月",
+            "kana": "ほしもと ゆづき",
+            "profile": "静岡県出身の俳優。キャストコーポレーション所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/hoshimotoyuzuki",
+              "official": "https://cast-may.com/artist/yuzuki-hoshimoto/",
+              "instagram": "https://www.instagram.com/yuzuki_hoshimoto/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-31T16:27:49.872381+00:00",
+            "updated_at": "2026-03-31T16:27:49.872381+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1997-10-15",
+            "height_cm": 164,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "星元裕月",
+            "sourceActorUrl": "https://kira-hai.net/hoshimoto-yuzuki",
+            "role_name": "フィーニス",
+            "cast_group": null
+          },
+          "sourceCreditKey": "dcdafe56177d9aa0ee0b",
+          "sourceOrder": 7,
+          "billingOrder": 7,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "189ea368-c895-4564-b87d-f6bb287972dc",
+            "slug": "kimisawa-yuki",
+            "name": "君沢 ユウキ",
+            "kana": "きみさわ ゆうき",
+            "profile": "京都府出身の俳優。株式会社オムニア所属。ミュージカル『テニスの王子様』2ndシーズン（渡邊オサム役）やライブ・スペクタクル『NARUTO-ナルト-』（はたけカカシ役）、舞台『文豪ストレイドッグス』（フランシス・F役）等の舞台作品に出演。また、特撮ドラマ『仮面ライダーW』（園咲霧彦役）などの映像作品にも出演している。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/yukikimisawa",
+              "official": "https://kimisawayuki.com/",
+              "instagram": "https://www.instagram.com/yukikimisawa"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:06:19.306372+00:00",
+            "updated_at": "2026-03-21T15:06:19.306372+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1985-01-31",
+            "height_cm": 181,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Kyoto Prefecture. Affiliated with OMNIA Co., Ltd. He has appeared in stage works such as the musical \"The Prince of Tennis\" 2nd season (as Osamu Watanabe), the Live Spectacle \"NARUTO\" (as Kakashi Hatake), and the stage play \"Bungo Stray Dogs\" (as Francis F). He has also appeared in television works such as the special effects drama \"Kamen Rider W\" (as Kirihiko Sonozaki).",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "君沢ユウキ",
+            "sourceActorUrl": "https://kira-hai.net/kimisawa-yuki",
+            "role_name": "エルロック・ショルメ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "14b25bfa9c3badf2bf63",
+          "sourceOrder": 8,
+          "billingOrder": 8,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "4a838028-500a-4d52-a483-df6832a3c209",
+            "slug": "coderealize2018-leonhard",
+            "name": "大力",
+            "kana": null,
+            "profile": "俳優。2018年のミュージカル『Code：Realize ～創世の姫君～』でランパール・レオンハルト役を務めた。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": null,
+            "height_cm": null,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "大力",
+            "sourceActorUrl": null,
+            "role_name": "ランパール・レオンハルト",
+            "cast_group": null
+          },
+          "sourceCreditKey": "304fd716fb6756eccfe9",
+          "sourceOrder": 9,
+          "billingOrder": 9,
+          "expectedNote": null
+        }
+      ],
+      "castPatches": [],
+      "keptCasts": [],
+      "keptActors": [],
+      "legacyCandidates": [
+        {
+          "id": "25188479-5a30-4fb4-af67-2e90ed0c7c4c",
+          "source": "kira-hai",
+          "external_actor_id": "9fea349b-e488-4b80-9c79-d95929686c69",
+          "external_play_id": "34fce6e5-09c9-4448-b7a8-fa416c5ff884",
+          "source_actor_name": "仲田博喜",
+          "source_actor_url": "https://kira-hai.net/nakada-hiroki",
+          "source_work_title": "Code:Realize ～創世の姫君～",
+          "source_work_url": "https://kira-hai.net/coderealize2018",
+          "source_year": 2021,
+          "source_role_raw": "ヴィクター・フランケンシュタイン",
+          "source_role_names": [
+            "ヴィクター・フランケンシュタイン"
+          ],
+          "matched_actor_id": "bfa3b811-ab92-4044-818b-82244d2746e5",
+          "matched_play_id": null,
+          "accepted_cast_id": null,
+          "confidence": 60,
+          "status": "pending",
+          "note": null,
+          "scraped_at": "2026-04-27T18:14:01.434+00:00",
+          "created_at": "2026-04-27T18:14:00.64259+00:00",
+          "updated_at": "2026-04-27T18:14:01.434+00:00",
+          "accepted_at": null,
+          "rejected_at": null,
+          "source_cast_group": null,
+          "source_order": null,
+          "source_credit_key": null,
+          "source_evidence": null
+        }
+      ],
+      "sourceFingerprint": "434d8b0d30ea84a26949c86230c5c05459a80f89b8906e4685b72bebc87d580a",
+      "expectedCastCount": 9,
+      "evidence": [
+        {
+          "url": "https://kira-hai.net/coderealize2018",
+          "checkedAt": "2026-10-20T18:14:59.073Z",
+          "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+        },
+        {
+          "url": "https://www.fwinc.co.jp/news/45669/",
+          "checkedAt": "2026-10-20T18:14:15.140Z",
+          "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+        },
+        {
+          "url": "https://www.fwinc.co.jp/news/45346/",
+          "checkedAt": "2026-10-20T18:14:15.195Z",
+          "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+        },
+        {
+          "url": "https://www.video.unext.jp/title/SID0038692",
+          "checkedAt": "2026-10-20T18:14:15.612Z",
+          "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+        },
+        {
+          "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=22507",
+          "checkedAt": "2026-10-20T18:16:02.464Z",
+          "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+        },
+        {
+          "url": "https://www.bs-log.com/news/stage/20180517_1287731.html",
+          "checkedAt": "2026-10-20T18:15:35.108Z",
+          "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+        },
+        {
+          "url": "https://ameblo.jp/rachi-shinji/entry-12386171127.html",
+          "checkedAt": "2026-10-20T18:15:35.747Z",
+          "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+        }
+      ]
+    }
+  ],
+  "evidence": {
+    "links": [
+      {
+        "url": "https://kira-hai.net/coderealize2018",
+        "checkedAt": "2026-10-20T18:14:59.073Z",
+        "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+      },
+      {
+        "url": "https://www.fwinc.co.jp/news/45669/",
+        "checkedAt": "2026-10-20T18:14:15.140Z",
+        "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+      },
+      {
+        "url": "https://www.fwinc.co.jp/news/45346/",
+        "checkedAt": "2026-10-20T18:14:15.195Z",
+        "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+      },
+      {
+        "url": "https://www.video.unext.jp/title/SID0038692",
+        "checkedAt": "2026-10-20T18:14:15.612Z",
+        "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+      },
+      {
+        "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=22507",
+        "checkedAt": "2026-10-20T18:16:02.464Z",
+        "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+      },
+      {
+        "url": "https://www.bs-log.com/news/stage/20180517_1287731.html",
+        "checkedAt": "2026-10-20T18:15:35.108Z",
+        "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+      },
+      {
+        "url": "https://ameblo.jp/rachi-shinji/entry-12386171127.html",
+        "checkedAt": "2026-10-20T18:15:35.747Z",
+        "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+      }
+    ],
+    "sources": [
+      {
+        "name": "kira-search",
+        "url": "https://kira-hai.net/?s=Code%3ARealize",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/?s=Code%3ARealize",
+        "checkedAt": "2026-10-20T18:14:15.293Z",
+        "sha256": "b71bea8098752bf597bba5488c4d64dcbb9383bd3cc10d207e73401f18449727"
+      },
+      {
+        "name": "producer-final",
+        "url": "https://www.fwinc.co.jp/news/45669/",
+        "status": 200,
+        "finalUrl": "https://www.fwinc.co.jp/news/45669/",
+        "checkedAt": "2026-10-20T18:14:15.140Z",
+        "sha256": "42868010d9cdfa85155616e941d83d60a1f52293642a65c4fe7d2e99171d5143"
+      },
+      {
+        "name": "producer-cast",
+        "url": "https://www.fwinc.co.jp/news/45346/",
+        "status": 200,
+        "finalUrl": "https://www.fwinc.co.jp/news/45346/",
+        "checkedAt": "2026-10-20T18:14:15.195Z",
+        "sha256": "750d3bff7d55b32a00bf43b2cc600e5245511a3a5f4a47a59e9392ab3284db17"
+      },
+      {
+        "name": "plot",
+        "url": "https://www.video.unext.jp/title/SID0038692",
+        "status": 200,
+        "finalUrl": "https://www.video.unext.jp/title/SID0038692",
+        "checkedAt": "2026-10-20T18:14:15.612Z",
+        "sha256": "fb24c0233801760cbbdc51d9f45b759acc985a5af785b64791d06ec2891f24b2"
+      },
+      {
+        "name": "robots",
+        "url": "https://kira-hai.net/robots.txt",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/robots.txt",
+        "checkedAt": "2026-10-20T18:14:15.404Z",
+        "sha256": "f6ed0322f0e3df8c3b42b14df3254a90cca7b94a4172de91812952b3c7060b03"
+      },
+      {
+        "name": "changelog",
+        "url": "https://supabase.com/changelog.md",
+        "status": 200,
+        "finalUrl": "https://supabase.com/changelog.md",
+        "checkedAt": "2026-10-20T18:14:15.499Z",
+        "sha256": "15b3d0d1a7dc3b3f2c0af4788e49acfdf2d2edbd2613f22de0705fa43b1cf58b"
+      },
+      {
+        "name": "docs-tables",
+        "url": "https://supabase.com/docs/guides/database/tables.md",
+        "status": 200,
+        "finalUrl": "https://supabase.com/docs/guides/database/tables.md",
+        "checkedAt": "2026-10-20T18:14:15.680Z",
+        "sha256": "fdcc9957da7b920de29201ebb0f0d37c05c3c05cd6b7893ecc19e64dc39febfa"
+      },
+      {
+        "name": "work",
+        "url": "https://kira-hai.net/coderealize2018",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/coderealize2018",
+        "checkedAt": "2026-10-20T18:14:59.073Z",
+        "sha256": "aa1125e9ae13d5930722b9bc621fabac97c94d5fd2f8b6023a0bcafc6492ee2c"
+      },
+      {
+        "name": "hasegawa-kira",
+        "url": "https://kira-hai.net/hasegawa-ai",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/hasegawa-ai",
+        "checkedAt": "2026-10-20T18:14:59.107Z",
+        "sha256": "9ba24d4d9b0f41bfb75a668b30bbe8af7e2fe4a4352eae1535a6ef1420dbcd32"
+      },
+      {
+        "name": "hasegawa",
+        "url": "https://ai-hasegawa.com/biography",
+        "status": 200,
+        "finalUrl": "https://ai-hasegawa.com/biography",
+        "checkedAt": "2026-10-20T18:15:34.477Z",
+        "sha256": "9a6d3aa8108e80872f205ef9d02891f1ccae3b97b00a080c3c92d5564c701270"
+      },
+      {
+        "name": "rachi-old",
+        "url": "https://rachi-shinji.officialsite.co/pages/1106/profile",
+        "status": 200,
+        "finalUrl": "https://rachi-shinji.officialsite.co/pages/1106/profile",
+        "checkedAt": "2026-10-20T18:15:34.502Z",
+        "sha256": "fd0dd166e808d213b65395a0d2ddb5682498703ee1856bff0e8c586730ad0fc5"
+      },
+      {
+        "name": "rachi-old-home",
+        "url": "https://rachi-shinji.officialsite.co/",
+        "status": 200,
+        "finalUrl": "https://rachi-shinji.officialsite.co/",
+        "checkedAt": "2026-10-20T18:15:34.394Z",
+        "sha256": "1a0456ae59e7100b30844f35003666a268c3e7b62179e63ee9e49d7c24ce095a"
+      },
+      {
+        "name": "opening",
+        "url": "https://www.bs-log.com/news/stage/20180517_1287731.html",
+        "status": 200,
+        "finalUrl": "https://www.bs-log.com/news/stage/20180517_1287731.html",
+        "checkedAt": "2026-10-20T18:15:35.108Z",
+        "sha256": "a7a101ec777822ee916cbdfc2ac8e52c8606ed723ea52472252deafa706cebb2"
+      },
+      {
+        "name": "end-report",
+        "url": "https://ameblo.jp/rachi-shinji/entry-12386171127.html",
+        "status": 200,
+        "finalUrl": "https://ameblo.jp/rachi-shinji/entry-12386171127.html",
+        "checkedAt": "2026-10-20T18:15:35.747Z",
+        "sha256": "b63d7e4dbe331fc5fa83ec7b4a9ad03105d870a302e2e2c93d7b184b98cb4bad"
+      },
+      {
+        "name": "rachi-kira",
+        "url": "https://kira-hai.net/rachi-shinji",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/rachi-shinji",
+        "checkedAt": "2026-10-20T18:16:00.761Z",
+        "sha256": "e9459e5479f3ac73c73ce47623d1aa017fb779f4fb502dfc7a9e7bf08374c735"
+      },
+      {
+        "name": "washio-kira",
+        "url": "https://kira-hai.net/washio-shuto",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/washio-shuto",
+        "checkedAt": "2026-10-20T18:16:00.799Z",
+        "sha256": "86418cbe10f948a49d104f16d6676cb4f108e5b793a858494cac27a2b0376601"
+      },
+      {
+        "name": "takizawa-kira",
+        "url": "https://kira-hai.net/takizawa-ryo",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/takizawa-ryo",
+        "checkedAt": "2026-10-20T18:16:00.712Z",
+        "sha256": "4bab9a7a7ab4bbe7fa522e0871dae88eebedf8c75ca0ab6b70e30ea3030b50b0"
+      },
+      {
+        "name": "world-talents",
+        "url": "https://worldcode.co.jp/talent/",
+        "status": 200,
+        "finalUrl": "https://worldcode.co.jp/talent/",
+        "checkedAt": "2026-10-20T18:16:02.088Z",
+        "sha256": "c7a3a27e92051f6817627abcc243c12c45b946f9bb1615e4991ff16941f4cd7a"
+      },
+      {
+        "name": "world-ceo",
+        "url": "https://worldcode.co.jp/company/message/",
+        "status": 200,
+        "finalUrl": "https://worldcode.co.jp/company/message/",
+        "checkedAt": "2026-10-20T18:16:03.143Z",
+        "sha256": "ea7a3f32fcc88ea60131de1308fdba8ac0e1e28c886b5d4c05bf0fec41007e22"
+      },
+      {
+        "name": "d-anime",
+        "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=22507",
+        "status": 200,
+        "finalUrl": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=22507",
+        "checkedAt": "2026-10-20T18:16:02.464Z",
+        "sha256": "e1bf70f7130a1cae4f98bf274eb445e1c5bb051cbf0a63d87e4fdf4e026ad17b"
+      },
+      {
+        "name": "amuleto-home",
+        "url": "https://amuleto.jp/",
+        "status": 200,
+        "finalUrl": "https://amuleto.jp/",
+        "checkedAt": "2026-10-20T18:16:46.433Z",
+        "sha256": "f68c039b593197891c4fa76e59b3988910d338f8f8da991c887aec39614a2a53"
+      },
+      {
+        "name": "rachi",
+        "url": "https://worldcode.co.jp/rachi-shinji/",
+        "status": 200,
+        "finalUrl": "https://worldcode.co.jp/rachi-shinji/",
+        "checkedAt": "2026-10-20T18:17:19.642Z",
+        "sha256": "e388e78b0bf5c53e6edca0c87498503b4c63e70ea56cc27fd9dda4d0e43e510f"
+      },
+      {
+        "name": "chinen-current",
+        "url": "https://worldcode.co.jp/saya-chinen/",
+        "status": 200,
+        "finalUrl": "https://worldcode.co.jp/talent/saya-chinen/",
+        "checkedAt": "2026-10-20T18:17:20.284Z",
+        "sha256": "e56430109e85ba1db9e1463ac96d2ab429146a399986269362b185851b857a1a"
+      },
+      {
+        "name": "dairiki-event",
+        "url": "https://harenochinonchi.themedia.jp/pages/4903120/profile",
+        "status": 200,
+        "finalUrl": "https://harenochinonchi.themedia.jp/pages/4903120/profile",
+        "checkedAt": "2026-10-20T18:17:18.823Z",
+        "sha256": "4275d09a1ddae76bf2385ef33be4ca5474523a2e3148697b678acb3bbfa6bf19"
+      },
+      {
+        "name": "washio-toki-home",
+        "url": "https://tokientertainment.co.jp/",
+        "status": 200,
+        "finalUrl": "https://tokientertainment.co.jp/",
+        "checkedAt": "2026-10-20T18:17:22.456Z",
+        "sha256": "f300a63cda3c6e161fe6bdc0a0fb1f51decb3c7f25c59792035bc3aae308cf1b"
+      },
+      {
+        "name": "toki-list",
+        "url": "https://tokientertainment.co.jp/product/",
+        "status": 200,
+        "finalUrl": "https://tokientertainment.co.jp/product/",
+        "checkedAt": "2026-10-20T18:18:47.535Z",
+        "sha256": "a4c78016a1e88f33b2e6e60cb336b8f6cb2c7322948c756589667afb37512f0a"
+      },
+      {
+        "name": "amuleto-list",
+        "url": "https://amuleto.jp/talents/",
+        "status": 200,
+        "finalUrl": "https://amuleto.jp/talents",
+        "checkedAt": "2026-10-20T18:18:46.410Z",
+        "sha256": "5bf3967fbe0dffb3c7632d53c04e6eadd214bef79468b8cf1fe62266e8c072a0"
+      }
+    ],
+    "unavailable": [
+      {
+        "name": "official",
+        "url": "https://musical-coderealize.com/",
+        "status": 0,
+        "error": "TypeError: fetch failed",
+        "checkedAt": "2026-10-20T18:14:14.679Z"
+      },
+      {
+        "name": "washio-old",
+        "url": "https://www.starbeat.jp/shuto-washio",
+        "status": 404,
+        "finalUrl": "https://www.starbeat.jp/shuto-washio",
+        "checkedAt": "2026-10-20T18:16:46.901Z",
+        "sha256": "3b8c2405170f5a5cb7e0c0320cc86d993a12772d569c808aa08ff87dd8b57e48"
+      },
+      {
+        "name": "washio-toki",
+        "url": "https://tokientertainment.co.jp/management/washio.html",
+        "status": 404,
+        "finalUrl": "https://tokientertainment.co.jp/management/washio.html",
+        "checkedAt": "2026-10-20T18:16:47.580Z",
+        "sha256": "d87dbb17b1dac296a96a72b6bec3f2c5f86b0c9c9c6c871c5b871015366f1fc4"
+      },
+      {
+        "name": "washio-official",
+        "url": "https://washioshuto.com/",
+        "status": 0,
+        "error": "TypeError: fetch failed",
+        "checkedAt": "2026-10-20T18:16:45.768Z"
+      },
+      {
+        "name": "amuleto",
+        "url": "https://amuleto.jp/talents/TakizawaRyo.html",
+        "status": 404,
+        "finalUrl": "https://amuleto.jp/talents/TakizawaRyo.html",
+        "checkedAt": "2026-10-20T18:17:18.866Z",
+        "sha256": "de161b562ffa80302dfe059344d68cd8aeb184ed86eee1ac047550c9bed0f221"
+      }
+    ],
+    "notes": [
+      "主要9配役と東京・大阪の全日程・会場を第一参照先と制作元最終告知で照合。8人のアンサンブルは作品クレジットへ、個別配役や俳優は増やさない。",
+      "東京2018年5月17日〜20日・大阪5月26日〜27日を同一作品へ保存。5月24日のトークイベントや5月27日のアニメ声優イベントを本公演と混同しない。",
+      "制作元の最終告知と開幕レポートにより、副題を含む正式タイトルを採用。旧公演公式は取得不可のため制作元の一次情報を基礎にする。",
+      "旧候補の仲田博喜・ヴィクター役は同じ作品URLを照合して誤年2021を2018へ訂正し同IDで採用。外部ID・原文・確度・作成日時等を保持し、変更前全項目を履歴へ保存する。",
+      "良知・長谷川は本人の現行公式で主要属性を確認。鷲尾・滝澤は第一参照先土台、旧所属を現在情報にしない。大力は公演役の事実のみで属性を推測しない。",
+      "短い日英概要と英語表示名・シリーズ説明を編集。原作区分・既存シリーズ名とslug等を保持し、現在配信リンク・主演フラグを推測で設定しない。"
+    ],
+    "unresolved": [
+      "人物総合監査・大力を含む未確認属性・鷲尾と滝澤の現在所属／出身／英字名、プロフィールや全役名・クレジット・会場等の英訳、現在配信・主演指定・全技術スタッフは後続。",
+      "アンサンブル内の具体的な兼役・原作人物役は公的な確証を得られず未採用。観劇感想だけからアイザック役等を確定しない。",
+      "本劇場公演1作品の範囲。別の声優イベント・関連催事・将来公演の完全網羅を意味しない。",
+      "調査中に既存知念紗耶のWorld Code本人紹介が見つかった。生年月日・身長等の追加一次根拠を取得できたが、本バッチでは既存人物を変更せず後続補完候補として保持する。"
+    ]
+  },
+  "requestKey": "741b436dcc5b5586d2b7fa8e90888228a993e2a774c7230124377dc967a09b9c"
+}
