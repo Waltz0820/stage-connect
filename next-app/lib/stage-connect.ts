@@ -11,6 +11,7 @@ export type ActorLink = {
   nameEn?: string | null;
   roleName: string | null;
   castGroup: string | null;
+  note: string | null;
   isStarring: boolean | null;
 };
 
@@ -452,6 +453,7 @@ export async function getPlayDetailBySlug(slug: string): Promise<PlayDetailData 
         `
         role_name,
         cast_group,
+        note,
         is_starring,
         billing_order,
         created_at,
@@ -476,6 +478,7 @@ export async function getPlayDetailBySlug(slug: string): Promise<PlayDetailData 
         `
         role_name,
         cast_group,
+        note,
         is_starring,
         billing_order,
         created_at,
@@ -509,6 +512,7 @@ export async function getPlayDetailBySlug(slug: string): Promise<PlayDetailData 
       nameEn: String(row?.actor?.name_en ?? "").trim() || null,
       roleName: String(row?.role_name ?? "").trim() || null,
       castGroup: String(row?.cast_group ?? "").trim() || null,
+      note: String(row?.note ?? "").trim() || null,
       isStarring: typeof row?.is_starring === "boolean" ? row.is_starring : null,
       billingOrder: typeof row?.billing_order === "number" ? row.billing_order : Number.MAX_SAFE_INTEGER,
       createdAt: String(row?.created_at ?? "").trim() || null,

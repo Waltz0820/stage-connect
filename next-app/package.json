@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "test:locale": "node --test scripts/localization.test.mjs",
+    "test:play-cast": "node --test scripts/play-cast.test.mjs",
     "test:voting": "node --test scripts/oshi-voting.test.mjs",
     "preview:voting": "node scripts/serve-voting-preview.mjs",
     "verify:voting-preview": "node scripts/verify-voting-preview.mjs",

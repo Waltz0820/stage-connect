@@ -5346,6 +5346,19 @@ a {
   line-height: 1.5;
 }
 
+.play-detail-stage-page .cast-credit + .cast-credit {
+  margin-top: 8px;
+}
+
+.play-detail-stage-page .cast-note {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+
 .play-detail-stage-page .cast-badge {
   width: fit-content;
   margin-top: 8px;

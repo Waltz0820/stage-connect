@@ -1,3 +1,5 @@
+import { PlayCastRoles } from "../../../../components/PlayCastRoles";
+import { groupPlayCast } from "../../../../lib/play-cast";
 import OshiVotingClient from "../../../../components/OshiVotingClient";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -22,16 +24,6 @@ type Params = {
   slug: string;
 };
 
-type GroupedCast = {
-  name: string | null;
-  items: Array<{
-    slug: string;
-    name: string;
-    roleName: string | null;
-    isStarring: boolean | null;
-  }>;
-};
-
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
 
 export const revalidate = 3600;
@@ -42,12 +34,6 @@ const splitSlashList = (value?: string | null) =>
     .split(" / ")
     .map((item) => item.trim())
     .filter(Boolean);
-
-const summarizeRoleName = (value?: string | null) => {
-  const roles = splitSlashList(value);
-  if (roles.length <= 3) return value ?? null;
-  return `${roles.slice(0, 3).join(" / ")} / ほか${roles.length - 3}役`;
-};
 
 const parseScheduleEntries = (period?: string | null) =>
   String(period ?? "")
@@ -129,55 +115,6 @@ const summarizeVenues = (venue?: string | null) => {
   return `${venues.slice(0, 2).join(" / ")} / ほか${venues.length - 2}会場`;
 };
 
-const groupCast = (
-  cast: Array<{
-    slug: string;
-    name: string;
-    roleName: string | null;
-    castGroup: string | null;
-    isStarring: boolean | null;
-  }>
-): GroupedCast[] => {
-  const groups = new Map<string, GroupedCast>();
-
-  for (const item of cast) {
-    const groupName = item.castGroup?.trim() || null;
-    const groupKey = groupName ?? "__ungrouped__";
-    const currentGroup = groups.get(groupKey) ?? { name: groupName, items: [] };
-    const existingIndex = currentGroup.items.findIndex((entry) => entry.slug === item.slug);
-
-    if (existingIndex === -1) {
-      currentGroup.items.push({
-        slug: item.slug,
-        name: item.name,
-        roleName: item.roleName,
-        isStarring: item.isStarring,
-      });
-      groups.set(groupKey, currentGroup);
-      continue;
-    }
-
-    const existing = currentGroup.items[existingIndex];
-    const mergedRoles = Array.from(
-      new Set(
-        `${existing.roleName ?? ""} / ${item.roleName ?? ""}`
-          .split("/")
-          .map((value) => value.trim())
-          .filter(Boolean)
-      )
-    );
-
-    currentGroup.items[existingIndex] = {
-      ...existing,
-      roleName: mergedRoles.length > 0 ? mergedRoles.join(" / ") : null,
-      isStarring: Boolean(existing.isStarring || item.isStarring),
-    };
-    groups.set(groupKey, currentGroup);
-  }
-
-  return Array.from(groups.values());
-};
-
 const getCastInitials = (item: { slug: string; name: string }) => {
   const slugParts = item.slug
     .split("-")
@@ -256,7 +193,7 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
     { name: play.title, path: `/plays/${play.slug}` },
   ]);
   const castSummary = summarizeCast(play.cast);
-  const groupedCast = groupCast(play.cast);
+  const groupedCast = groupPlayCast(play.cast);
   const hasVod = Boolean(play.vod && Object.keys(play.vod).length > 0);
   const scheduleEntries = parseScheduleEntries(play.period);
   const scheduleSummary = extractPeriodSummary(play.period);
@@ -553,7 +490,7 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
                         </div>
                         <div className="cast-card__body">
                           <div className="cast-name">{item.name}</div>
-                          {item.roleName ? <div className="cast-role">{summarizeRoleName(item.roleName)}</div> : null}
+                          <PlayCastRoles roleName={item.roleName} credits={item.credits} locale="ja" />
                           {item.isStarring ? <div className="cast-badge">MAIN CAST</div> : null}
                         </div>
                       </Link>

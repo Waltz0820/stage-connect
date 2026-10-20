@@ -266,6 +266,33 @@ export const translateAnnotatedDisplayTextEn = (value?: string | null) =>
     .filter(Boolean)
     .join(" / ");
 
+export const translateCastNoteEn = (value: string) => {
+  const note = value.trim();
+  if (note === "コーチ") return "Coach";
+  if (note === "大阪公演（2022年11月3日〜6日）は、一部楽曲を除くライブシーンで橋本真一の歌唱録音を使用。ストーリー場面も身体の負担を考慮し、一部台詞のカット・話者変更あり。") {
+    return "For the Osaka performances (November 3–6, 2022), Shinichi Hashimoto's recorded vocals were used in the live concert scenes, except for some songs. To reduce physical strain, some lines in the story scenes were also cut or reassigned.";
+  }
+  // Translate only the recognized schedule format; unknown notes remain intact.
+  const guest = note.match(/^ゲスト出演：((?:\d{1,2}月\d{1,2}日\d{1,2}:\d{2}(?:／\d{1,2}:\d{2})*、?)+)公演。$/);
+  if (guest) {
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const entries = guest[1].split("、").filter(Boolean);
+    const dates = entries.map((entry) => {
+      const match = entry.match(/^(\d{1,2})月(\d{1,2})日(.+)$/)!;
+      const month = Number(match[1]);
+      const day = Number(match[2]);
+      const times = match[3].split("／");
+      if (month < 1 || month > 12 || day < 1 || day > 31 || times.some((time) => {
+        const [hour, minute] = time.split(":").map(Number);
+        return hour > 23 || minute > 59;
+      })) return null;
+      return `${months[month - 1]} ${day}, ${times.join(" / ")}`;
+    });
+    if (dates.every((date) => date !== null)) return `Guest appearance: ${dates.join("; ")}.`;
+  }
+  return note;
+};
+
 export const normalizePeriodDisplayEn = (value?: string | null) =>
   String(value ?? "")
     .normalize("NFKC")

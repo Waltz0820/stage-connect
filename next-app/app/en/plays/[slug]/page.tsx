@@ -1,3 +1,5 @@
+import { PlayCastRoles } from "../../../../components/PlayCastRoles";
+import { groupPlayCast } from "../../../../lib/play-cast";
 import OshiVotingClient from "../../../../components/OshiVotingClient";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -22,17 +24,6 @@ import { buildBreadcrumbList } from "../../../../lib/structured-data";
 import { getCreditItems, getPlayDetailBySlug, getSeriesDetailBySlug, toPlainText } from "../../../../lib/stage-connect";
 
 type Params = { slug: string };
-type GroupedCast = {
-  name: string | null;
-  items: Array<{
-    slug: string;
-    name: string;
-    nameEn?: string | null;
-    roleName: string | null;
-    isStarring: boolean | null;
-  }>;
-};
-
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
 export const revalidate = 3600;
 export const dynamicParams = true;
@@ -62,12 +53,6 @@ const summarizeCastEn = (
   if (names.length === 0) return "cast not listed yet";
   if (names.length <= 3) return names.join(", ");
   return `${names.slice(0, 3).join(", ")}, and more`;
-};
-
-const summarizeRoleNameEn = (value?: string | null) => {
-  const roles = splitSlashList(value);
-  if (roles.length <= 3) return value ?? null;
-  return `${roles.slice(0, 3).join(" / ")} / ${roles.length - 3} more`;
 };
 
 const getCastInitials = (name: string) => {
@@ -114,57 +99,6 @@ const extractScheduleCitiesEn = (period?: string | null) => {
     .map((city) => translateAnnotatedDisplayTextEn(city));
 
   return Array.from(new Set(cities));
-};
-
-const groupCast = (
-  cast: Array<{
-    slug: string;
-    name: string;
-    nameEn?: string | null;
-    roleName: string | null;
-    castGroup: string | null;
-    isStarring: boolean | null;
-  }>
-): GroupedCast[] => {
-  const groups = new Map<string, GroupedCast>();
-
-  for (const item of cast) {
-    const groupName = item.castGroup?.trim() || null;
-    const groupKey = groupName ?? "__ungrouped__";
-    const currentGroup = groups.get(groupKey) ?? { name: groupName, items: [] };
-    const existingIndex = currentGroup.items.findIndex((entry) => entry.slug === item.slug);
-
-    if (existingIndex === -1) {
-      currentGroup.items.push({
-        slug: item.slug,
-        name: item.name,
-        nameEn: item.nameEn,
-        roleName: item.roleName,
-        isStarring: item.isStarring,
-      });
-      groups.set(groupKey, currentGroup);
-      continue;
-    }
-
-    const existing = currentGroup.items[existingIndex];
-    const mergedRoles = Array.from(
-      new Set(
-        `${existing.roleName ?? ""} / ${item.roleName ?? ""}`
-          .split("/")
-          .map((value) => value.trim())
-          .filter(Boolean)
-      )
-    );
-
-    currentGroup.items[existingIndex] = {
-      ...existing,
-      roleName: mergedRoles.length > 0 ? mergedRoles.join(" / ") : null,
-      isStarring: Boolean(existing.isStarring || item.isStarring),
-    };
-    groups.set(groupKey, currentGroup);
-  }
-
-  return Array.from(groups.values());
 };
 
 const buildPlayMetaDescriptionEn = (play: NonNullable<Awaited<ReturnType<typeof getPlayDetailBySlug>>>) => {
@@ -232,7 +166,7 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
   const translatedVenues = venues.map((item) => translateAnnotatedDisplayTextEn(item));
   const translatedPeriod = normalizePeriodDisplayEn(translateAnnotatedDisplayTextEn(play.period));
   const scheduleCities = extractScheduleCitiesEn(play.period);
-  const groupedCast = groupCast(play.cast);
+  const groupedCast = groupPlayCast(play.cast);
   const shouldShowPublicInfoDetail = Boolean(play.period || play.venue);
   const synopsis = play.summaryEn || translateDisplayTextEn(play.summary);
   const displaySeriesName = play.franchiseName
@@ -475,9 +409,7 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
                         </div>
                         <div className="cast-card__body">
                           <div className="cast-name">{getEnglishActorName(item)}</div>
-                          {item.roleName ? (
-                            <div className="cast-role">{summarizeRoleNameEn(translateAnnotatedDisplayTextEn(item.roleName))}</div>
-                          ) : null}
+                          <PlayCastRoles roleName={item.roleName} credits={item.credits} locale="en" />
                           {item.isStarring ? <div className="cast-badge">MAIN CAST</div> : null}
                         </div>
                       </Link>
