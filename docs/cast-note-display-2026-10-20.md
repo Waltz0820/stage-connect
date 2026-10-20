@@ -25,3 +25,15 @@
 日英作品詳細、`lib/stage-connect.ts`、`lib/play-cast.ts`、`lib/en-copy.ts`、`components/PlayCastRoles.tsx`、`app/globals.css`、`package.json`、回帰テストと公開ページ確認スクリプト。本書と監査メモに経緯を記録。
 
 役名・学校名・プロフィールなどの未翻訳は既存の後続作業。今回の修正は保存済み注記の欠落を解消するもので、全シリーズの翻訳完了を意味しない。外部Drainsは未設定のまま。
+
+## 本番リリース結果
+
+- URL：https://stageconnect.jp/plays/allout2017#cast ／ https://stageconnect.jp/en/plays/allout2017#cast
+- 対象：Stage connectチームのstage-connect-ggdd、production。
+- Status：READY。公開コミット `83af8b9e1d1c2a6b71d2d4eba773ab0fcd99f230` をGitHub mainへfast-forward反映。
+- デプロイ：`dpl_7YvbqXdRtonWUKdmSffCzLz243Pd`。Next.js 15.5.28、ビルド約44秒。stageconnect.jpの割当成功を確認。
+- 公開URLで日英6ページの全20注記を全文照合し、一般60ページの確認も成功。
+- 当該デプロイの直近15分のerror／fatalログは0件。外部Drainsは未設定。現時点の検証結果であり、常時監視の導入ではない。
+- 前回本番：`dpl_5ZbquJMLxsZFynGQGnKPyzSqbCwk`。今回はDBのスキーマ変更・データ書き換えを行っていない。
+
+公開確認結果と保全対象のカード比較結果を非公開成果物 `cast-note-display-20261020/` に保存した。
