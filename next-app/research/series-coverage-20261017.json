@@ -1584,7 +1584,18 @@
       "name": "舞台『ACCA13区監察課』",
       "registeredDay": "2026-02-09",
       "plays": 1,
-      "protected": false
+      "protected": false,
+      "castRows": 15,
+      "castCoverageNote": "2017年舞台公演の公式15役を照合。人物6・配役13を追加し、既存2配役と候補2行を保持。アンサンブル区分が後続3役へ継続した抽出を補正し、通常14役と声の出演1役。文、秉泰・Ibuは作品クレジット。旧名荒木宏文と異体字山﨑晶吾は既存人物へ接続。全日程・会場・主要スタッフ・短い日英概要・英語タイトルとシリーズ説明を補完。日英34ページ・主要8テーブル全行比較・再実行で変更0件。人物総合監査・詳細英訳・現在配信・未記載役・掲載順と主演指定、別系統の朗読音楽劇は後続。",
+      "seriesAudit": {
+        "checkedAt": "2026-10-20T07:44:10.277Z",
+        "works": 1,
+        "castRows": 15,
+        "voiceCastRows": 1,
+        "publicPages": 34,
+        "report": "docs/acca2017-2026-10-20.md",
+        "research": "next-app/research/acca2017-20261020.json"
+      }
     },
     {
       "id": "fdeaf7b3-691a-4657-837a-387c32260623",
