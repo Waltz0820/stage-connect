@@ -1,0 +1,3092 @@
+{
+  "version": 1,
+  "batchId": "yuhaku2019-2020-20261020-01",
+  "expectedFranchise": {
+    "id": "c8fee609-5ef2-439f-a6de-60781c798d0f",
+    "name": "舞台「幽☆遊☆白書」（幽ステ）",
+    "created_at": "2025-12-13T04:58:27.220101+00:00",
+    "updated_at": "2025-12-13T04:58:27.220101+00:00",
+    "slug": "yuyu-hakusho",
+    "intro": null,
+    "description": "冨樫義博による90年代を代表する大ヒットオカルトバトル漫画を原作とした舞台作品。通称「幽ステ」。2019年に初演。不慮の事故で死んでしまった不良少年・浦飯幽助が霊界探偵として蘇り、桑原、蔵馬、飛影といった仲間たちと共に強大な妖怪たちと死闘を繰り広げる姿を描く。霊丸や炎殺黒龍波といった象徴的な必殺技を、映像効果だけでなく役者の身体表現を巧みに組み合わせて舞台上に再現。最大のインパクトとして、規格外の巨体を持つ戸愚呂弟などの人間離れしたキャラクターを、巨大な造形物や役者の怪演といった演劇特有の力技でねじ伏せるように実写化し、SNS等でも大きな反響を呼んだ。原作の持つ熱量や独特のコメディテンポを見事にすくい取り、往年のファンからも熱狂的な支持を集めたシリーズ。",
+    "origin_type": "漫画原作",
+    "origin_note": "原作：冨樫義博「幽☆遊☆白書」（集英社「ジャンプコミックス」刊）",
+    "production_companies": [
+      "Office ENDLESS"
+    ],
+    "related_franchise_ids": [],
+    "format": null,
+    "description_en": null,
+    "name_en": null
+  },
+  "franchisePatch": {
+    "format": "stage",
+    "name_en": "Yu Yu Hakusho: The Stage",
+    "description": "冨樫義博の漫画『幽☆遊☆白書』を原作とする舞台シリーズ。2019年に初演、2020年に続編「其の弐」を上演。霊界探偵となった浦飯幽助と仲間たちの戦いを描く。",
+    "description_en": "A stage series based on Yoshihiro Togashi’s manga Yu Yu Hakusho. The first production was staged in 2019, followed by Part Two in 2020, following Spirit Detective Yusuke Urameshi and his companions."
+  },
+  "oldPlay": {
+    "id": "94d9d600-38ed-4ded-8d63-26d391cf786f",
+    "slug": "yuyu-hakusho-stage",
+    "title": "舞台「幽☆遊☆白書」",
+    "franchise_id": "c8fee609-5ef2-439f-a6de-60781c798d0f",
+    "summary": "冨樫義博による不朽の名作漫画の舞台化。霊界探偵として蘇った浦飯幽助の活躍を描く。",
+    "period": "2019年8月",
+    "venue": "シアター1010 他",
+    "vod": {
+      "dmm": "#",
+      "unext": "#"
+    },
+    "genre": "battle_shonen",
+    "created_at": "2025-12-13T05:12:12.983557+00:00",
+    "updated_at": "2025-12-13T05:12:12.983557+00:00",
+    "tags": [
+      "アクション",
+      "名作",
+      "バトル"
+    ],
+    "credits": null,
+    "related_franchise_ids": [],
+    "summary_en": null,
+    "title_en": null
+  },
+  "patch": {
+    "title_en": "Yu Yu Hakusho: The Stage",
+    "summary_en": "A stage adaptation of Yoshihiro Togashi’s manga, following Yusuke Urameshi after he returns to life as a Spirit Detective.",
+    "period": "東京：2019年8月28日〜9月2日／大阪：2019年9月4日〜8日／福岡：2019年9月10日〜12日／愛知：2019年9月20日〜22日",
+    "venue": "シアター1010／森ノ宮ピロティホール／ももちパレス／一宮市民会館",
+    "vod": {},
+    "credits": [
+      {
+        "role": "原作",
+        "names": [
+          "冨樫義博「幽☆遊☆白書」（集英社「ジャンプコミックス」刊）"
+        ],
+        "is_core": true,
+        "sort_order": 1
+      },
+      {
+        "role": "脚本・演出",
+        "names": [
+          "御笠ノ忠次"
+        ],
+        "is_core": true,
+        "sort_order": 2
+      },
+      {
+        "role": "主題歌",
+        "names": [
+          "馬渡松子「微笑みの爆弾」"
+        ],
+        "is_core": true,
+        "sort_order": 3
+      },
+      {
+        "role": "舞台音楽",
+        "names": [
+          "Yu（vague）"
+        ],
+        "is_core": true,
+        "sort_order": 4
+      },
+      {
+        "role": "アンサンブル",
+        "names": [
+          "秋山皓郎",
+          "安藤勇雅",
+          "片伯部浩正",
+          "坂井良平",
+          "田﨑直輝",
+          "田邊謙",
+          "戸舘大河",
+          "名幸哲之介",
+          "野村新成",
+          "星直実",
+          "南井雄斗",
+          "村井雅和",
+          "山田貴斗"
+        ],
+        "is_core": false,
+        "sort_order": 5
+      }
+    ]
+  },
+  "removedCast": {
+    "id": "243d2fde-67b7-43b6-aea1-efbd729c5e7f",
+    "play_id": "94d9d600-38ed-4ded-8d63-26d391cf786f",
+    "actor_id": "b3bf8e98-26bc-457a-af8b-b7c48f8989ec",
+    "role_name": null,
+    "is_starring": true,
+    "created_at": "2025-12-13T05:18:03.3201+00:00",
+    "billing_order": null,
+    "cast_group": null,
+    "role_name_kana": null,
+    "role_type": null,
+    "note": null,
+    "updated_at": "2025-12-16T17:25:29.486976+00:00"
+  },
+  "removedCastActor": {
+    "id": "b3bf8e98-26bc-457a-af8b-b7c48f8989ec",
+    "slug": "kizu-tsubasa",
+    "name": "木津 つばさ",
+    "kana": "きづ つばさ",
+    "profile": "広島県出身の俳優。ルビーパレード所属。",
+    "image_url": null,
+    "sns": {
+      "x": "https://x.com/kizu_tsubasa",
+      "official": "https://www.ruby-parade.com/artist/kizu-tsubasa/",
+      "instagram": "https://www.instagram.com/tsubasa__kizu/"
+    },
+    "gender": "male",
+    "created_at": "2025-12-13T04:41:02.052969+00:00",
+    "updated_at": "2025-12-13T04:41:02.052969+00:00",
+    "tags": [
+      "ツッコミ",
+      "愛されキャラ"
+    ],
+    "featured_play_slugs": [],
+    "birthday": "1998-01-07",
+    "height_cm": 168,
+    "blood_type": "B",
+    "birthday_label": null,
+    "name_en": null,
+    "profile_en": null,
+    "death_date": null
+  },
+  "castPatches": [
+    {
+      "before": {
+        "id": "81ecec71-1735-4980-b3cd-1e38f2b074ee",
+        "play_id": "94d9d600-38ed-4ded-8d63-26d391cf786f",
+        "actor_id": "54670688-dceb-4291-9096-5875c732edd9",
+        "role_name": null,
+        "is_starring": true,
+        "created_at": "2025-12-13T05:18:03.3201+00:00",
+        "billing_order": null,
+        "cast_group": null,
+        "role_name_kana": null,
+        "role_type": null,
+        "note": null,
+        "updated_at": "2025-12-16T17:25:29.486976+00:00"
+      },
+      "patch": {
+        "role_name": "蔵馬"
+      },
+      "actor": {
+        "id": "54670688-dceb-4291-9096-5875c732edd9",
+        "slug": "suzuki-hiroki",
+        "name": "鈴木 拡樹",
+        "kana": "すずき ひろき",
+        "profile": "大阪府出身の俳優。株式会社オウサム所属。",
+        "image_url": null,
+        "sns": {
+          "x": "https://x.com/hiroki_0604",
+          "official": "https://suzuki-hiroki.jp/"
+        },
+        "gender": "male",
+        "created_at": "2025-12-11T17:26:17.810112+00:00",
+        "updated_at": "2025-12-11T17:26:17.810112+00:00",
+        "tags": [
+          "実力派",
+          "2.5次元トップランナー"
+        ],
+        "featured_play_slugs": [],
+        "birthday": "1985-06-04",
+        "height_cm": 173,
+        "blood_type": "AB",
+        "birthday_label": null,
+        "name_en": null,
+        "profile_en": null,
+        "death_date": null
+      }
+    },
+    {
+      "before": {
+        "id": "9b21a1f3-2bb2-4d21-803b-6a4b4f5b252d",
+        "play_id": "94d9d600-38ed-4ded-8d63-26d391cf786f",
+        "actor_id": "d9df8cc7-9c58-4ab5-bc19-3b5a75a2e9b6",
+        "role_name": null,
+        "is_starring": true,
+        "created_at": "2025-12-13T05:18:03.3201+00:00",
+        "billing_order": null,
+        "cast_group": null,
+        "role_name_kana": null,
+        "role_type": null,
+        "note": null,
+        "updated_at": "2025-12-16T17:25:29.486976+00:00"
+      },
+      "patch": {
+        "role_name": "飛影"
+      },
+      "actor": {
+        "id": "d9df8cc7-9c58-4ab5-bc19-3b5a75a2e9b6",
+        "slug": "hashimoto-shohei",
+        "name": "橋本 祥平",
+        "kana": "はしもと しょうへい",
+        "profile": "神奈川県出身の俳優・声優。キャストコーポレーション所属。",
+        "image_url": null,
+        "sns": {
+          "x": "https://twitter.com/hashimotoshohey",
+          "official": "https://hashimoto-shohei.com/"
+        },
+        "gender": "male",
+        "created_at": "2025-12-13T04:41:02.052969+00:00",
+        "updated_at": "2025-12-13T04:41:02.052969+00:00",
+        "tags": [
+          "ドラム",
+          "愛されキャラ"
+        ],
+        "featured_play_slugs": [
+          "bungo-stage",
+          "yuyu-hakusho-stage"
+        ],
+        "birthday": "1993-12-31",
+        "height_cm": 170,
+        "blood_type": "A",
+        "birthday_label": null,
+        "name_en": null,
+        "profile_en": null,
+        "death_date": null
+      }
+    }
+  ],
+  "actors": [
+    {
+      "actor": {
+        "id": "90cf10e0-7a35-411c-917b-1b2a06a8bf4c",
+        "slug": "hinata-mirai",
+        "name": "日向未来",
+        "kana": "ひなた みらい",
+        "profile": "埼玉県出身の俳優・タレント。元おはガール。舞台「幽☆遊☆白書」の雪村螢子役、アニメ『東京ミュウミュウ にゅ〜♡』の藍沢みんと役などを務める。旧名は未来。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "2002-09-13",
+        "height_cm": 155,
+        "blood_type": "O",
+        "birthday_label": null,
+        "name_en": "Mirai Hinata",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "未来",
+      "profileUrl": "https://www.just-pro.jp/talent/actor-talent-model/mirai_hinata/",
+      "evidence": [
+        {
+          "url": "https://www.just-pro.jp/talent/actor-talent-model/mirai_hinata/",
+          "checkedAt": "2026-10-20T06:04:38.130Z",
+          "note": "人物と当該配役の接点、採用した基本情報を照合。資料種別・項目別の範囲はnotesに記録。"
+        },
+        {
+          "url": "https://www.vip-times.co.jp/?talent_id=W17-0266",
+          "checkedAt": "2026-10-20T06:08:34.321Z",
+          "note": "人物と当該配役の接点、採用した基本情報を照合。資料種別・項目別の範囲はnotesに記録。"
+        },
+        {
+          "url": "https://wpb.shueisha.co.jp/gravure/news/20200127-110584/",
+          "checkedAt": "2026-10-20T06:03:01.710Z",
+          "note": "人物と当該配役の接点、採用した基本情報を照合。資料種別・項目別の範囲はnotesに記録。"
+        }
+      ],
+      "notes": [
+        "旧名未来の当該役・生年月日と現名日向未来の公式出演歴を照合。現在の公式に明記された155cm・O型・Mirai Hinataを採用。2020年の本人取材154cmは過去値として保持。2026年3月の退所はアデッソであり、現在参照できるジャストプロ個人ページとは別資料。現在所属の断定は紹介文に入れない。公式出演歴の其の弐=2021年3月という年は公演公式と違うため不採用。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "cfe1dc2c-1de1-47bf-8e6d-c1629b060252",
+        "slug": "kadoshima-mio",
+        "name": "角島美緒",
+        "kana": "かどしま みお",
+        "profile": "愛知県出身の俳優。クィーンズアベニュー所属。舞台芸術学院ミュージカル部本科出身。舞台「幽☆遊☆白書」では浦飯温子役を演じる。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1986-09-29",
+        "height_cm": 165,
+        "blood_type": "AB",
+        "birthday_label": null,
+        "name_en": "Mio Kadoshima",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "角島美緒",
+      "profileUrl": "https://www.queens-ave.com/talent/mio-kadoshima/",
+      "evidence": [
+        {
+          "url": "https://www.queens-ave.com/talent/mio-kadoshima/",
+          "checkedAt": "2026-10-20T06:02:51.856Z",
+          "note": "人物と当該配役の接点、採用した基本情報を照合。資料種別・項目別の範囲はnotesに記録。"
+        },
+        {
+          "url": "https://www.ameba.jp/profile/ameba/kadoshimamio/",
+          "checkedAt": "2026-10-20T06:08:30.433Z",
+          "note": "人物と当該配役の接点、採用した基本情報を照合。資料種別・項目別の範囲はnotesに記録。"
+        },
+        {
+          "url": "https://www.b-ch.com/titles/7031/",
+          "checkedAt": "2026-10-20T06:00:32.552Z",
+          "note": "人物と当該配役の接点、採用した基本情報を照合。資料種別・項目別の範囲はnotesに記録。"
+        }
+      ],
+      "notes": [
+        "現所属公式で生年月日・165cm・愛知県・AB型・Mio Kadoshima・出身校・2019年当該作品出演を確認。読みは本人公式ブログのプロフィール。旧二次資料の162cmではなく現所属公式165cmを採用。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "a2509257-5bb8-4b51-a92f-db5742ab637c",
+        "slug": "nitta-kenta",
+        "name": "新田健太",
+        "kana": "にった けんた",
+        "profile": "大阪府出身の俳優・アクションコレオグラファー。ジャパンアクションエンタープライズ所属。舞台「幽☆遊☆白書」の剛鬼役などを務める。公表身長は176.5cm。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1985-08-22",
+        "height_cm": null,
+        "blood_type": "A",
+        "birthday_label": null,
+        "name_en": null,
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "新田健太",
+      "profileUrl": "https://japanactionenterprise.com/talent/kenta-nitta/",
+      "evidence": [
+        {
+          "url": "https://japanactionenterprise.com/talent/kenta-nitta/",
+          "checkedAt": "2026-10-20T06:04:35.560Z",
+          "note": "人物と当該配役の接点、採用した基本情報を照合。資料種別・項目別の範囲はnotesに記録。"
+        },
+        {
+          "url": "https://kira-hai.net/nitta-kenta",
+          "checkedAt": "2026-10-20T05:57:55.923Z",
+          "note": "人物と当該配役の接点、採用した基本情報を照合。資料種別・項目別の範囲はnotesに記録。"
+        },
+        {
+          "url": "https://www.b-ch.com/titles/7031/",
+          "checkedAt": "2026-10-20T06:00:32.552Z",
+          "note": "人物と当該配役の接点、採用した基本情報を照合。資料種別・項目別の範囲はnotesに記録。"
+        }
+      ],
+      "notes": [
+        "現所属公式の読み・出身・職種と176.5cmを採用。身長列が整数なので丸めずnull、正確な値を紹介文に保存。生年1985とA型は第一参照先由来。公式は月日だけだが生年との矛盾はない。英語名はURLから生成しない。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "185a4c8c-88f6-45c4-9184-470ae36e55f3",
+        "slug": "elizabeth-marry",
+        "name": "エリザベス・マリー",
+        "kana": "えりざべす まりー",
+        "profile": "神奈川県出身の俳優・ダンサー・振付師。えりオフィス所属。舞台「幽☆遊☆白書」の幻海役、舞台「文豪ストレイドッグス」のルーシー・M役などを務める。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1988-11-26",
+        "height_cm": 155,
+        "blood_type": "A",
+        "birthday_label": null,
+        "name_en": "Elizabeth Marry",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "エリザベス・マリー",
+      "profileUrl": "https://www.erioffice.co.jp/talent_female/elizabethmarry/",
+      "evidence": [
+        {
+          "url": "https://www.erioffice.co.jp/talent_female/elizabethmarry/",
+          "checkedAt": "2026-10-20T06:06:21.858Z",
+          "note": "人物と当該配役の接点、採用した基本情報を照合。資料種別・項目別の範囲はnotesに記録。"
+        },
+        {
+          "url": "https://www.vip-times.co.jp/?talent_id=W14-1423",
+          "checkedAt": "2026-10-20T06:06:26.354Z",
+          "note": "人物と当該配役の接点、採用した基本情報を照合。資料種別・項目別の範囲はnotesに記録。"
+        },
+        {
+          "url": "https://www.tunecore.co.jp/artists/elizabeth-Marie",
+          "checkedAt": "2026-10-20T06:06:29.151Z",
+          "note": "人物と当該配役の接点、採用した基本情報を照合。資料種別・項目別の範囲はnotesに記録。"
+        }
+      ],
+      "notes": [
+        "現所属公式で生年月日・出身・身長・英語名・両年幻海役とルーシー役、振付歴を確認。読みとA型は日本タレント名鑑。検索で出たbambooの過去スケジュールを現在所属と誤認しない。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "1eb863f1-74e9-4a64-a6bd-64846be6a816",
+        "slug": "enoki-tomokazu",
+        "name": "榎木智一",
+        "kana": "えのき ともかず",
+        "profile": "福岡県北九州市出身の俳優。殺陣・アクションを特技とし、舞台「幽☆遊☆白書」其の弐では青龍役を演じる。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1981-01-30",
+        "height_cm": 175,
+        "blood_type": "A",
+        "birthday_label": null,
+        "name_en": null,
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "榎木智一",
+      "profileUrl": "https://mirrorliar.com/portfolios/enoki3",
+      "evidence": [
+        {
+          "url": "https://mirrorliar.com/portfolios/enoki3",
+          "checkedAt": "2026-10-20T06:02:54.587Z",
+          "note": "人物と当該配役の接点、採用した基本情報を照合。資料種別・項目別の範囲はnotesに記録。"
+        },
+        {
+          "url": "https://thetv.jp/person/1000050538/",
+          "checkedAt": "2026-10-20T06:06:31.731Z",
+          "note": "人物と当該配役の接点、採用した基本情報を照合。資料種別・項目別の範囲はnotesに記録。"
+        },
+        {
+          "url": "https://officeendless.com/sp/yuhaku/cast",
+          "checkedAt": "2026-10-20T05:59:07.121Z",
+          "note": "人物と当該配役の接点、採用した基本情報を照合。資料種別・項目別の範囲はnotesに記録。"
+        }
+      ],
+      "notes": [
+        "本人ポートフォリオに1981.1.30・A型・福岡県北九州市・175cm・殺陣歴。読みは編集媒体の人物紹介、当該役は公演公式。現在所属とフルネーム英字は今回未採用。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "661e87c5-6aa2-4f89-8daa-4c6b7eaf0adf",
+        "slug": "katayama-hironori",
+        "name": "片山浩憲",
+        "kana": "かたやま ひろのり",
+        "profile": "俳優。ライブ・スペクタクル「NARUTO-ナルト-」のトビ役、舞台「幽☆遊☆白書」其の弐の戸愚呂弟役などを演じる。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": null,
+        "height_cm": 183,
+        "blood_type": null,
+        "birthday_label": "4月21日",
+        "name_en": null,
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "片山浩憲",
+      "profileUrl": "https://kira-hai.net/katayama-hironori",
+      "evidence": [
+        {
+          "url": "https://kira-hai.net/katayama-hironori",
+          "checkedAt": "2026-10-20T06:02:46.790Z",
+          "note": "人物と当該配役の接点、採用した基本情報を照合。資料種別・項目別の範囲はnotesに記録。"
+        },
+        {
+          "url": "https://www.shonenjump.com/j/notice/2019/04/08/190408_naruto001.html",
+          "checkedAt": "2026-10-20T06:04:56.736Z",
+          "note": "人物と当該配役の接点、採用した基本情報を照合。資料種別・項目別の範囲はnotesに記録。"
+        },
+        {
+          "url": "https://officeendless.com/sp/yuhaku/cast",
+          "checkedAt": "2026-10-20T05:59:07.121Z",
+          "note": "人物と当該配役の接点、採用した基本情報を照合。資料種別・項目別の範囲はnotesに記録。"
+        }
+      ],
+      "notes": [
+        "第一参照先の欠けた生年を補わずbirthday=null、birthday_label=4月21日。読み・183cmは第一参照先。ジャンプ公式で別作品のトビ役、公演公式で戸愚呂弟役を照合。現在所属・出身・血液型・英字名は未確認。刀剣乱舞等の既存クレジットを個人配役へ変えない。"
+      ]
+    }
+  ],
+  "works": [
+    {
+      "year": 2019,
+      "play": null,
+      "rawSource": {
+        "sourceUrl": "https://kira-hai.net/yuhaku2019",
+        "title": "舞台「幽☆遊☆白書」",
+        "scheduleLines": [
+          "2019年8月28日-9月2日 シアター1010",
+          "2019年9月4日-8日 森ノ宮ピロティホール",
+          "2019年9月10日-13日 ももちパレス",
+          "2019年9月20日-22日 一宮市民会館"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "崎山つばさ",
+            "sourceActorUrl": "https://kira-hai.net/sakiyama-tsubasa",
+            "role_name": "浦飯幽助",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "郷本直也",
+            "sourceActorUrl": "https://kira-hai.net/gomoto-naoya",
+            "role_name": "桑原和真",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "鈴木拡樹",
+            "sourceActorUrl": "https://kira-hai.net/suzuki-hiroki",
+            "role_name": "蔵馬",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "橋本祥平",
+            "sourceActorUrl": "https://kira-hai.net/hashimoto-shohei",
+            "role_name": "飛影",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "未来",
+            "sourceActorUrl": null,
+            "role_name": "雪村螢子",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "角島美緒",
+            "sourceActorUrl": null,
+            "role_name": "浦飯温子",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "平田裕香",
+            "sourceActorUrl": "https://kira-hai.net/hirata-yuka",
+            "role_name": "ぼたん",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "新田健太",
+            "sourceActorUrl": "https://kira-hai.net/nitta-kenta",
+            "role_name": "剛鬼",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "エリザベス・マリー",
+            "sourceActorUrl": null,
+            "role_name": "幻海",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "荒木宏文",
+            "sourceActorUrl": "https://kira-hai.net/araki-hirofumi",
+            "role_name": "コエンマ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "秋山皓郎",
+            "sourceActorUrl": "https://kira-hai.net/akiyama-hiroo",
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "安藤勇雅",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "片伯部浩正",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "坂井良平",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "田﨑直輝",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "田邊謙",
+            "sourceActorUrl": "https://kira-hai.net/tanabe-ken",
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "戸舘大河",
+            "sourceActorUrl": "https://kira-hai.net/todate-taiga",
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "名幸哲之介",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "野村新成",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "星直実",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "南井雄斗",
+            "sourceActorUrl": "https://kira-hai.net/minai-yuto",
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "村井雅和",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "山田貴斗",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          }
+        ],
+        "unparsed": []
+      },
+      "source": {
+        "sourceUrl": "https://kira-hai.net/yuhaku2019",
+        "title": "舞台「幽☆遊☆白書」",
+        "scheduleLines": [
+          "2019年8月28日-9月2日 シアター1010",
+          "2019年9月4日-8日 森ノ宮ピロティホール",
+          "2019年9月10日-13日 ももちパレス",
+          "2019年9月20日-22日 一宮市民会館"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "崎山つばさ",
+            "sourceActorUrl": "https://kira-hai.net/sakiyama-tsubasa",
+            "role_name": "浦飯幽助",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "郷本直也",
+            "sourceActorUrl": "https://kira-hai.net/gomoto-naoya",
+            "role_name": "桑原和真",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "鈴木拡樹",
+            "sourceActorUrl": "https://kira-hai.net/suzuki-hiroki",
+            "role_name": "蔵馬",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "橋本祥平",
+            "sourceActorUrl": "https://kira-hai.net/hashimoto-shohei",
+            "role_name": "飛影",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "未来",
+            "sourceActorUrl": null,
+            "role_name": "雪村螢子",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "角島美緒",
+            "sourceActorUrl": null,
+            "role_name": "浦飯温子",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "平田裕香",
+            "sourceActorUrl": "https://kira-hai.net/hirata-yuka",
+            "role_name": "ぼたん",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "新田健太",
+            "sourceActorUrl": "https://kira-hai.net/nitta-kenta",
+            "role_name": "剛鬼",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "エリザベス・マリー",
+            "sourceActorUrl": null,
+            "role_name": "幻海",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "荒木宏文",
+            "sourceActorUrl": "https://kira-hai.net/araki-hirofumi",
+            "role_name": "コエンマ",
+            "cast_group": null
+          }
+        ],
+        "unparsed": [],
+        "checkedAt": "2026-10-20T05:59:02.147Z",
+        "creditOnly": {
+          "rawCast": [
+            {
+              "sourceActorName": "秋山皓郎",
+              "sourceActorUrl": "https://kira-hai.net/akiyama-hiroo",
+              "role_name": null,
+              "cast_group": "アンサンブル"
+            },
+            {
+              "sourceActorName": "安藤勇雅",
+              "sourceActorUrl": null,
+              "role_name": null,
+              "cast_group": "アンサンブル"
+            },
+            {
+              "sourceActorName": "片伯部浩正",
+              "sourceActorUrl": null,
+              "role_name": null,
+              "cast_group": "アンサンブル"
+            },
+            {
+              "sourceActorName": "坂井良平",
+              "sourceActorUrl": null,
+              "role_name": null,
+              "cast_group": "アンサンブル"
+            },
+            {
+              "sourceActorName": "田﨑直輝",
+              "sourceActorUrl": null,
+              "role_name": null,
+              "cast_group": "アンサンブル"
+            },
+            {
+              "sourceActorName": "田邊謙",
+              "sourceActorUrl": "https://kira-hai.net/tanabe-ken",
+              "role_name": null,
+              "cast_group": "アンサンブル"
+            },
+            {
+              "sourceActorName": "戸舘大河",
+              "sourceActorUrl": "https://kira-hai.net/todate-taiga",
+              "role_name": null,
+              "cast_group": "アンサンブル"
+            },
+            {
+              "sourceActorName": "名幸哲之介",
+              "sourceActorUrl": null,
+              "role_name": null,
+              "cast_group": "アンサンブル"
+            },
+            {
+              "sourceActorName": "野村新成",
+              "sourceActorUrl": null,
+              "role_name": null,
+              "cast_group": "アンサンブル"
+            },
+            {
+              "sourceActorName": "星直実",
+              "sourceActorUrl": null,
+              "role_name": null,
+              "cast_group": "アンサンブル"
+            },
+            {
+              "sourceActorName": "南井雄斗",
+              "sourceActorUrl": "https://kira-hai.net/minai-yuto",
+              "role_name": null,
+              "cast_group": "アンサンブル"
+            },
+            {
+              "sourceActorName": "村井雅和",
+              "sourceActorUrl": null,
+              "role_name": null,
+              "cast_group": "アンサンブル"
+            },
+            {
+              "sourceActorName": "山田貴斗",
+              "sourceActorUrl": null,
+              "role_name": null,
+              "cast_group": "アンサンブル"
+            }
+          ],
+          "unparsed": [],
+          "decision": "出演情報を作品クレジットへ保存。2020年田邊謙は公式告知を優先し出演見合わせに区別。"
+        }
+      },
+      "stage": {
+        "workUrl": "https://kira-hai.net/yuhaku2019",
+        "key": "b68e009a2aa39301c0c62f0fed81823188a046ac60eafd5d3a16d64437c730a5",
+        "items": [
+          {
+            "source_actor_name": "崎山つばさ",
+            "source_actor_url": "https://kira-hai.net/sakiyama-tsubasa",
+            "source_work_title": "舞台「幽☆遊☆白書」",
+            "source_year": 2019,
+            "source_role_raw": "浦飯幽助",
+            "source_role_names": [
+              "浦飯幽助"
+            ],
+            "source_cast_group": null,
+            "source_order": 1,
+            "source_credit_key": "702ac82f237820b0795d",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/yuhaku2019",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "ad8ff0b35fd34cec1db187b4840c2d5ec752cfdb9a1aa32c5f797e5f512c3984",
+              "review_fingerprint": "2532c947541a7041d4006d351259439c0db5269e67229488f7f967bf6b94e40f",
+              "snapshot_fingerprint": "d28e2a47a643bc539a381ca206b602f9d07b6d2e80bf231e35cdfebb53360031",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "ae8f9195-c18d-4d87-ae48-fbf211df21e5",
+            "matched_play_id": "94d9d600-38ed-4ded-8d63-26d391cf786f",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "郷本直也",
+            "source_actor_url": "https://kira-hai.net/gomoto-naoya",
+            "source_work_title": "舞台「幽☆遊☆白書」",
+            "source_year": 2019,
+            "source_role_raw": "桑原和真",
+            "source_role_names": [
+              "桑原和真"
+            ],
+            "source_cast_group": null,
+            "source_order": 2,
+            "source_credit_key": "1f8afe31c28c946a5c34",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/yuhaku2019",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "ad8ff0b35fd34cec1db187b4840c2d5ec752cfdb9a1aa32c5f797e5f512c3984",
+              "review_fingerprint": "2532c947541a7041d4006d351259439c0db5269e67229488f7f967bf6b94e40f",
+              "snapshot_fingerprint": "d28e2a47a643bc539a381ca206b602f9d07b6d2e80bf231e35cdfebb53360031",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "e57de3c5-d324-477b-b323-6009311c2ca3",
+            "matched_play_id": "94d9d600-38ed-4ded-8d63-26d391cf786f",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "未来",
+            "source_actor_url": null,
+            "source_work_title": "舞台「幽☆遊☆白書」",
+            "source_year": 2019,
+            "source_role_raw": "雪村螢子",
+            "source_role_names": [
+              "雪村螢子"
+            ],
+            "source_cast_group": null,
+            "source_order": 5,
+            "source_credit_key": "20d7a2680c349943c4b5",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/yuhaku2019",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://www.just-pro.jp/talent/actor-talent-model/mirai_hinata/",
+                  "checkedAt": "2026-10-20T06:04:38.130Z",
+                  "note": "人物と当該配役の接点、採用した基本情報を照合。資料種別・項目別の範囲はnotesに記録。"
+                },
+                {
+                  "url": "https://www.vip-times.co.jp/?talent_id=W17-0266",
+                  "checkedAt": "2026-10-20T06:08:34.321Z",
+                  "note": "人物と当該配役の接点、採用した基本情報を照合。資料種別・項目別の範囲はnotesに記録。"
+                },
+                {
+                  "url": "https://wpb.shueisha.co.jp/gravure/news/20200127-110584/",
+                  "checkedAt": "2026-10-20T06:03:01.710Z",
+                  "note": "人物と当該配役の接点、採用した基本情報を照合。資料種別・項目別の範囲はnotesに記録。"
+                }
+              ],
+              "source_fingerprint": "ad8ff0b35fd34cec1db187b4840c2d5ec752cfdb9a1aa32c5f797e5f512c3984",
+              "review_fingerprint": "2532c947541a7041d4006d351259439c0db5269e67229488f7f967bf6b94e40f",
+              "snapshot_fingerprint": "d28e2a47a643bc539a381ca206b602f9d07b6d2e80bf231e35cdfebb53360031",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "90cf10e0-7a35-411c-917b-1b2a06a8bf4c",
+            "matched_play_id": "94d9d600-38ed-4ded-8d63-26d391cf786f",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "角島美緒",
+            "source_actor_url": null,
+            "source_work_title": "舞台「幽☆遊☆白書」",
+            "source_year": 2019,
+            "source_role_raw": "浦飯温子",
+            "source_role_names": [
+              "浦飯温子"
+            ],
+            "source_cast_group": null,
+            "source_order": 6,
+            "source_credit_key": "2034df327cd9054d187b",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/yuhaku2019",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://www.queens-ave.com/talent/mio-kadoshima/",
+                  "checkedAt": "2026-10-20T06:02:51.856Z",
+                  "note": "人物と当該配役の接点、採用した基本情報を照合。資料種別・項目別の範囲はnotesに記録。"
+                },
+                {
+                  "url": "https://www.ameba.jp/profile/ameba/kadoshimamio/",
+                  "checkedAt": "2026-10-20T06:08:30.433Z",
+                  "note": "人物と当該配役の接点、採用した基本情報を照合。資料種別・項目別の範囲はnotesに記録。"
+                },
+                {
+                  "url": "https://www.b-ch.com/titles/7031/",
+                  "checkedAt": "2026-10-20T06:00:32.552Z",
+                  "note": "人物と当該配役の接点、採用した基本情報を照合。資料種別・項目別の範囲はnotesに記録。"
+                }
+              ],
+              "source_fingerprint": "ad8ff0b35fd34cec1db187b4840c2d5ec752cfdb9a1aa32c5f797e5f512c3984",
+              "review_fingerprint": "2532c947541a7041d4006d351259439c0db5269e67229488f7f967bf6b94e40f",
+              "snapshot_fingerprint": "d28e2a47a643bc539a381ca206b602f9d07b6d2e80bf231e35cdfebb53360031",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "cfe1dc2c-1de1-47bf-8e6d-c1629b060252",
+            "matched_play_id": "94d9d600-38ed-4ded-8d63-26d391cf786f",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "平田裕香",
+            "source_actor_url": "https://kira-hai.net/hirata-yuka",
+            "source_work_title": "舞台「幽☆遊☆白書」",
+            "source_year": 2019,
+            "source_role_raw": "ぼたん",
+            "source_role_names": [
+              "ぼたん"
+            ],
+            "source_cast_group": null,
+            "source_order": 7,
+            "source_credit_key": "82b40c87c10f506c1eb2",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/yuhaku2019",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "ad8ff0b35fd34cec1db187b4840c2d5ec752cfdb9a1aa32c5f797e5f512c3984",
+              "review_fingerprint": "2532c947541a7041d4006d351259439c0db5269e67229488f7f967bf6b94e40f",
+              "snapshot_fingerprint": "d28e2a47a643bc539a381ca206b602f9d07b6d2e80bf231e35cdfebb53360031",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "1618e2ce-c0de-4ecb-9f59-e23adfbc41bf",
+            "matched_play_id": "94d9d600-38ed-4ded-8d63-26d391cf786f",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "新田健太",
+            "source_actor_url": "https://kira-hai.net/nitta-kenta",
+            "source_work_title": "舞台「幽☆遊☆白書」",
+            "source_year": 2019,
+            "source_role_raw": "剛鬼",
+            "source_role_names": [
+              "剛鬼"
+            ],
+            "source_cast_group": null,
+            "source_order": 8,
+            "source_credit_key": "475a455db4f34478cd47",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/yuhaku2019",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://japanactionenterprise.com/talent/kenta-nitta/",
+                  "checkedAt": "2026-10-20T06:04:35.560Z",
+                  "note": "人物と当該配役の接点、採用した基本情報を照合。資料種別・項目別の範囲はnotesに記録。"
+                },
+                {
+                  "url": "https://kira-hai.net/nitta-kenta",
+                  "checkedAt": "2026-10-20T05:57:55.923Z",
+                  "note": "人物と当該配役の接点、採用した基本情報を照合。資料種別・項目別の範囲はnotesに記録。"
+                },
+                {
+                  "url": "https://www.b-ch.com/titles/7031/",
+                  "checkedAt": "2026-10-20T06:00:32.552Z",
+                  "note": "人物と当該配役の接点、採用した基本情報を照合。資料種別・項目別の範囲はnotesに記録。"
+                }
+              ],
+              "source_fingerprint": "ad8ff0b35fd34cec1db187b4840c2d5ec752cfdb9a1aa32c5f797e5f512c3984",
+              "review_fingerprint": "2532c947541a7041d4006d351259439c0db5269e67229488f7f967bf6b94e40f",
+              "snapshot_fingerprint": "d28e2a47a643bc539a381ca206b602f9d07b6d2e80bf231e35cdfebb53360031",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "a2509257-5bb8-4b51-a92f-db5742ab637c",
+            "matched_play_id": "94d9d600-38ed-4ded-8d63-26d391cf786f",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "エリザベス・マリー",
+            "source_actor_url": null,
+            "source_work_title": "舞台「幽☆遊☆白書」",
+            "source_year": 2019,
+            "source_role_raw": "幻海",
+            "source_role_names": [
+              "幻海"
+            ],
+            "source_cast_group": null,
+            "source_order": 9,
+            "source_credit_key": "be71acb86626095ff328",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/yuhaku2019",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://www.erioffice.co.jp/talent_female/elizabethmarry/",
+                  "checkedAt": "2026-10-20T06:06:21.858Z",
+                  "note": "人物と当該配役の接点、採用した基本情報を照合。資料種別・項目別の範囲はnotesに記録。"
+                },
+                {
+                  "url": "https://www.vip-times.co.jp/?talent_id=W14-1423",
+                  "checkedAt": "2026-10-20T06:06:26.354Z",
+                  "note": "人物と当該配役の接点、採用した基本情報を照合。資料種別・項目別の範囲はnotesに記録。"
+                },
+                {
+                  "url": "https://www.tunecore.co.jp/artists/elizabeth-Marie",
+                  "checkedAt": "2026-10-20T06:06:29.151Z",
+                  "note": "人物と当該配役の接点、採用した基本情報を照合。資料種別・項目別の範囲はnotesに記録。"
+                }
+              ],
+              "source_fingerprint": "ad8ff0b35fd34cec1db187b4840c2d5ec752cfdb9a1aa32c5f797e5f512c3984",
+              "review_fingerprint": "2532c947541a7041d4006d351259439c0db5269e67229488f7f967bf6b94e40f",
+              "snapshot_fingerprint": "d28e2a47a643bc539a381ca206b602f9d07b6d2e80bf231e35cdfebb53360031",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "185a4c8c-88f6-45c4-9184-470ae36e55f3",
+            "matched_play_id": "94d9d600-38ed-4ded-8d63-26d391cf786f",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "荒木宏文",
+            "source_actor_url": "https://kira-hai.net/araki-hirofumi",
+            "source_work_title": "舞台「幽☆遊☆白書」",
+            "source_year": 2019,
+            "source_role_raw": "コエンマ",
+            "source_role_names": [
+              "コエンマ"
+            ],
+            "source_cast_group": null,
+            "source_order": 10,
+            "source_credit_key": "8e376061c09dc9389804",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/yuhaku2019",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/araki-hirofumi",
+                  "checkedAt": "2026-10-20T06:02:49.259Z",
+                  "note": "旧名の個人ページから現所属の新木宏典の同一個人URLへ接続。"
+                },
+                {
+                  "url": "https://www.watanabepro.co.jp/mypage/10000022/",
+                  "checkedAt": "2026-10-20T06:06:36.003Z",
+                  "note": "現名と生年月日、当該作品出演を照合。"
+                }
+              ],
+              "source_fingerprint": "ad8ff0b35fd34cec1db187b4840c2d5ec752cfdb9a1aa32c5f797e5f512c3984",
+              "review_fingerprint": "2532c947541a7041d4006d351259439c0db5269e67229488f7f967bf6b94e40f",
+              "snapshot_fingerprint": "d28e2a47a643bc539a381ca206b602f9d07b6d2e80bf231e35cdfebb53360031",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "61b66c0c-1429-4afe-ad97-3aa2bd71eccb",
+            "matched_play_id": "94d9d600-38ed-4ded-8d63-26d391cf786f",
+            "status": "pending"
+          }
+        ]
+      },
+      "records": [
+        {
+          "actor": {
+            "id": "ae8f9195-c18d-4d87-ae48-fbf211df21e5",
+            "slug": "sakiyama-tsubasa",
+            "name": "崎山 つばさ",
+            "kana": "さきやま つばさ",
+            "profile": "千葉県出身の俳優・アーティスト。Star Dream Company所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/team_sakiyama",
+              "official": "https://tsubasa-sakiyama.net/",
+              "instagram": "https://www.instagram.com/sakiyamaofficial/"
+            },
+            "gender": "male",
+            "created_at": "2026-04-05T16:36:20.984891+00:00",
+            "updated_at": "2026-04-05T16:36:20.984891+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1989-11-03",
+            "height_cm": 175,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "崎山つばさ",
+            "sourceActorUrl": "https://kira-hai.net/sakiyama-tsubasa",
+            "role_name": "浦飯幽助",
+            "cast_group": null
+          },
+          "sourceCreditKey": "702ac82f237820b0795d",
+          "sourceOrder": 1
+        },
+        {
+          "actor": {
+            "id": "e57de3c5-d324-477b-b323-6009311c2ca3",
+            "slug": "gomoto-naoya",
+            "name": "郷本 直也",
+            "kana": "ごうもと なおや",
+            "profile": "大阪府出身の俳優。芸能事務所ナノスクエア代表取締役社長。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/GomotoNaoya",
+              "official": "https://ameblo.jp/naoya-g-sanpo/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-15T15:02:38.988564+00:00",
+            "updated_at": "2026-03-15T15:02:38.988564+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1980-04-25",
+            "height_cm": 186,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "郷本直也",
+            "sourceActorUrl": "https://kira-hai.net/gomoto-naoya",
+            "role_name": "桑原和真",
+            "cast_group": null
+          },
+          "sourceCreditKey": "1f8afe31c28c946a5c34",
+          "sourceOrder": 2
+        },
+        {
+          "actor": {
+            "id": "90cf10e0-7a35-411c-917b-1b2a06a8bf4c",
+            "slug": "hinata-mirai",
+            "name": "日向未来",
+            "kana": "ひなた みらい",
+            "profile": "埼玉県出身の俳優・タレント。元おはガール。舞台「幽☆遊☆白書」の雪村螢子役、アニメ『東京ミュウミュウ にゅ〜♡』の藍沢みんと役などを務める。旧名は未来。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "2002-09-13",
+            "height_cm": 155,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": "Mirai Hinata",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "未来",
+            "sourceActorUrl": null,
+            "role_name": "雪村螢子",
+            "cast_group": null
+          },
+          "sourceCreditKey": "20d7a2680c349943c4b5",
+          "sourceOrder": 5
+        },
+        {
+          "actor": {
+            "id": "cfe1dc2c-1de1-47bf-8e6d-c1629b060252",
+            "slug": "kadoshima-mio",
+            "name": "角島美緒",
+            "kana": "かどしま みお",
+            "profile": "愛知県出身の俳優。クィーンズアベニュー所属。舞台芸術学院ミュージカル部本科出身。舞台「幽☆遊☆白書」では浦飯温子役を演じる。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1986-09-29",
+            "height_cm": 165,
+            "blood_type": "AB",
+            "birthday_label": null,
+            "name_en": "Mio Kadoshima",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "角島美緒",
+            "sourceActorUrl": null,
+            "role_name": "浦飯温子",
+            "cast_group": null
+          },
+          "sourceCreditKey": "2034df327cd9054d187b",
+          "sourceOrder": 6
+        },
+        {
+          "actor": {
+            "id": "1618e2ce-c0de-4ecb-9f59-e23adfbc41bf",
+            "slug": "hirata-yuka",
+            "name": "平田裕香",
+            "kana": "ひらた ゆか",
+            "profile": "俳優。『ROCK MUSICAL BLEACH』の卯ノ花烈役、舞台『デビルマン ～不動を待ちながら～』の牧村美樹役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-19T09:07:56.196763+00:00",
+            "updated_at": "2026-10-19T09:07:56.196763+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1983-09-15",
+            "height_cm": 158,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "平田裕香",
+            "sourceActorUrl": "https://kira-hai.net/hirata-yuka",
+            "role_name": "ぼたん",
+            "cast_group": null
+          },
+          "sourceCreditKey": "82b40c87c10f506c1eb2",
+          "sourceOrder": 7
+        },
+        {
+          "actor": {
+            "id": "a2509257-5bb8-4b51-a92f-db5742ab637c",
+            "slug": "nitta-kenta",
+            "name": "新田健太",
+            "kana": "にった けんた",
+            "profile": "大阪府出身の俳優・アクションコレオグラファー。ジャパンアクションエンタープライズ所属。舞台「幽☆遊☆白書」の剛鬼役などを務める。公表身長は176.5cm。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1985-08-22",
+            "height_cm": null,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "新田健太",
+            "sourceActorUrl": "https://kira-hai.net/nitta-kenta",
+            "role_name": "剛鬼",
+            "cast_group": null
+          },
+          "sourceCreditKey": "475a455db4f34478cd47",
+          "sourceOrder": 8
+        },
+        {
+          "actor": {
+            "id": "185a4c8c-88f6-45c4-9184-470ae36e55f3",
+            "slug": "elizabeth-marry",
+            "name": "エリザベス・マリー",
+            "kana": "えりざべす まりー",
+            "profile": "神奈川県出身の俳優・ダンサー・振付師。えりオフィス所属。舞台「幽☆遊☆白書」の幻海役、舞台「文豪ストレイドッグス」のルーシー・M役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1988-11-26",
+            "height_cm": 155,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": "Elizabeth Marry",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "エリザベス・マリー",
+            "sourceActorUrl": null,
+            "role_name": "幻海",
+            "cast_group": null
+          },
+          "sourceCreditKey": "be71acb86626095ff328",
+          "sourceOrder": 9
+        },
+        {
+          "actor": {
+            "id": "61b66c0c-1429-4afe-ad97-3aa2bd71eccb",
+            "slug": "araki-hirofumi",
+            "name": "新木 宏典",
+            "kana": "あらき ひろふみ",
+            "profile": "兵庫県出身の俳優・声優。ワタナベエンターテインメント所属。D-BOYSのメンバー 兼 D☆DATEリーダー。旧芸名は荒木宏文。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/araki_hiro0614",
+              "instagram": "https://www.instagram.com/araki_hiro0614/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-19T17:35:58.50398+00:00",
+            "updated_at": "2026-03-19T17:35:58.50398+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1983-06-14",
+            "height_cm": 174,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "荒木宏文",
+            "sourceActorUrl": "https://kira-hai.net/araki-hirofumi",
+            "role_name": "コエンマ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "8e376061c09dc9389804",
+          "sourceOrder": 10
+        }
+      ],
+      "keptCasts": [
+        {
+          "id": "81ecec71-1735-4980-b3cd-1e38f2b074ee",
+          "play_id": "94d9d600-38ed-4ded-8d63-26d391cf786f",
+          "actor_id": "54670688-dceb-4291-9096-5875c732edd9",
+          "role_name": "蔵馬",
+          "is_starring": true,
+          "created_at": "2025-12-13T05:18:03.3201+00:00",
+          "billing_order": null,
+          "cast_group": null,
+          "role_name_kana": null,
+          "role_type": null,
+          "note": null,
+          "updated_at": "2025-12-16T17:25:29.486976+00:00"
+        },
+        {
+          "id": "9b21a1f3-2bb2-4d21-803b-6a4b4f5b252d",
+          "play_id": "94d9d600-38ed-4ded-8d63-26d391cf786f",
+          "actor_id": "d9df8cc7-9c58-4ab5-bc19-3b5a75a2e9b6",
+          "role_name": "飛影",
+          "is_starring": true,
+          "created_at": "2025-12-13T05:18:03.3201+00:00",
+          "billing_order": null,
+          "cast_group": null,
+          "role_name_kana": null,
+          "role_type": null,
+          "note": null,
+          "updated_at": "2025-12-16T17:25:29.486976+00:00"
+        }
+      ],
+      "sourceFingerprint": "ad8ff0b35fd34cec1db187b4840c2d5ec752cfdb9a1aa32c5f797e5f512c3984",
+      "legacyCandidates": [],
+      "expectedCastCount": 10
+    },
+    {
+      "year": 2020,
+      "play": {
+        "id": "82a2df2a-d5df-46d7-bfa9-e825eaabe0fa",
+        "slug": "yuhaku2020",
+        "title": "舞台「幽☆遊☆白書」其の弐",
+        "franchise_id": "c8fee609-5ef2-439f-a6de-60781c798d0f",
+        "summary": "霊界探偵となった浦飯幽助は、桑原、蔵馬、飛影とともに妖怪たちとの戦いへ向かう。新たな強敵との出会いを描く、舞台シリーズの第2弾。",
+        "period": "東京：2020年12月5日〜15日（12月4日18:30は中止）／大阪：2020年12月20日（12月18日18:30・19日13:00／17:30は中止）／京都：2020年12月23日〜30日",
+        "venue": "品川プリンスホテル ステラボール／COOL JAPAN PARK OSAKA WWホール／京都劇場",
+        "vod": null,
+        "genre": null,
+        "tags": [],
+        "credits": [
+          {
+            "role": "原作",
+            "names": [
+              "冨樫義博「幽☆遊☆白書」（集英社「ジャンプコミックス」刊）"
+            ],
+            "is_core": true,
+            "sort_order": 1
+          },
+          {
+            "role": "脚本",
+            "names": [
+              "伊藤栄之進"
+            ],
+            "is_core": true,
+            "sort_order": 2
+          },
+          {
+            "role": "演出",
+            "names": [
+              "伊藤栄之進",
+              "加古臨王",
+              "荒木宏文"
+            ],
+            "is_core": true,
+            "sort_order": 3
+          },
+          {
+            "role": "音楽",
+            "names": [
+              "佐々木久夫（SeanNorth）"
+            ],
+            "is_core": true,
+            "sort_order": 4
+          },
+          {
+            "role": "出演（役名未記載）",
+            "names": [
+              "中村哲人",
+              "秋山皓郎",
+              "安藤勇雅",
+              "高間淳平",
+              "田﨑直輝",
+              "戸舘大河"
+            ],
+            "is_core": false,
+            "sort_order": 5
+          },
+          {
+            "role": "出演見合わせ",
+            "names": [
+              "田邊謙（当初発表キャスト。2020年11月29日の公式告知で出演シーンの再編集を発表）"
+            ],
+            "is_core": false,
+            "sort_order": 6
+          },
+          {
+            "role": "公演補足",
+            "names": [
+              "東京の当初初日12月4日18:30、大阪12月18日18:30・19日13:00／17:30の計4公演は中止。大阪は12月20日12:00／16:30の2公演を上演。"
+            ],
+            "is_core": false,
+            "sort_order": 7
+          }
+        ],
+        "related_franchise_ids": [],
+        "summary_en": "In the second stage production, Spirit Detective Yusuke Urameshi joins Kuwabara, Kurama and Hiei in battles against demons and encounters new, formidable opponents.",
+        "title_en": "Yu Yu Hakusho: The Stage -Part Two-"
+      },
+      "rawSource": {
+        "sourceUrl": "https://kira-hai.net/yuhaku2020",
+        "title": "舞台「幽☆遊☆白書」其の弐",
+        "scheduleLines": [
+          "2020年12月4日-15日 品川プリンスホテル ステラボール",
+          "2020年12月18日-20日 COOL JAPAN PARK OSAKA WWホール",
+          "2020年12月23日-30日 京都劇場"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "崎山つばさ",
+            "sourceActorUrl": "https://kira-hai.net/sakiyama-tsubasa",
+            "role_name": "浦飯幽助",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "郷本直也",
+            "sourceActorUrl": "https://kira-hai.net/gomoto-naoya",
+            "role_name": "桑原和真",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "鈴木拡樹",
+            "sourceActorUrl": "https://kira-hai.net/suzuki-hiroki",
+            "role_name": "蔵馬",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "橋本祥平",
+            "sourceActorUrl": "https://kira-hai.net/hashimoto-shohei",
+            "role_name": "飛影",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "未来",
+            "sourceActorUrl": null,
+            "role_name": "雪村螢子",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "平田裕香",
+            "sourceActorUrl": "https://kira-hai.net/hirata-yuka",
+            "role_name": "ぼたん",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "エリザベス・マリー",
+            "sourceActorUrl": null,
+            "role_name": "幻海",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "木津つばさ",
+            "sourceActorUrl": "https://kira-hai.net/kizu-tsubasa",
+            "role_name": "朱雀",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "榎木智一",
+            "sourceActorUrl": null,
+            "role_name": "青龍",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "田上真里奈",
+            "sourceActorUrl": "https://kira-hai.net/tanoue-marina",
+            "role_name": "雪菜",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "荒木健太朗",
+            "sourceActorUrl": "https://kira-hai.net/araki-kentaro",
+            "role_name": "左京",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "片山浩憲",
+            "sourceActorUrl": "https://kira-hai.net/katayama-hironori",
+            "role_name": "戸愚呂弟",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "中河内雅貴",
+            "sourceActorUrl": "https://kira-hai.net/nakagauchi-masataka",
+            "role_name": "戸愚呂兄",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "荒木宏文",
+            "sourceActorUrl": "https://kira-hai.net/araki-hirofumi",
+            "role_name": "コエンマ",
+            "cast_group": null
+          }
+        ],
+        "unparsed": [
+          "中村哲人",
+          "秋山皓郎",
+          "安藤勇雅",
+          "高間淳平",
+          "田﨑直輝",
+          "田邊謙",
+          "戸舘大河"
+        ]
+      },
+      "source": {
+        "sourceUrl": "https://kira-hai.net/yuhaku2020",
+        "title": "舞台「幽☆遊☆白書」其の弐",
+        "scheduleLines": [
+          "2020年12月4日-15日 品川プリンスホテル ステラボール",
+          "2020年12月18日-20日 COOL JAPAN PARK OSAKA WWホール",
+          "2020年12月23日-30日 京都劇場"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "崎山つばさ",
+            "sourceActorUrl": "https://kira-hai.net/sakiyama-tsubasa",
+            "role_name": "浦飯幽助",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "郷本直也",
+            "sourceActorUrl": "https://kira-hai.net/gomoto-naoya",
+            "role_name": "桑原和真",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "鈴木拡樹",
+            "sourceActorUrl": "https://kira-hai.net/suzuki-hiroki",
+            "role_name": "蔵馬",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "橋本祥平",
+            "sourceActorUrl": "https://kira-hai.net/hashimoto-shohei",
+            "role_name": "飛影",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "未来",
+            "sourceActorUrl": null,
+            "role_name": "雪村螢子",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "平田裕香",
+            "sourceActorUrl": "https://kira-hai.net/hirata-yuka",
+            "role_name": "ぼたん",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "エリザベス・マリー",
+            "sourceActorUrl": null,
+            "role_name": "幻海",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "木津つばさ",
+            "sourceActorUrl": "https://kira-hai.net/kizu-tsubasa",
+            "role_name": "朱雀",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "榎木智一",
+            "sourceActorUrl": null,
+            "role_name": "青龍",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "田上真里奈",
+            "sourceActorUrl": "https://kira-hai.net/tanoue-marina",
+            "role_name": "雪菜",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "荒木健太朗",
+            "sourceActorUrl": "https://kira-hai.net/araki-kentaro",
+            "role_name": "左京",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "片山浩憲",
+            "sourceActorUrl": "https://kira-hai.net/katayama-hironori",
+            "role_name": "戸愚呂弟",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "中河内雅貴",
+            "sourceActorUrl": "https://kira-hai.net/nakagauchi-masataka",
+            "role_name": "戸愚呂兄",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "荒木宏文",
+            "sourceActorUrl": "https://kira-hai.net/araki-hirofumi",
+            "role_name": "コエンマ",
+            "cast_group": null
+          }
+        ],
+        "unparsed": [],
+        "checkedAt": "2026-10-20T05:59:04.584Z",
+        "creditOnly": {
+          "rawCast": [],
+          "unparsed": [
+            "中村哲人",
+            "秋山皓郎",
+            "安藤勇雅",
+            "高間淳平",
+            "田﨑直輝",
+            "田邊謙",
+            "戸舘大河"
+          ],
+          "decision": "出演情報を作品クレジットへ保存。2020年田邊謙は公式告知を優先し出演見合わせに区別。"
+        }
+      },
+      "stage": {
+        "workUrl": "https://kira-hai.net/yuhaku2020",
+        "key": "6fa2d3ebee019dd7b95e4cf81400103e01eaa2fe3e539e14a88dd92a7c4fa9dd",
+        "items": [
+          {
+            "source_actor_name": "崎山つばさ",
+            "source_actor_url": "https://kira-hai.net/sakiyama-tsubasa",
+            "source_work_title": "舞台「幽☆遊☆白書」其の弐",
+            "source_year": 2020,
+            "source_role_raw": "浦飯幽助",
+            "source_role_names": [
+              "浦飯幽助"
+            ],
+            "source_cast_group": null,
+            "source_order": 1,
+            "source_credit_key": "702ac82f237820b0795d",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/yuhaku2020",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "ce8711bde85cbcb613475242e2b0f0f579cc61a5614e43911d9d94c8d149d49f",
+              "review_fingerprint": "bff6f7bdd6a9783e41bab7701ef64feb16dd4d4e8fa5885406779ab235e17ba7",
+              "snapshot_fingerprint": "f76b7baaff3e4fef2118dd2c7358428fbb68bd15a0d388db2ae5d87137767db4",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "ae8f9195-c18d-4d87-ae48-fbf211df21e5",
+            "matched_play_id": "82a2df2a-d5df-46d7-bfa9-e825eaabe0fa",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "郷本直也",
+            "source_actor_url": "https://kira-hai.net/gomoto-naoya",
+            "source_work_title": "舞台「幽☆遊☆白書」其の弐",
+            "source_year": 2020,
+            "source_role_raw": "桑原和真",
+            "source_role_names": [
+              "桑原和真"
+            ],
+            "source_cast_group": null,
+            "source_order": 2,
+            "source_credit_key": "1f8afe31c28c946a5c34",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/yuhaku2020",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "ce8711bde85cbcb613475242e2b0f0f579cc61a5614e43911d9d94c8d149d49f",
+              "review_fingerprint": "bff6f7bdd6a9783e41bab7701ef64feb16dd4d4e8fa5885406779ab235e17ba7",
+              "snapshot_fingerprint": "f76b7baaff3e4fef2118dd2c7358428fbb68bd15a0d388db2ae5d87137767db4",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "e57de3c5-d324-477b-b323-6009311c2ca3",
+            "matched_play_id": "82a2df2a-d5df-46d7-bfa9-e825eaabe0fa",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "鈴木拡樹",
+            "source_actor_url": "https://kira-hai.net/suzuki-hiroki",
+            "source_work_title": "舞台「幽☆遊☆白書」其の弐",
+            "source_year": 2020,
+            "source_role_raw": "蔵馬",
+            "source_role_names": [
+              "蔵馬"
+            ],
+            "source_cast_group": null,
+            "source_order": 3,
+            "source_credit_key": "8a551fe99edc3892f0d1",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/yuhaku2020",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "ce8711bde85cbcb613475242e2b0f0f579cc61a5614e43911d9d94c8d149d49f",
+              "review_fingerprint": "bff6f7bdd6a9783e41bab7701ef64feb16dd4d4e8fa5885406779ab235e17ba7",
+              "snapshot_fingerprint": "f76b7baaff3e4fef2118dd2c7358428fbb68bd15a0d388db2ae5d87137767db4",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "54670688-dceb-4291-9096-5875c732edd9",
+            "matched_play_id": "82a2df2a-d5df-46d7-bfa9-e825eaabe0fa",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "橋本祥平",
+            "source_actor_url": "https://kira-hai.net/hashimoto-shohei",
+            "source_work_title": "舞台「幽☆遊☆白書」其の弐",
+            "source_year": 2020,
+            "source_role_raw": "飛影",
+            "source_role_names": [
+              "飛影"
+            ],
+            "source_cast_group": null,
+            "source_order": 4,
+            "source_credit_key": "a8d9aaf00484bb9f910c",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/yuhaku2020",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "ce8711bde85cbcb613475242e2b0f0f579cc61a5614e43911d9d94c8d149d49f",
+              "review_fingerprint": "bff6f7bdd6a9783e41bab7701ef64feb16dd4d4e8fa5885406779ab235e17ba7",
+              "snapshot_fingerprint": "f76b7baaff3e4fef2118dd2c7358428fbb68bd15a0d388db2ae5d87137767db4",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "d9df8cc7-9c58-4ab5-bc19-3b5a75a2e9b6",
+            "matched_play_id": "82a2df2a-d5df-46d7-bfa9-e825eaabe0fa",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "未来",
+            "source_actor_url": null,
+            "source_work_title": "舞台「幽☆遊☆白書」其の弐",
+            "source_year": 2020,
+            "source_role_raw": "雪村螢子",
+            "source_role_names": [
+              "雪村螢子"
+            ],
+            "source_cast_group": null,
+            "source_order": 5,
+            "source_credit_key": "20d7a2680c349943c4b5",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/yuhaku2020",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://www.just-pro.jp/talent/actor-talent-model/mirai_hinata/",
+                  "checkedAt": "2026-10-20T06:04:38.130Z",
+                  "note": "人物と当該配役の接点、採用した基本情報を照合。資料種別・項目別の範囲はnotesに記録。"
+                },
+                {
+                  "url": "https://www.vip-times.co.jp/?talent_id=W17-0266",
+                  "checkedAt": "2026-10-20T06:08:34.321Z",
+                  "note": "人物と当該配役の接点、採用した基本情報を照合。資料種別・項目別の範囲はnotesに記録。"
+                },
+                {
+                  "url": "https://wpb.shueisha.co.jp/gravure/news/20200127-110584/",
+                  "checkedAt": "2026-10-20T06:03:01.710Z",
+                  "note": "人物と当該配役の接点、採用した基本情報を照合。資料種別・項目別の範囲はnotesに記録。"
+                }
+              ],
+              "source_fingerprint": "ce8711bde85cbcb613475242e2b0f0f579cc61a5614e43911d9d94c8d149d49f",
+              "review_fingerprint": "bff6f7bdd6a9783e41bab7701ef64feb16dd4d4e8fa5885406779ab235e17ba7",
+              "snapshot_fingerprint": "f76b7baaff3e4fef2118dd2c7358428fbb68bd15a0d388db2ae5d87137767db4",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "90cf10e0-7a35-411c-917b-1b2a06a8bf4c",
+            "matched_play_id": "82a2df2a-d5df-46d7-bfa9-e825eaabe0fa",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "平田裕香",
+            "source_actor_url": "https://kira-hai.net/hirata-yuka",
+            "source_work_title": "舞台「幽☆遊☆白書」其の弐",
+            "source_year": 2020,
+            "source_role_raw": "ぼたん",
+            "source_role_names": [
+              "ぼたん"
+            ],
+            "source_cast_group": null,
+            "source_order": 6,
+            "source_credit_key": "82b40c87c10f506c1eb2",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/yuhaku2020",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "ce8711bde85cbcb613475242e2b0f0f579cc61a5614e43911d9d94c8d149d49f",
+              "review_fingerprint": "bff6f7bdd6a9783e41bab7701ef64feb16dd4d4e8fa5885406779ab235e17ba7",
+              "snapshot_fingerprint": "f76b7baaff3e4fef2118dd2c7358428fbb68bd15a0d388db2ae5d87137767db4",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "1618e2ce-c0de-4ecb-9f59-e23adfbc41bf",
+            "matched_play_id": "82a2df2a-d5df-46d7-bfa9-e825eaabe0fa",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "エリザベス・マリー",
+            "source_actor_url": null,
+            "source_work_title": "舞台「幽☆遊☆白書」其の弐",
+            "source_year": 2020,
+            "source_role_raw": "幻海",
+            "source_role_names": [
+              "幻海"
+            ],
+            "source_cast_group": null,
+            "source_order": 7,
+            "source_credit_key": "be71acb86626095ff328",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/yuhaku2020",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://www.erioffice.co.jp/talent_female/elizabethmarry/",
+                  "checkedAt": "2026-10-20T06:06:21.858Z",
+                  "note": "人物と当該配役の接点、採用した基本情報を照合。資料種別・項目別の範囲はnotesに記録。"
+                },
+                {
+                  "url": "https://www.vip-times.co.jp/?talent_id=W14-1423",
+                  "checkedAt": "2026-10-20T06:06:26.354Z",
+                  "note": "人物と当該配役の接点、採用した基本情報を照合。資料種別・項目別の範囲はnotesに記録。"
+                },
+                {
+                  "url": "https://www.tunecore.co.jp/artists/elizabeth-Marie",
+                  "checkedAt": "2026-10-20T06:06:29.151Z",
+                  "note": "人物と当該配役の接点、採用した基本情報を照合。資料種別・項目別の範囲はnotesに記録。"
+                }
+              ],
+              "source_fingerprint": "ce8711bde85cbcb613475242e2b0f0f579cc61a5614e43911d9d94c8d149d49f",
+              "review_fingerprint": "bff6f7bdd6a9783e41bab7701ef64feb16dd4d4e8fa5885406779ab235e17ba7",
+              "snapshot_fingerprint": "f76b7baaff3e4fef2118dd2c7358428fbb68bd15a0d388db2ae5d87137767db4",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "185a4c8c-88f6-45c4-9184-470ae36e55f3",
+            "matched_play_id": "82a2df2a-d5df-46d7-bfa9-e825eaabe0fa",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "木津つばさ",
+            "source_actor_url": "https://kira-hai.net/kizu-tsubasa",
+            "source_work_title": "舞台「幽☆遊☆白書」其の弐",
+            "source_year": 2020,
+            "source_role_raw": "朱雀",
+            "source_role_names": [
+              "朱雀"
+            ],
+            "source_cast_group": null,
+            "source_order": 8,
+            "source_credit_key": "4bddf944cd642599f34f",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/yuhaku2020",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "ce8711bde85cbcb613475242e2b0f0f579cc61a5614e43911d9d94c8d149d49f",
+              "review_fingerprint": "bff6f7bdd6a9783e41bab7701ef64feb16dd4d4e8fa5885406779ab235e17ba7",
+              "snapshot_fingerprint": "f76b7baaff3e4fef2118dd2c7358428fbb68bd15a0d388db2ae5d87137767db4",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "b3bf8e98-26bc-457a-af8b-b7c48f8989ec",
+            "matched_play_id": "82a2df2a-d5df-46d7-bfa9-e825eaabe0fa",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "榎木智一",
+            "source_actor_url": null,
+            "source_work_title": "舞台「幽☆遊☆白書」其の弐",
+            "source_year": 2020,
+            "source_role_raw": "青龍",
+            "source_role_names": [
+              "青龍"
+            ],
+            "source_cast_group": null,
+            "source_order": 9,
+            "source_credit_key": "b0c1d7ff556423336757",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/yuhaku2020",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://mirrorliar.com/portfolios/enoki3",
+                  "checkedAt": "2026-10-20T06:02:54.587Z",
+                  "note": "人物と当該配役の接点、採用した基本情報を照合。資料種別・項目別の範囲はnotesに記録。"
+                },
+                {
+                  "url": "https://thetv.jp/person/1000050538/",
+                  "checkedAt": "2026-10-20T06:06:31.731Z",
+                  "note": "人物と当該配役の接点、採用した基本情報を照合。資料種別・項目別の範囲はnotesに記録。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/yuhaku/cast",
+                  "checkedAt": "2026-10-20T05:59:07.121Z",
+                  "note": "人物と当該配役の接点、採用した基本情報を照合。資料種別・項目別の範囲はnotesに記録。"
+                }
+              ],
+              "source_fingerprint": "ce8711bde85cbcb613475242e2b0f0f579cc61a5614e43911d9d94c8d149d49f",
+              "review_fingerprint": "bff6f7bdd6a9783e41bab7701ef64feb16dd4d4e8fa5885406779ab235e17ba7",
+              "snapshot_fingerprint": "f76b7baaff3e4fef2118dd2c7358428fbb68bd15a0d388db2ae5d87137767db4",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "1eb863f1-74e9-4a64-a6bd-64846be6a816",
+            "matched_play_id": "82a2df2a-d5df-46d7-bfa9-e825eaabe0fa",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "田上真里奈",
+            "source_actor_url": "https://kira-hai.net/tanoue-marina",
+            "source_work_title": "舞台「幽☆遊☆白書」其の弐",
+            "source_year": 2020,
+            "source_role_raw": "雪菜",
+            "source_role_names": [
+              "雪菜"
+            ],
+            "source_cast_group": null,
+            "source_order": 10,
+            "source_credit_key": "9b81c0a4dfc2ce24b40a",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/yuhaku2020",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "ce8711bde85cbcb613475242e2b0f0f579cc61a5614e43911d9d94c8d149d49f",
+              "review_fingerprint": "bff6f7bdd6a9783e41bab7701ef64feb16dd4d4e8fa5885406779ab235e17ba7",
+              "snapshot_fingerprint": "f76b7baaff3e4fef2118dd2c7358428fbb68bd15a0d388db2ae5d87137767db4",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "573ef8c0-7d7b-4bc1-855b-519453181f28",
+            "matched_play_id": "82a2df2a-d5df-46d7-bfa9-e825eaabe0fa",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "荒木健太朗",
+            "source_actor_url": "https://kira-hai.net/araki-kentaro",
+            "source_work_title": "舞台「幽☆遊☆白書」其の弐",
+            "source_year": 2020,
+            "source_role_raw": "左京",
+            "source_role_names": [
+              "左京"
+            ],
+            "source_cast_group": null,
+            "source_order": 11,
+            "source_credit_key": "54bdcd030284755bf4a9",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/yuhaku2020",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/araki-kentaro",
+                  "checkedAt": "2026-10-20T06:02:44.377Z",
+                  "note": "旧名・生年月日、左京役、公式プロフィールURL。"
+                },
+                {
+                  "url": "https://dog-day-afternoon.net/profile.html",
+                  "checkedAt": "2026-10-20T06:04:47.493Z",
+                  "note": "現名荒木健太郎と同一生年月日を確認。"
+                }
+              ],
+              "source_fingerprint": "ce8711bde85cbcb613475242e2b0f0f579cc61a5614e43911d9d94c8d149d49f",
+              "review_fingerprint": "bff6f7bdd6a9783e41bab7701ef64feb16dd4d4e8fa5885406779ab235e17ba7",
+              "snapshot_fingerprint": "f76b7baaff3e4fef2118dd2c7358428fbb68bd15a0d388db2ae5d87137767db4",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "5a9e38c8-53c0-45f8-9f64-2287a7c663e0",
+            "matched_play_id": "82a2df2a-d5df-46d7-bfa9-e825eaabe0fa",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "片山浩憲",
+            "source_actor_url": "https://kira-hai.net/katayama-hironori",
+            "source_work_title": "舞台「幽☆遊☆白書」其の弐",
+            "source_year": 2020,
+            "source_role_raw": "戸愚呂弟",
+            "source_role_names": [
+              "戸愚呂弟"
+            ],
+            "source_cast_group": null,
+            "source_order": 12,
+            "source_credit_key": "72ed87b9e0497aea373d",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/yuhaku2020",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/katayama-hironori",
+                  "checkedAt": "2026-10-20T06:02:46.790Z",
+                  "note": "人物と当該配役の接点、採用した基本情報を照合。資料種別・項目別の範囲はnotesに記録。"
+                },
+                {
+                  "url": "https://www.shonenjump.com/j/notice/2019/04/08/190408_naruto001.html",
+                  "checkedAt": "2026-10-20T06:04:56.736Z",
+                  "note": "人物と当該配役の接点、採用した基本情報を照合。資料種別・項目別の範囲はnotesに記録。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/yuhaku/cast",
+                  "checkedAt": "2026-10-20T05:59:07.121Z",
+                  "note": "人物と当該配役の接点、採用した基本情報を照合。資料種別・項目別の範囲はnotesに記録。"
+                }
+              ],
+              "source_fingerprint": "ce8711bde85cbcb613475242e2b0f0f579cc61a5614e43911d9d94c8d149d49f",
+              "review_fingerprint": "bff6f7bdd6a9783e41bab7701ef64feb16dd4d4e8fa5885406779ab235e17ba7",
+              "snapshot_fingerprint": "f76b7baaff3e4fef2118dd2c7358428fbb68bd15a0d388db2ae5d87137767db4",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "661e87c5-6aa2-4f89-8daa-4c6b7eaf0adf",
+            "matched_play_id": "82a2df2a-d5df-46d7-bfa9-e825eaabe0fa",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "中河内雅貴",
+            "source_actor_url": "https://kira-hai.net/nakagauchi-masataka",
+            "source_work_title": "舞台「幽☆遊☆白書」其の弐",
+            "source_year": 2020,
+            "source_role_raw": "戸愚呂兄",
+            "source_role_names": [
+              "戸愚呂兄"
+            ],
+            "source_cast_group": null,
+            "source_order": 13,
+            "source_credit_key": "02a8833d67275bb11d47",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/yuhaku2020",
+                  "note": "作品ページのキャスト欄"
+                }
+              ],
+              "source_fingerprint": "ce8711bde85cbcb613475242e2b0f0f579cc61a5614e43911d9d94c8d149d49f",
+              "review_fingerprint": "bff6f7bdd6a9783e41bab7701ef64feb16dd4d4e8fa5885406779ab235e17ba7",
+              "snapshot_fingerprint": "f76b7baaff3e4fef2118dd2c7358428fbb68bd15a0d388db2ae5d87137767db4",
+              "identity": "exact_name"
+            },
+            "matched_actor_id": "8dc7612c-480c-419b-aaab-46c1e0d7f59b",
+            "matched_play_id": "82a2df2a-d5df-46d7-bfa9-e825eaabe0fa",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "荒木宏文",
+            "source_actor_url": "https://kira-hai.net/araki-hirofumi",
+            "source_work_title": "舞台「幽☆遊☆白書」其の弐",
+            "source_year": 2020,
+            "source_role_raw": "コエンマ",
+            "source_role_names": [
+              "コエンマ"
+            ],
+            "source_cast_group": null,
+            "source_order": 14,
+            "source_credit_key": "8e376061c09dc9389804",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/yuhaku2020",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/araki-hirofumi",
+                  "checkedAt": "2026-10-20T06:02:49.259Z",
+                  "note": "旧名の個人ページから現所属の新木宏典の同一個人URLへ接続。"
+                },
+                {
+                  "url": "https://www.watanabepro.co.jp/mypage/10000022/",
+                  "checkedAt": "2026-10-20T06:06:36.003Z",
+                  "note": "現名と生年月日、当該作品出演を照合。"
+                }
+              ],
+              "source_fingerprint": "ce8711bde85cbcb613475242e2b0f0f579cc61a5614e43911d9d94c8d149d49f",
+              "review_fingerprint": "bff6f7bdd6a9783e41bab7701ef64feb16dd4d4e8fa5885406779ab235e17ba7",
+              "snapshot_fingerprint": "f76b7baaff3e4fef2118dd2c7358428fbb68bd15a0d388db2ae5d87137767db4",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "61b66c0c-1429-4afe-ad97-3aa2bd71eccb",
+            "matched_play_id": "82a2df2a-d5df-46d7-bfa9-e825eaabe0fa",
+            "status": "pending"
+          }
+        ]
+      },
+      "records": [
+        {
+          "actor": {
+            "id": "ae8f9195-c18d-4d87-ae48-fbf211df21e5",
+            "slug": "sakiyama-tsubasa",
+            "name": "崎山 つばさ",
+            "kana": "さきやま つばさ",
+            "profile": "千葉県出身の俳優・アーティスト。Star Dream Company所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/team_sakiyama",
+              "official": "https://tsubasa-sakiyama.net/",
+              "instagram": "https://www.instagram.com/sakiyamaofficial/"
+            },
+            "gender": "male",
+            "created_at": "2026-04-05T16:36:20.984891+00:00",
+            "updated_at": "2026-04-05T16:36:20.984891+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1989-11-03",
+            "height_cm": 175,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "崎山つばさ",
+            "sourceActorUrl": "https://kira-hai.net/sakiyama-tsubasa",
+            "role_name": "浦飯幽助",
+            "cast_group": null
+          },
+          "sourceCreditKey": "702ac82f237820b0795d",
+          "sourceOrder": 1
+        },
+        {
+          "actor": {
+            "id": "e57de3c5-d324-477b-b323-6009311c2ca3",
+            "slug": "gomoto-naoya",
+            "name": "郷本 直也",
+            "kana": "ごうもと なおや",
+            "profile": "大阪府出身の俳優。芸能事務所ナノスクエア代表取締役社長。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/GomotoNaoya",
+              "official": "https://ameblo.jp/naoya-g-sanpo/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-15T15:02:38.988564+00:00",
+            "updated_at": "2026-03-15T15:02:38.988564+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1980-04-25",
+            "height_cm": 186,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "郷本直也",
+            "sourceActorUrl": "https://kira-hai.net/gomoto-naoya",
+            "role_name": "桑原和真",
+            "cast_group": null
+          },
+          "sourceCreditKey": "1f8afe31c28c946a5c34",
+          "sourceOrder": 2
+        },
+        {
+          "actor": {
+            "id": "54670688-dceb-4291-9096-5875c732edd9",
+            "slug": "suzuki-hiroki",
+            "name": "鈴木 拡樹",
+            "kana": "すずき ひろき",
+            "profile": "大阪府出身の俳優。株式会社オウサム所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/hiroki_0604",
+              "official": "https://suzuki-hiroki.jp/"
+            },
+            "gender": "male",
+            "created_at": "2025-12-11T17:26:17.810112+00:00",
+            "updated_at": "2025-12-11T17:26:17.810112+00:00",
+            "tags": [
+              "実力派",
+              "2.5次元トップランナー"
+            ],
+            "featured_play_slugs": [],
+            "birthday": "1985-06-04",
+            "height_cm": 173,
+            "blood_type": "AB",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "鈴木拡樹",
+            "sourceActorUrl": "https://kira-hai.net/suzuki-hiroki",
+            "role_name": "蔵馬",
+            "cast_group": null
+          },
+          "sourceCreditKey": "8a551fe99edc3892f0d1",
+          "sourceOrder": 3
+        },
+        {
+          "actor": {
+            "id": "d9df8cc7-9c58-4ab5-bc19-3b5a75a2e9b6",
+            "slug": "hashimoto-shohei",
+            "name": "橋本 祥平",
+            "kana": "はしもと しょうへい",
+            "profile": "神奈川県出身の俳優・声優。キャストコーポレーション所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://twitter.com/hashimotoshohey",
+              "official": "https://hashimoto-shohei.com/"
+            },
+            "gender": "male",
+            "created_at": "2025-12-13T04:41:02.052969+00:00",
+            "updated_at": "2025-12-13T04:41:02.052969+00:00",
+            "tags": [
+              "ドラム",
+              "愛されキャラ"
+            ],
+            "featured_play_slugs": [
+              "bungo-stage",
+              "yuyu-hakusho-stage"
+            ],
+            "birthday": "1993-12-31",
+            "height_cm": 170,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "橋本祥平",
+            "sourceActorUrl": "https://kira-hai.net/hashimoto-shohei",
+            "role_name": "飛影",
+            "cast_group": null
+          },
+          "sourceCreditKey": "a8d9aaf00484bb9f910c",
+          "sourceOrder": 4
+        },
+        {
+          "actor": {
+            "id": "90cf10e0-7a35-411c-917b-1b2a06a8bf4c",
+            "slug": "hinata-mirai",
+            "name": "日向未来",
+            "kana": "ひなた みらい",
+            "profile": "埼玉県出身の俳優・タレント。元おはガール。舞台「幽☆遊☆白書」の雪村螢子役、アニメ『東京ミュウミュウ にゅ〜♡』の藍沢みんと役などを務める。旧名は未来。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "2002-09-13",
+            "height_cm": 155,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": "Mirai Hinata",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "未来",
+            "sourceActorUrl": null,
+            "role_name": "雪村螢子",
+            "cast_group": null
+          },
+          "sourceCreditKey": "20d7a2680c349943c4b5",
+          "sourceOrder": 5
+        },
+        {
+          "actor": {
+            "id": "1618e2ce-c0de-4ecb-9f59-e23adfbc41bf",
+            "slug": "hirata-yuka",
+            "name": "平田裕香",
+            "kana": "ひらた ゆか",
+            "profile": "俳優。『ROCK MUSICAL BLEACH』の卯ノ花烈役、舞台『デビルマン ～不動を待ちながら～』の牧村美樹役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-19T09:07:56.196763+00:00",
+            "updated_at": "2026-10-19T09:07:56.196763+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1983-09-15",
+            "height_cm": 158,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "平田裕香",
+            "sourceActorUrl": "https://kira-hai.net/hirata-yuka",
+            "role_name": "ぼたん",
+            "cast_group": null
+          },
+          "sourceCreditKey": "82b40c87c10f506c1eb2",
+          "sourceOrder": 6
+        },
+        {
+          "actor": {
+            "id": "185a4c8c-88f6-45c4-9184-470ae36e55f3",
+            "slug": "elizabeth-marry",
+            "name": "エリザベス・マリー",
+            "kana": "えりざべす まりー",
+            "profile": "神奈川県出身の俳優・ダンサー・振付師。えりオフィス所属。舞台「幽☆遊☆白書」の幻海役、舞台「文豪ストレイドッグス」のルーシー・M役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1988-11-26",
+            "height_cm": 155,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": "Elizabeth Marry",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "エリザベス・マリー",
+            "sourceActorUrl": null,
+            "role_name": "幻海",
+            "cast_group": null
+          },
+          "sourceCreditKey": "be71acb86626095ff328",
+          "sourceOrder": 7
+        },
+        {
+          "actor": {
+            "id": "b3bf8e98-26bc-457a-af8b-b7c48f8989ec",
+            "slug": "kizu-tsubasa",
+            "name": "木津 つばさ",
+            "kana": "きづ つばさ",
+            "profile": "広島県出身の俳優。ルビーパレード所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/kizu_tsubasa",
+              "official": "https://www.ruby-parade.com/artist/kizu-tsubasa/",
+              "instagram": "https://www.instagram.com/tsubasa__kizu/"
+            },
+            "gender": "male",
+            "created_at": "2025-12-13T04:41:02.052969+00:00",
+            "updated_at": "2025-12-13T04:41:02.052969+00:00",
+            "tags": [
+              "ツッコミ",
+              "愛されキャラ"
+            ],
+            "featured_play_slugs": [],
+            "birthday": "1998-01-07",
+            "height_cm": 168,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "木津つばさ",
+            "sourceActorUrl": "https://kira-hai.net/kizu-tsubasa",
+            "role_name": "朱雀",
+            "cast_group": null
+          },
+          "sourceCreditKey": "4bddf944cd642599f34f",
+          "sourceOrder": 8
+        },
+        {
+          "actor": {
+            "id": "1eb863f1-74e9-4a64-a6bd-64846be6a816",
+            "slug": "enoki-tomokazu",
+            "name": "榎木智一",
+            "kana": "えのき ともかず",
+            "profile": "福岡県北九州市出身の俳優。殺陣・アクションを特技とし、舞台「幽☆遊☆白書」其の弐では青龍役を演じる。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1981-01-30",
+            "height_cm": 175,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "榎木智一",
+            "sourceActorUrl": null,
+            "role_name": "青龍",
+            "cast_group": null
+          },
+          "sourceCreditKey": "b0c1d7ff556423336757",
+          "sourceOrder": 9
+        },
+        {
+          "actor": {
+            "id": "573ef8c0-7d7b-4bc1-855b-519453181f28",
+            "slug": "tanoue-marina",
+            "name": "田上真里奈",
+            "kana": "たのうえ まりな",
+            "profile": "俳優。2016年まで声優ユニットTrefleで活動。舞台『血界戦線』のルシアナ・エステヴェス役を務め、『炎炎ノ消防隊』『ロミオの青い空』『モノノ怪』などの舞台にも出演する。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-19T15:35:18.355815+00:00",
+            "updated_at": "2026-10-19T15:35:18.355815+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1991-09-28",
+            "height_cm": 155,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Marina Tanoue",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "田上真里奈",
+            "sourceActorUrl": "https://kira-hai.net/tanoue-marina",
+            "role_name": "雪菜",
+            "cast_group": null
+          },
+          "sourceCreditKey": "9b81c0a4dfc2ce24b40a",
+          "sourceOrder": 10
+        },
+        {
+          "actor": {
+            "id": "5a9e38c8-53c0-45f8-9f64-2287a7c663e0",
+            "slug": "araki-kentaro",
+            "name": "荒木 健太郎",
+            "kana": "あらき けんたろう",
+            "profile": "熊本県出身の俳優。Spacenoid Company所属、元Studio Lifeメンバー。旧芸名は荒木健太朗。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/borntobemild825",
+              "official": "https://dog-day-afternoon.net/",
+              "instagram": "https://www.instagram.com/borntobemild0825/"
+            },
+            "gender": "male",
+            "created_at": "2026-04-05T18:42:39.608993+00:00",
+            "updated_at": "2026-04-05T18:42:39.608993+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1982-08-25",
+            "height_cm": 173,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "荒木健太朗",
+            "sourceActorUrl": "https://kira-hai.net/araki-kentaro",
+            "role_name": "左京",
+            "cast_group": null
+          },
+          "sourceCreditKey": "54bdcd030284755bf4a9",
+          "sourceOrder": 11
+        },
+        {
+          "actor": {
+            "id": "661e87c5-6aa2-4f89-8daa-4c6b7eaf0adf",
+            "slug": "katayama-hironori",
+            "name": "片山浩憲",
+            "kana": "かたやま ひろのり",
+            "profile": "俳優。ライブ・スペクタクル「NARUTO-ナルト-」のトビ役、舞台「幽☆遊☆白書」其の弐の戸愚呂弟役などを演じる。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": null,
+            "height_cm": 183,
+            "blood_type": null,
+            "birthday_label": "4月21日",
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "片山浩憲",
+            "sourceActorUrl": "https://kira-hai.net/katayama-hironori",
+            "role_name": "戸愚呂弟",
+            "cast_group": null
+          },
+          "sourceCreditKey": "72ed87b9e0497aea373d",
+          "sourceOrder": 12
+        },
+        {
+          "actor": {
+            "id": "8dc7612c-480c-419b-aaab-46c1e0d7f59b",
+            "slug": "nakagauchi-masataka",
+            "name": "中河内 雅貴",
+            "kana": "なかがうち まさたか",
+            "profile": "広島県広島市出身の俳優・ダンサー・アーティスト。カオス・パフォーマーズオフィス所属。",
+            "image_url": null,
+            "sns": {
+              "official": "https://nakagauchi.com",
+              "instagram": "https://www.instagram.com/masagauchi/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T14:53:11.103962+00:00",
+            "updated_at": "2026-03-21T14:53:11.103962+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1985-08-23",
+            "height_cm": 174,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "中河内雅貴",
+            "sourceActorUrl": "https://kira-hai.net/nakagauchi-masataka",
+            "role_name": "戸愚呂兄",
+            "cast_group": null
+          },
+          "sourceCreditKey": "02a8833d67275bb11d47",
+          "sourceOrder": 13
+        },
+        {
+          "actor": {
+            "id": "61b66c0c-1429-4afe-ad97-3aa2bd71eccb",
+            "slug": "araki-hirofumi",
+            "name": "新木 宏典",
+            "kana": "あらき ひろふみ",
+            "profile": "兵庫県出身の俳優・声優。ワタナベエンターテインメント所属。D-BOYSのメンバー 兼 D☆DATEリーダー。旧芸名は荒木宏文。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/araki_hiro0614",
+              "instagram": "https://www.instagram.com/araki_hiro0614/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-19T17:35:58.50398+00:00",
+            "updated_at": "2026-03-19T17:35:58.50398+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1983-06-14",
+            "height_cm": 174,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "荒木宏文",
+            "sourceActorUrl": "https://kira-hai.net/araki-hirofumi",
+            "role_name": "コエンマ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "8e376061c09dc9389804",
+          "sourceOrder": 14
+        }
+      ],
+      "keptCasts": [],
+      "sourceFingerprint": "ce8711bde85cbcb613475242e2b0f0f579cc61a5614e43911d9d94c8d149d49f",
+      "legacyCandidates": [
+        {
+          "id": "d4923f9d-485a-4403-82b0-903db5fc4fb6",
+          "source": "kira-hai",
+          "external_actor_id": "d4cb6798-3e10-476d-a8c3-381285b85b3a",
+          "external_play_id": "8bd2cab9-2ec9-4552-8d2c-bfcf594ca951",
+          "source_actor_name": "中河内雅貴",
+          "source_actor_url": "https://kira-hai.net/nakagauchi-masataka",
+          "source_work_title": "舞台「幽☆遊☆白書」其の弐",
+          "source_work_url": "https://kira-hai.net/yuhaku2020",
+          "source_year": 2021,
+          "source_role_raw": "戸愚呂兄",
+          "source_role_names": [
+            "戸愚呂兄"
+          ],
+          "matched_actor_id": "8dc7612c-480c-419b-aaab-46c1e0d7f59b",
+          "matched_play_id": null,
+          "accepted_cast_id": null,
+          "confidence": 60,
+          "status": "pending",
+          "note": null,
+          "scraped_at": "2026-04-27T17:56:09.656+00:00",
+          "created_at": "2026-04-27T17:56:08.96805+00:00",
+          "updated_at": "2026-04-27T17:56:09.656+00:00",
+          "accepted_at": null,
+          "rejected_at": null,
+          "source_cast_group": null,
+          "source_order": null,
+          "source_credit_key": null,
+          "source_evidence": null
+        }
+      ],
+      "expectedCastCount": 14
+    }
+  ],
+  "evidence": {
+    "links": [
+      {
+        "url": "https://kira-hai.net/yuhaku2019",
+        "checkedAt": "2026-10-20T05:59:02.147Z",
+        "note": "初演10役とアンサンブル13名。福岡終日は9月13日とあるが当時の主催発表は12日。"
+      },
+      {
+        "url": "https://www.b-ch.com/titles/7031/",
+        "checkedAt": "2026-10-20T06:00:32.552Z",
+        "note": "初演の映像配信元で10役とスタッフを照合。"
+      },
+      {
+        "url": "https://www.famitsu.com/news/201905/09175954.html",
+        "checkedAt": "2026-10-20T06:00:35.173Z",
+        "note": "主催発表の転載を本文で確認。初演4都市の日程、福岡9月12日まで。"
+      },
+      {
+        "url": "https://kira-hai.net/yuhaku2020",
+        "checkedAt": "2026-10-20T05:59:04.584Z",
+        "note": "其の弐14役と役名なし7名。原文は変更せず保持。"
+      },
+      {
+        "url": "https://officeendless.com/sp/yuhaku/cast",
+        "checkedAt": "2026-10-20T05:59:07.121Z",
+        "note": "其の弐の14役とスタッフ。ただし田邊謙の古い掲載は後日の公式出演見合わせ告知を優先。"
+      },
+      {
+        "url": "https://officeendless.com/sp/yuhaku/schedule",
+        "checkedAt": "2026-10-20T05:59:09.946Z",
+        "note": "当初発表の3都市日程。東京初日と大阪一部中止は別告知により補正。"
+      },
+      {
+        "url": "https://officeendless.com/sp/yuhaku/news/154",
+        "checkedAt": "2026-10-20T06:03:04.959Z",
+        "note": "12月4日18:30の中止と、田邊謙の出演シーンの脚本・演出再編集を発表。"
+      },
+      {
+        "url": "https://officeendless.com/sp/yuhaku/news/197",
+        "checkedAt": "2026-10-20T06:04:54.269Z",
+        "note": "大阪18日18:30・19日13:00／17:30の3公演中止、20日の2公演は上演と明記。"
+      },
+      {
+        "url": "https://dog-day-afternoon.net/profile.html",
+        "checkedAt": "2026-10-20T06:04:47.493Z",
+        "note": "現名荒木健太郎・生年月日・英字名。旧名荒木健太朗の第一参照先から公式へ接続。"
+      },
+      {
+        "url": "https://www.watanabepro.co.jp/mypage/10000022/",
+        "checkedAt": "2026-10-20T06:06:36.003Z",
+        "note": "旧名荒木宏文の第一参照先からリンクされる現名新木宏典公式。生年月日も既存人物と一致。"
+      }
+    ],
+    "sources": [
+      {
+        "name": "official2020",
+        "url": "https://officeendless.com/sp/yuhaku/",
+        "status": 200,
+        "finalUrl": "https://officeendless.com/sp/yuhaku/",
+        "checkedAt": "2026-10-20T05:57:50.809Z",
+        "sha256": "b615a38bf08e1b1a8f4fe239aad2319db319539f1b457293f2003d6269c173fd"
+      },
+      {
+        "name": "kira-hirata",
+        "url": "https://kira-hai.net/hirata-yuka",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/hirata-yuka",
+        "checkedAt": "2026-10-20T05:57:53.431Z",
+        "sha256": "a911d99cd8e2f70c48aa408210f99a6fe74c2999c1eb23081e6600a364355389"
+      },
+      {
+        "name": "kira-nitta",
+        "url": "https://kira-hai.net/nitta-kenta",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/nitta-kenta",
+        "checkedAt": "2026-10-20T05:57:55.923Z",
+        "sha256": "fc279ab80df0a181a93198be56e960ccc1aca4c4e652d3a66f192d0a18352936"
+      },
+      {
+        "name": "changelog",
+        "url": "https://supabase.com/changelog.md",
+        "status": 200,
+        "finalUrl": "https://supabase.com/changelog.md",
+        "checkedAt": "2026-10-20T05:57:58.436Z",
+        "sha256": "15b3d0d1a7dc3b3f2c0af4788e49acfdf2d2edbd2613f22de0705fa43b1cf58b"
+      },
+      {
+        "name": "kira2019",
+        "url": "https://kira-hai.net/yuhaku2019",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/yuhaku2019",
+        "checkedAt": "2026-10-20T05:59:02.147Z",
+        "sha256": "8eb7cfc05c783b8001ee68106c3dd841ea5d57c6ff07e66cb8a6105accddd62a"
+      },
+      {
+        "name": "kira2020",
+        "url": "https://kira-hai.net/yuhaku2020",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/yuhaku2020",
+        "checkedAt": "2026-10-20T05:59:04.584Z",
+        "sha256": "4ff6a9fee432579b43abec1853cc0b324878addbbc7c75eb7569797305ee5936"
+      },
+      {
+        "name": "cast2020",
+        "url": "https://officeendless.com/sp/yuhaku/cast",
+        "status": 200,
+        "finalUrl": "https://officeendless.com/sp/yuhaku/cast",
+        "checkedAt": "2026-10-20T05:59:07.121Z",
+        "sha256": "51bcbad1036444c6e41d57eac9dd314f021b4fd7006afc0cae9867b67f50d1e7"
+      },
+      {
+        "name": "schedule2020",
+        "url": "https://officeendless.com/sp/yuhaku/schedule",
+        "status": 200,
+        "finalUrl": "https://officeendless.com/sp/yuhaku/schedule",
+        "checkedAt": "2026-10-20T05:59:09.946Z",
+        "sha256": "6a04f940fc3dbb0914d0f928fcd6bbd07b53dea2bc8754ce082bfcf0ad868f0c"
+      },
+      {
+        "name": "intro2020",
+        "url": "https://officeendless.com/sp/yuhaku/introduction",
+        "status": 200,
+        "finalUrl": "https://officeendless.com/sp/yuhaku/introduction",
+        "checkedAt": "2026-10-20T05:59:12.317Z",
+        "sha256": "c518a0101b45d128839bcd0610227f42cc4697442fdae3a55e4c533a41d151c5"
+      },
+      {
+        "name": "bandai2019",
+        "url": "https://www.b-ch.com/titles/7031/",
+        "status": 200,
+        "finalUrl": "https://www.b-ch.com/titles/7031/",
+        "checkedAt": "2026-10-20T06:00:32.552Z",
+        "sha256": "7b236340ad6e37972035629357522153e32e724b1e6083439cdea7c402f9fb8e"
+      },
+      {
+        "name": "press2019",
+        "url": "https://www.famitsu.com/news/201905/09175954.html",
+        "status": 200,
+        "finalUrl": "https://www.famitsu.com/news/201905/09175954.html",
+        "checkedAt": "2026-10-20T06:00:35.173Z",
+        "sha256": "e9fdf23eae5f801d7a1b5f1cd3d8f9d068ac50a014d32df2d111c5deb876ec2d"
+      },
+      {
+        "name": "osaka-cancellation",
+        "url": "https://kyodo-osaka.co.jp/search/detail/1741",
+        "status": 200,
+        "finalUrl": "https://kyodo-osaka.co.jp/search/detail/1741",
+        "checkedAt": "2026-10-20T06:00:38.092Z",
+        "sha256": "99fe51c9e6fbcc942b3167ff067dc82423c1b5158a574480ebb455ffe91d6366"
+      },
+      {
+        "name": "works2019",
+        "url": "https://officeendless.com/works?type=2019",
+        "status": 200,
+        "finalUrl": "https://officeendless.com/works?type=2019",
+        "checkedAt": "2026-10-20T06:00:40.593Z",
+        "sha256": "0caa99eb5f203b8fae6a9dae616cf790af8d6b62d12924a06b3771f197cc5c89"
+      },
+      {
+        "name": "newslist",
+        "url": "https://officeendless.com/sp/yuhaku/news",
+        "status": 200,
+        "finalUrl": "https://officeendless.com/sp/yuhaku/news",
+        "checkedAt": "2026-10-20T06:00:43.418Z",
+        "sha256": "cfd10c232c276d6927fdb475a03b1fd154f839bd1a642ee79a5d5e677c4a150b"
+      },
+      {
+        "name": "kira-araki",
+        "url": "https://kira-hai.net/araki-kentaro",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/araki-kentaro",
+        "checkedAt": "2026-10-20T06:02:44.377Z",
+        "sha256": "c98079b094af569975725b69db7833f315633a67ddeed36d6b8bdddcb9507769"
+      },
+      {
+        "name": "kira-katayama",
+        "url": "https://kira-hai.net/katayama-hironori",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/katayama-hironori",
+        "checkedAt": "2026-10-20T06:02:46.790Z",
+        "sha256": "ac31a23ca9db84b600b75262575e8a1f9093c5b76c725ec19dad400d15e4115f"
+      },
+      {
+        "name": "kira-araki-old",
+        "url": "https://kira-hai.net/araki-hirofumi",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/araki-hirofumi",
+        "checkedAt": "2026-10-20T06:02:49.259Z",
+        "sha256": "bdf8c0f5ad910272d35599be2131f086ab04e2c2aecf812cb822c7279d1df091"
+      },
+      {
+        "name": "kadoshima",
+        "url": "https://www.queens-ave.com/talent/mio-kadoshima/",
+        "status": 200,
+        "finalUrl": "https://www.queens-ave.com/talent/mio-kadoshima/",
+        "checkedAt": "2026-10-20T06:02:51.856Z",
+        "sha256": "e47899f2683d6d9eb9d36f9eed3d582f8516026dfe9dd775ba8be087e5ebfbf1"
+      },
+      {
+        "name": "enoki-portfolio",
+        "url": "https://mirrorliar.com/portfolios/enoki3",
+        "status": 200,
+        "finalUrl": "https://mirrorliar.com/portfolios/enoki3",
+        "checkedAt": "2026-10-20T06:02:54.587Z",
+        "sha256": "9c6cbf5d4694ddd64be87d13b0676dc005d15bafff39cc92bf4310ff6852cb27"
+      },
+      {
+        "name": "bamboo-list",
+        "url": "https://bam-boo.biz/news_list.php?id=26",
+        "status": 200,
+        "finalUrl": "https://bam-boo.biz/news_list.php?id=26",
+        "checkedAt": "2026-10-20T06:02:57.975Z",
+        "sha256": "545f9dec53389425374f8ec59104dcf8682716d704aa2439676337f90929dd02"
+      },
+      {
+        "name": "mirai-interview",
+        "url": "https://wpb.shueisha.co.jp/gravure/news/20200127-110584/",
+        "status": 200,
+        "finalUrl": "https://wpb.shueisha.co.jp/gravure/news/20200127-110584/",
+        "checkedAt": "2026-10-20T06:03:01.710Z",
+        "sha256": "d3709009c20b8f40aada8fd569b29ffde54112c73465ecaec29aff357198a89d"
+      },
+      {
+        "name": "cancel1204",
+        "url": "https://officeendless.com/sp/yuhaku/news/154",
+        "status": 200,
+        "finalUrl": "https://officeendless.com/sp/yuhaku/news/154",
+        "checkedAt": "2026-10-20T06:03:04.959Z",
+        "sha256": "3a84e6e088dbd0a8c13d8777d3fcebd54abb4900474c1816d238ad2102fccbd2"
+      },
+      {
+        "name": "cancel-osaka",
+        "url": "https://officeendless.com/sp/yuhaku/news/202",
+        "status": 200,
+        "finalUrl": "https://officeendless.com/sp/yuhaku/news/202",
+        "checkedAt": "2026-10-20T06:03:07.306Z",
+        "sha256": "6bf18a19883accb8b047365b46a72234f0411c89a46d27260f16636757cc82dd"
+      },
+      {
+        "name": "nitta-official",
+        "url": "https://japanactionenterprise.com/talent/kenta-nitta/",
+        "status": 200,
+        "finalUrl": "https://japanactionenterprise.com/talent/kenta-nitta/",
+        "checkedAt": "2026-10-20T06:04:35.560Z",
+        "sha256": "ea698438742f798a14fb862eeb1799caca8cfe5f39f08ff3518588c16d151b6e"
+      },
+      {
+        "name": "mirai-justpro",
+        "url": "https://www.just-pro.jp/talent/actor-talent-model/mirai_hinata/",
+        "status": 200,
+        "finalUrl": "https://www.just-pro.jp/talent/actor-talent-model/mirai_hinata/",
+        "checkedAt": "2026-10-20T06:04:38.130Z",
+        "sha256": "76077b12f11341a30b85ba67304640462b10cf41c4d6f8d681e93f3292d674d4"
+      },
+      {
+        "name": "mirai-2026",
+        "url": "https://www.sponichi.co.jp/entertainment/news/2026/03/31/kiji/20260331s00041000242000c.html",
+        "status": 200,
+        "finalUrl": "https://www.sponichi.co.jp/entertainment/news/2026/03/31/kiji/20260331s00041000242000c.html",
+        "checkedAt": "2026-10-20T06:04:40.581Z",
+        "sha256": "4f8cacb00a06753d61e6d61b8e5b43866291183ca14b08e691de7b3e179f4136"
+      },
+      {
+        "name": "bamboo-profiles",
+        "url": "https://bam-boo.biz/profile.php",
+        "status": 200,
+        "finalUrl": "https://bam-boo.biz/profile.php",
+        "checkedAt": "2026-10-20T06:04:43.171Z",
+        "sha256": "e3feb0766091f84649945f26be3e536897edafe8f28010fba84f75e0e98b8ddf"
+      },
+      {
+        "name": "araki-official",
+        "url": "https://dog-day-afternoon.net/profile.html",
+        "status": 200,
+        "finalUrl": "https://dog-day-afternoon.net/profile.html",
+        "checkedAt": "2026-10-20T06:04:47.493Z",
+        "sha256": "6b5d3e02c363e9a12bb675407db127c2b9f852327492eecd01502137e759bdd2"
+      },
+      {
+        "name": "araki-current",
+        "url": "https://dog-day-afternoon.net/",
+        "status": 200,
+        "finalUrl": "https://dog-day-afternoon.net/",
+        "checkedAt": "2026-10-20T06:04:50.659Z",
+        "sha256": "b5bf0c6ec22f3c1179e3cf388d2a583d2ac29887fbe372aee225e922ce7fa496"
+      },
+      {
+        "name": "cancel-osaka-notice",
+        "url": "https://officeendless.com/sp/yuhaku/news/197",
+        "status": 200,
+        "finalUrl": "https://officeendless.com/sp/yuhaku/news/197",
+        "checkedAt": "2026-10-20T06:04:54.269Z",
+        "sha256": "11ff41c51001dd16853e6f04d4d4abaea6142f24f9ce6cf38607b5200bc8b99d"
+      },
+      {
+        "name": "katayama-naruto",
+        "url": "https://www.shonenjump.com/j/notice/2019/04/08/190408_naruto001.html",
+        "status": 200,
+        "finalUrl": "https://www.shonenjump.com/j/notice/2019/04/08/190408_naruto001.html",
+        "checkedAt": "2026-10-20T06:04:56.736Z",
+        "sha256": "8adf2f9958da68d49851ff2872c661b182db08d6d5b6ba8546041bbc2d3eb302"
+      },
+      {
+        "name": "elizabeth-eri",
+        "url": "https://www.erioffice.co.jp/talent_female/elizabethmarry/",
+        "status": 200,
+        "finalUrl": "https://www.erioffice.co.jp/talent_female/elizabethmarry/",
+        "checkedAt": "2026-10-20T06:06:21.858Z",
+        "sha256": "b07f54e792fa19231ab748dd62a60e1c0f8200c3e3601ded0905609dcb10b2a0"
+      },
+      {
+        "name": "elizabeth-vip",
+        "url": "https://www.vip-times.co.jp/?talent_id=W14-1423",
+        "status": 200,
+        "finalUrl": "https://www.vip-times.co.jp/?talent_id=W14-1423",
+        "checkedAt": "2026-10-20T06:06:26.354Z",
+        "sha256": "3d4a85f14f7ee8eae5fc50261c3e5f9615508ac6c67b53151f9a7e30f6c2a8e8"
+      },
+      {
+        "name": "elizabeth-tunecore",
+        "url": "https://www.tunecore.co.jp/artists/elizabeth-Marie",
+        "status": 200,
+        "finalUrl": "https://www.tunecore.co.jp/artists/elizabeth-Marie",
+        "checkedAt": "2026-10-20T06:06:29.151Z",
+        "sha256": "b33be9b666bbfbd2f455da7da764c8f837ba65370b91f85659f1e64bde2017cf"
+      },
+      {
+        "name": "enoki-thetv",
+        "url": "https://thetv.jp/person/1000050538/",
+        "status": 200,
+        "finalUrl": "https://thetv.jp/person/1000050538/",
+        "checkedAt": "2026-10-20T06:06:31.731Z",
+        "sha256": "95fe39d58f56bf51971c5638e5ad103d922231017b180bd13d4fa0fbd3d14f1e"
+      },
+      {
+        "name": "araki-watanabe",
+        "url": "https://www.watanabepro.co.jp/mypage/10000022/",
+        "status": 200,
+        "finalUrl": "https://www.watanabepro.co.jp/mypage/10000022/",
+        "checkedAt": "2026-10-20T06:06:36.003Z",
+        "sha256": "9c8edbceb4d2f24b5c942864f02426bd3878de778337bf8a5ba0609a1e81b301"
+      },
+      {
+        "name": "robots-kira",
+        "url": "https://kira-hai.net/robots.txt",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/robots.txt",
+        "checkedAt": "2026-10-20T06:08:27.640Z",
+        "sha256": "f6ed0322f0e3df8c3b42b14df3254a90cca7b94a4172de91812952b3c7060b03"
+      },
+      {
+        "name": "kadoshima-reading",
+        "url": "https://www.ameba.jp/profile/ameba/kadoshimamio/",
+        "status": 200,
+        "finalUrl": "https://www.ameba.jp/profile/ameba/kadoshimamio/",
+        "checkedAt": "2026-10-20T06:08:30.433Z",
+        "sha256": "aaa80995204f582aba6461ab570a83afaddafa7b81b756179581774617496911"
+      },
+      {
+        "name": "mirai-vip",
+        "url": "https://www.vip-times.co.jp/?talent_id=W17-0266",
+        "status": 200,
+        "finalUrl": "https://www.vip-times.co.jp/?talent_id=W17-0266",
+        "checkedAt": "2026-10-20T06:08:34.321Z",
+        "sha256": "5fc1cbd2464211525c62d7ec6e02bece4baeb11f2c5f6424460a6a2bda5c739d"
+      }
+    ],
+    "notes": [
+      "初演の既存IDと日本語概要・ジャンル・旧タグを保持。無効な配信プレースホルダー#だけを除去し、配信の現況は断定しない。",
+      "初演に誤っていた木津つばさの役名なし主演紐付けだけを解除し、其の弐の公式朱雀役を新たに採用。人物と他作品・保護対象は全項目保持。削除前は履歴とスナップショットに保存。",
+      "初演の鈴木拡樹・橋本祥平はIDと主演指定・表示順を保持し役名のみ補完。新しい配役は主演・掲載順を推測せずRPCの既定値。",
+      "荒木健太朗と荒木宏文は確認済み旧名から既存の荒木健太郎と新木宏典へ接続。未来は現在の日向未来として新規登録し原名を候補に保持。",
+      "荒木宏文は其の弐で演出とコエンマ役の両方に公式掲載。準備計算の同名クレジット警告だけを個別確認し、本番には演出と配役の両方を保持。",
+      "13名の初演アンサンブルと続編6名の役名未記載出演はクレジット。田邊謙は初演ではアンサンブル、続編では公式出演見合わせを区別。",
+      "其の弐の大阪地域ページにある田上真里菜・中河内将暉の誤字は公演Castと既存人物を優先して不採用。",
+      "日英タイトル・短い概要・シリーズ説明を補完。英語タイトルは編集上の表示訳。"
+    ],
+    "unresolved": [
+      "人物の全項目の総合監査とプロフィール英訳、全役名・会場・クレジットの英訳、現在配信URLは後続。",
+      "初演13名のアンサンブルは第一参照先由来で、現存する公演公式は続編に置き換わっている。",
+      "続編の役名未記載6名の具体的な役名は未確認。現存する当初Castと最終出演の違いは公式告知で追跡した範囲。",
+      "片山浩憲の生年・現在所属・英字名、新田健太の小数身長列への対応は未完。",
+      "既存の初演2人に残る主演指定と掲載順の詳細監査は後続。"
+    ]
+  },
+  "requestKey": "9f80ddef61d363acd1bead35e4bd9fa3f53928d647a29a72f2674747292f1b7e"
+}
