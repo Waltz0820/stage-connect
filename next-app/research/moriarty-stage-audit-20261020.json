@@ -1,0 +1,3247 @@
+{
+  "version": 1,
+  "batchId": "moriarty-stage-audit-20261020-01",
+  "expectedFranchise": {
+    "id": "de2dd05e-e2ae-461c-9c20-42de1dc019aa",
+    "name": "舞台「憂国のモリアーティ」（モリステ）",
+    "created_at": "2026-04-03T13:15:30.58142+00:00",
+    "updated_at": "2026-10-19T14:46:49.33877+00:00",
+    "slug": "moriarty-stage",
+    "intro": null,
+    "description": "竹内良輔（構成）・三好輝（漫画）による人気サスペンス漫画を原作としたストレートプレイ（演劇）作品。通称「モリステ」。2020年に初演。ミュージカル版（モリミュ）とは異なり、歌唱を交えない純粋なお芝居として物語が展開される。緻密な心理戦やセリフの応酬、華麗なアクションに重きが置かれており、プロジェクションマッピングなどの映像演出を効果的に駆使して19世紀末のロンドンの光と影をドラマチックに描き出している。ストレートプレイならではのヒリヒリとした緊迫感と、豪華キャスト陣による繊細なキャラクター表現が魅力のシリーズ。",
+    "origin_type": "漫画原作",
+    "origin_note": "原作：構成／竹内良輔 漫画／三好 輝「憂国のモリアーティ」（集英社「ジャンプSQ.」連載）",
+    "production_companies": [
+      "Office ENDLESS",
+      "バンダイナムコフィルムワークス"
+    ],
+    "related_franchise_ids": [
+      "0ed0cd85-f73c-443e-a2d1-1321b00dff3d"
+    ],
+    "format": "stage",
+    "description_en": null,
+    "name_en": null
+  },
+  "franchisePatch": {
+    "name_en": "Moriarty the Patriot: The Stage",
+    "description": "竹内良輔（構成）・三好輝（漫画）の『憂国のモリアーティ』を原作とする舞台シリーズ。2020年に初演、2021年に「-case2-」を上演。脚本・演出は西田大輔。ミュージカル版とは異なる舞台化作品。",
+    "description_en": "A stage adaptation of Moriarty the Patriot, with story composition by Ryosuke Takeuchi and manga by Hikaru Miyoshi. Written and directed by Daisuke Nishida, the first production ran in 2020, followed by -case2- in 2021. This series is separate from the musical adaptation."
+  },
+  "actors": [
+    {
+      "actor": {
+        "id": "ae942e1f-730b-4fd6-9928-8a64e80d0cb3",
+        "slug": "sakuma-hiroto",
+        "name": "佐久間祐人",
+        "kana": "さくま ひろと",
+        "profile": "俳優。劇団AND ENDLESS所属。1997年に俳優活動を始め、2004年に同劇団へ入団。出演のほか演出助手も務め、舞台「ヴィンランド・サガ」ではラグナル役を演じる。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1971-06-10",
+        "height_cm": null,
+        "blood_type": "A",
+        "birthday_label": null,
+        "name_en": "Hiroto Sakuma",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "佐久間祐人",
+      "profileUrl": "https://www.andendless.com/profile-2//cast_sakuma/",
+      "evidence": [
+        {
+          "url": "https://www.andendless.com/profile-2//cast_sakuma/",
+          "checkedAt": "2026-10-19T16:20:51.159Z",
+          "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+        },
+        {
+          "url": "https://www.andendless.com/profile-2/",
+          "checkedAt": "2026-10-19T16:18:30.344Z",
+          "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+        },
+        {
+          "url": "https://talent-dictionary.com/佐久間祐人",
+          "checkedAt": "2026-10-19T16:22:39.274Z",
+          "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+        },
+        {
+          "url": "https://officeendless.com/sp/moriarty-st/case1/cast.html",
+          "checkedAt": "2026-10-19T16:16:37.824Z",
+          "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+        }
+      ],
+      "notes": [
+        "読みだけはタレントデータバンク提供の二次資料で確認。生年月日・血液型・入団年・経歴・英字名は劇団公式。身長・出身地は今回未採用。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "158c7bb9-4c95-4eba-aca0-56e564d9e761",
+        "slug": "tsukamoto-takuya",
+        "name": "塚本拓弥",
+        "kana": "つかもと たくや",
+        "profile": "東京都出身の俳優。SOS Entertainments所属。舞台「戦国BASARA」シリーズの今川義元役や、舞台「憂国のモリアーティ」のマグワイア大佐役を務める。映画「カイジⅡ」「20世紀少年」などにも出演。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1975-11-07",
+        "height_cm": 174,
+        "blood_type": "A",
+        "birthday_label": null,
+        "name_en": "Takuya Tsukamoto",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "塚本拓弥",
+      "profileUrl": "https://www.sos-model.com/entertainments/932",
+      "evidence": [
+        {
+          "url": "https://www.sos-model.com/entertainments/932",
+          "checkedAt": "2026-10-19T16:20:59.066Z",
+          "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+        },
+        {
+          "url": "https://www.sos-model.com/category/entertainments",
+          "checkedAt": "2026-10-19T16:19:43.232Z",
+          "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+        },
+        {
+          "url": "https://kira-hai.net/tsukamoto-takuya",
+          "checkedAt": "2026-10-19T16:16:45.071Z",
+          "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+        },
+        {
+          "url": "https://officeendless.com/sp/moriarty-st/case1/cast.html",
+          "checkedAt": "2026-10-19T16:16:37.824Z",
+          "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+        }
+      ],
+      "notes": [
+        "所属公式で本人・生年月日・174cm・出身地・英字名と出演歴。読み・A型は第一参照先。別人の不動産担当者を混同しない。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "ee987526-4bbd-4658-b499-56faedf24b4a",
+        "slug": "haga-keiko",
+        "name": "芳賀恵子",
+        "kana": "はが けいこ",
+        "profile": "俳優。舞台「憂国のモリアーティ」でスザンナ役を務める。AND ENDLESSの「ONLY SILVER FISH」「＋GOLD FISH」にも出演。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": null,
+        "height_cm": null,
+        "blood_type": null,
+        "birthday_label": null,
+        "name_en": null,
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "芳賀恵子",
+      "profileUrl": "https://t.pia.jp/pia/artist/artists.do?artistsCd=35160066",
+      "evidence": [
+        {
+          "url": "https://t.pia.jp/pia/artist/artists.do?artistsCd=35160066",
+          "checkedAt": "2026-10-19T16:18:40.579Z",
+          "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+        },
+        {
+          "url": "https://officeendless.com/sp/moriarty-st/case1/cast.html",
+          "checkedAt": "2026-10-19T16:16:37.824Z",
+          "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+        },
+        {
+          "url": "https://www.andendless.com/ae_archive/only-silver-fish-gold-fish/",
+          "checkedAt": "2026-10-19T16:18:43.355Z",
+          "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+        }
+      ],
+      "notes": [
+        "チケットぴあのカタカナ表記から読みを機械的にひらがな化。劇団公式アーカイブで過去の役付き出演を照合。現在所属・生年月日・身長・血液型・出身地・英字名は不明なので追加しない。2007年の「虎のこ」表記を現在所属へ流用しない。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "1b8363f5-7fa1-4b82-b654-2b2c9bc3e0b4",
+        "slug": "kazuuchi-yu",
+        "name": "一内侑",
+        "kana": "かずうち ゆう",
+        "profile": "俳優。劇団AND ENDLESS所属。2006年に入団。舞台「機動戦士ガンダム00」シリーズのビリー・カタギリ役などを務める。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1981-02-02",
+        "height_cm": 176,
+        "blood_type": "AB",
+        "birthday_label": null,
+        "name_en": "Yu Kazuuchi",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "一内侑",
+      "profileUrl": "https://www.andendless.com/profile-2//cast_kazuuchi/",
+      "evidence": [
+        {
+          "url": "https://www.andendless.com/profile-2//cast_kazuuchi/",
+          "checkedAt": "2026-10-19T16:20:53.663Z",
+          "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+        },
+        {
+          "url": "https://www.andendless.com/profile-2/",
+          "checkedAt": "2026-10-19T16:18:30.344Z",
+          "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+        },
+        {
+          "url": "https://kira-hai.net/kazuuchi-yu",
+          "checkedAt": "2026-10-19T16:16:50.038Z",
+          "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+        },
+        {
+          "url": "https://officeendless.com/sp/moriarty-st/case1/cast.html",
+          "checkedAt": "2026-10-19T16:16:37.824Z",
+          "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+        }
+      ],
+      "notes": [
+        "入団年はファン資料の2007年ではなく現劇団公式の2006年を採用。読み・身長は第一参照先。英字名は現劇団公式のYu Kazuuchi。出身地・現在の事務所所属は推測しない。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "ac07046e-3240-48b0-ab52-a4b0b17c57de",
+        "slug": "ishii-hiroto",
+        "name": "石井寛人",
+        "kana": "いしい ひろと",
+        "profile": "俳優。劇団AND ENDLESS所属。ワークショップを経て2010年に入団。劇団公演やOffice ENDLESS、DisGOONieの舞台に出演し、舞台「憂国のモリアーティ」ではルシアン・アトウッド役を務める。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1986-11-27",
+        "height_cm": 176,
+        "blood_type": "A",
+        "birthday_label": null,
+        "name_en": "Hiroto Ishii",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "石井寛人",
+      "profileUrl": "https://www.andendless.com/profile-2//cast_ishii/",
+      "evidence": [
+        {
+          "url": "https://www.andendless.com/profile-2//cast_ishii/",
+          "checkedAt": "2026-10-19T16:20:56.262Z",
+          "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+        },
+        {
+          "url": "https://www.andendless.com/profile-2/",
+          "checkedAt": "2026-10-19T16:18:30.344Z",
+          "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+        },
+        {
+          "url": "https://kira-hai.net/ishii-hiroto",
+          "checkedAt": "2026-10-19T16:16:52.886Z",
+          "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+        },
+        {
+          "url": "https://officeendless.com/sp/moriarty-st/case1/cast.html",
+          "checkedAt": "2026-10-19T16:16:37.824Z",
+          "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+        },
+        {
+          "url": "https://officeendless.com/sp/moriarty-st/cast/",
+          "checkedAt": "2026-10-19T16:16:40.135Z",
+          "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+        }
+      ],
+      "notes": [
+        "同姓同名の医師・能楽師・野球選手と混同せず、劇団の本人紹介・誕生日・当該配役で照合。初演の役付き出演は個人配役へ移すが、case2の公式アンサンブルはクレジットのまま保持。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "e29c01ee-772e-4c44-ad29-946813ee2c0c",
+        "slug": "honma-tatsuhiro",
+        "name": "本間健大",
+        "kana": "ほんま たつひろ",
+        "profile": "東京都出身の俳優。舞台「憂国のモリアーティ」でテイト・パーシヴァル役を務める。舞台「戦国BASARA」シリーズや「青の祓魔師」などにも出演。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": null,
+        "height_cm": 162,
+        "blood_type": null,
+        "birthday_label": "5月2日",
+        "name_en": "Honma Tatsuhiro",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "本間健大",
+      "profileUrl": "https://croquegirls.wixsite.com/croque-web/honma",
+      "evidence": [
+        {
+          "url": "https://croquegirls.wixsite.com/croque-web/honma",
+          "checkedAt": "2026-10-19T16:18:35.382Z",
+          "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+        },
+        {
+          "url": "https://kira-hai.net/honma-tatsuhiro",
+          "checkedAt": "2026-10-19T16:16:55.686Z",
+          "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+        },
+        {
+          "url": "https://officeendless.com/sp/moriarty-st/case1/cast.html",
+          "checkedAt": "2026-10-19T16:16:37.824Z",
+          "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+        }
+      ],
+      "notes": [
+        "劇団クロックガールズ公式の過去プロフィールで月日・出身地・身長と英字名を確認。公表されない生年を作らずbirthday=null、birthday_label=5月2日。2014年のページだけで現在所属を断定しない。英字姓名順は公式どおり。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "d373c120-2031-432f-b920-23c5ccbb7d74",
+        "slug": "hayakawa-yuhei",
+        "name": "早川勇平",
+        "kana": "はやかわ ゆうへい",
+        "profile": "俳優。舞台「憂国のモリアーティ」でチャールズ・バスカヴィル役を務める。「戦国BASARA」シリーズや「BIOHAZARD THE STAGE」、「からくりサーカス」などにも出演。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1989-02-16",
+        "height_cm": 173,
+        "blood_type": null,
+        "birthday_label": null,
+        "name_en": null,
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "早川勇平",
+      "profileUrl": "https://kira-hai.net/hayakawa-yuhei",
+      "evidence": [
+        {
+          "url": "https://kira-hai.net/hayakawa-yuhei",
+          "checkedAt": "2026-10-19T16:16:58.587Z",
+          "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+        },
+        {
+          "url": "https://officeendless.com/sp/moriarty-st/case1/cast.html",
+          "checkedAt": "2026-10-19T16:16:37.824Z",
+          "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+        },
+        {
+          "url": "https://revolver-stage.com/",
+          "checkedAt": "2026-10-19T16:19:45.759Z",
+          "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+        }
+      ],
+      "notes": [
+        "基本情報は第一参照先、本人の当該出演はモリステ公式で確認。現在のRE:BIRTH公式でも同名の出演を照合。テアトルアカデミーの旧所属は現行本人ページで確認できないため転記しない。英字フルネーム・血液型・出身地は追加しない。"
+      ]
+    }
+  ],
+  "patchedActors": [
+    {
+      "before": {
+        "id": "508ba664-f644-4c55-a98e-4ac0d87778e3",
+        "slug": "domi-akira",
+        "name": "百成瑛",
+        "kana": "どうみあきら",
+        "profile": null,
+        "image_url": null,
+        "sns": null,
+        "gender": null,
+        "created_at": "2026-10-17T08:22:48.968908+00:00",
+        "updated_at": "2026-10-17T08:22:48.968908+00:00",
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1997-01-06",
+        "height_cm": 178,
+        "blood_type": "B",
+        "birthday_label": null,
+        "name_en": null,
+        "profile_en": null,
+        "death_date": null
+      },
+      "patch": {
+        "profile": "イギリス出身の俳優・モデル。A&H Promotion.所属。旧芸名は瑛。2014年の「ソニーミュージック×smartモデルオーディション」でグランプリを受賞しデビュー。「あんさんぶるスターズ！」の乙狩アドニス役や「Fate/Grand Order THE STAGE」のマーリン役を務める。",
+        "name_en": "Akira Domiki"
+      },
+      "profileUrl": "https://a-and-h-promotion.com/artists/akira-domiki/",
+      "evidence": [
+        {
+          "url": "https://kira-hai.net/akira",
+          "checkedAt": "2026-10-19T16:16:47.494Z",
+          "note": "旧名瑛と現在名百成瑛、1997年1月6日を確認。"
+        },
+        {
+          "url": "https://a-and-h-promotion.com/artists/akira-domiki/",
+          "checkedAt": "2026-10-19T16:18:32.875Z",
+          "note": "現所属公式の本人・1997/1/6・当該ダドリー役・他の役付き出演とAkira Domikiを照合。公式の当該公演をミュージカルと書く箇所は採用せず、公演公式の舞台として記録。"
+        }
+      ],
+      "notes": [
+        "既存人物のID・slug・氏名・読み・生年月日・身体情報と旧人物出典は保持。氏名から英字名を推測せず、現公式のAkira Domikiをそのまま採用。出典原名の瑛は候補・原文へ保持し、新しい瑛ページを作らない。"
+      ]
+    }
+  ],
+  "patchedPlays": [
+    {
+      "before": {
+        "id": "9206a2dd-68ef-425c-babb-791a92e816df",
+        "slug": "moriarty-stage-2020",
+        "title": "舞台「憂国のモリアーティ」",
+        "franchise_id": "de2dd05e-e2ae-461c-9c20-42de1dc019aa",
+        "summary": null,
+        "period": "東京：2020年1月10日〜19日／大阪：2020年1月31日〜2月2日",
+        "venue": "EX THEATER ROPPONGI／梅田芸術劇場 シアター・ドラマシティ",
+        "vod": null,
+        "genre": null,
+        "created_at": "2026-10-19T14:46:49.33877+00:00",
+        "updated_at": "2026-10-19T14:46:49.33877+00:00",
+        "tags": [],
+        "credits": [
+          {
+            "role": "原作",
+            "names": [
+              "構成／竹内良輔 漫画／三好輝『憂国のモリアーティ』（集英社「ジャンプSQ.」連載）"
+            ],
+            "is_core": true,
+            "sort_order": 1
+          },
+          {
+            "role": "脚本・演出",
+            "names": [
+              "西田大輔"
+            ],
+            "is_core": true,
+            "sort_order": 2
+          },
+          {
+            "role": "音楽",
+            "names": [
+              "YOSHIZUMI"
+            ],
+            "is_core": true,
+            "sort_order": 3
+          },
+          {
+            "role": "その他出演",
+            "names": [
+              "佐久間祐人（レニー・ダブリン男爵）",
+              "塚本拓弥（マグワイア大佐）",
+              "芳賀恵子（スザンナ）",
+              "瑛（ダドリー・ベイル）",
+              "一内侑（ベンジャミン・バートン）",
+              "石井寛人（ルシアン・アトウッド）",
+              "本間健大（テイト・パーシヴァル）",
+              "早川勇平（チャールズ・バスカヴィル）"
+            ],
+            "is_core": false,
+            "sort_order": 4
+          },
+          {
+            "role": "Dancer",
+            "names": [
+              "市川絵美",
+              "黒沢茉莉衣",
+              "佐藤侑愛",
+              "脇坂舞美"
+            ],
+            "is_core": false,
+            "sort_order": 5
+          }
+        ],
+        "related_franchise_ids": [],
+        "summary_en": null,
+        "title_en": null
+      },
+      "patch": {
+        "title_en": "Moriarty the Patriot: The Stage",
+        "credits": [
+          {
+            "role": "原作",
+            "names": [
+              "構成／竹内良輔 漫画／三好輝『憂国のモリアーティ』（集英社「ジャンプSQ.」連載）"
+            ],
+            "is_core": true,
+            "sort_order": 1
+          },
+          {
+            "role": "脚本・演出",
+            "names": [
+              "西田大輔"
+            ],
+            "is_core": true,
+            "sort_order": 2
+          },
+          {
+            "role": "音楽",
+            "names": [
+              "YOSHIZUMI"
+            ],
+            "is_core": true,
+            "sort_order": 3
+          },
+          {
+            "role": "Dancer",
+            "names": [
+              "市川絵美",
+              "黒沢茉莉衣",
+              "佐藤侑愛",
+              "脇坂舞美"
+            ],
+            "is_core": false,
+            "sort_order": 5
+          }
+        ]
+      }
+    },
+    {
+      "before": {
+        "id": "56b2d094-05cc-49e1-b6df-f3ec2277e3fb",
+        "slug": "moriarty-stage-case2",
+        "title": "舞台「憂国のモリアーティ」-case2-",
+        "franchise_id": "de2dd05e-e2ae-461c-9c20-42de1dc019aa",
+        "summary": null,
+        "period": "2021年7月23日〜8月1日",
+        "venue": "新国立劇場 中劇場",
+        "vod": null,
+        "genre": null,
+        "created_at": "2026-10-19T14:46:49.33877+00:00",
+        "updated_at": "2026-10-19T14:46:49.33877+00:00",
+        "tags": [],
+        "credits": [
+          {
+            "role": "原作",
+            "names": [
+              "構成／竹内良輔 漫画／三好輝『憂国のモリアーティ』（集英社「ジャンプSQ.」連載）"
+            ],
+            "is_core": true,
+            "sort_order": 1
+          },
+          {
+            "role": "脚本・演出",
+            "names": [
+              "西田大輔"
+            ],
+            "is_core": true,
+            "sort_order": 2
+          },
+          {
+            "role": "音楽",
+            "names": [
+              "YOSHIZUMI"
+            ],
+            "is_core": true,
+            "sort_order": 3
+          },
+          {
+            "role": "アンサンブル",
+            "names": [
+              "杉山健一",
+              "石井寛人",
+              "田上健太",
+              "中土井俊允",
+              "岡直樹",
+              "榎太誠",
+              "書川勇輝"
+            ],
+            "is_core": false,
+            "sort_order": 4
+          },
+          {
+            "role": "Dancer",
+            "names": [
+              "岡本真友",
+              "山田美貴",
+              "市川絵美",
+              "中野紗耶可"
+            ],
+            "is_core": false,
+            "sort_order": 5
+          }
+        ],
+        "related_franchise_ids": [],
+        "summary_en": null,
+        "title_en": null
+      },
+      "patch": {
+        "title_en": "Moriarty the Patriot: The Stage -case2-"
+      }
+    }
+  ],
+  "oldPlay": {
+    "id": "9206a2dd-68ef-425c-babb-791a92e816df",
+    "slug": "moriarty-stage-2020",
+    "title": "舞台「憂国のモリアーティ」",
+    "franchise_id": "de2dd05e-e2ae-461c-9c20-42de1dc019aa",
+    "summary": null,
+    "period": "東京：2020年1月10日〜19日／大阪：2020年1月31日〜2月2日",
+    "venue": "EX THEATER ROPPONGI／梅田芸術劇場 シアター・ドラマシティ",
+    "vod": null,
+    "genre": null,
+    "created_at": "2026-10-19T14:46:49.33877+00:00",
+    "updated_at": "2026-10-19T14:46:49.33877+00:00",
+    "tags": [],
+    "credits": [
+      {
+        "role": "原作",
+        "names": [
+          "構成／竹内良輔 漫画／三好輝『憂国のモリアーティ』（集英社「ジャンプSQ.」連載）"
+        ],
+        "is_core": true,
+        "sort_order": 1
+      },
+      {
+        "role": "脚本・演出",
+        "names": [
+          "西田大輔"
+        ],
+        "is_core": true,
+        "sort_order": 2
+      },
+      {
+        "role": "音楽",
+        "names": [
+          "YOSHIZUMI"
+        ],
+        "is_core": true,
+        "sort_order": 3
+      },
+      {
+        "role": "その他出演",
+        "names": [
+          "佐久間祐人（レニー・ダブリン男爵）",
+          "塚本拓弥（マグワイア大佐）",
+          "芳賀恵子（スザンナ）",
+          "瑛（ダドリー・ベイル）",
+          "一内侑（ベンジャミン・バートン）",
+          "石井寛人（ルシアン・アトウッド）",
+          "本間健大（テイト・パーシヴァル）",
+          "早川勇平（チャールズ・バスカヴィル）"
+        ],
+        "is_core": false,
+        "sort_order": 4
+      },
+      {
+        "role": "Dancer",
+        "names": [
+          "市川絵美",
+          "黒沢茉莉衣",
+          "佐藤侑愛",
+          "脇坂舞美"
+        ],
+        "is_core": false,
+        "sort_order": 5
+      }
+    ],
+    "related_franchise_ids": [],
+    "summary_en": null,
+    "title_en": null
+  },
+  "rawSource": {
+    "sourceUrl": "https://kira-hai.net/moriartystage2020",
+    "title": "舞台「憂国のモリアーティ」",
+    "scheduleLines": [
+      "2020年1月10日-19日 EX THEATER ROPPONGI",
+      "2020年1月31日-2月2日 梅田芸術劇場シアター・ドラマシティ"
+    ],
+    "cast": [
+      {
+        "sourceActorName": "荒牧慶彦",
+        "sourceActorUrl": "https://kira-hai.net/aramaki-yoshihiko",
+        "role_name": "ウィリアム・ジェームズ・モリアーティ",
+        "cast_group": null
+      },
+      {
+        "sourceActorName": "瀬戸祐介",
+        "sourceActorUrl": "https://kira-hai.net/seto-yusuke",
+        "role_name": "アルバート・ジェームズ・モリアーティ",
+        "cast_group": null
+      },
+      {
+        "sourceActorName": "糸川耀士郎",
+        "sourceActorUrl": "https://kira-hai.net/itokawa-yojiro",
+        "role_name": "ルイス・ジェームズ・モリアーティ",
+        "cast_group": null
+      },
+      {
+        "sourceActorName": "君沢ユウキ",
+        "sourceActorUrl": "https://kira-hai.net/kimisawa-yuki",
+        "role_name": "セバスチャン・モラン",
+        "cast_group": null
+      },
+      {
+        "sourceActorName": "設楽銀河",
+        "sourceActorUrl": "https://kira-hai.net/shitara-ginga",
+        "role_name": "フレッド・ポーロック",
+        "cast_group": null
+      },
+      {
+        "sourceActorName": "松井勇歩",
+        "sourceActorUrl": "https://kira-hai.net/matsui-yuho",
+        "role_name": "ジョン・H・ワトソン",
+        "cast_group": null
+      },
+      {
+        "sourceActorName": "野本ほたる",
+        "sourceActorUrl": "https://kira-hai.net/nomoto-hotaru",
+        "role_name": "ミス・ハドソン",
+        "cast_group": null
+      },
+      {
+        "sourceActorName": "立道梨緒奈",
+        "sourceActorUrl": "https://kira-hai.net/tatemichi-riona",
+        "role_name": "アイリーン・アドラー",
+        "cast_group": null
+      },
+      {
+        "sourceActorName": "早乙女じょうじ",
+        "sourceActorUrl": "https://kira-hai.net/saotome-joji",
+        "role_name": "マイクロフト・ホームズ",
+        "cast_group": null
+      },
+      {
+        "sourceActorName": "北村諒",
+        "sourceActorUrl": "https://kira-hai.net/kitamura-ryo",
+        "role_name": "シャーロック・ホームズ",
+        "cast_group": null
+      },
+      {
+        "sourceActorName": "佐久間祐人",
+        "sourceActorUrl": null,
+        "role_name": "レニー・ダブリン男爵",
+        "cast_group": null
+      },
+      {
+        "sourceActorName": "塚本拓弥",
+        "sourceActorUrl": "https://kira-hai.net/tsukamoto-takuya",
+        "role_name": "マグワイア大佐",
+        "cast_group": null
+      },
+      {
+        "sourceActorName": "芳賀恵子",
+        "sourceActorUrl": null,
+        "role_name": "スザンナ",
+        "cast_group": null
+      },
+      {
+        "sourceActorName": "瑛",
+        "sourceActorUrl": "https://kira-hai.net/akira",
+        "role_name": "ダドリー・ベイル",
+        "cast_group": null
+      },
+      {
+        "sourceActorName": "一内侑",
+        "sourceActorUrl": "https://kira-hai.net/kazuuchi-yu",
+        "role_name": "ベンジャミン・バートン",
+        "cast_group": null
+      },
+      {
+        "sourceActorName": "石井寛人",
+        "sourceActorUrl": "https://kira-hai.net/ishii-hiroto",
+        "role_name": "ルシアン・アトウッド",
+        "cast_group": null
+      },
+      {
+        "sourceActorName": "本間健大",
+        "sourceActorUrl": "https://kira-hai.net/honma-tatsuhiro",
+        "role_name": "テイト・パーシヴァル",
+        "cast_group": null
+      },
+      {
+        "sourceActorName": "早川勇平",
+        "sourceActorUrl": "https://kira-hai.net/hayakawa-yuhei",
+        "role_name": "チャールズ・バスカヴィル",
+        "cast_group": null
+      }
+    ],
+    "unparsed": [
+      "市川絵美",
+      "黒沢茉莉衣",
+      "佐藤侑愛",
+      "脇坂舞美"
+    ]
+  },
+  "source": {
+    "sourceUrl": "https://kira-hai.net/moriartystage2020",
+    "title": "舞台「憂国のモリアーティ」",
+    "scheduleLines": [
+      "2020年1月10日-19日 EX THEATER ROPPONGI",
+      "2020年1月31日-2月2日 梅田芸術劇場シアター・ドラマシティ"
+    ],
+    "cast": [
+      {
+        "sourceActorName": "荒牧慶彦",
+        "sourceActorUrl": "https://kira-hai.net/aramaki-yoshihiko",
+        "role_name": "ウィリアム・ジェームズ・モリアーティ",
+        "cast_group": null
+      },
+      {
+        "sourceActorName": "瀬戸祐介",
+        "sourceActorUrl": "https://kira-hai.net/seto-yusuke",
+        "role_name": "アルバート・ジェームズ・モリアーティ",
+        "cast_group": null
+      },
+      {
+        "sourceActorName": "糸川耀士郎",
+        "sourceActorUrl": "https://kira-hai.net/itokawa-yojiro",
+        "role_name": "ルイス・ジェームズ・モリアーティ",
+        "cast_group": null
+      },
+      {
+        "sourceActorName": "君沢ユウキ",
+        "sourceActorUrl": "https://kira-hai.net/kimisawa-yuki",
+        "role_name": "セバスチャン・モラン",
+        "cast_group": null
+      },
+      {
+        "sourceActorName": "設楽銀河",
+        "sourceActorUrl": "https://kira-hai.net/shitara-ginga",
+        "role_name": "フレッド・ポーロック",
+        "cast_group": null
+      },
+      {
+        "sourceActorName": "松井勇歩",
+        "sourceActorUrl": "https://kira-hai.net/matsui-yuho",
+        "role_name": "ジョン・H・ワトソン",
+        "cast_group": null
+      },
+      {
+        "sourceActorName": "野本ほたる",
+        "sourceActorUrl": "https://kira-hai.net/nomoto-hotaru",
+        "role_name": "ミス・ハドソン",
+        "cast_group": null
+      },
+      {
+        "sourceActorName": "立道梨緒奈",
+        "sourceActorUrl": "https://kira-hai.net/tatemichi-riona",
+        "role_name": "アイリーン・アドラー",
+        "cast_group": null
+      },
+      {
+        "sourceActorName": "早乙女じょうじ",
+        "sourceActorUrl": "https://kira-hai.net/saotome-joji",
+        "role_name": "マイクロフト・ホームズ",
+        "cast_group": null
+      },
+      {
+        "sourceActorName": "北村諒",
+        "sourceActorUrl": "https://kira-hai.net/kitamura-ryo",
+        "role_name": "シャーロック・ホームズ",
+        "cast_group": null
+      },
+      {
+        "sourceActorName": "佐久間祐人",
+        "sourceActorUrl": null,
+        "role_name": "レニー・ダブリン男爵",
+        "cast_group": null
+      },
+      {
+        "sourceActorName": "塚本拓弥",
+        "sourceActorUrl": "https://kira-hai.net/tsukamoto-takuya",
+        "role_name": "マグワイア大佐",
+        "cast_group": null
+      },
+      {
+        "sourceActorName": "芳賀恵子",
+        "sourceActorUrl": null,
+        "role_name": "スザンナ",
+        "cast_group": null
+      },
+      {
+        "sourceActorName": "瑛",
+        "sourceActorUrl": "https://kira-hai.net/akira",
+        "role_name": "ダドリー・ベイル",
+        "cast_group": null
+      },
+      {
+        "sourceActorName": "一内侑",
+        "sourceActorUrl": "https://kira-hai.net/kazuuchi-yu",
+        "role_name": "ベンジャミン・バートン",
+        "cast_group": null
+      },
+      {
+        "sourceActorName": "石井寛人",
+        "sourceActorUrl": "https://kira-hai.net/ishii-hiroto",
+        "role_name": "ルシアン・アトウッド",
+        "cast_group": null
+      },
+      {
+        "sourceActorName": "本間健大",
+        "sourceActorUrl": "https://kira-hai.net/honma-tatsuhiro",
+        "role_name": "テイト・パーシヴァル",
+        "cast_group": null
+      },
+      {
+        "sourceActorName": "早川勇平",
+        "sourceActorUrl": "https://kira-hai.net/hayakawa-yuhei",
+        "role_name": "チャールズ・バスカヴィル",
+        "cast_group": null
+      }
+    ],
+    "unparsed": [],
+    "creditOnly": {
+      "otherRoles": [],
+      "ensemble": [],
+      "dancers": [
+        "市川絵美",
+        "黒沢茉莉衣",
+        "佐藤侑愛",
+        "脇坂舞美"
+      ],
+      "decision": "当該公式のanother_castは役名付きの通常出演8人であり、一括除外を訂正して配役へ移す。Dancer4人は作品クレジットのまま。"
+    }
+  },
+  "records": [
+    {
+      "actor": {
+        "id": "ae942e1f-730b-4fd6-9928-8a64e80d0cb3",
+        "slug": "sakuma-hiroto",
+        "name": "佐久間祐人",
+        "kana": "さくま ひろと",
+        "profile": "俳優。劇団AND ENDLESS所属。1997年に俳優活動を始め、2004年に同劇団へ入団。出演のほか演出助手も務め、舞台「ヴィンランド・サガ」ではラグナル役を演じる。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1971-06-10",
+        "height_cm": null,
+        "blood_type": "A",
+        "birthday_label": null,
+        "name_en": "Hiroto Sakuma",
+        "profile_en": null,
+        "death_date": null,
+        "created_at": "prepared-not-yet-inserted",
+        "updated_at": "prepared-not-yet-inserted"
+      },
+      "source": {
+        "sourceActorName": "佐久間祐人",
+        "sourceActorUrl": null,
+        "role_name": "レニー・ダブリン男爵",
+        "cast_group": null
+      },
+      "sourceCreditKey": "95e1cee982a1873d267c",
+      "sourceOrder": 11
+    },
+    {
+      "actor": {
+        "id": "158c7bb9-4c95-4eba-aca0-56e564d9e761",
+        "slug": "tsukamoto-takuya",
+        "name": "塚本拓弥",
+        "kana": "つかもと たくや",
+        "profile": "東京都出身の俳優。SOS Entertainments所属。舞台「戦国BASARA」シリーズの今川義元役や、舞台「憂国のモリアーティ」のマグワイア大佐役を務める。映画「カイジⅡ」「20世紀少年」などにも出演。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1975-11-07",
+        "height_cm": 174,
+        "blood_type": "A",
+        "birthday_label": null,
+        "name_en": "Takuya Tsukamoto",
+        "profile_en": null,
+        "death_date": null,
+        "created_at": "prepared-not-yet-inserted",
+        "updated_at": "prepared-not-yet-inserted"
+      },
+      "source": {
+        "sourceActorName": "塚本拓弥",
+        "sourceActorUrl": "https://kira-hai.net/tsukamoto-takuya",
+        "role_name": "マグワイア大佐",
+        "cast_group": null
+      },
+      "sourceCreditKey": "0028767d3078e295389e",
+      "sourceOrder": 12
+    },
+    {
+      "actor": {
+        "id": "ee987526-4bbd-4658-b499-56faedf24b4a",
+        "slug": "haga-keiko",
+        "name": "芳賀恵子",
+        "kana": "はが けいこ",
+        "profile": "俳優。舞台「憂国のモリアーティ」でスザンナ役を務める。AND ENDLESSの「ONLY SILVER FISH」「＋GOLD FISH」にも出演。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": null,
+        "height_cm": null,
+        "blood_type": null,
+        "birthday_label": null,
+        "name_en": null,
+        "profile_en": null,
+        "death_date": null,
+        "created_at": "prepared-not-yet-inserted",
+        "updated_at": "prepared-not-yet-inserted"
+      },
+      "source": {
+        "sourceActorName": "芳賀恵子",
+        "sourceActorUrl": null,
+        "role_name": "スザンナ",
+        "cast_group": null
+      },
+      "sourceCreditKey": "925b6abcf0501fa4c13f",
+      "sourceOrder": 13
+    },
+    {
+      "actor": {
+        "id": "508ba664-f644-4c55-a98e-4ac0d87778e3",
+        "slug": "domi-akira",
+        "name": "百成瑛",
+        "kana": "どうみあきら",
+        "profile": null,
+        "image_url": null,
+        "sns": null,
+        "gender": null,
+        "created_at": "2026-10-17T08:22:48.968908+00:00",
+        "updated_at": "2026-10-17T08:22:48.968908+00:00",
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1997-01-06",
+        "height_cm": 178,
+        "blood_type": "B",
+        "birthday_label": null,
+        "name_en": null,
+        "profile_en": null,
+        "death_date": null
+      },
+      "source": {
+        "sourceActorName": "瑛",
+        "sourceActorUrl": "https://kira-hai.net/akira",
+        "role_name": "ダドリー・ベイル",
+        "cast_group": null
+      },
+      "sourceCreditKey": "fa1714d14ccc0418be13",
+      "sourceOrder": 14
+    },
+    {
+      "actor": {
+        "id": "1b8363f5-7fa1-4b82-b654-2b2c9bc3e0b4",
+        "slug": "kazuuchi-yu",
+        "name": "一内侑",
+        "kana": "かずうち ゆう",
+        "profile": "俳優。劇団AND ENDLESS所属。2006年に入団。舞台「機動戦士ガンダム00」シリーズのビリー・カタギリ役などを務める。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1981-02-02",
+        "height_cm": 176,
+        "blood_type": "AB",
+        "birthday_label": null,
+        "name_en": "Yu Kazuuchi",
+        "profile_en": null,
+        "death_date": null,
+        "created_at": "prepared-not-yet-inserted",
+        "updated_at": "prepared-not-yet-inserted"
+      },
+      "source": {
+        "sourceActorName": "一内侑",
+        "sourceActorUrl": "https://kira-hai.net/kazuuchi-yu",
+        "role_name": "ベンジャミン・バートン",
+        "cast_group": null
+      },
+      "sourceCreditKey": "3b8632bf48f73f444271",
+      "sourceOrder": 15
+    },
+    {
+      "actor": {
+        "id": "ac07046e-3240-48b0-ab52-a4b0b17c57de",
+        "slug": "ishii-hiroto",
+        "name": "石井寛人",
+        "kana": "いしい ひろと",
+        "profile": "俳優。劇団AND ENDLESS所属。ワークショップを経て2010年に入団。劇団公演やOffice ENDLESS、DisGOONieの舞台に出演し、舞台「憂国のモリアーティ」ではルシアン・アトウッド役を務める。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1986-11-27",
+        "height_cm": 176,
+        "blood_type": "A",
+        "birthday_label": null,
+        "name_en": "Hiroto Ishii",
+        "profile_en": null,
+        "death_date": null,
+        "created_at": "prepared-not-yet-inserted",
+        "updated_at": "prepared-not-yet-inserted"
+      },
+      "source": {
+        "sourceActorName": "石井寛人",
+        "sourceActorUrl": "https://kira-hai.net/ishii-hiroto",
+        "role_name": "ルシアン・アトウッド",
+        "cast_group": null
+      },
+      "sourceCreditKey": "aaf0f13ba00f8b7b0845",
+      "sourceOrder": 16
+    },
+    {
+      "actor": {
+        "id": "e29c01ee-772e-4c44-ad29-946813ee2c0c",
+        "slug": "honma-tatsuhiro",
+        "name": "本間健大",
+        "kana": "ほんま たつひろ",
+        "profile": "東京都出身の俳優。舞台「憂国のモリアーティ」でテイト・パーシヴァル役を務める。舞台「戦国BASARA」シリーズや「青の祓魔師」などにも出演。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": null,
+        "height_cm": 162,
+        "blood_type": null,
+        "birthday_label": "5月2日",
+        "name_en": "Honma Tatsuhiro",
+        "profile_en": null,
+        "death_date": null,
+        "created_at": "prepared-not-yet-inserted",
+        "updated_at": "prepared-not-yet-inserted"
+      },
+      "source": {
+        "sourceActorName": "本間健大",
+        "sourceActorUrl": "https://kira-hai.net/honma-tatsuhiro",
+        "role_name": "テイト・パーシヴァル",
+        "cast_group": null
+      },
+      "sourceCreditKey": "e31afb0f62ec759fe8c1",
+      "sourceOrder": 17
+    },
+    {
+      "actor": {
+        "id": "d373c120-2031-432f-b920-23c5ccbb7d74",
+        "slug": "hayakawa-yuhei",
+        "name": "早川勇平",
+        "kana": "はやかわ ゆうへい",
+        "profile": "俳優。舞台「憂国のモリアーティ」でチャールズ・バスカヴィル役を務める。「戦国BASARA」シリーズや「BIOHAZARD THE STAGE」、「からくりサーカス」などにも出演。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1989-02-16",
+        "height_cm": 173,
+        "blood_type": null,
+        "birthday_label": null,
+        "name_en": null,
+        "profile_en": null,
+        "death_date": null,
+        "created_at": "prepared-not-yet-inserted",
+        "updated_at": "prepared-not-yet-inserted"
+      },
+      "source": {
+        "sourceActorName": "早川勇平",
+        "sourceActorUrl": "https://kira-hai.net/hayakawa-yuhei",
+        "role_name": "チャールズ・バスカヴィル",
+        "cast_group": null
+      },
+      "sourceCreditKey": "5fcdb451cdd7c87f14cb",
+      "sourceOrder": 18
+    }
+  ],
+  "stage": {
+    "workUrl": "https://kira-hai.net/moriartystage2020",
+    "key": "df00a481966f132062209aaa310ef70b82d893fe6931dda0658c19e98af97fe2",
+    "items": [
+      {
+        "source_actor_name": "佐久間祐人",
+        "source_actor_url": null,
+        "source_work_title": "舞台「憂国のモリアーティ」",
+        "source_year": 2020,
+        "source_role_raw": "レニー・ダブリン男爵",
+        "source_role_names": [
+          "レニー・ダブリン男爵"
+        ],
+        "source_cast_group": null,
+        "source_order": 11,
+        "source_credit_key": "95e1cee982a1873d267c",
+        "source_evidence": {
+          "links": [
+            {
+              "url": "https://kira-hai.net/moriartystage2020",
+              "note": "作品ページのキャスト欄"
+            },
+            {
+              "url": "https://www.andendless.com/profile-2//cast_sakuma/",
+              "checkedAt": "2026-10-19T16:20:51.159Z",
+              "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+            },
+            {
+              "url": "https://www.andendless.com/profile-2/",
+              "checkedAt": "2026-10-19T16:18:30.344Z",
+              "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+            },
+            {
+              "url": "https://talent-dictionary.com/佐久間祐人",
+              "checkedAt": "2026-10-19T16:22:39.274Z",
+              "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+            },
+            {
+              "url": "https://officeendless.com/sp/moriarty-st/case1/cast.html",
+              "checkedAt": "2026-10-19T16:16:37.824Z",
+              "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+            },
+            {
+              "url": "https://officeendless.com/sp/moriarty-st/case1/cast.html",
+              "checkedAt": "2026-10-19T16:16:37.824Z",
+              "note": "公式のanother_castは役付き8人でありアンサンブルという分類はない。Dancerとは区分して保存。"
+            }
+          ],
+          "source_fingerprint": "237bea0bb514fb3a6b9ad743cf0498982c04b32a8833949df4c8329749ff51d7",
+          "review_fingerprint": "cf8a6c09729f01e8cdee28e4d1db2517fd8fbdb50a23b5bf168ae89c8d08fbd8",
+          "snapshot_fingerprint": "ff5d2b1a0cf945d3f39a478434242761c4856497a3c213384edc02c7b3c53bce",
+          "identity": "reviewed_link"
+        },
+        "matched_actor_id": "ae942e1f-730b-4fd6-9928-8a64e80d0cb3",
+        "matched_play_id": "9206a2dd-68ef-425c-babb-791a92e816df",
+        "status": "pending"
+      },
+      {
+        "source_actor_name": "塚本拓弥",
+        "source_actor_url": "https://kira-hai.net/tsukamoto-takuya",
+        "source_work_title": "舞台「憂国のモリアーティ」",
+        "source_year": 2020,
+        "source_role_raw": "マグワイア大佐",
+        "source_role_names": [
+          "マグワイア大佐"
+        ],
+        "source_cast_group": null,
+        "source_order": 12,
+        "source_credit_key": "0028767d3078e295389e",
+        "source_evidence": {
+          "links": [
+            {
+              "url": "https://kira-hai.net/moriartystage2020",
+              "note": "作品ページのキャスト欄"
+            },
+            {
+              "url": "https://www.sos-model.com/entertainments/932",
+              "checkedAt": "2026-10-19T16:20:59.066Z",
+              "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+            },
+            {
+              "url": "https://www.sos-model.com/category/entertainments",
+              "checkedAt": "2026-10-19T16:19:43.232Z",
+              "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+            },
+            {
+              "url": "https://kira-hai.net/tsukamoto-takuya",
+              "checkedAt": "2026-10-19T16:16:45.071Z",
+              "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+            },
+            {
+              "url": "https://officeendless.com/sp/moriarty-st/case1/cast.html",
+              "checkedAt": "2026-10-19T16:16:37.824Z",
+              "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+            },
+            {
+              "url": "https://officeendless.com/sp/moriarty-st/case1/cast.html",
+              "checkedAt": "2026-10-19T16:16:37.824Z",
+              "note": "公式のanother_castは役付き8人でありアンサンブルという分類はない。Dancerとは区分して保存。"
+            }
+          ],
+          "source_fingerprint": "237bea0bb514fb3a6b9ad743cf0498982c04b32a8833949df4c8329749ff51d7",
+          "review_fingerprint": "cf8a6c09729f01e8cdee28e4d1db2517fd8fbdb50a23b5bf168ae89c8d08fbd8",
+          "snapshot_fingerprint": "ff5d2b1a0cf945d3f39a478434242761c4856497a3c213384edc02c7b3c53bce",
+          "identity": "reviewed_link"
+        },
+        "matched_actor_id": "158c7bb9-4c95-4eba-aca0-56e564d9e761",
+        "matched_play_id": "9206a2dd-68ef-425c-babb-791a92e816df",
+        "status": "pending"
+      },
+      {
+        "source_actor_name": "芳賀恵子",
+        "source_actor_url": null,
+        "source_work_title": "舞台「憂国のモリアーティ」",
+        "source_year": 2020,
+        "source_role_raw": "スザンナ",
+        "source_role_names": [
+          "スザンナ"
+        ],
+        "source_cast_group": null,
+        "source_order": 13,
+        "source_credit_key": "925b6abcf0501fa4c13f",
+        "source_evidence": {
+          "links": [
+            {
+              "url": "https://kira-hai.net/moriartystage2020",
+              "note": "作品ページのキャスト欄"
+            },
+            {
+              "url": "https://t.pia.jp/pia/artist/artists.do?artistsCd=35160066",
+              "checkedAt": "2026-10-19T16:18:40.579Z",
+              "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+            },
+            {
+              "url": "https://officeendless.com/sp/moriarty-st/case1/cast.html",
+              "checkedAt": "2026-10-19T16:16:37.824Z",
+              "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+            },
+            {
+              "url": "https://www.andendless.com/ae_archive/only-silver-fish-gold-fish/",
+              "checkedAt": "2026-10-19T16:18:43.355Z",
+              "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+            },
+            {
+              "url": "https://officeendless.com/sp/moriarty-st/case1/cast.html",
+              "checkedAt": "2026-10-19T16:16:37.824Z",
+              "note": "公式のanother_castは役付き8人でありアンサンブルという分類はない。Dancerとは区分して保存。"
+            }
+          ],
+          "source_fingerprint": "237bea0bb514fb3a6b9ad743cf0498982c04b32a8833949df4c8329749ff51d7",
+          "review_fingerprint": "cf8a6c09729f01e8cdee28e4d1db2517fd8fbdb50a23b5bf168ae89c8d08fbd8",
+          "snapshot_fingerprint": "ff5d2b1a0cf945d3f39a478434242761c4856497a3c213384edc02c7b3c53bce",
+          "identity": "reviewed_link"
+        },
+        "matched_actor_id": "ee987526-4bbd-4658-b499-56faedf24b4a",
+        "matched_play_id": "9206a2dd-68ef-425c-babb-791a92e816df",
+        "status": "pending"
+      },
+      {
+        "source_actor_name": "瑛",
+        "source_actor_url": "https://kira-hai.net/akira",
+        "source_work_title": "舞台「憂国のモリアーティ」",
+        "source_year": 2020,
+        "source_role_raw": "ダドリー・ベイル",
+        "source_role_names": [
+          "ダドリー・ベイル"
+        ],
+        "source_cast_group": null,
+        "source_order": 14,
+        "source_credit_key": "fa1714d14ccc0418be13",
+        "source_evidence": {
+          "links": [
+            {
+              "url": "https://kira-hai.net/moriartystage2020",
+              "note": "作品ページのキャスト欄"
+            },
+            {
+              "url": "https://kira-hai.net/akira",
+              "checkedAt": "2026-10-19T16:16:47.494Z",
+              "note": "旧名瑛と現在名百成瑛、1997年1月6日を確認。"
+            },
+            {
+              "url": "https://a-and-h-promotion.com/artists/akira-domiki/",
+              "checkedAt": "2026-10-19T16:18:32.875Z",
+              "note": "現所属公式の本人・1997/1/6・当該ダドリー役・他の役付き出演とAkira Domikiを照合。公式の当該公演をミュージカルと書く箇所は採用せず、公演公式の舞台として記録。"
+            }
+          ],
+          "source_fingerprint": "237bea0bb514fb3a6b9ad743cf0498982c04b32a8833949df4c8329749ff51d7",
+          "review_fingerprint": "cf8a6c09729f01e8cdee28e4d1db2517fd8fbdb50a23b5bf168ae89c8d08fbd8",
+          "snapshot_fingerprint": "ff5d2b1a0cf945d3f39a478434242761c4856497a3c213384edc02c7b3c53bce",
+          "identity": "reviewed_link"
+        },
+        "matched_actor_id": "508ba664-f644-4c55-a98e-4ac0d87778e3",
+        "matched_play_id": "9206a2dd-68ef-425c-babb-791a92e816df",
+        "status": "pending"
+      },
+      {
+        "source_actor_name": "一内侑",
+        "source_actor_url": "https://kira-hai.net/kazuuchi-yu",
+        "source_work_title": "舞台「憂国のモリアーティ」",
+        "source_year": 2020,
+        "source_role_raw": "ベンジャミン・バートン",
+        "source_role_names": [
+          "ベンジャミン・バートン"
+        ],
+        "source_cast_group": null,
+        "source_order": 15,
+        "source_credit_key": "3b8632bf48f73f444271",
+        "source_evidence": {
+          "links": [
+            {
+              "url": "https://kira-hai.net/moriartystage2020",
+              "note": "作品ページのキャスト欄"
+            },
+            {
+              "url": "https://www.andendless.com/profile-2//cast_kazuuchi/",
+              "checkedAt": "2026-10-19T16:20:53.663Z",
+              "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+            },
+            {
+              "url": "https://www.andendless.com/profile-2/",
+              "checkedAt": "2026-10-19T16:18:30.344Z",
+              "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+            },
+            {
+              "url": "https://kira-hai.net/kazuuchi-yu",
+              "checkedAt": "2026-10-19T16:16:50.038Z",
+              "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+            },
+            {
+              "url": "https://officeendless.com/sp/moriarty-st/case1/cast.html",
+              "checkedAt": "2026-10-19T16:16:37.824Z",
+              "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+            },
+            {
+              "url": "https://officeendless.com/sp/moriarty-st/case1/cast.html",
+              "checkedAt": "2026-10-19T16:16:37.824Z",
+              "note": "公式のanother_castは役付き8人でありアンサンブルという分類はない。Dancerとは区分して保存。"
+            }
+          ],
+          "source_fingerprint": "237bea0bb514fb3a6b9ad743cf0498982c04b32a8833949df4c8329749ff51d7",
+          "review_fingerprint": "cf8a6c09729f01e8cdee28e4d1db2517fd8fbdb50a23b5bf168ae89c8d08fbd8",
+          "snapshot_fingerprint": "ff5d2b1a0cf945d3f39a478434242761c4856497a3c213384edc02c7b3c53bce",
+          "identity": "reviewed_link"
+        },
+        "matched_actor_id": "1b8363f5-7fa1-4b82-b654-2b2c9bc3e0b4",
+        "matched_play_id": "9206a2dd-68ef-425c-babb-791a92e816df",
+        "status": "pending"
+      },
+      {
+        "source_actor_name": "石井寛人",
+        "source_actor_url": "https://kira-hai.net/ishii-hiroto",
+        "source_work_title": "舞台「憂国のモリアーティ」",
+        "source_year": 2020,
+        "source_role_raw": "ルシアン・アトウッド",
+        "source_role_names": [
+          "ルシアン・アトウッド"
+        ],
+        "source_cast_group": null,
+        "source_order": 16,
+        "source_credit_key": "aaf0f13ba00f8b7b0845",
+        "source_evidence": {
+          "links": [
+            {
+              "url": "https://kira-hai.net/moriartystage2020",
+              "note": "作品ページのキャスト欄"
+            },
+            {
+              "url": "https://www.andendless.com/profile-2//cast_ishii/",
+              "checkedAt": "2026-10-19T16:20:56.262Z",
+              "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+            },
+            {
+              "url": "https://www.andendless.com/profile-2/",
+              "checkedAt": "2026-10-19T16:18:30.344Z",
+              "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+            },
+            {
+              "url": "https://kira-hai.net/ishii-hiroto",
+              "checkedAt": "2026-10-19T16:16:52.886Z",
+              "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+            },
+            {
+              "url": "https://officeendless.com/sp/moriarty-st/case1/cast.html",
+              "checkedAt": "2026-10-19T16:16:37.824Z",
+              "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+            },
+            {
+              "url": "https://officeendless.com/sp/moriarty-st/cast/",
+              "checkedAt": "2026-10-19T16:16:40.135Z",
+              "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+            },
+            {
+              "url": "https://officeendless.com/sp/moriarty-st/case1/cast.html",
+              "checkedAt": "2026-10-19T16:16:37.824Z",
+              "note": "公式のanother_castは役付き8人でありアンサンブルという分類はない。Dancerとは区分して保存。"
+            }
+          ],
+          "source_fingerprint": "237bea0bb514fb3a6b9ad743cf0498982c04b32a8833949df4c8329749ff51d7",
+          "review_fingerprint": "cf8a6c09729f01e8cdee28e4d1db2517fd8fbdb50a23b5bf168ae89c8d08fbd8",
+          "snapshot_fingerprint": "ff5d2b1a0cf945d3f39a478434242761c4856497a3c213384edc02c7b3c53bce",
+          "identity": "reviewed_link"
+        },
+        "matched_actor_id": "ac07046e-3240-48b0-ab52-a4b0b17c57de",
+        "matched_play_id": "9206a2dd-68ef-425c-babb-791a92e816df",
+        "status": "pending"
+      },
+      {
+        "source_actor_name": "本間健大",
+        "source_actor_url": "https://kira-hai.net/honma-tatsuhiro",
+        "source_work_title": "舞台「憂国のモリアーティ」",
+        "source_year": 2020,
+        "source_role_raw": "テイト・パーシヴァル",
+        "source_role_names": [
+          "テイト・パーシヴァル"
+        ],
+        "source_cast_group": null,
+        "source_order": 17,
+        "source_credit_key": "e31afb0f62ec759fe8c1",
+        "source_evidence": {
+          "links": [
+            {
+              "url": "https://kira-hai.net/moriartystage2020",
+              "note": "作品ページのキャスト欄"
+            },
+            {
+              "url": "https://croquegirls.wixsite.com/croque-web/honma",
+              "checkedAt": "2026-10-19T16:18:35.382Z",
+              "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+            },
+            {
+              "url": "https://kira-hai.net/honma-tatsuhiro",
+              "checkedAt": "2026-10-19T16:16:55.686Z",
+              "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+            },
+            {
+              "url": "https://officeendless.com/sp/moriarty-st/case1/cast.html",
+              "checkedAt": "2026-10-19T16:16:37.824Z",
+              "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+            },
+            {
+              "url": "https://officeendless.com/sp/moriarty-st/case1/cast.html",
+              "checkedAt": "2026-10-19T16:16:37.824Z",
+              "note": "公式のanother_castは役付き8人でありアンサンブルという分類はない。Dancerとは区分して保存。"
+            }
+          ],
+          "source_fingerprint": "237bea0bb514fb3a6b9ad743cf0498982c04b32a8833949df4c8329749ff51d7",
+          "review_fingerprint": "cf8a6c09729f01e8cdee28e4d1db2517fd8fbdb50a23b5bf168ae89c8d08fbd8",
+          "snapshot_fingerprint": "ff5d2b1a0cf945d3f39a478434242761c4856497a3c213384edc02c7b3c53bce",
+          "identity": "reviewed_link"
+        },
+        "matched_actor_id": "e29c01ee-772e-4c44-ad29-946813ee2c0c",
+        "matched_play_id": "9206a2dd-68ef-425c-babb-791a92e816df",
+        "status": "pending"
+      },
+      {
+        "source_actor_name": "早川勇平",
+        "source_actor_url": "https://kira-hai.net/hayakawa-yuhei",
+        "source_work_title": "舞台「憂国のモリアーティ」",
+        "source_year": 2020,
+        "source_role_raw": "チャールズ・バスカヴィル",
+        "source_role_names": [
+          "チャールズ・バスカヴィル"
+        ],
+        "source_cast_group": null,
+        "source_order": 18,
+        "source_credit_key": "5fcdb451cdd7c87f14cb",
+        "source_evidence": {
+          "links": [
+            {
+              "url": "https://kira-hai.net/moriartystage2020",
+              "note": "作品ページのキャスト欄"
+            },
+            {
+              "url": "https://kira-hai.net/hayakawa-yuhei",
+              "checkedAt": "2026-10-19T16:16:58.587Z",
+              "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+            },
+            {
+              "url": "https://officeendless.com/sp/moriarty-st/case1/cast.html",
+              "checkedAt": "2026-10-19T16:16:37.824Z",
+              "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+            },
+            {
+              "url": "https://revolver-stage.com/",
+              "checkedAt": "2026-10-19T16:19:45.759Z",
+              "note": "本人の基本情報・出演歴または当該役名を照合。採用範囲と留保はnotesに記録。"
+            },
+            {
+              "url": "https://officeendless.com/sp/moriarty-st/case1/cast.html",
+              "checkedAt": "2026-10-19T16:16:37.824Z",
+              "note": "公式のanother_castは役付き8人でありアンサンブルという分類はない。Dancerとは区分して保存。"
+            }
+          ],
+          "source_fingerprint": "237bea0bb514fb3a6b9ad743cf0498982c04b32a8833949df4c8329749ff51d7",
+          "review_fingerprint": "cf8a6c09729f01e8cdee28e4d1db2517fd8fbdb50a23b5bf168ae89c8d08fbd8",
+          "snapshot_fingerprint": "ff5d2b1a0cf945d3f39a478434242761c4856497a3c213384edc02c7b3c53bce",
+          "identity": "reviewed_link"
+        },
+        "matched_actor_id": "d373c120-2031-432f-b920-23c5ccbb7d74",
+        "matched_play_id": "9206a2dd-68ef-425c-babb-791a92e816df",
+        "status": "pending"
+      }
+    ]
+  },
+  "sourceFingerprint": "237bea0bb514fb3a6b9ad743cf0498982c04b32a8833949df4c8329749ff51d7",
+  "keptCasts": [
+    {
+      "id": "1beb35dc-e305-486b-b2be-8d674d9bbf8b",
+      "play_id": "9206a2dd-68ef-425c-babb-791a92e816df",
+      "actor_id": "cad82806-61cb-402a-933c-fd6c35c991f9",
+      "role_name": "ルイス・ジェームズ・モリアーティ",
+      "is_starring": false,
+      "created_at": "2026-10-19T14:46:49.33877+00:00",
+      "billing_order": null,
+      "cast_group": null,
+      "role_name_kana": null,
+      "role_type": null,
+      "note": null,
+      "updated_at": "2026-10-19T14:46:49.33877+00:00"
+    },
+    {
+      "id": "25af9190-faf5-40ce-9ac8-4f009a1fc13e",
+      "play_id": "9206a2dd-68ef-425c-babb-791a92e816df",
+      "actor_id": "04667c45-07d7-475b-ac16-f47d3f853398",
+      "role_name": "ジョン・H・ワトソン",
+      "is_starring": false,
+      "created_at": "2026-10-19T14:46:49.33877+00:00",
+      "billing_order": null,
+      "cast_group": null,
+      "role_name_kana": null,
+      "role_type": null,
+      "note": null,
+      "updated_at": "2026-10-19T14:46:49.33877+00:00"
+    },
+    {
+      "id": "3280f1ff-f633-48fe-8e43-fc5586556e57",
+      "play_id": "56b2d094-05cc-49e1-b6df-f3ec2277e3fb",
+      "actor_id": "7314febd-7b3d-46c5-a638-4e8e7336b4fb",
+      "role_name": "ミス・ハドソン",
+      "is_starring": false,
+      "created_at": "2026-10-19T14:46:49.33877+00:00",
+      "billing_order": null,
+      "cast_group": null,
+      "role_name_kana": null,
+      "role_type": null,
+      "note": null,
+      "updated_at": "2026-10-19T14:46:49.33877+00:00"
+    },
+    {
+      "id": "342665bd-a480-45c6-a4ed-b13272065027",
+      "play_id": "9206a2dd-68ef-425c-babb-791a92e816df",
+      "actor_id": "929888ac-3f6a-40d0-a856-41dd028b2753",
+      "role_name": "ウィリアム・ジェームズ・モリアーティ",
+      "is_starring": false,
+      "created_at": "2026-10-19T14:46:49.33877+00:00",
+      "billing_order": null,
+      "cast_group": null,
+      "role_name_kana": null,
+      "role_type": null,
+      "note": null,
+      "updated_at": "2026-10-19T14:46:49.33877+00:00"
+    },
+    {
+      "id": "4410083e-5a9b-4e0c-95a8-c950cc1acb34",
+      "play_id": "56b2d094-05cc-49e1-b6df-f3ec2277e3fb",
+      "actor_id": "929888ac-3f6a-40d0-a856-41dd028b2753",
+      "role_name": "ウィリアム・ジェームズ・モリアーティ",
+      "is_starring": false,
+      "created_at": "2026-10-19T14:46:49.33877+00:00",
+      "billing_order": null,
+      "cast_group": null,
+      "role_name_kana": null,
+      "role_type": null,
+      "note": null,
+      "updated_at": "2026-10-19T14:46:49.33877+00:00"
+    },
+    {
+      "id": "44105b1e-8a20-45b2-81c1-55acdc704b6b",
+      "play_id": "9206a2dd-68ef-425c-babb-791a92e816df",
+      "actor_id": "853dd8bc-bb1d-41e4-b9b9-978ecb70fbb9",
+      "role_name": "シャーロック・ホームズ",
+      "is_starring": false,
+      "created_at": "2026-10-19T14:46:49.33877+00:00",
+      "billing_order": null,
+      "cast_group": null,
+      "role_name_kana": null,
+      "role_type": null,
+      "note": null,
+      "updated_at": "2026-10-19T14:46:49.33877+00:00"
+    },
+    {
+      "id": "4b4f2fd9-3e73-4e1c-82c3-082fb08c9361",
+      "play_id": "56b2d094-05cc-49e1-b6df-f3ec2277e3fb",
+      "actor_id": "cad82806-61cb-402a-933c-fd6c35c991f9",
+      "role_name": "ルイス・ジェームズ・モリアーティ",
+      "is_starring": false,
+      "created_at": "2026-10-19T14:46:49.33877+00:00",
+      "billing_order": null,
+      "cast_group": null,
+      "role_name_kana": null,
+      "role_type": null,
+      "note": null,
+      "updated_at": "2026-10-19T14:46:49.33877+00:00"
+    },
+    {
+      "id": "4f358c7d-7446-462f-9d1a-585941a78e8d",
+      "play_id": "9206a2dd-68ef-425c-babb-791a92e816df",
+      "actor_id": "7545490b-c94f-429a-8b4a-8c47176e8f4c",
+      "role_name": "アイリーン・アドラー",
+      "is_starring": false,
+      "created_at": "2026-10-19T14:46:49.33877+00:00",
+      "billing_order": null,
+      "cast_group": null,
+      "role_name_kana": null,
+      "role_type": null,
+      "note": null,
+      "updated_at": "2026-10-19T14:46:49.33877+00:00"
+    },
+    {
+      "id": "64159300-0387-4047-a956-b7932245ca16",
+      "play_id": "9206a2dd-68ef-425c-babb-791a92e816df",
+      "actor_id": "88c35f79-7c9c-426a-968d-a181ffa420d2",
+      "role_name": "マイクロフト・ホームズ",
+      "is_starring": false,
+      "created_at": "2026-10-19T14:46:49.33877+00:00",
+      "billing_order": null,
+      "cast_group": null,
+      "role_name_kana": null,
+      "role_type": null,
+      "note": null,
+      "updated_at": "2026-10-19T14:46:49.33877+00:00"
+    },
+    {
+      "id": "73581485-e4e6-4124-9bcd-eebd29f3bd28",
+      "play_id": "9206a2dd-68ef-425c-babb-791a92e816df",
+      "actor_id": "189ea368-c895-4564-b87d-f6bb287972dc",
+      "role_name": "セバスチャン・モラン",
+      "is_starring": false,
+      "created_at": "2026-10-19T14:46:49.33877+00:00",
+      "billing_order": null,
+      "cast_group": null,
+      "role_name_kana": null,
+      "role_type": null,
+      "note": null,
+      "updated_at": "2026-10-19T14:46:49.33877+00:00"
+    },
+    {
+      "id": "7b4cd68b-8c2a-4820-a5e5-ae4b5f0933d7",
+      "play_id": "56b2d094-05cc-49e1-b6df-f3ec2277e3fb",
+      "actor_id": "7863efd5-1d81-4f33-9cf7-9344ea01961c",
+      "role_name": "ジョージ・レストレード",
+      "is_starring": false,
+      "created_at": "2026-10-19T14:46:49.33877+00:00",
+      "billing_order": null,
+      "cast_group": null,
+      "role_name_kana": null,
+      "role_type": null,
+      "note": null,
+      "updated_at": "2026-10-19T14:46:49.33877+00:00"
+    },
+    {
+      "id": "94a51200-f2ed-4fc4-aa57-b799f8e608b5",
+      "play_id": "9206a2dd-68ef-425c-babb-791a92e816df",
+      "actor_id": "4c9fbcf1-a0c1-4556-b243-f08eefaf1b51",
+      "role_name": "アルバート・ジェームズ・モリアーティ",
+      "is_starring": false,
+      "created_at": "2026-10-19T14:46:49.33877+00:00",
+      "billing_order": null,
+      "cast_group": null,
+      "role_name_kana": null,
+      "role_type": null,
+      "note": null,
+      "updated_at": "2026-10-19T14:46:49.33877+00:00"
+    },
+    {
+      "id": "94f0bfdd-8cf3-4131-8bbf-2e8334424b3d",
+      "play_id": "9206a2dd-68ef-425c-babb-791a92e816df",
+      "actor_id": "04e3f405-d1e0-4157-8932-27e2c1be941f",
+      "role_name": "フレッド・ポーロック",
+      "is_starring": false,
+      "created_at": "2026-10-19T14:46:49.33877+00:00",
+      "billing_order": null,
+      "cast_group": null,
+      "role_name_kana": null,
+      "role_type": null,
+      "note": null,
+      "updated_at": "2026-10-19T14:46:49.33877+00:00"
+    },
+    {
+      "id": "95d55937-18a5-43bd-8245-680b09e6e4ff",
+      "play_id": "56b2d094-05cc-49e1-b6df-f3ec2277e3fb",
+      "actor_id": "853dd8bc-bb1d-41e4-b9b9-978ecb70fbb9",
+      "role_name": "シャーロック・ホームズ",
+      "is_starring": false,
+      "created_at": "2026-10-19T14:46:49.33877+00:00",
+      "billing_order": null,
+      "cast_group": null,
+      "role_name_kana": null,
+      "role_type": null,
+      "note": null,
+      "updated_at": "2026-10-19T14:46:49.33877+00:00"
+    },
+    {
+      "id": "9d43c590-46ba-42cc-bf8e-c78020119955",
+      "play_id": "56b2d094-05cc-49e1-b6df-f3ec2277e3fb",
+      "actor_id": "e57de3c5-d324-477b-b323-6009311c2ca3",
+      "role_name": "セバスチャン・モラン",
+      "is_starring": false,
+      "created_at": "2026-10-19T14:46:49.33877+00:00",
+      "billing_order": null,
+      "cast_group": null,
+      "role_name_kana": null,
+      "role_type": null,
+      "note": null,
+      "updated_at": "2026-10-19T14:46:49.33877+00:00"
+    },
+    {
+      "id": "9e928790-680e-4a59-ae9e-464e3b64018f",
+      "play_id": "56b2d094-05cc-49e1-b6df-f3ec2277e3fb",
+      "actor_id": "c709f777-ac1c-4483-84a0-0e5948a29bb8",
+      "role_name": "ジャック・レンフィールド",
+      "is_starring": false,
+      "created_at": "2026-10-19T14:46:49.33877+00:00",
+      "billing_order": null,
+      "cast_group": null,
+      "role_name_kana": null,
+      "role_type": null,
+      "note": null,
+      "updated_at": "2026-10-19T14:46:49.33877+00:00"
+    },
+    {
+      "id": "b56b9b1e-db44-4596-b896-4ad110ae4ef7",
+      "play_id": "9206a2dd-68ef-425c-babb-791a92e816df",
+      "actor_id": "7314febd-7b3d-46c5-a638-4e8e7336b4fb",
+      "role_name": "ミス・ハドソン",
+      "is_starring": false,
+      "created_at": "2026-10-19T14:46:49.33877+00:00",
+      "billing_order": null,
+      "cast_group": null,
+      "role_name_kana": null,
+      "role_type": null,
+      "note": null,
+      "updated_at": "2026-10-19T14:46:49.33877+00:00"
+    },
+    {
+      "id": "c4392b0d-b795-4325-824a-9a3d5f38cbc4",
+      "play_id": "56b2d094-05cc-49e1-b6df-f3ec2277e3fb",
+      "actor_id": "4c9fbcf1-a0c1-4556-b243-f08eefaf1b51",
+      "role_name": "アルバート・ジェームズ・モリアーティ",
+      "is_starring": false,
+      "created_at": "2026-10-19T14:46:49.33877+00:00",
+      "billing_order": null,
+      "cast_group": null,
+      "role_name_kana": null,
+      "role_type": null,
+      "note": null,
+      "updated_at": "2026-10-19T14:46:49.33877+00:00"
+    },
+    {
+      "id": "d12df022-8830-4939-bfa1-5f12ed20e5e6",
+      "play_id": "56b2d094-05cc-49e1-b6df-f3ec2277e3fb",
+      "actor_id": "04e3f405-d1e0-4157-8932-27e2c1be941f",
+      "role_name": "フレッド・ポーロック",
+      "is_starring": false,
+      "created_at": "2026-10-19T14:46:49.33877+00:00",
+      "billing_order": null,
+      "cast_group": null,
+      "role_name_kana": null,
+      "role_type": null,
+      "note": null,
+      "updated_at": "2026-10-19T14:46:49.33877+00:00"
+    },
+    {
+      "id": "d17b36c0-d4e5-4c44-b432-5bc344311ba5",
+      "play_id": "56b2d094-05cc-49e1-b6df-f3ec2277e3fb",
+      "actor_id": "7545490b-c94f-429a-8b4a-8c47176e8f4c",
+      "role_name": "ジェームズ・ボンド",
+      "is_starring": false,
+      "created_at": "2026-10-19T14:46:49.33877+00:00",
+      "billing_order": null,
+      "cast_group": null,
+      "role_name_kana": null,
+      "role_type": null,
+      "note": null,
+      "updated_at": "2026-10-19T14:46:49.33877+00:00"
+    },
+    {
+      "id": "f1a9cb49-52c1-498e-b54f-ee47c2f47a10",
+      "play_id": "56b2d094-05cc-49e1-b6df-f3ec2277e3fb",
+      "actor_id": "04667c45-07d7-475b-ac16-f47d3f853398",
+      "role_name": "ジョン・H・ワトソン",
+      "is_starring": false,
+      "created_at": "2026-10-19T14:46:49.33877+00:00",
+      "billing_order": null,
+      "cast_group": null,
+      "role_name_kana": null,
+      "role_type": null,
+      "note": null,
+      "updated_at": "2026-10-19T14:46:49.33877+00:00"
+    }
+  ],
+  "keptCandidates": [
+    {
+      "id": "020cb7c0-e5a4-488d-9931-3a62ea6e1275",
+      "source": "kira-hai",
+      "external_actor_id": null,
+      "external_play_id": null,
+      "source_actor_name": "荒牧慶彦",
+      "source_actor_url": "https://kira-hai.net/aramaki-yoshihiko",
+      "source_work_title": "舞台「憂国のモリアーティ」",
+      "source_work_url": "https://kira-hai.net/moriartystage2020",
+      "source_year": 2020,
+      "source_role_raw": "ウィリアム・ジェームズ・モリアーティ",
+      "source_role_names": [
+        "ウィリアム・ジェームズ・モリアーティ"
+      ],
+      "matched_actor_id": "929888ac-3f6a-40d0-a856-41dd028b2753",
+      "matched_play_id": "9206a2dd-68ef-425c-babb-791a92e816df",
+      "accepted_cast_id": "342665bd-a480-45c6-a4ed-b13272065027",
+      "confidence": 0,
+      "status": "accepted",
+      "note": null,
+      "scraped_at": "2026-10-19T14:46:49.33877+00:00",
+      "created_at": "2026-10-19T14:46:49.33877+00:00",
+      "updated_at": "2026-10-19T14:46:49.33877+00:00",
+      "accepted_at": "2026-10-19T14:46:49.33877+00:00",
+      "rejected_at": null,
+      "source_cast_group": null,
+      "source_order": 1,
+      "source_credit_key": "babcb0043e3a04a7bce0",
+      "source_evidence": {
+        "links": [
+          {
+            "url": "https://kira-hai.net/moriartystage2020",
+            "note": "作品ページのキャスト欄"
+          },
+          {
+            "url": "https://kira-hai.net/moriartystage2020",
+            "note": "第一参照先の当該舞台版から主要配役・日程・役名付き別枠またはアンサンブルとダンサーを抽出。ミュージカル版と別シリーズ。",
+            "checkedAt": "2026-10-19T14:32:39.366Z"
+          },
+          {
+            "url": "https://officeendless.com/sp/moriarty-st/case1/cast.html",
+            "note": "公式初演アーカイブで主要10配役、別枠8配役、Dancer4人を照合。別枠はアンサンブルと断定せず役名ごと作品クレジットへ保存。",
+            "checkedAt": "2026-10-19T14:35:57.903Z"
+          }
+        ],
+        "identity": "reviewed_link",
+        "review_fingerprint": "722c564c30fec8daa7cdef4aa4881631d9cd39420e053717c490b861b3f309d2",
+        "source_fingerprint": "b88c29f63df19ed13bbf00b8b4ac6d58005db2c7a613fb0573e508eab8d95afa",
+        "snapshot_fingerprint": "4542c4b271d747af77a682a0189b0d0f3fbe8775e4f467bcd79f576992b7930c"
+      }
+    },
+    {
+      "id": "06ce54f6-32b3-4a79-986d-eee5c79794c8",
+      "source": "kira-hai",
+      "external_actor_id": null,
+      "external_play_id": null,
+      "source_actor_name": "村田洋二郎",
+      "source_actor_url": "https://kira-hai.net/murata-yojiro",
+      "source_work_title": "舞台「憂国のモリアーティ」case 2",
+      "source_work_url": "https://kira-hai.net/moriartystage2021",
+      "source_year": 2021,
+      "source_role_raw": "ジョージ・レストレード",
+      "source_role_names": [
+        "ジョージ・レストレード"
+      ],
+      "matched_actor_id": "7863efd5-1d81-4f33-9cf7-9344ea01961c",
+      "matched_play_id": "56b2d094-05cc-49e1-b6df-f3ec2277e3fb",
+      "accepted_cast_id": "7b4cd68b-8c2a-4820-a5e5-ae4b5f0933d7",
+      "confidence": 0,
+      "status": "accepted",
+      "note": null,
+      "scraped_at": "2026-10-19T14:46:49.33877+00:00",
+      "created_at": "2026-10-19T14:46:49.33877+00:00",
+      "updated_at": "2026-10-19T14:46:49.33877+00:00",
+      "accepted_at": "2026-10-19T14:46:49.33877+00:00",
+      "rejected_at": null,
+      "source_cast_group": null,
+      "source_order": 10,
+      "source_credit_key": "224842313f765403ae2a",
+      "source_evidence": {
+        "links": [
+          {
+            "url": "https://kira-hai.net/moriartystage2021",
+            "note": "作品ページのキャスト欄"
+          },
+          {
+            "url": "https://kira-hai.net/murata-yojiro",
+            "note": "第一参照先または所属・劇団・出演作公式で当該人物の基本情報・役名・経歴を照合。",
+            "checkedAt": "2026-10-19T14:34:54.281Z"
+          },
+          {
+            "url": "https://www.andendless.com/profile-2/cast_murata/",
+            "note": "本人の個人プロフィールで基本情報・読み・英字名または経歴を確認。採用範囲はnotesに明記。",
+            "checkedAt": "2026-10-19T14:36:15.583Z"
+          },
+          {
+            "url": "https://officeendless.com/sp/moriarty-st/cast/",
+            "note": "公式case 2の主要11配役とアンサンブル7人・Dancer4人を確認。第一参照先にない書川勇輝を公式から補完。",
+            "checkedAt": "2026-10-19T14:32:50.984Z"
+          }
+        ],
+        "identity": "reviewed_link",
+        "review_fingerprint": "d3abdc024f225891c28da83164ecd17307ae7809c2a525323989e05a0f519c00",
+        "source_fingerprint": "5e10e4e90f655368a19120105cd399a911cc243e6bd08147f3d195a45565fa57",
+        "snapshot_fingerprint": "9c7bf45abf434e64e2e97e2d8935266d402a4c7d38c117c6aa5acd42ad33c71a"
+      }
+    },
+    {
+      "id": "0ac32df1-8d90-4926-a175-2d20a7ce069f",
+      "source": "kira-hai",
+      "external_actor_id": null,
+      "external_play_id": null,
+      "source_actor_name": "野本ほたる",
+      "source_actor_url": "https://kira-hai.net/nomoto-hotaru",
+      "source_work_title": "舞台「憂国のモリアーティ」case 2",
+      "source_work_url": "https://kira-hai.net/moriartystage2021",
+      "source_year": 2021,
+      "source_role_raw": "ミス・ハドソン",
+      "source_role_names": [
+        "ミス・ハドソン"
+      ],
+      "matched_actor_id": "7314febd-7b3d-46c5-a638-4e8e7336b4fb",
+      "matched_play_id": "56b2d094-05cc-49e1-b6df-f3ec2277e3fb",
+      "accepted_cast_id": "3280f1ff-f633-48fe-8e43-fc5586556e57",
+      "confidence": 0,
+      "status": "accepted",
+      "note": null,
+      "scraped_at": "2026-10-19T14:46:49.33877+00:00",
+      "created_at": "2026-10-19T14:46:49.33877+00:00",
+      "updated_at": "2026-10-19T14:46:49.33877+00:00",
+      "accepted_at": "2026-10-19T14:46:49.33877+00:00",
+      "rejected_at": null,
+      "source_cast_group": null,
+      "source_order": 7,
+      "source_credit_key": "9f910ce7f1c8a11f1758",
+      "source_evidence": {
+        "links": [
+          {
+            "url": "https://kira-hai.net/moriartystage2021",
+            "note": "作品ページのキャスト欄"
+          },
+          {
+            "url": "https://kira-hai.net/nomoto-hotaru",
+            "note": "第一参照先または所属・劇団・出演作公式で当該人物の基本情報・役名・経歴を照合。",
+            "checkedAt": "2026-10-19T14:34:46.020Z"
+          },
+          {
+            "url": "https://mmitt.jp/talent/%E9%87%8E%E6%9C%AC%E3%81%BB%E3%81%9F%E3%82%8B",
+            "note": "本人の個人プロフィールで基本情報・読み・英字名または経歴を確認。採用範囲はnotesに明記。",
+            "checkedAt": "2026-10-19T14:36:03.977Z"
+          },
+          {
+            "url": "https://officeendless.com/sp/moriarty-st/cast/",
+            "note": "公式case 2の主要11配役とアンサンブル7人・Dancer4人を確認。第一参照先にない書川勇輝を公式から補完。",
+            "checkedAt": "2026-10-19T14:32:50.984Z"
+          }
+        ],
+        "identity": "reviewed_link",
+        "review_fingerprint": "d3abdc024f225891c28da83164ecd17307ae7809c2a525323989e05a0f519c00",
+        "source_fingerprint": "5e10e4e90f655368a19120105cd399a911cc243e6bd08147f3d195a45565fa57",
+        "snapshot_fingerprint": "9c7bf45abf434e64e2e97e2d8935266d402a4c7d38c117c6aa5acd42ad33c71a"
+      }
+    },
+    {
+      "id": "2d248c22-ab15-4ff2-9802-ee425d1a3117",
+      "source": "kira-hai",
+      "external_actor_id": null,
+      "external_play_id": null,
+      "source_actor_name": "設楽銀河",
+      "source_actor_url": "https://kira-hai.net/shitara-ginga",
+      "source_work_title": "舞台「憂国のモリアーティ」",
+      "source_work_url": "https://kira-hai.net/moriartystage2020",
+      "source_year": 2020,
+      "source_role_raw": "フレッド・ポーロック",
+      "source_role_names": [
+        "フレッド・ポーロック"
+      ],
+      "matched_actor_id": "04e3f405-d1e0-4157-8932-27e2c1be941f",
+      "matched_play_id": "9206a2dd-68ef-425c-babb-791a92e816df",
+      "accepted_cast_id": "94f0bfdd-8cf3-4131-8bbf-2e8334424b3d",
+      "confidence": 0,
+      "status": "accepted",
+      "note": null,
+      "scraped_at": "2026-10-19T14:46:49.33877+00:00",
+      "created_at": "2026-10-19T14:46:49.33877+00:00",
+      "updated_at": "2026-10-19T14:46:49.33877+00:00",
+      "accepted_at": "2026-10-19T14:46:49.33877+00:00",
+      "rejected_at": null,
+      "source_cast_group": null,
+      "source_order": 5,
+      "source_credit_key": "f1eb77436ed825602e95",
+      "source_evidence": {
+        "links": [
+          {
+            "url": "https://kira-hai.net/moriartystage2020",
+            "note": "作品ページのキャスト欄"
+          },
+          {
+            "url": "https://kira-hai.net/moriartystage2020",
+            "note": "第一参照先の当該舞台版から主要配役・日程・役名付き別枠またはアンサンブルとダンサーを抽出。ミュージカル版と別シリーズ。",
+            "checkedAt": "2026-10-19T14:32:39.366Z"
+          },
+          {
+            "url": "https://officeendless.com/sp/moriarty-st/case1/cast.html",
+            "note": "公式初演アーカイブで主要10配役、別枠8配役、Dancer4人を照合。別枠はアンサンブルと断定せず役名ごと作品クレジットへ保存。",
+            "checkedAt": "2026-10-19T14:35:57.903Z"
+          }
+        ],
+        "identity": "reviewed_link",
+        "review_fingerprint": "722c564c30fec8daa7cdef4aa4881631d9cd39420e053717c490b861b3f309d2",
+        "source_fingerprint": "b88c29f63df19ed13bbf00b8b4ac6d58005db2c7a613fb0573e508eab8d95afa",
+        "snapshot_fingerprint": "4542c4b271d747af77a682a0189b0d0f3fbe8775e4f467bcd79f576992b7930c"
+      }
+    },
+    {
+      "id": "3373b84a-6035-4476-8f9b-b5edb0dd1370",
+      "source": "kira-hai",
+      "external_actor_id": null,
+      "external_play_id": null,
+      "source_actor_name": "立道梨緒奈",
+      "source_actor_url": "https://kira-hai.net/tatemichi-riona",
+      "source_work_title": "舞台「憂国のモリアーティ」",
+      "source_work_url": "https://kira-hai.net/moriartystage2020",
+      "source_year": 2020,
+      "source_role_raw": "アイリーン・アドラー",
+      "source_role_names": [
+        "アイリーン・アドラー"
+      ],
+      "matched_actor_id": "7545490b-c94f-429a-8b4a-8c47176e8f4c",
+      "matched_play_id": "9206a2dd-68ef-425c-babb-791a92e816df",
+      "accepted_cast_id": "4f358c7d-7446-462f-9d1a-585941a78e8d",
+      "confidence": 0,
+      "status": "accepted",
+      "note": null,
+      "scraped_at": "2026-10-19T14:46:49.33877+00:00",
+      "created_at": "2026-10-19T14:46:49.33877+00:00",
+      "updated_at": "2026-10-19T14:46:49.33877+00:00",
+      "accepted_at": "2026-10-19T14:46:49.33877+00:00",
+      "rejected_at": null,
+      "source_cast_group": null,
+      "source_order": 8,
+      "source_credit_key": "73a9bf903267291e219e",
+      "source_evidence": {
+        "links": [
+          {
+            "url": "https://kira-hai.net/moriartystage2020",
+            "note": "作品ページのキャスト欄"
+          },
+          {
+            "url": "https://kira-hai.net/tatemichi-riona",
+            "note": "第一参照先または所属・劇団・出演作公式で当該人物の基本情報・役名・経歴を照合。",
+            "checkedAt": "2026-10-19T14:34:48.738Z"
+          },
+          {
+            "url": "https://dolce-star.com/talent/tatemichi",
+            "note": "本人の個人プロフィールで基本情報・読み・英字名または経歴を確認。採用範囲はnotesに明記。",
+            "checkedAt": "2026-10-19T14:36:06.859Z"
+          },
+          {
+            "url": "https://officeendless.com/sp/moriarty-st/case1/cast.html",
+            "note": "公式初演アーカイブで主要10配役、別枠8配役、Dancer4人を照合。別枠はアンサンブルと断定せず役名ごと作品クレジットへ保存。",
+            "checkedAt": "2026-10-19T14:35:57.903Z"
+          }
+        ],
+        "identity": "reviewed_link",
+        "review_fingerprint": "722c564c30fec8daa7cdef4aa4881631d9cd39420e053717c490b861b3f309d2",
+        "source_fingerprint": "b88c29f63df19ed13bbf00b8b4ac6d58005db2c7a613fb0573e508eab8d95afa",
+        "snapshot_fingerprint": "4542c4b271d747af77a682a0189b0d0f3fbe8775e4f467bcd79f576992b7930c"
+      }
+    },
+    {
+      "id": "3ad52870-7273-4db2-889a-fb9e85b876ec",
+      "source": "kira-hai",
+      "external_actor_id": null,
+      "external_play_id": null,
+      "source_actor_name": "君沢ユウキ",
+      "source_actor_url": "https://kira-hai.net/kimisawa-yuki",
+      "source_work_title": "舞台「憂国のモリアーティ」",
+      "source_work_url": "https://kira-hai.net/moriartystage2020",
+      "source_year": 2020,
+      "source_role_raw": "セバスチャン・モラン",
+      "source_role_names": [
+        "セバスチャン・モラン"
+      ],
+      "matched_actor_id": "189ea368-c895-4564-b87d-f6bb287972dc",
+      "matched_play_id": "9206a2dd-68ef-425c-babb-791a92e816df",
+      "accepted_cast_id": "73581485-e4e6-4124-9bcd-eebd29f3bd28",
+      "confidence": 0,
+      "status": "accepted",
+      "note": null,
+      "scraped_at": "2026-10-19T14:46:49.33877+00:00",
+      "created_at": "2026-10-19T14:46:49.33877+00:00",
+      "updated_at": "2026-10-19T14:46:49.33877+00:00",
+      "accepted_at": "2026-10-19T14:46:49.33877+00:00",
+      "rejected_at": null,
+      "source_cast_group": null,
+      "source_order": 4,
+      "source_credit_key": "e40dc9e1c58051fa3949",
+      "source_evidence": {
+        "links": [
+          {
+            "url": "https://kira-hai.net/moriartystage2020",
+            "note": "作品ページのキャスト欄"
+          },
+          {
+            "url": "https://kira-hai.net/moriartystage2020",
+            "note": "第一参照先の当該舞台版から主要配役・日程・役名付き別枠またはアンサンブルとダンサーを抽出。ミュージカル版と別シリーズ。",
+            "checkedAt": "2026-10-19T14:32:39.366Z"
+          },
+          {
+            "url": "https://officeendless.com/sp/moriarty-st/case1/cast.html",
+            "note": "公式初演アーカイブで主要10配役、別枠8配役、Dancer4人を照合。別枠はアンサンブルと断定せず役名ごと作品クレジットへ保存。",
+            "checkedAt": "2026-10-19T14:35:57.903Z"
+          }
+        ],
+        "identity": "reviewed_link",
+        "review_fingerprint": "722c564c30fec8daa7cdef4aa4881631d9cd39420e053717c490b861b3f309d2",
+        "source_fingerprint": "b88c29f63df19ed13bbf00b8b4ac6d58005db2c7a613fb0573e508eab8d95afa",
+        "snapshot_fingerprint": "4542c4b271d747af77a682a0189b0d0f3fbe8775e4f467bcd79f576992b7930c"
+      }
+    },
+    {
+      "id": "4babbc7c-69f6-45b3-a5f2-6eb06b0c970a",
+      "source": "kira-hai",
+      "external_actor_id": null,
+      "external_play_id": null,
+      "source_actor_name": "瀬戸祐介",
+      "source_actor_url": "https://kira-hai.net/seto-yusuke",
+      "source_work_title": "舞台「憂国のモリアーティ」case 2",
+      "source_work_url": "https://kira-hai.net/moriartystage2021",
+      "source_year": 2021,
+      "source_role_raw": "アルバート・ジェームズ・モリアーティ",
+      "source_role_names": [
+        "アルバート・ジェームズ・モリアーティ"
+      ],
+      "matched_actor_id": "4c9fbcf1-a0c1-4556-b243-f08eefaf1b51",
+      "matched_play_id": "56b2d094-05cc-49e1-b6df-f3ec2277e3fb",
+      "accepted_cast_id": "c4392b0d-b795-4325-824a-9a3d5f38cbc4",
+      "confidence": 0,
+      "status": "accepted",
+      "note": null,
+      "scraped_at": "2026-10-19T14:46:49.33877+00:00",
+      "created_at": "2026-10-19T14:46:49.33877+00:00",
+      "updated_at": "2026-10-19T14:46:49.33877+00:00",
+      "accepted_at": "2026-10-19T14:46:49.33877+00:00",
+      "rejected_at": null,
+      "source_cast_group": null,
+      "source_order": 2,
+      "source_credit_key": "752a26efb22eee7195bb",
+      "source_evidence": {
+        "links": [
+          {
+            "url": "https://kira-hai.net/moriartystage2021",
+            "note": "作品ページのキャスト欄"
+          },
+          {
+            "url": "https://kira-hai.net/moriartystage2021",
+            "note": "第一参照先の当該舞台版から主要配役・日程・役名付き別枠またはアンサンブルとダンサーを抽出。ミュージカル版と別シリーズ。",
+            "checkedAt": "2026-10-19T14:32:42.137Z"
+          },
+          {
+            "url": "https://officeendless.com/sp/moriarty-st/cast/",
+            "note": "公式case 2の主要11配役とアンサンブル7人・Dancer4人を確認。第一参照先にない書川勇輝を公式から補完。",
+            "checkedAt": "2026-10-19T14:32:50.984Z"
+          }
+        ],
+        "identity": "reviewed_link",
+        "review_fingerprint": "d3abdc024f225891c28da83164ecd17307ae7809c2a525323989e05a0f519c00",
+        "source_fingerprint": "5e10e4e90f655368a19120105cd399a911cc243e6bd08147f3d195a45565fa57",
+        "snapshot_fingerprint": "9c7bf45abf434e64e2e97e2d8935266d402a4c7d38c117c6aa5acd42ad33c71a"
+      }
+    },
+    {
+      "id": "5e85890f-b77f-4ebc-9c0d-12869257e33e",
+      "source": "kira-hai",
+      "external_actor_id": null,
+      "external_play_id": null,
+      "source_actor_name": "糸川耀士郎",
+      "source_actor_url": "https://kira-hai.net/itokawa-yojiro",
+      "source_work_title": "舞台「憂国のモリアーティ」case 2",
+      "source_work_url": "https://kira-hai.net/moriartystage2021",
+      "source_year": 2021,
+      "source_role_raw": "ルイス・ジェームズ・モリアーティ",
+      "source_role_names": [
+        "ルイス・ジェームズ・モリアーティ"
+      ],
+      "matched_actor_id": "cad82806-61cb-402a-933c-fd6c35c991f9",
+      "matched_play_id": "56b2d094-05cc-49e1-b6df-f3ec2277e3fb",
+      "accepted_cast_id": "4b4f2fd9-3e73-4e1c-82c3-082fb08c9361",
+      "confidence": 0,
+      "status": "accepted",
+      "note": null,
+      "scraped_at": "2026-10-19T14:46:49.33877+00:00",
+      "created_at": "2026-10-19T14:46:49.33877+00:00",
+      "updated_at": "2026-10-19T14:46:49.33877+00:00",
+      "accepted_at": "2026-10-19T14:46:49.33877+00:00",
+      "rejected_at": null,
+      "source_cast_group": null,
+      "source_order": 3,
+      "source_credit_key": "6e1c17b701bfa4daf695",
+      "source_evidence": {
+        "links": [
+          {
+            "url": "https://kira-hai.net/moriartystage2021",
+            "note": "作品ページのキャスト欄"
+          },
+          {
+            "url": "https://kira-hai.net/moriartystage2021",
+            "note": "第一参照先の当該舞台版から主要配役・日程・役名付き別枠またはアンサンブルとダンサーを抽出。ミュージカル版と別シリーズ。",
+            "checkedAt": "2026-10-19T14:32:42.137Z"
+          },
+          {
+            "url": "https://officeendless.com/sp/moriarty-st/cast/",
+            "note": "公式case 2の主要11配役とアンサンブル7人・Dancer4人を確認。第一参照先にない書川勇輝を公式から補完。",
+            "checkedAt": "2026-10-19T14:32:50.984Z"
+          }
+        ],
+        "identity": "reviewed_link",
+        "review_fingerprint": "d3abdc024f225891c28da83164ecd17307ae7809c2a525323989e05a0f519c00",
+        "source_fingerprint": "5e10e4e90f655368a19120105cd399a911cc243e6bd08147f3d195a45565fa57",
+        "snapshot_fingerprint": "9c7bf45abf434e64e2e97e2d8935266d402a4c7d38c117c6aa5acd42ad33c71a"
+      }
+    },
+    {
+      "id": "7e6ceb71-7309-4785-a4ca-e1d277cc8734",
+      "source": "kira-hai",
+      "external_actor_id": null,
+      "external_play_id": null,
+      "source_actor_name": "松井勇歩",
+      "source_actor_url": "https://kira-hai.net/matsui-yuho",
+      "source_work_title": "舞台「憂国のモリアーティ」case 2",
+      "source_work_url": "https://kira-hai.net/moriartystage2021",
+      "source_year": 2021,
+      "source_role_raw": "ジョン・H・ワトソン",
+      "source_role_names": [
+        "ジョン・H・ワトソン"
+      ],
+      "matched_actor_id": "04667c45-07d7-475b-ac16-f47d3f853398",
+      "matched_play_id": "56b2d094-05cc-49e1-b6df-f3ec2277e3fb",
+      "accepted_cast_id": "f1a9cb49-52c1-498e-b54f-ee47c2f47a10",
+      "confidence": 0,
+      "status": "accepted",
+      "note": null,
+      "scraped_at": "2026-10-19T14:46:49.33877+00:00",
+      "created_at": "2026-10-19T14:46:49.33877+00:00",
+      "updated_at": "2026-10-19T14:46:49.33877+00:00",
+      "accepted_at": "2026-10-19T14:46:49.33877+00:00",
+      "rejected_at": null,
+      "source_cast_group": null,
+      "source_order": 6,
+      "source_credit_key": "cff5d6ee2beba9e997cc",
+      "source_evidence": {
+        "links": [
+          {
+            "url": "https://kira-hai.net/moriartystage2021",
+            "note": "作品ページのキャスト欄"
+          },
+          {
+            "url": "https://kira-hai.net/moriartystage2021",
+            "note": "第一参照先の当該舞台版から主要配役・日程・役名付き別枠またはアンサンブルとダンサーを抽出。ミュージカル版と別シリーズ。",
+            "checkedAt": "2026-10-19T14:32:42.137Z"
+          },
+          {
+            "url": "https://officeendless.com/sp/moriarty-st/cast/",
+            "note": "公式case 2の主要11配役とアンサンブル7人・Dancer4人を確認。第一参照先にない書川勇輝を公式から補完。",
+            "checkedAt": "2026-10-19T14:32:50.984Z"
+          }
+        ],
+        "identity": "reviewed_link",
+        "review_fingerprint": "d3abdc024f225891c28da83164ecd17307ae7809c2a525323989e05a0f519c00",
+        "source_fingerprint": "5e10e4e90f655368a19120105cd399a911cc243e6bd08147f3d195a45565fa57",
+        "snapshot_fingerprint": "9c7bf45abf434e64e2e97e2d8935266d402a4c7d38c117c6aa5acd42ad33c71a"
+      }
+    },
+    {
+      "id": "805fbe11-b39b-4804-b26c-567832f62b2c",
+      "source": "kira-hai",
+      "external_actor_id": null,
+      "external_play_id": null,
+      "source_actor_name": "糸川耀士郎",
+      "source_actor_url": "https://kira-hai.net/itokawa-yojiro",
+      "source_work_title": "舞台「憂国のモリアーティ」",
+      "source_work_url": "https://kira-hai.net/moriartystage2020",
+      "source_year": 2020,
+      "source_role_raw": "ルイス・ジェームズ・モリアーティ",
+      "source_role_names": [
+        "ルイス・ジェームズ・モリアーティ"
+      ],
+      "matched_actor_id": "cad82806-61cb-402a-933c-fd6c35c991f9",
+      "matched_play_id": "9206a2dd-68ef-425c-babb-791a92e816df",
+      "accepted_cast_id": "1beb35dc-e305-486b-b2be-8d674d9bbf8b",
+      "confidence": 0,
+      "status": "accepted",
+      "note": null,
+      "scraped_at": "2026-10-19T14:46:49.33877+00:00",
+      "created_at": "2026-10-19T14:46:49.33877+00:00",
+      "updated_at": "2026-10-19T14:46:49.33877+00:00",
+      "accepted_at": "2026-10-19T14:46:49.33877+00:00",
+      "rejected_at": null,
+      "source_cast_group": null,
+      "source_order": 3,
+      "source_credit_key": "6e1c17b701bfa4daf695",
+      "source_evidence": {
+        "links": [
+          {
+            "url": "https://kira-hai.net/moriartystage2020",
+            "note": "作品ページのキャスト欄"
+          },
+          {
+            "url": "https://kira-hai.net/moriartystage2020",
+            "note": "第一参照先の当該舞台版から主要配役・日程・役名付き別枠またはアンサンブルとダンサーを抽出。ミュージカル版と別シリーズ。",
+            "checkedAt": "2026-10-19T14:32:39.366Z"
+          },
+          {
+            "url": "https://officeendless.com/sp/moriarty-st/case1/cast.html",
+            "note": "公式初演アーカイブで主要10配役、別枠8配役、Dancer4人を照合。別枠はアンサンブルと断定せず役名ごと作品クレジットへ保存。",
+            "checkedAt": "2026-10-19T14:35:57.903Z"
+          }
+        ],
+        "identity": "reviewed_link",
+        "review_fingerprint": "722c564c30fec8daa7cdef4aa4881631d9cd39420e053717c490b861b3f309d2",
+        "source_fingerprint": "b88c29f63df19ed13bbf00b8b4ac6d58005db2c7a613fb0573e508eab8d95afa",
+        "snapshot_fingerprint": "4542c4b271d747af77a682a0189b0d0f3fbe8775e4f467bcd79f576992b7930c"
+      }
+    },
+    {
+      "id": "846f853b-a877-43c8-aa50-114fee868ebb",
+      "source": "kira-hai",
+      "external_actor_id": null,
+      "external_play_id": null,
+      "source_actor_name": "北村諒",
+      "source_actor_url": "https://kira-hai.net/kitamura-ryo",
+      "source_work_title": "舞台「憂国のモリアーティ」case 2",
+      "source_work_url": "https://kira-hai.net/moriartystage2021",
+      "source_year": 2021,
+      "source_role_raw": "シャーロック・ホームズ",
+      "source_role_names": [
+        "シャーロック・ホームズ"
+      ],
+      "matched_actor_id": "853dd8bc-bb1d-41e4-b9b9-978ecb70fbb9",
+      "matched_play_id": "56b2d094-05cc-49e1-b6df-f3ec2277e3fb",
+      "accepted_cast_id": "95d55937-18a5-43bd-8245-680b09e6e4ff",
+      "confidence": 0,
+      "status": "accepted",
+      "note": null,
+      "scraped_at": "2026-10-19T14:46:49.33877+00:00",
+      "created_at": "2026-10-19T14:46:49.33877+00:00",
+      "updated_at": "2026-10-19T14:46:49.33877+00:00",
+      "accepted_at": "2026-10-19T14:46:49.33877+00:00",
+      "rejected_at": null,
+      "source_cast_group": null,
+      "source_order": 11,
+      "source_credit_key": "a6e05e5b29809bbf562c",
+      "source_evidence": {
+        "links": [
+          {
+            "url": "https://kira-hai.net/moriartystage2021",
+            "note": "作品ページのキャスト欄"
+          },
+          {
+            "url": "https://kira-hai.net/moriartystage2021",
+            "note": "第一参照先の当該舞台版から主要配役・日程・役名付き別枠またはアンサンブルとダンサーを抽出。ミュージカル版と別シリーズ。",
+            "checkedAt": "2026-10-19T14:32:42.137Z"
+          },
+          {
+            "url": "https://officeendless.com/sp/moriarty-st/cast/",
+            "note": "公式case 2の主要11配役とアンサンブル7人・Dancer4人を確認。第一参照先にない書川勇輝を公式から補完。",
+            "checkedAt": "2026-10-19T14:32:50.984Z"
+          }
+        ],
+        "identity": "reviewed_link",
+        "review_fingerprint": "d3abdc024f225891c28da83164ecd17307ae7809c2a525323989e05a0f519c00",
+        "source_fingerprint": "5e10e4e90f655368a19120105cd399a911cc243e6bd08147f3d195a45565fa57",
+        "snapshot_fingerprint": "9c7bf45abf434e64e2e97e2d8935266d402a4c7d38c117c6aa5acd42ad33c71a"
+      }
+    },
+    {
+      "id": "8d89e262-0001-45bf-9f46-68237aa094da",
+      "source": "kira-hai",
+      "external_actor_id": null,
+      "external_play_id": null,
+      "source_actor_name": "瀬戸祐介",
+      "source_actor_url": "https://kira-hai.net/seto-yusuke",
+      "source_work_title": "舞台「憂国のモリアーティ」",
+      "source_work_url": "https://kira-hai.net/moriartystage2020",
+      "source_year": 2020,
+      "source_role_raw": "アルバート・ジェームズ・モリアーティ",
+      "source_role_names": [
+        "アルバート・ジェームズ・モリアーティ"
+      ],
+      "matched_actor_id": "4c9fbcf1-a0c1-4556-b243-f08eefaf1b51",
+      "matched_play_id": "9206a2dd-68ef-425c-babb-791a92e816df",
+      "accepted_cast_id": "94a51200-f2ed-4fc4-aa57-b799f8e608b5",
+      "confidence": 0,
+      "status": "accepted",
+      "note": null,
+      "scraped_at": "2026-10-19T14:46:49.33877+00:00",
+      "created_at": "2026-10-19T14:46:49.33877+00:00",
+      "updated_at": "2026-10-19T14:46:49.33877+00:00",
+      "accepted_at": "2026-10-19T14:46:49.33877+00:00",
+      "rejected_at": null,
+      "source_cast_group": null,
+      "source_order": 2,
+      "source_credit_key": "752a26efb22eee7195bb",
+      "source_evidence": {
+        "links": [
+          {
+            "url": "https://kira-hai.net/moriartystage2020",
+            "note": "作品ページのキャスト欄"
+          },
+          {
+            "url": "https://kira-hai.net/moriartystage2020",
+            "note": "第一参照先の当該舞台版から主要配役・日程・役名付き別枠またはアンサンブルとダンサーを抽出。ミュージカル版と別シリーズ。",
+            "checkedAt": "2026-10-19T14:32:39.366Z"
+          },
+          {
+            "url": "https://officeendless.com/sp/moriarty-st/case1/cast.html",
+            "note": "公式初演アーカイブで主要10配役、別枠8配役、Dancer4人を照合。別枠はアンサンブルと断定せず役名ごと作品クレジットへ保存。",
+            "checkedAt": "2026-10-19T14:35:57.903Z"
+          }
+        ],
+        "identity": "reviewed_link",
+        "review_fingerprint": "722c564c30fec8daa7cdef4aa4881631d9cd39420e053717c490b861b3f309d2",
+        "source_fingerprint": "b88c29f63df19ed13bbf00b8b4ac6d58005db2c7a613fb0573e508eab8d95afa",
+        "snapshot_fingerprint": "4542c4b271d747af77a682a0189b0d0f3fbe8775e4f467bcd79f576992b7930c"
+      }
+    },
+    {
+      "id": "904952d4-d987-4d63-9cdc-2a604918673d",
+      "source": "kira-hai",
+      "external_actor_id": null,
+      "external_play_id": null,
+      "source_actor_name": "設楽銀河",
+      "source_actor_url": "https://kira-hai.net/shitara-ginga",
+      "source_work_title": "舞台「憂国のモリアーティ」case 2",
+      "source_work_url": "https://kira-hai.net/moriartystage2021",
+      "source_year": 2021,
+      "source_role_raw": "フレッド・ポーロック",
+      "source_role_names": [
+        "フレッド・ポーロック"
+      ],
+      "matched_actor_id": "04e3f405-d1e0-4157-8932-27e2c1be941f",
+      "matched_play_id": "56b2d094-05cc-49e1-b6df-f3ec2277e3fb",
+      "accepted_cast_id": "d12df022-8830-4939-bfa1-5f12ed20e5e6",
+      "confidence": 0,
+      "status": "accepted",
+      "note": null,
+      "scraped_at": "2026-10-19T14:46:49.33877+00:00",
+      "created_at": "2026-10-19T14:46:49.33877+00:00",
+      "updated_at": "2026-10-19T14:46:49.33877+00:00",
+      "accepted_at": "2026-10-19T14:46:49.33877+00:00",
+      "rejected_at": null,
+      "source_cast_group": null,
+      "source_order": 5,
+      "source_credit_key": "f1eb77436ed825602e95",
+      "source_evidence": {
+        "links": [
+          {
+            "url": "https://kira-hai.net/moriartystage2021",
+            "note": "作品ページのキャスト欄"
+          },
+          {
+            "url": "https://kira-hai.net/moriartystage2021",
+            "note": "第一参照先の当該舞台版から主要配役・日程・役名付き別枠またはアンサンブルとダンサーを抽出。ミュージカル版と別シリーズ。",
+            "checkedAt": "2026-10-19T14:32:42.137Z"
+          },
+          {
+            "url": "https://officeendless.com/sp/moriarty-st/cast/",
+            "note": "公式case 2の主要11配役とアンサンブル7人・Dancer4人を確認。第一参照先にない書川勇輝を公式から補完。",
+            "checkedAt": "2026-10-19T14:32:50.984Z"
+          }
+        ],
+        "identity": "reviewed_link",
+        "review_fingerprint": "d3abdc024f225891c28da83164ecd17307ae7809c2a525323989e05a0f519c00",
+        "source_fingerprint": "5e10e4e90f655368a19120105cd399a911cc243e6bd08147f3d195a45565fa57",
+        "snapshot_fingerprint": "9c7bf45abf434e64e2e97e2d8935266d402a4c7d38c117c6aa5acd42ad33c71a"
+      }
+    },
+    {
+      "id": "95084acc-b4cd-4c40-90c1-94e47866680f",
+      "source": "kira-hai",
+      "external_actor_id": null,
+      "external_play_id": null,
+      "source_actor_name": "荒牧慶彦",
+      "source_actor_url": "https://kira-hai.net/aramaki-yoshihiko",
+      "source_work_title": "舞台「憂国のモリアーティ」case 2",
+      "source_work_url": "https://kira-hai.net/moriartystage2021",
+      "source_year": 2021,
+      "source_role_raw": "ウィリアム・ジェームズ・モリアーティ",
+      "source_role_names": [
+        "ウィリアム・ジェームズ・モリアーティ"
+      ],
+      "matched_actor_id": "929888ac-3f6a-40d0-a856-41dd028b2753",
+      "matched_play_id": "56b2d094-05cc-49e1-b6df-f3ec2277e3fb",
+      "accepted_cast_id": "4410083e-5a9b-4e0c-95a8-c950cc1acb34",
+      "confidence": 0,
+      "status": "accepted",
+      "note": null,
+      "scraped_at": "2026-10-19T14:46:49.33877+00:00",
+      "created_at": "2026-10-19T14:46:49.33877+00:00",
+      "updated_at": "2026-10-19T14:46:49.33877+00:00",
+      "accepted_at": "2026-10-19T14:46:49.33877+00:00",
+      "rejected_at": null,
+      "source_cast_group": null,
+      "source_order": 1,
+      "source_credit_key": "babcb0043e3a04a7bce0",
+      "source_evidence": {
+        "links": [
+          {
+            "url": "https://kira-hai.net/moriartystage2021",
+            "note": "作品ページのキャスト欄"
+          },
+          {
+            "url": "https://kira-hai.net/moriartystage2021",
+            "note": "第一参照先の当該舞台版から主要配役・日程・役名付き別枠またはアンサンブルとダンサーを抽出。ミュージカル版と別シリーズ。",
+            "checkedAt": "2026-10-19T14:32:42.137Z"
+          },
+          {
+            "url": "https://officeendless.com/sp/moriarty-st/cast/",
+            "note": "公式case 2の主要11配役とアンサンブル7人・Dancer4人を確認。第一参照先にない書川勇輝を公式から補完。",
+            "checkedAt": "2026-10-19T14:32:50.984Z"
+          }
+        ],
+        "identity": "reviewed_link",
+        "review_fingerprint": "d3abdc024f225891c28da83164ecd17307ae7809c2a525323989e05a0f519c00",
+        "source_fingerprint": "5e10e4e90f655368a19120105cd399a911cc243e6bd08147f3d195a45565fa57",
+        "snapshot_fingerprint": "9c7bf45abf434e64e2e97e2d8935266d402a4c7d38c117c6aa5acd42ad33c71a"
+      }
+    },
+    {
+      "id": "981b96af-45f5-459b-b09a-386fe781ba92",
+      "source": "kira-hai",
+      "external_actor_id": null,
+      "external_play_id": null,
+      "source_actor_name": "北村諒",
+      "source_actor_url": "https://kira-hai.net/kitamura-ryo",
+      "source_work_title": "舞台「憂国のモリアーティ」",
+      "source_work_url": "https://kira-hai.net/moriartystage2020",
+      "source_year": 2020,
+      "source_role_raw": "シャーロック・ホームズ",
+      "source_role_names": [
+        "シャーロック・ホームズ"
+      ],
+      "matched_actor_id": "853dd8bc-bb1d-41e4-b9b9-978ecb70fbb9",
+      "matched_play_id": "9206a2dd-68ef-425c-babb-791a92e816df",
+      "accepted_cast_id": "44105b1e-8a20-45b2-81c1-55acdc704b6b",
+      "confidence": 0,
+      "status": "accepted",
+      "note": null,
+      "scraped_at": "2026-10-19T14:46:49.33877+00:00",
+      "created_at": "2026-10-19T14:46:49.33877+00:00",
+      "updated_at": "2026-10-19T14:46:49.33877+00:00",
+      "accepted_at": "2026-10-19T14:46:49.33877+00:00",
+      "rejected_at": null,
+      "source_cast_group": null,
+      "source_order": 10,
+      "source_credit_key": "a6e05e5b29809bbf562c",
+      "source_evidence": {
+        "links": [
+          {
+            "url": "https://kira-hai.net/moriartystage2020",
+            "note": "作品ページのキャスト欄"
+          },
+          {
+            "url": "https://kira-hai.net/moriartystage2020",
+            "note": "第一参照先の当該舞台版から主要配役・日程・役名付き別枠またはアンサンブルとダンサーを抽出。ミュージカル版と別シリーズ。",
+            "checkedAt": "2026-10-19T14:32:39.366Z"
+          },
+          {
+            "url": "https://officeendless.com/sp/moriarty-st/case1/cast.html",
+            "note": "公式初演アーカイブで主要10配役、別枠8配役、Dancer4人を照合。別枠はアンサンブルと断定せず役名ごと作品クレジットへ保存。",
+            "checkedAt": "2026-10-19T14:35:57.903Z"
+          }
+        ],
+        "identity": "reviewed_link",
+        "review_fingerprint": "722c564c30fec8daa7cdef4aa4881631d9cd39420e053717c490b861b3f309d2",
+        "source_fingerprint": "b88c29f63df19ed13bbf00b8b4ac6d58005db2c7a613fb0573e508eab8d95afa",
+        "snapshot_fingerprint": "4542c4b271d747af77a682a0189b0d0f3fbe8775e4f467bcd79f576992b7930c"
+      }
+    },
+    {
+      "id": "9af1bd5c-8376-494b-83a4-fba9d13a37ee",
+      "source": "kira-hai",
+      "external_actor_id": null,
+      "external_play_id": null,
+      "source_actor_name": "野本ほたる",
+      "source_actor_url": "https://kira-hai.net/nomoto-hotaru",
+      "source_work_title": "舞台「憂国のモリアーティ」",
+      "source_work_url": "https://kira-hai.net/moriartystage2020",
+      "source_year": 2020,
+      "source_role_raw": "ミス・ハドソン",
+      "source_role_names": [
+        "ミス・ハドソン"
+      ],
+      "matched_actor_id": "7314febd-7b3d-46c5-a638-4e8e7336b4fb",
+      "matched_play_id": "9206a2dd-68ef-425c-babb-791a92e816df",
+      "accepted_cast_id": "b56b9b1e-db44-4596-b896-4ad110ae4ef7",
+      "confidence": 0,
+      "status": "accepted",
+      "note": null,
+      "scraped_at": "2026-10-19T14:46:49.33877+00:00",
+      "created_at": "2026-10-19T14:46:49.33877+00:00",
+      "updated_at": "2026-10-19T14:46:49.33877+00:00",
+      "accepted_at": "2026-10-19T14:46:49.33877+00:00",
+      "rejected_at": null,
+      "source_cast_group": null,
+      "source_order": 7,
+      "source_credit_key": "9f910ce7f1c8a11f1758",
+      "source_evidence": {
+        "links": [
+          {
+            "url": "https://kira-hai.net/moriartystage2020",
+            "note": "作品ページのキャスト欄"
+          },
+          {
+            "url": "https://kira-hai.net/nomoto-hotaru",
+            "note": "第一参照先または所属・劇団・出演作公式で当該人物の基本情報・役名・経歴を照合。",
+            "checkedAt": "2026-10-19T14:34:46.020Z"
+          },
+          {
+            "url": "https://mmitt.jp/talent/%E9%87%8E%E6%9C%AC%E3%81%BB%E3%81%9F%E3%82%8B",
+            "note": "本人の個人プロフィールで基本情報・読み・英字名または経歴を確認。採用範囲はnotesに明記。",
+            "checkedAt": "2026-10-19T14:36:03.977Z"
+          },
+          {
+            "url": "https://officeendless.com/sp/moriarty-st/case1/cast.html",
+            "note": "公式初演アーカイブで主要10配役、別枠8配役、Dancer4人を照合。別枠はアンサンブルと断定せず役名ごと作品クレジットへ保存。",
+            "checkedAt": "2026-10-19T14:35:57.903Z"
+          }
+        ],
+        "identity": "reviewed_link",
+        "review_fingerprint": "722c564c30fec8daa7cdef4aa4881631d9cd39420e053717c490b861b3f309d2",
+        "source_fingerprint": "b88c29f63df19ed13bbf00b8b4ac6d58005db2c7a613fb0573e508eab8d95afa",
+        "snapshot_fingerprint": "4542c4b271d747af77a682a0189b0d0f3fbe8775e4f467bcd79f576992b7930c"
+      }
+    },
+    {
+      "id": "aace6e9c-c800-4066-afc0-92d429c4adb9",
+      "source": "kira-hai",
+      "external_actor_id": null,
+      "external_play_id": null,
+      "source_actor_name": "早乙女じょうじ",
+      "source_actor_url": "https://kira-hai.net/saotome-joji",
+      "source_work_title": "舞台「憂国のモリアーティ」",
+      "source_work_url": "https://kira-hai.net/moriartystage2020",
+      "source_year": 2020,
+      "source_role_raw": "マイクロフト・ホームズ",
+      "source_role_names": [
+        "マイクロフト・ホームズ"
+      ],
+      "matched_actor_id": "88c35f79-7c9c-426a-968d-a181ffa420d2",
+      "matched_play_id": "9206a2dd-68ef-425c-babb-791a92e816df",
+      "accepted_cast_id": "64159300-0387-4047-a956-b7932245ca16",
+      "confidence": 0,
+      "status": "accepted",
+      "note": null,
+      "scraped_at": "2026-10-19T14:46:49.33877+00:00",
+      "created_at": "2026-10-19T14:46:49.33877+00:00",
+      "updated_at": "2026-10-19T14:46:49.33877+00:00",
+      "accepted_at": "2026-10-19T14:46:49.33877+00:00",
+      "rejected_at": null,
+      "source_cast_group": null,
+      "source_order": 9,
+      "source_credit_key": "712240c8e3f24d91fa8c",
+      "source_evidence": {
+        "links": [
+          {
+            "url": "https://kira-hai.net/moriartystage2020",
+            "note": "作品ページのキャスト欄"
+          },
+          {
+            "url": "https://kira-hai.net/moriartystage2020",
+            "note": "第一参照先の当該舞台版から主要配役・日程・役名付き別枠またはアンサンブルとダンサーを抽出。ミュージカル版と別シリーズ。",
+            "checkedAt": "2026-10-19T14:32:39.366Z"
+          },
+          {
+            "url": "https://officeendless.com/sp/moriarty-st/case1/cast.html",
+            "note": "公式初演アーカイブで主要10配役、別枠8配役、Dancer4人を照合。別枠はアンサンブルと断定せず役名ごと作品クレジットへ保存。",
+            "checkedAt": "2026-10-19T14:35:57.903Z"
+          }
+        ],
+        "identity": "reviewed_link",
+        "review_fingerprint": "722c564c30fec8daa7cdef4aa4881631d9cd39420e053717c490b861b3f309d2",
+        "source_fingerprint": "b88c29f63df19ed13bbf00b8b4ac6d58005db2c7a613fb0573e508eab8d95afa",
+        "snapshot_fingerprint": "4542c4b271d747af77a682a0189b0d0f3fbe8775e4f467bcd79f576992b7930c"
+      }
+    },
+    {
+      "id": "d87ccd6c-178a-42d2-9ed8-2ac9c822b6cd",
+      "source": "kira-hai",
+      "external_actor_id": null,
+      "external_play_id": null,
+      "source_actor_name": "萩野崇",
+      "source_actor_url": "https://kira-hai.net/hagino-takashi",
+      "source_work_title": "舞台「憂国のモリアーティ」case 2",
+      "source_work_url": "https://kira-hai.net/moriartystage2021",
+      "source_year": 2021,
+      "source_role_raw": "ジャック・レンフィールド",
+      "source_role_names": [
+        "ジャック・レンフィールド"
+      ],
+      "matched_actor_id": "c709f777-ac1c-4483-84a0-0e5948a29bb8",
+      "matched_play_id": "56b2d094-05cc-49e1-b6df-f3ec2277e3fb",
+      "accepted_cast_id": "9e928790-680e-4a59-ae9e-464e3b64018f",
+      "confidence": 0,
+      "status": "accepted",
+      "note": null,
+      "scraped_at": "2026-10-19T14:46:49.33877+00:00",
+      "created_at": "2026-10-19T14:46:49.33877+00:00",
+      "updated_at": "2026-10-19T14:46:49.33877+00:00",
+      "accepted_at": "2026-10-19T14:46:49.33877+00:00",
+      "rejected_at": null,
+      "source_cast_group": null,
+      "source_order": 9,
+      "source_credit_key": "74906923a0ee24faf430",
+      "source_evidence": {
+        "links": [
+          {
+            "url": "https://kira-hai.net/moriartystage2021",
+            "note": "作品ページのキャスト欄"
+          },
+          {
+            "url": "https://kira-hai.net/hagino-takashi",
+            "note": "本人の個人プロフィールで基本情報・読み・英字名または経歴を確認。採用範囲はnotesに明記。",
+            "checkedAt": "2026-10-19T14:34:51.490Z"
+          },
+          {
+            "url": "https://www.tv-asahi.co.jp/tokusatsu-fc/files/news/0276/",
+            "note": "第一参照先または所属・劇団・出演作公式で当該人物の基本情報・役名・経歴を照合。",
+            "checkedAt": "2026-10-19T14:39:51.793Z"
+          },
+          {
+            "url": "https://www.kamen-rider-official.com/zukan/characters/1711",
+            "note": "第一参照先または所属・劇団・出演作公式で当該人物の基本情報・役名・経歴を照合。",
+            "checkedAt": "2026-10-19T14:39:54.551Z"
+          },
+          {
+            "url": "https://officeendless.com/sp/moriarty-st/cast/",
+            "note": "第一参照先または所属・劇団・出演作公式で当該人物の基本情報・役名・経歴を照合。",
+            "checkedAt": "2026-10-19T14:32:50.984Z"
+          },
+          {
+            "url": "https://officeendless.com/sp/moriarty-st/cast/",
+            "note": "公式case 2の主要11配役とアンサンブル7人・Dancer4人を確認。第一参照先にない書川勇輝を公式から補完。",
+            "checkedAt": "2026-10-19T14:32:50.984Z"
+          }
+        ],
+        "identity": "reviewed_link",
+        "review_fingerprint": "d3abdc024f225891c28da83164ecd17307ae7809c2a525323989e05a0f519c00",
+        "source_fingerprint": "5e10e4e90f655368a19120105cd399a911cc243e6bd08147f3d195a45565fa57",
+        "snapshot_fingerprint": "9c7bf45abf434e64e2e97e2d8935266d402a4c7d38c117c6aa5acd42ad33c71a"
+      }
+    },
+    {
+      "id": "dcdb778f-f835-4275-9cfe-e037f1364167",
+      "source": "kira-hai",
+      "external_actor_id": null,
+      "external_play_id": null,
+      "source_actor_name": "立道梨緒奈",
+      "source_actor_url": "https://kira-hai.net/tatemichi-riona",
+      "source_work_title": "舞台「憂国のモリアーティ」case 2",
+      "source_work_url": "https://kira-hai.net/moriartystage2021",
+      "source_year": 2021,
+      "source_role_raw": "ジェームズ・ボンド",
+      "source_role_names": [
+        "ジェームズ・ボンド"
+      ],
+      "matched_actor_id": "7545490b-c94f-429a-8b4a-8c47176e8f4c",
+      "matched_play_id": "56b2d094-05cc-49e1-b6df-f3ec2277e3fb",
+      "accepted_cast_id": "d17b36c0-d4e5-4c44-b432-5bc344311ba5",
+      "confidence": 0,
+      "status": "accepted",
+      "note": null,
+      "scraped_at": "2026-10-19T14:46:49.33877+00:00",
+      "created_at": "2026-10-19T14:46:49.33877+00:00",
+      "updated_at": "2026-10-19T14:46:49.33877+00:00",
+      "accepted_at": "2026-10-19T14:46:49.33877+00:00",
+      "rejected_at": null,
+      "source_cast_group": null,
+      "source_order": 8,
+      "source_credit_key": "9fe28d6afd243712ea4c",
+      "source_evidence": {
+        "links": [
+          {
+            "url": "https://kira-hai.net/moriartystage2021",
+            "note": "作品ページのキャスト欄"
+          },
+          {
+            "url": "https://kira-hai.net/tatemichi-riona",
+            "note": "第一参照先または所属・劇団・出演作公式で当該人物の基本情報・役名・経歴を照合。",
+            "checkedAt": "2026-10-19T14:34:48.738Z"
+          },
+          {
+            "url": "https://dolce-star.com/talent/tatemichi",
+            "note": "本人の個人プロフィールで基本情報・読み・英字名または経歴を確認。採用範囲はnotesに明記。",
+            "checkedAt": "2026-10-19T14:36:06.859Z"
+          },
+          {
+            "url": "https://officeendless.com/sp/moriarty-st/cast/",
+            "note": "公式case 2の主要11配役とアンサンブル7人・Dancer4人を確認。第一参照先にない書川勇輝を公式から補完。",
+            "checkedAt": "2026-10-19T14:32:50.984Z"
+          }
+        ],
+        "identity": "reviewed_link",
+        "review_fingerprint": "d3abdc024f225891c28da83164ecd17307ae7809c2a525323989e05a0f519c00",
+        "source_fingerprint": "5e10e4e90f655368a19120105cd399a911cc243e6bd08147f3d195a45565fa57",
+        "snapshot_fingerprint": "9c7bf45abf434e64e2e97e2d8935266d402a4c7d38c117c6aa5acd42ad33c71a"
+      }
+    },
+    {
+      "id": "f5d13922-c665-4289-bb7f-fdd948e59c93",
+      "source": "kira-hai",
+      "external_actor_id": null,
+      "external_play_id": null,
+      "source_actor_name": "松井勇歩",
+      "source_actor_url": "https://kira-hai.net/matsui-yuho",
+      "source_work_title": "舞台「憂国のモリアーティ」",
+      "source_work_url": "https://kira-hai.net/moriartystage2020",
+      "source_year": 2020,
+      "source_role_raw": "ジョン・H・ワトソン",
+      "source_role_names": [
+        "ジョン・H・ワトソン"
+      ],
+      "matched_actor_id": "04667c45-07d7-475b-ac16-f47d3f853398",
+      "matched_play_id": "9206a2dd-68ef-425c-babb-791a92e816df",
+      "accepted_cast_id": "25af9190-faf5-40ce-9ac8-4f009a1fc13e",
+      "confidence": 0,
+      "status": "accepted",
+      "note": null,
+      "scraped_at": "2026-10-19T14:46:49.33877+00:00",
+      "created_at": "2026-10-19T14:46:49.33877+00:00",
+      "updated_at": "2026-10-19T14:46:49.33877+00:00",
+      "accepted_at": "2026-10-19T14:46:49.33877+00:00",
+      "rejected_at": null,
+      "source_cast_group": null,
+      "source_order": 6,
+      "source_credit_key": "cff5d6ee2beba9e997cc",
+      "source_evidence": {
+        "links": [
+          {
+            "url": "https://kira-hai.net/moriartystage2020",
+            "note": "作品ページのキャスト欄"
+          },
+          {
+            "url": "https://kira-hai.net/moriartystage2020",
+            "note": "第一参照先の当該舞台版から主要配役・日程・役名付き別枠またはアンサンブルとダンサーを抽出。ミュージカル版と別シリーズ。",
+            "checkedAt": "2026-10-19T14:32:39.366Z"
+          },
+          {
+            "url": "https://officeendless.com/sp/moriarty-st/case1/cast.html",
+            "note": "公式初演アーカイブで主要10配役、別枠8配役、Dancer4人を照合。別枠はアンサンブルと断定せず役名ごと作品クレジットへ保存。",
+            "checkedAt": "2026-10-19T14:35:57.903Z"
+          }
+        ],
+        "identity": "reviewed_link",
+        "review_fingerprint": "722c564c30fec8daa7cdef4aa4881631d9cd39420e053717c490b861b3f309d2",
+        "source_fingerprint": "b88c29f63df19ed13bbf00b8b4ac6d58005db2c7a613fb0573e508eab8d95afa",
+        "snapshot_fingerprint": "4542c4b271d747af77a682a0189b0d0f3fbe8775e4f467bcd79f576992b7930c"
+      }
+    },
+    {
+      "id": "fdec2534-6e53-40cb-9730-90453f5aac9a",
+      "source": "kira-hai",
+      "external_actor_id": null,
+      "external_play_id": null,
+      "source_actor_name": "郷本直也",
+      "source_actor_url": "https://kira-hai.net/gomoto-naoya",
+      "source_work_title": "舞台「憂国のモリアーティ」case 2",
+      "source_work_url": "https://kira-hai.net/moriartystage2021",
+      "source_year": 2021,
+      "source_role_raw": "セバスチャン・モラン",
+      "source_role_names": [
+        "セバスチャン・モラン"
+      ],
+      "matched_actor_id": "e57de3c5-d324-477b-b323-6009311c2ca3",
+      "matched_play_id": "56b2d094-05cc-49e1-b6df-f3ec2277e3fb",
+      "accepted_cast_id": "9d43c590-46ba-42cc-bf8e-c78020119955",
+      "confidence": 0,
+      "status": "accepted",
+      "note": null,
+      "scraped_at": "2026-10-19T14:46:49.33877+00:00",
+      "created_at": "2026-10-19T14:46:49.33877+00:00",
+      "updated_at": "2026-10-19T14:46:49.33877+00:00",
+      "accepted_at": "2026-10-19T14:46:49.33877+00:00",
+      "rejected_at": null,
+      "source_cast_group": null,
+      "source_order": 4,
+      "source_credit_key": "5e210ee82a038d6ad6af",
+      "source_evidence": {
+        "links": [
+          {
+            "url": "https://kira-hai.net/moriartystage2021",
+            "note": "作品ページのキャスト欄"
+          },
+          {
+            "url": "https://kira-hai.net/moriartystage2021",
+            "note": "第一参照先の当該舞台版から主要配役・日程・役名付き別枠またはアンサンブルとダンサーを抽出。ミュージカル版と別シリーズ。",
+            "checkedAt": "2026-10-19T14:32:42.137Z"
+          },
+          {
+            "url": "https://officeendless.com/sp/moriarty-st/cast/",
+            "note": "公式case 2の主要11配役とアンサンブル7人・Dancer4人を確認。第一参照先にない書川勇輝を公式から補完。",
+            "checkedAt": "2026-10-19T14:32:50.984Z"
+          }
+        ],
+        "identity": "reviewed_link",
+        "review_fingerprint": "d3abdc024f225891c28da83164ecd17307ae7809c2a525323989e05a0f519c00",
+        "source_fingerprint": "5e10e4e90f655368a19120105cd399a911cc243e6bd08147f3d195a45565fa57",
+        "snapshot_fingerprint": "9c7bf45abf434e64e2e97e2d8935266d402a4c7d38c117c6aa5acd42ad33c71a"
+      }
+    }
+  ],
+  "evidence": {
+    "sources": [
+      {
+        "name": "cast",
+        "url": "https://officeendless.com/sp/moriarty-st/case1/cast.html",
+        "status": 200,
+        "finalUrl": "https://officeendless.com/sp/moriarty-st/case1/cast.html",
+        "checkedAt": "2026-10-19T16:16:37.824Z",
+        "sha256": "c0748edeb7671c5c641bd7835a9e3c20489a8e2d35cfa1ba8a6f055a51e84026"
+      },
+      {
+        "name": "case2cast",
+        "url": "https://officeendless.com/sp/moriarty-st/cast/",
+        "status": 200,
+        "finalUrl": "https://officeendless.com/sp/moriarty-st/cast/",
+        "checkedAt": "2026-10-19T16:16:40.135Z",
+        "sha256": "6f8eb30766b5289ef3e25c660cd8d1a0db897baba7e393b3599591615a38ca01"
+      },
+      {
+        "name": "work",
+        "url": "https://kira-hai.net/moriartystage2020",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/moriartystage2020",
+        "checkedAt": "2026-10-19T16:16:42.655Z",
+        "sha256": "c36402004712cac51e67160254609837f3a8f9e1ac5ed6d3bbe0d778c59fb93a"
+      },
+      {
+        "name": "tsukamoto",
+        "url": "https://kira-hai.net/tsukamoto-takuya",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/tsukamoto-takuya",
+        "checkedAt": "2026-10-19T16:16:45.071Z",
+        "sha256": "e8d870e9116a45227e14c21ce8db833075023fed4d336c36e72e36cf676cabf0"
+      },
+      {
+        "name": "akira",
+        "url": "https://kira-hai.net/akira",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/akira",
+        "checkedAt": "2026-10-19T16:16:47.494Z",
+        "sha256": "212b0a168d093edfc477757576d24060fa27f73a331e559050bdcce12fc53ed8"
+      },
+      {
+        "name": "kazuuchi",
+        "url": "https://kira-hai.net/kazuuchi-yu",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/kazuuchi-yu",
+        "checkedAt": "2026-10-19T16:16:50.038Z",
+        "sha256": "3ab206d8273929773bb2fc12db97f2fd361c6988e8b1999571dc7c3270734467"
+      },
+      {
+        "name": "ishii",
+        "url": "https://kira-hai.net/ishii-hiroto",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/ishii-hiroto",
+        "checkedAt": "2026-10-19T16:16:52.886Z",
+        "sha256": "9200c550a0b5609ece8f6d90fc29cb01e77dfe9994c1a2219296cc9674e92206"
+      },
+      {
+        "name": "honma",
+        "url": "https://kira-hai.net/honma-tatsuhiro",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/honma-tatsuhiro",
+        "checkedAt": "2026-10-19T16:16:55.686Z",
+        "sha256": "3eeda5f2f0d6dacd4c00fdaf99cd42a0cfbfc80eed0f4136aee50fe867f4f4b3"
+      },
+      {
+        "name": "hayakawa",
+        "url": "https://kira-hai.net/hayakawa-yuhei",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/hayakawa-yuhei",
+        "checkedAt": "2026-10-19T16:16:58.587Z",
+        "sha256": "ab3f0beaae502d76caac3ffe2de80ea4c7a6a362518f882dee7abb1df7c24522"
+      },
+      {
+        "name": "changelog",
+        "url": "https://supabase.com/changelog.md",
+        "status": 200,
+        "finalUrl": "https://supabase.com/changelog.md",
+        "checkedAt": "2026-10-19T16:17:01.050Z",
+        "sha256": "15b3d0d1a7dc3b3f2c0af4788e49acfdf2d2edbd2613f22de0705fa43b1cf58b"
+      },
+      {
+        "name": "robots",
+        "url": "https://kira-hai.net/robots.txt",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/robots.txt",
+        "checkedAt": "2026-10-19T16:17:03.438Z",
+        "sha256": "f6ed0322f0e3df8c3b42b14df3254a90cca7b94a4172de91812952b3c7060b03"
+      },
+      {
+        "name": "and-profile",
+        "url": "https://www.andendless.com/profile-2/",
+        "status": 200,
+        "finalUrl": "https://www.andendless.com/profile-2/",
+        "checkedAt": "2026-10-19T16:18:30.344Z",
+        "sha256": "8b4d7cbc2896f6d007b4589a0487f9492f2cd681c1b8d0e6090ff05d5011706c"
+      },
+      {
+        "name": "akira-official",
+        "url": "https://a-and-h-promotion.com/artists/akira-domiki/",
+        "status": 200,
+        "finalUrl": "https://a-and-h-promotion.com/artists/akira-domiki/",
+        "checkedAt": "2026-10-19T16:18:32.875Z",
+        "sha256": "933917519bcf7d75896adaaeddbdea54f697abf5e0f968cfb1fde4d7502bc7e1"
+      },
+      {
+        "name": "honma-official",
+        "url": "https://croquegirls.wixsite.com/croque-web/honma",
+        "status": 200,
+        "finalUrl": "https://croquegirls.wixsite.com/croque-web/honma",
+        "checkedAt": "2026-10-19T16:18:35.382Z",
+        "sha256": "8aaddf34e60ac47711fa8679a796accafcaacdd9162ba2ec7ccf42472f249320"
+      },
+      {
+        "name": "tsukamoto-secondary",
+        "url": "https://thetv.jp/person/2000022169/",
+        "status": 200,
+        "finalUrl": "https://thetv.jp/person/2000022169/",
+        "checkedAt": "2026-10-19T16:18:37.914Z",
+        "sha256": "aa08e640cb368719f5f524cc5facf4ee5b98773286b71e898d4f9edc8cc14fd5"
+      },
+      {
+        "name": "haga-ticket",
+        "url": "https://t.pia.jp/pia/artist/artists.do?artistsCd=35160066",
+        "status": 200,
+        "finalUrl": "https://t.pia.jp/pia/artist/artists.do?artistsCd=35160066",
+        "checkedAt": "2026-10-19T16:18:40.579Z",
+        "sha256": "2f8780f5f4f3cf786ed6cbbaab65f6d3bd3fa7f62a86ec4de8d564abc396d119"
+      },
+      {
+        "name": "and-goldfish",
+        "url": "https://www.andendless.com/ae_archive/only-silver-fish-gold-fish/",
+        "status": 200,
+        "finalUrl": "https://www.andendless.com/ae_archive/only-silver-fish-gold-fish/",
+        "checkedAt": "2026-10-19T16:18:43.355Z",
+        "sha256": "2e15996b6448c9b0458cdc2eefd3b09622e60a553ec57194b13f0a1e805f668e"
+      },
+      {
+        "name": "sos-list",
+        "url": "https://www.sos-model.com/category/entertainments",
+        "status": 200,
+        "finalUrl": "https://www.sos-model.com/category/entertainments",
+        "checkedAt": "2026-10-19T16:19:43.232Z",
+        "sha256": "0c1c67b5ead86909603f64ce62d66600d0eaa942a494ea92bba485d01d1247a4"
+      },
+      {
+        "name": "revolver",
+        "url": "https://revolver-stage.com/",
+        "status": 200,
+        "finalUrl": "https://revolver-stage.com/",
+        "checkedAt": "2026-10-19T16:19:45.759Z",
+        "sha256": "c8562142a887b67328f432ee23268c51dc7e9c9553361d8d5ea9d41b0a6f3e93"
+      },
+      {
+        "name": "sakuma-official",
+        "url": "https://www.andendless.com/profile-2//cast_sakuma/",
+        "status": 200,
+        "finalUrl": "https://www.andendless.com/profile-2/cast_sakuma/",
+        "checkedAt": "2026-10-19T16:20:51.159Z",
+        "sha256": "3248ff4e7b6299977d1b88a4bb244726d2fda9aaf69afad38ece447ba40b22c2"
+      },
+      {
+        "name": "kazuuchi-official",
+        "url": "https://www.andendless.com/profile-2//cast_kazuuchi/",
+        "status": 200,
+        "finalUrl": "https://www.andendless.com/profile-2/cast_kazuuchi/",
+        "checkedAt": "2026-10-19T16:20:53.663Z",
+        "sha256": "b5673f4b9f93df7f8fe91924b89b5b254aa39a5672bd556a112868599fad3329"
+      },
+      {
+        "name": "ishii-official",
+        "url": "https://www.andendless.com/profile-2//cast_ishii/",
+        "status": 200,
+        "finalUrl": "https://www.andendless.com/profile-2/cast_ishii/",
+        "checkedAt": "2026-10-19T16:20:56.262Z",
+        "sha256": "9f4b22fecf063f33489e120af3c29410fdf3de8fb748f1a6f84bf21b8eb0d105"
+      },
+      {
+        "name": "tsukamoto-official",
+        "url": "https://www.sos-model.com/entertainments/932",
+        "status": 200,
+        "finalUrl": "https://www.sos-model.com/entertainments/932",
+        "checkedAt": "2026-10-19T16:20:59.066Z",
+        "sha256": "bb0644caddedec1bb811f13ca17af09aeed5da47a05f1c58b33c082b83168574"
+      },
+      {
+        "name": "sakuma-reading",
+        "url": "https://talent-dictionary.com/佐久間祐人",
+        "status": 200,
+        "finalUrl": "https://talent-dictionary.com/%E4%BD%90%E4%B9%85%E9%96%93%E7%A5%90%E4%BA%BA",
+        "checkedAt": "2026-10-19T16:22:39.274Z",
+        "sha256": "a2b68de31c25b5a131b9202ca4bf04e954a218c9d646e8c6a0d01aa0b4044c6c"
+      },
+      {
+        "name": "schedule",
+        "url": "https://officeendless.com/sp/moriarty-st/case1/schedule.html",
+        "status": 200,
+        "finalUrl": "https://officeendless.com/sp/moriarty-st/case1/schedule.html",
+        "checkedAt": "2026-10-19T16:22:41.688Z",
+        "sha256": "4374c54f8b159c5a653af25f0f183686c61baae71b345df43b6168b34f569134"
+      },
+      {
+        "name": "case2schedule",
+        "url": "https://officeendless.com/sp/moriarty-st/schedule/",
+        "status": 200,
+        "finalUrl": "https://officeendless.com/sp/moriarty-st/schedule/",
+        "checkedAt": "2026-10-19T16:22:44.110Z",
+        "sha256": "14ba310f61f71b707d8dfe291df71681245793b2ff10976f086044e9cd7a5bce"
+      },
+      {
+        "name": "case2work",
+        "url": "https://kira-hai.net/moriartystage2021",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/moriartystage2021",
+        "checkedAt": "2026-10-19T16:22:46.625Z",
+        "sha256": "2a3e9652f6c6b3dcbfdc2087c20f2b7850feffce4bb8334e5f86f7761d639f1d"
+      },
+      {
+        "name": "viz",
+        "url": "https://www.viz.com/moriarty-the-patriot",
+        "status": 200,
+        "finalUrl": "https://www.viz.com/moriarty-the-patriot",
+        "checkedAt": "2026-10-19T16:24:25.776Z",
+        "sha256": "4c67963756e7dfcc72761993a07da336d69ba6d0e0c695c424be9db88a54cc7e"
+      }
+    ],
+    "links": [
+      {
+        "url": "https://kira-hai.net/moriartystage2020",
+        "checkedAt": "2026-10-19T16:16:42.655Z",
+        "note": "第一参照先の通常役と別枠8人を原文氏名・役名のまま照合。"
+      },
+      {
+        "url": "https://officeendless.com/sp/moriarty-st/case1/cast.html",
+        "checkedAt": "2026-10-19T16:16:37.824Z",
+        "note": "公式のanother_castは役付き8人でありアンサンブルという分類はない。Dancerとは区分して保存。"
+      },
+      {
+        "url": "https://officeendless.com/sp/moriarty-st/cast/",
+        "checkedAt": "2026-10-19T16:16:40.135Z",
+        "note": "case2は石井寛人ほか7人を公式がアンサンブルと明記。初演だけを移す。"
+      },
+      {
+        "url": "https://officeendless.com/sp/moriarty-st/case1/schedule.html",
+        "checkedAt": "2026-10-19T16:22:41.688Z",
+        "note": "初演の両都市日程・会場を再確認。"
+      },
+      {
+        "url": "https://officeendless.com/sp/moriarty-st/schedule/",
+        "checkedAt": "2026-10-19T16:22:44.110Z",
+        "note": "case2の7月23日〜8月1日・新国立劇場を再確認。"
+      },
+      {
+        "url": "https://www.viz.com/moriarty-the-patriot",
+        "checkedAt": "2026-10-19T16:24:25.776Z",
+        "note": "原作の英語正式名と作者の英字表記を照合。"
+      }
+    ],
+    "notes": [
+      "初演のその他出演8人を既存クレジットから配役へ移し二重表示を防ぐ。既存21配役と21採用候補は全項目保持。",
+      "Dancer4人とcase2アンサンブル7人・Dancer4人はそのまま。人物ページを持ったことを理由に他作品の公式アンサンブルまで配役にしない。",
+      "シリーズの旧説明中の宣伝的評価や「歌唱を交えない純粋なお芝居」という未確認の断定を、出典のある公演事実の短い日英説明に置換。原作・主催・関連シリーズ等は保持。2作品の英語表示タイトルは編集訳。"
+    ],
+    "unresolved": [
+      "あらすじ・俳優プロフィール英訳・役名とスタッフ／会場名の全英訳・配信URL・掲載順／主演指定・総合監査は後続。未確認の個人情報はnull。",
+      "本間健大の生年・現在所属、芳賀恵子の生年月日・身長・現在所属、佐久間祐人の身長等を補うために推測しない。"
+    ]
+  },
+  "requestKey": "570b3dbac46f480503743fd7dbef22580751dd0ba3536a402f84aee15ccb6572"
+}
