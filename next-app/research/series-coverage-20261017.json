@@ -50,8 +50,53 @@
       "slug": "hunter-x-hunter",
       "name": "舞台『HUNTER×HUNTER』",
       "registeredDay": "2026-02-09",
-      "plays": 1,
-      "protected": false
+      "plays": 2,
+      "protected": false,
+      "castRows": 14,
+      "castCoverageNote": "2023年初演を1作品12配役で追加・点検。新規皇希1人物、既存11人物は全項目保全。役名未記載の出演10人は公式の原順でクレジット保存し、アンサンブルと断定しない。制作スタッフ25区分、短い日英あらすじ・作品タイトル・シリーズ説明、東京の全期間会場、2023/05年表と抜粋を確認。旧丘山ヒソカ候補の誤年2021を2023へ履歴付き訂正し同ID採用。8テーブル全件比較・同処理再実行・日英32ページ確認。既存2024年第2弾1作品2配役と受理済み候補は保全し、補完は次対象。2025年第3弾・現行公式の第4弾前編等は構成確認対象。人物総合監査・詳細英訳・現在配信・主演指定は後続。",
+      "seriesAudit": {
+        "checkedAt": "2026-10-21T14:18:38.560Z",
+        "scope": "2023年初演1作品・12配役を点検。既存2024年公演と2配役は保全。シリーズ全体の収録完了・点検済みを意味しない。",
+        "works": 1,
+        "castRows": 12,
+        "registeredSeriesWorks": 2,
+        "registeredSeriesCastRows": 14,
+        "newActors": 1,
+        "existingActorsPreserved": 11,
+        "staffCategories": 25,
+        "creditCategories": 26,
+        "castNotes": 0,
+        "voiceCastRows": 0,
+        "creditOnlyNames": 10,
+        "reusedLegacyCandidates": 1,
+        "legacyYearCorrected": [
+          2021,
+          2023
+        ],
+        "publicPages": 32,
+        "cities": 1,
+        "venues": 1,
+        "report": "docs/hunter2023-2026-10-21.md",
+        "research": "next-app/research/hunter2023-20261021.json",
+        "pendingWorks": [
+          {
+            "year": 2024,
+            "title": "『HUNTER×HUNTER』THE STAGE 2",
+            "slug": "hunterxhunter2024",
+            "status": "existing_sparse_work_two_casts_preserved_pending_completion"
+          },
+          {
+            "year": 2025,
+            "title": "『HUNTER×HUNTER』THE STAGE 3",
+            "status": "pending_research"
+          },
+          {
+            "title": "『HUNTER×HUNTER』THE STAGE 4 前編等",
+            "sourceUrl": "https://hunter-stage.jp/",
+            "status": "current_official_page_found_pending_scope_review"
+          }
+        ]
+      }
     },
     {
       "id": "0dfffe54-c688-428b-990f-e1e84433af39",
