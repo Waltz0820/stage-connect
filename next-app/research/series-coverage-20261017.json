@@ -390,8 +390,37 @@
       "slug": "blue-lock",
       "name": "舞台『ブルーロック』（ブルステ）",
       "registeredDay": "2026-02-09",
-      "plays": 0,
-      "protected": false
+      "plays": 2,
+      "protected": false,
+      "castRows": 32,
+      "castCoverageNote": "2023年初演17配役を新規作品として追加。既存2nd STAGEは2021年の誤年・シリーズ未接続を修正して2024年15配役へ補完。人物9・配役30を追加、既存2配役はnullの掲載順以外を保全。映像1・日替わりゲスト3、代役・中止・各ゲスト日時と公演当時名義を保存。アンサンブル延べ7名はクレジット。短い日英概要・英語タイトル・シリーズ日英紹介を補完、年表2024/01→2023/05と抜粋を確認。8テーブル全件比較・再実行0変更、日英50ページを確認。3rd以降とEPISODE 凪系は未収録で全シリーズ完了ではない。人物総合監査・詳細英訳・現在配信・主演指定は後続。",
+      "seriesAudit": {
+        "checkedAt": "2026-10-21T16:25:01.617Z",
+        "scope": "初演・2nd STAGEの2作品を登録・補完し点検。3rd以降・EPISODE 凪系と全項目監査は未完。",
+        "works": 2,
+        "castRows": 32,
+        "newActors": 9,
+        "newPlays": 1,
+        "newCastRows": 30,
+        "keptCastRows": 2,
+        "seriesUniqueActors": 22,
+        "castNotes": 5,
+        "videoCastRows": 1,
+        "guestCastRows": 3,
+        "creditOnlyEnsembleNames": 7,
+        "legacyCandidatesCorrected": 3,
+        "publicPages": 50,
+        "timeline": [
+          "2024/01",
+          "2023/05"
+        ],
+        "report": "docs/bluelock2023-2024-2026-10-22.md",
+        "research": "next-app/research/bluelock2023-2024-20261022.json",
+        "pendingWorks": [
+          "3rd STAGE以降",
+          "EPISODE 凪／Re EPISODE 凪"
+        ]
+      }
     },
     {
       "id": "2b082cf5-9524-4d99-af95-35b0354fd5ee",
