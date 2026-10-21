@@ -12,7 +12,9 @@ export const extractPerformanceCities = (period?: string | null): string[] => {
     const labelled = text.match(/^([^\d:][^:]*):/u);
     const direct = text.match(/^([^\d]+?)\s+\d{4}\s*(?:\/|年)/u);
     const city = labelled?.[1] ?? direct?.[1] ?? "";
-    return city.split("・")[0].trim().replace(/\s+/gu, " ").replace(/(?:公演|会場)$/u, "").trim();
+    // Venue/district qualifiers do not make two Tokyo runs different cities.
+    // This only normalizes the count label; the full schedule stays intact.
+    return city.split("・")[0].replace(/\([^()]*\)/gu, "").trim().replace(/\s+/gu, " ").replace(/(?:公演|会場)$/u, "").trim();
   });
   return Array.from(new Set(cities.filter(Boolean)));
 };

@@ -31,3 +31,15 @@ test('missing values and unlabelled dates do not invent a city or venue',()=>{
  assert.deepEqual(extractPerformanceCities('2018年9月20日19:00／2018年9月21日14:00'),[]);
  assert.deepEqual(splitPerformanceList('シアター1010'),['シアター1010']);
 });
+
+test('Bakuman district qualifiers count as two cities while all three venue runs remain intact',()=>{
+ const period='東京（天王洲）：2021年10月8日〜17日／東京（水道橋）：2021年10月21日〜24日／大阪：2021年10月28日〜31日';
+ assert.deepEqual(extractPerformanceCities(period),['東京','大阪']);
+ assert.deepEqual(splitPerformanceList(period),['東京（天王洲）：2021年10月8日〜17日','東京（水道橋）：2021年10月21日〜24日','大阪：2021年10月28日〜31日']);
+ assert.deepEqual(splitPerformanceList('東京：天王洲 銀河劇場／東京：TOKYO DOME CITY HALL／大阪：メルパルクホール大阪'),['東京：天王洲 銀河劇場','東京：TOKYO DOME CITY HALL','大阪：メルパルクホール大阪']);
+});
+
+test('parenthesized venue qualifiers normalize in both scripts and repeated tour stops',()=>{
+ assert.deepEqual(extractPerformanceCities('Tokyo (Tennozu): 2021/10/8-17 / Tokyo (Suidobashi): 2021/10/21-24 / Osaka: 2021/10/28-31'),['Tokyo','Osaka']);
+ assert.deepEqual(extractPerformanceCities('東京公演（銀河劇場）：10月8日／東京（東京ドームシティホール）公演：10月21日／大阪（メルパルク）会場：10月28日'),['東京','大阪']);
+});
