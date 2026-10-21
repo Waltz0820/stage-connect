@@ -21,18 +21,13 @@ import {
   truncateText,
 } from "../../../../lib/en-copy";
 import { buildBreadcrumbList } from "../../../../lib/structured-data";
+import { extractPerformanceCities, splitPerformanceList } from "../../../../lib/performance-list";
 import { getCreditItems, getPlayDetailBySlug, getSeriesDetailBySlug, toPlainText } from "../../../../lib/stage-connect";
 
 type Params = { slug: string };
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
 export const revalidate = 3600;
 export const dynamicParams = true;
-
-const splitSlashList = (value?: string | null) =>
-  String(value ?? "")
-    .split(" / ")
-    .map((item) => item.trim())
-    .filter(Boolean);
 
 const summarizeCastEn = (
   cast: Array<{
@@ -70,35 +65,6 @@ const getCastInitials = (name: string) => {
   }
 
   return name.trim().slice(0, 2).toUpperCase() || "SC";
-};
-
-const parseScheduleEntries = (period?: string | null) =>
-  String(period ?? "")
-    .split(" / ")
-    .map((item) => item.trim())
-    .filter(Boolean);
-
-const normalizeScheduleCity = (city: string) =>
-  city
-    .normalize("NFKC")
-    .trim()
-    .replace(/[:：]\s*$/u, "")
-    .replace(/\s+/gu, " ")
-    .replace(/(?:公演|会場)$/u, "")
-    .trim();
-
-const extractScheduleCitiesEn = (period?: string | null) => {
-  const cities = parseScheduleEntries(period)
-    .map((entry) => {
-      const colonSplit = entry.split(/[:：]/);
-      if (colonSplit.length > 1) return normalizeScheduleCity(colonSplit[0]);
-      const direct = entry.match(/^([^\d]+?)\s+\d{4}\s*\/\s*\d{1,2}/);
-      return direct ? normalizeScheduleCity(direct[1]) : "";
-    })
-    .filter(Boolean)
-    .map((city) => translateAnnotatedDisplayTextEn(city));
-
-  return Array.from(new Set(cities));
 };
 
 const buildPlayMetaDescriptionEn = (play: NonNullable<Awaited<ReturnType<typeof getPlayDetailBySlug>>>) => {
@@ -162,10 +128,10 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
   const creditItems = getCreditItems(play.credits);
   const castSummary = summarizeCastEn(play.cast);
   const hasVod = Boolean(play.vod && Object.keys(play.vod).length > 0);
-  const venues = splitSlashList(play.venue);
+  const venues = splitPerformanceList(play.venue);
   const translatedVenues = venues.map((item) => translateAnnotatedDisplayTextEn(item));
   const translatedPeriod = normalizePeriodDisplayEn(translateAnnotatedDisplayTextEn(play.period));
-  const scheduleCities = extractScheduleCitiesEn(play.period);
+  const scheduleCities = Array.from(new Set(extractPerformanceCities(play.period).map(translateAnnotatedDisplayTextEn)));
   const groupedCast = groupPlayCast(play.cast);
   const shouldShowPublicInfoDetail = Boolean(play.period || play.venue);
   const synopsis = play.summaryEn || translateDisplayTextEn(play.summary);

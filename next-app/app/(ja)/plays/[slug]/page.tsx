@@ -19,6 +19,7 @@ import {
   truncate,
 } from "../../../../lib/stage-connect";
 import { buildBreadcrumbList } from "../../../../lib/structured-data";
+import { extractPerformanceCities, splitPerformanceList } from "../../../../lib/performance-list";
 
 type Params = {
   slug: string;
@@ -28,27 +29,6 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
 
 export const revalidate = 3600;
 export const dynamicParams = true;
-
-const splitSlashList = (value?: string | null) =>
-  String(value ?? "")
-    .split(" / ")
-    .map((item) => item.trim())
-    .filter(Boolean);
-
-const parseScheduleEntries = (period?: string | null) =>
-  String(period ?? "")
-    .split(" / ")
-    .map((item) => item.trim())
-    .filter(Boolean);
-
-const normalizeScheduleCity = (city: string) =>
-  city
-    .normalize("NFKC")
-    .trim()
-    .replace(/[：:]\s*$/u, "")
-    .replace(/\s+/gu, " ")
-    .replace(/(?:公演|会場)$/u, "")
-    .trim();
 
 const extractPeriodSummary = (period?: string | null) => {
   if (!period) return null;
@@ -95,21 +75,8 @@ const extractPeriodSummary = (period?: string | null) => {
   return `${start}-${end}`;
 };
 
-const extractScheduleCities = (period?: string | null) => {
-  const cities = parseScheduleEntries(period)
-    .map((entry) => {
-      const colonSplit = entry.split(/[:・]/);
-      if (colonSplit.length > 1) return normalizeScheduleCity(colonSplit[0]);
-      const direct = entry.match(/^([^\d]+?)\s+\d{4}\//);
-      return direct ? normalizeScheduleCity(direct[1]) : "";
-    })
-    .filter(Boolean);
-
-  return Array.from(new Set(cities));
-};
-
 const summarizeVenues = (venue?: string | null) => {
-  const venues = splitSlashList(venue);
+  const venues = splitPerformanceList(venue);
   if (venues.length === 0) return null;
   if (venues.length <= 3) return venues.join(" / ");
   return `${venues.slice(0, 2).join(" / ")} / ほか${venues.length - 2}会場`;
@@ -195,10 +162,10 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
   const castSummary = summarizeCast(play.cast);
   const groupedCast = groupPlayCast(play.cast);
   const hasVod = Boolean(play.vod && Object.keys(play.vod).length > 0);
-  const scheduleEntries = parseScheduleEntries(play.period);
+  const scheduleEntries = splitPerformanceList(play.period);
   const scheduleSummary = extractPeriodSummary(play.period);
-  const scheduleCities = extractScheduleCities(play.period);
-  const venueList = splitSlashList(play.venue);
+  const scheduleCities = extractPerformanceCities(play.period);
+  const venueList = splitPerformanceList(play.venue);
   const compactVenueSummary = summarizeVenues(play.venue);
   const shouldCollapseSchedule = scheduleEntries.length > 2 || venueList.length > 3;
   const shouldShowScheduleDetailToggle =
