@@ -1,0 +1,3558 @@
+{
+  "version": 1,
+  "batchId": "hunter2024-20261021-01",
+  "expectedFranchise": {
+    "id": "0d678f15-d8dd-42d5-8051-8b4c8219807c",
+    "name": "舞台『HUNTER×HUNTER』",
+    "created_at": "2026-02-08T16:26:41.990203+00:00",
+    "updated_at": "2026-10-21T14:13:20.685856+00:00",
+    "slug": "hunter-x-hunter",
+    "intro": null,
+    "description": "冨樫義博の漫画『HUNTER×HUNTER』（集英社）を原作とする舞台シリーズ。父と同じハンターを目指すゴンと、キルア、クラピカ、レオリオたちの旅を描く。山崎彬が脚本・演出を担当し、2023年に『HUNTER×HUNTER』THE STAGEが上演された。",
+    "origin_type": "漫画原作",
+    "origin_note": "原作：冨樫義博『HUNTER×HUNTER』（集英社）",
+    "production_companies": null,
+    "related_franchise_ids": [],
+    "format": "stage",
+    "description_en": "A stage series based on Yoshihiro Togashi’s manga HUNTER×HUNTER, published by Shueisha. It follows Gon’s journey to become a Hunter like his father, alongside Killua, Kurapika and Leorio. Written and directed by Akira Yamazaki, HUNTER×HUNTER THE STAGE opened in 2023.",
+    "name_en": "HUNTER×HUNTER THE STAGE"
+  },
+  "franchisePatch": {},
+  "actors": [
+    {
+      "actor": {
+        "id": "5ea52785-4dd3-4d75-a38a-3de16098a173",
+        "slug": "murata-mitsu",
+        "name": "村田充",
+        "kana": "むらた みつ",
+        "profile": "大阪府出身の俳優。舞台『弱虫ペダル』の御堂筋翔役、『HUNTER×HUNTER』THE STAGE 2のノブナガ役、「進撃の巨人」-the Musical-のハンネス役などを務める。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1977-08-18",
+        "height_cm": null,
+        "blood_type": "A",
+        "birthday_label": null,
+        "name_en": "Mitsu Murata",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "村田充",
+      "profileUrl": "https://kira-hai.net/murata-mitsu",
+      "evidence": [
+        {
+          "url": "https://kira-hai.net/murata-mitsu",
+          "checkedAt": "2026-10-21T14:29:21.570Z",
+          "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+        },
+        {
+          "url": "https://attackontitan-themusical.com/cast.html",
+          "checkedAt": "2026-10-21T14:30:43.622Z",
+          "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+        },
+        {
+          "url": "https://www.nikkansports.com/entertainment/news/202401010000610.html",
+          "checkedAt": "2026-10-21T14:30:43.251Z",
+          "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+        },
+        {
+          "url": "https://hunter-stage.jp/2024/cast",
+          "checkedAt": "2026-10-21T14:26:06.295Z",
+          "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+        }
+      ],
+      "notes": [
+        "DOB・血液型は第一参照先。大阪府は退所報道の人物紹介、各役と英字は公式・キラハイ照合。旧オリオンズベルトを現在所属にしない。キラハイ186cmと旧事務所PDF検索結果187cmが食い違うため身長nullで監査待ち。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "19d1c7f2-beb4-438a-803d-37962f5b7be9",
+        "slug": "akino-yuka",
+        "name": "秋野祐香",
+        "kana": "あきの ゆうか",
+        "profile": "埼玉県出身の俳優。東宝芸能所属。『HUNTER×HUNTER』THE STAGEのマチ役、ミュージカル「Fate/Zero」のセイバー役などを務める。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "2001-10-17",
+        "height_cm": null,
+        "blood_type": "O",
+        "birthday_label": null,
+        "name_en": "Yuka Akino",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "秋野祐香",
+      "profileUrl": "https://www.toho-ent.co.jp/actor/80833",
+      "evidence": [
+        {
+          "url": "https://www.toho-ent.co.jp/actor/80833",
+          "checkedAt": "2026-10-21T14:29:22.034Z",
+          "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+        },
+        {
+          "url": "https://kira-hai.net/akino-yuka",
+          "checkedAt": "2026-10-21T14:29:21.543Z",
+          "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+        },
+        {
+          "url": "https://hunter-stage.jp/2024/cast",
+          "checkedAt": "2026-10-21T14:26:06.295Z",
+          "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+        }
+      ],
+      "notes": [
+        "現行東宝芸能のDOB・出身・所属・血液型・英字・固有出演を採用。身長155.7cmは整数のheight_cmへ丸めずnull、原値を本出典とHTMLへ保存。小数の属性対応は本バッチでは変更しない。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "44817d51-248f-49d6-b694-5387c4565af5",
+        "slug": "oribe-yoshinari",
+        "name": "織部典成",
+        "kana": "おりべ よしなり",
+        "profile": "大阪府出身の俳優。ソニー・ミュージックエンタテインメント所属。演劇「ハイキュー!!」の山口忠役、舞台『ブルーロック』の國神錬介役、『HUNTER×HUNTER』THE STAGEのシャルナーク役などを務める。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "2000-08-18",
+        "height_cm": 181,
+        "blood_type": "O",
+        "birthday_label": null,
+        "name_en": "Yoshinari Oribe",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "織部典成",
+      "profileUrl": "https://red-actors.com/artist/yoshinari-oribe/",
+      "evidence": [
+        {
+          "url": "https://red-actors.com/artist/yoshinari-oribe/",
+          "checkedAt": "2026-10-21T14:29:21.429Z",
+          "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+        },
+        {
+          "url": "https://kira-hai.net/oribe-yoshinari",
+          "checkedAt": "2026-10-21T14:29:22.232Z",
+          "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+        },
+        {
+          "url": "https://hunter-stage.jp/2024/cast",
+          "checkedAt": "2026-10-21T14:26:06.295Z",
+          "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+        }
+      ],
+      "notes": [
+        "現行SonyMusic公式人物ページのDOB・出身・181cm・血液型・英字・所属掲載・固有出演を採用。キラハイ180cmとの差を記録し現行181cmを使用。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "cc5779f8-afc3-4d00-8c45-9ba2fe63ebb1",
+        "slug": "hosho-dai",
+        "name": "鳳翔大",
+        "kana": "ほうしょう だい",
+        "profile": "兵庫県西宮市出身の俳優。元宝塚歌劇団雪組の男役。2002年に入団し、2017年に退団。舞台・映像作品に出演するほか、自身のブランド「Dineige」のデザインとプロデュースも手掛ける。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": null,
+        "height_cm": null,
+        "blood_type": null,
+        "birthday_label": null,
+        "name_en": "Dai Hosho",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "鳳翔大",
+      "profileUrl": "https://www.dineige.com/dai_houshou",
+      "evidence": [
+        {
+          "url": "https://www.dineige.com/dai_houshou",
+          "checkedAt": "2026-10-21T14:33:19.692Z",
+          "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+        },
+        {
+          "url": "https://www.dineige.com/",
+          "checkedAt": "2026-10-21T14:30:41.652Z",
+          "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+        },
+        {
+          "url": "https://hunter-stage.jp/2024/cast",
+          "checkedAt": "2026-10-21T14:26:06.295Z",
+          "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+        }
+      ],
+      "notes": [
+        "本人ブランド内の人物紹介・署名を根拠に出身・宝塚歴・英字・ブランド活動を採用。誕生日・身長・血液型は一次未確認でnull。旧TRUSTAR URLは現行タレント一覧へ転送され本人紹介がなく、現在所属を断定しない。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "1605532e-bdf1-4c20-b30e-a10c6126e16c",
+        "slug": "iwata-hiroko",
+        "name": "岩田弘子",
+        "kana": "いわた ひろこ",
+        "profile": "俳優。『HUNTER×HUNTER』THE STAGE 2でセンリツ役を務める。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": null,
+        "height_cm": null,
+        "blood_type": null,
+        "birthday_label": null,
+        "name_en": "岩田弘子",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "岩田弘子",
+      "profileUrl": "https://hunter-stage.jp/2024/cast",
+      "evidence": [
+        {
+          "url": "https://hunter-stage.jp/2024/cast",
+          "checkedAt": "2026-10-21T14:26:06.295Z",
+          "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+        },
+        {
+          "url": "https://kira-hai.net/hunterxhunter2024",
+          "checkedAt": "2026-10-21T14:22:10.592Z",
+          "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+        }
+      ],
+      "notes": [
+        "公式キャストの役名・氏名・読みで本人を固定。個人人物ページがないため公演公式URLを出典として明記。人物紹介を見たと装わない。同名のチア・トレーナー等の属性を流用しない。0Fを名乗るnote等は出演への直接の一次接点を本バッチで確定できず所属等へ不採用。DOB・身長・出身・所属・英字は未確認。name_enは誤った自動ローマ字補完を防ぐため日本語名を明示。slugはURL用表記で英字根拠ではない。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "6bce9fb6-d6a1-4fdb-b38c-898c7a704ed4",
+        "slug": "sakurai-yune",
+        "name": "櫻井佑音",
+        "kana": "さくらい ゆうね",
+        "profile": "埼玉県出身の俳優・歌手。ミュージカル「美少女戦士セーラームーン」かぐや姫の恋人のルナ役、『HUNTER×HUNTER』THE STAGE 2のネオン役を務め、映画『にじいろトリップ』では主演を務めた。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "2008-05-09",
+        "height_cm": null,
+        "blood_type": null,
+        "birthday_label": null,
+        "name_en": "Yune Sakurai",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "櫻井佑音",
+      "profileUrl": "https://cscenturypro.wixsite.com/cscenturypro/blank-1",
+      "evidence": [
+        {
+          "url": "https://cscenturypro.wixsite.com/cscenturypro/blank-1",
+          "checkedAt": "2026-10-21T14:30:45.458Z",
+          "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+        },
+        {
+          "url": "https://sailormoon-official.com/musical/history/kaguyahimenokoibito/cast_staff/index.php",
+          "checkedAt": "2026-10-21T14:30:43.291Z",
+          "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+        },
+        {
+          "url": "https://hunter-stage.jp/2024/cast",
+          "checkedAt": "2026-10-21T14:26:06.295Z",
+          "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+        }
+      ],
+      "notes": [
+        "旧事務所に残る本人欄はDOB・氏名を採用し、現行所属や小学生時代128cmを転記しない。セラミュー公式の出身・英字・ルナ・映画主演歴と本作ネオンを照合。公演主要写真付きの役かつ他作品の継続主要出演があり個別登録。旧本人ドメインは駐車ページで不採用。血液型の報道ABは一次未確認でnull。"
+      ]
+    }
+  ],
+  "works": [
+    {
+      "year": 2024,
+      "before": {
+        "id": "6d87e448-9830-46fb-af0b-0609c20dede8",
+        "slug": "hunterxhunter2024",
+        "title": "『HUNTER×HUNTER』THE STAGE 2",
+        "franchise_id": "0d678f15-d8dd-42d5-8051-8b4c8219807c",
+        "summary": null,
+        "period": "2024年",
+        "venue": null,
+        "vod": {},
+        "genre": null,
+        "created_at": "2026-05-04T14:00:44.405488+00:00",
+        "updated_at": "2026-05-04T14:00:44.405488+00:00",
+        "tags": [],
+        "credits": null,
+        "related_franchise_ids": [],
+        "summary_en": null,
+        "title_en": null
+      },
+      "patch": {
+        "period": "東京：2024年3月16日〜31日／大阪：2024年4月6日〜14日",
+        "venue": "東京：天王洲 銀河劇場／大阪：梅田芸術劇場 シアター・ドラマシティ",
+        "credits": [
+          {
+            "role": "原作",
+            "names": [
+              "冨樫義博 （集英社「週刊少年ジャンプ」より）"
+            ],
+            "is_core": true,
+            "sort_order": 1
+          },
+          {
+            "role": "脚本・演出",
+            "names": [
+              "山崎 彬"
+            ],
+            "is_core": true,
+            "sort_order": 2
+          },
+          {
+            "role": "音楽",
+            "names": [
+              "坂部 剛"
+            ],
+            "is_core": false,
+            "sort_order": 3
+          },
+          {
+            "role": "振付",
+            "names": [
+              "當間里美"
+            ],
+            "is_core": false,
+            "sort_order": 4
+          },
+          {
+            "role": "美術",
+            "names": [
+              "田中敏恵"
+            ],
+            "is_core": false,
+            "sort_order": 5
+          },
+          {
+            "role": "照明",
+            "names": [
+              "加藤直子"
+            ],
+            "is_core": false,
+            "sort_order": 6
+          },
+          {
+            "role": "音響",
+            "names": [
+              "増澤 努"
+            ],
+            "is_core": false,
+            "sort_order": 7
+          },
+          {
+            "role": "音響効果",
+            "names": [
+              "天野高志"
+            ],
+            "is_core": false,
+            "sort_order": 8
+          },
+          {
+            "role": "映像",
+            "names": [
+              "O-beron inc."
+            ],
+            "is_core": false,
+            "sort_order": 9
+          },
+          {
+            "role": "衣裳",
+            "names": [
+              "及川千春 (とわづくり)"
+            ],
+            "is_core": false,
+            "sort_order": 10
+          },
+          {
+            "role": "ヘアメイク",
+            "names": [
+              "糸川智文 (STRINGS)"
+            ],
+            "is_core": false,
+            "sort_order": 11
+          },
+          {
+            "role": "特殊造形",
+            "names": [
+              "林屋陽二"
+            ],
+            "is_core": false,
+            "sort_order": 12
+          },
+          {
+            "role": "アクション監督",
+            "names": [
+              "加藤 学"
+            ],
+            "is_core": false,
+            "sort_order": 13
+          },
+          {
+            "role": "歌唱指導",
+            "names": [
+              "宗田梁市"
+            ],
+            "is_core": false,
+            "sort_order": 14
+          },
+          {
+            "role": "稽古場ピアノ",
+            "names": [
+              "伊藤辰哉"
+            ],
+            "is_core": false,
+            "sort_order": 15
+          },
+          {
+            "role": "演出助手",
+            "names": [
+              "木下マカイ"
+            ],
+            "is_core": false,
+            "sort_order": 16
+          },
+          {
+            "role": "舞台監督",
+            "names": [
+              "今野健一 (KeyStones)"
+            ],
+            "is_core": false,
+            "sort_order": 17
+          },
+          {
+            "role": "宣伝美術",
+            "names": [
+              "江口伸二郎 奈良友里花 (SENRIN)"
+            ],
+            "is_core": false,
+            "sort_order": 18
+          },
+          {
+            "role": "宣伝写真",
+            "names": [
+              "三宅祐介"
+            ],
+            "is_core": false,
+            "sort_order": 19
+          },
+          {
+            "role": "制作協力",
+            "names": [
+              "アプル"
+            ],
+            "is_core": false,
+            "sort_order": 20
+          },
+          {
+            "role": "制作",
+            "names": [
+              "ネルケプランニング"
+            ],
+            "is_core": false,
+            "sort_order": 21
+          },
+          {
+            "role": "監修",
+            "names": [
+              "集英社（「週刊少年ジャンプ」編集部）"
+            ],
+            "is_core": false,
+            "sort_order": 22
+          },
+          {
+            "role": "協賛",
+            "names": [
+              "ローソンチケット"
+            ],
+            "is_core": false,
+            "sort_order": 23
+          },
+          {
+            "role": "協力",
+            "names": [
+              "一般社団法人 日本2.5次元ミュージカル協会"
+            ],
+            "is_core": false,
+            "sort_order": 24
+          },
+          {
+            "role": "主催",
+            "names": [
+              "『HUNTER×HUNTER』THE STAGE 2製作委員会"
+            ],
+            "is_core": false,
+            "sort_order": 25
+          },
+          {
+            "role": "出演（役名未記載）",
+            "names": [
+              "高岩芯泰",
+              "辻本将平",
+              "原池 優",
+              "藤田浩太朗",
+              "古田伊吹",
+              "山崎里彩",
+              "岡村拓真",
+              "河野凌太",
+              "小池堆賀",
+              "島田隆誠",
+              "平井浩基",
+              "山上和輝",
+              "山﨑竜之介"
+            ],
+            "is_core": false,
+            "sort_order": 26
+          }
+        ],
+        "title_en": "HUNTER×HUNTER THE STAGE 2",
+        "summary": "ハンター試験を終えたゴンたちは、世界最大のオークションが開かれるヨークシンシティで再会する。一方、クロロ率いる幻影旅団も競売品を狙って集結していた。同胞であるクルタ族を殺されたクラピカは、仲間への思いと復讐の間で揺れながら、幻影旅団との対決に臨む。",
+        "summary_en": "After the Hunter Exam, Gon and his friends reunite in Yorknew City for the world’s largest auction. Chrollo and the Phantom Troupe also gather there to seize its treasures. Seeking vengeance for the Kurta Clan, Kurapika confronts the Troupe while his friends try to bring him back from his solitary pursuit."
+      },
+      "play": {
+        "id": "6d87e448-9830-46fb-af0b-0609c20dede8",
+        "slug": "hunterxhunter2024",
+        "title": "『HUNTER×HUNTER』THE STAGE 2",
+        "franchise_id": "0d678f15-d8dd-42d5-8051-8b4c8219807c",
+        "summary": "ハンター試験を終えたゴンたちは、世界最大のオークションが開かれるヨークシンシティで再会する。一方、クロロ率いる幻影旅団も競売品を狙って集結していた。同胞であるクルタ族を殺されたクラピカは、仲間への思いと復讐の間で揺れながら、幻影旅団との対決に臨む。",
+        "period": "東京：2024年3月16日〜31日／大阪：2024年4月6日〜14日",
+        "venue": "東京：天王洲 銀河劇場／大阪：梅田芸術劇場 シアター・ドラマシティ",
+        "vod": {},
+        "genre": null,
+        "tags": [],
+        "credits": [
+          {
+            "role": "原作",
+            "names": [
+              "冨樫義博 （集英社「週刊少年ジャンプ」より）"
+            ],
+            "is_core": true,
+            "sort_order": 1
+          },
+          {
+            "role": "脚本・演出",
+            "names": [
+              "山崎 彬"
+            ],
+            "is_core": true,
+            "sort_order": 2
+          },
+          {
+            "role": "音楽",
+            "names": [
+              "坂部 剛"
+            ],
+            "is_core": false,
+            "sort_order": 3
+          },
+          {
+            "role": "振付",
+            "names": [
+              "當間里美"
+            ],
+            "is_core": false,
+            "sort_order": 4
+          },
+          {
+            "role": "美術",
+            "names": [
+              "田中敏恵"
+            ],
+            "is_core": false,
+            "sort_order": 5
+          },
+          {
+            "role": "照明",
+            "names": [
+              "加藤直子"
+            ],
+            "is_core": false,
+            "sort_order": 6
+          },
+          {
+            "role": "音響",
+            "names": [
+              "増澤 努"
+            ],
+            "is_core": false,
+            "sort_order": 7
+          },
+          {
+            "role": "音響効果",
+            "names": [
+              "天野高志"
+            ],
+            "is_core": false,
+            "sort_order": 8
+          },
+          {
+            "role": "映像",
+            "names": [
+              "O-beron inc."
+            ],
+            "is_core": false,
+            "sort_order": 9
+          },
+          {
+            "role": "衣裳",
+            "names": [
+              "及川千春 (とわづくり)"
+            ],
+            "is_core": false,
+            "sort_order": 10
+          },
+          {
+            "role": "ヘアメイク",
+            "names": [
+              "糸川智文 (STRINGS)"
+            ],
+            "is_core": false,
+            "sort_order": 11
+          },
+          {
+            "role": "特殊造形",
+            "names": [
+              "林屋陽二"
+            ],
+            "is_core": false,
+            "sort_order": 12
+          },
+          {
+            "role": "アクション監督",
+            "names": [
+              "加藤 学"
+            ],
+            "is_core": false,
+            "sort_order": 13
+          },
+          {
+            "role": "歌唱指導",
+            "names": [
+              "宗田梁市"
+            ],
+            "is_core": false,
+            "sort_order": 14
+          },
+          {
+            "role": "稽古場ピアノ",
+            "names": [
+              "伊藤辰哉"
+            ],
+            "is_core": false,
+            "sort_order": 15
+          },
+          {
+            "role": "演出助手",
+            "names": [
+              "木下マカイ"
+            ],
+            "is_core": false,
+            "sort_order": 16
+          },
+          {
+            "role": "舞台監督",
+            "names": [
+              "今野健一 (KeyStones)"
+            ],
+            "is_core": false,
+            "sort_order": 17
+          },
+          {
+            "role": "宣伝美術",
+            "names": [
+              "江口伸二郎 奈良友里花 (SENRIN)"
+            ],
+            "is_core": false,
+            "sort_order": 18
+          },
+          {
+            "role": "宣伝写真",
+            "names": [
+              "三宅祐介"
+            ],
+            "is_core": false,
+            "sort_order": 19
+          },
+          {
+            "role": "制作協力",
+            "names": [
+              "アプル"
+            ],
+            "is_core": false,
+            "sort_order": 20
+          },
+          {
+            "role": "制作",
+            "names": [
+              "ネルケプランニング"
+            ],
+            "is_core": false,
+            "sort_order": 21
+          },
+          {
+            "role": "監修",
+            "names": [
+              "集英社（「週刊少年ジャンプ」編集部）"
+            ],
+            "is_core": false,
+            "sort_order": 22
+          },
+          {
+            "role": "協賛",
+            "names": [
+              "ローソンチケット"
+            ],
+            "is_core": false,
+            "sort_order": 23
+          },
+          {
+            "role": "協力",
+            "names": [
+              "一般社団法人 日本2.5次元ミュージカル協会"
+            ],
+            "is_core": false,
+            "sort_order": 24
+          },
+          {
+            "role": "主催",
+            "names": [
+              "『HUNTER×HUNTER』THE STAGE 2製作委員会"
+            ],
+            "is_core": false,
+            "sort_order": 25
+          },
+          {
+            "role": "出演（役名未記載）",
+            "names": [
+              "高岩芯泰",
+              "辻本将平",
+              "原池 優",
+              "藤田浩太朗",
+              "古田伊吹",
+              "山崎里彩",
+              "岡村拓真",
+              "河野凌太",
+              "小池堆賀",
+              "島田隆誠",
+              "平井浩基",
+              "山上和輝",
+              "山﨑竜之介"
+            ],
+            "is_core": false,
+            "sort_order": 26
+          }
+        ],
+        "related_franchise_ids": [],
+        "summary_en": "After the Hunter Exam, Gon and his friends reunite in Yorknew City for the world’s largest auction. Chrollo and the Phantom Troupe also gather there to seize its treasures. Seeking vengeance for the Kurta Clan, Kurapika confronts the Troupe while his friends try to bring him back from his solitary pursuit.",
+        "title_en": "HUNTER×HUNTER THE STAGE 2"
+      },
+      "rawSource": {
+        "sourceUrl": "https://kira-hai.net/hunterxhunter2024",
+        "title": "『HUNTER×HUNTER』THE STAGE 2",
+        "scheduleLines": [
+          "2024年3月16日-31日 天王洲 銀河劇場",
+          "2024年4月6日-14日 梅田芸術劇場 シアター・ドラマシティ"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "大友至恩",
+            "sourceActorUrl": "https://kira-hai.net/otomo-shion",
+            "role_name": "ゴン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "阿久津仁愛",
+            "sourceActorUrl": "https://kira-hai.net/akutsu-nichika",
+            "role_name": "キルア",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "小越勇輝",
+            "sourceActorUrl": "https://kira-hai.net/ogoe-yuki",
+            "role_name": "クラピカ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "近藤頌利",
+            "sourceActorUrl": "https://kira-hai.net/kondo-shori",
+            "role_name": "レオリオ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "村田充",
+            "sourceActorUrl": "https://kira-hai.net/murata-mitsu",
+            "role_name": "ノブナガ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "平松來馬",
+            "sourceActorUrl": "https://kira-hai.net/hiramatsu-raima",
+            "role_name": "フェイタン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "秋野祐香",
+            "sourceActorUrl": "https://kira-hai.net/akino-yuka",
+            "role_name": "マチ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "田鶴翔吾",
+            "sourceActorUrl": "https://kira-hai.net/tazuru-shogo",
+            "role_name": "フィンクス",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "織部典成",
+            "sourceActorUrl": "https://kira-hai.net/oribe-yoshinari",
+            "role_name": "シャルナーク",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "佐當友莉亜",
+            "sourceActorUrl": "https://kira-hai.net/sato-yuria",
+            "role_name": "シズク",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "鳳翔大",
+            "sourceActorUrl": null,
+            "role_name": "パクノダ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "伊勢大貴",
+            "sourceActorUrl": "https://kira-hai.net/ise-daiki",
+            "role_name": "ウボォーギン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "北村圭吾",
+            "sourceActorUrl": "https://kira-hai.net/kitamura-keigo",
+            "role_name": "シルバ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "椎名鯛造",
+            "sourceActorUrl": "https://kira-hai.net/shiina-taizo",
+            "role_name": "ゼノ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "岩田弘子",
+            "sourceActorUrl": null,
+            "role_name": "センリツ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "櫻井佑音",
+            "sourceActorUrl": null,
+            "role_name": "ネオン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "和泉宗兵",
+            "sourceActorUrl": "https://kira-hai.net/izumi-shuhei",
+            "role_name": "ライト",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "丘山晴己",
+            "sourceActorUrl": "https://kira-hai.net/kiyama-haruki",
+            "role_name": "ヒソカ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "太田基裕",
+            "sourceActorUrl": "https://kira-hai.net/ota-motohiro",
+            "role_name": "クロロ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "上田堪大",
+            "sourceActorUrl": "https://kira-hai.net/ueda-kandai",
+            "role_name": "イルミ",
+            "cast_group": "声の出演"
+          }
+        ],
+        "unparsed": [
+          "高岩芯泰",
+          "辻本将平",
+          "原池優",
+          "藤田浩太朗",
+          "古田伊吹",
+          "山崎里彩",
+          "岡村拓真",
+          "河野凌太",
+          "小池堆賀",
+          "島田隆誠",
+          "平井浩基",
+          "山上和輝",
+          "山﨑竜之介"
+        ]
+      },
+      "officialRaw": {
+        "cards": [
+          {
+            "role": "ゴン",
+            "name": "大友至恩",
+            "kana": "おおともしおん",
+            "text": "\n            \n            ゴン\n            大友至恩おおともしおん\n            "
+          },
+          {
+            "role": "キルア",
+            "name": "阿久津仁愛",
+            "kana": "あくつにちか",
+            "text": "\n            \n            キルア\n            阿久津仁愛あくつにちか\n            "
+          },
+          {
+            "role": "クラピカ",
+            "name": "小越勇輝",
+            "kana": "おごえゆうき",
+            "text": "\n            \n            クラピカ\n            小越勇輝おごえゆうき\n            "
+          },
+          {
+            "role": "レオリオ",
+            "name": "近藤頌利",
+            "kana": "こんどうしょうり",
+            "text": "\n            \n            レオリオ\n            近藤頌利こんどうしょうり\n            "
+          },
+          {
+            "role": "ノブナガ",
+            "name": "村田 充",
+            "kana": "むらたみつ",
+            "text": "\n            \n            ノブナガ\n            村田 充むらたみつ\n            "
+          },
+          {
+            "role": "フェイタン",
+            "name": "平松來馬",
+            "kana": "ひらまつらいま",
+            "text": "\n            \n            フェイタン\n            平松來馬ひらまつらいま\n            "
+          },
+          {
+            "role": "マチ",
+            "name": "秋野祐香",
+            "kana": "あきのゆうか",
+            "text": "\n            \n            マチ\n            秋野祐香あきのゆうか\n            "
+          },
+          {
+            "role": "フィンクス",
+            "name": "田鶴翔吾",
+            "kana": "たづるしょうご",
+            "text": "\n            \n            フィンクス\n            田鶴翔吾たづるしょうご\n            "
+          },
+          {
+            "role": "シャルナーク",
+            "name": "織部典成",
+            "kana": "おりべよしなり",
+            "text": "\n            \n            シャルナーク\n            織部典成おりべよしなり\n            "
+          },
+          {
+            "role": "シズク",
+            "name": "佐當友莉亜",
+            "kana": "さとうゆりあ",
+            "text": "\n            \n            シズク\n            佐當友莉亜さとうゆりあ\n            "
+          },
+          {
+            "role": "パクノダ",
+            "name": "鳳翔 大",
+            "kana": "ほうしょうだい",
+            "text": "\n            \n            パクノダ\n            鳳翔 大ほうしょうだい\n            "
+          },
+          {
+            "role": "ウボォーギン",
+            "name": "伊勢大貴",
+            "kana": "いせだいき",
+            "text": "\n            \n            ウボォーギン\n            伊勢大貴いせだいき\n            "
+          },
+          {
+            "role": "シルバ",
+            "name": "北村圭吾",
+            "kana": "きたむらけいご",
+            "text": "\n            \n            シルバ\n             北村圭吾 きたむらけいご \n            "
+          },
+          {
+            "role": "ゼノ",
+            "name": "椎名鯛造",
+            "kana": "しいなたいぞう",
+            "text": "\n            \n            ゼノ\n            椎名鯛造しいなたいぞう\n            "
+          },
+          {
+            "role": "センリツ",
+            "name": "岩田弘子",
+            "kana": "いわたひろこ",
+            "text": "\n            \n            センリツ\n             岩田弘子 いわたひろこ \n            "
+          },
+          {
+            "role": "ネオン",
+            "name": "櫻井佑音",
+            "kana": "さくらいゆうね",
+            "text": "\n            \n            ネオン\n            櫻井佑音さくらいゆうね\n            "
+          },
+          {
+            "role": "ライト",
+            "name": "和泉宗兵",
+            "kana": "いずみしゅうへい",
+            "text": "\n            \n            ライト\n            和泉宗兵いずみしゅうへい\n            "
+          },
+          {
+            "role": "ヒソカ",
+            "name": "丘山晴己",
+            "kana": "きやまはるき",
+            "text": "\n            \n            ヒソカ\n            丘山晴己きやまはるき\n            "
+          },
+          {
+            "role": "クロロ",
+            "name": "太田基裕",
+            "kana": "おおたもとひろ",
+            "text": "\n              \n                \n                \n              \n              クロロ\n               太田基裕 おおたもとひろ \n            "
+          },
+          {
+            "role": "イルミ",
+            "name": "上田堪大",
+            "kana": "うえだかんだい",
+            "text": "\n                    イルミ\n                    上田堪大うえだかんだい \n                "
+          }
+        ],
+        "other": [
+          "高岩芯泰",
+          "辻本将平",
+          "原池 優",
+          "藤田浩太朗",
+          "古田伊吹",
+          "山崎里彩",
+          "岡村拓真",
+          "河野凌太",
+          "小池堆賀",
+          "島田隆誠",
+          "平井浩基",
+          "山上和輝",
+          "山﨑竜之介"
+        ]
+      },
+      "source": {
+        "sourceUrl": "https://kira-hai.net/hunterxhunter2024",
+        "title": "『HUNTER×HUNTER』THE STAGE 2",
+        "scheduleLines": [
+          "2024年3月16日-31日 天王洲 銀河劇場",
+          "2024年4月6日-14日 梅田芸術劇場 シアター・ドラマシティ"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "大友至恩",
+            "sourceActorUrl": "https://kira-hai.net/otomo-shion",
+            "role_name": "ゴン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "阿久津仁愛",
+            "sourceActorUrl": "https://kira-hai.net/akutsu-nichika",
+            "role_name": "キルア",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "小越勇輝",
+            "sourceActorUrl": "https://kira-hai.net/ogoe-yuki",
+            "role_name": "クラピカ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "近藤頌利",
+            "sourceActorUrl": "https://kira-hai.net/kondo-shori",
+            "role_name": "レオリオ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "村田充",
+            "sourceActorUrl": "https://kira-hai.net/murata-mitsu",
+            "role_name": "ノブナガ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "平松來馬",
+            "sourceActorUrl": "https://kira-hai.net/hiramatsu-raima",
+            "role_name": "フェイタン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "秋野祐香",
+            "sourceActorUrl": "https://kira-hai.net/akino-yuka",
+            "role_name": "マチ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "田鶴翔吾",
+            "sourceActorUrl": "https://kira-hai.net/tazuru-shogo",
+            "role_name": "フィンクス",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "織部典成",
+            "sourceActorUrl": "https://kira-hai.net/oribe-yoshinari",
+            "role_name": "シャルナーク",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "佐當友莉亜",
+            "sourceActorUrl": "https://kira-hai.net/sato-yuria",
+            "role_name": "シズク",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "鳳翔大",
+            "sourceActorUrl": null,
+            "role_name": "パクノダ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "伊勢大貴",
+            "sourceActorUrl": "https://kira-hai.net/ise-daiki",
+            "role_name": "ウボォーギン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "北村圭吾",
+            "sourceActorUrl": "https://kira-hai.net/kitamura-keigo",
+            "role_name": "シルバ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "椎名鯛造",
+            "sourceActorUrl": "https://kira-hai.net/shiina-taizo",
+            "role_name": "ゼノ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "岩田弘子",
+            "sourceActorUrl": null,
+            "role_name": "センリツ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "櫻井佑音",
+            "sourceActorUrl": null,
+            "role_name": "ネオン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "和泉宗兵",
+            "sourceActorUrl": "https://kira-hai.net/izumi-shuhei",
+            "role_name": "ライト",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "丘山晴己",
+            "sourceActorUrl": "https://kira-hai.net/kiyama-haruki",
+            "role_name": "ヒソカ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "太田基裕",
+            "sourceActorUrl": "https://kira-hai.net/ota-motohiro",
+            "role_name": "クロロ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "上田堪大",
+            "sourceActorUrl": "https://kira-hai.net/ueda-kandai",
+            "role_name": "イルミ",
+            "cast_group": "声の出演"
+          }
+        ],
+        "unparsed": []
+      },
+      "stage": {
+        "workUrl": "https://kira-hai.net/hunterxhunter2024",
+        "key": "cea0938adf5e6a9471cf4b30f849b75ce2c57cda681f0e7c410e83f59804a7b5",
+        "items": [
+          {
+            "source_actor_name": "大友至恩",
+            "source_actor_url": "https://kira-hai.net/otomo-shion",
+            "source_work_title": "『HUNTER×HUNTER』THE STAGE 2",
+            "source_year": 2024,
+            "source_role_raw": "ゴン",
+            "source_role_names": [
+              "ゴン"
+            ],
+            "source_cast_group": null,
+            "source_order": 1,
+            "source_credit_key": "b08f93b3bece33e94f0f",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hunterxhunter2024",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hunterxhunter2024",
+                  "checkedAt": "2026-10-21T14:22:10.592Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/cast",
+                  "checkedAt": "2026-10-21T14:26:06.295Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/schedule",
+                  "checkedAt": "2026-10-21T14:26:06.311Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/about",
+                  "checkedAt": "2026-10-21T14:26:06.261Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "229cbf67c1aadb92935dae94ef0e1ac1df7e233472262bab6d90926461ad96d5",
+              "review_fingerprint": "82b5acc2ad136c7d6c8a56972fbbef4f95a38779ea8835f7d1150c1223209e01",
+              "snapshot_fingerprint": "1e404fea4c30025999a63c0fdbe22bdad2a0d71befef687180ace5539ac9fe17",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "e300c63b-e9cd-4b2c-b191-916ac0fdc119",
+            "matched_play_id": "6d87e448-9830-46fb-af0b-0609c20dede8",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "阿久津仁愛",
+            "source_actor_url": "https://kira-hai.net/akutsu-nichika",
+            "source_work_title": "『HUNTER×HUNTER』THE STAGE 2",
+            "source_year": 2024,
+            "source_role_raw": "キルア",
+            "source_role_names": [
+              "キルア"
+            ],
+            "source_cast_group": null,
+            "source_order": 2,
+            "source_credit_key": "bf2fd6d755af1d917543",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hunterxhunter2024",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hunterxhunter2024",
+                  "checkedAt": "2026-10-21T14:22:10.592Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/cast",
+                  "checkedAt": "2026-10-21T14:26:06.295Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/schedule",
+                  "checkedAt": "2026-10-21T14:26:06.311Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/about",
+                  "checkedAt": "2026-10-21T14:26:06.261Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "229cbf67c1aadb92935dae94ef0e1ac1df7e233472262bab6d90926461ad96d5",
+              "review_fingerprint": "82b5acc2ad136c7d6c8a56972fbbef4f95a38779ea8835f7d1150c1223209e01",
+              "snapshot_fingerprint": "1e404fea4c30025999a63c0fdbe22bdad2a0d71befef687180ace5539ac9fe17",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "17a8ebf5-7122-4360-8413-35ecc1a62145",
+            "matched_play_id": "6d87e448-9830-46fb-af0b-0609c20dede8",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "小越勇輝",
+            "source_actor_url": "https://kira-hai.net/ogoe-yuki",
+            "source_work_title": "『HUNTER×HUNTER』THE STAGE 2",
+            "source_year": 2024,
+            "source_role_raw": "クラピカ",
+            "source_role_names": [
+              "クラピカ"
+            ],
+            "source_cast_group": null,
+            "source_order": 3,
+            "source_credit_key": "b69c35d954036dc0cb60",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hunterxhunter2024",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hunterxhunter2024",
+                  "checkedAt": "2026-10-21T14:22:10.592Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/cast",
+                  "checkedAt": "2026-10-21T14:26:06.295Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/schedule",
+                  "checkedAt": "2026-10-21T14:26:06.311Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/about",
+                  "checkedAt": "2026-10-21T14:26:06.261Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "229cbf67c1aadb92935dae94ef0e1ac1df7e233472262bab6d90926461ad96d5",
+              "review_fingerprint": "82b5acc2ad136c7d6c8a56972fbbef4f95a38779ea8835f7d1150c1223209e01",
+              "snapshot_fingerprint": "1e404fea4c30025999a63c0fdbe22bdad2a0d71befef687180ace5539ac9fe17",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "dd35d9b1-89c2-4a2c-940b-634446c56a76",
+            "matched_play_id": "6d87e448-9830-46fb-af0b-0609c20dede8",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "近藤頌利",
+            "source_actor_url": "https://kira-hai.net/kondo-shori",
+            "source_work_title": "『HUNTER×HUNTER』THE STAGE 2",
+            "source_year": 2024,
+            "source_role_raw": "レオリオ",
+            "source_role_names": [
+              "レオリオ"
+            ],
+            "source_cast_group": null,
+            "source_order": 4,
+            "source_credit_key": "7f99adcc13fd2c9cca31",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hunterxhunter2024",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hunterxhunter2024",
+                  "checkedAt": "2026-10-21T14:22:10.592Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/cast",
+                  "checkedAt": "2026-10-21T14:26:06.295Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/schedule",
+                  "checkedAt": "2026-10-21T14:26:06.311Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/about",
+                  "checkedAt": "2026-10-21T14:26:06.261Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "229cbf67c1aadb92935dae94ef0e1ac1df7e233472262bab6d90926461ad96d5",
+              "review_fingerprint": "82b5acc2ad136c7d6c8a56972fbbef4f95a38779ea8835f7d1150c1223209e01",
+              "snapshot_fingerprint": "1e404fea4c30025999a63c0fdbe22bdad2a0d71befef687180ace5539ac9fe17",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "963b0cce-9c1d-4d7b-a3a1-ff72863c24bd",
+            "matched_play_id": "6d87e448-9830-46fb-af0b-0609c20dede8",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "村田充",
+            "source_actor_url": "https://kira-hai.net/murata-mitsu",
+            "source_work_title": "『HUNTER×HUNTER』THE STAGE 2",
+            "source_year": 2024,
+            "source_role_raw": "ノブナガ",
+            "source_role_names": [
+              "ノブナガ"
+            ],
+            "source_cast_group": null,
+            "source_order": 5,
+            "source_credit_key": "05eca5ad995b456de2b4",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hunterxhunter2024",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hunterxhunter2024",
+                  "checkedAt": "2026-10-21T14:22:10.592Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/cast",
+                  "checkedAt": "2026-10-21T14:26:06.295Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/schedule",
+                  "checkedAt": "2026-10-21T14:26:06.311Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/about",
+                  "checkedAt": "2026-10-21T14:26:06.261Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "229cbf67c1aadb92935dae94ef0e1ac1df7e233472262bab6d90926461ad96d5",
+              "review_fingerprint": "82b5acc2ad136c7d6c8a56972fbbef4f95a38779ea8835f7d1150c1223209e01",
+              "snapshot_fingerprint": "1e404fea4c30025999a63c0fdbe22bdad2a0d71befef687180ace5539ac9fe17",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "5ea52785-4dd3-4d75-a38a-3de16098a173",
+            "matched_play_id": "6d87e448-9830-46fb-af0b-0609c20dede8",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "平松來馬",
+            "source_actor_url": "https://kira-hai.net/hiramatsu-raima",
+            "source_work_title": "『HUNTER×HUNTER』THE STAGE 2",
+            "source_year": 2024,
+            "source_role_raw": "フェイタン",
+            "source_role_names": [
+              "フェイタン"
+            ],
+            "source_cast_group": null,
+            "source_order": 6,
+            "source_credit_key": "e7d267552c0b96c70b2a",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hunterxhunter2024",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hunterxhunter2024",
+                  "checkedAt": "2026-10-21T14:22:10.592Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/cast",
+                  "checkedAt": "2026-10-21T14:26:06.295Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/schedule",
+                  "checkedAt": "2026-10-21T14:26:06.311Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/about",
+                  "checkedAt": "2026-10-21T14:26:06.261Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "229cbf67c1aadb92935dae94ef0e1ac1df7e233472262bab6d90926461ad96d5",
+              "review_fingerprint": "82b5acc2ad136c7d6c8a56972fbbef4f95a38779ea8835f7d1150c1223209e01",
+              "snapshot_fingerprint": "1e404fea4c30025999a63c0fdbe22bdad2a0d71befef687180ace5539ac9fe17",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "8278030b-89b0-4674-ba56-e6a520878a5c",
+            "matched_play_id": "6d87e448-9830-46fb-af0b-0609c20dede8",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "秋野祐香",
+            "source_actor_url": "https://kira-hai.net/akino-yuka",
+            "source_work_title": "『HUNTER×HUNTER』THE STAGE 2",
+            "source_year": 2024,
+            "source_role_raw": "マチ",
+            "source_role_names": [
+              "マチ"
+            ],
+            "source_cast_group": null,
+            "source_order": 7,
+            "source_credit_key": "7f9078884727994c2141",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hunterxhunter2024",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hunterxhunter2024",
+                  "checkedAt": "2026-10-21T14:22:10.592Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/cast",
+                  "checkedAt": "2026-10-21T14:26:06.295Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/schedule",
+                  "checkedAt": "2026-10-21T14:26:06.311Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/about",
+                  "checkedAt": "2026-10-21T14:26:06.261Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "229cbf67c1aadb92935dae94ef0e1ac1df7e233472262bab6d90926461ad96d5",
+              "review_fingerprint": "82b5acc2ad136c7d6c8a56972fbbef4f95a38779ea8835f7d1150c1223209e01",
+              "snapshot_fingerprint": "1e404fea4c30025999a63c0fdbe22bdad2a0d71befef687180ace5539ac9fe17",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "19d1c7f2-beb4-438a-803d-37962f5b7be9",
+            "matched_play_id": "6d87e448-9830-46fb-af0b-0609c20dede8",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "田鶴翔吾",
+            "source_actor_url": "https://kira-hai.net/tazuru-shogo",
+            "source_work_title": "『HUNTER×HUNTER』THE STAGE 2",
+            "source_year": 2024,
+            "source_role_raw": "フィンクス",
+            "source_role_names": [
+              "フィンクス"
+            ],
+            "source_cast_group": null,
+            "source_order": 8,
+            "source_credit_key": "06141a8afdfa8337e7a9",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hunterxhunter2024",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hunterxhunter2024",
+                  "checkedAt": "2026-10-21T14:22:10.592Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/cast",
+                  "checkedAt": "2026-10-21T14:26:06.295Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/schedule",
+                  "checkedAt": "2026-10-21T14:26:06.311Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/about",
+                  "checkedAt": "2026-10-21T14:26:06.261Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "229cbf67c1aadb92935dae94ef0e1ac1df7e233472262bab6d90926461ad96d5",
+              "review_fingerprint": "82b5acc2ad136c7d6c8a56972fbbef4f95a38779ea8835f7d1150c1223209e01",
+              "snapshot_fingerprint": "1e404fea4c30025999a63c0fdbe22bdad2a0d71befef687180ace5539ac9fe17",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "9137026a-94be-4d55-956b-22cd7bd7bad9",
+            "matched_play_id": "6d87e448-9830-46fb-af0b-0609c20dede8",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "織部典成",
+            "source_actor_url": "https://kira-hai.net/oribe-yoshinari",
+            "source_work_title": "『HUNTER×HUNTER』THE STAGE 2",
+            "source_year": 2024,
+            "source_role_raw": "シャルナーク",
+            "source_role_names": [
+              "シャルナーク"
+            ],
+            "source_cast_group": null,
+            "source_order": 9,
+            "source_credit_key": "61ab3226d5e5e9e286fe",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hunterxhunter2024",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hunterxhunter2024",
+                  "checkedAt": "2026-10-21T14:22:10.592Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/cast",
+                  "checkedAt": "2026-10-21T14:26:06.295Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/schedule",
+                  "checkedAt": "2026-10-21T14:26:06.311Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/about",
+                  "checkedAt": "2026-10-21T14:26:06.261Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "229cbf67c1aadb92935dae94ef0e1ac1df7e233472262bab6d90926461ad96d5",
+              "review_fingerprint": "82b5acc2ad136c7d6c8a56972fbbef4f95a38779ea8835f7d1150c1223209e01",
+              "snapshot_fingerprint": "1e404fea4c30025999a63c0fdbe22bdad2a0d71befef687180ace5539ac9fe17",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "44817d51-248f-49d6-b694-5387c4565af5",
+            "matched_play_id": "6d87e448-9830-46fb-af0b-0609c20dede8",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "佐當友莉亜",
+            "source_actor_url": "https://kira-hai.net/sato-yuria",
+            "source_work_title": "『HUNTER×HUNTER』THE STAGE 2",
+            "source_year": 2024,
+            "source_role_raw": "シズク",
+            "source_role_names": [
+              "シズク"
+            ],
+            "source_cast_group": null,
+            "source_order": 10,
+            "source_credit_key": "99abf0d7155a98da2512",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hunterxhunter2024",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hunterxhunter2024",
+                  "checkedAt": "2026-10-21T14:22:10.592Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/cast",
+                  "checkedAt": "2026-10-21T14:26:06.295Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/schedule",
+                  "checkedAt": "2026-10-21T14:26:06.311Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/about",
+                  "checkedAt": "2026-10-21T14:26:06.261Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "229cbf67c1aadb92935dae94ef0e1ac1df7e233472262bab6d90926461ad96d5",
+              "review_fingerprint": "82b5acc2ad136c7d6c8a56972fbbef4f95a38779ea8835f7d1150c1223209e01",
+              "snapshot_fingerprint": "1e404fea4c30025999a63c0fdbe22bdad2a0d71befef687180ace5539ac9fe17",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "2602df7c-079b-4117-925c-2e1031806793",
+            "matched_play_id": "6d87e448-9830-46fb-af0b-0609c20dede8",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "鳳翔大",
+            "source_actor_url": null,
+            "source_work_title": "『HUNTER×HUNTER』THE STAGE 2",
+            "source_year": 2024,
+            "source_role_raw": "パクノダ",
+            "source_role_names": [
+              "パクノダ"
+            ],
+            "source_cast_group": null,
+            "source_order": 11,
+            "source_credit_key": "9dc602ad689b28aaca65",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hunterxhunter2024",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hunterxhunter2024",
+                  "checkedAt": "2026-10-21T14:22:10.592Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/cast",
+                  "checkedAt": "2026-10-21T14:26:06.295Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/schedule",
+                  "checkedAt": "2026-10-21T14:26:06.311Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/about",
+                  "checkedAt": "2026-10-21T14:26:06.261Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "229cbf67c1aadb92935dae94ef0e1ac1df7e233472262bab6d90926461ad96d5",
+              "review_fingerprint": "82b5acc2ad136c7d6c8a56972fbbef4f95a38779ea8835f7d1150c1223209e01",
+              "snapshot_fingerprint": "1e404fea4c30025999a63c0fdbe22bdad2a0d71befef687180ace5539ac9fe17",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "cc5779f8-afc3-4d00-8c45-9ba2fe63ebb1",
+            "matched_play_id": "6d87e448-9830-46fb-af0b-0609c20dede8",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "伊勢大貴",
+            "source_actor_url": "https://kira-hai.net/ise-daiki",
+            "source_work_title": "『HUNTER×HUNTER』THE STAGE 2",
+            "source_year": 2024,
+            "source_role_raw": "ウボォーギン",
+            "source_role_names": [
+              "ウボォーギン"
+            ],
+            "source_cast_group": null,
+            "source_order": 12,
+            "source_credit_key": "9560c06fd7fb2590b14c",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hunterxhunter2024",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hunterxhunter2024",
+                  "checkedAt": "2026-10-21T14:22:10.592Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/cast",
+                  "checkedAt": "2026-10-21T14:26:06.295Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/schedule",
+                  "checkedAt": "2026-10-21T14:26:06.311Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/about",
+                  "checkedAt": "2026-10-21T14:26:06.261Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "229cbf67c1aadb92935dae94ef0e1ac1df7e233472262bab6d90926461ad96d5",
+              "review_fingerprint": "82b5acc2ad136c7d6c8a56972fbbef4f95a38779ea8835f7d1150c1223209e01",
+              "snapshot_fingerprint": "1e404fea4c30025999a63c0fdbe22bdad2a0d71befef687180ace5539ac9fe17",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "b296f874-8554-496b-857e-a4dfbdd234ca",
+            "matched_play_id": "6d87e448-9830-46fb-af0b-0609c20dede8",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "北村圭吾",
+            "source_actor_url": "https://kira-hai.net/kitamura-keigo",
+            "source_work_title": "『HUNTER×HUNTER』THE STAGE 2",
+            "source_year": 2024,
+            "source_role_raw": "シルバ",
+            "source_role_names": [
+              "シルバ"
+            ],
+            "source_cast_group": null,
+            "source_order": 13,
+            "source_credit_key": "f1641665291eb3f898db",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hunterxhunter2024",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hunterxhunter2024",
+                  "checkedAt": "2026-10-21T14:22:10.592Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/cast",
+                  "checkedAt": "2026-10-21T14:26:06.295Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/schedule",
+                  "checkedAt": "2026-10-21T14:26:06.311Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/about",
+                  "checkedAt": "2026-10-21T14:26:06.261Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "229cbf67c1aadb92935dae94ef0e1ac1df7e233472262bab6d90926461ad96d5",
+              "review_fingerprint": "82b5acc2ad136c7d6c8a56972fbbef4f95a38779ea8835f7d1150c1223209e01",
+              "snapshot_fingerprint": "1e404fea4c30025999a63c0fdbe22bdad2a0d71befef687180ace5539ac9fe17",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "eb2f2496-7082-4d84-a7a7-80b75f8798f0",
+            "matched_play_id": "6d87e448-9830-46fb-af0b-0609c20dede8",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "椎名鯛造",
+            "source_actor_url": "https://kira-hai.net/shiina-taizo",
+            "source_work_title": "『HUNTER×HUNTER』THE STAGE 2",
+            "source_year": 2024,
+            "source_role_raw": "ゼノ",
+            "source_role_names": [
+              "ゼノ"
+            ],
+            "source_cast_group": null,
+            "source_order": 14,
+            "source_credit_key": "c577cc912d01e093a0e3",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hunterxhunter2024",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hunterxhunter2024",
+                  "checkedAt": "2026-10-21T14:22:10.592Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/cast",
+                  "checkedAt": "2026-10-21T14:26:06.295Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/schedule",
+                  "checkedAt": "2026-10-21T14:26:06.311Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/about",
+                  "checkedAt": "2026-10-21T14:26:06.261Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "229cbf67c1aadb92935dae94ef0e1ac1df7e233472262bab6d90926461ad96d5",
+              "review_fingerprint": "82b5acc2ad136c7d6c8a56972fbbef4f95a38779ea8835f7d1150c1223209e01",
+              "snapshot_fingerprint": "1e404fea4c30025999a63c0fdbe22bdad2a0d71befef687180ace5539ac9fe17",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "346488a0-ec1a-434a-bed2-cdc766dca326",
+            "matched_play_id": "6d87e448-9830-46fb-af0b-0609c20dede8",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "岩田弘子",
+            "source_actor_url": null,
+            "source_work_title": "『HUNTER×HUNTER』THE STAGE 2",
+            "source_year": 2024,
+            "source_role_raw": "センリツ",
+            "source_role_names": [
+              "センリツ"
+            ],
+            "source_cast_group": null,
+            "source_order": 15,
+            "source_credit_key": "638eec6154b8a5ad6ac9",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hunterxhunter2024",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hunterxhunter2024",
+                  "checkedAt": "2026-10-21T14:22:10.592Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/cast",
+                  "checkedAt": "2026-10-21T14:26:06.295Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/schedule",
+                  "checkedAt": "2026-10-21T14:26:06.311Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/about",
+                  "checkedAt": "2026-10-21T14:26:06.261Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "229cbf67c1aadb92935dae94ef0e1ac1df7e233472262bab6d90926461ad96d5",
+              "review_fingerprint": "82b5acc2ad136c7d6c8a56972fbbef4f95a38779ea8835f7d1150c1223209e01",
+              "snapshot_fingerprint": "1e404fea4c30025999a63c0fdbe22bdad2a0d71befef687180ace5539ac9fe17",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "1605532e-bdf1-4c20-b30e-a10c6126e16c",
+            "matched_play_id": "6d87e448-9830-46fb-af0b-0609c20dede8",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "櫻井佑音",
+            "source_actor_url": null,
+            "source_work_title": "『HUNTER×HUNTER』THE STAGE 2",
+            "source_year": 2024,
+            "source_role_raw": "ネオン",
+            "source_role_names": [
+              "ネオン"
+            ],
+            "source_cast_group": null,
+            "source_order": 16,
+            "source_credit_key": "14b8d40469325d153d3b",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hunterxhunter2024",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hunterxhunter2024",
+                  "checkedAt": "2026-10-21T14:22:10.592Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/cast",
+                  "checkedAt": "2026-10-21T14:26:06.295Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/schedule",
+                  "checkedAt": "2026-10-21T14:26:06.311Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/about",
+                  "checkedAt": "2026-10-21T14:26:06.261Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "229cbf67c1aadb92935dae94ef0e1ac1df7e233472262bab6d90926461ad96d5",
+              "review_fingerprint": "82b5acc2ad136c7d6c8a56972fbbef4f95a38779ea8835f7d1150c1223209e01",
+              "snapshot_fingerprint": "1e404fea4c30025999a63c0fdbe22bdad2a0d71befef687180ace5539ac9fe17",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "6bce9fb6-d6a1-4fdb-b38c-898c7a704ed4",
+            "matched_play_id": "6d87e448-9830-46fb-af0b-0609c20dede8",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "和泉宗兵",
+            "source_actor_url": "https://kira-hai.net/izumi-shuhei",
+            "source_work_title": "『HUNTER×HUNTER』THE STAGE 2",
+            "source_year": 2024,
+            "source_role_raw": "ライト",
+            "source_role_names": [
+              "ライト"
+            ],
+            "source_cast_group": null,
+            "source_order": 17,
+            "source_credit_key": "c47a8ffba7952d06da6b",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hunterxhunter2024",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hunterxhunter2024",
+                  "checkedAt": "2026-10-21T14:22:10.592Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/cast",
+                  "checkedAt": "2026-10-21T14:26:06.295Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/schedule",
+                  "checkedAt": "2026-10-21T14:26:06.311Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/about",
+                  "checkedAt": "2026-10-21T14:26:06.261Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "229cbf67c1aadb92935dae94ef0e1ac1df7e233472262bab6d90926461ad96d5",
+              "review_fingerprint": "82b5acc2ad136c7d6c8a56972fbbef4f95a38779ea8835f7d1150c1223209e01",
+              "snapshot_fingerprint": "1e404fea4c30025999a63c0fdbe22bdad2a0d71befef687180ace5539ac9fe17",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "926f2f25-19b6-48cf-91ae-acd8188dbcb4",
+            "matched_play_id": "6d87e448-9830-46fb-af0b-0609c20dede8",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "丘山晴己",
+            "source_actor_url": "https://kira-hai.net/kiyama-haruki",
+            "source_work_title": "『HUNTER×HUNTER』THE STAGE 2",
+            "source_year": 2024,
+            "source_role_raw": "ヒソカ",
+            "source_role_names": [
+              "ヒソカ"
+            ],
+            "source_cast_group": null,
+            "source_order": 18,
+            "source_credit_key": "72a1b91f27223d9fb320",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hunterxhunter2024",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hunterxhunter2024",
+                  "checkedAt": "2026-10-21T14:22:10.592Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/cast",
+                  "checkedAt": "2026-10-21T14:26:06.295Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/schedule",
+                  "checkedAt": "2026-10-21T14:26:06.311Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/about",
+                  "checkedAt": "2026-10-21T14:26:06.261Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "229cbf67c1aadb92935dae94ef0e1ac1df7e233472262bab6d90926461ad96d5",
+              "review_fingerprint": "82b5acc2ad136c7d6c8a56972fbbef4f95a38779ea8835f7d1150c1223209e01",
+              "snapshot_fingerprint": "1e404fea4c30025999a63c0fdbe22bdad2a0d71befef687180ace5539ac9fe17",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "513aecd3-e4c7-4780-9e31-be06fb340d84",
+            "matched_play_id": "6d87e448-9830-46fb-af0b-0609c20dede8",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "太田基裕",
+            "source_actor_url": "https://kira-hai.net/ota-motohiro",
+            "source_work_title": "『HUNTER×HUNTER』THE STAGE 2",
+            "source_year": 2024,
+            "source_role_raw": "クロロ",
+            "source_role_names": [
+              "クロロ"
+            ],
+            "source_cast_group": null,
+            "source_order": 19,
+            "source_credit_key": "7a2d7cbf7695216c509a",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hunterxhunter2024",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hunterxhunter2024",
+                  "checkedAt": "2026-10-21T14:22:10.592Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/cast",
+                  "checkedAt": "2026-10-21T14:26:06.295Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/schedule",
+                  "checkedAt": "2026-10-21T14:26:06.311Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/about",
+                  "checkedAt": "2026-10-21T14:26:06.261Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "229cbf67c1aadb92935dae94ef0e1ac1df7e233472262bab6d90926461ad96d5",
+              "review_fingerprint": "82b5acc2ad136c7d6c8a56972fbbef4f95a38779ea8835f7d1150c1223209e01",
+              "snapshot_fingerprint": "1e404fea4c30025999a63c0fdbe22bdad2a0d71befef687180ace5539ac9fe17",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "bfbf30bd-bbd9-4a33-a365-fe27670e5599",
+            "matched_play_id": "6d87e448-9830-46fb-af0b-0609c20dede8",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "上田堪大",
+            "source_actor_url": "https://kira-hai.net/ueda-kandai",
+            "source_work_title": "『HUNTER×HUNTER』THE STAGE 2",
+            "source_year": 2024,
+            "source_role_raw": "イルミ",
+            "source_role_names": [
+              "イルミ"
+            ],
+            "source_cast_group": "声の出演",
+            "source_order": 20,
+            "source_credit_key": "00acbe2b862ed0ce0766",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hunterxhunter2024",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hunterxhunter2024",
+                  "checkedAt": "2026-10-21T14:22:10.592Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/cast",
+                  "checkedAt": "2026-10-21T14:26:06.295Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/schedule",
+                  "checkedAt": "2026-10-21T14:26:06.311Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                },
+                {
+                  "url": "https://hunter-stage.jp/2024/about",
+                  "checkedAt": "2026-10-21T14:26:06.261Z",
+                  "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "229cbf67c1aadb92935dae94ef0e1ac1df7e233472262bab6d90926461ad96d5",
+              "review_fingerprint": "82b5acc2ad136c7d6c8a56972fbbef4f95a38779ea8835f7d1150c1223209e01",
+              "snapshot_fingerprint": "1e404fea4c30025999a63c0fdbe22bdad2a0d71befef687180ace5539ac9fe17",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "9dd007c7-a216-4d25-85fb-77fad853123e",
+            "matched_play_id": "6d87e448-9830-46fb-af0b-0609c20dede8",
+            "status": "pending"
+          }
+        ]
+      },
+      "records": [
+        {
+          "actor": {
+            "id": "e300c63b-e9cd-4b2c-b191-916ac0fdc119",
+            "slug": "otomo-shion",
+            "name": "大友 至恩",
+            "kana": "おおとも しおん",
+            "profile": "京都府出身の俳優。劇団東俳所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://twitter.com/shion_otomo",
+              "official": "https://shion-otomo.com/",
+              "instagram": "https://www.instagram.com/shion.otomo/"
+            },
+            "gender": "male",
+            "created_at": "2026-04-11T03:51:55.180261+00:00",
+            "updated_at": "2026-04-11T03:51:55.180261+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "2007-08-10",
+            "height_cm": 175,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "大友至恩",
+            "sourceActorUrl": "https://kira-hai.net/otomo-shion",
+            "role_name": "ゴン",
+            "cast_group": null
+          },
+          "sourceCreditKey": "b08f93b3bece33e94f0f",
+          "sourceOrder": 1,
+          "billingOrder": 1,
+          "expectedNote": null,
+          "isKept": false,
+          "keptCastId": null
+        },
+        {
+          "actor": {
+            "id": "17a8ebf5-7122-4360-8413-35ecc1a62145",
+            "slug": "akutsu-nichika",
+            "name": "阿久津 仁愛",
+            "kana": "あくつ にちか",
+            "profile": "栃木県出身の俳優。キューブ所属。ミュージカル『テニスの王子様』3rdシーズン（越前リョーマ役）や舞台『「HUNTER×HUNTER」THE STAGE』（キルア役）、舞台『鬼滅の刃 其ノ弐 絆』（累役）等の舞台作品に出演。また、テレビドラマ『俺のスカート、どこ行った?』（光岡慎之介役）や『BLドラマの主演になりました』（青柳萌役）等の映像作品にも出演している。第27回ジュノン・スーパーボーイ・コンテストにて準グランプリを受賞した経歴を持つ。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/Nichika20001223",
+              "official": "https://www.cubeinc.co.jp/archives/artist/akutsunichika",
+              "instagram": "https://www.instagram.com/nichika_akutsu/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:10:00.631722+00:00",
+            "updated_at": "2026-03-21T15:10:00.631722+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "2000-12-23",
+            "height_cm": 166,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Tochigi Prefecture. Affiliated with Cube. He has appeared in stage works such as the musical \"The Prince of Tennis\" 3rd season (as Ryoma Echizen), the stage play \"HUNTER x HUNTER THE STAGE\" (as Killua), and the stage play \"Demon Slayer: Kimetsu no Yaiba Part 2: Bond\" (as Rui). He has also appeared in television works such as the TV dramas \"Where Have My Skirts Gone?\" (as Shinnosuke Mitsuoka) and \"I Became the Lead in a BL Drama\" (as Hajime Aoyagi). He won the runner-up prize at the 27th Junon Superboy Contest.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "阿久津仁愛",
+            "sourceActorUrl": "https://kira-hai.net/akutsu-nichika",
+            "role_name": "キルア",
+            "cast_group": null
+          },
+          "sourceCreditKey": "bf2fd6d755af1d917543",
+          "sourceOrder": 2,
+          "billingOrder": 2,
+          "expectedNote": null,
+          "isKept": false,
+          "keptCastId": null
+        },
+        {
+          "actor": {
+            "id": "dd35d9b1-89c2-4a2c-940b-634446c56a76",
+            "slug": "ogoe-yuki",
+            "name": "小越 勇輝",
+            "kana": "おごえ ゆうき",
+            "profile": "東京都出身の俳優。舘プロ所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/yuki_ogoe_0408",
+              "official": "https://tachipro.jp/members/ogoe/",
+              "instagram": "https://www.instagram.com/yuki_ogoe/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:01:26.311999+00:00",
+            "updated_at": "2026-03-21T15:01:26.311999+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1994-04-08",
+            "height_cm": 168,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "小越勇輝",
+            "sourceActorUrl": "https://kira-hai.net/ogoe-yuki",
+            "role_name": "クラピカ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "b69c35d954036dc0cb60",
+          "sourceOrder": 3,
+          "billingOrder": 3,
+          "expectedNote": null,
+          "isKept": false,
+          "keptCastId": null
+        },
+        {
+          "actor": {
+            "id": "963b0cce-9c1d-4d7b-a3a1-ff72863c24bd",
+            "slug": "kondo-shori",
+            "name": "近藤 頌利",
+            "kana": "こんどう しょうり",
+            "profile": "大阪府出身の俳優。ワタナベエンターテインメント所属、劇団Patchメンバー。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/p_shori_k412",
+              "official": "https://shori-kondo.bitfan.id/",
+              "instagram": "https://www.instagram.com/shori_kondo412"
+            },
+            "gender": "male",
+            "created_at": "2026-03-31T20:05:15.469756+00:00",
+            "updated_at": "2026-03-31T20:05:15.469756+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1994-04-12",
+            "height_cm": 184,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "近藤頌利",
+            "sourceActorUrl": "https://kira-hai.net/kondo-shori",
+            "role_name": "レオリオ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "7f99adcc13fd2c9cca31",
+          "sourceOrder": 4,
+          "billingOrder": 4,
+          "expectedNote": null,
+          "isKept": false,
+          "keptCastId": null
+        },
+        {
+          "actor": {
+            "id": "5ea52785-4dd3-4d75-a38a-3de16098a173",
+            "slug": "murata-mitsu",
+            "name": "村田充",
+            "kana": "むらた みつ",
+            "profile": "大阪府出身の俳優。舞台『弱虫ペダル』の御堂筋翔役、『HUNTER×HUNTER』THE STAGE 2のノブナガ役、「進撃の巨人」-the Musical-のハンネス役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1977-08-18",
+            "height_cm": null,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": "Mitsu Murata",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "村田充",
+            "sourceActorUrl": "https://kira-hai.net/murata-mitsu",
+            "role_name": "ノブナガ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "05eca5ad995b456de2b4",
+          "sourceOrder": 5,
+          "billingOrder": 5,
+          "expectedNote": null,
+          "isKept": false,
+          "keptCastId": null
+        },
+        {
+          "actor": {
+            "id": "8278030b-89b0-4674-ba56-e6a520878a5c",
+            "slug": "hiramatsu-raima",
+            "name": "平松 來馬",
+            "kana": "ひらまつ らいま",
+            "profile": "神奈川県出身の俳優。株式会社ワイケーエージェント所属。子役時代から活動を行っている。ミュージカル『テニスの王子様』3rdシーズン（遠山金太郎役）をはじめ、舞台『鋼の錬金術師』（エンヴィー役）、『HUNTER×HUNTER』THE STAGE（フェイタン役）、ミュージカル『東京リベンジャーズ』（稀咲鉄太役）、『Dancing☆star プリキュア』The Stage（鈴ノ木蛍役）等の舞台作品を中心に出演している。また、大河ドラマ『青天を衝け』や映画『Daughters』等の映像作品への出演経歴も持つ。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/HRaima_official",
+              "official": "https://raimahiramatsu-official.com/",
+              "instagram": "https://www.instagram.com/raimagram_official/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:13:20.008797+00:00",
+            "updated_at": "2026-03-21T15:13:20.008797+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "2002-01-12",
+            "height_cm": 164,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Kanagawa Prefecture. Affiliated with YKAgent. He has been active since his days as a child actor. He primarily appears in stage works such as the musical \"The Prince of Tennis\" 3rd season (as Kintaro Toyama), the stage play \"Fullmetal Alchemist\" (as Envy), \"HUNTER×HUNTER\" THE STAGE (as Feitan), the musical \"Tokyo Revengers\" (as Tetta Kisaki), and \"Dancing☆star Precure\" The Stage (as Hotaru Suzunoki). He also has experience appearing in film and television works such as the Taiga drama \"Seiten wo Tsuke\" and the movie \"Daughters\".",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "平松來馬",
+            "sourceActorUrl": "https://kira-hai.net/hiramatsu-raima",
+            "role_name": "フェイタン",
+            "cast_group": null
+          },
+          "sourceCreditKey": "e7d267552c0b96c70b2a",
+          "sourceOrder": 6,
+          "billingOrder": 6,
+          "expectedNote": null,
+          "isKept": false,
+          "keptCastId": null
+        },
+        {
+          "actor": {
+            "id": "19d1c7f2-beb4-438a-803d-37962f5b7be9",
+            "slug": "akino-yuka",
+            "name": "秋野祐香",
+            "kana": "あきの ゆうか",
+            "profile": "埼玉県出身の俳優。東宝芸能所属。『HUNTER×HUNTER』THE STAGEのマチ役、ミュージカル「Fate/Zero」のセイバー役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "2001-10-17",
+            "height_cm": null,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": "Yuka Akino",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "秋野祐香",
+            "sourceActorUrl": "https://kira-hai.net/akino-yuka",
+            "role_name": "マチ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "7f9078884727994c2141",
+          "sourceOrder": 7,
+          "billingOrder": 7,
+          "expectedNote": null,
+          "isKept": false,
+          "keptCastId": null
+        },
+        {
+          "actor": {
+            "id": "9137026a-94be-4d55-956b-22cd7bd7bad9",
+            "slug": "tazuru-shogo",
+            "name": "田鶴 翔吾",
+            "kana": "たづる しょうご",
+            "profile": "兵庫県出身の俳優。マリー社所属。ミュージカル『テニスの王子様』3rdシーズン（真田弦一郎役）をはじめ、舞台『刀剣乱舞』十口伝 あまねく刻の遥かへ（日光一文字役）、『ワールドトリガー the Stage』B級ランク戦最終決戦編（木崎レイジ役）等の舞台作品を中心に出演している。また、映画『その恋、自販機で買えますか？』等の映像作品にも出演している。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/shogo_taduru",
+              "official": "https://shogotazuru.jp/",
+              "instagram": "https://www.instagram.com/shogo_taduru/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:10:00.631722+00:00",
+            "updated_at": "2026-03-21T15:10:00.631722+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1992-06-02",
+            "height_cm": 185,
+            "blood_type": "AB",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Hyogo Prefecture. Affiliated with Marie Inc. He primarily appears in stage works such as the musical \"The Prince of Tennis\" 3rd season (as Genichiro Sanada), the stage play \"Touken Ranbu\" Jukuden Amaneku Toki no Haruka e (as Nikko Ichimonji), and \"World Trigger the Stage\" B-Class Rank Wars Final Match (as Reiji Kizaki). He has also appeared in film works such as the movie \"Sono Koi, Jihanki de Kaemasuka?\".",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "田鶴翔吾",
+            "sourceActorUrl": "https://kira-hai.net/tazuru-shogo",
+            "role_name": "フィンクス",
+            "cast_group": null
+          },
+          "sourceCreditKey": "06141a8afdfa8337e7a9",
+          "sourceOrder": 8,
+          "billingOrder": 8,
+          "expectedNote": null,
+          "isKept": false,
+          "keptCastId": null
+        },
+        {
+          "actor": {
+            "id": "44817d51-248f-49d6-b694-5387c4565af5",
+            "slug": "oribe-yoshinari",
+            "name": "織部典成",
+            "kana": "おりべ よしなり",
+            "profile": "大阪府出身の俳優。ソニー・ミュージックエンタテインメント所属。演劇「ハイキュー!!」の山口忠役、舞台『ブルーロック』の國神錬介役、『HUNTER×HUNTER』THE STAGEのシャルナーク役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "2000-08-18",
+            "height_cm": 181,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": "Yoshinari Oribe",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "織部典成",
+            "sourceActorUrl": "https://kira-hai.net/oribe-yoshinari",
+            "role_name": "シャルナーク",
+            "cast_group": null
+          },
+          "sourceCreditKey": "61ab3226d5e5e9e286fe",
+          "sourceOrder": 9,
+          "billingOrder": 9,
+          "expectedNote": null,
+          "isKept": false,
+          "keptCastId": null
+        },
+        {
+          "actor": {
+            "id": "2602df7c-079b-4117-925c-2e1031806793",
+            "slug": "sato-yuria",
+            "name": "佐當友莉亜",
+            "kana": "さとう ゆりあ",
+            "profile": "福井県出身の俳優。AUNN所属。『少女☆歌劇 レヴュースタァライト』の森保クイナ役でデビュー。『ROCK MUSICAL BLEACH』では井上織姫役を務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-19T10:45:26.548927+00:00",
+            "updated_at": "2026-10-19T10:45:26.548927+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": null,
+            "height_cm": 162,
+            "blood_type": "O",
+            "birthday_label": "3月10日",
+            "name_en": "Yuria Sato",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "佐當友莉亜",
+            "sourceActorUrl": "https://kira-hai.net/sato-yuria",
+            "role_name": "シズク",
+            "cast_group": null
+          },
+          "sourceCreditKey": "99abf0d7155a98da2512",
+          "sourceOrder": 10,
+          "billingOrder": 10,
+          "expectedNote": null,
+          "isKept": false,
+          "keptCastId": null
+        },
+        {
+          "actor": {
+            "id": "cc5779f8-afc3-4d00-8c45-9ba2fe63ebb1",
+            "slug": "hosho-dai",
+            "name": "鳳翔大",
+            "kana": "ほうしょう だい",
+            "profile": "兵庫県西宮市出身の俳優。元宝塚歌劇団雪組の男役。2002年に入団し、2017年に退団。舞台・映像作品に出演するほか、自身のブランド「Dineige」のデザインとプロデュースも手掛ける。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": null,
+            "height_cm": null,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Dai Hosho",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "鳳翔大",
+            "sourceActorUrl": null,
+            "role_name": "パクノダ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "9dc602ad689b28aaca65",
+          "sourceOrder": 11,
+          "billingOrder": 11,
+          "expectedNote": null,
+          "isKept": false,
+          "keptCastId": null
+        },
+        {
+          "actor": {
+            "id": "b296f874-8554-496b-857e-a4dfbdd234ca",
+            "slug": "ise-daiki",
+            "name": "伊勢 大貴",
+            "kana": "いせ だいき",
+            "profile": "北海道出身の俳優・歌手。ウイントアーツ所属。旧芸名は伊勢康。ミュージカル『テニスの王子様』2ndシーズン（日吉若役）で俳優デビューを果たし、『烈車戦隊トッキュウジャー』の主題歌を担当するなど歌手としても活動。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/isedai0515",
+              "official": "https://wintinc.jp/talent/ise",
+              "instagram": "https://www.instagram.com/daiki.ise/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:03:44.295565+00:00",
+            "updated_at": "2026-03-21T15:03:44.295565+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1991-05-15",
+            "height_cm": 181,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor and singer from Hokkaido. Affiliated with Wintarts. His former stage name was Yasushi Ise. He made his acting debut in the musical \"The Prince of Tennis\" 2nd season (as Wakashi Hiyoshi) and is also active as a singer, performing the theme song for \"Ressha Sentai ToQger\".",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "伊勢大貴",
+            "sourceActorUrl": "https://kira-hai.net/ise-daiki",
+            "role_name": "ウボォーギン",
+            "cast_group": null
+          },
+          "sourceCreditKey": "9560c06fd7fb2590b14c",
+          "sourceOrder": 12,
+          "billingOrder": 12,
+          "expectedNote": null,
+          "isKept": true,
+          "keptCastId": "cc850c2a-d1ac-4614-9006-7f275697bf4e"
+        },
+        {
+          "actor": {
+            "id": "eb2f2496-7082-4d84-a7a7-80b75f8798f0",
+            "slug": "kitamura-keigo",
+            "name": "北村圭吾",
+            "kana": "きたむら けいご",
+            "profile": "俳優。GMBプロダクション所属。舞台「リコリス・リコイル」のミカ役、「HUNTER×HUNTER」THE STAGEのシルバ役、ライブ・スペクタクル「NARUTO-ナルト-」のエー役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-20T06:55:08.075885+00:00",
+            "updated_at": "2026-10-20T06:55:08.075885+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1982-08-08",
+            "height_cm": 181,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Kitamura Keigo",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "北村圭吾",
+            "sourceActorUrl": "https://kira-hai.net/kitamura-keigo",
+            "role_name": "シルバ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "f1641665291eb3f898db",
+          "sourceOrder": 13,
+          "billingOrder": 13,
+          "expectedNote": null,
+          "isKept": false,
+          "keptCastId": null
+        },
+        {
+          "actor": {
+            "id": "346488a0-ec1a-434a-bed2-cdc766dca326",
+            "slug": "shiina-taizo",
+            "name": "椎名 鯛造",
+            "kana": "しいな たいぞう",
+            "profile": "岐阜県出身の俳優。株式会社GVM所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/TaizoShiina"
+            },
+            "gender": "male",
+            "created_at": "2026-03-29T15:49:11.130151+00:00",
+            "updated_at": "2026-03-29T15:49:11.130151+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1986-06-17",
+            "height_cm": 164,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "椎名鯛造",
+            "sourceActorUrl": "https://kira-hai.net/shiina-taizo",
+            "role_name": "ゼノ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "c577cc912d01e093a0e3",
+          "sourceOrder": 14,
+          "billingOrder": 14,
+          "expectedNote": null,
+          "isKept": false,
+          "keptCastId": null
+        },
+        {
+          "actor": {
+            "id": "1605532e-bdf1-4c20-b30e-a10c6126e16c",
+            "slug": "iwata-hiroko",
+            "name": "岩田弘子",
+            "kana": "いわた ひろこ",
+            "profile": "俳優。『HUNTER×HUNTER』THE STAGE 2でセンリツ役を務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": null,
+            "height_cm": null,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "岩田弘子",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "岩田弘子",
+            "sourceActorUrl": null,
+            "role_name": "センリツ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "638eec6154b8a5ad6ac9",
+          "sourceOrder": 15,
+          "billingOrder": 15,
+          "expectedNote": null,
+          "isKept": false,
+          "keptCastId": null
+        },
+        {
+          "actor": {
+            "id": "6bce9fb6-d6a1-4fdb-b38c-898c7a704ed4",
+            "slug": "sakurai-yune",
+            "name": "櫻井佑音",
+            "kana": "さくらい ゆうね",
+            "profile": "埼玉県出身の俳優・歌手。ミュージカル「美少女戦士セーラームーン」かぐや姫の恋人のルナ役、『HUNTER×HUNTER』THE STAGE 2のネオン役を務め、映画『にじいろトリップ』では主演を務めた。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "2008-05-09",
+            "height_cm": null,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Yune Sakurai",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "櫻井佑音",
+            "sourceActorUrl": null,
+            "role_name": "ネオン",
+            "cast_group": null
+          },
+          "sourceCreditKey": "14b8d40469325d153d3b",
+          "sourceOrder": 16,
+          "billingOrder": 16,
+          "expectedNote": null,
+          "isKept": false,
+          "keptCastId": null
+        },
+        {
+          "actor": {
+            "id": "926f2f25-19b6-48cf-91ae-acd8188dbcb4",
+            "slug": "izumi-shuhei",
+            "name": "和泉 宗兵",
+            "kana": "いずみ しゅうへい",
+            "profile": "神奈川県出身の俳優。特撮ドラマ『未来戦隊タイムレンジャー』（ドモン / タイムイエロー役）に出演し、広く知られるようになる。映像作品のほか、ミュージカル『新テニスの王子様』シリーズ（齋藤至役）をはじめとする数々の舞台・ミュージカル作品に出演している。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/the_dehi",
+              "official": "https://www.erioffice.co.jp/talent_male/izumisyuhei/",
+              "instagram": "https://www.instagram.com/dehi_izumi/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:13:20.008797+00:00",
+            "updated_at": "2026-03-21T15:13:20.008797+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1977-10-11",
+            "height_cm": 186,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Kanagawa Prefecture. He became widely known for his role in the tokusatsu drama \"Mirai Sentai Timeranger\" (as Domon / Time Yellow). In addition to film and television works, he appears in numerous stage plays and musicals, including the musical \"The New Prince of Tennis\" series (as Itaru Saito).",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "和泉宗兵",
+            "sourceActorUrl": "https://kira-hai.net/izumi-shuhei",
+            "role_name": "ライト",
+            "cast_group": null
+          },
+          "sourceCreditKey": "c47a8ffba7952d06da6b",
+          "sourceOrder": 17,
+          "billingOrder": 17,
+          "expectedNote": null,
+          "isKept": false,
+          "keptCastId": null
+        },
+        {
+          "actor": {
+            "id": "513aecd3-e4c7-4780-9e31-be06fb340d84",
+            "slug": "kiyama-haruki",
+            "name": "丘山 晴己",
+            "kana": "きやま はるき",
+            "profile": "東京都出身の俳優・ダンサー。株式会社ユークリッド・エンターテイメント所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/HARUKES",
+              "official": "https://haruki-kiyama.com/",
+              "instagram": "https://www.instagram.com/haruki_kiyama/"
+            },
+            "gender": "male",
+            "created_at": "2025-12-13T04:41:02.052969+00:00",
+            "updated_at": "2025-12-13T04:41:02.052969+00:00",
+            "tags": [
+              "インターナショナル",
+              "ダンス"
+            ],
+            "featured_play_slugs": [],
+            "birthday": "1985-01-10",
+            "height_cm": 180,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "丘山晴己",
+            "sourceActorUrl": "https://kira-hai.net/kiyama-haruki",
+            "role_name": "ヒソカ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "72a1b91f27223d9fb320",
+          "sourceOrder": 18,
+          "billingOrder": 18,
+          "expectedNote": null,
+          "isKept": true,
+          "keptCastId": "f2c2bb4e-3f97-456a-a161-0577843b3314"
+        },
+        {
+          "actor": {
+            "id": "bfbf30bd-bbd9-4a33-a365-fe27670e5599",
+            "slug": "ota-motohiro",
+            "name": "太田 基裕",
+            "kana": "おおた もとひろ",
+            "profile": "東京都出身の俳優。株式会社アバンセ所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/motohiro0119",
+              "official": "https://ameblo.jp/motohiro-ota0119/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:01:26.311999+00:00",
+            "updated_at": "2026-03-21T15:01:26.311999+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1987-01-19",
+            "height_cm": 178,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "太田基裕",
+            "sourceActorUrl": "https://kira-hai.net/ota-motohiro",
+            "role_name": "クロロ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "7a2d7cbf7695216c509a",
+          "sourceOrder": 19,
+          "billingOrder": 19,
+          "expectedNote": null,
+          "isKept": false,
+          "keptCastId": null
+        },
+        {
+          "actor": {
+            "id": "9dd007c7-a216-4d25-85fb-77fad853123e",
+            "slug": "ueda-kandai",
+            "name": "上田堪大",
+            "kana": "うえだかんだい",
+            "profile": null,
+            "image_url": null,
+            "sns": null,
+            "gender": null,
+            "created_at": "2026-10-17T08:22:48.968908+00:00",
+            "updated_at": "2026-10-17T08:22:48.968908+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1988-10-21",
+            "height_cm": 179,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "上田堪大",
+            "sourceActorUrl": "https://kira-hai.net/ueda-kandai",
+            "role_name": "イルミ",
+            "cast_group": "声の出演"
+          },
+          "sourceCreditKey": "00acbe2b862ed0ce0766",
+          "sourceOrder": 20,
+          "billingOrder": 20,
+          "expectedNote": null,
+          "isKept": false,
+          "keptCastId": null
+        }
+      ],
+      "castPatches": [
+        {
+          "before": {
+            "id": "cc850c2a-d1ac-4614-9006-7f275697bf4e",
+            "play_id": "6d87e448-9830-46fb-af0b-0609c20dede8",
+            "actor_id": "b296f874-8554-496b-857e-a4dfbdd234ca",
+            "role_name": "ウボォーギン",
+            "is_starring": false,
+            "created_at": "2026-05-04T14:00:45.6719+00:00",
+            "billing_order": null,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null,
+            "updated_at": "2026-05-04T14:00:45.6719+00:00"
+          },
+          "patch": {
+            "billing_order": 12
+          }
+        },
+        {
+          "before": {
+            "id": "f2c2bb4e-3f97-456a-a161-0577843b3314",
+            "play_id": "6d87e448-9830-46fb-af0b-0609c20dede8",
+            "actor_id": "513aecd3-e4c7-4780-9e31-be06fb340d84",
+            "role_name": "ヒソカ",
+            "is_starring": false,
+            "created_at": "2026-05-04T19:15:22.045752+00:00",
+            "billing_order": null,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null,
+            "updated_at": "2026-05-04T19:15:22.045752+00:00"
+          },
+          "patch": {
+            "billing_order": 18
+          }
+        }
+      ],
+      "keptCasts": [
+        {
+          "id": "cc850c2a-d1ac-4614-9006-7f275697bf4e",
+          "play_id": "6d87e448-9830-46fb-af0b-0609c20dede8",
+          "actor_id": "b296f874-8554-496b-857e-a4dfbdd234ca",
+          "role_name": "ウボォーギン",
+          "is_starring": false,
+          "created_at": "2026-05-04T14:00:45.6719+00:00",
+          "billing_order": null,
+          "cast_group": null,
+          "role_name_kana": null,
+          "role_type": null,
+          "note": null,
+          "updated_at": "2026-05-04T14:00:45.6719+00:00"
+        },
+        {
+          "id": "f2c2bb4e-3f97-456a-a161-0577843b3314",
+          "play_id": "6d87e448-9830-46fb-af0b-0609c20dede8",
+          "actor_id": "513aecd3-e4c7-4780-9e31-be06fb340d84",
+          "role_name": "ヒソカ",
+          "is_starring": false,
+          "created_at": "2026-05-04T19:15:22.045752+00:00",
+          "billing_order": null,
+          "cast_group": null,
+          "role_name_kana": null,
+          "role_type": null,
+          "note": null,
+          "updated_at": "2026-05-04T19:15:22.045752+00:00"
+        }
+      ],
+      "keptActors": [
+        {
+          "id": "b296f874-8554-496b-857e-a4dfbdd234ca",
+          "slug": "ise-daiki",
+          "name": "伊勢 大貴",
+          "kana": "いせ だいき",
+          "profile": "北海道出身の俳優・歌手。ウイントアーツ所属。旧芸名は伊勢康。ミュージカル『テニスの王子様』2ndシーズン（日吉若役）で俳優デビューを果たし、『烈車戦隊トッキュウジャー』の主題歌を担当するなど歌手としても活動。",
+          "image_url": null,
+          "sns": {
+            "x": "https://x.com/isedai0515",
+            "official": "https://wintinc.jp/talent/ise",
+            "instagram": "https://www.instagram.com/daiki.ise/"
+          },
+          "gender": "male",
+          "created_at": "2026-03-21T15:03:44.295565+00:00",
+          "updated_at": "2026-03-21T15:03:44.295565+00:00",
+          "tags": [],
+          "featured_play_slugs": [],
+          "birthday": "1991-05-15",
+          "height_cm": 181,
+          "blood_type": "O",
+          "birthday_label": null,
+          "name_en": null,
+          "profile_en": "An actor and singer from Hokkaido. Affiliated with Wintarts. His former stage name was Yasushi Ise. He made his acting debut in the musical \"The Prince of Tennis\" 2nd season (as Wakashi Hiyoshi) and is also active as a singer, performing the theme song for \"Ressha Sentai ToQger\".",
+          "death_date": null
+        },
+        {
+          "id": "513aecd3-e4c7-4780-9e31-be06fb340d84",
+          "slug": "kiyama-haruki",
+          "name": "丘山 晴己",
+          "kana": "きやま はるき",
+          "profile": "東京都出身の俳優・ダンサー。株式会社ユークリッド・エンターテイメント所属。",
+          "image_url": null,
+          "sns": {
+            "x": "https://x.com/HARUKES",
+            "official": "https://haruki-kiyama.com/",
+            "instagram": "https://www.instagram.com/haruki_kiyama/"
+          },
+          "gender": "male",
+          "created_at": "2025-12-13T04:41:02.052969+00:00",
+          "updated_at": "2025-12-13T04:41:02.052969+00:00",
+          "tags": [
+            "インターナショナル",
+            "ダンス"
+          ],
+          "featured_play_slugs": [],
+          "birthday": "1985-01-10",
+          "height_cm": 180,
+          "blood_type": null,
+          "birthday_label": null,
+          "name_en": null,
+          "profile_en": null,
+          "death_date": null
+        }
+      ],
+      "legacyCandidates": [
+        {
+          "id": "031dc80e-bea5-47c6-9240-25a00fc0f29e",
+          "source": "kira-hai",
+          "external_actor_id": "b97f8321-af0e-4bbf-bb53-eaaff81ef686",
+          "external_play_id": "b75c3e01-1b87-44a2-b8c1-561d2e9fefa9",
+          "source_actor_name": "丘山晴己",
+          "source_actor_url": "https://kira-hai.net/kiyama-haruki",
+          "source_work_title": "『HUNTER×HUNTER』THE STAGE 2",
+          "source_work_url": "https://kira-hai.net/hunterxhunter2024",
+          "source_year": 2021,
+          "source_role_raw": "ヒソカ",
+          "source_role_names": [
+            "ヒソカ"
+          ],
+          "matched_actor_id": "513aecd3-e4c7-4780-9e31-be06fb340d84",
+          "matched_play_id": "6d87e448-9830-46fb-af0b-0609c20dede8",
+          "accepted_cast_id": "f2c2bb4e-3f97-456a-a161-0577843b3314",
+          "confidence": 60,
+          "status": "accepted",
+          "note": null,
+          "scraped_at": "2026-04-27T17:46:47.321+00:00",
+          "created_at": "2026-04-27T17:46:46.555775+00:00",
+          "updated_at": "2026-05-04T19:15:22.643+00:00",
+          "accepted_at": "2026-05-04T19:15:22.643+00:00",
+          "rejected_at": null,
+          "source_cast_group": null,
+          "source_order": null,
+          "source_credit_key": null,
+          "source_evidence": null
+        },
+        {
+          "id": "ffc365f7-56e7-4b5f-9ea9-26eed63c45ce",
+          "source": "kira-hai",
+          "external_actor_id": "6b1b931c-59f0-4d8c-aa43-f071fb86fbea",
+          "external_play_id": "b75c3e01-1b87-44a2-b8c1-561d2e9fefa9",
+          "source_actor_name": "伊勢大貴",
+          "source_actor_url": "https://kira-hai.net/ise-daiki",
+          "source_work_title": "『HUNTER×HUNTER』THE STAGE 2",
+          "source_work_url": "https://kira-hai.net/hunterxhunter2024",
+          "source_year": 2021,
+          "source_role_raw": "ウボォーギン",
+          "source_role_names": [
+            "ウボォーギン"
+          ],
+          "matched_actor_id": "b296f874-8554-496b-857e-a4dfbdd234ca",
+          "matched_play_id": "6d87e448-9830-46fb-af0b-0609c20dede8",
+          "accepted_cast_id": "cc850c2a-d1ac-4614-9006-7f275697bf4e",
+          "confidence": 60,
+          "status": "accepted",
+          "note": null,
+          "scraped_at": "2026-04-27T18:18:14.309+00:00",
+          "created_at": "2026-04-27T18:18:13.599835+00:00",
+          "updated_at": "2026-05-04T14:00:45.92+00:00",
+          "accepted_at": "2026-05-04T14:00:45.92+00:00",
+          "rejected_at": null,
+          "source_cast_group": null,
+          "source_order": null,
+          "source_credit_key": null,
+          "source_evidence": null
+        }
+      ],
+      "sourceFingerprint": "229cbf67c1aadb92935dae94ef0e1ac1df7e233472262bab6d90926461ad96d5",
+      "expectedCastCount": 20,
+      "evidence": [
+        {
+          "url": "https://kira-hai.net/hunterxhunter2024",
+          "checkedAt": "2026-10-21T14:22:10.592Z",
+          "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+        },
+        {
+          "url": "https://hunter-stage.jp/2024/cast",
+          "checkedAt": "2026-10-21T14:26:06.295Z",
+          "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+        },
+        {
+          "url": "https://hunter-stage.jp/2024/schedule",
+          "checkedAt": "2026-10-21T14:26:06.311Z",
+          "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+        },
+        {
+          "url": "https://hunter-stage.jp/2024/about",
+          "checkedAt": "2026-10-21T14:26:06.261Z",
+          "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+        }
+      ],
+      "exceptions": [
+        "2既存配役はID・役名・出演区分・注記・主演指定等を保持し、未指定だった掲載順のみ当該年公式順の12・18へ補完。",
+        "旧受理済み候補2件は誤年2021。変更前全項目を記録して年と出典キー・順・根拠を補完。受理状態・配役ID・受理日時・外部ID・原文・確度・作成日を保持し再受理しない。",
+        "クロロは公式に2種類のビジュアルがあるが同じ太田基裕の1役であり重複配役にしない。イルミのみ声の出演で通常出演と区分。",
+        "役名なし13人は公式のHTMLクラスがensembleだが可視見出しの明記はない。出演（役名未記載）のクレジットに原順で保存し、細かな役や個人ページは追加しない。山崎里彩の表記を2023年の山崎理彩へ自動修正しない。",
+        "協賛のテキストはローソンチケット。altなしの画像のブランド名は推測で追加せずHTMLとURLを保持。"
+      ]
+    }
+  ],
+  "keptPlays": [
+    {
+      "id": "46ee11e3-5217-4a25-9721-f959d89453c5",
+      "slug": "hunterxhunter2023",
+      "title": "『HUNTER×HUNTER』THE STAGE",
+      "franchise_id": "0d678f15-d8dd-42d5-8051-8b4c8219807c",
+      "summary": "くじら島で育ったゴンは、死んだと思っていた父ジンが生きており、ハンターとして活動していると知る。父に会うため、同じハンターになるために島を旅立ったゴンは、キルア、クラピカ、レオリオたちと出会い、難関のハンター試験に挑む。",
+      "period": "東京：2023年5月12日〜28日",
+      "venue": "東京：天王洲 銀河劇場",
+      "vod": null,
+      "genre": null,
+      "created_at": "2026-10-21T14:13:20.685856+00:00",
+      "updated_at": "2026-10-21T14:13:20.685856+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "冨樫義博（集英社「週刊少年ジャンプ」より）"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "脚本・演出",
+          "names": [
+            "山崎 彬"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "音楽",
+          "names": [
+            "坂部 剛"
+          ],
+          "is_core": false,
+          "sort_order": 3
+        },
+        {
+          "role": "振付",
+          "names": [
+            "當間里美"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "美術",
+          "names": [
+            "田中敏恵"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "照明",
+          "names": [
+            "加藤直子"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        },
+        {
+          "role": "音響",
+          "names": [
+            "増澤 努"
+          ],
+          "is_core": false,
+          "sort_order": 7
+        },
+        {
+          "role": "音響効果",
+          "names": [
+            "天野高志"
+          ],
+          "is_core": false,
+          "sort_order": 8
+        },
+        {
+          "role": "映像",
+          "names": [
+            "O-beron inc."
+          ],
+          "is_core": false,
+          "sort_order": 9
+        },
+        {
+          "role": "衣裳",
+          "names": [
+            "及川千春 (とわづくり)"
+          ],
+          "is_core": false,
+          "sort_order": 10
+        },
+        {
+          "role": "ヘアメイク",
+          "names": [
+            "糸川智文 (STRINGS)"
+          ],
+          "is_core": false,
+          "sort_order": 11
+        },
+        {
+          "role": "特殊造形",
+          "names": [
+            "林屋陽二"
+          ],
+          "is_core": false,
+          "sort_order": 12
+        },
+        {
+          "role": "アクション監督",
+          "names": [
+            "加藤 学"
+          ],
+          "is_core": false,
+          "sort_order": 13
+        },
+        {
+          "role": "歌唱指導",
+          "names": [
+            "宗田梁市"
+          ],
+          "is_core": false,
+          "sort_order": 14
+        },
+        {
+          "role": "稽古場ピアノ",
+          "names": [
+            "伊藤辰哉"
+          ],
+          "is_core": false,
+          "sort_order": 15
+        },
+        {
+          "role": "演出助手",
+          "names": [
+            "木下マカイ"
+          ],
+          "is_core": false,
+          "sort_order": 16
+        },
+        {
+          "role": "舞台監督",
+          "names": [
+            "今野健一 (KeyStones)"
+          ],
+          "is_core": false,
+          "sort_order": 17
+        },
+        {
+          "role": "宣伝美術",
+          "names": [
+            "江口伸二郎 (SENRIN)"
+          ],
+          "is_core": false,
+          "sort_order": 18
+        },
+        {
+          "role": "宣伝写真",
+          "names": [
+            "三宅祐介"
+          ],
+          "is_core": false,
+          "sort_order": 19
+        },
+        {
+          "role": "制作協力",
+          "names": [
+            "アプル"
+          ],
+          "is_core": false,
+          "sort_order": 20
+        },
+        {
+          "role": "制作",
+          "names": [
+            "ネルケプランニング"
+          ],
+          "is_core": false,
+          "sort_order": 21
+        },
+        {
+          "role": "監修",
+          "names": [
+            "集英社（「週刊少年ジャンプ」編集部）"
+          ],
+          "is_core": false,
+          "sort_order": 22
+        },
+        {
+          "role": "協賛",
+          "names": [
+            "ローソンチケット"
+          ],
+          "is_core": false,
+          "sort_order": 23
+        },
+        {
+          "role": "協力",
+          "names": [
+            "一般社団法人 日本2.5次元ミュージカル協会"
+          ],
+          "is_core": false,
+          "sort_order": 24
+        },
+        {
+          "role": "主催",
+          "names": [
+            "『HUNTER×HUNTER』THE STAGE製作委員会"
+          ],
+          "is_core": false,
+          "sort_order": 25
+        },
+        {
+          "role": "出演（役名未記載）",
+          "names": [
+            "倉持聖菜",
+            "齋藤 潤",
+            "高岩芯泰",
+            "辻本将平",
+            "原池 優",
+            "樋口明志",
+            "藤田浩太朗",
+            "古田伊吹",
+            "森川 錦",
+            "山崎理彩"
+          ],
+          "is_core": false,
+          "sort_order": 26
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "Raised on Whale Island, Gon learns that his father Ging is alive and working as a Hunter. Determined to find him and become a Hunter himself, Gon leaves home, meets Killua, Kurapika and Leorio, and faces the demanding Hunter Exam.",
+      "title_en": "HUNTER×HUNTER THE STAGE (2023)"
+    }
+  ],
+  "evidence": {
+    "links": [
+      {
+        "url": "https://kira-hai.net/hunterxhunter2024",
+        "checkedAt": "2026-10-21T14:22:10.592Z",
+        "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+      },
+      {
+        "url": "https://hunter-stage.jp/2024/cast",
+        "checkedAt": "2026-10-21T14:26:06.295Z",
+        "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+      },
+      {
+        "url": "https://hunter-stage.jp/2024/schedule",
+        "checkedAt": "2026-10-21T14:26:06.311Z",
+        "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+      },
+      {
+        "url": "https://hunter-stage.jp/2024/about",
+        "checkedAt": "2026-10-21T14:26:06.261Z",
+        "note": "採用項目・資料の時期・不採用理由は個別notesを参照。"
+      }
+    ],
+    "sources": [
+      {
+        "name": "work",
+        "url": "https://kira-hai.net/hunterxhunter2024",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/hunterxhunter2024",
+        "checkedAt": "2026-10-21T14:22:10.592Z",
+        "sha256": "39a1a1c431eebdd0253ce5ff0bc840f5ba08d6c3ee33f8aa4715f8267f7f7c02"
+      },
+      {
+        "name": "official",
+        "url": "https://hunter-stage.jp/2024/",
+        "status": 200,
+        "finalUrl": "https://hunter-stage.jp/2024/",
+        "checkedAt": "2026-10-21T14:22:10.475Z",
+        "sha256": "abdc4fc1c3604d6c4fa84ada9c105e33dd50f59268544a43cc47784e5611c9d9"
+      },
+      {
+        "name": "changelog",
+        "url": "https://supabase.com/changelog.md",
+        "status": 200,
+        "finalUrl": "https://supabase.com/changelog.md",
+        "checkedAt": "2026-10-21T14:22:10.525Z",
+        "sha256": "15b3d0d1a7dc3b3f2c0af4788e49acfdf2d2edbd2613f22de0705fa43b1cf58b"
+      },
+      {
+        "name": "robots",
+        "url": "https://kira-hai.net/robots.txt",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/robots.txt",
+        "checkedAt": "2026-10-21T14:22:10.496Z",
+        "sha256": "f6ed0322f0e3df8c3b42b14df3254a90cca7b94a4172de91812952b3c7060b03"
+      },
+      {
+        "name": "cast-official",
+        "url": "https://hunter-stage.jp/2024/cast",
+        "status": 200,
+        "finalUrl": "https://hunter-stage.jp/2024/cast",
+        "checkedAt": "2026-10-21T14:26:06.295Z",
+        "sha256": "84a48c8e5db27c35f06af9a4d2a97cbb19dae7836b7fcfbae7a7e024743aa8b2"
+      },
+      {
+        "name": "about",
+        "url": "https://hunter-stage.jp/2024/about",
+        "status": 200,
+        "finalUrl": "https://hunter-stage.jp/2024/about",
+        "checkedAt": "2026-10-21T14:26:06.261Z",
+        "sha256": "dca624805941cb3f4969410c06205768a4a3dfbd3e0391a765050a083bd812ea"
+      },
+      {
+        "name": "schedule",
+        "url": "https://hunter-stage.jp/2024/schedule",
+        "status": 200,
+        "finalUrl": "https://hunter-stage.jp/2024/schedule",
+        "checkedAt": "2026-10-21T14:26:06.311Z",
+        "sha256": "9f0e31677ee71b255b7ba30afbe6f1852f8b7f3007902a244dcfc4bb7895d5fa"
+      },
+      {
+        "name": "akino",
+        "url": "https://www.toho-ent.co.jp/actor/80833",
+        "status": 200,
+        "finalUrl": "https://www.toho-ent.co.jp/actor/80833",
+        "checkedAt": "2026-10-21T14:29:22.034Z",
+        "sha256": "727f0bcce0be15ee43268469a9cb2242416dd7b1f1c3a3d1c2095c03947216cf"
+      },
+      {
+        "name": "oribe",
+        "url": "https://red-actors.com/artist/yoshinari-oribe/",
+        "status": 200,
+        "finalUrl": "https://red-actors.com/artist/yoshinari-oribe/",
+        "checkedAt": "2026-10-21T14:29:21.429Z",
+        "sha256": "b602613eb120dbf172d338797e969d0d7d21609bdbf8cbf22d2224c8bf60351c"
+      },
+      {
+        "name": "murata-kira",
+        "url": "https://kira-hai.net/murata-mitsu",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/murata-mitsu",
+        "checkedAt": "2026-10-21T14:29:21.570Z",
+        "sha256": "42507c18a6c87c22410388f0181c4908c781f65f83db7e17e62498609898b5c0"
+      },
+      {
+        "name": "akino-kira",
+        "url": "https://kira-hai.net/akino-yuka",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/akino-yuka",
+        "checkedAt": "2026-10-21T14:29:21.543Z",
+        "sha256": "1d0ab517ed807ac4e18a2a87d2d361d2635ade6186080fa1a9c8760e6d1df6a4"
+      },
+      {
+        "name": "oribe-kira",
+        "url": "https://kira-hai.net/oribe-yoshinari",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/oribe-yoshinari",
+        "checkedAt": "2026-10-21T14:29:22.232Z",
+        "sha256": "1c05268c8ca5757180617c7ee65ec5581df2b4e864e8832465ae154b20ee4875"
+      },
+      {
+        "name": "hosho-old",
+        "url": "https://trustar.co.jp/talents/6924/",
+        "status": 200,
+        "finalUrl": "https://trustar.co.jp/talents/6924/",
+        "checkedAt": "2026-10-21T14:30:42.611Z",
+        "sha256": "f4742f59db2db6940133108d799567ca0c8b39cec8b980a3d383845589042e74"
+      },
+      {
+        "name": "hosho-brand",
+        "url": "https://www.dineige.com/",
+        "status": 200,
+        "finalUrl": "https://www.dineige.com/",
+        "checkedAt": "2026-10-21T14:30:41.652Z",
+        "sha256": "f4c668ad0aaed9b0b880f1608ff32a0aa1d58a8d9103a6d03ea7dafe069c58c9"
+      },
+      {
+        "name": "iwata-note",
+        "url": "https://note.com/iwatahiroko0f/n/n397a2ff5503d",
+        "status": 200,
+        "finalUrl": "https://note.com/iwatahiroko0f/n/n397a2ff5503d",
+        "checkedAt": "2026-10-21T14:30:41.324Z",
+        "sha256": "5ddc4a7398e63c6c14b7c5debb50b2cb11f9c13945f482a58dc0abdf10af1b37"
+      },
+      {
+        "name": "sakurai",
+        "url": "https://www.sakuraiyune.com/",
+        "status": 200,
+        "finalUrl": "https://www.sakuraiyune.com/",
+        "checkedAt": "2026-10-21T14:30:41.670Z",
+        "sha256": "b3036a68ba717a3a1f9b27f8cadca8788c5eec85d0372330284cd7370afc6b73"
+      },
+      {
+        "name": "sakurai-old",
+        "url": "https://cscenturypro.wixsite.com/cscenturypro/blank-1",
+        "status": 200,
+        "finalUrl": "https://cscenturypro.wixsite.com/cscenturypro/blank-1",
+        "checkedAt": "2026-10-21T14:30:45.458Z",
+        "sha256": "2c2df15b69472396de9e96fe30cd7c1d9f18e7452293eb2cff062f0e2ac549a3"
+      },
+      {
+        "name": "sakurai-moon",
+        "url": "https://sailormoon-official.com/musical/history/kaguyahimenokoibito/cast_staff/index.php",
+        "status": 200,
+        "finalUrl": "https://sailormoon-official.com/musical/history/kaguyahimenokoibito/cast_staff/index.php",
+        "checkedAt": "2026-10-21T14:30:43.291Z",
+        "sha256": "6e23da9361b51e2f80991e57f94b94246f09a58d84b21f044eb37868e4d89aa2"
+      },
+      {
+        "name": "murata-titan",
+        "url": "https://attackontitan-themusical.com/cast.html",
+        "status": 200,
+        "finalUrl": "https://attackontitan-themusical.com/cast.html",
+        "checkedAt": "2026-10-21T14:30:43.622Z",
+        "sha256": "45e50e9a013b4d434a9ccebf265f5e698c03fbdc61c05b1d3d15410c49fbe9d7"
+      },
+      {
+        "name": "murata-retire",
+        "url": "https://www.nikkansports.com/entertainment/news/202401010000610.html",
+        "status": 200,
+        "finalUrl": "https://www.nikkansports.com/entertainment/news/202401010000610.html",
+        "checkedAt": "2026-10-21T14:30:43.251Z",
+        "sha256": "674c997111d6a4802f5015c20a2709e152bae7c22b86a4734128a10cd4ae9f6f"
+      },
+      {
+        "name": "hosho",
+        "url": "https://www.dineige.com/dai_houshou",
+        "status": 200,
+        "finalUrl": "https://www.dineige.com/dai_houshou",
+        "checkedAt": "2026-10-21T14:33:19.692Z",
+        "sha256": "0af7f22023edf7d4a4f532e3579600d4d780b76613c8ee12b3840e0e20389f70"
+      }
+    ],
+    "unavailable": [],
+    "notes": [
+      "20人物20配役のうち18新規配役、2既存を保持。新規人物6・既存人物14。作品のID・URL・vod等を保全。",
+      "2024年の2都市2会場・短い日英あらすじ・英語タイトル・スタッフ25区分・出演13人を保存し年表2024/03と抜粋を確認。"
+    ],
+    "unresolved": [
+      "2025年第3弾、現行公式の第4弾前編等は後続。シリーズ全体の収録完了ではない。",
+      "人物総合監査、既存紹介の追加照合、人物・役名・スタッフの詳細英訳、現在配信、主演指定、協賛ロゴ文字補完は後続。",
+      "秋野祐香155.7cmは現在の整数型へ丸めず未入力で原値保持。村田充の186/187cm差、鳳翔大・岩田弘子の未確認属性・岩田の英字は監査事項。"
+    ]
+  },
+  "requestKey": "630b269dab788ef68f739542e345f6151c11c45b55b2bb526831125ff2a26644"
+}
