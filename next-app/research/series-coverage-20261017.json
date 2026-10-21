@@ -1699,8 +1699,31 @@
       "slug": "bakuman",
       "name": "舞台「バクマン。」",
       "registeredDay": "2026-02-09",
-      "plays": 0,
-      "protected": false
+      "plays": 1,
+      "protected": false,
+      "castRows": 9,
+      "castCoverageNote": "2021年の東京2会場・大阪を同一の1作品・主要9配役として追加。新規3人物・既存6人物を保全。公式の制作スタッフ24区分・全日程・日英概要とタイトル、シリーズ説明・年表2021/10と抜粋を補完。旧オレノ候補は正しい2021年を保持して同ID採用。村上の本作役は出演であり演出ではない。長谷川の現所属は市の紹介からカクタス本人公式で確認。同一処理再実行と8テーブル全件比較、日英22ページ確認。都市ラベルの地区補足をまとめる表示修正も本番反映し2都市3会場、既存12ページを確認。人物総合監査・詳細英訳・現在配信・主演指定は後続。",
+      "seriesAudit": {
+        "checkedAt": "2026-10-21T09:19:41.448Z",
+        "scope": "2021年の劇場公演1作品、2都市3会場。8K上映・映像発売・関連トークは含めない。",
+        "works": 1,
+        "castRows": 9,
+        "newActors": 3,
+        "existingActorsPreserved": 6,
+        "staffCategories": 24,
+        "castNotes": 0,
+        "ensembleCreditNames": 0,
+        "reusedLegacyCandidates": 1,
+        "legacyYearPreserved": true,
+        "publicPages": 22,
+        "displayControlPages": 12,
+        "cities": 2,
+        "venues": 3,
+        "displayFixCommit": "ca3c3dd190819dffd09f8c77c1ffe3c78039f457",
+        "report": "docs/bakuman2021-2026-10-21.md",
+        "research": "next-app/research/bakuman2021-20261021.json",
+        "pendingWorks": []
+      }
     },
     {
       "id": "f96ba221-7a53-4d51-9b39-2ca9eb66fc4d",
