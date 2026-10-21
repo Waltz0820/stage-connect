@@ -1,0 +1,2162 @@
+{
+  "version": 1,
+  "batchId": "chainsawman2026-20261021-01",
+  "mode": "reviewed_official_source",
+  "expectedFranchise": {
+    "id": "bce75037-1458-4d79-863f-54aba49e737a",
+    "name": "舞台「チェンソーマン」",
+    "created_at": "2026-02-08T16:26:41.990203+00:00",
+    "updated_at": "2026-10-21T10:12:58.005594+00:00",
+    "slug": "chainsaw-man",
+    "intro": null,
+    "description": "藤本タツキの漫画『チェンソーマン』（集英社）を原作とする舞台シリーズ。チェンソーの悪魔・ポチタと契約した少年デンジが、公安のデビルハンターとして悪魔と戦う。松崎史也が脚本・演出を担当し、2023年の初演に続き、2026年にはレゼ篇が上演された。",
+    "origin_type": "漫画原作",
+    "origin_note": "原作：藤本タツキ『チェンソーマン』（集英社）",
+    "production_companies": null,
+    "related_franchise_ids": [],
+    "format": "stage",
+    "description_en": "A stage series based on Tatsuki Fujimoto’s manga Chainsaw Man, published by Shueisha. Denji forms a contract with the Chainsaw Devil, Pochita, and fights devils as a Public Safety Devil Hunter. Written and directed by Fumiya Matsuzaki, the series began in 2023 and continued with the Reze Arc in 2026.",
+    "name_en": "Chainsaw Man: The Stage"
+  },
+  "franchisePatch": null,
+  "keptPlays": [
+    {
+      "id": "a9bf8025-5a43-43d8-bdf6-2d5f2d3bfa63",
+      "slug": "chainsawman2023",
+      "title": "「チェンソーマン」ザ・ステージ",
+      "franchise_id": "bce75037-1458-4d79-863f-54aba49e737a",
+      "summary": "親の借金を返すため、チェンソーの悪魔・ポチタと悪魔を狩って暮らす少年デンジ。裏切りによって命を落とすが、ポチタとの契約でチェンソーマンとして蘇る。公安のマキマに導かれ、早川アキやパワーとともにデビルハンターとして働き始める。",
+      "period": "東京：2023年9月16日〜10月1日／京都：2023年10月6日〜9日",
+      "venue": "東京：天王洲 銀河劇場／京都：京都劇場",
+      "vod": null,
+      "genre": null,
+      "created_at": "2026-10-21T10:12:58.005594+00:00",
+      "updated_at": "2026-10-21T10:12:58.005594+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "藤本タツキ（集英社「少年ジャンプ＋」連載）"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "脚本・演出",
+          "names": [
+            "松崎史也"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "音楽",
+          "names": [
+            "和田俊輔"
+          ],
+          "is_core": false,
+          "sort_order": 3
+        },
+        {
+          "role": "振付",
+          "names": [
+            "HIDALI"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "美術",
+          "names": [
+            "松生紘子"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "照明",
+          "names": [
+            "大波多秀起"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        },
+        {
+          "role": "音響効果",
+          "names": [
+            "天野高志"
+          ],
+          "is_core": false,
+          "sort_order": 7
+        },
+        {
+          "role": "音響",
+          "names": [
+            "田中嘉人"
+          ],
+          "is_core": false,
+          "sort_order": 8
+        },
+        {
+          "role": "映像",
+          "names": [
+            "荒川ヒロキ"
+          ],
+          "is_core": false,
+          "sort_order": 9
+        },
+        {
+          "role": "衣裳",
+          "names": [
+            "丁瑩"
+          ],
+          "is_core": false,
+          "sort_order": 10
+        },
+        {
+          "role": "ヘアメイク",
+          "names": [
+            "水﨑優里"
+          ],
+          "is_core": false,
+          "sort_order": 11
+        },
+        {
+          "role": "アクション監督",
+          "names": [
+            "栗田政明"
+          ],
+          "is_core": false,
+          "sort_order": 12
+        },
+        {
+          "role": "特殊造形",
+          "names": [
+            "林屋陽二"
+          ],
+          "is_core": false,
+          "sort_order": 13
+        },
+        {
+          "role": "歌唱指導",
+          "names": [
+            "宗田梁市"
+          ],
+          "is_core": false,
+          "sort_order": 14
+        },
+        {
+          "role": "稽古ピアノ",
+          "names": [
+            "安藤菜々子"
+          ],
+          "is_core": false,
+          "sort_order": 15
+        },
+        {
+          "role": "インティマシーコーディネーター",
+          "names": [
+            "浅田智穂"
+          ],
+          "is_core": false,
+          "sort_order": 16
+        },
+        {
+          "role": "演出助手",
+          "names": [
+            "小林賢祐"
+          ],
+          "is_core": false,
+          "sort_order": 17
+        },
+        {
+          "role": "舞台監督",
+          "names": [
+            "須田桃李（DDR）"
+          ],
+          "is_core": false,
+          "sort_order": 18
+        },
+        {
+          "role": "技術監督",
+          "names": [
+            "堀 吉行（DDR）"
+          ],
+          "is_core": false,
+          "sort_order": 19
+        },
+        {
+          "role": "宣伝美術",
+          "names": [
+            "江口伸二郎"
+          ],
+          "is_core": false,
+          "sort_order": 20
+        },
+        {
+          "role": "宣伝写真",
+          "names": [
+            "中村理生"
+          ],
+          "is_core": false,
+          "sort_order": 21
+        },
+        {
+          "role": "制作",
+          "names": [
+            "ネルケプランニング"
+          ],
+          "is_core": false,
+          "sort_order": 22
+        },
+        {
+          "role": "監修",
+          "names": [
+            "集英社（「少年ジャンプ＋」編集部）"
+          ],
+          "is_core": false,
+          "sort_order": 23
+        },
+        {
+          "role": "主催",
+          "names": [
+            "「チェンソーマン」ザ・ステージ製作委員会"
+          ],
+          "is_core": false,
+          "sort_order": 24
+        },
+        {
+          "role": "出演（役名未記載）",
+          "names": [
+            "船木政秀",
+            "三枝奈都紀",
+            "阿瀬川健太",
+            "新原ミナミ",
+            "古屋敷悠",
+            "山咲和也",
+            "キッキィ",
+            "啓",
+            "ゴリキング",
+            "Charlie"
+          ],
+          "is_core": false,
+          "sort_order": 25
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "Denji hunts devils with the Chainsaw Devil, Pochita, to repay the debt left by his father. After a betrayal costs him his life, a contract with Pochita brings him back as Chainsaw Man. Recruited by Makima of Public Safety, he begins working as a Devil Hunter alongside Aki Hayakawa and Power.",
+      "title_en": "Chainsaw Man: The Stage (2023)"
+    }
+  ],
+  "existingActors": [
+    {
+      "id": "a281bdff-2187-4772-8f3f-8db59b06c780",
+      "slug": "tsuchiya-naotake",
+      "name": "土屋 直武",
+      "kana": "つちや なおたけ",
+      "profile": "千葉県出身の俳優、歌手。株式会社エーライツ所属。かつては男性ダンス&ボーカルグループ「AVEST」のリーダーとして活動していた（2023年に卒業）。主な出演作として、ミュージカル『テニスの王子様』4thシーズン（伊武深司役）、『チェンソーマン』ザ・ステージ（主演・デンジ役）、演劇【推しの子】2.5次元舞台編（鳴嶋メルト役）、脳内クラッシュ演劇「DRAMAtical Murder」フラッシュバック（主演・蒼葉役）等の舞台作品がある。",
+      "image_url": null,
+      "sns": {
+        "x": "https://x.com/Nao__Tsuchiya",
+        "official": "https://naotake-tsuchiya.net/",
+        "instagram": "https://www.instagram.com/naotake_tsuchiya/"
+      },
+      "gender": "male",
+      "created_at": "2026-03-21T15:15:49.295117+00:00",
+      "updated_at": "2026-03-21T15:15:49.295117+00:00",
+      "tags": [],
+      "featured_play_slugs": [],
+      "birthday": "1999-12-22",
+      "height_cm": 171,
+      "blood_type": "AB",
+      "birthday_label": null,
+      "name_en": null,
+      "profile_en": "An actor and singer from Chiba Prefecture. Affiliated with A-Light. He was previously active as the leader of the male dance and vocal group \"AVEST\" (graduated in 2023). His major appearances include stage works such as the musical \"The Prince of Tennis\" 4th season (as Shinji Ibu), \"Chainsaw Man\" the Stage (as Denji, starring role), Engeki [Oshi no Ko] 2.5D Stage (as Melt Narushima), and Brain Crash Engeki \"DRAMAtical Murder\" Flashback (as Aoba, starring role).",
+      "death_date": null
+    },
+    {
+      "id": "46a3d601-948a-427e-a2be-6d29f93629bd",
+      "slug": "soma-yui",
+      "name": "相馬 結衣",
+      "kana": "そうま ゆい",
+      "profile": "青森県出身の俳優。株式会社 充s所属。AKB48の元メンバー「横山結衣」",
+      "image_url": null,
+      "sns": {
+        "x": "https://x.com/_yokoyuichan_",
+        "official": "https://soma-yui.com/",
+        "instagram": "https://www.instagram.com/yoko_yui_team8"
+      },
+      "gender": "female",
+      "created_at": "2026-04-04T06:41:47.688452+00:00",
+      "updated_at": "2026-04-04T06:41:47.688452+00:00",
+      "tags": [],
+      "featured_play_slugs": [],
+      "birthday": "2001-02-22",
+      "height_cm": 160,
+      "blood_type": "O",
+      "birthday_label": null,
+      "name_en": null,
+      "profile_en": null,
+      "death_date": null
+    },
+    {
+      "id": "f4242835-df1c-473e-b3fa-a3e0da83bbec",
+      "slug": "umetsu-mizuki",
+      "name": "梅津 瑞樹",
+      "kana": "うめつ みずき",
+      "profile": "千葉県出身の俳優。bamboo所属。",
+      "image_url": null,
+      "sns": {
+        "x": "https://x.com/MizukiUmetsu",
+        "official": "https://ameblo.jp/mizuki-umetsu/",
+        "instagram": "https://www.instagram.com/umetsumizuki"
+      },
+      "gender": "male",
+      "created_at": "2026-03-30T19:05:10.478594+00:00",
+      "updated_at": "2026-03-30T19:05:10.478594+00:00",
+      "tags": [],
+      "featured_play_slugs": [],
+      "birthday": "1992-12-08",
+      "height_cm": 175,
+      "blood_type": "O",
+      "birthday_label": null,
+      "name_en": null,
+      "profile_en": null,
+      "death_date": null
+    },
+    {
+      "id": "d4585bc4-85d6-40b8-ad80-56faf8121652",
+      "slug": "coda-mahiru",
+      "name": "甲田まひる",
+      "kana": null,
+      "profile": "沖縄県出身、東京都育ちのシンガーソングライター・俳優。ジャズピアニストとして2018年に『PLANKTON』を発表し、映画『台風家族』で俳優活動を開始。2023年の「チェンソーマン」ザ・ステージでパワー役を務め、初舞台に立った。",
+      "image_url": null,
+      "sns": {},
+      "gender": null,
+      "created_at": "2026-10-21T10:12:58.005594+00:00",
+      "updated_at": "2026-10-21T10:12:58.005594+00:00",
+      "tags": [],
+      "featured_play_slugs": [],
+      "birthday": "2001-05-24",
+      "height_cm": null,
+      "blood_type": null,
+      "birthday_label": null,
+      "name_en": "Mahiru Coda",
+      "profile_en": null,
+      "death_date": null
+    },
+    {
+      "id": "7b1fcc7e-3d65-4eb4-b95e-537efd4fac7f",
+      "slug": "funaki-masahide",
+      "name": "船木 政秀",
+      "kana": "ふなき まさひで",
+      "profile": "東京都出身の俳優・アクション振り付け師・殺陣師。現在はフリーで活動。",
+      "image_url": null,
+      "sns": {
+        "x": "https://x.com/f_masa777",
+        "official": "https://ameblo.jp/maziuta1000/"
+      },
+      "gender": "male",
+      "created_at": "2026-03-31T17:16:48.44846+00:00",
+      "updated_at": "2026-03-31T17:16:48.44846+00:00",
+      "tags": [],
+      "featured_play_slugs": [],
+      "birthday": "1992-02-04",
+      "height_cm": 176,
+      "blood_type": "B",
+      "birthday_label": null,
+      "name_en": null,
+      "profile_en": null,
+      "death_date": null
+    },
+    {
+      "id": "6abc5562-febd-46a7-86c1-b93c34ed46da",
+      "slug": "tada-masahide",
+      "name": "夛田将秀",
+      "kana": "ただ まさひで",
+      "profile": "香川県出身のアクション俳優・スタントマン。KLC所属。映画・ドラマのアクションや舞台で活動し、「チェンソーマン」ザ・ステージでチェンソーマン役を担当。舞台『鬼滅の刃』『血界戦線』『刀剣乱舞』などにも出演している。",
+      "image_url": null,
+      "sns": {},
+      "gender": null,
+      "created_at": "2026-10-21T10:12:58.005594+00:00",
+      "updated_at": "2026-10-21T10:12:58.005594+00:00",
+      "tags": [],
+      "featured_play_slugs": [],
+      "birthday": "1993-09-29",
+      "height_cm": 172,
+      "blood_type": null,
+      "birthday_label": null,
+      "name_en": "Masahide Tada",
+      "profile_en": null,
+      "death_date": null
+    },
+    {
+      "id": "8f4eb200-36de-40ae-8a51-c6b0912dab1e",
+      "slug": "hirano-aya",
+      "name": "平野綾",
+      "kana": "ひらの あや",
+      "profile": "愛知県出身の俳優・声優・歌手。子役として芸能活動を始め、2006年にソロ歌手デビュー。2011年から舞台を中心に活動し、「チェンソーマン」ザ・ステージでマキマ役を担当。2024年から歌手活動も本格的に再開した。",
+      "image_url": null,
+      "sns": {},
+      "gender": null,
+      "created_at": "2026-10-21T10:12:58.005594+00:00",
+      "updated_at": "2026-10-21T10:12:58.005594+00:00",
+      "tags": [],
+      "featured_play_slugs": [],
+      "birthday": "1987-10-08",
+      "height_cm": 157,
+      "blood_type": "O",
+      "birthday_label": null,
+      "name_en": null,
+      "profile_en": null,
+      "death_date": null
+    },
+    {
+      "id": "a5742739-99e0-4011-ac99-821c59ec9e3f",
+      "slug": "iwata-haruki",
+      "name": "岩田陽葵",
+      "kana": "いわた はるき",
+      "profile": "東京都出身の俳優・声優。fennec所属。舞台とアニメの『少女☆歌劇 レヴュースタァライト』で露崎まひる役を担当。声優ユニット「harmoe」でも活動し、「チェンソーマン」ザ・ステージでは東山コベニ役を務める。",
+      "image_url": null,
+      "sns": {},
+      "gender": null,
+      "created_at": "2026-10-21T10:12:58.005594+00:00",
+      "updated_at": "2026-10-21T10:12:58.005594+00:00",
+      "tags": [],
+      "featured_play_slugs": [],
+      "birthday": "1995-04-03",
+      "height_cm": 153,
+      "blood_type": "AB",
+      "birthday_label": null,
+      "name_en": "Haruki Iwata",
+      "profile_en": null,
+      "death_date": null
+    },
+    {
+      "id": "81f104b4-a34b-4723-ac96-fe30bbc7b1c0",
+      "slug": "izawa-shiori",
+      "name": "井澤詩織",
+      "kana": "いざわ しおり",
+      "profile": "埼玉県出身の声優。ボイスキット所属。アニメ『チェンソーマン』のポチタ役、『メイドインアビス』のナナチ役などを担当。「チェンソーマン」ザ・ステージにもポチタ役で声の出演をしている。",
+      "image_url": null,
+      "sns": {},
+      "gender": null,
+      "created_at": "2026-10-21T10:12:58.005594+00:00",
+      "updated_at": "2026-10-21T10:12:58.005594+00:00",
+      "tags": [],
+      "featured_play_slugs": [],
+      "birthday": null,
+      "height_cm": null,
+      "blood_type": null,
+      "birthday_label": "2月1日",
+      "name_en": "Shiori Izawa",
+      "profile_en": null,
+      "death_date": null
+    },
+    {
+      "id": "0bacf5d0-6b90-46f5-90d7-eece4a9031d8",
+      "slug": "tsukui-minami",
+      "name": "佃井皆美",
+      "kana": "つくい みなみ",
+      "profile": "埼玉県出身の俳優。グランドスラム所属。殺陣・アクションを特技とし、『仮面ライダー鎧武』の湊耀子／仮面ライダーマリカ役を担当。舞台『鋼の錬金術師』のリザ・ホークアイ役、「チェンソーマン」ザ・ステージの姫野役などを務める。",
+      "image_url": null,
+      "sns": {},
+      "gender": null,
+      "created_at": "2026-10-21T10:12:58.005594+00:00",
+      "updated_at": "2026-10-21T10:12:58.005594+00:00",
+      "tags": [],
+      "featured_play_slugs": [],
+      "birthday": "1987-12-18",
+      "height_cm": 163,
+      "blood_type": "A",
+      "birthday_label": null,
+      "name_en": "Minami Tsukui",
+      "profile_en": null,
+      "death_date": null
+    }
+  ],
+  "actors": [
+    {
+      "actor": {
+        "id": "8514fb16-715a-434d-a0fb-2c21bd6619af",
+        "slug": "yutaro",
+        "name": "ゆうたろう",
+        "kana": "ゆうたろう",
+        "profile": "広島県出身の俳優・モデル。アソビシステム所属。ショップ店員を経て2016年に芸能界デビューし、映画『3D彼女 リアルガール』に出演。『30歳まで童貞だと魔法使いになれるらしい』の綿谷湊役、「チェンソーマン」ザ・ステージ レゼ篇の天使の悪魔役などを務める。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1998-06-03",
+        "height_cm": 166,
+        "blood_type": null,
+        "birthday_label": null,
+        "name_en": "Yutaro",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "ゆうたろう",
+      "profileUrl": "https://asobisystem.com/talent/yutaro/",
+      "evidence": [
+        {
+          "url": "https://asobisystem.com/talent/yutaro/",
+          "checkedAt": "2026-10-21T10:35:58.112Z",
+          "note": "公演・人物を照合。採用項目と未確認事項はnotes。"
+        },
+        {
+          "url": "https://asobisystem.com/en/talent/yutaro/",
+          "checkedAt": "2026-10-21T10:38:23.233Z",
+          "note": "公演・人物を照合。採用項目と未確認事項はnotes。"
+        },
+        {
+          "url": "https://chainsawman-stage.jp/cast/",
+          "checkedAt": "2026-10-21T10:33:44.763Z",
+          "note": "公演・人物を照合。採用項目と未確認事項はnotes。"
+        }
+      ],
+      "notes": [
+        "現行所属の日本語でDOB・広島県・166cm・役歴を確認。英語ページの165cmより日本語の現行166cmを採用し揺れを記録。英字Yutaroは所属先英語版。別人のものまね芸人やパルクールのYUUTAROUと混同しない。血液型未確認。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "1f270387-8309-4778-93f3-1c28b71a4cd0",
+        "slug": "kajihara-hayate",
+        "name": "梶原颯",
+        "kana": "かじはら はやて",
+        "profile": "兵庫県出身の俳優。+7 Plus SEVEN ENTERTAINMENT所属。『ウルトラマンブレーザー』でバンドウヤスノブ役を担当。アクロバットや身体能力を生かして舞台でも活動し、TBS『SASUKE』にも出場。「チェンソーマン」ザ・ステージ レゼ篇でビーム役を務める。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1994-06-04",
+        "height_cm": 178,
+        "blood_type": "A",
+        "birthday_label": null,
+        "name_en": "Hayate Kajihara",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "梶原颯",
+      "profileUrl": "https://www.plus-7seven.jp/talent/talent/kajihara.html",
+      "evidence": [
+        {
+          "url": "https://www.plus-7seven.jp/talent/talent/kajihara.html",
+          "checkedAt": "2026-10-21T10:36:40.550Z",
+          "note": "公演・人物を照合。採用項目と未確認事項はnotes。"
+        },
+        {
+          "url": "https://yoshimotozaka46.com/member/detail/51.php",
+          "checkedAt": "2026-10-21T10:36:40.581Z",
+          "note": "公演・人物を照合。採用項目と未確認事項はnotes。"
+        },
+        {
+          "url": "https://chainsawman-stage.jp/cast/",
+          "checkedAt": "2026-10-21T10:33:44.763Z",
+          "note": "公演・人物を照合。採用項目と未確認事項はnotes。"
+        }
+      ],
+      "notes": [
+        "現行所属先でDOB・兵庫県・178cm・英字Hayate Kajihara・ビームとブレーザー役を照合。読みとA型は吉本坂46公式。旧公式177cmや旧所属を現在にしない。KajiharaをKajiwaraへ推測変更しない。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "5ffb55f3-3a53-42d9-9bba-039aec89ae12",
+        "slug": "taisei-nakamoto",
+        "name": "Taisei Nakamoto",
+        "kana": null,
+        "profile": "「チェンソーマン」ザ・ステージ レゼ篇でチェンソーマン役を務める出演者。仲宗根豊に代わり全公演に出演。デンジ役の土屋直武、チェンソーマン役の夛田将秀と、声や身体表現を分担してキャラクターを表現した。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": null,
+        "height_cm": null,
+        "blood_type": null,
+        "birthday_label": null,
+        "name_en": "Taisei Nakamoto",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "Taisei Nakamoto",
+      "profileUrl": "https://chainsawman-stage.jp/news/0513a/",
+      "evidence": [
+        {
+          "url": "https://chainsawman-stage.jp/news/0513a/",
+          "checkedAt": "2026-10-21T10:35:16.092Z",
+          "note": "公演・人物を照合。採用項目と未確認事項はnotes。"
+        },
+        {
+          "url": "https://chainsawman-stage.jp/cast/",
+          "checkedAt": "2026-10-21T10:33:44.763Z",
+          "note": "公演・人物を照合。採用項目と未確認事項はnotes。"
+        },
+        {
+          "url": "https://lp.p.pia.jp/article/news/487857/index.html",
+          "checkedAt": "2026-10-21T10:38:16.913Z",
+          "note": "公演・人物を照合。採用項目と未確認事項はnotes。"
+        }
+      ],
+      "notes": [
+        "公式の出演者変更と本人取材に基づく。漢字名・読み・出生・所属・ダンス歴は未確認。PubMedの同名研究者や既存中本大賀とは接続しない。舞台での英字名を原表記のまま採用。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "998190e6-4aa1-42e1-bfb5-2f92b0f29e87",
+        "slug": "kaida-mai",
+        "name": "海田真衣",
+        "kana": null,
+        "profile": "大阪府出身のアクション俳優・スタントパフォーマー。KLC所属。映画『シティハンター』などでスタントダブルを担当。「チェンソーマン」ザ・ステージ レゼ篇ではボム役を務め、相馬結衣、池田真結とともにレゼの変身後の姿を表現した。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1994-04-25",
+        "height_cm": 166,
+        "blood_type": null,
+        "birthday_label": null,
+        "name_en": "Mai Kaida",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "海田真衣",
+      "profileUrl": "https://klc-action.com/creator-12.html",
+      "evidence": [
+        {
+          "url": "https://klc-action.com/creator-12.html",
+          "checkedAt": "2026-10-21T10:35:58.051Z",
+          "note": "公演・人物を照合。採用項目と未確認事項はnotes。"
+        },
+        {
+          "url": "https://chainsawman-stage.jp/cast/",
+          "checkedAt": "2026-10-21T10:33:44.763Z",
+          "note": "公演・人物を照合。採用項目と未確認事項はnotes。"
+        },
+        {
+          "url": "https://lp.p.pia.jp/article/news/487857/index.html",
+          "checkedAt": "2026-10-21T10:38:16.913Z",
+          "note": "公演・人物を照合。採用項目と未確認事項はnotes。"
+        }
+      ],
+      "notes": [
+        "KLC本人ページでDOB・大阪府・166cm・英字Mai Kaida・ボム役・スタント歴を確認。未確認の平仮名・血液型は埋めない。職種だけでアンサンブルへ一括除外せず、本作の役付き出演を採用。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "cc533a85-4c84-4fb7-8714-56149a2bba19",
+        "slug": "ikeda-chainsawman-bomb",
+        "name": "池田真結",
+        "kana": null,
+        "profile": "「チェンソーマン」ザ・ステージ レゼ篇でボム役を務める出演者。レゼ役の相馬結衣、ボム役の海田真衣と、声や身体表現を分担してキャラクターを表現した。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": null,
+        "height_cm": null,
+        "blood_type": null,
+        "birthday_label": null,
+        "name_en": "池田真結",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "池田真結",
+      "profileUrl": "https://chainsawman-stage.jp/cast/",
+      "evidence": [
+        {
+          "url": "https://chainsawman-stage.jp/cast/",
+          "checkedAt": "2026-10-21T10:33:44.763Z",
+          "note": "公演・人物を照合。採用項目と未確認事項はnotes。"
+        },
+        {
+          "url": "https://www.nelke.co.jp/stage/chainsawman-stage-reze/",
+          "checkedAt": "2026-10-21T10:33:44.875Z",
+          "note": "公演・人物を照合。採用項目と未確認事項はnotes。"
+        },
+        {
+          "url": "https://www.gingeki.jp/archives/14011",
+          "checkedAt": "2026-10-21T10:35:58.199Z",
+          "note": "公演・人物を照合。採用項目と未確認事項はnotes。"
+        },
+        {
+          "url": "https://lp.p.pia.jp/article/news/487857/index.html",
+          "checkedAt": "2026-10-21T10:38:16.913Z",
+          "note": "公演・人物を照合。採用項目と未確認事項はnotes。"
+        }
+      ],
+      "notes": [
+        "公演公式・劇場・出演者取材で役を確認。DOB・読み・出身・所属・英字表記は未確認。学校通信・競技結果・学会名簿などの同名情報を流用しない。URLは作品に由来する識別子で読みを推測せず、英語表示も原氏名に固定してslugからの誤ったローマ字生成を避ける。"
+      ]
+    }
+  ],
+  "works": [
+    {
+      "year": 2026,
+      "before": null,
+      "play": {
+        "id": "77dbbabe-f257-4a68-95b4-1785fa41812d",
+        "slug": "chainsawman2026",
+        "title": "「チェンソーマン」ザ・ステージ レゼ篇",
+        "franchise_id": "bce75037-1458-4d79-863f-54aba49e737a",
+        "summary": "チェンソーマンとなったデンジは、公安対魔特異4課のデビルハンターとして暮らしていた。ある日、雨宿りの途中でカフェに勤める少女レゼと出会う。彼女と距離を縮めていくデンジだが、その出会いをきっかけに日常は大きく動き始める。",
+        "period": "東京：2026年7月25日〜8月2日／京都：2026年8月7日〜12日",
+        "venue": "東京：天王洲 銀河劇場／京都：京都劇場",
+        "vod": null,
+        "genre": null,
+        "tags": [],
+        "credits": [
+          {
+            "role": "原作",
+            "names": [
+              "藤本タツキ（集英社ジャンプコミックス刊）"
+            ],
+            "is_core": true,
+            "sort_order": 1
+          },
+          {
+            "role": "脚本・演出",
+            "names": [
+              "松崎史也"
+            ],
+            "is_core": true,
+            "sort_order": 2
+          },
+          {
+            "role": "音楽",
+            "names": [
+              "和田俊輔"
+            ],
+            "is_core": false,
+            "sort_order": 3
+          },
+          {
+            "role": "振付",
+            "names": [
+              "HIDALI"
+            ],
+            "is_core": false,
+            "sort_order": 4
+          },
+          {
+            "role": "アクション監督",
+            "names": [
+              "栗田政明"
+            ],
+            "is_core": false,
+            "sort_order": 5
+          },
+          {
+            "role": "美術",
+            "names": [
+              "松生紘子"
+            ],
+            "is_core": false,
+            "sort_order": 6
+          },
+          {
+            "role": "照明",
+            "names": [
+              "大波多秀起"
+            ],
+            "is_core": false,
+            "sort_order": 7
+          },
+          {
+            "role": "音響効果",
+            "names": [
+              "天野高志（RESON）"
+            ],
+            "is_core": false,
+            "sort_order": 8
+          },
+          {
+            "role": "音響",
+            "names": [
+              "増澤 努（1ststep）"
+            ],
+            "is_core": false,
+            "sort_order": 9
+          },
+          {
+            "role": "映像",
+            "names": [
+              "荒川ヒロキ"
+            ],
+            "is_core": false,
+            "sort_order": 10
+          },
+          {
+            "role": "衣裳",
+            "names": [
+              "丁瑩"
+            ],
+            "is_core": false,
+            "sort_order": 11
+          },
+          {
+            "role": "ヘアメイク",
+            "names": [
+              "水﨑優里（MIG）"
+            ],
+            "is_core": false,
+            "sort_order": 12
+          },
+          {
+            "role": "小道具・特殊造形",
+            "names": [
+              "林屋陽二"
+            ],
+            "is_core": false,
+            "sort_order": 13
+          },
+          {
+            "role": "特殊道具",
+            "names": [
+              "アトリエ・カオス"
+            ],
+            "is_core": false,
+            "sort_order": 14
+          },
+          {
+            "role": "フライング・パルクールコーディネート",
+            "names": [
+              "HAYATE"
+            ],
+            "is_core": false,
+            "sort_order": 15
+          },
+          {
+            "role": "インティマシーコーディネーター",
+            "names": [
+              "浅田智穂"
+            ],
+            "is_core": false,
+            "sort_order": 16
+          },
+          {
+            "role": "演出助手",
+            "names": [
+              "小林賢祐"
+            ],
+            "is_core": false,
+            "sort_order": 17
+          },
+          {
+            "role": "舞台監督",
+            "names": [
+              "須田桃李（DDR）"
+            ],
+            "is_core": false,
+            "sort_order": 18
+          },
+          {
+            "role": "技術監督",
+            "names": [
+              "堀 吉行（DDR）"
+            ],
+            "is_core": false,
+            "sort_order": 19
+          },
+          {
+            "role": "宣伝美術",
+            "names": [
+              "江口伸二郎"
+            ],
+            "is_core": false,
+            "sort_order": 20
+          },
+          {
+            "role": "宣伝写真",
+            "names": [
+              "中村理生（ONPHA）"
+            ],
+            "is_core": false,
+            "sort_order": 21
+          },
+          {
+            "role": "制作",
+            "names": [
+              "ネルケプランニング"
+            ],
+            "is_core": false,
+            "sort_order": 22
+          },
+          {
+            "role": "監修",
+            "names": [
+              "集英社（「少年ジャンプ＋」編集部）"
+            ],
+            "is_core": false,
+            "sort_order": 23
+          },
+          {
+            "role": "協賛",
+            "names": [
+              "セブンイレブン",
+              "ぴあ"
+            ],
+            "is_core": false,
+            "sort_order": 24
+          },
+          {
+            "role": "協力",
+            "names": [
+              "一般社団法人 日本2.5次元ミュージカル協会"
+            ],
+            "is_core": false,
+            "sort_order": 25
+          },
+          {
+            "role": "主催",
+            "names": [
+              "「チェンソーマン」ザ・ステージ レゼ篇 製作委員会"
+            ],
+            "is_core": false,
+            "sort_order": 26
+          },
+          {
+            "role": "サブキャスト",
+            "names": [
+              "三好大貴",
+              "阿瀬川健太",
+              "新原ミナミ",
+              "笹川大輔",
+              "山﨑竜之介",
+              "寺井竜哉",
+              "大賀辰次朗"
+            ],
+            "is_core": false,
+            "sort_order": 27
+          },
+          {
+            "role": "ダンサー",
+            "names": [
+              "キッキィ",
+              "啓",
+              "ゴリキング",
+              "Charlie"
+            ],
+            "is_core": false,
+            "sort_order": 28
+          },
+          {
+            "role": "スウィングキャスト",
+            "names": [
+              "石田流星"
+            ],
+            "is_core": false,
+            "sort_order": 29
+          }
+        ],
+        "related_franchise_ids": [],
+        "title_en": "Chainsaw Man: The Stage — Reze Arc",
+        "summary_en": "Now living as Chainsaw Man, Denji works as a Devil Hunter in Public Safety Special Division 4. While sheltering from the rain, he meets Reze, a girl who works at a nearby cafe. As the two grow closer, their encounter begins to change his everyday life."
+      },
+      "rawSource": {
+        "sourceUrl": "https://chainsawman-stage.jp/cast/",
+        "checkedAt": "2026-10-21T10:33:44.763Z",
+        "title": "「チェンソーマン」ザ・ステージ レゼ篇",
+        "scheduleLines": [
+          "東京：2026年7月25日〜8月2日 天王洲 銀河劇場",
+          "京都：2026年8月7日〜12日 京都劇場"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "土屋直武",
+            "sourceActorUrl": null,
+            "role_name": "デンジ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "相馬結衣",
+            "sourceActorUrl": null,
+            "role_name": "レゼ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "梅津瑞樹",
+            "sourceActorUrl": null,
+            "role_name": "早川アキ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "甲田まひる",
+            "sourceActorUrl": null,
+            "role_name": "パワー",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "ゆうたろう",
+            "sourceActorUrl": null,
+            "role_name": "天使の悪魔",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "梶原颯",
+            "sourceActorUrl": null,
+            "role_name": "ビーム",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "船木政秀",
+            "sourceActorUrl": null,
+            "role_name": "暴力の魔人",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "夛田将秀",
+            "sourceActorUrl": null,
+            "role_name": "チェンソーマン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "Taisei Nakamoto",
+            "sourceActorUrl": null,
+            "role_name": "チェンソーマン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "海田真衣",
+            "sourceActorUrl": null,
+            "role_name": "ボム",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "池田真結",
+            "sourceActorUrl": null,
+            "role_name": "ボム",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "平野綾",
+            "sourceActorUrl": null,
+            "role_name": "マキマ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "岩田陽葵",
+            "sourceActorUrl": null,
+            "role_name": "東山コベニ",
+            "cast_group": "特別出演"
+          },
+          {
+            "sourceActorName": "井澤詩織",
+            "sourceActorUrl": null,
+            "role_name": "ポチタ",
+            "cast_group": "声の出演"
+          },
+          {
+            "sourceActorName": "佃井皆美",
+            "sourceActorUrl": null,
+            "role_name": "姫野",
+            "cast_group": "声の出演"
+          }
+        ],
+        "unparsed": [],
+        "rawCardHtml": [
+          "<span class=\"act_name\">デンジ</span><br>土屋直武",
+          "<span class=\"act_name\">レゼ</span><br>相馬結衣",
+          "<span class=\"act_name\">早川アキ</span><br>梅津瑞樹",
+          "<span class=\"act_name\">パワー</span><br>甲田まひる",
+          "<span class=\"act_name\">天使の悪魔</span><br>ゆうたろう",
+          "<span class=\"act_name\">ビーム</span><br>梶原 颯",
+          "<span class=\"act_name\">暴力の魔人</span><br>船木政秀",
+          "<span class=\"act_name\">チェンソーマン</span><br>夛⽥将秀<br>Taisei Nakamoto",
+          "<span class=\"act_name\">ボム</span><br>海田真衣<br>池田真結",
+          "<span class=\"act_name\">マキマ</span><br>平野 綾"
+        ],
+        "additionalHtml": [
+          "岩田陽葵",
+          "※7月25日(土)12:30公演／17:30公演では、<br>岩田陽葵さんの出演はございません。",
+          "井澤詩織",
+          "佃井皆美"
+        ],
+        "creditGroups": [
+          {
+            "role": "サブキャスト",
+            "names": [
+              "三好大貴",
+              "阿瀬川健太",
+              "新原ミナミ",
+              "笹川大輔",
+              "山﨑竜之介",
+              "寺井竜哉",
+              "大賀辰次朗"
+            ]
+          },
+          {
+            "role": "ダンサー",
+            "names": [
+              "キッキィ",
+              "啓",
+              "ゴリキング",
+              "Charlie"
+            ]
+          },
+          {
+            "role": "スウィングキャスト",
+            "names": [
+              "石田流星"
+            ]
+          }
+        ]
+      },
+      "source": {
+        "sourceUrl": "https://chainsawman-stage.jp/cast/",
+        "checkedAt": "2026-10-21T10:33:44.763Z",
+        "title": "「チェンソーマン」ザ・ステージ レゼ篇",
+        "scheduleLines": [
+          "東京：2026年7月25日〜8月2日 天王洲 銀河劇場",
+          "京都：2026年8月7日〜12日 京都劇場"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "土屋直武",
+            "sourceActorUrl": null,
+            "role_name": "デンジ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "相馬結衣",
+            "sourceActorUrl": null,
+            "role_name": "レゼ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "梅津瑞樹",
+            "sourceActorUrl": null,
+            "role_name": "早川アキ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "甲田まひる",
+            "sourceActorUrl": null,
+            "role_name": "パワー",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "ゆうたろう",
+            "sourceActorUrl": null,
+            "role_name": "天使の悪魔",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "梶原颯",
+            "sourceActorUrl": null,
+            "role_name": "ビーム",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "船木政秀",
+            "sourceActorUrl": null,
+            "role_name": "暴力の魔人",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "夛田将秀",
+            "sourceActorUrl": null,
+            "role_name": "チェンソーマン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "Taisei Nakamoto",
+            "sourceActorUrl": null,
+            "role_name": "チェンソーマン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "海田真衣",
+            "sourceActorUrl": null,
+            "role_name": "ボム",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "池田真結",
+            "sourceActorUrl": null,
+            "role_name": "ボム",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "平野綾",
+            "sourceActorUrl": null,
+            "role_name": "マキマ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "岩田陽葵",
+            "sourceActorUrl": null,
+            "role_name": "東山コベニ",
+            "cast_group": "特別出演"
+          },
+          {
+            "sourceActorName": "井澤詩織",
+            "sourceActorUrl": null,
+            "role_name": "ポチタ",
+            "cast_group": "声の出演"
+          },
+          {
+            "sourceActorName": "佃井皆美",
+            "sourceActorUrl": null,
+            "role_name": "姫野",
+            "cast_group": "声の出演"
+          }
+        ],
+        "unparsed": []
+      },
+      "records": [
+        {
+          "actor": {
+            "id": "a281bdff-2187-4772-8f3f-8db59b06c780",
+            "slug": "tsuchiya-naotake",
+            "name": "土屋 直武",
+            "kana": "つちや なおたけ",
+            "profile": "千葉県出身の俳優、歌手。株式会社エーライツ所属。かつては男性ダンス&ボーカルグループ「AVEST」のリーダーとして活動していた（2023年に卒業）。主な出演作として、ミュージカル『テニスの王子様』4thシーズン（伊武深司役）、『チェンソーマン』ザ・ステージ（主演・デンジ役）、演劇【推しの子】2.5次元舞台編（鳴嶋メルト役）、脳内クラッシュ演劇「DRAMAtical Murder」フラッシュバック（主演・蒼葉役）等の舞台作品がある。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/Nao__Tsuchiya",
+              "official": "https://naotake-tsuchiya.net/",
+              "instagram": "https://www.instagram.com/naotake_tsuchiya/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:15:49.295117+00:00",
+            "updated_at": "2026-03-21T15:15:49.295117+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1999-12-22",
+            "height_cm": 171,
+            "blood_type": "AB",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor and singer from Chiba Prefecture. Affiliated with A-Light. He was previously active as the leader of the male dance and vocal group \"AVEST\" (graduated in 2023). His major appearances include stage works such as the musical \"The Prince of Tennis\" 4th season (as Shinji Ibu), \"Chainsaw Man\" the Stage (as Denji, starring role), Engeki [Oshi no Ko] 2.5D Stage (as Melt Narushima), and Brain Crash Engeki \"DRAMAtical Murder\" Flashback (as Aoba, starring role).",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "土屋直武",
+            "sourceActorUrl": null,
+            "role_name": "デンジ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "f82a652d85116f12d6cf",
+          "sourceOrder": 1,
+          "cast": {
+            "id": "8ab016e9-5772-4a35-afdf-d310b6e74a99",
+            "play_id": "77dbbabe-f257-4a68-95b4-1785fa41812d",
+            "actor_id": "a281bdff-2187-4772-8f3f-8db59b06c780",
+            "role_name": "デンジ",
+            "is_starring": false,
+            "billing_order": 1,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null
+          }
+        },
+        {
+          "actor": {
+            "id": "46a3d601-948a-427e-a2be-6d29f93629bd",
+            "slug": "soma-yui",
+            "name": "相馬 結衣",
+            "kana": "そうま ゆい",
+            "profile": "青森県出身の俳優。株式会社 充s所属。AKB48の元メンバー「横山結衣」",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/_yokoyuichan_",
+              "official": "https://soma-yui.com/",
+              "instagram": "https://www.instagram.com/yoko_yui_team8"
+            },
+            "gender": "female",
+            "created_at": "2026-04-04T06:41:47.688452+00:00",
+            "updated_at": "2026-04-04T06:41:47.688452+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "2001-02-22",
+            "height_cm": 160,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "相馬結衣",
+            "sourceActorUrl": null,
+            "role_name": "レゼ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "169bad8ab842ec250dc1",
+          "sourceOrder": 2,
+          "cast": {
+            "id": "68970a54-ad20-4695-b102-f6b9be94df2e",
+            "play_id": "77dbbabe-f257-4a68-95b4-1785fa41812d",
+            "actor_id": "46a3d601-948a-427e-a2be-6d29f93629bd",
+            "role_name": "レゼ",
+            "is_starring": false,
+            "billing_order": 2,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null
+          }
+        },
+        {
+          "actor": {
+            "id": "f4242835-df1c-473e-b3fa-a3e0da83bbec",
+            "slug": "umetsu-mizuki",
+            "name": "梅津 瑞樹",
+            "kana": "うめつ みずき",
+            "profile": "千葉県出身の俳優。bamboo所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/MizukiUmetsu",
+              "official": "https://ameblo.jp/mizuki-umetsu/",
+              "instagram": "https://www.instagram.com/umetsumizuki"
+            },
+            "gender": "male",
+            "created_at": "2026-03-30T19:05:10.478594+00:00",
+            "updated_at": "2026-03-30T19:05:10.478594+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1992-12-08",
+            "height_cm": 175,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "梅津瑞樹",
+            "sourceActorUrl": null,
+            "role_name": "早川アキ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "5dbc50484a1150b43f68",
+          "sourceOrder": 3,
+          "cast": {
+            "id": "27c4c1fe-dd09-4386-a4dd-7f9faf4dc043",
+            "play_id": "77dbbabe-f257-4a68-95b4-1785fa41812d",
+            "actor_id": "f4242835-df1c-473e-b3fa-a3e0da83bbec",
+            "role_name": "早川アキ",
+            "is_starring": false,
+            "billing_order": 3,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null
+          }
+        },
+        {
+          "actor": {
+            "id": "d4585bc4-85d6-40b8-ad80-56faf8121652",
+            "slug": "coda-mahiru",
+            "name": "甲田まひる",
+            "kana": null,
+            "profile": "沖縄県出身、東京都育ちのシンガーソングライター・俳優。ジャズピアニストとして2018年に『PLANKTON』を発表し、映画『台風家族』で俳優活動を開始。2023年の「チェンソーマン」ザ・ステージでパワー役を務め、初舞台に立った。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-21T10:12:58.005594+00:00",
+            "updated_at": "2026-10-21T10:12:58.005594+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "2001-05-24",
+            "height_cm": null,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Mahiru Coda",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "甲田まひる",
+            "sourceActorUrl": null,
+            "role_name": "パワー",
+            "cast_group": null
+          },
+          "sourceCreditKey": "51ebe222fae9cee62c6d",
+          "sourceOrder": 4,
+          "cast": {
+            "id": "649197fb-c76c-400e-9e76-55d87dc25fdf",
+            "play_id": "77dbbabe-f257-4a68-95b4-1785fa41812d",
+            "actor_id": "d4585bc4-85d6-40b8-ad80-56faf8121652",
+            "role_name": "パワー",
+            "is_starring": false,
+            "billing_order": 4,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null
+          }
+        },
+        {
+          "actor": {
+            "id": "8514fb16-715a-434d-a0fb-2c21bd6619af",
+            "slug": "yutaro",
+            "name": "ゆうたろう",
+            "kana": "ゆうたろう",
+            "profile": "広島県出身の俳優・モデル。アソビシステム所属。ショップ店員を経て2016年に芸能界デビューし、映画『3D彼女 リアルガール』に出演。『30歳まで童貞だと魔法使いになれるらしい』の綿谷湊役、「チェンソーマン」ザ・ステージ レゼ篇の天使の悪魔役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1998-06-03",
+            "height_cm": 166,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Yutaro",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "ゆうたろう",
+            "sourceActorUrl": null,
+            "role_name": "天使の悪魔",
+            "cast_group": null
+          },
+          "sourceCreditKey": "6b6cca32b04dde6b2fb9",
+          "sourceOrder": 5,
+          "cast": {
+            "id": "9762f15c-4f70-44b9-a2bb-9d389e638209",
+            "play_id": "77dbbabe-f257-4a68-95b4-1785fa41812d",
+            "actor_id": "8514fb16-715a-434d-a0fb-2c21bd6619af",
+            "role_name": "天使の悪魔",
+            "is_starring": false,
+            "billing_order": 5,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null
+          }
+        },
+        {
+          "actor": {
+            "id": "1f270387-8309-4778-93f3-1c28b71a4cd0",
+            "slug": "kajihara-hayate",
+            "name": "梶原颯",
+            "kana": "かじはら はやて",
+            "profile": "兵庫県出身の俳優。+7 Plus SEVEN ENTERTAINMENT所属。『ウルトラマンブレーザー』でバンドウヤスノブ役を担当。アクロバットや身体能力を生かして舞台でも活動し、TBS『SASUKE』にも出場。「チェンソーマン」ザ・ステージ レゼ篇でビーム役を務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1994-06-04",
+            "height_cm": 178,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": "Hayate Kajihara",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "梶原颯",
+            "sourceActorUrl": null,
+            "role_name": "ビーム",
+            "cast_group": null
+          },
+          "sourceCreditKey": "5adf6459fa0b8e7b982b",
+          "sourceOrder": 6,
+          "cast": {
+            "id": "2534a4df-c1cf-4a2e-a25b-b5dd1acd4359",
+            "play_id": "77dbbabe-f257-4a68-95b4-1785fa41812d",
+            "actor_id": "1f270387-8309-4778-93f3-1c28b71a4cd0",
+            "role_name": "ビーム",
+            "is_starring": false,
+            "billing_order": 6,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null
+          }
+        },
+        {
+          "actor": {
+            "id": "7b1fcc7e-3d65-4eb4-b95e-537efd4fac7f",
+            "slug": "funaki-masahide",
+            "name": "船木 政秀",
+            "kana": "ふなき まさひで",
+            "profile": "東京都出身の俳優・アクション振り付け師・殺陣師。現在はフリーで活動。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/f_masa777",
+              "official": "https://ameblo.jp/maziuta1000/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-31T17:16:48.44846+00:00",
+            "updated_at": "2026-03-31T17:16:48.44846+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1992-02-04",
+            "height_cm": 176,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "船木政秀",
+            "sourceActorUrl": null,
+            "role_name": "暴力の魔人",
+            "cast_group": null
+          },
+          "sourceCreditKey": "955374ea4908bfdd83e8",
+          "sourceOrder": 7,
+          "cast": {
+            "id": "de7424da-8c05-4d38-be64-294543a4f252",
+            "play_id": "77dbbabe-f257-4a68-95b4-1785fa41812d",
+            "actor_id": "7b1fcc7e-3d65-4eb4-b95e-537efd4fac7f",
+            "role_name": "暴力の魔人",
+            "is_starring": false,
+            "billing_order": 7,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null
+          }
+        },
+        {
+          "actor": {
+            "id": "6abc5562-febd-46a7-86c1-b93c34ed46da",
+            "slug": "tada-masahide",
+            "name": "夛田将秀",
+            "kana": "ただ まさひで",
+            "profile": "香川県出身のアクション俳優・スタントマン。KLC所属。映画・ドラマのアクションや舞台で活動し、「チェンソーマン」ザ・ステージでチェンソーマン役を担当。舞台『鬼滅の刃』『血界戦線』『刀剣乱舞』などにも出演している。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-21T10:12:58.005594+00:00",
+            "updated_at": "2026-10-21T10:12:58.005594+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1993-09-29",
+            "height_cm": 172,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Masahide Tada",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "夛田将秀",
+            "sourceActorUrl": null,
+            "role_name": "チェンソーマン",
+            "cast_group": null
+          },
+          "sourceCreditKey": "bd97e1646fb8d84694f7",
+          "sourceOrder": 8,
+          "cast": {
+            "id": "736f0d0a-4958-497f-8436-e2596c53e290",
+            "play_id": "77dbbabe-f257-4a68-95b4-1785fa41812d",
+            "actor_id": "6abc5562-febd-46a7-86c1-b93c34ed46da",
+            "role_name": "チェンソーマン",
+            "is_starring": false,
+            "billing_order": 8,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": "デンジ役の土屋直武、Taisei Nakamotoと、声や身体表現を分担する。"
+          }
+        },
+        {
+          "actor": {
+            "id": "5ffb55f3-3a53-42d9-9bba-039aec89ae12",
+            "slug": "taisei-nakamoto",
+            "name": "Taisei Nakamoto",
+            "kana": null,
+            "profile": "「チェンソーマン」ザ・ステージ レゼ篇でチェンソーマン役を務める出演者。仲宗根豊に代わり全公演に出演。デンジ役の土屋直武、チェンソーマン役の夛田将秀と、声や身体表現を分担してキャラクターを表現した。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": null,
+            "height_cm": null,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Taisei Nakamoto",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "Taisei Nakamoto",
+            "sourceActorUrl": null,
+            "role_name": "チェンソーマン",
+            "cast_group": null
+          },
+          "sourceCreditKey": "49ed1b7be897100306dd",
+          "sourceOrder": 9,
+          "cast": {
+            "id": "494932ec-55ac-4571-9d32-3f7240a02887",
+            "play_id": "77dbbabe-f257-4a68-95b4-1785fa41812d",
+            "actor_id": "5ffb55f3-3a53-42d9-9bba-039aec89ae12",
+            "role_name": "チェンソーマン",
+            "is_starring": false,
+            "billing_order": 9,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": "デンジ役の土屋直武、夛田将秀と、声や身体表現を分担する。仲宗根豊に代わり全公演に出演（2026年5月13日発表）。"
+          }
+        },
+        {
+          "actor": {
+            "id": "998190e6-4aa1-42e1-bfb5-2f92b0f29e87",
+            "slug": "kaida-mai",
+            "name": "海田真衣",
+            "kana": null,
+            "profile": "大阪府出身のアクション俳優・スタントパフォーマー。KLC所属。映画『シティハンター』などでスタントダブルを担当。「チェンソーマン」ザ・ステージ レゼ篇ではボム役を務め、相馬結衣、池田真結とともにレゼの変身後の姿を表現した。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1994-04-25",
+            "height_cm": 166,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Mai Kaida",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "海田真衣",
+            "sourceActorUrl": null,
+            "role_name": "ボム",
+            "cast_group": null
+          },
+          "sourceCreditKey": "261d0d60e0cc8befd23d",
+          "sourceOrder": 10,
+          "cast": {
+            "id": "adaa4df1-fea4-48e6-9e8c-19af82c2b6a4",
+            "play_id": "77dbbabe-f257-4a68-95b4-1785fa41812d",
+            "actor_id": "998190e6-4aa1-42e1-bfb5-2f92b0f29e87",
+            "role_name": "ボム",
+            "is_starring": false,
+            "billing_order": 10,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": "レゼ役の相馬結衣、池田真結と、声や身体表現を分担する。"
+          }
+        },
+        {
+          "actor": {
+            "id": "cc533a85-4c84-4fb7-8714-56149a2bba19",
+            "slug": "ikeda-chainsawman-bomb",
+            "name": "池田真結",
+            "kana": null,
+            "profile": "「チェンソーマン」ザ・ステージ レゼ篇でボム役を務める出演者。レゼ役の相馬結衣、ボム役の海田真衣と、声や身体表現を分担してキャラクターを表現した。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": null,
+            "height_cm": null,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "池田真結",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "池田真結",
+            "sourceActorUrl": null,
+            "role_name": "ボム",
+            "cast_group": null
+          },
+          "sourceCreditKey": "a604345379040ddc5678",
+          "sourceOrder": 11,
+          "cast": {
+            "id": "0a32ee28-d6ce-4f56-9691-5b0b36378f14",
+            "play_id": "77dbbabe-f257-4a68-95b4-1785fa41812d",
+            "actor_id": "cc533a85-4c84-4fb7-8714-56149a2bba19",
+            "role_name": "ボム",
+            "is_starring": false,
+            "billing_order": 11,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": "レゼ役の相馬結衣、海田真衣と、声や身体表現を分担する。"
+          }
+        },
+        {
+          "actor": {
+            "id": "8f4eb200-36de-40ae-8a51-c6b0912dab1e",
+            "slug": "hirano-aya",
+            "name": "平野綾",
+            "kana": "ひらの あや",
+            "profile": "愛知県出身の俳優・声優・歌手。子役として芸能活動を始め、2006年にソロ歌手デビュー。2011年から舞台を中心に活動し、「チェンソーマン」ザ・ステージでマキマ役を担当。2024年から歌手活動も本格的に再開した。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-21T10:12:58.005594+00:00",
+            "updated_at": "2026-10-21T10:12:58.005594+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1987-10-08",
+            "height_cm": 157,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "平野綾",
+            "sourceActorUrl": null,
+            "role_name": "マキマ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "478fa6411ec6801fe99c",
+          "sourceOrder": 12,
+          "cast": {
+            "id": "c554dfc6-0511-40cc-b6f5-6bfe026d34cc",
+            "play_id": "77dbbabe-f257-4a68-95b4-1785fa41812d",
+            "actor_id": "8f4eb200-36de-40ae-8a51-c6b0912dab1e",
+            "role_name": "マキマ",
+            "is_starring": false,
+            "billing_order": 12,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null
+          }
+        },
+        {
+          "actor": {
+            "id": "a5742739-99e0-4011-ac99-821c59ec9e3f",
+            "slug": "iwata-haruki",
+            "name": "岩田陽葵",
+            "kana": "いわた はるき",
+            "profile": "東京都出身の俳優・声優。fennec所属。舞台とアニメの『少女☆歌劇 レヴュースタァライト』で露崎まひる役を担当。声優ユニット「harmoe」でも活動し、「チェンソーマン」ザ・ステージでは東山コベニ役を務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-21T10:12:58.005594+00:00",
+            "updated_at": "2026-10-21T10:12:58.005594+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1995-04-03",
+            "height_cm": 153,
+            "blood_type": "AB",
+            "birthday_label": null,
+            "name_en": "Haruki Iwata",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "岩田陽葵",
+            "sourceActorUrl": null,
+            "role_name": "東山コベニ",
+            "cast_group": "特別出演"
+          },
+          "sourceCreditKey": "ab5a7c855218ba5f6e04",
+          "sourceOrder": 13,
+          "cast": {
+            "id": "d2abe386-4795-445b-acc4-1fa5a99c5788",
+            "play_id": "77dbbabe-f257-4a68-95b4-1785fa41812d",
+            "actor_id": "a5742739-99e0-4011-ac99-821c59ec9e3f",
+            "role_name": "東山コベニ",
+            "is_starring": false,
+            "billing_order": 13,
+            "cast_group": "特別出演",
+            "role_name_kana": null,
+            "role_type": null,
+            "note": "特別出演。2026年7月25日12:30公演・17:30公演には出演せず、その他の東京公演・京都公演に出演。"
+          }
+        },
+        {
+          "actor": {
+            "id": "81f104b4-a34b-4723-ac96-fe30bbc7b1c0",
+            "slug": "izawa-shiori",
+            "name": "井澤詩織",
+            "kana": "いざわ しおり",
+            "profile": "埼玉県出身の声優。ボイスキット所属。アニメ『チェンソーマン』のポチタ役、『メイドインアビス』のナナチ役などを担当。「チェンソーマン」ザ・ステージにもポチタ役で声の出演をしている。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-21T10:12:58.005594+00:00",
+            "updated_at": "2026-10-21T10:12:58.005594+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": null,
+            "height_cm": null,
+            "blood_type": null,
+            "birthday_label": "2月1日",
+            "name_en": "Shiori Izawa",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "井澤詩織",
+            "sourceActorUrl": null,
+            "role_name": "ポチタ",
+            "cast_group": "声の出演"
+          },
+          "sourceCreditKey": "6fde6c51b4612f9587ca",
+          "sourceOrder": 14,
+          "cast": {
+            "id": "ad3f6771-c0b6-46b9-98d9-109056cecaab",
+            "play_id": "77dbbabe-f257-4a68-95b4-1785fa41812d",
+            "actor_id": "81f104b4-a34b-4723-ac96-fe30bbc7b1c0",
+            "role_name": "ポチタ",
+            "is_starring": false,
+            "billing_order": 14,
+            "cast_group": "声の出演",
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null
+          }
+        },
+        {
+          "actor": {
+            "id": "0bacf5d0-6b90-46f5-90d7-eece4a9031d8",
+            "slug": "tsukui-minami",
+            "name": "佃井皆美",
+            "kana": "つくい みなみ",
+            "profile": "埼玉県出身の俳優。グランドスラム所属。殺陣・アクションを特技とし、『仮面ライダー鎧武』の湊耀子／仮面ライダーマリカ役を担当。舞台『鋼の錬金術師』のリザ・ホークアイ役、「チェンソーマン」ザ・ステージの姫野役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-21T10:12:58.005594+00:00",
+            "updated_at": "2026-10-21T10:12:58.005594+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1987-12-18",
+            "height_cm": 163,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": "Minami Tsukui",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "佃井皆美",
+            "sourceActorUrl": null,
+            "role_name": "姫野",
+            "cast_group": "声の出演"
+          },
+          "sourceCreditKey": "f8dd0c3035d7b7336f59",
+          "sourceOrder": 15,
+          "cast": {
+            "id": "df64f275-9036-4dfa-9fe5-c1b3cd8aaa49",
+            "play_id": "77dbbabe-f257-4a68-95b4-1785fa41812d",
+            "actor_id": "0bacf5d0-6b90-46f5-90d7-eece4a9031d8",
+            "role_name": "姫野",
+            "is_starring": false,
+            "billing_order": 15,
+            "cast_group": "声の出演",
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null
+          }
+        }
+      ],
+      "sourceFingerprint": "4c747586aeca85c284c87a7640eef0cac2521b158f170059b419406290f76cf0",
+      "expectedCastCount": 15,
+      "evidence": [
+        {
+          "url": "https://chainsawman-stage.jp/cast/",
+          "checkedAt": "2026-10-21T10:33:44.763Z",
+          "note": "公演・人物を照合。採用項目と未確認事項はnotes。"
+        },
+        {
+          "url": "https://chainsawman-stage.jp/schedule/",
+          "checkedAt": "2026-10-21T10:33:44.817Z",
+          "note": "公演・人物を照合。採用項目と未確認事項はnotes。"
+        },
+        {
+          "url": "https://chainsawman-stage.jp/introduction/",
+          "checkedAt": "2026-10-21T10:33:45.787Z",
+          "note": "公演・人物を照合。採用項目と未確認事項はnotes。"
+        },
+        {
+          "url": "https://www.nelke.co.jp/stage/chainsawman-stage-reze/",
+          "checkedAt": "2026-10-21T10:33:44.875Z",
+          "note": "公演・人物を照合。採用項目と未確認事項はnotes。"
+        },
+        {
+          "url": "https://chainsawman-stage.jp/news/0513a/",
+          "checkedAt": "2026-10-21T10:35:16.092Z",
+          "note": "公演・人物を照合。採用項目と未確認事項はnotes。"
+        },
+        {
+          "url": "https://chainsawman-stage.jp/news/0715a/",
+          "checkedAt": "2026-10-21T10:35:17.010Z",
+          "note": "公演・人物を照合。採用項目と未確認事項はnotes。"
+        },
+        {
+          "url": "https://chainsawman-stage.jp/news/0610a/",
+          "checkedAt": "2026-10-21T10:35:16.110Z",
+          "note": "公演・人物を照合。採用項目と未確認事項はnotes。"
+        },
+        {
+          "url": "https://lp.p.pia.jp/article/news/487857/index.html",
+          "checkedAt": "2026-10-21T10:38:16.913Z",
+          "note": "公演・人物を照合。採用項目と未確認事項はnotes。"
+        },
+        {
+          "url": "https://www.j25musical.jp/en/stage/1013",
+          "checkedAt": "2026-10-21T10:38:17.525Z",
+          "note": "公演・人物を照合。採用項目と未確認事項はnotes。"
+        }
+      ]
+    }
+  ],
+  "planSummary": {
+    "counts": {
+      "keep": 0,
+      "add_cast": 15,
+      "prepare_actor": 0,
+      "hold": 0
+    },
+    "sourceFingerprint": "4c747586aeca85c284c87a7640eef0cac2521b158f170059b419406290f76cf0",
+    "snapshotFingerprint": "decedd23a9e439485bb79b1777b2c79b4b0b149c141f3660a98ddff854176ce2",
+    "reviewFingerprint": "b2792a0c03f383e04e945e6de8ece60bce012564b182426edfd143f0c414d3f1"
+  },
+  "evidence": {
+    "links": [
+      {
+        "url": "https://chainsawman-stage.jp/cast/",
+        "checkedAt": "2026-10-21T10:33:44.763Z",
+        "note": "公演・人物を照合。採用項目と未確認事項はnotes。"
+      },
+      {
+        "url": "https://chainsawman-stage.jp/schedule/",
+        "checkedAt": "2026-10-21T10:33:44.817Z",
+        "note": "公演・人物を照合。採用項目と未確認事項はnotes。"
+      },
+      {
+        "url": "https://chainsawman-stage.jp/introduction/",
+        "checkedAt": "2026-10-21T10:33:45.787Z",
+        "note": "公演・人物を照合。採用項目と未確認事項はnotes。"
+      },
+      {
+        "url": "https://www.nelke.co.jp/stage/chainsawman-stage-reze/",
+        "checkedAt": "2026-10-21T10:33:44.875Z",
+        "note": "公演・人物を照合。採用項目と未確認事項はnotes。"
+      },
+      {
+        "url": "https://chainsawman-stage.jp/news/0513a/",
+        "checkedAt": "2026-10-21T10:35:16.092Z",
+        "note": "公演・人物を照合。採用項目と未確認事項はnotes。"
+      },
+      {
+        "url": "https://chainsawman-stage.jp/news/0715a/",
+        "checkedAt": "2026-10-21T10:35:17.010Z",
+        "note": "公演・人物を照合。採用項目と未確認事項はnotes。"
+      },
+      {
+        "url": "https://chainsawman-stage.jp/news/0610a/",
+        "checkedAt": "2026-10-21T10:35:16.110Z",
+        "note": "公演・人物を照合。採用項目と未確認事項はnotes。"
+      },
+      {
+        "url": "https://lp.p.pia.jp/article/news/487857/index.html",
+        "checkedAt": "2026-10-21T10:38:16.913Z",
+        "note": "公演・人物を照合。採用項目と未確認事項はnotes。"
+      },
+      {
+        "url": "https://www.j25musical.jp/en/stage/1013",
+        "checkedAt": "2026-10-21T10:38:17.525Z",
+        "note": "公演・人物を照合。採用項目と未確認事項はnotes。"
+      }
+    ],
+    "sources": [
+      {
+        "name": "cast",
+        "url": "https://chainsawman-stage.jp/cast/",
+        "status": 200,
+        "finalUrl": "https://chainsawman-stage.jp/cast/",
+        "checkedAt": "2026-10-21T10:33:44.763Z",
+        "sha256": "e927ea9f152d361d4c5d85bc419493dab1318629ebaadaad615b131b323d8778"
+      },
+      {
+        "name": "schedule",
+        "url": "https://chainsawman-stage.jp/schedule/",
+        "status": 200,
+        "finalUrl": "https://chainsawman-stage.jp/schedule/",
+        "checkedAt": "2026-10-21T10:33:44.817Z",
+        "sha256": "087cbf91e64fdb36ee8a387c345de4856f5b3504d4d124e1dd22412088acc58f"
+      },
+      {
+        "name": "intro",
+        "url": "https://chainsawman-stage.jp/introduction/",
+        "status": 200,
+        "finalUrl": "https://chainsawman-stage.jp/introduction/",
+        "checkedAt": "2026-10-21T10:33:45.787Z",
+        "sha256": "02dd18a8f06a44c439c5b7d229d54476cd4a4090249aefec3f181dcdfcad0354"
+      },
+      {
+        "name": "nelke",
+        "url": "https://www.nelke.co.jp/stage/chainsawman-stage-reze/",
+        "status": 200,
+        "finalUrl": "https://www.nelke.co.jp/stage/chainsawman-stage-reze/",
+        "checkedAt": "2026-10-21T10:33:44.875Z",
+        "sha256": "80766ae803725b7c9eef024b3379d8cfe7100ba5dc62f19e6b699e196a23a340"
+      },
+      {
+        "name": "news",
+        "url": "https://chainsawman-stage.jp/news/",
+        "status": 200,
+        "finalUrl": "https://chainsawman-stage.jp/news/",
+        "checkedAt": "2026-10-21T10:33:45.924Z",
+        "sha256": "996a3a191f641493a47271e6da9f7a7ec2417f33409c8be3ea3e39deb08bac25"
+      },
+      {
+        "name": "changelog",
+        "url": "https://supabase.com/changelog.md",
+        "status": 200,
+        "finalUrl": "https://supabase.com/changelog.md",
+        "checkedAt": "2026-10-21T10:33:46.130Z",
+        "sha256": "15b3d0d1a7dc3b3f2c0af4788e49acfdf2d2edbd2613f22de0705fa43b1cf58b"
+      },
+      {
+        "name": "replacement",
+        "url": "https://chainsawman-stage.jp/news/0513a/",
+        "status": 200,
+        "finalUrl": "https://chainsawman-stage.jp/news/0513a/",
+        "checkedAt": "2026-10-21T10:35:16.092Z",
+        "sha256": "03107f6083670505e5011ac919f667472f174cfd2e37465524161287651195e4"
+      },
+      {
+        "name": "additional",
+        "url": "https://chainsawman-stage.jp/news/0715a/",
+        "status": 200,
+        "finalUrl": "https://chainsawman-stage.jp/news/0715a/",
+        "checkedAt": "2026-10-21T10:35:17.010Z",
+        "sha256": "6936270e0e575dc993355ac17137d56a514f52bbc0a0ba0340c1418dc593e444"
+      },
+      {
+        "name": "swing",
+        "url": "https://chainsawman-stage.jp/news/0610a/",
+        "status": 200,
+        "finalUrl": "https://chainsawman-stage.jp/news/0610a/",
+        "checkedAt": "2026-10-21T10:35:16.110Z",
+        "sha256": "68fedef44f14139e885dd4819607d29617e98cb03029e6f31a5ee45d72500c51"
+      },
+      {
+        "name": "english-ticket",
+        "url": "https://chainsawman-stage.jp/news/0529a/",
+        "status": 200,
+        "finalUrl": "https://chainsawman-stage.jp/news/0529a/",
+        "checkedAt": "2026-10-21T10:35:16.120Z",
+        "sha256": "d93b120c56125394dac390eb56a0c2e2f802ffdc0e8eccfacc44216e4af2972a"
+      },
+      {
+        "name": "soma",
+        "url": "https://soma-yui.com/profiles",
+        "status": 200,
+        "finalUrl": "https://soma-yui.com/profiles",
+        "checkedAt": "2026-10-21T10:35:58.169Z",
+        "sha256": "239f4ca6a387bd2ca966e9b665b49a53e5339c17bcf471669c2fe00ef8f38c4f"
+      },
+      {
+        "name": "yutaro",
+        "url": "https://asobisystem.com/talent/yutaro/",
+        "status": 200,
+        "finalUrl": "https://asobisystem.com/talent/yutaro/",
+        "checkedAt": "2026-10-21T10:35:58.112Z",
+        "sha256": "3361f4eba0172a02efde7fbd4ae0fb6370dc14edf01a717b474916ed92c13239"
+      },
+      {
+        "name": "kaida",
+        "url": "https://klc-action.com/creator-12.html",
+        "status": 200,
+        "finalUrl": "https://klc-action.com/creator-12.html",
+        "checkedAt": "2026-10-21T10:35:58.051Z",
+        "sha256": "8ee792513837412e1832bad87bb6a680f89e6db912150d2fbe8f9842e5a9643e"
+      },
+      {
+        "name": "gingeki",
+        "url": "https://www.gingeki.jp/archives/14011",
+        "status": 200,
+        "finalUrl": "https://www.gingeki.jp/archives/14011",
+        "checkedAt": "2026-10-21T10:35:58.199Z",
+        "sha256": "fca2c63b263021c169c83bc0ec8d5ec071068d97da97b64002190ec5ba03c497"
+      },
+      {
+        "name": "kajihara",
+        "url": "https://www.plus-7seven.jp/talent/talent/kajihara.html",
+        "status": 200,
+        "finalUrl": "https://www.plus-7seven.jp/talent/talent/kajihara.html",
+        "checkedAt": "2026-10-21T10:36:40.550Z",
+        "sha256": "c88652b116d66259aa54eaa71376a7ef7163a5f56da5fc8e38f949a47c6007cd"
+      },
+      {
+        "name": "kajihara-reading",
+        "url": "https://yoshimotozaka46.com/member/detail/51.php",
+        "status": 200,
+        "finalUrl": "https://yoshimotozaka46.com/member/detail/51.php",
+        "checkedAt": "2026-10-21T10:36:40.581Z",
+        "sha256": "3dcec27067acc9681741be345d2acd1efaf5d91ff5a634503992e5eb6fc84a01"
+      },
+      {
+        "name": "robots",
+        "url": "https://chainsawman-stage.jp/robots.txt",
+        "status": 200,
+        "finalUrl": "https://chainsawman-stage.jp/robots.txt",
+        "checkedAt": "2026-10-21T10:36:40.588Z",
+        "sha256": "f9f762913bb0789cfef047873848bb6cccfbc3c659ff71020bd49c69011392b0"
+      },
+      {
+        "name": "interview",
+        "url": "https://lp.p.pia.jp/article/news/487857/index.html",
+        "status": 200,
+        "finalUrl": "https://lp.p.pia.jp/article/news/487857/index.html",
+        "checkedAt": "2026-10-21T10:38:16.913Z",
+        "sha256": "e8e7664066602112ce2ba937cf5961fc5b2894356a868b67e6ca54025a201312"
+      },
+      {
+        "name": "english",
+        "url": "https://www.j25musical.jp/en/stage/1013",
+        "status": 200,
+        "finalUrl": "https://www.j25musical.jp/en/stage/1013",
+        "checkedAt": "2026-10-21T10:38:17.525Z",
+        "sha256": "fc8bbbbb2bc77fe27460372d33e66d625eb76ba3906e75ee1ad70137eb707ad9"
+      },
+      {
+        "name": "yutaro-en",
+        "url": "https://asobisystem.com/en/talent/yutaro/",
+        "status": 200,
+        "finalUrl": "https://asobisystem.com/en/talent/yutaro/",
+        "checkedAt": "2026-10-21T10:38:23.233Z",
+        "sha256": "92cc6f42eeb4862a335b8f8f958ff9b1c7c08bbb9de53146626a21507ef16728"
+      }
+    ],
+    "unavailable": [],
+    "notes": [
+      "Kiraの2026年推測URLは前バッチで404。公式サイトを原資料として確認し、既存の汎用レビュー計画で15行を点検。Kira専用RPCに公式資料を偽装して渡さず、source-review履歴付きの限定トランザクションで保存する。外部人物・外部候補は変更しない。",
+      "既存相馬結衣は横山結衣からの改名済みページへ接続。船木政秀の初演クレジットを維持し本年の役付き出演のみ配役追加。既存10人物と初演は全項目保持。",
+      "仲宗根豊の降板は初演の出演を消す理由にしない。2026年はTaisei Nakamotoが全公演。Wキャストとはせず、主演2名の取材で声と身体表現の分担を確認。",
+      "サブキャスト7人・ダンサー4人・スウィング1人を公式の区分・掲載順でクレジットへ保存。役付き15人を技術職だけで除外しない。",
+      "日英作品概要・タイトル、2都市2会場の日程、26区分のスタッフ、年表2026/07、シリーズ既存説明と初演表示を点検する。"
+    ],
+    "unresolved": [
+      "人物の総合監査、未確認属性・所属・詳細英訳、現在配信の紐付け、主演指定は後続。現行公式と2023年アーカイブで確認できる舞台2作品の範囲。上映・映像商品・外部イベントを新作へ加算しない。"
+    ]
+  },
+  "requestKey": "d54f77f4acb6dcf274728de08952a0b98a72e484cc74391914773e5b72064f5d"
+}
