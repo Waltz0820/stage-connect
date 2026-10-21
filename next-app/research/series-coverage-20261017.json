@@ -111,8 +111,24 @@
       "slug": "nanbaka",
       "name": "舞台「ナンバカ」",
       "registeredDay": "2026-02-09",
-      "plays": 0,
-      "protected": false
+      "plays": 1,
+      "protected": false,
+      "castRows": 17,
+      "castCoverageNote": "2017年歌劇を追加。人物5・作品1・通常15役＋声2役の17配役、役名未記載4人はクレジットへ。星乃は既存星野勇太、Kimeruは既存KIMERUへ接続。旧候補2件の誤年2021を2017へ訂正して同IDで採用、HTMLと別作品が混ざった重複1件は原文保持でrejected・正常候補IDを記録。日程・会場・主要スタッフ・短い日英概要・英語表示名・シリーズ説明・年表2017/09を点検。人物総合監査・未確認属性・詳細英訳・現在配信・主演指定・役名未記載者の具体的役は後続。",
+      "seriesAudit": {
+        "checkedAt": "2026-10-21T00:17:33.666Z",
+        "scope": "2017年の劇場公演1作品。アニメ声優トーク企画・関連催事・将来作品の完全網羅を意味しない。",
+        "works": 1,
+        "castRows": 17,
+        "voiceCasts": 2,
+        "unnamedCreditNames": 4,
+        "reusedLegacyCandidates": 2,
+        "malformedDuplicateRejected": 1,
+        "publicPages": 38,
+        "report": "docs/nanbaka2017-2026-10-21.md",
+        "research": "next-app/research/nanbaka2017-20261021.json",
+        "pendingWorks": []
+      }
     },
     {
       "id": "11552dbb-bdcf-4f5c-ad44-a9c9aab7bf37",

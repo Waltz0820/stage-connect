@@ -1,0 +1,91 @@
+{
+  "version": 1,
+  "batchId": "chinen-profile-20261021-01",
+  "before": {
+    "id": "ad043aee-e47c-47eb-a44b-23d97fdf700e",
+    "slug": "chinen-saya",
+    "name": "知念紗耶",
+    "kana": null,
+    "profile": "俳優・アクロバットダンスパフォーマー。ラナハウス提携アーティスト。2025年にG-Rocketsを退団。『終わりのセラフ』The Musicalの阿朱羅丸役や、『ラブ・ネバー・ダイ』のフレック役などを務める。",
+    "image_url": null,
+    "sns": {},
+    "gender": null,
+    "created_at": "2026-10-20T17:27:00.41405+00:00",
+    "updated_at": "2026-10-20T17:27:00.41405+00:00",
+    "tags": [],
+    "featured_play_slugs": [],
+    "birthday": null,
+    "height_cm": null,
+    "blood_type": null,
+    "birthday_label": null,
+    "name_en": "Saya Chinen",
+    "profile_en": null,
+    "death_date": null
+  },
+  "patch": {
+    "birthday": "1991-12-09",
+    "height_cm": 143,
+    "blood_type": "A",
+    "profile": "静岡県出身の俳優・アクロバットダンスパフォーマー。2025年にG-Rocketsを退団。『終わりのセラフ』The Musicalの阿朱羅丸役や、『ラブ・ネバー・ダイ』のフレック役などを務める。"
+  },
+  "profileUrl": "https://worldcode.co.jp/saya-chinen/",
+  "evidence": {
+    "sources": [
+      {
+        "name": "current",
+        "url": "https://worldcode.co.jp/saya-chinen/",
+        "status": 200,
+        "finalUrl": "https://worldcode.co.jp/talent/saya-chinen/",
+        "checkedAt": "2026-10-21T00:01:33.094Z",
+        "sha256": "b8e35c596752d5a64a5e0ff4e8fe2fada49f73a7811501979067a8c382c9aa47"
+      },
+      {
+        "name": "list",
+        "url": "https://worldcode.co.jp/talent/",
+        "status": 200,
+        "finalUrl": "https://worldcode.co.jp/talent/",
+        "checkedAt": "2026-10-21T00:01:31.626Z",
+        "sha256": "c7a3a27e92051f6817627abcc243c12c45b946f9bb1615e4991ff16941f4cd7a"
+      },
+      {
+        "name": "ninja",
+        "url": "https://ninja-agency.com/talents/f50/",
+        "status": 200,
+        "finalUrl": "https://ninja-agency.com/talents/f50/",
+        "checkedAt": "2026-10-21T00:01:31.506Z",
+        "sha256": "2618bfa17f2b3087e54c562bbb94edadb30fcba90c88a0cf472d4201b5a8fc02"
+      },
+      {
+        "name": "g-rockets",
+        "url": "https://g-rockets.jp/performer/chinen/",
+        "status": 200,
+        "finalUrl": "https://g-rockets.jp/performer/chinen/",
+        "checkedAt": "2026-10-21T00:01:31.480Z",
+        "sha256": "54cbfd831910c57b7546488827d9835db36a614cc23e5654363ac1267a9f2a3a"
+      },
+      {
+        "name": "changelog",
+        "url": "https://supabase.com/changelog.md",
+        "status": 200,
+        "finalUrl": "https://supabase.com/changelog.md",
+        "checkedAt": "2026-10-21T00:01:33.307Z",
+        "sha256": "15b3d0d1a7dc3b3f2c0af4788e49acfdf2d2edbd2613f22de0705fa43b1cf58b"
+      },
+      {
+        "name": "docs-tables",
+        "url": "https://supabase.com/docs/guides/database/tables.md",
+        "status": 200,
+        "finalUrl": "https://supabase.com/docs/guides/database/tables.md",
+        "checkedAt": "2026-10-21T00:01:33.472Z",
+        "sha256": "fdcc9957da7b920de29201ebb0f0d37c05c3c05cd6b7893ecc19e64dc39febfa"
+      }
+    ],
+    "notes": [
+      "前回保留した生年月日・出身・身長・血液型をWorld Codeの現行本人紹介で確認。143cmはNinja Agencyの一次紹介とも一致し、二次情報154cmを採らない。",
+      "World Codeのタレント一覧・本人紹介、G-Rocketsの提携紹介を保存。所属／業務提携の関係を勝手に単一所属へ統合しないため、本文の現在所属断定を外して確認できた出身・活動歴に整える。",
+      "読み・家族関係・その他の基本情報を推測しない。既存の名・英字名・プロフィール英訳・配役・旧出典は保持。"
+    ],
+    "review_status": "source_reviewed_audit_pending"
+  },
+  "requestKey": "83f14784eae4ba86c19964493249c2dcdec91a30a1cfe2fcef8f8676c2158517"
+}
