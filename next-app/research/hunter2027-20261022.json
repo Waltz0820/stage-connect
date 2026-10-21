@@ -1,0 +1,3378 @@
+{
+  "version": 1,
+  "batchId": "hunter2027-20261022-01",
+  "mode": "reviewed_official_source",
+  "expectedFranchise": {
+    "id": "0d678f15-d8dd-42d5-8051-8b4c8219807c",
+    "name": "舞台『HUNTER×HUNTER』",
+    "created_at": "2026-02-08T16:26:41.990203+00:00",
+    "updated_at": "2026-10-21T14:13:20.685856+00:00",
+    "slug": "hunter-x-hunter",
+    "intro": null,
+    "description": "冨樫義博の漫画『HUNTER×HUNTER』（集英社）を原作とする舞台シリーズ。父と同じハンターを目指すゴンと、キルア、クラピカ、レオリオたちの旅を描く。山崎彬が脚本・演出を担当し、2023年に『HUNTER×HUNTER』THE STAGEが上演された。",
+    "origin_type": "漫画原作",
+    "origin_note": "原作：冨樫義博『HUNTER×HUNTER』（集英社）",
+    "production_companies": null,
+    "related_franchise_ids": [],
+    "format": "stage",
+    "description_en": "A stage series based on Yoshihiro Togashi’s manga HUNTER×HUNTER, published by Shueisha. It follows Gon’s journey to become a Hunter like his father, alongside Killua, Kurapika and Leorio. Written and directed by Akira Yamazaki, HUNTER×HUNTER THE STAGE opened in 2023.",
+    "name_en": "HUNTER×HUNTER THE STAGE"
+  },
+  "franchisePatch": null,
+  "keptPlays": [
+    {
+      "id": "46ee11e3-5217-4a25-9721-f959d89453c5",
+      "slug": "hunterxhunter2023",
+      "title": "『HUNTER×HUNTER』THE STAGE",
+      "franchise_id": "0d678f15-d8dd-42d5-8051-8b4c8219807c",
+      "summary": "くじら島で育ったゴンは、死んだと思っていた父ジンが生きており、ハンターとして活動していると知る。父に会うため、同じハンターになるために島を旅立ったゴンは、キルア、クラピカ、レオリオたちと出会い、難関のハンター試験に挑む。",
+      "period": "東京：2023年5月12日〜28日",
+      "venue": "東京：天王洲 銀河劇場",
+      "vod": null,
+      "genre": null,
+      "created_at": "2026-10-21T14:13:20.685856+00:00",
+      "updated_at": "2026-10-21T14:13:20.685856+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "冨樫義博（集英社「週刊少年ジャンプ」より）"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "脚本・演出",
+          "names": [
+            "山崎 彬"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "音楽",
+          "names": [
+            "坂部 剛"
+          ],
+          "is_core": false,
+          "sort_order": 3
+        },
+        {
+          "role": "振付",
+          "names": [
+            "當間里美"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "美術",
+          "names": [
+            "田中敏恵"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "照明",
+          "names": [
+            "加藤直子"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        },
+        {
+          "role": "音響",
+          "names": [
+            "増澤 努"
+          ],
+          "is_core": false,
+          "sort_order": 7
+        },
+        {
+          "role": "音響効果",
+          "names": [
+            "天野高志"
+          ],
+          "is_core": false,
+          "sort_order": 8
+        },
+        {
+          "role": "映像",
+          "names": [
+            "O-beron inc."
+          ],
+          "is_core": false,
+          "sort_order": 9
+        },
+        {
+          "role": "衣裳",
+          "names": [
+            "及川千春 (とわづくり)"
+          ],
+          "is_core": false,
+          "sort_order": 10
+        },
+        {
+          "role": "ヘアメイク",
+          "names": [
+            "糸川智文 (STRINGS)"
+          ],
+          "is_core": false,
+          "sort_order": 11
+        },
+        {
+          "role": "特殊造形",
+          "names": [
+            "林屋陽二"
+          ],
+          "is_core": false,
+          "sort_order": 12
+        },
+        {
+          "role": "アクション監督",
+          "names": [
+            "加藤 学"
+          ],
+          "is_core": false,
+          "sort_order": 13
+        },
+        {
+          "role": "歌唱指導",
+          "names": [
+            "宗田梁市"
+          ],
+          "is_core": false,
+          "sort_order": 14
+        },
+        {
+          "role": "稽古場ピアノ",
+          "names": [
+            "伊藤辰哉"
+          ],
+          "is_core": false,
+          "sort_order": 15
+        },
+        {
+          "role": "演出助手",
+          "names": [
+            "木下マカイ"
+          ],
+          "is_core": false,
+          "sort_order": 16
+        },
+        {
+          "role": "舞台監督",
+          "names": [
+            "今野健一 (KeyStones)"
+          ],
+          "is_core": false,
+          "sort_order": 17
+        },
+        {
+          "role": "宣伝美術",
+          "names": [
+            "江口伸二郎 (SENRIN)"
+          ],
+          "is_core": false,
+          "sort_order": 18
+        },
+        {
+          "role": "宣伝写真",
+          "names": [
+            "三宅祐介"
+          ],
+          "is_core": false,
+          "sort_order": 19
+        },
+        {
+          "role": "制作協力",
+          "names": [
+            "アプル"
+          ],
+          "is_core": false,
+          "sort_order": 20
+        },
+        {
+          "role": "制作",
+          "names": [
+            "ネルケプランニング"
+          ],
+          "is_core": false,
+          "sort_order": 21
+        },
+        {
+          "role": "監修",
+          "names": [
+            "集英社（「週刊少年ジャンプ」編集部）"
+          ],
+          "is_core": false,
+          "sort_order": 22
+        },
+        {
+          "role": "協賛",
+          "names": [
+            "ローソンチケット"
+          ],
+          "is_core": false,
+          "sort_order": 23
+        },
+        {
+          "role": "協力",
+          "names": [
+            "一般社団法人 日本2.5次元ミュージカル協会"
+          ],
+          "is_core": false,
+          "sort_order": 24
+        },
+        {
+          "role": "主催",
+          "names": [
+            "『HUNTER×HUNTER』THE STAGE製作委員会"
+          ],
+          "is_core": false,
+          "sort_order": 25
+        },
+        {
+          "role": "出演（役名未記載）",
+          "names": [
+            "倉持聖菜",
+            "齋藤 潤",
+            "高岩芯泰",
+            "辻本将平",
+            "原池 優",
+            "樋口明志",
+            "藤田浩太朗",
+            "古田伊吹",
+            "森川 錦",
+            "山崎理彩"
+          ],
+          "is_core": false,
+          "sort_order": 26
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "Raised on Whale Island, Gon learns that his father Ging is alive and working as a Hunter. Determined to find him and become a Hunter himself, Gon leaves home, meets Killua, Kurapika and Leorio, and faces the demanding Hunter Exam.",
+      "title_en": "HUNTER×HUNTER THE STAGE (2023)"
+    },
+    {
+      "id": "5602adb8-766a-4fa2-9020-f5e7f0465693",
+      "slug": "hunterxhunter2025",
+      "title": "『HUNTER×HUNTER』THE STAGE 3",
+      "franchise_id": "0d678f15-d8dd-42d5-8051-8b4c8219807c",
+      "summary": "父ジンの手掛かりを求めるゴンとキルアは、大富豪バッテラに雇われ、ハンター専用ゲーム「グリードアイランド」へ入る。ビスケとの出会いをきっかけに修行を重ねた2人は、ほかのプレイヤーたちと競いながら、ゲームの攻略とゲンスルーらとの戦いに挑む。",
+      "period": "東京：2025年5月17日〜25日／大阪：2025年6月7日〜15日",
+      "venue": "東京：天王洲 銀河劇場／大阪：ＳｋｙシアターＭＢＳ",
+      "vod": null,
+      "genre": null,
+      "created_at": "2026-10-21T15:13:36.507511+00:00",
+      "updated_at": "2026-10-21T15:13:36.507511+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "冨樫義博（集英社「週刊少年ジャンプ」より）"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "脚本・演出",
+          "names": [
+            "山崎 彬"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "音楽",
+          "names": [
+            "坂部 剛"
+          ],
+          "is_core": false,
+          "sort_order": 3
+        },
+        {
+          "role": "振付",
+          "names": [
+            "當間里美"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "美術",
+          "names": [
+            "田中敏恵"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "照明",
+          "names": [
+            "加藤直子"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        },
+        {
+          "role": "音響",
+          "names": [
+            "増澤 努"
+          ],
+          "is_core": false,
+          "sort_order": 7
+        },
+        {
+          "role": "音響効果",
+          "names": [
+            "天野高志"
+          ],
+          "is_core": false,
+          "sort_order": 8
+        },
+        {
+          "role": "映像",
+          "names": [
+            "O-beron inc."
+          ],
+          "is_core": false,
+          "sort_order": 9
+        },
+        {
+          "role": "衣裳",
+          "names": [
+            "川島加菜果"
+          ],
+          "is_core": false,
+          "sort_order": 10
+        },
+        {
+          "role": "ヘアメイク",
+          "names": [
+            "糸川智文 (STRINGS)"
+          ],
+          "is_core": false,
+          "sort_order": 11
+        },
+        {
+          "role": "特殊造形",
+          "names": [
+            "林屋陽二"
+          ],
+          "is_core": false,
+          "sort_order": 12
+        },
+        {
+          "role": "アクション監督",
+          "names": [
+            "加藤 学"
+          ],
+          "is_core": false,
+          "sort_order": 13
+        },
+        {
+          "role": "歌唱指導",
+          "names": [
+            "宗田梁市"
+          ],
+          "is_core": false,
+          "sort_order": 14
+        },
+        {
+          "role": "稽古場ピアノ",
+          "names": [
+            "伊藤辰哉"
+          ],
+          "is_core": false,
+          "sort_order": 15
+        },
+        {
+          "role": "演出助手",
+          "names": [
+            "木下マカイ、藤嶋 恵"
+          ],
+          "is_core": false,
+          "sort_order": 16
+        },
+        {
+          "role": "舞台監督",
+          "names": [
+            "今野健一 (KeyStones)"
+          ],
+          "is_core": false,
+          "sort_order": 17
+        },
+        {
+          "role": "宣伝美術",
+          "names": [
+            "江口伸二郎、奈良友里花(SENRIN)"
+          ],
+          "is_core": false,
+          "sort_order": 18
+        },
+        {
+          "role": "宣伝写真",
+          "names": [
+            "三宅祐介"
+          ],
+          "is_core": false,
+          "sort_order": 19
+        },
+        {
+          "role": "制作協力",
+          "names": [
+            "アプル"
+          ],
+          "is_core": false,
+          "sort_order": 20
+        },
+        {
+          "role": "制作",
+          "names": [
+            "ネルケプランニング"
+          ],
+          "is_core": false,
+          "sort_order": 21
+        },
+        {
+          "role": "原作協力",
+          "names": [
+            "集英社（「週刊少年ジャンプ」編集部）"
+          ],
+          "is_core": false,
+          "sort_order": 22
+        },
+        {
+          "role": "協賛",
+          "names": [
+            "ローソンチケット"
+          ],
+          "is_core": false,
+          "sort_order": 23
+        },
+        {
+          "role": "協力",
+          "names": [
+            "一般社団法人 日本2.5次元ミュージカル協会"
+          ],
+          "is_core": false,
+          "sort_order": 24
+        },
+        {
+          "role": "主催",
+          "names": [
+            "『HUNTER×HUNTER』THE STAGE ３製作委員会"
+          ],
+          "is_core": false,
+          "sort_order": 25
+        },
+        {
+          "role": "出演（役名未記載）",
+          "names": [
+            "辻本将平",
+            "原池 優",
+            "古田伊吹",
+            "山崎里彩",
+            "平井浩基",
+            "山﨑竜之介",
+            "池之上頼嗣",
+            "川口 調",
+            "佐藤新太",
+            "三小田芳樹",
+            "能代谷和輝",
+            "細見奏仁",
+            "馬渕香那"
+          ],
+          "is_core": false,
+          "sort_order": 26
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "Searching for clues to his father Ging, Gon enters the Hunter-only game Greed Island with Killua as players hired by the wealthy Battera. Training with Bisky helps them grow stronger as they compete with other players, face Genthru and his allies, and work to clear the game.",
+      "title_en": "HUNTER×HUNTER THE STAGE 3"
+    },
+    {
+      "id": "6d87e448-9830-46fb-af0b-0609c20dede8",
+      "slug": "hunterxhunter2024",
+      "title": "『HUNTER×HUNTER』THE STAGE 2",
+      "franchise_id": "0d678f15-d8dd-42d5-8051-8b4c8219807c",
+      "summary": "ハンター試験を終えたゴンたちは、世界最大のオークションが開かれるヨークシンシティで再会する。一方、クロロ率いる幻影旅団も競売品を狙って集結していた。同胞であるクルタ族を殺されたクラピカは、仲間への思いと復讐の間で揺れながら、幻影旅団との対決に臨む。",
+      "period": "東京：2024年3月16日〜31日／大阪：2024年4月6日〜14日",
+      "venue": "東京：天王洲 銀河劇場／大阪：梅田芸術劇場 シアター・ドラマシティ",
+      "vod": {},
+      "genre": null,
+      "created_at": "2026-05-04T14:00:44.405488+00:00",
+      "updated_at": "2026-10-21T14:39:56.197436+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "冨樫義博 （集英社「週刊少年ジャンプ」より）"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "脚本・演出",
+          "names": [
+            "山崎 彬"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "音楽",
+          "names": [
+            "坂部 剛"
+          ],
+          "is_core": false,
+          "sort_order": 3
+        },
+        {
+          "role": "振付",
+          "names": [
+            "當間里美"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "美術",
+          "names": [
+            "田中敏恵"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "照明",
+          "names": [
+            "加藤直子"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        },
+        {
+          "role": "音響",
+          "names": [
+            "増澤 努"
+          ],
+          "is_core": false,
+          "sort_order": 7
+        },
+        {
+          "role": "音響効果",
+          "names": [
+            "天野高志"
+          ],
+          "is_core": false,
+          "sort_order": 8
+        },
+        {
+          "role": "映像",
+          "names": [
+            "O-beron inc."
+          ],
+          "is_core": false,
+          "sort_order": 9
+        },
+        {
+          "role": "衣裳",
+          "names": [
+            "及川千春 (とわづくり)"
+          ],
+          "is_core": false,
+          "sort_order": 10
+        },
+        {
+          "role": "ヘアメイク",
+          "names": [
+            "糸川智文 (STRINGS)"
+          ],
+          "is_core": false,
+          "sort_order": 11
+        },
+        {
+          "role": "特殊造形",
+          "names": [
+            "林屋陽二"
+          ],
+          "is_core": false,
+          "sort_order": 12
+        },
+        {
+          "role": "アクション監督",
+          "names": [
+            "加藤 学"
+          ],
+          "is_core": false,
+          "sort_order": 13
+        },
+        {
+          "role": "歌唱指導",
+          "names": [
+            "宗田梁市"
+          ],
+          "is_core": false,
+          "sort_order": 14
+        },
+        {
+          "role": "稽古場ピアノ",
+          "names": [
+            "伊藤辰哉"
+          ],
+          "is_core": false,
+          "sort_order": 15
+        },
+        {
+          "role": "演出助手",
+          "names": [
+            "木下マカイ"
+          ],
+          "is_core": false,
+          "sort_order": 16
+        },
+        {
+          "role": "舞台監督",
+          "names": [
+            "今野健一 (KeyStones)"
+          ],
+          "is_core": false,
+          "sort_order": 17
+        },
+        {
+          "role": "宣伝美術",
+          "names": [
+            "江口伸二郎 奈良友里花 (SENRIN)"
+          ],
+          "is_core": false,
+          "sort_order": 18
+        },
+        {
+          "role": "宣伝写真",
+          "names": [
+            "三宅祐介"
+          ],
+          "is_core": false,
+          "sort_order": 19
+        },
+        {
+          "role": "制作協力",
+          "names": [
+            "アプル"
+          ],
+          "is_core": false,
+          "sort_order": 20
+        },
+        {
+          "role": "制作",
+          "names": [
+            "ネルケプランニング"
+          ],
+          "is_core": false,
+          "sort_order": 21
+        },
+        {
+          "role": "監修",
+          "names": [
+            "集英社（「週刊少年ジャンプ」編集部）"
+          ],
+          "is_core": false,
+          "sort_order": 22
+        },
+        {
+          "role": "協賛",
+          "names": [
+            "ローソンチケット"
+          ],
+          "is_core": false,
+          "sort_order": 23
+        },
+        {
+          "role": "協力",
+          "names": [
+            "一般社団法人 日本2.5次元ミュージカル協会"
+          ],
+          "is_core": false,
+          "sort_order": 24
+        },
+        {
+          "role": "主催",
+          "names": [
+            "『HUNTER×HUNTER』THE STAGE 2製作委員会"
+          ],
+          "is_core": false,
+          "sort_order": 25
+        },
+        {
+          "role": "出演（役名未記載）",
+          "names": [
+            "高岩芯泰",
+            "辻本将平",
+            "原池 優",
+            "藤田浩太朗",
+            "古田伊吹",
+            "山崎里彩",
+            "岡村拓真",
+            "河野凌太",
+            "小池堆賀",
+            "島田隆誠",
+            "平井浩基",
+            "山上和輝",
+            "山﨑竜之介"
+          ],
+          "is_core": false,
+          "sort_order": 26
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "After the Hunter Exam, Gon and his friends reunite in Yorknew City for the world’s largest auction. Chrollo and the Phantom Troupe also gather there to seize its treasures. Seeking vengeance for the Kurta Clan, Kurapika confronts the Troupe while his friends try to bring him back from his solitary pursuit.",
+      "title_en": "HUNTER×HUNTER THE STAGE 2"
+    }
+  ],
+  "existingActors": [
+    {
+      "id": "eedf6c31-b9b1-420e-b7f8-1ebcc20f97d0",
+      "slug": "nishiyama-rento",
+      "name": "西山蓮都",
+      "kana": "にしやま れんと",
+      "profile": "俳優。スペースクラフト所属。『HUNTER×HUNTER』THE STAGE 3のゴン役、舞台『魔法使いの約束』祝祭シリーズPart2のザシャ役、Experimental Theater「結合男子」の凍硝七瀬役などを務める。",
+      "image_url": null,
+      "sns": {},
+      "gender": null,
+      "created_at": "2026-10-21T15:13:36.507511+00:00",
+      "updated_at": "2026-10-21T15:13:36.507511+00:00",
+      "tags": [],
+      "featured_play_slugs": [],
+      "birthday": "2009-05-04",
+      "height_cm": 165,
+      "blood_type": null,
+      "birthday_label": null,
+      "name_en": "Rento Nishiyama",
+      "profile_en": null,
+      "death_date": null
+    },
+    {
+      "id": "17a8ebf5-7122-4360-8413-35ecc1a62145",
+      "slug": "akutsu-nichika",
+      "name": "阿久津 仁愛",
+      "kana": "あくつ にちか",
+      "profile": "栃木県出身の俳優。キューブ所属。ミュージカル『テニスの王子様』3rdシーズン（越前リョーマ役）や舞台『「HUNTER×HUNTER」THE STAGE』（キルア役）、舞台『鬼滅の刃 其ノ弐 絆』（累役）等の舞台作品に出演。また、テレビドラマ『俺のスカート、どこ行った?』（光岡慎之介役）や『BLドラマの主演になりました』（青柳萌役）等の映像作品にも出演している。第27回ジュノン・スーパーボーイ・コンテストにて準グランプリを受賞した経歴を持つ。",
+      "image_url": null,
+      "sns": {
+        "x": "https://x.com/Nichika20001223",
+        "official": "https://www.cubeinc.co.jp/archives/artist/akutsunichika",
+        "instagram": "https://www.instagram.com/nichika_akutsu/"
+      },
+      "gender": "male",
+      "created_at": "2026-03-21T15:10:00.631722+00:00",
+      "updated_at": "2026-03-21T15:10:00.631722+00:00",
+      "tags": [],
+      "featured_play_slugs": [],
+      "birthday": "2000-12-23",
+      "height_cm": 166,
+      "blood_type": "O",
+      "birthday_label": null,
+      "name_en": null,
+      "profile_en": "An actor from Tochigi Prefecture. Affiliated with Cube. He has appeared in stage works such as the musical \"The Prince of Tennis\" 3rd season (as Ryoma Echizen), the stage play \"HUNTER x HUNTER THE STAGE\" (as Killua), and the stage play \"Demon Slayer: Kimetsu no Yaiba Part 2: Bond\" (as Rui). He has also appeared in television works such as the TV dramas \"Where Have My Skirts Gone?\" (as Shinnosuke Mitsuoka) and \"I Became the Lead in a BL Drama\" (as Hajime Aoyagi). He won the runner-up prize at the 27th Junon Superboy Contest.",
+      "death_date": null
+    },
+    {
+      "id": "e57de3c5-d324-477b-b323-6009311c2ca3",
+      "slug": "gomoto-naoya",
+      "name": "郷本 直也",
+      "kana": "ごうもと なおや",
+      "profile": "大阪府出身の俳優。芸能事務所ナノスクエア代表取締役社長。",
+      "image_url": null,
+      "sns": {
+        "x": "https://x.com/GomotoNaoya",
+        "official": "https://ameblo.jp/naoya-g-sanpo/"
+      },
+      "gender": "male",
+      "created_at": "2026-03-15T15:02:38.988564+00:00",
+      "updated_at": "2026-03-15T15:02:38.988564+00:00",
+      "tags": [],
+      "featured_play_slugs": [],
+      "birthday": "1980-04-25",
+      "height_cm": 186,
+      "blood_type": "O",
+      "birthday_label": null,
+      "name_en": null,
+      "profile_en": null,
+      "death_date": null
+    },
+    {
+      "id": "ea543ad9-7cc6-4ffe-9100-e5af5f8bfdb9",
+      "slug": "hyakuna-hiroki",
+      "name": "百名ヒロキ",
+      "kana": "ひゃくな ひろき",
+      "profile": "俳優。『ROCK MUSICAL BLEACH』の『Arrancar the Beginning』『Arrancar the Final』でウルキオラ・シファー役を務める。",
+      "image_url": null,
+      "sns": {},
+      "gender": null,
+      "created_at": "2026-10-19T10:45:26.548927+00:00",
+      "updated_at": "2026-10-19T10:45:26.548927+00:00",
+      "tags": [],
+      "featured_play_slugs": [],
+      "birthday": "1994-01-04",
+      "height_cm": 172,
+      "blood_type": "O",
+      "birthday_label": null,
+      "name_en": null,
+      "profile_en": null,
+      "death_date": null
+    },
+    {
+      "id": "a4665a08-82dd-44ff-b2fa-3c5c3262728c",
+      "slug": "hosogai-kei",
+      "name": "細貝 圭",
+      "kana": "ほそがい けい",
+      "profile": "東京都出身の俳優・声優。プロダクション尾木所属。",
+      "image_url": null,
+      "sns": {
+        "x": "https://x.com/kei_hsgi1010",
+        "official": "https://hosogai-kei.com/",
+        "instagram": "https://www.instagram.com/hsgi1010_staff/"
+      },
+      "gender": "male",
+      "created_at": "2026-03-21T15:01:26.311999+00:00",
+      "updated_at": "2026-03-21T15:01:26.311999+00:00",
+      "tags": [],
+      "featured_play_slugs": [],
+      "birthday": "1984-10-10",
+      "height_cm": 184,
+      "blood_type": "A",
+      "birthday_label": null,
+      "name_en": null,
+      "profile_en": null,
+      "death_date": null
+    },
+    {
+      "id": "49d6ead1-cb51-418e-adf8-0576b882a412",
+      "slug": "takahashi-ai",
+      "name": "高橋愛",
+      "kana": "たかはし あい",
+      "profile": "福井県出身の俳優・歌手・モデル。アップフロントクリエイト所属。2001年にモーニング娘。の5期メンバーとしてデビューし、第6代リーダーを務めた。卒業後はミュージカルや舞台、ドラマにも出演。",
+      "image_url": null,
+      "sns": {},
+      "gender": null,
+      "created_at": "2026-10-21T15:13:36.507511+00:00",
+      "updated_at": "2026-10-21T15:13:36.507511+00:00",
+      "tags": [],
+      "featured_play_slugs": [],
+      "birthday": "1986-09-14",
+      "height_cm": 154,
+      "blood_type": "A",
+      "birthday_label": null,
+      "name_en": "Ai Takahashi",
+      "profile_en": null,
+      "death_date": null
+    },
+    {
+      "id": "36a2584b-10ed-4d03-a1b1-8b71ebc68dfc",
+      "slug": "otaka-hiroo",
+      "name": "大高 洋夫",
+      "kana": "おおたか ひろお",
+      "profile": "新潟県長岡市出身の俳優。株式会社フロム・ファーストプロダクション所属。",
+      "image_url": null,
+      "sns": {
+        "x": "https://x.com/gibson_703",
+        "official": "https://www.from1-pro.jp/talent/detail.php?id=233",
+        "instagram": "https://www.instagram.com/hiroo_ohtaka/"
+      },
+      "gender": "male",
+      "created_at": "2026-04-04T02:47:55.331417+00:00",
+      "updated_at": "2026-04-04T02:47:55.331417+00:00",
+      "tags": [],
+      "featured_play_slugs": [],
+      "birthday": "1959-06-27",
+      "height_cm": 170,
+      "blood_type": "AB",
+      "birthday_label": null,
+      "name_en": null,
+      "profile_en": null,
+      "death_date": null
+    },
+    {
+      "id": "8278030b-89b0-4674-ba56-e6a520878a5c",
+      "slug": "hiramatsu-raima",
+      "name": "平松 來馬",
+      "kana": "ひらまつ らいま",
+      "profile": "神奈川県出身の俳優。株式会社ワイケーエージェント所属。子役時代から活動を行っている。ミュージカル『テニスの王子様』3rdシーズン（遠山金太郎役）をはじめ、舞台『鋼の錬金術師』（エンヴィー役）、『HUNTER×HUNTER』THE STAGE（フェイタン役）、ミュージカル『東京リベンジャーズ』（稀咲鉄太役）、『Dancing☆star プリキュア』The Stage（鈴ノ木蛍役）等の舞台作品を中心に出演している。また、大河ドラマ『青天を衝け』や映画『Daughters』等の映像作品への出演経歴も持つ。",
+      "image_url": null,
+      "sns": {
+        "x": "https://x.com/HRaima_official",
+        "official": "https://raimahiramatsu-official.com/",
+        "instagram": "https://www.instagram.com/raimagram_official/"
+      },
+      "gender": "male",
+      "created_at": "2026-03-21T15:13:20.008797+00:00",
+      "updated_at": "2026-03-21T15:13:20.008797+00:00",
+      "tags": [],
+      "featured_play_slugs": [],
+      "birthday": "2002-01-12",
+      "height_cm": 164,
+      "blood_type": "A",
+      "birthday_label": null,
+      "name_en": null,
+      "profile_en": "An actor from Kanagawa Prefecture. Affiliated with YKAgent. He has been active since his days as a child actor. He primarily appears in stage works such as the musical \"The Prince of Tennis\" 3rd season (as Kintaro Toyama), the stage play \"Fullmetal Alchemist\" (as Envy), \"HUNTER×HUNTER\" THE STAGE (as Feitan), the musical \"Tokyo Revengers\" (as Tetta Kisaki), and \"Dancing☆star Precure\" The Stage (as Hotaru Suzunoki). He also has experience appearing in film and television works such as the Taiga drama \"Seiten wo Tsuke\" and the movie \"Daughters\".",
+      "death_date": null
+    },
+    {
+      "id": "9137026a-94be-4d55-956b-22cd7bd7bad9",
+      "slug": "tazuru-shogo",
+      "name": "田鶴 翔吾",
+      "kana": "たづる しょうご",
+      "profile": "兵庫県出身の俳優。マリー社所属。ミュージカル『テニスの王子様』3rdシーズン（真田弦一郎役）をはじめ、舞台『刀剣乱舞』十口伝 あまねく刻の遥かへ（日光一文字役）、『ワールドトリガー the Stage』B級ランク戦最終決戦編（木崎レイジ役）等の舞台作品を中心に出演している。また、映画『その恋、自販機で買えますか？』等の映像作品にも出演している。",
+      "image_url": null,
+      "sns": {
+        "x": "https://x.com/shogo_taduru",
+        "official": "https://shogotazuru.jp/",
+        "instagram": "https://www.instagram.com/shogo_taduru/"
+      },
+      "gender": "male",
+      "created_at": "2026-03-21T15:10:00.631722+00:00",
+      "updated_at": "2026-03-21T15:10:00.631722+00:00",
+      "tags": [],
+      "featured_play_slugs": [],
+      "birthday": "1992-06-02",
+      "height_cm": 185,
+      "blood_type": "AB",
+      "birthday_label": null,
+      "name_en": null,
+      "profile_en": "An actor from Hyogo Prefecture. Affiliated with Marie Inc. He primarily appears in stage works such as the musical \"The Prince of Tennis\" 3rd season (as Genichiro Sanada), the stage play \"Touken Ranbu\" Jukuden Amaneku Toki no Haruka e (as Nikko Ichimonji), and \"World Trigger the Stage\" B-Class Rank Wars Final Match (as Reiji Kizaki). He has also appeared in film works such as the movie \"Sono Koi, Jihanki de Kaemasuka?\".",
+      "death_date": null
+    },
+    {
+      "id": "44817d51-248f-49d6-b694-5387c4565af5",
+      "slug": "oribe-yoshinari",
+      "name": "織部典成",
+      "kana": "おりべ よしなり",
+      "profile": "大阪府出身の俳優。ソニー・ミュージックエンタテインメント所属。演劇「ハイキュー!!」の山口忠役、舞台『ブルーロック』の國神錬介役、『HUNTER×HUNTER』THE STAGEのシャルナーク役などを務める。",
+      "image_url": null,
+      "sns": {},
+      "gender": null,
+      "created_at": "2026-10-21T14:39:56.197436+00:00",
+      "updated_at": "2026-10-21T14:39:56.197436+00:00",
+      "tags": [],
+      "featured_play_slugs": [],
+      "birthday": "2000-08-18",
+      "height_cm": 181,
+      "blood_type": "O",
+      "birthday_label": null,
+      "name_en": "Yoshinari Oribe",
+      "profile_en": null,
+      "death_date": null
+    },
+    {
+      "id": "48c0033e-6a55-4ac8-a2a4-d5f0acd41e2f",
+      "slug": "kiyoi-saki",
+      "name": "清井咲希",
+      "kana": "きよい さき",
+      "profile": "大阪府出身の俳優。WYS Relation所属。元たこやきレインボーのメンバー。『HUNTER×HUNTER』THE STAGE 3のシズク役、『FINAL FANTASY BRAVE EXVIUS 幻影戦争 THE STAGE』のラマダ役などを務める。",
+      "image_url": null,
+      "sns": {},
+      "gender": null,
+      "created_at": "2026-10-21T15:13:36.507511+00:00",
+      "updated_at": "2026-10-21T15:13:36.507511+00:00",
+      "tags": [],
+      "featured_play_slugs": [],
+      "birthday": "1999-08-05",
+      "height_cm": 158,
+      "blood_type": null,
+      "birthday_label": null,
+      "name_en": "Saki Kiyoi",
+      "profile_en": null,
+      "death_date": null
+    },
+    {
+      "id": "d9df8cc7-9c58-4ab5-bc19-3b5a75a2e9b6",
+      "slug": "hashimoto-shohei",
+      "name": "橋本 祥平",
+      "kana": "はしもと しょうへい",
+      "profile": "神奈川県出身の俳優・声優。キャストコーポレーション所属。",
+      "image_url": null,
+      "sns": {
+        "x": "https://twitter.com/hashimotoshohey",
+        "official": "https://hashimoto-shohei.com/"
+      },
+      "gender": "male",
+      "created_at": "2025-12-13T04:41:02.052969+00:00",
+      "updated_at": "2025-12-13T04:41:02.052969+00:00",
+      "tags": [
+        "ドラム",
+        "愛されキャラ"
+      ],
+      "featured_play_slugs": [
+        "bungo-stage",
+        "yuyu-hakusho-stage"
+      ],
+      "birthday": "1993-12-31",
+      "height_cm": 170,
+      "blood_type": "A",
+      "birthday_label": null,
+      "name_en": null,
+      "profile_en": null,
+      "death_date": null
+    },
+    {
+      "id": "6b60d532-94b7-4d13-9865-f2886b0218a0",
+      "slug": "katagiri-jin",
+      "name": "片桐仁",
+      "kana": null,
+      "profile": "埼玉県出身の俳優・アーティスト。トゥインクル・コーポレーション所属。多摩美術大学在学中に小林賢太郎とラーメンズを結成。舞台やドラマへの出演に加え、美術作品の個展を開くなどの創作活動も行っている。",
+      "image_url": null,
+      "sns": {},
+      "gender": null,
+      "created_at": "2026-10-21T09:02:33.951758+00:00",
+      "updated_at": "2026-10-21T09:02:33.951758+00:00",
+      "tags": [],
+      "featured_play_slugs": [],
+      "birthday": "1973-11-27",
+      "height_cm": 176,
+      "blood_type": null,
+      "birthday_label": null,
+      "name_en": "Jin Katagiri",
+      "profile_en": null,
+      "death_date": null
+    },
+    {
+      "id": "be22597d-20fd-4112-8085-6d533a26171b",
+      "slug": "sato-ryuji",
+      "name": "佐藤 流司",
+      "kana": "さとう りゅうじ",
+      "profile": "宮城県出身の俳優・歌手。劇団ひまわり所属。ミュージカル『テニスの王子様』2ndシーズン（財前光役）やミュージカル『刀剣乱舞』（加州清光役）、ライブ・スペクタクル『NARUTO-ナルト-』（うちはサスケ役）等の舞台作品に出演。また、バンドプロジェクト「The Brow Beat」（Ryuji名義）や「ZIPANG OPERA」のメンバーとして音楽活動も行っている。",
+      "image_url": null,
+      "sns": {
+        "x": "https://twitter.com/ryuji7117",
+        "official": "https://sato-ryuji.com/",
+        "instagram": "https://www.instagram.com/ryuji_japan/"
+      },
+      "gender": "male",
+      "created_at": "2025-12-13T04:41:02.052969+00:00",
+      "updated_at": "2025-12-13T04:41:02.052969+00:00",
+      "tags": [
+        "アーティスト",
+        "カリスマ"
+      ],
+      "featured_play_slugs": [],
+      "birthday": "1995-01-17",
+      "height_cm": 172,
+      "blood_type": "B",
+      "birthday_label": null,
+      "name_en": null,
+      "profile_en": "An actor and singer from Miyagi Prefecture. Affiliated with Gekidan Himawari. He has appeared in stage works such as the musical \"The Prince of Tennis\" 2nd season (as Hikaru Zaizen), the musical \"Touken Ranbu\" (as Kashu Kiyomitsu), and the Live Spectacle \"NARUTO\" (as Sasuke Uchiha). He is also active in music as \"Ryuji\" in the band project \"The Brow Beat\" and as a member of \"ZIPANG OPERA\".",
+      "death_date": null
+    },
+    {
+      "id": "eb2f2496-7082-4d84-a7a7-80b75f8798f0",
+      "slug": "kitamura-keigo",
+      "name": "北村圭吾",
+      "kana": "きたむら けいご",
+      "profile": "俳優。GMBプロダクション所属。舞台「リコリス・リコイル」のミカ役、「HUNTER×HUNTER」THE STAGEのシルバ役、ライブ・スペクタクル「NARUTO-ナルト-」のエー役などを務める。",
+      "image_url": null,
+      "sns": {},
+      "gender": null,
+      "created_at": "2026-10-20T06:55:08.075885+00:00",
+      "updated_at": "2026-10-20T06:55:08.075885+00:00",
+      "tags": [],
+      "featured_play_slugs": [],
+      "birthday": "1982-08-08",
+      "height_cm": 181,
+      "blood_type": null,
+      "birthday_label": null,
+      "name_en": "Kitamura Keigo",
+      "profile_en": null,
+      "death_date": null
+    },
+    {
+      "id": "346488a0-ec1a-434a-bed2-cdc766dca326",
+      "slug": "shiina-taizo",
+      "name": "椎名 鯛造",
+      "kana": "しいな たいぞう",
+      "profile": "岐阜県出身の俳優。株式会社GVM所属。",
+      "image_url": null,
+      "sns": {
+        "x": "https://x.com/TaizoShiina"
+      },
+      "gender": "male",
+      "created_at": "2026-03-29T15:49:11.130151+00:00",
+      "updated_at": "2026-03-29T15:49:11.130151+00:00",
+      "tags": [],
+      "featured_play_slugs": [],
+      "birthday": "1986-06-17",
+      "height_cm": 164,
+      "blood_type": "A",
+      "birthday_label": null,
+      "name_en": null,
+      "profile_en": null,
+      "death_date": null
+    }
+  ],
+  "actors": [
+    {
+      "actor": {
+        "id": "8b9cfc42-f8aa-4b0e-a7d4-2a0f38ca4807",
+        "slug": "irie-jingi",
+        "name": "入江甚儀",
+        "kana": "いりえ じんぎ",
+        "profile": "千葉県出身の俳優。研音所属。ドラマ『絶対彼氏』でデビューし、映画『キカイダー REBOOT』などに出演。『HUNTER×HUNTER』THE STAGE 4 前編ではノヴ役で出演予定。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1993-05-18",
+        "height_cm": 183,
+        "blood_type": null,
+        "birthday_label": null,
+        "name_en": "Jingi Irie",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "入江甚儀",
+      "profileUrl": "https://www.ken-on.co.jp/jingi/profile/",
+      "evidence": [
+        {
+          "url": "https://www.ken-on.co.jp/jingi/profile/",
+          "checkedAt": "2026-10-21T15:24:47.149Z",
+          "note": "採用項目・時点・未確認事項は個別notes参照。"
+        },
+        {
+          "url": "https://www.oricon.co.jp/prof/488174/",
+          "checkedAt": "2026-10-21T15:26:21.459Z",
+          "note": "採用項目・時点・未確認事項は個別notes参照。"
+        },
+        {
+          "url": "https://hunter-stage.jp/cast-staff/",
+          "checkedAt": "2026-10-21T15:22:41.974Z",
+          "note": "採用項目・時点・未確認事項は個別notes参照。"
+        }
+      ],
+      "notes": [
+        "現行事務所のDOB・出身・183cm・英字を採用。読みとデビュー・映画歴はORICONのVIPタイムズ由来紹介（編集資料）で確認、Shift_JISを復号して原バイトも保持。血液型Oの編集資料値は今回は採用せずnull。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "88cb3f42-a55c-4412-883b-07856ff5f471",
+        "slug": "nanaka",
+        "name": "菜々香",
+        "kana": null,
+        "profile": "歌手・俳優。ボーカルグループBRIGHTのメンバーとしてデビュー。ソロ活動と並行して舞台・ミュージカルに出演し、『ヒプノシスマイク -Division Rap Battle-』Rule the Stageで東方天乙統女役を務める。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": null,
+        "height_cm": null,
+        "blood_type": null,
+        "birthday_label": null,
+        "name_en": "NANAKA",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "菜々香",
+      "profileUrl": "https://7knot.bitfan.id/contents/menu/98206",
+      "evidence": [
+        {
+          "url": "https://7knot.bitfan.id/contents/menu/98206",
+          "checkedAt": "2026-10-21T15:25:25.760Z",
+          "note": "採用項目・時点・未確認事項は個別notes参照。"
+        },
+        {
+          "url": "https://7knot.bitfan.id/",
+          "checkedAt": "2026-10-21T15:24:20.047Z",
+          "note": "採用項目・時点・未確認事項は個別notes参照。"
+        },
+        {
+          "url": "https://hunter-stage.jp/cast-staff/",
+          "checkedAt": "2026-10-21T15:22:41.974Z",
+          "note": "採用項目・時点・未確認事項は個別notes参照。"
+        }
+      ],
+      "notes": [
+        "本人公式の英字NANAKA・BRIGHT歴・固有出演を採用。パーム役の公式写真と本人資料を照合。DOB・身長・血液型・出身・現在所属・平仮名は今回未確認でnull。名前が近い他分野の人物・青木菜々香等を統合しない。編集資料URLは取得503で採用しない。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "99cd654d-3bc3-4f9c-ae5c-d10d6b977054",
+        "slug": "sakamoto-hoa",
+        "name": "坂本宝愛",
+        "kana": "さかもと ほあ",
+        "profile": "俳優。テアトルアカデミープロダクション所属。『パニパニパイナ！ シーズン３』のスキップ役、映画『みんなの街』の瀬尾蒼役などを務める。『HUNTER×HUNTER』THE STAGE 4 前編でコムギ役として出演予定。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "2009-06-01",
+        "height_cm": 153,
+        "blood_type": null,
+        "birthday_label": null,
+        "name_en": "坂本宝愛",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "坂本宝愛",
+      "profileUrl": "https://ta-production.jp/talent/detail/?code=1900013223",
+      "evidence": [
+        {
+          "url": "https://ta-production.jp/talent/detail/?code=1900013223",
+          "checkedAt": "2026-10-21T15:24:19.450Z",
+          "note": "採用項目・時点・未確認事項は個別notes参照。"
+        },
+        {
+          "url": "https://hunter-stage.jp/cast-staff/",
+          "checkedAt": "2026-10-21T15:22:41.974Z",
+          "note": "採用項目・時点・未確認事項は個別notes参照。"
+        },
+        {
+          "url": "https://www.cubeinc.co.jp/archives/theater/hunter-stage",
+          "checkedAt": "2026-10-21T15:25:25.701Z",
+          "note": "採用項目・時点・未確認事項は個別notes参照。"
+        }
+      ],
+      "notes": [
+        "現行事務所のDOB・153.0cm・読み・継続主要出演を採用。主要写真付きコムギ役かつ他作品のメイン・W主演歴があり、年齢だけで除外しない。同名の競技結果等の属性を流用しない。出身・血液型・公式英字は未確認、name_enは日本語名を固定。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "23c15493-6bf0-41fd-9d42-d638344ad760",
+        "slug": "wakatsuki-yumi",
+        "name": "若月佑美",
+        "kana": "わかつき ゆみ",
+        "profile": "静岡県出身の俳優・モデル。ゼスト所属。乃木坂46の1期生として活動し、2018年に卒業。舞台『薔薇王の葬列』のリチャード役などを務め、二科展デザイン部門での入選・特選入賞歴も持つ。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": null,
+        "height_cm": null,
+        "blood_type": null,
+        "birthday_label": "6月27日",
+        "name_en": "Yumi Wakatsuki",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "若月佑美",
+      "profileUrl": "https://www.zest-corp.com/management/344/",
+      "evidence": [
+        {
+          "url": "https://www.zest-corp.com/management/344/",
+          "checkedAt": "2026-10-21T15:24:47.107Z",
+          "note": "採用項目・時点・未確認事項は個別notes参照。"
+        },
+        {
+          "url": "https://yumiwakatsuki.com/",
+          "checkedAt": "2026-10-21T15:27:00.947Z",
+          "note": "採用項目・時点・未確認事項は個別notes参照。"
+        },
+        {
+          "url": "https://hunter-stage.jp/cast-staff/",
+          "checkedAt": "2026-10-21T15:22:41.974Z",
+          "note": "採用項目・時点・未確認事項は個別notes参照。"
+        }
+      ],
+      "notes": [
+        "現行所属の出身・読み・月日・元乃木坂と舞台・二科展歴を採用。生年は現行人物欄にないため推測せずbirthday null、月日のみラベルへ。157.7cmは整数型へ丸めず原値を保持しheight_cm null。英字は本人公式サイト。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "fb7aa224-6dbf-4161-8053-4bd9f5fcf9d3",
+        "slug": "sanada-riki",
+        "name": "真田理希",
+        "kana": "さなだ りき",
+        "profile": "大阪府出身の俳優・モデル・プロキックボクサー。スターダストプロモーション所属。連続テレビ小説『おむすび』の水谷役などに出演。『HUNTER×HUNTER』THE STAGE 4 前編でシャウアプフ役を務める予定。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "2003-04-05",
+        "height_cm": 180,
+        "blood_type": "O",
+        "birthday_label": null,
+        "name_en": "真田理希",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "真田理希",
+      "profileUrl": "https://www.stardust.co.jp/talent/section1/sanadariki/",
+      "evidence": [
+        {
+          "url": "https://www.stardust.co.jp/talent/section1/sanadariki/",
+          "checkedAt": "2026-10-21T15:24:15.577Z",
+          "note": "採用項目・時点・未確認事項は個別notes参照。"
+        },
+        {
+          "url": "https://www.stardust.co.jp/news/item-60529/",
+          "checkedAt": "2026-10-21T15:24:15.544Z",
+          "note": "採用項目・時点・未確認事項は個別notes参照。"
+        },
+        {
+          "url": "https://hunter-stage.jp/cast-staff/",
+          "checkedAt": "2026-10-21T15:22:41.974Z",
+          "note": "採用項目・時点・未確認事項は個別notes参照。"
+        }
+      ],
+      "notes": [
+        "現行所属のDOB・大阪府・180cm・O型・読み・職業と出演歴を採用。EBiDAN旧URLのWeb検索結果には英字があるが、現行HTTP本文はエラーJSONであり採用しない。公式英字は未確認、日本語名を明示。所属先の当該作出演告知で本人と役を照合。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "9fba1c13-ed1c-4625-bea3-cca7484d8de9",
+        "slug": "uchida-asahi",
+        "name": "内田朝陽",
+        "kana": "うちだ あさひ",
+        "profile": "東京都出身の俳優・音楽家。ホリプロ所属。2000年に映画『死者の学園祭』でデビュー。舞台『ハリー・ポッターと呪いの子』のドラコ・マルフォイ役などを務め、楽曲制作や音楽ユニットquuでも活動する。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1982-05-30",
+        "height_cm": 183,
+        "blood_type": "AB",
+        "birthday_label": null,
+        "name_en": "Asahi Uchida",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "内田朝陽",
+      "profileUrl": "https://www.horipro.co.jp/uchidaasahi/",
+      "evidence": [
+        {
+          "url": "https://www.horipro.co.jp/uchidaasahi/",
+          "checkedAt": "2026-10-21T15:24:47.914Z",
+          "note": "採用項目・時点・未確認事項は個別notes参照。"
+        },
+        {
+          "url": "https://hunter-stage.jp/cast-staff/",
+          "checkedAt": "2026-10-21T15:22:41.974Z",
+          "note": "採用項目・時点・未確認事項は個別notes参照。"
+        },
+        {
+          "url": "https://www.stardust.co.jp/news/item-60529/",
+          "checkedAt": "2026-10-21T15:24:15.544Z",
+          "note": "採用項目・時点・未確認事項は個別notes参照。"
+        }
+      ],
+      "notes": [
+        "現行所属のDOB・東京・183・AB型・読み・デビュー・音楽・舞台歴を採用。英字は同一人物ページの音楽クレジットASAHI UCHIDA。本作ユピーは公式キャストと共演者所属の告知を照合。"
+      ]
+    }
+  ],
+  "works": [
+    {
+      "year": 2027,
+      "before": null,
+      "play": {
+        "id": "fb04666f-b827-4ed6-8f8c-5ec32bd110b8",
+        "slug": "hunterxhunter2027-part-one",
+        "title": "『HUNTER×HUNTER』THE STAGE 4 前編",
+        "franchise_id": "0d678f15-d8dd-42d5-8051-8b4c8219807c",
+        "summary": "2027年上演予定のシリーズ第4弾前編。グリードアイランドをクリアし、父ジンの手掛かりに近づいたゴンとキルア。一方、人間をも餌とする巨大なキメラアントが勢力を広げていた。やがて生まれる王と直属護衛軍に、ゴンたちは立ち向かう。",
+        "period": "東京：2027年1月23日〜2月7日／京都：2027年2月13日〜21日",
+        "venue": "東京：天王洲 銀河劇場／京都：京都劇場",
+        "vod": null,
+        "genre": null,
+        "tags": [],
+        "credits": [
+          {
+            "role": "原作",
+            "names": [
+              "冨樫義博（集英社「週刊少年ジャンプ」より）"
+            ],
+            "is_core": true,
+            "sort_order": 1
+          },
+          {
+            "role": "脚本・演出",
+            "names": [
+              "山崎 彬"
+            ],
+            "is_core": true,
+            "sort_order": 2
+          },
+          {
+            "role": "音楽",
+            "names": [
+              "坂部 剛"
+            ],
+            "is_core": false,
+            "sort_order": 3
+          },
+          {
+            "role": "振付",
+            "names": [
+              "當間里美"
+            ],
+            "is_core": false,
+            "sort_order": 4
+          },
+          {
+            "role": "美術",
+            "names": [
+              "田中敏恵"
+            ],
+            "is_core": false,
+            "sort_order": 5
+          },
+          {
+            "role": "照明",
+            "names": [
+              "松本大介"
+            ],
+            "is_core": false,
+            "sort_order": 6
+          },
+          {
+            "role": "音響",
+            "names": [
+              "増澤 努"
+            ],
+            "is_core": false,
+            "sort_order": 7
+          },
+          {
+            "role": "音響効果",
+            "names": [
+              "天野高志"
+            ],
+            "is_core": false,
+            "sort_order": 8
+          },
+          {
+            "role": "映像",
+            "names": [
+              "O-beron inc."
+            ],
+            "is_core": false,
+            "sort_order": 9
+          },
+          {
+            "role": "衣裳",
+            "names": [
+              "川島加菜果"
+            ],
+            "is_core": false,
+            "sort_order": 10
+          },
+          {
+            "role": "ヘアメイク",
+            "names": [
+              "糸川智文 (STRINGS)"
+            ],
+            "is_core": false,
+            "sort_order": 11
+          },
+          {
+            "role": "特殊造形",
+            "names": [
+              "林屋陽二"
+            ],
+            "is_core": false,
+            "sort_order": 12
+          },
+          {
+            "role": "アクション監督",
+            "names": [
+              "加藤 学"
+            ],
+            "is_core": false,
+            "sort_order": 13
+          },
+          {
+            "role": "歌唱指導",
+            "names": [
+              "宗田梁市"
+            ],
+            "is_core": false,
+            "sort_order": 14
+          },
+          {
+            "role": "稽古場ピアノ",
+            "names": [
+              "安藤菜々子"
+            ],
+            "is_core": false,
+            "sort_order": 15
+          },
+          {
+            "role": "演出助手",
+            "names": [
+              "木下マカイ、藤嶋 恵"
+            ],
+            "is_core": false,
+            "sort_order": 16
+          },
+          {
+            "role": "舞台監督",
+            "names": [
+              "久保健一郎 (DDR)"
+            ],
+            "is_core": false,
+            "sort_order": 17
+          },
+          {
+            "role": "技術監督",
+            "names": [
+              "堀 吉行 (DDR)"
+            ],
+            "is_core": false,
+            "sort_order": 18
+          },
+          {
+            "role": "宣伝美術",
+            "names": [
+              "SENRIN"
+            ],
+            "is_core": false,
+            "sort_order": 19
+          },
+          {
+            "role": "宣伝写真",
+            "names": [
+              "三宅祐介"
+            ],
+            "is_core": false,
+            "sort_order": 20
+          },
+          {
+            "role": "制作協力",
+            "names": [
+              "アプル"
+            ],
+            "is_core": false,
+            "sort_order": 21
+          },
+          {
+            "role": "制作",
+            "names": [
+              "ネルケプランニング"
+            ],
+            "is_core": false,
+            "sort_order": 22
+          },
+          {
+            "role": "原作協力",
+            "names": [
+              "集英社（「週刊少年ジャンプ」編集部）"
+            ],
+            "is_core": false,
+            "sort_order": 23
+          },
+          {
+            "role": "協賛",
+            "names": [
+              "ローソンチケット"
+            ],
+            "is_core": false,
+            "sort_order": 24
+          },
+          {
+            "role": "協力",
+            "names": [
+              "一般社団法人 日本2.5次元ミュージカル協会"
+            ],
+            "is_core": false,
+            "sort_order": 25
+          },
+          {
+            "role": "主催",
+            "names": [
+              "『HUNTER×HUNTER』THE STAGE 4製作委員会"
+            ],
+            "is_core": false,
+            "sort_order": 26
+          },
+          {
+            "role": "出演（役名未記載）",
+            "names": [
+              "原池 優",
+              "古田伊吹",
+              "山崎里彩",
+              "平井浩基",
+              "佐藤新太",
+              "アイザワアイ",
+              "鹿嶋佑斗",
+              "末髙伊織",
+              "原川昊大"
+            ],
+            "is_core": false,
+            "sort_order": 27
+          },
+          {
+            "role": "スウィング",
+            "names": [
+              "尾嶋永遠子",
+              "谷澤和真"
+            ],
+            "is_core": false,
+            "sort_order": 28
+          }
+        ],
+        "related_franchise_ids": [],
+        "title_en": "HUNTER×HUNTER THE STAGE 4 — Part One",
+        "summary_en": "Scheduled for 2027, Part One of the fourth stage production follows Gon and Killua after they clear Greed Island and find a lead to Ging. Meanwhile, giant Chimera Ants that prey on humans expand their territory. Gon and his allies face the coming Ant King and his Royal Guards."
+      },
+      "rawSource": {
+        "sourceUrl": "https://hunter-stage.jp/cast-staff/",
+        "checkedAt": "2026-10-21T15:22:41.974Z",
+        "title": "『HUNTER×HUNTER』THE STAGE 4 前編",
+        "scheduleLines": [
+          "東京：2027年1月23日〜2月7日 天王洲 銀河劇場",
+          "京都：2027年2月13日〜21日 京都劇場"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "西山蓮都",
+            "sourceActorUrl": null,
+            "role_name": "ゴン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "阿久津仁愛",
+            "sourceActorUrl": null,
+            "role_name": "キルア",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "郷本直也",
+            "sourceActorUrl": null,
+            "role_name": "モラウ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "入江甚儀",
+            "sourceActorUrl": null,
+            "role_name": "ノヴ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "百名ヒロキ",
+            "sourceActorUrl": null,
+            "role_name": "ナックル",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "細貝 圭",
+            "sourceActorUrl": null,
+            "role_name": "シュート",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "菜々香",
+            "sourceActorUrl": null,
+            "role_name": "パーム",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "高橋 愛",
+            "sourceActorUrl": null,
+            "role_name": "ビスケ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "大高洋夫",
+            "sourceActorUrl": null,
+            "role_name": "ネテロ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "坂本宝愛",
+            "sourceActorUrl": null,
+            "role_name": "コムギ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "平松來馬",
+            "sourceActorUrl": null,
+            "role_name": "フェイタン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "田鶴翔吾",
+            "sourceActorUrl": null,
+            "role_name": "フィンクス",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "織部典成",
+            "sourceActorUrl": null,
+            "role_name": "シャルナーク",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "清井咲希",
+            "sourceActorUrl": null,
+            "role_name": "シズク",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "若月佑美",
+            "sourceActorUrl": null,
+            "role_name": "ネフェルピトー",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "真田理希",
+            "sourceActorUrl": null,
+            "role_name": "シャウアプフ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "内田朝陽",
+            "sourceActorUrl": null,
+            "role_name": "モントゥトゥユピー",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "橋本祥平",
+            "sourceActorUrl": null,
+            "role_name": "コルト",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "片桐 仁",
+            "sourceActorUrl": null,
+            "role_name": "イカルゴ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "佐藤流司",
+            "sourceActorUrl": null,
+            "role_name": "メルエム",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "北村圭吾",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "出演（役名未記載）"
+          },
+          {
+            "sourceActorName": "椎名鯛造",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "出演（役名未記載）"
+          }
+        ],
+        "unparsed": [],
+        "creditGroups": [
+          {
+            "role": "出演（役名未記載）",
+            "names": [
+              "原池 優",
+              "古田伊吹",
+              "山崎里彩",
+              "平井浩基",
+              "佐藤新太",
+              "アイザワアイ",
+              "鹿嶋佑斗",
+              "末髙伊織",
+              "原川昊大"
+            ]
+          },
+          {
+            "role": "スウィング",
+            "names": [
+              "尾嶋永遠子",
+              "谷澤和真"
+            ]
+          }
+        ],
+        "rawCastHtml": [
+          "\n                <div class=\"cast_img\"><img src=\"https://hunter-stage.jp/2027-partone/wp-content/themes/hh4th_01/images/cast/bust/01.webp\" alt=\"ゴン／西山蓮都\" loading=\"lazy\"></div>\n                <div class=\"name_block\">\n                  <div class=\"part\">ゴン</div>\n                  <div class=\"name\">西山蓮都</div>\n                </div>\n              ",
+          "\n                <div class=\"cast_img\"><img src=\"https://hunter-stage.jp/2027-partone/wp-content/themes/hh4th_01/images/cast/bust/02.webp\" alt=\"キルア／阿久津仁愛\" loading=\"lazy\"></div>\n                <div class=\"name_block\">\n                  <div class=\"part\">キルア</div>\n                  <div class=\"name\">阿久津仁愛</div>\n                </div>\n              ",
+          "\n                <div class=\"cast_img\"><img src=\"https://hunter-stage.jp/2027-partone/wp-content/themes/hh4th_01/images/cast/bust/03.webp\" alt=\"モラウ／郷本直也\" loading=\"lazy\"></div>\n                <div class=\"name_block\">\n                  <div class=\"part\">モラウ</div>\n                  <div class=\"name\">郷本直也</div>\n                </div>\n              ",
+          "\n                <div class=\"cast_img\"><img src=\"https://hunter-stage.jp/2027-partone/wp-content/themes/hh4th_01/images/cast/bust/04.webp\" alt=\"ノヴ／入江甚儀\" loading=\"lazy\"></div>\n                <div class=\"name_block\">\n                  <div class=\"part\">ノヴ</div>\n                  <div class=\"name\">入江甚儀</div>\n                </div>\n              ",
+          "\n                <div class=\"cast_img\"><img src=\"https://hunter-stage.jp/2027-partone/wp-content/themes/hh4th_01/images/cast/bust/05.webp\" alt=\"ナックル／百名ヒロキ\" loading=\"lazy\"></div>\n                <div class=\"name_block\">\n                  <div class=\"part\">ナックル</div>\n                  <div class=\"name\">百名ヒロキ</div>\n                </div>\n              ",
+          "\n                <div class=\"cast_img\"><img src=\"https://hunter-stage.jp/2027-partone/wp-content/themes/hh4th_01/images/cast/bust/06.webp\" alt=\"シュート／細貝 圭\" loading=\"lazy\"></div>\n                <div class=\"name_block\">\n                  <div class=\"part\">シュート</div>\n                  <div class=\"name\">細貝 圭</div>\n                </div>\n              ",
+          "\n                <div class=\"cast_img\"><img src=\"https://hunter-stage.jp/2027-partone/wp-content/themes/hh4th_01/images/cast/bust/07.webp\" alt=\"パーム／菜々香\" loading=\"lazy\"></div>\n                <div class=\"name_block\">\n                  <div class=\"part\">パーム</div>\n                  <div class=\"name\">菜々香</div>\n                </div>\n              ",
+          "\n                <div class=\"cast_img\"><img src=\"https://hunter-stage.jp/2027-partone/wp-content/themes/hh4th_01/images/cast/bust/08.webp\" alt=\"ビスケ／高橋 愛\" loading=\"lazy\"></div>\n                <div class=\"name_block\">\n                  <div class=\"part\">ビスケ</div>\n                  <div class=\"name\">高橋 愛</div>\n                </div>\n              ",
+          "\n                <div class=\"cast_img\"><img src=\"https://hunter-stage.jp/2027-partone/wp-content/themes/hh4th_01/images/cast/bust/09.webp\" alt=\"ネテロ／大高洋夫\" loading=\"lazy\"></div>\n                <div class=\"name_block\">\n                  <div class=\"part\">ネテロ</div>\n                  <div class=\"name\">大高洋夫</div>\n                </div>\n              ",
+          "\n                <div class=\"cast_img\"><img src=\"https://hunter-stage.jp/2027-partone/wp-content/themes/hh4th_01/images/cast/bust/10.webp\" alt=\"コムギ／坂本宝愛\" loading=\"lazy\"></div>\n                <div class=\"name_block\">\n                  <div class=\"part\">コムギ</div>\n                  <div class=\"name\">坂本宝愛</div>\n                </div>\n              ",
+          "\n                <div class=\"cast_img\"><img src=\"https://hunter-stage.jp/2027-partone/wp-content/themes/hh4th_01/images/cast/bust/11.webp\" alt=\"フェイタン／平松來馬\" loading=\"lazy\"></div>\n                <div class=\"name_block\">\n                  <div class=\"part\">フェイタン</div>\n                  <div class=\"name\">平松來馬</div>\n                </div>\n              ",
+          "\n                <div class=\"cast_img\"><img src=\"https://hunter-stage.jp/2027-partone/wp-content/themes/hh4th_01/images/cast/bust/12.webp\" alt=\"フィンクス／田鶴翔吾\" loading=\"lazy\"></div>\n                <div class=\"name_block\">\n                  <div class=\"part\">フィンクス</div>\n                  <div class=\"name\">田鶴翔吾</div>\n                </div>\n              ",
+          "\n                <div class=\"cast_img\"><img src=\"https://hunter-stage.jp/2027-partone/wp-content/themes/hh4th_01/images/cast/bust/13.webp\" alt=\"シャルナーク／織部典成\" loading=\"lazy\"></div>\n                <div class=\"name_block\">\n                  <div class=\"part\">シャルナーク</div>\n                  <div class=\"name\">織部典成</div>\n                </div>\n              ",
+          "\n                <div class=\"cast_img\"><img src=\"https://hunter-stage.jp/2027-partone/wp-content/themes/hh4th_01/images/cast/bust/14.webp\" alt=\"シズク／清井咲希\" loading=\"lazy\"></div>\n                <div class=\"name_block\">\n                  <div class=\"part\">シズク</div>\n                  <div class=\"name\">清井咲希</div>\n                </div>\n              ",
+          "\n                <div class=\"cast_img\"><img src=\"https://hunter-stage.jp/2027-partone/wp-content/themes/hh4th_01/images/cast/bust/15.webp\" alt=\"ネフェルピトー／若月佑美\" loading=\"lazy\"></div>\n                <div class=\"name_block\">\n                  <div class=\"part\">ネフェルピトー</div>\n                  <div class=\"name\">若月佑美</div>\n                </div>\n              ",
+          "\n                <div class=\"cast_img\"><img src=\"https://hunter-stage.jp/2027-partone/wp-content/themes/hh4th_01/images/cast/bust/16.webp\" alt=\"シャウアプフ／真田理希\" loading=\"lazy\"></div>\n                <div class=\"name_block\">\n                  <div class=\"part\">シャウアプフ</div>\n                  <div class=\"name\">真田理希</div>\n                </div>\n              ",
+          "\n                <div class=\"cast_img\"><img src=\"https://hunter-stage.jp/2027-partone/wp-content/themes/hh4th_01/images/cast/bust/17.webp\" alt=\"モントゥトゥユピー／内田朝陽\" loading=\"lazy\"></div>\n                <div class=\"name_block\">\n                  <div class=\"part\">モントゥトゥユピー</div>\n                  <div class=\"name\">内田朝陽</div>\n                </div>\n              ",
+          "\n                <div class=\"cast_img\"><img src=\"https://hunter-stage.jp/2027-partone/wp-content/themes/hh4th_01/images/cast/bust/18.webp\" alt=\"コルト／橋本祥平\" loading=\"lazy\"></div>\n                <div class=\"name_block\">\n                  <div class=\"part\">コルト</div>\n                  <div class=\"name\">橋本祥平</div>\n                </div>\n              ",
+          "\n                <div class=\"cast_img\"><img src=\"https://hunter-stage.jp/2027-partone/wp-content/themes/hh4th_01/images/cast/bust/19.webp\" alt=\"イカルゴ／片桐 仁\" loading=\"lazy\"></div>\n                <div class=\"name_block\">\n                  <div class=\"part\">イカルゴ</div>\n                  <div class=\"name\">片桐 仁</div>\n                </div>\n              ",
+          "\n                <div class=\"cast_img\"><img src=\"https://hunter-stage.jp/2027-partone/wp-content/themes/hh4th_01/images/cast/bust/20.webp\" alt=\"メルエム／佐藤流司\" loading=\"lazy\"></div>\n                <div class=\"name_block\">\n                  <div class=\"part\">メルエム</div>\n                  <div class=\"name\">佐藤流司</div>\n                </div>\n              ",
+          "\n                <div class=\"cast_img\"><img src=\"https://hunter-stage.jp/2027-partone/wp-content/themes/hh4th_01/images/cast/bust/21.webp\" alt=\"北村圭吾\" loading=\"lazy\"></div>\n                <div class=\"name_block\">\n                  <div class=\"part\"></div>\n                  <div class=\"name\">北村圭吾</div>\n                </div>\n              ",
+          "\n                <div class=\"cast_img\"><img src=\"https://hunter-stage.jp/2027-partone/wp-content/themes/hh4th_01/images/cast/bust/22.webp\" alt=\"椎名鯛造\" loading=\"lazy\"></div>\n                <div class=\"name_block\">\n                  <div class=\"part\"></div>\n                  <div class=\"name\">椎名鯛造</div>\n                </div>\n              "
+        ],
+        "staff": [
+          {
+            "role": "原作",
+            "names": [
+              "冨樫義博（集英社「週刊少年ジャンプ」より）"
+            ]
+          },
+          {
+            "role": "脚本・演出",
+            "names": [
+              "山崎 彬"
+            ]
+          },
+          {
+            "role": "音楽",
+            "names": [
+              "坂部 剛"
+            ]
+          },
+          {
+            "role": "振付",
+            "names": [
+              "當間里美"
+            ]
+          },
+          {
+            "role": "美術",
+            "names": [
+              "田中敏恵"
+            ]
+          },
+          {
+            "role": "照明",
+            "names": [
+              "松本大介"
+            ]
+          },
+          {
+            "role": "音響",
+            "names": [
+              "増澤 努"
+            ]
+          },
+          {
+            "role": "音響効果",
+            "names": [
+              "天野高志"
+            ]
+          },
+          {
+            "role": "映像",
+            "names": [
+              "O-beron inc."
+            ]
+          },
+          {
+            "role": "衣裳",
+            "names": [
+              "川島加菜果"
+            ]
+          },
+          {
+            "role": "ヘアメイク",
+            "names": [
+              "糸川智文 (STRINGS)"
+            ]
+          },
+          {
+            "role": "特殊造形",
+            "names": [
+              "林屋陽二"
+            ]
+          },
+          {
+            "role": "アクション監督",
+            "names": [
+              "加藤 学"
+            ]
+          },
+          {
+            "role": "歌唱指導",
+            "names": [
+              "宗田梁市"
+            ]
+          },
+          {
+            "role": "稽古場ピアノ",
+            "names": [
+              "安藤菜々子"
+            ]
+          },
+          {
+            "role": "演出助手",
+            "names": [
+              "木下マカイ、藤嶋 恵"
+            ]
+          },
+          {
+            "role": "舞台監督",
+            "names": [
+              "久保健一郎 (DDR)"
+            ]
+          },
+          {
+            "role": "技術監督",
+            "names": [
+              "堀 吉行 (DDR)"
+            ]
+          },
+          {
+            "role": "宣伝美術",
+            "names": [
+              "SENRIN"
+            ]
+          },
+          {
+            "role": "宣伝写真",
+            "names": [
+              "三宅祐介"
+            ]
+          },
+          {
+            "role": "制作協力",
+            "names": [
+              "アプル"
+            ]
+          },
+          {
+            "role": "制作",
+            "names": [
+              "ネルケプランニング"
+            ]
+          },
+          {
+            "role": "原作協力",
+            "names": [
+              "集英社（「週刊少年ジャンプ」編集部）"
+            ]
+          },
+          {
+            "role": "協賛",
+            "names": [
+              "ローソンチケット"
+            ]
+          },
+          {
+            "role": "協力",
+            "names": [
+              "一般社団法人 日本2.5次元ミュージカル協会"
+            ]
+          },
+          {
+            "role": "主催",
+            "names": [
+              "『HUNTER×HUNTER』THE STAGE 4製作委員会"
+            ]
+          }
+        ]
+      },
+      "source": {
+        "sourceUrl": "https://hunter-stage.jp/cast-staff/",
+        "checkedAt": "2026-10-21T15:22:41.974Z",
+        "title": "『HUNTER×HUNTER』THE STAGE 4 前編",
+        "scheduleLines": [
+          "東京：2027年1月23日〜2月7日 天王洲 銀河劇場",
+          "京都：2027年2月13日〜21日 京都劇場"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "西山蓮都",
+            "sourceActorUrl": null,
+            "role_name": "ゴン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "阿久津仁愛",
+            "sourceActorUrl": null,
+            "role_name": "キルア",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "郷本直也",
+            "sourceActorUrl": null,
+            "role_name": "モラウ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "入江甚儀",
+            "sourceActorUrl": null,
+            "role_name": "ノヴ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "百名ヒロキ",
+            "sourceActorUrl": null,
+            "role_name": "ナックル",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "細貝 圭",
+            "sourceActorUrl": null,
+            "role_name": "シュート",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "菜々香",
+            "sourceActorUrl": null,
+            "role_name": "パーム",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "高橋 愛",
+            "sourceActorUrl": null,
+            "role_name": "ビスケ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "大高洋夫",
+            "sourceActorUrl": null,
+            "role_name": "ネテロ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "坂本宝愛",
+            "sourceActorUrl": null,
+            "role_name": "コムギ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "平松來馬",
+            "sourceActorUrl": null,
+            "role_name": "フェイタン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "田鶴翔吾",
+            "sourceActorUrl": null,
+            "role_name": "フィンクス",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "織部典成",
+            "sourceActorUrl": null,
+            "role_name": "シャルナーク",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "清井咲希",
+            "sourceActorUrl": null,
+            "role_name": "シズク",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "若月佑美",
+            "sourceActorUrl": null,
+            "role_name": "ネフェルピトー",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "真田理希",
+            "sourceActorUrl": null,
+            "role_name": "シャウアプフ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "内田朝陽",
+            "sourceActorUrl": null,
+            "role_name": "モントゥトゥユピー",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "橋本祥平",
+            "sourceActorUrl": null,
+            "role_name": "コルト",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "片桐 仁",
+            "sourceActorUrl": null,
+            "role_name": "イカルゴ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "佐藤流司",
+            "sourceActorUrl": null,
+            "role_name": "メルエム",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "北村圭吾",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "出演（役名未記載）"
+          },
+          {
+            "sourceActorName": "椎名鯛造",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "出演（役名未記載）"
+          }
+        ],
+        "unparsed": []
+      },
+      "records": [
+        {
+          "actor": {
+            "id": "eedf6c31-b9b1-420e-b7f8-1ebcc20f97d0",
+            "slug": "nishiyama-rento",
+            "name": "西山蓮都",
+            "kana": "にしやま れんと",
+            "profile": "俳優。スペースクラフト所属。『HUNTER×HUNTER』THE STAGE 3のゴン役、舞台『魔法使いの約束』祝祭シリーズPart2のザシャ役、Experimental Theater「結合男子」の凍硝七瀬役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-21T15:13:36.507511+00:00",
+            "updated_at": "2026-10-21T15:13:36.507511+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "2009-05-04",
+            "height_cm": 165,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Rento Nishiyama",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "西山蓮都",
+            "sourceActorUrl": null,
+            "role_name": "ゴン",
+            "cast_group": null
+          },
+          "sourceCreditKey": "c12ca9ad753344f2889b",
+          "sourceOrder": 1,
+          "cast": {
+            "id": "511e715a-67e7-4345-8830-83c5cf02d167",
+            "play_id": "fb04666f-b827-4ed6-8f8c-5ec32bd110b8",
+            "actor_id": "eedf6c31-b9b1-420e-b7f8-1ebcc20f97d0",
+            "role_name": "ゴン",
+            "is_starring": false,
+            "billing_order": 1,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null
+          }
+        },
+        {
+          "actor": {
+            "id": "17a8ebf5-7122-4360-8413-35ecc1a62145",
+            "slug": "akutsu-nichika",
+            "name": "阿久津 仁愛",
+            "kana": "あくつ にちか",
+            "profile": "栃木県出身の俳優。キューブ所属。ミュージカル『テニスの王子様』3rdシーズン（越前リョーマ役）や舞台『「HUNTER×HUNTER」THE STAGE』（キルア役）、舞台『鬼滅の刃 其ノ弐 絆』（累役）等の舞台作品に出演。また、テレビドラマ『俺のスカート、どこ行った?』（光岡慎之介役）や『BLドラマの主演になりました』（青柳萌役）等の映像作品にも出演している。第27回ジュノン・スーパーボーイ・コンテストにて準グランプリを受賞した経歴を持つ。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/Nichika20001223",
+              "official": "https://www.cubeinc.co.jp/archives/artist/akutsunichika",
+              "instagram": "https://www.instagram.com/nichika_akutsu/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:10:00.631722+00:00",
+            "updated_at": "2026-03-21T15:10:00.631722+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "2000-12-23",
+            "height_cm": 166,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Tochigi Prefecture. Affiliated with Cube. He has appeared in stage works such as the musical \"The Prince of Tennis\" 3rd season (as Ryoma Echizen), the stage play \"HUNTER x HUNTER THE STAGE\" (as Killua), and the stage play \"Demon Slayer: Kimetsu no Yaiba Part 2: Bond\" (as Rui). He has also appeared in television works such as the TV dramas \"Where Have My Skirts Gone?\" (as Shinnosuke Mitsuoka) and \"I Became the Lead in a BL Drama\" (as Hajime Aoyagi). He won the runner-up prize at the 27th Junon Superboy Contest.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "阿久津仁愛",
+            "sourceActorUrl": null,
+            "role_name": "キルア",
+            "cast_group": null
+          },
+          "sourceCreditKey": "bf2fd6d755af1d917543",
+          "sourceOrder": 2,
+          "cast": {
+            "id": "66f95d13-7289-4ac1-9601-937b85bb30d4",
+            "play_id": "fb04666f-b827-4ed6-8f8c-5ec32bd110b8",
+            "actor_id": "17a8ebf5-7122-4360-8413-35ecc1a62145",
+            "role_name": "キルア",
+            "is_starring": false,
+            "billing_order": 2,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null
+          }
+        },
+        {
+          "actor": {
+            "id": "e57de3c5-d324-477b-b323-6009311c2ca3",
+            "slug": "gomoto-naoya",
+            "name": "郷本 直也",
+            "kana": "ごうもと なおや",
+            "profile": "大阪府出身の俳優。芸能事務所ナノスクエア代表取締役社長。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/GomotoNaoya",
+              "official": "https://ameblo.jp/naoya-g-sanpo/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-15T15:02:38.988564+00:00",
+            "updated_at": "2026-03-15T15:02:38.988564+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1980-04-25",
+            "height_cm": 186,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "郷本直也",
+            "sourceActorUrl": null,
+            "role_name": "モラウ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "92a4ee70dc8a3215bae2",
+          "sourceOrder": 3,
+          "cast": {
+            "id": "bbe0f8d9-b200-43fe-83f3-39ae232b08f9",
+            "play_id": "fb04666f-b827-4ed6-8f8c-5ec32bd110b8",
+            "actor_id": "e57de3c5-d324-477b-b323-6009311c2ca3",
+            "role_name": "モラウ",
+            "is_starring": false,
+            "billing_order": 3,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null
+          }
+        },
+        {
+          "actor": {
+            "id": "8b9cfc42-f8aa-4b0e-a7d4-2a0f38ca4807",
+            "slug": "irie-jingi",
+            "name": "入江甚儀",
+            "kana": "いりえ じんぎ",
+            "profile": "千葉県出身の俳優。研音所属。ドラマ『絶対彼氏』でデビューし、映画『キカイダー REBOOT』などに出演。『HUNTER×HUNTER』THE STAGE 4 前編ではノヴ役で出演予定。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1993-05-18",
+            "height_cm": 183,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Jingi Irie",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "入江甚儀",
+            "sourceActorUrl": null,
+            "role_name": "ノヴ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "e86a325d0eb022cc3032",
+          "sourceOrder": 4,
+          "cast": {
+            "id": "19e9a591-576f-4d5b-96f0-884a65bb08ee",
+            "play_id": "fb04666f-b827-4ed6-8f8c-5ec32bd110b8",
+            "actor_id": "8b9cfc42-f8aa-4b0e-a7d4-2a0f38ca4807",
+            "role_name": "ノヴ",
+            "is_starring": false,
+            "billing_order": 4,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null
+          }
+        },
+        {
+          "actor": {
+            "id": "ea543ad9-7cc6-4ffe-9100-e5af5f8bfdb9",
+            "slug": "hyakuna-hiroki",
+            "name": "百名ヒロキ",
+            "kana": "ひゃくな ひろき",
+            "profile": "俳優。『ROCK MUSICAL BLEACH』の『Arrancar the Beginning』『Arrancar the Final』でウルキオラ・シファー役を務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-19T10:45:26.548927+00:00",
+            "updated_at": "2026-10-19T10:45:26.548927+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1994-01-04",
+            "height_cm": 172,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "百名ヒロキ",
+            "sourceActorUrl": null,
+            "role_name": "ナックル",
+            "cast_group": null
+          },
+          "sourceCreditKey": "74298685eb4d1060bbcf",
+          "sourceOrder": 5,
+          "cast": {
+            "id": "b15fe00d-efb9-44c9-ad76-4e4d5e559cd4",
+            "play_id": "fb04666f-b827-4ed6-8f8c-5ec32bd110b8",
+            "actor_id": "ea543ad9-7cc6-4ffe-9100-e5af5f8bfdb9",
+            "role_name": "ナックル",
+            "is_starring": false,
+            "billing_order": 5,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null
+          }
+        },
+        {
+          "actor": {
+            "id": "a4665a08-82dd-44ff-b2fa-3c5c3262728c",
+            "slug": "hosogai-kei",
+            "name": "細貝 圭",
+            "kana": "ほそがい けい",
+            "profile": "東京都出身の俳優・声優。プロダクション尾木所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/kei_hsgi1010",
+              "official": "https://hosogai-kei.com/",
+              "instagram": "https://www.instagram.com/hsgi1010_staff/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:01:26.311999+00:00",
+            "updated_at": "2026-03-21T15:01:26.311999+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1984-10-10",
+            "height_cm": 184,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "細貝 圭",
+            "sourceActorUrl": null,
+            "role_name": "シュート",
+            "cast_group": null
+          },
+          "sourceCreditKey": "9433ac29743688cbd52d",
+          "sourceOrder": 6,
+          "cast": {
+            "id": "6a669620-c5c6-4e69-ab7c-4b59aa0de77d",
+            "play_id": "fb04666f-b827-4ed6-8f8c-5ec32bd110b8",
+            "actor_id": "a4665a08-82dd-44ff-b2fa-3c5c3262728c",
+            "role_name": "シュート",
+            "is_starring": false,
+            "billing_order": 6,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null
+          }
+        },
+        {
+          "actor": {
+            "id": "88cb3f42-a55c-4412-883b-07856ff5f471",
+            "slug": "nanaka",
+            "name": "菜々香",
+            "kana": null,
+            "profile": "歌手・俳優。ボーカルグループBRIGHTのメンバーとしてデビュー。ソロ活動と並行して舞台・ミュージカルに出演し、『ヒプノシスマイク -Division Rap Battle-』Rule the Stageで東方天乙統女役を務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": null,
+            "height_cm": null,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "NANAKA",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "菜々香",
+            "sourceActorUrl": null,
+            "role_name": "パーム",
+            "cast_group": null
+          },
+          "sourceCreditKey": "b26aa170d52d1e693b9f",
+          "sourceOrder": 7,
+          "cast": {
+            "id": "7926bc5a-b807-4378-b530-11576f3e460a",
+            "play_id": "fb04666f-b827-4ed6-8f8c-5ec32bd110b8",
+            "actor_id": "88cb3f42-a55c-4412-883b-07856ff5f471",
+            "role_name": "パーム",
+            "is_starring": false,
+            "billing_order": 7,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null
+          }
+        },
+        {
+          "actor": {
+            "id": "49d6ead1-cb51-418e-adf8-0576b882a412",
+            "slug": "takahashi-ai",
+            "name": "高橋愛",
+            "kana": "たかはし あい",
+            "profile": "福井県出身の俳優・歌手・モデル。アップフロントクリエイト所属。2001年にモーニング娘。の5期メンバーとしてデビューし、第6代リーダーを務めた。卒業後はミュージカルや舞台、ドラマにも出演。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-21T15:13:36.507511+00:00",
+            "updated_at": "2026-10-21T15:13:36.507511+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1986-09-14",
+            "height_cm": 154,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": "Ai Takahashi",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "高橋 愛",
+            "sourceActorUrl": null,
+            "role_name": "ビスケ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "76a84fa5f0817d9b9cc7",
+          "sourceOrder": 8,
+          "cast": {
+            "id": "a2ec9bf8-1537-4e1b-bdd0-c9b1ac4e307e",
+            "play_id": "fb04666f-b827-4ed6-8f8c-5ec32bd110b8",
+            "actor_id": "49d6ead1-cb51-418e-adf8-0576b882a412",
+            "role_name": "ビスケ",
+            "is_starring": false,
+            "billing_order": 8,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null
+          }
+        },
+        {
+          "actor": {
+            "id": "36a2584b-10ed-4d03-a1b1-8b71ebc68dfc",
+            "slug": "otaka-hiroo",
+            "name": "大高 洋夫",
+            "kana": "おおたか ひろお",
+            "profile": "新潟県長岡市出身の俳優。株式会社フロム・ファーストプロダクション所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/gibson_703",
+              "official": "https://www.from1-pro.jp/talent/detail.php?id=233",
+              "instagram": "https://www.instagram.com/hiroo_ohtaka/"
+            },
+            "gender": "male",
+            "created_at": "2026-04-04T02:47:55.331417+00:00",
+            "updated_at": "2026-04-04T02:47:55.331417+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1959-06-27",
+            "height_cm": 170,
+            "blood_type": "AB",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "大高洋夫",
+            "sourceActorUrl": null,
+            "role_name": "ネテロ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "5a9f30c1ce88417f3276",
+          "sourceOrder": 9,
+          "cast": {
+            "id": "a51cbd32-1905-49c7-ba08-ea5f8d218140",
+            "play_id": "fb04666f-b827-4ed6-8f8c-5ec32bd110b8",
+            "actor_id": "36a2584b-10ed-4d03-a1b1-8b71ebc68dfc",
+            "role_name": "ネテロ",
+            "is_starring": false,
+            "billing_order": 9,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null
+          }
+        },
+        {
+          "actor": {
+            "id": "99cd654d-3bc3-4f9c-ae5c-d10d6b977054",
+            "slug": "sakamoto-hoa",
+            "name": "坂本宝愛",
+            "kana": "さかもと ほあ",
+            "profile": "俳優。テアトルアカデミープロダクション所属。『パニパニパイナ！ シーズン３』のスキップ役、映画『みんなの街』の瀬尾蒼役などを務める。『HUNTER×HUNTER』THE STAGE 4 前編でコムギ役として出演予定。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "2009-06-01",
+            "height_cm": 153,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "坂本宝愛",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "坂本宝愛",
+            "sourceActorUrl": null,
+            "role_name": "コムギ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "6bc23208263baeed72eb",
+          "sourceOrder": 10,
+          "cast": {
+            "id": "4214b4ba-3582-4414-ba17-acc63327efc8",
+            "play_id": "fb04666f-b827-4ed6-8f8c-5ec32bd110b8",
+            "actor_id": "99cd654d-3bc3-4f9c-ae5c-d10d6b977054",
+            "role_name": "コムギ",
+            "is_starring": false,
+            "billing_order": 10,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null
+          }
+        },
+        {
+          "actor": {
+            "id": "8278030b-89b0-4674-ba56-e6a520878a5c",
+            "slug": "hiramatsu-raima",
+            "name": "平松 來馬",
+            "kana": "ひらまつ らいま",
+            "profile": "神奈川県出身の俳優。株式会社ワイケーエージェント所属。子役時代から活動を行っている。ミュージカル『テニスの王子様』3rdシーズン（遠山金太郎役）をはじめ、舞台『鋼の錬金術師』（エンヴィー役）、『HUNTER×HUNTER』THE STAGE（フェイタン役）、ミュージカル『東京リベンジャーズ』（稀咲鉄太役）、『Dancing☆star プリキュア』The Stage（鈴ノ木蛍役）等の舞台作品を中心に出演している。また、大河ドラマ『青天を衝け』や映画『Daughters』等の映像作品への出演経歴も持つ。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/HRaima_official",
+              "official": "https://raimahiramatsu-official.com/",
+              "instagram": "https://www.instagram.com/raimagram_official/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:13:20.008797+00:00",
+            "updated_at": "2026-03-21T15:13:20.008797+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "2002-01-12",
+            "height_cm": 164,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Kanagawa Prefecture. Affiliated with YKAgent. He has been active since his days as a child actor. He primarily appears in stage works such as the musical \"The Prince of Tennis\" 3rd season (as Kintaro Toyama), the stage play \"Fullmetal Alchemist\" (as Envy), \"HUNTER×HUNTER\" THE STAGE (as Feitan), the musical \"Tokyo Revengers\" (as Tetta Kisaki), and \"Dancing☆star Precure\" The Stage (as Hotaru Suzunoki). He also has experience appearing in film and television works such as the Taiga drama \"Seiten wo Tsuke\" and the movie \"Daughters\".",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "平松來馬",
+            "sourceActorUrl": null,
+            "role_name": "フェイタン",
+            "cast_group": null
+          },
+          "sourceCreditKey": "e7d267552c0b96c70b2a",
+          "sourceOrder": 11,
+          "cast": {
+            "id": "da04c329-cd37-4f79-a970-5751e8e823a5",
+            "play_id": "fb04666f-b827-4ed6-8f8c-5ec32bd110b8",
+            "actor_id": "8278030b-89b0-4674-ba56-e6a520878a5c",
+            "role_name": "フェイタン",
+            "is_starring": false,
+            "billing_order": 11,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null
+          }
+        },
+        {
+          "actor": {
+            "id": "9137026a-94be-4d55-956b-22cd7bd7bad9",
+            "slug": "tazuru-shogo",
+            "name": "田鶴 翔吾",
+            "kana": "たづる しょうご",
+            "profile": "兵庫県出身の俳優。マリー社所属。ミュージカル『テニスの王子様』3rdシーズン（真田弦一郎役）をはじめ、舞台『刀剣乱舞』十口伝 あまねく刻の遥かへ（日光一文字役）、『ワールドトリガー the Stage』B級ランク戦最終決戦編（木崎レイジ役）等の舞台作品を中心に出演している。また、映画『その恋、自販機で買えますか？』等の映像作品にも出演している。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/shogo_taduru",
+              "official": "https://shogotazuru.jp/",
+              "instagram": "https://www.instagram.com/shogo_taduru/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:10:00.631722+00:00",
+            "updated_at": "2026-03-21T15:10:00.631722+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1992-06-02",
+            "height_cm": 185,
+            "blood_type": "AB",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Hyogo Prefecture. Affiliated with Marie Inc. He primarily appears in stage works such as the musical \"The Prince of Tennis\" 3rd season (as Genichiro Sanada), the stage play \"Touken Ranbu\" Jukuden Amaneku Toki no Haruka e (as Nikko Ichimonji), and \"World Trigger the Stage\" B-Class Rank Wars Final Match (as Reiji Kizaki). He has also appeared in film works such as the movie \"Sono Koi, Jihanki de Kaemasuka?\".",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "田鶴翔吾",
+            "sourceActorUrl": null,
+            "role_name": "フィンクス",
+            "cast_group": null
+          },
+          "sourceCreditKey": "06141a8afdfa8337e7a9",
+          "sourceOrder": 12,
+          "cast": {
+            "id": "fb2fdc9e-018a-4ead-ad1e-347dba3a3571",
+            "play_id": "fb04666f-b827-4ed6-8f8c-5ec32bd110b8",
+            "actor_id": "9137026a-94be-4d55-956b-22cd7bd7bad9",
+            "role_name": "フィンクス",
+            "is_starring": false,
+            "billing_order": 12,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null
+          }
+        },
+        {
+          "actor": {
+            "id": "44817d51-248f-49d6-b694-5387c4565af5",
+            "slug": "oribe-yoshinari",
+            "name": "織部典成",
+            "kana": "おりべ よしなり",
+            "profile": "大阪府出身の俳優。ソニー・ミュージックエンタテインメント所属。演劇「ハイキュー!!」の山口忠役、舞台『ブルーロック』の國神錬介役、『HUNTER×HUNTER』THE STAGEのシャルナーク役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-21T14:39:56.197436+00:00",
+            "updated_at": "2026-10-21T14:39:56.197436+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "2000-08-18",
+            "height_cm": 181,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": "Yoshinari Oribe",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "織部典成",
+            "sourceActorUrl": null,
+            "role_name": "シャルナーク",
+            "cast_group": null
+          },
+          "sourceCreditKey": "61ab3226d5e5e9e286fe",
+          "sourceOrder": 13,
+          "cast": {
+            "id": "41d62f4b-4620-40f0-862d-6dd447ac0380",
+            "play_id": "fb04666f-b827-4ed6-8f8c-5ec32bd110b8",
+            "actor_id": "44817d51-248f-49d6-b694-5387c4565af5",
+            "role_name": "シャルナーク",
+            "is_starring": false,
+            "billing_order": 13,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null
+          }
+        },
+        {
+          "actor": {
+            "id": "48c0033e-6a55-4ac8-a2a4-d5f0acd41e2f",
+            "slug": "kiyoi-saki",
+            "name": "清井咲希",
+            "kana": "きよい さき",
+            "profile": "大阪府出身の俳優。WYS Relation所属。元たこやきレインボーのメンバー。『HUNTER×HUNTER』THE STAGE 3のシズク役、『FINAL FANTASY BRAVE EXVIUS 幻影戦争 THE STAGE』のラマダ役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-21T15:13:36.507511+00:00",
+            "updated_at": "2026-10-21T15:13:36.507511+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1999-08-05",
+            "height_cm": 158,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Saki Kiyoi",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "清井咲希",
+            "sourceActorUrl": null,
+            "role_name": "シズク",
+            "cast_group": null
+          },
+          "sourceCreditKey": "af3745eeebff23f404e3",
+          "sourceOrder": 14,
+          "cast": {
+            "id": "2e231c1c-8801-4212-8007-b4df522770f1",
+            "play_id": "fb04666f-b827-4ed6-8f8c-5ec32bd110b8",
+            "actor_id": "48c0033e-6a55-4ac8-a2a4-d5f0acd41e2f",
+            "role_name": "シズク",
+            "is_starring": false,
+            "billing_order": 14,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null
+          }
+        },
+        {
+          "actor": {
+            "id": "23c15493-6bf0-41fd-9d42-d638344ad760",
+            "slug": "wakatsuki-yumi",
+            "name": "若月佑美",
+            "kana": "わかつき ゆみ",
+            "profile": "静岡県出身の俳優・モデル。ゼスト所属。乃木坂46の1期生として活動し、2018年に卒業。舞台『薔薇王の葬列』のリチャード役などを務め、二科展デザイン部門での入選・特選入賞歴も持つ。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": null,
+            "height_cm": null,
+            "blood_type": null,
+            "birthday_label": "6月27日",
+            "name_en": "Yumi Wakatsuki",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "若月佑美",
+            "sourceActorUrl": null,
+            "role_name": "ネフェルピトー",
+            "cast_group": null
+          },
+          "sourceCreditKey": "267950546c1f054e3888",
+          "sourceOrder": 15,
+          "cast": {
+            "id": "b432e8b1-4164-4ade-9984-426ac4426ad7",
+            "play_id": "fb04666f-b827-4ed6-8f8c-5ec32bd110b8",
+            "actor_id": "23c15493-6bf0-41fd-9d42-d638344ad760",
+            "role_name": "ネフェルピトー",
+            "is_starring": false,
+            "billing_order": 15,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null
+          }
+        },
+        {
+          "actor": {
+            "id": "fb7aa224-6dbf-4161-8053-4bd9f5fcf9d3",
+            "slug": "sanada-riki",
+            "name": "真田理希",
+            "kana": "さなだ りき",
+            "profile": "大阪府出身の俳優・モデル・プロキックボクサー。スターダストプロモーション所属。連続テレビ小説『おむすび』の水谷役などに出演。『HUNTER×HUNTER』THE STAGE 4 前編でシャウアプフ役を務める予定。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "2003-04-05",
+            "height_cm": 180,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": "真田理希",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "真田理希",
+            "sourceActorUrl": null,
+            "role_name": "シャウアプフ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "c0649cf4508548bcaaea",
+          "sourceOrder": 16,
+          "cast": {
+            "id": "8d38c310-b3c3-4167-b319-2944923f389f",
+            "play_id": "fb04666f-b827-4ed6-8f8c-5ec32bd110b8",
+            "actor_id": "fb7aa224-6dbf-4161-8053-4bd9f5fcf9d3",
+            "role_name": "シャウアプフ",
+            "is_starring": false,
+            "billing_order": 16,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null
+          }
+        },
+        {
+          "actor": {
+            "id": "9fba1c13-ed1c-4625-bea3-cca7484d8de9",
+            "slug": "uchida-asahi",
+            "name": "内田朝陽",
+            "kana": "うちだ あさひ",
+            "profile": "東京都出身の俳優・音楽家。ホリプロ所属。2000年に映画『死者の学園祭』でデビュー。舞台『ハリー・ポッターと呪いの子』のドラコ・マルフォイ役などを務め、楽曲制作や音楽ユニットquuでも活動する。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1982-05-30",
+            "height_cm": 183,
+            "blood_type": "AB",
+            "birthday_label": null,
+            "name_en": "Asahi Uchida",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "内田朝陽",
+            "sourceActorUrl": null,
+            "role_name": "モントゥトゥユピー",
+            "cast_group": null
+          },
+          "sourceCreditKey": "dfb96b95252ee05244ef",
+          "sourceOrder": 17,
+          "cast": {
+            "id": "c3f02fc5-98b2-4052-8a3a-06a62b292739",
+            "play_id": "fb04666f-b827-4ed6-8f8c-5ec32bd110b8",
+            "actor_id": "9fba1c13-ed1c-4625-bea3-cca7484d8de9",
+            "role_name": "モントゥトゥユピー",
+            "is_starring": false,
+            "billing_order": 17,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null
+          }
+        },
+        {
+          "actor": {
+            "id": "d9df8cc7-9c58-4ab5-bc19-3b5a75a2e9b6",
+            "slug": "hashimoto-shohei",
+            "name": "橋本 祥平",
+            "kana": "はしもと しょうへい",
+            "profile": "神奈川県出身の俳優・声優。キャストコーポレーション所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://twitter.com/hashimotoshohey",
+              "official": "https://hashimoto-shohei.com/"
+            },
+            "gender": "male",
+            "created_at": "2025-12-13T04:41:02.052969+00:00",
+            "updated_at": "2025-12-13T04:41:02.052969+00:00",
+            "tags": [
+              "ドラム",
+              "愛されキャラ"
+            ],
+            "featured_play_slugs": [
+              "bungo-stage",
+              "yuyu-hakusho-stage"
+            ],
+            "birthday": "1993-12-31",
+            "height_cm": 170,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "橋本祥平",
+            "sourceActorUrl": null,
+            "role_name": "コルト",
+            "cast_group": null
+          },
+          "sourceCreditKey": "f5b5c67a81c1ddb71e6d",
+          "sourceOrder": 18,
+          "cast": {
+            "id": "b0f3d532-bc17-44d9-a4f6-cc6d92be0671",
+            "play_id": "fb04666f-b827-4ed6-8f8c-5ec32bd110b8",
+            "actor_id": "d9df8cc7-9c58-4ab5-bc19-3b5a75a2e9b6",
+            "role_name": "コルト",
+            "is_starring": false,
+            "billing_order": 18,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null
+          }
+        },
+        {
+          "actor": {
+            "id": "6b60d532-94b7-4d13-9865-f2886b0218a0",
+            "slug": "katagiri-jin",
+            "name": "片桐仁",
+            "kana": null,
+            "profile": "埼玉県出身の俳優・アーティスト。トゥインクル・コーポレーション所属。多摩美術大学在学中に小林賢太郎とラーメンズを結成。舞台やドラマへの出演に加え、美術作品の個展を開くなどの創作活動も行っている。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-21T09:02:33.951758+00:00",
+            "updated_at": "2026-10-21T09:02:33.951758+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1973-11-27",
+            "height_cm": 176,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Jin Katagiri",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "片桐 仁",
+            "sourceActorUrl": null,
+            "role_name": "イカルゴ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "9fe1df99c24e4605f26c",
+          "sourceOrder": 19,
+          "cast": {
+            "id": "360b2014-c1d1-41a1-8275-f8e72040f864",
+            "play_id": "fb04666f-b827-4ed6-8f8c-5ec32bd110b8",
+            "actor_id": "6b60d532-94b7-4d13-9865-f2886b0218a0",
+            "role_name": "イカルゴ",
+            "is_starring": false,
+            "billing_order": 19,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null
+          }
+        },
+        {
+          "actor": {
+            "id": "be22597d-20fd-4112-8085-6d533a26171b",
+            "slug": "sato-ryuji",
+            "name": "佐藤 流司",
+            "kana": "さとう りゅうじ",
+            "profile": "宮城県出身の俳優・歌手。劇団ひまわり所属。ミュージカル『テニスの王子様』2ndシーズン（財前光役）やミュージカル『刀剣乱舞』（加州清光役）、ライブ・スペクタクル『NARUTO-ナルト-』（うちはサスケ役）等の舞台作品に出演。また、バンドプロジェクト「The Brow Beat」（Ryuji名義）や「ZIPANG OPERA」のメンバーとして音楽活動も行っている。",
+            "image_url": null,
+            "sns": {
+              "x": "https://twitter.com/ryuji7117",
+              "official": "https://sato-ryuji.com/",
+              "instagram": "https://www.instagram.com/ryuji_japan/"
+            },
+            "gender": "male",
+            "created_at": "2025-12-13T04:41:02.052969+00:00",
+            "updated_at": "2025-12-13T04:41:02.052969+00:00",
+            "tags": [
+              "アーティスト",
+              "カリスマ"
+            ],
+            "featured_play_slugs": [],
+            "birthday": "1995-01-17",
+            "height_cm": 172,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor and singer from Miyagi Prefecture. Affiliated with Gekidan Himawari. He has appeared in stage works such as the musical \"The Prince of Tennis\" 2nd season (as Hikaru Zaizen), the musical \"Touken Ranbu\" (as Kashu Kiyomitsu), and the Live Spectacle \"NARUTO\" (as Sasuke Uchiha). He is also active in music as \"Ryuji\" in the band project \"The Brow Beat\" and as a member of \"ZIPANG OPERA\".",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "佐藤流司",
+            "sourceActorUrl": null,
+            "role_name": "メルエム",
+            "cast_group": null
+          },
+          "sourceCreditKey": "a710191b491aaf609510",
+          "sourceOrder": 20,
+          "cast": {
+            "id": "6e88db57-1189-459e-892a-f84bf3d5a581",
+            "play_id": "fb04666f-b827-4ed6-8f8c-5ec32bd110b8",
+            "actor_id": "be22597d-20fd-4112-8085-6d533a26171b",
+            "role_name": "メルエム",
+            "is_starring": false,
+            "billing_order": 20,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null
+          }
+        },
+        {
+          "actor": {
+            "id": "eb2f2496-7082-4d84-a7a7-80b75f8798f0",
+            "slug": "kitamura-keigo",
+            "name": "北村圭吾",
+            "kana": "きたむら けいご",
+            "profile": "俳優。GMBプロダクション所属。舞台「リコリス・リコイル」のミカ役、「HUNTER×HUNTER」THE STAGEのシルバ役、ライブ・スペクタクル「NARUTO-ナルト-」のエー役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-20T06:55:08.075885+00:00",
+            "updated_at": "2026-10-20T06:55:08.075885+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1982-08-08",
+            "height_cm": 181,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Kitamura Keigo",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "北村圭吾",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "出演（役名未記載）"
+          },
+          "sourceCreditKey": "cfcf85b075c988733fb6",
+          "sourceOrder": 21,
+          "cast": {
+            "id": "c705c9d9-73a9-4209-abdb-a6976e00f4d9",
+            "play_id": "fb04666f-b827-4ed6-8f8c-5ec32bd110b8",
+            "actor_id": "eb2f2496-7082-4d84-a7a7-80b75f8798f0",
+            "role_name": null,
+            "is_starring": false,
+            "billing_order": 21,
+            "cast_group": "出演（役名未記載）",
+            "role_name_kana": null,
+            "role_type": null,
+            "note": "公式の個別キャスト欄に氏名・写真のみ掲載（2026年10月22日確認）。"
+          }
+        },
+        {
+          "actor": {
+            "id": "346488a0-ec1a-434a-bed2-cdc766dca326",
+            "slug": "shiina-taizo",
+            "name": "椎名 鯛造",
+            "kana": "しいな たいぞう",
+            "profile": "岐阜県出身の俳優。株式会社GVM所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/TaizoShiina"
+            },
+            "gender": "male",
+            "created_at": "2026-03-29T15:49:11.130151+00:00",
+            "updated_at": "2026-03-29T15:49:11.130151+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1986-06-17",
+            "height_cm": 164,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "椎名鯛造",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "出演（役名未記載）"
+          },
+          "sourceCreditKey": "5f2bb1edb0200591e6d5",
+          "sourceOrder": 22,
+          "cast": {
+            "id": "72775f3f-a51a-4701-afa8-6ec141795e63",
+            "play_id": "fb04666f-b827-4ed6-8f8c-5ec32bd110b8",
+            "actor_id": "346488a0-ec1a-434a-bed2-cdc766dca326",
+            "role_name": null,
+            "is_starring": false,
+            "billing_order": 22,
+            "cast_group": "出演（役名未記載）",
+            "role_name_kana": null,
+            "role_type": null,
+            "note": "公式の個別キャスト欄に氏名・写真のみ掲載（2026年10月22日確認）。"
+          }
+        }
+      ],
+      "sourceFingerprint": "57678d86dcbf1e3a0d8e8f311a72bcf90f33bc030def4b3eb2d2268e9e6af19d",
+      "expectedCastCount": 22,
+      "evidence": [
+        {
+          "url": "https://hunter-stage.jp/",
+          "checkedAt": "2026-10-21T15:22:41.982Z",
+          "note": "採用項目・時点・未確認事項は個別notes参照。"
+        },
+        {
+          "url": "https://hunter-stage.jp/cast-staff/",
+          "checkedAt": "2026-10-21T15:22:41.974Z",
+          "note": "採用項目・時点・未確認事項は個別notes参照。"
+        },
+        {
+          "url": "https://hunter-stage.jp/schedule-tickets/",
+          "checkedAt": "2026-10-21T15:22:42.001Z",
+          "note": "採用項目・時点・未確認事項は個別notes参照。"
+        },
+        {
+          "url": "https://hunter-stage.jp/about/",
+          "checkedAt": "2026-10-21T15:22:41.939Z",
+          "note": "採用項目・時点・未確認事項は個別notes参照。"
+        },
+        {
+          "url": "https://www.cubeinc.co.jp/archives/theater/hunter-stage",
+          "checkedAt": "2026-10-21T15:25:25.701Z",
+          "note": "採用項目・時点・未確認事項は個別notes参照。"
+        },
+        {
+          "url": "https://www.stardust.co.jp/news/item-60529/",
+          "checkedAt": "2026-10-21T15:24:15.544Z",
+          "note": "採用項目・時点・未確認事項は個別notes参照。"
+        }
+      ]
+    }
+  ],
+  "planSummary": {
+    "counts": {
+      "keep": 0,
+      "add_cast": 22,
+      "prepare_actor": 0,
+      "hold": 0
+    },
+    "sourceFingerprint": "57678d86dcbf1e3a0d8e8f311a72bcf90f33bc030def4b3eb2d2268e9e6af19d",
+    "snapshotFingerprint": "de5715ad151368c606d60eef6ef30fc12d5c22fe01c072f450fe6a76d9357ffa",
+    "reviewFingerprint": "e3e6a9febdbaae19c4a98e63539ebc012b1125d98c75bed00e00311de32ea3a8"
+  },
+  "evidence": {
+    "links": [
+      {
+        "url": "https://hunter-stage.jp/",
+        "checkedAt": "2026-10-21T15:22:41.982Z",
+        "note": "採用項目・時点・未確認事項は個別notes参照。"
+      },
+      {
+        "url": "https://hunter-stage.jp/cast-staff/",
+        "checkedAt": "2026-10-21T15:22:41.974Z",
+        "note": "採用項目・時点・未確認事項は個別notes参照。"
+      },
+      {
+        "url": "https://hunter-stage.jp/schedule-tickets/",
+        "checkedAt": "2026-10-21T15:22:42.001Z",
+        "note": "採用項目・時点・未確認事項は個別notes参照。"
+      },
+      {
+        "url": "https://hunter-stage.jp/about/",
+        "checkedAt": "2026-10-21T15:22:41.939Z",
+        "note": "採用項目・時点・未確認事項は個別notes参照。"
+      },
+      {
+        "url": "https://www.cubeinc.co.jp/archives/theater/hunter-stage",
+        "checkedAt": "2026-10-21T15:25:25.701Z",
+        "note": "採用項目・時点・未確認事項は個別notes参照。"
+      },
+      {
+        "url": "https://www.stardust.co.jp/news/item-60529/",
+        "checkedAt": "2026-10-21T15:24:15.544Z",
+        "note": "採用項目・時点・未確認事項は個別notes参照。"
+      }
+    ],
+    "sources": [
+      {
+        "name": "official",
+        "url": "https://hunter-stage.jp/",
+        "status": 200,
+        "finalUrl": "https://hunter-stage.jp/",
+        "checkedAt": "2026-10-21T15:22:41.982Z",
+        "sha256": "43b1d5077ba06e8d6f8bd1fc51c12b6187240271db1911a8b1d7cc47cb3c643c"
+      },
+      {
+        "name": "cast-official",
+        "url": "https://hunter-stage.jp/cast-staff/",
+        "status": 200,
+        "finalUrl": "https://hunter-stage.jp/cast-staff/",
+        "checkedAt": "2026-10-21T15:22:41.974Z",
+        "sha256": "ccb76a0e13535501076bd9154537de8f1e519cf7fdb671652ed479cfb198881a"
+      },
+      {
+        "name": "about",
+        "url": "https://hunter-stage.jp/about/",
+        "status": 200,
+        "finalUrl": "https://hunter-stage.jp/about/",
+        "checkedAt": "2026-10-21T15:22:41.939Z",
+        "sha256": "206f541a7429acf174a2e186755149b3c0565f1261b893989036869c9241f3a2"
+      },
+      {
+        "name": "schedule",
+        "url": "https://hunter-stage.jp/schedule-tickets/",
+        "status": 200,
+        "finalUrl": "https://hunter-stage.jp/schedule-tickets/",
+        "checkedAt": "2026-10-21T15:22:42.001Z",
+        "sha256": "2b8585e5bfb0033c64a27e305c45d849854325e764cd815391aa4477b19c3a87"
+      },
+      {
+        "name": "changelog",
+        "url": "https://supabase.com/changelog.md",
+        "status": 200,
+        "finalUrl": "https://supabase.com/changelog.md",
+        "checkedAt": "2026-10-21T15:22:42.220Z",
+        "sha256": "15b3d0d1a7dc3b3f2c0af4788e49acfdf2d2edbd2613f22de0705fa43b1cf58b"
+      },
+      {
+        "name": "sanada",
+        "url": "https://www.stardust.co.jp/talent/section1/sanadariki/",
+        "status": 200,
+        "finalUrl": "https://www.stardust.co.jp/talent/section1/sanadariki/",
+        "checkedAt": "2026-10-21T15:24:15.577Z",
+        "sha256": "1cda8bcdbf3ca8521446a0fd4f900238cf2ceb8e617cc53544c89e713b9f5c61"
+      },
+      {
+        "name": "sanada-work",
+        "url": "https://www.stardust.co.jp/news/item-60529/",
+        "status": 200,
+        "finalUrl": "https://www.stardust.co.jp/news/item-60529/",
+        "checkedAt": "2026-10-21T15:24:15.544Z",
+        "sha256": "a2c1b7abc189872f7aa883ec08c049351704032b5236cb10c60f651cbd0a1560"
+      },
+      {
+        "name": "sanada-en",
+        "url": "https://ebidan.com/sanada_riki",
+        "status": 200,
+        "finalUrl": "https://ebidan.com/sanada_riki",
+        "checkedAt": "2026-10-21T15:24:15.418Z",
+        "sha256": "d4607446816dde93dc201d44d170b229dffc8447cc03d80067518a601a9c3a41"
+      },
+      {
+        "name": "sakamoto",
+        "url": "https://ta-production.jp/talent/detail/?code=1900013223",
+        "status": 200,
+        "finalUrl": "https://ta-production.jp/talent/detail/?code=1900013223",
+        "checkedAt": "2026-10-21T15:24:19.450Z",
+        "sha256": "c7f16e1726a7339f2bc5c6e73ec764e94ace34aa987fa5ff45c64586f87fa48f"
+      },
+      {
+        "name": "nanaka-site",
+        "url": "https://7knot.bitfan.id/",
+        "status": 200,
+        "finalUrl": "https://7knot.bitfan.id/",
+        "checkedAt": "2026-10-21T15:24:20.047Z",
+        "sha256": "5006b3c929255d2351462fc5395c155d586e4b351380fc9747a5f563ab542e68"
+      },
+      {
+        "name": "irie",
+        "url": "https://www.ken-on.co.jp/jingi/profile/",
+        "status": 200,
+        "finalUrl": "https://www.ken-on.co.jp/jingi/profile/",
+        "checkedAt": "2026-10-21T15:24:47.149Z",
+        "sha256": "d762feae89591a12852ac78e1938e0c3e7c57a92591c1f7e95b5d7282cc5d2c9"
+      },
+      {
+        "name": "wakatsuki",
+        "url": "https://www.zest-corp.com/management/344/",
+        "status": 200,
+        "finalUrl": "https://www.zest-corp.com/management/344/",
+        "checkedAt": "2026-10-21T15:24:47.107Z",
+        "sha256": "640a0caa606f362026753b7bcb5eb6d5917f0b73322c8b4b5d1d81a3901bddb9"
+      },
+      {
+        "name": "uchida",
+        "url": "https://www.horipro.co.jp/uchidaasahi/",
+        "status": 200,
+        "finalUrl": "https://www.horipro.co.jp/uchidaasahi/",
+        "checkedAt": "2026-10-21T15:24:47.914Z",
+        "sha256": "545396fe546c107dcfefaf6511b8ff0ab1c36a8ef22ea7c598609e9f65151a8c"
+      },
+      {
+        "name": "production",
+        "url": "https://www.cubeinc.co.jp/archives/theater/hunter-stage",
+        "status": 200,
+        "finalUrl": "https://www.cubeinc.co.jp/archives/theater/hunter-stage",
+        "checkedAt": "2026-10-21T15:25:25.701Z",
+        "sha256": "2ec20159c619b1398e87e2ab7a13715b8af4f81c39b79ac485e458a367b47760"
+      },
+      {
+        "name": "nanaka-profile",
+        "url": "https://7knot.bitfan.id/contents/menu/98206",
+        "status": 200,
+        "finalUrl": "https://7knot.bitfan.id/contents/menu/98206",
+        "checkedAt": "2026-10-21T15:25:25.760Z",
+        "sha256": "500747f0e8ed4c871be5ca694e0d8ca0a2c9d61b6e010402876a03eeba2a88ac"
+      },
+      {
+        "name": "irie-editorial",
+        "url": "https://www.oricon.co.jp/prof/488174/",
+        "status": 200,
+        "finalUrl": "https://www.oricon.co.jp/prof/488174/",
+        "checkedAt": "2026-10-21T15:26:21.459Z",
+        "sha256": "d89227bd47f240bde1c716881ba4570c1aac0158853a0adf9cfb6281603849b2"
+      },
+      {
+        "name": "wakatsuki-en",
+        "url": "https://yumiwakatsuki.com/",
+        "status": 200,
+        "finalUrl": "https://yumiwakatsuki.com/",
+        "checkedAt": "2026-10-21T15:27:00.947Z",
+        "sha256": "b33d550678d3deac45b9e088cd7144f405541b4701d74cbf78cd477f20af2228"
+      }
+    ],
+    "unavailable": [
+      {
+        "name": "work-unavailable",
+        "url": "https://kira-hai.net/hunterxhunter2027",
+        "status": 404,
+        "finalUrl": "https://kira-hai.net/hunterxhunter2027",
+        "checkedAt": "2026-10-21T15:22:42.244Z",
+        "sha256": "4623d372d52429846804582566ef92e273e59f8bb560c986026d74bb73f87fa8"
+      },
+      {
+        "name": "publisher",
+        "url": "https://books.shueisha.co.jp/info/comics/4184.html",
+        "status": 504,
+        "finalUrl": "https://books.shueisha.co.jp/info/comics/4184.html",
+        "checkedAt": "2026-10-21T15:25:35.550Z",
+        "sha256": "ac3d2ee82ed9f1e9c9550e5de29c9e0b059296ffd1c5e1b28e2c1ac7d9a7ca66"
+      },
+      {
+        "name": "nanaka-editorial",
+        "url": "https://www.animatetimes.com/tag/details.php?id=28360",
+        "status": 503,
+        "finalUrl": "https://www.animatetimes.com/tag/details.php?id=28360",
+        "checkedAt": "2026-10-21T15:26:20.293Z",
+        "sha256": "d6a9641ef056c6510890710daea05e192e9fd761af358da59071e0e582c5d645"
+      },
+      {
+        "name": "publisher-retry",
+        "url": "https://books.shueisha.co.jp/info/comics/4184.html",
+        "status": 504,
+        "finalUrl": "https://books.shueisha.co.jp/info/comics/4184.html",
+        "checkedAt": "2026-10-21T15:27:10.178Z",
+        "sha256": "ac3d2ee82ed9f1e9c9550e5de29c9e0b059296ffd1c5e1b28e2c1ac7d9a7ca66"
+      }
+    ],
+    "notes": [
+      "キラハイの当該年推測URLは404。現在公式を原資料として汎用レビュー計画で22行を点検し、Kira専用RPCへ偽装せず限定トランザクション＋source-review履歴で保存。外部人物・外部候補は変更しない。",
+      "公式TOPはレスポンシブ表示用の一部重複があるためキャスト専用ページの22カードを使用。役名未記載の個別写真付き2人をアンサンブルと断定して除外せず、出演区分と確認時点の注記で保存。",
+      "上演予定は日英あらすじへ明示。現在発表の前編だけを登録し後編に配役・期間・会場を複製しない。集英社2026年9月8日告知をWeb読取APIで確認し、後編は2027年7〜8月東京京都の予定と把握。HTML取得は2回504だったことも記録。告知URL：https://books.shueisha.co.jp/info/comics/4184.html",
+      "26区分の当該年スタッフ、役名なし9人・スウィング2人、2都市2会場、日英タイトル・短いあらすじ、2027/01年表と抜粋を点検。過去3作品48配役・既存16人物とシリーズ全項目は保持。"
+    ],
+    "unresolved": [
+      "後編の詳細日程・会場名・キャストは未確認。予定告知を前編から補作しない。公開後の変更・追加発表は別バッチで確認。",
+      "人物総合監査・既存長文の精査・未確認属性・詳細英訳・現在配信・主演指定は後続。菜々香の基本属性と読み、若月の生年と157.7cmの小数型対応、坂本・真田の英字は未確認。",
+      "現行公式のURLはルートで将来別公演に変わり得るため、当日のHTML・ハッシュと画像パス2027-partoneを保持し、公演同一性を年次で固定。"
+    ]
+  },
+  "requestKey": "7325930624f5a924148e47abe6c54e1d3ff4b639bf1aae529fed115c66411b83"
+}
