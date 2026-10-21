@@ -1,0 +1,3250 @@
+{
+  "version": 1,
+  "batchId": "hagaren2026-20261021-01",
+  "expectedFranchise": {
+    "id": "418b4913-42ec-48b9-bd8b-8d736504f9ac",
+    "name": "舞台『鋼の錬金術師』",
+    "created_at": "2026-02-08T16:26:41.990203+00:00",
+    "updated_at": "2026-10-21T12:15:09.437961+00:00",
+    "slug": "hagane-no-renkinjutsushi",
+    "intro": null,
+    "description": "荒川弘の漫画『鋼の錬金術師』（スクウェア・エニックス）を原作とする舞台シリーズ。人体錬成の代償として身体を失ったエドワードとアルフォンスの兄弟が、賢者の石を求めて旅する。石丸さち子が脚本・演出を担当し、2023年の初演に続いて2024年・2026年に続編が上演された。",
+    "origin_type": "漫画原作",
+    "origin_note": "原作：荒川弘『鋼の錬金術師』（スクウェア・エニックス）",
+    "production_companies": null,
+    "related_franchise_ids": [],
+    "format": "stage",
+    "description_en": "A stage series based on Hiromu Arakawa’s manga Fullmetal Alchemist, published by Square Enix. After losing their bodies in an attempt at human transmutation, brothers Edward and Alphonse Elric search for the Philosopher’s Stone. Written and directed by Sachiko Ishimaru, the series began in 2023 and continued in 2024 and 2026.",
+    "name_en": "Fullmetal Alchemist: The Stage"
+  },
+  "franchisePatch": {},
+  "actors": [
+    {
+      "actor": {
+        "id": "914b73e5-04a0-4b03-96ef-ff56b2c8255b",
+        "slug": "akane-liv",
+        "name": "AKANE LIV",
+        "kana": null,
+        "profile": "スウェーデン・ヨーテボリ出身の歌手・俳優。元宝塚歌劇団。退団後に英国でシェイクスピアや歌を学び、シンフォニックメタルバンド「LIV MOON」を結成。音楽活動と並行してミュージカルにも出演し、舞台『鋼の錬金術師』でオリヴィエ役を務める。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": null,
+        "height_cm": 170,
+        "blood_type": "A",
+        "birthday_label": "8月24日",
+        "name_en": "AKANE LIV",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "AKANE LIV",
+      "profileUrl": "https://akanelivmoon.amebaownd.com/pages/4126263/biography",
+      "evidence": [
+        {
+          "url": "https://akanelivmoon.amebaownd.com/pages/4126263/biography",
+          "checkedAt": "2026-10-21T13:28:03.946Z",
+          "note": "採用項目・資料の時期は個別notesを参照。"
+        },
+        {
+          "url": "https://www.jvcmusic.co.jp/-/Profile/A024620.html",
+          "checkedAt": "2026-10-21T13:28:03.916Z",
+          "note": "採用項目・資料の時期は個別notesを参照。"
+        },
+        {
+          "url": "https://stage-hagaren.jp/caststaff/",
+          "checkedAt": "2026-10-21T13:36:48.881Z",
+          "retrieval": "web parsed text",
+          "localFile": "official-web.txt",
+          "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+          "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+        }
+      ],
+      "notes": [
+        "出身・元宝塚・英国留学・LIV MOONは本人公式FCとレーベル。月日・170cm・A型は過去時点のレーベルプロフィール由来で時期を記録。生年は当該一次資料にないためDOBを作らず月日のみ、読みも未確認。本人公式FCには2022年4月よりVOICE OF JAPANとの記載があるがリンク先が404のため現所属を紹介で断定しない。旧名の神月茜・岡本茜等とも既存照合し重複を除外。英字は現名そのもの。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "3fe36127-73e4-4e89-a737-8cecdf52cea8",
+        "slug": "mori-ryuji",
+        "name": "盛隆二",
+        "kana": "もり りゅうじ",
+        "profile": "東京都出身の俳優。吉住モータース所属、劇団イキウメのメンバー。飲食店で働いた後に俳優活動を始め、2004年からイキウメに参加。『散歩する侵略者』『太陽』などに出演し、舞台『鋼の錬金術師』ではティム・マルコー役を務める。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1976-07-28",
+        "height_cm": 180,
+        "blood_type": null,
+        "birthday_label": null,
+        "name_en": "Ryuji Mori",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "盛隆二",
+      "profileUrl": "https://www.y-motors.net/work/mori.php",
+      "evidence": [
+        {
+          "url": "https://www.y-motors.net/work/mori.php",
+          "checkedAt": "2026-10-21T13:29:43.944Z",
+          "note": "採用項目・資料の時期は個別notesを参照。"
+        },
+        {
+          "url": "https://www.y-motors.net/artist/",
+          "checkedAt": "2026-10-21T13:29:43.394Z",
+          "note": "採用項目・資料の時期は個別notesを参照。"
+        },
+        {
+          "url": "https://stage-hagaren.jp/caststaff/",
+          "checkedAt": "2026-10-21T13:36:48.881Z",
+          "retrieval": "web parsed text",
+          "localFile": "official-web.txt",
+          "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+          "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+        }
+      ],
+      "notes": [
+        "現行所属先でDOB・読み・東京都・180cm・イキウメ・2004年参加と職歴・出演歴を確認。ローマ字は所属先と公演公式。血液型未確認。従来の阿部裕のマルコー役と区別し、過去公演の人物・役名を置き換えない。"
+      ]
+    }
+  ],
+  "works": [
+    {
+      "year": 2026,
+      "before": null,
+      "patch": null,
+      "play": {
+        "id": "b0fac1c7-a7a5-45e4-bb78-2feabb982f7f",
+        "slug": "hagaren2026",
+        "title": "舞台『鋼の錬金術師』―闇と光の野望―",
+        "franchise_id": "418b4913-42ec-48b9-bd8b-8d736504f9ac",
+        "summary": "エドワードとアルフォンスは、ホムンクルスを操る「お父様」と対峙する中、メイ・チャンの錬丹術に身体を取り戻す可能性を見出す。彼女を追って北へ向かった兄弟は、オリヴィエが率いるブリッグズ要塞へ。そこでアメストリスを覆う計画と、国の過去に関わる真実に迫っていく。",
+        "period": "東京：2026年2月7日〜15日／大阪：2026年2月20日〜22日",
+        "venue": "東京：シアターH／大阪：梅田芸術劇場 シアター・ドラマシティ",
+        "vod": null,
+        "genre": null,
+        "tags": [],
+        "credits": [
+          {
+            "role": "原作",
+            "names": [
+              "「鋼の錬金術師」荒川 弘 （「ガンガンコミックス」スクウェア・エニックス刊）"
+            ],
+            "is_core": true,
+            "sort_order": 1
+          },
+          {
+            "role": "脚本・演出",
+            "names": [
+              "石丸さち子"
+            ],
+            "is_core": true,
+            "sort_order": 2
+          },
+          {
+            "role": "音楽監督",
+            "names": [
+              "森 大輔"
+            ],
+            "is_core": false,
+            "sort_order": 3
+          },
+          {
+            "role": "作詞",
+            "names": [
+              "石丸さち子"
+            ],
+            "is_core": false,
+            "sort_order": 4
+          },
+          {
+            "role": "作曲",
+            "names": [
+              "森 大輔"
+            ],
+            "is_core": false,
+            "sort_order": 5
+          },
+          {
+            "role": "美術",
+            "names": [
+              "伊藤雅子"
+            ],
+            "is_core": false,
+            "sort_order": 6
+          },
+          {
+            "role": "照明",
+            "names": [
+              "日下靖順"
+            ],
+            "is_core": false,
+            "sort_order": 7
+          },
+          {
+            "role": "音響効果",
+            "names": [
+              "天野高志"
+            ],
+            "is_core": false,
+            "sort_order": 8
+          },
+          {
+            "role": "音響",
+            "names": [
+              "増澤 努"
+            ],
+            "is_core": false,
+            "sort_order": 9
+          },
+          {
+            "role": "映像",
+            "names": [
+              "O-beron inc."
+            ],
+            "is_core": false,
+            "sort_order": 10
+          },
+          {
+            "role": "舞台監督",
+            "names": [
+              "今野健一"
+            ],
+            "is_core": false,
+            "sort_order": 11
+          },
+          {
+            "role": "ヘアメイク",
+            "names": [
+              "馮 啓孝",
+              "井村祥子"
+            ],
+            "is_core": false,
+            "sort_order": 12
+          },
+          {
+            "role": "衣裳",
+            "names": [
+              "渡邊礼子"
+            ],
+            "is_core": false,
+            "sort_order": 13
+          },
+          {
+            "role": "小道具",
+            "names": [
+              "羽鳥健一"
+            ],
+            "is_core": false,
+            "sort_order": 14
+          },
+          {
+            "role": "殺陣",
+            "names": [
+              "新田健太"
+            ],
+            "is_core": false,
+            "sort_order": 15
+          },
+          {
+            "role": "演出助手",
+            "names": [
+              "矢本翼子"
+            ],
+            "is_core": false,
+            "sort_order": 16
+          },
+          {
+            "role": "制作進行",
+            "names": [
+              "麻田幹太"
+            ],
+            "is_core": false,
+            "sort_order": 17
+          },
+          {
+            "role": "宣伝デザイン",
+            "names": [
+              "山代政一"
+            ],
+            "is_core": false,
+            "sort_order": 18
+          },
+          {
+            "role": "グッズデザイン",
+            "names": [
+              "山代政一",
+              "石本寛絵"
+            ],
+            "is_core": false,
+            "sort_order": 19
+          },
+          {
+            "role": "デザイン協力",
+            "names": [
+              "石本茂幸"
+            ],
+            "is_core": false,
+            "sort_order": 20
+          },
+          {
+            "role": "フォトグラファー",
+            "names": [
+              "TOBI"
+            ],
+            "is_core": false,
+            "sort_order": 21
+          },
+          {
+            "role": "主催",
+            "names": [
+              "舞台『鋼の錬金術師』製作委員会"
+            ],
+            "is_core": false,
+            "sort_order": 22
+          },
+          {
+            "role": "アンサンブル（役柄併記）",
+            "names": [
+              "真鍋恭輔（エンヴィーの中の魂/真理の扉の手/看守/軍人/ブリッグズ兵/クセルクセスの街人・奴隷/臣下）",
+              "榮桃太郎（エンヴィーの中の魂/真理の扉の手/シャオメイ/軍人/ブリッグズ兵/クセルクセスの街人・奴隷）"
+            ],
+            "is_core": false,
+            "sort_order": 23
+          }
+        ],
+        "related_franchise_ids": [],
+        "title_en": "Fullmetal Alchemist: The Stage -Ambitions of Darkness and Light-",
+        "summary_en": "After confronting Father, the figure behind the Homunculi, Edward and Alphonse see new possibilities in May Chang’s alkahestry. Following her north, the brothers reach Briggs Fortress, commanded by Olivier Armstrong. There they uncover a plan reaching across Amestris and truths connected to the nation’s past."
+      },
+      "rawSource": {
+        "sourceUrl": "https://kira-hai.net/hagaren2026",
+        "title": "舞台『鋼の錬金術師』―闇と光の野望―",
+        "scheduleLines": [
+          "2026年2月7日-15日 シアターH",
+          "2026年2月20日-22日 梅田芸術劇場 シアター・ドラマシティ"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "一色洋平 / 廣野凌大",
+            "sourceActorUrl": null,
+            "role_name": "エドワード・エルリック",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "眞嶋秀斗",
+            "sourceActorUrl": "https://kira-hai.net/mashima-shuto",
+            "role_name": "アルフォンス・エルリック",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "岡部麟",
+            "sourceActorUrl": "https://kira-hai.net/okabe-rin",
+            "role_name": "ウィンリィ・ロックベル",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "蒼木陣 / 和田琢磨",
+            "sourceActorUrl": null,
+            "role_name": "ロイ・マスタング / ホーエンハイム(青年)",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "AKANE LIV",
+            "sourceActorUrl": null,
+            "role_name": "オリヴィエ・ミラ・アームストロング / クセルクセスの街人",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "吉田メタル",
+            "sourceActorUrl": null,
+            "role_name": "バッカニア / アレックス・ルイ・アームストロング / クセルクセスの街人",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "岡本悠紀",
+            "sourceActorUrl": "https://kira-hai.net/okamoto-yuki",
+            "role_name": "マイルズ / マース・ヒューズ / 科学者 / クセルクセスの街人",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "本田礼生",
+            "sourceActorUrl": "https://kira-hai.net/honda-reo",
+            "role_name": "リン・ヤオ / グリード / ヘンシェル / フラスコの中の小人(声)",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "柿澤ゆりあ",
+            "sourceActorUrl": null,
+            "role_name": "メイ・チャン / クセルクセスの街人",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "平松來馬",
+            "sourceActorUrl": "https://kira-hai.net/hiramatsu-raima",
+            "role_name": "エンヴィー / 軍医 / ブリッグズ兵 / クセルクセスの街人 / シャオメイ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "草野大成",
+            "sourceActorUrl": null,
+            "role_name": "グラトニー / 花屋 / ブリッグズ兵 / クセルクセスの街人・奴隷",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "青柳塁斗",
+            "sourceActorUrl": "https://kira-hai.net/aoyagi-ruito",
+            "role_name": "スロウス / ダリウス / 真理(声) / エンヴィーの中の魂 / クセルクセスの街人",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "君沢ユウキ",
+            "sourceActorUrl": "https://kira-hai.net/kimisawa-yuki",
+            "role_name": "ハインケル / 傷の男(スカー)の兄 / エンヴィーの中の魂 / ブリッグズ兵 / クセルクセスの街人",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "大石継太",
+            "sourceActorUrl": null,
+            "role_name": "ヨキ / ノックス / レイヴン / 医者",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "盛隆二",
+            "sourceActorUrl": null,
+            "role_name": "ティム・マルコー / クセルクセス王",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "星智也",
+            "sourceActorUrl": null,
+            "role_name": "傷の男(スカー)",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "谷口賢志",
+            "sourceActorUrl": "https://kira-hai.net/taniguchi-masashi",
+            "role_name": "キング・ブラッドレイ / ホーエンハイム(青年)の主人",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "鈴木勝吾",
+            "sourceActorUrl": "https://kira-hai.net/suzuki-shogo",
+            "role_name": "ゾルフ・J・キンブリー / グリード(声)",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "鍛治直人",
+            "sourceActorUrl": null,
+            "role_name": "ヴァン・ホーエンハイム / お父様",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "桜田航成",
+            "sourceActorUrl": "https://kira-hai.net/sakurada-kosei",
+            "role_name": "アルフォンス・エルリック",
+            "cast_group": "SUIT ACTOR"
+          }
+        ],
+        "unparsed": [
+          "真鍋恭輔",
+          "榮桃太郎"
+        ]
+      },
+      "officialRaw": {
+        "retrieval": "web parsed text, not downloaded HTML",
+        "url": "https://stage-hagaren.jp/caststaff/",
+        "groups": [
+          {
+            "group": "CAST",
+            "rows": [
+              {
+                "role": "エドワード・エルリック",
+                "names": "一色洋平/廣野凌大(Wキャスト)"
+              },
+              {
+                "role": "アルフォンス・エルリック",
+                "names": "眞嶋秀斗"
+              },
+              {
+                "role": "ウィンリィ・ロックベル",
+                "names": "岡部 麟"
+              },
+              {
+                "role": "ロイ・マスタング/ホーエンハイム(青年)",
+                "names": "蒼木 陣/和田琢磨(Wキャスト)"
+              },
+              {
+                "role": "オリヴィエ・ミラ・アームストロング/クセルクセスの街人",
+                "names": "AKANE LIV"
+              },
+              {
+                "role": "バッカニア/アレックス・ルイ・アームストロング/クセルクセスの街人",
+                "names": "吉田メタル"
+              },
+              {
+                "role": "マイルズ/マース・ヒューズ/科学者/クセルクセスの街人",
+                "names": "岡本悠紀"
+              },
+              {
+                "role": "リン・ヤオ/グリード/ヘンシェル/フラスコの中の小人(声)",
+                "names": "本田礼生"
+              },
+              {
+                "role": "メイ・チャン/クセルクセスの街人",
+                "names": "柿澤ゆりあ"
+              },
+              {
+                "role": "エンヴィー/軍医/ブリッグズ兵/クセルクセスの街人/シャオメイ",
+                "names": "平松來馬"
+              },
+              {
+                "role": "グラトニー/花屋/ブリッグズ兵/クセルクセスの街人・奴隷",
+                "names": "草野大成"
+              },
+              {
+                "role": "スロウス/ダリウス/真理(声)/エンヴィーの中の魂/クセルクセスの街人",
+                "names": "青柳塁斗"
+              },
+              {
+                "role": "ハインケル/傷の男(スカー)の兄/エンヴィーの中の魂/ブリッグズ兵/クセルクセスの街人",
+                "names": "君沢ユウキ"
+              },
+              {
+                "role": "ヨキ/ノックス/レイヴン/医者",
+                "names": "大石継太"
+              },
+              {
+                "role": "ティム・マルコー/クセルクセス王",
+                "names": "盛 隆二"
+              },
+              {
+                "role": "傷の男(スカー)",
+                "names": "星 智也"
+              },
+              {
+                "role": "キング・ブラッドレイ/ホーエンハイム(青年)の主人",
+                "names": "谷口賢志"
+              },
+              {
+                "role": "ゾルフ・J・キンブリー/グリード(声)",
+                "names": "鈴木勝吾"
+              },
+              {
+                "role": "ヴァン・ホーエンハイム/お父様",
+                "names": "鍛治直人"
+              }
+            ]
+          },
+          {
+            "group": "SUIT ACTOR",
+            "rows": [
+              {
+                "role": "アルフォンス・エルリック",
+                "names": "桜田航成"
+              }
+            ]
+          },
+          {
+            "group": "ENSEMBLE",
+            "rows": [
+              {
+                "role": "エンヴィーの中の魂/真理の扉の手/看守/軍人/ブリッグズ兵/クセルクセスの街人・奴隷/臣下",
+                "names": "真鍋恭輔"
+              },
+              {
+                "role": "エンヴィーの中の魂/真理の扉の手/シャオメイ/軍人/ブリッグズ兵/クセルクセスの街人・奴隷",
+                "names": "榮 桃太郎"
+              }
+            ]
+          }
+        ],
+        "body": "* cite0†NEWS L1:   * cite1†INTRODUCTION L2:   * cite2†CAST / STAFF L3:   * cite3†TICKET / SCHEDULE L4:   * cite4†MOVIE L5:   * cite5†STREAMING L6:   * cite6†SPECIAL L7:   * cite7†GOODS L8:   * cite8†Blu-ray / DVD L9:   * cite9†GUIDE L10: # 舞台「鋼の錬金術師」CAST / STAFF\n\nFULLMETAL ALCHEMIST THE STAGE\n\nMENU\n\nMENU\n\ncite10†舞台「鋼の錬金術師」FULLMETAL ALCHEMIST L19: \n* cite0†NEWS L21:   * cite1†INTRODUCTION L22:   * cite2†CAST / STAFF L23:   * cite3†TICKET / SCHEDULE L24:   * cite4†MOVIE L25:   * cite5†STREAMING L26:   * cite6†SPECIAL L27:   * cite7†GOODS L28:   * cite8†Blu-ray / DVD L29:   * cite9†GUIDE L30: \nFOLLOW US\ncite11†Official X†twitter.com L33:     cite12†Instagram†www.instagram.com L34: ## CAST出演者\n/配役\n\n* cite13†Image: YOHEI ISSHIKI L38: \n一色 洋平\n\nYOHEI ISSHIKI\n\nas エドワード・エルリック\n(Wキャスト)\n* cite14†Image: RYOTA HIRONO L46: \n廣野 凌大\n\nRYOTA HIRONO\n\nas エドワード・エルリック\n(Wキャスト)\n* cite15†Image: SHUTO MASHIMA L54: \n眞嶋 秀斗\n\nSHUTO MASHIMA\n\nas アルフォンス・エルリック\n* cite16†Image: RIN OKABE L61: \n岡部 麟\n\nRIN OKABE\n\nas ウィンリィ・ロックベル\n* cite17†Image: JIN AOKI L68: \n蒼木 陣\n\nJIN AOKI\n\nas ロイ・マスタング\n(Wキャスト)\n* cite18†Image: TAKUMA WADA L76: \n和田 琢磨\n\nTAKUMA WADA\n\nas ロイ・マスタング\n(Wキャスト)\n* cite19†Image: AKANE LIV L84: \nAKANE LIV\n\nAKANE LIV\nas オリヴィエ・ミラ・\nアームストロング\n* cite20†Image: METAL YOSHIDA L91: \n吉田 メタル\n\nMETAL YOSHIDA\n\nas バッカニア\n* cite21†Image: YUKI OKAMOTO L98: \n岡本 悠紀\n\nYUKI OKAMOTO\n\nas マイルズ\n* cite22†Image: REO HONDA cite23†Image: REO HONDA L105: \n本田 礼生\n\nREO HONDA\n\nas リン・ヤオ／グリード\n* cite24†Image: YURIA KAKIZAWA L112: \n柿澤 ゆりあ\n\nYURIA KAKIZAWA\n\nas メイ・チャン\n* cite25†Image: RAIMA HIRAMATSU L119: \n平松 來馬\n\nRAIMA HIRAMATSU\n\nas エンヴィー\n* cite26†Image: TAISEI KUSANO L126: \n草野 大成\n\nTAISEI KUSANO\n\nas グラトニー\n* cite27†Image: RUITO AOYAGI cite28†Image: RUITO AOYAGI L133: \n青柳 塁斗\n\nRUITO AOYAGI\nas スロウス／ダリウス\n* cite29†Image: YUKI KIMISAWA L139: \n君沢 ユウキ\n\nYUKI KIMISAWA\n\nas ハインケル\n* cite30†Image: KEITA OISHI L146: \n大石 継太\n\nKEITA OISHI\n\nas ヨキ\n* cite31†Image: RYUJI MORI L153: \n盛 隆二\n\nRYUJI MORI\n\nas ティム・マルコー\n* cite32†Image: TOMOYA HOSHI L160: \n星 智也\n\nTOMOYA HOSHI\n\nas 傷の男(スカー)\n* cite33†Image: MASASHI TANIGUCHI L167: \n谷口 賢志\n\nMASASHI TANIGUCHI\n\nas キング・ブラッドレイ\n* cite34†Image: SHOGO SUZUKI L174: \n鈴木 勝吾\n\nSHOGO SUZUKI\n\nas ゾルフ・J・キンブリー\n* cite35†Image: NAOTO KAJI cite36†Image: NAOTO KAJI L181: \n鍛治 直人\n\nNAOTO KAJI\n\nas ヴァン・ホーエンハイム／\nお父様\n\n※Wキャストは五十音順\n### SUIT ACTOR\n\n* cite37†Image: KOSEI SAKURADA L193: \n桜田 航成\n\nKOSEI SAKURADA\n\nas アルフォンス・エルリック\n\n## ENSEMBLE\n\n* cite38†Image: 真鍋恭輔 真鍋恭輔\n* cite39†Image: 榮 桃太郎 榮 桃太郎\n## STAFF\n\n原作\n「鋼の錬金術師」荒川 弘\n（「ガンガンコミックス」スクウェア・エニックス刊）\n\n脚本・演出\n石丸さち子\n\n音楽監督\n森 大輔\n\n作詞\n石丸さち子\n\n作曲\n森 大輔\n\n美術\n伊藤雅子\n\n照明\n日下靖順\n\n音響効果\n天野高志\n\n音響\n増澤 努\n\n映像\nO-beron inc.\n\n舞台監督\n今野健一\n\nヘアメイク\n馮 啓孝　井村祥子\n\n衣裳\n渡邊礼子\n\n小道具\n羽鳥健一\n\n殺陣\n新田健太\n\n演出助手\n矢本翼子\n\n制作進行\n麻田幹太\n\n宣伝デザイン\n山代政一\n\nグッズデザイン\n山代政一　石本寛絵\n\nデザイン協力\n石本茂幸\n\nフォトグラファー\nTOBI\n\n主催\n舞台『鋼の錬金術師』製作委員会\n\ncite10†FULLMETAL ALCHEMIST THE STAGE L274: 公演に関するお問合せ\ncite40†マーベラス ユーザーサポート†www.marv.jp 営業時間　10:00～17:00（土日祝日休業日を除く）\n※営業時間外にいただいたお問合せは翌営業日以降のご返信となります。\ncite41†プライバシーポリシー†www.marv.jp L278: \nFOLLOW US\ncite11†Official X†twitter.com L281:     cite12†Instagram†www.instagram.com L282: \n*   * ©荒川弘／SQUARE ENIX・舞台「鋼の錬金術師」製作委員会\n掲載されている画像・テキスト等の無断転載・無断使用を固く禁じます。\n\ncite42†PAGETOP L287: \nCLOSE\n\nCLOSE\n\nCLOSE\n\nCAST\n\n\nエドワード・エルリック\n一色洋平/廣野凌大(Wキャスト)\n\nアルフォンス・エルリック\n眞嶋秀斗\n\nウィンリィ・ロックベル\n岡部 麟\n\nロイ・マスタング/ホーエンハイム(青年)\n蒼木 陣/和田琢磨(Wキャスト)\n\nオリヴィエ・ミラ・アームストロング/クセルクセスの街人\nAKANE LIV\nバッカニア/アレックス・ルイ・アームストロング/クセルクセスの街人\n吉田メタル\n\nマイルズ/マース・ヒューズ/科学者/クセルクセスの街人\n岡本悠紀\n\nリン・ヤオ/グリード/ヘンシェル/フラスコの中の小人(声)\n本田礼生\n\nメイ・チャン/クセルクセスの街人\n柿澤ゆりあ\n\nエンヴィー/軍医/ブリッグズ兵/クセルクセスの街人/シャオメイ\n平松來馬\n\nグラトニー/花屋/ブリッグズ兵/クセルクセスの街人・奴隷\n草野大成\n\nスロウス/ダリウス/真理(声)/エンヴィーの中の魂/クセルクセスの街人\n青柳塁斗\n\nハインケル/傷の男(スカー)の兄/エンヴィーの中の魂/ブリッグズ兵/\nクセルクセスの街人\n君沢ユウキ\n\nヨキ/ノックス/レイヴン/医者\n大石継太\n\nティム・マルコー/クセルクセス王\n盛 隆二\n\n傷の男(スカー)\n星 智也\n\nキング・ブラッドレイ/ホーエンハイム(青年)の主人\n谷口賢志\n\nゾルフ・J・キンブリー/グリード(声)\n鈴木勝吾\n\nヴァン・ホーエンハイム/お父様\n鍛治直人\nSUIT ACTOR\n\n\nアルフォンス・エルリック\n桜田航成\n\nENSEMBLE\n\n\nエンヴィーの中の魂/真理の扉の手/看守/軍人/ブリッグズ兵/\nクセルクセスの街人・奴隷/臣下\n真鍋恭輔\n\nエンヴィーの中の魂/真理の扉の手/シャオメイ/軍人/ブリッグズ兵/\nクセルクセスの街人・奴隷\n榮 桃太郎\n\n※Wキャストは五十音順"
+      },
+      "source": {
+        "sourceUrl": "https://kira-hai.net/hagaren2026",
+        "title": "舞台『鋼の錬金術師』―闇と光の野望―",
+        "scheduleLines": [
+          "2026年2月7日-15日 シアターH",
+          "2026年2月20日-22日 梅田芸術劇場 シアター・ドラマシティ"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "一色洋平",
+            "sourceActorUrl": "https://kira-hai.net/isshiki-yohei",
+            "role_name": "エドワード・エルリック",
+            "cast_group": "Wキャスト"
+          },
+          {
+            "sourceActorName": "廣野凌大",
+            "sourceActorUrl": "https://kira-hai.net/hirono-ryota",
+            "role_name": "エドワード・エルリック",
+            "cast_group": "Wキャスト"
+          },
+          {
+            "sourceActorName": "眞嶋秀斗",
+            "sourceActorUrl": "https://kira-hai.net/mashima-shuto",
+            "role_name": "アルフォンス・エルリック",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "岡部麟",
+            "sourceActorUrl": "https://kira-hai.net/okabe-rin",
+            "role_name": "ウィンリィ・ロックベル",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "蒼木陣",
+            "sourceActorUrl": "https://kira-hai.net/aoki-jin",
+            "role_name": "ロイ・マスタング / ホーエンハイム(青年)",
+            "cast_group": "Wキャスト"
+          },
+          {
+            "sourceActorName": "和田琢磨",
+            "sourceActorUrl": "https://kira-hai.net/wada-takuma",
+            "role_name": "ロイ・マスタング / ホーエンハイム(青年)",
+            "cast_group": "Wキャスト"
+          },
+          {
+            "sourceActorName": "AKANE LIV",
+            "sourceActorUrl": null,
+            "role_name": "オリヴィエ・ミラ・アームストロング",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "吉田メタル",
+            "sourceActorUrl": null,
+            "role_name": "バッカニア / アレックス・ルイ・アームストロング",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "岡本悠紀",
+            "sourceActorUrl": "https://kira-hai.net/okamoto-yuki",
+            "role_name": "マイルズ / マース・ヒューズ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "本田礼生",
+            "sourceActorUrl": "https://kira-hai.net/honda-reo",
+            "role_name": "リン・ヤオ / グリード / ヘンシェル",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "柿澤ゆりあ",
+            "sourceActorUrl": null,
+            "role_name": "メイ・チャン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "平松來馬",
+            "sourceActorUrl": "https://kira-hai.net/hiramatsu-raima",
+            "role_name": "エンヴィー / シャオメイ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "草野大成",
+            "sourceActorUrl": null,
+            "role_name": "グラトニー",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "青柳塁斗",
+            "sourceActorUrl": "https://kira-hai.net/aoyagi-ruito",
+            "role_name": "スロウス / ダリウス",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "君沢ユウキ",
+            "sourceActorUrl": "https://kira-hai.net/kimisawa-yuki",
+            "role_name": "ハインケル / 傷の男(スカー)の兄",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "大石継太",
+            "sourceActorUrl": null,
+            "role_name": "ヨキ / ノックス / レイヴン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "盛隆二",
+            "sourceActorUrl": null,
+            "role_name": "ティム・マルコー / クセルクセス王",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "星智也",
+            "sourceActorUrl": null,
+            "role_name": "傷の男(スカー)",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "谷口賢志",
+            "sourceActorUrl": "https://kira-hai.net/taniguchi-masashi",
+            "role_name": "キング・ブラッドレイ / ホーエンハイム(青年)の主人",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "鈴木勝吾",
+            "sourceActorUrl": "https://kira-hai.net/suzuki-shogo",
+            "role_name": "ゾルフ・J・キンブリー",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "鍛治直人",
+            "sourceActorUrl": null,
+            "role_name": "ヴァン・ホーエンハイム / お父様",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "桜田航成",
+            "sourceActorUrl": "https://kira-hai.net/sakurada-kosei",
+            "role_name": "アルフォンス・エルリック",
+            "cast_group": "スーツアクター"
+          },
+          {
+            "sourceActorName": "本田礼生",
+            "sourceActorUrl": "https://kira-hai.net/honda-reo",
+            "role_name": "フラスコの中の小人",
+            "cast_group": "声の出演"
+          },
+          {
+            "sourceActorName": "青柳塁斗",
+            "sourceActorUrl": "https://kira-hai.net/aoyagi-ruito",
+            "role_name": "真理",
+            "cast_group": "声の出演"
+          },
+          {
+            "sourceActorName": "鈴木勝吾",
+            "sourceActorUrl": "https://kira-hai.net/suzuki-shogo",
+            "role_name": "グリード",
+            "cast_group": "声の出演"
+          }
+        ],
+        "unparsed": []
+      },
+      "stage": {
+        "workUrl": "https://kira-hai.net/hagaren2026",
+        "key": "19316bedccc81eb40bf4dbbff2076d8dfada645298571b5a9a8e358cfa079dac",
+        "items": [
+          {
+            "source_actor_name": "一色洋平",
+            "source_actor_url": "https://kira-hai.net/isshiki-yohei",
+            "source_work_title": "舞台『鋼の錬金術師』―闇と光の野望―",
+            "source_year": 2026,
+            "source_role_raw": "エドワード・エルリック",
+            "source_role_names": [
+              "エドワード・エルリック"
+            ],
+            "source_cast_group": "Wキャスト",
+            "source_order": 1,
+            "source_credit_key": "d26ec8b8496f5ceddf86",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "checkedAt": "2026-10-21T13:24:14.903Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/caststaff/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/introduction/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/11001/",
+                  "checkedAt": "2026-10-21T13:30:29.807Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "30e63967756349038dccab4ff78d88505f5089c978e410968d15d80445bf1b7e",
+              "review_fingerprint": "2b30c1d7d3715e34db6143171628eb406ca3cf0181c0ab3643b3c7ba4cf5e338",
+              "snapshot_fingerprint": "a3889a1d7a78311f15f3cf1794ccba112b5cd3e07334ee345c15baf2ac376ab8",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "2e14776f-f48e-441f-adb4-90e1317817cb",
+            "matched_play_id": "b0fac1c7-a7a5-45e4-bb78-2feabb982f7f",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "廣野凌大",
+            "source_actor_url": "https://kira-hai.net/hirono-ryota",
+            "source_work_title": "舞台『鋼の錬金術師』―闇と光の野望―",
+            "source_year": 2026,
+            "source_role_raw": "エドワード・エルリック",
+            "source_role_names": [
+              "エドワード・エルリック"
+            ],
+            "source_cast_group": "Wキャスト",
+            "source_order": 2,
+            "source_credit_key": "07995bc117ae50104b40",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "checkedAt": "2026-10-21T13:24:14.903Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/caststaff/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/introduction/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/11001/",
+                  "checkedAt": "2026-10-21T13:30:29.807Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "30e63967756349038dccab4ff78d88505f5089c978e410968d15d80445bf1b7e",
+              "review_fingerprint": "2b30c1d7d3715e34db6143171628eb406ca3cf0181c0ab3643b3c7ba4cf5e338",
+              "snapshot_fingerprint": "a3889a1d7a78311f15f3cf1794ccba112b5cd3e07334ee345c15baf2ac376ab8",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "b8a82c7b-502b-4a03-94c7-11fa7a2ee9e5",
+            "matched_play_id": "b0fac1c7-a7a5-45e4-bb78-2feabb982f7f",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "眞嶋秀斗",
+            "source_actor_url": "https://kira-hai.net/mashima-shuto",
+            "source_work_title": "舞台『鋼の錬金術師』―闇と光の野望―",
+            "source_year": 2026,
+            "source_role_raw": "アルフォンス・エルリック",
+            "source_role_names": [
+              "アルフォンス・エルリック"
+            ],
+            "source_cast_group": null,
+            "source_order": 3,
+            "source_credit_key": "8fa99a693b0d320dff76",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "checkedAt": "2026-10-21T13:24:14.903Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/caststaff/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/introduction/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/11001/",
+                  "checkedAt": "2026-10-21T13:30:29.807Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "30e63967756349038dccab4ff78d88505f5089c978e410968d15d80445bf1b7e",
+              "review_fingerprint": "2b30c1d7d3715e34db6143171628eb406ca3cf0181c0ab3643b3c7ba4cf5e338",
+              "snapshot_fingerprint": "a3889a1d7a78311f15f3cf1794ccba112b5cd3e07334ee345c15baf2ac376ab8",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "96c3ef14-6c93-4f46-a4fe-1856bc3922b5",
+            "matched_play_id": "b0fac1c7-a7a5-45e4-bb78-2feabb982f7f",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "岡部麟",
+            "source_actor_url": "https://kira-hai.net/okabe-rin",
+            "source_work_title": "舞台『鋼の錬金術師』―闇と光の野望―",
+            "source_year": 2026,
+            "source_role_raw": "ウィンリィ・ロックベル",
+            "source_role_names": [
+              "ウィンリィ・ロックベル"
+            ],
+            "source_cast_group": null,
+            "source_order": 4,
+            "source_credit_key": "d225d0a793cc51c7fa1e",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "checkedAt": "2026-10-21T13:24:14.903Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/caststaff/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/introduction/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/11001/",
+                  "checkedAt": "2026-10-21T13:30:29.807Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "30e63967756349038dccab4ff78d88505f5089c978e410968d15d80445bf1b7e",
+              "review_fingerprint": "2b30c1d7d3715e34db6143171628eb406ca3cf0181c0ab3643b3c7ba4cf5e338",
+              "snapshot_fingerprint": "a3889a1d7a78311f15f3cf1794ccba112b5cd3e07334ee345c15baf2ac376ab8",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "b9f5c602-c7c3-46ce-8311-565b0c3fc54d",
+            "matched_play_id": "b0fac1c7-a7a5-45e4-bb78-2feabb982f7f",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "蒼木陣",
+            "source_actor_url": "https://kira-hai.net/aoki-jin",
+            "source_work_title": "舞台『鋼の錬金術師』―闇と光の野望―",
+            "source_year": 2026,
+            "source_role_raw": "ロイ・マスタング / ホーエンハイム(青年)",
+            "source_role_names": [
+              "ロイ・マスタング / ホーエンハイム(青年)"
+            ],
+            "source_cast_group": "Wキャスト",
+            "source_order": 5,
+            "source_credit_key": "85bd0a52e78298428db3",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "checkedAt": "2026-10-21T13:24:14.903Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/caststaff/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/introduction/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/11001/",
+                  "checkedAt": "2026-10-21T13:30:29.807Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "30e63967756349038dccab4ff78d88505f5089c978e410968d15d80445bf1b7e",
+              "review_fingerprint": "2b30c1d7d3715e34db6143171628eb406ca3cf0181c0ab3643b3c7ba4cf5e338",
+              "snapshot_fingerprint": "a3889a1d7a78311f15f3cf1794ccba112b5cd3e07334ee345c15baf2ac376ab8",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "db8cc881-a613-4c16-ad95-e8fcf7084e8f",
+            "matched_play_id": "b0fac1c7-a7a5-45e4-bb78-2feabb982f7f",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "和田琢磨",
+            "source_actor_url": "https://kira-hai.net/wada-takuma",
+            "source_work_title": "舞台『鋼の錬金術師』―闇と光の野望―",
+            "source_year": 2026,
+            "source_role_raw": "ロイ・マスタング / ホーエンハイム(青年)",
+            "source_role_names": [
+              "ロイ・マスタング / ホーエンハイム(青年)"
+            ],
+            "source_cast_group": "Wキャスト",
+            "source_order": 6,
+            "source_credit_key": "d955d9cca7aa497db9de",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "checkedAt": "2026-10-21T13:24:14.903Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/caststaff/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/introduction/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/11001/",
+                  "checkedAt": "2026-10-21T13:30:29.807Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "30e63967756349038dccab4ff78d88505f5089c978e410968d15d80445bf1b7e",
+              "review_fingerprint": "2b30c1d7d3715e34db6143171628eb406ca3cf0181c0ab3643b3c7ba4cf5e338",
+              "snapshot_fingerprint": "a3889a1d7a78311f15f3cf1794ccba112b5cd3e07334ee345c15baf2ac376ab8",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "fe1af02f-afc1-47f9-a8f3-1d0490811772",
+            "matched_play_id": "b0fac1c7-a7a5-45e4-bb78-2feabb982f7f",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "AKANE LIV",
+            "source_actor_url": null,
+            "source_work_title": "舞台『鋼の錬金術師』―闇と光の野望―",
+            "source_year": 2026,
+            "source_role_raw": "オリヴィエ・ミラ・アームストロング",
+            "source_role_names": [
+              "オリヴィエ・ミラ・アームストロング"
+            ],
+            "source_cast_group": null,
+            "source_order": 7,
+            "source_credit_key": "341215f9876069630277",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "checkedAt": "2026-10-21T13:24:14.903Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/caststaff/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/introduction/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/11001/",
+                  "checkedAt": "2026-10-21T13:30:29.807Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "30e63967756349038dccab4ff78d88505f5089c978e410968d15d80445bf1b7e",
+              "review_fingerprint": "2b30c1d7d3715e34db6143171628eb406ca3cf0181c0ab3643b3c7ba4cf5e338",
+              "snapshot_fingerprint": "a3889a1d7a78311f15f3cf1794ccba112b5cd3e07334ee345c15baf2ac376ab8",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "914b73e5-04a0-4b03-96ef-ff56b2c8255b",
+            "matched_play_id": "b0fac1c7-a7a5-45e4-bb78-2feabb982f7f",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "吉田メタル",
+            "source_actor_url": null,
+            "source_work_title": "舞台『鋼の錬金術師』―闇と光の野望―",
+            "source_year": 2026,
+            "source_role_raw": "バッカニア / アレックス・ルイ・アームストロング",
+            "source_role_names": [
+              "バッカニア / アレックス・ルイ・アームストロング"
+            ],
+            "source_cast_group": null,
+            "source_order": 8,
+            "source_credit_key": "246c105e036b6023ec5d",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "checkedAt": "2026-10-21T13:24:14.903Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/caststaff/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/introduction/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/11001/",
+                  "checkedAt": "2026-10-21T13:30:29.807Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "30e63967756349038dccab4ff78d88505f5089c978e410968d15d80445bf1b7e",
+              "review_fingerprint": "2b30c1d7d3715e34db6143171628eb406ca3cf0181c0ab3643b3c7ba4cf5e338",
+              "snapshot_fingerprint": "a3889a1d7a78311f15f3cf1794ccba112b5cd3e07334ee345c15baf2ac376ab8",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "b1d92f66-455c-45e0-81c5-03eed5fd6a7f",
+            "matched_play_id": "b0fac1c7-a7a5-45e4-bb78-2feabb982f7f",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "岡本悠紀",
+            "source_actor_url": "https://kira-hai.net/okamoto-yuki",
+            "source_work_title": "舞台『鋼の錬金術師』―闇と光の野望―",
+            "source_year": 2026,
+            "source_role_raw": "マイルズ / マース・ヒューズ",
+            "source_role_names": [
+              "マイルズ / マース・ヒューズ"
+            ],
+            "source_cast_group": null,
+            "source_order": 9,
+            "source_credit_key": "3a7124c37232774224c7",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "checkedAt": "2026-10-21T13:24:14.903Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/caststaff/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/introduction/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/11001/",
+                  "checkedAt": "2026-10-21T13:30:29.807Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "30e63967756349038dccab4ff78d88505f5089c978e410968d15d80445bf1b7e",
+              "review_fingerprint": "2b30c1d7d3715e34db6143171628eb406ca3cf0181c0ab3643b3c7ba4cf5e338",
+              "snapshot_fingerprint": "a3889a1d7a78311f15f3cf1794ccba112b5cd3e07334ee345c15baf2ac376ab8",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "9ba33ccd-8bee-4415-999c-3808db92605a",
+            "matched_play_id": "b0fac1c7-a7a5-45e4-bb78-2feabb982f7f",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "本田礼生",
+            "source_actor_url": "https://kira-hai.net/honda-reo",
+            "source_work_title": "舞台『鋼の錬金術師』―闇と光の野望―",
+            "source_year": 2026,
+            "source_role_raw": "リン・ヤオ / グリード / ヘンシェル",
+            "source_role_names": [
+              "リン・ヤオ / グリード / ヘンシェル"
+            ],
+            "source_cast_group": null,
+            "source_order": 10,
+            "source_credit_key": "8506e9abad07c016fa56",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "checkedAt": "2026-10-21T13:24:14.903Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/caststaff/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/introduction/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/11001/",
+                  "checkedAt": "2026-10-21T13:30:29.807Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "30e63967756349038dccab4ff78d88505f5089c978e410968d15d80445bf1b7e",
+              "review_fingerprint": "2b30c1d7d3715e34db6143171628eb406ca3cf0181c0ab3643b3c7ba4cf5e338",
+              "snapshot_fingerprint": "a3889a1d7a78311f15f3cf1794ccba112b5cd3e07334ee345c15baf2ac376ab8",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "8b7c86f6-a193-46a9-89b3-2662f03b7b2b",
+            "matched_play_id": "b0fac1c7-a7a5-45e4-bb78-2feabb982f7f",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "柿澤ゆりあ",
+            "source_actor_url": null,
+            "source_work_title": "舞台『鋼の錬金術師』―闇と光の野望―",
+            "source_year": 2026,
+            "source_role_raw": "メイ・チャン",
+            "source_role_names": [
+              "メイ・チャン"
+            ],
+            "source_cast_group": null,
+            "source_order": 11,
+            "source_credit_key": "a8f5509efcc58b8ab021",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "checkedAt": "2026-10-21T13:24:14.903Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/caststaff/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/introduction/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/11001/",
+                  "checkedAt": "2026-10-21T13:30:29.807Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "30e63967756349038dccab4ff78d88505f5089c978e410968d15d80445bf1b7e",
+              "review_fingerprint": "2b30c1d7d3715e34db6143171628eb406ca3cf0181c0ab3643b3c7ba4cf5e338",
+              "snapshot_fingerprint": "a3889a1d7a78311f15f3cf1794ccba112b5cd3e07334ee345c15baf2ac376ab8",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "f08ab77f-3294-4c32-a457-aa5834dedece",
+            "matched_play_id": "b0fac1c7-a7a5-45e4-bb78-2feabb982f7f",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "平松來馬",
+            "source_actor_url": "https://kira-hai.net/hiramatsu-raima",
+            "source_work_title": "舞台『鋼の錬金術師』―闇と光の野望―",
+            "source_year": 2026,
+            "source_role_raw": "エンヴィー / シャオメイ",
+            "source_role_names": [
+              "エンヴィー / シャオメイ"
+            ],
+            "source_cast_group": null,
+            "source_order": 12,
+            "source_credit_key": "f8a609e0ed081886a545",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "checkedAt": "2026-10-21T13:24:14.903Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/caststaff/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/introduction/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/11001/",
+                  "checkedAt": "2026-10-21T13:30:29.807Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "30e63967756349038dccab4ff78d88505f5089c978e410968d15d80445bf1b7e",
+              "review_fingerprint": "2b30c1d7d3715e34db6143171628eb406ca3cf0181c0ab3643b3c7ba4cf5e338",
+              "snapshot_fingerprint": "a3889a1d7a78311f15f3cf1794ccba112b5cd3e07334ee345c15baf2ac376ab8",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "8278030b-89b0-4674-ba56-e6a520878a5c",
+            "matched_play_id": "b0fac1c7-a7a5-45e4-bb78-2feabb982f7f",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "草野大成",
+            "source_actor_url": null,
+            "source_work_title": "舞台『鋼の錬金術師』―闇と光の野望―",
+            "source_year": 2026,
+            "source_role_raw": "グラトニー",
+            "source_role_names": [
+              "グラトニー"
+            ],
+            "source_cast_group": null,
+            "source_order": 13,
+            "source_credit_key": "80506417901dfb6a0450",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "checkedAt": "2026-10-21T13:24:14.903Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/caststaff/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/introduction/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/11001/",
+                  "checkedAt": "2026-10-21T13:30:29.807Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "30e63967756349038dccab4ff78d88505f5089c978e410968d15d80445bf1b7e",
+              "review_fingerprint": "2b30c1d7d3715e34db6143171628eb406ca3cf0181c0ab3643b3c7ba4cf5e338",
+              "snapshot_fingerprint": "a3889a1d7a78311f15f3cf1794ccba112b5cd3e07334ee345c15baf2ac376ab8",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "86bffab8-6caf-41e6-a4b1-0736868d3e9f",
+            "matched_play_id": "b0fac1c7-a7a5-45e4-bb78-2feabb982f7f",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "青柳塁斗",
+            "source_actor_url": "https://kira-hai.net/aoyagi-ruito",
+            "source_work_title": "舞台『鋼の錬金術師』―闇と光の野望―",
+            "source_year": 2026,
+            "source_role_raw": "スロウス / ダリウス",
+            "source_role_names": [
+              "スロウス / ダリウス"
+            ],
+            "source_cast_group": null,
+            "source_order": 14,
+            "source_credit_key": "7424bd6ea645ed8e9490",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "checkedAt": "2026-10-21T13:24:14.903Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/caststaff/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/introduction/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/11001/",
+                  "checkedAt": "2026-10-21T13:30:29.807Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "30e63967756349038dccab4ff78d88505f5089c978e410968d15d80445bf1b7e",
+              "review_fingerprint": "2b30c1d7d3715e34db6143171628eb406ca3cf0181c0ab3643b3c7ba4cf5e338",
+              "snapshot_fingerprint": "a3889a1d7a78311f15f3cf1794ccba112b5cd3e07334ee345c15baf2ac376ab8",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "39f893e4-6bc7-4393-a463-09afc6f22f90",
+            "matched_play_id": "b0fac1c7-a7a5-45e4-bb78-2feabb982f7f",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "君沢ユウキ",
+            "source_actor_url": "https://kira-hai.net/kimisawa-yuki",
+            "source_work_title": "舞台『鋼の錬金術師』―闇と光の野望―",
+            "source_year": 2026,
+            "source_role_raw": "ハインケル / 傷の男(スカー)の兄",
+            "source_role_names": [
+              "ハインケル / 傷の男(スカー)の兄"
+            ],
+            "source_cast_group": null,
+            "source_order": 15,
+            "source_credit_key": "d3f8ef7a40ec31d66961",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "checkedAt": "2026-10-21T13:24:14.903Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/caststaff/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/introduction/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/11001/",
+                  "checkedAt": "2026-10-21T13:30:29.807Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "30e63967756349038dccab4ff78d88505f5089c978e410968d15d80445bf1b7e",
+              "review_fingerprint": "2b30c1d7d3715e34db6143171628eb406ca3cf0181c0ab3643b3c7ba4cf5e338",
+              "snapshot_fingerprint": "a3889a1d7a78311f15f3cf1794ccba112b5cd3e07334ee345c15baf2ac376ab8",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "189ea368-c895-4564-b87d-f6bb287972dc",
+            "matched_play_id": "b0fac1c7-a7a5-45e4-bb78-2feabb982f7f",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "大石継太",
+            "source_actor_url": null,
+            "source_work_title": "舞台『鋼の錬金術師』―闇と光の野望―",
+            "source_year": 2026,
+            "source_role_raw": "ヨキ / ノックス / レイヴン",
+            "source_role_names": [
+              "ヨキ / ノックス / レイヴン"
+            ],
+            "source_cast_group": null,
+            "source_order": 16,
+            "source_credit_key": "8c67a2a3211b630fbad5",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "checkedAt": "2026-10-21T13:24:14.903Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/caststaff/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/introduction/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/11001/",
+                  "checkedAt": "2026-10-21T13:30:29.807Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "30e63967756349038dccab4ff78d88505f5089c978e410968d15d80445bf1b7e",
+              "review_fingerprint": "2b30c1d7d3715e34db6143171628eb406ca3cf0181c0ab3643b3c7ba4cf5e338",
+              "snapshot_fingerprint": "a3889a1d7a78311f15f3cf1794ccba112b5cd3e07334ee345c15baf2ac376ab8",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "32984d17-90b4-41f1-86f3-e390401e3658",
+            "matched_play_id": "b0fac1c7-a7a5-45e4-bb78-2feabb982f7f",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "盛隆二",
+            "source_actor_url": null,
+            "source_work_title": "舞台『鋼の錬金術師』―闇と光の野望―",
+            "source_year": 2026,
+            "source_role_raw": "ティム・マルコー / クセルクセス王",
+            "source_role_names": [
+              "ティム・マルコー / クセルクセス王"
+            ],
+            "source_cast_group": null,
+            "source_order": 17,
+            "source_credit_key": "46a93b0c675666d7d66d",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "checkedAt": "2026-10-21T13:24:14.903Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/caststaff/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/introduction/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/11001/",
+                  "checkedAt": "2026-10-21T13:30:29.807Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "30e63967756349038dccab4ff78d88505f5089c978e410968d15d80445bf1b7e",
+              "review_fingerprint": "2b30c1d7d3715e34db6143171628eb406ca3cf0181c0ab3643b3c7ba4cf5e338",
+              "snapshot_fingerprint": "a3889a1d7a78311f15f3cf1794ccba112b5cd3e07334ee345c15baf2ac376ab8",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "3fe36127-73e4-4e89-a737-8cecdf52cea8",
+            "matched_play_id": "b0fac1c7-a7a5-45e4-bb78-2feabb982f7f",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "星智也",
+            "source_actor_url": null,
+            "source_work_title": "舞台『鋼の錬金術師』―闇と光の野望―",
+            "source_year": 2026,
+            "source_role_raw": "傷の男(スカー)",
+            "source_role_names": [
+              "傷の男(スカー)"
+            ],
+            "source_cast_group": null,
+            "source_order": 18,
+            "source_credit_key": "5a122935bb3af5080801",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "checkedAt": "2026-10-21T13:24:14.903Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/caststaff/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/introduction/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/11001/",
+                  "checkedAt": "2026-10-21T13:30:29.807Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "30e63967756349038dccab4ff78d88505f5089c978e410968d15d80445bf1b7e",
+              "review_fingerprint": "2b30c1d7d3715e34db6143171628eb406ca3cf0181c0ab3643b3c7ba4cf5e338",
+              "snapshot_fingerprint": "a3889a1d7a78311f15f3cf1794ccba112b5cd3e07334ee345c15baf2ac376ab8",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "d30b191a-6df7-4235-a170-06b12a5b847d",
+            "matched_play_id": "b0fac1c7-a7a5-45e4-bb78-2feabb982f7f",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "谷口賢志",
+            "source_actor_url": "https://kira-hai.net/taniguchi-masashi",
+            "source_work_title": "舞台『鋼の錬金術師』―闇と光の野望―",
+            "source_year": 2026,
+            "source_role_raw": "キング・ブラッドレイ / ホーエンハイム(青年)の主人",
+            "source_role_names": [
+              "キング・ブラッドレイ / ホーエンハイム(青年)の主人"
+            ],
+            "source_cast_group": null,
+            "source_order": 19,
+            "source_credit_key": "cbd1987cf1243e5c901c",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "checkedAt": "2026-10-21T13:24:14.903Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/caststaff/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/introduction/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/11001/",
+                  "checkedAt": "2026-10-21T13:30:29.807Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "30e63967756349038dccab4ff78d88505f5089c978e410968d15d80445bf1b7e",
+              "review_fingerprint": "2b30c1d7d3715e34db6143171628eb406ca3cf0181c0ab3643b3c7ba4cf5e338",
+              "snapshot_fingerprint": "a3889a1d7a78311f15f3cf1794ccba112b5cd3e07334ee345c15baf2ac376ab8",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "84e43961-444d-4831-99e7-b79a3e0e7548",
+            "matched_play_id": "b0fac1c7-a7a5-45e4-bb78-2feabb982f7f",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "鈴木勝吾",
+            "source_actor_url": "https://kira-hai.net/suzuki-shogo",
+            "source_work_title": "舞台『鋼の錬金術師』―闇と光の野望―",
+            "source_year": 2026,
+            "source_role_raw": "ゾルフ・J・キンブリー",
+            "source_role_names": [
+              "ゾルフ・J・キンブリー"
+            ],
+            "source_cast_group": null,
+            "source_order": 20,
+            "source_credit_key": "832a586139c496070e80",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "checkedAt": "2026-10-21T13:24:14.903Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/caststaff/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/introduction/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/11001/",
+                  "checkedAt": "2026-10-21T13:30:29.807Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "30e63967756349038dccab4ff78d88505f5089c978e410968d15d80445bf1b7e",
+              "review_fingerprint": "2b30c1d7d3715e34db6143171628eb406ca3cf0181c0ab3643b3c7ba4cf5e338",
+              "snapshot_fingerprint": "a3889a1d7a78311f15f3cf1794ccba112b5cd3e07334ee345c15baf2ac376ab8",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "d9b2e659-3fc1-49be-a56f-80989b0908e8",
+            "matched_play_id": "b0fac1c7-a7a5-45e4-bb78-2feabb982f7f",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "鍛治直人",
+            "source_actor_url": null,
+            "source_work_title": "舞台『鋼の錬金術師』―闇と光の野望―",
+            "source_year": 2026,
+            "source_role_raw": "ヴァン・ホーエンハイム / お父様",
+            "source_role_names": [
+              "ヴァン・ホーエンハイム / お父様"
+            ],
+            "source_cast_group": null,
+            "source_order": 21,
+            "source_credit_key": "00353abd475cc91e5b12",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "checkedAt": "2026-10-21T13:24:14.903Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/caststaff/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/introduction/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/11001/",
+                  "checkedAt": "2026-10-21T13:30:29.807Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "30e63967756349038dccab4ff78d88505f5089c978e410968d15d80445bf1b7e",
+              "review_fingerprint": "2b30c1d7d3715e34db6143171628eb406ca3cf0181c0ab3643b3c7ba4cf5e338",
+              "snapshot_fingerprint": "a3889a1d7a78311f15f3cf1794ccba112b5cd3e07334ee345c15baf2ac376ab8",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "082a7857-dcc6-4bb7-8fc2-0cd133a5f3ab",
+            "matched_play_id": "b0fac1c7-a7a5-45e4-bb78-2feabb982f7f",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "桜田航成",
+            "source_actor_url": "https://kira-hai.net/sakurada-kosei",
+            "source_work_title": "舞台『鋼の錬金術師』―闇と光の野望―",
+            "source_year": 2026,
+            "source_role_raw": "アルフォンス・エルリック",
+            "source_role_names": [
+              "アルフォンス・エルリック"
+            ],
+            "source_cast_group": "スーツアクター",
+            "source_order": 22,
+            "source_credit_key": "6fd1fc57a1963ba63ee9",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "checkedAt": "2026-10-21T13:24:14.903Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/caststaff/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/introduction/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/11001/",
+                  "checkedAt": "2026-10-21T13:30:29.807Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "30e63967756349038dccab4ff78d88505f5089c978e410968d15d80445bf1b7e",
+              "review_fingerprint": "2b30c1d7d3715e34db6143171628eb406ca3cf0181c0ab3643b3c7ba4cf5e338",
+              "snapshot_fingerprint": "a3889a1d7a78311f15f3cf1794ccba112b5cd3e07334ee345c15baf2ac376ab8",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "09754279-07f2-45b5-a112-544b791ab7fc",
+            "matched_play_id": "b0fac1c7-a7a5-45e4-bb78-2feabb982f7f",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "本田礼生",
+            "source_actor_url": "https://kira-hai.net/honda-reo",
+            "source_work_title": "舞台『鋼の錬金術師』―闇と光の野望―",
+            "source_year": 2026,
+            "source_role_raw": "フラスコの中の小人",
+            "source_role_names": [
+              "フラスコの中の小人"
+            ],
+            "source_cast_group": "声の出演",
+            "source_order": 23,
+            "source_credit_key": "a9aa91cf9484acf0929e",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "checkedAt": "2026-10-21T13:24:14.903Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/caststaff/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/introduction/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/11001/",
+                  "checkedAt": "2026-10-21T13:30:29.807Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "30e63967756349038dccab4ff78d88505f5089c978e410968d15d80445bf1b7e",
+              "review_fingerprint": "2b30c1d7d3715e34db6143171628eb406ca3cf0181c0ab3643b3c7ba4cf5e338",
+              "snapshot_fingerprint": "a3889a1d7a78311f15f3cf1794ccba112b5cd3e07334ee345c15baf2ac376ab8",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "8b7c86f6-a193-46a9-89b3-2662f03b7b2b",
+            "matched_play_id": "b0fac1c7-a7a5-45e4-bb78-2feabb982f7f",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "青柳塁斗",
+            "source_actor_url": "https://kira-hai.net/aoyagi-ruito",
+            "source_work_title": "舞台『鋼の錬金術師』―闇と光の野望―",
+            "source_year": 2026,
+            "source_role_raw": "真理",
+            "source_role_names": [
+              "真理"
+            ],
+            "source_cast_group": "声の出演",
+            "source_order": 24,
+            "source_credit_key": "f1bc68c99df5c402dc92",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "checkedAt": "2026-10-21T13:24:14.903Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/caststaff/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/introduction/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/11001/",
+                  "checkedAt": "2026-10-21T13:30:29.807Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "30e63967756349038dccab4ff78d88505f5089c978e410968d15d80445bf1b7e",
+              "review_fingerprint": "2b30c1d7d3715e34db6143171628eb406ca3cf0181c0ab3643b3c7ba4cf5e338",
+              "snapshot_fingerprint": "a3889a1d7a78311f15f3cf1794ccba112b5cd3e07334ee345c15baf2ac376ab8",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "39f893e4-6bc7-4393-a463-09afc6f22f90",
+            "matched_play_id": "b0fac1c7-a7a5-45e4-bb78-2feabb982f7f",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "鈴木勝吾",
+            "source_actor_url": "https://kira-hai.net/suzuki-shogo",
+            "source_work_title": "舞台『鋼の錬金術師』―闇と光の野望―",
+            "source_year": 2026,
+            "source_role_raw": "グリード",
+            "source_role_names": [
+              "グリード"
+            ],
+            "source_cast_group": "声の出演",
+            "source_order": 25,
+            "source_credit_key": "f035a361f6c16609c822",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hagaren2026",
+                  "checkedAt": "2026-10-21T13:24:14.903Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/caststaff/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://stage-hagaren.jp/introduction/",
+                  "checkedAt": "2026-10-21T13:36:48.881Z",
+                  "retrieval": "web parsed text",
+                  "localFile": "official-web.txt",
+                  "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+                  "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/11001/",
+                  "checkedAt": "2026-10-21T13:30:29.807Z",
+                  "note": "採用項目・資料の時期は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "30e63967756349038dccab4ff78d88505f5089c978e410968d15d80445bf1b7e",
+              "review_fingerprint": "2b30c1d7d3715e34db6143171628eb406ca3cf0181c0ab3643b3c7ba4cf5e338",
+              "snapshot_fingerprint": "a3889a1d7a78311f15f3cf1794ccba112b5cd3e07334ee345c15baf2ac376ab8",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "d9b2e659-3fc1-49be-a56f-80989b0908e8",
+            "matched_play_id": "b0fac1c7-a7a5-45e4-bb78-2feabb982f7f",
+            "status": "pending"
+          }
+        ]
+      },
+      "records": [
+        {
+          "actor": {
+            "id": "2e14776f-f48e-441f-adb4-90e1317817cb",
+            "slug": "isshiki-yohei",
+            "name": "一色 洋平",
+            "kana": "いっしき ようへい",
+            "profile": "神奈川県出身の俳優。グランドスラム所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/yohei_isshiki",
+              "youtube": "https://www.youtube.com/@Yohei_Isshiki",
+              "official": "https://grandslam.ciao.jp/isshikiyohei/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-30T20:14:55.175684+00:00",
+            "updated_at": "2026-03-30T20:14:55.175684+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1991-08-06",
+            "height_cm": 166,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "一色洋平",
+            "sourceActorUrl": "https://kira-hai.net/isshiki-yohei",
+            "role_name": "エドワード・エルリック",
+            "cast_group": "Wキャスト"
+          },
+          "sourceCreditKey": "d26ec8b8496f5ceddf86",
+          "sourceOrder": 1,
+          "billingOrder": 1,
+          "expectedNote": "Wキャスト。各回の出演者は公式公演日程による。"
+        },
+        {
+          "actor": {
+            "id": "b8a82c7b-502b-4a03-94c7-11fa7a2ee9e5",
+            "slug": "hirono-ryota",
+            "name": "廣野 凌大",
+            "kana": "ひろの りょうた",
+            "profile": "千葉県出身の俳優、アーティスト。自身が代表を務める株式会社RBに所属。ミュージカル『テニスの王子様』3rdシーズン（財前光役）をはじめ、『ヒプノシスマイク -Division Rap Battle-』Rule the Stage（波羅夷空却役）、舞台『鋼の錬金術師』（主演・エドワード・エルリック役）等の舞台作品に出演している。また、「Bimi」名義でアーティスト活動も行っており、EVIL LINE RECORDS（キングレコード）からメジャーデビューしている。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/hironobimistaff",
+              "official": "https://ryotahirono.com/",
+              "instagram": "https://www.instagram.com/bimi_official0428_"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:13:20.008797+00:00",
+            "updated_at": "2026-03-21T15:13:20.008797+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1998-04-28",
+            "height_cm": 165,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor and artist from Chiba Prefecture. He is affiliated with RB Co., Ltd., where he serves as the representative director. He appears in stage works such as the musical \"The Prince of Tennis\" 3rd season (as Hikaru Zaizen), \"Hypnosis Mic -Division Rap Battle-\" Rule the Stage (as Kuko Harai), and the stage play \"Fullmetal Alchemist\" (as the lead role, Edward Elric). He is also active as an artist under the name \"Bimi\" and has made his major debut with EVIL LINE RECORDS.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "廣野凌大",
+            "sourceActorUrl": "https://kira-hai.net/hirono-ryota",
+            "role_name": "エドワード・エルリック",
+            "cast_group": "Wキャスト"
+          },
+          "sourceCreditKey": "07995bc117ae50104b40",
+          "sourceOrder": 2,
+          "billingOrder": 2,
+          "expectedNote": "Wキャスト。各回の出演者は公式公演日程による。"
+        },
+        {
+          "actor": {
+            "id": "96c3ef14-6c93-4f46-a4fe-1856bc3922b5",
+            "slug": "mashima-shuto",
+            "name": "眞嶋 秀斗",
+            "kana": "ましま しゅうと",
+            "profile": "群馬県出身の俳優。エイベックス・マネジメント所属。ミュージカル『テニスの王子様』3rdシーズン（桃城武役）や斬劇『戦国BASARA』シリーズ（伊達政宗役）、舞台『アオペラ』等の舞台作品に出演。また、テレビドラマ『俺のスカート、どこ行った？』や映画『ブラック校則』などの映像作品にも出演している。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/mashimashuto",
+              "youtube": "https://www.youtube.com/@shuteatime",
+              "instagram": "https://www.instagram.com/mashimashuto/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:06:19.306372+00:00",
+            "updated_at": "2026-03-21T15:06:19.306372+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1995-08-08",
+            "height_cm": 172,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Gunma Prefecture. Affiliated with Avex Management. He has appeared in stage works such as the musical \"The Prince of Tennis\" 3rd season (as Takeshi Momoshiro), the \"Sengoku BASARA\" stage series (as Masamune Date), and the stage play \"Aoppella\". He has also appeared in film and television works such as the drama \"Where Have My Skirts Gone?\" and the film \"Black School Rules\".",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "眞嶋秀斗",
+            "sourceActorUrl": "https://kira-hai.net/mashima-shuto",
+            "role_name": "アルフォンス・エルリック",
+            "cast_group": null
+          },
+          "sourceCreditKey": "8fa99a693b0d320dff76",
+          "sourceOrder": 3,
+          "billingOrder": 3,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "b9f5c602-c7c3-46ce-8311-565b0c3fc54d",
+            "slug": "okabe-rin",
+            "name": "岡部麟",
+            "kana": "おかべ りん",
+            "profile": "茨城県出身の俳優・タレント。ホリプロ所属。AKB48チーム8の茨城県代表として活動し、卒業後も舞台や映像作品に出演。舞台『鋼の錬金術師』ではウィンリィ・ロックベル役を担当し、イラストや模写を特技としている。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-21T12:15:09.437961+00:00",
+            "updated_at": "2026-10-21T12:15:09.437961+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1996-11-07",
+            "height_cm": 159,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Rin Okabe",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "岡部麟",
+            "sourceActorUrl": "https://kira-hai.net/okabe-rin",
+            "role_name": "ウィンリィ・ロックベル",
+            "cast_group": null
+          },
+          "sourceCreditKey": "d225d0a793cc51c7fa1e",
+          "sourceOrder": 4,
+          "billingOrder": 4,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "db8cc881-a613-4c16-ad95-e8fcf7084e8f",
+            "slug": "aoki-jin",
+            "name": "蒼木 陣",
+            "kana": "あおき じん",
+            "profile": "大阪府出身の俳優。サンミュージックブレーン所属。ミュージカル『テニスの王子様』3rdシーズン（喜多一馬役）や舞台『刀剣乱舞』シリーズ（陸奥守吉行役）、舞台『鬼滅の刃』シリーズ（猗窩座役）、舞台『プリンス・オブ・ストライド THE LIVE STAGE』シリーズ（藤原尊役）、舞台『鋼の錬金術師』シリーズ（ロイ・マスタング役）等の舞台作品を中心に出演している。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/ORANGEJIN",
+              "official": "https://aokijin-fc.com/",
+              "instagram": "https://www.instagram.com/aokijin.526"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:10:00.631722+00:00",
+            "updated_at": "2026-03-21T15:10:00.631722+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1992-05-26",
+            "height_cm": 172,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Osaka Prefecture. Affiliated with Sun Music Brain. He primarily appears in stage works such as the musical \"The Prince of Tennis\" 3rd season (as Kazuma Kita), the stage play \"Touken Ranbu\" series (as Mutsunokami Yoshiyuki), the stage play \"Demon Slayer: Kimetsu no Yaiba\" series (as Akaza), the stage play \"Prince of Stride THE LIVE STAGE\" series (as Takeru Fujiwara), and the stage play \"Fullmetal Alchemist\" series (as Roy Mustang).",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "蒼木陣",
+            "sourceActorUrl": "https://kira-hai.net/aoki-jin",
+            "role_name": "ロイ・マスタング / ホーエンハイム(青年)",
+            "cast_group": "Wキャスト"
+          },
+          "sourceCreditKey": "85bd0a52e78298428db3",
+          "sourceOrder": 5,
+          "billingOrder": 5,
+          "expectedNote": "Wキャスト。各回の出演者は公式公演日程による。"
+        },
+        {
+          "actor": {
+            "id": "fe1af02f-afc1-47f9-a8f3-1d0490811772",
+            "slug": "wada-takuma",
+            "name": "和田 琢磨",
+            "kana": "わだ たくま",
+            "profile": "山形県出身の俳優。株式会社HeHe所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/wadatakuma_",
+              "official": "https://wadatakuma.com/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:01:26.311999+00:00",
+            "updated_at": "2026-03-21T15:01:26.311999+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1986-01-04",
+            "height_cm": 178,
+            "blood_type": "AB",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "和田琢磨",
+            "sourceActorUrl": "https://kira-hai.net/wada-takuma",
+            "role_name": "ロイ・マスタング / ホーエンハイム(青年)",
+            "cast_group": "Wキャスト"
+          },
+          "sourceCreditKey": "d955d9cca7aa497db9de",
+          "sourceOrder": 6,
+          "billingOrder": 6,
+          "expectedNote": "Wキャスト。各回の出演者は公式公演日程による。"
+        },
+        {
+          "actor": {
+            "id": "914b73e5-04a0-4b03-96ef-ff56b2c8255b",
+            "slug": "akane-liv",
+            "name": "AKANE LIV",
+            "kana": null,
+            "profile": "スウェーデン・ヨーテボリ出身の歌手・俳優。元宝塚歌劇団。退団後に英国でシェイクスピアや歌を学び、シンフォニックメタルバンド「LIV MOON」を結成。音楽活動と並行してミュージカルにも出演し、舞台『鋼の錬金術師』でオリヴィエ役を務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": null,
+            "height_cm": 170,
+            "blood_type": "A",
+            "birthday_label": "8月24日",
+            "name_en": "AKANE LIV",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "AKANE LIV",
+            "sourceActorUrl": null,
+            "role_name": "オリヴィエ・ミラ・アームストロング",
+            "cast_group": null
+          },
+          "sourceCreditKey": "341215f9876069630277",
+          "sourceOrder": 7,
+          "billingOrder": 7,
+          "expectedNote": "兼役：クセルクセスの街人。"
+        },
+        {
+          "actor": {
+            "id": "b1d92f66-455c-45e0-81c5-03eed5fd6a7f",
+            "slug": "yoshida-metal",
+            "name": "吉田メタル",
+            "kana": "よしだ めたる",
+            "profile": "石川県出身の俳優。劇団☆新感線所属。1992年に入団し、『ゴローにおまかせ』で俳優デビュー。舞台・ミュージカルを中心に活動し、『仮面ライダー鎧武』の凰蓮・ピエール・アルフォンゾ／仮面ライダーブラーボ役も務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-21T12:15:09.437961+00:00",
+            "updated_at": "2026-10-21T12:15:09.437961+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1971-11-01",
+            "height_cm": 185,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": "Metal Yoshida",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "吉田メタル",
+            "sourceActorUrl": null,
+            "role_name": "バッカニア / アレックス・ルイ・アームストロング",
+            "cast_group": null
+          },
+          "sourceCreditKey": "246c105e036b6023ec5d",
+          "sourceOrder": 8,
+          "billingOrder": 8,
+          "expectedNote": "兼役：クセルクセスの街人。"
+        },
+        {
+          "actor": {
+            "id": "9ba33ccd-8bee-4415-999c-3808db92605a",
+            "slug": "okamoto-yuki1",
+            "name": "岡本 悠紀",
+            "kana": null,
+            "profile": "東京都出身のミュージカル俳優、シンガー。株式会社ムジカモモジカ所属。大学時代まではアメリカンフットボール部に所属していた経歴を持つ。ミュージカル『新テニスの王子様』シリーズ（鬼十次郎役）をはじめ、『「僕のヒーローアカデミア」The \"Ultra\" Stage』（プレゼント・マイク役）、「ROCK MUSICAL BLEACH」（更木剣八役）等の舞台作品に出演している。また、『RENT』や『ミス・サイゴン』等のブロードウェイミュージカル作品への出演経歴も持ち、舞台作品においてボーカルキャプテンや歌唱指導も務めている。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/yuki_wr1",
+              "official": "https://www.musicamomosica.com/yuki/",
+              "instagram": "https://www.instagram.com/yuki_wr1/"
+            },
+            "gender": "male",
+            "created_at": "2026-04-22T02:51:29.723178+00:00",
+            "updated_at": "2026-04-22T02:51:29.723178+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1989-01-07",
+            "height_cm": 180,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": "Yuki Okamoto",
+            "profile_en": "A musical actor and singer from Tokyo. Affiliated with Musica Momosica. He has a background as an American football player until his university days. He appears in stage works such as the musical \"The New Prince of Tennis\" series (as Jujiro Oni), \"My Hero Academia\" The \"Ultra\" Stage (as Present Mic), and \"ROCK MUSICAL BLEACH\" (as Kenpachi Zaraki). He also has experience appearing in Broadway musicals such as \"RENT\" and \"Miss Saigon,\" and serves as a vocal captain and singing coach for stage productions.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "岡本悠紀",
+            "sourceActorUrl": "https://kira-hai.net/okamoto-yuki",
+            "role_name": "マイルズ / マース・ヒューズ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "3a7124c37232774224c7",
+          "sourceOrder": 9,
+          "billingOrder": 9,
+          "expectedNote": "兼役：科学者／クセルクセスの街人。"
+        },
+        {
+          "actor": {
+            "id": "8b7c86f6-a193-46a9-89b3-2662f03b7b2b",
+            "slug": "honda-reo",
+            "name": "本田 礼生",
+            "kana": "ほんだ れお",
+            "profile": "愛媛県出身の俳優。ヤザ・パパ所属。ミュージカル『テニスの王子様』3rdシーズン（菊丸英二役）や舞台『刀剣乱舞』（一期一振役）、『MANKAI STAGE「A3!」』シリーズ（斑鳩三角役）等の舞台作品に出演。特技のアクロバットやブレイクダンスを活かした高い身体能力に定評があり、エンターテインメント集団「THE CONVOY（ザ・コンボイ）」の若手メンバーとしても活動している。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/honda_reo",
+              "official": "https://honda-reo.com/",
+              "instagram": "https://www.instagram.com/honda_reo_staff/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:06:19.306372+00:00",
+            "updated_at": "2026-03-21T15:06:19.306372+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1992-10-28",
+            "height_cm": 175,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Ehime Prefecture. Affiliated with Yaza Papa. He has appeared in stage works such as the musical \"The Prince of Tennis\" 3rd season (as Eiji Kikumaru), the stage play \"Touken Ranbu\" (as Ichigo Hitofuri), and the \"MANKAI STAGE 'A3!'\" series (as Misumi Ikaruga). He is highly regarded for his physical abilities, utilizing his special skills in acrobatics and breakdancing, and is also active as a younger member of the entertainment group \"THE CONVOY\".",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "本田礼生",
+            "sourceActorUrl": "https://kira-hai.net/honda-reo",
+            "role_name": "リン・ヤオ / グリード / ヘンシェル",
+            "cast_group": null
+          },
+          "sourceCreditKey": "8506e9abad07c016fa56",
+          "sourceOrder": 10,
+          "billingOrder": 10,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "f08ab77f-3294-4c32-a457-aa5834dedece",
+            "slug": "kakizawa-yuria",
+            "name": "柿澤ゆりあ",
+            "kana": "かきざわ ゆりあ",
+            "profile": "長野県出身の俳優。2016年の第8回「東宝シンデレラ」オーディションで審査員特別賞・集英社賞を受賞。舞台「鬼滅の刃」の白髪役、舞台『鋼の錬金術師』―それぞれの戦場―のメイ・チャン役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-21T13:10:03.368542+00:00",
+            "updated_at": "2026-10-21T13:10:03.368542+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "2003-04-03",
+            "height_cm": null,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Yuria Kakizawa",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "柿澤ゆりあ",
+            "sourceActorUrl": null,
+            "role_name": "メイ・チャン",
+            "cast_group": null
+          },
+          "sourceCreditKey": "a8f5509efcc58b8ab021",
+          "sourceOrder": 11,
+          "billingOrder": 11,
+          "expectedNote": "兼役：クセルクセスの街人。"
+        },
+        {
+          "actor": {
+            "id": "8278030b-89b0-4674-ba56-e6a520878a5c",
+            "slug": "hiramatsu-raima",
+            "name": "平松 來馬",
+            "kana": "ひらまつ らいま",
+            "profile": "神奈川県出身の俳優。株式会社ワイケーエージェント所属。子役時代から活動を行っている。ミュージカル『テニスの王子様』3rdシーズン（遠山金太郎役）をはじめ、舞台『鋼の錬金術師』（エンヴィー役）、『HUNTER×HUNTER』THE STAGE（フェイタン役）、ミュージカル『東京リベンジャーズ』（稀咲鉄太役）、『Dancing☆star プリキュア』The Stage（鈴ノ木蛍役）等の舞台作品を中心に出演している。また、大河ドラマ『青天を衝け』や映画『Daughters』等の映像作品への出演経歴も持つ。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/HRaima_official",
+              "official": "https://raimahiramatsu-official.com/",
+              "instagram": "https://www.instagram.com/raimagram_official/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:13:20.008797+00:00",
+            "updated_at": "2026-03-21T15:13:20.008797+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "2002-01-12",
+            "height_cm": 164,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Kanagawa Prefecture. Affiliated with YKAgent. He has been active since his days as a child actor. He primarily appears in stage works such as the musical \"The Prince of Tennis\" 3rd season (as Kintaro Toyama), the stage play \"Fullmetal Alchemist\" (as Envy), \"HUNTER×HUNTER\" THE STAGE (as Feitan), the musical \"Tokyo Revengers\" (as Tetta Kisaki), and \"Dancing☆star Precure\" The Stage (as Hotaru Suzunoki). He also has experience appearing in film and television works such as the Taiga drama \"Seiten wo Tsuke\" and the movie \"Daughters\".",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "平松來馬",
+            "sourceActorUrl": "https://kira-hai.net/hiramatsu-raima",
+            "role_name": "エンヴィー / シャオメイ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "f8a609e0ed081886a545",
+          "sourceOrder": 12,
+          "billingOrder": 12,
+          "expectedNote": "兼役：軍医／ブリッグズ兵／クセルクセスの街人。"
+        },
+        {
+          "actor": {
+            "id": "86bffab8-6caf-41e6-a4b1-0736868d3e9f",
+            "slug": "kusano-taisei",
+            "name": "草野大成",
+            "kana": null,
+            "profile": "神奈川県出身の俳優。ドラマ『仰げば尊し』『お前はまだグンマを知らない』『マジムリ学園』などに出演。舞台『鋼の錬金術師』ではグラトニー役に加え、ナンバー48の弟の声も担当している。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-21T12:15:09.437961+00:00",
+            "updated_at": "2026-10-21T12:15:09.437961+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1994-05-16",
+            "height_cm": 174,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Taisei Kusano",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "草野大成",
+            "sourceActorUrl": null,
+            "role_name": "グラトニー",
+            "cast_group": null
+          },
+          "sourceCreditKey": "80506417901dfb6a0450",
+          "sourceOrder": 13,
+          "billingOrder": 13,
+          "expectedNote": "兼役：花屋／ブリッグズ兵／クセルクセスの街人・奴隷。"
+        },
+        {
+          "actor": {
+            "id": "39f893e4-6bc7-4393-a463-09afc6f22f90",
+            "slug": "aoyagi-ruito",
+            "name": "青柳 塁斗",
+            "kana": "あおやぎ るいと",
+            "profile": "北海道出身の俳優。アミューズ所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/AoyagiKoushiki",
+              "official": "https://ameblo.jp/ruito-aoyagi/",
+              "instagram": "https://www.instagram.com/ruitoaoyagi/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-20T19:59:11.529982+00:00",
+            "updated_at": "2026-03-20T19:59:11.529982+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1990-02-09",
+            "height_cm": 174,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "青柳塁斗",
+            "sourceActorUrl": "https://kira-hai.net/aoyagi-ruito",
+            "role_name": "スロウス / ダリウス",
+            "cast_group": null
+          },
+          "sourceCreditKey": "7424bd6ea645ed8e9490",
+          "sourceOrder": 14,
+          "billingOrder": 14,
+          "expectedNote": "兼役：エンヴィーの中の魂／クセルクセスの街人。"
+        },
+        {
+          "actor": {
+            "id": "189ea368-c895-4564-b87d-f6bb287972dc",
+            "slug": "kimisawa-yuki",
+            "name": "君沢 ユウキ",
+            "kana": "きみさわ ゆうき",
+            "profile": "京都府出身の俳優。株式会社オムニア所属。ミュージカル『テニスの王子様』2ndシーズン（渡邊オサム役）やライブ・スペクタクル『NARUTO-ナルト-』（はたけカカシ役）、舞台『文豪ストレイドッグス』（フランシス・F役）等の舞台作品に出演。また、特撮ドラマ『仮面ライダーW』（園咲霧彦役）などの映像作品にも出演している。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/yukikimisawa",
+              "official": "https://kimisawayuki.com/",
+              "instagram": "https://www.instagram.com/yukikimisawa"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:06:19.306372+00:00",
+            "updated_at": "2026-03-21T15:06:19.306372+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1985-01-31",
+            "height_cm": 181,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Kyoto Prefecture. Affiliated with OMNIA Co., Ltd. He has appeared in stage works such as the musical \"The Prince of Tennis\" 2nd season (as Osamu Watanabe), the Live Spectacle \"NARUTO\" (as Kakashi Hatake), and the stage play \"Bungo Stray Dogs\" (as Francis F). He has also appeared in television works such as the special effects drama \"Kamen Rider W\" (as Kirihiko Sonozaki).",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "君沢ユウキ",
+            "sourceActorUrl": "https://kira-hai.net/kimisawa-yuki",
+            "role_name": "ハインケル / 傷の男(スカー)の兄",
+            "cast_group": null
+          },
+          "sourceCreditKey": "d3f8ef7a40ec31d66961",
+          "sourceOrder": 15,
+          "billingOrder": 15,
+          "expectedNote": "兼役：エンヴィーの中の魂／ブリッグズ兵／クセルクセスの街人。"
+        },
+        {
+          "actor": {
+            "id": "32984d17-90b4-41f1-86f3-e390401e3658",
+            "slug": "oishi-keita",
+            "name": "大石継太",
+            "kana": null,
+            "profile": "大阪府出身の俳優。フロム・ファーストプロダクション所属。1983年から蜷川スタジオに参加し、『血の婚礼』『近松心中物語』『お気に召すまま』などに出演。舞台『鋼の錬金術師』ではショウ・タッカーとドミニク・レコルトを演じた。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-21T12:15:09.437961+00:00",
+            "updated_at": "2026-10-21T12:15:09.437961+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1960-10-18",
+            "height_cm": null,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Keita Oishi",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "大石継太",
+            "sourceActorUrl": null,
+            "role_name": "ヨキ / ノックス / レイヴン",
+            "cast_group": null
+          },
+          "sourceCreditKey": "8c67a2a3211b630fbad5",
+          "sourceOrder": 16,
+          "billingOrder": 16,
+          "expectedNote": "兼役：医者。"
+        },
+        {
+          "actor": {
+            "id": "3fe36127-73e4-4e89-a737-8cecdf52cea8",
+            "slug": "mori-ryuji",
+            "name": "盛隆二",
+            "kana": "もり りゅうじ",
+            "profile": "東京都出身の俳優。吉住モータース所属、劇団イキウメのメンバー。飲食店で働いた後に俳優活動を始め、2004年からイキウメに参加。『散歩する侵略者』『太陽』などに出演し、舞台『鋼の錬金術師』ではティム・マルコー役を務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1976-07-28",
+            "height_cm": 180,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Ryuji Mori",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "盛隆二",
+            "sourceActorUrl": null,
+            "role_name": "ティム・マルコー / クセルクセス王",
+            "cast_group": null
+          },
+          "sourceCreditKey": "46a93b0c675666d7d66d",
+          "sourceOrder": 17,
+          "billingOrder": 17,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "d30b191a-6df7-4235-a170-06b12a5b847d",
+            "slug": "hoshi-tomoya",
+            "name": "星智也",
+            "kana": "ほし ともや",
+            "profile": "神奈川県出身の俳優。文学座所属。2001年に文学座附属演劇研究所へ入り、2003年の『リチャード三世』で初舞台。2006年に座員となる。舞台『鋼の錬金術師』の傷の男役のほか、海外ドラマの吹き替えでも活動する。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-21T12:15:09.437961+00:00",
+            "updated_at": "2026-10-21T12:15:09.437961+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1977-03-29",
+            "height_cm": 192,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Tomoya Hoshi",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "星智也",
+            "sourceActorUrl": null,
+            "role_name": "傷の男(スカー)",
+            "cast_group": null
+          },
+          "sourceCreditKey": "5a122935bb3af5080801",
+          "sourceOrder": 18,
+          "billingOrder": 18,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "84e43961-444d-4831-99e7-b79a3e0e7548",
+            "slug": "taniguchi-masashi",
+            "name": "谷口賢志",
+            "kana": "たにぐち まさし",
+            "profile": "東京都出身の俳優。1999年に『救急戦隊ゴーゴーファイブ』の巽流水／ゴーブルー役でデビュー。舞台『戦国BASARA』の明智光秀／天海役などを務め、「チェンソーマン」ザ・ステージでは岸辺役を担当した。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-21T10:12:58.005594+00:00",
+            "updated_at": "2026-10-21T10:12:58.005594+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1977-11-05",
+            "height_cm": 180,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": "Masashi Taniguchi",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "谷口賢志",
+            "sourceActorUrl": "https://kira-hai.net/taniguchi-masashi",
+            "role_name": "キング・ブラッドレイ / ホーエンハイム(青年)の主人",
+            "cast_group": null
+          },
+          "sourceCreditKey": "cbd1987cf1243e5c901c",
+          "sourceOrder": 19,
+          "billingOrder": 19,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "d9b2e659-3fc1-49be-a56f-80989b0908e8",
+            "slug": "suzuki-shogo",
+            "name": "鈴木 勝吾",
+            "kana": "すずき しょうご",
+            "profile": "1989年2月4日生まれ、神奈川県出身。『侍戦隊シンケンジャー』でデビュー。ミュージカル『薄桜鬼』風間千景役や『憂国のモリアーティ』ウィリアム役など、圧倒的な歌唱力と存在感を誇る。",
+            "image_url": "/actors/suzuki-shogo.jpg",
+            "sns": {
+              "x": "https://twitter.com/Shogo_Suzuki_",
+              "official": "https://smiling-days.com/"
+            },
+            "gender": "male",
+            "created_at": "2025-12-13T04:41:02.052969+00:00",
+            "updated_at": "2025-12-13T04:41:02.052969+00:00",
+            "tags": [
+              "歌唱力",
+              "熱演"
+            ],
+            "featured_play_slugs": [
+              "hakuoki-musical-saito",
+              "moriarty-musical"
+            ],
+            "birthday": "1989-02-04",
+            "height_cm": null,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "鈴木勝吾",
+            "sourceActorUrl": "https://kira-hai.net/suzuki-shogo",
+            "role_name": "ゾルフ・J・キンブリー",
+            "cast_group": null
+          },
+          "sourceCreditKey": "832a586139c496070e80",
+          "sourceOrder": 20,
+          "billingOrder": 20,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "082a7857-dcc6-4bb7-8fc2-0cd133a5f3ab",
+            "slug": "kaji-naoto",
+            "name": "鍛治直人",
+            "kana": "かじ なおと",
+            "profile": "兵庫県出身の俳優。文学座所属。1997年に文学座附属演劇研究所へ入り、2000年の『心破れて』で初舞台。2002年に座員となり、文化庁派遣在外研究生としてロンドンに留学。舞台『鋼の錬金術師』ではヴァン・ホーエンハイム役を務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-21T13:10:03.368542+00:00",
+            "updated_at": "2026-10-21T13:10:03.368542+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": null,
+            "height_cm": 182,
+            "blood_type": null,
+            "birthday_label": "1月24日",
+            "name_en": "Naoto Kaji",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "鍛治直人",
+            "sourceActorUrl": null,
+            "role_name": "ヴァン・ホーエンハイム / お父様",
+            "cast_group": null
+          },
+          "sourceCreditKey": "00353abd475cc91e5b12",
+          "sourceOrder": 21,
+          "billingOrder": 21,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "09754279-07f2-45b5-a112-544b791ab7fc",
+            "slug": "sakurada-kosei",
+            "name": "桜田航成",
+            "kana": "さくらだ こうせい",
+            "profile": "俳優。2010年に俳優デビューし、舞台を中心に活動。殺陣・アクションを得意とし、『仮面ライダーセイバー×ゴースト』『仮面ライダースペクター』にも出演。舞台『鋼の錬金術師』ではアルフォンス・エルリックのスーツアクターを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-21T12:15:09.437961+00:00",
+            "updated_at": "2026-10-21T12:15:09.437961+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1987-05-28",
+            "height_cm": 180,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": "Kosei Sakurada",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "桜田航成",
+            "sourceActorUrl": "https://kira-hai.net/sakurada-kosei",
+            "role_name": "アルフォンス・エルリック",
+            "cast_group": "スーツアクター"
+          },
+          "sourceCreditKey": "6fd1fc57a1963ba63ee9",
+          "sourceOrder": 22,
+          "billingOrder": 22,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "8b7c86f6-a193-46a9-89b3-2662f03b7b2b",
+            "slug": "honda-reo",
+            "name": "本田 礼生",
+            "kana": "ほんだ れお",
+            "profile": "愛媛県出身の俳優。ヤザ・パパ所属。ミュージカル『テニスの王子様』3rdシーズン（菊丸英二役）や舞台『刀剣乱舞』（一期一振役）、『MANKAI STAGE「A3!」』シリーズ（斑鳩三角役）等の舞台作品に出演。特技のアクロバットやブレイクダンスを活かした高い身体能力に定評があり、エンターテインメント集団「THE CONVOY（ザ・コンボイ）」の若手メンバーとしても活動している。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/honda_reo",
+              "official": "https://honda-reo.com/",
+              "instagram": "https://www.instagram.com/honda_reo_staff/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:06:19.306372+00:00",
+            "updated_at": "2026-03-21T15:06:19.306372+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1992-10-28",
+            "height_cm": 175,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Ehime Prefecture. Affiliated with Yaza Papa. He has appeared in stage works such as the musical \"The Prince of Tennis\" 3rd season (as Eiji Kikumaru), the stage play \"Touken Ranbu\" (as Ichigo Hitofuri), and the \"MANKAI STAGE 'A3!'\" series (as Misumi Ikaruga). He is highly regarded for his physical abilities, utilizing his special skills in acrobatics and breakdancing, and is also active as a younger member of the entertainment group \"THE CONVOY\".",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "本田礼生",
+            "sourceActorUrl": "https://kira-hai.net/honda-reo",
+            "role_name": "フラスコの中の小人",
+            "cast_group": "声の出演"
+          },
+          "sourceCreditKey": "a9aa91cf9484acf0929e",
+          "sourceOrder": 23,
+          "billingOrder": 23,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "39f893e4-6bc7-4393-a463-09afc6f22f90",
+            "slug": "aoyagi-ruito",
+            "name": "青柳 塁斗",
+            "kana": "あおやぎ るいと",
+            "profile": "北海道出身の俳優。アミューズ所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/AoyagiKoushiki",
+              "official": "https://ameblo.jp/ruito-aoyagi/",
+              "instagram": "https://www.instagram.com/ruitoaoyagi/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-20T19:59:11.529982+00:00",
+            "updated_at": "2026-03-20T19:59:11.529982+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1990-02-09",
+            "height_cm": 174,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "青柳塁斗",
+            "sourceActorUrl": "https://kira-hai.net/aoyagi-ruito",
+            "role_name": "真理",
+            "cast_group": "声の出演"
+          },
+          "sourceCreditKey": "f1bc68c99df5c402dc92",
+          "sourceOrder": 24,
+          "billingOrder": 24,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "d9b2e659-3fc1-49be-a56f-80989b0908e8",
+            "slug": "suzuki-shogo",
+            "name": "鈴木 勝吾",
+            "kana": "すずき しょうご",
+            "profile": "1989年2月4日生まれ、神奈川県出身。『侍戦隊シンケンジャー』でデビュー。ミュージカル『薄桜鬼』風間千景役や『憂国のモリアーティ』ウィリアム役など、圧倒的な歌唱力と存在感を誇る。",
+            "image_url": "/actors/suzuki-shogo.jpg",
+            "sns": {
+              "x": "https://twitter.com/Shogo_Suzuki_",
+              "official": "https://smiling-days.com/"
+            },
+            "gender": "male",
+            "created_at": "2025-12-13T04:41:02.052969+00:00",
+            "updated_at": "2025-12-13T04:41:02.052969+00:00",
+            "tags": [
+              "歌唱力",
+              "熱演"
+            ],
+            "featured_play_slugs": [
+              "hakuoki-musical-saito",
+              "moriarty-musical"
+            ],
+            "birthday": "1989-02-04",
+            "height_cm": null,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "鈴木勝吾",
+            "sourceActorUrl": "https://kira-hai.net/suzuki-shogo",
+            "role_name": "グリード",
+            "cast_group": "声の出演"
+          },
+          "sourceCreditKey": "f035a361f6c16609c822",
+          "sourceOrder": 25,
+          "billingOrder": 25,
+          "expectedNote": null
+        }
+      ],
+      "castPatches": [],
+      "keptCasts": [],
+      "keptActors": [],
+      "legacyCandidates": [],
+      "legacyPatch": null,
+      "sourceFingerprint": "30e63967756349038dccab4ff78d88505f5089c978e410968d15d80445bf1b7e",
+      "expectedCastCount": 25,
+      "evidence": [
+        {
+          "url": "https://kira-hai.net/hagaren2026",
+          "checkedAt": "2026-10-21T13:24:14.903Z",
+          "note": "採用項目・資料の時期は個別notesを参照。"
+        },
+        {
+          "url": "https://stage-hagaren.jp/caststaff/",
+          "checkedAt": "2026-10-21T13:36:48.881Z",
+          "retrieval": "web parsed text",
+          "localFile": "official-web.txt",
+          "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+          "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+        },
+        {
+          "url": "https://stage-hagaren.jp/introduction/",
+          "checkedAt": "2026-10-21T13:36:48.881Z",
+          "retrieval": "web parsed text",
+          "localFile": "official-web.txt",
+          "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+          "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+        },
+        {
+          "url": "https://www.marv.jp/titles/st/11001/",
+          "checkedAt": "2026-10-21T13:30:29.807Z",
+          "note": "採用項目・資料の時期は個別notesを参照。"
+        }
+      ],
+      "exceptions": [
+        "2026年の主要21人・スーツ1人で22人物25配役。通常役と声の兼役3行を分離。W2役4人・スーツ1人・注記13件。",
+        "ホーエンハイム青年をロイと兼ねるWキャスト2人に保持。鍛治のお父様は2024年の声だけ出演をコピーせず通常兼役。本田の通常グリードと鈴木のグリードの声、青柳の真理の声を区別。",
+        "公式ENSEMBLE2人は全役柄付きクレジットへ。2026年のCAST/STAFFには演奏者別掲がないため旧作のバンドメンバーを転記しない。制作スタッフ22区分は全氏名を当該年公式と再照合。",
+        "公式ドメインへの直接接続はHTTP/HTTPSとも拒否。公式配役と紹介はWeb閲覧本文で取得し原表示を保存。日程会場は取得成功した制作元マーベラスとキラハイで照合。日別W割当表のHTMLを取得済みとはしない。",
+        "英語副題はサイト向け訳。公式英語案内・協会英語ページを取得できておらず、公式表記と称しない。既存2作品とシリーズ、既存20人物の全項目を保持。"
+      ]
+    }
+  ],
+  "evidence": {
+    "links": [
+      {
+        "url": "https://kira-hai.net/hagaren2026",
+        "checkedAt": "2026-10-21T13:24:14.903Z",
+        "note": "採用項目・資料の時期は個別notesを参照。"
+      },
+      {
+        "url": "https://stage-hagaren.jp/caststaff/",
+        "checkedAt": "2026-10-21T13:36:48.881Z",
+        "retrieval": "web parsed text",
+        "localFile": "official-web.txt",
+        "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+        "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+      },
+      {
+        "url": "https://stage-hagaren.jp/introduction/",
+        "checkedAt": "2026-10-21T13:36:48.881Z",
+        "retrieval": "web parsed text",
+        "localFile": "official-web.txt",
+        "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+        "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+      },
+      {
+        "url": "https://www.marv.jp/titles/st/11001/",
+        "checkedAt": "2026-10-21T13:30:29.807Z",
+        "note": "採用項目・資料の時期は個別notesを参照。"
+      }
+    ],
+    "sources": [
+      {
+        "name": "kira-work-probe",
+        "url": "https://kira-hai.net/hagaren2026",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/hagaren2026",
+        "checkedAt": "2026-10-21T13:24:14.903Z",
+        "sha256": "6f96715888ac7238896da1ec5a3d8d3730a6c1b7ed4a502425d1413d85430858"
+      },
+      {
+        "name": "changelog",
+        "url": "https://supabase.com/changelog.md",
+        "status": 200,
+        "finalUrl": "https://supabase.com/changelog.md",
+        "checkedAt": "2026-10-21T13:24:14.840Z",
+        "sha256": "15b3d0d1a7dc3b3f2c0af4788e49acfdf2d2edbd2613f22de0705fa43b1cf58b"
+      },
+      {
+        "name": "robots",
+        "url": "https://kira-hai.net/robots.txt",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/robots.txt",
+        "checkedAt": "2026-10-21T13:24:14.781Z",
+        "sha256": "f6ed0322f0e3df8c3b42b14df3254a90cca7b94a4172de91812952b3c7060b03"
+      },
+      {
+        "name": "akane-label",
+        "url": "https://www.jvcmusic.co.jp/-/Profile/A024620.html",
+        "status": 200,
+        "finalUrl": "https://www.jvcmusic.co.jp/-/Profile/A024620.html",
+        "checkedAt": "2026-10-21T13:28:03.916Z",
+        "sha256": "85728e4c11bd79f8b8e04c50d23cb7b615b1e6d985ad19eb2b8786406000075c"
+      },
+      {
+        "name": "akane-bio",
+        "url": "https://akanelivmoon.amebaownd.com/pages/4126263/biography",
+        "status": 200,
+        "finalUrl": "https://akanelivmoon.amebaownd.com/pages/4126263/biography",
+        "checkedAt": "2026-10-21T13:28:03.946Z",
+        "sha256": "23d472c001685d4528e174d2af4c66e16792ecbd18e008156f946348fbcd61b3"
+      },
+      {
+        "name": "akane-contact",
+        "url": "https://akanelivmoon.amebaownd.com/pages/4126265/contact",
+        "status": 200,
+        "finalUrl": "https://akanelivmoon.amebaownd.com/pages/4126265/contact",
+        "checkedAt": "2026-10-21T13:28:03.889Z",
+        "sha256": "77ec5a7df88fb990ab63a5e179f6ab86939419cef5854498b364870bce2332f4"
+      },
+      {
+        "name": "mori-article",
+        "url": "https://natalie.mu/stage/artist/103219",
+        "status": 200,
+        "finalUrl": "https://natalie.mu/profile/103219",
+        "checkedAt": "2026-10-21T13:28:04.529Z",
+        "sha256": "a28debf7546c891ce729f511f03111ecf528e09fee9bf4e1295ba12a835c380c"
+      },
+      {
+        "name": "mori",
+        "url": "https://www.y-motors.net/work/mori.php",
+        "status": 200,
+        "finalUrl": "https://www.y-motors.net/artist/mori/",
+        "checkedAt": "2026-10-21T13:29:43.944Z",
+        "sha256": "a82e62d125de22853887c28302f20a0435bf2984c0e6470b3d8d5d1402b65e02"
+      },
+      {
+        "name": "mori-http",
+        "url": "http://www.y-motors.net/work/mori.php",
+        "status": 200,
+        "finalUrl": "https://www.y-motors.net/artist/mori/",
+        "checkedAt": "2026-10-21T13:29:44.053Z",
+        "sha256": "a82e62d125de22853887c28302f20a0435bf2984c0e6470b3d8d5d1402b65e02"
+      },
+      {
+        "name": "mori-roster",
+        "url": "https://www.y-motors.net/artist/",
+        "status": 200,
+        "finalUrl": "https://www.y-motors.net/artist/",
+        "checkedAt": "2026-10-21T13:29:43.394Z",
+        "sha256": "4ffc9452f2b8fdc27b2a70094a0b26a98045e9de3a7cd3e026bc5337b0a190b6"
+      },
+      {
+        "name": "marv",
+        "url": "https://www.marv.jp/titles/st/11001/",
+        "status": 200,
+        "finalUrl": "https://www.marv.jp/titles/st/11001/",
+        "checkedAt": "2026-10-21T13:30:29.807Z",
+        "sha256": "c0ff7174ecf517394ca7f4e5ad49b0db48a620425c0f1dad65a3e6707d86c2e9"
+      }
+    ],
+    "parsedOfficial": [
+      {
+        "url": "https://stage-hagaren.jp/caststaff/",
+        "checkedAt": "2026-10-21T13:36:48.881Z",
+        "retrieval": "web parsed text",
+        "localFile": "official-web.txt",
+        "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+        "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+      },
+      {
+        "url": "https://stage-hagaren.jp/introduction/",
+        "checkedAt": "2026-10-21T13:36:48.881Z",
+        "retrieval": "web parsed text",
+        "localFile": "official-web.txt",
+        "sha256": "230f1e3e9e125c843677effba06288251ae7ef9ead48650871da29b6fb86f891",
+        "note": "直接取得は接続拒否。Web閲覧の公式本文を保存・照合し、HTML取得成功と偽装しない。"
+      }
+    ],
+    "unavailable": [
+      {
+        "name": "official",
+        "url": "https://stage-hagaren.jp/",
+        "status": 0,
+        "error": "TypeError: fetch failed",
+        "checkedAt": "2026-10-21T13:24:14.447Z"
+      },
+      {
+        "name": "cast-official",
+        "url": "https://stage-hagaren.jp/caststaff/",
+        "status": 0,
+        "error": "TypeError: fetch failed",
+        "checkedAt": "2026-10-21T13:24:14.455Z"
+      },
+      {
+        "name": "schedule-official",
+        "url": "https://stage-hagaren.jp/tschedule/",
+        "status": 0,
+        "error": "TypeError: fetch failed",
+        "checkedAt": "2026-10-21T13:24:14.456Z"
+      },
+      {
+        "name": "intro",
+        "url": "https://stage-hagaren.jp/introduction/",
+        "status": 0,
+        "error": "TypeError: fetch failed",
+        "checkedAt": "2026-10-21T13:24:14.453Z"
+      },
+      {
+        "name": "official-http",
+        "url": "http://stage-hagaren.jp/",
+        "status": 0,
+        "error": "TypeError: fetch failed",
+        "checkedAt": "2026-10-21T13:26:30.348Z"
+      },
+      {
+        "name": "cast-http",
+        "url": "http://stage-hagaren.jp/caststaff/",
+        "status": 0,
+        "error": "TypeError: fetch failed",
+        "checkedAt": "2026-10-21T13:26:30.353Z"
+      },
+      {
+        "name": "schedule-http",
+        "url": "http://stage-hagaren.jp/tschedule/",
+        "status": 0,
+        "error": "TypeError: fetch failed",
+        "checkedAt": "2026-10-21T13:26:30.353Z"
+      },
+      {
+        "name": "intro-http",
+        "url": "http://stage-hagaren.jp/introduction/",
+        "status": 0,
+        "error": "TypeError: fetch failed",
+        "checkedAt": "2026-10-21T13:26:30.354Z"
+      },
+      {
+        "name": "akane-agency",
+        "url": "https://voiceofjapan.co.jp/artists/akane.html",
+        "status": 404,
+        "finalUrl": "https://voiceofjapan.co.jp/artists/akane.html",
+        "checkedAt": "2026-10-21T13:29:43.425Z",
+        "sha256": "edff48ff78b5430211377709e3ea8e933a5febdeaea2ca6bfb057df8fb3e92dd"
+      },
+      {
+        "name": "association",
+        "url": "https://www.j25musical.jp/stage/1075",
+        "status": 503,
+        "finalUrl": "https://www.j25musical.jp/stage/1075",
+        "checkedAt": "2026-10-21T13:30:29.727Z",
+        "sha256": "de02136928ed52c7ec3666213bc15339030940b80591a5a2b38384c8215bf5f9"
+      },
+      {
+        "name": "association-en",
+        "url": "https://www.j25musical.jp/en/stage/1075",
+        "status": 503,
+        "finalUrl": "https://www.j25musical.jp/en/stage/1075",
+        "checkedAt": "2026-10-21T13:30:29.749Z",
+        "sha256": "de02136928ed52c7ec3666213bc15339030940b80591a5a2b38384c8215bf5f9"
+      }
+    ],
+    "notes": [
+      "2026年第三弾1作品・22人物25配役、新規2人物と既存20人物。W4・声3・スーツ1・注記13件、ENSEMBLE2人の全役柄を保存。",
+      "2023・2024年の既存作品・配役・翻訳とシリーズ説明は変更しない。各公演の役・通常／声・担当者交代を別々に保存。"
+    ],
+    "unresolved": [
+      "人物総合監査、未確認属性、人物・役名・注記・スタッフの詳細英訳、現在配信・主演指定、日別W割当の構造化、英語副題の公式表記照合は後続。",
+      "2023年その他出演8人の個別掲載判断と、詳細な人物監査は残る。今回のシリーズ点検は3作品の正式名・年・会場・配役・区分・日英表示・相互リンクを対象。"
+    ]
+  },
+  "requestKey": "a0e74aaf63402d441b5d81d4f33c63d24d929ad6af0bdec05ef52c321a12dc6c"
+}
