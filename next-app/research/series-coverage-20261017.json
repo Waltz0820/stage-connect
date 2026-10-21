@@ -1259,8 +1259,40 @@
       "slug": "chainsaw-man",
       "name": "舞台「チェンソーマン」",
       "registeredDay": "2026-02-09",
-      "plays": 0,
-      "protected": false
+      "plays": 1,
+      "protected": false,
+      "castRows": 13,
+      "castCoverageNote": "2023年初演を1作品・13配役で追加。新規10人物・既存3人物を保全。チェンソーマン2名はWキャストでなく表現分担の注記、ポチタは声の出演を保持。役名なし10名は公式の原順で出演（役名未記載）のクレジットへ。全日程・会場・24区分の制作スタッフ・日英概要とタイトル・シリーズ説明・2023/09年表と抜粋を点検。旧オレノ候補の誤年2021を2023へ訂正し同ID採用。現行所属・KLCの別人ページalt混入・非公表生年を区別。8テーブル全件比較・同処理再実行・日英30ページ確認。2026年レゼ篇は資料確認済み未登録で次の対象。人物総合監査・詳細英訳・現在配信・主演指定は後続。",
+      "seriesAudit": {
+        "checkedAt": "2026-10-21T10:22:53.856Z",
+        "scope": "2023年初演1作品、2都市2会場。2026年レゼ篇は次バッチで未登録。",
+        "works": 1,
+        "castRows": 13,
+        "newActors": 10,
+        "existingActorsPreserved": 3,
+        "staffCategories": 24,
+        "castNotes": 2,
+        "voiceCastRows": 1,
+        "creditOnlyNames": 10,
+        "reusedLegacyCandidates": 1,
+        "legacyYearCorrected": [
+          2021,
+          2023
+        ],
+        "publicPages": 30,
+        "cities": 2,
+        "venues": 2,
+        "report": "docs/chainsawman2023-2026-10-21.md",
+        "research": "next-app/research/chainsawman2023-20261021.json",
+        "pendingWorks": [
+          {
+            "year": 2026,
+            "title": "「チェンソーマン」ザ・ステージ レゼ篇",
+            "sourceUrl": "https://www.nelke.co.jp/stage/chainsawman-stage-reze/",
+            "status": "official_sources_checked_not_imported"
+          }
+        ]
+      }
     },
     {
       "id": "be67922b-1510-404c-a0f2-cf9adbdf845b",
