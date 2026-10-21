@@ -939,8 +939,22 @@
       "slug": "dive",
       "name": "舞台「DIVE!! The STAGE!!」",
       "registeredDay": "2026-02-09",
-      "plays": 0,
-      "protected": false
+      "plays": 1,
+      "protected": false,
+      "castRows": 15,
+      "castCoverageNote": "2018年東京・大阪の同一公演を作品1件として追加。人物4・主要15配役、パフォーマー7人は正規商品資料の区分でクレジットへ。既存11人物を全項目保持。正式タイトル・全日程／会場・主要スタッフ・短い日英概要／英語表示名・年表2018/09を点検。納谷建の配信元誤記を不採用とし納谷健へ接続。名塚は月日のみ、藤岡の宝塚歴と大島の現所属・卒業歴、光宣の本人情報を照合。人物総合監査・未確認属性・詳細英訳・現在配信・主演指定等は後続。",
+      "seriesAudit": {
+        "checkedAt": "2026-10-21T00:58:28.508Z",
+        "scope": "2018年劇場公演1作品の東京・大阪公演。2019年映像発売イベント等の別催事は含めない。将来公演の完全網羅を意味しない。",
+        "works": 1,
+        "castRows": 15,
+        "performerCreditNames": 7,
+        "reusedLegacyCandidates": 0,
+        "publicPages": 34,
+        "report": "docs/dive2018-2026-10-21.md",
+        "research": "next-app/research/dive2018-20261021.json",
+        "pendingWorks": []
+      }
     },
     {
       "id": "8ff37710-ac0b-46fe-8edd-55f291c58764",

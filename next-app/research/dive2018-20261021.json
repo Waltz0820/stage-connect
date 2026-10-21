@@ -1,0 +1,2198 @@
+{
+  "version": 1,
+  "batchId": "dive2018-20261021-01",
+  "expectedFranchise": {
+    "id": "8f908abc-39b6-457e-8f58-b09eaf6eeeab",
+    "name": "舞台「DIVE!! The STAGE!!」",
+    "created_at": "2026-02-08T16:26:41.990203+00:00",
+    "updated_at": "2026-02-08T16:26:41.990203+00:00",
+    "slug": "dive",
+    "intro": null,
+    "description": "森絵都による水泳の飛込み競技を題材とした大ヒット青春小説『DIVE!!』を原作とする舞台作品。2018年に初演。飛び込みというわずか1.4秒の空中の芸術にすべてを懸ける中高生たちの熱き青春と葛藤を描く。主人公の坂井知季を納谷健、孤高のエリート・富士谷要一を牧島輝、津軽からやってきた野生児・沖津飛沫を財木琢磨が演じるなど、実力派若手キャストが集結。本作の最大の見どころは、実際の水やプールを一切使わず、俳優の鍛え上げられた肉体と演技力、そして照明などの演劇的ギミックを駆使して「飛び込み」のダイナミズムと緊迫感を舞台上に表現した点にある。スポーツ系2.5次元演劇のなかでも、己の肉体と精神の限界に挑む競泳水着姿のキャストたちの泥臭い熱量が観客の胸を打つ、「スポ根」ストレートプレイの秀作。",
+    "origin_type": "小説原作",
+    "origin_note": "原作：森絵都『DIVE!!』（角川文庫刊）／協力：アニメ「DIVE!!」製作委員会",
+    "production_companies": [
+      "「DIVE!!」The STAGE!!製作委員会",
+      "Office ENDLESS"
+    ],
+    "related_franchise_ids": [],
+    "format": "stage",
+    "description_en": null,
+    "name_en": null
+  },
+  "franchisePatch": {
+    "format": "stage",
+    "name_en": "DIVE!! The STAGE!!",
+    "description": "森絵都の小説『DIVE!!』（角川文庫刊）を原作とする舞台。ミズキダイビングクラブに通う少年たちが、クラブの存続とオリンピック出場を懸けて飛び込み競技に挑む。2018年に東京・大阪で上演され、脚本・演出を伊勢直弘が担当した。",
+    "description_en": "A stage adaptation of Eto Mori’s novel DIVE!!, published by Kadokawa Bunko. It follows the young members of Mizuki Diving Club as they pursue an Olympic place and try to save their club. Written and directed by Naohiro Ise, the production was performed in Tokyo and Osaka in 2018."
+  },
+  "actors": [
+    {
+      "actor": {
+        "id": "3b153bc6-f73c-4d81-ae33-23a6d8002ada",
+        "slug": "nazuka-kaori",
+        "name": "名塚佳織",
+        "kana": "なづか かおり",
+        "profile": "東京都出身の声優・俳優。小学生の頃から子役として舞台に出演。アニメ『交響詩篇エウレカセブン』のエウレカ役、『コードギアス 反逆のルルーシュ』のナナリー役などを務める。舞台『DIVE!!』では麻木夏陽子役で出演した。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": null,
+        "height_cm": 160,
+        "blood_type": "B",
+        "birthday_label": "4月24日",
+        "name_en": null,
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "名塚佳織",
+      "profileUrl": "https://blog.excite.co.jp/kamosan/10764050/",
+      "evidence": [
+        {
+          "url": "https://blog.excite.co.jp/kamosan/10764050/",
+          "checkedAt": "2026-10-21T00:50:11.710Z",
+          "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+        },
+        {
+          "url": "https://www.onsen.ag/program/kamo",
+          "checkedAt": "2026-10-21T00:49:55.496Z",
+          "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+        },
+        {
+          "url": "https://columbia.jp/w-witch/info.html",
+          "checkedAt": "2026-10-21T00:49:51.705Z",
+          "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+        },
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000048.000001346.html",
+          "checkedAt": "2026-10-21T00:50:27.894Z",
+          "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+        },
+        {
+          "url": "https://thetv.jp/person/0000258902/",
+          "checkedAt": "2026-10-21T00:51:57.158Z",
+          "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+        },
+        {
+          "url": "https://pictures.dmm.com/lineup/dive-stage/",
+          "checkedAt": "2026-10-21T00:47:27.771Z",
+          "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+        }
+      ],
+      "notes": [
+        "読み・代表アニメ役は日本コロムビア、月日は本人公式ブログと音泉、160cmは本人公式ブログ。出身・B型・職種／子役歴はWEBザテレビジョンも照合した。本人公式に生年がないため1985年を推測せずbirthdayはnull。現在所属・フリー表記・公式英字名は未採用。本作の出演は声のみではなく主要な舞台出演。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "996e5d1b-2458-4b99-885e-9f4208678f15",
+        "slug": "oshima-ryoka",
+        "name": "大島涼花",
+        "kana": "おおしま りょうか",
+        "profile": "神奈川県出身の俳優。METEORA所属。AKB48の13期生として活動し、2017年に卒業。舞台『DIVE!!』の野村未羽役、『BASARA外伝～KATANA 虹の話-銀杏-～』などに出演し、映画やドラマでも活動している。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1998-10-21",
+        "height_cm": 154,
+        "blood_type": "O",
+        "birthday_label": null,
+        "name_en": "Ryoka Oshima",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "大島涼花",
+      "profileUrl": "https://meteora-pro.com/artists/ryoka-oshima/",
+      "evidence": [
+        {
+          "url": "https://meteora-pro.com/artists/ryoka-oshima/",
+          "checkedAt": "2026-10-21T00:50:13.043Z",
+          "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+        },
+        {
+          "url": "https://www.akb48.co.jp/sousenkyo/37thsingle/Pkey%3Doshima_ryoka_member_detail.html",
+          "checkedAt": "2026-10-21T00:48:50.567Z",
+          "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+        },
+        {
+          "url": "https://www.akb48.co.jp/news/detailpage/11689035",
+          "checkedAt": "2026-10-21T00:48:50.819Z",
+          "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+        },
+        {
+          "url": "https://about.colorfulcast.com/プロフィール/?id=8gSY9wALQHQ84h6sUohZ",
+          "checkedAt": "2026-10-21T00:50:13.998Z",
+          "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+        },
+        {
+          "url": "https://pictures.dmm.com/lineup/dive-stage/",
+          "checkedAt": "2026-10-21T00:47:27.771Z",
+          "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+        }
+      ],
+      "notes": [
+        "現行所属先METEORAで生年月日・出身・O型・英字名・DIVE等の出演歴を確認。読みはAKB48公式、卒業年と13期は同公式記録。154cmは本人／所属登録のキャスティング用紹介。旧Candee所属を現在所属にしない。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "ad1ca503-4c96-4717-91c5-7a118cf8f52f",
+        "slug": "fujioka-sayaka",
+        "name": "藤岡沙也香",
+        "kana": "ふじおか さやか",
+        "profile": "茨城県出身の俳優。LIBERA所属。2006年に宝塚歌劇団へ入団し、月野姫花の名で娘役として活動、2012年に退団。ミュージカル『美少女戦士セーラームーン』の海王みちる／セーラーネプチューン役、舞台『DIVE!!』の西川恭子役などを務めた。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1988-06-09",
+        "height_cm": 161,
+        "blood_type": "A",
+        "birthday_label": null,
+        "name_en": "Sayaka Fujioka",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "藤岡沙也香",
+      "profileUrl": "https://www.libera-japan.com/artist/sayaka.php",
+      "evidence": [
+        {
+          "url": "https://www.libera-japan.com/artist/sayaka.php",
+          "checkedAt": "2026-10-21T00:48:50.530Z",
+          "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+        },
+        {
+          "url": "https://www.libera-japan.com/artist/",
+          "checkedAt": "2026-10-21T00:50:27.812Z",
+          "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+        },
+        {
+          "url": "https://sailormoon-official.com/musical/history/le_mouvement_final/cast_staff/",
+          "checkedAt": "2026-10-21T00:49:51.509Z",
+          "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+        },
+        {
+          "url": "https://www.talent-databank.co.jp/search/profile/2000081210",
+          "checkedAt": "2026-10-21T00:51:59.001Z",
+          "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+        },
+        {
+          "url": "https://pictures.dmm.com/lineup/dive-stage/",
+          "checkedAt": "2026-10-21T00:47:27.771Z",
+          "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+        }
+      ],
+      "notes": [
+        "現行所属先で職種・英字表記・161cmと当該作品役を照合。原作公式の公演紹介で出身・月日・宝塚入退団年・旧名月野姫花を確認。生年1988とA型はタレントデータバンクの明記を採用し、月日から生年を推測していない。旧名も既存人物にないことを照合。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "c37cff85-0994-4810-81cb-b6041895b626",
+        "slug": "kousen",
+        "name": "光宣",
+        "kana": null,
+        "profile": "東京都出身の俳優。センシティブ・プロデュース所属。舞台『青の祓魔師 京都紅蓮篇』の勝呂達磨役、『ジョーカー・ゲーム』の武藤大佐役、『DIVE!!』の前原一朗役などを務め、ドラマや映画にも出演している。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1973-11-16",
+        "height_cm": 173,
+        "blood_type": "B",
+        "birthday_label": null,
+        "name_en": "Kousen",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "光宣",
+      "profileUrl": "https://sensitive-pro.com/profile_kousen.html",
+      "evidence": [
+        {
+          "url": "https://sensitive-pro.com/profile_kousen.html",
+          "checkedAt": "2026-10-21T00:48:50.475Z",
+          "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+        },
+        {
+          "url": "https://sensitive-pro.com/",
+          "checkedAt": "2026-10-21T00:50:27.783Z",
+          "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+        },
+        {
+          "url": "https://pictures.dmm.com/lineup/dive-stage/",
+          "checkedAt": "2026-10-21T00:47:27.771Z",
+          "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+        }
+      ],
+      "notes": [
+        "所属先の現行本人紹介で生年月日・東京都・173cm・B型・英字名・DIVEと他作品の役を照合。読みを独立した一次表記で確定できていないためkanaはnull。僧侶資格など二次紹介だけの経歴は今回採用しない。同名語の一般人情報や別人の光生を混ぜない。"
+      ]
+    }
+  ],
+  "works": [
+    {
+      "year": 2018,
+      "before": null,
+      "patch": null,
+      "play": {
+        "id": "9869dbb8-ec5d-4537-9abe-4d199b15cf10",
+        "slug": "dive2018",
+        "title": "「DIVE!!」The STAGE!!",
+        "franchise_id": "8f908abc-39b6-457e-8f58-b09eaf6eeeab",
+        "summary": "坂井知季が通うミズキダイビングクラブは、経営難で存続の危機にある。新任コーチの麻木夏陽子が示した条件は、クラブからオリンピックの日本代表選手を出すこと。知季はエースの富士谷要一、津軽から来た沖津飛沫らと競い合い、それぞれの葛藤を抱えながら飛び込み台に向き合っていく。",
+        "period": "東京：2018年9月20日〜30日／大阪：2018年10月6日〜7日",
+        "venue": "東京：シアター1010／大阪：森ノ宮ピロティホール",
+        "vod": null,
+        "genre": null,
+        "tags": [],
+        "credits": [
+          {
+            "role": "原作",
+            "names": [
+              "森絵都「DIVE!!」（角川文庫刊）"
+            ],
+            "is_core": true,
+            "sort_order": 1
+          },
+          {
+            "role": "協力",
+            "names": [
+              "アニメ「DIVE!!」製作委員会"
+            ],
+            "is_core": false,
+            "sort_order": 2
+          },
+          {
+            "role": "脚本・演出",
+            "names": [
+              "伊勢直弘"
+            ],
+            "is_core": true,
+            "sort_order": 3
+          },
+          {
+            "role": "音楽",
+            "names": [
+              "Yu（vague）"
+            ],
+            "is_core": true,
+            "sort_order": 4
+          },
+          {
+            "role": "テーマ曲",
+            "names": [
+              "「この夏は確かに僕らを強くする」vague"
+            ],
+            "is_core": false,
+            "sort_order": 5
+          },
+          {
+            "role": "挿入歌",
+            "names": [
+              "「晴れるように」vague"
+            ],
+            "is_core": false,
+            "sort_order": 6
+          },
+          {
+            "role": "エンディング曲",
+            "names": [
+              "「新しい景色」如月愛里"
+            ],
+            "is_core": false,
+            "sort_order": 7
+          },
+          {
+            "role": "飛び込み監修",
+            "names": [
+              "金戸恵太"
+            ],
+            "is_core": false,
+            "sort_order": 8
+          },
+          {
+            "role": "パフォーマー",
+            "names": [
+              "AKI",
+              "柏木佑太",
+              "田嶋悠理",
+              "西田直樹",
+              "平山唯斗",
+              "渡辺誠也",
+              "和田啓汰"
+            ],
+            "is_core": false,
+            "sort_order": 9
+          },
+          {
+            "role": "制作",
+            "names": [
+              "Office ENDLESS"
+            ],
+            "is_core": false,
+            "sort_order": 10
+          },
+          {
+            "role": "主催",
+            "names": [
+              "「DIVE!!」The STAGE!!製作委員会"
+            ],
+            "is_core": false,
+            "sort_order": 11
+          }
+        ],
+        "related_franchise_ids": [],
+        "summary_en": "Tomoki Sakai’s Mizuki Diving Club faces closure because of financial difficulties. Its new coach, Kayoko Asaki, offers a way to save it: send a club member to the Olympics as a Japanese representative. Tomoki competes with the club’s ace Yoichi Fujitani and Shibuki Okitsu, a diver from Tsugaru, as each confronts his own struggles on the diving platform.",
+        "title_en": "DIVE!! The STAGE!!"
+      },
+      "rawSource": {
+        "sourceUrl": "https://kira-hai.net/dive2018",
+        "title": "舞台「DIVE!! The STAGE!!」",
+        "scheduleLines": [
+          "2018年9月20日-30日 シアター1010",
+          "2018年10月6日-7日 森ノ宮ピロティホール"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "納谷健",
+            "sourceActorUrl": "https://kira-hai.net/naya-takeru",
+            "role_name": "坂井知季",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "牧島輝",
+            "sourceActorUrl": "https://kira-hai.net/makishima-hikaru",
+            "role_name": "富士谷要一",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "財木琢磨",
+            "sourceActorUrl": "https://kira-hai.net/zaiki-takuma",
+            "role_name": "沖津飛沫",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "杉江大志",
+            "sourceActorUrl": "https://kira-hai.net/sugie-taishi",
+            "role_name": "大広陵",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "高橋健介",
+            "sourceActorUrl": "https://kira-hai.net/takahashi-kensuke",
+            "role_name": "丸山レイジ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "名塚佳織",
+            "sourceActorUrl": null,
+            "role_name": "麻木夏陽子",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "唐橋充",
+            "sourceActorUrl": "https://kira-hai.net/karahashi-mitsuru",
+            "role_name": "富士谷敬介",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "安達勇人",
+            "sourceActorUrl": "https://kira-hai.net/adachi-yuto",
+            "role_name": "山田篤彦",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "宮城紘大",
+            "sourceActorUrl": "https://kira-hai.net/miyagi-kodai",
+            "role_name": "平山二郎",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "瀬戸祐介",
+            "sourceActorUrl": "https://kira-hai.net/seto-yusuke",
+            "role_name": "松野清孝",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "西野太盛",
+            "sourceActorUrl": "https://kira-hai.net/nishino-taisei",
+            "role_name": "辻利彦",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "廣野凌大",
+            "sourceActorUrl": "https://kira-hai.net/hirono-ryota",
+            "role_name": "坂井弘也",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "大島涼花",
+            "sourceActorUrl": null,
+            "role_name": "野村未羽",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "藤岡沙也香",
+            "sourceActorUrl": null,
+            "role_name": "西川恭子",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "光宣",
+            "sourceActorUrl": null,
+            "role_name": "前原一朗",
+            "cast_group": null
+          }
+        ],
+        "unparsed": [
+          "AKI",
+          "柏木佑太",
+          "田嶋悠理",
+          "西田直樹",
+          "平山唯斗",
+          "渡辺誠也",
+          "和田啓汰"
+        ]
+      },
+      "source": {
+        "sourceUrl": "https://kira-hai.net/dive2018",
+        "title": "「DIVE!!」The STAGE!!",
+        "scheduleLines": [
+          "2018年9月20日-30日 シアター1010",
+          "2018年10月6日-7日 森ノ宮ピロティホール"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "納谷健",
+            "sourceActorUrl": "https://kira-hai.net/naya-takeru",
+            "role_name": "坂井知季",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "牧島輝",
+            "sourceActorUrl": "https://kira-hai.net/makishima-hikaru",
+            "role_name": "富士谷要一",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "財木琢磨",
+            "sourceActorUrl": "https://kira-hai.net/zaiki-takuma",
+            "role_name": "沖津飛沫",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "杉江大志",
+            "sourceActorUrl": "https://kira-hai.net/sugie-taishi",
+            "role_name": "大広陵",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "高橋健介",
+            "sourceActorUrl": "https://kira-hai.net/takahashi-kensuke",
+            "role_name": "丸山レイジ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "名塚佳織",
+            "sourceActorUrl": null,
+            "role_name": "麻木夏陽子",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "唐橋充",
+            "sourceActorUrl": "https://kira-hai.net/karahashi-mitsuru",
+            "role_name": "富士谷敬介",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "安達勇人",
+            "sourceActorUrl": "https://kira-hai.net/adachi-yuto",
+            "role_name": "山田篤彦",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "宮城紘大",
+            "sourceActorUrl": "https://kira-hai.net/miyagi-kodai",
+            "role_name": "平山二郎",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "瀬戸祐介",
+            "sourceActorUrl": "https://kira-hai.net/seto-yusuke",
+            "role_name": "松野清孝",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "西野太盛",
+            "sourceActorUrl": "https://kira-hai.net/nishino-taisei",
+            "role_name": "辻利彦",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "廣野凌大",
+            "sourceActorUrl": "https://kira-hai.net/hirono-ryota",
+            "role_name": "坂井弘也",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "大島涼花",
+            "sourceActorUrl": null,
+            "role_name": "野村未羽",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "藤岡沙也香",
+            "sourceActorUrl": null,
+            "role_name": "西川恭子",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "光宣",
+            "sourceActorUrl": null,
+            "role_name": "前原一朗",
+            "cast_group": null
+          }
+        ],
+        "unparsed": []
+      },
+      "stage": {
+        "workUrl": "https://kira-hai.net/dive2018",
+        "key": "6a464afeb571c81900b49b861bd5637ee63d9150de32ef69e9ca21789a1df76c",
+        "items": [
+          {
+            "source_actor_name": "納谷健",
+            "source_actor_url": "https://kira-hai.net/naya-takeru",
+            "source_work_title": "「DIVE!!」The STAGE!!",
+            "source_year": 2018,
+            "source_role_raw": "坂井知季",
+            "source_role_names": [
+              "坂井知季"
+            ],
+            "source_cast_group": null,
+            "source_order": 1,
+            "source_credit_key": "5b266ef2b651b53d182d",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/dive2018",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/dive2018",
+                  "checkedAt": "2026-10-21T00:48:50.613Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://pictures.dmm.com/lineup/dive-stage/",
+                  "checkedAt": "2026-10-21T00:47:27.771Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://m-card.info/artist/detail.php?id=416",
+                  "checkedAt": "2026-10-21T00:50:27.903Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://spice.eplus.jp/articles/195555",
+                  "checkedAt": "2026-10-21T00:48:51.317Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.video.unext.jp/title/SID0080200",
+                  "checkedAt": "2026-10-21T00:48:50.991Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                }
+              ],
+              "source_fingerprint": "c917c57da8a5a9fef704bfe28e53623019878aa651cead34bd1283d82d13371e",
+              "review_fingerprint": "75534b6e648df024397bb3f1f8e0120c86246f25c8db632c725c6ecc25200fb1",
+              "snapshot_fingerprint": "33f6185175a9f58a4b9c8e896671ad494c347e183a6a29b4ce1a7f0e336b4a84",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "190a713a-5a74-43f1-8c6f-1c34d85f1421",
+            "matched_play_id": "9869dbb8-ec5d-4537-9abe-4d199b15cf10",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "牧島輝",
+            "source_actor_url": "https://kira-hai.net/makishima-hikaru",
+            "source_work_title": "「DIVE!!」The STAGE!!",
+            "source_year": 2018,
+            "source_role_raw": "富士谷要一",
+            "source_role_names": [
+              "富士谷要一"
+            ],
+            "source_cast_group": null,
+            "source_order": 2,
+            "source_credit_key": "8c5b012d78440af43be4",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/dive2018",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/dive2018",
+                  "checkedAt": "2026-10-21T00:48:50.613Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://pictures.dmm.com/lineup/dive-stage/",
+                  "checkedAt": "2026-10-21T00:47:27.771Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://m-card.info/artist/detail.php?id=416",
+                  "checkedAt": "2026-10-21T00:50:27.903Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://spice.eplus.jp/articles/195555",
+                  "checkedAt": "2026-10-21T00:48:51.317Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.video.unext.jp/title/SID0080200",
+                  "checkedAt": "2026-10-21T00:48:50.991Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                }
+              ],
+              "source_fingerprint": "c917c57da8a5a9fef704bfe28e53623019878aa651cead34bd1283d82d13371e",
+              "review_fingerprint": "75534b6e648df024397bb3f1f8e0120c86246f25c8db632c725c6ecc25200fb1",
+              "snapshot_fingerprint": "33f6185175a9f58a4b9c8e896671ad494c347e183a6a29b4ce1a7f0e336b4a84",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "5533574d-232b-492a-bad8-2aadc44b2e63",
+            "matched_play_id": "9869dbb8-ec5d-4537-9abe-4d199b15cf10",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "財木琢磨",
+            "source_actor_url": "https://kira-hai.net/zaiki-takuma",
+            "source_work_title": "「DIVE!!」The STAGE!!",
+            "source_year": 2018,
+            "source_role_raw": "沖津飛沫",
+            "source_role_names": [
+              "沖津飛沫"
+            ],
+            "source_cast_group": null,
+            "source_order": 3,
+            "source_credit_key": "110c6ffeef51dfa03cbe",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/dive2018",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/dive2018",
+                  "checkedAt": "2026-10-21T00:48:50.613Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://pictures.dmm.com/lineup/dive-stage/",
+                  "checkedAt": "2026-10-21T00:47:27.771Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://m-card.info/artist/detail.php?id=416",
+                  "checkedAt": "2026-10-21T00:50:27.903Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://spice.eplus.jp/articles/195555",
+                  "checkedAt": "2026-10-21T00:48:51.317Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.video.unext.jp/title/SID0080200",
+                  "checkedAt": "2026-10-21T00:48:50.991Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                }
+              ],
+              "source_fingerprint": "c917c57da8a5a9fef704bfe28e53623019878aa651cead34bd1283d82d13371e",
+              "review_fingerprint": "75534b6e648df024397bb3f1f8e0120c86246f25c8db632c725c6ecc25200fb1",
+              "snapshot_fingerprint": "33f6185175a9f58a4b9c8e896671ad494c347e183a6a29b4ce1a7f0e336b4a84",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "b26d6c0b-4f19-4283-bbe1-c53db92766f5",
+            "matched_play_id": "9869dbb8-ec5d-4537-9abe-4d199b15cf10",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "杉江大志",
+            "source_actor_url": "https://kira-hai.net/sugie-taishi",
+            "source_work_title": "「DIVE!!」The STAGE!!",
+            "source_year": 2018,
+            "source_role_raw": "大広陵",
+            "source_role_names": [
+              "大広陵"
+            ],
+            "source_cast_group": null,
+            "source_order": 4,
+            "source_credit_key": "a58212e5d3114eea92d0",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/dive2018",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/dive2018",
+                  "checkedAt": "2026-10-21T00:48:50.613Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://pictures.dmm.com/lineup/dive-stage/",
+                  "checkedAt": "2026-10-21T00:47:27.771Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://m-card.info/artist/detail.php?id=416",
+                  "checkedAt": "2026-10-21T00:50:27.903Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://spice.eplus.jp/articles/195555",
+                  "checkedAt": "2026-10-21T00:48:51.317Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.video.unext.jp/title/SID0080200",
+                  "checkedAt": "2026-10-21T00:48:50.991Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                }
+              ],
+              "source_fingerprint": "c917c57da8a5a9fef704bfe28e53623019878aa651cead34bd1283d82d13371e",
+              "review_fingerprint": "75534b6e648df024397bb3f1f8e0120c86246f25c8db632c725c6ecc25200fb1",
+              "snapshot_fingerprint": "33f6185175a9f58a4b9c8e896671ad494c347e183a6a29b4ce1a7f0e336b4a84",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "1ae8e0b4-b42c-46aa-8d23-bac885531af6",
+            "matched_play_id": "9869dbb8-ec5d-4537-9abe-4d199b15cf10",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "高橋健介",
+            "source_actor_url": "https://kira-hai.net/takahashi-kensuke",
+            "source_work_title": "「DIVE!!」The STAGE!!",
+            "source_year": 2018,
+            "source_role_raw": "丸山レイジ",
+            "source_role_names": [
+              "丸山レイジ"
+            ],
+            "source_cast_group": null,
+            "source_order": 5,
+            "source_credit_key": "05b2094d5d6c6a326085",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/dive2018",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/dive2018",
+                  "checkedAt": "2026-10-21T00:48:50.613Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://pictures.dmm.com/lineup/dive-stage/",
+                  "checkedAt": "2026-10-21T00:47:27.771Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://m-card.info/artist/detail.php?id=416",
+                  "checkedAt": "2026-10-21T00:50:27.903Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://spice.eplus.jp/articles/195555",
+                  "checkedAt": "2026-10-21T00:48:51.317Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.video.unext.jp/title/SID0080200",
+                  "checkedAt": "2026-10-21T00:48:50.991Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                }
+              ],
+              "source_fingerprint": "c917c57da8a5a9fef704bfe28e53623019878aa651cead34bd1283d82d13371e",
+              "review_fingerprint": "75534b6e648df024397bb3f1f8e0120c86246f25c8db632c725c6ecc25200fb1",
+              "snapshot_fingerprint": "33f6185175a9f58a4b9c8e896671ad494c347e183a6a29b4ce1a7f0e336b4a84",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "3c51382e-6af1-45dc-85da-d7bb8b28b890",
+            "matched_play_id": "9869dbb8-ec5d-4537-9abe-4d199b15cf10",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "名塚佳織",
+            "source_actor_url": null,
+            "source_work_title": "「DIVE!!」The STAGE!!",
+            "source_year": 2018,
+            "source_role_raw": "麻木夏陽子",
+            "source_role_names": [
+              "麻木夏陽子"
+            ],
+            "source_cast_group": null,
+            "source_order": 6,
+            "source_credit_key": "12fbb18e358bb179fc15",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/dive2018",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/dive2018",
+                  "checkedAt": "2026-10-21T00:48:50.613Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://pictures.dmm.com/lineup/dive-stage/",
+                  "checkedAt": "2026-10-21T00:47:27.771Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://m-card.info/artist/detail.php?id=416",
+                  "checkedAt": "2026-10-21T00:50:27.903Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://spice.eplus.jp/articles/195555",
+                  "checkedAt": "2026-10-21T00:48:51.317Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.video.unext.jp/title/SID0080200",
+                  "checkedAt": "2026-10-21T00:48:50.991Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                }
+              ],
+              "source_fingerprint": "c917c57da8a5a9fef704bfe28e53623019878aa651cead34bd1283d82d13371e",
+              "review_fingerprint": "75534b6e648df024397bb3f1f8e0120c86246f25c8db632c725c6ecc25200fb1",
+              "snapshot_fingerprint": "33f6185175a9f58a4b9c8e896671ad494c347e183a6a29b4ce1a7f0e336b4a84",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "3b153bc6-f73c-4d81-ae33-23a6d8002ada",
+            "matched_play_id": "9869dbb8-ec5d-4537-9abe-4d199b15cf10",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "唐橋充",
+            "source_actor_url": "https://kira-hai.net/karahashi-mitsuru",
+            "source_work_title": "「DIVE!!」The STAGE!!",
+            "source_year": 2018,
+            "source_role_raw": "富士谷敬介",
+            "source_role_names": [
+              "富士谷敬介"
+            ],
+            "source_cast_group": null,
+            "source_order": 7,
+            "source_credit_key": "277d4b9d3c7f6290452c",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/dive2018",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/dive2018",
+                  "checkedAt": "2026-10-21T00:48:50.613Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://pictures.dmm.com/lineup/dive-stage/",
+                  "checkedAt": "2026-10-21T00:47:27.771Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://m-card.info/artist/detail.php?id=416",
+                  "checkedAt": "2026-10-21T00:50:27.903Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://spice.eplus.jp/articles/195555",
+                  "checkedAt": "2026-10-21T00:48:51.317Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.video.unext.jp/title/SID0080200",
+                  "checkedAt": "2026-10-21T00:48:50.991Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                }
+              ],
+              "source_fingerprint": "c917c57da8a5a9fef704bfe28e53623019878aa651cead34bd1283d82d13371e",
+              "review_fingerprint": "75534b6e648df024397bb3f1f8e0120c86246f25c8db632c725c6ecc25200fb1",
+              "snapshot_fingerprint": "33f6185175a9f58a4b9c8e896671ad494c347e183a6a29b4ce1a7f0e336b4a84",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "b9e00d02-dcda-49be-99a2-ccf9afd2ac81",
+            "matched_play_id": "9869dbb8-ec5d-4537-9abe-4d199b15cf10",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "安達勇人",
+            "source_actor_url": "https://kira-hai.net/adachi-yuto",
+            "source_work_title": "「DIVE!!」The STAGE!!",
+            "source_year": 2018,
+            "source_role_raw": "山田篤彦",
+            "source_role_names": [
+              "山田篤彦"
+            ],
+            "source_cast_group": null,
+            "source_order": 8,
+            "source_credit_key": "0ae832bddb7c1e2057db",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/dive2018",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/dive2018",
+                  "checkedAt": "2026-10-21T00:48:50.613Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://pictures.dmm.com/lineup/dive-stage/",
+                  "checkedAt": "2026-10-21T00:47:27.771Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://m-card.info/artist/detail.php?id=416",
+                  "checkedAt": "2026-10-21T00:50:27.903Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://spice.eplus.jp/articles/195555",
+                  "checkedAt": "2026-10-21T00:48:51.317Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.video.unext.jp/title/SID0080200",
+                  "checkedAt": "2026-10-21T00:48:50.991Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                }
+              ],
+              "source_fingerprint": "c917c57da8a5a9fef704bfe28e53623019878aa651cead34bd1283d82d13371e",
+              "review_fingerprint": "75534b6e648df024397bb3f1f8e0120c86246f25c8db632c725c6ecc25200fb1",
+              "snapshot_fingerprint": "33f6185175a9f58a4b9c8e896671ad494c347e183a6a29b4ce1a7f0e336b4a84",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "f64ec2d8-2742-49eb-9585-97b0e3fa0a58",
+            "matched_play_id": "9869dbb8-ec5d-4537-9abe-4d199b15cf10",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "宮城紘大",
+            "source_actor_url": "https://kira-hai.net/miyagi-kodai",
+            "source_work_title": "「DIVE!!」The STAGE!!",
+            "source_year": 2018,
+            "source_role_raw": "平山二郎",
+            "source_role_names": [
+              "平山二郎"
+            ],
+            "source_cast_group": null,
+            "source_order": 9,
+            "source_credit_key": "5a18acec9b79045b1b49",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/dive2018",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/dive2018",
+                  "checkedAt": "2026-10-21T00:48:50.613Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://pictures.dmm.com/lineup/dive-stage/",
+                  "checkedAt": "2026-10-21T00:47:27.771Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://m-card.info/artist/detail.php?id=416",
+                  "checkedAt": "2026-10-21T00:50:27.903Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://spice.eplus.jp/articles/195555",
+                  "checkedAt": "2026-10-21T00:48:51.317Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.video.unext.jp/title/SID0080200",
+                  "checkedAt": "2026-10-21T00:48:50.991Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                }
+              ],
+              "source_fingerprint": "c917c57da8a5a9fef704bfe28e53623019878aa651cead34bd1283d82d13371e",
+              "review_fingerprint": "75534b6e648df024397bb3f1f8e0120c86246f25c8db632c725c6ecc25200fb1",
+              "snapshot_fingerprint": "33f6185175a9f58a4b9c8e896671ad494c347e183a6a29b4ce1a7f0e336b4a84",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "f2de5c70-74cd-41d3-a982-8234332cae09",
+            "matched_play_id": "9869dbb8-ec5d-4537-9abe-4d199b15cf10",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "瀬戸祐介",
+            "source_actor_url": "https://kira-hai.net/seto-yusuke",
+            "source_work_title": "「DIVE!!」The STAGE!!",
+            "source_year": 2018,
+            "source_role_raw": "松野清孝",
+            "source_role_names": [
+              "松野清孝"
+            ],
+            "source_cast_group": null,
+            "source_order": 10,
+            "source_credit_key": "476bceb0619269eaeb54",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/dive2018",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/dive2018",
+                  "checkedAt": "2026-10-21T00:48:50.613Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://pictures.dmm.com/lineup/dive-stage/",
+                  "checkedAt": "2026-10-21T00:47:27.771Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://m-card.info/artist/detail.php?id=416",
+                  "checkedAt": "2026-10-21T00:50:27.903Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://spice.eplus.jp/articles/195555",
+                  "checkedAt": "2026-10-21T00:48:51.317Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.video.unext.jp/title/SID0080200",
+                  "checkedAt": "2026-10-21T00:48:50.991Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                }
+              ],
+              "source_fingerprint": "c917c57da8a5a9fef704bfe28e53623019878aa651cead34bd1283d82d13371e",
+              "review_fingerprint": "75534b6e648df024397bb3f1f8e0120c86246f25c8db632c725c6ecc25200fb1",
+              "snapshot_fingerprint": "33f6185175a9f58a4b9c8e896671ad494c347e183a6a29b4ce1a7f0e336b4a84",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "4c9fbcf1-a0c1-4556-b243-f08eefaf1b51",
+            "matched_play_id": "9869dbb8-ec5d-4537-9abe-4d199b15cf10",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "西野太盛",
+            "source_actor_url": "https://kira-hai.net/nishino-taisei",
+            "source_work_title": "「DIVE!!」The STAGE!!",
+            "source_year": 2018,
+            "source_role_raw": "辻利彦",
+            "source_role_names": [
+              "辻利彦"
+            ],
+            "source_cast_group": null,
+            "source_order": 11,
+            "source_credit_key": "688a7cbcb7d1bd2f1744",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/dive2018",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/dive2018",
+                  "checkedAt": "2026-10-21T00:48:50.613Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://pictures.dmm.com/lineup/dive-stage/",
+                  "checkedAt": "2026-10-21T00:47:27.771Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://m-card.info/artist/detail.php?id=416",
+                  "checkedAt": "2026-10-21T00:50:27.903Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://spice.eplus.jp/articles/195555",
+                  "checkedAt": "2026-10-21T00:48:51.317Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.video.unext.jp/title/SID0080200",
+                  "checkedAt": "2026-10-21T00:48:50.991Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                }
+              ],
+              "source_fingerprint": "c917c57da8a5a9fef704bfe28e53623019878aa651cead34bd1283d82d13371e",
+              "review_fingerprint": "75534b6e648df024397bb3f1f8e0120c86246f25c8db632c725c6ecc25200fb1",
+              "snapshot_fingerprint": "33f6185175a9f58a4b9c8e896671ad494c347e183a6a29b4ce1a7f0e336b4a84",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "0db80234-9cdf-49f3-b158-fcbaad8774c1",
+            "matched_play_id": "9869dbb8-ec5d-4537-9abe-4d199b15cf10",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "廣野凌大",
+            "source_actor_url": "https://kira-hai.net/hirono-ryota",
+            "source_work_title": "「DIVE!!」The STAGE!!",
+            "source_year": 2018,
+            "source_role_raw": "坂井弘也",
+            "source_role_names": [
+              "坂井弘也"
+            ],
+            "source_cast_group": null,
+            "source_order": 12,
+            "source_credit_key": "f073c8c3019a7cc80c4e",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/dive2018",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/dive2018",
+                  "checkedAt": "2026-10-21T00:48:50.613Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://pictures.dmm.com/lineup/dive-stage/",
+                  "checkedAt": "2026-10-21T00:47:27.771Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://m-card.info/artist/detail.php?id=416",
+                  "checkedAt": "2026-10-21T00:50:27.903Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://spice.eplus.jp/articles/195555",
+                  "checkedAt": "2026-10-21T00:48:51.317Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.video.unext.jp/title/SID0080200",
+                  "checkedAt": "2026-10-21T00:48:50.991Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                }
+              ],
+              "source_fingerprint": "c917c57da8a5a9fef704bfe28e53623019878aa651cead34bd1283d82d13371e",
+              "review_fingerprint": "75534b6e648df024397bb3f1f8e0120c86246f25c8db632c725c6ecc25200fb1",
+              "snapshot_fingerprint": "33f6185175a9f58a4b9c8e896671ad494c347e183a6a29b4ce1a7f0e336b4a84",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "b8a82c7b-502b-4a03-94c7-11fa7a2ee9e5",
+            "matched_play_id": "9869dbb8-ec5d-4537-9abe-4d199b15cf10",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "大島涼花",
+            "source_actor_url": null,
+            "source_work_title": "「DIVE!!」The STAGE!!",
+            "source_year": 2018,
+            "source_role_raw": "野村未羽",
+            "source_role_names": [
+              "野村未羽"
+            ],
+            "source_cast_group": null,
+            "source_order": 13,
+            "source_credit_key": "b2c247b42b172f3e3904",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/dive2018",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/dive2018",
+                  "checkedAt": "2026-10-21T00:48:50.613Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://pictures.dmm.com/lineup/dive-stage/",
+                  "checkedAt": "2026-10-21T00:47:27.771Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://m-card.info/artist/detail.php?id=416",
+                  "checkedAt": "2026-10-21T00:50:27.903Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://spice.eplus.jp/articles/195555",
+                  "checkedAt": "2026-10-21T00:48:51.317Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.video.unext.jp/title/SID0080200",
+                  "checkedAt": "2026-10-21T00:48:50.991Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                }
+              ],
+              "source_fingerprint": "c917c57da8a5a9fef704bfe28e53623019878aa651cead34bd1283d82d13371e",
+              "review_fingerprint": "75534b6e648df024397bb3f1f8e0120c86246f25c8db632c725c6ecc25200fb1",
+              "snapshot_fingerprint": "33f6185175a9f58a4b9c8e896671ad494c347e183a6a29b4ce1a7f0e336b4a84",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "996e5d1b-2458-4b99-885e-9f4208678f15",
+            "matched_play_id": "9869dbb8-ec5d-4537-9abe-4d199b15cf10",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "藤岡沙也香",
+            "source_actor_url": null,
+            "source_work_title": "「DIVE!!」The STAGE!!",
+            "source_year": 2018,
+            "source_role_raw": "西川恭子",
+            "source_role_names": [
+              "西川恭子"
+            ],
+            "source_cast_group": null,
+            "source_order": 14,
+            "source_credit_key": "f4914605a6d1b1c52634",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/dive2018",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/dive2018",
+                  "checkedAt": "2026-10-21T00:48:50.613Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://pictures.dmm.com/lineup/dive-stage/",
+                  "checkedAt": "2026-10-21T00:47:27.771Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://m-card.info/artist/detail.php?id=416",
+                  "checkedAt": "2026-10-21T00:50:27.903Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://spice.eplus.jp/articles/195555",
+                  "checkedAt": "2026-10-21T00:48:51.317Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.video.unext.jp/title/SID0080200",
+                  "checkedAt": "2026-10-21T00:48:50.991Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                }
+              ],
+              "source_fingerprint": "c917c57da8a5a9fef704bfe28e53623019878aa651cead34bd1283d82d13371e",
+              "review_fingerprint": "75534b6e648df024397bb3f1f8e0120c86246f25c8db632c725c6ecc25200fb1",
+              "snapshot_fingerprint": "33f6185175a9f58a4b9c8e896671ad494c347e183a6a29b4ce1a7f0e336b4a84",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "ad1ca503-4c96-4717-91c5-7a118cf8f52f",
+            "matched_play_id": "9869dbb8-ec5d-4537-9abe-4d199b15cf10",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "光宣",
+            "source_actor_url": null,
+            "source_work_title": "「DIVE!!」The STAGE!!",
+            "source_year": 2018,
+            "source_role_raw": "前原一朗",
+            "source_role_names": [
+              "前原一朗"
+            ],
+            "source_cast_group": null,
+            "source_order": 15,
+            "source_credit_key": "16dba13046bb86df0f99",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/dive2018",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/dive2018",
+                  "checkedAt": "2026-10-21T00:48:50.613Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://pictures.dmm.com/lineup/dive-stage/",
+                  "checkedAt": "2026-10-21T00:47:27.771Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://m-card.info/artist/detail.php?id=416",
+                  "checkedAt": "2026-10-21T00:50:27.903Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://spice.eplus.jp/articles/195555",
+                  "checkedAt": "2026-10-21T00:48:51.317Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                },
+                {
+                  "url": "https://www.video.unext.jp/title/SID0080200",
+                  "checkedAt": "2026-10-21T00:48:50.991Z",
+                  "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+                }
+              ],
+              "source_fingerprint": "c917c57da8a5a9fef704bfe28e53623019878aa651cead34bd1283d82d13371e",
+              "review_fingerprint": "75534b6e648df024397bb3f1f8e0120c86246f25c8db632c725c6ecc25200fb1",
+              "snapshot_fingerprint": "33f6185175a9f58a4b9c8e896671ad494c347e183a6a29b4ce1a7f0e336b4a84",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "c37cff85-0994-4810-81cb-b6041895b626",
+            "matched_play_id": "9869dbb8-ec5d-4537-9abe-4d199b15cf10",
+            "status": "pending"
+          }
+        ]
+      },
+      "records": [
+        {
+          "actor": {
+            "id": "190a713a-5a74-43f1-8c6f-1c34d85f1421",
+            "slug": "naya-takeru",
+            "name": "納谷 健",
+            "kana": "なや たける",
+            "profile": "大阪府出身の俳優。ワタナベエンターテインメント所属、劇団Patchメンバー。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/patch_takeru78",
+              "official": "https://www.watanabepro.co.jp/mypage/90000026/",
+              "instagram": "https://www.instagram.com/patch_takeru78/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-29T15:36:38.90316+00:00",
+            "updated_at": "2026-03-29T15:36:38.90316+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1995-08-07",
+            "height_cm": 162,
+            "blood_type": "AB",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "納谷健",
+            "sourceActorUrl": "https://kira-hai.net/naya-takeru",
+            "role_name": "坂井知季",
+            "cast_group": null
+          },
+          "sourceCreditKey": "5b266ef2b651b53d182d",
+          "sourceOrder": 1,
+          "billingOrder": 1,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "5533574d-232b-492a-bad8-2aadc44b2e63",
+            "slug": "makishima-hikaru",
+            "name": "牧島 輝",
+            "kana": "まきしま ひかる",
+            "profile": "埼玉県出身の俳優・アーティスト。現在はフリーランスとして活動し、株式会社ワイケーエージェントと業務提携を行っている。ミュージカル『テニスの王子様』3rdシーズン（海堂薫役）をはじめ、MANKAI STAGE『A3!』シリーズ（碓氷真澄役）、ミュージカル『刀剣乱舞』シリーズ（大倶利伽羅役）、舞台『キングダム』（嬴政 / 漂役）等の舞台作品を中心に出演している。また、音楽アーティストとしても活動しており、現在は日本コロムビアにて「牧島輝」名義で楽曲リリースを行っている。",
+            "image_url": null,
+            "sns": {
+              "x": "https://twitter.com/maximum083",
+              "youtube": "https://www.youtube.com/@makishimahikaru-musicofficial",
+              "official": "https://makishima-hikaru.net/",
+              "instagram": "https://www.instagram.com/maximumhikaru/?hl=ja"
+            },
+            "gender": "male",
+            "created_at": "2025-12-13T04:41:02.052969+00:00",
+            "updated_at": "2025-12-13T04:41:02.052969+00:00",
+            "tags": [
+              "クール",
+              "歌唱力"
+            ],
+            "featured_play_slugs": [
+              "ace-stage-ss",
+              "kingdom-stage"
+            ],
+            "birthday": "1995-08-03",
+            "height_cm": 177,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor and artist from Saitama Prefecture. He is currently working as a freelancer with a business tie-up with YK Agent. He primarily appears in stage works such as the musical \"The Prince of Tennis\" 3rd season (as Kaoru Kaido), MANKAI STAGE \"A3!\" series (as Masumi Usui), the musical \"Touken Ranbu\" series (as Okurikara), and the stage play \"Kingdom\" (as Ei Sei / Hyo). He is also active as a music artist, currently releasing music under the name \"Hikaru Makishima\" with Nippon Columbia.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "牧島輝",
+            "sourceActorUrl": "https://kira-hai.net/makishima-hikaru",
+            "role_name": "富士谷要一",
+            "cast_group": null
+          },
+          "sourceCreditKey": "8c5b012d78440af43be4",
+          "sourceOrder": 2,
+          "billingOrder": 2,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "b26d6c0b-4f19-4283-bbe1-c53db92766f5",
+            "slug": "zaiki-takuma",
+            "name": "財木 琢磨",
+            "kana": "ざいき たくま",
+            "profile": "福岡県久留米市出身の俳優。長良マネジメント所属。ミュージカル『テニスの王子様』3rdシーズン（手塚国光役）やミュージカル『刀剣乱舞』（大倶利伽羅役）等の舞台作品に出演。また、BS-TBSのテレビドラマ『水戸黄門』（佐々木助三郎役）などの映像作品にも出演している。",
+            "image_url": null,
+            "sns": {
+              "x": "https://twitter.com/takuma_zaiki",
+              "official": "https://zaiki-takuma.com/",
+              "instagram": "https://www.instagram.com/takuma_zaiki_official/"
+            },
+            "gender": "male",
+            "created_at": "2025-12-13T04:41:02.052969+00:00",
+            "updated_at": "2025-12-13T04:41:02.052969+00:00",
+            "tags": [
+              "長身",
+              "硬派"
+            ],
+            "featured_play_slugs": [],
+            "birthday": "1992-10-15",
+            "height_cm": 178,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Kurume City, Fukuoka Prefecture. Affiliated with Nagara Management. He has appeared in stage works such as the musical \"The Prince of Tennis\" 3rd season (as Kunimitsu Tezuka) and the musical \"Touken Ranbu\" (as Ookurikara). He has also appeared in television works such as the BS-TBS drama \"Mito Komon\" (as Sukesaburo Sasaki).",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "財木琢磨",
+            "sourceActorUrl": "https://kira-hai.net/zaiki-takuma",
+            "role_name": "沖津飛沫",
+            "cast_group": null
+          },
+          "sourceCreditKey": "110c6ffeef51dfa03cbe",
+          "sourceOrder": 3,
+          "billingOrder": 3,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "1ae8e0b4-b42c-46aa-8d23-bac885531af6",
+            "slug": "sugie-taishi",
+            "name": "杉江 大志",
+            "kana": "すぎえ たいし",
+            "profile": "滋賀県出身の俳優。えりオフィス所属。ミュージカル『テニスの王子様』2ndシーズン（一氏ユウジ役）や舞台『刀剣乱舞』（鯰尾藤四郎役）、ミュージカル『ヘタリア』（中国役）、ミュージカル『スタミュ』（星谷悠太役）等の舞台作品に出演。また、映画やテレビドラマ等の映像作品にも出演している。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/SugieTaishi",
+              "official": "https://sugietaishi.com/",
+              "instagram": "https://www.instagram.com/taishisugie?igsh=MXA3b3A3NnIzZTRjMw%3D%3D&utm_source=qr"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:06:19.306372+00:00",
+            "updated_at": "2026-03-21T15:06:19.306372+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1992-05-07",
+            "height_cm": 171,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Shiga Prefecture. Affiliated with Eri Office. He has appeared in stage works such as the musical \"The Prince of Tennis\" 2nd season (as Yuji Hitouji), the stage play \"Touken Ranbu\" (as Namazuo Toushirou), the musical \"Hetalia\" (as China), and the musical \"STARMYU\" (as Yuta Hoshitani). He has also appeared in film and television works.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "杉江大志",
+            "sourceActorUrl": "https://kira-hai.net/sugie-taishi",
+            "role_name": "大広陵",
+            "cast_group": null
+          },
+          "sourceCreditKey": "a58212e5d3114eea92d0",
+          "sourceOrder": 4,
+          "billingOrder": 4,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "3c51382e-6af1-45dc-85da-d7bb8b28b890",
+            "slug": "takahashi-kensuke",
+            "name": "高橋 健介",
+            "kana": "たかはし けんすけ",
+            "profile": "東京都出身の俳優。株式会社トランセンド所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/kensuke_mr6",
+              "official": "https://takahashi-kensuke.com/",
+              "instagram": "https://www.instagram.com/kensukeaogaku/"
+            },
+            "gender": "male",
+            "created_at": "2026-04-05T19:58:36.111713+00:00",
+            "updated_at": "2026-04-05T19:58:36.111713+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1994-12-24",
+            "height_cm": 179,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "高橋健介",
+            "sourceActorUrl": "https://kira-hai.net/takahashi-kensuke",
+            "role_name": "丸山レイジ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "05b2094d5d6c6a326085",
+          "sourceOrder": 5,
+          "billingOrder": 5,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "3b153bc6-f73c-4d81-ae33-23a6d8002ada",
+            "slug": "nazuka-kaori",
+            "name": "名塚佳織",
+            "kana": "なづか かおり",
+            "profile": "東京都出身の声優・俳優。小学生の頃から子役として舞台に出演。アニメ『交響詩篇エウレカセブン』のエウレカ役、『コードギアス 反逆のルルーシュ』のナナリー役などを務める。舞台『DIVE!!』では麻木夏陽子役で出演した。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": null,
+            "height_cm": 160,
+            "blood_type": "B",
+            "birthday_label": "4月24日",
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "名塚佳織",
+            "sourceActorUrl": null,
+            "role_name": "麻木夏陽子",
+            "cast_group": null
+          },
+          "sourceCreditKey": "12fbb18e358bb179fc15",
+          "sourceOrder": 6,
+          "billingOrder": 6,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "b9e00d02-dcda-49be-99a2-ccf9afd2ac81",
+            "slug": "karahashi-mitsuru",
+            "name": "唐橋 充",
+            "kana": "からはし みつる",
+            "profile": "福島県出身の俳優・イラストレーター。オフィス・モレ所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/MituruKarahashi",
+              "official": "https://office-mole.co.jp/artist/karahashi_mitsuru/",
+              "instagram": "https://www.instagram.com/tokyovillage/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-30T20:21:08.773467+00:00",
+            "updated_at": "2026-03-30T20:21:08.773467+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1977-05-30",
+            "height_cm": 178,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "唐橋充",
+            "sourceActorUrl": "https://kira-hai.net/karahashi-mitsuru",
+            "role_name": "富士谷敬介",
+            "cast_group": null
+          },
+          "sourceCreditKey": "277d4b9d3c7f6290452c",
+          "sourceOrder": 7,
+          "billingOrder": 7,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "f64ec2d8-2742-49eb-9585-97b0e3fa0a58",
+            "slug": "adachi-yuto",
+            "name": "安達勇人",
+            "kana": "あだち ゆうと",
+            "profile": "茨城県出身の俳優・歌手。ミュージカル『忍たま乱太郎』の善法寺伊作役、舞台『フルーツバスケット』の草摩利津役などを務める。音楽活動とともに、茨城県での地域イベントにも取り組む。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-20T13:06:44.037599+00:00",
+            "updated_at": "2026-10-20T13:06:44.037599+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1988-07-28",
+            "height_cm": 173,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "安達勇人",
+            "sourceActorUrl": "https://kira-hai.net/adachi-yuto",
+            "role_name": "山田篤彦",
+            "cast_group": null
+          },
+          "sourceCreditKey": "0ae832bddb7c1e2057db",
+          "sourceOrder": 8,
+          "billingOrder": 8,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "f2de5c70-74cd-41d3-a982-8234332cae09",
+            "slug": "miyagi-kodai",
+            "name": "宮城 紘大",
+            "kana": "みやぎ こうだい",
+            "profile": "広島県出身の俳優、ミュージシャン。ミュージカル『テニスの王子様』3rdシーズン（観月はじめ役）や『ヒプノシスマイク-Division Rap Battle-』Rule the Stage（観音坂独歩役）、舞台『メサイア』シリーズ（スーク役）等の舞台作品に出演。2022年に一度俳優業を引退したが、バンド「Am Amp」のドラマーとしての活動を経て、現在は俳優業にも復帰している。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/dddkoodai",
+              "official": "https://kodai-miyagi.bitfan.id/",
+              "instagram": "https://www.instagram.com/miya_kooodai/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:06:19.306372+00:00",
+            "updated_at": "2026-03-21T15:06:19.306372+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1994-07-27",
+            "height_cm": 175,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor and musician from Hiroshima Prefecture. He has appeared in stage works such as the musical \"The Prince of Tennis\" 3rd season (as Hajime Mizuki), \"Hypnosis Mic -Division Rap Battle-\" Rule the Stage (as Doppo Kannonzaka), and the stage play \"Messiah\" series (as Souk). After retiring from acting in 2022, he resumed activities as a drummer for the band \"Am Amp\" and has since returned to acting.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "宮城紘大",
+            "sourceActorUrl": "https://kira-hai.net/miyagi-kodai",
+            "role_name": "平山二郎",
+            "cast_group": null
+          },
+          "sourceCreditKey": "5a18acec9b79045b1b49",
+          "sourceOrder": 9,
+          "billingOrder": 9,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "4c9fbcf1-a0c1-4556-b243-f08eefaf1b51",
+            "slug": "seto-yusuke",
+            "name": "瀬戸 祐介",
+            "kana": "せと ゆうすけ",
+            "profile": "神奈川県出身の俳優。えりオフィス所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/sety_11",
+              "official": "https://www.erioffice.co.jp/actor/setoyusuke",
+              "instagram": "https://www.instagram.com/yusuke_seto913/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:01:26.311999+00:00",
+            "updated_at": "2026-03-21T15:01:26.311999+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1985-09-13",
+            "height_cm": 180,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "瀬戸祐介",
+            "sourceActorUrl": "https://kira-hai.net/seto-yusuke",
+            "role_name": "松野清孝",
+            "cast_group": null
+          },
+          "sourceCreditKey": "476bceb0619269eaeb54",
+          "sourceOrder": 10,
+          "billingOrder": 10,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "0db80234-9cdf-49f3-b158-fcbaad8774c1",
+            "slug": "nishino-taisei",
+            "name": "西野太盛",
+            "kana": "にしの たいせい",
+            "profile": "俳優。舞台『DIABOLIK LOVERS MORE,BLOOD』の無神アズサ役、『ROSE GUNS DAYS』シリーズのオリバー・織部役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-20T15:08:41.65273+00:00",
+            "updated_at": "2026-10-20T15:08:41.65273+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1992-01-10",
+            "height_cm": 170,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "西野太盛",
+            "sourceActorUrl": "https://kira-hai.net/nishino-taisei",
+            "role_name": "辻利彦",
+            "cast_group": null
+          },
+          "sourceCreditKey": "688a7cbcb7d1bd2f1744",
+          "sourceOrder": 11,
+          "billingOrder": 11,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "b8a82c7b-502b-4a03-94c7-11fa7a2ee9e5",
+            "slug": "hirono-ryota",
+            "name": "廣野 凌大",
+            "kana": "ひろの りょうた",
+            "profile": "千葉県出身の俳優、アーティスト。自身が代表を務める株式会社RBに所属。ミュージカル『テニスの王子様』3rdシーズン（財前光役）をはじめ、『ヒプノシスマイク -Division Rap Battle-』Rule the Stage（波羅夷空却役）、舞台『鋼の錬金術師』（主演・エドワード・エルリック役）等の舞台作品に出演している。また、「Bimi」名義でアーティスト活動も行っており、EVIL LINE RECORDS（キングレコード）からメジャーデビューしている。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/hironobimistaff",
+              "official": "https://ryotahirono.com/",
+              "instagram": "https://www.instagram.com/bimi_official0428_"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:13:20.008797+00:00",
+            "updated_at": "2026-03-21T15:13:20.008797+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1998-04-28",
+            "height_cm": 165,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor and artist from Chiba Prefecture. He is affiliated with RB Co., Ltd., where he serves as the representative director. He appears in stage works such as the musical \"The Prince of Tennis\" 3rd season (as Hikaru Zaizen), \"Hypnosis Mic -Division Rap Battle-\" Rule the Stage (as Kuko Harai), and the stage play \"Fullmetal Alchemist\" (as the lead role, Edward Elric). He is also active as an artist under the name \"Bimi\" and has made his major debut with EVIL LINE RECORDS.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "廣野凌大",
+            "sourceActorUrl": "https://kira-hai.net/hirono-ryota",
+            "role_name": "坂井弘也",
+            "cast_group": null
+          },
+          "sourceCreditKey": "f073c8c3019a7cc80c4e",
+          "sourceOrder": 12,
+          "billingOrder": 12,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "996e5d1b-2458-4b99-885e-9f4208678f15",
+            "slug": "oshima-ryoka",
+            "name": "大島涼花",
+            "kana": "おおしま りょうか",
+            "profile": "神奈川県出身の俳優。METEORA所属。AKB48の13期生として活動し、2017年に卒業。舞台『DIVE!!』の野村未羽役、『BASARA外伝～KATANA 虹の話-銀杏-～』などに出演し、映画やドラマでも活動している。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1998-10-21",
+            "height_cm": 154,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": "Ryoka Oshima",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "大島涼花",
+            "sourceActorUrl": null,
+            "role_name": "野村未羽",
+            "cast_group": null
+          },
+          "sourceCreditKey": "b2c247b42b172f3e3904",
+          "sourceOrder": 13,
+          "billingOrder": 13,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "ad1ca503-4c96-4717-91c5-7a118cf8f52f",
+            "slug": "fujioka-sayaka",
+            "name": "藤岡沙也香",
+            "kana": "ふじおか さやか",
+            "profile": "茨城県出身の俳優。LIBERA所属。2006年に宝塚歌劇団へ入団し、月野姫花の名で娘役として活動、2012年に退団。ミュージカル『美少女戦士セーラームーン』の海王みちる／セーラーネプチューン役、舞台『DIVE!!』の西川恭子役などを務めた。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1988-06-09",
+            "height_cm": 161,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": "Sayaka Fujioka",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "藤岡沙也香",
+            "sourceActorUrl": null,
+            "role_name": "西川恭子",
+            "cast_group": null
+          },
+          "sourceCreditKey": "f4914605a6d1b1c52634",
+          "sourceOrder": 14,
+          "billingOrder": 14,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "c37cff85-0994-4810-81cb-b6041895b626",
+            "slug": "kousen",
+            "name": "光宣",
+            "kana": null,
+            "profile": "東京都出身の俳優。センシティブ・プロデュース所属。舞台『青の祓魔師 京都紅蓮篇』の勝呂達磨役、『ジョーカー・ゲーム』の武藤大佐役、『DIVE!!』の前原一朗役などを務め、ドラマや映画にも出演している。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1973-11-16",
+            "height_cm": 173,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": "Kousen",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared-not-yet-inserted",
+            "updated_at": "prepared-not-yet-inserted"
+          },
+          "source": {
+            "sourceActorName": "光宣",
+            "sourceActorUrl": null,
+            "role_name": "前原一朗",
+            "cast_group": null
+          },
+          "sourceCreditKey": "16dba13046bb86df0f99",
+          "sourceOrder": 15,
+          "billingOrder": 15,
+          "expectedNote": null
+        }
+      ],
+      "castPatches": [],
+      "keptCasts": [],
+      "keptActors": [],
+      "legacyCandidates": [],
+      "sourceFingerprint": "c917c57da8a5a9fef704bfe28e53623019878aa651cead34bd1283d82d13371e",
+      "expectedCastCount": 15,
+      "evidence": [
+        {
+          "url": "https://kira-hai.net/dive2018",
+          "checkedAt": "2026-10-21T00:48:50.613Z",
+          "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+        },
+        {
+          "url": "https://pictures.dmm.com/lineup/dive-stage/",
+          "checkedAt": "2026-10-21T00:47:27.771Z",
+          "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+        },
+        {
+          "url": "https://m-card.info/artist/detail.php?id=416",
+          "checkedAt": "2026-10-21T00:50:27.903Z",
+          "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+        },
+        {
+          "url": "https://spice.eplus.jp/articles/195555",
+          "checkedAt": "2026-10-21T00:48:51.317Z",
+          "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+        },
+        {
+          "url": "https://www.video.unext.jp/title/SID0080200",
+          "checkedAt": "2026-10-21T00:48:50.991Z",
+          "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+        }
+      ]
+    }
+  ],
+  "evidence": {
+    "links": [
+      {
+        "url": "https://kira-hai.net/dive2018",
+        "checkedAt": "2026-10-21T00:48:50.613Z",
+        "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+      },
+      {
+        "url": "https://pictures.dmm.com/lineup/dive-stage/",
+        "checkedAt": "2026-10-21T00:47:27.771Z",
+        "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+      },
+      {
+        "url": "https://m-card.info/artist/detail.php?id=416",
+        "checkedAt": "2026-10-21T00:50:27.903Z",
+        "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+      },
+      {
+        "url": "https://spice.eplus.jp/articles/195555",
+        "checkedAt": "2026-10-21T00:48:51.317Z",
+        "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+      },
+      {
+        "url": "https://www.video.unext.jp/title/SID0080200",
+        "checkedAt": "2026-10-21T00:48:50.991Z",
+        "note": "当該公演・人物資料を照合。項目別の採用範囲はnotes。"
+      }
+    ],
+    "sources": [
+      {
+        "name": "search",
+        "url": "https://kira-hai.net/?s=DIVE",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/?s=DIVE",
+        "checkedAt": "2026-10-21T00:47:28.211Z",
+        "sha256": "f7ef3510e41149b083954f2cd7d6d405fdd9f246260ec915915c1eb8326283a8"
+      },
+      {
+        "name": "producer",
+        "url": "https://pictures.dmm.com/lineup/dive-stage/",
+        "status": 200,
+        "finalUrl": "https://pictures.dmm.com/lineup/dive-stage/",
+        "checkedAt": "2026-10-21T00:47:27.771Z",
+        "sha256": "09be2fd961856be632c1b474e66a77eeaa531111934dc28a328f9b76cabadad5"
+      },
+      {
+        "name": "changelog",
+        "url": "https://supabase.com/changelog.md",
+        "status": 200,
+        "finalUrl": "https://supabase.com/changelog.md",
+        "checkedAt": "2026-10-21T00:47:27.720Z",
+        "sha256": "15b3d0d1a7dc3b3f2c0af4788e49acfdf2d2edbd2613f22de0705fa43b1cf58b"
+      },
+      {
+        "name": "dbdocs",
+        "url": "https://supabase.com/docs/guides/database/tables.md",
+        "status": 200,
+        "finalUrl": "https://supabase.com/docs/guides/database/tables.md",
+        "checkedAt": "2026-10-21T00:47:28.443Z",
+        "sha256": "fdcc9957da7b920de29201ebb0f0d37c05c3c05cd6b7893ecc19e64dc39febfa"
+      },
+      {
+        "name": "robots",
+        "url": "https://kira-hai.net/robots.txt",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/robots.txt",
+        "checkedAt": "2026-10-21T00:47:28.306Z",
+        "sha256": "f6ed0322f0e3df8c3b42b14df3254a90cca7b94a4172de91812952b3c7060b03"
+      },
+      {
+        "name": "work",
+        "url": "https://kira-hai.net/dive2018",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/dive2018",
+        "checkedAt": "2026-10-21T00:48:50.613Z",
+        "sha256": "18131bd7fe89f98872da925a00a8959c392c1640c563801083506fde20214ce3"
+      },
+      {
+        "name": "kousen",
+        "url": "https://sensitive-pro.com/profile_kousen.html",
+        "status": 200,
+        "finalUrl": "https://sensitive-pro.com/profile_kousen.html",
+        "checkedAt": "2026-10-21T00:48:50.475Z",
+        "sha256": "69e47197e6017fbef0fe70358882dd2ce27de1c25546fd4ba67408c778725e4b"
+      },
+      {
+        "name": "fujioka",
+        "url": "https://www.libera-japan.com/artist/sayaka.php",
+        "status": 200,
+        "finalUrl": "https://www.libera-japan.com/artist/sayaka.php",
+        "checkedAt": "2026-10-21T00:48:50.530Z",
+        "sha256": "8a48f0a2dc29efbbcbfc3c910ec69ef760c0f611852d666379c2c8fb656209b4"
+      },
+      {
+        "name": "oshima-akb",
+        "url": "https://www.akb48.co.jp/sousenkyo/37thsingle/Pkey%3Doshima_ryoka_member_detail.html",
+        "status": 200,
+        "finalUrl": "https://www.akb48.co.jp/sousenkyo/37thsingle/Pkey%3Doshima_ryoka_member_detail.html",
+        "checkedAt": "2026-10-21T00:48:50.567Z",
+        "sha256": "ccaab34cde0be522743df5a3e80161339ade8c3aec45a6f519820517c655bdff"
+      },
+      {
+        "name": "oshima-graduate",
+        "url": "https://www.akb48.co.jp/news/detailpage/11689035",
+        "status": 200,
+        "finalUrl": "https://www.akb48.co.jp/news/detailpage/11689035",
+        "checkedAt": "2026-10-21T00:48:50.819Z",
+        "sha256": "b1213d95a94c24a41f05810ef8d4819bdabf45a5de9e05481568c70fb2e77d46"
+      },
+      {
+        "name": "schedule",
+        "url": "https://spice.eplus.jp/articles/195555",
+        "status": 200,
+        "finalUrl": "https://spice.eplus.jp/articles/195555",
+        "checkedAt": "2026-10-21T00:48:51.317Z",
+        "sha256": "bbe3198b65a7fc188020a61320c56b5a6a4dbcdca03a904cd80390ed9e8b6b30"
+      },
+      {
+        "name": "unext",
+        "url": "https://www.video.unext.jp/title/SID0080200",
+        "status": 200,
+        "finalUrl": "https://www.video.unext.jp/title/SID0080200",
+        "checkedAt": "2026-10-21T00:48:50.991Z",
+        "sha256": "7aeacb5b35dbdcce742ff19efa9735bc44cd9ccc4e0493f7b00a5a18b6e94d71"
+      },
+      {
+        "name": "nazuka-blog",
+        "url": "https://blog.excite.co.jp/kamosan/10764050/",
+        "status": 200,
+        "finalUrl": "https://blog.excite.co.jp/kamosan/10764050/",
+        "checkedAt": "2026-10-21T00:50:11.710Z",
+        "sha256": "f95558cf479d54a08fba0e2a1de2b1955e799fe5be7e3de0316b8a09dc2f2552"
+      },
+      {
+        "name": "nazuka-radio",
+        "url": "https://www.onsen.ag/program/kamo",
+        "status": 200,
+        "finalUrl": "https://www.onsen.ag/program/kamo",
+        "checkedAt": "2026-10-21T00:49:55.496Z",
+        "sha256": "b584c108277d42518b1de59542694b5043868d964fcc94b5d63037375a5c45f3"
+      },
+      {
+        "name": "nazuka-columbia",
+        "url": "https://columbia.jp/w-witch/info.html",
+        "status": 200,
+        "finalUrl": "https://columbia.jp/w-witch/info.html",
+        "checkedAt": "2026-10-21T00:49:51.705Z",
+        "sha256": "495f34b2def8c780a51299bb96538b6c32a4195103871d5966b7ee64494ed74f"
+      },
+      {
+        "name": "fujioka-sailormoon",
+        "url": "https://sailormoon-official.com/musical/history/le_mouvement_final/cast_staff/",
+        "status": 200,
+        "finalUrl": "https://sailormoon-official.com/musical/history/le_mouvement_final/cast_staff/",
+        "checkedAt": "2026-10-21T00:49:51.509Z",
+        "sha256": "c27ed277f85da114ba9eb56e409706f3c182646b90a03dded4b0054f0a437fe4"
+      },
+      {
+        "name": "oshima",
+        "url": "https://meteora-pro.com/artists/ryoka-oshima/",
+        "status": 200,
+        "finalUrl": "https://meteora-pro.com/artists/ryoka-oshima/",
+        "checkedAt": "2026-10-21T00:50:13.043Z",
+        "sha256": "ddd581de14757f4689a7a39e9a791305e5b606d05cd7fb9f83b235a5bdbb4ff3"
+      },
+      {
+        "name": "fujioka-blog",
+        "url": "https://ameblo.jp/sayaka-fujioka/",
+        "status": 200,
+        "finalUrl": "https://ameblo.jp/sayaka-fujioka/",
+        "checkedAt": "2026-10-21T00:50:12.543Z",
+        "sha256": "7d6dc4be35684403d149bbf1be503c5b207464d6770bf48536ea32b225295495"
+      },
+      {
+        "name": "oshima-height",
+        "url": "https://about.colorfulcast.com/プロフィール/?id=8gSY9wALQHQ84h6sUohZ",
+        "status": 200,
+        "finalUrl": "https://about.colorfulcast.com/%E3%83%97%E3%83%AD%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB/?id=8gSY9wALQHQ84h6sUohZ",
+        "checkedAt": "2026-10-21T00:50:13.998Z",
+        "sha256": "3f6280ef2d643747558a3a6afc76bd665904a4c2668c91358633d66344412303"
+      },
+      {
+        "name": "mcard",
+        "url": "https://m-card.info/artist/detail.php?id=416",
+        "status": 200,
+        "finalUrl": "https://m-card.info/artist/detail.php?id=416",
+        "checkedAt": "2026-10-21T00:50:27.903Z",
+        "sha256": "97755de9e7125639b15df0e422689267f77e05b8d026f6364be7b9629328fccb"
+      },
+      {
+        "name": "fujioka-agency",
+        "url": "https://www.libera-japan.com/artist/",
+        "status": 200,
+        "finalUrl": "https://www.libera-japan.com/artist/",
+        "checkedAt": "2026-10-21T00:50:27.812Z",
+        "sha256": "29845ca0879161374855737a116056c772139f350dfd2942990e43f587eb24a0"
+      },
+      {
+        "name": "kousen-agency",
+        "url": "https://sensitive-pro.com/",
+        "status": 200,
+        "finalUrl": "https://sensitive-pro.com/",
+        "checkedAt": "2026-10-21T00:50:27.783Z",
+        "sha256": "6b9e09e42c5451cb14dbe01e722dcfe1cdfbc57d2c406f9c30903766d19aed41"
+      },
+      {
+        "name": "nazuka-press",
+        "url": "https://prtimes.jp/main/html/rd/p/000000048.000001346.html",
+        "status": 200,
+        "finalUrl": "https://prtimes.jp/main/html/rd/p/000000048.000001346.html",
+        "checkedAt": "2026-10-21T00:50:27.894Z",
+        "sha256": "5929291ee09cd9bfbebc961007135a32019396482a546c2507f92ba58522cd5c"
+      },
+      {
+        "name": "fujioka-data",
+        "url": "https://www.talent-databank.co.jp/search/profile/2000081210",
+        "status": 200,
+        "finalUrl": "https://www.talent-databank.co.jp/search/profile/2000081210",
+        "checkedAt": "2026-10-21T00:51:59.001Z",
+        "sha256": "f25cab3cf13a4bdf9c4ca8e53f33b4977d435ff19197458c4597c86f9bc67ab4"
+      },
+      {
+        "name": "nazuka-data",
+        "url": "https://thetv.jp/person/0000258902/",
+        "status": 200,
+        "finalUrl": "https://thetv.jp/person/0000258902/",
+        "checkedAt": "2026-10-21T00:51:57.158Z",
+        "sha256": "2fbb56aa012bdaeb0eb358a42002fba25877527c208fcc825a18899e38f46e89"
+      }
+    ],
+    "unavailable": [
+      {
+        "name": "official",
+        "url": "https://officeendless.com/sp/dive/",
+        "status": 500,
+        "finalUrl": "https://officeendless.com/sp/dive/",
+        "checkedAt": "2026-10-21T00:47:27.669Z",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ],
+    "notes": [
+      "主要15配役は第一参照先・制作元DMM・正規商品Mカードの役名と順序を照合。既存11人物を全項目保持して接続し、新規4人物のみ追加。",
+      "第一参照先のunparsed7名は正規Mカード商品紹介でパフォーマーと確認。原文をrawSourceへ保持し、同じ順序で作品クレジットへ移した。既存人物に同名がいても、この出演を個別配役にはしない。",
+      "旧公演公式は500。代替一次として制作元と正規商品紹介を確認し、全日程・東京大阪の会場をプレイガイド告知とも照合。東京9月20日〜30日・大阪10月6日〜7日。",
+      "U-NEXTの坂井知季役にある納谷建は誤表記として不採用。制作元・Mカード・第一参照先が一致する納谷健を採用。配信紹介の空白付き役名表記も制作元の統一表記に従う。",
+      "短い日英概要と英語表示名・シリーズ説明を補完し、旧シリーズ説明の宣伝的評価を除いた。既存シリーズ名・原作区分・原作注記・slug等は保持。",
+      "新規プロフィールは出身・職種・確認した所属・短い経歴。名塚は生年を作らず月日のみ。藤岡は一次資料の宝塚歴と所属、二次人物紹介の明記された生年月日を区別して採用範囲を記録。"
+    ],
+    "unresolved": [
+      "人物総合監査・名塚の生年と現在所属／英字名・光宣のかな読み・プロフィールや全役名／クレジット／会場等の英訳、現在配信リンク・主演指定・全技術スタッフは後続。",
+      "2018年の東京大阪の劇場公演1作品の範囲。2019年の映像発売イベントや原作関連催事は含めない。将来公演の完全網羅を意味しない。",
+      "パフォーマー7名の劇中の具体役や兼役は今回未確認。名義を保存し、役やプロフィールを推測しない。"
+    ]
+  },
+  "requestKey": "ba65340069fea12a47c315eb1f938568516c3847f1db76f092f186681ffa6633"
+}
