@@ -22,3 +22,12 @@
 記録はGit外の`performance-list-20261021/`へ保存。変更前本番・ローカル・公開結果、影響33作品の一覧を保管する。DB・スキーマ・RPC・RLSの変更やマイグレーションはない。
 
 今回の処理は既存文字列の区切り表示を改善するもの。公演中止の区別・同会場名の別名統合・日程全体の再構造化・全会場英訳の完了は含めない。元データの詳細表示を維持する。
+
+## 本番反映結果
+
+- 公開コミット：`e3c5f425ee1e16a28278865684dc8a4bbb9db013`。GitHub mainへfast-forward反映。
+- Vercel：Stage connectチーム・`stage-connect-ggdd`・production、`dpl_6JjJU5KWkxJNGUkKPQj8K56aRWKa`。
+- READYと`stageconnect.jp`の割当、当該コミットの一致を確認。前回本番は`dpl_7YvbqXdRtonWUKdmSffCzLz243Pd`。
+- 公開日英14ページで会場数・都市数の修正、既存配役と構造化データの完全一致を確認。公開の一般60ページと日英6ページの20注記も成功。
+- デプロイの直近15分のerror／fatalログは該当0件。常時監視や外部Drainsの追加はしていない。
+- [DIVE公開ページ](https://stageconnect.jp/plays/dive2018#performances)は「2都市 / 東京 / 大阪」「2会場」を表示する。先の収録記録に記載した会場数バッジの残課題は解消済み。
