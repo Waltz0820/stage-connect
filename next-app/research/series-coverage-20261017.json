@@ -333,8 +333,50 @@
       "slug": "hagane-no-renkinjutsushi",
       "name": "舞台『鋼の錬金術師』",
       "registeredDay": "2026-02-09",
-      "plays": 0,
-      "protected": false
+      "plays": 1,
+      "protected": false,
+      "castRows": 31,
+      "castCoverageNote": "2023年初演1作品・26人物31配役を追加。新規14人物、既存12人物は全項目保全。Wキャスト6件・声の兼役5件・スーツアクター1件、出演条件等の注記14件を保持。その他8人は全役柄付きクレジット、演奏4人も原区分で保存。2都市2会場、24区分の制作スタッフ、日英あらすじとタイトル・シリーズ説明、2023/03年表と抜粋を点検。旧蒼木候補のHTMLと別作品混入・誤年2021を履歴付きで訂正し同ID採用。8テーブル全件比較・同処理再実行・日英56ページ確認。2024年それぞれの戦場と2026年闇と光の野望は未登録、次の対象。人物総合監査・詳細英訳・現在配信・主演指定は後続。",
+      "seriesAudit": {
+        "checkedAt": "2026-10-21T12:24:14.222Z",
+        "scope": "2023年初演1作品、2都市2会場。2024年・2026年の続編は未登録でシリーズ全体の完了ではない。",
+        "works": 1,
+        "castRows": 31,
+        "uniqueActors": 26,
+        "newActors": 14,
+        "existingActorsPreserved": 12,
+        "staffCategories": 24,
+        "creditCategories": 29,
+        "castNotes": 14,
+        "voiceCastRows": 5,
+        "doubleCastRows": 6,
+        "suitCastRows": 1,
+        "creditOnlyNames": 12,
+        "reusedLegacyCandidates": 1,
+        "legacyYearCorrected": [
+          2021,
+          2023
+        ],
+        "publicPages": 56,
+        "cities": 2,
+        "venues": 2,
+        "report": "docs/hagaren2023-2026-10-21.md",
+        "research": "next-app/research/hagaren2023-20261021.json",
+        "pendingWorks": [
+          {
+            "year": 2024,
+            "title": "舞台「鋼の錬金術師」―それぞれの戦場―",
+            "sourceUrl": "https://stage-hagaren.jp/s-hagaren-2/",
+            "status": "sources_checked_not_imported"
+          },
+          {
+            "year": 2026,
+            "title": "舞台「鋼の錬金術師」―闇と光の野望―",
+            "sourceUrl": "https://stage-hagaren.jp/",
+            "status": "sources_checked_not_imported"
+          }
+        ]
+      }
     },
     {
       "id": "4260f1c6-84bd-4ee7-b1b3-1b1bc2fb0c41",
