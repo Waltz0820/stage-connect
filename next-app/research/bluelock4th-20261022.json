@@ -1,0 +1,4620 @@
+{
+  "version": 1,
+  "batchId": "bluelock4th-20261022-01",
+  "expectedFranchise": {
+    "id": "2a8c7f6a-f48b-4c65-829d-f869229567e0",
+    "name": "舞台『ブルーロック』（ブルステ）",
+    "created_at": "2026-02-08T16:26:41.990203+00:00",
+    "updated_at": "2026-10-21T16:16:29.615669+00:00",
+    "slug": "blue-lock",
+    "intro": null,
+    "description": "金城宗幸（原作）・ノ村優介（漫画）の『ブルーロック』を原作とする舞台シリーズ。2023年に初演。FW育成施設「青い監獄」に集められた高校生たちが、世界一のストライカーを目指して選考に挑む。",
+    "origin_type": "漫画原作",
+    "origin_note": "原作：金城宗幸・ノ村優介「ブルーロック」（講談社「週刊少年マガジン」連載）",
+    "production_companies": [
+      "Office ENDLESS"
+    ],
+    "related_franchise_ids": [],
+    "format": "stage",
+    "description_en": "A stage series based on Blue Lock, the manga written by Muneyuki Kaneshiro and illustrated by Yusuke Nomura. First staged in 2023, it follows high-school forwards competing at the Blue Lock training facility to become the world’s best striker.",
+    "name_en": "BLUE LOCK Stage Series"
+  },
+  "franchisePatch": {},
+  "actors": [
+    {
+      "actor": {
+        "id": "65b3d016-48b7-4a17-a8a6-87955f07096a",
+        "slug": "sakuraba-haruto",
+        "name": "桜庭大翔",
+        "kana": "さくらば はると",
+        "profile": "大分県出身の俳優。ハイパープロジェクション演劇『ハイキュー!!』の木兎光太郎役、舞台『刃牙 THE GRAPPLER STAGE』の花山薫役、舞台『ブルーロック』4th STAGEのオリヴァ・愛空役などを務める。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1996-02-21",
+        "height_cm": 187,
+        "blood_type": null,
+        "birthday_label": null,
+        "name_en": "Haruto Sakuraba",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "桜庭大翔",
+      "profileUrl": "https://sakuraba-haruto.net/profiles",
+      "evidence": [
+        {
+          "url": "https://sakuraba-haruto.net/profiles",
+          "checkedAt": "2026-10-22T06:58:05.706Z",
+          "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+        },
+        {
+          "url": "https://kira-hai.net/sakuraba-haruto",
+          "checkedAt": "2026-10-22T06:57:29.638Z",
+          "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+        },
+        {
+          "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/cast-staff/",
+          "checkedAt": "2026-10-22T06:55:47.356Z",
+          "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+        }
+      ],
+      "notes": [
+        "本人サイトのDOB・187cm・大分県・英字と具体的役名を照合。読みは第一参照先。現在所属・血液型は未確認、古いSpace Craft表記を現在所属へ流用しない。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "bb717597-891c-42dd-94a3-4b264f9a3ab6",
+        "slug": "matsumoto-gaku",
+        "name": "松本岳",
+        "kana": "まつもと がく",
+        "profile": "富山県出身の俳優。イザワオフィス所属。2013年にドラマ『名もなき毒』で俳優デビュー。『手裏剣戦隊ニンニンジャー』のアオニンジャー役や、舞台『ブルーロック』4th STAGEの閃堂秋人役などを務める。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1993-04-08",
+        "height_cm": 174,
+        "blood_type": "O",
+        "birthday_label": null,
+        "name_en": "Gaku Matsumoto",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "松本岳",
+      "profileUrl": "https://izawaoffice.jp/artist/matsumoto",
+      "evidence": [
+        {
+          "url": "https://izawaoffice.jp/artist/matsumoto",
+          "checkedAt": "2026-10-22T06:59:22.796Z",
+          "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+        },
+        {
+          "url": "https://izawaoffice.jp/news/8",
+          "checkedAt": "2026-10-22T06:59:22.766Z",
+          "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+        },
+        {
+          "url": "https://kira-hai.net/matsumoto-gaku",
+          "checkedAt": "2026-10-22T06:57:29.674Z",
+          "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+        },
+        {
+          "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/cast-staff/",
+          "checkedAt": "2026-10-22T06:55:47.356Z",
+          "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+        }
+      ],
+      "notes": [
+        "現行事務所のDOB・174cm・富山県・英字・所属・経歴と公演告知の役名で照合。第一参照先173cmではなく現行174cm。読みとO型は第一参照先由来。既存の松田岳（士道龍聖役）とは姓・DOB・本人URLが異なる別人。旧本人URL404。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "b966622f-3323-468a-bd70-12ceb0c69c1d",
+        "slug": "kageyama-tatsuya",
+        "name": "影山達也",
+        "kana": "かげやま たつや",
+        "profile": "静岡県出身の俳優。ドルチェスター所属。舞台『ブルーロック』4th STAGEの仁王和真役、2.5次元ダンスライブ『ALIVESTAGE』の在原守人役、ミラクル☆ステージ『サンリオ男子』の菅見直樹役などを務める。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1992-07-12",
+        "height_cm": 178,
+        "blood_type": null,
+        "birthday_label": null,
+        "name_en": "Tatsuya Kageyama",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "影山達也",
+      "profileUrl": "https://dolce-star.com/management/kageyama.html",
+      "evidence": [
+        {
+          "url": "https://dolce-star.com/management/kageyama.html",
+          "checkedAt": "2026-10-22T06:58:05.669Z",
+          "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+        },
+        {
+          "url": "https://kira-hai.net/kageyama-tatsuya",
+          "checkedAt": "2026-10-22T06:57:29.656Z",
+          "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+        },
+        {
+          "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/cast-staff/",
+          "checkedAt": "2026-10-22T06:55:47.356Z",
+          "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+        }
+      ],
+      "notes": [
+        "現行事務所のDOB・178cm・静岡県・英字・所属・本作と他作品役を照合。読みは第一参照先、血液型は未確認。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "a6524e6f-6a0c-4c45-9238-3749c7080013",
+        "slug": "nakadoi-toshimasa",
+        "name": "中土井俊允",
+        "kana": "なかどい としまさ",
+        "profile": "神奈川県出身の俳優。えりオフィス所属。舞台『ブルーロック』4th STAGEの音留徹平役、『花郎～ファラン～』のマンムン役などを務める。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1999-03-08",
+        "height_cm": 174,
+        "blood_type": null,
+        "birthday_label": null,
+        "name_en": "Toshimasa Nakadoi",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "中土井俊允",
+      "profileUrl": "https://www.erioffice.co.jp/talent_male/nakadoitoshimasa/",
+      "evidence": [
+        {
+          "url": "https://www.erioffice.co.jp/talent_male/nakadoitoshimasa/",
+          "checkedAt": "2026-10-22T07:02:22.550Z",
+          "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+        },
+        {
+          "url": "https://kira-hai.net/nakadoi-toshimasa",
+          "checkedAt": "2026-10-22T06:57:29.605Z",
+          "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+        },
+        {
+          "url": "https://www.talent-databank.co.jp/search/profile/2000097417",
+          "checkedAt": "2026-10-22T07:00:19.682Z",
+          "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+        },
+        {
+          "url": "https://db.epad.jp/p/24015",
+          "checkedAt": "2026-10-22T07:00:17.595Z",
+          "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+        },
+        {
+          "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/cast-staff/",
+          "checkedAt": "2026-10-22T06:55:47.356Z",
+          "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+        }
+      ],
+      "notes": [
+        "現事務所の移転後URLでDOB・174cm・神奈川・英字・所属・本作と花郎役を照合。読みは第一参照先。旧/men/URL404を現在プロフィールにしない。前作アンダースタディ、初演アンサンブルを遡及して通常配役へ移動しない。血液型は未確認。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "8429d136-00f3-4925-933b-0ec12391123e",
+        "slug": "furuta-ren",
+        "name": "古田蓮",
+        "kana": "ふるた れん",
+        "profile": "宮城県出身の俳優。アーティストクルー所属。舞台『ブルーロック』4th STAGEの超健人役、舞台『ちはやふる神の国2020～異聞本能寺の変～』の森力丸役などを務める。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": null,
+        "height_cm": 175,
+        "blood_type": "O",
+        "birthday_label": "7月4日",
+        "name_en": "Ren Furuta",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "古田蓮",
+      "profileUrl": "https://artist-crew.net/artist/m_furuta_ren/",
+      "evidence": [
+        {
+          "url": "https://artist-crew.net/artist/m_furuta_ren/",
+          "checkedAt": "2026-10-22T06:58:08.857Z",
+          "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+        },
+        {
+          "url": "https://kira-hai.net/furuta-ren",
+          "checkedAt": "2026-10-22T06:57:29.902Z",
+          "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+        },
+        {
+          "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/cast-staff/",
+          "checkedAt": "2026-10-22T06:55:47.356Z",
+          "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+        }
+      ],
+      "notes": [
+        "現行事務所は月日7/4のみで生年を補作せずbirthday=null。現公式175cmを採用し第一参照先177cmを転記しない。宮城県・O型・英字・所属・本作役と他作品役は現公式、読みは第一参照先。役名の超健人と、乙夜役の俳優健人を混同しない。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "08e469e6-cf5c-4b41-9d28-f53f6aa2e100",
+        "slug": "aramaki-daiya",
+        "name": "荒牧大矢",
+        "kana": "あらまき だいや",
+        "profile": "東京都出身の俳優。合同会社ドリーヴス所属。中学時代から大学卒業まで米国へ留学。舞台『ブルーロック』4th STAGEの颯波留役、縁劇人の舞台『レ・ミゼラブル2025』のレーグル役などを務める。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1999-04-30",
+        "height_cm": 171,
+        "blood_type": "B",
+        "birthday_label": null,
+        "name_en": "Daiya Aramaki",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "荒牧大矢",
+      "profileUrl": "https://www.dreaves-official.com/member/man/daiya-aramaki/",
+      "evidence": [
+        {
+          "url": "https://www.dreaves-official.com/member/man/daiya-aramaki/",
+          "checkedAt": "2026-10-22T06:58:06.302Z",
+          "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+        },
+        {
+          "url": "https://kira-hai.net/aramaki-daiya",
+          "checkedAt": "2026-10-22T06:57:29.881Z",
+          "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+        },
+        {
+          "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/cast-staff/",
+          "checkedAt": "2026-10-22T06:55:47.356Z",
+          "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+        }
+      ],
+      "notes": [
+        "現事務所のDOB・171cm・B型・東京都・英字・所属・留学歴・本作役を照合。読みは第一参照先。縁劇人の舞台歴は東宝版ミュージカルへの出演と混同しない。前作はアンダースタディでクレジットを保持し今回の役を遡及コピーしない。所属先の4rd誤字を正式作品名へ流用しない。"
+      ]
+    }
+  ],
+  "works": [
+    {
+      "year": 2025,
+      "before": null,
+      "patch": null,
+      "play": {
+        "id": "37af8473-44f9-4508-a88c-10927b8c26dc",
+        "slug": "bluelock2025",
+        "title": "舞台『ブルーロック』4th STAGE",
+        "franchise_id": "2a8c7f6a-f48b-4c65-829d-f869229567e0",
+        "summary": "潔世一たちは「青い監獄」プロジェクトの存続を懸け、U-20日本代表との試合に挑む。相手はオリヴァ・愛空らが率いる守備陣に、世界で活躍する糸師冴を加えたチーム。敗れればプロジェクト解体となる一戦で、潔たちは自分たちの攻撃を示そうとする。",
+        "period": "東京：2025年5月15日〜25日／大阪：2025年5月30日〜6月1日",
+        "venue": "東京：THEATER MILANO-Za／大阪：東大阪市文化創造館 Dream House 大ホール",
+        "vod": null,
+        "genre": null,
+        "tags": [],
+        "credits": [
+          {
+            "role": "脚本・演出",
+            "names": [
+              "伊勢直弘"
+            ],
+            "is_core": true,
+            "sort_order": 1
+          },
+          {
+            "role": "演出助手",
+            "names": [
+              "入江浩平"
+            ],
+            "is_core": false,
+            "sort_order": 2
+          },
+          {
+            "role": "美術",
+            "names": [
+              "乘峯雅寛"
+            ],
+            "is_core": false,
+            "sort_order": 3
+          },
+          {
+            "role": "舞台音楽",
+            "names": [
+              "Rebrast"
+            ],
+            "is_core": false,
+            "sort_order": 4
+          },
+          {
+            "role": "技術監督",
+            "names": [
+              "寅川英司"
+            ],
+            "is_core": false,
+            "sort_order": 5
+          },
+          {
+            "role": "舞台監督",
+            "names": [
+              "田中 翼",
+              "冨岡伸夫"
+            ],
+            "is_core": false,
+            "sort_order": 6
+          },
+          {
+            "role": "照明",
+            "names": [
+              "大波多秀起(デイライト)"
+            ],
+            "is_core": false,
+            "sort_order": 7
+          },
+          {
+            "role": "音響効果",
+            "names": [
+              "前田規寛(ロア)"
+            ],
+            "is_core": false,
+            "sort_order": 8
+          },
+          {
+            "role": "映像",
+            "names": [
+              "O-beron inc."
+            ],
+            "is_core": false,
+            "sort_order": 9
+          },
+          {
+            "role": "衣裳",
+            "names": [
+              "雲出三緒"
+            ],
+            "is_core": false,
+            "sort_order": 10
+          },
+          {
+            "role": "衣裳協賛",
+            "names": [
+              "umbro"
+            ],
+            "is_core": false,
+            "sort_order": 11
+          },
+          {
+            "role": "ヘアメイク",
+            "names": [
+              "木村美和子(dot)"
+            ],
+            "is_core": false,
+            "sort_order": 12
+          },
+          {
+            "role": "撮影小道具",
+            "names": [
+              "平野雅史"
+            ],
+            "is_core": false,
+            "sort_order": 13
+          },
+          {
+            "role": "ステージング",
+            "names": [
+              "船木政秀",
+              "吉田拓也"
+            ],
+            "is_core": false,
+            "sort_order": 14
+          },
+          {
+            "role": "サッカー指導",
+            "names": [
+              "エリース東京(豊島区国際アート・カルチャー特命大使/SDGs 特命大使)"
+            ],
+            "is_core": false,
+            "sort_order": 15
+          },
+          {
+            "role": "大道具",
+            "names": [
+              "俳優座劇場"
+            ],
+            "is_core": false,
+            "sort_order": 16
+          },
+          {
+            "role": "宣伝写真",
+            "names": [
+              "渡邉和弘"
+            ],
+            "is_core": false,
+            "sort_order": 17
+          },
+          {
+            "role": "宣伝美術・Web デザイン",
+            "names": [
+              "EAST END CREATIVE"
+            ],
+            "is_core": false,
+            "sort_order": 18
+          },
+          {
+            "role": "グッズデザイン",
+            "names": [
+              "EAST END CREATIVE / flyer-ya"
+            ],
+            "is_core": false,
+            "sort_order": 19
+          },
+          {
+            "role": "制作",
+            "names": [
+              "Office ENDLESS"
+            ],
+            "is_core": false,
+            "sort_order": 20
+          },
+          {
+            "role": "クリエイティブプロデューサー",
+            "names": [
+              "下浦貴敬(Office ENDLESS/豊島区国際アート･カルチャー特命大使/SDGs特命大使)"
+            ],
+            "is_core": false,
+            "sort_order": 21
+          },
+          {
+            "role": "主催",
+            "names": [
+              "舞台『ブルーロック』4th STAGE製作委員会"
+            ],
+            "is_core": false,
+            "sort_order": 22
+          }
+        ],
+        "related_franchise_ids": [],
+        "title_en": "BLUE LOCK 4th STAGE",
+        "summary_en": "Yoichi Isagi and the Blue Lock players face Japan’s U-20 team with the future of their project at stake. Their opponents combine a defense led by Oliver Aiku with the internationally acclaimed Sae Itoshi. With defeat meaning the end of Blue Lock, Isagi and his teammates must prove the strength of their attack."
+      },
+      "rawSource": {
+        "sourceUrl": "https://kira-hai.net/bluelock2025",
+        "title": "舞台『ブルーロック』4th STAGE",
+        "scheduleLines": [
+          "2025年5月15日-25日 THEATER MILANO-Za",
+          "2025年5月30日-6月1日 東大阪市文化創造館 Dream House 大ホール"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "竹中凌平",
+            "sourceActorUrl": "https://kira-hai.net/takenaka-ryohei",
+            "role_name": "潔世一",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "草地稜之",
+            "sourceActorUrl": "https://kira-hai.net/kusachi-ryono",
+            "role_name": "糸師凛",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "佐藤信長",
+            "sourceActorUrl": "https://kira-hai.net/sato-nobunaga",
+            "role_name": "蜂楽廻",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "佐藤たかみち",
+            "sourceActorUrl": "https://kira-hai.net/sato-takamichi",
+            "role_name": "凪誠士郎",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "松田岳",
+            "sourceActorUrl": "https://kira-hai.net/matsuda-gaku",
+            "role_name": "士道龍聖",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "宇野結也",
+            "sourceActorUrl": "https://kira-hai.net/uno-yuya",
+            "role_name": "烏旅人",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "遊馬晃祐",
+            "sourceActorUrl": "https://kira-hai.net/asuma-kosuke",
+            "role_name": "雪宮剣優",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "佐伯亮",
+            "sourceActorUrl": "https://kira-hai.net/saeki-ryo",
+            "role_name": "千切豹馬",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "前嶋曜",
+            "sourceActorUrl": "https://kira-hai.net/maejima-yo",
+            "role_name": "二子一揮",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "菊池修司",
+            "sourceActorUrl": "https://kira-hai.net/kikuchi-shuji",
+            "role_name": "御影玲王",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "三浦海里",
+            "sourceActorUrl": "https://kira-hai.net/miura-kairi",
+            "role_name": "氷織羊",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "伊万里有",
+            "sourceActorUrl": "https://kira-hai.net/imari-yu",
+            "role_name": "馬狼照英",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "健人",
+            "sourceActorUrl": "https://kira-hai.net/kento",
+            "role_name": "乙夜影汰",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "磯野大",
+            "sourceActorUrl": "https://kira-hai.net/isono-dai",
+            "role_name": "蟻生十兵衛",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "村松洸希",
+            "sourceActorUrl": "https://kira-hai.net/muramatsu-koki",
+            "role_name": "我牙丸吟",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "横井翔二郎",
+            "sourceActorUrl": "https://kira-hai.net/yokoi-shojiro",
+            "role_name": "絵心甚八",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "桜庭大翔",
+            "sourceActorUrl": "https://kira-hai.net/sakuraba-haruto",
+            "role_name": "オリヴァ・愛空",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "松本岳",
+            "sourceActorUrl": "https://kira-hai.net/matsumoto-gaku",
+            "role_name": "閃堂秋人",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "ジョエル・ショウヘイ",
+            "sourceActorUrl": "https://kira-hai.net/joel-shohei",
+            "role_name": "蛇来弥勒",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "影山達也",
+            "sourceActorUrl": "https://kira-hai.net/kageyama-tatsuya",
+            "role_name": "仁王和真",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "中土井俊允",
+            "sourceActorUrl": "https://kira-hai.net/nakadoi-toshimasa",
+            "role_name": "音留徹平",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "古田蓮",
+            "sourceActorUrl": "https://kira-hai.net/furuta-ren",
+            "role_name": "超健人",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "荒牧大矢",
+            "sourceActorUrl": "https://kira-hai.net/aramaki-daiya",
+            "role_name": "颯波留",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "土居健蔵",
+            "sourceActorUrl": "https://kira-hai.net/doi-kenzo",
+            "role_name": "不角源",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "猪野広樹",
+            "sourceActorUrl": "https://kira-hai.net/ino-hiroki",
+            "role_name": "糸師冴",
+            "cast_group": null
+          }
+        ],
+        "unparsed": []
+      },
+      "officialRaw": {
+        "cards": [
+          {
+            "role": "潔 世一",
+            "name": "竹中凌平"
+          },
+          {
+            "role": "糸師 凛",
+            "name": "草地稜之"
+          },
+          {
+            "role": "蜂楽 廻",
+            "name": "佐藤信長"
+          },
+          {
+            "role": "凪 誠士郎",
+            "name": "佐藤たかみち"
+          },
+          {
+            "role": "士道龍聖",
+            "name": "松田 岳"
+          },
+          {
+            "role": "烏 旅人",
+            "name": "宇野結也"
+          },
+          {
+            "role": "雪宮剣優",
+            "name": "遊馬晃祐"
+          },
+          {
+            "role": "千切豹馬",
+            "name": "佐伯 亮"
+          },
+          {
+            "role": "二子一揮",
+            "name": "前嶋 曜"
+          },
+          {
+            "role": "御影玲王",
+            "name": "菊池修司"
+          },
+          {
+            "role": "氷織 羊",
+            "name": "三浦海里"
+          },
+          {
+            "role": "馬狼照英",
+            "name": "伊万里 有"
+          },
+          {
+            "role": "乙夜影汰",
+            "name": "健人"
+          },
+          {
+            "role": "蟻生十兵衛",
+            "name": "磯野 大"
+          },
+          {
+            "role": "我牙丸 吟",
+            "name": "村松洸希"
+          },
+          {
+            "role": "絵心甚八",
+            "name": "横井翔二郎"
+          },
+          {
+            "role": "オリヴァ・愛空",
+            "name": "桜庭大翔"
+          },
+          {
+            "role": "閃堂秋人",
+            "name": "松本 岳"
+          },
+          {
+            "role": "蛇来弥勒",
+            "name": "ジョエル・ショウヘイ"
+          },
+          {
+            "role": "仁王和真",
+            "name": "影山達也"
+          },
+          {
+            "role": "音留徹平",
+            "name": "中土井俊允"
+          },
+          {
+            "role": "超 健人",
+            "name": "古田 蓮"
+          },
+          {
+            "role": "颯 波留",
+            "name": "荒牧大矢"
+          },
+          {
+            "role": "不角 源",
+            "name": "土居健蔵"
+          },
+          {
+            "role": "糸師 冴",
+            "name": "猪野広樹"
+          }
+        ],
+        "other": []
+      },
+      "source": {
+        "sourceUrl": "https://kira-hai.net/bluelock2025",
+        "title": "舞台『ブルーロック』4th STAGE",
+        "scheduleLines": [
+          "2025年5月15日-25日 THEATER MILANO-Za",
+          "2025年5月30日-6月1日 東大阪市文化創造館 Dream House 大ホール"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "竹中凌平",
+            "sourceActorUrl": "https://kira-hai.net/takenaka-ryohei",
+            "role_name": "潔世一",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "草地稜之",
+            "sourceActorUrl": "https://kira-hai.net/kusachi-ryono",
+            "role_name": "糸師凛",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "佐藤信長",
+            "sourceActorUrl": "https://kira-hai.net/sato-nobunaga",
+            "role_name": "蜂楽廻",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "佐藤たかみち",
+            "sourceActorUrl": "https://kira-hai.net/sato-takamichi",
+            "role_name": "凪誠士郎",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "松田岳",
+            "sourceActorUrl": "https://kira-hai.net/matsuda-gaku",
+            "role_name": "士道龍聖",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "宇野結也",
+            "sourceActorUrl": "https://kira-hai.net/uno-yuya",
+            "role_name": "烏旅人",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "遊馬晃祐",
+            "sourceActorUrl": "https://kira-hai.net/asuma-kosuke",
+            "role_name": "雪宮剣優",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "佐伯亮",
+            "sourceActorUrl": "https://kira-hai.net/saeki-ryo",
+            "role_name": "千切豹馬",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "前嶋曜",
+            "sourceActorUrl": "https://kira-hai.net/maejima-yo",
+            "role_name": "二子一揮",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "菊池修司",
+            "sourceActorUrl": "https://kira-hai.net/kikuchi-shuji",
+            "role_name": "御影玲王",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "三浦海里",
+            "sourceActorUrl": "https://kira-hai.net/miura-kairi",
+            "role_name": "氷織羊",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "伊万里有",
+            "sourceActorUrl": "https://kira-hai.net/imari-yu",
+            "role_name": "馬狼照英",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "健人",
+            "sourceActorUrl": "https://kira-hai.net/kento",
+            "role_name": "乙夜影汰",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "磯野大",
+            "sourceActorUrl": "https://kira-hai.net/isono-dai",
+            "role_name": "蟻生十兵衛",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "村松洸希",
+            "sourceActorUrl": "https://kira-hai.net/muramatsu-koki",
+            "role_name": "我牙丸吟",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "横井翔二郎",
+            "sourceActorUrl": "https://kira-hai.net/yokoi-shojiro",
+            "role_name": "絵心甚八",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "桜庭大翔",
+            "sourceActorUrl": "https://kira-hai.net/sakuraba-haruto",
+            "role_name": "オリヴァ・愛空",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "松本岳",
+            "sourceActorUrl": "https://kira-hai.net/matsumoto-gaku",
+            "role_name": "閃堂秋人",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "ジョエル・ショウヘイ",
+            "sourceActorUrl": "https://kira-hai.net/joel-shohei",
+            "role_name": "蛇来弥勒",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "影山達也",
+            "sourceActorUrl": "https://kira-hai.net/kageyama-tatsuya",
+            "role_name": "仁王和真",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "中土井俊允",
+            "sourceActorUrl": "https://kira-hai.net/nakadoi-toshimasa",
+            "role_name": "音留徹平",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "古田蓮",
+            "sourceActorUrl": "https://kira-hai.net/furuta-ren",
+            "role_name": "超健人",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "荒牧大矢",
+            "sourceActorUrl": "https://kira-hai.net/aramaki-daiya",
+            "role_name": "颯波留",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "土居健蔵",
+            "sourceActorUrl": "https://kira-hai.net/doi-kenzo",
+            "role_name": "不角源",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "猪野広樹",
+            "sourceActorUrl": "https://kira-hai.net/ino-hiroki",
+            "role_name": "糸師冴",
+            "cast_group": null
+          }
+        ],
+        "unparsed": []
+      },
+      "stage": {
+        "workUrl": "https://kira-hai.net/bluelock2025",
+        "key": "c48ee8e09d9aaa7797d4883375d9af98188624f180d2406dfb39718a60a7fddb",
+        "items": [
+          {
+            "source_actor_name": "竹中凌平",
+            "source_actor_url": "https://kira-hai.net/takenaka-ryohei",
+            "source_work_title": "舞台『ブルーロック』4th STAGE",
+            "source_year": 2025,
+            "source_role_raw": "潔世一",
+            "source_role_names": [
+              "潔世一"
+            ],
+            "source_cast_group": null,
+            "source_order": 1,
+            "source_credit_key": "37bd00e62a201f26250f",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "checkedAt": "2026-10-22T06:55:47.266Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/cast-staff/",
+                  "checkedAt": "2026-10-22T06:55:47.356Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/tickets-schedule/",
+                  "checkedAt": "2026-10-22T06:55:48.091Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/introduction/",
+                  "checkedAt": "2026-10-22T06:56:56.936Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://higashiosaka.hall-info.jp/hcch/2025/2025/20250530-0601.html",
+                  "checkedAt": "2026-10-22T06:55:48.600Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/",
+                  "checkedAt": "2026-10-22T06:56:56.852Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=2",
+                  "checkedAt": "2026-10-22T06:58:06.552Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=3",
+                  "checkedAt": "2026-10-22T06:58:07.209Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=28371",
+                  "checkedAt": "2026-10-22T06:56:56.900Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "fac8b59f49bb50c99872a9cde4f9b4e2b2fa134cb3c2d13d84ffa04c9493f077",
+              "review_fingerprint": "7e00a3ff14bc6bfab55d25ffcd24c74b3f8a07c8b0afa1386cec58e0b337367c",
+              "snapshot_fingerprint": "41c0087cafd90dd45c7f8a2bfae97374435caac7ada6ffe0ed0dce14f39ec475",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "c185bf12-396a-4b0f-87d8-f5dce00abab9",
+            "matched_play_id": "37af8473-44f9-4508-a88c-10927b8c26dc",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "草地稜之",
+            "source_actor_url": "https://kira-hai.net/kusachi-ryono",
+            "source_work_title": "舞台『ブルーロック』4th STAGE",
+            "source_year": 2025,
+            "source_role_raw": "糸師凛",
+            "source_role_names": [
+              "糸師凛"
+            ],
+            "source_cast_group": null,
+            "source_order": 2,
+            "source_credit_key": "b5d8f55b448bf96f634f",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "checkedAt": "2026-10-22T06:55:47.266Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/cast-staff/",
+                  "checkedAt": "2026-10-22T06:55:47.356Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/tickets-schedule/",
+                  "checkedAt": "2026-10-22T06:55:48.091Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/introduction/",
+                  "checkedAt": "2026-10-22T06:56:56.936Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://higashiosaka.hall-info.jp/hcch/2025/2025/20250530-0601.html",
+                  "checkedAt": "2026-10-22T06:55:48.600Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/",
+                  "checkedAt": "2026-10-22T06:56:56.852Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=2",
+                  "checkedAt": "2026-10-22T06:58:06.552Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=3",
+                  "checkedAt": "2026-10-22T06:58:07.209Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=28371",
+                  "checkedAt": "2026-10-22T06:56:56.900Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "fac8b59f49bb50c99872a9cde4f9b4e2b2fa134cb3c2d13d84ffa04c9493f077",
+              "review_fingerprint": "7e00a3ff14bc6bfab55d25ffcd24c74b3f8a07c8b0afa1386cec58e0b337367c",
+              "snapshot_fingerprint": "41c0087cafd90dd45c7f8a2bfae97374435caac7ada6ffe0ed0dce14f39ec475",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "bd68ed86-f941-4744-9da9-b0fa381c9010",
+            "matched_play_id": "37af8473-44f9-4508-a88c-10927b8c26dc",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "佐藤信長",
+            "source_actor_url": "https://kira-hai.net/sato-nobunaga",
+            "source_work_title": "舞台『ブルーロック』4th STAGE",
+            "source_year": 2025,
+            "source_role_raw": "蜂楽廻",
+            "source_role_names": [
+              "蜂楽廻"
+            ],
+            "source_cast_group": null,
+            "source_order": 3,
+            "source_credit_key": "6cece141c1aa10d4d838",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "checkedAt": "2026-10-22T06:55:47.266Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/cast-staff/",
+                  "checkedAt": "2026-10-22T06:55:47.356Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/tickets-schedule/",
+                  "checkedAt": "2026-10-22T06:55:48.091Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/introduction/",
+                  "checkedAt": "2026-10-22T06:56:56.936Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://higashiosaka.hall-info.jp/hcch/2025/2025/20250530-0601.html",
+                  "checkedAt": "2026-10-22T06:55:48.600Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/",
+                  "checkedAt": "2026-10-22T06:56:56.852Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=2",
+                  "checkedAt": "2026-10-22T06:58:06.552Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=3",
+                  "checkedAt": "2026-10-22T06:58:07.209Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=28371",
+                  "checkedAt": "2026-10-22T06:56:56.900Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "fac8b59f49bb50c99872a9cde4f9b4e2b2fa134cb3c2d13d84ffa04c9493f077",
+              "review_fingerprint": "7e00a3ff14bc6bfab55d25ffcd24c74b3f8a07c8b0afa1386cec58e0b337367c",
+              "snapshot_fingerprint": "41c0087cafd90dd45c7f8a2bfae97374435caac7ada6ffe0ed0dce14f39ec475",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "888425ea-130c-44be-8fbf-2393e597267d",
+            "matched_play_id": "37af8473-44f9-4508-a88c-10927b8c26dc",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "佐藤たかみち",
+            "source_actor_url": "https://kira-hai.net/sato-takamichi",
+            "source_work_title": "舞台『ブルーロック』4th STAGE",
+            "source_year": 2025,
+            "source_role_raw": "凪誠士郎",
+            "source_role_names": [
+              "凪誠士郎"
+            ],
+            "source_cast_group": null,
+            "source_order": 4,
+            "source_credit_key": "89b1b9445e92b3c84365",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "checkedAt": "2026-10-22T06:55:47.266Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/cast-staff/",
+                  "checkedAt": "2026-10-22T06:55:47.356Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/tickets-schedule/",
+                  "checkedAt": "2026-10-22T06:55:48.091Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/introduction/",
+                  "checkedAt": "2026-10-22T06:56:56.936Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://higashiosaka.hall-info.jp/hcch/2025/2025/20250530-0601.html",
+                  "checkedAt": "2026-10-22T06:55:48.600Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/",
+                  "checkedAt": "2026-10-22T06:56:56.852Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=2",
+                  "checkedAt": "2026-10-22T06:58:06.552Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=3",
+                  "checkedAt": "2026-10-22T06:58:07.209Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=28371",
+                  "checkedAt": "2026-10-22T06:56:56.900Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "fac8b59f49bb50c99872a9cde4f9b4e2b2fa134cb3c2d13d84ffa04c9493f077",
+              "review_fingerprint": "7e00a3ff14bc6bfab55d25ffcd24c74b3f8a07c8b0afa1386cec58e0b337367c",
+              "snapshot_fingerprint": "41c0087cafd90dd45c7f8a2bfae97374435caac7ada6ffe0ed0dce14f39ec475",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "e34bae02-d4f8-4c49-9c53-b5f65ee97b49",
+            "matched_play_id": "37af8473-44f9-4508-a88c-10927b8c26dc",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "松田岳",
+            "source_actor_url": "https://kira-hai.net/matsuda-gaku",
+            "source_work_title": "舞台『ブルーロック』4th STAGE",
+            "source_year": 2025,
+            "source_role_raw": "士道龍聖",
+            "source_role_names": [
+              "士道龍聖"
+            ],
+            "source_cast_group": null,
+            "source_order": 5,
+            "source_credit_key": "54afbcb2f1d55c9a7c77",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "checkedAt": "2026-10-22T06:55:47.266Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/cast-staff/",
+                  "checkedAt": "2026-10-22T06:55:47.356Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/tickets-schedule/",
+                  "checkedAt": "2026-10-22T06:55:48.091Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/introduction/",
+                  "checkedAt": "2026-10-22T06:56:56.936Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://higashiosaka.hall-info.jp/hcch/2025/2025/20250530-0601.html",
+                  "checkedAt": "2026-10-22T06:55:48.600Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/",
+                  "checkedAt": "2026-10-22T06:56:56.852Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=2",
+                  "checkedAt": "2026-10-22T06:58:06.552Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=3",
+                  "checkedAt": "2026-10-22T06:58:07.209Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=28371",
+                  "checkedAt": "2026-10-22T06:56:56.900Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "fac8b59f49bb50c99872a9cde4f9b4e2b2fa134cb3c2d13d84ffa04c9493f077",
+              "review_fingerprint": "7e00a3ff14bc6bfab55d25ffcd24c74b3f8a07c8b0afa1386cec58e0b337367c",
+              "snapshot_fingerprint": "41c0087cafd90dd45c7f8a2bfae97374435caac7ada6ffe0ed0dce14f39ec475",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "1689a3cd-4583-4413-9842-80362e01d002",
+            "matched_play_id": "37af8473-44f9-4508-a88c-10927b8c26dc",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "宇野結也",
+            "source_actor_url": "https://kira-hai.net/uno-yuya",
+            "source_work_title": "舞台『ブルーロック』4th STAGE",
+            "source_year": 2025,
+            "source_role_raw": "烏旅人",
+            "source_role_names": [
+              "烏旅人"
+            ],
+            "source_cast_group": null,
+            "source_order": 6,
+            "source_credit_key": "bef788c4284d88b93ce8",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "checkedAt": "2026-10-22T06:55:47.266Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/cast-staff/",
+                  "checkedAt": "2026-10-22T06:55:47.356Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/tickets-schedule/",
+                  "checkedAt": "2026-10-22T06:55:48.091Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/introduction/",
+                  "checkedAt": "2026-10-22T06:56:56.936Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://higashiosaka.hall-info.jp/hcch/2025/2025/20250530-0601.html",
+                  "checkedAt": "2026-10-22T06:55:48.600Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/",
+                  "checkedAt": "2026-10-22T06:56:56.852Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=2",
+                  "checkedAt": "2026-10-22T06:58:06.552Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=3",
+                  "checkedAt": "2026-10-22T06:58:07.209Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=28371",
+                  "checkedAt": "2026-10-22T06:56:56.900Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "fac8b59f49bb50c99872a9cde4f9b4e2b2fa134cb3c2d13d84ffa04c9493f077",
+              "review_fingerprint": "7e00a3ff14bc6bfab55d25ffcd24c74b3f8a07c8b0afa1386cec58e0b337367c",
+              "snapshot_fingerprint": "41c0087cafd90dd45c7f8a2bfae97374435caac7ada6ffe0ed0dce14f39ec475",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "c9a0b816-6f8d-413e-bdff-2e84f5f1a601",
+            "matched_play_id": "37af8473-44f9-4508-a88c-10927b8c26dc",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "遊馬晃祐",
+            "source_actor_url": "https://kira-hai.net/asuma-kosuke",
+            "source_work_title": "舞台『ブルーロック』4th STAGE",
+            "source_year": 2025,
+            "source_role_raw": "雪宮剣優",
+            "source_role_names": [
+              "雪宮剣優"
+            ],
+            "source_cast_group": null,
+            "source_order": 7,
+            "source_credit_key": "4782702ba7675bf6a348",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "checkedAt": "2026-10-22T06:55:47.266Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/cast-staff/",
+                  "checkedAt": "2026-10-22T06:55:47.356Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/tickets-schedule/",
+                  "checkedAt": "2026-10-22T06:55:48.091Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/introduction/",
+                  "checkedAt": "2026-10-22T06:56:56.936Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://higashiosaka.hall-info.jp/hcch/2025/2025/20250530-0601.html",
+                  "checkedAt": "2026-10-22T06:55:48.600Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/",
+                  "checkedAt": "2026-10-22T06:56:56.852Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=2",
+                  "checkedAt": "2026-10-22T06:58:06.552Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=3",
+                  "checkedAt": "2026-10-22T06:58:07.209Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=28371",
+                  "checkedAt": "2026-10-22T06:56:56.900Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "fac8b59f49bb50c99872a9cde4f9b4e2b2fa134cb3c2d13d84ffa04c9493f077",
+              "review_fingerprint": "7e00a3ff14bc6bfab55d25ffcd24c74b3f8a07c8b0afa1386cec58e0b337367c",
+              "snapshot_fingerprint": "41c0087cafd90dd45c7f8a2bfae97374435caac7ada6ffe0ed0dce14f39ec475",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "a5cba653-e9bb-4e19-89cf-19db6ca5af7b",
+            "matched_play_id": "37af8473-44f9-4508-a88c-10927b8c26dc",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "佐伯亮",
+            "source_actor_url": "https://kira-hai.net/saeki-ryo",
+            "source_work_title": "舞台『ブルーロック』4th STAGE",
+            "source_year": 2025,
+            "source_role_raw": "千切豹馬",
+            "source_role_names": [
+              "千切豹馬"
+            ],
+            "source_cast_group": null,
+            "source_order": 8,
+            "source_credit_key": "b16fb470187ade71cfc3",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "checkedAt": "2026-10-22T06:55:47.266Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/cast-staff/",
+                  "checkedAt": "2026-10-22T06:55:47.356Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/tickets-schedule/",
+                  "checkedAt": "2026-10-22T06:55:48.091Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/introduction/",
+                  "checkedAt": "2026-10-22T06:56:56.936Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://higashiosaka.hall-info.jp/hcch/2025/2025/20250530-0601.html",
+                  "checkedAt": "2026-10-22T06:55:48.600Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/",
+                  "checkedAt": "2026-10-22T06:56:56.852Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=2",
+                  "checkedAt": "2026-10-22T06:58:06.552Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=3",
+                  "checkedAt": "2026-10-22T06:58:07.209Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=28371",
+                  "checkedAt": "2026-10-22T06:56:56.900Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "fac8b59f49bb50c99872a9cde4f9b4e2b2fa134cb3c2d13d84ffa04c9493f077",
+              "review_fingerprint": "7e00a3ff14bc6bfab55d25ffcd24c74b3f8a07c8b0afa1386cec58e0b337367c",
+              "snapshot_fingerprint": "41c0087cafd90dd45c7f8a2bfae97374435caac7ada6ffe0ed0dce14f39ec475",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "7444fe49-d308-41e4-9220-e7dd737d044f",
+            "matched_play_id": "37af8473-44f9-4508-a88c-10927b8c26dc",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "前嶋曜",
+            "source_actor_url": "https://kira-hai.net/maejima-yo",
+            "source_work_title": "舞台『ブルーロック』4th STAGE",
+            "source_year": 2025,
+            "source_role_raw": "二子一揮",
+            "source_role_names": [
+              "二子一揮"
+            ],
+            "source_cast_group": null,
+            "source_order": 9,
+            "source_credit_key": "8fa16aeaa2968bc7d6db",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "checkedAt": "2026-10-22T06:55:47.266Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/cast-staff/",
+                  "checkedAt": "2026-10-22T06:55:47.356Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/tickets-schedule/",
+                  "checkedAt": "2026-10-22T06:55:48.091Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/introduction/",
+                  "checkedAt": "2026-10-22T06:56:56.936Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://higashiosaka.hall-info.jp/hcch/2025/2025/20250530-0601.html",
+                  "checkedAt": "2026-10-22T06:55:48.600Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/",
+                  "checkedAt": "2026-10-22T06:56:56.852Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=2",
+                  "checkedAt": "2026-10-22T06:58:06.552Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=3",
+                  "checkedAt": "2026-10-22T06:58:07.209Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=28371",
+                  "checkedAt": "2026-10-22T06:56:56.900Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "fac8b59f49bb50c99872a9cde4f9b4e2b2fa134cb3c2d13d84ffa04c9493f077",
+              "review_fingerprint": "7e00a3ff14bc6bfab55d25ffcd24c74b3f8a07c8b0afa1386cec58e0b337367c",
+              "snapshot_fingerprint": "41c0087cafd90dd45c7f8a2bfae97374435caac7ada6ffe0ed0dce14f39ec475",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "77fb830c-4de8-4b4f-8416-79c886b15501",
+            "matched_play_id": "37af8473-44f9-4508-a88c-10927b8c26dc",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "菊池修司",
+            "source_actor_url": "https://kira-hai.net/kikuchi-shuji",
+            "source_work_title": "舞台『ブルーロック』4th STAGE",
+            "source_year": 2025,
+            "source_role_raw": "御影玲王",
+            "source_role_names": [
+              "御影玲王"
+            ],
+            "source_cast_group": null,
+            "source_order": 10,
+            "source_credit_key": "7c26865be34cee36a2d6",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "checkedAt": "2026-10-22T06:55:47.266Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/cast-staff/",
+                  "checkedAt": "2026-10-22T06:55:47.356Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/tickets-schedule/",
+                  "checkedAt": "2026-10-22T06:55:48.091Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/introduction/",
+                  "checkedAt": "2026-10-22T06:56:56.936Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://higashiosaka.hall-info.jp/hcch/2025/2025/20250530-0601.html",
+                  "checkedAt": "2026-10-22T06:55:48.600Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/",
+                  "checkedAt": "2026-10-22T06:56:56.852Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=2",
+                  "checkedAt": "2026-10-22T06:58:06.552Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=3",
+                  "checkedAt": "2026-10-22T06:58:07.209Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=28371",
+                  "checkedAt": "2026-10-22T06:56:56.900Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "fac8b59f49bb50c99872a9cde4f9b4e2b2fa134cb3c2d13d84ffa04c9493f077",
+              "review_fingerprint": "7e00a3ff14bc6bfab55d25ffcd24c74b3f8a07c8b0afa1386cec58e0b337367c",
+              "snapshot_fingerprint": "41c0087cafd90dd45c7f8a2bfae97374435caac7ada6ffe0ed0dce14f39ec475",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "e70ca3b8-5221-4009-8981-9584226c490c",
+            "matched_play_id": "37af8473-44f9-4508-a88c-10927b8c26dc",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "三浦海里",
+            "source_actor_url": "https://kira-hai.net/miura-kairi",
+            "source_work_title": "舞台『ブルーロック』4th STAGE",
+            "source_year": 2025,
+            "source_role_raw": "氷織羊",
+            "source_role_names": [
+              "氷織羊"
+            ],
+            "source_cast_group": null,
+            "source_order": 11,
+            "source_credit_key": "5fccb5fd9291a961953e",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "checkedAt": "2026-10-22T06:55:47.266Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/cast-staff/",
+                  "checkedAt": "2026-10-22T06:55:47.356Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/tickets-schedule/",
+                  "checkedAt": "2026-10-22T06:55:48.091Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/introduction/",
+                  "checkedAt": "2026-10-22T06:56:56.936Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://higashiosaka.hall-info.jp/hcch/2025/2025/20250530-0601.html",
+                  "checkedAt": "2026-10-22T06:55:48.600Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/",
+                  "checkedAt": "2026-10-22T06:56:56.852Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=2",
+                  "checkedAt": "2026-10-22T06:58:06.552Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=3",
+                  "checkedAt": "2026-10-22T06:58:07.209Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=28371",
+                  "checkedAt": "2026-10-22T06:56:56.900Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "fac8b59f49bb50c99872a9cde4f9b4e2b2fa134cb3c2d13d84ffa04c9493f077",
+              "review_fingerprint": "7e00a3ff14bc6bfab55d25ffcd24c74b3f8a07c8b0afa1386cec58e0b337367c",
+              "snapshot_fingerprint": "41c0087cafd90dd45c7f8a2bfae97374435caac7ada6ffe0ed0dce14f39ec475",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "531a2f17-353d-49ad-ba10-919983f2d12b",
+            "matched_play_id": "37af8473-44f9-4508-a88c-10927b8c26dc",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "伊万里有",
+            "source_actor_url": "https://kira-hai.net/imari-yu",
+            "source_work_title": "舞台『ブルーロック』4th STAGE",
+            "source_year": 2025,
+            "source_role_raw": "馬狼照英",
+            "source_role_names": [
+              "馬狼照英"
+            ],
+            "source_cast_group": null,
+            "source_order": 12,
+            "source_credit_key": "e06ad56677130d83ed2c",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "checkedAt": "2026-10-22T06:55:47.266Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/cast-staff/",
+                  "checkedAt": "2026-10-22T06:55:47.356Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/tickets-schedule/",
+                  "checkedAt": "2026-10-22T06:55:48.091Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/introduction/",
+                  "checkedAt": "2026-10-22T06:56:56.936Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://higashiosaka.hall-info.jp/hcch/2025/2025/20250530-0601.html",
+                  "checkedAt": "2026-10-22T06:55:48.600Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/",
+                  "checkedAt": "2026-10-22T06:56:56.852Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=2",
+                  "checkedAt": "2026-10-22T06:58:06.552Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=3",
+                  "checkedAt": "2026-10-22T06:58:07.209Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=28371",
+                  "checkedAt": "2026-10-22T06:56:56.900Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "fac8b59f49bb50c99872a9cde4f9b4e2b2fa134cb3c2d13d84ffa04c9493f077",
+              "review_fingerprint": "7e00a3ff14bc6bfab55d25ffcd24c74b3f8a07c8b0afa1386cec58e0b337367c",
+              "snapshot_fingerprint": "41c0087cafd90dd45c7f8a2bfae97374435caac7ada6ffe0ed0dce14f39ec475",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "48311c5f-4620-416c-8f41-7b87ee99d51d",
+            "matched_play_id": "37af8473-44f9-4508-a88c-10927b8c26dc",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "健人",
+            "source_actor_url": "https://kira-hai.net/kento",
+            "source_work_title": "舞台『ブルーロック』4th STAGE",
+            "source_year": 2025,
+            "source_role_raw": "乙夜影汰",
+            "source_role_names": [
+              "乙夜影汰"
+            ],
+            "source_cast_group": null,
+            "source_order": 13,
+            "source_credit_key": "f449af3c866c98b9ae4f",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "checkedAt": "2026-10-22T06:55:47.266Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/cast-staff/",
+                  "checkedAt": "2026-10-22T06:55:47.356Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/tickets-schedule/",
+                  "checkedAt": "2026-10-22T06:55:48.091Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/introduction/",
+                  "checkedAt": "2026-10-22T06:56:56.936Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://higashiosaka.hall-info.jp/hcch/2025/2025/20250530-0601.html",
+                  "checkedAt": "2026-10-22T06:55:48.600Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/",
+                  "checkedAt": "2026-10-22T06:56:56.852Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=2",
+                  "checkedAt": "2026-10-22T06:58:06.552Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=3",
+                  "checkedAt": "2026-10-22T06:58:07.209Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=28371",
+                  "checkedAt": "2026-10-22T06:56:56.900Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "fac8b59f49bb50c99872a9cde4f9b4e2b2fa134cb3c2d13d84ffa04c9493f077",
+              "review_fingerprint": "7e00a3ff14bc6bfab55d25ffcd24c74b3f8a07c8b0afa1386cec58e0b337367c",
+              "snapshot_fingerprint": "41c0087cafd90dd45c7f8a2bfae97374435caac7ada6ffe0ed0dce14f39ec475",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "4df6c773-2f8f-4c76-882c-4159d36da42a",
+            "matched_play_id": "37af8473-44f9-4508-a88c-10927b8c26dc",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "磯野大",
+            "source_actor_url": "https://kira-hai.net/isono-dai",
+            "source_work_title": "舞台『ブルーロック』4th STAGE",
+            "source_year": 2025,
+            "source_role_raw": "蟻生十兵衛",
+            "source_role_names": [
+              "蟻生十兵衛"
+            ],
+            "source_cast_group": null,
+            "source_order": 14,
+            "source_credit_key": "7c54fd64549d5c856eec",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "checkedAt": "2026-10-22T06:55:47.266Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/cast-staff/",
+                  "checkedAt": "2026-10-22T06:55:47.356Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/tickets-schedule/",
+                  "checkedAt": "2026-10-22T06:55:48.091Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/introduction/",
+                  "checkedAt": "2026-10-22T06:56:56.936Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://higashiosaka.hall-info.jp/hcch/2025/2025/20250530-0601.html",
+                  "checkedAt": "2026-10-22T06:55:48.600Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/",
+                  "checkedAt": "2026-10-22T06:56:56.852Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=2",
+                  "checkedAt": "2026-10-22T06:58:06.552Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=3",
+                  "checkedAt": "2026-10-22T06:58:07.209Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=28371",
+                  "checkedAt": "2026-10-22T06:56:56.900Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "fac8b59f49bb50c99872a9cde4f9b4e2b2fa134cb3c2d13d84ffa04c9493f077",
+              "review_fingerprint": "7e00a3ff14bc6bfab55d25ffcd24c74b3f8a07c8b0afa1386cec58e0b337367c",
+              "snapshot_fingerprint": "41c0087cafd90dd45c7f8a2bfae97374435caac7ada6ffe0ed0dce14f39ec475",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "981b6f48-20f7-4744-9412-b29acd509c72",
+            "matched_play_id": "37af8473-44f9-4508-a88c-10927b8c26dc",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "村松洸希",
+            "source_actor_url": "https://kira-hai.net/muramatsu-koki",
+            "source_work_title": "舞台『ブルーロック』4th STAGE",
+            "source_year": 2025,
+            "source_role_raw": "我牙丸吟",
+            "source_role_names": [
+              "我牙丸吟"
+            ],
+            "source_cast_group": null,
+            "source_order": 15,
+            "source_credit_key": "42c6ecfb9eb4bc55a44e",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "checkedAt": "2026-10-22T06:55:47.266Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/cast-staff/",
+                  "checkedAt": "2026-10-22T06:55:47.356Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/tickets-schedule/",
+                  "checkedAt": "2026-10-22T06:55:48.091Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/introduction/",
+                  "checkedAt": "2026-10-22T06:56:56.936Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://higashiosaka.hall-info.jp/hcch/2025/2025/20250530-0601.html",
+                  "checkedAt": "2026-10-22T06:55:48.600Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/",
+                  "checkedAt": "2026-10-22T06:56:56.852Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=2",
+                  "checkedAt": "2026-10-22T06:58:06.552Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=3",
+                  "checkedAt": "2026-10-22T06:58:07.209Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=28371",
+                  "checkedAt": "2026-10-22T06:56:56.900Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "fac8b59f49bb50c99872a9cde4f9b4e2b2fa134cb3c2d13d84ffa04c9493f077",
+              "review_fingerprint": "7e00a3ff14bc6bfab55d25ffcd24c74b3f8a07c8b0afa1386cec58e0b337367c",
+              "snapshot_fingerprint": "41c0087cafd90dd45c7f8a2bfae97374435caac7ada6ffe0ed0dce14f39ec475",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "b0b72af6-00c9-4e92-bbc0-ab627345eda8",
+            "matched_play_id": "37af8473-44f9-4508-a88c-10927b8c26dc",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "横井翔二郎",
+            "source_actor_url": "https://kira-hai.net/yokoi-shojiro",
+            "source_work_title": "舞台『ブルーロック』4th STAGE",
+            "source_year": 2025,
+            "source_role_raw": "絵心甚八",
+            "source_role_names": [
+              "絵心甚八"
+            ],
+            "source_cast_group": null,
+            "source_order": 16,
+            "source_credit_key": "503d48b6df6ecede5295",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "checkedAt": "2026-10-22T06:55:47.266Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/cast-staff/",
+                  "checkedAt": "2026-10-22T06:55:47.356Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/tickets-schedule/",
+                  "checkedAt": "2026-10-22T06:55:48.091Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/introduction/",
+                  "checkedAt": "2026-10-22T06:56:56.936Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://higashiosaka.hall-info.jp/hcch/2025/2025/20250530-0601.html",
+                  "checkedAt": "2026-10-22T06:55:48.600Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/",
+                  "checkedAt": "2026-10-22T06:56:56.852Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=2",
+                  "checkedAt": "2026-10-22T06:58:06.552Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=3",
+                  "checkedAt": "2026-10-22T06:58:07.209Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=28371",
+                  "checkedAt": "2026-10-22T06:56:56.900Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "fac8b59f49bb50c99872a9cde4f9b4e2b2fa134cb3c2d13d84ffa04c9493f077",
+              "review_fingerprint": "7e00a3ff14bc6bfab55d25ffcd24c74b3f8a07c8b0afa1386cec58e0b337367c",
+              "snapshot_fingerprint": "41c0087cafd90dd45c7f8a2bfae97374435caac7ada6ffe0ed0dce14f39ec475",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "5b634cd8-f8b7-4f15-8430-ef2288a2e77f",
+            "matched_play_id": "37af8473-44f9-4508-a88c-10927b8c26dc",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "桜庭大翔",
+            "source_actor_url": "https://kira-hai.net/sakuraba-haruto",
+            "source_work_title": "舞台『ブルーロック』4th STAGE",
+            "source_year": 2025,
+            "source_role_raw": "オリヴァ・愛空",
+            "source_role_names": [
+              "オリヴァ・愛空"
+            ],
+            "source_cast_group": null,
+            "source_order": 17,
+            "source_credit_key": "d21412e9905ce533fe16",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "checkedAt": "2026-10-22T06:55:47.266Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/cast-staff/",
+                  "checkedAt": "2026-10-22T06:55:47.356Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/tickets-schedule/",
+                  "checkedAt": "2026-10-22T06:55:48.091Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/introduction/",
+                  "checkedAt": "2026-10-22T06:56:56.936Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://higashiosaka.hall-info.jp/hcch/2025/2025/20250530-0601.html",
+                  "checkedAt": "2026-10-22T06:55:48.600Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/",
+                  "checkedAt": "2026-10-22T06:56:56.852Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=2",
+                  "checkedAt": "2026-10-22T06:58:06.552Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=3",
+                  "checkedAt": "2026-10-22T06:58:07.209Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=28371",
+                  "checkedAt": "2026-10-22T06:56:56.900Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "fac8b59f49bb50c99872a9cde4f9b4e2b2fa134cb3c2d13d84ffa04c9493f077",
+              "review_fingerprint": "7e00a3ff14bc6bfab55d25ffcd24c74b3f8a07c8b0afa1386cec58e0b337367c",
+              "snapshot_fingerprint": "41c0087cafd90dd45c7f8a2bfae97374435caac7ada6ffe0ed0dce14f39ec475",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "65b3d016-48b7-4a17-a8a6-87955f07096a",
+            "matched_play_id": "37af8473-44f9-4508-a88c-10927b8c26dc",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "松本岳",
+            "source_actor_url": "https://kira-hai.net/matsumoto-gaku",
+            "source_work_title": "舞台『ブルーロック』4th STAGE",
+            "source_year": 2025,
+            "source_role_raw": "閃堂秋人",
+            "source_role_names": [
+              "閃堂秋人"
+            ],
+            "source_cast_group": null,
+            "source_order": 18,
+            "source_credit_key": "d14e9e8f9426eee8c980",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "checkedAt": "2026-10-22T06:55:47.266Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/cast-staff/",
+                  "checkedAt": "2026-10-22T06:55:47.356Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/tickets-schedule/",
+                  "checkedAt": "2026-10-22T06:55:48.091Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/introduction/",
+                  "checkedAt": "2026-10-22T06:56:56.936Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://higashiosaka.hall-info.jp/hcch/2025/2025/20250530-0601.html",
+                  "checkedAt": "2026-10-22T06:55:48.600Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/",
+                  "checkedAt": "2026-10-22T06:56:56.852Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=2",
+                  "checkedAt": "2026-10-22T06:58:06.552Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=3",
+                  "checkedAt": "2026-10-22T06:58:07.209Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=28371",
+                  "checkedAt": "2026-10-22T06:56:56.900Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "fac8b59f49bb50c99872a9cde4f9b4e2b2fa134cb3c2d13d84ffa04c9493f077",
+              "review_fingerprint": "7e00a3ff14bc6bfab55d25ffcd24c74b3f8a07c8b0afa1386cec58e0b337367c",
+              "snapshot_fingerprint": "41c0087cafd90dd45c7f8a2bfae97374435caac7ada6ffe0ed0dce14f39ec475",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "bb717597-891c-42dd-94a3-4b264f9a3ab6",
+            "matched_play_id": "37af8473-44f9-4508-a88c-10927b8c26dc",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "ジョエル・ショウヘイ",
+            "source_actor_url": "https://kira-hai.net/joel-shohei",
+            "source_work_title": "舞台『ブルーロック』4th STAGE",
+            "source_year": 2025,
+            "source_role_raw": "蛇来弥勒",
+            "source_role_names": [
+              "蛇来弥勒"
+            ],
+            "source_cast_group": null,
+            "source_order": 19,
+            "source_credit_key": "93dad791a24607981687",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "checkedAt": "2026-10-22T06:55:47.266Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/cast-staff/",
+                  "checkedAt": "2026-10-22T06:55:47.356Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/tickets-schedule/",
+                  "checkedAt": "2026-10-22T06:55:48.091Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/introduction/",
+                  "checkedAt": "2026-10-22T06:56:56.936Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://higashiosaka.hall-info.jp/hcch/2025/2025/20250530-0601.html",
+                  "checkedAt": "2026-10-22T06:55:48.600Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/",
+                  "checkedAt": "2026-10-22T06:56:56.852Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=2",
+                  "checkedAt": "2026-10-22T06:58:06.552Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=3",
+                  "checkedAt": "2026-10-22T06:58:07.209Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=28371",
+                  "checkedAt": "2026-10-22T06:56:56.900Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "fac8b59f49bb50c99872a9cde4f9b4e2b2fa134cb3c2d13d84ffa04c9493f077",
+              "review_fingerprint": "7e00a3ff14bc6bfab55d25ffcd24c74b3f8a07c8b0afa1386cec58e0b337367c",
+              "snapshot_fingerprint": "41c0087cafd90dd45c7f8a2bfae97374435caac7ada6ffe0ed0dce14f39ec475",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "7d18f4eb-9304-4bbd-88de-b5276b27268f",
+            "matched_play_id": "37af8473-44f9-4508-a88c-10927b8c26dc",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "影山達也",
+            "source_actor_url": "https://kira-hai.net/kageyama-tatsuya",
+            "source_work_title": "舞台『ブルーロック』4th STAGE",
+            "source_year": 2025,
+            "source_role_raw": "仁王和真",
+            "source_role_names": [
+              "仁王和真"
+            ],
+            "source_cast_group": null,
+            "source_order": 20,
+            "source_credit_key": "702755543efdfc46c5ac",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "checkedAt": "2026-10-22T06:55:47.266Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/cast-staff/",
+                  "checkedAt": "2026-10-22T06:55:47.356Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/tickets-schedule/",
+                  "checkedAt": "2026-10-22T06:55:48.091Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/introduction/",
+                  "checkedAt": "2026-10-22T06:56:56.936Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://higashiosaka.hall-info.jp/hcch/2025/2025/20250530-0601.html",
+                  "checkedAt": "2026-10-22T06:55:48.600Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/",
+                  "checkedAt": "2026-10-22T06:56:56.852Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=2",
+                  "checkedAt": "2026-10-22T06:58:06.552Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=3",
+                  "checkedAt": "2026-10-22T06:58:07.209Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=28371",
+                  "checkedAt": "2026-10-22T06:56:56.900Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "fac8b59f49bb50c99872a9cde4f9b4e2b2fa134cb3c2d13d84ffa04c9493f077",
+              "review_fingerprint": "7e00a3ff14bc6bfab55d25ffcd24c74b3f8a07c8b0afa1386cec58e0b337367c",
+              "snapshot_fingerprint": "41c0087cafd90dd45c7f8a2bfae97374435caac7ada6ffe0ed0dce14f39ec475",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "b966622f-3323-468a-bd70-12ceb0c69c1d",
+            "matched_play_id": "37af8473-44f9-4508-a88c-10927b8c26dc",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "中土井俊允",
+            "source_actor_url": "https://kira-hai.net/nakadoi-toshimasa",
+            "source_work_title": "舞台『ブルーロック』4th STAGE",
+            "source_year": 2025,
+            "source_role_raw": "音留徹平",
+            "source_role_names": [
+              "音留徹平"
+            ],
+            "source_cast_group": null,
+            "source_order": 21,
+            "source_credit_key": "15c6e9e7d577f6188a6e",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "checkedAt": "2026-10-22T06:55:47.266Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/cast-staff/",
+                  "checkedAt": "2026-10-22T06:55:47.356Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/tickets-schedule/",
+                  "checkedAt": "2026-10-22T06:55:48.091Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/introduction/",
+                  "checkedAt": "2026-10-22T06:56:56.936Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://higashiosaka.hall-info.jp/hcch/2025/2025/20250530-0601.html",
+                  "checkedAt": "2026-10-22T06:55:48.600Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/",
+                  "checkedAt": "2026-10-22T06:56:56.852Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=2",
+                  "checkedAt": "2026-10-22T06:58:06.552Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=3",
+                  "checkedAt": "2026-10-22T06:58:07.209Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=28371",
+                  "checkedAt": "2026-10-22T06:56:56.900Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "fac8b59f49bb50c99872a9cde4f9b4e2b2fa134cb3c2d13d84ffa04c9493f077",
+              "review_fingerprint": "7e00a3ff14bc6bfab55d25ffcd24c74b3f8a07c8b0afa1386cec58e0b337367c",
+              "snapshot_fingerprint": "41c0087cafd90dd45c7f8a2bfae97374435caac7ada6ffe0ed0dce14f39ec475",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "a6524e6f-6a0c-4c45-9238-3749c7080013",
+            "matched_play_id": "37af8473-44f9-4508-a88c-10927b8c26dc",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "古田蓮",
+            "source_actor_url": "https://kira-hai.net/furuta-ren",
+            "source_work_title": "舞台『ブルーロック』4th STAGE",
+            "source_year": 2025,
+            "source_role_raw": "超健人",
+            "source_role_names": [
+              "超健人"
+            ],
+            "source_cast_group": null,
+            "source_order": 22,
+            "source_credit_key": "14f20360256c48bb7f14",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "checkedAt": "2026-10-22T06:55:47.266Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/cast-staff/",
+                  "checkedAt": "2026-10-22T06:55:47.356Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/tickets-schedule/",
+                  "checkedAt": "2026-10-22T06:55:48.091Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/introduction/",
+                  "checkedAt": "2026-10-22T06:56:56.936Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://higashiosaka.hall-info.jp/hcch/2025/2025/20250530-0601.html",
+                  "checkedAt": "2026-10-22T06:55:48.600Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/",
+                  "checkedAt": "2026-10-22T06:56:56.852Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=2",
+                  "checkedAt": "2026-10-22T06:58:06.552Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=3",
+                  "checkedAt": "2026-10-22T06:58:07.209Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=28371",
+                  "checkedAt": "2026-10-22T06:56:56.900Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "fac8b59f49bb50c99872a9cde4f9b4e2b2fa134cb3c2d13d84ffa04c9493f077",
+              "review_fingerprint": "7e00a3ff14bc6bfab55d25ffcd24c74b3f8a07c8b0afa1386cec58e0b337367c",
+              "snapshot_fingerprint": "41c0087cafd90dd45c7f8a2bfae97374435caac7ada6ffe0ed0dce14f39ec475",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "8429d136-00f3-4925-933b-0ec12391123e",
+            "matched_play_id": "37af8473-44f9-4508-a88c-10927b8c26dc",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "荒牧大矢",
+            "source_actor_url": "https://kira-hai.net/aramaki-daiya",
+            "source_work_title": "舞台『ブルーロック』4th STAGE",
+            "source_year": 2025,
+            "source_role_raw": "颯波留",
+            "source_role_names": [
+              "颯波留"
+            ],
+            "source_cast_group": null,
+            "source_order": 23,
+            "source_credit_key": "4587fbfb95a853330b40",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "checkedAt": "2026-10-22T06:55:47.266Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/cast-staff/",
+                  "checkedAt": "2026-10-22T06:55:47.356Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/tickets-schedule/",
+                  "checkedAt": "2026-10-22T06:55:48.091Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/introduction/",
+                  "checkedAt": "2026-10-22T06:56:56.936Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://higashiosaka.hall-info.jp/hcch/2025/2025/20250530-0601.html",
+                  "checkedAt": "2026-10-22T06:55:48.600Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/",
+                  "checkedAt": "2026-10-22T06:56:56.852Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=2",
+                  "checkedAt": "2026-10-22T06:58:06.552Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=3",
+                  "checkedAt": "2026-10-22T06:58:07.209Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=28371",
+                  "checkedAt": "2026-10-22T06:56:56.900Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "fac8b59f49bb50c99872a9cde4f9b4e2b2fa134cb3c2d13d84ffa04c9493f077",
+              "review_fingerprint": "7e00a3ff14bc6bfab55d25ffcd24c74b3f8a07c8b0afa1386cec58e0b337367c",
+              "snapshot_fingerprint": "41c0087cafd90dd45c7f8a2bfae97374435caac7ada6ffe0ed0dce14f39ec475",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "08e469e6-cf5c-4b41-9d28-f53f6aa2e100",
+            "matched_play_id": "37af8473-44f9-4508-a88c-10927b8c26dc",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "土居健蔵",
+            "source_actor_url": "https://kira-hai.net/doi-kenzo",
+            "source_work_title": "舞台『ブルーロック』4th STAGE",
+            "source_year": 2025,
+            "source_role_raw": "不角源",
+            "source_role_names": [
+              "不角源"
+            ],
+            "source_cast_group": null,
+            "source_order": 24,
+            "source_credit_key": "e0d0b03afe715d2d1c55",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "checkedAt": "2026-10-22T06:55:47.266Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/cast-staff/",
+                  "checkedAt": "2026-10-22T06:55:47.356Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/tickets-schedule/",
+                  "checkedAt": "2026-10-22T06:55:48.091Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/introduction/",
+                  "checkedAt": "2026-10-22T06:56:56.936Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://higashiosaka.hall-info.jp/hcch/2025/2025/20250530-0601.html",
+                  "checkedAt": "2026-10-22T06:55:48.600Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/",
+                  "checkedAt": "2026-10-22T06:56:56.852Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=2",
+                  "checkedAt": "2026-10-22T06:58:06.552Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=3",
+                  "checkedAt": "2026-10-22T06:58:07.209Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=28371",
+                  "checkedAt": "2026-10-22T06:56:56.900Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "fac8b59f49bb50c99872a9cde4f9b4e2b2fa134cb3c2d13d84ffa04c9493f077",
+              "review_fingerprint": "7e00a3ff14bc6bfab55d25ffcd24c74b3f8a07c8b0afa1386cec58e0b337367c",
+              "snapshot_fingerprint": "41c0087cafd90dd45c7f8a2bfae97374435caac7ada6ffe0ed0dce14f39ec475",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "3498f7d2-a6cb-46a0-afda-39daf52405e4",
+            "matched_play_id": "37af8473-44f9-4508-a88c-10927b8c26dc",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "猪野広樹",
+            "source_actor_url": "https://kira-hai.net/ino-hiroki",
+            "source_work_title": "舞台『ブルーロック』4th STAGE",
+            "source_year": 2025,
+            "source_role_raw": "糸師冴",
+            "source_role_names": [
+              "糸師冴"
+            ],
+            "source_cast_group": null,
+            "source_order": 25,
+            "source_credit_key": "26923f70abec784e4c6e",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bluelock2025",
+                  "checkedAt": "2026-10-22T06:55:47.266Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/cast-staff/",
+                  "checkedAt": "2026-10-22T06:55:47.356Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/tickets-schedule/",
+                  "checkedAt": "2026-10-22T06:55:48.091Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/introduction/",
+                  "checkedAt": "2026-10-22T06:56:56.936Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://higashiosaka.hall-info.jp/hcch/2025/2025/20250530-0601.html",
+                  "checkedAt": "2026-10-22T06:55:48.600Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/",
+                  "checkedAt": "2026-10-22T06:56:56.852Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=2",
+                  "checkedAt": "2026-10-22T06:58:06.552Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=3",
+                  "checkedAt": "2026-10-22T06:58:07.209Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=28371",
+                  "checkedAt": "2026-10-22T06:56:56.900Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "fac8b59f49bb50c99872a9cde4f9b4e2b2fa134cb3c2d13d84ffa04c9493f077",
+              "review_fingerprint": "7e00a3ff14bc6bfab55d25ffcd24c74b3f8a07c8b0afa1386cec58e0b337367c",
+              "snapshot_fingerprint": "41c0087cafd90dd45c7f8a2bfae97374435caac7ada6ffe0ed0dce14f39ec475",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "38a5ba32-7c63-40fa-b5db-3e287b50a921",
+            "matched_play_id": "37af8473-44f9-4508-a88c-10927b8c26dc",
+            "status": "pending"
+          }
+        ]
+      },
+      "records": [
+        {
+          "actor": {
+            "id": "c185bf12-396a-4b0f-87d8-f5dce00abab9",
+            "slug": "takenaka-ryohei",
+            "name": "竹中 凌平",
+            "kana": "たけなか りょうへい",
+            "profile": "千葉県出身の俳優・歌手。株式会社Allen所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/ry_0922",
+              "official": "https://allen-co.com/takenakaryohei/",
+              "instagram": "https://www.instagram.com/ryohei_0922/"
+            },
+            "gender": "male",
+            "created_at": "2026-04-04T03:17:01.949277+00:00",
+            "updated_at": "2026-04-04T03:17:01.949277+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1993-09-22",
+            "height_cm": 170,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "竹中凌平",
+            "sourceActorUrl": "https://kira-hai.net/takenaka-ryohei",
+            "role_name": "潔世一",
+            "cast_group": null
+          },
+          "sourceCreditKey": "37bd00e62a201f26250f",
+          "sourceOrder": 1,
+          "billingOrder": 1,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "bd68ed86-f941-4744-9da9-b0fa381c9010",
+            "slug": "kusachi-ryono",
+            "name": "草地 稜之",
+            "kana": "くさち りょうの",
+            "profile": "東京都出身の俳優。吉本興業所属。パフォーマンスユニット「ENJIN」のメンバー（RYONO名義）としても活動している。主な出演作として、ミュージカル『テニスの王子様』4thシーズン（氷帝学園・忍足侑士役）、舞台『ブルーロック』シリーズ（糸師凛役）、舞台『おそ松さん on STAGE』（おそ松 / F6役）、舞台『桃源暗鬼』（矢颪碇役）等の舞台作品のほか、テレビドラマ『その女、ジルバ』などの映像作品がある。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/RyononK",
+              "youtube": "https://www.youtube.com/channel/UCk7uL1QPQ1k9DrXectZ3sXw",
+              "official": "https://profile.yoshimoto.co.jp/talent/detail?id=10054",
+              "instagram": "https://www.instagram.com/18mgumr_no1"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:17:46.505362+00:00",
+            "updated_at": "2026-03-21T15:17:46.505362+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1998-06-17",
+            "height_cm": 178,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Tokyo. Affiliated with Yoshimoto Kogyo. He is also active as a member of the performance unit \"ENJIN\" under the name RYONO. His major appearances include stage works such as the musical \"The Prince of Tennis\" 4th season (as Yushi Oshitari of Hyotei), the stage play \"Blue Lock\" series (as Rin Itoshi), \"Osomatsu-san on STAGE\" (as Osomatsu / F6), and \"Tougen Anki\" (as Ikari Yara), as well as video works like the TV drama \"Sono Onna, Jirba\".",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "草地稜之",
+            "sourceActorUrl": "https://kira-hai.net/kusachi-ryono",
+            "role_name": "糸師凛",
+            "cast_group": null
+          },
+          "sourceCreditKey": "b5d8f55b448bf96f634f",
+          "sourceOrder": 2,
+          "billingOrder": 2,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "888425ea-130c-44be-8fbf-2393e597267d",
+            "slug": "sato-nobunaga",
+            "name": "佐藤 信長",
+            "kana": "さとう のぶなが",
+            "profile": "宮崎県出身の俳優。合同会社AYRTON所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://twitter.com/NobunagaSato",
+              "youtube": "https://youtube.com/@nobunaga1103",
+              "official": "https://sato-nobunaga.com/",
+              "instagram": "https://www.instagram.com/nobunaga_sato"
+            },
+            "gender": "male",
+            "created_at": "2026-04-10T02:52:07.416879+00:00",
+            "updated_at": "2026-04-10T02:52:07.416879+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1995-03-30",
+            "height_cm": 175,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "佐藤信長",
+            "sourceActorUrl": "https://kira-hai.net/sato-nobunaga",
+            "role_name": "蜂楽廻",
+            "cast_group": null
+          },
+          "sourceCreditKey": "6cece141c1aa10d4d838",
+          "sourceOrder": 3,
+          "billingOrder": 3,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "e34bae02-d4f8-4c49-9c53-b5f65ee97b49",
+            "slug": "sato-takamichi",
+            "name": "佐藤たかみち",
+            "kana": "さとう たかみち",
+            "profile": "埼玉県出身の俳優。2018年に舞台『母の桜が散った夜』でデビュー。映画『刀剣乱舞-黎明-』の髭切役、舞台『ブルーロック』の雷市陣吾役・凪誠士郎役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-20T12:24:53.422304+00:00",
+            "updated_at": "2026-10-20T12:24:53.422304+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1998-03-21",
+            "height_cm": 183,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": "Takamichi Sato",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "佐藤たかみち",
+            "sourceActorUrl": "https://kira-hai.net/sato-takamichi",
+            "role_name": "凪誠士郎",
+            "cast_group": null
+          },
+          "sourceCreditKey": "89b1b9445e92b3c84365",
+          "sourceOrder": 4,
+          "billingOrder": 4,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "1689a3cd-4583-4413-9842-80362e01d002",
+            "slug": "matsuda-gaku",
+            "name": "松田 岳",
+            "kana": "まつだ がく",
+            "profile": "兵庫県出身の俳優。ブルーシャトル所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/8739gaku",
+              "official": "https://matsudagaku.jp/",
+              "instagram": "https://www.instagram.com/matsuda.gaku/"
+            },
+            "gender": "male",
+            "created_at": "2026-04-01T17:19:31.071114+00:00",
+            "updated_at": "2026-04-01T17:19:31.071114+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1992-11-20",
+            "height_cm": 181,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "松田岳",
+            "sourceActorUrl": "https://kira-hai.net/matsuda-gaku",
+            "role_name": "士道龍聖",
+            "cast_group": null
+          },
+          "sourceCreditKey": "54afbcb2f1d55c9a7c77",
+          "sourceOrder": 5,
+          "billingOrder": 5,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "c9a0b816-6f8d-413e-bdff-2e84f5f1a601",
+            "slug": "uno-yuya",
+            "name": "宇野 結也",
+            "kana": "うの ゆうや",
+            "profile": "岐阜県出身の俳優。HONEST所属。ミュージカル『テニスの王子様』3rdシーズン（手塚国光役）や舞台『盾の勇者の成り上がり』（岩谷尚文役）、『ROCK MUSICAL BLEACH』～Arrancar the Beginning〜（阿散井恋次役）、舞台『ブルーロック』シリーズ、舞台『鬼滅の刃』シリーズ等の舞台作品を中心に出演している。かつてはオスカープロモーション所属の男劇団 青山表参道Xのメンバーとしても活動していた。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/uno_yuya",
+              "official": "https://unoyuya-official.bitfan.id/",
+              "instagram": "https://www.instagram.com/unoyuya/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:10:00.631722+00:00",
+            "updated_at": "2026-03-21T15:10:00.631722+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1992-05-21",
+            "height_cm": 179,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Gifu Prefecture. Affiliated with HONEST. He primarily appears in stage works such as the musical \"The Prince of Tennis\" 3rd season (as Kunimitsu Tezuka), the stage play \"The Rising of the Shield Hero\" (as Naofumi Iwatani), \"ROCK MUSICAL BLEACH\" ~Arrancar the Beginning~ (as Renji Abarai), the stage play \"Blue Lock\" series, and the stage play \"Demon Slayer: Kimetsu no Yaiba\" series. He was formerly a member of the Men's Theater Group Aoyama Omotesando X.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "宇野結也",
+            "sourceActorUrl": "https://kira-hai.net/uno-yuya",
+            "role_name": "烏旅人",
+            "cast_group": null
+          },
+          "sourceCreditKey": "bef788c4284d88b93ce8",
+          "sourceOrder": 6,
+          "billingOrder": 6,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "a5cba653-e9bb-4e19-89cf-19db6ca5af7b",
+            "slug": "asuma-kosuke",
+            "name": "遊馬晃祐",
+            "kana": "あすま こうすけ",
+            "profile": "俳優。ハイパープロジェクション演劇『ハイキュー!!』の及川徹役、『ROCK MUSICAL BLEACH』の市丸ギン役など、舞台作品に出演。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-19T09:07:56.196763+00:00",
+            "updated_at": "2026-10-19T09:07:56.196763+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1995-10-20",
+            "height_cm": 184,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "遊馬晃祐",
+            "sourceActorUrl": "https://kira-hai.net/asuma-kosuke",
+            "role_name": "雪宮剣優",
+            "cast_group": null
+          },
+          "sourceCreditKey": "4782702ba7675bf6a348",
+          "sourceOrder": 7,
+          "billingOrder": 7,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "7444fe49-d308-41e4-9220-e7dd737d044f",
+            "slug": "saeki-ryo",
+            "name": "佐伯亮",
+            "kana": "さえきりょう",
+            "profile": null,
+            "image_url": null,
+            "sns": null,
+            "gender": null,
+            "created_at": "2026-10-17T13:27:59.664418+00:00",
+            "updated_at": "2026-10-17T13:27:59.664418+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1995-10-10",
+            "height_cm": 176,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "佐伯亮",
+            "sourceActorUrl": "https://kira-hai.net/saeki-ryo",
+            "role_name": "千切豹馬",
+            "cast_group": null
+          },
+          "sourceCreditKey": "b16fb470187ade71cfc3",
+          "sourceOrder": 8,
+          "billingOrder": 8,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "77fb830c-4de8-4b4f-8416-79c886b15501",
+            "slug": "maejima-yoh",
+            "name": "前嶋 曜",
+            "kana": "まえじま よう",
+            "profile": "神奈川県出身の俳優。OMNIA所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/maejima_yoh",
+              "official": "https://maejima-yoh.com/",
+              "instagram": "https://www.instagram.com/yoh_maejima/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-31T18:15:21.081141+00:00",
+            "updated_at": "2026-03-31T18:15:21.081141+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1997-04-21",
+            "height_cm": 172,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "前嶋曜",
+            "sourceActorUrl": "https://kira-hai.net/maejima-yo",
+            "role_name": "二子一揮",
+            "cast_group": null
+          },
+          "sourceCreditKey": "8fa16aeaa2968bc7d6db",
+          "sourceOrder": 9,
+          "billingOrder": 9,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "e70ca3b8-5221-4009-8981-9584226c490c",
+            "slug": "kikuchi-shuji",
+            "name": "菊池修司",
+            "kana": "きくち しゅうじ",
+            "profile": "俳優。Stova所属。舞台『ブルーロック』の御影玲王役、舞台『東京リベンジャーズ』の半間修二役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-21T16:16:29.615669+00:00",
+            "updated_at": "2026-10-21T16:16:29.615669+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1995-11-10",
+            "height_cm": null,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": "菊池修司",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "菊池修司",
+            "sourceActorUrl": "https://kira-hai.net/kikuchi-shuji",
+            "role_name": "御影玲王",
+            "cast_group": null
+          },
+          "sourceCreditKey": "7c26865be34cee36a2d6",
+          "sourceOrder": 10,
+          "billingOrder": 10,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "531a2f17-353d-49ad-ba10-919983f2d12b",
+            "slug": "miura-kairi",
+            "name": "三浦海里",
+            "kana": "みうら かいり",
+            "profile": "埼玉県出身の俳優。第24回ジュノン・スーパーボーイ・コンテストのファイナリスト。オーディション番組「主役の椅子はオレの椅子」を経て舞台『青空ハイライト』で主演を務め、映画『ゲネプロ★7』でも主演を務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-22T06:48:20.587396+00:00",
+            "updated_at": "2026-10-22T06:48:20.587396+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1996-10-26",
+            "height_cm": 178,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": "三浦海里",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "三浦海里",
+            "sourceActorUrl": "https://kira-hai.net/miura-kairi",
+            "role_name": "氷織羊",
+            "cast_group": null
+          },
+          "sourceCreditKey": "5fccb5fd9291a961953e",
+          "sourceOrder": 11,
+          "billingOrder": 11,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "48311c5f-4620-416c-8f41-7b87ee99d51d",
+            "slug": "imari-yu",
+            "name": "伊万里 有",
+            "kana": "いまり ゆう",
+            "profile": "佐賀県出身の俳優。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/imari_yu",
+              "official": "https://lit.link/818181",
+              "instagram": "https://www.instagram.com/imariyu_official/"
+            },
+            "gender": "male",
+            "created_at": "2026-04-05T20:11:45.292101+00:00",
+            "updated_at": "2026-04-05T20:11:45.292101+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1988-01-09",
+            "height_cm": 186,
+            "blood_type": "AB",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "伊万里有",
+            "sourceActorUrl": "https://kira-hai.net/imari-yu",
+            "role_name": "馬狼照英",
+            "cast_group": null
+          },
+          "sourceCreditKey": "e06ad56677130d83ed2c",
+          "sourceOrder": 12,
+          "billingOrder": 12,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "4df6c773-2f8f-4c76-882c-4159d36da42a",
+            "slug": "kento",
+            "name": "健人",
+            "kana": "けんと",
+            "profile": "大阪府出身の俳優。Star Dream Company所属。ミュージカル『テニスの王子様』3rdシーズン（伊武深司役）や舞台『刀剣乱舞』シリーズ（鶴丸国永役）、舞台『ブルーロック』シリーズ（乙夜影汰役）、演戯『ヴィジュアルプリズン』ー月下歌饗ー（イヴ・ルイーズ役）等の舞台作品を中心に活躍。過去には新感覚アーティストグループ「TFG」のメンバーとしても活動していた。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/KENT_1106_",
+              "official": "https://kent-official.net/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:06:19.306372+00:00",
+            "updated_at": "2026-03-21T15:06:19.306372+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1993-11-06",
+            "height_cm": 178,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Osaka Prefecture. Affiliated with Star Dream Company. He primarily appears in stage works such as the musical \"The Prince of Tennis\" 3rd season (as Shinji Ibu), the stage play \"Touken Ranbu\" series (as Tsurumaru Kuninaga), the stage play \"BLUE LOCK\" series (as Eita Otoya), and the play \"Visual Prison\" (as Eve Louise). In the past, he was also active as a member of the sensory artist group \"TFG\".",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "健人",
+            "sourceActorUrl": "https://kira-hai.net/kento",
+            "role_name": "乙夜影汰",
+            "cast_group": null
+          },
+          "sourceCreditKey": "f449af3c866c98b9ae4f",
+          "sourceOrder": 13,
+          "billingOrder": 13,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "981b6f48-20f7-4744-9412-b29acd509c72",
+            "slug": "isono-dai",
+            "name": "磯野 大",
+            "kana": "いその だい",
+            "profile": "千葉県出身の俳優。PLAYLAND所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/Dai_Is1214",
+              "official": "https://playland-japan.com/isonodai/",
+              "instagram": "https://www.instagram.com/dai_isono_/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-30T18:03:15.192222+00:00",
+            "updated_at": "2026-03-30T18:03:15.192222+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1992-12-14",
+            "height_cm": 187,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "磯野大",
+            "sourceActorUrl": "https://kira-hai.net/isono-dai",
+            "role_name": "蟻生十兵衛",
+            "cast_group": null
+          },
+          "sourceCreditKey": "7c54fd64549d5c856eec",
+          "sourceOrder": 14,
+          "billingOrder": 14,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "b0b72af6-00c9-4e92-bbc0-ab627345eda8",
+            "slug": "muramatsu-koki",
+            "name": "村松洸希",
+            "kana": "むらまつ こうき",
+            "profile": "長野県出身の俳優・脚本家・演出家。劇団「柿喰う客」所属。舞台『ブルーロック』の我牙丸吟役を務め、2nd STAGEでは演出補も担当する。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-21T16:16:29.615669+00:00",
+            "updated_at": "2026-10-21T16:16:29.615669+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1994-08-05",
+            "height_cm": 192,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Koki Muramatsu",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "村松洸希",
+            "sourceActorUrl": "https://kira-hai.net/muramatsu-koki",
+            "role_name": "我牙丸吟",
+            "cast_group": null
+          },
+          "sourceCreditKey": "42c6ecfb9eb4bc55a44e",
+          "sourceOrder": 15,
+          "billingOrder": 15,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "5b634cd8-f8b7-4f15-8430-ef2288a2e77f",
+            "slug": "yokoi-shojiro",
+            "name": "横井翔二郎",
+            "kana": "よこいしょうじろう",
+            "profile": null,
+            "image_url": null,
+            "sns": null,
+            "gender": null,
+            "created_at": "2026-10-18T10:25:13.748723+00:00",
+            "updated_at": "2026-10-18T10:25:13.748723+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1991-01-28",
+            "height_cm": 175,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "横井翔二郎",
+            "sourceActorUrl": "https://kira-hai.net/yokoi-shojiro",
+            "role_name": "絵心甚八",
+            "cast_group": null
+          },
+          "sourceCreditKey": "503d48b6df6ecede5295",
+          "sourceOrder": 16,
+          "billingOrder": 16,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "65b3d016-48b7-4a17-a8a6-87955f07096a",
+            "slug": "sakuraba-haruto",
+            "name": "桜庭大翔",
+            "kana": "さくらば はると",
+            "profile": "大分県出身の俳優。ハイパープロジェクション演劇『ハイキュー!!』の木兎光太郎役、舞台『刃牙 THE GRAPPLER STAGE』の花山薫役、舞台『ブルーロック』4th STAGEのオリヴァ・愛空役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1996-02-21",
+            "height_cm": 187,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Haruto Sakuraba",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared",
+            "updated_at": "prepared"
+          },
+          "source": {
+            "sourceActorName": "桜庭大翔",
+            "sourceActorUrl": "https://kira-hai.net/sakuraba-haruto",
+            "role_name": "オリヴァ・愛空",
+            "cast_group": null
+          },
+          "sourceCreditKey": "d21412e9905ce533fe16",
+          "sourceOrder": 17,
+          "billingOrder": 17,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "bb717597-891c-42dd-94a3-4b264f9a3ab6",
+            "slug": "matsumoto-gaku",
+            "name": "松本岳",
+            "kana": "まつもと がく",
+            "profile": "富山県出身の俳優。イザワオフィス所属。2013年にドラマ『名もなき毒』で俳優デビュー。『手裏剣戦隊ニンニンジャー』のアオニンジャー役や、舞台『ブルーロック』4th STAGEの閃堂秋人役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1993-04-08",
+            "height_cm": 174,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": "Gaku Matsumoto",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared",
+            "updated_at": "prepared"
+          },
+          "source": {
+            "sourceActorName": "松本岳",
+            "sourceActorUrl": "https://kira-hai.net/matsumoto-gaku",
+            "role_name": "閃堂秋人",
+            "cast_group": null
+          },
+          "sourceCreditKey": "d14e9e8f9426eee8c980",
+          "sourceOrder": 18,
+          "billingOrder": 18,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "7d18f4eb-9304-4bbd-88de-b5276b27268f",
+            "slug": "joeru-shohei",
+            "name": "ジョエル・ショウヘイ",
+            "kana": "じょえる しょうへい",
+            "profile": "俳優として活動。",
+            "image_url": null,
+            "sns": {},
+            "gender": "male",
+            "created_at": "2026-03-21T15:17:46.505362+00:00",
+            "updated_at": "2026-03-21T15:17:46.505362+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": null,
+            "height_cm": null,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Joel Shohei",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "ジョエル・ショウヘイ",
+            "sourceActorUrl": "https://kira-hai.net/joel-shohei",
+            "role_name": "蛇来弥勒",
+            "cast_group": null
+          },
+          "sourceCreditKey": "93dad791a24607981687",
+          "sourceOrder": 19,
+          "billingOrder": 19,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "b966622f-3323-468a-bd70-12ceb0c69c1d",
+            "slug": "kageyama-tatsuya",
+            "name": "影山達也",
+            "kana": "かげやま たつや",
+            "profile": "静岡県出身の俳優。ドルチェスター所属。舞台『ブルーロック』4th STAGEの仁王和真役、2.5次元ダンスライブ『ALIVESTAGE』の在原守人役、ミラクル☆ステージ『サンリオ男子』の菅見直樹役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1992-07-12",
+            "height_cm": 178,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Tatsuya Kageyama",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared",
+            "updated_at": "prepared"
+          },
+          "source": {
+            "sourceActorName": "影山達也",
+            "sourceActorUrl": "https://kira-hai.net/kageyama-tatsuya",
+            "role_name": "仁王和真",
+            "cast_group": null
+          },
+          "sourceCreditKey": "702755543efdfc46c5ac",
+          "sourceOrder": 20,
+          "billingOrder": 20,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "a6524e6f-6a0c-4c45-9238-3749c7080013",
+            "slug": "nakadoi-toshimasa",
+            "name": "中土井俊允",
+            "kana": "なかどい としまさ",
+            "profile": "神奈川県出身の俳優。えりオフィス所属。舞台『ブルーロック』4th STAGEの音留徹平役、『花郎～ファラン～』のマンムン役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1999-03-08",
+            "height_cm": 174,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Toshimasa Nakadoi",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared",
+            "updated_at": "prepared"
+          },
+          "source": {
+            "sourceActorName": "中土井俊允",
+            "sourceActorUrl": "https://kira-hai.net/nakadoi-toshimasa",
+            "role_name": "音留徹平",
+            "cast_group": null
+          },
+          "sourceCreditKey": "15c6e9e7d577f6188a6e",
+          "sourceOrder": 21,
+          "billingOrder": 21,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "8429d136-00f3-4925-933b-0ec12391123e",
+            "slug": "furuta-ren",
+            "name": "古田蓮",
+            "kana": "ふるた れん",
+            "profile": "宮城県出身の俳優。アーティストクルー所属。舞台『ブルーロック』4th STAGEの超健人役、舞台『ちはやふる神の国2020～異聞本能寺の変～』の森力丸役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": null,
+            "height_cm": 175,
+            "blood_type": "O",
+            "birthday_label": "7月4日",
+            "name_en": "Ren Furuta",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared",
+            "updated_at": "prepared"
+          },
+          "source": {
+            "sourceActorName": "古田蓮",
+            "sourceActorUrl": "https://kira-hai.net/furuta-ren",
+            "role_name": "超健人",
+            "cast_group": null
+          },
+          "sourceCreditKey": "14f20360256c48bb7f14",
+          "sourceOrder": 22,
+          "billingOrder": 22,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "08e469e6-cf5c-4b41-9d28-f53f6aa2e100",
+            "slug": "aramaki-daiya",
+            "name": "荒牧大矢",
+            "kana": "あらまき だいや",
+            "profile": "東京都出身の俳優。合同会社ドリーヴス所属。中学時代から大学卒業まで米国へ留学。舞台『ブルーロック』4th STAGEの颯波留役、縁劇人の舞台『レ・ミゼラブル2025』のレーグル役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1999-04-30",
+            "height_cm": 171,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": "Daiya Aramaki",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared",
+            "updated_at": "prepared"
+          },
+          "source": {
+            "sourceActorName": "荒牧大矢",
+            "sourceActorUrl": "https://kira-hai.net/aramaki-daiya",
+            "role_name": "颯波留",
+            "cast_group": null
+          },
+          "sourceCreditKey": "4587fbfb95a853330b40",
+          "sourceOrder": 23,
+          "billingOrder": 23,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "3498f7d2-a6cb-46a0-afda-39daf52405e4",
+            "slug": "doi-kenzo",
+            "name": "土居健蔵",
+            "kana": "どい けんぞう",
+            "profile": "東京都出身の俳優。J-ROCK所属。少林寺拳法で全国3位の経験を持つ。舞台『ブルーロック』3rd STAGEではレオナルド・ルナほかを演じ、朗読劇『怪人二十面相』では小林芳雄役を務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-22T06:48:20.587396+00:00",
+            "updated_at": "2026-10-22T06:48:20.587396+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1994-10-14",
+            "height_cm": 178,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Kenzo Doi",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "土居健蔵",
+            "sourceActorUrl": "https://kira-hai.net/doi-kenzo",
+            "role_name": "不角源",
+            "cast_group": null
+          },
+          "sourceCreditKey": "e0d0b03afe715d2d1c55",
+          "sourceOrder": 24,
+          "billingOrder": 24,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "38a5ba32-7c63-40fa-b5db-3e287b50a921",
+            "slug": "ino-hiroki",
+            "name": "猪野 広樹",
+            "kana": "いの ひろき",
+            "profile": "神奈川県出身の俳優。スターダストプロモーション所属。",
+            "image_url": null,
+            "sns": {
+              "official": "https://www.stardust.co.jp/talent/section2/inohiroki/",
+              "instagram": "https://www.instagram.com/hiroki_ino/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-29T18:15:56.579017+00:00",
+            "updated_at": "2026-03-29T18:15:56.579017+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1992-09-11",
+            "height_cm": 175,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "猪野広樹",
+            "sourceActorUrl": "https://kira-hai.net/ino-hiroki",
+            "role_name": "糸師冴",
+            "cast_group": null
+          },
+          "sourceCreditKey": "26923f70abec784e4c6e",
+          "sourceOrder": 25,
+          "billingOrder": 25,
+          "expectedNote": null
+        }
+      ],
+      "castPatches": [],
+      "keptCasts": [],
+      "legacyCandidates": [],
+      "sourceFingerprint": "fac8b59f49bb50c99872a9cde4f9b4e2b2fa134cb3c2d13d84ffa04c9493f077",
+      "expectedCastCount": 25,
+      "evidence": [
+        {
+          "url": "https://kira-hai.net/bluelock2025",
+          "checkedAt": "2026-10-22T06:55:47.266Z",
+          "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+        },
+        {
+          "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/cast-staff/",
+          "checkedAt": "2026-10-22T06:55:47.356Z",
+          "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+        },
+        {
+          "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/tickets-schedule/",
+          "checkedAt": "2026-10-22T06:55:48.091Z",
+          "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+        },
+        {
+          "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/introduction/",
+          "checkedAt": "2026-10-22T06:56:56.936Z",
+          "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+        },
+        {
+          "url": "https://higashiosaka.hall-info.jp/hcch/2025/2025/20250530-0601.html",
+          "checkedAt": "2026-10-22T06:55:48.600Z",
+          "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+        },
+        {
+          "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/",
+          "checkedAt": "2026-10-22T06:56:56.852Z",
+          "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+        },
+        {
+          "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=2",
+          "checkedAt": "2026-10-22T06:58:06.552Z",
+          "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+        },
+        {
+          "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=3",
+          "checkedAt": "2026-10-22T06:58:07.209Z",
+          "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+        },
+        {
+          "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=28371",
+          "checkedAt": "2026-10-22T06:56:56.900Z",
+          "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+        }
+      ],
+      "exceptions": [
+        "二子は前嶋曜、馬狼は伊万里有が担当。松田岳（士道）と松本岳（閃堂）は別人物。役名の超健人と俳優健人（乙夜）も区別。",
+        "荒牧・中土井は前作アンダースタディから本作通常役、土居は前作レオナルドから不角へ。過去の区分・役名・注記をコピーせず前作履歴を全項目保持。",
+        "公式HTMLコメントに旧アンサンブル欄と○○プレースホルダーが残るが可視の通常25人と正規映像クレジットで照合し、コメントを取り込まない。今回アンサンブル・アンダースタディの可視欄はなく、架空のクレジットも作らない。",
+        "公式ニュース3ページで当該公演の出演交代・中止告知は見当たらず。過去の2nd休演・3rd台風対応を本作へコピーしない。"
+      ]
+    }
+  ],
+  "keptPlays": [
+    {
+      "id": "23464fb7-fa9f-4160-bbdf-87823dc9df50",
+      "slug": "bluelock2024-2",
+      "title": "舞台『ブルーロック』3rd STAGE",
+      "franchise_id": "2a8c7f6a-f48b-4c65-829d-f869229567e0",
+      "summary": "二次選考を突破した潔世一たちは、三次選考で世界選抜との5対5の試合に挑む。さらに「青い監獄」の存続を懸けたU-20日本代表戦に向け、レギュラー11人を選ぶ適性試験が始まる。潔は上位のストライカーたちと競い、自分の力を示そうとする。",
+      "period": "大阪：2024年8月9日〜12日／東京：2024年8月17日〜25日",
+      "venue": "大阪：東大阪市文化創造館 Dream House 大ホール／東京：シアターH",
+      "vod": null,
+      "genre": null,
+      "created_at": "2026-10-22T06:48:20.587396+00:00",
+      "updated_at": "2026-10-22T06:48:20.587396+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "脚本・演出",
+          "names": [
+            "伊勢直弘"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "演出補",
+          "names": [
+            "村松洸希"
+          ],
+          "is_core": false,
+          "sort_order": 2
+        },
+        {
+          "role": "演出助手",
+          "names": [
+            "入江浩平"
+          ],
+          "is_core": false,
+          "sort_order": 3
+        },
+        {
+          "role": "美術",
+          "names": [
+            "乘峯雅寛"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "主題歌歌唱",
+          "names": [
+            "Kradness×un:c"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "舞台音楽",
+          "names": [
+            "関根佑樹（Rebrast）・Tsubasa（Rebrast）"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        },
+        {
+          "role": "技術監督",
+          "names": [
+            "寅川英司"
+          ],
+          "is_core": false,
+          "sort_order": 7
+        },
+        {
+          "role": "舞台監督",
+          "names": [
+            "田中 翼"
+          ],
+          "is_core": false,
+          "sort_order": 8
+        },
+        {
+          "role": "照明",
+          "names": [
+            "大波多秀起(デイライト)"
+          ],
+          "is_core": false,
+          "sort_order": 9
+        },
+        {
+          "role": "音響効果",
+          "names": [
+            "前田規寛(ロア)"
+          ],
+          "is_core": false,
+          "sort_order": 10
+        },
+        {
+          "role": "映像",
+          "names": [
+            "O-beron inc."
+          ],
+          "is_core": false,
+          "sort_order": 11
+        },
+        {
+          "role": "衣裳",
+          "names": [
+            "雲出三緒"
+          ],
+          "is_core": false,
+          "sort_order": 12
+        },
+        {
+          "role": "衣裳協賛",
+          "names": [
+            "umbro"
+          ],
+          "is_core": false,
+          "sort_order": 13
+        },
+        {
+          "role": "ヘアメイク",
+          "names": [
+            "木村美和子(dot)"
+          ],
+          "is_core": false,
+          "sort_order": 14
+        },
+        {
+          "role": "撮影小道具",
+          "names": [
+            "平野雅史"
+          ],
+          "is_core": false,
+          "sort_order": 15
+        },
+        {
+          "role": "アンダースタディ",
+          "names": [
+            "荒牧大矢",
+            "中土井俊允"
+          ],
+          "is_core": false,
+          "sort_order": 16
+        },
+        {
+          "role": "ステージング",
+          "names": [
+            "船木政秀"
+          ],
+          "is_core": false,
+          "sort_order": 17
+        },
+        {
+          "role": "サッカー指導",
+          "names": [
+            "牧野裕夢/エリース東京(豊島区国際アート・カルチャー特命大使/SDGs 特命大使)"
+          ],
+          "is_core": false,
+          "sort_order": 18
+        },
+        {
+          "role": "宣伝写真",
+          "names": [
+            "渡邉和弘"
+          ],
+          "is_core": false,
+          "sort_order": 19
+        },
+        {
+          "role": "宣伝美術・Web デザイン",
+          "names": [
+            "EAST END CREATIVE"
+          ],
+          "is_core": false,
+          "sort_order": 20
+        },
+        {
+          "role": "グッズデザイン",
+          "names": [
+            "EAST END CREATIVE/flyer-ya"
+          ],
+          "is_core": false,
+          "sort_order": 21
+        },
+        {
+          "role": "制作",
+          "names": [
+            "Office ENDLESS"
+          ],
+          "is_core": false,
+          "sort_order": 22
+        },
+        {
+          "role": "主催",
+          "names": [
+            "舞台『ブルーロック』３rd STAGE 製作委員会"
+          ],
+          "is_core": false,
+          "sort_order": 23
+        },
+        {
+          "role": "台風時の公演対応",
+          "names": [
+            "東京8月17日13:00公演は定刻通り実施。台風7号に伴う来場困難者には、8月19日14:00、21日14:00・18:30、22日14:00・18:30、23日14:00への振替、または未使用チケットの払い戻しを案内。"
+          ],
+          "is_core": false,
+          "sort_order": 24
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "After clearing the Second Selection, Yoichi Isagi and the other forwards face a five-on-five match against the World Five. A tryout then begins to choose the eleven players who will face Japan’s U-20 team with the future of Blue Lock at stake. Isagi competes against the top-ranked strikers to prove his abilities.",
+      "title_en": "BLUE LOCK 3rd STAGE"
+    },
+    {
+      "id": "8cde611d-b8e5-4076-902b-1960c850cf14",
+      "slug": "bluelock2023",
+      "title": "舞台『ブルーロック』",
+      "franchise_id": "2a8c7f6a-f48b-4c65-829d-f869229567e0",
+      "summary": "県大会決勝で敗れた高校生FW・潔世一に、ストライカー育成施設「青い監獄」への招待状が届く。集められた300人から世界一のストライカーを生み出す選考で、潔は蜂楽廻や國神錬介らとチームZを結成し、凪誠士郎や御影玲王らとの戦いに挑む。",
+      "period": "大阪：2023年5月4日〜7日／東京：2023年5月11日〜14日",
+      "venue": "大阪：サンケイホールブリーゼ／東京：サンシャイン劇場",
+      "vod": null,
+      "genre": null,
+      "created_at": "2026-10-21T16:16:29.615669+00:00",
+      "updated_at": "2026-10-21T16:16:29.615669+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "原作 ： 金城宗幸漫画 ： ノ村優介『ブルーロック』（講談社「週刊少年マガジン」連載）"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "脚本・演出",
+          "names": [
+            "伊勢直弘"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "美術",
+          "names": [
+            "乘峯雅寛"
+          ],
+          "is_core": false,
+          "sort_order": 3
+        },
+        {
+          "role": "主題歌歌唱",
+          "names": [
+            "Kradness"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "舞台音楽",
+          "names": [
+            "早川博隆(Rebrast)／関根佑樹(Rebrast)"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "技術監督",
+          "names": [
+            "寅川英司"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        },
+        {
+          "role": "舞台監督",
+          "names": [
+            "田中 翼"
+          ],
+          "is_core": false,
+          "sort_order": 7
+        },
+        {
+          "role": "音響",
+          "names": [
+            "前田規寛（ロア）"
+          ],
+          "is_core": false,
+          "sort_order": 8
+        },
+        {
+          "role": "照明",
+          "names": [
+            "大波多秀起"
+          ],
+          "is_core": false,
+          "sort_order": 9
+        },
+        {
+          "role": "映像",
+          "names": [
+            "O-beron inc."
+          ],
+          "is_core": false,
+          "sort_order": 10
+        },
+        {
+          "role": "衣裳",
+          "names": [
+            "雲出三緒"
+          ],
+          "is_core": false,
+          "sort_order": 11
+        },
+        {
+          "role": "ヘアメイク",
+          "names": [
+            "木村美和子"
+          ],
+          "is_core": false,
+          "sort_order": 12
+        },
+        {
+          "role": "小道具",
+          "names": [
+            "枦山 兼"
+          ],
+          "is_core": false,
+          "sort_order": 13
+        },
+        {
+          "role": "演出助手",
+          "names": [
+            "入江浩平"
+          ],
+          "is_core": false,
+          "sort_order": 14
+        },
+        {
+          "role": "宣伝美術・WEBデザイン・物販デザイン",
+          "names": [
+            "遠藤嘉人 岡部哲也（EAST END CREATIVE）"
+          ],
+          "is_core": false,
+          "sort_order": 15
+        },
+        {
+          "role": "物販デザイン",
+          "names": [
+            "flyer-ya"
+          ],
+          "is_core": false,
+          "sort_order": 16
+        },
+        {
+          "role": "宣伝写真",
+          "names": [
+            "渡邉和弘"
+          ],
+          "is_core": false,
+          "sort_order": 17
+        },
+        {
+          "role": "制作協力",
+          "names": [
+            "上野志津華（KURAN）"
+          ],
+          "is_core": false,
+          "sort_order": 18
+        },
+        {
+          "role": "プロデューサー",
+          "names": [
+            "下浦貴敬（豊島区国際アート・カルチャー特命大使/SDGs特命大使）"
+          ],
+          "is_core": false,
+          "sort_order": 19
+        },
+        {
+          "role": "制作",
+          "names": [
+            "Office ENDLESS（豊島区国際アート・カルチャー特命大使/SDGs特命大使）"
+          ],
+          "is_core": false,
+          "sort_order": 20
+        },
+        {
+          "role": "協力",
+          "names": [
+            "豊島区 DESCENTE UMBRO メイコー化粧品"
+          ],
+          "is_core": false,
+          "sort_order": 21
+        },
+        {
+          "role": "サッカー指導",
+          "names": [
+            "牧野裕夢/エリース東京（豊島区国際アート･カルチャー特命大使/SDGs特命大使）"
+          ],
+          "is_core": false,
+          "sort_order": 22
+        },
+        {
+          "role": "主催",
+          "names": [
+            "舞台『ブルーロック』製作委員会"
+          ],
+          "is_core": false,
+          "sort_order": 23
+        },
+        {
+          "role": "アンサンブル",
+          "names": [
+            "安藤勇雅",
+            "窪寺直",
+            "土居健蔵",
+            "中土井俊允",
+            "牧野裕夢"
+          ],
+          "is_core": false,
+          "sort_order": 24
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "After losing a prefectural final, high-school forward Yoichi Isagi is invited to the Blue Lock training facility. Joining Team Z with Meguru Bachira and Rensuke Kunigami, he competes against Seishiro Nagi, Reo Mikage and other forwards in a selection designed to produce the world’s best striker.",
+      "title_en": "BLUE LOCK"
+    },
+    {
+      "id": "e8750f28-027d-4303-9690-0327b1c73bd9",
+      "slug": "bluelock2024",
+      "title": "舞台『ブルーロック』2nd STAGE",
+      "franchise_id": "2a8c7f6a-f48b-4c65-829d-f869229567e0",
+      "summary": "二次選考に進んだ潔世一たちは、かつての仲間とも競い、対戦相手ともチームを組みながら勝ち残りを目指す。ランキング上位の糸師凛と出会い、それぞれがストライカーとしての進化を試される。※東京公演の2024年1月25日14:00回は中止。",
+      "period": "京都：2024年1月18日〜21日／東京：2024年1月25日〜31日（1月25日14:00公演は中止）",
+      "venue": "京都：京都劇場／東京：ヒューリックホール東京",
+      "vod": {},
+      "genre": null,
+      "created_at": "2026-04-30T17:56:30.07015+00:00",
+      "updated_at": "2026-10-21T16:16:29.615669+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "脚本・演出",
+          "names": [
+            "伊勢直弘"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "演出補",
+          "names": [
+            "村松洸希"
+          ],
+          "is_core": false,
+          "sort_order": 2
+        },
+        {
+          "role": "演出助手",
+          "names": [
+            "入江浩平"
+          ],
+          "is_core": false,
+          "sort_order": 3
+        },
+        {
+          "role": "美術",
+          "names": [
+            "乘峯雅寛"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "舞台音楽",
+          "names": [
+            "早川博隆(Rebrast)/関根佑樹(Rebrast)"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "技術監督",
+          "names": [
+            "寅川英司"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        },
+        {
+          "role": "舞台監督",
+          "names": [
+            "田中 翼"
+          ],
+          "is_core": false,
+          "sort_order": 7
+        },
+        {
+          "role": "照明",
+          "names": [
+            "大波多秀起(デイライト)"
+          ],
+          "is_core": false,
+          "sort_order": 8
+        },
+        {
+          "role": "音響効果",
+          "names": [
+            "前田規寛(ロア)"
+          ],
+          "is_core": false,
+          "sort_order": 9
+        },
+        {
+          "role": "映像",
+          "names": [
+            "O-beron inc."
+          ],
+          "is_core": false,
+          "sort_order": 10
+        },
+        {
+          "role": "衣裳",
+          "names": [
+            "雲出三緒"
+          ],
+          "is_core": false,
+          "sort_order": 11
+        },
+        {
+          "role": "衣裳協賛",
+          "names": [
+            "umbro"
+          ],
+          "is_core": false,
+          "sort_order": 12
+        },
+        {
+          "role": "ヘアメイク",
+          "names": [
+            "木村美和子(dot)"
+          ],
+          "is_core": false,
+          "sort_order": 13
+        },
+        {
+          "role": "撮影小道具",
+          "names": [
+            "平野雅史"
+          ],
+          "is_core": false,
+          "sort_order": 14
+        },
+        {
+          "role": "サッカー指導",
+          "names": [
+            "牧野裕夢/エリース東京（豊島区国際アート･カルチャー特命大使/SDGs特命大使）"
+          ],
+          "is_core": false,
+          "sort_order": 15
+        },
+        {
+          "role": "宣伝写真",
+          "names": [
+            "渡邉和弘"
+          ],
+          "is_core": false,
+          "sort_order": 16
+        },
+        {
+          "role": "宣伝美術・Web デザイン",
+          "names": [
+            "EAST END CREATIVE"
+          ],
+          "is_core": false,
+          "sort_order": 17
+        },
+        {
+          "role": "グッズデザイン",
+          "names": [
+            "EAST END CREATIVE/flyer-ya"
+          ],
+          "is_core": false,
+          "sort_order": 18
+        },
+        {
+          "role": "プロデューサー",
+          "names": [
+            "下浦貴敬(Office ENDLESS)(豊島区国際アート・カルチャー特命大使/SDGs 特命大使)"
+          ],
+          "is_core": false,
+          "sort_order": 19
+        },
+        {
+          "role": "制作",
+          "names": [
+            "Office ENDLESS(豊島区国際アート・カルチャー特命大使/SDGs 特命大使)"
+          ],
+          "is_core": false,
+          "sort_order": 20
+        },
+        {
+          "role": "主催",
+          "names": [
+            "舞台『ブルーロック』2nd STAGE 製作委員会"
+          ],
+          "is_core": false,
+          "sort_order": 21
+        },
+        {
+          "role": "アンサンブル",
+          "names": [
+            "土居健蔵",
+            "牧野裕夢"
+          ],
+          "is_core": false,
+          "sort_order": 22
+        },
+        {
+          "role": "出演変更・中止",
+          "names": [
+            "凪誠士郎役の國島直希は出演見合わせ、佐藤たかみちが全公演で代役。佐藤たかみちの雷市陣吾役ゲスト出演（1月20日13:00・17:30、1月29日14:00）は中止。"
+          ],
+          "is_core": false,
+          "sort_order": 23
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "In the Second Selection, Yoichi Isagi and the other forwards must compete against former teammates and team up with past rivals. Facing top-ranked Rin Itoshi, they are pushed to develop their abilities as strikers. The Tokyo performance at 14:00 on January 25, 2024 was cancelled.",
+      "title_en": "BLUE LOCK 2nd STAGE"
+    }
+  ],
+  "evidence": {
+    "links": [
+      {
+        "url": "https://kira-hai.net/bluelock2025",
+        "checkedAt": "2026-10-22T06:55:47.266Z",
+        "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+      },
+      {
+        "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/cast-staff/",
+        "checkedAt": "2026-10-22T06:55:47.356Z",
+        "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+      },
+      {
+        "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/tickets-schedule/",
+        "checkedAt": "2026-10-22T06:55:48.091Z",
+        "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+      },
+      {
+        "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/introduction/",
+        "checkedAt": "2026-10-22T06:56:56.936Z",
+        "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+      },
+      {
+        "url": "https://higashiosaka.hall-info.jp/hcch/2025/2025/20250530-0601.html",
+        "checkedAt": "2026-10-22T06:55:48.600Z",
+        "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+      },
+      {
+        "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/",
+        "checkedAt": "2026-10-22T06:56:56.852Z",
+        "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+      },
+      {
+        "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=2",
+        "checkedAt": "2026-10-22T06:58:06.552Z",
+        "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+      },
+      {
+        "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=3",
+        "checkedAt": "2026-10-22T06:58:07.209Z",
+        "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+      },
+      {
+        "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=28371",
+        "checkedAt": "2026-10-22T06:56:56.900Z",
+        "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+      }
+    ],
+    "sources": [
+      {
+        "name": "work",
+        "url": "https://kira-hai.net/bluelock2025",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/bluelock2025",
+        "checkedAt": "2026-10-22T06:55:47.266Z",
+        "sha256": "90dc82684bcd96f9e2a61a91a6b7912679743421c4b3c3e848dd2ba7c5905079"
+      },
+      {
+        "name": "official",
+        "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/",
+        "status": 200,
+        "finalUrl": "https://officeendless.com/sp/bluelock_stage/2025_4th/",
+        "checkedAt": "2026-10-22T06:55:47.217Z",
+        "sha256": "e06ab75e0d0d879e13306f24c9f6f4e01d72e091e5ea44988cc75636daaf1ee7"
+      },
+      {
+        "name": "cast-official",
+        "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/cast-staff/",
+        "status": 200,
+        "finalUrl": "https://officeendless.com/sp/bluelock_stage/2025_4th/cast-staff/",
+        "checkedAt": "2026-10-22T06:55:47.356Z",
+        "sha256": "e294cda42ffe95351b8d89940812938577908854f60baa721946c853d6694a04"
+      },
+      {
+        "name": "schedule",
+        "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/tickets-schedule/",
+        "status": 200,
+        "finalUrl": "https://officeendless.com/sp/bluelock_stage/2025_4th/tickets-schedule/",
+        "checkedAt": "2026-10-22T06:55:48.091Z",
+        "sha256": "ed778f2d78d5a29e808310c92c654bad54337b539c9d396329f36c9bf5d9c5cc"
+      },
+      {
+        "name": "theater",
+        "url": "https://higashiosaka.hall-info.jp/hcch/2025/2025/20250530-0601.html",
+        "status": 200,
+        "finalUrl": "https://higashiosaka.hall-info.jp/hcch/2025/2025/20250530-0601.html",
+        "checkedAt": "2026-10-22T06:55:48.600Z",
+        "sha256": "4a1419832df08d86985b2d5d95795f658fc2d80d3265b6a6ef43cc3c63578086"
+      },
+      {
+        "name": "tokyo-theater",
+        "url": "https://milano-za.jp/events/article?id=20250515",
+        "status": 200,
+        "finalUrl": "https://milano-za.jp/maintenance.html?id=20250515",
+        "checkedAt": "2026-10-22T06:55:48.799Z",
+        "sha256": "c71b0bfbb1bb8adb431086100077c5ad6f623cf4a8670c6d781be35ff804f0e2"
+      },
+      {
+        "name": "robots",
+        "url": "https://kira-hai.net/robots.txt",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/robots.txt",
+        "checkedAt": "2026-10-22T06:55:48.366Z",
+        "sha256": "f6ed0322f0e3df8c3b42b14df3254a90cca7b94a4172de91812952b3c7060b03"
+      },
+      {
+        "name": "changelog",
+        "url": "https://supabase.com/changelog.md",
+        "status": 200,
+        "finalUrl": "https://supabase.com/changelog.md",
+        "checkedAt": "2026-10-22T06:55:48.579Z",
+        "sha256": "15b3d0d1a7dc3b3f2c0af4788e49acfdf2d2edbd2613f22de0705fa43b1cf58b"
+      },
+      {
+        "name": "about",
+        "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/introduction/",
+        "status": 200,
+        "finalUrl": "https://officeendless.com/sp/bluelock_stage/2025_4th/introduction/",
+        "checkedAt": "2026-10-22T06:56:56.936Z",
+        "sha256": "a962feba13cbd524e91c1c1248debe716e235c715efe65b8dba38e59f5854637"
+      },
+      {
+        "name": "news",
+        "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/",
+        "status": 200,
+        "finalUrl": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/",
+        "checkedAt": "2026-10-22T06:56:56.852Z",
+        "sha256": "1cce76cd43e5bbf9e0c462493b46ad75c64607d87c3ee1aac471751169bdf1fe"
+      },
+      {
+        "name": "anime-store",
+        "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=28371",
+        "status": 200,
+        "finalUrl": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=28371",
+        "checkedAt": "2026-10-22T06:56:56.900Z",
+        "sha256": "191f29252f9312a248cdf7f0a823c714536e0f83a29c183e3ad6a20f819a0ff6"
+      },
+      {
+        "name": "sakuraba-kira",
+        "url": "https://kira-hai.net/sakuraba-haruto",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/sakuraba-haruto",
+        "checkedAt": "2026-10-22T06:57:29.638Z",
+        "sha256": "1332b75be460f6e8fa4c5b39705a2f5fa3313fd5c0a6b84250f8eef9c5996694"
+      },
+      {
+        "name": "matsumoto-kira",
+        "url": "https://kira-hai.net/matsumoto-gaku",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/matsumoto-gaku",
+        "checkedAt": "2026-10-22T06:57:29.674Z",
+        "sha256": "724d11f34af8bc1367b4217fbe8763bf5c1fd14cbf2f084b9c1eb8bd3c71dc45"
+      },
+      {
+        "name": "kageyama-kira",
+        "url": "https://kira-hai.net/kageyama-tatsuya",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/kageyama-tatsuya",
+        "checkedAt": "2026-10-22T06:57:29.656Z",
+        "sha256": "c54eb7afb45662633d3c81827a970b921b963de3b2f2bea60cbdc675e0ed3a0a"
+      },
+      {
+        "name": "nakadoi-kira",
+        "url": "https://kira-hai.net/nakadoi-toshimasa",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/nakadoi-toshimasa",
+        "checkedAt": "2026-10-22T06:57:29.605Z",
+        "sha256": "2e0f9792a30c49fd178b405b7a168376bf6d11ee0a2bffc00979cf98e2cce75e"
+      },
+      {
+        "name": "furuta-kira",
+        "url": "https://kira-hai.net/furuta-ren",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/furuta-ren",
+        "checkedAt": "2026-10-22T06:57:29.902Z",
+        "sha256": "a13a85bd8703ccff045725290a79e52453e5d5c104d847906528926497e36965"
+      },
+      {
+        "name": "aramaki-kira",
+        "url": "https://kira-hai.net/aramaki-daiya",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/aramaki-daiya",
+        "checkedAt": "2026-10-22T06:57:29.881Z",
+        "sha256": "45165399987647920c337a97bf543b73f971da1b0d1d106c1788f6f3756bd2eb"
+      },
+      {
+        "name": "sakuraba",
+        "url": "https://sakuraba-haruto.net/profiles",
+        "status": 200,
+        "finalUrl": "https://sakuraba-haruto.net/profiles",
+        "checkedAt": "2026-10-22T06:58:05.706Z",
+        "sha256": "e7d63b2d07f3bee0d0de9fed65fe24eaecaae0348ab5e174bb0a2d3c7a7eabb6"
+      },
+      {
+        "name": "kageyama",
+        "url": "https://dolce-star.com/management/kageyama.html",
+        "status": 200,
+        "finalUrl": "https://dolce-star.com/talent/kageyama",
+        "checkedAt": "2026-10-22T06:58:05.669Z",
+        "sha256": "80d474f0b2d8cb73a491d0d1e506ec3929ba98d4e1398f6d612e77320262f65b"
+      },
+      {
+        "name": "furuta",
+        "url": "https://artist-crew.net/artist/m_furuta_ren/",
+        "status": 200,
+        "finalUrl": "https://artist-crew.net/artist/m_furuta_ren/",
+        "checkedAt": "2026-10-22T06:58:08.857Z",
+        "sha256": "9c3fdd23e5977af463e03989681d520c817fdce6352c0b0ff65fc0c0285f2986"
+      },
+      {
+        "name": "aramaki",
+        "url": "https://www.dreaves-official.com/member/man/daiya-aramaki/",
+        "status": 200,
+        "finalUrl": "https://www.dreaves-official.com/member/man/daiya-aramaki/",
+        "checkedAt": "2026-10-22T06:58:06.302Z",
+        "sha256": "7af7d6bb83663b6b788c9653c0e5dea25033d7ee4866618c19e0902ba252a136"
+      },
+      {
+        "name": "news2",
+        "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=2",
+        "status": 200,
+        "finalUrl": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/page/2/",
+        "checkedAt": "2026-10-22T06:58:06.552Z",
+        "sha256": "0285f5216a8426502d8e000115cadbc0de12861e33a176cbbce30a89a972156e"
+      },
+      {
+        "name": "news3",
+        "url": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/?paged=3",
+        "status": 200,
+        "finalUrl": "https://officeendless.com/sp/bluelock_stage/2025_4th/news/page/3/",
+        "checkedAt": "2026-10-22T06:58:07.209Z",
+        "sha256": "99f9322fffe83ca6c3938f35faddb174b22ef772deddcb8bc95b40dbcf0814e8"
+      },
+      {
+        "name": "matsumoto-current",
+        "url": "https://izawaoffice.jp/artist/matsumoto",
+        "status": 200,
+        "finalUrl": "https://izawaoffice.jp/artist/matsumoto",
+        "checkedAt": "2026-10-22T06:59:22.796Z",
+        "sha256": "5b4818f251f45e0381d4d3e11b68c90e91e6811a0dcd809b4a4ee55be23be276"
+      },
+      {
+        "name": "matsumoto-work",
+        "url": "https://izawaoffice.jp/news/8",
+        "status": 200,
+        "finalUrl": "https://izawaoffice.jp/news/8",
+        "checkedAt": "2026-10-22T06:59:22.766Z",
+        "sha256": "61f3e2829de86dce079c9dfd7daa1e0ce051d871532fabaea100d5cbc16c3260"
+      },
+      {
+        "name": "nakadoi-archive",
+        "url": "https://db.epad.jp/p/24015",
+        "status": 200,
+        "finalUrl": "https://db.epad.jp/p/24015",
+        "checkedAt": "2026-10-22T07:00:17.595Z",
+        "sha256": "c28e0a1fd1da076e91eb0cd9de2ba96186f7d0bd172f3d9ccd7321bf3e365cab"
+      },
+      {
+        "name": "nakadoi-bank",
+        "url": "https://www.talent-databank.co.jp/search/profile/2000097417",
+        "status": 200,
+        "finalUrl": "https://www.talent-databank.co.jp/search/profile/2000097417",
+        "checkedAt": "2026-10-22T07:00:19.682Z",
+        "sha256": "7eb1e513793c7ddf2dbe0d2003d4c22bb3c8b0ab6f9b36cc406feb200e3be628"
+      },
+      {
+        "name": "nakadoi-current",
+        "url": "https://www.erioffice.co.jp/talent_male/nakadoitoshimasa/",
+        "status": 200,
+        "finalUrl": "https://www.erioffice.co.jp/talent_male/nakadoitoshimasa/",
+        "checkedAt": "2026-10-22T07:02:22.550Z",
+        "sha256": "6f92733fcb2d36476c8d0eb82e5c36fcb26a802fab741ad47ad5791ee26c4939"
+      }
+    ],
+    "unavailable": [
+      {
+        "name": "matsumoto",
+        "url": "https://izawaoffice.jp/matsumoto",
+        "status": 404,
+        "finalUrl": "https://izawaoffice.jp/matsumoto",
+        "checkedAt": "2026-10-22T06:58:05.302Z",
+        "sha256": "b9347f234dc3c8d56e015e86d88a1400415db8f7a5ad91f02b6a2323c10a4187"
+      },
+      {
+        "name": "nakadoi",
+        "url": "https://www.erioffice.co.jp/men/nakadoitoshimasa.html",
+        "status": 404,
+        "finalUrl": "https://www.erioffice.co.jp/men/nakadoitoshimasa.html",
+        "checkedAt": "2026-10-22T06:58:05.782Z",
+        "sha256": "32b2e291973345bf9d878d10456b5cfbaf172be2ded7188a5269dee0f40a2abe"
+      }
+    ],
+    "notes": [
+      "新規人物6・作品1・配役25。過去3作品55配役と既存人物・シリーズは全項目保持。",
+      "東京劇場URLはHTTP200でもメンテナンス本文で日程の採用根拠から除外。東京日程は公演公式と第一参照先、松本本人の所属先公演告知で照合。",
+      "Supabase changelogを確認。既存DML・RPCのみ。Node現行TLSで接続、DDL・権限・認証変更なし。",
+      "人物現行サイトと第一参照先を区別し、月日のみは生年を作らない。身長不一致は現公式優先で松本174・古田175を採用。"
+    ],
+    "unresolved": [
+      "EPISODE 凪・Re EPISODE 凪・現行5th STAGEは後続。シリーズ全作品の収録完了ではない。",
+      "人物総合監査・詳細の英訳・現在配信・主演指定は後続。桜庭の現在所属は未確認、古田の生年は未公表で未採用。"
+    ]
+  },
+  "requestKey": "3954c67a475786cd0b8388b0eba199df0c7c4fa72dc85343a66d2c23c3a35cbb"
+}
