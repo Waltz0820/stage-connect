@@ -6,7 +6,6 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { SearchBarClient } from "./SearchBarClient";
 import { LocaleSwitcher } from "./LocaleSwitcher";
 import { StreamingClickTracker } from "./StreamingClickTracker";
-import { BrandLogo } from './BrandLogo';
 import { getLanguageTargets, isAdminPath } from "../lib/locale-routing";
 
 const copy = {
@@ -83,6 +82,10 @@ function PublicSiteChrome({ pathname, children }: { pathname: string | null; chi
   const menuRef = useRef<HTMLDivElement>(null);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
+  const headerRef = useRef<HTMLElement>(null);
+  const [isCompact, setIsCompact] = useState(false);
+  const isHome = pathname === '/' || pathname === '/en';
 
   const { locale } = getLanguageTargets(pathname);
   const labels = copy[locale];
@@ -93,9 +96,24 @@ function PublicSiteChrome({ pathname, children }: { pathname: string | null; chi
   }, [pathname]);
 
   useEffect(() => {
+    if (!isHome) return;
+    const logo = document.getElementById('archive-wordmark');
+    if (!logo || !('IntersectionObserver' in window)) return;
+    const update = () => setIsCompact(logo.getBoundingClientRect().bottom <= 60);
+    const observer = new IntersectionObserver(update, { rootMargin: '-60px 0px 0px 0px', threshold: 0 });
+    observer.observe(logo);
+    update();
+    return () => observer.disconnect();
+  }, [isHome, pathname]);
+
+  useEffect(() => {
     if (!isMenuOpen) return;
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
+    const content = contentRef.current;
+    const header = headerRef.current;
+    if (content) content.inert = true;
+    if (header) header.inert = true;
     const focusFrame = window.requestAnimationFrame(() => closeButtonRef.current?.focus());
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') { setIsMenuOpen(false); menuButtonRef.current?.focus(); }
@@ -110,6 +128,9 @@ function PublicSiteChrome({ pathname, children }: { pathname: string | null; chi
     document.addEventListener('keydown', onKeyDown);
     return () => {
       document.body.style.overflow = previousOverflow;
+      if (content) content.inert = false;
+      if (header) header.inert = false;
+      if (menuRef.current?.contains(document.activeElement)) menuButtonRef.current?.focus();
       window.cancelAnimationFrame(focusFrame);
       document.removeEventListener('keydown', onKeyDown);
     };
@@ -121,14 +142,14 @@ function PublicSiteChrome({ pathname, children }: { pathname: string | null; chi
   const localeSwitcher = <LocaleSwitcher pathname={pathname}/>;
 
   return (
-    <div className="page-shell stage-v2">
+    <div className={`page-shell stage-v2 editorial-chrome${isHome ? ' editorial-chrome--home' : ''}${isCompact ? ' editorial-chrome--compact' : ''}`}>
       <StreamingClickTracker/>
       <a className="skip-link" href="#main-content">{locale === 'en' ? 'Skip to content' : '本文へ移動'}</a>
-      <header className="site-header">
+      <header ref={headerRef} className="site-header">
         <div className="container site-header__inner">
           <div className="site-header__left">
             <Link href={locale === "en" ? "/en" : "/"} className="site-brand">
-              <BrandLogo locale={locale}/>
+              <span className="editorial-brand">STAGE CONNECT</span>
             </Link>
             <nav className="site-nav desktop-nav" aria-label={labels.globalNavLabel} data-streaming-placement="header">
               {labels.primaryNav.map((item) => (
@@ -164,6 +185,7 @@ function PublicSiteChrome({ pathname, children }: { pathname: string | null; chi
       </header>
 
       <div ref={menuRef} id="site-navigation" className={`mobile-menu ${isMenuOpen ? "is-open" : ""}`} role="dialog" aria-modal={isMenuOpen ? true : undefined} aria-label={labels.mobileNavLabel} aria-hidden={!isMenuOpen} inert={!isMenuOpen}
+        onClick={event => { if (event.target === event.currentTarget) { setIsMenuOpen(false); menuButtonRef.current?.focus(); } }}
         onTransitionEnd={event => {
           if (isMenuOpen && event.target === event.currentTarget && !menuRef.current?.contains(document.activeElement)) closeButtonRef.current?.focus();
         }}>
@@ -194,15 +216,17 @@ function PublicSiteChrome({ pathname, children }: { pathname: string | null; chi
           </nav>
 
           <div className="mobile-menu__footer">
-            <BrandLogo locale={locale}/>
+            <Link href="/contact" onClick={() => setIsMenuOpen(false)}>{labels.contact}</Link>
+            <Link href="/privacy" onClick={() => setIsMenuOpen(false)}>{labels.privacy}</Link>
           </div>
         </div>
       </div>
 
-      <div id="main-content" className="site-content" tabIndex={-1}>{children}</div>
+      <div ref={contentRef} id="main-content" className="site-content" tabIndex={-1}>{children}</div>
 
       <footer className="site-footer" data-streaming-placement="footer">
         <div className="container site-footer__upper">
+          <div className="editorial-footer-intro"><span className="editorial-brand">STAGE CONNECT</span><p>{locale === 'ja' ? <>好きが、つながる。<br/>もっと広がる。</> : <>Find what you love.<br/>Make new connections.</>}</p></div>
           <div className="site-footer__grid">
             <section className="site-footer__column">
               <h3>{labels.footerContent}</h3>

@@ -1,22 +1,27 @@
-import { getImageProps } from 'next/image';
 import Link from 'next/link';
 import { getEnglishSeriesName } from '../lib/en-copy';
-import { getHomeStats, getSeriesList } from '../lib/stage-connect';
-import { ArchiveIcon, SeriesMotif } from './ArchiveIcon';
+import { getGuideList, getHomeStats, getSeriesList } from '../lib/stage-connect';
+import { ArchiveHomeMotion } from './ArchiveHomeMotion';
 import { OshiDiscoveryLinks } from './OshiPoints';
+import { SearchBarClient } from './SearchBarClient';
 
-const heroImageOptions = { alt: '', fill: true, sizes: '100vw', quality: 85, loading: 'eager' as const, fetchPriority: 'high' as const };
-const desktopHero = getImageProps({ ...heroImageOptions, src: '/stage-hero-v2.png' }).props;
-const mobileHero = getImageProps({ ...heroImageOptions, src: '/stage-hero-mobile-v2.png' }).props;
+// Display labels only. Entity names, order, counts and destinations come from the archive.
+const shortNames: Record<string, { ja: string; en: string }> = {
+  'touken-ranbu-musical': { ja: '刀ミュ', en: 'TOUMYU' },
+  'butai-touken-ranbu': { ja: '刀ステ', en: 'TOUSUTE' },
+  tennimu: { ja: 'テニミュ', en: 'TENIMYU' },
+  'tennimu-2nd': { ja: 'テニミュ 2nd', en: 'TENIMYU 2nd' },
+  bleach: { ja: 'BLEACH', en: 'BLEACH' },
+};
 
 export default async function ArchiveHome({ locale }: { locale: 'ja' | 'en' }) {
-  const [stats, series] = await Promise.all([getHomeStats(), getSeriesList()]);
+  const [stats, series, guides] = await Promise.all([getHomeStats(), getSeriesList(), getGuideList()]);
   const en = locale === 'en';
   const prefix = en ? '/en' : '';
   const actions = [
-    { href: '/actors', icon: 'actor' as const, title: en ? 'Browse actors' : '俳優を探す', text: en ? 'Profiles, credits, and cast connections' : '出演作・プロフィール・つながりから探す' },
-    { href: '/plays', icon: 'play' as const, title: en ? 'Browse plays' : '作品を探す', text: en ? 'Productions, casts, and streaming links' : '舞台作品・キャスト・配信情報を探す' },
-    { href: '/series', icon: 'series' as const, title: en ? 'Browse series' : 'シリーズを探す', text: en ? 'Find a world you want to explore' : '気になるシリーズから作品を探す' },
+    { href: '/actors', word: 'ACTORS', title: en ? 'Browse actors' : '俳優を探す', text: en ? 'Credits, roles and co-stars' : '出演作品・役柄・共演者から' },
+    { href: '/plays', word: 'PLAYS', title: en ? 'Browse plays' : '作品を探す', text: en ? 'Performances, casts and streaming' : '公演情報・キャスト・配信から' },
+    { href: '/series', word: 'SERIES', title: en ? 'Browse series' : 'シリーズを探す', text: en ? 'Follow each series through its history' : '歴代公演・シリーズの流れから' },
   ];
   const counts = [
     { label: en ? 'Actors' : '俳優', value: stats.actorCount },
@@ -24,66 +29,51 @@ export default async function ArchiveHome({ locale }: { locale: 'ja' | 'en' }) {
     { label: en ? 'Series' : 'シリーズ', value: series.length },
   ];
 
-  return <main className="home-shell home-shell--theatre">
-    <section className="home-stage">
-      <div className="home-stage__grid">
-        <div className="home-stage__hero">
-          <picture className="home-stage__image" aria-hidden="true">
-            <source media="(max-width: 719px)" srcSet={mobileHero.srcSet} sizes="100vw"/>
-            <img {...desktopHero}/>
-          </picture>
-          <div className="home-stage__scrim" aria-hidden="true"/>
-          <div className="home-stage__hero-copy">
-            <h1 className="home-stage__title">{en ? <>Discover 2.5D theatre.<br/>Connect through the cast.</> : <>2.5次元舞台と<br/>キャストをつなぐ</>}</h1>
-            <p className="home-stage__lead">{en ? <>Productions, series, cast history, and streaming.<br/>One connected archive for the world of 2.5D theatre.</> : <>作品・シリーズ・出演者・配信情報を横断して追える。<br/>2.5次元舞台に特化したデジタルアーカイブ。</>}</p>
-          </div>
-        </div>
-
-        <form className="v2-search home-search" action={`${prefix}/search`}>
-          <label className="sr-only" htmlFor="home-query">{en ? 'Search plays, actors and series' : '作品・俳優・シリーズを検索'}</label>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg>
-          <input id="home-query" name="q" placeholder={en ? 'Search plays, actors and series' : '作品名・俳優名・シリーズ名で検索'}/>
-          <button type="submit" aria-label={en ? 'Search' : '検索'}>→</button>
-        </form>
-
-        <div className="home-stage__stats">
-          {counts.map(({label, value}) => <div className="home-stage__stat" key={label}><span className="home-stage__stat-label">{label}</span><strong>{value.toLocaleString(en ? 'en-US' : 'ja-JP')}</strong></div>)}
-        </div>
-
-        <div className="home-stage__actions">
-          {actions.map(item => <Link key={item.href} href={`${prefix}${item.href}`} className="home-stage__action">
-            <span className="home-stage__action-icon"><ArchiveIcon name={item.icon}/></span>
-            <span className="home-stage__action-copy"><span className="home-stage__action-title">{en ? item.title : <><span>{item.title.replace('を探す', '')}</span><span>を探す</span></>}</span><span className="home-stage__action-text">{item.text}</span></span>
-            <span className="home-stage__action-arrow" aria-hidden="true">→</span>
-          </Link>)}
-        </div>
-
-        <section className="home-stage__section home-stage__section--open">
-          <div className="home-stage__section-head">
-            <h2>{en ? 'Explore series' : 'シリーズから探す'}</h2>
-            <Link href={`${prefix}/series`}>{en ? 'View all' : 'すべて見る'} <span aria-hidden="true">→</span></Link>
-          </div>
-          <div className="home-stage__series-grid">
-            {series.slice(0,4).map(item => <Link key={item.slug} href={`${prefix}/series/${item.slug}`} className="home-stage__series-card">
-              <span className="home-stage__series-motif"><SeriesMotif slug={item.slug} format={item.format}/></span>
-              <div className="home-stage__series-copy"><strong>{en ? getEnglishSeriesName(item) : item.name}</strong></div>
-              <span className="home-stage__series-arrow" aria-hidden="true">→</span>
-              <span className="home-stage__series-meta">{item.format === 'musical' ? (en ? 'Musical' : 'ミュージカル') : item.format === 'stage' ? (en ? 'Stage' : '舞台') : (en ? 'Series' : 'シリーズ')}<span aria-hidden="true">｜</span>{en ? `${item.playCount} ${item.playCount === 1 ? 'work' : 'works'}` : `${item.playCount}作品`}</span>
-            </Link>)}
-          </div>
-        </section>
-
-        <section className="home-streaming" aria-label={en ? 'Explore streaming options' : '配信で観られる作品'}>
-          <Link className="home-streaming__banner" data-streaming-placement="home_banner" href={`${prefix}/watch/dmm`}>
-            <span className="home-streaming__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m9 5 11 7-11 7Z"/></svg></span>
-            <strong>DMM TV</strong>
-            <span className="home-streaming__copy"><span>{en ? 'Find streaming information for your next production' : '気になる作品の配信情報をチェック'}</span><small>{en ? 'Explore 2.5D theatre, whenever you like.' : '2.5次元舞台作品を、いつでもどこでも。'}</small></span>
-            <span className="home-streaming__link">{en ? 'Explore streaming' : '配信情報を見る'} <span aria-hidden="true">→</span></span>
-          </Link>
-        </section>
-
-        <OshiDiscoveryLinks locale={locale}/>
+  return <main className="editorial-home">
+    <ArchiveHomeMotion/>
+    <section className="archive-hero">
+      <div className="archive-hero__overline"><span>2.5D STAGE ARCHIVE</span><span>DISCOVER / TRACE / CONNECT</span></div>
+      <div id="archive-wordmark" className="archive-wordmark" aria-hidden="true"><span>STAGE</span><span>CONNECT</span></div>
+      <h1>{en ? 'Explore the stage. Discover more to love.' : '2.5次元舞台の、好きな作品をもっと深く。'}</h1>
+      <p className="archive-hero__description">{en ? 'Explore actors, productions and series in a connected digital archive of 2.5D theatre.' : '俳優・作品・シリーズを横断して探せる、2.5次元舞台のデジタルアーカイブ。'}</p>
+      <SearchBarClient variant="hero"/>
+      <div className="archive-stats" aria-label={en ? 'Archive totals' : 'アーカイブの登録件数'}>
+        {counts.map(({ label, value }) => <div key={label}><strong>{value.toLocaleString(en ? 'en-US' : 'ja-JP')}</strong><span>{label}</span></div>)}
       </div>
+      <div className="archive-hero__bottom"><span>EXPLORE THE ARCHIVE</span><a href="#archive-pathways" aria-label={en ? 'Explore categories' : 'カテゴリーへスクロール'}>↓</a></div>
+    </section>
+
+    <nav id="archive-pathways" className="archive-pathways" aria-label={en ? 'Explore the archive' : 'コンテンツを探す'}>
+      {actions.map(item => <Link key={item.href} href={prefix + item.href} className="archive-pathway" data-reveal="path">
+        <span><span className="archive-pathway__word">{item.word}</span><span className="archive-pathway__title">{item.title}</span><span className="archive-pathway__description">{item.text}</span></span><span className="archive-pathway__arrow" aria-hidden="true">→</span>
+      </Link>)}
+    </nav>
+
+    <section className="archive-section archive-series" aria-labelledby="home-series-heading">
+      <div className="archive-section__heading" data-reveal="heading"><div><span className="archive-kicker">01 / SERIES</span><h2 id="home-series-heading">{en ? 'Explore series' : 'シリーズから探す'}</h2><p>{en ? 'Follow the world of each production.' : '作品の世界を、シリーズから辿る。'}</p></div><Link href={prefix + '/series'}>{en ? 'View all' : 'すべて見る'} <span aria-hidden="true">↗</span></Link></div>
+      <div className="archive-series__grid">
+        {series.slice(0, 4).map(item => <Link key={item.slug} href={prefix + '/series/' + item.slug} className="archive-series__tile" data-reveal="series">
+          <span className="archive-series__top"><span>{item.format === 'musical' ? 'MUSICAL' : item.format === 'stage' ? 'STAGE PLAY' : 'SERIES'}</span><span>{en ? item.playCount + ' works' : item.playCount + '作品'}</span></span>
+          <span className="archive-series__names"><strong>{shortNames[item.slug]?.[locale] ?? (en ? getEnglishSeriesName(item) : item.name)}</strong><span>{en ? getEnglishSeriesName(item) : item.name}</span></span>
+          <span className="archive-round-arrow" aria-hidden="true">→</span>
+        </Link>)}
+      </div>
+    </section>
+
+    <div className="archive-points"><span className="archive-kicker" data-reveal="heading">02 / DISCOVERY</span><OshiDiscoveryLinks locale={locale}/></div>
+
+    {guides.length > 0 ? <section className="archive-section archive-guides" aria-labelledby="home-guide-heading">
+      <div className="archive-section__heading" data-reveal="heading"><div><span className="archive-kicker">03 / GUIDE &amp; EDITORIAL</span><h2 id="home-guide-heading">{en ? 'Enjoy more of the stage.' : '舞台をもっと楽しむ。'}</h2><p>{en ? 'Guides for your next discovery. Available in Japanese.' : 'はじめての人も、もっと深く知りたい人も。'}</p></div><Link href="/guide">{en ? 'All guides' : 'ガイド一覧'} <span aria-hidden="true">↗</span></Link></div>
+      <div className="archive-guides__list">{guides.map((guide, index) => <Link key={guide.slug} href={'/guide/' + guide.slug} className="archive-guide" data-reveal="guide">
+        <span className="archive-guide__number">GUIDE {String(index + 1).padStart(3, '0')}{en ? ' / 日本語' : guide.category === 'series-guides' ? ' / シリーズガイド' : ''}</span>
+        <strong lang="ja">{guide.title}</strong><span className="archive-guide__bottom"><span>{en ? 'Read the guide (Japanese)' : 'ガイドを読む'}</span><span aria-hidden="true">↗</span></span>
+      </Link>)}</div>
+    </section> : null}
+
+    <section className="archive-home-streaming" aria-label={en ? 'Explore streaming options' : '配信で観られる作品'}>
+      <Link className="archive-streaming-link" data-streaming-placement="home_banner" href={prefix + '/watch/dmm'}>
+        <strong>DMM TV</strong><span>{en ? 'Find streaming information for your next production' : '気になる作品の配信情報をチェック'}</span><span aria-hidden="true">→</span>
+      </Link>
     </section>
   </main>;
 }
