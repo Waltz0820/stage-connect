@@ -7,6 +7,7 @@ import { SearchBarClient } from "./SearchBarClient";
 import { LocaleSwitcher } from "./LocaleSwitcher";
 import { StreamingClickTracker } from "./StreamingClickTracker";
 import { getLanguageTargets, isAdminPath } from "../lib/locale-routing";
+import { cycleDialogFocus } from "../lib/dialog-focus";
 
 const copy = {
   ja: {
@@ -120,12 +121,7 @@ function PublicSiteChrome({ pathname, children }: { pathname: string | null; chi
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') { setIsMenuOpen(false); menuButtonRef.current?.focus(); }
       if (event.key !== 'Tab') return;
-      const items = menuRef.current?.querySelectorAll<HTMLElement>('a[href], button:not(:disabled)');
-      if (!items?.length) return;
-      const first = items[0], last = items[items.length - 1];
-      if (!menuRef.current?.contains(document.activeElement)) { event.preventDefault(); first.focus(); }
-      else if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
-      else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+      if (menuRef.current && cycleDialogFocus(menuRef.current, event.shiftKey)) event.preventDefault();
     };
     document.addEventListener('keydown', onKeyDown);
     return () => {

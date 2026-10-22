@@ -6,6 +6,7 @@ import { useEffect, useId, useRef, useState } from 'react';
 import { getEnglishActorName, getEnglishPlayTitle, getEnglishSeriesName } from '../lib/en-copy';
 import { normalizeSearchQuery, SEARCH_QUERY_LIMIT } from '../lib/search-query';
 import type { SearchResultBundle } from '../lib/stage-connect';
+import { cycleDialogFocus } from '../lib/dialog-focus';
 
 const emptyResults: SearchResultBundle = { actors: [], plays: [], series: [] };
 const searchIcon = <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path strokeLinecap="round" d="m16 16 5 5"/></svg>;
@@ -92,12 +93,7 @@ export function SearchBarClient({ variant = 'header' }: { variant?: 'header' | '
       onKeyDown={event => {
         if (event.key === 'Escape') { event.preventDefault(); event.stopPropagation(); close(); return; }
         if (event.key !== 'Tab') return;
-        const items = event.currentTarget.querySelectorAll<HTMLElement>('a[href], button:not(:disabled), input:not(:disabled)');
-        const first = items[0], last = items[items.length - 1];
-        if (!first) return;
-        if (!event.currentTarget.contains(document.activeElement)) { event.preventDefault(); first.focus(); }
-        else if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
-        else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+        if (cycleDialogFocus(event.currentTarget, event.shiftKey)) event.preventDefault();
       }}>
       <div className="archive-search-dialog__inner">
         <div className="archive-search-dialog__header"><span>SEARCH</span><button type="button" onClick={close} aria-label={en ? 'Close search' : '検索を閉じる'}>×</button></div>

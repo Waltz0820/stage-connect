@@ -181,6 +181,8 @@
 .stage-v2 .editorial-detail .oshi-submit { background: var(--ed-ink); color: #fff; border: 0; border-radius: 50px; min-height: 48px; font-family: var(--ed-font); box-shadow: none; }
 .stage-v2 .editorial-detail .oshi-submit:disabled { opacity: .55; }
 .stage-v2 .editorial-detail :is(.oshi-intro,.oshi-help,.oshi-privacy,.oshi-first,.oshi-status,.oshi-early) { color: var(--ed-ink); }
+.stage-v2 .editorial-detail .oshi-submit-row > span { color: var(--ed-ink); }
+.stage-v2 .editorial-detail .oshi-privacy a { color: #163ab5; text-decoration: underline; text-underline-offset: 3px; }
 .stage-v2 .editorial-detail .oshi-results { background: #fff; border: 0; border-radius: 6px; margin-top: 20px; padding: 20px 14px; }
 .stage-v2 .editorial-detail .oshi-results ol { gap: 10px; }
 .stage-v2 .editorial-detail .oshi-results li { background: var(--ed-paper); border: 0; box-shadow: none; }
