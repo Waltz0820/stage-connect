@@ -15,7 +15,8 @@ export function AnchorTabs({ items, label }: { items: Tab[]; label: string }) {
     let frame = 0;
     const update = () => {
       frame = 0;
-      const offset = (navRef.current?.getBoundingClientRect().bottom ?? 120) + 32;
+      const nav = navRef.current;
+      const offset = (nav ? (Number.parseFloat(getComputedStyle(nav).top) || 0) + nav.offsetHeight : 120) + 32;
       const passed = sections.filter((section) => section.getBoundingClientRect().top <= offset)
         .sort((a, b) => a.getBoundingClientRect().top - b.getBoundingClientRect().top);
       setActive((passed.at(-1) ?? sections[0])?.id);
