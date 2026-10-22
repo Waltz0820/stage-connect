@@ -20,6 +20,7 @@ const copy = {
     ],
     mobileNavExtra: [
       { href: "/favorites", label: "お気に入り" },
+      { href: "/about", label: "About" },
     ],
     favorites: "お気に入り",
     globalNavLabel: "グローバルナビゲーション",
@@ -50,6 +51,7 @@ const copy = {
     ],
     mobileNavExtra: [
       { href: "/favorites", label: "Favorites" },
+      { href: "/en/about", label: "About" },
     ],
     favorites: "Favorites",
     globalNavLabel: "Global navigation",
@@ -236,6 +238,7 @@ function PublicSiteChrome({ pathname, children }: { pathname: string | null; chi
                 <li><Link href={locale === "en" ? "/en/series" : "/series"}>{labels.series}</Link></li>
                 <li><Link href="/guide">{labels.guide}</Link></li>
                 <li><Link href="/favorites">{labels.favorites}</Link></li>
+                <li><Link href={locale === "en" ? "/en/about" : "/about"}>About</Link></li>
               </ul>
             </section>
 

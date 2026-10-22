@@ -6,6 +6,7 @@ const pairs=['/','/actors','/plays','/series','/actors/sato-ryuji','/plays/tenni
 const paths=pairs.flatMap(path=>[path,path==='/'?'/en':'/en'+path]);
 paths.push('/search?q=佐藤','/en/search?q=sato','/plays?q=刀剣&format=musical','/actors?q=佐藤流司','/series?q=テニス','/watch/dmm','/tags','/privacy','/tags/tag_style_sharp','/watch','/watch/u-next','/guide');
 paths.push('/favorites','/guide/touken-ranbu-complete-guide','/watch/danime','/contact');
+paths.push('/about','/en/about');
 paths.push('/search','/en/search','/search?q=サトウリュウジ','/en/search?q=Final%20Match%20Rikkai','/actors?q=a&gender=male&page=2','/en/actors?q=a&gender=male&page=2','/series?q=舞台&format=stage&sort=name_asc&page=2','/en/series?q=stage&format=stage&sort=name_asc&page=2');
 paths.push('/series/touken-ranbu-musical','/en/series/touken-ranbu-musical','/series/tennimu-2nd','/en/series/tennimu-2nd','/plays/ace-stage-aw','/en/plays/ace-stage-aw','/plays?streaming=available','/en/plays?streaming=available');
 paths.push('/en/watch','/en/watch/dmm','/en/watch/u-next','/en/watch/danime');
@@ -22,6 +23,12 @@ for(const path of paths){
   assert.equal($('a[href^="/tags"]').length,0,path+' old tag navigation');
   assert.equal($('.play-detail-tags-section').length,0,path);
   assert.equal($('.play-poster-frame').length,0,path+' synthetic poster removed');
+  if(path === '/about' || path === '/en/about') {
+    assert.equal($('.about-node').length,5,path+' real relationship nodes');
+    assert.equal($('.about-connection > a').length,5,path+' navigable archive connections');
+    assert.equal($('link[rel="alternate"][hreflang="en"]').attr('href'),'https://stageconnect.jp/en/about',path+' English counterpart');
+    for(const node of $('.about-node').toArray()) assert.equal($($(node).attr('href')).length,1,path+' node explanation target');
+  }
   if(/^\/(en\/)?watch(?:\/|$)/.test(path)) {
     assert.equal($('main form input[name="q"]').length,1,path+' search for a production');
     assert.ok($('main time[datetime]').length,path+' reviewed date');

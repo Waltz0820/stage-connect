@@ -87,7 +87,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<Para
   };
 
   return (
-    <main data-streaming-placement="guide_content" className="container guide-stage-page">
+    <main id="guide-top" data-streaming-placement="guide_content" className="container guide-stage-page editorial-support support-article">
       <StructuredData data={jsonLd} />
 
       <div className="stack-lg">
@@ -194,6 +194,12 @@ export default async function GuideDetailPage({ params }: { params: Promise<Para
             </div>
           </section>
         ) : null}
+        <section className="support-discover">
+          <h2>読んだあとも、好きが広がる。</h2>
+          <p>気になった作品や俳優から、次の舞台へ。</p>
+          <div><Link href="/plays">作品を探す →</Link><Link href="/actors">俳優を探す →</Link><Link href="/series">シリーズを探す →</Link></div>
+        </section>
+        <nav className="support-article-end" aria-label="記事の関連リンク"><Link href="/guide">ガイド一覧へ ←</Link><a href="#guide-top">ページの先頭に戻る ↑</a></nav>
       </div>
     </main>
   );

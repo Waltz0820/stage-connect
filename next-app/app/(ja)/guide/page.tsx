@@ -31,7 +31,7 @@ export default async function GuidePage() {
   });
 
   return (
-    <main className="container guide-stage-page">
+    <main className="container guide-stage-page editorial-support support-guides">
       <StructuredData data={collectionJsonLd} />
       <div className="stack-lg">
         <section className="hero-card stack-md">
@@ -59,8 +59,9 @@ export default async function GuidePage() {
           </div>
 
           <div className="catalog-grid">
-            {guides.map((guide) => (
+            {guides.map((guide, index) => (
               <article className="catalog-card" key={guide.slug}>
+                <span className="guide-issue" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
                 <div className="catalog-card__top">
                   <Link className="catalog-card__title" href={`/guide/${guide.slug}`}>
                     {guide.title}

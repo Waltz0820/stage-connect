@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function FavoritesPage() {
   return (
-    <main className="container" style={{ paddingBlock: 32 }}>
+    <main className="container editorial-support support-favorites">
       <FavoritesClient />
     </main>
   );

@@ -6,6 +6,7 @@ import "../stage-v2.css";
 import "../editorial-v2.css";
 import "../editorial-details.css";
 import "../editorial-directory.css";
+import "../editorial-support.css";
 
 export const metadata: Metadata = getSiteMetadata("ja");
 export const viewport: Viewport = siteViewport;

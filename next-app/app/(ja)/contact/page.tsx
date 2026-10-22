@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { ContactEmail } from "../../../components/ContactEmail";
+import { Breadcrumbs } from "../../../components/Breadcrumbs";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
 const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "stageconnect2.5d@gmail.com";
@@ -18,8 +20,9 @@ export default function ContactPage() {
   const hasX = Boolean(contactX);
 
   return (
-    <main className="container" style={{ paddingBlock: 32 }}>
+    <main className="container editorial-support support-contact">
       <div className="stack-lg">
+        <Breadcrumbs items={[{ label: "お問い合わせ" }]} />
         <section className="hero-card stack-md">
           <div className="stack-sm">
             <span className="eyebrow">Contact</span>
@@ -31,15 +34,10 @@ export default function ContactPage() {
         </section>
 
         <section className="section-card stack-md">
-          <h2 className="section-title">ご連絡方法</h2>
+          <h2 className="section-title">メールでのお問い合わせ</h2>
           <div className="rich-text">
             {hasEmail ? (
-              <p>
-                メール:{" "}
-                <a href={`mailto:${contactEmail}`}>
-                  {contactEmail}
-                </a>
-              </p>
+              <ContactEmail email={contactEmail} />
             ) : null}
 
             {hasX ? (
@@ -71,13 +69,18 @@ export default function ContactPage() {
           </div>
         </section>
 
-        <section className="section-card stack-md">
-          <h2 className="section-title">お願い</h2>
+        <section className="section-card stack-md contact-checklist">
+          <h2 className="section-title">修正依頼の際は</h2>
           <div className="rich-text">
             <p>
               修正依頼の際は、対象ページURL、該当箇所、正しい情報が分かる一次ソース等をあわせてご連絡いただけると確認がスムーズです。
             </p>
           </div>
+          <ol className="support-checklist">
+            <li><strong>対象ページのURL</strong><span>該当するページのリンク</span></li>
+            <li><strong>修正を希望する箇所</strong><span>現在の表記と、修正したい内容</span></li>
+            <li><strong>一次ソースの情報</strong><span>公式サイト・公式発表・公式SNSなど</span></li>
+          </ol>
         </section>
       </div>
     </main>

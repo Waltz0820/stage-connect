@@ -128,3 +128,12 @@ test('language switches retain catalogue filters and section anchors, without tr
   assert.equal(routing.getLanguageTargets('/search', '?q=sato&gender=male').enHref, '/en/search?q=sato');
   assert.equal(routing.getLanguageTargets('/actors', '?q=sato&page=2&gender=male').enHref, '/en/actors?q=sato&gender=male&page=2');
 });
+
+test('About has a real language counterpart while Japanese utility pages remain untranslated', () => {
+  assert.equal(routing.getLanguageTargets('/about').enAvailable, true);
+  assert.equal(routing.getLanguageTargets('/about').enHref, '/en/about');
+  assert.equal(routing.getLanguageTargets('/en/about').jaHref, '/about');
+  for (const path of ['/guide', '/favorites', '/contact', '/privacy']) {
+    assert.equal(routing.getLanguageTargets(path).enAvailable, false, path);
+  }
+});

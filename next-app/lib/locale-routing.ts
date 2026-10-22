@@ -14,7 +14,7 @@ export function getLanguageTargets(pathname: string | null, search = '', hash = 
   const suffix = (params.size ? `?${params}` : '') + (hash.startsWith('#') ? hash : '');
   const jaHref = jaPath + suffix;
   const enHref = (jaPath === "/" ? "/en" : `/en${jaPath}`) + suffix;
-  return { locale, jaHref, enHref, enAvailable: jaPath === "/" || jaPath === "/search" || /^\/watch(?:\/(?:dmm|u-next|danime))?$/.test(jaPath) || translatedPath.test(jaPath) };
+  return { locale, jaHref, enHref, enAvailable: jaPath === "/" || jaPath === "/about" || jaPath === "/search" || /^\/watch(?:\/(?:dmm|u-next|danime))?$/.test(jaPath) || translatedPath.test(jaPath) };
 }
 
 export const isAdminPath = (pathname: string | null) => pathname === "/admin" || Boolean(pathname?.startsWith("/admin/"));
