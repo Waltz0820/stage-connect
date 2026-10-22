@@ -1,0 +1,69 @@
+{
+  "checkedAt": "2026-10-22T10:01:29.813Z",
+  "scope": "公式・制作者・第一参照先で確認した初演と2025年続編の2作品を収録し、配役・年表・公開導線を点検。全人物属性の総合監査・詳細翻訳は未完。",
+  "franchiseId": "81da3096-4f00-4a3b-a116-b630b12d8a9a",
+  "slug": "bishounen-tanteidan",
+  "registeredWorks": 2,
+  "castRows": 16,
+  "uniqueActors": 11,
+  "publicPages": 28,
+  "castNotes": 1,
+  "creditOnlyNames": 16,
+  "timeline": [
+    "2025/03",
+    "2021/12"
+  ],
+  "works": [
+    {
+      "id": "bb31d3ab-579f-42ee-898d-1b2c08d9aef6",
+      "slug": "bishonentanteidan2021",
+      "title": "迷宮歌劇「美少年探偵団」",
+      "title_en": "Bishonen Tanteidan",
+      "period": "東京：2021年12月31日〜2022年1月10日",
+      "venue": "東京：天王洲 銀河劇場",
+      "castRows": 8,
+      "source": "https://kira-hai.net/bishonentanteidan2021",
+      "research": "next-app/research/bishonentanteidan-20261022.json",
+      "summaryPresent": true,
+      "englishSummaryPresent": true,
+      "creditOnlyNames": 8,
+      "streaming": {
+        "unext": "https://www.video.unext.jp/title/SID0075335"
+      },
+      "exceptions": [
+        "公演は2021年末開幕・2022年1月終演。初演を2022年だけの作品にしたり別作品へ分割しない。",
+        "公式JavaScriptの旧キャスト配列は奥田夢叶のままだが、可視の降板・代役告知と第一参照先・現在の配信キャストに基づき持田悠生のみを採用。奥田は本作の出演配役へ増やさず、持田の補足に当初予定と発表日を保持。"
+      ]
+    },
+    {
+      "id": "9f8ac9ff-82dc-4e19-bc35-ea30da1ec1ec",
+      "slug": "bishonentanteidan2025",
+      "title": "迷宮歌劇「続・美少年探偵団」",
+      "title_en": "Bishonen Tanteidan: Zoku",
+      "period": "東京：2025年3月3日〜9日／大阪：2025年3月14日〜16日",
+      "venue": "東京：天王洲 銀河劇場／大阪：サンケイホールブリーゼ",
+      "castRows": 8,
+      "source": "https://kira-hai.net/bishonentanteidan2025",
+      "research": "next-app/research/bishonentanteidan-20261022.json",
+      "summaryPresent": true,
+      "englishSummaryPresent": true,
+      "creditOnlyNames": 8,
+      "streaming": {
+        "unext": "https://www.video.unext.jp/title/SID0283848",
+        "danime": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=28721"
+      },
+      "exceptions": [
+        "第一参照先でShuntaとTanaseが改行分割されて9人になるが、公式・制作者・配信元ではShunta Tanaseの1人。実出演のアンサンブル8人を原綴り・掲載順で保存。",
+        "2025/2/16の公式告知に基づき、馬場礼可は出演者に含めず樋口明志を収録。商品の古い出演者欄に馬場が残っていても最終公式を優先。経緯は作品クレジットの出演変更へ。",
+        "2025脚本は三浦香・畑雅文の2人、演出・作詞は三浦香。初報や初演の脚本1人を流用しない。",
+        "U-NEXTとdアニメは個別作品ページのレンタル表示を確認。2025/3のDMMライブ・見逃し告知は現在見放題の根拠とせずDMMリンクは追加しない。"
+      ]
+    }
+  ],
+  "pendingChecks": [
+    "小林由佳は同名人物との個人属性の同定を後続へ。DOB等を推測で補わず、本作公式で裏付けた出演事実のみを掲載。",
+    "齋藤かなこの現在所属、神越将の現在所属・現身長・公式英字名は未確認。",
+    "人物総合監査、役名・人物紹介・クレジット・注記等の詳細英訳、主演指定は後続。英語作品名は編集上の表記で公式英題と断定しない。"
+  ],
+  "report": "docs/bishonentanteidan-2026-10-22.md"
+}
