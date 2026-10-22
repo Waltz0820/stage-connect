@@ -1,0 +1,1539 @@
+{
+  "version": 1,
+  "batchId": "karneval2016-20261022-01",
+  "expectedFranchise": {
+    "id": "ccd71c2b-4d89-424a-9f05-c3140039a755",
+    "name": "THE STAGE「カーニヴァル」",
+    "created_at": "2026-02-08T16:26:41.990203+00:00",
+    "updated_at": "2026-02-08T16:26:41.990203+00:00",
+    "slug": "karneval",
+    "intro": null,
+    "description": "御巫桃也による大人気ファンタジー漫画『カーニヴァル』を原作とした舞台作品。2016年に『THE STAGE「カーニヴァル 始まりの輪舞曲（ロンド）」』として初演された。自分の名前と「嘉禄（カロク）」という人物のことしか知らない不思議な少年・无（ナイ）と、彼を助けたスリの少年・花礫（ガレキ）が、国家防衛機関「輪（サーカス）」のメンバーと出会い、数奇な運命に巻き込まれていく姿を描く。无役を倉持聖菜、花礫役を飯山裕太、與儀役を鷲尾修斗が演じるなどフレッシュなキャストが集結。演出に赤澤ムックを迎え、原作の持つ華やかで美麗な世界観と、謎が謎を呼ぶダークファンタジーの要素を、華麗なアクションと繊細な心理描写で舞台上に立体化したストレートプレイ作品。",
+    "origin_type": "漫画原作",
+    "origin_note": "原作：御巫桃也（一迅社「月刊コミックZERO-SUM」）",
+    "production_companies": [
+      "THE STAGE『カーニヴァル』製作委員会",
+      "映劇"
+    ],
+    "related_franchise_ids": [],
+    "format": "stage",
+    "description_en": null,
+    "name_en": null
+  },
+  "franchisePatch": {
+    "description": "御巫桃也の漫画『カーニヴァル』を原作とする舞台。2016年に『始まりの輪舞曲』を上演。无と花礫が国家防衛機関「輪」に保護され、花礫の過去に関わる事件へ向き合う。脚本は石橋大樹、演出は赤澤ムック、音楽は印南俊太朗。",
+    "name_en": "Karneval The Stage",
+    "description_en": "A stage adaptation of Touya Mikanagi’s manga Karneval. The 2016 production, Hajimari no Rondo, follows Nai and Gareki as they encounter the organisation Circus and a mystery tied to Gareki’s past.",
+    "origin_note": "原作：御巫桃也（一迅社「月刊コミックZERO-SUM」）"
+  },
+  "actors": [
+    {
+      "actor": {
+        "id": "5c5f6f70-04dc-4854-bb7f-f75af7b2c564",
+        "slug": "kuramochi-sena",
+        "name": "倉持聖菜",
+        "kana": "くらもち せな",
+        "profile": "埼玉県出身の俳優。THE STAGE『カーニヴァル 始まりの輪舞曲』で无役を務める。テレビドラマ『地獄先生ぬ〜べ〜』の高野早希役、舞台版『てーきゅう』の押本陽太役などで出演している。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1996-07-09",
+        "height_cm": 157,
+        "blood_type": null,
+        "birthday_label": null,
+        "name_en": "倉持聖菜",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "倉持聖菜",
+      "profileUrl": "https://www.talent-databank.co.jp/search/profile/2000093304",
+      "evidence": [
+        {
+          "url": "https://www.talent-databank.co.jp/search/profile/2000093304",
+          "checkedAt": "2026-10-22T13:44:34.459Z",
+          "note": "採用項目と不採用事項は個別notesを参照。"
+        },
+        {
+          "url": "https://kira-hai.net/kuramochi-sena",
+          "checkedAt": "2026-10-22T13:43:43.698Z",
+          "note": "採用項目と不採用事項は個別notesを参照。"
+        },
+        {
+          "url": "https://narrow.jp/talent/24036",
+          "checkedAt": "2026-10-22T13:46:09.318Z",
+          "note": "採用項目と不採用事項は個別notesを参照。"
+        },
+        {
+          "url": "https://spice.eplus.jp/articles/45136",
+          "checkedAt": "2026-10-22T13:43:44.054Z",
+          "note": "採用項目と不採用事項は個別notesを参照。"
+        }
+      ],
+      "notes": [
+        "第一参照先と人物名鑑で読み・DOB・157cm、最新の名鑑転載で埼玉出身、作品公式と本作告知で人物・役名を照合。旧事務所の本人ページ404で現在所属は記載しない。英字名・血液型は未確認。既存HUNTER等のアンサンブル記録を役付き配役へ自動変換しない。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "1e8b3d89-ce02-4fff-8586-ff306f2dc8c3",
+        "slug": "okabayashi-yuka",
+        "name": "岡林佑香",
+        "kana": "おかばやし ゆか",
+        "profile": "高知県出身の俳優・タレント。THE STAGE『カーニヴァル 始まりの輪舞曲』のツクモ役を務める。舞台『bluethanblue』『クジラの歌』などに出演している。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1991-04-09",
+        "height_cm": null,
+        "blood_type": null,
+        "birthday_label": null,
+        "name_en": "岡林佑香",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "岡林佑香",
+      "profileUrl": "https://www.dimora.jp/talent-info/5/354839/?areaId=0155",
+      "evidence": [
+        {
+          "url": "https://www.dimora.jp/talent-info/5/354839/?areaId=0155",
+          "checkedAt": "2026-10-22T13:43:43.720Z",
+          "note": "採用項目と不採用事項は個別notesを参照。"
+        },
+        {
+          "url": "https://spice.eplus.jp/articles/45136",
+          "checkedAt": "2026-10-22T13:43:44.054Z",
+          "note": "採用項目と不採用事項は個別notesを参照。"
+        }
+      ],
+      "notes": [
+        "放送事業者の人物情報で読み・DOB・出身を確認し、作品公式の人物紹介で具体的な舞台履歴を照合。現事務所の本人ページを取得できず、過去のサンミュージック告知だけで現在所属とは断定しない。身長・血液型・公式英字名は未確認。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "a645d459-9980-4a1f-b292-656d078a78de",
+        "slug": "koitabashi-misuzu",
+        "name": "小板橋みすず",
+        "kana": "こいたばし みすず",
+        "profile": "秋田県出身の俳優。芸映プロダクション所属。映画『彼岸島デラックス』の弥生役、THE STAGE『カーニヴァル 始まりの輪舞曲』のツバキ役などを務める。脚本執筆を趣味に挙げる。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1992-05-15",
+        "height_cm": 153,
+        "blood_type": "A",
+        "birthday_label": null,
+        "name_en": "Misuzu Koitabashi",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "小板橋みすず",
+      "profileUrl": "https://geiei.co.jp/next-station/koitabashimisuzu/",
+      "evidence": [
+        {
+          "url": "https://geiei.co.jp/next-station/koitabashimisuzu/",
+          "checkedAt": "2026-10-22T13:42:52.701Z",
+          "note": "採用項目と不採用事項は個別notesを参照。"
+        },
+        {
+          "url": "https://www.oricon.co.jp/prof/877104/",
+          "checkedAt": "2026-10-22T13:42:52.531Z",
+          "note": "採用項目と不採用事項は個別notesを参照。"
+        },
+        {
+          "url": "https://spice.eplus.jp/articles/45136",
+          "checkedAt": "2026-10-22T13:43:44.054Z",
+          "note": "採用項目と不採用事項は個別notesを参照。"
+        }
+      ],
+      "notes": [
+        "現存する事務所本人ページで基本属性・英字・出演歴を確認。読みは編集プロフィール。作品公式でも本作出演と過去主演歴が確認できる。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "33ac0c86-a1b7-4581-877a-331e552fa53a",
+        "slug": "kuroki-shion",
+        "name": "黒木シオン",
+        "kana": "くろき しおん",
+        "profile": "東京都出身の俳優。THE STAGE『カーニヴァル 始まりの輪舞曲』の迷呀役、舞台『あなたを待ちながら ～Waiting for you～』の春川俊哉役などを務める。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1993-04-06",
+        "height_cm": null,
+        "blood_type": "B",
+        "birthday_label": null,
+        "name_en": "黒木シオン",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "黒木シオン",
+      "profileUrl": "https://thetv.jp/person/2000017259/",
+      "evidence": [
+        {
+          "url": "https://thetv.jp/person/2000017259/",
+          "checkedAt": "2026-10-22T13:43:43.651Z",
+          "note": "採用項目と不採用事項は個別notesを参照。"
+        },
+        {
+          "url": "https://spice.eplus.jp/articles/45136",
+          "checkedAt": "2026-10-22T13:43:44.054Z",
+          "note": "採用項目と不採用事項は個別notesを参照。"
+        }
+      ],
+      "notes": [
+        "本作とあなたを待ちながらの出演歴が一致する編集部作成人物プロフィールで読み・DOB・東京出身・B型を確認。作品公式の人物紹介でも同じ舞台履歴を確認。同名の成人向けゲームの架空キャラクター（164cm・5月6日等）を人物属性へ混入させない。身長・現所属・公式英字名は未確認。"
+      ]
+    }
+  ],
+  "works": [
+    {
+      "year": 2016,
+      "before": null,
+      "patch": null,
+      "play": {
+        "id": "eb29507e-96de-4654-97f5-cfe2e4542d8c",
+        "slug": "karneval2016",
+        "title": "THE STAGE『カーニヴァル 始まりの輪舞曲』",
+        "franchise_id": "ccd71c2b-4d89-424a-9f05-c3140039a755",
+        "summary": "嘉禄という青年を捜す少年・无と、盗み先の館で彼に出会った花礫。能力者に襲われた二人は国家防衛機関「輪」に保護される。花礫の故郷に近いカラスナへ向かうと、幼なじみのツバメから思いがけない告白を聞く。御巫桃也の漫画を原作とする2016年の舞台化作品。",
+        "period": "東京：2016年5月20日〜29日",
+        "venue": "東京：あうるすぽっと",
+        "vod": null,
+        "genre": null,
+        "tags": [],
+        "credits": [
+          {
+            "role": "原作",
+            "names": [
+              "御巫桃也『カーニヴァル』（一迅社）"
+            ],
+            "is_core": true,
+            "sort_order": 1
+          },
+          {
+            "role": "脚本",
+            "names": [
+              "石橋大樹"
+            ],
+            "is_core": true,
+            "sort_order": 2
+          },
+          {
+            "role": "演出",
+            "names": [
+              "赤澤ムック"
+            ],
+            "is_core": true,
+            "sort_order": 3
+          },
+          {
+            "role": "音楽",
+            "names": [
+              "印南俊太朗"
+            ],
+            "is_core": true,
+            "sort_order": 4
+          },
+          {
+            "role": "アンサンブル",
+            "names": [
+              "入江海斗",
+              "小野田唯",
+              "武内恭彦",
+              "野村俊",
+              "福嶋勇太",
+              "正木みわ"
+            ],
+            "is_core": false,
+            "sort_order": 5
+          },
+          {
+            "role": "主催",
+            "names": [
+              "THE STAGE『カーニヴァル』製作委員会"
+            ],
+            "is_core": false,
+            "sort_order": 6
+          }
+        ],
+        "related_franchise_ids": [],
+        "title_en": "Karneval: Hajimari no Rondo",
+        "summary_en": "Nai is searching for Karoku when he encounters Gareki in a mansion. After an attack, the two are taken into the care of the national defence organisation Circus. They visit Karasuna near Gareki’s hometown, where his childhood friend Tsubame makes an unexpected confession. This 2016 stage production adapts Touya Mikanagi’s manga Karneval."
+      },
+      "rawSource": {
+        "sourceUrl": "https://kira-hai.net/karneval2016",
+        "title": "THE STAGE『カーニヴァル 始まりの輪舞曲』",
+        "scheduleLines": [
+          "2016年5月20日-29日 あうるすぽっと"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "倉持聖菜",
+            "sourceActorUrl": "https://kira-hai.net/kuramochi-sena",
+            "role_name": "无",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "飯山裕太",
+            "sourceActorUrl": "https://kira-hai.net/iiyama-yuta",
+            "role_name": "花礫",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "鷲尾修斗",
+            "sourceActorUrl": "https://kira-hai.net/washio-shuto",
+            "role_name": "與儀",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "岡林佑香",
+            "sourceActorUrl": null,
+            "role_name": "ツクモ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "岸本卓也",
+            "sourceActorUrl": "https://kira-hai.net/kishimoto-takuya",
+            "role_name": "平門",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "甲斐千尋",
+            "sourceActorUrl": "https://kira-hai.net/kai-chihiro",
+            "role_name": "ツバメ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "大見拓土",
+            "sourceActorUrl": "https://kira-hai.net/omi-takuto",
+            "role_name": "ヨタカ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "小板橋みすず",
+            "sourceActorUrl": null,
+            "role_name": "ツバキ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "黒木シオン",
+            "sourceActorUrl": null,
+            "role_name": "迷呀",
+            "cast_group": null
+          }
+        ],
+        "unparsed": [
+          "入江海斗",
+          "小野田唯",
+          "武内恭彦",
+          "野村俊",
+          "福嶋勇太",
+          "正木みわ"
+        ]
+      },
+      "source": {
+        "sourceUrl": "https://kira-hai.net/karneval2016",
+        "title": "THE STAGE『カーニヴァル 始まりの輪舞曲』",
+        "scheduleLines": [
+          "2016年5月20日-29日 あうるすぽっと"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "倉持聖菜",
+            "sourceActorUrl": "https://kira-hai.net/kuramochi-sena",
+            "role_name": "无",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "飯山裕太",
+            "sourceActorUrl": "https://kira-hai.net/iiyama-yuta",
+            "role_name": "花礫",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "鷲尾修斗",
+            "sourceActorUrl": "https://kira-hai.net/washio-shuto",
+            "role_name": "與儀",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "岡林佑香",
+            "sourceActorUrl": null,
+            "role_name": "ツクモ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "岸本卓也",
+            "sourceActorUrl": "https://kira-hai.net/kishimoto-takuya",
+            "role_name": "平門",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "甲斐千尋",
+            "sourceActorUrl": "https://kira-hai.net/kai-chihiro",
+            "role_name": "ツバメ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "大見拓土",
+            "sourceActorUrl": "https://kira-hai.net/omi-takuto",
+            "role_name": "ヨタカ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "小板橋みすず",
+            "sourceActorUrl": null,
+            "role_name": "ツバキ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "黒木シオン",
+            "sourceActorUrl": null,
+            "role_name": "迷呀",
+            "cast_group": null
+          }
+        ],
+        "unparsed": []
+      },
+      "stage": {
+        "workUrl": "https://kira-hai.net/karneval2016",
+        "key": "cc3890e3143a866aaba495735aa54e426bd33a7ad994fb35557822b8ad966198",
+        "items": [
+          {
+            "source_actor_name": "倉持聖菜",
+            "source_actor_url": "https://kira-hai.net/kuramochi-sena",
+            "source_work_title": "THE STAGE『カーニヴァル 始まりの輪舞曲』",
+            "source_year": 2016,
+            "source_role_raw": "无",
+            "source_role_names": [
+              "无"
+            ],
+            "source_cast_group": null,
+            "source_order": 1,
+            "source_credit_key": "00c10834badc488660c2",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/karneval2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/karneval2016",
+                  "checkedAt": "2026-10-22T13:41:23.601Z",
+                  "note": "採用項目と不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://spice.eplus.jp/articles/45136",
+                  "checkedAt": "2026-10-22T13:43:44.054Z",
+                  "note": "採用項目と不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://www.oricon.co.jp/news/2068613/full/",
+                  "checkedAt": "2026-10-22T13:43:45.001Z",
+                  "note": "採用項目と不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://stagenews25.jp/?p=2336",
+                  "checkedAt": "2026-10-22T13:46:09.889Z",
+                  "note": "採用項目と不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://stagenews25.jp/?p=2743",
+                  "checkedAt": "2026-10-22T13:46:09.863Z",
+                  "note": "採用項目と不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "c849bc9c3eafd58ee5b6ea60dbf23c2015dbcf7081b5824fbdd8f09d99344c6e",
+              "review_fingerprint": "47110eee736c3defdb83af86e3a403e4300df318630c05cdb2391ce14333020d",
+              "snapshot_fingerprint": "43e6577908f721ce29abfa35961eff104b0de686ccd1da972dcdb6952af228d6",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "5c5f6f70-04dc-4854-bb7f-f75af7b2c564",
+            "matched_play_id": "eb29507e-96de-4654-97f5-cfe2e4542d8c",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "飯山裕太",
+            "source_actor_url": "https://kira-hai.net/iiyama-yuta",
+            "source_work_title": "THE STAGE『カーニヴァル 始まりの輪舞曲』",
+            "source_year": 2016,
+            "source_role_raw": "花礫",
+            "source_role_names": [
+              "花礫"
+            ],
+            "source_cast_group": null,
+            "source_order": 2,
+            "source_credit_key": "d06a758a7b9bca81abc8",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/karneval2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/karneval2016",
+                  "checkedAt": "2026-10-22T13:41:23.601Z",
+                  "note": "採用項目と不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://spice.eplus.jp/articles/45136",
+                  "checkedAt": "2026-10-22T13:43:44.054Z",
+                  "note": "採用項目と不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://www.oricon.co.jp/news/2068613/full/",
+                  "checkedAt": "2026-10-22T13:43:45.001Z",
+                  "note": "採用項目と不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://stagenews25.jp/?p=2336",
+                  "checkedAt": "2026-10-22T13:46:09.889Z",
+                  "note": "採用項目と不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://stagenews25.jp/?p=2743",
+                  "checkedAt": "2026-10-22T13:46:09.863Z",
+                  "note": "採用項目と不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "c849bc9c3eafd58ee5b6ea60dbf23c2015dbcf7081b5824fbdd8f09d99344c6e",
+              "review_fingerprint": "47110eee736c3defdb83af86e3a403e4300df318630c05cdb2391ce14333020d",
+              "snapshot_fingerprint": "43e6577908f721ce29abfa35961eff104b0de686ccd1da972dcdb6952af228d6",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "6bceb925-43c8-4198-8cda-9bb3b45c3f15",
+            "matched_play_id": "eb29507e-96de-4654-97f5-cfe2e4542d8c",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "鷲尾修斗",
+            "source_actor_url": "https://kira-hai.net/washio-shuto",
+            "source_work_title": "THE STAGE『カーニヴァル 始まりの輪舞曲』",
+            "source_year": 2016,
+            "source_role_raw": "與儀",
+            "source_role_names": [
+              "與儀"
+            ],
+            "source_cast_group": null,
+            "source_order": 3,
+            "source_credit_key": "6d179e5461f6057daf6f",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/karneval2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/karneval2016",
+                  "checkedAt": "2026-10-22T13:41:23.601Z",
+                  "note": "採用項目と不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://spice.eplus.jp/articles/45136",
+                  "checkedAt": "2026-10-22T13:43:44.054Z",
+                  "note": "採用項目と不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://www.oricon.co.jp/news/2068613/full/",
+                  "checkedAt": "2026-10-22T13:43:45.001Z",
+                  "note": "採用項目と不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://stagenews25.jp/?p=2336",
+                  "checkedAt": "2026-10-22T13:46:09.889Z",
+                  "note": "採用項目と不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://stagenews25.jp/?p=2743",
+                  "checkedAt": "2026-10-22T13:46:09.863Z",
+                  "note": "採用項目と不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "c849bc9c3eafd58ee5b6ea60dbf23c2015dbcf7081b5824fbdd8f09d99344c6e",
+              "review_fingerprint": "47110eee736c3defdb83af86e3a403e4300df318630c05cdb2391ce14333020d",
+              "snapshot_fingerprint": "43e6577908f721ce29abfa35961eff104b0de686ccd1da972dcdb6952af228d6",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "6dae98f7-0b1c-4016-8ebf-fb15d9c81d40",
+            "matched_play_id": "eb29507e-96de-4654-97f5-cfe2e4542d8c",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "岡林佑香",
+            "source_actor_url": null,
+            "source_work_title": "THE STAGE『カーニヴァル 始まりの輪舞曲』",
+            "source_year": 2016,
+            "source_role_raw": "ツクモ",
+            "source_role_names": [
+              "ツクモ"
+            ],
+            "source_cast_group": null,
+            "source_order": 4,
+            "source_credit_key": "4f0ebab3fdc4667c4aba",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/karneval2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/karneval2016",
+                  "checkedAt": "2026-10-22T13:41:23.601Z",
+                  "note": "採用項目と不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://spice.eplus.jp/articles/45136",
+                  "checkedAt": "2026-10-22T13:43:44.054Z",
+                  "note": "採用項目と不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://www.oricon.co.jp/news/2068613/full/",
+                  "checkedAt": "2026-10-22T13:43:45.001Z",
+                  "note": "採用項目と不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://stagenews25.jp/?p=2336",
+                  "checkedAt": "2026-10-22T13:46:09.889Z",
+                  "note": "採用項目と不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://stagenews25.jp/?p=2743",
+                  "checkedAt": "2026-10-22T13:46:09.863Z",
+                  "note": "採用項目と不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "c849bc9c3eafd58ee5b6ea60dbf23c2015dbcf7081b5824fbdd8f09d99344c6e",
+              "review_fingerprint": "47110eee736c3defdb83af86e3a403e4300df318630c05cdb2391ce14333020d",
+              "snapshot_fingerprint": "43e6577908f721ce29abfa35961eff104b0de686ccd1da972dcdb6952af228d6",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "1e8b3d89-ce02-4fff-8586-ff306f2dc8c3",
+            "matched_play_id": "eb29507e-96de-4654-97f5-cfe2e4542d8c",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "岸本卓也",
+            "source_actor_url": "https://kira-hai.net/kishimoto-takuya",
+            "source_work_title": "THE STAGE『カーニヴァル 始まりの輪舞曲』",
+            "source_year": 2016,
+            "source_role_raw": "平門",
+            "source_role_names": [
+              "平門"
+            ],
+            "source_cast_group": null,
+            "source_order": 5,
+            "source_credit_key": "9babd59d82947ce32b89",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/karneval2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/karneval2016",
+                  "checkedAt": "2026-10-22T13:41:23.601Z",
+                  "note": "採用項目と不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://spice.eplus.jp/articles/45136",
+                  "checkedAt": "2026-10-22T13:43:44.054Z",
+                  "note": "採用項目と不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://www.oricon.co.jp/news/2068613/full/",
+                  "checkedAt": "2026-10-22T13:43:45.001Z",
+                  "note": "採用項目と不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://stagenews25.jp/?p=2336",
+                  "checkedAt": "2026-10-22T13:46:09.889Z",
+                  "note": "採用項目と不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://stagenews25.jp/?p=2743",
+                  "checkedAt": "2026-10-22T13:46:09.863Z",
+                  "note": "採用項目と不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "c849bc9c3eafd58ee5b6ea60dbf23c2015dbcf7081b5824fbdd8f09d99344c6e",
+              "review_fingerprint": "47110eee736c3defdb83af86e3a403e4300df318630c05cdb2391ce14333020d",
+              "snapshot_fingerprint": "43e6577908f721ce29abfa35961eff104b0de686ccd1da972dcdb6952af228d6",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "22be1ab1-4169-400e-bf90-3e3f74fc4539",
+            "matched_play_id": "eb29507e-96de-4654-97f5-cfe2e4542d8c",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "甲斐千尋",
+            "source_actor_url": "https://kira-hai.net/kai-chihiro",
+            "source_work_title": "THE STAGE『カーニヴァル 始まりの輪舞曲』",
+            "source_year": 2016,
+            "source_role_raw": "ツバメ",
+            "source_role_names": [
+              "ツバメ"
+            ],
+            "source_cast_group": null,
+            "source_order": 6,
+            "source_credit_key": "125de9590133f5449883",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/karneval2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/karneval2016",
+                  "checkedAt": "2026-10-22T13:41:23.601Z",
+                  "note": "採用項目と不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://spice.eplus.jp/articles/45136",
+                  "checkedAt": "2026-10-22T13:43:44.054Z",
+                  "note": "採用項目と不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://www.oricon.co.jp/news/2068613/full/",
+                  "checkedAt": "2026-10-22T13:43:45.001Z",
+                  "note": "採用項目と不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://stagenews25.jp/?p=2336",
+                  "checkedAt": "2026-10-22T13:46:09.889Z",
+                  "note": "採用項目と不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://stagenews25.jp/?p=2743",
+                  "checkedAt": "2026-10-22T13:46:09.863Z",
+                  "note": "採用項目と不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "c849bc9c3eafd58ee5b6ea60dbf23c2015dbcf7081b5824fbdd8f09d99344c6e",
+              "review_fingerprint": "47110eee736c3defdb83af86e3a403e4300df318630c05cdb2391ce14333020d",
+              "snapshot_fingerprint": "43e6577908f721ce29abfa35961eff104b0de686ccd1da972dcdb6952af228d6",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "591fd3ca-6bfa-4fb8-a1fd-e9cb1da215ee",
+            "matched_play_id": "eb29507e-96de-4654-97f5-cfe2e4542d8c",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "大見拓土",
+            "source_actor_url": "https://kira-hai.net/omi-takuto",
+            "source_work_title": "THE STAGE『カーニヴァル 始まりの輪舞曲』",
+            "source_year": 2016,
+            "source_role_raw": "ヨタカ",
+            "source_role_names": [
+              "ヨタカ"
+            ],
+            "source_cast_group": null,
+            "source_order": 7,
+            "source_credit_key": "17205092b5fa855daad1",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/karneval2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/karneval2016",
+                  "checkedAt": "2026-10-22T13:41:23.601Z",
+                  "note": "採用項目と不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://spice.eplus.jp/articles/45136",
+                  "checkedAt": "2026-10-22T13:43:44.054Z",
+                  "note": "採用項目と不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://www.oricon.co.jp/news/2068613/full/",
+                  "checkedAt": "2026-10-22T13:43:45.001Z",
+                  "note": "採用項目と不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://stagenews25.jp/?p=2336",
+                  "checkedAt": "2026-10-22T13:46:09.889Z",
+                  "note": "採用項目と不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://stagenews25.jp/?p=2743",
+                  "checkedAt": "2026-10-22T13:46:09.863Z",
+                  "note": "採用項目と不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "c849bc9c3eafd58ee5b6ea60dbf23c2015dbcf7081b5824fbdd8f09d99344c6e",
+              "review_fingerprint": "47110eee736c3defdb83af86e3a403e4300df318630c05cdb2391ce14333020d",
+              "snapshot_fingerprint": "43e6577908f721ce29abfa35961eff104b0de686ccd1da972dcdb6952af228d6",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "29728783-f36a-46b4-b1b3-d1cd59456b6c",
+            "matched_play_id": "eb29507e-96de-4654-97f5-cfe2e4542d8c",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "小板橋みすず",
+            "source_actor_url": null,
+            "source_work_title": "THE STAGE『カーニヴァル 始まりの輪舞曲』",
+            "source_year": 2016,
+            "source_role_raw": "ツバキ",
+            "source_role_names": [
+              "ツバキ"
+            ],
+            "source_cast_group": null,
+            "source_order": 8,
+            "source_credit_key": "496a7169c7d17df36827",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/karneval2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/karneval2016",
+                  "checkedAt": "2026-10-22T13:41:23.601Z",
+                  "note": "採用項目と不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://spice.eplus.jp/articles/45136",
+                  "checkedAt": "2026-10-22T13:43:44.054Z",
+                  "note": "採用項目と不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://www.oricon.co.jp/news/2068613/full/",
+                  "checkedAt": "2026-10-22T13:43:45.001Z",
+                  "note": "採用項目と不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://stagenews25.jp/?p=2336",
+                  "checkedAt": "2026-10-22T13:46:09.889Z",
+                  "note": "採用項目と不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://stagenews25.jp/?p=2743",
+                  "checkedAt": "2026-10-22T13:46:09.863Z",
+                  "note": "採用項目と不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "c849bc9c3eafd58ee5b6ea60dbf23c2015dbcf7081b5824fbdd8f09d99344c6e",
+              "review_fingerprint": "47110eee736c3defdb83af86e3a403e4300df318630c05cdb2391ce14333020d",
+              "snapshot_fingerprint": "43e6577908f721ce29abfa35961eff104b0de686ccd1da972dcdb6952af228d6",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "a645d459-9980-4a1f-b292-656d078a78de",
+            "matched_play_id": "eb29507e-96de-4654-97f5-cfe2e4542d8c",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "黒木シオン",
+            "source_actor_url": null,
+            "source_work_title": "THE STAGE『カーニヴァル 始まりの輪舞曲』",
+            "source_year": 2016,
+            "source_role_raw": "迷呀",
+            "source_role_names": [
+              "迷呀"
+            ],
+            "source_cast_group": null,
+            "source_order": 9,
+            "source_credit_key": "0e4edb9fdc6481522185",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/karneval2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/karneval2016",
+                  "checkedAt": "2026-10-22T13:41:23.601Z",
+                  "note": "採用項目と不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://spice.eplus.jp/articles/45136",
+                  "checkedAt": "2026-10-22T13:43:44.054Z",
+                  "note": "採用項目と不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://www.oricon.co.jp/news/2068613/full/",
+                  "checkedAt": "2026-10-22T13:43:45.001Z",
+                  "note": "採用項目と不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://stagenews25.jp/?p=2336",
+                  "checkedAt": "2026-10-22T13:46:09.889Z",
+                  "note": "採用項目と不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://stagenews25.jp/?p=2743",
+                  "checkedAt": "2026-10-22T13:46:09.863Z",
+                  "note": "採用項目と不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "c849bc9c3eafd58ee5b6ea60dbf23c2015dbcf7081b5824fbdd8f09d99344c6e",
+              "review_fingerprint": "47110eee736c3defdb83af86e3a403e4300df318630c05cdb2391ce14333020d",
+              "snapshot_fingerprint": "43e6577908f721ce29abfa35961eff104b0de686ccd1da972dcdb6952af228d6",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "33ac0c86-a1b7-4581-877a-331e552fa53a",
+            "matched_play_id": "eb29507e-96de-4654-97f5-cfe2e4542d8c",
+            "status": "pending"
+          }
+        ]
+      },
+      "records": [
+        {
+          "actor": {
+            "id": "5c5f6f70-04dc-4854-bb7f-f75af7b2c564",
+            "slug": "kuramochi-sena",
+            "name": "倉持聖菜",
+            "kana": "くらもち せな",
+            "profile": "埼玉県出身の俳優。THE STAGE『カーニヴァル 始まりの輪舞曲』で无役を務める。テレビドラマ『地獄先生ぬ〜べ〜』の高野早希役、舞台版『てーきゅう』の押本陽太役などで出演している。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1996-07-09",
+            "height_cm": 157,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "倉持聖菜",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared",
+            "updated_at": "prepared"
+          },
+          "source": {
+            "sourceActorName": "倉持聖菜",
+            "sourceActorUrl": "https://kira-hai.net/kuramochi-sena",
+            "role_name": "无",
+            "cast_group": null
+          },
+          "sourceCreditKey": "00c10834badc488660c2",
+          "sourceOrder": 1,
+          "billingOrder": 1,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "6bceb925-43c8-4198-8cda-9bb3b45c3f15",
+            "slug": "iiyama-yuta",
+            "name": "飯山 裕太",
+            "kana": "いいやま ゆうた",
+            "profile": "千葉県出身の俳優。キャストコーポレーション所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/729Yuta",
+              "official": "https://iiyama-yuta.bitfan.id/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-29T19:44:17.336696+00:00",
+            "updated_at": "2026-03-29T19:44:17.336696+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1996-07-29",
+            "height_cm": 177,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "飯山裕太",
+            "sourceActorUrl": "https://kira-hai.net/iiyama-yuta",
+            "role_name": "花礫",
+            "cast_group": null
+          },
+          "sourceCreditKey": "d06a758a7b9bca81abc8",
+          "sourceOrder": 2,
+          "billingOrder": 2,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "6dae98f7-0b1c-4016-8ebf-fb15d9c81d40",
+            "slug": "washio-shuto",
+            "name": "鷲尾修斗",
+            "kana": "わしお しゅうと",
+            "profile": "俳優。『ツキステ。』シリーズの葉月陽役、ミュージカル『忍たま乱太郎』の中在家長次役などを務めた。『Code：Realize ～創世の姫君～』ではインピー・バービケーン役で出演している。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-20T18:23:08.200269+00:00",
+            "updated_at": "2026-10-20T18:23:08.200269+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1987-12-27",
+            "height_cm": 180,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "鷲尾修斗",
+            "sourceActorUrl": "https://kira-hai.net/washio-shuto",
+            "role_name": "與儀",
+            "cast_group": null
+          },
+          "sourceCreditKey": "6d179e5461f6057daf6f",
+          "sourceOrder": 3,
+          "billingOrder": 3,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "1e8b3d89-ce02-4fff-8586-ff306f2dc8c3",
+            "slug": "okabayashi-yuka",
+            "name": "岡林佑香",
+            "kana": "おかばやし ゆか",
+            "profile": "高知県出身の俳優・タレント。THE STAGE『カーニヴァル 始まりの輪舞曲』のツクモ役を務める。舞台『bluethanblue』『クジラの歌』などに出演している。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1991-04-09",
+            "height_cm": null,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "岡林佑香",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared",
+            "updated_at": "prepared"
+          },
+          "source": {
+            "sourceActorName": "岡林佑香",
+            "sourceActorUrl": null,
+            "role_name": "ツクモ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "4f0ebab3fdc4667c4aba",
+          "sourceOrder": 4,
+          "billingOrder": 4,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "22be1ab1-4169-400e-bf90-3e3f74fc4539",
+            "slug": "kishimoto-takuya",
+            "name": "岸本 卓也",
+            "kana": "きしもと たくや",
+            "profile": "兵庫県出身の俳優。Toki Entertainmentと業務提携。ミュージカル『テニスの王子様』2ndシーズン（亜久津仁役）等に出演。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/tkyksmt57",
+              "youtube": "https://www.youtube.com/@user-kishitaku-hitorinomi",
+              "instagram": "https://www.instagram.com/takuyakishimoto/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:03:44.295565+00:00",
+            "updated_at": "2026-03-21T15:03:44.295565+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1985-05-07",
+            "height_cm": 180,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Hyogo Prefecture. He has a business partnership with Toki Entertainment. He appeared in the musical \"The Prince of Tennis\" 2nd season (as Jin Akutsu).",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "岸本卓也",
+            "sourceActorUrl": "https://kira-hai.net/kishimoto-takuya",
+            "role_name": "平門",
+            "cast_group": null
+          },
+          "sourceCreditKey": "9babd59d82947ce32b89",
+          "sourceOrder": 5,
+          "billingOrder": 5,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "591fd3ca-6bfa-4fb8-a1fd-e9cb1da215ee",
+            "slug": "kai-chihiro",
+            "name": "甲斐千尋",
+            "kana": "かい ちひろ",
+            "profile": "俳優。『ROCK MUSICAL BLEACH』の朽木ルキア役、『Fate/Grand Order THE STAGE』のモードレッド役など、舞台作品に出演。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-19T09:07:56.196763+00:00",
+            "updated_at": "2026-10-19T09:07:56.196763+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1990-01-23",
+            "height_cm": 153,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "甲斐千尋",
+            "sourceActorUrl": "https://kira-hai.net/kai-chihiro",
+            "role_name": "ツバメ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "125de9590133f5449883",
+          "sourceOrder": 6,
+          "billingOrder": 6,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "29728783-f36a-46b4-b1b3-d1cd59456b6c",
+            "slug": "ohmi-takuto",
+            "name": "大見 拓土",
+            "kana": "おおみ たくと",
+            "profile": "青森県出身の俳優。AYRTON所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/ohmi_takuto",
+              "official": "https://ohmi-takuto.com/",
+              "instagram": "https://www.instagram.com/takuto_ohmi/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-31T16:11:44.437175+00:00",
+            "updated_at": "2026-03-31T16:11:44.437175+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1994-07-05",
+            "height_cm": 165,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "大見拓土",
+            "sourceActorUrl": "https://kira-hai.net/omi-takuto",
+            "role_name": "ヨタカ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "17205092b5fa855daad1",
+          "sourceOrder": 7,
+          "billingOrder": 7,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "a645d459-9980-4a1f-b292-656d078a78de",
+            "slug": "koitabashi-misuzu",
+            "name": "小板橋みすず",
+            "kana": "こいたばし みすず",
+            "profile": "秋田県出身の俳優。芸映プロダクション所属。映画『彼岸島デラックス』の弥生役、THE STAGE『カーニヴァル 始まりの輪舞曲』のツバキ役などを務める。脚本執筆を趣味に挙げる。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1992-05-15",
+            "height_cm": 153,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": "Misuzu Koitabashi",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared",
+            "updated_at": "prepared"
+          },
+          "source": {
+            "sourceActorName": "小板橋みすず",
+            "sourceActorUrl": null,
+            "role_name": "ツバキ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "496a7169c7d17df36827",
+          "sourceOrder": 8,
+          "billingOrder": 8,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "33ac0c86-a1b7-4581-877a-331e552fa53a",
+            "slug": "kuroki-shion",
+            "name": "黒木シオン",
+            "kana": "くろき しおん",
+            "profile": "東京都出身の俳優。THE STAGE『カーニヴァル 始まりの輪舞曲』の迷呀役、舞台『あなたを待ちながら ～Waiting for you～』の春川俊哉役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1993-04-06",
+            "height_cm": null,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": "黒木シオン",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared",
+            "updated_at": "prepared"
+          },
+          "source": {
+            "sourceActorName": "黒木シオン",
+            "sourceActorUrl": null,
+            "role_name": "迷呀",
+            "cast_group": null
+          },
+          "sourceCreditKey": "0e4edb9fdc6481522185",
+          "sourceOrder": 9,
+          "billingOrder": 9,
+          "expectedNote": null
+        }
+      ],
+      "castPatches": [],
+      "keptCasts": [],
+      "legacyCandidates": [],
+      "sourceFingerprint": "c849bc9c3eafd58ee5b6ea60dbf23c2015dbcf7081b5824fbdd8f09d99344c6e",
+      "expectedCastCount": 9,
+      "evidence": [
+        {
+          "url": "https://kira-hai.net/karneval2016",
+          "checkedAt": "2026-10-22T13:41:23.601Z",
+          "note": "採用項目と不採用事項は個別notesを参照。"
+        },
+        {
+          "url": "https://spice.eplus.jp/articles/45136",
+          "checkedAt": "2026-10-22T13:43:44.054Z",
+          "note": "採用項目と不採用事項は個別notesを参照。"
+        },
+        {
+          "url": "https://www.oricon.co.jp/news/2068613/full/",
+          "checkedAt": "2026-10-22T13:43:45.001Z",
+          "note": "採用項目と不採用事項は個別notesを参照。"
+        },
+        {
+          "url": "https://stagenews25.jp/?p=2336",
+          "checkedAt": "2026-10-22T13:46:09.889Z",
+          "note": "採用項目と不採用事項は個別notesを参照。"
+        },
+        {
+          "url": "https://stagenews25.jp/?p=2743",
+          "checkedAt": "2026-10-22T13:46:09.863Z",
+          "note": "採用項目と不採用事項は個別notesを参照。"
+        }
+      ],
+      "creditOnly": [
+        {
+          "sourceActorName": "入江海斗",
+          "role_name": null,
+          "cast_group": "アンサンブル",
+          "storageDecision": {
+            "target": "plays.credits",
+            "reason": "公式のアンサンブル見出しと氏名順をweb取得で確認。個人ページを増やさない。"
+          }
+        },
+        {
+          "sourceActorName": "小野田唯",
+          "role_name": null,
+          "cast_group": "アンサンブル",
+          "storageDecision": {
+            "target": "plays.credits",
+            "reason": "公式のアンサンブル見出しと氏名順をweb取得で確認。個人ページを増やさない。"
+          }
+        },
+        {
+          "sourceActorName": "武内恭彦",
+          "role_name": null,
+          "cast_group": "アンサンブル",
+          "storageDecision": {
+            "target": "plays.credits",
+            "reason": "公式のアンサンブル見出しと氏名順をweb取得で確認。個人ページを増やさない。"
+          }
+        },
+        {
+          "sourceActorName": "野村俊",
+          "role_name": null,
+          "cast_group": "アンサンブル",
+          "storageDecision": {
+            "target": "plays.credits",
+            "reason": "公式のアンサンブル見出しと氏名順をweb取得で確認。個人ページを増やさない。"
+          }
+        },
+        {
+          "sourceActorName": "福嶋勇太",
+          "role_name": null,
+          "cast_group": "アンサンブル",
+          "storageDecision": {
+            "target": "plays.credits",
+            "reason": "公式のアンサンブル見出しと氏名順をweb取得で確認。個人ページを増やさない。"
+          }
+        },
+        {
+          "sourceActorName": "正木みわ",
+          "role_name": null,
+          "cast_group": "アンサンブル",
+          "storageDecision": {
+            "target": "plays.credits",
+            "reason": "公式のアンサンブル見出しと氏名順をweb取得で確認。個人ページを増やさない。"
+          }
+        }
+      ],
+      "exceptions": [
+        "第一参照先の役付き9人と、公式のアンサンブル6人を分けて保存。サブキャスト4人も通常役付き出演として登録し、掲載ブロックを理由に除外しない。",
+        "公式サイトの通常fetchは403。web取得で確認できた公演情報・人物紹介・アンサンブル見出し／氏名を構造化したwebEvidenceへ保存し、200で取得した原HTMLがあるとは扱わない。日程・配役・スタッフ・本作あらすじはイープラス等の当時の公演情報でも照合。",
+        "ボイスアルバムはキャスト音声アプリ、ルッキュは2016年6/6〜19限定配信。現在の舞台本編視聴可能やDMM/U-NEXT見放題としてvodへ追加しない。",
+        "既存シリーズ紹介の未検証の評語や演技評価、ストレートプレイの断定を短い確認済みの作品紹介へ整理。シリーズ名・format=stage・原作区分・制作会社・関連ID等は保持。",
+        "作品・シリーズ英名は編集上の表記で、公式英題とは断定しない。"
+      ]
+    }
+  ],
+  "keptPlays": [],
+  "evidence": {
+    "webEvidence": {
+      "provider": "web.run",
+      "checkedAt": "2026-10-22 13:48:53 UTC",
+      "sources": [
+        {
+          "name": "official-schedule",
+          "url": "https://karneval.eigeki.jp/stage.html",
+          "observed": {
+            "period": "2016年5月20日〜29日",
+            "venue": "あうるすぽっと",
+            "performances": 12,
+            "staff": {
+              "演出": "赤澤ムック",
+              "脚本": "石橋大樹",
+              "音楽": "印南俊太朗"
+            }
+          },
+          "note": "web取得で確認。Node fetchは403で別途保存。出演者ページ・公演情報の再取得にも403があり完全な告知網羅は保留。"
+        },
+        {
+          "name": "official-characters",
+          "url": "https://karneval.eigeki.jp/phone/the-stage%E3%80%8E%E3%82%AB%E3%83%BC%E3%83%8B%E3%83%B4%E3%82%A1%E3%83%AB-%E5%A7%8B%E3%81%BE%E3%82%8A%E3%81%AE%E8%BC%AA%E8%88%9E%E6%9B%B2%E3%80%8F%E5%85%AC%E5%BC%8F%E3%82%B5%E3%82%A4%E3%83%88---%E3%82%AD%E3%83%A3%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%BC.html",
+          "observed": {
+            "actors": [
+              "倉持聖菜",
+              "飯山裕太",
+              "鷲尾修斗",
+              "岡林佑香",
+              "岸本卓也",
+              "甲斐千尋",
+              "大見拓土",
+              "小板橋みすず",
+              "黒木シオン"
+            ],
+            "ensemble": [
+              "入江海斗",
+              "小野田唯",
+              "武内恭彦",
+              "野村俊",
+              "福嶋勇太",
+              "正木みわ"
+            ],
+            "shionRoles": [
+              "吉原万灯：忠太",
+              "Iridescent Clouds：相田",
+              "あなたを待ちながら：春川俊哉"
+            ]
+          },
+          "note": "web取得でキャスト紹介とアンサンブル見出し・6人の氏名を確認。Node fetch403は原HTML取得済みと扱わない。"
+        }
+      ]
+    },
+    "links": [
+      {
+        "url": "https://kira-hai.net/karneval2016",
+        "checkedAt": "2026-10-22T13:41:23.601Z",
+        "note": "採用項目と不採用事項は個別notesを参照。"
+      },
+      {
+        "url": "https://spice.eplus.jp/articles/45136",
+        "checkedAt": "2026-10-22T13:43:44.054Z",
+        "note": "採用項目と不採用事項は個別notesを参照。"
+      },
+      {
+        "url": "https://www.oricon.co.jp/news/2068613/full/",
+        "checkedAt": "2026-10-22T13:43:45.001Z",
+        "note": "採用項目と不採用事項は個別notesを参照。"
+      },
+      {
+        "url": "https://stagenews25.jp/?p=2336",
+        "checkedAt": "2026-10-22T13:46:09.889Z",
+        "note": "採用項目と不採用事項は個別notesを参照。"
+      },
+      {
+        "url": "https://stagenews25.jp/?p=2743",
+        "checkedAt": "2026-10-22T13:46:09.863Z",
+        "note": "採用項目と不採用事項は個別notesを参照。"
+      }
+    ],
+    "sources": [
+      {
+        "name": "work",
+        "url": "https://kira-hai.net/karneval2016",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/karneval2016",
+        "checkedAt": "2026-10-22T13:41:23.601Z",
+        "sha256": "0174a33c0c7ac2293241397e1385f323c21554babcb01df70bcefbdec6856ebf"
+      },
+      {
+        "name": "robots",
+        "url": "https://kira-hai.net/robots.txt",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/robots.txt",
+        "checkedAt": "2026-10-22T13:41:23.516Z",
+        "sha256": "f6ed0322f0e3df8c3b42b14df3254a90cca7b94a4172de91812952b3c7060b03"
+      },
+      {
+        "name": "misuzu",
+        "url": "https://geiei.co.jp/next-station/koitabashimisuzu/",
+        "status": 200,
+        "finalUrl": "https://geiei.co.jp/next-station/koitabashimisuzu/",
+        "checkedAt": "2026-10-22T13:42:52.701Z",
+        "sha256": "bbe52f1aa1387b22f6125813ecaae614168c141f7d583863329f1de62bf116e4"
+      },
+      {
+        "name": "misuzu-reading",
+        "url": "https://www.oricon.co.jp/prof/877104/",
+        "status": 200,
+        "finalUrl": "https://www.oricon.co.jp/prof/877104/",
+        "checkedAt": "2026-10-22T13:42:52.531Z",
+        "sha256": "dbbfc6b65be52bc4af7a14999f83b2b22d45999741b040e5a31abee47f30aed9"
+      },
+      {
+        "name": "sena-kira",
+        "url": "https://kira-hai.net/kuramochi-sena",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/kuramochi-sena",
+        "checkedAt": "2026-10-22T13:43:43.698Z",
+        "sha256": "d6cf1fefc375c9c9b856ffad259e7c26f66f174f15dae90e0870f83de6a78fba"
+      },
+      {
+        "name": "shion-profile",
+        "url": "https://thetv.jp/person/2000017259/",
+        "status": 200,
+        "finalUrl": "https://thetv.jp/person/2000017259/",
+        "checkedAt": "2026-10-22T13:43:43.651Z",
+        "sha256": "8fe1efa5c802e4a9c7d1f18e1eae276448bc9e32bcf8070b65b654105b397e8b"
+      },
+      {
+        "name": "spice",
+        "url": "https://spice.eplus.jp/articles/45136",
+        "status": 200,
+        "finalUrl": "https://spice.eplus.jp/articles/45136",
+        "checkedAt": "2026-10-22T13:43:44.054Z",
+        "sha256": "ef981fc41f60af1ca388203d78835c55b4765ac31eafeedba61cb8de2d9bfd13"
+      },
+      {
+        "name": "yuka-broadcast",
+        "url": "https://www.dimora.jp/talent-info/5/354839/?areaId=0155",
+        "status": 200,
+        "finalUrl": "https://www.dimora.jp/talent-info/5/354839/?areaId=0155",
+        "checkedAt": "2026-10-22T13:43:43.720Z",
+        "sha256": "3a3d974e42111f6027cd466e3e098c0508dd1cb0304ca2bc0061b0c477cf0752"
+      },
+      {
+        "name": "oricon",
+        "url": "https://www.oricon.co.jp/news/2068613/full/",
+        "status": 200,
+        "finalUrl": "https://www.oricon.co.jp/news/2068613/full/",
+        "checkedAt": "2026-10-22T13:43:45.001Z",
+        "sha256": "26bba4ac89560acd72e095d6e787c8e7a77d6037aca3ba2eb27dae4fe84b52d3"
+      },
+      {
+        "name": "sunmusic-news",
+        "url": "https://sunmusic-gp.co.jp/news/tn001631/page%3A123",
+        "status": 200,
+        "finalUrl": "https://sunmusic-gp.co.jp/news/tn001631/page%3A123",
+        "checkedAt": "2026-10-22T13:44:32.741Z",
+        "sha256": "0a3f116cf3be7a5a8df32ba8699ce2635296116b4876ae9f69e4d8edb43bf125"
+      },
+      {
+        "name": "sena-registry",
+        "url": "https://www.talent-databank.co.jp/search/profile/2000093304",
+        "status": 200,
+        "finalUrl": "https://www.talent-databank.co.jp/search/profile/2000093304",
+        "checkedAt": "2026-10-22T13:44:34.459Z",
+        "sha256": "e37580fc57fb0cdd41cee0f5c8ab8c2b612133b0ab3bd84b165b4f9b2cae70ad"
+      },
+      {
+        "name": "sena-current-registry",
+        "url": "https://narrow.jp/talent/24036",
+        "status": 200,
+        "finalUrl": "https://narrow.jp/talent/24036",
+        "checkedAt": "2026-10-22T13:46:09.318Z",
+        "sha256": "ae6cc9dc34cd7edf8d8f4bbf9a394e997a38f1131448dcfa2f37d0598e9a6ca2"
+      },
+      {
+        "name": "stagenews-final",
+        "url": "https://stagenews25.jp/?p=2336",
+        "status": 200,
+        "finalUrl": "https://stagenews25.jp/?p=2336",
+        "checkedAt": "2026-10-22T13:46:09.889Z",
+        "sha256": "a84ff4950c998197ede2fbc1a9f7b4226e5fba643a724a773d80f15b2cc836aa"
+      },
+      {
+        "name": "stage-report",
+        "url": "https://stagenews25.jp/?p=2743",
+        "status": 200,
+        "finalUrl": "https://stagenews25.jp/?p=2743",
+        "checkedAt": "2026-10-22T13:46:09.863Z",
+        "sha256": "2cb30156bccad61f26cc35fc1336972a80d0abf15ec536cf79496ba5ae2c5dc1"
+      }
+    ],
+    "unavailable": [
+      {
+        "name": "official",
+        "url": "https://karneval.eigeki.jp/",
+        "status": 403,
+        "finalUrl": "https://karneval.eigeki.jp/",
+        "checkedAt": "2026-10-22T13:41:23.493Z",
+        "sha256": "ab768623070128ccef048c88def86155dbe776c3d8db423cc8fa89432673d8a8"
+      },
+      {
+        "name": "schedule",
+        "url": "https://karneval.eigeki.jp/stage.html",
+        "status": 403,
+        "finalUrl": "https://karneval.eigeki.jp/stage.html",
+        "checkedAt": "2026-10-22T13:42:52.296Z",
+        "sha256": "ab768623070128ccef048c88def86155dbe776c3d8db423cc8fa89432673d8a8"
+      },
+      {
+        "name": "characters",
+        "url": "https://karneval.eigeki.jp/phone/the-stage%E3%80%8E%E3%82%AB%E3%83%BC%E3%83%8B%E3%83%B4%E3%82%A1%E3%83%AB-%E5%A7%8B%E3%81%BE%E3%82%8A%E3%81%AE%E8%BC%AA%E8%88%9E%E6%9B%B2%E3%80%8F%E5%85%AC%E5%BC%8F%E3%82%B5%E3%82%A4%E3%83%88---%E3%82%AD%E3%83%A3%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%BC.html",
+        "status": 403,
+        "finalUrl": "https://karneval.eigeki.jp/phone/the-stage%E3%80%8E%E3%82%AB%E3%83%BC%E3%83%8B%E3%83%B4%E3%82%A1%E3%83%AB-%E5%A7%8B%E3%81%BE%E3%82%8A%E3%81%AE%E8%BC%AA%E8%88%9E%E6%9B%B2%E3%80%8F%E5%85%AC%E5%BC%8F%E3%82%B5%E3%82%A4%E3%83%88---%E3%82%AD%E3%83%A3%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%BC.html",
+        "checkedAt": "2026-10-22T13:42:52.304Z",
+        "sha256": "ab768623070128ccef048c88def86155dbe776c3d8db423cc8fa89432673d8a8"
+      },
+      {
+        "name": "sena",
+        "url": "https://g-tohai.co.jp/kuramochi_sena/",
+        "status": 404,
+        "finalUrl": "https://g-tohai.co.jp/kuramochi_sena/",
+        "checkedAt": "2026-10-22T13:45:17.779Z",
+        "sha256": "9516567a944ca0421b65cdb7267652f6c6910d0dd9b663c02b34bbea30235019"
+      }
+    ],
+    "notes": [
+      "新規人物4・作品1・配役9、既存5人物を再利用。アンサンブル6人は作品クレジットへ。",
+      "Supabase changelogを同日確認。既存DMLと採用RPCのみ、DDL・認証・権限変更なし。",
+      "確認できた舞台作品は2016年の1作品。上映・DVD発売・ボイスアプリ・期間限定配信を別舞台作品として増やさない。"
+    ],
+    "unresolved": [
+      "現在所属未確認の人物は所属を書かない。黒木の現所属・身長、岡林の現所属・身長・血液型等は保留。",
+      "人物総合監査、詳細英訳、主演指定、現在の本編配信の追加確認は後続。",
+      "公式サイトの取得制限により、過去告知の完全網羅までは未確認。出演変更や公演中止がなかったと断定しない。"
+    ]
+  },
+  "requestKey": "8991323c85d64f3a13777762a37cd1b92248ae298acee06ded57a3fce58d3898"
+}

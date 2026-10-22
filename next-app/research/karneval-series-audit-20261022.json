@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-10-22T13:57:33.220Z",
+  "scope": "確認できた2016年公演1作品を収録し、配役・年表・公開導線を点検。公式の取得制限による過去告知の完全網羅、全人物属性の総合監査・詳細翻訳は未完。",
+  "franchiseId": "ccd71c2b-4d89-424a-9f05-c3140039a755",
+  "slug": "karneval",
+  "registeredWorks": 1,
+  "castRows": 9,
+  "uniqueActors": 9,
+  "publicPages": 22,
+  "creditOnlyNames": 6,
+  "timeline": [
+    "2016/05"
+  ],
+  "works": [
+    {
+      "id": "eb29507e-96de-4654-97f5-cfe2e4542d8c",
+      "slug": "karneval2016",
+      "title": "THE STAGE『カーニヴァル 始まりの輪舞曲』",
+      "title_en": "Karneval: Hajimari no Rondo",
+      "period": "東京：2016年5月20日〜29日",
+      "venue": "東京：あうるすぽっと",
+      "castRows": 9,
+      "source": "https://kira-hai.net/karneval2016",
+      "research": "next-app/research/karneval2016-20261022.json",
+      "summaryPresent": true,
+      "englishSummaryPresent": true,
+      "creditOnlyNames": 6,
+      "streaming": null,
+      "exceptions": [
+        "第一参照先の役付き9人と、公式のアンサンブル6人を分けて保存。サブキャスト4人も通常役付き出演として登録し、掲載ブロックを理由に除外しない。",
+        "公式サイトの通常fetchは403。web取得で確認できた公演情報・人物紹介・アンサンブル見出し／氏名を構造化したwebEvidenceへ保存し、200で取得した原HTMLがあるとは扱わない。日程・配役・スタッフ・本作あらすじはイープラス等の当時の公演情報でも照合。",
+        "ボイスアルバムはキャスト音声アプリ、ルッキュは2016年6/6〜19限定配信。現在の舞台本編視聴可能やDMM/U-NEXT見放題としてvodへ追加しない。",
+        "既存シリーズ紹介の未検証の評語や演技評価、ストレートプレイの断定を短い確認済みの作品紹介へ整理。シリーズ名・format=stage・原作区分・制作会社・関連ID等は保持。",
+        "作品・シリーズ英名は編集上の表記で、公式英題とは断定しない。"
+      ]
+    }
+  ],
+  "pendingChecks": [
+    "現在所属未確認の人物は所属を書かない。黒木の現所属・身長、岡林の現所属・身長・血液型等は保留。",
+    "人物総合監査、詳細英訳、主演指定、現在の本編配信の追加確認は後続。",
+    "公式サイトの取得制限により、過去告知の完全網羅までは未確認。出演変更や公演中止がなかったと断定しない。"
+  ],
+  "report": "docs/karneval2016-2026-10-22.md"
+}

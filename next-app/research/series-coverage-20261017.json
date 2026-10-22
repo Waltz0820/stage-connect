@@ -1840,8 +1840,34 @@
       "slug": "karneval",
       "name": "THE STAGE「カーニヴァル」",
       "registeredDay": "2026-02-09",
-      "plays": 0,
-      "protected": false
+      "plays": 1,
+      "protected": false,
+      "castRows": 9,
+      "castCoverageNote": "2016年『始まりの輪舞曲』を1作品9配役で収録。既存5人物を再利用し新規4人物を追加。サブキャスト4人も通常役付きとして保持、公式アンサンブル6人は作品クレジットへ。公式は通常fetch403のためweb取得で確認した事実を構造化保存し、当時のイープラス・公演告知・開幕情報と照合。人物は具体的な役歴で同定し、黒木シオンと同名の架空キャラ属性を排除。所属不明は書かない。作品日英タイトル・概要、シリーズ英名・英語概要を補完し未検証の評語・形式断定を短い事実紹介へ整理。現在の配信は未確認でvod空欄。日英22ページ、年表2016/05・抜粋・9配役・全クレジット・逆リンク・投票・構造化データを確認。8テーブル全行比較・再実行0変更。公式告知の完全網羅・人物総合監査・詳細英訳・主演指定・現在配信確認は後続。",
+      "seriesAudit": {
+        "checkedAt": "2026-10-22T13:57:33.220Z",
+        "scope": "確認できた2016年公演1作品を収録し、配役・年表・公開導線を点検。公式の取得制限による過去告知の完全網羅、全人物属性の総合監査・詳細翻訳は未完。",
+        "works": 1,
+        "castRows": 9,
+        "currentBatchWorks": 1,
+        "currentBatchCastRows": 9,
+        "newActors": 4,
+        "existingActorsPreserved": 5,
+        "seriesUniqueActors": 9,
+        "creditOnlyNames": 6,
+        "publicPages": 22,
+        "timeline": [
+          "2016/05"
+        ],
+        "report": "docs/karneval2016-2026-10-22.md",
+        "research": "next-app/research/karneval2016-20261022.json",
+        "seriesResearch": "next-app/research/karneval-series-audit-20261022.json",
+        "pendingChecks": [
+          "現在所属未確認の人物は所属を書かない。黒木の現所属・身長、岡林の現所属・身長・血液型等は保留。",
+          "人物総合監査、詳細英訳、主演指定、現在の本編配信の追加確認は後続。",
+          "公式サイトの取得制限により、過去告知の完全網羅までは未確認。出演変更や公演中止がなかったと断定しない。"
+        ]
+      }
     },
     {
       "id": "cce33553-7e67-4cb5-aae3-d6482dd01562",
