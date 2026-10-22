@@ -2191,8 +2191,34 @@
       "slug": "blue-period",
       "name": "舞台「ブルーピリオド」",
       "registeredDay": "2026-02-09",
-      "plays": 0,
-      "protected": false
+      "plays": 1,
+      "protected": false,
+      "castRows": 11,
+      "castCoverageNote": "2022年ブルーピリオドを1作品11配役で収録。既存7人物を再利用し新規4人物を追加。役名なし10人は公式の区分を捏造せず出演クレジットへ保存。制作者公式・学校・本人告知で確認し、未確認の読み・生年月日・現所属等は空欄。作品日英タイトル・概要とシリーズ英名・英語概要を補完、U-NEXT舞台個別リンクを保存。日英26ページ、年表2022/03・抜粋・11配役・全クレジット・逆リンク・投票・配信導線を確認。8テーブル全行比較、再実行0変更。旧専用サイトの告知完全網羅・人物総合監査・詳細英訳・主演指定・既存紹介の公演形式監査は後続。",
+      "seriesAudit": {
+        "checkedAt": "2026-10-22T09:25:21.263Z",
+        "scope": "確認できた2022年公演1作品の収録・配役・年表・公開導線を点検。過去告知の完全網羅、全項目一次監査・詳細翻訳は未完。",
+        "works": 1,
+        "castRows": 11,
+        "currentBatchWorks": 1,
+        "currentBatchCastRows": 11,
+        "newActors": 4,
+        "existingActorsPreserved": 7,
+        "seriesUniqueActors": 11,
+        "creditOnlyNames": 10,
+        "publicPages": 26,
+        "timeline": [
+          "2022/03"
+        ],
+        "report": "docs/blueperiod2022-2026-10-22.md",
+        "research": "next-app/research/blueperiod2022-20261022.json",
+        "seriesResearch": "next-app/research/blueperiod-series-audit-20261022.json",
+        "pendingChecks": [
+          "人物総合監査・詳細英訳・主演指定は後続。役名やスタッフ等の詳細英訳は今回の完成範囲に含めない。",
+          "宮城生馬の読み・生年月日・出身地・所属等、岡村さやかの出生年・出身地・現所属等は確認できず。",
+          "旧専用サイトにアクセスできず、過去告知の完全な網羅確認は未完。公演中止やキャスト変更がなかったと断定しない。"
+        ]
+      }
     },
     {
       "id": "fced3f0c-f4b3-4d40-ba8a-82c6e8be3238",
