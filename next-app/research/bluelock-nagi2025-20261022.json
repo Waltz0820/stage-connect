@@ -1,0 +1,3347 @@
+{
+  "version": 1,
+  "batchId": "bluelock-nagi2025-20261022-01",
+  "expectedFranchise": {
+    "id": "2a8c7f6a-f48b-4c65-829d-f869229567e0",
+    "name": "舞台『ブルーロック』（ブルステ）",
+    "created_at": "2026-02-08T16:26:41.990203+00:00",
+    "updated_at": "2026-10-21T16:16:29.615669+00:00",
+    "slug": "blue-lock",
+    "intro": null,
+    "description": "金城宗幸（原作）・ノ村優介（漫画）の『ブルーロック』を原作とする舞台シリーズ。2023年に初演。FW育成施設「青い監獄」に集められた高校生たちが、世界一のストライカーを目指して選考に挑む。",
+    "origin_type": "漫画原作",
+    "origin_note": "原作：金城宗幸・ノ村優介「ブルーロック」（講談社「週刊少年マガジン」連載）",
+    "production_companies": [
+      "Office ENDLESS"
+    ],
+    "related_franchise_ids": [],
+    "format": "stage",
+    "description_en": "A stage series based on Blue Lock, the manga written by Muneyuki Kaneshiro and illustrated by Yusuke Nomura. First staged in 2023, it follows high-school forwards competing at the Blue Lock training facility to become the world’s best striker.",
+    "name_en": "BLUE LOCK Stage Series"
+  },
+  "franchisePatch": {},
+  "actors": [
+    {
+      "actor": {
+        "id": "8953ff7d-54be-4d42-a117-e59bc507ea14",
+        "slug": "seki-hayata",
+        "name": "関隼汰",
+        "kana": "せき はやた",
+        "profile": "千葉県出身の俳優。オフィス24所属。第33回ジュノンスーパーボーイコンテストでフォトジェニック賞を受賞。『仮面ライダーリバイス』のオルテカ役、舞台『ブルーロック -EPISODE 凪-』の日不見愛基役などを務める。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1999-08-18",
+        "height_cm": 174,
+        "blood_type": null,
+        "birthday_label": null,
+        "name_en": "Hayata Seki",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "関隼汰",
+      "profileUrl": "https://www.japanmusic.jp/talent/sekihayata/",
+      "evidence": [
+        {
+          "url": "https://www.japanmusic.jp/talent/sekihayata/",
+          "checkedAt": "2026-10-22T07:25:11.398Z",
+          "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+        },
+        {
+          "url": "https://kira-hai.net/seki-hayata",
+          "checkedAt": "2026-10-22T07:22:49.255Z",
+          "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+        },
+        {
+          "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/cast-staff/",
+          "checkedAt": "2026-10-22T07:22:47.598Z",
+          "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+        }
+      ],
+      "notes": [
+        "現行事務所のDOB・174cm・千葉県・英字・所属・ジュノン受賞・オルテカ役・本作日不見役を確認。読みのみ第一参照先。血液型・性別は未確認で空欄。",
+        "事務所履歴のEPISPDEという綴り誤字を正式作品名へ流用しない。初演2025年11月と再演2026年6月が別公演として記録されている。関修人など既存の別人を統合しない。"
+      ]
+    }
+  ],
+  "works": [
+    {
+      "year": 2025,
+      "before": null,
+      "patch": null,
+      "play": {
+        "id": "eac92cc7-7dbc-4e2a-bb2c-d8d020dff84a",
+        "slug": "bluelock-nagi2025",
+        "title": "舞台『ブルーロック -EPISODE 凪-』",
+        "franchise_id": "2a8c7f6a-f48b-4c65-829d-f869229567e0",
+        "summary": "退屈な毎日を送っていた高校生・凪誠士郎は、御影玲王にサッカーの才能を見いだされる。ともに「青い監獄」へ参加した凪は、潔世一らとの対戦で初めて悔しさを知り、強くなりたいという思いを抱く。凪の視点から、選考を勝ち進む中で揺れ動く玲王との関係を描く。",
+        "period": "東京：2025年11月20日〜30日",
+        "venue": "東京：東京ドームシティ シアターGロッソ",
+        "vod": null,
+        "genre": null,
+        "tags": [],
+        "credits": [
+          {
+            "role": "脚本・演出",
+            "names": [
+              "伊勢直弘"
+            ],
+            "is_core": true,
+            "sort_order": 1
+          },
+          {
+            "role": "ステージング",
+            "names": [
+              "船木政秀"
+            ],
+            "is_core": false,
+            "sort_order": 2
+          },
+          {
+            "role": "サッカー指導",
+            "names": [
+              "松本 岳",
+              "影山達也"
+            ],
+            "is_core": false,
+            "sort_order": 3
+          },
+          {
+            "role": "演出助手",
+            "names": [
+              "入江浩平"
+            ],
+            "is_core": false,
+            "sort_order": 4
+          },
+          {
+            "role": "美術",
+            "names": [
+              "乘峯雅寛"
+            ],
+            "is_core": false,
+            "sort_order": 5
+          },
+          {
+            "role": "技術監督",
+            "names": [
+              "寅川英司"
+            ],
+            "is_core": false,
+            "sort_order": 6
+          },
+          {
+            "role": "舞台監督",
+            "names": [
+              "弘光哲也"
+            ],
+            "is_core": false,
+            "sort_order": 7
+          },
+          {
+            "role": "照明",
+            "names": [
+              "大波多秀起 （デイライト）"
+            ],
+            "is_core": false,
+            "sort_order": 8
+          },
+          {
+            "role": "音響",
+            "names": [
+              "前田規寛 （ロア）"
+            ],
+            "is_core": false,
+            "sort_order": 9
+          },
+          {
+            "role": "映像",
+            "names": [
+              "松本竜一"
+            ],
+            "is_core": false,
+            "sort_order": 10
+          },
+          {
+            "role": "衣裳",
+            "names": [
+              "雲出三緒"
+            ],
+            "is_core": false,
+            "sort_order": 11
+          },
+          {
+            "role": "衣裳協賛",
+            "names": [
+              "UMBRO"
+            ],
+            "is_core": false,
+            "sort_order": 12
+          },
+          {
+            "role": "ヘアメイク",
+            "names": [
+              "木村美和子 （dot）"
+            ],
+            "is_core": false,
+            "sort_order": 13
+          },
+          {
+            "role": "撮影小道具",
+            "names": [
+              "平野雅史"
+            ],
+            "is_core": false,
+            "sort_order": 14
+          },
+          {
+            "role": "大道具",
+            "names": [
+              "俳優座劇場"
+            ],
+            "is_core": false,
+            "sort_order": 15
+          },
+          {
+            "role": "宣伝写真",
+            "names": [
+              "渡邉和弘"
+            ],
+            "is_core": false,
+            "sort_order": 16
+          },
+          {
+            "role": "宣伝美術・Webデザイン",
+            "names": [
+              "村上 凜",
+              "岡田千春（EAST END CREATIVE）"
+            ],
+            "is_core": false,
+            "sort_order": 17
+          },
+          {
+            "role": "グッズデザイン",
+            "names": [
+              "岡田千春",
+              "片山莉緒（EAST END CREATIVE）",
+              "flyer-ya"
+            ],
+            "is_core": false,
+            "sort_order": 18
+          },
+          {
+            "role": "制作",
+            "names": [
+              "Office ENDLESS"
+            ],
+            "is_core": false,
+            "sort_order": 19
+          },
+          {
+            "role": "クリエイティブプロデューサー",
+            "names": [
+              "下浦貴敬 （Office ENDLESS／ ENDLESS ACADEMY）"
+            ],
+            "is_core": false,
+            "sort_order": 20
+          },
+          {
+            "role": "協力",
+            "names": [
+              "ENDLESS ACADEMY"
+            ],
+            "is_core": false,
+            "sort_order": 21
+          },
+          {
+            "role": "主催",
+            "names": [
+              "舞台『ブルーロック - EPISODE 凪-』 製作委員会"
+            ],
+            "is_core": false,
+            "sort_order": 22
+          },
+          {
+            "role": "アンサンブル",
+            "names": [
+              "荒牧大矢",
+              "窪寺 直",
+              "土居健蔵",
+              "古田 蓮"
+            ],
+            "is_core": false,
+            "sort_order": 23
+          }
+        ],
+        "related_franchise_ids": [],
+        "title_en": "BLUE LOCK -EPISODE NAGI-",
+        "summary_en": "Bored high school student Seishiro Nagi discovers his talent for soccer when Reo Mikage invites him to play. Together they enter Blue Lock, where encounters with Yoichi Isagi and other strikers awaken Nagi’s frustration and desire to improve. The story follows the selection from Nagi’s perspective as his relationship with Reo begins to change."
+      },
+      "rawSource": {
+        "sourceUrl": "https://kira-hai.net/bluelock-nagi2025",
+        "title": "舞台『ブルーロック -EPISODE 凪-』",
+        "scheduleLines": [
+          "2025年11月20日-30日 東京ドームシティ シアターGロッソ"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "佐藤たかみち",
+            "sourceActorUrl": "https://kira-hai.net/sato-takamichi",
+            "role_name": "凪誠士郎",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "菊池修司",
+            "sourceActorUrl": "https://kira-hai.net/kikuchi-shuji",
+            "role_name": "御影玲王",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "松井健太",
+            "sourceActorUrl": "https://kira-hai.net/matsui-kenta",
+            "role_name": "剣城斬鉄",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "佐藤信長",
+            "sourceActorUrl": "https://kira-hai.net/sato-nobunaga",
+            "role_name": "蜂楽廻",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "佐伯亮",
+            "sourceActorUrl": "https://kira-hai.net/saeki-ryo",
+            "role_name": "千切豹馬",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "伊万里有",
+            "sourceActorUrl": "https://kira-hai.net/imari-yu",
+            "role_name": "馬狼照英",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "宇野結也",
+            "sourceActorUrl": "https://kira-hai.net/uno-yuya",
+            "role_name": "烏旅人",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "健人",
+            "sourceActorUrl": "https://kira-hai.net/kento",
+            "role_name": "乙夜影汰",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "前嶋曜",
+            "sourceActorUrl": "https://kira-hai.net/maejima-yo",
+            "role_name": "二子一揮",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "中西智也",
+            "sourceActorUrl": "https://kira-hai.net/nakanishi-tomoya",
+            "role_name": "清羅刃",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "関隼汰",
+            "sourceActorUrl": "https://kira-hai.net/seki-hayata",
+            "role_name": "日不見愛基",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "坂田大夢",
+            "sourceActorUrl": "https://kira-hai.net/sakata-hiromu",
+            "role_name": "柊零次",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "竹中凌平",
+            "sourceActorUrl": "https://kira-hai.net/takenaka-ryohei",
+            "role_name": "潔世一",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "草地稜之",
+            "sourceActorUrl": "https://kira-hai.net/kusachi-ryono",
+            "role_name": "糸師凛",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "横井翔二郎",
+            "sourceActorUrl": "https://kira-hai.net/yokoi-shojiro",
+            "role_name": "絵心甚八",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "荒牧大矢",
+            "sourceActorUrl": "https://kira-hai.net/aramaki-daiya",
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "窪寺直",
+            "sourceActorUrl": "https://kira-hai.net/kubodera-nao",
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "土居健蔵",
+            "sourceActorUrl": "https://kira-hai.net/doi-kenzo",
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "古田蓮",
+            "sourceActorUrl": "https://kira-hai.net/furuta-ren",
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          }
+        ],
+        "unparsed": []
+      },
+      "officialRaw": {
+        "cards": [
+          {
+            "role": "凪 誠士郎",
+            "name": "佐藤たかみち"
+          },
+          {
+            "role": "御影玲王",
+            "name": "菊池修司"
+          },
+          {
+            "role": "剣城斬鉄",
+            "name": "松井健太"
+          },
+          {
+            "role": "蜂楽 廻",
+            "name": "佐藤信長"
+          },
+          {
+            "role": "千切豹馬",
+            "name": "佐伯 亮"
+          },
+          {
+            "role": "馬狼照英",
+            "name": "伊万里 有"
+          },
+          {
+            "role": "烏 旅人",
+            "name": "宇野結也"
+          },
+          {
+            "role": "乙夜影汰",
+            "name": "健人"
+          },
+          {
+            "role": "二子一揮",
+            "name": "前嶋 曜"
+          },
+          {
+            "role": "清羅 刃",
+            "name": "中西智也"
+          },
+          {
+            "role": "日不見愛基",
+            "name": "関 隼汰"
+          },
+          {
+            "role": "柊 零次",
+            "name": "坂田大夢"
+          },
+          {
+            "role": "潔 世一",
+            "name": "竹中凌平"
+          },
+          {
+            "role": "糸師 凛",
+            "name": "草地稜之"
+          },
+          {
+            "role": "絵心甚八",
+            "name": "横井翔二郎"
+          }
+        ],
+        "ensemble": [
+          "荒牧大矢",
+          "窪寺 直",
+          "土居健蔵",
+          "古田 蓮"
+        ]
+      },
+      "source": {
+        "sourceUrl": "https://kira-hai.net/bluelock-nagi2025",
+        "title": "舞台『ブルーロック -EPISODE 凪-』",
+        "scheduleLines": [
+          "2025年11月20日-30日 東京ドームシティ シアターGロッソ"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "佐藤たかみち",
+            "sourceActorUrl": "https://kira-hai.net/sato-takamichi",
+            "role_name": "凪誠士郎",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "菊池修司",
+            "sourceActorUrl": "https://kira-hai.net/kikuchi-shuji",
+            "role_name": "御影玲王",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "松井健太",
+            "sourceActorUrl": "https://kira-hai.net/matsui-kenta",
+            "role_name": "剣城斬鉄",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "佐藤信長",
+            "sourceActorUrl": "https://kira-hai.net/sato-nobunaga",
+            "role_name": "蜂楽廻",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "佐伯亮",
+            "sourceActorUrl": "https://kira-hai.net/saeki-ryo",
+            "role_name": "千切豹馬",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "伊万里有",
+            "sourceActorUrl": "https://kira-hai.net/imari-yu",
+            "role_name": "馬狼照英",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "宇野結也",
+            "sourceActorUrl": "https://kira-hai.net/uno-yuya",
+            "role_name": "烏旅人",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "健人",
+            "sourceActorUrl": "https://kira-hai.net/kento",
+            "role_name": "乙夜影汰",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "前嶋曜",
+            "sourceActorUrl": "https://kira-hai.net/maejima-yo",
+            "role_name": "二子一揮",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "中西智也",
+            "sourceActorUrl": "https://kira-hai.net/nakanishi-tomoya",
+            "role_name": "清羅刃",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "関隼汰",
+            "sourceActorUrl": "https://kira-hai.net/seki-hayata",
+            "role_name": "日不見愛基",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "坂田大夢",
+            "sourceActorUrl": "https://kira-hai.net/sakata-hiromu",
+            "role_name": "柊零次",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "竹中凌平",
+            "sourceActorUrl": "https://kira-hai.net/takenaka-ryohei",
+            "role_name": "潔世一",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "草地稜之",
+            "sourceActorUrl": "https://kira-hai.net/kusachi-ryono",
+            "role_name": "糸師凛",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "横井翔二郎",
+            "sourceActorUrl": "https://kira-hai.net/yokoi-shojiro",
+            "role_name": "絵心甚八",
+            "cast_group": null
+          }
+        ],
+        "unparsed": []
+      },
+      "stage": {
+        "workUrl": "https://kira-hai.net/bluelock-nagi2025",
+        "key": "d5ddb32b360fcb4a9404fe9769a36fb2b0948cc81c494af0a07dd425ef20e1ea",
+        "items": [
+          {
+            "source_actor_name": "佐藤たかみち",
+            "source_actor_url": "https://kira-hai.net/sato-takamichi",
+            "source_work_title": "舞台『ブルーロック -EPISODE 凪-』",
+            "source_year": 2025,
+            "source_role_raw": "凪誠士郎",
+            "source_role_names": [
+              "凪誠士郎"
+            ],
+            "source_cast_group": null,
+            "source_order": 1,
+            "source_credit_key": "89b1b9445e92b3c84365",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bluelock-nagi2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bluelock-nagi2025",
+                  "checkedAt": "2026-10-22T07:22:46.989Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/",
+                  "checkedAt": "2026-10-22T07:22:47.315Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/cast-staff/",
+                  "checkedAt": "2026-10-22T07:22:47.598Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/schedule-ticket/",
+                  "checkedAt": "2026-10-22T07:25:09.272Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/introduction/",
+                  "checkedAt": "2026-10-22T07:22:47.698Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/news/",
+                  "checkedAt": "2026-10-22T07:22:48.808Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/news/?paged=2",
+                  "checkedAt": "2026-10-22T07:25:09.614Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://enjin-official.jp/schedule/739",
+                  "checkedAt": "2026-10-22T07:22:49.514Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/streaming/",
+                  "checkedAt": "2026-10-22T07:25:10.440Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "bfde788842d121a720d8dad5a0237b25f8394809d1e0ba1f870aae5ed04868ee",
+              "review_fingerprint": "039c003638d8d8a5f142fd42c57d624761041a1a533df32b38724d121619ae6d",
+              "snapshot_fingerprint": "54588df4665d5ace7d40b3ed1cea11cf0e685da4a6f8c5dad72755d228a33a0f",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "e34bae02-d4f8-4c49-9c53-b5f65ee97b49",
+            "matched_play_id": "eac92cc7-7dbc-4e2a-bb2c-d8d020dff84a",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "菊池修司",
+            "source_actor_url": "https://kira-hai.net/kikuchi-shuji",
+            "source_work_title": "舞台『ブルーロック -EPISODE 凪-』",
+            "source_year": 2025,
+            "source_role_raw": "御影玲王",
+            "source_role_names": [
+              "御影玲王"
+            ],
+            "source_cast_group": null,
+            "source_order": 2,
+            "source_credit_key": "7c26865be34cee36a2d6",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bluelock-nagi2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bluelock-nagi2025",
+                  "checkedAt": "2026-10-22T07:22:46.989Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/",
+                  "checkedAt": "2026-10-22T07:22:47.315Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/cast-staff/",
+                  "checkedAt": "2026-10-22T07:22:47.598Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/schedule-ticket/",
+                  "checkedAt": "2026-10-22T07:25:09.272Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/introduction/",
+                  "checkedAt": "2026-10-22T07:22:47.698Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/news/",
+                  "checkedAt": "2026-10-22T07:22:48.808Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/news/?paged=2",
+                  "checkedAt": "2026-10-22T07:25:09.614Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://enjin-official.jp/schedule/739",
+                  "checkedAt": "2026-10-22T07:22:49.514Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/streaming/",
+                  "checkedAt": "2026-10-22T07:25:10.440Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "bfde788842d121a720d8dad5a0237b25f8394809d1e0ba1f870aae5ed04868ee",
+              "review_fingerprint": "039c003638d8d8a5f142fd42c57d624761041a1a533df32b38724d121619ae6d",
+              "snapshot_fingerprint": "54588df4665d5ace7d40b3ed1cea11cf0e685da4a6f8c5dad72755d228a33a0f",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "e70ca3b8-5221-4009-8981-9584226c490c",
+            "matched_play_id": "eac92cc7-7dbc-4e2a-bb2c-d8d020dff84a",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "松井健太",
+            "source_actor_url": "https://kira-hai.net/matsui-kenta",
+            "source_work_title": "舞台『ブルーロック -EPISODE 凪-』",
+            "source_year": 2025,
+            "source_role_raw": "剣城斬鉄",
+            "source_role_names": [
+              "剣城斬鉄"
+            ],
+            "source_cast_group": null,
+            "source_order": 3,
+            "source_credit_key": "32ec2ca04ddb3004314c",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bluelock-nagi2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bluelock-nagi2025",
+                  "checkedAt": "2026-10-22T07:22:46.989Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/",
+                  "checkedAt": "2026-10-22T07:22:47.315Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/cast-staff/",
+                  "checkedAt": "2026-10-22T07:22:47.598Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/schedule-ticket/",
+                  "checkedAt": "2026-10-22T07:25:09.272Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/introduction/",
+                  "checkedAt": "2026-10-22T07:22:47.698Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/news/",
+                  "checkedAt": "2026-10-22T07:22:48.808Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/news/?paged=2",
+                  "checkedAt": "2026-10-22T07:25:09.614Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://enjin-official.jp/schedule/739",
+                  "checkedAt": "2026-10-22T07:22:49.514Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/streaming/",
+                  "checkedAt": "2026-10-22T07:25:10.440Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "bfde788842d121a720d8dad5a0237b25f8394809d1e0ba1f870aae5ed04868ee",
+              "review_fingerprint": "039c003638d8d8a5f142fd42c57d624761041a1a533df32b38724d121619ae6d",
+              "snapshot_fingerprint": "54588df4665d5ace7d40b3ed1cea11cf0e685da4a6f8c5dad72755d228a33a0f",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "2a78c3a2-0a79-4db3-a31d-7bc9bfc7c0ca",
+            "matched_play_id": "eac92cc7-7dbc-4e2a-bb2c-d8d020dff84a",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "佐藤信長",
+            "source_actor_url": "https://kira-hai.net/sato-nobunaga",
+            "source_work_title": "舞台『ブルーロック -EPISODE 凪-』",
+            "source_year": 2025,
+            "source_role_raw": "蜂楽廻",
+            "source_role_names": [
+              "蜂楽廻"
+            ],
+            "source_cast_group": null,
+            "source_order": 4,
+            "source_credit_key": "6cece141c1aa10d4d838",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bluelock-nagi2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bluelock-nagi2025",
+                  "checkedAt": "2026-10-22T07:22:46.989Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/",
+                  "checkedAt": "2026-10-22T07:22:47.315Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/cast-staff/",
+                  "checkedAt": "2026-10-22T07:22:47.598Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/schedule-ticket/",
+                  "checkedAt": "2026-10-22T07:25:09.272Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/introduction/",
+                  "checkedAt": "2026-10-22T07:22:47.698Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/news/",
+                  "checkedAt": "2026-10-22T07:22:48.808Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/news/?paged=2",
+                  "checkedAt": "2026-10-22T07:25:09.614Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://enjin-official.jp/schedule/739",
+                  "checkedAt": "2026-10-22T07:22:49.514Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/streaming/",
+                  "checkedAt": "2026-10-22T07:25:10.440Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "bfde788842d121a720d8dad5a0237b25f8394809d1e0ba1f870aae5ed04868ee",
+              "review_fingerprint": "039c003638d8d8a5f142fd42c57d624761041a1a533df32b38724d121619ae6d",
+              "snapshot_fingerprint": "54588df4665d5ace7d40b3ed1cea11cf0e685da4a6f8c5dad72755d228a33a0f",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "888425ea-130c-44be-8fbf-2393e597267d",
+            "matched_play_id": "eac92cc7-7dbc-4e2a-bb2c-d8d020dff84a",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "佐伯亮",
+            "source_actor_url": "https://kira-hai.net/saeki-ryo",
+            "source_work_title": "舞台『ブルーロック -EPISODE 凪-』",
+            "source_year": 2025,
+            "source_role_raw": "千切豹馬",
+            "source_role_names": [
+              "千切豹馬"
+            ],
+            "source_cast_group": null,
+            "source_order": 5,
+            "source_credit_key": "b16fb470187ade71cfc3",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bluelock-nagi2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bluelock-nagi2025",
+                  "checkedAt": "2026-10-22T07:22:46.989Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/",
+                  "checkedAt": "2026-10-22T07:22:47.315Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/cast-staff/",
+                  "checkedAt": "2026-10-22T07:22:47.598Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/schedule-ticket/",
+                  "checkedAt": "2026-10-22T07:25:09.272Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/introduction/",
+                  "checkedAt": "2026-10-22T07:22:47.698Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/news/",
+                  "checkedAt": "2026-10-22T07:22:48.808Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/news/?paged=2",
+                  "checkedAt": "2026-10-22T07:25:09.614Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://enjin-official.jp/schedule/739",
+                  "checkedAt": "2026-10-22T07:22:49.514Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/streaming/",
+                  "checkedAt": "2026-10-22T07:25:10.440Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "bfde788842d121a720d8dad5a0237b25f8394809d1e0ba1f870aae5ed04868ee",
+              "review_fingerprint": "039c003638d8d8a5f142fd42c57d624761041a1a533df32b38724d121619ae6d",
+              "snapshot_fingerprint": "54588df4665d5ace7d40b3ed1cea11cf0e685da4a6f8c5dad72755d228a33a0f",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "7444fe49-d308-41e4-9220-e7dd737d044f",
+            "matched_play_id": "eac92cc7-7dbc-4e2a-bb2c-d8d020dff84a",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "伊万里有",
+            "source_actor_url": "https://kira-hai.net/imari-yu",
+            "source_work_title": "舞台『ブルーロック -EPISODE 凪-』",
+            "source_year": 2025,
+            "source_role_raw": "馬狼照英",
+            "source_role_names": [
+              "馬狼照英"
+            ],
+            "source_cast_group": null,
+            "source_order": 6,
+            "source_credit_key": "e06ad56677130d83ed2c",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bluelock-nagi2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bluelock-nagi2025",
+                  "checkedAt": "2026-10-22T07:22:46.989Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/",
+                  "checkedAt": "2026-10-22T07:22:47.315Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/cast-staff/",
+                  "checkedAt": "2026-10-22T07:22:47.598Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/schedule-ticket/",
+                  "checkedAt": "2026-10-22T07:25:09.272Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/introduction/",
+                  "checkedAt": "2026-10-22T07:22:47.698Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/news/",
+                  "checkedAt": "2026-10-22T07:22:48.808Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/news/?paged=2",
+                  "checkedAt": "2026-10-22T07:25:09.614Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://enjin-official.jp/schedule/739",
+                  "checkedAt": "2026-10-22T07:22:49.514Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/streaming/",
+                  "checkedAt": "2026-10-22T07:25:10.440Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "bfde788842d121a720d8dad5a0237b25f8394809d1e0ba1f870aae5ed04868ee",
+              "review_fingerprint": "039c003638d8d8a5f142fd42c57d624761041a1a533df32b38724d121619ae6d",
+              "snapshot_fingerprint": "54588df4665d5ace7d40b3ed1cea11cf0e685da4a6f8c5dad72755d228a33a0f",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "48311c5f-4620-416c-8f41-7b87ee99d51d",
+            "matched_play_id": "eac92cc7-7dbc-4e2a-bb2c-d8d020dff84a",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "宇野結也",
+            "source_actor_url": "https://kira-hai.net/uno-yuya",
+            "source_work_title": "舞台『ブルーロック -EPISODE 凪-』",
+            "source_year": 2025,
+            "source_role_raw": "烏旅人",
+            "source_role_names": [
+              "烏旅人"
+            ],
+            "source_cast_group": null,
+            "source_order": 7,
+            "source_credit_key": "bef788c4284d88b93ce8",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bluelock-nagi2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bluelock-nagi2025",
+                  "checkedAt": "2026-10-22T07:22:46.989Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/",
+                  "checkedAt": "2026-10-22T07:22:47.315Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/cast-staff/",
+                  "checkedAt": "2026-10-22T07:22:47.598Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/schedule-ticket/",
+                  "checkedAt": "2026-10-22T07:25:09.272Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/introduction/",
+                  "checkedAt": "2026-10-22T07:22:47.698Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/news/",
+                  "checkedAt": "2026-10-22T07:22:48.808Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/news/?paged=2",
+                  "checkedAt": "2026-10-22T07:25:09.614Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://enjin-official.jp/schedule/739",
+                  "checkedAt": "2026-10-22T07:22:49.514Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/streaming/",
+                  "checkedAt": "2026-10-22T07:25:10.440Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "bfde788842d121a720d8dad5a0237b25f8394809d1e0ba1f870aae5ed04868ee",
+              "review_fingerprint": "039c003638d8d8a5f142fd42c57d624761041a1a533df32b38724d121619ae6d",
+              "snapshot_fingerprint": "54588df4665d5ace7d40b3ed1cea11cf0e685da4a6f8c5dad72755d228a33a0f",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "c9a0b816-6f8d-413e-bdff-2e84f5f1a601",
+            "matched_play_id": "eac92cc7-7dbc-4e2a-bb2c-d8d020dff84a",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "健人",
+            "source_actor_url": "https://kira-hai.net/kento",
+            "source_work_title": "舞台『ブルーロック -EPISODE 凪-』",
+            "source_year": 2025,
+            "source_role_raw": "乙夜影汰",
+            "source_role_names": [
+              "乙夜影汰"
+            ],
+            "source_cast_group": null,
+            "source_order": 8,
+            "source_credit_key": "f449af3c866c98b9ae4f",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bluelock-nagi2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bluelock-nagi2025",
+                  "checkedAt": "2026-10-22T07:22:46.989Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/",
+                  "checkedAt": "2026-10-22T07:22:47.315Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/cast-staff/",
+                  "checkedAt": "2026-10-22T07:22:47.598Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/schedule-ticket/",
+                  "checkedAt": "2026-10-22T07:25:09.272Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/introduction/",
+                  "checkedAt": "2026-10-22T07:22:47.698Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/news/",
+                  "checkedAt": "2026-10-22T07:22:48.808Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/news/?paged=2",
+                  "checkedAt": "2026-10-22T07:25:09.614Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://enjin-official.jp/schedule/739",
+                  "checkedAt": "2026-10-22T07:22:49.514Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/streaming/",
+                  "checkedAt": "2026-10-22T07:25:10.440Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "bfde788842d121a720d8dad5a0237b25f8394809d1e0ba1f870aae5ed04868ee",
+              "review_fingerprint": "039c003638d8d8a5f142fd42c57d624761041a1a533df32b38724d121619ae6d",
+              "snapshot_fingerprint": "54588df4665d5ace7d40b3ed1cea11cf0e685da4a6f8c5dad72755d228a33a0f",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "4df6c773-2f8f-4c76-882c-4159d36da42a",
+            "matched_play_id": "eac92cc7-7dbc-4e2a-bb2c-d8d020dff84a",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "前嶋曜",
+            "source_actor_url": "https://kira-hai.net/maejima-yo",
+            "source_work_title": "舞台『ブルーロック -EPISODE 凪-』",
+            "source_year": 2025,
+            "source_role_raw": "二子一揮",
+            "source_role_names": [
+              "二子一揮"
+            ],
+            "source_cast_group": null,
+            "source_order": 9,
+            "source_credit_key": "8fa16aeaa2968bc7d6db",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bluelock-nagi2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bluelock-nagi2025",
+                  "checkedAt": "2026-10-22T07:22:46.989Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/",
+                  "checkedAt": "2026-10-22T07:22:47.315Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/cast-staff/",
+                  "checkedAt": "2026-10-22T07:22:47.598Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/schedule-ticket/",
+                  "checkedAt": "2026-10-22T07:25:09.272Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/introduction/",
+                  "checkedAt": "2026-10-22T07:22:47.698Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/news/",
+                  "checkedAt": "2026-10-22T07:22:48.808Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/news/?paged=2",
+                  "checkedAt": "2026-10-22T07:25:09.614Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://enjin-official.jp/schedule/739",
+                  "checkedAt": "2026-10-22T07:22:49.514Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/streaming/",
+                  "checkedAt": "2026-10-22T07:25:10.440Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "bfde788842d121a720d8dad5a0237b25f8394809d1e0ba1f870aae5ed04868ee",
+              "review_fingerprint": "039c003638d8d8a5f142fd42c57d624761041a1a533df32b38724d121619ae6d",
+              "snapshot_fingerprint": "54588df4665d5ace7d40b3ed1cea11cf0e685da4a6f8c5dad72755d228a33a0f",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "77fb830c-4de8-4b4f-8416-79c886b15501",
+            "matched_play_id": "eac92cc7-7dbc-4e2a-bb2c-d8d020dff84a",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "中西智也",
+            "source_actor_url": "https://kira-hai.net/nakanishi-tomoya",
+            "source_work_title": "舞台『ブルーロック -EPISODE 凪-』",
+            "source_year": 2025,
+            "source_role_raw": "清羅刃",
+            "source_role_names": [
+              "清羅刃"
+            ],
+            "source_cast_group": null,
+            "source_order": 10,
+            "source_credit_key": "9f3a8f2937cfde6ac486",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bluelock-nagi2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bluelock-nagi2025",
+                  "checkedAt": "2026-10-22T07:22:46.989Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/",
+                  "checkedAt": "2026-10-22T07:22:47.315Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/cast-staff/",
+                  "checkedAt": "2026-10-22T07:22:47.598Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/schedule-ticket/",
+                  "checkedAt": "2026-10-22T07:25:09.272Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/introduction/",
+                  "checkedAt": "2026-10-22T07:22:47.698Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/news/",
+                  "checkedAt": "2026-10-22T07:22:48.808Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/news/?paged=2",
+                  "checkedAt": "2026-10-22T07:25:09.614Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://enjin-official.jp/schedule/739",
+                  "checkedAt": "2026-10-22T07:22:49.514Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/streaming/",
+                  "checkedAt": "2026-10-22T07:25:10.440Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "bfde788842d121a720d8dad5a0237b25f8394809d1e0ba1f870aae5ed04868ee",
+              "review_fingerprint": "039c003638d8d8a5f142fd42c57d624761041a1a533df32b38724d121619ae6d",
+              "snapshot_fingerprint": "54588df4665d5ace7d40b3ed1cea11cf0e685da4a6f8c5dad72755d228a33a0f",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "14eb7849-874e-49ad-8729-793890561b40",
+            "matched_play_id": "eac92cc7-7dbc-4e2a-bb2c-d8d020dff84a",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "関隼汰",
+            "source_actor_url": "https://kira-hai.net/seki-hayata",
+            "source_work_title": "舞台『ブルーロック -EPISODE 凪-』",
+            "source_year": 2025,
+            "source_role_raw": "日不見愛基",
+            "source_role_names": [
+              "日不見愛基"
+            ],
+            "source_cast_group": null,
+            "source_order": 11,
+            "source_credit_key": "69dbf1ddae7bb0f0b760",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bluelock-nagi2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bluelock-nagi2025",
+                  "checkedAt": "2026-10-22T07:22:46.989Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/",
+                  "checkedAt": "2026-10-22T07:22:47.315Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/cast-staff/",
+                  "checkedAt": "2026-10-22T07:22:47.598Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/schedule-ticket/",
+                  "checkedAt": "2026-10-22T07:25:09.272Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/introduction/",
+                  "checkedAt": "2026-10-22T07:22:47.698Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/news/",
+                  "checkedAt": "2026-10-22T07:22:48.808Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/news/?paged=2",
+                  "checkedAt": "2026-10-22T07:25:09.614Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://enjin-official.jp/schedule/739",
+                  "checkedAt": "2026-10-22T07:22:49.514Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/streaming/",
+                  "checkedAt": "2026-10-22T07:25:10.440Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "bfde788842d121a720d8dad5a0237b25f8394809d1e0ba1f870aae5ed04868ee",
+              "review_fingerprint": "039c003638d8d8a5f142fd42c57d624761041a1a533df32b38724d121619ae6d",
+              "snapshot_fingerprint": "54588df4665d5ace7d40b3ed1cea11cf0e685da4a6f8c5dad72755d228a33a0f",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "8953ff7d-54be-4d42-a117-e59bc507ea14",
+            "matched_play_id": "eac92cc7-7dbc-4e2a-bb2c-d8d020dff84a",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "坂田大夢",
+            "source_actor_url": "https://kira-hai.net/sakata-hiromu",
+            "source_work_title": "舞台『ブルーロック -EPISODE 凪-』",
+            "source_year": 2025,
+            "source_role_raw": "柊零次",
+            "source_role_names": [
+              "柊零次"
+            ],
+            "source_cast_group": null,
+            "source_order": 12,
+            "source_credit_key": "f14055bc287d63c99da6",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bluelock-nagi2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bluelock-nagi2025",
+                  "checkedAt": "2026-10-22T07:22:46.989Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/",
+                  "checkedAt": "2026-10-22T07:22:47.315Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/cast-staff/",
+                  "checkedAt": "2026-10-22T07:22:47.598Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/schedule-ticket/",
+                  "checkedAt": "2026-10-22T07:25:09.272Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/introduction/",
+                  "checkedAt": "2026-10-22T07:22:47.698Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/news/",
+                  "checkedAt": "2026-10-22T07:22:48.808Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/news/?paged=2",
+                  "checkedAt": "2026-10-22T07:25:09.614Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://enjin-official.jp/schedule/739",
+                  "checkedAt": "2026-10-22T07:22:49.514Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/streaming/",
+                  "checkedAt": "2026-10-22T07:25:10.440Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "bfde788842d121a720d8dad5a0237b25f8394809d1e0ba1f870aae5ed04868ee",
+              "review_fingerprint": "039c003638d8d8a5f142fd42c57d624761041a1a533df32b38724d121619ae6d",
+              "snapshot_fingerprint": "54588df4665d5ace7d40b3ed1cea11cf0e685da4a6f8c5dad72755d228a33a0f",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "d0ffdf97-b466-49e1-bf7d-dd5f4bca2ee9",
+            "matched_play_id": "eac92cc7-7dbc-4e2a-bb2c-d8d020dff84a",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "竹中凌平",
+            "source_actor_url": "https://kira-hai.net/takenaka-ryohei",
+            "source_work_title": "舞台『ブルーロック -EPISODE 凪-』",
+            "source_year": 2025,
+            "source_role_raw": "潔世一",
+            "source_role_names": [
+              "潔世一"
+            ],
+            "source_cast_group": null,
+            "source_order": 13,
+            "source_credit_key": "37bd00e62a201f26250f",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bluelock-nagi2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bluelock-nagi2025",
+                  "checkedAt": "2026-10-22T07:22:46.989Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/",
+                  "checkedAt": "2026-10-22T07:22:47.315Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/cast-staff/",
+                  "checkedAt": "2026-10-22T07:22:47.598Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/schedule-ticket/",
+                  "checkedAt": "2026-10-22T07:25:09.272Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/introduction/",
+                  "checkedAt": "2026-10-22T07:22:47.698Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/news/",
+                  "checkedAt": "2026-10-22T07:22:48.808Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/news/?paged=2",
+                  "checkedAt": "2026-10-22T07:25:09.614Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://enjin-official.jp/schedule/739",
+                  "checkedAt": "2026-10-22T07:22:49.514Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/streaming/",
+                  "checkedAt": "2026-10-22T07:25:10.440Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "bfde788842d121a720d8dad5a0237b25f8394809d1e0ba1f870aae5ed04868ee",
+              "review_fingerprint": "039c003638d8d8a5f142fd42c57d624761041a1a533df32b38724d121619ae6d",
+              "snapshot_fingerprint": "54588df4665d5ace7d40b3ed1cea11cf0e685da4a6f8c5dad72755d228a33a0f",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "c185bf12-396a-4b0f-87d8-f5dce00abab9",
+            "matched_play_id": "eac92cc7-7dbc-4e2a-bb2c-d8d020dff84a",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "草地稜之",
+            "source_actor_url": "https://kira-hai.net/kusachi-ryono",
+            "source_work_title": "舞台『ブルーロック -EPISODE 凪-』",
+            "source_year": 2025,
+            "source_role_raw": "糸師凛",
+            "source_role_names": [
+              "糸師凛"
+            ],
+            "source_cast_group": null,
+            "source_order": 14,
+            "source_credit_key": "b5d8f55b448bf96f634f",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bluelock-nagi2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bluelock-nagi2025",
+                  "checkedAt": "2026-10-22T07:22:46.989Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/",
+                  "checkedAt": "2026-10-22T07:22:47.315Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/cast-staff/",
+                  "checkedAt": "2026-10-22T07:22:47.598Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/schedule-ticket/",
+                  "checkedAt": "2026-10-22T07:25:09.272Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/introduction/",
+                  "checkedAt": "2026-10-22T07:22:47.698Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/news/",
+                  "checkedAt": "2026-10-22T07:22:48.808Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/news/?paged=2",
+                  "checkedAt": "2026-10-22T07:25:09.614Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://enjin-official.jp/schedule/739",
+                  "checkedAt": "2026-10-22T07:22:49.514Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/streaming/",
+                  "checkedAt": "2026-10-22T07:25:10.440Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "bfde788842d121a720d8dad5a0237b25f8394809d1e0ba1f870aae5ed04868ee",
+              "review_fingerprint": "039c003638d8d8a5f142fd42c57d624761041a1a533df32b38724d121619ae6d",
+              "snapshot_fingerprint": "54588df4665d5ace7d40b3ed1cea11cf0e685da4a6f8c5dad72755d228a33a0f",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "bd68ed86-f941-4744-9da9-b0fa381c9010",
+            "matched_play_id": "eac92cc7-7dbc-4e2a-bb2c-d8d020dff84a",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "横井翔二郎",
+            "source_actor_url": "https://kira-hai.net/yokoi-shojiro",
+            "source_work_title": "舞台『ブルーロック -EPISODE 凪-』",
+            "source_year": 2025,
+            "source_role_raw": "絵心甚八",
+            "source_role_names": [
+              "絵心甚八"
+            ],
+            "source_cast_group": null,
+            "source_order": 15,
+            "source_credit_key": "503d48b6df6ecede5295",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bluelock-nagi2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bluelock-nagi2025",
+                  "checkedAt": "2026-10-22T07:22:46.989Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/",
+                  "checkedAt": "2026-10-22T07:22:47.315Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/cast-staff/",
+                  "checkedAt": "2026-10-22T07:22:47.598Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/schedule-ticket/",
+                  "checkedAt": "2026-10-22T07:25:09.272Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/introduction/",
+                  "checkedAt": "2026-10-22T07:22:47.698Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/news/",
+                  "checkedAt": "2026-10-22T07:22:48.808Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/news/?paged=2",
+                  "checkedAt": "2026-10-22T07:25:09.614Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://enjin-official.jp/schedule/739",
+                  "checkedAt": "2026-10-22T07:22:49.514Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                },
+                {
+                  "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/streaming/",
+                  "checkedAt": "2026-10-22T07:25:10.440Z",
+                  "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+                }
+              ],
+              "source_fingerprint": "bfde788842d121a720d8dad5a0237b25f8394809d1e0ba1f870aae5ed04868ee",
+              "review_fingerprint": "039c003638d8d8a5f142fd42c57d624761041a1a533df32b38724d121619ae6d",
+              "snapshot_fingerprint": "54588df4665d5ace7d40b3ed1cea11cf0e685da4a6f8c5dad72755d228a33a0f",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "5b634cd8-f8b7-4f15-8430-ef2288a2e77f",
+            "matched_play_id": "eac92cc7-7dbc-4e2a-bb2c-d8d020dff84a",
+            "status": "pending"
+          }
+        ]
+      },
+      "records": [
+        {
+          "actor": {
+            "id": "e34bae02-d4f8-4c49-9c53-b5f65ee97b49",
+            "slug": "sato-takamichi",
+            "name": "佐藤たかみち",
+            "kana": "さとう たかみち",
+            "profile": "埼玉県出身の俳優。2018年に舞台『母の桜が散った夜』でデビュー。映画『刀剣乱舞-黎明-』の髭切役、舞台『ブルーロック』の雷市陣吾役・凪誠士郎役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-20T12:24:53.422304+00:00",
+            "updated_at": "2026-10-20T12:24:53.422304+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1998-03-21",
+            "height_cm": 183,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": "Takamichi Sato",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "佐藤たかみち",
+            "sourceActorUrl": "https://kira-hai.net/sato-takamichi",
+            "role_name": "凪誠士郎",
+            "cast_group": null
+          },
+          "sourceCreditKey": "89b1b9445e92b3c84365",
+          "sourceOrder": 1,
+          "billingOrder": 1,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "e70ca3b8-5221-4009-8981-9584226c490c",
+            "slug": "kikuchi-shuji",
+            "name": "菊池修司",
+            "kana": "きくち しゅうじ",
+            "profile": "俳優。Stova所属。舞台『ブルーロック』の御影玲王役、舞台『東京リベンジャーズ』の半間修二役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-21T16:16:29.615669+00:00",
+            "updated_at": "2026-10-21T16:16:29.615669+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1995-11-10",
+            "height_cm": null,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": "菊池修司",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "菊池修司",
+            "sourceActorUrl": "https://kira-hai.net/kikuchi-shuji",
+            "role_name": "御影玲王",
+            "cast_group": null
+          },
+          "sourceCreditKey": "7c26865be34cee36a2d6",
+          "sourceOrder": 2,
+          "billingOrder": 2,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "2a78c3a2-0a79-4db3-a31d-7bc9bfc7c0ca",
+            "slug": "matsui-kenta",
+            "name": "松井健太",
+            "kana": "まつい けんた",
+            "profile": "東京都出身の俳優・モデル。映画『僕が君の耳になる』、新ミュージカル『スタミュ』などに出演。Action Stage『エリオスライジングヒーローズ』-THE EAST-ではグレイ・リヴァース／ジェット役を務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-20T12:24:53.422304+00:00",
+            "updated_at": "2026-10-20T12:24:53.422304+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1997-08-01",
+            "height_cm": 180,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "松井健太",
+            "sourceActorUrl": "https://kira-hai.net/matsui-kenta",
+            "role_name": "剣城斬鉄",
+            "cast_group": null
+          },
+          "sourceCreditKey": "32ec2ca04ddb3004314c",
+          "sourceOrder": 3,
+          "billingOrder": 3,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "888425ea-130c-44be-8fbf-2393e597267d",
+            "slug": "sato-nobunaga",
+            "name": "佐藤 信長",
+            "kana": "さとう のぶなが",
+            "profile": "宮崎県出身の俳優。合同会社AYRTON所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://twitter.com/NobunagaSato",
+              "youtube": "https://youtube.com/@nobunaga1103",
+              "official": "https://sato-nobunaga.com/",
+              "instagram": "https://www.instagram.com/nobunaga_sato"
+            },
+            "gender": "male",
+            "created_at": "2026-04-10T02:52:07.416879+00:00",
+            "updated_at": "2026-04-10T02:52:07.416879+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1995-03-30",
+            "height_cm": 175,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "佐藤信長",
+            "sourceActorUrl": "https://kira-hai.net/sato-nobunaga",
+            "role_name": "蜂楽廻",
+            "cast_group": null
+          },
+          "sourceCreditKey": "6cece141c1aa10d4d838",
+          "sourceOrder": 4,
+          "billingOrder": 4,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "7444fe49-d308-41e4-9220-e7dd737d044f",
+            "slug": "saeki-ryo",
+            "name": "佐伯亮",
+            "kana": "さえきりょう",
+            "profile": null,
+            "image_url": null,
+            "sns": null,
+            "gender": null,
+            "created_at": "2026-10-17T13:27:59.664418+00:00",
+            "updated_at": "2026-10-17T13:27:59.664418+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1995-10-10",
+            "height_cm": 176,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "佐伯亮",
+            "sourceActorUrl": "https://kira-hai.net/saeki-ryo",
+            "role_name": "千切豹馬",
+            "cast_group": null
+          },
+          "sourceCreditKey": "b16fb470187ade71cfc3",
+          "sourceOrder": 5,
+          "billingOrder": 5,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "48311c5f-4620-416c-8f41-7b87ee99d51d",
+            "slug": "imari-yu",
+            "name": "伊万里 有",
+            "kana": "いまり ゆう",
+            "profile": "佐賀県出身の俳優。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/imari_yu",
+              "official": "https://lit.link/818181",
+              "instagram": "https://www.instagram.com/imariyu_official/"
+            },
+            "gender": "male",
+            "created_at": "2026-04-05T20:11:45.292101+00:00",
+            "updated_at": "2026-04-05T20:11:45.292101+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1988-01-09",
+            "height_cm": 186,
+            "blood_type": "AB",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "伊万里有",
+            "sourceActorUrl": "https://kira-hai.net/imari-yu",
+            "role_name": "馬狼照英",
+            "cast_group": null
+          },
+          "sourceCreditKey": "e06ad56677130d83ed2c",
+          "sourceOrder": 6,
+          "billingOrder": 6,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "c9a0b816-6f8d-413e-bdff-2e84f5f1a601",
+            "slug": "uno-yuya",
+            "name": "宇野 結也",
+            "kana": "うの ゆうや",
+            "profile": "岐阜県出身の俳優。HONEST所属。ミュージカル『テニスの王子様』3rdシーズン（手塚国光役）や舞台『盾の勇者の成り上がり』（岩谷尚文役）、『ROCK MUSICAL BLEACH』～Arrancar the Beginning〜（阿散井恋次役）、舞台『ブルーロック』シリーズ、舞台『鬼滅の刃』シリーズ等の舞台作品を中心に出演している。かつてはオスカープロモーション所属の男劇団 青山表参道Xのメンバーとしても活動していた。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/uno_yuya",
+              "official": "https://unoyuya-official.bitfan.id/",
+              "instagram": "https://www.instagram.com/unoyuya/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:10:00.631722+00:00",
+            "updated_at": "2026-03-21T15:10:00.631722+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1992-05-21",
+            "height_cm": 179,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Gifu Prefecture. Affiliated with HONEST. He primarily appears in stage works such as the musical \"The Prince of Tennis\" 3rd season (as Kunimitsu Tezuka), the stage play \"The Rising of the Shield Hero\" (as Naofumi Iwatani), \"ROCK MUSICAL BLEACH\" ~Arrancar the Beginning~ (as Renji Abarai), the stage play \"Blue Lock\" series, and the stage play \"Demon Slayer: Kimetsu no Yaiba\" series. He was formerly a member of the Men's Theater Group Aoyama Omotesando X.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "宇野結也",
+            "sourceActorUrl": "https://kira-hai.net/uno-yuya",
+            "role_name": "烏旅人",
+            "cast_group": null
+          },
+          "sourceCreditKey": "bef788c4284d88b93ce8",
+          "sourceOrder": 7,
+          "billingOrder": 7,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "4df6c773-2f8f-4c76-882c-4159d36da42a",
+            "slug": "kento",
+            "name": "健人",
+            "kana": "けんと",
+            "profile": "大阪府出身の俳優。Star Dream Company所属。ミュージカル『テニスの王子様』3rdシーズン（伊武深司役）や舞台『刀剣乱舞』シリーズ（鶴丸国永役）、舞台『ブルーロック』シリーズ（乙夜影汰役）、演戯『ヴィジュアルプリズン』ー月下歌饗ー（イヴ・ルイーズ役）等の舞台作品を中心に活躍。過去には新感覚アーティストグループ「TFG」のメンバーとしても活動していた。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/KENT_1106_",
+              "official": "https://kent-official.net/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:06:19.306372+00:00",
+            "updated_at": "2026-03-21T15:06:19.306372+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1993-11-06",
+            "height_cm": 178,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Osaka Prefecture. Affiliated with Star Dream Company. He primarily appears in stage works such as the musical \"The Prince of Tennis\" 3rd season (as Shinji Ibu), the stage play \"Touken Ranbu\" series (as Tsurumaru Kuninaga), the stage play \"BLUE LOCK\" series (as Eita Otoya), and the play \"Visual Prison\" (as Eve Louise). In the past, he was also active as a member of the sensory artist group \"TFG\".",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "健人",
+            "sourceActorUrl": "https://kira-hai.net/kento",
+            "role_name": "乙夜影汰",
+            "cast_group": null
+          },
+          "sourceCreditKey": "f449af3c866c98b9ae4f",
+          "sourceOrder": 8,
+          "billingOrder": 8,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "77fb830c-4de8-4b4f-8416-79c886b15501",
+            "slug": "maejima-yoh",
+            "name": "前嶋 曜",
+            "kana": "まえじま よう",
+            "profile": "神奈川県出身の俳優。OMNIA所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/maejima_yoh",
+              "official": "https://maejima-yoh.com/",
+              "instagram": "https://www.instagram.com/yoh_maejima/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-31T18:15:21.081141+00:00",
+            "updated_at": "2026-03-31T18:15:21.081141+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1997-04-21",
+            "height_cm": 172,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "前嶋曜",
+            "sourceActorUrl": "https://kira-hai.net/maejima-yo",
+            "role_name": "二子一揮",
+            "cast_group": null
+          },
+          "sourceCreditKey": "8fa16aeaa2968bc7d6db",
+          "sourceOrder": 9,
+          "billingOrder": 9,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "14eb7849-874e-49ad-8729-793890561b40",
+            "slug": "nakanishi-tomoya",
+            "name": "中西 智也",
+            "kana": "なかにし ともや",
+            "profile": "福島県出身の俳優。マリー社所属。代々木アニメーション学院2.5次元演劇科在学中より舞台に出演し、2021年の舞台『あんさんぶるスターズ！ エクストラ・ステージ』～Meteor Lights～（南雲鉄虎役）で本格的にデビューを果たした。ミュージカル『新テニスの王子様』The First Stageにおいて「テニミュボーイズ」として出演したほか、舞台『ヒプノシスマイク -Division Rap Battle-』Rule the Stage（波羅夷空却役）、ミュージカル『進撃の巨人』-the Musical-等の舞台作品を中心に出演している。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/nkns__tomoya",
+              "official": "https://tomoyanakanishi.com/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:13:20.008797+00:00",
+            "updated_at": "2026-03-21T15:13:20.008797+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1999-11-30",
+            "height_cm": 165,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Fukushima Prefecture. Affiliated with Marrysha. He appeared on stage while studying in the 2.5D Theater Department at Yoyogi Animation Academy and made his full-fledged debut in the 2021 stage play \"Ensemble Stars! Extra Stage\" ~Meteor Lights~ (as Tetora Nagumo). He appeared as a member of the \"Tennimyu Boys\" in the musical \"The New Prince of Tennis\" The First Stage, and primarily appears in stage works such as \"Hypnosis Mic -Division Rap Battle-\" Rule the Stage (as Kuko Harai) and \"Attack on Titan: The Musical\".",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "中西智也",
+            "sourceActorUrl": "https://kira-hai.net/nakanishi-tomoya",
+            "role_name": "清羅刃",
+            "cast_group": null
+          },
+          "sourceCreditKey": "9f3a8f2937cfde6ac486",
+          "sourceOrder": 10,
+          "billingOrder": 10,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "8953ff7d-54be-4d42-a117-e59bc507ea14",
+            "slug": "seki-hayata",
+            "name": "関隼汰",
+            "kana": "せき はやた",
+            "profile": "千葉県出身の俳優。オフィス24所属。第33回ジュノンスーパーボーイコンテストでフォトジェニック賞を受賞。『仮面ライダーリバイス』のオルテカ役、舞台『ブルーロック -EPISODE 凪-』の日不見愛基役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1999-08-18",
+            "height_cm": 174,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Hayata Seki",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared",
+            "updated_at": "prepared"
+          },
+          "source": {
+            "sourceActorName": "関隼汰",
+            "sourceActorUrl": "https://kira-hai.net/seki-hayata",
+            "role_name": "日不見愛基",
+            "cast_group": null
+          },
+          "sourceCreditKey": "69dbf1ddae7bb0f0b760",
+          "sourceOrder": 11,
+          "billingOrder": 11,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "d0ffdf97-b466-49e1-bf7d-dd5f4bca2ee9",
+            "slug": "sakata-hiromu",
+            "name": "坂田 大夢",
+            "kana": "さかた ひろむ",
+            "profile": "東京都出身。俳優として活動。",
+            "image_url": null,
+            "sns": {},
+            "gender": "male",
+            "created_at": "2026-03-21T15:17:46.505362+00:00",
+            "updated_at": "2026-03-21T15:17:46.505362+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "2001-03-09",
+            "height_cm": null,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "坂田大夢",
+            "sourceActorUrl": "https://kira-hai.net/sakata-hiromu",
+            "role_name": "柊零次",
+            "cast_group": null
+          },
+          "sourceCreditKey": "f14055bc287d63c99da6",
+          "sourceOrder": 12,
+          "billingOrder": 12,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "c185bf12-396a-4b0f-87d8-f5dce00abab9",
+            "slug": "takenaka-ryohei",
+            "name": "竹中 凌平",
+            "kana": "たけなか りょうへい",
+            "profile": "千葉県出身の俳優・歌手。株式会社Allen所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/ry_0922",
+              "official": "https://allen-co.com/takenakaryohei/",
+              "instagram": "https://www.instagram.com/ryohei_0922/"
+            },
+            "gender": "male",
+            "created_at": "2026-04-04T03:17:01.949277+00:00",
+            "updated_at": "2026-04-04T03:17:01.949277+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1993-09-22",
+            "height_cm": 170,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "竹中凌平",
+            "sourceActorUrl": "https://kira-hai.net/takenaka-ryohei",
+            "role_name": "潔世一",
+            "cast_group": null
+          },
+          "sourceCreditKey": "37bd00e62a201f26250f",
+          "sourceOrder": 13,
+          "billingOrder": 13,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "bd68ed86-f941-4744-9da9-b0fa381c9010",
+            "slug": "kusachi-ryono",
+            "name": "草地 稜之",
+            "kana": "くさち りょうの",
+            "profile": "東京都出身の俳優。吉本興業所属。パフォーマンスユニット「ENJIN」のメンバー（RYONO名義）としても活動している。主な出演作として、ミュージカル『テニスの王子様』4thシーズン（氷帝学園・忍足侑士役）、舞台『ブルーロック』シリーズ（糸師凛役）、舞台『おそ松さん on STAGE』（おそ松 / F6役）、舞台『桃源暗鬼』（矢颪碇役）等の舞台作品のほか、テレビドラマ『その女、ジルバ』などの映像作品がある。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/RyononK",
+              "youtube": "https://www.youtube.com/channel/UCk7uL1QPQ1k9DrXectZ3sXw",
+              "official": "https://profile.yoshimoto.co.jp/talent/detail?id=10054",
+              "instagram": "https://www.instagram.com/18mgumr_no1"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:17:46.505362+00:00",
+            "updated_at": "2026-03-21T15:17:46.505362+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1998-06-17",
+            "height_cm": 178,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Tokyo. Affiliated with Yoshimoto Kogyo. He is also active as a member of the performance unit \"ENJIN\" under the name RYONO. His major appearances include stage works such as the musical \"The Prince of Tennis\" 4th season (as Yushi Oshitari of Hyotei), the stage play \"Blue Lock\" series (as Rin Itoshi), \"Osomatsu-san on STAGE\" (as Osomatsu / F6), and \"Tougen Anki\" (as Ikari Yara), as well as video works like the TV drama \"Sono Onna, Jirba\".",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "草地稜之",
+            "sourceActorUrl": "https://kira-hai.net/kusachi-ryono",
+            "role_name": "糸師凛",
+            "cast_group": null
+          },
+          "sourceCreditKey": "b5d8f55b448bf96f634f",
+          "sourceOrder": 14,
+          "billingOrder": 14,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "5b634cd8-f8b7-4f15-8430-ef2288a2e77f",
+            "slug": "yokoi-shojiro",
+            "name": "横井翔二郎",
+            "kana": "よこいしょうじろう",
+            "profile": null,
+            "image_url": null,
+            "sns": null,
+            "gender": null,
+            "created_at": "2026-10-18T10:25:13.748723+00:00",
+            "updated_at": "2026-10-18T10:25:13.748723+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1991-01-28",
+            "height_cm": 175,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "横井翔二郎",
+            "sourceActorUrl": "https://kira-hai.net/yokoi-shojiro",
+            "role_name": "絵心甚八",
+            "cast_group": null
+          },
+          "sourceCreditKey": "503d48b6df6ecede5295",
+          "sourceOrder": 15,
+          "billingOrder": 15,
+          "expectedNote": null
+        }
+      ],
+      "castPatches": [],
+      "keptCasts": [],
+      "legacyCandidates": [],
+      "sourceFingerprint": "bfde788842d121a720d8dad5a0237b25f8394809d1e0ba1f870aae5ed04868ee",
+      "expectedCastCount": 15,
+      "evidence": [
+        {
+          "url": "https://kira-hai.net/bluelock-nagi2025",
+          "checkedAt": "2026-10-22T07:22:46.989Z",
+          "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+        },
+        {
+          "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/",
+          "checkedAt": "2026-10-22T07:22:47.315Z",
+          "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+        },
+        {
+          "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/cast-staff/",
+          "checkedAt": "2026-10-22T07:22:47.598Z",
+          "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+        },
+        {
+          "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/schedule-ticket/",
+          "checkedAt": "2026-10-22T07:25:09.272Z",
+          "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+        },
+        {
+          "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/introduction/",
+          "checkedAt": "2026-10-22T07:22:47.698Z",
+          "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+        },
+        {
+          "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/news/",
+          "checkedAt": "2026-10-22T07:22:48.808Z",
+          "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+        },
+        {
+          "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/news/?paged=2",
+          "checkedAt": "2026-10-22T07:25:09.614Z",
+          "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+        },
+        {
+          "url": "https://enjin-official.jp/schedule/739",
+          "checkedAt": "2026-10-22T07:22:49.514Z",
+          "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+        },
+        {
+          "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/streaming/",
+          "checkedAt": "2026-10-22T07:25:10.440Z",
+          "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+        }
+      ],
+      "creditOnly": [
+        {
+          "sourceActorName": "荒牧大矢",
+          "sourceActorUrl": "https://kira-hai.net/aramaki-daiya",
+          "role_name": null,
+          "cast_group": "アンサンブル",
+          "storageDecision": {
+            "target": "plays.credits",
+            "reason": "公式アンサンブル区分。既存人物・過去作役付き配役は保持し本公演のcastは作らない。"
+          }
+        },
+        {
+          "sourceActorName": "窪寺直",
+          "sourceActorUrl": "https://kira-hai.net/kubodera-nao",
+          "role_name": null,
+          "cast_group": "アンサンブル",
+          "storageDecision": {
+            "target": "plays.credits",
+            "reason": "公式アンサンブル区分。既存人物・過去作役付き配役は保持し本公演のcastは作らない。"
+          }
+        },
+        {
+          "sourceActorName": "土居健蔵",
+          "sourceActorUrl": "https://kira-hai.net/doi-kenzo",
+          "role_name": null,
+          "cast_group": "アンサンブル",
+          "storageDecision": {
+            "target": "plays.credits",
+            "reason": "公式アンサンブル区分。既存人物・過去作役付き配役は保持し本公演のcastは作らない。"
+          }
+        },
+        {
+          "sourceActorName": "古田蓮",
+          "sourceActorUrl": "https://kira-hai.net/furuta-ren",
+          "role_name": null,
+          "cast_group": "アンサンブル",
+          "storageDecision": {
+            "target": "plays.credits",
+            "reason": "公式アンサンブル区分。既存人物・過去作役付き配役は保持し本公演のcastは作らない。"
+          }
+        }
+      ],
+      "exceptions": [
+        "2025年版アーカイブはページtitleがReと表示されるが、ロゴ・権利表記・日程・配役は2025年初演。現在の2026年Reページの配役・声のみ区分・会場・休演告知を流用しない。",
+        "草地稜之＝糸師凛は2025年公式では通常写真・役付き配役。2026年再演の声の出演区分を遡及しない。別媒体にある伊右衛門送人＝澤田拓郎は第一参照先・2025年公式キャストと矛盾するため採用しない。",
+        "荒牧・窪寺・土居・古田の4人は今回アンサンブル。過去3rd/4thの通常配役は保持し今回のクレジットだけ追加する。松本岳・影山達也はサッカー指導としてのみ保存し出演配役へ増やさない。",
+        "ニュース全2ページで本公演のキャスト変更・公演中止告知は見当たらず。2026年の宇野結也の休演等を流用しない。2026年Blu-rayイベントは本編の別配役として増やさない。"
+      ]
+    }
+  ],
+  "keptPlays": [
+    {
+      "id": "23464fb7-fa9f-4160-bbdf-87823dc9df50",
+      "slug": "bluelock2024-2",
+      "title": "舞台『ブルーロック』3rd STAGE",
+      "franchise_id": "2a8c7f6a-f48b-4c65-829d-f869229567e0",
+      "summary": "二次選考を突破した潔世一たちは、三次選考で世界選抜との5対5の試合に挑む。さらに「青い監獄」の存続を懸けたU-20日本代表戦に向け、レギュラー11人を選ぶ適性試験が始まる。潔は上位のストライカーたちと競い、自分の力を示そうとする。",
+      "period": "大阪：2024年8月9日〜12日／東京：2024年8月17日〜25日",
+      "venue": "大阪：東大阪市文化創造館 Dream House 大ホール／東京：シアターH",
+      "vod": null,
+      "genre": null,
+      "created_at": "2026-10-22T06:48:20.587396+00:00",
+      "updated_at": "2026-10-22T06:48:20.587396+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "脚本・演出",
+          "names": [
+            "伊勢直弘"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "演出補",
+          "names": [
+            "村松洸希"
+          ],
+          "is_core": false,
+          "sort_order": 2
+        },
+        {
+          "role": "演出助手",
+          "names": [
+            "入江浩平"
+          ],
+          "is_core": false,
+          "sort_order": 3
+        },
+        {
+          "role": "美術",
+          "names": [
+            "乘峯雅寛"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "主題歌歌唱",
+          "names": [
+            "Kradness×un:c"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "舞台音楽",
+          "names": [
+            "関根佑樹（Rebrast）・Tsubasa（Rebrast）"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        },
+        {
+          "role": "技術監督",
+          "names": [
+            "寅川英司"
+          ],
+          "is_core": false,
+          "sort_order": 7
+        },
+        {
+          "role": "舞台監督",
+          "names": [
+            "田中 翼"
+          ],
+          "is_core": false,
+          "sort_order": 8
+        },
+        {
+          "role": "照明",
+          "names": [
+            "大波多秀起(デイライト)"
+          ],
+          "is_core": false,
+          "sort_order": 9
+        },
+        {
+          "role": "音響効果",
+          "names": [
+            "前田規寛(ロア)"
+          ],
+          "is_core": false,
+          "sort_order": 10
+        },
+        {
+          "role": "映像",
+          "names": [
+            "O-beron inc."
+          ],
+          "is_core": false,
+          "sort_order": 11
+        },
+        {
+          "role": "衣裳",
+          "names": [
+            "雲出三緒"
+          ],
+          "is_core": false,
+          "sort_order": 12
+        },
+        {
+          "role": "衣裳協賛",
+          "names": [
+            "umbro"
+          ],
+          "is_core": false,
+          "sort_order": 13
+        },
+        {
+          "role": "ヘアメイク",
+          "names": [
+            "木村美和子(dot)"
+          ],
+          "is_core": false,
+          "sort_order": 14
+        },
+        {
+          "role": "撮影小道具",
+          "names": [
+            "平野雅史"
+          ],
+          "is_core": false,
+          "sort_order": 15
+        },
+        {
+          "role": "アンダースタディ",
+          "names": [
+            "荒牧大矢",
+            "中土井俊允"
+          ],
+          "is_core": false,
+          "sort_order": 16
+        },
+        {
+          "role": "ステージング",
+          "names": [
+            "船木政秀"
+          ],
+          "is_core": false,
+          "sort_order": 17
+        },
+        {
+          "role": "サッカー指導",
+          "names": [
+            "牧野裕夢/エリース東京(豊島区国際アート・カルチャー特命大使/SDGs 特命大使)"
+          ],
+          "is_core": false,
+          "sort_order": 18
+        },
+        {
+          "role": "宣伝写真",
+          "names": [
+            "渡邉和弘"
+          ],
+          "is_core": false,
+          "sort_order": 19
+        },
+        {
+          "role": "宣伝美術・Web デザイン",
+          "names": [
+            "EAST END CREATIVE"
+          ],
+          "is_core": false,
+          "sort_order": 20
+        },
+        {
+          "role": "グッズデザイン",
+          "names": [
+            "EAST END CREATIVE/flyer-ya"
+          ],
+          "is_core": false,
+          "sort_order": 21
+        },
+        {
+          "role": "制作",
+          "names": [
+            "Office ENDLESS"
+          ],
+          "is_core": false,
+          "sort_order": 22
+        },
+        {
+          "role": "主催",
+          "names": [
+            "舞台『ブルーロック』３rd STAGE 製作委員会"
+          ],
+          "is_core": false,
+          "sort_order": 23
+        },
+        {
+          "role": "台風時の公演対応",
+          "names": [
+            "東京8月17日13:00公演は定刻通り実施。台風7号に伴う来場困難者には、8月19日14:00、21日14:00・18:30、22日14:00・18:30、23日14:00への振替、または未使用チケットの払い戻しを案内。"
+          ],
+          "is_core": false,
+          "sort_order": 24
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "After clearing the Second Selection, Yoichi Isagi and the other forwards face a five-on-five match against the World Five. A tryout then begins to choose the eleven players who will face Japan’s U-20 team with the future of Blue Lock at stake. Isagi competes against the top-ranked strikers to prove his abilities.",
+      "title_en": "BLUE LOCK 3rd STAGE"
+    },
+    {
+      "id": "37af8473-44f9-4508-a88c-10927b8c26dc",
+      "slug": "bluelock2025",
+      "title": "舞台『ブルーロック』4th STAGE",
+      "franchise_id": "2a8c7f6a-f48b-4c65-829d-f869229567e0",
+      "summary": "潔世一たちは「青い監獄」プロジェクトの存続を懸け、U-20日本代表との試合に挑む。相手はオリヴァ・愛空らが率いる守備陣に、世界で活躍する糸師冴を加えたチーム。敗れればプロジェクト解体となる一戦で、潔たちは自分たちの攻撃を示そうとする。",
+      "period": "東京：2025年5月15日〜25日／大阪：2025年5月30日〜6月1日",
+      "venue": "東京：THEATER MILANO-Za／大阪：東大阪市文化創造館 Dream House 大ホール",
+      "vod": null,
+      "genre": null,
+      "created_at": "2026-10-22T07:08:32.721059+00:00",
+      "updated_at": "2026-10-22T07:08:32.721059+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "脚本・演出",
+          "names": [
+            "伊勢直弘"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "演出助手",
+          "names": [
+            "入江浩平"
+          ],
+          "is_core": false,
+          "sort_order": 2
+        },
+        {
+          "role": "美術",
+          "names": [
+            "乘峯雅寛"
+          ],
+          "is_core": false,
+          "sort_order": 3
+        },
+        {
+          "role": "舞台音楽",
+          "names": [
+            "Rebrast"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "技術監督",
+          "names": [
+            "寅川英司"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "舞台監督",
+          "names": [
+            "田中 翼",
+            "冨岡伸夫"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        },
+        {
+          "role": "照明",
+          "names": [
+            "大波多秀起(デイライト)"
+          ],
+          "is_core": false,
+          "sort_order": 7
+        },
+        {
+          "role": "音響効果",
+          "names": [
+            "前田規寛(ロア)"
+          ],
+          "is_core": false,
+          "sort_order": 8
+        },
+        {
+          "role": "映像",
+          "names": [
+            "O-beron inc."
+          ],
+          "is_core": false,
+          "sort_order": 9
+        },
+        {
+          "role": "衣裳",
+          "names": [
+            "雲出三緒"
+          ],
+          "is_core": false,
+          "sort_order": 10
+        },
+        {
+          "role": "衣裳協賛",
+          "names": [
+            "umbro"
+          ],
+          "is_core": false,
+          "sort_order": 11
+        },
+        {
+          "role": "ヘアメイク",
+          "names": [
+            "木村美和子(dot)"
+          ],
+          "is_core": false,
+          "sort_order": 12
+        },
+        {
+          "role": "撮影小道具",
+          "names": [
+            "平野雅史"
+          ],
+          "is_core": false,
+          "sort_order": 13
+        },
+        {
+          "role": "ステージング",
+          "names": [
+            "船木政秀",
+            "吉田拓也"
+          ],
+          "is_core": false,
+          "sort_order": 14
+        },
+        {
+          "role": "サッカー指導",
+          "names": [
+            "エリース東京(豊島区国際アート・カルチャー特命大使/SDGs 特命大使)"
+          ],
+          "is_core": false,
+          "sort_order": 15
+        },
+        {
+          "role": "大道具",
+          "names": [
+            "俳優座劇場"
+          ],
+          "is_core": false,
+          "sort_order": 16
+        },
+        {
+          "role": "宣伝写真",
+          "names": [
+            "渡邉和弘"
+          ],
+          "is_core": false,
+          "sort_order": 17
+        },
+        {
+          "role": "宣伝美術・Web デザイン",
+          "names": [
+            "EAST END CREATIVE"
+          ],
+          "is_core": false,
+          "sort_order": 18
+        },
+        {
+          "role": "グッズデザイン",
+          "names": [
+            "EAST END CREATIVE / flyer-ya"
+          ],
+          "is_core": false,
+          "sort_order": 19
+        },
+        {
+          "role": "制作",
+          "names": [
+            "Office ENDLESS"
+          ],
+          "is_core": false,
+          "sort_order": 20
+        },
+        {
+          "role": "クリエイティブプロデューサー",
+          "names": [
+            "下浦貴敬(Office ENDLESS/豊島区国際アート･カルチャー特命大使/SDGs特命大使)"
+          ],
+          "is_core": false,
+          "sort_order": 21
+        },
+        {
+          "role": "主催",
+          "names": [
+            "舞台『ブルーロック』4th STAGE製作委員会"
+          ],
+          "is_core": false,
+          "sort_order": 22
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "Yoichi Isagi and the Blue Lock players face Japan’s U-20 team with the future of their project at stake. Their opponents combine a defense led by Oliver Aiku with the internationally acclaimed Sae Itoshi. With defeat meaning the end of Blue Lock, Isagi and his teammates must prove the strength of their attack.",
+      "title_en": "BLUE LOCK 4th STAGE"
+    },
+    {
+      "id": "8cde611d-b8e5-4076-902b-1960c850cf14",
+      "slug": "bluelock2023",
+      "title": "舞台『ブルーロック』",
+      "franchise_id": "2a8c7f6a-f48b-4c65-829d-f869229567e0",
+      "summary": "県大会決勝で敗れた高校生FW・潔世一に、ストライカー育成施設「青い監獄」への招待状が届く。集められた300人から世界一のストライカーを生み出す選考で、潔は蜂楽廻や國神錬介らとチームZを結成し、凪誠士郎や御影玲王らとの戦いに挑む。",
+      "period": "大阪：2023年5月4日〜7日／東京：2023年5月11日〜14日",
+      "venue": "大阪：サンケイホールブリーゼ／東京：サンシャイン劇場",
+      "vod": null,
+      "genre": null,
+      "created_at": "2026-10-21T16:16:29.615669+00:00",
+      "updated_at": "2026-10-21T16:16:29.615669+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "原作 ： 金城宗幸漫画 ： ノ村優介『ブルーロック』（講談社「週刊少年マガジン」連載）"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "脚本・演出",
+          "names": [
+            "伊勢直弘"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "美術",
+          "names": [
+            "乘峯雅寛"
+          ],
+          "is_core": false,
+          "sort_order": 3
+        },
+        {
+          "role": "主題歌歌唱",
+          "names": [
+            "Kradness"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "舞台音楽",
+          "names": [
+            "早川博隆(Rebrast)／関根佑樹(Rebrast)"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "技術監督",
+          "names": [
+            "寅川英司"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        },
+        {
+          "role": "舞台監督",
+          "names": [
+            "田中 翼"
+          ],
+          "is_core": false,
+          "sort_order": 7
+        },
+        {
+          "role": "音響",
+          "names": [
+            "前田規寛（ロア）"
+          ],
+          "is_core": false,
+          "sort_order": 8
+        },
+        {
+          "role": "照明",
+          "names": [
+            "大波多秀起"
+          ],
+          "is_core": false,
+          "sort_order": 9
+        },
+        {
+          "role": "映像",
+          "names": [
+            "O-beron inc."
+          ],
+          "is_core": false,
+          "sort_order": 10
+        },
+        {
+          "role": "衣裳",
+          "names": [
+            "雲出三緒"
+          ],
+          "is_core": false,
+          "sort_order": 11
+        },
+        {
+          "role": "ヘアメイク",
+          "names": [
+            "木村美和子"
+          ],
+          "is_core": false,
+          "sort_order": 12
+        },
+        {
+          "role": "小道具",
+          "names": [
+            "枦山 兼"
+          ],
+          "is_core": false,
+          "sort_order": 13
+        },
+        {
+          "role": "演出助手",
+          "names": [
+            "入江浩平"
+          ],
+          "is_core": false,
+          "sort_order": 14
+        },
+        {
+          "role": "宣伝美術・WEBデザイン・物販デザイン",
+          "names": [
+            "遠藤嘉人 岡部哲也（EAST END CREATIVE）"
+          ],
+          "is_core": false,
+          "sort_order": 15
+        },
+        {
+          "role": "物販デザイン",
+          "names": [
+            "flyer-ya"
+          ],
+          "is_core": false,
+          "sort_order": 16
+        },
+        {
+          "role": "宣伝写真",
+          "names": [
+            "渡邉和弘"
+          ],
+          "is_core": false,
+          "sort_order": 17
+        },
+        {
+          "role": "制作協力",
+          "names": [
+            "上野志津華（KURAN）"
+          ],
+          "is_core": false,
+          "sort_order": 18
+        },
+        {
+          "role": "プロデューサー",
+          "names": [
+            "下浦貴敬（豊島区国際アート・カルチャー特命大使/SDGs特命大使）"
+          ],
+          "is_core": false,
+          "sort_order": 19
+        },
+        {
+          "role": "制作",
+          "names": [
+            "Office ENDLESS（豊島区国際アート・カルチャー特命大使/SDGs特命大使）"
+          ],
+          "is_core": false,
+          "sort_order": 20
+        },
+        {
+          "role": "協力",
+          "names": [
+            "豊島区 DESCENTE UMBRO メイコー化粧品"
+          ],
+          "is_core": false,
+          "sort_order": 21
+        },
+        {
+          "role": "サッカー指導",
+          "names": [
+            "牧野裕夢/エリース東京（豊島区国際アート･カルチャー特命大使/SDGs特命大使）"
+          ],
+          "is_core": false,
+          "sort_order": 22
+        },
+        {
+          "role": "主催",
+          "names": [
+            "舞台『ブルーロック』製作委員会"
+          ],
+          "is_core": false,
+          "sort_order": 23
+        },
+        {
+          "role": "アンサンブル",
+          "names": [
+            "安藤勇雅",
+            "窪寺直",
+            "土居健蔵",
+            "中土井俊允",
+            "牧野裕夢"
+          ],
+          "is_core": false,
+          "sort_order": 24
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "After losing a prefectural final, high-school forward Yoichi Isagi is invited to the Blue Lock training facility. Joining Team Z with Meguru Bachira and Rensuke Kunigami, he competes against Seishiro Nagi, Reo Mikage and other forwards in a selection designed to produce the world’s best striker.",
+      "title_en": "BLUE LOCK"
+    },
+    {
+      "id": "e8750f28-027d-4303-9690-0327b1c73bd9",
+      "slug": "bluelock2024",
+      "title": "舞台『ブルーロック』2nd STAGE",
+      "franchise_id": "2a8c7f6a-f48b-4c65-829d-f869229567e0",
+      "summary": "二次選考に進んだ潔世一たちは、かつての仲間とも競い、対戦相手ともチームを組みながら勝ち残りを目指す。ランキング上位の糸師凛と出会い、それぞれがストライカーとしての進化を試される。※東京公演の2024年1月25日14:00回は中止。",
+      "period": "京都：2024年1月18日〜21日／東京：2024年1月25日〜31日（1月25日14:00公演は中止）",
+      "venue": "京都：京都劇場／東京：ヒューリックホール東京",
+      "vod": {},
+      "genre": null,
+      "created_at": "2026-04-30T17:56:30.07015+00:00",
+      "updated_at": "2026-10-21T16:16:29.615669+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "脚本・演出",
+          "names": [
+            "伊勢直弘"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "演出補",
+          "names": [
+            "村松洸希"
+          ],
+          "is_core": false,
+          "sort_order": 2
+        },
+        {
+          "role": "演出助手",
+          "names": [
+            "入江浩平"
+          ],
+          "is_core": false,
+          "sort_order": 3
+        },
+        {
+          "role": "美術",
+          "names": [
+            "乘峯雅寛"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "舞台音楽",
+          "names": [
+            "早川博隆(Rebrast)/関根佑樹(Rebrast)"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "技術監督",
+          "names": [
+            "寅川英司"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        },
+        {
+          "role": "舞台監督",
+          "names": [
+            "田中 翼"
+          ],
+          "is_core": false,
+          "sort_order": 7
+        },
+        {
+          "role": "照明",
+          "names": [
+            "大波多秀起(デイライト)"
+          ],
+          "is_core": false,
+          "sort_order": 8
+        },
+        {
+          "role": "音響効果",
+          "names": [
+            "前田規寛(ロア)"
+          ],
+          "is_core": false,
+          "sort_order": 9
+        },
+        {
+          "role": "映像",
+          "names": [
+            "O-beron inc."
+          ],
+          "is_core": false,
+          "sort_order": 10
+        },
+        {
+          "role": "衣裳",
+          "names": [
+            "雲出三緒"
+          ],
+          "is_core": false,
+          "sort_order": 11
+        },
+        {
+          "role": "衣裳協賛",
+          "names": [
+            "umbro"
+          ],
+          "is_core": false,
+          "sort_order": 12
+        },
+        {
+          "role": "ヘアメイク",
+          "names": [
+            "木村美和子(dot)"
+          ],
+          "is_core": false,
+          "sort_order": 13
+        },
+        {
+          "role": "撮影小道具",
+          "names": [
+            "平野雅史"
+          ],
+          "is_core": false,
+          "sort_order": 14
+        },
+        {
+          "role": "サッカー指導",
+          "names": [
+            "牧野裕夢/エリース東京（豊島区国際アート･カルチャー特命大使/SDGs特命大使）"
+          ],
+          "is_core": false,
+          "sort_order": 15
+        },
+        {
+          "role": "宣伝写真",
+          "names": [
+            "渡邉和弘"
+          ],
+          "is_core": false,
+          "sort_order": 16
+        },
+        {
+          "role": "宣伝美術・Web デザイン",
+          "names": [
+            "EAST END CREATIVE"
+          ],
+          "is_core": false,
+          "sort_order": 17
+        },
+        {
+          "role": "グッズデザイン",
+          "names": [
+            "EAST END CREATIVE/flyer-ya"
+          ],
+          "is_core": false,
+          "sort_order": 18
+        },
+        {
+          "role": "プロデューサー",
+          "names": [
+            "下浦貴敬(Office ENDLESS)(豊島区国際アート・カルチャー特命大使/SDGs 特命大使)"
+          ],
+          "is_core": false,
+          "sort_order": 19
+        },
+        {
+          "role": "制作",
+          "names": [
+            "Office ENDLESS(豊島区国際アート・カルチャー特命大使/SDGs 特命大使)"
+          ],
+          "is_core": false,
+          "sort_order": 20
+        },
+        {
+          "role": "主催",
+          "names": [
+            "舞台『ブルーロック』2nd STAGE 製作委員会"
+          ],
+          "is_core": false,
+          "sort_order": 21
+        },
+        {
+          "role": "アンサンブル",
+          "names": [
+            "土居健蔵",
+            "牧野裕夢"
+          ],
+          "is_core": false,
+          "sort_order": 22
+        },
+        {
+          "role": "出演変更・中止",
+          "names": [
+            "凪誠士郎役の國島直希は出演見合わせ、佐藤たかみちが全公演で代役。佐藤たかみちの雷市陣吾役ゲスト出演（1月20日13:00・17:30、1月29日14:00）は中止。"
+          ],
+          "is_core": false,
+          "sort_order": 23
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "In the Second Selection, Yoichi Isagi and the other forwards must compete against former teammates and team up with past rivals. Facing top-ranked Rin Itoshi, they are pushed to develop their abilities as strikers. The Tokyo performance at 14:00 on January 25, 2024 was cancelled.",
+      "title_en": "BLUE LOCK 2nd STAGE"
+    }
+  ],
+  "evidence": {
+    "links": [
+      {
+        "url": "https://kira-hai.net/bluelock-nagi2025",
+        "checkedAt": "2026-10-22T07:22:46.989Z",
+        "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+      },
+      {
+        "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/",
+        "checkedAt": "2026-10-22T07:22:47.315Z",
+        "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+      },
+      {
+        "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/cast-staff/",
+        "checkedAt": "2026-10-22T07:22:47.598Z",
+        "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+      },
+      {
+        "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/schedule-ticket/",
+        "checkedAt": "2026-10-22T07:25:09.272Z",
+        "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+      },
+      {
+        "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/introduction/",
+        "checkedAt": "2026-10-22T07:22:47.698Z",
+        "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+      },
+      {
+        "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/news/",
+        "checkedAt": "2026-10-22T07:22:48.808Z",
+        "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+      },
+      {
+        "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/news/?paged=2",
+        "checkedAt": "2026-10-22T07:25:09.614Z",
+        "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+      },
+      {
+        "url": "https://enjin-official.jp/schedule/739",
+        "checkedAt": "2026-10-22T07:22:49.514Z",
+        "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+      },
+      {
+        "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/streaming/",
+        "checkedAt": "2026-10-22T07:25:10.440Z",
+        "note": "採用項目・資料の種別・不採用事項は個別notesを参照。"
+      }
+    ],
+    "sources": [
+      {
+        "name": "changelog",
+        "url": "https://supabase.com/changelog.md",
+        "status": 200,
+        "finalUrl": "https://supabase.com/changelog.md",
+        "checkedAt": "2026-10-22T07:22:46.942Z",
+        "sha256": "15b3d0d1a7dc3b3f2c0af4788e49acfdf2d2edbd2613f22de0705fa43b1cf58b"
+      },
+      {
+        "name": "robots",
+        "url": "https://kira-hai.net/robots.txt",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/robots.txt",
+        "checkedAt": "2026-10-22T07:22:46.904Z",
+        "sha256": "f6ed0322f0e3df8c3b42b14df3254a90cca7b94a4172de91812952b3c7060b03"
+      },
+      {
+        "name": "work",
+        "url": "https://kira-hai.net/bluelock-nagi2025",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/bluelock-nagi2025",
+        "checkedAt": "2026-10-22T07:22:46.989Z",
+        "sha256": "788c71982081f5d60c8060eb18a7c83aa5cd01e84a62962a08eeb42900561235"
+      },
+      {
+        "name": "official",
+        "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/",
+        "status": 200,
+        "finalUrl": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/",
+        "checkedAt": "2026-10-22T07:22:47.315Z",
+        "sha256": "59bb5ee0411d94f4c04ff9cb636600466f7c96fe003d0dbf1ea1486e7c610d45"
+      },
+      {
+        "name": "cast-official",
+        "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/cast-staff/",
+        "status": 200,
+        "finalUrl": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/cast-staff/",
+        "checkedAt": "2026-10-22T07:22:47.598Z",
+        "sha256": "9107661178ba010e93115f518a6bb8eaffc001eb36fd5121a0d09ef7cab0c9c4"
+      },
+      {
+        "name": "about",
+        "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/introduction/",
+        "status": 200,
+        "finalUrl": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/introduction/",
+        "checkedAt": "2026-10-22T07:22:47.698Z",
+        "sha256": "d5389d22422abe3656a6ea885051aaf5bd0e825f85a943d68b45da3fb26de4ef"
+      },
+      {
+        "name": "news",
+        "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/news/",
+        "status": 200,
+        "finalUrl": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/news/",
+        "checkedAt": "2026-10-22T07:22:48.808Z",
+        "sha256": "da28d221b3e7d2fd06c8df3a31fd2e18f903772705d3092d0f8dceced56550b0"
+      },
+      {
+        "name": "matsui-kira",
+        "url": "https://kira-hai.net/matsui-kenta",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/matsui-kenta",
+        "checkedAt": "2026-10-22T07:22:49.216Z",
+        "sha256": "dcc0249d6bd93d9edbdb3a36d699ce9a3f8a93c754213810f767c3651e09ab9b"
+      },
+      {
+        "name": "nakanishi-kira",
+        "url": "https://kira-hai.net/nakanishi-tomoya",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/nakanishi-tomoya",
+        "checkedAt": "2026-10-22T07:22:49.243Z",
+        "sha256": "e72202f61fdb8484fdc5d7ae17f1ff7f2aaa33fab34b859a249e1736c9be2865"
+      },
+      {
+        "name": "seki-kira",
+        "url": "https://kira-hai.net/seki-hayata",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/seki-hayata",
+        "checkedAt": "2026-10-22T07:22:49.255Z",
+        "sha256": "872ceb4cbfb8bf3acbc9933c70bfdffdeba5b5c12dc437b3d20e67b4cdee2c2a"
+      },
+      {
+        "name": "sakata-kira",
+        "url": "https://kira-hai.net/sakata-hiromu",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/sakata-hiromu",
+        "checkedAt": "2026-10-22T07:22:49.280Z",
+        "sha256": "2768e34d4ceb1a32a18b50948242231fcf99545dec891a1fbe0668f27e087894"
+      },
+      {
+        "name": "enjin",
+        "url": "https://enjin-official.jp/schedule/739",
+        "status": 200,
+        "finalUrl": "https://enjin-official.jp/schedule/739",
+        "checkedAt": "2026-10-22T07:22:49.514Z",
+        "sha256": "b781dab4394877794d364978033ab8e0d04fd49f843580d20c1145b6680e6ea0"
+      },
+      {
+        "name": "schedule-current",
+        "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/schedule-ticket/",
+        "status": 200,
+        "finalUrl": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/schedule-ticket/",
+        "checkedAt": "2026-10-22T07:25:09.272Z",
+        "sha256": "fd30e8bec247c236e53727fc30ab649d945ab543dad8fa6569e66da2a0283037"
+      },
+      {
+        "name": "news2",
+        "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/news/?paged=2",
+        "status": 200,
+        "finalUrl": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/news/page/2/",
+        "checkedAt": "2026-10-22T07:25:09.614Z",
+        "sha256": "8bce755b7d3424d7a585fd92b59608fb2794f67f8791021d022eae6fc157a823"
+      },
+      {
+        "name": "seki",
+        "url": "https://www.japanmusic.jp/talent/sekihayata/",
+        "status": 200,
+        "finalUrl": "https://www.japanmusic.jp/talent/sekihayata/",
+        "checkedAt": "2026-10-22T07:25:11.398Z",
+        "sha256": "df7224959ed7713ff9f71df08c670986247429b8fd158177085d1516673b7776"
+      },
+      {
+        "name": "streaming",
+        "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/streaming/",
+        "status": 200,
+        "finalUrl": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/streaming/",
+        "checkedAt": "2026-10-22T07:25:10.440Z",
+        "sha256": "cd661e9cefc9da2c939611289aa97d25f03a615dd37dd709bc189a51c9fa23ad"
+      },
+      {
+        "name": "tls",
+        "url": "https://supabase.com/changelog/cbc-tls-ciphers-deprecated",
+        "status": 200,
+        "finalUrl": "https://supabase.com/changelog/cbc-tls-ciphers-deprecated",
+        "checkedAt": "2026-10-22T07:25:11.878Z",
+        "sha256": "8adc0d94d3d8251b5919820ff4972748d444b7c1c736de1b692cffd14110d869"
+      }
+    ],
+    "unavailable": [
+      {
+        "name": "schedule",
+        "url": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/tickets-schedule/",
+        "status": 404,
+        "finalUrl": "https://officeendless.com/sp/bluelock_stage/epi-nagi/2025/tickets-schedule/",
+        "checkedAt": "2026-10-22T07:22:48.797Z",
+        "sha256": "1c7ab27d490fa6ead26320579aa52c81805411268cd923c6f0d99f833f8119e0"
+      }
+    ],
+    "notes": [
+      "新規人物1・作品1・配役15。既存14人物と過去4作品80配役を全項目保全。",
+      "公式schedule-ticketの画像altに日程・会場があり、ENJINの当時告知と第一参照先で照合。推定tickets-schedule URL404後、公式ナビの正しいURLへ移動。",
+      "協力はロゴのalt=ENDLESS ACADEMYを採用。サッカー指導2人などのスタッフと通常配役を区別。",
+      "Supabase changelog・TLS退役告知を確認。既存DML・RPCのみ、現行NodeのTLSで接続。DDL・認証・権限変更なし。"
+    ],
+    "unresolved": [
+      "Re EPISODE 凪と現行5th STAGEは後続。全作品収録完了ではない。",
+      "人物総合監査・詳細英訳・現在配信・主演指定は後続。DMMの2025年ライブ／見逃し配信終了告知を現在視聴可と扱わずvodはnull。",
+      "既存14人物のプロフィール・所属・基本属性の総合監査は本バッチ対象外で全項目保持。"
+    ]
+  },
+  "requestKey": "1d52aa82dcfcc806bc8caf9e90bd14e0803e4ed71bcb0b5e28decd3fa3c938cb"
+}
