@@ -1,3 +1,4 @@
+import { AnchorTabs } from "../../../../components/AnchorTabs";
 import { compactPerformancePeriod, getPerformanceStart } from "../../../../lib/performance-period";
 import type { Metadata } from "next";
 import { ProductionMark } from "../../../../components/ProductionMark";
@@ -119,7 +120,7 @@ export default async function EnglishSeriesDetailPage({ params }: { params: Prom
   ]);
 
   return (
-    <main className="container works-index-page detail-stage-page series-detail-stage-page" style={{ paddingBlock: 32 }}>
+    <main className="container works-index-page detail-stage-page editorial-detail series-detail-stage-page">
       <StructuredData data={breadcrumbJsonLd} />
       <StructuredData data={seriesJsonLd} />
       <div className="stack-lg">
@@ -149,7 +150,13 @@ export default async function EnglishSeriesDetailPage({ params }: { params: Prom
           </div>
         </section>
 
-        <section className="section-card stack-md detail-stage-section">
+        <AnchorTabs label="Series contents" items={[
+          { id: "series-overview", label: "Overview" }, { id: "timeline", label: "Timeline" },
+          { id: "series-cast", label: "Cast" },
+          ...(series.relatedSeries.length ? [{ id: "related-series", label: "Related series" }] : []),
+        ]} />
+
+        <section id="series-overview" className="section-card stack-md detail-stage-section">
           <h2 className="section-title">Series overview</h2>
           <div className="rich-text">{seriesOverview || "Series overview not available yet."}</div>
 
@@ -173,9 +180,7 @@ export default async function EnglishSeriesDetailPage({ params }: { params: Prom
           )}
         </section>
 
-        <SeriesCastOverviewClient topActors={series.topActors} />
-
-        <section className="section-card stack-md detail-stage-section series-timeline-section">
+        <section id="timeline" className="section-card stack-md detail-stage-section series-timeline-section">
           <div className="section-header-inline">
             <h2 className="section-title">Timeline</h2>
             {startYear ? <span className="pill">{startYear}-</span> : null}
@@ -228,8 +233,10 @@ export default async function EnglishSeriesDetailPage({ params }: { params: Prom
           </div>
         </section>
 
+        <SeriesCastOverviewClient topActors={series.topActors} />
+
         {series.relatedSeries.length > 0 ? (
-          <section className="section-card stack-md detail-stage-section">
+          <section id="related-series" className="section-card stack-md detail-stage-section">
             <div className="section-header-inline">
               <div className="stack-sm">
                 <h2 className="section-title">Related series</h2>

@@ -1,3 +1,4 @@
+import { AnchorTabs } from "../../../../components/AnchorTabs";
 import { PlayCastRoles } from "../../../../components/PlayCastRoles";
 import { groupPlayCast } from "../../../../lib/play-cast";
 import OshiVotingClient from "../../../../components/OshiVotingClient";
@@ -214,7 +215,7 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
   };
 
   return (
-    <main data-play-id={play.id} data-play-slug={play.slug} className="container works-index-page detail-stage-page play-detail-stage-page" style={{ paddingBlock: 32 }}>
+    <main data-play-id={play.id} data-play-slug={play.slug} className="container works-index-page detail-stage-page editorial-detail play-detail-stage-page">
       <StructuredData data={breadcrumbJsonLd} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }} />
@@ -256,8 +257,8 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
                 <strong>{play.cast.length}</strong>
               </div>
               <div className="detail-ledger__item">
-                <span className="detail-ledger__label">シリーズ</span>
-                <strong>{play.franchiseName || "単独作品"}</strong>
+                <span className="detail-ledger__label">公演期間</span>
+                <strong>{scheduleSummary || play.period || "未確認"}</strong>
               </div>
               <div className="detail-ledger__item">
                 <span className="detail-ledger__label">配信</span>
@@ -278,9 +279,11 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
           </div>
         </section>
 
-        <nav className="detail-contents-nav" aria-label="作品情報の目次">
-          <a href="#overview">概要</a><a href="#cast">キャスト</a><a href="#performances">公演情報</a><a href="#streaming">配信情報</a><a href="#fan-points">推しポイント</a>
-        </nav>
+        <AnchorTabs label="作品情報の目次" items={[
+          { id: "overview", label: "概要" }, { id: "cast", label: "キャスト" },
+          { id: "performances", label: "公演情報" }, { id: "streaming", label: "配信情報" },
+          { id: "fan-points", label: "推しポイント" },
+        ]} />
 
         <section className="section-card stack-md detail-stage-section play-detail-lead-section">
           <p className="lead">
@@ -297,6 +300,42 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
         <section id="overview" className="section-card stack-md detail-stage-section play-detail-synopsis-section">
           <h2 className="section-title">あらすじ</h2>
           <div className="rich-text">{play.summary || "あらすじ情報はまだありません。"}</div>
+        </section>
+
+        <section id="cast" className="section-card stack-md detail-stage-section play-detail-cast-section">
+          <h2 className="section-title">出演キャスト</h2>
+          {play.cast.length > 0 ? (
+            <div className="stack-md">
+              {groupedCast.map((group, index) => (
+                <div
+                  className={`cast-group-block stack-sm${group.name ? "" : " is-ungrouped"}`}
+                  key={group.name ?? `ungrouped-${index}`}
+                >
+                  <div className="group-chip">{group.name ?? "その他キャスト"}</div>
+                  <div className="cast-grid">
+                    {group.items.map((item) => (
+                      <Link
+                        href={`/actors/${item.slug}`}
+                        className="cast-card cast-card-link"
+                        key={`${item.slug}-${item.roleName ?? "cast"}-${group.name ?? "ungrouped"}`}
+                      >
+                        <div className="cast-card__monogram" aria-hidden="true">
+                          {getCastInitials(item)}
+                        </div>
+                        <div className="cast-card__body">
+                          <div className="cast-name">{item.name}</div>
+                          <PlayCastRoles roleName={item.roleName} credits={item.credits} locale="ja" />
+                          {item.isStarring ? <div className="cast-badge">MAIN CAST</div> : null}
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <p className="muted">出演キャスト情報はまだありません。</p>
+          )}
         </section>
 
         <section id="performances" className="section-card stack-md detail-stage-section play-detail-info-section">
@@ -417,60 +456,6 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
           {hasVod ? <p className="streaming-note">配信期間・見放題／レンタルの区分・料金は、リンク先の作品ページでご確認ください。</p> : null}
         </section>
 
-        <section className="section-card stack-md detail-stage-section play-detail-faq-section">
-          <h2 className="section-title">よくある質問（FAQ）</h2>
-          <div className="faq-grid">
-            <article className="faq-card">
-              <h3 className="faq-question">{play.title}は配信で見られますか？</h3>
-              <p className="faq-answer">
-                {hasVod
-                  ? "配信対応がある場合は、作品詳細ページでDMM TVなどの配信リンクを確認できます。"
-                  : "現時点では主要な配信情報は確認中です。DVD・Blu-rayや再演情報もあわせて確認してください。"}
-              </p>
-            </article>
-            <article className="faq-card">
-              <h3 className="faq-question">公演情報やクレジットも見られますか？</h3>
-              <p className="faq-answer">はい。公演情報、クレジット、出演キャスト、関連シリーズ情報を掲載しています。</p>
-            </article>
-          </div>
-        </section>
-
-        <section id="cast" className="section-card stack-md detail-stage-section play-detail-cast-section">
-          <h2 className="section-title">出演キャスト</h2>
-          {play.cast.length > 0 ? (
-            <div className="stack-md">
-              {groupedCast.map((group, index) => (
-                <div
-                  className={`cast-group-block stack-sm${group.name ? "" : " is-ungrouped"}`}
-                  key={group.name ?? `ungrouped-${index}`}
-                >
-                  <div className="group-chip">{group.name ?? "その他キャスト"}</div>
-                  <div className="cast-grid">
-                    {group.items.map((item) => (
-                      <Link
-                        href={`/actors/${item.slug}`}
-                        className="cast-card cast-card-link"
-                        key={`${item.slug}-${item.roleName ?? "cast"}-${group.name ?? "ungrouped"}`}
-                      >
-                        <div className="cast-card__monogram" aria-hidden="true">
-                          {getCastInitials(item)}
-                        </div>
-                        <div className="cast-card__body">
-                          <div className="cast-name">{item.name}</div>
-                          <PlayCastRoles roleName={item.roleName} credits={item.credits} locale="ja" />
-                          {item.isStarring ? <div className="cast-badge">MAIN CAST</div> : null}
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          ) : (
-            <p className="muted">出演キャスト情報はまだありません。</p>
-          )}
-        </section>
-
         <OshiVotingClient playId={play.id} locale="ja" />
 
         {relatedPlays.length > 0 ? (
@@ -500,6 +485,24 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
           </section>
         ) : null}
 
+
+        <section className="section-card stack-md detail-stage-section play-detail-faq-section">
+          <h2 className="section-title">よくある質問（FAQ）</h2>
+          <div className="faq-grid">
+            <article className="faq-card">
+              <h3 className="faq-question">{play.title}は配信で見られますか？</h3>
+              <p className="faq-answer">
+                {hasVod
+                  ? "配信対応がある場合は、作品詳細ページでDMM TVなどの配信リンクを確認できます。"
+                  : "現時点では主要な配信情報は確認中です。DVD・Blu-rayや再演情報もあわせて確認してください。"}
+              </p>
+            </article>
+            <article className="faq-card">
+              <h3 className="faq-question">公演情報やクレジットも見られますか？</h3>
+              <p className="faq-answer">はい。公演情報、クレジット、出演キャスト、関連シリーズ情報を掲載しています。</p>
+            </article>
+          </div>
+        </section>
 
         <section className="section-card detail-stage-section play-detail-bottom-cta">
           <div>

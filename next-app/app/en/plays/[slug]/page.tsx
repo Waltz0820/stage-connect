@@ -1,3 +1,4 @@
+import { AnchorTabs } from "../../../../components/AnchorTabs";
 import { PlayCastRoles } from "../../../../components/PlayCastRoles";
 import { groupPlayCast } from "../../../../lib/play-cast";
 import OshiVotingClient from "../../../../components/OshiVotingClient";
@@ -162,7 +163,7 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
   ]);
 
   return (
-    <main data-play-id={play.id} data-play-slug={play.slug} className="container works-index-page detail-stage-page play-detail-stage-page" style={{ paddingBlock: 32 }}>
+    <main data-play-id={play.id} data-play-slug={play.slug} className="container works-index-page detail-stage-page editorial-detail play-detail-stage-page">
       <StructuredData data={breadcrumbJsonLd} />
       <StructuredData data={creativeWorkJsonLd} />
       <div className="stack-lg">
@@ -198,8 +199,8 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
                 <strong>{play.cast.length}</strong>
               </div>
               <div className="detail-ledger__item">
-                <span className="detail-ledger__label">Series</span>
-                <strong>{displaySeriesName || "Standalone"}</strong>
+                <span className="detail-ledger__label">Schedule</span>
+                <strong>{compactListPeriodEn(play.period) || translatedPeriod || "Not confirmed"}</strong>
               </div>
               <div className="detail-ledger__item">
                 <span className="detail-ledger__label">Streaming links</span>
@@ -220,9 +221,11 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
           </div>
         </section>
 
-        <nav className="detail-contents-nav" aria-label="Production contents">
-          <a href="#overview">Overview</a><a href="#cast">Cast</a><a href="#performances">Performances</a><a href="#streaming">Streaming links</a><a href="#fan-points">Fan favorites</a>
-        </nav>
+        <AnchorTabs label="Production contents" items={[
+          { id: "overview", label: "Overview" }, { id: "cast", label: "Cast" },
+          { id: "performances", label: "Performances" }, { id: "streaming", label: "Streaming links" },
+          { id: "fan-points", label: "Fan favorites" },
+        ]} />
 
         <section className="section-card stack-md detail-stage-section play-detail-lead-section">
           <p className="lead">
@@ -234,6 +237,44 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
         <section id="overview" className="section-card stack-md detail-stage-section play-detail-synopsis-section">
           <h2 className="section-title">Synopsis</h2>
           <div className="rich-text">{synopsis || "Synopsis not available yet."}</div>
+        </section>
+
+        <section id="cast" className="section-card stack-md detail-stage-section play-detail-cast-section">
+          <h2 className="section-title">Cast</h2>
+          {play.cast.length > 0 ? (
+            <div className="stack-md">
+              {groupedCast.map((group, index) => (
+                <div
+                  className={`cast-group-block stack-sm${group.name ? "" : " is-ungrouped"}`}
+                  key={group.name ?? `ungrouped-${index}`}
+                >
+                  <div className="group-chip">
+                    {group.name ? translateAnnotatedDisplayTextEn(group.name) : "Additional cast"}
+                  </div>
+                  <div className="cast-grid">
+                    {group.items.map((item) => (
+                      <Link
+                        href={`/en/actors/${item.slug}`}
+                        className="cast-card cast-card-link"
+                        key={`${item.slug}-${item.roleName ?? "cast"}-${group.name ?? "ungrouped"}`}
+                      >
+                        <div className="cast-card__monogram" aria-hidden="true">
+                          {getCastInitials(getEnglishActorName(item))}
+                        </div>
+                        <div className="cast-card__body">
+                          <div className="cast-name">{getEnglishActorName(item)}</div>
+                          <PlayCastRoles roleName={item.roleName} credits={item.credits} locale="en" />
+                          {item.isStarring ? <div className="cast-badge">MAIN CAST</div> : null}
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <p className="muted">Cast information is not available yet.</p>
+          )}
         </section>
 
         <section id="performances" className="section-card stack-md detail-stage-section play-detail-info-section">
@@ -349,44 +390,6 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
             <Link className="action-button" href="/en/watch">Browse streaming services</Link>
           </div>
           {hasVod ? <p className="streaming-note">Check the provider’s title page for current availability, subscription or rental terms, and pricing.</p> : null}
-        </section>
-
-        <section id="cast" className="section-card stack-md detail-stage-section play-detail-cast-section">
-          <h2 className="section-title">Cast</h2>
-          {play.cast.length > 0 ? (
-            <div className="stack-md">
-              {groupedCast.map((group, index) => (
-                <div
-                  className={`cast-group-block stack-sm${group.name ? "" : " is-ungrouped"}`}
-                  key={group.name ?? `ungrouped-${index}`}
-                >
-                  <div className="group-chip">
-                    {group.name ? translateAnnotatedDisplayTextEn(group.name) : "Additional cast"}
-                  </div>
-                  <div className="cast-grid">
-                    {group.items.map((item) => (
-                      <Link
-                        href={`/en/actors/${item.slug}`}
-                        className="cast-card cast-card-link"
-                        key={`${item.slug}-${item.roleName ?? "cast"}-${group.name ?? "ungrouped"}`}
-                      >
-                        <div className="cast-card__monogram" aria-hidden="true">
-                          {getCastInitials(getEnglishActorName(item))}
-                        </div>
-                        <div className="cast-card__body">
-                          <div className="cast-name">{getEnglishActorName(item)}</div>
-                          <PlayCastRoles roleName={item.roleName} credits={item.credits} locale="en" />
-                          {item.isStarring ? <div className="cast-badge">MAIN CAST</div> : null}
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          ) : (
-            <p className="muted">Cast information is not available yet.</p>
-          )}
         </section>
 
         <OshiVotingClient playId={play.id} locale="en" />

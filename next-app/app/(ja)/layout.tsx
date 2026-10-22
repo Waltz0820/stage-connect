@@ -4,6 +4,7 @@ import { getSiteMetadata, siteViewport } from "../../lib/site-document-metadata"
 import "../globals.css";
 import "../stage-v2.css";
 import "../editorial-v2.css";
+import "../editorial-details.css";
 
 export const metadata: Metadata = getSiteMetadata("ja");
 export const viewport: Viewport = siteViewport;

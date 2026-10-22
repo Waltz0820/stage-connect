@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { DetailDialog } from "./DetailDialog";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { getEnglishActorName } from "../lib/en-copy";
@@ -76,7 +77,7 @@ export function ActorCoStarsClient({ coStars }: Props) {
   }, []);
 
   return (
-    <section className="section-card stack-md">
+    <section id="co-stars" className="section-card stack-md actor-co-stars-section">
       <div className="section-header-inline">
         <h2 className="section-title">{isEnglish ? "Co-star network" : "共演ネットワーク"}</h2>
         <span className="pill">{isEnglish ? "Frequent co-stars" : "共演数の多い俳優"}</span>
@@ -142,13 +143,7 @@ export function ActorCoStarsClient({ coStars }: Props) {
               : `すべて見る（上位 ${Math.min(coStars.length, MAX_VISIBLE_COUNT)} 人）`}
           </button>
 
-          <div
-            className={`next-modal-overlay${isOpen ? " is-open" : ""}`}
-            aria-hidden={!isOpen}
-            onMouseDown={(event) => {
-              if (event.target === event.currentTarget) setIsOpen(false);
-            }}
-          >
+          <DetailDialog open={isOpen} onClose={() => setIsOpen(false)} label={isEnglish ? "Co-star network" : "共演ネットワーク"}>
             <div className="next-modal-panel">
               <div className="next-modal-header">
                 <div className="stack-xs">
@@ -199,7 +194,7 @@ export function ActorCoStarsClient({ coStars }: Props) {
                 ) : null}
 
                 {hiddenSeoItems.length > 0 ? (
-                  <div className="seo-link-cluster" aria-hidden="true">
+                  <div className="seo-link-cluster" aria-hidden="true" inert>
                     {hiddenSeoItems.map((coStar) => (
                       <Link href={`${actorHrefBase}/${coStar.slug}`} key={`${coStar.slug}-seo`}>
                         {isEnglish ? getEnglishActorName(coStar) : coStar.name}
@@ -209,7 +204,7 @@ export function ActorCoStarsClient({ coStars }: Props) {
                 ) : null}
               </div>
             </div>
-          </div>
+          </DetailDialog>
         </>
       ) : null}
     </section>

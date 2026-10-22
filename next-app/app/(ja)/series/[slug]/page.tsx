@@ -1,3 +1,4 @@
+import { AnchorTabs } from "../../../../components/AnchorTabs";
 import { compactPerformancePeriod, getPerformanceStart } from "../../../../lib/performance-period";
 import type { Metadata } from "next";
 import { ProductionMark } from "../../../../components/ProductionMark";
@@ -138,7 +139,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
   ]);
 
   return (
-    <main className="container works-index-page detail-stage-page series-detail-stage-page" style={{ paddingBlock: 32 }}>
+    <main className="container works-index-page detail-stage-page editorial-detail series-detail-stage-page">
       <StructuredData data={breadcrumbJsonLd} />
       <StructuredData data={seriesJsonLd} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
@@ -170,7 +171,14 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
           </div>
         </section>
 
-        <section className="section-card stack-md detail-stage-section">
+        <AnchorTabs label="シリーズ情報の目次" items={[
+          { id: "series-overview", label: "概要" },
+          { id: "timeline", label: "年表" },
+          { id: "series-cast", label: "キャスト" },
+          ...(series.relatedSeries.length ? [{ id: "related-series", label: "関連シリーズ" }] : []),
+        ]} />
+
+        <section id="series-overview" className="section-card stack-md detail-stage-section">
           <h2 className="section-title">シリーズ情報</h2>
           <div className="rich-text">{series.description || `${series.name}のシリーズ情報を掲載しています。`}</div>
 
@@ -192,9 +200,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
           )}
         </section>
 
-        <SeriesCastOverviewClient topActors={series.topActors} />
-
-        <section className="section-card stack-md detail-stage-section series-timeline-section">
+        <section id="timeline" className="section-card stack-md detail-stage-section series-timeline-section">
           <div className="section-header-inline">
             <h2 className="section-title">年表</h2>
             {startYear ? <span className="pill">{startYear}年〜</span> : null}
@@ -245,8 +251,10 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
           </div>
         </section>
 
+        <SeriesCastOverviewClient topActors={series.topActors} />
+
         {series.relatedSeries.length > 0 ? (
-          <section className="section-card stack-md detail-stage-section">
+          <section id="related-series" className="section-card stack-md detail-stage-section">
             <div className="section-header-inline">
               <div className="stack-sm">
                 <h2 className="section-title">関連シリーズ</h2>

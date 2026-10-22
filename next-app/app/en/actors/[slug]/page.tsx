@@ -1,3 +1,4 @@
+import { AnchorTabs } from "../../../../components/AnchorTabs";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -165,13 +166,13 @@ export default async function EnglishActorDetailPage({ params }: { params: Promi
   ]);
 
   return (
-    <main className="container works-index-page detail-stage-page actor-detail-stage-page" style={{ paddingBlock: 32 }}>
+    <main className="container works-index-page detail-stage-page editorial-detail actor-detail-stage-page">
       <StructuredData data={breadcrumbJsonLd} />
       <StructuredData data={personJsonLd} />
       <div className="stack-lg">
         <Breadcrumbs items={[{ label: "Actors", href: "/en/actors" }, { label: displayName }]} />
 
-        <section className="hero-card stack-md detail-stage-hero">
+        <section id="actor-overview" className="hero-card stack-md detail-stage-hero">
           <div className="detail-hero-grid">
             <div className="detail-monogram" aria-hidden="true">
               {getActorInitials(actor, displayName)}
@@ -202,11 +203,18 @@ export default async function EnglishActorDetailPage({ params }: { params: Promi
           </div>
         </section>
 
+        <AnchorTabs label="Actor contents" items={[
+          { id: "actor-overview", label: "Profile" }, { id: "appearances", label: "Timeline" },
+          ...(actor.topSeries.length ? [{ id: "major-series", label: "Series" }] : []),
+          ...(actor.coStars.length ? [{ id: "co-stars", label: "Co-stars" }] : []),
+          { id: "official-links", label: "Links" },
+        ]} />
+
         {actor.topSeries.length > 0 ? (
           <ActorTopSeriesClient items={actor.topSeries} locale="en" />
         ) : null}
 
-        <section className="section-card stack-md detail-stage-section">
+        <section id="appearances" className="section-card stack-md detail-stage-section actor-appearances-section">
           <h2 className="section-title">Appearance timeline</h2>
           <div className="timeline-shell">
             {timeline.map((group) => (
@@ -214,7 +222,7 @@ export default async function EnglishActorDetailPage({ params }: { params: Promi
                 <div className="timeline-dot" />
                 <div className="timeline-year-heading">
                   <span className="timeline-year">{group.year}</span>
-                  <span className="timeline-year-sub">release year</span>
+                  <span className="timeline-year-sub">{group.plays.length} {group.plays.length === 1 ? "play" : "plays"}</span>
                 </div>
 
                 <div className="actor-timeline-list">
@@ -246,7 +254,7 @@ export default async function EnglishActorDetailPage({ params }: { params: Promi
 
         {actor.coStars.length > 0 ? <ActorCoStarsClient coStars={actor.coStars} /> : null}
 
-        <section className="section-card stack-md detail-stage-section">
+        <section id="official-links" className="section-card stack-md detail-stage-section">
           <h2 className="section-title">Official links</h2>
           {hasSns ? (
             <div className="action-row">

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { DetailDialog } from "./DetailDialog";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { getEnglishActorName, translateDisplayTextEn } from "../lib/en-copy";
@@ -63,7 +64,7 @@ export function SeriesCastOverviewClient({ topActors }: Props) {
 
   if (topActors.length === 0) {
     return (
-      <section className="section-card stack-md series-cast-overview-section">
+      <section id="series-cast" className="section-card stack-md series-cast-overview-section">
         <h2 className="section-title">{isEnglish ? "Cast and role ranking" : "出演キャスト・役柄一覧"}</h2>
         <p className="muted">{isEnglish ? "Cast data is not available yet." : "出演キャスト情報はまだありません。"}</p>
       </section>
@@ -71,7 +72,7 @@ export function SeriesCastOverviewClient({ topActors }: Props) {
   }
 
   return (
-    <section className="section-card stack-md series-cast-overview-section">
+    <section id="series-cast" className="section-card stack-md series-cast-overview-section">
       <h2 className="section-title">{isEnglish ? "Cast and role ranking" : "出演キャスト・役柄一覧"}</h2>
 
       {isMobile ? (
@@ -124,19 +125,13 @@ export function SeriesCastOverviewClient({ topActors }: Props) {
         </div>
       )}
 
-      {topActors.length > Math.max(mobileVisible.length, desktopVisible.length) ? (
+      {topActors.length > (isMobile ? mobileVisible.length : desktopVisible.length) ? (
         <>
           <button type="button" className="action-button" onClick={() => setIsOpen(true)}>
             {isEnglish ? `View all cast links (${topActors.length})` : `すべての出演キャストを見る (${topActors.length} 人)`}
           </button>
 
-          <div
-            className={`next-modal-overlay${isOpen ? " is-open" : ""}`}
-            aria-hidden={!isOpen}
-            onMouseDown={(event) => {
-              if (event.target === event.currentTarget) setIsOpen(false);
-            }}
-          >
+          <DetailDialog open={isOpen} onClose={() => setIsOpen(false)} label={isEnglish ? "Cast and role ranking" : "出演キャスト・役柄一覧"}>
             <div className="next-modal-panel">
               <div className="next-modal-header">
                 <p className="next-modal-title">{isEnglish ? "Cast and role ranking" : "出演キャスト・役柄一覧"}</p>
@@ -171,7 +166,7 @@ export function SeriesCastOverviewClient({ topActors }: Props) {
                 </div>
               </div>
             </div>
-          </div>
+          </DetailDialog>
         </>
       ) : null}
     </section>

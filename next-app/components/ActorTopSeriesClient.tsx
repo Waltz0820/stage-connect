@@ -34,7 +34,7 @@ export function ActorTopSeriesClient({
         };
 
   return (
-    <section className="section-card stack-md">
+    <section id="major-series" className="section-card stack-md actor-series-overview">
       <h2 className="section-title">{labels.title}</h2>
       <div className="meta-list top-series-list">
         {items.slice(0, INITIAL_VISIBLE).map((series) => (

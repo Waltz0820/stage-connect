@@ -1,3 +1,4 @@
+import { AnchorTabs } from "../../../../components/AnchorTabs";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -173,7 +174,7 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
   ]);
 
   return (
-    <main className="container works-index-page detail-stage-page actor-detail-stage-page" style={{ paddingBlock: 32 }}>
+    <main className="container works-index-page detail-stage-page editorial-detail actor-detail-stage-page">
       <StructuredData data={breadcrumbJsonLd} />
       <StructuredData data={personJsonLd} />
       <StructuredData data={faqJsonLd} />
@@ -181,7 +182,7 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
       <div className="stack-lg">
         <Breadcrumbs items={[{ label: "俳優一覧", href: "/actors" }, { label: actor.name }]} />
 
-        <section className="hero-card stack-md detail-stage-hero">
+        <section id="actor-overview" className="hero-card stack-md detail-stage-hero">
           <div className="detail-hero-grid">
             <div className="detail-monogram" aria-hidden="true">
               {getActorInitials(actor)}
@@ -212,9 +213,17 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
           </div>
         </section>
 
+        <AnchorTabs label="俳優情報の目次" items={[
+          { id: "actor-overview", label: "プロフィール" },
+          { id: "appearances", label: "出演年表" },
+          ...(actor.topSeries.length ? [{ id: "major-series", label: "シリーズ" }] : []),
+          ...(actor.coStars.length ? [{ id: "co-stars", label: "共演者" }] : []),
+          { id: "official-links", label: "公式リンク" },
+        ]} />
+
         {actor.topSeries.length > 0 ? <ActorTopSeriesClient items={actor.topSeries} /> : null}
 
-        <section className="section-card stack-md detail-stage-section">
+        <section id="appearances" className="section-card stack-md detail-stage-section actor-appearances-section">
           <h2 className="section-title">出演作品タイムライン</h2>
           <div className="timeline-shell">
             {timeline.map((group) => (
@@ -222,7 +231,7 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
                 <div className="timeline-dot" />
                 <div className="timeline-year-heading">
                   <span className="timeline-year">{group.year}</span>
-                  <span className="timeline-year-sub">公開年</span>
+                  <span className="timeline-year-sub">{group.plays.length}作品</span>
                 </div>
 
                 <div className="actor-timeline-list">
@@ -264,7 +273,7 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
 
         {actor.coStars.length > 0 ? <ActorCoStarsClient coStars={actor.coStars} /> : null}
 
-        <section className="section-card stack-md detail-stage-section">
+        <section id="official-links" className="section-card stack-md detail-stage-section">
           <h2 className="section-title">公式リンク</h2>
           {hasSns ? (
             <div className="action-row">
