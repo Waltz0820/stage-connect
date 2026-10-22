@@ -1,11 +1,13 @@
+import { DirectorySearchForm } from "../../../components/DirectorySearchForm";
+import { DirectorySeriesName } from "../../../components/DirectorySeriesName";
+import { DirectoryHero } from "../../../components/DirectoryHero";
 import { matchesSearch, normalizeSearchQuery } from '../../../lib/search-query';
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "../../../components/Breadcrumbs";
-import { ProductionMark } from "../../../components/ProductionMark";
 import { StructuredData } from "../../../components/StructuredData";
 import { buildBreadcrumbList, buildCollectionPageStructuredData } from "../../../lib/structured-data";
-import { getSeriesList, toPlainText, truncate } from "../../../lib/stage-connect";
+import { getSeriesList } from "../../../lib/stage-connect";
 
 type SearchParamValue = string | string[] | undefined;
 type SearchParams = Record<string, SearchParamValue>;
@@ -105,32 +107,23 @@ export default async function SeriesPage({
   const visibleSeries = sortedSeries.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 
   return (
-    <main className="container works-index-page series-index-page" style={{ paddingBlock: 32 }}>
+    <main className="container works-index-page series-index-page editorial-directory directory--series">
       <StructuredData data={breadcrumbJsonLd} />
       <StructuredData data={collectionJsonLd} />
       <div className="stack-lg">
         <Breadcrumbs items={[{ label: "シリーズ一覧" }]} />
 
-        <section className="hero-card stack-md works-index-hero">
-          <div className="stack-sm">
-            <span className="eyebrow">Series</span>
-            <h1 className="page-title">シリーズ一覧</h1>
-            <p className="lead">
-              シリーズの時系列と関連作品をたどる
-            </p>
-          </div>
-
-        </section>
+        <DirectoryHero kind="series" title="シリーズ一覧" description="シリーズの時系列と関連作品をたどる" count={filteredSeries.length} unit="シリーズ" />
 
         <section className="section-card stack-md works-list-panel">
           <h2 className="section-title">シリーズ・フィルター</h2>
 
-          <form className="v2-search" action="/series">
+          <DirectorySearchForm className="v2-search" action="/series">
             <label className="sr-only" htmlFor="series-query">シリーズ名で検索</label>
             <input id="series-query" name="q" defaultValue={q} placeholder="シリーズ名で検索"/>
             <input type="hidden" name="sort" value={sort}/><input type="hidden" name="format" value={format}/><input type="hidden" name="origin" value={origin}/>
             <button type="submit" aria-label="検索">→</button>
-          </form>
+          </DirectorySearchForm>
 
           <div className="filter-row filter-row--dense works-filter-row">
             <Link
@@ -147,6 +140,7 @@ export default async function SeriesPage({
             </Link>
           </div>
 
+          <fieldset className="directory-choice-group"><legend>上演形式</legend>
           <div className="filter-row filter-row--dense genre-filter-row works-filter-row">
             {formatOptions.map((option) => (
               <Link
@@ -158,7 +152,9 @@ export default async function SeriesPage({
               </Link>
             ))}
           </div>
+          </fieldset>
 
+          <fieldset className="directory-choice-group"><legend>原作区分</legend>
           <div className="filter-row filter-row--dense genre-filter-row works-filter-row">
             {originOptions.map((option) => (
               <Link
@@ -170,31 +166,21 @@ export default async function SeriesPage({
               </Link>
             ))}
           </div>
+          </fieldset>
 
           <p className="catalog-count"><strong>{filteredSeries.length.toLocaleString()}</strong>件のシリーズ</p>
 
           <div className="catalog-grid catalog-grid--play-list">
             {visibleSeries.map((series) => (
               <article className="catalog-card catalog-card--play-list" key={series.slug}>
-                <Link className="play-list-card__mark-link" href={`/series/${series.slug}`} aria-label={series.name}>
-                  <ProductionMark kind="series" seriesSlug={series.slug} format={series.format}/>
-                </Link>
+
 
                 <div className="play-list-card__main">
                   <Link className="catalog-card__body-link" href={`/series/${series.slug}`}>
+                    <DirectorySeriesName slug={series.slug} locale="ja" />
                     <div className="catalog-card__top catalog-card__top--stack">
                       <div className="catalog-card__title">{series.name}</div>
                     </div>
-
-                    {series.description ? (
-                      <div className="catalog-card__text play-list-card__summary">
-                        {truncate(toPlainText(series.description), 140)}
-                      </div>
-                    ) : (
-                      <div className="catalog-card__text play-list-card__summary">
-                        シリーズ説明は現在整備中です。
-                      </div>
-                    )}
 
                     <div className="play-list-card__facts">
                       <div className="play-list-card__fact">

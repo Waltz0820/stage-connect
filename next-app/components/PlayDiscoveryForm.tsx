@@ -1,6 +1,8 @@
 import { OSHI_POINTS, OSHI_MIN_PARTICIPANTS } from '../lib/oshi-points.mjs';
 import { STREAMING_GUIDES } from '../lib/streaming-guide';
 import Link from 'next/link';
+import { DirectoryFilterSheet } from './DirectoryFilterSheet';
+import { DirectorySearchForm } from './DirectorySearchForm';
 
 type Props = {
   locale: 'ja' | 'en';
@@ -11,12 +13,13 @@ type Props = {
 };
 export default function PlayDiscoveryForm({ locale, values, formats, genres, seriesOptions, pointAvailable }: Props) {
   const ja = locale === 'ja';
-  return <form className="play-discovery-form" action={ja ? '/plays' : '/en/plays'}>
+  return <DirectorySearchForm className="play-discovery-form" action={ja ? '/plays' : '/en/plays'}>
     <div className="v2-search"><span aria-hidden="true">⌕</span>
       <label className="sr-only" htmlFor="play-query">{ja ? '作品名・シリーズ名で検索' : 'Search plays and series'}</label>
       <input id="play-query" name="q" defaultValue={values.q} placeholder={ja ? '作品名・シリーズ名で検索' : 'Search plays and series'}/>
       <button type="submit" aria-label={ja ? '検索・絞り込みを適用' : 'Search and apply filters'}>→</button>
     </div>
+    <DirectoryFilterSheet locale={locale}>
     <div className="discovery-filters">
       <label><span>{ja ? '上演形式' : 'Format'}</span><select name="format" defaultValue={values.format}><option value="all">{ja ? 'すべての形式' : 'All formats'}</option>{Object.entries(formats).map(([id, label]) => <option key={id} value={id}>{label}</option>)}</select></label>
       <label><span>{ja ? 'ジャンル' : 'Genre'}</span><select name="genre" defaultValue={values.genre}><option value="all">{ja ? 'すべてのジャンル' : 'All genres'}</option>{Object.entries(genres).map(([id, label]) => <option key={id} value={id}>{label}</option>)}</select></label>
@@ -31,10 +34,11 @@ export default function PlayDiscoveryForm({ locale, values, formats, genres, ser
     </div>
     <div className="discovery-actions"><button type="submit" className="action-button">{ja ? '条件を適用' : 'Apply filters'}</button>
       <a href={ja ? '/plays' : '/en/plays'}>{ja ? 'リセット' : 'Reset'}</a></div>
+    </DirectoryFilterSheet>
     {values.service ? <p className="catalog-note">{ja ? 'Stage Connectに作品リンクがあるものを表示しています。未登録の作品は、' : 'Showing production links recorded in Stage Connect. For titles not listed, visit the '}<Link href={`${ja?'':'/en'}/watch/${values.service==='unext'?'u-next':values.service}`}>{ja ? 'サービス別ガイド' : 'service guide'}</Link>{ja ? 'から公式サイトも確認できます。' : ' and check the official catalogue.'}</p> : null}
     {values.point ? <p className="catalog-note" role="status">{!pointAvailable
       ? ja ? '推しポイント検索はただいま準備中です。ほかの条件はご利用いただけます。' : 'Fan-favorite search is being prepared. Other filters are available.'
       : ja ? `投票参加者が${OSHI_MIN_PARTICIPANTS}人以上で、この項目に支持がある作品を表示します。` : `Showing productions with at least ${OSHI_MIN_PARTICIPANTS} participants and support for this point.`}</p>
       : values.sort === 'support' ? <p className="catalog-note">{ja ? '支持率順で探すには、推しポイントを選んでください。現在は公演が新しい順です。' : 'Choose a point to sort by support. Currently showing newest first.'}</p> : null}
-  </form>;
+  </DirectorySearchForm>;
 }

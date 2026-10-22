@@ -1,3 +1,5 @@
+import { DirectorySearchForm } from "../../../components/DirectorySearchForm";
+import { DirectoryHero } from "../../../components/DirectoryHero";
 import { matchesSearch, normalizeSearchQuery } from '../../../lib/search-query';
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -9,8 +11,6 @@ import {
   getDisplayBirthday,
   getActorList,
   getAgeFromBirthday,
-  toPlainText,
-  truncate,
 } from "../../../lib/stage-connect";
 
 type SearchParamValue = string | string[] | undefined;
@@ -98,30 +98,21 @@ export default async function ActorsPage({
   const visibleActors = filteredActors.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 
   return (
-    <main className="container works-index-page" style={{ paddingBlock: 32 }}>
+    <main className="container works-index-page editorial-directory directory--actors">
       <StructuredData data={breadcrumbJsonLd} />
       <StructuredData data={collectionJsonLd} />
       <div className="stack-lg">
         <Breadcrumbs items={[{ label: "俳優一覧" }]} />
-        <section className="hero-card stack-md works-index-hero">
-          <div className="stack-sm">
-            <span className="eyebrow">Actors</span>
-            <h1 className="page-title">俳優一覧</h1>
-            <p className="lead">
-              2.5次元舞台で活躍する俳優を探す
-            </p>
-          </div>
-
-        </section>
+        <DirectoryHero kind="actors" title="俳優一覧" description="2.5次元舞台で活躍する俳優を探す" count={filteredActors.length} unit="人" />
 
         <section className="section-card stack-md works-list-panel">
           <h2 className="section-title">俳優データベース</h2>
 
-          <form className="v2-search" action="/actors">
+          <DirectorySearchForm className="v2-search" action="/actors">
             <label className="sr-only" htmlFor="actor-query">俳優名で検索</label>
             <input id="actor-query" name="q" defaultValue={q} placeholder="俳優名で検索（漢字・かな・ローマ字）"/>
             <input type="hidden" name="gender" value={gender}/><button type="submit" aria-label="検索">→</button>
-          </form>
+          </DirectorySearchForm>
           {filteredActors.length === 0 ? <p className="muted">該当する俳優は見つかりませんでした。</p> : null}
 
           <div className="filter-row filter-row--dense works-filter-row">
@@ -180,12 +171,6 @@ export default async function ActorsPage({
                           <span className="actor-list-card__fact">{GENDER_LABELS[actor.gender]}</span>
                         ) : null}
                       </div>
-
-                      {actor.profile ? (
-                        <div className="catalog-card__text actor-list-card__summary">{truncate(toPlainText(actor.profile), 140)}</div>
-                      ) : (
-                        <div className="catalog-card__text actor-list-card__summary">プロフィールは現在準備中です。</div>
-                      )}
 
                       <div className="catalog-card__footer actor-list-card__footer">
                         <span className="catalog-link">俳優詳細を見る</span>

@@ -1,3 +1,4 @@
+import { DirectoryHero } from "../../../components/DirectoryHero";
 import { isStreamingService, matchesStreamingService } from '../../../lib/streaming-guide';
 import { matchesSearch, normalizeSearchQuery } from '../../../lib/search-query';
 import PlayDiscoveryForm from "../../../components/PlayDiscoveryForm";
@@ -6,7 +7,6 @@ import { getOshiDiscovery } from "../../../lib/oshi-server";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "../../../components/Breadcrumbs";
-import { ProductionMark } from "../../../components/ProductionMark";
 import { StructuredData } from "../../../components/StructuredData";
 import {
   compactListPeriodEn,
@@ -14,10 +14,9 @@ import {
   EN_GENRE_LABELS,
   getEnglishPlayTitle,
   getEnglishSeriesName,
-  truncateText,
 } from "../../../lib/en-copy";
 import { buildBreadcrumbList, buildCollectionPageStructuredData } from "../../../lib/structured-data";
-import { getPlayList, getPlayMainCastSummariesBySlug, periodSortKey, toPlainText } from "../../../lib/stage-connect";
+import { getPlayList, getPlayMainCastSummariesBySlug, periodSortKey } from "../../../lib/stage-connect";
 
 type SearchParamValue = string | string[] | undefined;
 type SearchParams = Record<string, SearchParamValue>;
@@ -186,22 +185,13 @@ export default async function EnglishPlaysPage({
   const visibleCastSummaries = await getPlayMainCastSummariesBySlug(visible.map((play) => play.slug));
 
   return (
-    <main className="container works-index-page" style={{ paddingBlock: 32 }}>
+    <main className="container works-index-page editorial-directory directory--plays">
       <StructuredData data={breadcrumbJsonLd} />
       <StructuredData data={collectionJsonLd} />
       <div className="stack-lg">
         <Breadcrumbs items={[{ label: "Plays", href: "/en/plays" }]} />
 
-        <section className="hero-card stack-md works-index-hero">
-          <div className="stack-sm">
-            <span className="eyebrow">Plays</span>
-            <h1 className="page-title">2.5D Plays</h1>
-            <p className="lead">
-              Browse stage plays and musicals by release order, performance format, and genre.
-            </p>
-          </div>
-
-        </section>
+        <DirectoryHero kind="plays" title="2.5D Plays" description="Browse stage plays and musicals by release order, performance format, and genre." count={filtered.length} unit="productions" />
 
         <section className="section-card stack-md works-list-panel">
           <PlayDiscoveryForm locale="en" values={{ q, point, series, streaming, service, sort, format, genre }} formats={EN_FORMAT_LABELS} genres={EN_GENRE_LABELS} seriesOptions={seriesOptions} pointAvailable={discovery.available} />
@@ -212,14 +202,9 @@ export default async function EnglishPlaysPage({
           <div className="catalog-grid catalog-grid--play-list">
             {visible.map((play) => (
               <article className="catalog-card catalog-card--play-list" key={play.slug}>
-                <Link
-                  className="play-list-card__mark-link"
-                  href={`/en/plays/${play.slug}`}
-                  aria-label={getEnglishPlayTitle(play)}
-                >
-                  <ProductionMark seriesSlug={play.slug} format={play.franchiseFormat}/>
-                </Link>
 
+
+                {getPlayReleaseLabelEn(play.period) ? <div className="directory-release-band">{getPlayReleaseLabelEn(play.period)}</div> : null}
                 <div className="play-list-card__main">
                   <div className="catalog-card__top catalog-card__top--stack">
                     <Link className="catalog-card__title" href={`/en/plays/${play.slug}`}>{getEnglishPlayTitle(play)}</Link>
@@ -232,25 +217,10 @@ export default async function EnglishPlaysPage({
                       </div>
                     ) : null}
 
-                    <div className="catalog-card__text play-list-card__summary">
-                      {play.summaryEn || play.summary
-                        ? truncateText(toPlainText(play.summaryEn || play.summary), 160)
-                        : "Summary not available yet."}
-                    </div>
+
 
                     <div className="play-list-card__facts">
-                      {getPlayReleaseLabelEn(play.period) ? (
-                        <div className="play-list-card__fact">
-                          <span className="play-list-card__fact-icon" aria-hidden="true">
-                            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4">
-                              <rect x="2.5" y="3.5" width="11" height="10" rx="2" />
-                              <path d="M5 2.5v2M11 2.5v2M2.5 6.5h11" />
-                            </svg>
-                          </span>
-                          <span className="play-list-card__fact-key">Release</span>
-                          <span className="play-list-card__fact-value">{getPlayReleaseLabelEn(play.period)}</span>
-                        </div>
-                      ) : null}
+
                       <div className="play-list-card__fact">
                         <span className="play-list-card__fact-icon" aria-hidden="true">
                           <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4">

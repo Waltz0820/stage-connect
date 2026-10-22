@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, type ReactNode } from "react";
 
-export function DetailDialog({ open, onClose, label, children }: { open: boolean; onClose: () => void; label: string; children: ReactNode }) {
+export function DetailDialog({ open, onClose, label, children, className = "" }: { open: boolean; onClose: () => void; label: string; children: ReactNode; className?: string }) {
   const ref = useRef<HTMLDialogElement>(null);
   useEffect(() => {
     const dialog = ref.current;
@@ -35,7 +35,7 @@ export function DetailDialog({ open, onClose, label, children }: { open: boolean
     };
   }, [open]);
 
-  return <dialog ref={ref} className="editorial-detail-dialog" aria-label={label}
+  return <dialog ref={ref} className={`editorial-detail-dialog ${className}`.trim()} aria-label={label}
     onCancel={(event) => { event.preventDefault(); onClose(); }}
     onClose={onClose}
     onClick={(event) => {
@@ -44,7 +44,7 @@ export function DetailDialog({ open, onClose, label, children }: { open: boolean
     onKeyDown={(event) => {
       if (event.key === "Escape") { event.preventDefault(); onClose(); }
       if (event.key !== "Tab") return;
-      const focusable = Array.from(event.currentTarget.querySelectorAll<HTMLElement>('a[href],button:not([disabled]),[tabindex="0"]'))
+      const focusable = Array.from(event.currentTarget.querySelectorAll<HTMLElement>('a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex="0"]'))
         .filter((node) => !node.closest('[inert]') && node.getClientRects().length > 0);
       const first = focusable[0];
       const last = focusable.at(-1);

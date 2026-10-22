@@ -1,3 +1,4 @@
+import { DirectoryHero } from "../../../components/DirectoryHero";
 import { isStreamingService, matchesStreamingService } from '../../../lib/streaming-guide';
 import { matchesSearch, normalizeSearchQuery } from '../../../lib/search-query';
 import PlayDiscoveryForm from "../../../components/PlayDiscoveryForm";
@@ -6,10 +7,9 @@ import { getOshiDiscovery } from "../../../lib/oshi-server";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "../../../components/Breadcrumbs";
-import { ProductionMark } from "../../../components/ProductionMark";
 import { StructuredData } from "../../../components/StructuredData";
 import { buildBreadcrumbList, buildCollectionPageStructuredData } from "../../../lib/structured-data";
-import { getPlayList, getPlayMainCastSummariesBySlug, periodSortKey, toPlainText, truncate } from "../../../lib/stage-connect";
+import { getPlayList, getPlayMainCastSummariesBySlug, periodSortKey } from "../../../lib/stage-connect";
 
 type SearchParamValue = string | string[] | undefined;
 type SearchParams = Record<string, SearchParamValue>;
@@ -208,21 +208,12 @@ export default async function PlaysPage({
   const visibleCastSummaries = await getPlayMainCastSummariesBySlug(visiblePlays.map((play) => play.slug));
 
   return (
-    <main className="container works-index-page" style={{ paddingBlock: 32 }}>
+    <main className="container works-index-page editorial-directory directory--plays">
       <StructuredData data={breadcrumbJsonLd} />
       <StructuredData data={collectionJsonLd} />
       <div className="stack-lg">
         <Breadcrumbs items={[{ label: "作品一覧" }]} />
-        <section className="hero-card stack-md works-index-hero">
-          <div className="stack-sm">
-            <span className="eyebrow">Plays</span>
-            <h1 className="page-title">作品一覧</h1>
-            <p className="lead">
-              作品・キャスト・配信情報を探す
-            </p>
-          </div>
-
-        </section>
+        <DirectoryHero kind="plays" title="作品一覧" description="作品・キャスト・配信情報を探す" count={filteredPlays.length} unit="作品" />
 
         <section className="section-card stack-md works-list-panel">
           <PlayDiscoveryForm locale="ja" values={{ q, point, series, streaming, service, sort, format, genre }} formats={FORMAT_LABELS} genres={GENRE_LABELS} seriesOptions={seriesOptions} pointAvailable={discovery.available} />
@@ -233,10 +224,9 @@ export default async function PlaysPage({
           <div className="catalog-grid catalog-grid--play-list">
             {visiblePlays.map((play) => (
               <article className="catalog-card catalog-card--play-list" key={play.slug}>
-                <Link className="play-list-card__mark-link" href={`/plays/${play.slug}`} aria-label={play.title}>
-                  <ProductionMark seriesSlug={play.slug} format={play.franchiseFormat}/>
-                </Link>
 
+
+                {getPlayReleaseLabel(play.period) ? <div className="directory-release-band">{getPlayReleaseLabel(play.period)}</div> : null}
                 <div className="play-list-card__main">
                   <div className="catalog-card__top catalog-card__top--stack">
                     <Link className="catalog-card__title" href={`/plays/${play.slug}`}>{play.title}</Link>
@@ -247,27 +237,8 @@ export default async function PlaysPage({
                       <div className="catalog-card__sub play-list-card__series">{play.franchiseName}</div>
                     ) : null}
 
-                    {play.summary ? (
-                      <div className="catalog-card__text play-list-card__summary">
-                        {truncate(toPlainText(play.summary), 140)}
-                      </div>
-                    ) : (
-                      <div className="catalog-card__text play-list-card__summary">作品説明は現在準備中です。</div>
-                    )}
-
                     <div className="play-list-card__facts">
-                      {getPlayReleaseLabel(play.period) ? (
-                        <div className="play-list-card__fact">
-                          <span className="play-list-card__fact-icon" aria-hidden="true">
-                            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4">
-                              <rect x="2.5" y="3.5" width="11" height="10" rx="2" />
-                              <path d="M5 2.5v2M11 2.5v2M2.5 6.5h11" />
-                            </svg>
-                          </span>
-                          <span className="play-list-card__fact-key">公開年月</span>
-                          <span className="play-list-card__fact-value">{getPlayReleaseLabel(play.period)}</span>
-                        </div>
-                      ) : null}
+
                       <div className="play-list-card__fact">
                         <span className="play-list-card__fact-icon" aria-hidden="true">
                           <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4">

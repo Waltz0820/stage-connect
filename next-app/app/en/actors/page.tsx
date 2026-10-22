@@ -1,11 +1,13 @@
+import { DirectorySearchForm } from "../../../components/DirectorySearchForm";
+import { DirectoryHero } from "../../../components/DirectoryHero";
 import { matchesSearch, normalizeSearchQuery } from '../../../lib/search-query';
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "../../../components/Breadcrumbs";
 import { FavoriteButtonClient } from "../../../components/FavoriteButtonClient";
 import { StructuredData } from "../../../components/StructuredData";
-import { getActorList, getAgeFromBirthday, toPlainText } from "../../../lib/stage-connect";
-import { formatAgeEn, formatBirthdayEn, formatBirthdayLabelEn, getEnglishActorName, truncateText } from "../../../lib/en-copy";
+import { getActorList, getAgeFromBirthday } from "../../../lib/stage-connect";
+import { formatAgeEn, formatBirthdayEn, formatBirthdayLabelEn, getEnglishActorName } from "../../../lib/en-copy";
 import { buildBreadcrumbList, buildCollectionPageStructuredData } from "../../../lib/structured-data";
 
 type SearchParamValue = string | string[] | undefined;
@@ -109,31 +111,22 @@ export default async function EnglishActorsPage({
   const visibleActors = filteredActors.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 
   return (
-    <main className="container works-index-page" style={{ paddingBlock: 32 }}>
+    <main className="container works-index-page editorial-directory directory--actors">
       <StructuredData data={breadcrumbJsonLd} />
       <StructuredData data={collectionJsonLd} />
       <div className="stack-lg">
         <Breadcrumbs items={[{ label: "Actors", href: "/en/actors" }]} />
 
-        <section className="hero-card stack-md works-index-hero">
-          <div className="stack-sm">
-            <span className="eyebrow">Actors</span>
-            <h1 className="page-title">2.5D Cast</h1>
-            <p className="lead">
-              Browse actors, profiles, and stage appearance history connected to 2.5D productions.
-            </p>
-          </div>
-
-        </section>
+        <DirectoryHero kind="actors" title="2.5D Cast" description="Browse actors, profiles, and stage appearance history connected to 2.5D productions." count={filteredActors.length} unit="actors" />
 
         <section className="section-card stack-md works-list-panel">
           <h2 className="section-title">Filters</h2>
 
-          <form className="v2-search" action="/en/actors">
+          <DirectorySearchForm className="v2-search" action="/en/actors">
             <label className="sr-only" htmlFor="actor-query">Search actors</label>
             <input id="actor-query" name="q" defaultValue={q} placeholder="Search by actor name"/>
             <input type="hidden" name="gender" value={gender}/><button type="submit" aria-label="Search">→</button>
-          </form>
+          </DirectorySearchForm>
           {filteredActors.length === 0 ? <p className="muted">No actors matched your search.</p> : null}
 
           <div className="filter-row filter-row--dense works-filter-row">
@@ -190,14 +183,6 @@ export default async function EnglishActorsPage({
                           <span className="actor-list-card__fact">{GENDER_LABELS[actor.gender]}</span>
                         ) : null}
                       </div>
-
-                      {actor.profileEn || actor.profile ? (
-                        <div className="catalog-card__text actor-list-card__summary">
-                          {truncateText(toPlainText(actor.profileEn || actor.profile), 160)}
-                        </div>
-                      ) : (
-                        <div className="catalog-card__text actor-list-card__summary">Profile text is not available yet.</div>
-                      )}
 
                       <div className="catalog-card__footer actor-list-card__footer">
                         <span className="catalog-link">View actor details</span>

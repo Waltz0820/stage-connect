@@ -1,12 +1,14 @@
+import { DirectorySearchForm } from "../../../components/DirectorySearchForm";
+import { DirectorySeriesName } from "../../../components/DirectorySeriesName";
+import { DirectoryHero } from "../../../components/DirectoryHero";
 import { matchesSearch, normalizeSearchQuery } from '../../../lib/search-query';
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "../../../components/Breadcrumbs";
-import { ProductionMark } from "../../../components/ProductionMark";
 import { StructuredData } from "../../../components/StructuredData";
-import { EN_FORMAT_LABELS, getEnglishSeriesName, toEnglishOriginType, truncateText } from "../../../lib/en-copy";
+import { EN_FORMAT_LABELS, getEnglishSeriesName, toEnglishOriginType } from "../../../lib/en-copy";
 import { buildBreadcrumbList, buildCollectionPageStructuredData } from "../../../lib/structured-data";
-import { getSeriesList, toPlainText } from "../../../lib/stage-connect";
+import { getSeriesList } from "../../../lib/stage-connect";
 
 type SearchParamValue = string | string[] | undefined;
 type SearchParams = Record<string, SearchParamValue>;
@@ -102,32 +104,23 @@ export default async function EnglishSeriesPage({
   const visible = sorted.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 
   return (
-    <main className="container works-index-page series-index-page" style={{ paddingBlock: 32 }}>
+    <main className="container works-index-page series-index-page editorial-directory directory--series">
       <StructuredData data={breadcrumbJsonLd} />
       <StructuredData data={collectionJsonLd} />
       <div className="stack-lg">
         <Breadcrumbs items={[{ label: "Series", href: "/en/series" }]} />
 
-        <section className="hero-card stack-md works-index-hero">
-          <div className="stack-sm">
-            <span className="eyebrow">Series</span>
-            <h1 className="page-title">2.5D Series</h1>
-            <p className="lead">
-              Browse franchise lines, recurring stage adaptations, and long-running 2.5D projects.
-            </p>
-          </div>
-
-        </section>
+        <DirectoryHero kind="series" title="2.5D Series" description="Browse franchise lines, recurring stage adaptations, and long-running 2.5D projects." count={filtered.length} unit="series" />
 
         <section className="section-card stack-md works-list-panel">
           <h2 className="section-title">Series Filters</h2>
 
-          <form className="v2-search" action="/en/series">
+          <DirectorySearchForm className="v2-search" action="/en/series">
             <label className="sr-only" htmlFor="series-query">Search series</label>
             <input id="series-query" name="q" defaultValue={q} placeholder="Search by series name"/>
             <input type="hidden" name="sort" value={sort}/><input type="hidden" name="format" value={format}/><input type="hidden" name="origin" value={origin}/>
             <button type="submit" aria-label="Search">→</button>
-          </form>
+          </DirectorySearchForm>
 
           <div className="filter-row filter-row--dense works-filter-row">
             <Link
@@ -144,6 +137,7 @@ export default async function EnglishSeriesPage({
             </Link>
           </div>
 
+          <fieldset className="directory-choice-group"><legend>Format</legend>
           <div className="filter-row filter-row--dense genre-filter-row works-filter-row">
             {formatOptions.map((option) => (
               <Link
@@ -155,7 +149,9 @@ export default async function EnglishSeriesPage({
               </Link>
             ))}
           </div>
+          </fieldset>
 
+          <fieldset className="directory-choice-group"><legend>Original source</legend>
           <div className="filter-row filter-row--dense genre-filter-row works-filter-row">
             {originOptions.map((option) => (
               <Link
@@ -167,31 +163,23 @@ export default async function EnglishSeriesPage({
               </Link>
             ))}
           </div>
+          </fieldset>
 
           <p className="catalog-count"><strong>{filtered.length.toLocaleString()}</strong> series</p>
 
           <div className="catalog-grid catalog-grid--play-list">
             {visible.map((series) => (
               <article className="catalog-card catalog-card--play-list" key={series.slug}>
-                <Link
-                  className="play-list-card__mark-link"
-                  href={`/en/series/${series.slug}`}
-                  aria-label={getEnglishSeriesName(series)}
-                >
-                  <ProductionMark kind="series" seriesSlug={series.slug} format={series.format}/>
-                </Link>
+
 
                 <div className="play-list-card__main">
                   <Link className="catalog-card__body-link" href={`/en/series/${series.slug}`}>
+                    <DirectorySeriesName slug={series.slug} locale="en" />
                     <div className="catalog-card__top catalog-card__top--stack">
                       <div className="catalog-card__title">{getEnglishSeriesName(series)}</div>
                     </div>
 
-                    <div className="catalog-card__text play-list-card__summary">
-                      {series.descriptionEn || series.description
-                        ? truncateText(toPlainText(series.descriptionEn || series.description), 160)
-                        : "Series description not available yet."}
-                    </div>
+
 
                     <div className="play-list-card__facts">
                       <div className="play-list-card__fact">
