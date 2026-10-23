@@ -140,50 +140,6 @@
 .stage-v2 .favorite-results .muted { font-size: 12px; margin-top: 8px; }
 .stage-v2 .favorite-results--plays .support-button { border-color: var(--ed-coral); color: #a02e21; }
 
-/* About: type, flat color and a real relationship graph replace photography. */
-.stage-v2 .support-about { max-width: 1120px; }
-.about-opening { padding: 36px 20px 0; }
-.stage-v2 .support-about h1 { font-size: clamp(39px,10.4vw,96px); font-weight: 900; line-height: 1.24; letter-spacing: -.065em; margin: 24px 0; }
-.stage-v2 .support-about em { font-style: normal; color: var(--ed-blue); }
-.stage-v2 .support-about .about-opening > p { max-width: 620px; }
-.about-opening__next { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 24px 0; margin-top: 30px; border-top: 1px solid var(--ed-line); font-size: 10px; letter-spacing: .1em; }
-.about-opening__next span { font-size: 25px; color: var(--ed-blue); }
-.about-how { padding: 40px 20px; background: white; border-top: 1px solid var(--ed-line); }
-.stage-v2 .about-how > h2 { font-size: clamp(31px,8.1vw,76px); font-weight: 900; letter-spacing: -.07em; line-height: 1; margin: 24px 0 18px; }
-.stage-v2 .about-how .about-lead { font-size: 19px; font-weight: 850; }
-.stage-v2 .about-network-help { font-size: 12px; color: var(--ed-muted); padding-top: 10px; }
-.about-network { position: relative; width: 100%; height: auto; aspect-ratio: 1/1.12; max-width: 720px; margin: 12px auto 24px; }
-.about-network__lines { position: absolute; width: 100%; height: 100%; inset: 0; overflow: visible; }
-.about-network__lines line { stroke: var(--ed-blue); stroke-width: .45; stroke-dasharray: 100; animation: connection-draw .65s ease-out both; }
-.about-node { position: absolute; transform: translate(-50%,-50%); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; width: 43%; aspect-ratio: 1; min-height: 0; padding: 12px; border: 3px solid transparent; border-radius: 50%; background: var(--ed-blue); color: white; text-align: center; box-shadow: none; }
-.about-node--play { background: var(--ed-coral); color: var(--ed-ink); }
-.about-node--role { width: 37%; background: var(--ed-lavender); color: var(--ed-ink); }
-.about-node--costar { background: var(--ed-lime); color: var(--ed-ink); }
-.about-node--series { background: var(--ed-night); }
-.about-node.is-active { border-color: var(--ed-ink); }
-.about-node__label { font-weight: 900; font-size: clamp(14px,4.8vw,27px); line-height: 1.1; }
-.about-node__name { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; font-size: clamp(10px,2.7vw,14px); font-weight: 650; line-height: 1.5; overflow-wrap: anywhere; }
-.about-connection-list { display: grid; gap: 10px; }
-.about-connection { padding: 20px; border: 1px solid var(--ed-line); border-left: 5px solid var(--ed-line); border-radius: 6px; }
-.about-connection.is-active { background: #edf2ff; border-left-color: var(--ed-blue); }
-.about-connection > span { font-weight: 800; font-size: 11px; color: var(--ed-blue); letter-spacing: .06em; }
-.stage-v2 .about-connection h3 { font-size: 18px; font-weight: 850; margin: 8px 0; line-height: 1.6; }
-.stage-v2 .about-connection p { font-size: 13px; margin: 0 0 12px; }
-.about-connection > a { display: flex; align-items: center; justify-content: space-between; min-height: 44px; color: var(--ed-blue); font-size: 13px; font-weight: 800; }
-.about-statement { padding: 44px 20px; background: var(--ed-blue); color: white; }
-.stage-v2 .support-about .about-statement p { color: white; font-size: clamp(28px,8.1vw,80px); font-weight: 900; line-height: 1.15; letter-spacing: -.06em; margin: 0 0 26px; }
-.stage-v2 .about-statement em { color: var(--ed-lime); }
-.about-statement > span { font-weight: 700; font-size: 14px; }
-.about-mission { padding: 40px 20px; }
-.stage-v2 .about-mission h2 { font-size: clamp(32px,9vw,76px); font-weight: 900; line-height: 1.25; margin: 24px 0; }
-.about-mission > .support-button { margin-top: 26px; }
-.about-values { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 10px; padding-top: 24px; text-align: center; }
-.stage-v2 .about-values p { margin: 0; font-size: 12px; }
-.about-values span { display: grid; place-items: center; width: 64px; height: 64px; margin: 0 auto 12px; border-radius: 50%; background: #ffede9; color: #ba3243; font-size: 36px; }
-.about-values p:nth-child(2) span { background: #edf2ff; color: var(--ed-blue); }
-.about-values p:nth-child(3) span { background: var(--ed-lime); color: #394c0a; }
-@keyframes connection-draw { from { stroke-dashoffset: 100; } to { stroke-dashoffset: 0; } }
-@media (prefers-reduced-motion:reduce) { .about-network__lines line { animation: none; stroke-dasharray: none; } }
 @media (min-width:740px) {
   .stage-v2 .editorial-support :is(.hero-card,.section-card) { padding: 40px 48px; }
   .stage-v2 .editorial-support .breadcrumbs { padding: 24px 48px 0; }
@@ -196,13 +152,4 @@
   .stage-v2 .support-favorites :is(.favorite-tabs,.favorite-results,.favorite-storage-note,.favorite-notice,.empty-state-card) { padding-inline: 48px; }
   .stage-v2 .support-favorites .empty-state-card .action-row { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .stage-v2 .favorite-results .results-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
-  .about-opening,.about-how,.about-mission { padding: 54px 48px; }
-  .about-opening { padding-bottom: 0; }
-  .about-statement { padding: 54px 48px; }
-  .about-connection-list { grid-template-columns: repeat(2,minmax(0,1fr)); }
-  .about-connection:last-child { grid-column: 1/-1; }
-  .about-network { aspect-ratio: 1/.85; }
-  .about-node { width: 34%; }
-  .about-node--role { width: 28%; }
-  .stage-v2 .support-about .about-opening > p,.stage-v2 .support-about .about-mission > p { font-size: 18px; }
 }

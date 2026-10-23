@@ -7,6 +7,7 @@ import "../editorial-v2.css";
 import "../editorial-details.css";
 import "../editorial-directory.css";
 import "../editorial-support.css";
+import "../editorial-about.css";
 
 export const metadata: Metadata = getSiteMetadata("en");
 export const viewport: Viewport = siteViewport;
