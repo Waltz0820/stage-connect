@@ -1,0 +1,51 @@
+{
+  "checkedAt": "2026-10-23T20:14:04.265Z",
+  "scope": "2015年8月初演1作品26配役を収録・点検。シリーズ全5作品のうち初演までで、II〜Vの4作品は未収録。人物総合監査・詳細英訳・全シリーズ点検は未完。",
+  "franchiseId": "f9806a0c-a8e2-4de0-8c47-531fd6b6df6b",
+  "slug": "diamond-no-ace",
+  "registeredWorks": 1,
+  "castRows": 26,
+  "uniqueActors": 26,
+  "publicPages": 56,
+  "creditOnlyNames": 7,
+  "creditCategories": 29,
+  "identitySources": 13,
+  "castOnlyActorsWithoutProfile": 1,
+  "legacyCandidatesSuperseded": 1,
+  "timeline": [
+    "2015/08"
+  ],
+  "structuredActorLimit": 20,
+  "works": [
+    {
+      "id": "86f38080-4172-4161-9af2-7ec508734e8f",
+      "slug": "diaace2015",
+      "title": "「ダイヤのA」The LIVE",
+      "title_en": "Ace of Diamond The LIVE",
+      "period": "東京：2015年8月1日〜9日",
+      "venue": "東京：Zeppブルーシアター六本木",
+      "castRows": 26,
+      "source": "https://kira-hai.net/diaace2015",
+      "research": "next-app/research/diaace2015-20261024.json",
+      "summaryPresent": true,
+      "englishSummaryPresent": true,
+      "streaming": null,
+      "exceptions": [
+        "旧俳優ページ抽出候補1件（上田悠介）の2021年と別作品連結役名を採用せず、原文保持のままrejectedへ。公式2015年公演の作品単位候補へ集約し変更前と理由を履歴へ保存。",
+        "26役は公式キャスト画像のaltと掲載順で全員照合。舞台写真・人物写真はサイト資産へ取り込まない。第一参照先33行のうちアンサンブル7行は原文保存し、取り込み用sourceからだけ分けてクレジットへ。",
+        "片岡鉄心は第一参照先の役名を保持し、公式の片岡監督と同じ加藤靖久の役として照合。滝川クリス優は公式に沿う滝川・クリス・優へ正規化し、3役に分割しない。伊崎／伊﨑は異体字を個別判断。",
+        "遠藤沙季→遠藤さき、橘希→橘のぞみ→立花のぞみの人物判断を資料付きで保存。現在名へリンクし、公演当時名を元のsourceに保持。別々の人物を作らない。",
+        "和田亮一は同名の現クリエイターとの同定未完。DOB・読み・職歴を転用しない。役付き出演は登録し、人物出典表は個別プロフィールのない一人だけ作らず履歴へ作品根拠を残す。",
+        "2015年1月の延期された企画と2015年8月のThe LIVE初演を区別。シリーズ5作品のうち今回初演のみを登録し、シリーズ全体完了とは扱わない。別franchiseのミュージカルは保持。",
+        "既存シリーズの未検証の評語を短い事実紹介へ整理し、制作会社は本公演の公式Office ENDLESSに整理。未検証のネルケプランニングは外す。関連シリーズID等は保持。",
+        "現在の舞台本編配信は未確認でvod空欄。英題は編集表記。人物総合監査・詳細英訳・主演指定・後続4作品は別工程。"
+      ]
+    }
+  ],
+  "pendingChecks": [
+    "シリーズ後続II〜Vの4作品は次の工程。シリーズ全体の点検は全作品収録後に再実施する。",
+    "和田亮一の読み・個別プロフィール・同名クリエイターとの接点は未確認。黒須の洋嗣表記への改名や現所属も未確認。",
+    "人物総合監査、現在の本編配信、主演指定、詳細英訳、旧告知の完全網羅は後続。"
+  ],
+  "report": "docs/diaace2015-2026-10-24.md"
+}

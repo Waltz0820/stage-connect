@@ -2254,8 +2254,44 @@
       "slug": "diamond-no-ace",
       "name": "「ダイヤのA」The LIVE（ダイステ）",
       "registeredDay": "2026-02-09",
-      "plays": 0,
-      "protected": false
+      "plays": 1,
+      "protected": false,
+      "castRows": 26,
+      "castCoverageNote": "2015年8月The LIVE初演を1作品26配役で収録。全5作品のうち初演まで、II〜Vの4作品は後続。公式配役画像altと掲載順、第一参照先を全役照合。既存12人物保全、新規14人物。遠藤沙季→遠藤さき、橘希→立花のぞみ、伊崎／伊﨑を個別判断。和田亮一は同名クリエイターとの同定未完で属性を流用せず役付き出演のみ登録し、作品URLを個人出典へ偽装しない。アンサンブル7人はクレジット、計29区分。上田悠介の旧候補1件は誤年2021と別作品連結を原文保持のまま未採用処理。日英タイトル・短い概要とシリーズ紹介・英名を補完し制作会社を当該公式に整理。別ミュージカル、延期された2015年1月企画を混同しない。現在配信は未確認でvod空欄。日英56ページ、2015/08年表・抜粋・全配役・全クレジット・逆リンク・投票・構造化データを確認。8テーブル全件比較・再実行0変更。シリーズ完了後の全体点検・人物監査・詳細英訳・主演指定等は後続。",
+      "seriesAudit": {
+        "checkedAt": "2026-10-23T20:14:04.265Z",
+        "scope": "2015年8月初演1作品26配役を収録・点検。シリーズ全5作品のうち初演までで、II〜Vの4作品は未収録。人物総合監査・詳細英訳・全シリーズ点検は未完。",
+        "franchiseId": "f9806a0c-a8e2-4de0-8c47-531fd6b6df6b",
+        "slug": "diamond-no-ace",
+        "registeredWorks": 1,
+        "castRows": 26,
+        "uniqueActors": 26,
+        "publicPages": 56,
+        "creditOnlyNames": 7,
+        "creditCategories": 29,
+        "identitySources": 13,
+        "castOnlyActorsWithoutProfile": 1,
+        "legacyCandidatesSuperseded": 1,
+        "timeline": [
+          "2015/08"
+        ],
+        "structuredActorLimit": 20,
+        "works": 1,
+        "pendingChecks": [
+          "シリーズ後続II〜Vの4作品は次の工程。シリーズ全体の点検は全作品収録後に再実施する。",
+          "和田亮一の読み・個別プロフィール・同名クリエイターとの接点は未確認。黒須の洋嗣表記への改名や現所属も未確認。",
+          "人物総合監査、現在の本編配信、主演指定、詳細英訳、旧告知の完全網羅は後続。"
+        ],
+        "report": "docs/diaace2015-2026-10-24.md",
+        "remainingSeriesWorks": 4,
+        "currentBatchWorks": 1,
+        "currentBatchCastRows": 26,
+        "newActors": 14,
+        "existingActorsPreserved": 12,
+        "seriesUniqueActors": 26,
+        "research": "next-app/research/diaace2015-20261024.json",
+        "seriesResearch": "next-app/research/diaace-series-audit-20261024.json"
+      }
     },
     {
       "id": "fa760579-e63c-4ebe-8361-dd191c41f099",
