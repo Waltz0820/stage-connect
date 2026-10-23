@@ -1070,8 +1070,41 @@
       "slug": "steins-gate",
       "name": "LIVING ADV「STEINS;GATE」",
       "registeredDay": "2026-02-09",
-      "plays": 0,
-      "protected": false
+      "plays": 1,
+      "protected": false,
+      "castRows": 11,
+      "castCoverageNote": "2013年LIVING ADVを1作品11配役で収録。キラハイ9人と発売元DVD告知の追加2役を照合。既存4人物を保全、新規7人物。塚本拓弥の紅莉栖編・フェイリス編限定をnoteへ保存。アンサンブル10人と終演後ミニライブ2人はクレジットへ。6ルートは別作品に分割しない。旧公式URLの現在の仮置きページは不採用。作品日英タイトル・短い概要とシリーズ日英紹介を補完し、Dメールの分岐説明と制作会社欄を当時資料に沿って修正。生年月日の月日のみはbirthday_labelを利用。現在配信は未確認でvod空欄。日英26ページ、2013/10年表・抜粋・11配役・補足・全クレジット・逆リンク・投票・構造化データ確認。8テーブル全件比較・再実行0変更。人物総合監査・詳細英訳・主演指定・現在配信・過去告知の完全網羅は後続。",
+      "seriesAudit": {
+        "checkedAt": "2026-10-23T18:49:24.318Z",
+        "scope": "2013年公演1作品11配役を収録・公開点検。全6ルートは同一作品として保持。旧公式ドメインは仮置きページのため資料不採用。過去告知の完全網羅・人物属性の総合監査・詳細英訳は未完。",
+        "franchiseId": "7026086b-93ad-4ed6-89a4-708d8c5e4bda",
+        "slug": "steins-gate",
+        "registeredWorks": 1,
+        "castRows": 11,
+        "uniqueActors": 11,
+        "publicPages": 26,
+        "creditOnlyNames": 12,
+        "ensembleNames": 10,
+        "miniLiveNames": 2,
+        "castNotes": 1,
+        "timeline": [
+          "2013/10"
+        ],
+        "works": 1,
+        "pendingChecks": [
+          "当時公式の全告知の完全網羅、現在の本編配信、主演指定、人物属性の総合監査と詳細英訳は後続。",
+          "小川の生年・身長・血液型、上田の現所属・身長・血液型等は未確認で空欄。",
+          "伊倉153cmと過去の自己紹介152cmの時点差、上田理絵／理恵・天王寺裕吾／裕悟の出典表記差を保持。"
+        ],
+        "report": "docs/steinsgate2013-2026-10-24.md",
+        "currentBatchWorks": 1,
+        "currentBatchCastRows": 11,
+        "newActors": 7,
+        "existingActorsPreserved": 4,
+        "seriesUniqueActors": 11,
+        "research": "next-app/research/steinsgate2013-20261024.json",
+        "seriesResearch": "next-app/research/steinsgate-series-audit-20261024.json"
+      }
     },
     {
       "id": "710d6465-1a99-4bae-bb70-43405e21a978",

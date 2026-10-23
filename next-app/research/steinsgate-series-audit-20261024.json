@@ -1,0 +1,47 @@
+{
+  "checkedAt": "2026-10-23T18:49:24.318Z",
+  "scope": "2013年公演1作品11配役を収録・公開点検。全6ルートは同一作品として保持。旧公式ドメインは仮置きページのため資料不採用。過去告知の完全網羅・人物属性の総合監査・詳細英訳は未完。",
+  "franchiseId": "7026086b-93ad-4ed6-89a4-708d8c5e4bda",
+  "slug": "steins-gate",
+  "registeredWorks": 1,
+  "castRows": 11,
+  "uniqueActors": 11,
+  "publicPages": 26,
+  "creditOnlyNames": 12,
+  "ensembleNames": 10,
+  "miniLiveNames": 2,
+  "castNotes": 1,
+  "timeline": [
+    "2013/10"
+  ],
+  "works": [
+    {
+      "id": "09d920f2-5f32-4d87-ae31-50f762360f7d",
+      "slug": "steinsgate2013",
+      "title": "LIVING ADV「STEINS;GATE」",
+      "title_en": "LIVING ADV: STEINS;GATE",
+      "period": "東京：2013年10月12日〜20日",
+      "venue": "東京：Zepp DiverCity TOKYO",
+      "castRows": 11,
+      "source": "https://kira-hai.net/steinsgate2013",
+      "research": "next-app/research/steinsgate2013-20261024.json",
+      "summaryPresent": true,
+      "englishSummaryPresent": true,
+      "streaming": null,
+      "exceptions": [
+        "キラハイ9配役を原文保存し、ダイス配信のDVD告知で中鉢博士・秋葉幸高の2配役を追加。追加2人には架空のキラハイ人物URLを与えない。",
+        "塚本拓弥は紅莉栖編・フェイリス編のみの出演条件をnoteへ保存。観劇ブログのスラッシュ表記から佐久間祐人まで同条件と解釈しない。公演情報・開催記録で塚本への条件と照合。",
+        "全6ルートの第2幕を6つの作品として増やさない。DVD発売年2014年と公演年2013年を区別。終演後ミニライブは本編キャストに混ぜない。",
+        "旧公式ドメインは現在NameBrightの仮置きページ。HTTP200でも公演公式情報として採用しない。発売元リリース・制作発表会・当時の開催記録で照合。",
+        "シリーズ旧紹介にあった「特定の瞬間にメールを送るか否かで分岐」の断定・未検証の評語を除去し、Dメール登録者のWeb投票として整理。制作会社は当時の制作表記に合わせ、未確認のZeppライブエンタテインメントを外す。",
+        "2013年ニコ生・2014年DVDを現在視聴できる配信と扱わずvod空欄。英題は公演タイトルに基づく編集表記。"
+      ]
+    }
+  ],
+  "pendingChecks": [
+    "当時公式の全告知の完全網羅、現在の本編配信、主演指定、人物属性の総合監査と詳細英訳は後続。",
+    "小川の生年・身長・血液型、上田の現所属・身長・血液型等は未確認で空欄。",
+    "伊倉153cmと過去の自己紹介152cmの時点差、上田理絵／理恵・天王寺裕吾／裕悟の出典表記差を保持。"
+  ],
+  "report": "docs/steinsgate2013-2026-10-24.md"
+}
