@@ -8,6 +8,7 @@ import "../editorial-details.css";
 import "../editorial-directory.css";
 import "../editorial-support.css";
 import "../editorial-about.css";
+import "../editorial-interactions.css";
 
 export const metadata: Metadata = getSiteMetadata("ja");
 export const viewport: Viewport = siteViewport;

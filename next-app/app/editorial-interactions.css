@@ -1,0 +1,140 @@
+/* Shared touch language. Navigation and form submission never wait for motion. */
+.stage-v2.editorial-chrome {
+  --touch-ease: cubic-bezier(.2,.75,.25,1);
+  --touch-spring: cubic-bezier(.2,.85,.3,1.25);
+  --touch-wash: #edf2ff;
+}
+
+/* Quiet rows respond with a wash and a leading edge, without moving their hit area. */
+.stage-v2 :is(.editorial-directory,.editorial-detail,.editorial-support) :is(
+  a.catalog-card__body-link,a.actor-timeline-card__link,a.cast-card-link,
+  a.play-detail-related-card,a.search-result,a.catalog-card,a.guide-toc__link,a.favorite-actor-link,.directory-search-exits a
+),
+.stage-v2 .editorial-detail-dialog a.cast-card-link {
+  transition: background-color 200ms var(--touch-ease), box-shadow 200ms var(--touch-ease);
+}
+.stage-v2 :is(.editorial-directory,.editorial-detail) :is(
+  .catalog-card__title,.directory-series-short,.cast-name,.play-list-card__chevron,
+  .play-detail-related-card__arrow,.actor-list-card__monogram,.cast-card__monogram,.series-rank-badge
+),
+.stage-v2 .editorial-detail-dialog :is(.cast-name,.series-rank-badge) {
+  transition: translate 240ms var(--touch-ease), rotate 280ms var(--touch-spring), scale 240ms var(--touch-spring);
+}
+.stage-v2 .editorial-directory :is(.catalog-card--actor-list,.catalog-card--play-list) {
+  transition: background-color 200ms var(--touch-ease), box-shadow 200ms var(--touch-ease);
+}
+.stage-v2 :is(.editorial-directory,.editorial-detail,.editorial-support) :is(
+  a.catalog-card__body-link,a.actor-timeline-card__link,a.cast-card-link,
+  a.play-detail-related-card,a.search-result,a.catalog-card,a.guide-toc__link,a.favorite-actor-link,.directory-search-exits a
+):is(:focus-visible,:active),
+.stage-v2 .editorial-detail-dialog a.cast-card-link:is(:focus-visible,:active),
+.stage-v2 .editorial-directory :is(.catalog-card--actor-list,.catalog-card--play-list):has(a:is(:focus-visible,:active)) {
+  background-color: var(--touch-wash);
+  box-shadow: inset 3px 0 var(--ed-blue);
+}
+
+/* Controls have the same short compression on mouse, keyboard and touch. */
+.stage-v2 :where(.editorial-directory,.editorial-detail,.editorial-support,.editorial-detail-dialog) :is(
+  .action-button,.support-button,.favorite-button,.share-button,.filter-chip,
+  .pagination-link,.directory-filter__trigger,.discovery-actions button,.discovery-actions a,
+  .detail-toggle__button,.oshi-choice,.oshi-submit,.next-modal-close,.directory-filter__header button,
+  .v2-search button,.support-text-button,.favorite-tabs button
+) {
+  transition: transform 180ms var(--touch-spring), background-color 180ms var(--touch-ease),
+    border-color 180ms var(--touch-ease), color 180ms var(--touch-ease), box-shadow 180ms var(--touch-ease);
+  -webkit-tap-highlight-color: transparent;
+}
+.stage-v2 :where(.editorial-directory,.editorial-detail,.editorial-support,.editorial-detail-dialog) :is(
+  .action-button,.support-button,.favorite-button,.share-button,.filter-chip,
+  .pagination-link,.directory-filter__trigger,.discovery-actions button,.discovery-actions a,
+  .detail-toggle__button,.oshi-choice,.oshi-submit,.next-modal-close,.directory-filter__header button,
+  .v2-search button,.support-text-button,.favorite-tabs button
+):not(:disabled):active {
+  transform: translateY(1px) scale(.96);
+  transition-duration: 70ms;
+}
+.stage-v2 :is(.editorial-directory,.editorial-detail,.editorial-support) .favorite-button svg,
+.stage-v2 .editorial-detail .oshi-choice svg {
+  transition: scale 260ms var(--touch-spring), rotate 260ms var(--touch-spring), color 180ms var(--touch-ease);
+}
+.stage-v2 :is(.editorial-directory,.editorial-detail,.editorial-support) .favorite-button.is-active svg {
+  scale: 1.14; rotate: -8deg;
+}
+.stage-v2 .editorial-detail .oshi-choice.is-selected svg { scale: 1.12; rotate: -7deg; }
+.stage-v2 .editorial-detail .favorite-button.is-active { color: var(--ed-blue); background: #e8eeff; border-color: #a8baf1; }
+
+/* Location and form feedback stay visible even when movement is reduced. */
+.stage-v2 :is(.editorial-directory,.editorial-detail) :is(
+  .filter-chips a,.directory-search-types a,.detail-contents-nav a,.top-series-row a.catalog-link
+) { transition: background-color 180ms var(--touch-ease), color 180ms var(--touch-ease), border-color 180ms var(--touch-ease); }
+.stage-v2 :is(.editorial-directory,.editorial-detail) :is(
+  .directory-search-types a,.detail-contents-nav a,.top-series-row a.catalog-link
+):is(:focus-visible,:active) { background-color: var(--touch-wash); color: var(--ed-blue); }
+.stage-v2 .editorial-directory .v2-search,
+.stage-v2 .editorial-directory .discovery-filters select {
+  transition: border-color 180ms var(--touch-ease), box-shadow 180ms var(--touch-ease);
+}
+.stage-v2 .editorial-directory .v2-search:focus-within { border-color: var(--ed-blue); box-shadow: 0 0 0 3px #2449cd18; }
+
+@media (hover:hover) and (pointer:fine) {
+  .stage-v2 :is(.editorial-directory,.editorial-detail,.editorial-support) :is(
+    a.catalog-card__body-link,a.actor-timeline-card__link,a.cast-card-link,
+    a.play-detail-related-card,a.search-result,a.catalog-card,a.guide-toc__link,a.favorite-actor-link,.directory-search-exits a
+  ):hover,
+  .stage-v2 .editorial-detail-dialog a.cast-card-link:hover,
+  .stage-v2 .editorial-directory :is(.catalog-card--actor-list,.catalog-card--play-list):has(a:hover) {
+    background-color: var(--touch-wash); box-shadow: inset 3px 0 var(--ed-blue);
+  }
+  .stage-v2 .editorial-directory .catalog-card:has(a:hover) :is(.catalog-card__title,.directory-series-short),
+  .stage-v2 .editorial-detail :is(a.actor-timeline-card__link,a.cast-card-link):hover .cast-name,
+  .stage-v2 .editorial-detail-dialog a.cast-card-link:hover .cast-name { translate: 4px 0; }
+  .stage-v2 .editorial-directory .catalog-card:has(a:hover) .play-list-card__chevron,
+  .stage-v2 .editorial-detail a.play-detail-related-card:hover .play-detail-related-card__arrow { translate: 4px 0; rotate: -12deg; }
+  .stage-v2 .editorial-directory .catalog-card--actor-list:has(a:hover) .actor-list-card__monogram,
+  .stage-v2 .editorial-detail a.cast-card-link:hover :is(.cast-card__monogram,.series-rank-badge),
+  .stage-v2 .editorial-detail-dialog a.cast-card-link:hover .series-rank-badge { rotate: -7deg; scale: 1.06; }
+  .stage-v2 :is(.editorial-directory,.editorial-detail) :is(
+    .directory-search-types a,.detail-contents-nav a,.top-series-row a.catalog-link
+  ):hover { background-color: var(--touch-wash); color: var(--ed-blue); }
+  .stage-v2 :where(.editorial-directory,.editorial-detail,.editorial-support,.editorial-detail-dialog) :is(
+    .action-button,.support-button,.favorite-button,.share-button,.filter-chip,.pagination-link,
+    .directory-filter__trigger,.discovery-actions button,.discovery-actions a,.detail-toggle__button,
+    .oshi-choice,.oshi-submit,.next-modal-close,.directory-filter__header button,.v2-search button,.support-text-button,.favorite-tabs button
+  ):not(:disabled):not(:active):hover { transform: translateY(-2px); box-shadow: 0 3px 0 #13172024; }
+}
+
+/* The shared header and search keep the same touch response on every route. */
+.stage-v2.editorial-chrome :is(.search-toggle,.site-menu-button,.mobile-menu__close,.archive-search-dialog__header button) {
+  transition: scale 180ms var(--touch-spring), background-color 180ms var(--touch-ease);
+}
+.stage-v2.editorial-chrome :is(.search-toggle,.site-menu-button,.mobile-menu__close,.archive-search-dialog__header button):active { scale: .96; background: #e8e9e7; }
+.stage-v2.editorial-chrome :is(.mobile-menu__nav a,.archive-search-group .search-item,.archive-search-browse a) {
+  transition: background-color 200ms var(--touch-ease), color 200ms var(--touch-ease);
+}
+.stage-v2.editorial-chrome .mobile-menu__nav a::after { transition: translate 240ms var(--touch-ease); }
+.stage-v2.editorial-chrome :is(.mobile-menu__nav a,.archive-search-group .search-item,.archive-search-browse a):is(:active,:focus-visible) { background: var(--touch-wash); }
+@media (hover:hover) and (pointer:fine) {
+  .stage-v2.editorial-chrome :is(.search-toggle,.site-menu-button,.mobile-menu__close,.archive-search-dialog__header button):hover { background: #e8e9e7; }
+  .stage-v2.editorial-chrome :is(.mobile-menu__nav a,.archive-search-group .search-item,.archive-search-browse a):hover { background: var(--touch-wash); }
+  .stage-v2.editorial-chrome .mobile-menu__nav a:hover::after { translate: 3px -3px; }
+}
+
+/* Entry only: closing remains instant, including scroll and focus restoration on iOS. */
+.stage-v2 .editorial-detail-dialog[open] { animation: editorial-dialog-in 240ms var(--touch-ease); }
+.stage-v2 .editorial-detail-dialog[open]::backdrop { animation: editorial-backdrop-in 180ms ease-out; }
+.stage-v2 .editorial-detail .detail-toggle.is-open .detail-toggle__panel { animation: editorial-panel-in 220ms var(--touch-ease); }
+@keyframes editorial-dialog-in { from { opacity: .3; translate: 0 14px; } to { opacity: 1; translate: 0 0; } }
+@keyframes editorial-backdrop-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes editorial-panel-in { from { opacity: .4; translate: 0 6px; } to { opacity: 1; translate: 0 0; } }
+
+@media (prefers-reduced-motion:reduce) {
+  .stage-v2.editorial-chrome :is(.search-toggle,.site-menu-button,.mobile-menu__close,.archive-search-dialog__header button,.mobile-menu__nav a,.archive-search-group .search-item,.archive-search-browse a),
+  .stage-v2.editorial-chrome .mobile-menu__nav a::after { transition: none !important; scale: none !important; translate: none !important; }
+  .stage-v2 :is(.editorial-directory,.editorial-detail,.editorial-support,.editorial-detail-dialog) *,
+  .stage-v2 .editorial-detail-dialog {
+    animation: none !important; transition: none !important;
+    translate: none !important; rotate: none !important; scale: none !important;
+  }
+  .stage-v2 :is(.editorial-directory,.editorial-detail,.editorial-support,.editorial-detail-dialog) :is(a,button):is(:hover,:active) { transform: none !important; }
+  .stage-v2 .editorial-detail-dialog::backdrop { animation: none !important; }
+}

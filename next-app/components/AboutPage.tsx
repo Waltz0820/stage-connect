@@ -38,7 +38,7 @@ export async function AboutPage({ locale }: { locale: "ja" | "en" }) {
   return (
     <main className="container editorial-support support-about">
       <Breadcrumbs items={[{ label: en ? "About" : "当サイトについて" }]} />
-      <AboutMotion locale={locale}>
+      <AboutMotion>
       <section className="about-opening" data-about-reveal>
         <div className="about-opening__copy">
           <span className="eyebrow">ABOUT / OUR MISSION</span>
