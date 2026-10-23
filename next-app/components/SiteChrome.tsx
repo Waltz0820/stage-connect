@@ -151,7 +151,7 @@ function PublicSiteChrome({ pathname, children }: { pathname: string | null; chi
             </Link>
             <nav className="site-nav desktop-nav" aria-label={labels.globalNavLabel} data-streaming-placement="header">
               {labels.primaryNav.map((item) => (
-                <Link key={item.href} href={item.href} onClick={() => setIsMenuOpen(false)} className={isActive(item.href) ? "is-active" : undefined}>
+                <Link key={item.href} href={item.href} onClick={() => setIsMenuOpen(false)} aria-current={isActive(item.href) ? "page" : undefined} className={isActive(item.href) ? "is-active" : undefined}>
                   {item.label}
                 </Link>
               ))}
@@ -207,7 +207,7 @@ function PublicSiteChrome({ pathname, children }: { pathname: string | null; chi
 
           <nav className="mobile-menu__nav" aria-label={labels.mobileNavLabel} data-streaming-placement="mobile_menu">
             {mobileNav.map((item) => (
-              <Link key={item.href} href={item.href} onClick={() => setIsMenuOpen(false)} className={isActive(item.href) ? "is-active" : undefined}>
+              <Link key={item.href} href={item.href} onClick={() => setIsMenuOpen(false)} aria-current={isActive(item.href) ? "page" : undefined} className={isActive(item.href) ? "is-active" : undefined}>
                 {item.label}
               </Link>
             ))}

@@ -23,7 +23,6 @@ export async function SiteSearchPage({ locale, query }: { locale: 'ja' | 'en'; q
     <section className="hero-card stack-md directory-search-hero">
       <span className="directory-hero__word" aria-hidden="true">SEARCH</span>
       <h1 className="page-title">{en ? 'Search' : '検索'}</h1>
-      <p className="lead">{en ? 'Search actors, productions and series.' : '俳優・作品・シリーズをまとめて検索。'}</p>
       <DirectorySearchForm className="v2-search" action={`${prefix}/search`}>
         <label className="sr-only" htmlFor="site-query">{en ? 'Search actors, plays and series' : '俳優・作品・シリーズを検索'}</label>
         <input id="site-query" name="q" defaultValue={q} maxLength={SEARCH_QUERY_LIMIT} placeholder={en ? 'Search actors, plays and series' : '俳優・作品・シリーズ名を入力'}/>

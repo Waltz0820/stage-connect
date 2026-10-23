@@ -45,8 +45,6 @@ export default async function GuidePage() {
 
           <div className="catalog-summary">
             <span className="catalog-chip">公開ガイド {guides.length}本</span>
-            <span className="catalog-chip">見どころ・観る順番</span>
-            <span className="catalog-chip">作品情報とあわせて</span>
           </div>
         </section>
 

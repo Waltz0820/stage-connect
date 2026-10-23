@@ -122,7 +122,6 @@ export function FavoritesClient() {
       <div className="hero-card stack-sm">
         <span className="eyebrow">MY COLLECTION</span>
         <h1 className="page-title">お気に入り</h1>
-        <p className="muted">保存した俳優と作品をまとめて見返せます。</p>
       </div>
 
       <div className="favorite-tabs" aria-label="お気に入りの表示切替">
@@ -136,7 +135,7 @@ export function FavoritesClient() {
 
       <p className="favorite-notice" role="status">{notice}</p>
       {!ready ? <p className="favorite-state" role="status">保存したお気に入りを確認しています。</p> : storageError ? (
-        <div className="empty-state-card" role="status"><h2>保存内容を読み込めませんでした。</h2><p>ブラウザの保存設定をご確認ください。お気に入りは、このブラウザに保存されます。</p><div className="action-row"><Link href="/actors" className="action-button">キャスト一覧へ</Link><Link href="/plays" className="action-button">作品一覧へ</Link></div></div>
+        <div className="empty-state-card" role="status"><h2>保存内容を読み込めませんでした。</h2><p>ブラウザの保存設定をご確認ください。お気に入りは、このブラウザに保存されます。</p><div className="action-row"><Link href="/actors" className="action-button">俳優一覧へ</Link><Link href="/plays" className="action-button">作品一覧へ</Link></div></div>
       ) : activeCount === 0 ? (
         <div className="empty-state-card">
           <span className="favorite-empty-heart" aria-hidden="true">♡</span>
@@ -144,7 +143,7 @@ export function FavoritesClient() {
           <p className="muted">俳優や作品の ♡ をタップして保存できます。</p>
           <div className="action-row">
             <Link href="/actors" className="action-button">
-              キャスト一覧へ
+              俳優一覧へ
             </Link>
             <Link href="/plays" className="action-button">
               作品一覧へ
@@ -220,7 +219,7 @@ export function FavoritesClient() {
         </section>
       )}
       <p className="favorite-storage-note">このブラウザに保存されます。端末間の共有はできません。ブラウザのデータを削除すると消えます。</p>
-      <noscript><style>{".support-favorites .favorite-state { display: none; }"}</style><p>お気に入りを表示するにはJavaScriptを有効にしてください。</p><Link href="/actors">キャスト一覧へ</Link> / <Link href="/plays">作品一覧へ</Link></noscript>
+      <noscript><style>{".support-favorites .favorite-state { display: none; }"}</style><p>お気に入りを表示するにはJavaScriptを有効にしてください。</p><Link href="/actors">俳優一覧へ</Link> / <Link href="/plays">作品一覧へ</Link></noscript>
     </div>
   );
 }

@@ -1,3 +1,4 @@
+import { DirectoryEmpty } from "../../../components/DirectoryEmpty";
 import { DirectoryHero } from "../../../components/DirectoryHero";
 import { isStreamingService, matchesStreamingService } from '../../../lib/streaming-guide';
 import { matchesSearch, normalizeSearchQuery } from '../../../lib/search-query';
@@ -213,26 +214,27 @@ export default async function PlaysPage({
       <StructuredData data={collectionJsonLd} />
       <div className="stack-lg">
         <Breadcrumbs items={[{ label: "作品一覧" }]} />
-        <DirectoryHero kind="plays" title="作品一覧" description="作品・キャスト・配信情報を探す" count={filteredPlays.length} unit="作品" />
+        <DirectoryHero kind="plays" title="作品一覧" />
 
         <section className="section-card stack-md works-list-panel">
           <PlayDiscoveryForm locale="ja" values={{ q, point, series, streaming, service, sort, format, genre }} formats={FORMAT_LABELS} genres={GENRE_LABELS} seriesOptions={seriesOptions} pointAvailable={discovery.available} />
-          {filteredPlays.length === 0 ? <p className="catalog-note">この条件に合う作品はまだありません。条件を変えるか、作品ページで推しポイントを教えてね。</p> : null}
+          {filteredPlays.length === 0 ? <DirectoryEmpty locale="ja" kind="plays" /> : null}
 
           <p className="catalog-count"><strong>{filteredPlays.length.toLocaleString()}</strong>件の作品</p>
 
           <div className="catalog-grid catalog-grid--play-list">
             {visiblePlays.map((play) => (
               <article className="catalog-card catalog-card--play-list" key={play.slug}>
+                <Link className="directory-play-link" href={`/plays/${play.slug}`}>
 
 
                 {getPlayReleaseLabel(play.period) ? <div className="directory-release-band">{getPlayReleaseLabel(play.period)}</div> : null}
                 <div className="play-list-card__main">
                   <div className="catalog-card__top catalog-card__top--stack">
-                    <Link className="catalog-card__title" href={`/plays/${play.slug}`}>{play.title}</Link>
+                    <span className="catalog-card__title">{play.title}</span>
                   </div>
 
-                  <Link className="catalog-card__body-link" href={`/plays/${play.slug}`}>
+                  <div className="catalog-card__body-link">
                     {play.franchiseName ? (
                       <div className="catalog-card__sub play-list-card__series">{play.franchiseName}</div>
                     ) : null}
@@ -272,14 +274,10 @@ export default async function PlaysPage({
                       ))}
                     </div>
 
-                    <div className="catalog-card__footer play-list-card__footer">
-                      <span className="catalog-link">作品詳細を見る</span>
-                      <span className="play-list-card__chevron" aria-hidden="true">
-                        ›
-                      </span>
-                    </div>
-                  </Link>
+                    <span className="directory-card-arrow" aria-hidden="true">→</span>
+                  </div>
                 </div>
+                </Link>
               </article>
             ))}
           </div>
@@ -288,6 +286,7 @@ export default async function PlaysPage({
             <div className="pagination-row">
               <Link
                 className={`pagination-link ${safePage === 1 ? "is-disabled" : ""}`}
+                aria-disabled={safePage === 1 || undefined} tabIndex={safePage === 1 ? -1 : undefined}
                 href={pageHref({ page: Math.max(1, safePage - 1) })}
               >
                 前へ
@@ -297,6 +296,7 @@ export default async function PlaysPage({
               </span>
               <Link
                 className={`pagination-link ${safePage === totalPages ? "is-disabled" : ""}`}
+                aria-disabled={safePage === totalPages || undefined} tabIndex={safePage === totalPages ? -1 : undefined}
                 href={pageHref({ page: Math.min(totalPages, safePage + 1) })}
               >
                 次へ

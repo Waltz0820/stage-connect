@@ -1,3 +1,4 @@
+import { DirectoryEmpty } from "../../../components/DirectoryEmpty";
 import { DirectorySearchForm } from "../../../components/DirectorySearchForm";
 import { DirectorySeriesName } from "../../../components/DirectorySeriesName";
 import { DirectoryHero } from "../../../components/DirectoryHero";
@@ -21,15 +22,6 @@ const FORMAT_LABELS: Record<string, string> = {
 };
 
 const getSingleParam = (value: SearchParamValue) => (Array.isArray(value) ? value[0] : value) ?? "";
-
-const getSeriesCardTags = (series: { format: string | null; originType: string | null; playCount: number }) => {
-  const tags = [
-    series.format ? FORMAT_LABELS[series.format] ?? series.format : null,
-    series.originType,
-  ].filter(Boolean) as string[];
-
-  return Array.from(new Set(tags)).slice(0, 4);
-};
 
 const buildHref = (params: Record<string, string | number | null | undefined>) => {
   const search = new URLSearchParams();
@@ -113,7 +105,7 @@ export default async function SeriesPage({
       <div className="stack-lg">
         <Breadcrumbs items={[{ label: "シリーズ一覧" }]} />
 
-        <DirectoryHero kind="series" title="シリーズ一覧" description="シリーズの時系列と関連作品をたどる" count={filteredSeries.length} unit="シリーズ" />
+        <DirectoryHero kind="series" title="シリーズ一覧" />
 
         <section className="section-card stack-md works-list-panel">
           <h2 className="section-title">シリーズ・フィルター</h2>
@@ -169,14 +161,16 @@ export default async function SeriesPage({
           </fieldset>
 
           <p className="catalog-count"><strong>{filteredSeries.length.toLocaleString()}</strong>件のシリーズ</p>
+          {filteredSeries.length === 0 ? <DirectoryEmpty locale="ja" kind="series" /> : null}
 
           <div className="catalog-grid catalog-grid--play-list">
             {visibleSeries.map((series) => (
               <article className="catalog-card catalog-card--play-list" key={series.slug}>
+                <Link className="directory-play-link" href={`/series/${series.slug}`}>
 
 
                 <div className="play-list-card__main">
-                  <Link className="catalog-card__body-link" href={`/series/${series.slug}`}>
+                  <div className="catalog-card__body-link">
                     <DirectorySeriesName slug={series.slug} locale="ja" />
                     <div className="catalog-card__top catalog-card__top--stack">
                       <div className="catalog-card__title">{series.name}</div>
@@ -237,22 +231,11 @@ export default async function SeriesPage({
                       ) : null}
                     </div>
 
-                    <div className="play-list-card__tag-row">
-                      {getSeriesCardTags(series).map((tag) => (
-                        <span className="play-list-card__tag" key={tag}>
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
 
-                    <div className="catalog-card__footer play-list-card__footer">
-                      <span className="catalog-link">シリーズ詳細を見る</span>
-                      <span className="play-list-card__chevron" aria-hidden="true">
-                        →
-                      </span>
-                    </div>
-                  </Link>
+                    <span className="directory-card-arrow" aria-hidden="true">→</span>
+                  </div>
                 </div>
+                </Link>
               </article>
             ))}
           </div>
@@ -261,6 +244,7 @@ export default async function SeriesPage({
             <div className="pagination-row">
               <Link
                 className={`pagination-link ${safePage === 1 ? "is-disabled" : ""}`}
+                aria-disabled={safePage === 1 || undefined} tabIndex={safePage === 1 ? -1 : undefined}
                 href={buildHref({ q, page: Math.max(1, safePage - 1), sort, format, origin })}
               >
                 前へ
@@ -270,6 +254,7 @@ export default async function SeriesPage({
               </span>
               <Link
                 className={`pagination-link ${safePage === totalPages ? "is-disabled" : ""}`}
+                aria-disabled={safePage === totalPages || undefined} tabIndex={safePage === totalPages ? -1 : undefined}
                 href={buildHref({ q, page: Math.min(totalPages, safePage + 1), sort, format, origin })}
               >
                 次へ

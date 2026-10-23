@@ -1,10 +1,10 @@
+import { DirectoryEmpty } from "../../../components/DirectoryEmpty";
 import { DirectorySearchForm } from "../../../components/DirectorySearchForm";
 import { DirectoryHero } from "../../../components/DirectoryHero";
 import { matchesSearch, normalizeSearchQuery } from '../../../lib/search-query';
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "../../../components/Breadcrumbs";
-import { FavoriteButtonClient } from "../../../components/FavoriteButtonClient";
 import { StructuredData } from "../../../components/StructuredData";
 import { getActorList, getAgeFromBirthday } from "../../../lib/stage-connect";
 import { formatAgeEn, formatBirthdayEn, formatBirthdayLabelEn, getEnglishActorName } from "../../../lib/en-copy";
@@ -117,7 +117,7 @@ export default async function EnglishActorsPage({
       <div className="stack-lg">
         <Breadcrumbs items={[{ label: "Actors", href: "/en/actors" }]} />
 
-        <DirectoryHero kind="actors" title="2.5D Cast" description="Find actors and explore their profiles and credits." count={filteredActors.length} unit="actors" />
+        <DirectoryHero kind="actors" title="2.5D Cast" />
 
         <section className="section-card stack-md works-list-panel">
           <h2 className="section-title">Filters</h2>
@@ -127,7 +127,7 @@ export default async function EnglishActorsPage({
             <input id="actor-query" name="q" defaultValue={q} placeholder="Search by actor name"/>
             <input type="hidden" name="gender" value={gender}/><button type="submit" aria-label="Search">→</button>
           </DirectorySearchForm>
-          {filteredActors.length === 0 ? <p className="muted">No actors matched your search.</p> : null}
+          {filteredActors.length === 0 ? <DirectoryEmpty locale="en" kind="actors" /> : null}
 
           <div className="filter-row filter-row--dense works-filter-row">
             <Link className={`filter-chip ${gender === "all" ? "is-active" : ""}`} href={buildHref({ q, page: 1, gender: "all" })}>
@@ -158,20 +158,11 @@ export default async function EnglishActorsPage({
 
               return (
                 <article className="catalog-card catalog-card--actor-list" key={actor.slug}>
-                  <Link className="actor-list-card__monogram-link" href={`/en/actors/${actor.slug}`} aria-label={`View ${displayName}`}>
-                    <span className="actor-list-card__monogram">{initials}</span>
-                  </Link>
-
-                  <div className="actor-list-card__main">
-                    <div className="catalog-card__top actor-list-card__top">
-                      <div>
-                        <Link className="catalog-card__title" href={`/en/actors/${actor.slug}`}>{displayName}</Link>
-                        {actor.kana ? <div className="actor-list-card__kana">{actor.kana}</div> : null}
-                      </div>
-                      <FavoriteButtonClient slug={actor.slug} type="actor" size="sm" name={displayName} kana={actor.kana} />
-                    </div>
-
-                    <Link className="catalog-card__body-link actor-list-card__body" href={`/en/actors/${actor.slug}`}>
+                  <Link className="actor-directory-link" href={`/en/actors/${actor.slug}`}>
+                    <span className="actor-list-card__monogram" aria-hidden="true">{initials}</span>
+                    <div className="actor-list-card__main">
+                      <span className="catalog-card__title">{displayName}</span>
+                      {actor.kana ? <div className="actor-list-card__kana">{actor.kana}</div> : null}
                       <div className="actor-list-card__facts">
                         {birthday ? (
                           <span className="actor-list-card__fact">
@@ -183,13 +174,9 @@ export default async function EnglishActorsPage({
                           <span className="actor-list-card__fact">{GENDER_LABELS[actor.gender]}</span>
                         ) : null}
                       </div>
-
-                      <div className="catalog-card__footer actor-list-card__footer">
-                        <span className="catalog-link">View actor details</span>
-                        <span className="play-list-card__chevron">›</span>
-                      </div>
-                    </Link>
-                  </div>
+                    </div>
+                    <span className="directory-row-arrow" aria-hidden="true">→</span>
+                  </Link>
                 </article>
               );
             })}
@@ -199,6 +186,7 @@ export default async function EnglishActorsPage({
             <div className="pagination-row">
               <Link
                 className={`pagination-link ${safePage === 1 ? "is-disabled" : ""}`}
+                aria-disabled={safePage === 1 || undefined} tabIndex={safePage === 1 ? -1 : undefined}
                 href={buildHref({ q, page: Math.max(1, safePage - 1), gender })}
               >
                 Previous
@@ -208,6 +196,7 @@ export default async function EnglishActorsPage({
               </span>
               <Link
                 className={`pagination-link ${safePage === totalPages ? "is-disabled" : ""}`}
+                aria-disabled={safePage === totalPages || undefined} tabIndex={safePage === totalPages ? -1 : undefined}
                 href={buildHref({ q, page: Math.min(totalPages, safePage + 1), gender })}
               >
                 Next

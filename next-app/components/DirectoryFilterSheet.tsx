@@ -4,7 +4,7 @@ import { useEffect, useLayoutEffect, useRef, useState, type ReactNode } from "re
 import { DetailDialog } from "./DetailDialog";
 
 /** One set of native form controls: draft choices survive closing and reopening. */
-export function DirectoryFilterSheet({ locale, children }: { locale: "ja" | "en"; children: ReactNode }) {
+export function DirectoryFilterSheet({ locale, children, activeCount = 0 }: { locale: "ja" | "en"; children: ReactNode; activeCount?: number }) {
   const [mobile, setMobile] = useState(false);
   const [open, setOpen] = useState(false);
   const container = useRef<HTMLDivElement>(null);
@@ -34,6 +34,7 @@ export function DirectoryFilterSheet({ locale, children }: { locale: "ja" | "en"
     <button type="button" className="directory-filter__trigger" onClick={() => setOpen(true)} aria-haspopup="dialog">
       <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M3 6h18M3 12h18M3 18h18"/><path d="M8 3v6m8 0v6m-8 0v6"/></svg>
       {en ? "Filters" : "絞り込む"}
+      {activeCount > 0 ? <span className="directory-filter__count">{activeCount}<span className="sr-only">{en ? ' active' : '件適用中'}</span></span> : null}
     </button>
     {mobile ? <DetailDialog open={open} onClose={() => setOpen(false)} label={title} className="directory-filter-dialog">
       <div className="directory-filter__header"><h2>{title}</h2><button type="button" onClick={() => setOpen(false)} aria-label={en ? "Close filters" : "絞り込みを閉じる"}>×</button></div>

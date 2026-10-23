@@ -33,6 +33,17 @@ export function AnchorTabs({ items, label }: { items: Tab[]; label: string }) {
     };
   }, [ids]);
 
+  useEffect(() => {
+    // Keep the current section visible on narrow screens without scrolling the page.
+    const nav = navRef.current;
+    const link = nav?.querySelector<HTMLElement>('[aria-current="location"]');
+    if (!nav || !link) return;
+    const box = nav.getBoundingClientRect(), item = link.getBoundingClientRect();
+    if (item.left < box.left || item.right > box.right) {
+      nav.scrollTo({ left: nav.scrollLeft + item.left - box.left - (box.width - item.width) / 2, behavior: 'instant' });
+    }
+  }, [active]);
+
   return <nav ref={navRef} className="detail-contents-nav" aria-label={label}>
     {items.map((item) => <Link key={item.id} href={`#${item.id}`} prefetch={false} aria-current={active === item.id ? "location" : undefined} onClick={() => setActive(item.id)}>{item.label}</Link>)}
   </nav>;

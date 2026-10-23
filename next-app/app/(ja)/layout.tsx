@@ -10,6 +10,8 @@ import "../editorial-support.css";
 import "../editorial-about.css";
 import "../editorial-interactions.css";
 import "../editorial-copy.css";
+import "../editorial-watch.css";
+import "../editorial-refinements.css";
 
 export const metadata: Metadata = getSiteMetadata("ja");
 export const viewport: Viewport = siteViewport;

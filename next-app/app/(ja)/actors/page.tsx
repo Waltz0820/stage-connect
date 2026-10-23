@@ -1,10 +1,10 @@
+import { DirectoryEmpty } from "../../../components/DirectoryEmpty";
 import { DirectorySearchForm } from "../../../components/DirectorySearchForm";
 import { DirectoryHero } from "../../../components/DirectoryHero";
 import { matchesSearch, normalizeSearchQuery } from '../../../lib/search-query';
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "../../../components/Breadcrumbs";
-import { FavoriteButtonClient } from "../../../components/FavoriteButtonClient";
 import { StructuredData } from "../../../components/StructuredData";
 import { buildBreadcrumbList, buildCollectionPageStructuredData } from "../../../lib/structured-data";
 import {
@@ -103,7 +103,7 @@ export default async function ActorsPage({
       <StructuredData data={collectionJsonLd} />
       <div className="stack-lg">
         <Breadcrumbs items={[{ label: "俳優一覧" }]} />
-        <DirectoryHero kind="actors" title="俳優一覧" description="2.5次元舞台で活躍する俳優を探す" count={filteredActors.length} unit="人" />
+        <DirectoryHero kind="actors" title="俳優一覧" />
 
         <section className="section-card stack-md works-list-panel">
           <h2 className="section-title">俳優データベース</h2>
@@ -113,7 +113,7 @@ export default async function ActorsPage({
             <input id="actor-query" name="q" defaultValue={q} placeholder="俳優名で検索（漢字・かな・ローマ字）"/>
             <input type="hidden" name="gender" value={gender}/><button type="submit" aria-label="検索">→</button>
           </DirectorySearchForm>
-          {filteredActors.length === 0 ? <p className="muted">該当する俳優は見つかりませんでした。</p> : null}
+          {filteredActors.length === 0 ? <DirectoryEmpty locale="ja" kind="actors" /> : null}
 
           <div className="filter-row filter-row--dense works-filter-row">
             <Link className={`filter-chip ${gender === "all" ? "is-active" : ""}`} href={buildHref({ q, page: 1, gender: "all" })}>
@@ -140,26 +140,11 @@ export default async function ActorsPage({
 
               return (
                 <article className="catalog-card catalog-card--actor-list" key={actor.slug}>
-                  <Link className="actor-list-card__monogram-link" href={`/actors/${actor.slug}`} aria-label={`${actor.name}の詳細を見る`}>
-                    <span className="actor-list-card__monogram">{initials}</span>
-                  </Link>
-
-                  <div className="actor-list-card__main">
-                    <div className="catalog-card__top actor-list-card__top">
-                      <div>
-                        <Link className="catalog-card__title" href={`/actors/${actor.slug}`}>{actor.name}</Link>
-                        {actor.kana ? <div className="actor-list-card__kana">{actor.kana}</div> : null}
-                      </div>
-                      <FavoriteButtonClient
-                        slug={actor.slug}
-                        type="actor"
-                        size="sm"
-                        name={actor.name}
-                        kana={actor.kana}
-                      />
-                    </div>
-
-                    <Link className="catalog-card__body-link actor-list-card__body" href={`/actors/${actor.slug}`}>
+                  <Link className="actor-directory-link" href={`/actors/${actor.slug}`}>
+                    <span className="actor-list-card__monogram" aria-hidden="true">{initials}</span>
+                    <div className="actor-list-card__main">
+                      <span className="catalog-card__title">{actor.name}</span>
+                      {actor.kana ? <div className="actor-list-card__kana">{actor.kana}</div> : null}
                       <div className="actor-list-card__facts">
                         {birthday ? (
                           <span className="actor-list-card__fact">
@@ -171,13 +156,9 @@ export default async function ActorsPage({
                           <span className="actor-list-card__fact">{GENDER_LABELS[actor.gender]}</span>
                         ) : null}
                       </div>
-
-                      <div className="catalog-card__footer actor-list-card__footer">
-                        <span className="catalog-link">俳優詳細を見る</span>
-                        <span className="play-list-card__chevron">›</span>
-                      </div>
-                    </Link>
-                  </div>
+                    </div>
+                    <span className="directory-row-arrow" aria-hidden="true">→</span>
+                  </Link>
                 </article>
               );
             })}
@@ -187,6 +168,7 @@ export default async function ActorsPage({
             <div className="pagination-row">
               <Link
                 className={`pagination-link ${safePage === 1 ? "is-disabled" : ""}`}
+                aria-disabled={safePage === 1 || undefined} tabIndex={safePage === 1 ? -1 : undefined}
                 href={buildHref({ q, page: Math.max(1, safePage - 1), gender })}
               >
                 前へ
@@ -196,6 +178,7 @@ export default async function ActorsPage({
               </span>
               <Link
                 className={`pagination-link ${safePage === totalPages ? "is-disabled" : ""}`}
+                aria-disabled={safePage === totalPages || undefined} tabIndex={safePage === totalPages ? -1 : undefined}
                 href={buildHref({ q, page: Math.min(totalPages, safePage + 1), gender })}
               >
                 次へ

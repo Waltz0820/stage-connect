@@ -1,3 +1,4 @@
+import { DirectoryEmpty } from "../../../components/DirectoryEmpty";
 import { DirectorySearchForm } from "../../../components/DirectorySearchForm";
 import { DirectorySeriesName } from "../../../components/DirectorySeriesName";
 import { DirectoryHero } from "../../../components/DirectoryHero";
@@ -26,15 +27,6 @@ const buildHref = (params: Record<string, string | number | null | undefined>) =
   });
   const query = search.toString();
   return query ? `/en/series?${query}` : "/en/series";
-};
-
-const getSeriesCardTagsEn = (series: { format: string | null; originType: string | null; playCount: number }) => {
-  const tags = [
-    series.format ? EN_FORMAT_LABELS[series.format] ?? series.format : null,
-    series.originType ? toEnglishOriginType(series.originType) ?? series.originType : null,
-  ].filter(Boolean) as string[];
-
-  return Array.from(new Set(tags)).slice(0, 4);
 };
 
 export const metadata: Metadata = {
@@ -110,7 +102,7 @@ export default async function EnglishSeriesPage({
       <div className="stack-lg">
         <Breadcrumbs items={[{ label: "Series", href: "/en/series" }]} />
 
-        <DirectoryHero kind="series" title="2.5D Series" description="Explore each series through its productions and timeline." count={filtered.length} unit="series" />
+        <DirectoryHero kind="series" title="2.5D Series" />
 
         <section className="section-card stack-md works-list-panel">
           <h2 className="section-title">Series Filters</h2>
@@ -166,14 +158,16 @@ export default async function EnglishSeriesPage({
           </fieldset>
 
           <p className="catalog-count"><strong>{filtered.length.toLocaleString()}</strong> series</p>
+          {filtered.length === 0 ? <DirectoryEmpty locale="en" kind="series" /> : null}
 
           <div className="catalog-grid catalog-grid--play-list">
             {visible.map((series) => (
               <article className="catalog-card catalog-card--play-list" key={series.slug}>
+                <Link className="directory-play-link" href={`/en/series/${series.slug}`}>
 
 
                 <div className="play-list-card__main">
-                  <Link className="catalog-card__body-link" href={`/en/series/${series.slug}`}>
+                  <div className="catalog-card__body-link">
                     <DirectorySeriesName slug={series.slug} locale="en" />
                     <div className="catalog-card__top catalog-card__top--stack">
                       <div className="catalog-card__title">{getEnglishSeriesName(series)}</div>
@@ -238,22 +232,11 @@ export default async function EnglishSeriesPage({
                       ) : null}
                     </div>
 
-                    <div className="play-list-card__tag-row">
-                      {getSeriesCardTagsEn(series).map((tag) => (
-                        <span className="play-list-card__tag" key={tag}>
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
 
-                    <div className="catalog-card__footer play-list-card__footer">
-                      <span className="catalog-link">View series details</span>
-                      <span className="play-list-card__chevron" aria-hidden="true">
-                        →
-                      </span>
-                    </div>
-                  </Link>
+                    <span className="directory-card-arrow" aria-hidden="true">→</span>
+                  </div>
                 </div>
+                </Link>
               </article>
             ))}
           </div>
@@ -262,6 +245,7 @@ export default async function EnglishSeriesPage({
             <div className="pagination-row">
               <Link
                 className={`pagination-link ${safePage === 1 ? "is-disabled" : ""}`}
+                aria-disabled={safePage === 1 || undefined} tabIndex={safePage === 1 ? -1 : undefined}
                 href={buildHref({ q, page: Math.max(1, safePage - 1), sort, format, origin })}
               >
                 Previous
@@ -271,6 +255,7 @@ export default async function EnglishSeriesPage({
               </span>
               <Link
                 className={`pagination-link ${safePage === totalPages ? "is-disabled" : ""}`}
+                aria-disabled={safePage === totalPages || undefined} tabIndex={safePage === totalPages ? -1 : undefined}
                 href={buildHref({ q, page: Math.min(totalPages, safePage + 1), sort, format, origin })}
               >
                 Next

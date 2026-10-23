@@ -129,10 +129,6 @@ export default async function EnglishSeriesDetailPage({ params }: { params: Prom
         <section className="hero-card stack-md detail-stage-hero series-detail-stage-hero">
           <div className="stack-sm detail-ledger-shell">
             <div className="detail-title-row"><ProductionMark kind="series" seriesSlug={series.slug}/><h1 className="page-title">{displayName}</h1></div>
-            <div className="pill-row">
-              <span className="pill accent-pill">{series.plays.length} plays</span>
-              {series.originType ? <span className="pill">Origin: {toEnglishOriginType(series.originType)}</span> : null}
-            </div>
             <div className="detail-ledger">
               <div className="detail-ledger__item">
                 <span className="detail-ledger__label">Origin</span>

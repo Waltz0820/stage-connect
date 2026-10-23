@@ -1,0 +1,39 @@
+/* Audit refinements: fewer repeated labels, larger real link targets. */
+.stage-v2.editorial-chrome { background: var(--ed-paper); }
+.stage-v2 .editorial-directory .directory-hero { gap: 12px; padding-bottom: 46px; }
+.stage-v2 .editorial-directory .catalog-card--actor-list { display: block; padding: 0; }
+.stage-v2 .editorial-directory .actor-directory-link { display: grid; grid-template-columns: 54px minmax(0,1fr) 20px; gap: 14px; align-items: center; min-height: 112px; padding: 20px 0; border-radius: 3px; }
+.stage-v2 .editorial-directory .actor-directory-link .actor-list-card__main { display: block; }
+.directory-row-arrow { color: var(--ed-muted); font-size: 20px; transition: translate 220ms ease; }
+.stage-v2 .editorial-directory .catalog-card--play-list { position: relative; }
+.stage-v2 .editorial-directory .directory-play-link { display: block; height: 100%; }
+.stage-v2 .editorial-directory .directory-play-link:focus-visible { outline: none; }
+.stage-v2 .editorial-directory .catalog-card:has(.directory-play-link:focus-visible) { outline: 3px solid var(--ed-blue); outline-offset: 4px; }
+.stage-v2 .editorial-directory .catalog-card--play-list .play-list-card__main { padding-right: 40px; }
+.stage-v2 .editorial-directory .catalog-card--play-list .catalog-card__title { font-size: 18px; }
+.directory-card-arrow { position: absolute; bottom: 18px; right: 14px; color: var(--ed-ink); font-size: 22px; transition: translate 220ms ease; }
+.stage-v2 .editorial-directory .directory-active-filters { display: flex; flex-wrap: wrap; gap: 8px; }
+.directory-active-filters a { display: inline-flex; align-items: center; justify-content: space-between; gap: 12px; max-width: 100%; min-height: 44px; padding: 8px 12px; border: 1px solid #b8c6f2; border-radius: 4px; background: #e8eeff; color: #173aaf; font-size: 12px; line-height: 1.5; overflow-wrap: anywhere; }
+.directory-active-filters a > span { font-size: 20px; flex-shrink: 0; }
+.directory-filter__count { display: grid; place-items: center; min-width: 24px; height: 24px; padding: 0 5px; border-radius: 50%; background: var(--ed-blue); color: white; font-size: 11px; }
+.directory-empty { padding: 24px 18px; border: 1px solid var(--ed-line); border-radius: 4px; }
+.directory-empty p { margin: 0 0 16px; font-size: 14px; line-height: 1.7; }
+.directory-empty a { display: inline-flex; align-items: center; gap: 28px; min-height: 44px; padding: 10px 16px; border-radius: 4px; background: var(--ed-ink); color: #fff; font-size: 13px; font-weight: 700; }
+.stage-v2 .editorial-detail .series-detail-stage-hero .detail-ledger { margin-top: 24px; }
+.stage-v2 .editorial-detail .actor-timeline-card .catalog-card__footer { display: flex; justify-content: flex-end; }
+.stage-v2 .editorial-detail .actor-timeline-card .catalog-card__footer.is-empty { display: none; }
+.stage-v2 .editorial-detail .actor-timeline-card .action-button { display: inline-flex; width: auto; min-height: 44px; gap: 14px; padding: 8px 12px; border: 1px solid var(--ed-line); background: transparent; color: var(--ed-ink); font-size: 12px; font-weight: 650; }
+.stage-v2 .editorial-detail .actor-timeline-card .action-button::after { content: '↗'; font-size: 17px; }
+.stage-v2 .editorial-detail .actor-timeline-card:has(.action-button) .actor-timeline-card__link { padding-bottom: 8px; }
+.stage-v2 .editorial-detail .detail-contents-nav { scrollbar-width: thin; }
+.stage-v2 .editorial-directory .pagination-link.is-disabled { pointer-events: none; opacity: .4; }
+@media (hover:hover) and (pointer:fine) {
+  .actor-directory-link:hover .directory-row-arrow,.catalog-card:hover .directory-card-arrow { translate: 4px 0; }
+  .directory-active-filters a:hover { background: #d7e2ff; border-color: var(--ed-blue); }
+  .stage-v2 .editorial-detail .actor-timeline-card .action-button:hover { color: white; background: var(--ed-blue); border-color: var(--ed-blue); }
+}
+@media (prefers-reduced-motion:no-preference) {
+  .actor-directory-link:active .actor-list-card__monogram { scale: .93; transition-duration: 70ms; }
+  .actor-directory-link:focus-visible .directory-row-arrow { translate: 4px 0; }
+}
+@media (prefers-reduced-motion:reduce) { .directory-row-arrow,.directory-card-arrow { transition: none; translate: none !important; } }
