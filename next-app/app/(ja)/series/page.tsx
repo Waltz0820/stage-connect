@@ -283,7 +283,7 @@ export default async function SeriesPage({
             </div>
             <div className="works-index-cta__copy">
               <p className="works-index-cta__title">シリーズから関連作品をまとめて確認</p>
-              <p className="works-index-cta__text">気になるシリーズの詳細から、作品一覧や配信状況まで横断できます。</p>
+              <p className="works-index-cta__text">シリーズごとの公演と配信情報を確認できます。</p>
             </div>
             <Link className="works-index-cta__link" href="/plays">
               作品一覧へ

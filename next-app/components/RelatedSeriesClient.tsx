@@ -55,7 +55,7 @@ export function RelatedSeriesClient({ items }: Props) {
               ) : null}
             </div>
             <div className="catalog-card__text catalog-card__text--clamped">
-              {related.description || (isEnglish ? `${related.name} related series archive.` : `${related.name} のシリーズ詳細ページです。`)}
+              {related.description || (isEnglish ? "Explore productions and casts." : "公演年表と出演キャストを見る")}
             </div>
             <div className="catalog-card__footer">
               <span className="catalog-link">{isEnglish ? "View series details" : "シリーズ詳細を見る"}</span>
@@ -80,7 +80,7 @@ export function RelatedSeriesClient({ items }: Props) {
           </div>
           <Link className="catalog-card__body-link" href={related.slug ? `${seriesHrefBase}/${related.slug}` : seriesHrefBase}>
             <div className="catalog-card__text catalog-card__text--clamped">
-              {related.description || (isEnglish ? `${related.name} related series archive.` : `${related.name} のシリーズ詳細ページです。`)}
+              {related.description || (isEnglish ? "Explore productions and casts." : "公演年表と出演キャストを見る")}
             </div>
             <div className="catalog-card__footer">
               <span className="catalog-link">{isEnglish ? "View series details" : "シリーズ詳細を見る"}</span>

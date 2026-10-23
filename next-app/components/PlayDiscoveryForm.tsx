@@ -35,10 +35,10 @@ export default function PlayDiscoveryForm({ locale, values, formats, genres, ser
     <div className="discovery-actions"><button type="submit" className="action-button">{ja ? '条件を適用' : 'Apply filters'}</button>
       <a href={ja ? '/plays' : '/en/plays'}>{ja ? 'リセット' : 'Reset'}</a></div>
     </DirectoryFilterSheet>
-    {values.service ? <p className="catalog-note">{ja ? 'Stage Connectに作品リンクがあるものを表示しています。未登録の作品は、' : 'Showing production links recorded in Stage Connect. For titles not listed, visit the '}<Link href={`${ja?'':'/en'}/watch/${values.service==='unext'?'u-next':values.service}`}>{ja ? 'サービス別ガイド' : 'service guide'}</Link>{ja ? 'から公式サイトも確認できます。' : ' and check the official catalogue.'}</p> : null}
+    {values.service ? <p className="catalog-note">{ja ? '配信リンクが登録された作品を表示しています。ほかの作品は' : 'Showing productions with recorded streaming links. Find other titles through the '}<Link href={`${ja?'':'/en'}/watch/${values.service==='unext'?'u-next':values.service}`}>{ja ? 'サービス別ガイド' : 'service guide'}</Link>{ja ? 'の公式リンクから探せます。' : ' and official catalogue.'}</p> : null}
     {values.point ? <p className="catalog-note" role="status">{!pointAvailable
       ? ja ? '推しポイント検索はただいま準備中です。ほかの条件はご利用いただけます。' : 'Fan-favorite search is being prepared. Other filters are available.'
-      : ja ? `投票参加者が${OSHI_MIN_PARTICIPANTS}人以上で、この項目に支持がある作品を表示します。` : `Showing productions with at least ${OSHI_MIN_PARTICIPANTS} participants and support for this point.`}</p>
-      : values.sort === 'support' ? <p className="catalog-note">{ja ? '支持率順で探すには、推しポイントを選んでください。現在は公演が新しい順です。' : 'Choose a point to sort by support. Currently showing newest first.'}</p> : null}
+      : ja ? `${OSHI_MIN_PARTICIPANTS}人以上が投票し、このポイントに支持がある作品が対象です。` : `Includes productions with at least ${OSHI_MIN_PARTICIPANTS} voters and support for this point.`}</p>
+      : values.sort === 'support' ? <p className="catalog-note">{ja ? '推しポイントを選ぶと支持率順に並びます。未選択の間は公演が新しい順です。' : 'Choose a point to sort by support. Until then, productions are shown newest first.'}</p> : null}
   </DirectorySearchForm>;
 }

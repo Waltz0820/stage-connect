@@ -109,7 +109,7 @@ export function SearchBarClient({ variant = 'header' }: { variant?: 'header' | '
         </form>
         {!normalizeSearchQuery(query) ? <div className="archive-search-browse">{groups.map(group => <Link key={group.kind} href={prefix + '/' + group.kind} onClick={close}>{group.label}<span aria-hidden="true">→</span></Link>)}</div> : <div className="archive-search-results" aria-busy={status === 'loading'}>
           <div className="archive-search-status" role="status">{status === 'loading' ? (en ? 'Searching…' : '検索中…')
-            : status === 'error' ? (en ? 'Search is temporarily unavailable. Please try again.' : '検索を読み込めませんでした。時間をおいてお試しください。')
+            : status === 'error' ? (en ? 'Search is temporarily unavailable. Please try again.' : '検索できませんでした。時間をおいてお試しください。')
             : status === 'ready' && !hasResults ? (en ? 'No results found. Try another keyword.' : '見つかりませんでした。別のキーワードでお試しください。') : ''}</div>
           {groups.filter(group => group.rows.length).map(group => <section className="archive-search-group" key={group.kind}>
             <h3>{group.label}</h3>

@@ -17,7 +17,7 @@ export default async function StreamingGuide({ locale, service }: { locale: Site
   const item = STREAMING_GUIDES.find(item => item.id === service);
   const shownServices = item ? [item] : STREAMING_GUIDES;
   const serviceName = (entry: typeof STREAMING_GUIDES[number]) => en && entry.id === 'danime' ? 'd Anime Store' : entry.name;
-  const title = item ? (en ? `Stage productions on ${serviceName(item)}` : `${serviceName(item)}で舞台を探す`) : (en ? 'Find a stream for your next stage production' : '見たい舞台から、配信を探す。');
+  const title = item ? (en ? `Stage productions on ${serviceName(item)}` : `${serviceName(item)}で舞台を探す`) : (en ? 'Find a stream for your next production' : '見たい舞台の配信を探す');
   const listing = `${prefix}/plays?streaming=available${service ? '&service='+service : ''}`;
   const breadcrumbs = [{name:en?'Home':'ホーム',path:prefix || '/'},{name:en?'Streaming guide':'配信ガイド',path:prefix+'/watch'},...(item?[{name:serviceName(item),path:streamingGuidePath(locale,service)}]:[])];
   const faqs = en ? [
@@ -36,7 +36,7 @@ export default async function StreamingGuide({ locale, service }: { locale: Site
     <section className="streaming-guide__hero" data-streaming-placement="watch_hero">
       <span className="eyebrow">STREAMING GUIDE</span>
       <h1>{title}</h1>
-      <p>{item ? item[locale].intro : en ? 'Search for a recording, compare viewing options, then follow the production’s streaming link.' : '作品を探して、視聴条件を確かめる。キャストやシリーズから気になった舞台を、次の一本へ。'}</p>
+      <p>{item ? item[locale].intro : en ? 'Search productions and check streaming links and viewing conditions.' : '作品を検索して配信先と視聴条件を確認できます。'}</p>
       <form className="streaming-guide__search" action={prefix+'/plays'}>
         <input type="hidden" name="streaming" value="available"/>
         <label className="sr-only" htmlFor="streaming-query">{en?'Production or series name':'作品名・シリーズ名'}</label>

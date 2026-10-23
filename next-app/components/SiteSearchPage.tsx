@@ -23,16 +23,16 @@ export async function SiteSearchPage({ locale, query }: { locale: 'ja' | 'en'; q
     <section className="hero-card stack-md directory-search-hero">
       <span className="directory-hero__word" aria-hidden="true">SEARCH</span>
       <h1 className="page-title">{en ? 'Search' : '検索'}</h1>
-      <p className="lead">{en ? 'Explore actors, productions and series.' : '俳優・作品・シリーズを横断して探せます。'}</p>
+      <p className="lead">{en ? 'Search actors, productions and series.' : '俳優・作品・シリーズをまとめて検索。'}</p>
       <DirectorySearchForm className="v2-search" action={`${prefix}/search`}>
         <label className="sr-only" htmlFor="site-query">{en ? 'Search actors, plays and series' : '俳優・作品・シリーズを検索'}</label>
         <input id="site-query" name="q" defaultValue={q} maxLength={SEARCH_QUERY_LIMIT} placeholder={en ? 'Search actors, plays and series' : '俳優・作品・シリーズ名を入力'}/>
         <button type="submit" aria-label={en ? 'Search' : '検索'}>→</button>
       </DirectorySearchForm>
     </section>
-    {!q ? <p className="muted">{en ? 'Enter a name or title to start exploring.' : '名前や作品名を入力して検索できます。'}</p>
-      : unavailable ? <p role="status" className="muted">{en ? 'Search is temporarily unavailable. Please try again later.' : '検索を読み込めませんでした。時間をおいてお試しください。'}</p>
-      : <p className="muted">{en ? `Showing ${count} results for “${q}”` : `「${q}」の検索結果：${count}件を表示`}{count === 0 ? (en ? '. Try another keyword.' : '。表記を変えてお試しください。') : ''}</p>}
+    {!q ? <p className="muted">{en ? 'Enter a name or title.' : '名前や作品名を入力してください。'}</p>
+      : unavailable ? <p role="status" className="muted">{en ? 'Search is temporarily unavailable. Please try again later.' : '検索できませんでした。時間をおいてお試しください。'}</p>
+      : <p className="muted">{en ? `${count} results for “${q}”` : `「${q}」の検索結果：${count}件`}{count === 0 ? (en ? '. Try another keyword.' : '。キーワードを変えてお試しください。') : ''}</p>}
     {count > 0 ? <nav className="directory-search-types" aria-label={en ? 'Result categories' : '検索結果の種類'}>
       {groups.filter(group => group.rows.length).map(group => <Link key={group.kind} href={`#results-${group.kind}`} prefetch={false}>{group.label}<span>{group.rows.length}</span></Link>)}
     </nav> : <nav className="directory-search-exits" aria-label={en ? 'Explore the archive' : '一覧から探す'}>

@@ -191,7 +191,7 @@ export default async function EnglishPlaysPage({
       <div className="stack-lg">
         <Breadcrumbs items={[{ label: "Plays", href: "/en/plays" }]} />
 
-        <DirectoryHero kind="plays" title="2.5D Plays" description="Browse stage plays and musicals by release order, performance format, and genre." count={filtered.length} unit="productions" />
+        <DirectoryHero kind="plays" title="2.5D Plays" description="Find productions, casts and streaming links." count={filtered.length} unit="productions" />
 
         <section className="section-card stack-md works-list-panel">
           <PlayDiscoveryForm locale="en" values={{ q, point, series, streaming, service, sort, format, genre }} formats={EN_FORMAT_LABELS} genres={EN_GENRE_LABELS} seriesOptions={seriesOptions} pointAvailable={discovery.available} />

@@ -1,0 +1,8 @@
+/* Keep short copy phrases together without forcing names or long titles onto one line. */
+.stage-v2 .copy-phrase { display: inline-block; max-width: 100%; }
+.stage-v2 :is(
+  .archive-hero__description,.archive-section__heading p,.about-opening__copy > p,
+  .about-how > p,.about-discovery p,.about-mission > p,.directory-hero .lead,
+  .directory-search-hero .lead,.support-guides .lead,.contact-checklist .rich-text,
+  .oshi-discovery > p
+) { text-wrap: pretty; }

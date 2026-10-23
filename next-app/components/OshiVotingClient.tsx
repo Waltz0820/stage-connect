@@ -7,9 +7,9 @@ import { OshiIcon } from './OshiPoints';
 type Results = { participants: number; top: { id: string; votes: number; support: number }[] };
 const copy = {
   ja: { title: 'この作品の推しポイントは？', intro: '好きなところを選んで教えてね！', limit: '1〜3項目まで選べます。ログイン不要。',
-    send: '推しポイントを送る', update: '選び直して更新する', sending: '送信中…', saved: '教えてくれてありがとう！ 選び直して変更できます。',
+    send: '推しポイントを送る', update: '選び直して更新する', sending: '送信中…', saved: 'ありがとう！ あとから選び直せます。',
     results: 'みんなの推しポイント', early: 'まだ少人数の声です。あなたの推しポイントも教えてね。',
-    first: '最初のひとりになって、この作品の好きなところを教えてね。', note: '支持率＝その項目を選んだ人数 ÷ 投票参加人数（複数選択）',
+    first: 'この作品の推しポイントを最初に教えてね。', note: '支持率＝その項目を選んだ人数 ÷ 投票参加人数（複数選択）',
     unavailable: '投票はただいま準備中です。時間をおいて、また遊びにきてね。', failed: '送信できませんでした。通信を確認して、もう一度お試しください。',
     rate: '短い間に投票が続いたため、少し時間をおいてからお試しください。', cookie: '投票の確認に必要なCookieを保存できませんでした。Cookieを有効にして再読み込みしてください。',
     loading: '投票を読み込み中…', max: '選べるのは3項目までです。', privacy: '同じブラウザでの投票を記憶します。', privacyLink: 'プライバシーについて', },

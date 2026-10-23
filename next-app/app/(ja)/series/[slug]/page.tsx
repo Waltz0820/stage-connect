@@ -107,18 +107,18 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
     mainEntity: [
       {
         "@type": "Question",
-        name: `${series.name}の関連作品はすべて見られますか？`,
+        name: "登録されている作品数は？",
         acceptedAnswer: {
           "@type": "Answer",
-          text: `現時点で、${series.name}には${series.plays.length}作品を掲載しています。`,
+          text: `${series.plays.length}作品を掲載しています。`,
         },
       },
       {
         "@type": "Question",
-        name: "どの順番で見ればよいですか？",
+        name: "公演順はどこで確認できますか？",
         acceptedAnswer: {
           "@type": "Answer",
-          text: `公開順に見たい場合は${startYear ?? "初期"}年ごろからの年表順で作品をたどるのがおすすめです。`,
+          text: "公演年表で各作品の上演時期を確認できます。",
         },
       },
       {
@@ -126,7 +126,7 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
         name: "出演キャストも確認できますか？",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "はい。シリーズ詳細では出演キャスト・役柄一覧を確認でき、気になる俳優詳細ページへ移動できます。",
+          text: "キャスト・役柄一覧から各俳優のプロフィールや出演歴を確認できます。",
         },
       },
     ],
@@ -270,21 +270,21 @@ export default async function SeriesDetailPage({ params }: { params: Promise<Par
           <h2 className="section-title">よくある質問（FAQ）</h2>
           <div className="faq-grid">
             <article className="faq-card">
-              <h3 className="faq-question">Q. {series.name}の関連作品はすべて見られますか？</h3>
+              <h3 className="faq-question">Q. 登録されている作品数は？</h3>
               <p className="faq-answer">
-                現時点で、{series.name}には{series.plays.length}作品を掲載しています。
+                {series.plays.length}作品を掲載しています。
               </p>
             </article>
             <article className="faq-card">
-              <h3 className="faq-question">Q. どの順番で見ればよいですか？</h3>
+              <h3 className="faq-question">Q. 公演順はどこで確認できますか？</h3>
               <p className="faq-answer">
-                公開順に見たい場合は{startYear ?? "初期"}年ごろからの年表順で作品をたどるのがおすすめです。
+                公演年表で各作品の上演時期を確認できます。
               </p>
             </article>
             <article className="faq-card">
               <h3 className="faq-question">Q. 出演キャストも確認できますか？</h3>
               <p className="faq-answer">
-                はい。シリーズ詳細では出演キャスト・役柄一覧を確認でき、気になる俳優詳細ページへ移動できます。
+                キャスト・役柄一覧から各俳優のプロフィールや出演歴を確認できます。
               </p>
             </article>
           </div>

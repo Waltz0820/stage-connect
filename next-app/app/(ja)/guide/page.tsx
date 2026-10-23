@@ -39,23 +39,20 @@ export default async function GuidePage() {
             <span className="eyebrow">Guide</span>
             <h1 className="page-title">編集部ガイド</h1>
             <p className="lead">
-              2.5次元舞台・ミュージカルの見どころや作品理解に役立つ編集部ガイドを一覧できます。
+              シリーズの見どころや観る順番を紹介します。
             </p>
           </div>
 
           <div className="catalog-summary">
             <span className="catalog-chip">公開ガイド {guides.length}本</span>
-            <span className="catalog-chip">シリーズ理解を補強</span>
-            <span className="catalog-chip">作品ページとあわせて読める</span>
+            <span className="catalog-chip">見どころ・観る順番</span>
+            <span className="catalog-chip">作品情報とあわせて</span>
           </div>
         </section>
 
         <section className="section-card stack-md">
           <div className="stack-sm">
             <h2 className="section-title">ガイド一覧</h2>
-            <p className="catalog-note">
-              気になるシリーズの見どころや、作品ごとの理解を深めるガイドをまとめています。
-            </p>
           </div>
 
           <div className="catalog-grid">

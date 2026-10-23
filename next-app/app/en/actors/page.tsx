@@ -117,7 +117,7 @@ export default async function EnglishActorsPage({
       <div className="stack-lg">
         <Breadcrumbs items={[{ label: "Actors", href: "/en/actors" }]} />
 
-        <DirectoryHero kind="actors" title="2.5D Cast" description="Browse actors, profiles, and stage appearance history connected to 2.5D productions." count={filteredActors.length} unit="actors" />
+        <DirectoryHero kind="actors" title="2.5D Cast" description="Find actors and explore their profiles and credits." count={filteredActors.length} unit="actors" />
 
         <section className="section-card stack-md works-list-panel">
           <h2 className="section-title">Filters</h2>

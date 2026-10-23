@@ -47,8 +47,8 @@ export default async function ArchiveHome({ locale }: { locale: 'ja' | 'en' }) {
         <span className="archive-wordmark__line"><span className="archive-wordmark__ink">STAGE</span></span>
         <span className="archive-wordmark__line"><span className="archive-wordmark__ink">CONNECT</span></span>
       </div>
-      <h1>{en ? <>Explore the stage.{' '}<br/>Discover more to love.</> : <>2.5次元舞台の、<br/>好きな作品をもっと深く。</>}</h1>
-      <p className="archive-hero__description">{en ? 'Explore actors, productions and series in a connected digital archive of 2.5D theatre.' : '俳優・作品・シリーズを横断して探せる、2.5次元舞台のデジタルアーカイブ。'}</p>
+      <h1>{en ? <>Explore 2.5D theatre.{' '}<br/>Find your next production.</> : <>2.5次元舞台を<br/>もっと深く。</>}</h1>
+      <p className="archive-hero__description">{en ? 'Find casts, credits and streams through actors, productions and series.' : <><span className="copy-phrase">俳優・作品・シリーズから</span><span className="copy-phrase">配役や出演歴、配信情報を探せます。</span></>}</p>
       <SearchBarClient variant="hero"/>
       <nav className="archive-quick-series" aria-label={en ? 'Featured series' : 'シリーズからすぐ探す'}>
         {quickSeries.map(item => <Link key={item.slug} href={`${prefix}/series/${item.slug}`}>{item[locale]}</Link>)}
@@ -67,7 +67,7 @@ export default async function ArchiveHome({ locale }: { locale: 'ja' | 'en' }) {
     </nav>
 
     <section className="archive-section archive-series" aria-labelledby="home-series-heading">
-      <div className="archive-section__heading" data-reveal="heading"><div><span className="archive-kicker">01 / SERIES</span><h2 id="home-series-heading">{en ? 'Explore series' : 'シリーズから探す'}</h2><p>{en ? 'Follow the world of each production.' : '作品の世界を、シリーズから辿る。'}</p></div><Link href={prefix + '/series'}>{en ? 'View all' : 'すべて見る'} <span aria-hidden="true">↗</span></Link></div>
+      <div className="archive-section__heading" data-reveal="heading"><div><span className="archive-kicker">01 / SERIES</span><h2 id="home-series-heading">{en ? 'Explore series' : 'シリーズから探す'}</h2><p>{en ? 'Explore productions and casts across each series.' : '歴代公演と出演キャストをまとめて見る。'}</p></div><Link href={prefix + '/series'}>{en ? 'View all' : 'すべて見る'} <span aria-hidden="true">↗</span></Link></div>
       <div className="archive-series__grid">
         {series.slice(0, 4).map(item => <Link key={item.slug} href={prefix + '/series/' + item.slug} className="archive-series__tile" data-reveal="series">
           <span className="archive-series__top"><span>{item.format === 'musical' ? 'MUSICAL' : item.format === 'stage' ? 'STAGE PLAY' : 'SERIES'}</span><span>{en ? item.playCount + ' works' : item.playCount + '作品'}</span></span>
@@ -80,7 +80,7 @@ export default async function ArchiveHome({ locale }: { locale: 'ja' | 'en' }) {
     <div className="archive-points"><span className="archive-kicker" data-reveal="heading">02 / DISCOVERY</span><OshiDiscoveryLinks locale={locale}/></div>
 
     {guides.length > 0 ? <section className="archive-section archive-guides" aria-labelledby="home-guide-heading">
-      <div className="archive-section__heading" data-reveal="heading"><div><span className="archive-kicker">03 / GUIDE &amp; EDITORIAL</span><h2 id="home-guide-heading">{en ? 'Enjoy more of the stage.' : '舞台をもっと楽しむ。'}</h2><p>{en ? 'Guides for your next discovery. Available in Japanese.' : 'はじめての人も、もっと深く知りたい人も。'}</p></div><Link href="/guide">{en ? 'All guides' : 'ガイド一覧'} <span aria-hidden="true">↗</span></Link></div>
+      <div className="archive-section__heading" data-reveal="heading"><div><span className="archive-kicker">03 / GUIDE &amp; EDITORIAL</span><h2 id="home-guide-heading">{en ? 'Enjoy more theatre' : '舞台をもっと楽しむ'}</h2><p>{en ? 'Highlights and viewing guides. Available in Japanese.' : '作品の見どころや観る順番を紹介。'}</p></div><Link href="/guide">{en ? 'All guides' : 'ガイド一覧'} <span aria-hidden="true">↗</span></Link></div>
       <div className="archive-guides__list">{guides.map((guide, index) => <Link key={guide.slug} href={'/guide/' + guide.slug} className="archive-guide" data-reveal="guide">
         <span className="archive-guide__number">GUIDE {String(index + 1).padStart(3, '0')}{en ? ' / 日本語' : guide.category === 'series-guides' ? ' / シリーズガイド' : ''}</span>
         <strong lang="ja">{guide.title}</strong><span className="archive-guide__bottom"><span>{en ? 'Read the guide (Japanese)' : 'ガイドを読む'}</span><span aria-hidden="true">↗</span></span>
@@ -89,7 +89,7 @@ export default async function ArchiveHome({ locale }: { locale: 'ja' | 'en' }) {
 
     <section className="archive-home-streaming" aria-label={en ? 'Explore streaming options' : '配信で観られる作品'}>
       <Link className="archive-streaming-link" data-streaming-placement="home_banner" href={prefix + '/watch/dmm'}>
-        <strong>DMM TV</strong><span>{en ? 'Find streaming information for your next production' : '気になる作品の配信情報をチェック'}</span><span aria-hidden="true">→</span>
+        <strong>DMM TV</strong><span>{en ? 'Browse stage streaming links' : '舞台の配信情報を見る'}</span><span aria-hidden="true">→</span>
       </Link>
     </section>
   </main>;

@@ -145,7 +145,7 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
         name: `${actor.name}の出演作品はどこで見られますか？`,
         acceptedAnswer: {
           "@type": "Answer",
-          text: `Stage Connectでは${actor.name}の出演作品を年表順にまとめています。出演作品タイムラインから関連する作品ページへ移動できます。`,
+          text: "出演年表から各作品の詳細を確認できます。",
         },
       },
       {
@@ -153,7 +153,7 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
         name: "配信で見られる作品はありますか？",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "配信対応の作品は作品詳細ページに掲載しています。作品ページでDMM TVなどの配信リンクを確認できます。",
+          text: "各作品の配信情報欄でリンクと視聴条件をご確認ください。",
         },
       },
       {
@@ -161,7 +161,7 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
         name: "最新の出演情報はどこで確認できますか？",
         acceptedAnswer: {
           "@type": "Answer",
-          text: `${actor.name}の公式SNSや公式サイトで最新情報を確認できます。このページの公式リンクから移動できます。`,
+          text: "最新情報は公式サイトやSNSでご確認ください。登録済みのリンクは「公式リンク」に掲載しています。",
         },
       },
     ],
@@ -309,19 +309,19 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
             <article className="faq-card">
               <h3 className="faq-question">Q. {actor.name}の出演作品はどこで見られますか？</h3>
               <p className="faq-answer">
-                Stage Connectでは{actor.name}の出演作品を年表順にまとめています。出演作品タイムラインから関連する作品ページへ移動できます。
+                出演年表から各作品の詳細を確認できます。
               </p>
             </article>
             <article className="faq-card">
               <h3 className="faq-question">Q. 配信で見られる作品はありますか？</h3>
               <p className="faq-answer">
-                配信対応の作品は作品詳細ページに掲載しています。作品ページでDMM TVなどの配信リンクを確認できます。
+                各作品の配信情報欄でリンクと視聴条件をご確認ください。
               </p>
             </article>
             <article className="faq-card">
               <h3 className="faq-question">Q. 最新の出演情報はどこで確認できますか？</h3>
               <p className="faq-answer">
-                {actor.name}の公式SNSや公式サイトで最新情報を確認できます。このページの公式リンクから移動できます。
+                最新情報は公式サイトやSNSでご確認ください。登録済みのリンクは「公式リンク」に掲載しています。
               </p>
             </article>
           </div>

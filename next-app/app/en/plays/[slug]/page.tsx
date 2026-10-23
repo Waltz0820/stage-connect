@@ -30,27 +30,6 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
 export const revalidate = 3600;
 export const dynamicParams = true;
 
-const summarizeCastEn = (
-  cast: Array<{
-    slug?: string | null;
-    name?: string | null;
-    nameEn?: string | null;
-  }>
-) => {
-  const names = Array.from(
-    new Set(
-      cast
-        .map((item) => getEnglishActorName(item))
-        .map((name) => name.trim())
-        .filter(Boolean)
-    )
-  );
-
-  if (names.length === 0) return "cast not listed yet";
-  if (names.length <= 3) return names.join(", ");
-  return `${names.slice(0, 3).join(", ")}, and more`;
-};
-
 const getCastInitials = (name: string) => {
   const parts = name
     .split(/\s+/)
@@ -127,7 +106,6 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
 
   const displayTitle = getEnglishPlayTitle(play);
   const creditItems = getCreditItems(play.credits);
-  const castSummary = summarizeCastEn(play.cast);
   const hasVod = Boolean(play.vod && Object.keys(play.vod).length > 0);
   const venues = splitPerformanceList(play.venue);
   const translatedVenues = venues.map((item) => translateAnnotatedDisplayTextEn(item));
@@ -226,13 +204,6 @@ export default async function EnglishPlayDetailPage({ params }: { params: Promis
           { id: "performances", label: "Performances" }, { id: "streaming", label: "Streaming links" },
           { id: "fan-points", label: "Fan favorites" },
         ]} />
-
-        <section className="section-card stack-md detail-stage-section play-detail-lead-section">
-          <p className="lead">
-            <strong className="strong-inline">{displayTitle}</strong> is listed with cast, series connection, public
-            schedule, venue, and streaming availability. Featured cast includes {castSummary}.
-          </p>
-        </section>
 
         <section id="overview" className="section-card stack-md detail-stage-section play-detail-synopsis-section">
           <h2 className="section-title">Synopsis</h2>

@@ -28,7 +28,7 @@ export default function ContactPage() {
             <span className="eyebrow">Contact</span>
             <h1 className="page-title">お問い合わせ</h1>
             <p className="lead">
-              掲載情報の修正・削除依頼、運営に関するご連絡、その他のお問い合わせはこちらをご利用ください。
+              掲載情報の修正・削除や運営に関するご連絡はこちらへ。
             </p>
           </div>
         </section>
@@ -51,7 +51,7 @@ export default function ContactPage() {
 
             {!hasEmail && !hasX ? (
               <p>
-                連絡先は現在準備中です。実運用時はこのページにメールアドレスまたは公式Xアカウントを掲載してください。
+                お問い合わせ先は準備中です。
               </p>
             ) : null}
           </div>
@@ -73,12 +73,12 @@ export default function ContactPage() {
           <h2 className="section-title">修正依頼の際は</h2>
           <div className="rich-text">
             <p>
-              修正依頼の際は、対象ページURL、該当箇所、正しい情報が分かる一次ソース等をあわせてご連絡いただけると確認がスムーズです。
+              修正したい箇所と確認できる公式情報をお知らせください。
             </p>
           </div>
           <ol className="support-checklist">
             <li><strong>対象ページのURL</strong><span>該当するページのリンク</span></li>
-            <li><strong>修正を希望する箇所</strong><span>現在の表記と、修正したい内容</span></li>
+            <li><strong>修正を希望する箇所</strong><span>現在の表記と修正したい内容</span></li>
             <li><strong>一次ソースの情報</strong><span>公式サイト・公式発表・公式SNSなど</span></li>
           </ol>
         </section>

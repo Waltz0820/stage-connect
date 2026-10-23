@@ -209,7 +209,7 @@ export default async function ActorsPage({
             </div>
             <div className="works-index-cta__copy">
               <p className="works-index-cta__title">出演作・シリーズからも探す</p>
-              <p className="works-index-cta__text">作品やシリーズを起点に、出演キャストや関連情報を横断できます。</p>
+              <p className="works-index-cta__text">作品やシリーズから出演キャストを探せます。</p>
             </div>
             <Link className="works-index-cta__link" href="/plays">
               作品一覧へ

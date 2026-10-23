@@ -86,8 +86,6 @@
 .stage-v2 .editorial-detail .play-detail-hero-content > * { grid-column: auto; grid-row: auto; }
 .stage-v2 .editorial-detail .play-detail-hero-title { font-size: clamp(30px,7.2vw,62px); }
 .stage-v2 .editorial-detail .series-pill { justify-self: start; height: auto; padding: 7px 9px; color: #163ab5; font-weight: 700; }
-.stage-v2 .editorial-detail .play-detail-lead-section { padding-block: 20px; background: #fff; }
-.stage-v2 .editorial-detail .play-detail-lead-section .lead { color: var(--ed-muted); font-size: 12px; }
 .stage-v2 .editorial-detail .detail-title-row { display: block; }
 .stage-v2 .editorial-detail .series-detail-stage-hero .page-title { font-size: clamp(34px,8.5vw,76px); }
 .stage-v2 .editorial-detail .series-detail-stage-hero .detail-ledger__item:nth-child(2) strong { font-size: 30px; line-height: 1; }

@@ -122,12 +122,12 @@ export function FavoritesClient() {
       <div className="hero-card stack-sm">
         <span className="eyebrow">MY COLLECTION</span>
         <h1 className="page-title">お気に入り</h1>
-        <p className="muted">保存したキャストと作品を、あとからまとめて見返せます。</p>
+        <p className="muted">保存した俳優と作品をまとめて見返せます。</p>
       </div>
 
       <div className="favorite-tabs" aria-label="お気に入りの表示切替">
         <button type="button" aria-pressed={tab === "actors"} className={tab === "actors" ? "is-active" : ""} onClick={() => setTab("actors")}>
-          キャスト <span>{ready ? actors.length : "—"}</span>
+          俳優 <span>{ready ? actors.length : "—"}</span>
         </button>
         <button type="button" aria-pressed={tab === "plays"} className={tab === "plays" ? "is-active" : ""} onClick={() => setTab("plays")}>
           作品 <span>{ready ? plays.length : "—"}</span>
@@ -140,8 +140,8 @@ export function FavoritesClient() {
       ) : activeCount === 0 ? (
         <div className="empty-state-card">
           <span className="favorite-empty-heart" aria-hidden="true">♡</span>
-          <h2>まだお気に入りがありません。</h2>
-          <p className="muted">気になるキャストや作品の ♡ をタップすると、ここに保存されます。</p>
+          <h2>お気に入りはまだありません</h2>
+          <p className="muted">俳優や作品の ♡ をタップして保存できます。</p>
           <div className="action-row">
             <Link href="/actors" className="action-button">
               キャスト一覧へ
@@ -219,7 +219,7 @@ export function FavoritesClient() {
           <Link className="support-button support-button--outline" href="/plays">作品をもっと探す →</Link>
         </section>
       )}
-      <p className="favorite-storage-note">お気に入りはこのブラウザに保存されます。ブラウザのデータを削除した場合や、別の端末では引き継がれません。</p>
+      <p className="favorite-storage-note">このブラウザに保存されます。端末間の共有はできません。ブラウザのデータを削除すると消えます。</p>
       <noscript><style>{".support-favorites .favorite-state { display: none; }"}</style><p>お気に入りを表示するにはJavaScriptを有効にしてください。</p><Link href="/actors">キャスト一覧へ</Link> / <Link href="/plays">作品一覧へ</Link></noscript>
     </div>
   );

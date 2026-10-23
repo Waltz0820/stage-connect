@@ -19,7 +19,7 @@ export function OshiIcon({ icon }: { icon: string }) {
 export function OshiDiscoveryLinks({ locale }: { locale: 'ja' | 'en' }) {
   return <section className="oshi-discovery">
     <h2>{locale === 'ja' ? 'みんなの推しポイントから探す' : 'Discover what fans love'}</h2>
-    <p>{locale === 'ja' ? '気になるポイントから、次に観たい作品を見つけよう。' : 'Find your next production through the things you love.'}</p>
+    <p>{locale === 'ja' ? '歌や殺陣など好きな要素で作品を探す。' : 'Find productions through music, action and more.'}</p>
     <div className="oshi-discovery__grid">{OSHI_POINTS.map((point) => <Link key={point.id} href={`${locale === 'en' ? '/en' : ''}/plays?point=${point.id}&sort=support`}>
       <OshiIcon icon={point.icon}/><span>{point[locale]}</span><span aria-hidden="true">›</span>
     </Link>)}</div>

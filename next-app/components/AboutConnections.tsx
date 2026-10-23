@@ -36,7 +36,7 @@ export function AboutConnections({ nodes, locale }: { nodes: ConnectionNode[]; l
   const edges = [["actor", "play"], ["actor", "role"], ["role", "play"], ["actor", "costar"], ["play", "costar"], ["play", "series"]] as const;
   return (
     <div className="about-connections" data-about-reveal>
-      <p className="about-network-help">{locale === "ja" ? "つながりを選ぶと、実際のアーカイブへ進めます。" : "Select a connection to explore the actual archive."}</p>
+      <p className="about-network-help">{locale === "ja" ? "項目を選んでつながりをたどる。" : "Select an item to follow its connections."}</p>
       <div className="about-network" aria-label={locale === "ja" ? "作品を中心につながる5つの情報" : "Five connections around one production"}>
         <svg className="about-network__lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
           {edges.filter(([a, b]) => nodes.some(n => n.id === a) && nodes.some(n => n.id === b)).map(([a, b], index) => <line key={`${a}-${b}`} pathLength={100} style={{ animationDelay: `${index * 90}ms` }} x1={positions[a][0]} y1={positions[a][1]} x2={positions[b][0]} y2={positions[b][1]} />)}
@@ -44,7 +44,7 @@ export function AboutConnections({ nodes, locale }: { nodes: ConnectionNode[]; l
         </svg>
         {nodes.map(node => <Link key={node.id} prefetch={false} className={`about-node about-node--${node.id}${active === node.id ? " is-active" : ""}`} style={{ left: `${positions[node.id][0]}%`, top: `${positions[node.id][1]}%` }} href={`#connection-${node.id}`} onClick={() => setActive(node.id)} onFocus={() => setActive(node.id)} onMouseEnter={() => setActive(node.id)} aria-current={active === node.id ? "true" : undefined} aria-controls={`connection-${node.id}`} aria-label={`${node.label}: ${node.name}`} title={node.name}>
           <ConnectionArtwork kind={node.id} />
-          <span className="about-node__caption"><span className="about-node__label">{node.label}</span><span className="about-node__hint">{(locale === "ja" ? { actor: "出演作品・役柄から", play: "公演情報・キャストから", role: "演じた役から", costar: "同じ舞台に立った仲間から", series: "シリーズ・関連作品から" } : { actor: "Follow the performer", play: "Explore the production", role: "Discover the character", costar: "Meet the cast", series: "Trace the series" })[node.id]}</span></span>
+          <span className="about-node__caption"><span className="about-node__label">{node.label}</span><span className="about-node__hint">{(locale === "ja" ? { actor: "出演作品と役柄", play: "公演情報とキャスト", role: "役柄と出演者", costar: "共演した俳優", series: "歴代公演とキャスト" } : { actor: "Credits and roles", play: "Dates and cast", role: "Roles and performers", costar: "Fellow cast members", series: "Productions and casts" })[node.id]}</span></span>
         </Link>)}
       </div>
       <div className={`about-connection-list${enhanced ? " is-enhanced" : ""}`}>

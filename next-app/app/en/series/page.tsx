@@ -110,7 +110,7 @@ export default async function EnglishSeriesPage({
       <div className="stack-lg">
         <Breadcrumbs items={[{ label: "Series", href: "/en/series" }]} />
 
-        <DirectoryHero kind="series" title="2.5D Series" description="Browse franchise lines, recurring stage adaptations, and long-running 2.5D projects." count={filtered.length} unit="series" />
+        <DirectoryHero kind="series" title="2.5D Series" description="Explore each series through its productions and timeline." count={filtered.length} unit="series" />
 
         <section className="section-card stack-md works-list-panel">
           <h2 className="section-title">Series Filters</h2>

@@ -15,7 +15,6 @@ import {
   getCreditItems,
   getPlayDetailBySlug,
   getSeriesDetailBySlug,
-  summarizeCast,
   toPlainText,
   truncate,
 } from "../../../../lib/stage-connect";
@@ -160,7 +159,6 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
     { name: "作品一覧", path: "/plays" },
     { name: play.title, path: `/plays/${play.slug}` },
   ]);
-  const castSummary = summarizeCast(play.cast);
   const groupedCast = groupPlayCast(play.cast);
   const hasVod = Boolean(play.vod && Object.keys(play.vod).length > 0);
   const scheduleEntries = splitPerformanceList(play.period);
@@ -199,8 +197,8 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
         acceptedAnswer: {
           "@type": "Answer",
           text: hasVod
-            ? "配信対応がある場合は、作品詳細ページでDMM TVなどの配信リンクを確認できます。"
-            : "現時点では主要な配信情報は確認できていません。DVD・Blu-rayや再演情報もあわせて確認してください。",
+            ? "配信情報欄のリンクから視聴条件をご確認ください。"
+            : "配信リンクはまだ登録されていません。配信の有無は各サービスの公式サイトでご確認ください。",
         },
       },
       {
@@ -208,7 +206,7 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
         name: "公演情報やクレジットも見られますか？",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "はい。公演情報、クレジット、出演キャスト、関連シリーズ情報を掲載しています。",
+          text: "公演情報・キャスト・クレジットは各欄で確認できます。",
         },
       },
     ],
@@ -284,18 +282,6 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
           { id: "performances", label: "公演情報" }, { id: "streaming", label: "配信情報" },
           { id: "fan-points", label: "推しポイント" },
         ]} />
-
-        <section className="section-card stack-md detail-stage-section play-detail-lead-section">
-          <p className="lead">
-            <strong className="strong-inline">{play.title}</strong>
-            の配信情報（VOD）と公演データをまとめました。主な出演キャストは
-            {castSummary}
-            です。
-            {hasVod
-              ? " 配信ありの場合は、主要リンクから詳細を確認できます。"
-              : " 現時点では主要な配信情報は確認中です。DVD・Blu-rayや再演情報もあわせて確認してください。"}
-          </p>
-        </section>
 
         <section id="overview" className="section-card stack-md detail-stage-section play-detail-synopsis-section">
           <h2 className="section-title">あらすじ</h2>
@@ -424,9 +410,9 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
         <section data-streaming-placement="play_streaming" id="streaming" className="section-card stack-md detail-stage-section play-streaming-section">
           <h2 className="section-title">{hasVod ? "配信で見る" : "見る方法を確認"}</h2>
           {hasVod ? (
-            <p className="muted">DMM TV など主要な配信リンクを作品ごとに確認できます。</p>
+            <p className="muted">リンク先で配信状況と視聴条件をご確認ください。</p>
           ) : (
-            <p className="muted">現時点では主要な配信情報は確認中です。シリーズ作品や関連作品もあわせて確認してください。</p>
+            <p className="muted">配信リンクはまだ登録されていません。各サービスの公式サイトで配信状況をご確認ください。</p>
           )}
           <div className="action-row">
             {play.vod?.dmm ? (
@@ -493,13 +479,13 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
               <h3 className="faq-question">{play.title}は配信で見られますか？</h3>
               <p className="faq-answer">
                 {hasVod
-                  ? "配信対応がある場合は、作品詳細ページでDMM TVなどの配信リンクを確認できます。"
-                  : "現時点では主要な配信情報は確認中です。DVD・Blu-rayや再演情報もあわせて確認してください。"}
+                  ? "配信情報欄のリンクから視聴条件をご確認ください。"
+                  : "配信リンクはまだ登録されていません。配信の有無は各サービスの公式サイトでご確認ください。"}
               </p>
             </article>
             <article className="faq-card">
               <h3 className="faq-question">公演情報やクレジットも見られますか？</h3>
-              <p className="faq-answer">はい。公演情報、クレジット、出演キャスト、関連シリーズ情報を掲載しています。</p>
+              <p className="faq-answer">公演情報・キャスト・クレジットは各欄で確認できます。</p>
             </article>
           </div>
         </section>
@@ -507,7 +493,7 @@ export default async function PlayDetailPage({ params }: { params: Promise<Param
         <section className="section-card detail-stage-section play-detail-bottom-cta">
           <div>
             <h2 className="section-title">キャストやシリーズ作品もチェック</h2>
-            <p className="muted">出演俳優のプロフィールや、同じシリーズの関連作品をご覧いただけます。</p>
+            <p className="muted">出演俳優のプロフィールや同じシリーズの作品へ。</p>
           </div>
           <div className="action-row">
             {play.franchiseSlug ? (

@@ -139,8 +139,8 @@ export function ActorCoStarsClient({ coStars }: Props) {
         <>
           <button type="button" className="action-button" onClick={() => setIsOpen(true)}>
             {isEnglish
-              ? `View all (top ${Math.min(coStars.length, MAX_VISIBLE_COUNT)})`
-              : `すべて見る（上位 ${Math.min(coStars.length, MAX_VISIBLE_COUNT)} 人）`}
+              ? `View co-stars (top ${Math.min(coStars.length, MAX_VISIBLE_COUNT)})`
+              : `共演者を見る（上位${Math.min(coStars.length, MAX_VISIBLE_COUNT)}人）`}
           </button>
 
           <DetailDialog open={isOpen} onClose={() => setIsOpen(false)} label={isEnglish ? "Co-star network" : "共演ネットワーク"}>
@@ -150,8 +150,8 @@ export function ActorCoStarsClient({ coStars }: Props) {
                   <p className="next-modal-title">{isEnglish ? "Co-star network" : "共演ネットワーク"}</p>
                   <p className="catalog-note">
                     {isEnglish
-                      ? `Showing the top ${Math.min(coStars.length, MAX_VISIBLE_COUNT)} co-stars by appearance count.`
-                      : `共演数の多い俳優を上位 ${Math.min(coStars.length, MAX_VISIBLE_COUNT)} 人まで表示しています。`}
+                      ? `Top ${Math.min(coStars.length, MAX_VISIBLE_COUNT)} co-stars by shared credits.`
+                      : `共演数の多い順・上位${Math.min(coStars.length, MAX_VISIBLE_COUNT)}人`}
                   </p>
                 </div>
                 <button type="button" className="next-modal-close" onClick={() => setIsOpen(false)}>
@@ -188,8 +188,8 @@ export function ActorCoStarsClient({ coStars }: Props) {
                 {coStars.length > MAX_VISIBLE_COUNT ? (
                   <p className="catalog-note">
                     {isEnglish
-                      ? `Only the top ${MAX_VISIBLE_COUNT} co-stars are shown in the visible list.`
-                      : `見えるリストでは上位 ${MAX_VISIBLE_COUNT} 人まで表示しています。`}
+                      ? `Limited to the top ${MAX_VISIBLE_COUNT} co-stars.`
+                      : `表示は上位${MAX_VISIBLE_COUNT}人までです。`}
                   </p>
                 ) : null}
 
