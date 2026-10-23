@@ -1,0 +1,73 @@
+{
+  "checkedAt": "2026-10-23T20:35:02.353Z",
+  "scope": "初演・IIの2作品54配役まで収録。今回は2016年IIの通常26配役・映像2配役を点検。III〜Vの3作品、人物総合監査・詳細英訳・全シリーズ点検は未完。",
+  "franchiseId": "f9806a0c-a8e2-4de0-8c47-531fd6b6df6b",
+  "slug": "diamond-no-ace",
+  "registeredWorks": 2,
+  "castRows": 54,
+  "uniqueActors": 32,
+  "currentBatchWorks": 1,
+  "currentBatchCastRows": 28,
+  "newActors": 4,
+  "existingActorsPreserved": 24,
+  "publicPages": 62,
+  "videoCasts": 2,
+  "creditOnlyNames": 9,
+  "creditCategories": 33,
+  "identitySources": 4,
+  "legacyCandidatesCorrectedAndReused": 1,
+  "timeline": [
+    "2016/03",
+    "2015/08"
+  ],
+  "structuredActorLimit": 20,
+  "previousAudit": "next-app/research/diaace-series-audit-20261024.json",
+  "works": [
+    {
+      "id": "0347179a-fdb8-4c24-87c6-bbdc88711e15",
+      "slug": "diaace2016",
+      "title": "「ダイヤのA」The LIVE II",
+      "title_en": "Ace of Diamond The LIVE II",
+      "period": "東京：2016年3月17日〜21日／名古屋：2016年3月24日／大阪：2016年4月1日〜3日",
+      "venue": "東京：天王洲 銀河劇場／名古屋：名古屋文理大学文化フォーラム 大ホール／大阪：森ノ宮ピロティホール",
+      "castRows": 28,
+      "source": "https://kira-hai.net/diaace2016",
+      "research": "next-app/research/diaace2-20261024.json",
+      "summaryPresent": true,
+      "englishSummaryPresent": true,
+      "streaming": null,
+      "exceptions": [
+        "通常出演26配役と映像出演2配役を区別してcast_groupに保持。アンサンブル9人はクレジットへ収録、既存人物の書川勇輝も本作では通常配役にしない。",
+        "初演の既存人物22人と既存の和田雅成・三枝奈都紀を照合し計24人再利用。遠藤沙季は前バッチで改名を接続した遠藤さきのIDを再利用。",
+        "公式一覧altの陽舜臣と個別紹介の楊舜臣の差は、個別紹介・第一参照先の楊へ。峰富士夫／峰冨士夫は第一参照先と公式全体表の富へ。",
+        "明川学園監督は公式個別紹介の尾形一成へ役名を補完し、監督の説明はnoteへ。片岡鉄心は第一参照先の名前、公式全体表の片岡監督を照合。滝川・クリス・優は兼役に分割しない。",
+        "名古屋の公演回数は古い日時ページaltの1回と最新トップの追加公演2回が異なる。日付は一致し3月24日の1行へ登録し、回数は未検証の画像を使って推測補完しない。",
+        "上田悠介の旧候補は役名・人物・作品URLが一致し、公演年のみ2021と誤っていた。変更前の全項目を履歴へ保存して2016へ訂正し、既存候補IDを作品単位候補へ再利用。候補を重複させない。",
+        "遠藤ゆりか元公式の現在内容は無関係な賭博情報のため不採用。旧公式の検索キャッシュの157cmも採用せず、保存した編集人物資料・公式発表で確認できた範囲を登録。",
+        "島岡の旧吉本人物URLはHTTP200でも本人情報が消え一般検索ページに遷移しているため現所属の証明にしない。田尻の生年は未確認で月日ラベルだけ。",
+        "和田亮一は初演と同じ白州健二郎の映像配役として既存人物を再利用し、同名クリエイターの属性は転用しない。",
+        "シリーズ・初演と既存人物は全項目保全。本編の現在配信は未確認でvod空欄。詳細英訳・主演指定・人物総合監査・III〜Vは後続。"
+      ]
+    },
+    {
+      "id": "86f38080-4172-4161-9af2-7ec508734e8f",
+      "slug": "diaace2015",
+      "title": "「ダイヤのA」The LIVE",
+      "title_en": "Ace of Diamond The LIVE",
+      "period": "東京：2015年8月1日〜9日",
+      "venue": "東京：Zeppブルーシアター六本木",
+      "castRows": 26,
+      "source": "https://kira-hai.net/diaace2015",
+      "research": "next-app/research/diaace2015-20261024.json",
+      "summaryPresent": true,
+      "englishSummaryPresent": true,
+      "streaming": null
+    }
+  ],
+  "pendingChecks": [
+    "III〜Vの3作品は後続。シリーズ全体の点検は全作品登録後。",
+    "和田亮一の人物属性、島岡亮丞の現所属・公式英字、田尻浩章の生年等は未確認。",
+    "人物総合監査・詳細英訳・現在配信・主演指定と当時告知の完全網羅は後続。"
+  ],
+  "report": "docs/diaace2-2026-10-24.md"
+}
