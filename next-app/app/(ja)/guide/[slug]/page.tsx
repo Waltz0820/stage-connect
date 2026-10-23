@@ -125,16 +125,16 @@ export default async function GuideDetailPage({ params }: { params: Promise<Para
             <ol className="guide-toc__list">
               {tocItems.map((item) => (
                 <li key={item.id} className="guide-toc__item">
-                  <a className="guide-toc__link" href={`#${item.id}`}>
+                  <Link className="guide-toc__link" href={`#${item.id}`} prefetch={false}>
                     {item.text}
-                  </a>
+                  </Link>
                 </li>
               ))}
               {(guide.topActorsByFormat.stage.length > 0 || guide.topActorsByFormat.musical.length > 0) ? (
                 <li className="guide-toc__item">
-                  <a className="guide-toc__link" href="#top-cast">
+                  <Link className="guide-toc__link" href="#top-cast" prefetch={false}>
                     主な出演キャスト
-                  </a>
+                  </Link>
                 </li>
               ) : null}
             </ol>
@@ -199,7 +199,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<Para
           <p>気になった作品や俳優から、次の舞台へ。</p>
           <div><Link href="/plays">作品を探す →</Link><Link href="/actors">俳優を探す →</Link><Link href="/series">シリーズを探す →</Link></div>
         </section>
-        <nav className="support-article-end" aria-label="記事の関連リンク"><Link href="/guide">ガイド一覧へ ←</Link><a href="#guide-top">ページの先頭に戻る ↑</a></nav>
+        <nav className="support-article-end" aria-label="記事の関連リンク"><Link href="/guide">ガイド一覧へ ←</Link><Link href="#guide-top" prefetch={false}>ページの先頭に戻る ↑</Link></nav>
       </div>
     </main>
   );

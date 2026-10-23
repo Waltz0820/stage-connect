@@ -142,7 +142,7 @@ function PublicSiteChrome({ pathname, children }: { pathname: string | null; chi
   return (
     <div className={`page-shell stage-v2 editorial-chrome${isHome ? ' editorial-chrome--home' : ''}${isCompact ? ' editorial-chrome--compact' : ''}`}>
       <StreamingClickTracker/>
-      <a className="skip-link" href="#main-content">{locale === 'en' ? 'Skip to content' : '本文へ移動'}</a>
+      <Link className="skip-link" href="#main-content" prefetch={false}>{locale === 'en' ? 'Skip to content' : '本文へ移動'}</Link>
       <header ref={headerRef} className="site-header">
         <div className="container site-header__inner">
           <div className="site-header__left">

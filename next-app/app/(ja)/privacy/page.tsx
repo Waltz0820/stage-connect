@@ -32,14 +32,14 @@ export default function PrivacyPage() {
         <nav className="support-toc" aria-label="このページの内容">
           <h2>このページの内容</h2>
           <ol>
-            <li><a href="#privacy-1">運営者情報</a></li>
-            <li><a href="#privacy-2">個人情報について</a></li>
-            <li><a href="#privacy-3">アクセス解析について</a></li>
-            <li><a href="#privacy-4">Cookie について</a></li>
-            <li><a href="#privacy-5">推しポイントの投票について / Fan voting</a></li>
-            <li><a href="#privacy-6">広告配信について</a></li>
-            <li><a href="#privacy-7">掲載情報の修正・削除依頼</a></li>
-            <li><a href="#privacy-8">お問い合わせ</a></li>
+            <li><Link prefetch={false} href="#privacy-1">運営者情報</Link></li>
+            <li><Link prefetch={false} href="#privacy-2">個人情報について</Link></li>
+            <li><Link prefetch={false} href="#privacy-3">アクセス解析について</Link></li>
+            <li><Link prefetch={false} href="#privacy-4">Cookie について</Link></li>
+            <li><Link prefetch={false} href="#privacy-5">推しポイントの投票について / Fan voting</Link></li>
+            <li><Link prefetch={false} href="#privacy-6">広告配信について</Link></li>
+            <li><Link prefetch={false} href="#privacy-7">掲載情報の修正・削除依頼</Link></li>
+            <li><Link prefetch={false} href="#privacy-8">お問い合わせ</Link></li>
           </ol>
         </nav>
         <section className="section-card stack-md">

@@ -34,7 +34,7 @@ export async function SiteSearchPage({ locale, query }: { locale: 'ja' | 'en'; q
       : unavailable ? <p role="status" className="muted">{en ? 'Search is temporarily unavailable. Please try again later.' : '検索を読み込めませんでした。時間をおいてお試しください。'}</p>
       : <p className="muted">{en ? `Showing ${count} results for “${q}”` : `「${q}」の検索結果：${count}件を表示`}{count === 0 ? (en ? '. Try another keyword.' : '。表記を変えてお試しください。') : ''}</p>}
     {count > 0 ? <nav className="directory-search-types" aria-label={en ? 'Result categories' : '検索結果の種類'}>
-      {groups.filter(group => group.rows.length).map(group => <a key={group.kind} href={`#results-${group.kind}`}>{group.label}<span>{group.rows.length}</span></a>)}
+      {groups.filter(group => group.rows.length).map(group => <Link key={group.kind} href={`#results-${group.kind}`} prefetch={false}>{group.label}<span>{group.rows.length}</span></Link>)}
     </nav> : <nav className="directory-search-exits" aria-label={en ? 'Explore the archive' : '一覧から探す'}>
       {groups.map(group => <Link key={group.kind} href={`${prefix}/${group.kind}`}>{group.label}<span aria-hidden="true">→</span></Link>)}
     </nav>}

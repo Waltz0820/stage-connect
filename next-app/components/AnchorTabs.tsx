@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 
 type Tab = { id: string; label: string };
 
@@ -33,6 +34,6 @@ export function AnchorTabs({ items, label }: { items: Tab[]; label: string }) {
   }, [ids]);
 
   return <nav ref={navRef} className="detail-contents-nav" aria-label={label}>
-    {items.map((item) => <a key={item.id} href={`#${item.id}`} aria-current={active === item.id ? "location" : undefined} onClick={() => setActive(item.id)}>{item.label}</a>)}
+    {items.map((item) => <Link key={item.id} href={`#${item.id}`} prefetch={false} aria-current={active === item.id ? "location" : undefined} onClick={() => setActive(item.id)}>{item.label}</Link>)}
   </nav>;
 }

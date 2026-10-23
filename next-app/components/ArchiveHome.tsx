@@ -40,7 +40,7 @@ export default async function ArchiveHome({ locale }: { locale: 'ja' | 'en' }) {
       <div className="archive-stats" aria-label={en ? 'Archive totals' : 'アーカイブの登録件数'}>
         {counts.map(({ label, value }) => <div key={label}><strong>{value.toLocaleString(en ? 'en-US' : 'ja-JP')}</strong><span>{label}</span></div>)}
       </div>
-      <div className="archive-hero__bottom"><span>EXPLORE THE ARCHIVE</span><a href="#archive-pathways" aria-label={en ? 'Explore categories' : 'カテゴリーへスクロール'}>↓</a></div>
+      <div className="archive-hero__bottom"><span>EXPLORE THE ARCHIVE</span><Link href="#archive-pathways" prefetch={false} aria-label={en ? 'Explore categories' : 'カテゴリーへスクロール'}>↓</Link></div>
     </section>
 
     <nav id="archive-pathways" className="archive-pathways" aria-label={en ? 'Explore the archive' : 'コンテンツを探す'}>

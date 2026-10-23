@@ -50,7 +50,7 @@ export async function AboutPage({ locale }: { locale: "ja" | "en" }) {
           <span className="about-stage-light about-stage-light--one" /><span className="about-stage-light about-stage-light--two" />
           <span className="about-art-label">A STAGE. A STORY. A CONNECTION.</span>
         </div>
-        <a className="about-opening__next" href="#connections"><span>2.5D STAGE ARCHIVE<br />DISCOVER / TRACE / CONNECT</span><span className="about-next-arrow" aria-hidden="true">↓</span></a>
+        <Link className="about-opening__next" href="#connections" prefetch={false}><span>2.5D STAGE ARCHIVE<br />DISCOVER / TRACE / CONNECT</span><span className="about-next-arrow" aria-hidden="true">↓</span></Link>
       </section>
       <section className="about-how" id="connections" data-about-reveal>
         <span className="eyebrow">HOW IT WORKS</span>
