@@ -33,7 +33,19 @@ export default async function ArchiveHome({ locale }: { locale: 'ja' | 'en' }) {
     <ArchiveHomeMotion/>
     <section className="archive-hero">
       <div className="archive-hero__overline"><span>2.5D STAGE ARCHIVE</span><span>DISCOVER / TRACE / CONNECT</span></div>
-      <div id="archive-wordmark" className="archive-wordmark" aria-hidden="true"><span>STAGE</span><span>CONNECT</span></div>
+      <div id="archive-wordmark" className="archive-wordmark" aria-hidden="true">
+        <span className="archive-wordmark__line"><span className="archive-wordmark__ink">STAGE</span></span>
+        <span className="archive-wordmark__line"><span className="archive-wordmark__ink">CONNECT</span></span>
+      </div>
+      <div className="archive-hero__art" aria-hidden="true">
+        <svg viewBox="0 0 420 350" fill="none" focusable="false">
+          <g className="archive-hero__edges" stroke="currentColor" strokeWidth="1.5"><path d="m91 88 229 48-108 143L91 88Z"/><path d="m91 88 19 211 102-20M320 136l55 118-163 25"/></g>
+          <g className="archive-hero__node archive-hero__node--actor"><circle cx="91" cy="88" r="60" fill="#315cff"/><circle cx="91" cy="77" r="14" stroke="white" strokeWidth="2"/><path d="M65 113q0-25 26-25t26 25" stroke="white" strokeWidth="2"/><text x="91" y="175" textAnchor="middle">ACTORS</text></g>
+          <g className="archive-hero__node archive-hero__node--play"><path d="m269 74 112 14-14 112-112-14z" fill="#ff725e"/><path d="m307 115 31 23-36 15z" stroke="currentColor" strokeWidth="2"/><text x="320" y="226" textAnchor="middle">PLAYS</text></g>
+          <g className="archive-hero__node archive-hero__node--series"><circle cx="212" cy="279" r="55" fill="#e0f16a"/><path d="m183 269 29-15 29 15-29 15-29-15Zm0 13 29 15 29-15m-58 13 29 15 29-15" stroke="currentColor" strokeWidth="2"/><text x="212" y="347" textAnchor="middle">SERIES</text></g>
+          <g fill="currentColor"><circle cx="110" cy="299" r="4"/><circle cx="375" cy="254" r="4"/><path d="M391 45v16m-8-8h16" stroke="currentColor" strokeWidth="1.5"/></g>
+        </svg>
+      </div>
       <h1>{en ? 'Explore the stage. Discover more to love.' : '2.5次元舞台の、好きな作品をもっと深く。'}</h1>
       <p className="archive-hero__description">{en ? 'Explore actors, productions and series in a connected digital archive of 2.5D theatre.' : '俳優・作品・シリーズを横断して探せる、2.5次元舞台のデジタルアーカイブ。'}</p>
       <SearchBarClient variant="hero"/>
@@ -44,6 +56,7 @@ export default async function ArchiveHome({ locale }: { locale: 'ja' | 'en' }) {
     </section>
 
     <nav id="archive-pathways" className="archive-pathways" aria-label={en ? 'Explore the archive' : 'コンテンツを探す'}>
+      <span className="archive-pathways__trace" aria-hidden="true"/>
       {actions.map(item => <Link key={item.href} href={prefix + item.href} className="archive-pathway" data-reveal="path">
         <span><span className="archive-pathway__word">{item.word}</span><span className="archive-pathway__title">{item.title}</span><span className="archive-pathway__description">{item.text}</span></span><span className="archive-pathway__arrow" aria-hidden="true">→</span>
       </Link>)}
