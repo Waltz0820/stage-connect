@@ -1,0 +1,69 @@
+{
+  "checkedAt": "2026-10-24T12:20:26.013Z",
+  "scope": "本公演2作品22配役・17人物を収録。今回2017年仮登録を補完し8配役・新規2人物を追加。2016年スペシャルイベントと人物総合監査・詳細英訳・現在配信は後続。",
+  "franchiseId": "a2c39146-fa29-47c7-81f4-693b5bc1cfea",
+  "slug": "tokyo-ghoul",
+  "registeredWorks": 2,
+  "castRows": 22,
+  "uniqueActors": 17,
+  "currentBatchWorks": 1,
+  "currentBatchCastRows": 9,
+  "newActors": 2,
+  "existingActorsPreserved": 7,
+  "newCastRows": 8,
+  "existingCastRowsPreserved": 1,
+  "publicPages": 24,
+  "creditOnlyNames": 10,
+  "creditCategories": 23,
+  "identitySources": 2,
+  "timeline": [
+    "2017/06",
+    "2015/07"
+  ],
+  "works": [
+    {
+      "id": "90025557-43af-4af8-8976-ac95dc49cdda",
+      "slug": "tokyoghoul2017",
+      "title": "舞台『東京喰種トーキョーグール』〜或いは、超越的美食学をめぐる瞑想録〜",
+      "title_en": "Tokyo Ghoul — Meditations on Transcendental Gastronomy (2017)",
+      "period": "東京：2017年6月29日〜7月4日／大阪：2017年7月8日〜9日",
+      "venue": "東京：シアター1010／大阪：梅田芸術劇場シアター・ドラマシティ",
+      "castRows": 9,
+      "source": "https://kira-hai.net/tokyoghoul2017",
+      "research": "next-app/research/tokyoghoul2017-20261024.json",
+      "summaryPresent": true,
+      "englishSummaryPresent": true,
+      "streaming": {},
+      "exceptions": [
+        "既存の仮登録はID・slug・作成日と月山習の配役IDを保全。年2021を2017へ訂正し、正式副題・公演地・期間・シリーズ・日英概要・クレジットを補完。",
+        "佐々木喜英の採用済み外部候補はpendingへ戻さず、年・照合キー・出典順・根拠のみ変更前照合付きで補完。accepted_cast_id・採用日時・元人物/作品IDを保持。既存月山配役は公式順のbilling_order=9と更新日時のみ補完。",
+        "公式とキラハイの主要9配役・並びが一致。アンサンブル10人は公式区分どおり23番目のクレジットへ。既存の同名俳優や他作品の配役は削除しない。",
+        "山谷花純の身長は現公式160cm、旧出版社162cm。現公式を優先。富田麻帆のThanks!は業務提携であり所属とは書かない。",
+        "英題・日英概要と新規人物の英語紹介は編集表記・翻訳。公式英題とは扱わない。写真・現在配信・主演区分は推測で追加しない。",
+        "2016年スペシャルイベントと映像商品イベントは2017年本公演へ混ぜず後続へ。"
+      ]
+    },
+    {
+      "id": "af7f0b41-ab8d-42aa-8b5c-cdeaf76d5f6d",
+      "slug": "tokyoghoul2015",
+      "title": "舞台『東京喰種トーキョーグール』（2015年）",
+      "title_en": "Tokyo Ghoul — Stage Production (2015)",
+      "period": "東京：2015年7月2日〜8日／京都：2015年7月18日〜20日",
+      "venue": "東京：AiiA 2.5 Theater Tokyo／京都：京都劇場",
+      "castRows": 13,
+      "source": "https://kira-hai.net/tokyoghou2015",
+      "research": "next-app/research/tokyoghoul2015-20261024.json",
+      "summaryPresent": true,
+      "englishSummaryPresent": true,
+      "streaming": null,
+      "exceptions": [
+        "初演13配役・幼少期補足を前工程から全項目保全。前工程の研究バッチと報告書参照。"
+      ]
+    }
+  ],
+  "pendingChecks": [
+    "2016年の上映・トーク・ライブのスペシャルイベントを独立公演として収録するか確認する。",
+    "現在配信、既存全人物プロフィールの総合監査・詳細英訳・公式主演指定の補完は後続。"
+  ],
+  "report": "docs/tokyoghoul2017-2026-10-24.md"
+}

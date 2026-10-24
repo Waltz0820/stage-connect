@@ -1539,56 +1539,43 @@
       "slug": "tokyo-ghoul",
       "name": "舞台『東京喰種トーキョーグール』",
       "registeredDay": "2026-02-09",
-      "plays": 1,
+      "plays": 2,
       "protected": false,
-      "castRows": 13,
-      "castCoverageNote": "2015年初演を13配役・13人物で収録。新規7人物・既存6人物。キラハイの12配役を公演公式で照合し霧島→霧嶋董香、亜門鋼太郎→鋼太朗を訂正、原文を保持。阿久津秀寿は現事務所の金木研幼少役と複数年の映画・吹替歴から個別掲載しアニメ西尾錦幼少役と分離。残る追加出演7人はアンサンブル区分を推定せず役名記載なしの出演クレジットへ。全19クレジット区分。宮崎→宮﨑秋人は公式注記と現事務所で接続。山神は月日のみを保持。シリーズ紹介3項目を履歴付きで補完し分類・ID・URLを保全。日英32ページ、年表2015/07・抜粋・全配役・幼少補足・全クレジット・逆リンク・投票・構造化データを点検。8テーブル比較と再実行0変更。2017年の未接続・年2021の仮登録はID・URL・既存月山1配役を保全して次工程、2016年スペシャルイベントも本編と分けて後続。",
+      "castRows": 22,
+      "castCoverageNote": "本公演2作品22配役・17人物。2017年仮登録の年2021を2017へ訂正し、正式副題・東京/大阪日程・シリーズ・日英概要・23区分のクレジットを補完。主要9配役を公式順で照合、新規8配役・既存月山1配役を保全し掲載順のみ補完。新規人物は山谷花純・富田麻帆、既存7人物は全項目保全。アンサンブル10人は作品クレジット。山谷の身長160/162差は現公式160を優先、富田のThanks!は業務提携と明記。採用済み外部候補は年・照合キー・順序・根拠のみ履歴付きで補完し採用ID/日時を保全。日英24ページと2017/06→2015/07の年表・抜粋・逆リンク・投票・構造化データ、初演13配役/幼少補足を点検。8テーブル全行比較と再実行0変更。2016年スペシャルイベント・人物総合監査・詳細英訳・現在配信は後続。",
       "seriesAudit": {
-        "checkedAt": "2026-10-24T09:23:11.059Z",
-        "scope": "2015年初演1作品13配役を収録。2017年作の既存仮登録と2016年スペシャルイベントは後続。人物総合監査・詳細翻訳・全シリーズ点検は未完。",
+        "checkedAt": "2026-10-24T12:20:26.013Z",
+        "scope": "本公演2作品22配役・17人物を収録。今回2017年仮登録を補完し8配役・新規2人物を追加。2016年スペシャルイベントと人物総合監査・詳細英訳・現在配信は後続。",
         "franchiseId": "a2c39146-fa29-47c7-81f4-693b5bc1cfea",
         "slug": "tokyo-ghoul",
-        "registeredWorks": 1,
-        "castRows": 13,
-        "uniqueActors": 13,
+        "registeredWorks": 2,
+        "castRows": 22,
+        "uniqueActors": 17,
         "currentBatchWorks": 1,
-        "currentBatchCastRows": 13,
-        "newActors": 7,
-        "existingActorsPreserved": 6,
-        "publicPages": 32,
-        "childhoodNotes": 1,
-        "creditOnlyNames": 7,
-        "creditCategories": 19,
-        "identitySources": 7,
-        "franchisePatch": {
-          "description": "石田スイの漫画『東京喰種トーキョーグール』を原作とする舞台シリーズ。人間と喰種の狭間で葛藤する金木研を描く。演出は茅野イサム、脚本は御笠ノ忠次。2015年7月に東京・京都で初演された。",
-          "name_en": "Tokyo Ghoul (Stage)",
-          "description_en": "A stage series based on Sui Ishida’s manga Tokyo Ghoul, following Ken Kaneki as he struggles between the worlds of humans and ghouls. Directed by Isamu Kayano and written by Chuji Mikasano, the first production premiered in Tokyo and Kyoto in July 2015."
-        },
-        "preserved2017Placeholder": [
-          {
-            "id": "90025557-43af-4af8-8976-ac95dc49cdda",
-            "slug": "tokyoghoul2017",
-            "title": "舞台『東京喰種トーキョーグール』",
-            "period": "2021年",
-            "franchiseId": null
-          }
-        ],
+        "currentBatchCastRows": 9,
+        "newActors": 2,
+        "existingActorsPreserved": 7,
+        "newCastRows": 8,
+        "existingCastRowsPreserved": 1,
+        "publicPages": 24,
+        "creditOnlyNames": 10,
+        "creditCategories": 23,
+        "identitySources": 2,
         "timeline": [
+          "2017/06",
           "2015/07"
         ],
-        "works": 1,
+        "works": 2,
         "pendingChecks": [
-          "2017年作は既存tokyoghoul2017のID・URLを維持して次工程で年・正式副題・シリーズ・配役を補完。2016年スペシャルイベントも本編と分けて後続。",
-          "追加出演7人の詳細役名、山神の生年等、浜田の身長差、全人物総合監査・詳細英訳・現在配信・主演指定は後続。"
+          "2016年の上映・トーク・ライブのスペシャルイベントを独立公演として収録するか確認する。",
+          "現在配信、既存全人物プロフィールの総合監査・詳細英訳・公式主演指定の補完は後続。"
         ],
-        "report": "docs/tokyoghoul2015-2026-10-24.md",
+        "report": "docs/tokyoghoul2017-2026-10-24.md",
         "remainingSeriesWorkItems": [
-          "2017年作の既存仮登録を補完",
           "2016年スペシャルイベントの収録判断と別公演登録"
         ],
-        "research": "next-app/research/tokyoghoul2015-20261024.json",
-        "seriesResearch": "next-app/research/tokyoghoul-series-audit-20261024-01.json"
+        "research": "next-app/research/tokyoghoul2017-20261024.json",
+        "seriesResearch": "next-app/research/tokyoghoul-series-audit-20261024-02.json"
       }
     },
     {
