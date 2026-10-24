@@ -1,0 +1,94 @@
+{
+  "checkedAt": "2026-10-24T16:10:02.362Z",
+  "scope": "登録済み3作品（2017年初演15役・2019年ライブ14役・2020年公演18役）の補完が完了。未登録2026年作の登録とシリーズ全体点検は後続。",
+  "franchiseId": "8cd271e6-0156-4216-b66c-b5f014366cca",
+  "slug": "king-of-prism",
+  "registeredWorks": 3,
+  "castRows": 47,
+  "uniqueActors": 19,
+  "completedWorks": 3,
+  "completedCastRows": 47,
+  "currentBatchWorks": 1,
+  "currentBatchCastRows": 18,
+  "newActors": 1,
+  "existingActorsPreserved": 17,
+  "newCastRows": 17,
+  "existingCastRowsPreserved": 1,
+  "publicPages": 44,
+  "creditOnlyNames": 5,
+  "creditCategories": 7,
+  "identitySources": 1,
+  "timeline": "2020/02",
+  "performanceStatus": {
+    "scheduled": "2020-02-20 / 2020-03-01",
+    "performed": "2020-02-20 / 2020-02-26",
+    "cancelled": "2020-02-27 / 2020-03-01",
+    "currentStreamingVerified": false
+  },
+  "works": [
+    {
+      "id": "12b4ddee-cc88-41fd-86da-1afa031e8803",
+      "slug": "kop2017",
+      "title": "舞台「KING OF PRISM-Over the Sunshine!-」",
+      "title_en": "KING OF PRISM -Over the Sunshine!- (2017)",
+      "period": "大阪：2017年11月2日〜5日／東京：2017年11月8日〜12日",
+      "venue": "大阪：梅田芸術劇場 シアター・ドラマシティ／東京：AiiA 2.5 Theater Tokyo",
+      "castRows": 15,
+      "source": "https://kira-hai.net/kop2017",
+      "research": "next-app/research/kop2017-20261025.json",
+      "summaryPresent": true,
+      "englishSummaryPresent": true,
+      "completedInThisBatch": false,
+      "exceptions": [
+        "前工程で補完した作品・配役の全項目を保全。"
+      ]
+    },
+    {
+      "id": "576d6488-3b91-4506-b021-29bab01bf1d9",
+      "slug": "kop2019",
+      "title": "舞台「KING OF PRISM-Rose Party on STAGE 2019-」",
+      "title_en": "KING OF PRISM -Rose Party on STAGE 2019-",
+      "period": "2019年10月12日（会場の昼夜公演は中止／夜の部は無観客ライブ・生配信）",
+      "venue": "パシフィコ横浜 国立大ホール（無観客実施）",
+      "castRows": 14,
+      "source": "https://kira-hai.net/kop2019",
+      "research": "next-app/research/kop2019-20261025.json",
+      "summaryPresent": true,
+      "englishSummaryPresent": true,
+      "completedInThisBatch": false,
+      "exceptions": [
+        "前工程で補完した作品・配役の全項目を保全。"
+      ]
+    },
+    {
+      "id": "64c8e12a-9d60-4a81-a05a-a7480e057b21",
+      "slug": "kop2020",
+      "title": "舞台「KING OF PRISM -Shiny Rose Stars-」",
+      "title_en": "KING OF PRISM -Shiny Rose Stars-",
+      "period": "2020年2月20日〜3月1日（2月27日〜3月1日の公演は中止）",
+      "venue": "TOKYO DOME CITY HALL",
+      "castRows": 18,
+      "source": "https://kira-hai.net/kop2020",
+      "research": "next-app/research/kop2020-20261025.json",
+      "summaryPresent": true,
+      "englishSummaryPresent": true,
+      "completedInThisBatch": true,
+      "exceptions": [
+        "主要18配役を現公式・公式映像商品・第一参照先で照合。掲載順は現公式キャスト順に統一し、映像商品では如月ルヰの位置が異なる点を記録。田中会長役の佐久間祐人は役名と人物を確認して既存俳優に接続。",
+        "如月ルヰは横田龍儀、池袋エィスは小林竜之、黒川冷は及川洸。2017年内藤大希や2019年14役の配役を流用しない。",
+        "2月20日開幕、2月27日以降は中止。予定期間と中止範囲を公演期間と日英概要で明示し、全公演中止と扱わない。公式映像商品の2月26日公演後の挨拶記録も確認。",
+        "2月27日DJ KOO／2月28日UKOON（DJ KOO・孝藤右近）の予定アフターイベントは中止範囲に含まれるため実出演キャストには追加しない。",
+        "アンサンブル5名はクレジットのみ。2020年1月27日告知の松田健太郎降板と小林駿太追加を反映し、旧告知を残す媒体や2017・2019年名簿を流用しない。",
+        "既存作品のID・slug・正式タイトル・作成日時・シリーズ・配信設定、既存spi配役のID等を保全。正常spi候補の誤年2021を2020へ訂正しキー・順序・根拠を補完。別作品HTML混入の重複履歴は保全し再採用しない。",
+        "及川の現所属・公式英字は未確認のため断定しない。既存17人物は全項目保全し、新規1人物は氏名・DOB・職業・出演作で接続。",
+        "日英概要・英題・人物英訳は編集表記。2020年6月26日の映像商品発売日や後日のニコ生放送日を公演日・現在の配信URLへ流用しない。"
+      ]
+    }
+  ],
+  "pendingChecks": [
+    "2026年Your Endless Callの登録とシリーズ全体点検は後続。",
+    "及川の現所属・公式英字、全技術スタッフ・詳細英訳・既存人物総合監査・現在配信・主演指定は後続。",
+    "旧spiのHTML混入済み重複採用履歴は原文保全。旧取り込み全体の整理は後続。"
+  ],
+  "report": "docs/kop2020-2026-10-25.md"
+}
