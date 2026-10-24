@@ -1,0 +1,3009 @@
+{
+  "version": 1,
+  "batchId": "k2016-20261025-01",
+  "expectedFranchise": {
+    "id": "21e2a016-4301-4053-9b79-6763d362193a",
+    "name": "舞台『K』（Kステ）",
+    "created_at": "2025-12-13T04:58:27.220101+00:00",
+    "updated_at": "2026-10-24T18:17:05.544152+00:00",
+    "slug": "k",
+    "intro": null,
+    "description": "GoRA×GoHandsのアニメ『K』を原作とする舞台シリーズ。異能を持つ「王」たちとクランズマンの争いを描く。2014年に初演され、脚本・演出は末満健一が担当する。",
+    "origin_type": "アニメ原作",
+    "origin_note": "原作：GoRA×GoHands『K』",
+    "production_companies": [
+      "マーベラス"
+    ],
+    "related_franchise_ids": [],
+    "format": null,
+    "description_en": "A stage series based on the anime K by GoRA and GoHands, depicting conflicts between superpowered Kings and their clansmen. The first production opened in 2014, written and directed by Kenichi Suemitsu.",
+    "name_en": "K (Stage)"
+  },
+  "actors": [
+    {
+      "actor": {
+        "id": "0f45c0ba-0474-4ece-8d40-8e31a1cee2a2",
+        "slug": "funaoka-saki",
+        "name": "船岡咲",
+        "kana": "ふなおか さき",
+        "profile": "神奈川県出身の俳優・モデル。オスカープロモーション所属。日テレジェニック2012に選出。舞台『K -Lost Small World-』の大貝阿耶役、『ダンガンロンパ3 THE STAGE 2018』の忌村静子役などを務める。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1993-03-02",
+        "height_cm": null,
+        "blood_type": "O",
+        "birthday_label": null,
+        "name_en": "Saki Funaoka",
+        "profile_en": "An actor and model from Kanagawa, represented by Oscar Promotion. Selected for Nittelegenic 2012, her stage credits include Aya Ogai in K -Lost Small World- and Seiko Kimura in Danganronpa 3 THE STAGE 2018.",
+        "death_date": null
+      },
+      "sourceActorName": "船岡咲",
+      "profileUrl": "https://catalog.oscarpro.co.jp/search/talent/1000004100",
+      "evidence": [
+        {
+          "url": "https://catalog.oscarpro.co.jp/search/talent/1000004100",
+          "checkedAt": "2026-10-24T18:38:25.534Z",
+          "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+        },
+        {
+          "url": "https://www.marv.jp/special/stage-k-3/cast03.html",
+          "checkedAt": "2026-10-24T18:40:12.577Z",
+          "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+        },
+        {
+          "url": "https://thetv.jp/person/2000041433/",
+          "checkedAt": "2026-10-24T18:40:12.919Z",
+          "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+        }
+      ],
+      "notes": [
+        "現事務所カタログで完全DOB・O型・英字・日テレジェニックを確認。公演公式で出身と本作役、編集人物紹介で読み・同DOBと別舞台役を照合。事務所の身長157.7cmはinteger列に丸めず空欄とし原値を根拠に保持。人物ページがないためキラハイの推定URLは付けない。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "0c6f2d44-a7ab-4d29-8789-0d8228f87846",
+        "slug": "terumi",
+        "name": "輝海",
+        "kana": "てるみ",
+        "profile": "大阪府出身の俳優。舞台『K -Lost Small World-』の草薙出雲役、『THE STAGE ラッキードッグ1』のジュリオ・ディ・ボンドーネ役などを務める。『仮面ライダーセイバー×ゴースト』ではカミーユを演じる。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1986-02-13",
+        "height_cm": null,
+        "blood_type": "O",
+        "birthday_label": null,
+        "name_en": null,
+        "profile_en": "An actor from Osaka. His stage credits include Izumo Kusanagi in K -Lost Small World- and Giulio di Bondone in THE STAGE Lucky Dog 1. He also plays Camille in Kamen Rider Saber × Ghost.",
+        "death_date": null
+      },
+      "sourceActorName": "輝海",
+      "profileUrl": "https://kira-hai.net/terumi",
+      "evidence": [
+        {
+          "url": "https://kira-hai.net/terumi",
+          "checkedAt": "2026-10-24T18:38:25.209Z",
+          "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+        },
+        {
+          "url": "https://www.marv.jp/special/stage-k-3/cast06.html",
+          "checkedAt": "2026-10-24T18:40:12.593Z",
+          "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+        },
+        {
+          "url": "https://www.kamen-rider-official.com/zukan/characters/2534",
+          "checkedAt": "2026-10-24T18:40:12.991Z",
+          "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+        }
+      ],
+      "notes": [
+        "第一参照先で読み・完全DOB・O型と本作およびラッキードッグの接点、公演公式で誕生月日・大阪府・本作役、東映でカミーユ役を確認。同名の2014年生まれ子役や読みが「ゆう」の新人と区別する。旧GFAプロフィールと本人プロフィールURLは404。現所属は断定しない。身長は第一参照先180cmに対し別の二次資料に177cmが残り、現一次資料がないため保留しnull。公式英字未確認のためnull。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "6f56fa1e-493d-4f17-917a-2559ecf800f5",
+        "slug": "maekawa-yuki",
+        "name": "前川優希",
+        "kana": "まえかわ ゆうき",
+        "profile": "東京都出身の俳優・歌手。舞台『K -Lost Small World-』の湊速人役、MANKAI STAGE『A3!』の皆木綴役などを務める。舞台のプロデュースや脚本も手がける。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1997-12-17",
+        "height_cm": 179,
+        "blood_type": null,
+        "birthday_label": null,
+        "name_en": "Maekawa Yuki",
+        "profile_en": "An actor and singer from Tokyo. Stage credits include Hayato Minato in K -Lost Small World- and Tsuzuru Minagi in MANKAI STAGE A3!. He also produces stage works and writes scripts.",
+        "death_date": null
+      },
+      "sourceActorName": "前川優希",
+      "profileUrl": "https://www.kingrecords.co.jp/cs/artist/artist.aspx?artist=50025",
+      "evidence": [
+        {
+          "url": "https://www.kingrecords.co.jp/cs/artist/artist.aspx?artist=50025",
+          "checkedAt": "2026-10-24T18:38:25.416Z",
+          "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+        },
+        {
+          "url": "https://www.marv.jp/special/stage-k-3/cast12.html",
+          "checkedAt": "2026-10-24T18:40:12.646Z",
+          "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+        },
+        {
+          "url": "https://kira-hai.net/maekawa-yuki",
+          "checkedAt": "2026-10-24T18:38:25.235Z",
+          "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+        }
+      ],
+      "notes": [
+        "レコード会社公式の完全DOB・東京都・179cm・英字と舞台制作／脚本活動を採用。公演公式で月日・東京・湊速人、第一参照先で読み・同DOB・179cm・A3!皆木綴を確認。旧スペースクラフトやTFGの掲載を現所属として流用しない。キングレコードは所属事務所ではなくレコード会社のため所属文へ変換しない。血液型未確認はnull。英字は公式大文字を通常表記に整えた。"
+      ]
+    }
+  ],
+  "works": [
+    {
+      "year": 2016,
+      "before": null,
+      "play": {
+        "id": "79389152-3b95-46a5-82e8-1b7fe9dfe7f4",
+        "slug": "k2016",
+        "title": "舞台『K -Lost Small World-』",
+        "franchise_id": "21e2a016-4301-4053-9b79-6763d362193a",
+        "summary": "八田美咲と伏見猿比古の中学生時代の出会いから決別までを描く、アニメ『K』のスピンオフ作品の舞台化。2016年7月に東京・京都で上演された。本編と、キャラクターたちがアイドルとして歌い踊る『BLACK DOG LIVE～fromアイドルK』の二部構成。",
+        "period": "2016年7月22日〜24日（東京）／7月30日〜31日（京都）",
+        "venue": "AiiA 2.5 Theater Tokyo／京都劇場",
+        "vod": {},
+        "genre": null,
+        "tags": [],
+        "credits": [
+          {
+            "role": "原作",
+            "names": [
+              "GoRA",
+              "GoHands"
+            ],
+            "is_core": true,
+            "sort_order": 1
+          },
+          {
+            "role": "「K -Lost Small World-」原作",
+            "names": [
+              "壁井ユカコ（GoRA）"
+            ],
+            "is_core": true,
+            "sort_order": 2
+          },
+          {
+            "role": "脚本・演出",
+            "names": [
+              "末満健一"
+            ],
+            "is_core": true,
+            "sort_order": 3
+          },
+          {
+            "role": "主催",
+            "names": [
+              "stage K-project"
+            ],
+            "is_core": false,
+            "sort_order": 4
+          },
+          {
+            "role": "アンサンブル",
+            "names": [
+              "日南田顕久",
+              "一之瀬嘉仁",
+              "珪吾",
+              "田中晃平",
+              "花塚廉太郎",
+              "松井勇歩",
+              "丸目聖人",
+              "村上渉"
+            ],
+            "is_core": false,
+            "sort_order": 5
+          }
+        ],
+        "related_franchise_ids": [],
+        "summary_en": "A stage adaptation of the K spin-off tracing Misaki Yata and Saruhiko Fushimi from their first meeting in junior high school to their eventual separation. Performed in Tokyo and Kyoto in July 2016, it paired the main story with BLACK DOG LIVE from Idol K, a live segment featuring the characters as singing and dancing idols.",
+        "title_en": "K -Lost Small World- (Stage, 2016)"
+      },
+      "rawSource": {
+        "sourceUrl": "https://kira-hai.net/k2016",
+        "title": "舞台『K -Lost Small World-』",
+        "scheduleLines": [
+          "2016年7月22-24日 AiiA 2.5 Theater Tokyo",
+          "2016年7月30日-7月31日 京都劇場"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "植田圭輔",
+            "sourceActorUrl": "https://kira-hai.net/ueda-keisuke",
+            "role_name": "八田美咲",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "安西慎太郎",
+            "sourceActorUrl": "https://kira-hai.net/anzai-shintaro",
+            "role_name": "伏見猿比古",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "荒牧慶彦",
+            "sourceActorUrl": "https://kira-hai.net/aramaki-yoshihiko",
+            "role_name": "伏見仁希",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "船岡咲",
+            "sourceActorUrl": null,
+            "role_name": "大貝阿耶",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "和田雅成",
+            "sourceActorUrl": "https://kira-hai.net/wada-masanari",
+            "role_name": "周防尊",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "輝海",
+            "sourceActorUrl": "https://kira-hai.net/terumi",
+            "role_name": "草薙出雲",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "前山剛久",
+            "sourceActorUrl": "https://kira-hai.net/maeyama-takahisa",
+            "role_name": "十束多々良",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "松崎裕",
+            "sourceActorUrl": null,
+            "role_name": "鎌本力夫",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "礒部花凜",
+            "sourceActorUrl": "https://kira-hai.net/isobe-karin",
+            "role_name": "櫛名アンナ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "土井一海",
+            "sourceActorUrl": "https://kira-hai.net/doi-kazumi",
+            "role_name": "宗像礼司",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "茉莉邑薫",
+            "sourceActorUrl": "https://kira-hai.net/marimura-kaoru",
+            "role_name": "淡島世理",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "岸本卓也",
+            "sourceActorUrl": "https://kira-hai.net/kishimoto-takuya",
+            "role_name": "塩津元",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "近藤頌利",
+            "sourceActorUrl": "https://kira-hai.net/kondo-shori",
+            "role_name": "湊秋人",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "前川優希",
+            "sourceActorUrl": "https://kira-hai.net/maekawa-yuki",
+            "role_name": "湊速人",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "荒牧慶彦",
+            "sourceActorUrl": "https://kira-hai.net/aramaki-yoshihiko",
+            "role_name": "夜刀神狗朗",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "松田凌 (映像出演)",
+            "sourceActorUrl": null,
+            "role_name": "伊佐那社",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "日南田顕久",
+            "sourceActorUrl": "https://kira-hai.net/hinata-akihisa",
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "一之瀬嘉仁",
+            "sourceActorUrl": "https://kira-hai.net/ichinose-yoshihito",
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "珪吾",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "田中晃平",
+            "sourceActorUrl": "https://kira-hai.net/tanaka-kohei",
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "花塚廉太郎",
+            "sourceActorUrl": "https://kira-hai.net/hanatsuka-rentaro",
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "松井勇歩",
+            "sourceActorUrl": "https://kira-hai.net/matsui-yuho",
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "丸目聖人",
+            "sourceActorUrl": "https://kira-hai.net/marume-kiyohito",
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "村上渉",
+            "sourceActorUrl": "https://kira-hai.net/murakami-wataru",
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          }
+        ],
+        "unparsed": []
+      },
+      "source": {
+        "sourceUrl": "https://kira-hai.net/k2016",
+        "title": "舞台『K -Lost Small World-』",
+        "scheduleLines": [
+          "2016年7月22-24日 AiiA 2.5 Theater Tokyo",
+          "2016年7月30日-7月31日 京都劇場"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "植田圭輔",
+            "sourceActorUrl": "https://kira-hai.net/ueda-keisuke",
+            "role_name": "八田美咲",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "安西慎太郎",
+            "sourceActorUrl": "https://kira-hai.net/anzai-shintaro",
+            "role_name": "伏見猿比古",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "荒牧慶彦",
+            "sourceActorUrl": "https://kira-hai.net/aramaki-yoshihiko",
+            "role_name": "伏見仁希",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "船岡咲",
+            "sourceActorUrl": null,
+            "role_name": "大貝阿耶",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "和田雅成",
+            "sourceActorUrl": "https://kira-hai.net/wada-masanari",
+            "role_name": "周防尊",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "輝海",
+            "sourceActorUrl": "https://kira-hai.net/terumi",
+            "role_name": "草薙出雲",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "前山剛久",
+            "sourceActorUrl": "https://kira-hai.net/maeyama-takahisa",
+            "role_name": "十束多々良",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "松崎裕",
+            "sourceActorUrl": null,
+            "role_name": "鎌本力夫",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "礒部花凜",
+            "sourceActorUrl": "https://kira-hai.net/isobe-karin",
+            "role_name": "櫛名アンナ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "土井一海",
+            "sourceActorUrl": "https://kira-hai.net/doi-kazumi",
+            "role_name": "宗像礼司",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "茉莉邑薫",
+            "sourceActorUrl": "https://kira-hai.net/marimura-kaoru",
+            "role_name": "淡島世理／伏見木佐",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "岸本卓也",
+            "sourceActorUrl": "https://kira-hai.net/kishimoto-takuya",
+            "role_name": "塩津元",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "近藤頌利",
+            "sourceActorUrl": "https://kira-hai.net/kondo-shori",
+            "role_name": "湊秋人",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "前川優希",
+            "sourceActorUrl": "https://kira-hai.net/maekawa-yuki",
+            "role_name": "湊速人",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "荒牧慶彦",
+            "sourceActorUrl": "https://kira-hai.net/aramaki-yoshihiko",
+            "role_name": "夜刀神狗朗",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "松田凌",
+            "sourceActorUrl": "https://kira-hai.net/matsuda-ryo",
+            "role_name": "伊佐那社",
+            "cast_group": "映像出演"
+          }
+        ],
+        "unparsed": []
+      },
+      "sourceFingerprint": "7a3c43d02cefbbdfa718dd14d5ae1835c543bbd88d12a8ff7e622e1d27fee9ba",
+      "stage": {
+        "workUrl": "https://kira-hai.net/k2016",
+        "key": "304beb56951af768962de6f7764649d83cc23e3f4940b0d29b3a5b83bf1337d2",
+        "items": [
+          {
+            "source_actor_name": "植田圭輔",
+            "source_actor_url": "https://kira-hai.net/ueda-keisuke",
+            "source_work_title": "舞台『K -Lost Small World-』",
+            "source_year": 2016,
+            "source_role_raw": "八田美咲",
+            "source_role_names": [
+              "八田美咲"
+            ],
+            "source_cast_group": null,
+            "source_order": 1,
+            "source_credit_key": "8c76de2822b72a1898d5",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/k2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/k2016",
+                  "checkedAt": "2026-10-24T18:38:25.141Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/stage-k-3/",
+                  "checkedAt": "2026-10-24T18:38:25.195Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/761/",
+                  "checkedAt": "2026-10-24T18:38:25.194Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.j25musical.jp/stage/135",
+                  "checkedAt": "2026-10-24T18:41:35.799Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=21077",
+                  "checkedAt": "2026-10-24T18:41:35.541Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.office-anemone.com/?page_id=3194",
+                  "checkedAt": "2026-10-24T18:41:35.635Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                }
+              ],
+              "source_fingerprint": "7a3c43d02cefbbdfa718dd14d5ae1835c543bbd88d12a8ff7e622e1d27fee9ba",
+              "review_fingerprint": "302ba086d731b9b5f43a678f1154be0dc33258fca57fbbb1a9d251ddbbe38cd8",
+              "snapshot_fingerprint": "790d160870f93f17274afb1e105d1b68311293570696032f39301fdda62f9558",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2016,
+                "reason": "公式公演日程・協会・配信元の製作年で確定。旧混入候補の2021は引き継がない。",
+                "evidence": [
+                  {
+                    "url": "https://www.marv.jp/special/stage-k-3/",
+                    "checkedAt": "2026-10-24T18:38:25.195Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  },
+                  {
+                    "url": "https://www.j25musical.jp/stage/135",
+                    "checkedAt": "2026-10-24T18:41:35.799Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  },
+                  {
+                    "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=21077",
+                    "checkedAt": "2026-10-24T18:41:35.541Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "efec4bde-6be0-4d8f-80e6-0d1c3accf066",
+            "matched_play_id": "79389152-3b95-46a5-82e8-1b7fe9dfe7f4",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "安西慎太郎",
+            "source_actor_url": "https://kira-hai.net/anzai-shintaro",
+            "source_work_title": "舞台『K -Lost Small World-』",
+            "source_year": 2016,
+            "source_role_raw": "伏見猿比古",
+            "source_role_names": [
+              "伏見猿比古"
+            ],
+            "source_cast_group": null,
+            "source_order": 2,
+            "source_credit_key": "ce92271df494abc48067",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/k2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/k2016",
+                  "checkedAt": "2026-10-24T18:38:25.141Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/stage-k-3/",
+                  "checkedAt": "2026-10-24T18:38:25.195Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/761/",
+                  "checkedAt": "2026-10-24T18:38:25.194Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.j25musical.jp/stage/135",
+                  "checkedAt": "2026-10-24T18:41:35.799Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=21077",
+                  "checkedAt": "2026-10-24T18:41:35.541Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.office-anemone.com/?page_id=3194",
+                  "checkedAt": "2026-10-24T18:41:35.635Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                }
+              ],
+              "source_fingerprint": "7a3c43d02cefbbdfa718dd14d5ae1835c543bbd88d12a8ff7e622e1d27fee9ba",
+              "review_fingerprint": "302ba086d731b9b5f43a678f1154be0dc33258fca57fbbb1a9d251ddbbe38cd8",
+              "snapshot_fingerprint": "790d160870f93f17274afb1e105d1b68311293570696032f39301fdda62f9558",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2016,
+                "reason": "公式公演日程・協会・配信元の製作年で確定。旧混入候補の2021は引き継がない。",
+                "evidence": [
+                  {
+                    "url": "https://www.marv.jp/special/stage-k-3/",
+                    "checkedAt": "2026-10-24T18:38:25.195Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  },
+                  {
+                    "url": "https://www.j25musical.jp/stage/135",
+                    "checkedAt": "2026-10-24T18:41:35.799Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  },
+                  {
+                    "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=21077",
+                    "checkedAt": "2026-10-24T18:41:35.541Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "1e6c2c99-e828-44c3-a4cc-81bf31bdbfe8",
+            "matched_play_id": "79389152-3b95-46a5-82e8-1b7fe9dfe7f4",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "荒牧慶彦",
+            "source_actor_url": "https://kira-hai.net/aramaki-yoshihiko",
+            "source_work_title": "舞台『K -Lost Small World-』",
+            "source_year": 2016,
+            "source_role_raw": "伏見仁希",
+            "source_role_names": [
+              "伏見仁希"
+            ],
+            "source_cast_group": null,
+            "source_order": 3,
+            "source_credit_key": "5df473049293ff4c11cd",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/k2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/k2016",
+                  "checkedAt": "2026-10-24T18:38:25.141Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/stage-k-3/",
+                  "checkedAt": "2026-10-24T18:38:25.195Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/761/",
+                  "checkedAt": "2026-10-24T18:38:25.194Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.j25musical.jp/stage/135",
+                  "checkedAt": "2026-10-24T18:41:35.799Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=21077",
+                  "checkedAt": "2026-10-24T18:41:35.541Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.office-anemone.com/?page_id=3194",
+                  "checkedAt": "2026-10-24T18:41:35.635Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                }
+              ],
+              "source_fingerprint": "7a3c43d02cefbbdfa718dd14d5ae1835c543bbd88d12a8ff7e622e1d27fee9ba",
+              "review_fingerprint": "302ba086d731b9b5f43a678f1154be0dc33258fca57fbbb1a9d251ddbbe38cd8",
+              "snapshot_fingerprint": "790d160870f93f17274afb1e105d1b68311293570696032f39301fdda62f9558",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2016,
+                "reason": "公式公演日程・協会・配信元の製作年で確定。旧混入候補の2021は引き継がない。",
+                "evidence": [
+                  {
+                    "url": "https://www.marv.jp/special/stage-k-3/",
+                    "checkedAt": "2026-10-24T18:38:25.195Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  },
+                  {
+                    "url": "https://www.j25musical.jp/stage/135",
+                    "checkedAt": "2026-10-24T18:41:35.799Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  },
+                  {
+                    "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=21077",
+                    "checkedAt": "2026-10-24T18:41:35.541Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "929888ac-3f6a-40d0-a856-41dd028b2753",
+            "matched_play_id": "79389152-3b95-46a5-82e8-1b7fe9dfe7f4",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "船岡咲",
+            "source_actor_url": null,
+            "source_work_title": "舞台『K -Lost Small World-』",
+            "source_year": 2016,
+            "source_role_raw": "大貝阿耶",
+            "source_role_names": [
+              "大貝阿耶"
+            ],
+            "source_cast_group": null,
+            "source_order": 4,
+            "source_credit_key": "39f52a0b9d218ea0936d",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/k2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/k2016",
+                  "checkedAt": "2026-10-24T18:38:25.141Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/stage-k-3/",
+                  "checkedAt": "2026-10-24T18:38:25.195Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/761/",
+                  "checkedAt": "2026-10-24T18:38:25.194Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.j25musical.jp/stage/135",
+                  "checkedAt": "2026-10-24T18:41:35.799Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=21077",
+                  "checkedAt": "2026-10-24T18:41:35.541Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.office-anemone.com/?page_id=3194",
+                  "checkedAt": "2026-10-24T18:41:35.635Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                }
+              ],
+              "source_fingerprint": "7a3c43d02cefbbdfa718dd14d5ae1835c543bbd88d12a8ff7e622e1d27fee9ba",
+              "review_fingerprint": "302ba086d731b9b5f43a678f1154be0dc33258fca57fbbb1a9d251ddbbe38cd8",
+              "snapshot_fingerprint": "790d160870f93f17274afb1e105d1b68311293570696032f39301fdda62f9558",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2016,
+                "reason": "公式公演日程・協会・配信元の製作年で確定。旧混入候補の2021は引き継がない。",
+                "evidence": [
+                  {
+                    "url": "https://www.marv.jp/special/stage-k-3/",
+                    "checkedAt": "2026-10-24T18:38:25.195Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  },
+                  {
+                    "url": "https://www.j25musical.jp/stage/135",
+                    "checkedAt": "2026-10-24T18:41:35.799Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  },
+                  {
+                    "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=21077",
+                    "checkedAt": "2026-10-24T18:41:35.541Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "0f45c0ba-0474-4ece-8d40-8e31a1cee2a2",
+            "matched_play_id": "79389152-3b95-46a5-82e8-1b7fe9dfe7f4",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "和田雅成",
+            "source_actor_url": "https://kira-hai.net/wada-masanari",
+            "source_work_title": "舞台『K -Lost Small World-』",
+            "source_year": 2016,
+            "source_role_raw": "周防尊",
+            "source_role_names": [
+              "周防尊"
+            ],
+            "source_cast_group": null,
+            "source_order": 5,
+            "source_credit_key": "96a461bff7fbc654373c",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/k2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/k2016",
+                  "checkedAt": "2026-10-24T18:38:25.141Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/stage-k-3/",
+                  "checkedAt": "2026-10-24T18:38:25.195Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/761/",
+                  "checkedAt": "2026-10-24T18:38:25.194Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.j25musical.jp/stage/135",
+                  "checkedAt": "2026-10-24T18:41:35.799Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=21077",
+                  "checkedAt": "2026-10-24T18:41:35.541Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.office-anemone.com/?page_id=3194",
+                  "checkedAt": "2026-10-24T18:41:35.635Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                }
+              ],
+              "source_fingerprint": "7a3c43d02cefbbdfa718dd14d5ae1835c543bbd88d12a8ff7e622e1d27fee9ba",
+              "review_fingerprint": "302ba086d731b9b5f43a678f1154be0dc33258fca57fbbb1a9d251ddbbe38cd8",
+              "snapshot_fingerprint": "790d160870f93f17274afb1e105d1b68311293570696032f39301fdda62f9558",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2016,
+                "reason": "公式公演日程・協会・配信元の製作年で確定。旧混入候補の2021は引き継がない。",
+                "evidence": [
+                  {
+                    "url": "https://www.marv.jp/special/stage-k-3/",
+                    "checkedAt": "2026-10-24T18:38:25.195Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  },
+                  {
+                    "url": "https://www.j25musical.jp/stage/135",
+                    "checkedAt": "2026-10-24T18:41:35.799Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  },
+                  {
+                    "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=21077",
+                    "checkedAt": "2026-10-24T18:41:35.541Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "d146e55f-5bdb-4823-bd51-f27aa04c383e",
+            "matched_play_id": "79389152-3b95-46a5-82e8-1b7fe9dfe7f4",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "輝海",
+            "source_actor_url": "https://kira-hai.net/terumi",
+            "source_work_title": "舞台『K -Lost Small World-』",
+            "source_year": 2016,
+            "source_role_raw": "草薙出雲",
+            "source_role_names": [
+              "草薙出雲"
+            ],
+            "source_cast_group": null,
+            "source_order": 6,
+            "source_credit_key": "0fc738eb7ba6c91d8512",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/k2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/k2016",
+                  "checkedAt": "2026-10-24T18:38:25.141Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/stage-k-3/",
+                  "checkedAt": "2026-10-24T18:38:25.195Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/761/",
+                  "checkedAt": "2026-10-24T18:38:25.194Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.j25musical.jp/stage/135",
+                  "checkedAt": "2026-10-24T18:41:35.799Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=21077",
+                  "checkedAt": "2026-10-24T18:41:35.541Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.office-anemone.com/?page_id=3194",
+                  "checkedAt": "2026-10-24T18:41:35.635Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                }
+              ],
+              "source_fingerprint": "7a3c43d02cefbbdfa718dd14d5ae1835c543bbd88d12a8ff7e622e1d27fee9ba",
+              "review_fingerprint": "302ba086d731b9b5f43a678f1154be0dc33258fca57fbbb1a9d251ddbbe38cd8",
+              "snapshot_fingerprint": "790d160870f93f17274afb1e105d1b68311293570696032f39301fdda62f9558",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2016,
+                "reason": "公式公演日程・協会・配信元の製作年で確定。旧混入候補の2021は引き継がない。",
+                "evidence": [
+                  {
+                    "url": "https://www.marv.jp/special/stage-k-3/",
+                    "checkedAt": "2026-10-24T18:38:25.195Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  },
+                  {
+                    "url": "https://www.j25musical.jp/stage/135",
+                    "checkedAt": "2026-10-24T18:41:35.799Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  },
+                  {
+                    "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=21077",
+                    "checkedAt": "2026-10-24T18:41:35.541Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "0c6f2d44-a7ab-4d29-8789-0d8228f87846",
+            "matched_play_id": "79389152-3b95-46a5-82e8-1b7fe9dfe7f4",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "前山剛久",
+            "source_actor_url": "https://kira-hai.net/maeyama-takahisa",
+            "source_work_title": "舞台『K -Lost Small World-』",
+            "source_year": 2016,
+            "source_role_raw": "十束多々良",
+            "source_role_names": [
+              "十束多々良"
+            ],
+            "source_cast_group": null,
+            "source_order": 7,
+            "source_credit_key": "78f5c24b70f6cb3b5d64",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/k2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/k2016",
+                  "checkedAt": "2026-10-24T18:38:25.141Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/stage-k-3/",
+                  "checkedAt": "2026-10-24T18:38:25.195Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/761/",
+                  "checkedAt": "2026-10-24T18:38:25.194Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.j25musical.jp/stage/135",
+                  "checkedAt": "2026-10-24T18:41:35.799Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=21077",
+                  "checkedAt": "2026-10-24T18:41:35.541Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.office-anemone.com/?page_id=3194",
+                  "checkedAt": "2026-10-24T18:41:35.635Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                }
+              ],
+              "source_fingerprint": "7a3c43d02cefbbdfa718dd14d5ae1835c543bbd88d12a8ff7e622e1d27fee9ba",
+              "review_fingerprint": "302ba086d731b9b5f43a678f1154be0dc33258fca57fbbb1a9d251ddbbe38cd8",
+              "snapshot_fingerprint": "790d160870f93f17274afb1e105d1b68311293570696032f39301fdda62f9558",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2016,
+                "reason": "公式公演日程・協会・配信元の製作年で確定。旧混入候補の2021は引き継がない。",
+                "evidence": [
+                  {
+                    "url": "https://www.marv.jp/special/stage-k-3/",
+                    "checkedAt": "2026-10-24T18:38:25.195Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  },
+                  {
+                    "url": "https://www.j25musical.jp/stage/135",
+                    "checkedAt": "2026-10-24T18:41:35.799Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  },
+                  {
+                    "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=21077",
+                    "checkedAt": "2026-10-24T18:41:35.541Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "4f5003f1-c905-49c8-979d-5db915efca61",
+            "matched_play_id": "79389152-3b95-46a5-82e8-1b7fe9dfe7f4",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "松崎裕",
+            "source_actor_url": null,
+            "source_work_title": "舞台『K -Lost Small World-』",
+            "source_year": 2016,
+            "source_role_raw": "鎌本力夫",
+            "source_role_names": [
+              "鎌本力夫"
+            ],
+            "source_cast_group": null,
+            "source_order": 8,
+            "source_credit_key": "ce1f778151c1b504d499",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/k2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/k2016",
+                  "checkedAt": "2026-10-24T18:38:25.141Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/stage-k-3/",
+                  "checkedAt": "2026-10-24T18:38:25.195Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/761/",
+                  "checkedAt": "2026-10-24T18:38:25.194Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.j25musical.jp/stage/135",
+                  "checkedAt": "2026-10-24T18:41:35.799Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=21077",
+                  "checkedAt": "2026-10-24T18:41:35.541Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.office-anemone.com/?page_id=3194",
+                  "checkedAt": "2026-10-24T18:41:35.635Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                }
+              ],
+              "source_fingerprint": "7a3c43d02cefbbdfa718dd14d5ae1835c543bbd88d12a8ff7e622e1d27fee9ba",
+              "review_fingerprint": "302ba086d731b9b5f43a678f1154be0dc33258fca57fbbb1a9d251ddbbe38cd8",
+              "snapshot_fingerprint": "790d160870f93f17274afb1e105d1b68311293570696032f39301fdda62f9558",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2016,
+                "reason": "公式公演日程・協会・配信元の製作年で確定。旧混入候補の2021は引き継がない。",
+                "evidence": [
+                  {
+                    "url": "https://www.marv.jp/special/stage-k-3/",
+                    "checkedAt": "2026-10-24T18:38:25.195Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  },
+                  {
+                    "url": "https://www.j25musical.jp/stage/135",
+                    "checkedAt": "2026-10-24T18:41:35.799Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  },
+                  {
+                    "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=21077",
+                    "checkedAt": "2026-10-24T18:41:35.541Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "c438954b-1ab1-4201-afbb-c483030727b8",
+            "matched_play_id": "79389152-3b95-46a5-82e8-1b7fe9dfe7f4",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "礒部花凜",
+            "source_actor_url": "https://kira-hai.net/isobe-karin",
+            "source_work_title": "舞台『K -Lost Small World-』",
+            "source_year": 2016,
+            "source_role_raw": "櫛名アンナ",
+            "source_role_names": [
+              "櫛名アンナ"
+            ],
+            "source_cast_group": null,
+            "source_order": 9,
+            "source_credit_key": "8e1148da9481ee0aff66",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/k2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/k2016",
+                  "checkedAt": "2026-10-24T18:38:25.141Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/stage-k-3/",
+                  "checkedAt": "2026-10-24T18:38:25.195Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/761/",
+                  "checkedAt": "2026-10-24T18:38:25.194Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.j25musical.jp/stage/135",
+                  "checkedAt": "2026-10-24T18:41:35.799Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=21077",
+                  "checkedAt": "2026-10-24T18:41:35.541Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.office-anemone.com/?page_id=3194",
+                  "checkedAt": "2026-10-24T18:41:35.635Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                }
+              ],
+              "source_fingerprint": "7a3c43d02cefbbdfa718dd14d5ae1835c543bbd88d12a8ff7e622e1d27fee9ba",
+              "review_fingerprint": "302ba086d731b9b5f43a678f1154be0dc33258fca57fbbb1a9d251ddbbe38cd8",
+              "snapshot_fingerprint": "790d160870f93f17274afb1e105d1b68311293570696032f39301fdda62f9558",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2016,
+                "reason": "公式公演日程・協会・配信元の製作年で確定。旧混入候補の2021は引き継がない。",
+                "evidence": [
+                  {
+                    "url": "https://www.marv.jp/special/stage-k-3/",
+                    "checkedAt": "2026-10-24T18:38:25.195Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  },
+                  {
+                    "url": "https://www.j25musical.jp/stage/135",
+                    "checkedAt": "2026-10-24T18:41:35.799Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  },
+                  {
+                    "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=21077",
+                    "checkedAt": "2026-10-24T18:41:35.541Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "e168fd52-4ea7-4302-a330-bc74353f1a1f",
+            "matched_play_id": "79389152-3b95-46a5-82e8-1b7fe9dfe7f4",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "土井一海",
+            "source_actor_url": "https://kira-hai.net/doi-kazumi",
+            "source_work_title": "舞台『K -Lost Small World-』",
+            "source_year": 2016,
+            "source_role_raw": "宗像礼司",
+            "source_role_names": [
+              "宗像礼司"
+            ],
+            "source_cast_group": null,
+            "source_order": 10,
+            "source_credit_key": "1230a7ecfaf45d6fa874",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/k2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/k2016",
+                  "checkedAt": "2026-10-24T18:38:25.141Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/stage-k-3/",
+                  "checkedAt": "2026-10-24T18:38:25.195Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/761/",
+                  "checkedAt": "2026-10-24T18:38:25.194Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.j25musical.jp/stage/135",
+                  "checkedAt": "2026-10-24T18:41:35.799Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=21077",
+                  "checkedAt": "2026-10-24T18:41:35.541Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.office-anemone.com/?page_id=3194",
+                  "checkedAt": "2026-10-24T18:41:35.635Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                }
+              ],
+              "source_fingerprint": "7a3c43d02cefbbdfa718dd14d5ae1835c543bbd88d12a8ff7e622e1d27fee9ba",
+              "review_fingerprint": "302ba086d731b9b5f43a678f1154be0dc33258fca57fbbb1a9d251ddbbe38cd8",
+              "snapshot_fingerprint": "790d160870f93f17274afb1e105d1b68311293570696032f39301fdda62f9558",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2016,
+                "reason": "公式公演日程・協会・配信元の製作年で確定。旧混入候補の2021は引き継がない。",
+                "evidence": [
+                  {
+                    "url": "https://www.marv.jp/special/stage-k-3/",
+                    "checkedAt": "2026-10-24T18:38:25.195Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  },
+                  {
+                    "url": "https://www.j25musical.jp/stage/135",
+                    "checkedAt": "2026-10-24T18:41:35.799Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  },
+                  {
+                    "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=21077",
+                    "checkedAt": "2026-10-24T18:41:35.541Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "3f47ef10-761f-4f22-bd09-4af9d1bf281a",
+            "matched_play_id": "79389152-3b95-46a5-82e8-1b7fe9dfe7f4",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "茉莉邑薫",
+            "source_actor_url": "https://kira-hai.net/marimura-kaoru",
+            "source_work_title": "舞台『K -Lost Small World-』",
+            "source_year": 2016,
+            "source_role_raw": "淡島世理／伏見木佐",
+            "source_role_names": [
+              "淡島世理／伏見木佐"
+            ],
+            "source_cast_group": null,
+            "source_order": 11,
+            "source_credit_key": "cb8909a1969671fc825f",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/k2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/k2016",
+                  "checkedAt": "2026-10-24T18:38:25.141Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/stage-k-3/",
+                  "checkedAt": "2026-10-24T18:38:25.195Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/761/",
+                  "checkedAt": "2026-10-24T18:38:25.194Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.j25musical.jp/stage/135",
+                  "checkedAt": "2026-10-24T18:41:35.799Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=21077",
+                  "checkedAt": "2026-10-24T18:41:35.541Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.office-anemone.com/?page_id=3194",
+                  "checkedAt": "2026-10-24T18:41:35.635Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                }
+              ],
+              "source_fingerprint": "7a3c43d02cefbbdfa718dd14d5ae1835c543bbd88d12a8ff7e622e1d27fee9ba",
+              "review_fingerprint": "302ba086d731b9b5f43a678f1154be0dc33258fca57fbbb1a9d251ddbbe38cd8",
+              "snapshot_fingerprint": "790d160870f93f17274afb1e105d1b68311293570696032f39301fdda62f9558",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2016,
+                "reason": "公式公演日程・協会・配信元の製作年で確定。旧混入候補の2021は引き継がない。",
+                "evidence": [
+                  {
+                    "url": "https://www.marv.jp/special/stage-k-3/",
+                    "checkedAt": "2026-10-24T18:38:25.195Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  },
+                  {
+                    "url": "https://www.j25musical.jp/stage/135",
+                    "checkedAt": "2026-10-24T18:41:35.799Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  },
+                  {
+                    "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=21077",
+                    "checkedAt": "2026-10-24T18:41:35.541Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  }
+                ]
+              },
+              "credit_review": {
+                "before": {
+                  "sourceActorName": "茉莉邑薫",
+                  "sourceActorUrl": "https://kira-hai.net/marimura-kaoru",
+                  "role_name": "淡島世理",
+                  "cast_group": null
+                },
+                "after": {
+                  "sourceActorName": "茉莉邑薫",
+                  "sourceActorUrl": "https://kira-hai.net/marimura-kaoru",
+                  "role_name": "淡島世理／伏見木佐",
+                  "cast_group": null
+                },
+                "reason": "事務所公式の当該作品履歴にある兼役を落とさず併記。出演方法・日程別条件は未記載のため推定しない。",
+                "evidence": [
+                  {
+                    "url": "https://www.office-anemone.com/?page_id=3194",
+                    "checkedAt": "2026-10-24T18:41:35.635Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  },
+                  {
+                    "url": "https://www.marv.jp/special/stage-k-3/",
+                    "checkedAt": "2026-10-24T18:38:25.195Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "a0872551-59e4-4e91-b197-a8ae215c3e4a",
+            "matched_play_id": "79389152-3b95-46a5-82e8-1b7fe9dfe7f4",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "岸本卓也",
+            "source_actor_url": "https://kira-hai.net/kishimoto-takuya",
+            "source_work_title": "舞台『K -Lost Small World-』",
+            "source_year": 2016,
+            "source_role_raw": "塩津元",
+            "source_role_names": [
+              "塩津元"
+            ],
+            "source_cast_group": null,
+            "source_order": 12,
+            "source_credit_key": "7569957f0a90739fdfeb",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/k2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/k2016",
+                  "checkedAt": "2026-10-24T18:38:25.141Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/stage-k-3/",
+                  "checkedAt": "2026-10-24T18:38:25.195Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/761/",
+                  "checkedAt": "2026-10-24T18:38:25.194Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.j25musical.jp/stage/135",
+                  "checkedAt": "2026-10-24T18:41:35.799Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=21077",
+                  "checkedAt": "2026-10-24T18:41:35.541Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.office-anemone.com/?page_id=3194",
+                  "checkedAt": "2026-10-24T18:41:35.635Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                }
+              ],
+              "source_fingerprint": "7a3c43d02cefbbdfa718dd14d5ae1835c543bbd88d12a8ff7e622e1d27fee9ba",
+              "review_fingerprint": "302ba086d731b9b5f43a678f1154be0dc33258fca57fbbb1a9d251ddbbe38cd8",
+              "snapshot_fingerprint": "790d160870f93f17274afb1e105d1b68311293570696032f39301fdda62f9558",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2016,
+                "reason": "公式公演日程・協会・配信元の製作年で確定。旧混入候補の2021は引き継がない。",
+                "evidence": [
+                  {
+                    "url": "https://www.marv.jp/special/stage-k-3/",
+                    "checkedAt": "2026-10-24T18:38:25.195Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  },
+                  {
+                    "url": "https://www.j25musical.jp/stage/135",
+                    "checkedAt": "2026-10-24T18:41:35.799Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  },
+                  {
+                    "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=21077",
+                    "checkedAt": "2026-10-24T18:41:35.541Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "22be1ab1-4169-400e-bf90-3e3f74fc4539",
+            "matched_play_id": "79389152-3b95-46a5-82e8-1b7fe9dfe7f4",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "近藤頌利",
+            "source_actor_url": "https://kira-hai.net/kondo-shori",
+            "source_work_title": "舞台『K -Lost Small World-』",
+            "source_year": 2016,
+            "source_role_raw": "湊秋人",
+            "source_role_names": [
+              "湊秋人"
+            ],
+            "source_cast_group": null,
+            "source_order": 13,
+            "source_credit_key": "5584bc0a730e044145da",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/k2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/k2016",
+                  "checkedAt": "2026-10-24T18:38:25.141Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/stage-k-3/",
+                  "checkedAt": "2026-10-24T18:38:25.195Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/761/",
+                  "checkedAt": "2026-10-24T18:38:25.194Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.j25musical.jp/stage/135",
+                  "checkedAt": "2026-10-24T18:41:35.799Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=21077",
+                  "checkedAt": "2026-10-24T18:41:35.541Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.office-anemone.com/?page_id=3194",
+                  "checkedAt": "2026-10-24T18:41:35.635Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                }
+              ],
+              "source_fingerprint": "7a3c43d02cefbbdfa718dd14d5ae1835c543bbd88d12a8ff7e622e1d27fee9ba",
+              "review_fingerprint": "302ba086d731b9b5f43a678f1154be0dc33258fca57fbbb1a9d251ddbbe38cd8",
+              "snapshot_fingerprint": "790d160870f93f17274afb1e105d1b68311293570696032f39301fdda62f9558",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2016,
+                "reason": "公式公演日程・協会・配信元の製作年で確定。旧混入候補の2021は引き継がない。",
+                "evidence": [
+                  {
+                    "url": "https://www.marv.jp/special/stage-k-3/",
+                    "checkedAt": "2026-10-24T18:38:25.195Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  },
+                  {
+                    "url": "https://www.j25musical.jp/stage/135",
+                    "checkedAt": "2026-10-24T18:41:35.799Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  },
+                  {
+                    "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=21077",
+                    "checkedAt": "2026-10-24T18:41:35.541Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "963b0cce-9c1d-4d7b-a3a1-ff72863c24bd",
+            "matched_play_id": "79389152-3b95-46a5-82e8-1b7fe9dfe7f4",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "前川優希",
+            "source_actor_url": "https://kira-hai.net/maekawa-yuki",
+            "source_work_title": "舞台『K -Lost Small World-』",
+            "source_year": 2016,
+            "source_role_raw": "湊速人",
+            "source_role_names": [
+              "湊速人"
+            ],
+            "source_cast_group": null,
+            "source_order": 14,
+            "source_credit_key": "90b991e02c10f3d56c3d",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/k2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/k2016",
+                  "checkedAt": "2026-10-24T18:38:25.141Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/stage-k-3/",
+                  "checkedAt": "2026-10-24T18:38:25.195Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/761/",
+                  "checkedAt": "2026-10-24T18:38:25.194Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.j25musical.jp/stage/135",
+                  "checkedAt": "2026-10-24T18:41:35.799Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=21077",
+                  "checkedAt": "2026-10-24T18:41:35.541Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.office-anemone.com/?page_id=3194",
+                  "checkedAt": "2026-10-24T18:41:35.635Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                }
+              ],
+              "source_fingerprint": "7a3c43d02cefbbdfa718dd14d5ae1835c543bbd88d12a8ff7e622e1d27fee9ba",
+              "review_fingerprint": "302ba086d731b9b5f43a678f1154be0dc33258fca57fbbb1a9d251ddbbe38cd8",
+              "snapshot_fingerprint": "790d160870f93f17274afb1e105d1b68311293570696032f39301fdda62f9558",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2016,
+                "reason": "公式公演日程・協会・配信元の製作年で確定。旧混入候補の2021は引き継がない。",
+                "evidence": [
+                  {
+                    "url": "https://www.marv.jp/special/stage-k-3/",
+                    "checkedAt": "2026-10-24T18:38:25.195Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  },
+                  {
+                    "url": "https://www.j25musical.jp/stage/135",
+                    "checkedAt": "2026-10-24T18:41:35.799Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  },
+                  {
+                    "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=21077",
+                    "checkedAt": "2026-10-24T18:41:35.541Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "6f56fa1e-493d-4f17-917a-2559ecf800f5",
+            "matched_play_id": "79389152-3b95-46a5-82e8-1b7fe9dfe7f4",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "荒牧慶彦",
+            "source_actor_url": "https://kira-hai.net/aramaki-yoshihiko",
+            "source_work_title": "舞台『K -Lost Small World-』",
+            "source_year": 2016,
+            "source_role_raw": "夜刀神狗朗",
+            "source_role_names": [
+              "夜刀神狗朗"
+            ],
+            "source_cast_group": null,
+            "source_order": 15,
+            "source_credit_key": "e94105d0637738babb7d",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/k2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/k2016",
+                  "checkedAt": "2026-10-24T18:38:25.141Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/stage-k-3/",
+                  "checkedAt": "2026-10-24T18:38:25.195Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/761/",
+                  "checkedAt": "2026-10-24T18:38:25.194Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.j25musical.jp/stage/135",
+                  "checkedAt": "2026-10-24T18:41:35.799Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=21077",
+                  "checkedAt": "2026-10-24T18:41:35.541Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.office-anemone.com/?page_id=3194",
+                  "checkedAt": "2026-10-24T18:41:35.635Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                }
+              ],
+              "source_fingerprint": "7a3c43d02cefbbdfa718dd14d5ae1835c543bbd88d12a8ff7e622e1d27fee9ba",
+              "review_fingerprint": "302ba086d731b9b5f43a678f1154be0dc33258fca57fbbb1a9d251ddbbe38cd8",
+              "snapshot_fingerprint": "790d160870f93f17274afb1e105d1b68311293570696032f39301fdda62f9558",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2016,
+                "reason": "公式公演日程・協会・配信元の製作年で確定。旧混入候補の2021は引き継がない。",
+                "evidence": [
+                  {
+                    "url": "https://www.marv.jp/special/stage-k-3/",
+                    "checkedAt": "2026-10-24T18:38:25.195Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  },
+                  {
+                    "url": "https://www.j25musical.jp/stage/135",
+                    "checkedAt": "2026-10-24T18:41:35.799Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  },
+                  {
+                    "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=21077",
+                    "checkedAt": "2026-10-24T18:41:35.541Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "929888ac-3f6a-40d0-a856-41dd028b2753",
+            "matched_play_id": "79389152-3b95-46a5-82e8-1b7fe9dfe7f4",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "松田凌",
+            "source_actor_url": "https://kira-hai.net/matsuda-ryo",
+            "source_work_title": "舞台『K -Lost Small World-』",
+            "source_year": 2016,
+            "source_role_raw": "伊佐那社",
+            "source_role_names": [
+              "伊佐那社"
+            ],
+            "source_cast_group": "映像出演",
+            "source_order": 16,
+            "source_credit_key": "ef9a6f8cdbe2e88fd460",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/k2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/k2016",
+                  "checkedAt": "2026-10-24T18:38:25.141Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/stage-k-3/",
+                  "checkedAt": "2026-10-24T18:38:25.195Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/761/",
+                  "checkedAt": "2026-10-24T18:38:25.194Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.j25musical.jp/stage/135",
+                  "checkedAt": "2026-10-24T18:41:35.799Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=21077",
+                  "checkedAt": "2026-10-24T18:41:35.541Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                },
+                {
+                  "url": "https://www.office-anemone.com/?page_id=3194",
+                  "checkedAt": "2026-10-24T18:41:35.635Z",
+                  "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                }
+              ],
+              "source_fingerprint": "7a3c43d02cefbbdfa718dd14d5ae1835c543bbd88d12a8ff7e622e1d27fee9ba",
+              "review_fingerprint": "302ba086d731b9b5f43a678f1154be0dc33258fca57fbbb1a9d251ddbbe38cd8",
+              "snapshot_fingerprint": "790d160870f93f17274afb1e105d1b68311293570696032f39301fdda62f9558",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2016,
+                "reason": "公式公演日程・協会・配信元の製作年で確定。旧混入候補の2021は引き継がない。",
+                "evidence": [
+                  {
+                    "url": "https://www.marv.jp/special/stage-k-3/",
+                    "checkedAt": "2026-10-24T18:38:25.195Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  },
+                  {
+                    "url": "https://www.j25musical.jp/stage/135",
+                    "checkedAt": "2026-10-24T18:41:35.799Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  },
+                  {
+                    "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=21077",
+                    "checkedAt": "2026-10-24T18:41:35.541Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  }
+                ]
+              },
+              "credit_review": {
+                "before": {
+                  "sourceActorName": "松田凌 (映像出演)",
+                  "sourceActorUrl": null,
+                  "role_name": "伊佐那社",
+                  "cast_group": null
+                },
+                "after": {
+                  "sourceActorName": "松田凌",
+                  "sourceActorUrl": "https://kira-hai.net/matsuda-ryo",
+                  "role_name": "伊佐那社",
+                  "cast_group": "映像出演"
+                },
+                "reason": "氏名横の映像出演を出演区分へ分離。公演公式・協会で映像出演を照合し、実在アンカーから人物URLを回収。",
+                "evidence": [
+                  {
+                    "url": "https://www.marv.jp/special/stage-k-3/",
+                    "checkedAt": "2026-10-24T18:38:25.195Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  },
+                  {
+                    "url": "https://www.j25musical.jp/stage/135",
+                    "checkedAt": "2026-10-24T18:41:35.799Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/k2016",
+                    "checkedAt": "2026-10-24T18:38:25.141Z",
+                    "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "22b8745b-049e-43be-9a54-e6b6f019fc93",
+            "matched_play_id": "79389152-3b95-46a5-82e8-1b7fe9dfe7f4",
+            "status": "pending"
+          }
+        ]
+      },
+      "records": [
+        {
+          "actor": {
+            "id": "efec4bde-6be0-4d8f-80e6-0d1c3accf066",
+            "slug": "ueda-keisuke",
+            "name": "植田 圭輔",
+            "kana": "うえだ けいすけ",
+            "profile": "大阪府出身の俳優。株式会社Pasture所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/uechan_0905",
+              "official": "https://keisuke-ueda.jp/",
+              "instagram": "https://www.instagram.com/keisukeueda0905/"
+            },
+            "gender": "male",
+            "created_at": "2025-12-13T04:41:02.052969+00:00",
+            "updated_at": "2025-12-13T04:41:02.052969+00:00",
+            "tags": [
+              "ベテラン",
+              "ツッコミ"
+            ],
+            "featured_play_slugs": [],
+            "birthday": "1989-09-05",
+            "height_cm": 164,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "植田圭輔",
+            "sourceActorUrl": "https://kira-hai.net/ueda-keisuke",
+            "role_name": "八田美咲",
+            "cast_group": null
+          },
+          "sourceCreditKey": "8c76de2822b72a1898d5",
+          "sourceOrder": 1,
+          "billingOrder": 1,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "1e6c2c99-e828-44c3-a4cc-81bf31bdbfe8",
+            "slug": "anzai-shintaro",
+            "name": "安西 慎太郎",
+            "kana": "あんざい しんたろう",
+            "profile": "神奈川県出身の俳優。株式会社ジースター・プロ所属。ミュージカル『テニスの王子様』2ndシーズン（白石蔵ノ介役）や舞台『戦国無双』（真田幸村役）、舞台『K』シリーズ（伏見猿比古役）、舞台『四月は君の嘘』（有馬公生役）、舞台『男水！』（藤川礼央役）等の舞台作品に出演。また、テレビドラマや映画などの映像作品にも出演している。",
+            "image_url": null,
+            "sns": {
+              "x": "https://twitter.com/anzaistaff",
+              "official": "https://shintarou-anzai.bitfan.id/",
+              "instagram": "https://www.instagram.com/shintaro_anzai_official/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:06:19.306372+00:00",
+            "updated_at": "2026-03-21T15:06:19.306372+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1993-12-16",
+            "height_cm": 173,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Kanagawa Prefecture. Affiliated with G-STAR.PRO. He has appeared in stage works such as the musical \"The Prince of Tennis\" 2nd season (as Kuranosuke Shiraishi), the stage play \"Sengoku Musou\" (as Yukimura Sanada), the stage play \"K\" series (as Saruhiko Fushimi), the stage play \"Your Lie in April\" (as Kosei Arima), and the stage play \"Dansui!\" (as Reo Fujikawa). He has also appeared in television and film works.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "安西慎太郎",
+            "sourceActorUrl": "https://kira-hai.net/anzai-shintaro",
+            "role_name": "伏見猿比古",
+            "cast_group": null
+          },
+          "sourceCreditKey": "ce92271df494abc48067",
+          "sourceOrder": 2,
+          "billingOrder": 2,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "929888ac-3f6a-40d0-a856-41dd028b2753",
+            "slug": "aramaki-yoshihiko",
+            "name": "荒牧 慶彦",
+            "kana": "あらまき よしひこ",
+            "profile": "東京都出身の俳優。株式会社Pastureの代表取締役社長も務める。ミュージカル『テニスの王子様』2ndシーズン（甲斐裕次郎役）や、舞台『刀剣乱舞』（山姥切国広役）、『MANKAI STAGE「A3!」』（月岡紬役）、『あんさんぶるスターズ！オン・ステージ』（朔間凛月役）等の舞台作品に出演。また、演劇興行のプロデュース業も手掛けている。",
+            "image_url": null,
+            "sns": {
+              "x": "https://twitter.com/ara_mackey",
+              "official": "https://aramaki-yoshihiko.com/",
+              "instagram": "https://www.instagram.com/aramaki.yoshi/"
+            },
+            "gender": "male",
+            "created_at": "2025-12-11T18:21:26.445003+00:00",
+            "updated_at": "2025-12-11T18:21:26.445003+00:00",
+            "tags": [
+              "王子様系",
+              "殺陣が得意"
+            ],
+            "featured_play_slugs": [],
+            "birthday": "1990-02-05",
+            "height_cm": 176,
+            "blood_type": "AB",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Tokyo. He also serves as the CEO of Pasture Co., Ltd. He has appeared in stage works such as the musical \"The Prince of Tennis\" 2nd season (as Yujiro Kai), the stage play \"Touken Ranbu\" (as Yamanbagiri Kunihiro), \"MANKAI STAGE 'A3!'\" (as Tsumugi Tsukioka), and \"Ensemble Stars! On Stage\" (as Ritsu Sakuma). He is also involved in producing stage performances.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "荒牧慶彦",
+            "sourceActorUrl": "https://kira-hai.net/aramaki-yoshihiko",
+            "role_name": "伏見仁希",
+            "cast_group": null
+          },
+          "sourceCreditKey": "5df473049293ff4c11cd",
+          "sourceOrder": 3,
+          "billingOrder": 3,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "0f45c0ba-0474-4ece-8d40-8e31a1cee2a2",
+            "slug": "funaoka-saki",
+            "name": "船岡咲",
+            "kana": "ふなおか さき",
+            "profile": "神奈川県出身の俳優・モデル。オスカープロモーション所属。日テレジェニック2012に選出。舞台『K -Lost Small World-』の大貝阿耶役、『ダンガンロンパ3 THE STAGE 2018』の忌村静子役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1993-03-02",
+            "height_cm": null,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": "Saki Funaoka",
+            "profile_en": "An actor and model from Kanagawa, represented by Oscar Promotion. Selected for Nittelegenic 2012, her stage credits include Aya Ogai in K -Lost Small World- and Seiko Kimura in Danganronpa 3 THE STAGE 2018.",
+            "death_date": null,
+            "created_at": "prepared",
+            "updated_at": "prepared"
+          },
+          "source": {
+            "sourceActorName": "船岡咲",
+            "sourceActorUrl": null,
+            "role_name": "大貝阿耶",
+            "cast_group": null
+          },
+          "sourceCreditKey": "39f52a0b9d218ea0936d",
+          "sourceOrder": 4,
+          "billingOrder": 4,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "d146e55f-5bdb-4823-bd51-f27aa04c383e",
+            "slug": "wada-masanari",
+            "name": "和田 雅成",
+            "kana": "わだ まさなり",
+            "profile": "大阪府出身の俳優。株式会社ルビーパレード所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/masanari6",
+              "official": "https://wadamasanari.com/",
+              "instagram": "https://www.instagram.com/masanariwada_/"
+            },
+            "gender": "male",
+            "created_at": "2025-12-13T04:41:02.052969+00:00",
+            "updated_at": "2025-12-13T04:41:02.052969+00:00",
+            "tags": [
+              "ツッコミ",
+              "関西出身"
+            ],
+            "featured_play_slugs": [],
+            "birthday": "1991-09-05",
+            "height_cm": 173,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "和田雅成",
+            "sourceActorUrl": "https://kira-hai.net/wada-masanari",
+            "role_name": "周防尊",
+            "cast_group": null
+          },
+          "sourceCreditKey": "96a461bff7fbc654373c",
+          "sourceOrder": 5,
+          "billingOrder": 5,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "0c6f2d44-a7ab-4d29-8789-0d8228f87846",
+            "slug": "terumi",
+            "name": "輝海",
+            "kana": "てるみ",
+            "profile": "大阪府出身の俳優。舞台『K -Lost Small World-』の草薙出雲役、『THE STAGE ラッキードッグ1』のジュリオ・ディ・ボンドーネ役などを務める。『仮面ライダーセイバー×ゴースト』ではカミーユを演じる。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1986-02-13",
+            "height_cm": null,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Osaka. His stage credits include Izumo Kusanagi in K -Lost Small World- and Giulio di Bondone in THE STAGE Lucky Dog 1. He also plays Camille in Kamen Rider Saber × Ghost.",
+            "death_date": null,
+            "created_at": "prepared",
+            "updated_at": "prepared"
+          },
+          "source": {
+            "sourceActorName": "輝海",
+            "sourceActorUrl": "https://kira-hai.net/terumi",
+            "role_name": "草薙出雲",
+            "cast_group": null
+          },
+          "sourceCreditKey": "0fc738eb7ba6c91d8512",
+          "sourceOrder": 6,
+          "billingOrder": 6,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "4f5003f1-c905-49c8-979d-5db915efca61",
+            "slug": "maeyama-takahisa",
+            "name": "前山 剛久",
+            "kana": "まえやま たかひさ",
+            "profile": "大阪府出身の元俳優。元D-BOYSメンバー。",
+            "image_url": null,
+            "sns": {
+              "instagram": "https://www.instagram.com/takahisa_maeyama/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-30T16:41:40.494386+00:00",
+            "updated_at": "2026-03-30T16:41:40.494386+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1991-02-07",
+            "height_cm": 172,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "前山剛久",
+            "sourceActorUrl": "https://kira-hai.net/maeyama-takahisa",
+            "role_name": "十束多々良",
+            "cast_group": null
+          },
+          "sourceCreditKey": "78f5c24b70f6cb3b5d64",
+          "sourceOrder": 7,
+          "billingOrder": 7,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "c438954b-1ab1-4201-afbb-c483030727b8",
+            "slug": "matsuzaki-yutaka",
+            "name": "松崎 裕",
+            "kana": "まつざき ゆたか",
+            "profile": "東京都出身の俳優。ヒラタオフィス所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/yutakamatsuzaki",
+              "official": "https://ameblo.jp/1978-07-24/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T14:53:11.103962+00:00",
+            "updated_at": "2026-03-21T14:53:11.103962+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1978-07-24",
+            "height_cm": 188,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "松崎裕",
+            "sourceActorUrl": null,
+            "role_name": "鎌本力夫",
+            "cast_group": null
+          },
+          "sourceCreditKey": "ce1f778151c1b504d499",
+          "sourceOrder": 8,
+          "billingOrder": 8,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "e168fd52-4ea7-4302-a330-bc74353f1a1f",
+            "slug": "isobe-karin",
+            "name": "礒部花凜",
+            "kana": "いそべ かりん",
+            "profile": "奈良県出身の声優・俳優・歌手。アミューズクリエイティブスタジオ所属。『Go!プリンセスプリキュア』の主題歌を担当し、舞台『K』第二章では櫛名アンナを演じる。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-24T18:31:56.437536+00:00",
+            "updated_at": "2026-10-24T18:31:56.437536+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1994-05-26",
+            "height_cm": 157,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Isobe Karin",
+            "profile_en": "A voice actor, actor and singer from Nara, represented by Amuse Creative Studio. She sang the opening theme for Go! Princess Precure and plays Anna Kushina in K: Chapter Two -AROUSAL OF KING-.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "礒部花凜",
+            "sourceActorUrl": "https://kira-hai.net/isobe-karin",
+            "role_name": "櫛名アンナ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "8e1148da9481ee0aff66",
+          "sourceOrder": 9,
+          "billingOrder": 9,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "3f47ef10-761f-4f22-bd09-4af9d1bf281a",
+            "slug": "doi-kazumi",
+            "name": "土井 一海",
+            "kana": "どい かずみ",
+            "profile": "兵庫県出身の俳優。株式会社ENA ENTERTAINMENT所属。ミュージカル『テニスの王子様』2ndシーズン（木手永四郎役）や2.5次元ダンスライブ『ツキウタ。』ステージ（文月海役）、舞台『K』（宗像礼司役）、舞台『ヲタクに恋は難しい』（二藤宏嵩役）等の舞台作品に出演。また、テレビドラマや映画などの映像作品にも出演している。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/oraoraoraorado1",
+              "official": "https://ameblo.jp/kazumi4869/",
+              "instagram": "https://www.instagram.com/kazumi___d/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:06:19.306372+00:00",
+            "updated_at": "2026-03-21T15:06:19.306372+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1989-01-20",
+            "height_cm": 180,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Hyogo Prefecture. Affiliated with ENA ENTERTAINMENT Co., Ltd. He has appeared in stage works such as the musical \"The Prince of Tennis\" 2nd season (as Eishiro Kite), the 2.5D Dance Live \"Tsukiuta.\" Stage (as Kai Fuduki), the stage play \"K\" (as Reisi Munakata), and the stage play \"Wotakoi: Love Is Hard for Otaku\" (as Hirotaka Nifuji). He has also appeared in television and film works.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "土井一海",
+            "sourceActorUrl": "https://kira-hai.net/doi-kazumi",
+            "role_name": "宗像礼司",
+            "cast_group": null
+          },
+          "sourceCreditKey": "1230a7ecfaf45d6fa874",
+          "sourceOrder": 10,
+          "billingOrder": 10,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "a0872551-59e4-4e91-b197-a8ae215c3e4a",
+            "slug": "marimura-kaoru",
+            "name": "茉莉邑薫",
+            "kana": "まりむら かおる",
+            "profile": "神奈川県出身の声優・俳優。オフィスアネモネと業務提携。元宝塚歌劇団星組男役。舞台『K』の淡島世理役、『PERSONA5 the Stage』の新島冴役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-24T18:17:05.544152+00:00",
+            "updated_at": "2026-10-24T18:17:05.544152+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": null,
+            "height_cm": 167,
+            "blood_type": "O",
+            "birthday_label": "2月20日",
+            "name_en": "Marimura Kaoru",
+            "profile_en": "A voice actor and stage actor from Kanagawa, affiliated with Office Anemone through a business partnership. A former male-role performer in the Takarazuka Revue’s Star Troupe, Marimura plays Seri Awashima in K and Sae Niijima in PERSONA5 the Stage.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "茉莉邑薫",
+            "sourceActorUrl": "https://kira-hai.net/marimura-kaoru",
+            "role_name": "淡島世理／伏見木佐",
+            "cast_group": null
+          },
+          "sourceCreditKey": "cb8909a1969671fc825f",
+          "sourceOrder": 11,
+          "billingOrder": 11,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "22be1ab1-4169-400e-bf90-3e3f74fc4539",
+            "slug": "kishimoto-takuya",
+            "name": "岸本 卓也",
+            "kana": "きしもと たくや",
+            "profile": "兵庫県出身の俳優。Toki Entertainmentと業務提携。ミュージカル『テニスの王子様』2ndシーズン（亜久津仁役）等に出演。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/tkyksmt57",
+              "youtube": "https://www.youtube.com/@user-kishitaku-hitorinomi",
+              "instagram": "https://www.instagram.com/takuyakishimoto/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:03:44.295565+00:00",
+            "updated_at": "2026-03-21T15:03:44.295565+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1985-05-07",
+            "height_cm": 180,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Hyogo Prefecture. He has a business partnership with Toki Entertainment. He appeared in the musical \"The Prince of Tennis\" 2nd season (as Jin Akutsu).",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "岸本卓也",
+            "sourceActorUrl": "https://kira-hai.net/kishimoto-takuya",
+            "role_name": "塩津元",
+            "cast_group": null
+          },
+          "sourceCreditKey": "7569957f0a90739fdfeb",
+          "sourceOrder": 12,
+          "billingOrder": 12,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "963b0cce-9c1d-4d7b-a3a1-ff72863c24bd",
+            "slug": "kondo-shori",
+            "name": "近藤 頌利",
+            "kana": "こんどう しょうり",
+            "profile": "大阪府出身の俳優。ワタナベエンターテインメント所属、劇団Patchメンバー。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/p_shori_k412",
+              "official": "https://shori-kondo.bitfan.id/",
+              "instagram": "https://www.instagram.com/shori_kondo412"
+            },
+            "gender": "male",
+            "created_at": "2026-03-31T20:05:15.469756+00:00",
+            "updated_at": "2026-03-31T20:05:15.469756+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1994-04-12",
+            "height_cm": 184,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "近藤頌利",
+            "sourceActorUrl": "https://kira-hai.net/kondo-shori",
+            "role_name": "湊秋人",
+            "cast_group": null
+          },
+          "sourceCreditKey": "5584bc0a730e044145da",
+          "sourceOrder": 13,
+          "billingOrder": 13,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "6f56fa1e-493d-4f17-917a-2559ecf800f5",
+            "slug": "maekawa-yuki",
+            "name": "前川優希",
+            "kana": "まえかわ ゆうき",
+            "profile": "東京都出身の俳優・歌手。舞台『K -Lost Small World-』の湊速人役、MANKAI STAGE『A3!』の皆木綴役などを務める。舞台のプロデュースや脚本も手がける。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1997-12-17",
+            "height_cm": 179,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Maekawa Yuki",
+            "profile_en": "An actor and singer from Tokyo. Stage credits include Hayato Minato in K -Lost Small World- and Tsuzuru Minagi in MANKAI STAGE A3!. He also produces stage works and writes scripts.",
+            "death_date": null,
+            "created_at": "prepared",
+            "updated_at": "prepared"
+          },
+          "source": {
+            "sourceActorName": "前川優希",
+            "sourceActorUrl": "https://kira-hai.net/maekawa-yuki",
+            "role_name": "湊速人",
+            "cast_group": null
+          },
+          "sourceCreditKey": "90b991e02c10f3d56c3d",
+          "sourceOrder": 14,
+          "billingOrder": 14,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "929888ac-3f6a-40d0-a856-41dd028b2753",
+            "slug": "aramaki-yoshihiko",
+            "name": "荒牧 慶彦",
+            "kana": "あらまき よしひこ",
+            "profile": "東京都出身の俳優。株式会社Pastureの代表取締役社長も務める。ミュージカル『テニスの王子様』2ndシーズン（甲斐裕次郎役）や、舞台『刀剣乱舞』（山姥切国広役）、『MANKAI STAGE「A3!」』（月岡紬役）、『あんさんぶるスターズ！オン・ステージ』（朔間凛月役）等の舞台作品に出演。また、演劇興行のプロデュース業も手掛けている。",
+            "image_url": null,
+            "sns": {
+              "x": "https://twitter.com/ara_mackey",
+              "official": "https://aramaki-yoshihiko.com/",
+              "instagram": "https://www.instagram.com/aramaki.yoshi/"
+            },
+            "gender": "male",
+            "created_at": "2025-12-11T18:21:26.445003+00:00",
+            "updated_at": "2025-12-11T18:21:26.445003+00:00",
+            "tags": [
+              "王子様系",
+              "殺陣が得意"
+            ],
+            "featured_play_slugs": [],
+            "birthday": "1990-02-05",
+            "height_cm": 176,
+            "blood_type": "AB",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Tokyo. He also serves as the CEO of Pasture Co., Ltd. He has appeared in stage works such as the musical \"The Prince of Tennis\" 2nd season (as Yujiro Kai), the stage play \"Touken Ranbu\" (as Yamanbagiri Kunihiro), \"MANKAI STAGE 'A3!'\" (as Tsumugi Tsukioka), and \"Ensemble Stars! On Stage\" (as Ritsu Sakuma). He is also involved in producing stage performances.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "荒牧慶彦",
+            "sourceActorUrl": "https://kira-hai.net/aramaki-yoshihiko",
+            "role_name": "夜刀神狗朗",
+            "cast_group": null
+          },
+          "sourceCreditKey": "e94105d0637738babb7d",
+          "sourceOrder": 15,
+          "billingOrder": 15,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "22b8745b-049e-43be-9a54-e6b6f019fc93",
+            "slug": "matsuda-ryo",
+            "name": "松田 凌",
+            "kana": "まつだ りょう",
+            "profile": "兵庫県出身の俳優。キャストコーポレーション所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/ryo_matsuda0913",
+              "official": "https://matsuda-ryo.com/",
+              "instagram": "https://www.instagram.com/matsudaryo_9/"
+            },
+            "gender": "male",
+            "created_at": "2025-12-13T04:41:02.052969+00:00",
+            "updated_at": "2025-12-13T04:41:02.052969+00:00",
+            "tags": [
+              "演技派",
+              "アクション"
+            ],
+            "featured_play_slugs": [],
+            "birthday": "1991-09-13",
+            "height_cm": 169,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "松田凌",
+            "sourceActorUrl": "https://kira-hai.net/matsuda-ryo",
+            "role_name": "伊佐那社",
+            "cast_group": "映像出演"
+          },
+          "sourceCreditKey": "ef9a6f8cdbe2e88fd460",
+          "sourceOrder": 16,
+          "billingOrder": 16,
+          "expectedNote": null,
+          "existingCast": null
+        }
+      ],
+      "legacyCandidates": [
+        {
+          "id": "517355fd-1515-4887-beeb-5a0cd3cd0b14",
+          "source": "kira-hai",
+          "external_actor_id": "b5f839b3-f12e-43f6-8039-36cada06082d",
+          "external_play_id": "9a435c7c-489a-48ed-8cc5-b34bf32a215a",
+          "source_actor_name": "丸目聖人",
+          "source_actor_url": "https://kira-hai.net/marume-kiyohito",
+          "source_work_title": "舞台『K -Lost Small World-』",
+          "source_work_url": "https://kira-hai.net/k2016",
+          "source_year": 2021,
+          "source_role_raw": "アンサンブル ESORA",
+          "source_role_names": [
+            "アンサンブル ESORA"
+          ],
+          "matched_actor_id": "d17fe61e-84fe-4d84-88bb-91c82f742ce5",
+          "matched_play_id": null,
+          "accepted_cast_id": null,
+          "confidence": 60,
+          "status": "pending",
+          "note": null,
+          "scraped_at": "2026-04-27T17:59:04.855+00:00",
+          "created_at": "2026-04-27T17:59:04.157381+00:00",
+          "updated_at": "2026-04-27T17:59:04.855+00:00",
+          "accepted_at": null,
+          "rejected_at": null,
+          "source_cast_group": null,
+          "source_order": null,
+          "source_credit_key": null,
+          "source_evidence": null
+        }
+      ],
+      "transformations": [
+        {
+          "before": {
+            "sourceActorName": "茉莉邑薫",
+            "sourceActorUrl": "https://kira-hai.net/marimura-kaoru",
+            "role_name": "淡島世理",
+            "cast_group": null
+          },
+          "after": {
+            "sourceActorName": "茉莉邑薫",
+            "sourceActorUrl": "https://kira-hai.net/marimura-kaoru",
+            "role_name": "淡島世理／伏見木佐",
+            "cast_group": null
+          },
+          "reason": "事務所公式の当該作品履歴にある兼役を落とさず併記。出演方法・日程別条件は未記載のため推定しない。",
+          "evidence": [
+            {
+              "url": "https://www.office-anemone.com/?page_id=3194",
+              "checkedAt": "2026-10-24T18:41:35.635Z",
+              "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+            },
+            {
+              "url": "https://www.marv.jp/special/stage-k-3/",
+              "checkedAt": "2026-10-24T18:38:25.195Z",
+              "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+            }
+          ]
+        },
+        {
+          "before": {
+            "sourceActorName": "松田凌 (映像出演)",
+            "sourceActorUrl": null,
+            "role_name": "伊佐那社",
+            "cast_group": null
+          },
+          "after": {
+            "sourceActorName": "松田凌",
+            "sourceActorUrl": "https://kira-hai.net/matsuda-ryo",
+            "role_name": "伊佐那社",
+            "cast_group": "映像出演"
+          },
+          "reason": "氏名横の映像出演を出演区分へ分離。公演公式・協会で映像出演を照合し、実在アンカーから人物URLを回収。",
+          "evidence": [
+            {
+              "url": "https://www.marv.jp/special/stage-k-3/",
+              "checkedAt": "2026-10-24T18:38:25.195Z",
+              "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+            },
+            {
+              "url": "https://www.j25musical.jp/stage/135",
+              "checkedAt": "2026-10-24T18:41:35.799Z",
+              "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+            },
+            {
+              "url": "https://kira-hai.net/k2016",
+              "checkedAt": "2026-10-24T18:38:25.141Z",
+              "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+            }
+          ]
+        }
+      ],
+      "creditOnly": [
+        {
+          "sourceActorName": "日南田顕久",
+          "sourceActorUrl": "https://kira-hai.net/hinata-akihisa",
+          "role_name": null,
+          "cast_group": "アンサンブル",
+          "storageDecision": {
+            "target": "plays.credits",
+            "reason": "本公演公式・協会のアンサンブル8人。既存人物があっても役付き配役へ移さず氏名と順序を保存。"
+          }
+        },
+        {
+          "sourceActorName": "一之瀬嘉仁",
+          "sourceActorUrl": "https://kira-hai.net/ichinose-yoshihito",
+          "role_name": null,
+          "cast_group": "アンサンブル",
+          "storageDecision": {
+            "target": "plays.credits",
+            "reason": "本公演公式・協会のアンサンブル8人。既存人物があっても役付き配役へ移さず氏名と順序を保存。"
+          }
+        },
+        {
+          "sourceActorName": "珪吾",
+          "sourceActorUrl": null,
+          "role_name": null,
+          "cast_group": "アンサンブル",
+          "storageDecision": {
+            "target": "plays.credits",
+            "reason": "本公演公式・協会のアンサンブル8人。既存人物があっても役付き配役へ移さず氏名と順序を保存。"
+          }
+        },
+        {
+          "sourceActorName": "田中晃平",
+          "sourceActorUrl": "https://kira-hai.net/tanaka-kohei",
+          "role_name": null,
+          "cast_group": "アンサンブル",
+          "storageDecision": {
+            "target": "plays.credits",
+            "reason": "本公演公式・協会のアンサンブル8人。既存人物があっても役付き配役へ移さず氏名と順序を保存。"
+          }
+        },
+        {
+          "sourceActorName": "花塚廉太郎",
+          "sourceActorUrl": "https://kira-hai.net/hanatsuka-rentaro",
+          "role_name": null,
+          "cast_group": "アンサンブル",
+          "storageDecision": {
+            "target": "plays.credits",
+            "reason": "本公演公式・協会のアンサンブル8人。既存人物があっても役付き配役へ移さず氏名と順序を保存。"
+          }
+        },
+        {
+          "sourceActorName": "松井勇歩",
+          "sourceActorUrl": "https://kira-hai.net/matsui-yuho",
+          "role_name": null,
+          "cast_group": "アンサンブル",
+          "storageDecision": {
+            "target": "plays.credits",
+            "reason": "本公演公式・協会のアンサンブル8人。既存人物があっても役付き配役へ移さず氏名と順序を保存。"
+          }
+        },
+        {
+          "sourceActorName": "丸目聖人",
+          "sourceActorUrl": "https://kira-hai.net/marume-kiyohito",
+          "role_name": null,
+          "cast_group": "アンサンブル",
+          "storageDecision": {
+            "target": "plays.credits",
+            "reason": "本公演公式・協会のアンサンブル8人。既存人物があっても役付き配役へ移さず氏名と順序を保存。"
+          }
+        },
+        {
+          "sourceActorName": "村上渉",
+          "sourceActorUrl": "https://kira-hai.net/murakami-wataru",
+          "role_name": null,
+          "cast_group": "アンサンブル",
+          "storageDecision": {
+            "target": "plays.credits",
+            "reason": "本公演公式・協会のアンサンブル8人。既存人物があっても役付き配役へ移さず氏名と順序を保存。"
+          }
+        }
+      ],
+      "exceptions": [
+        "2016年7月22〜24日東京・7月30〜31日京都の1作品。K -Lost Small World-本編とBLACK DOG LIVE～fromアイドルKの二部構成で、同時上演のライブを別作品として水増ししない。追加された7月22日14時回も同じ作品内。",
+        "公演公式の16行・15人物を収録。荒牧慶彦は伏見仁希と夜刀神狗朗を別行で保持。伏見仁希の事前告知「????」は初日更新後の公演公式で解消。松田凌の伊佐那社は映像出演として出演区分に保存し、氏名の一部や通常出演へ変換しない。",
+        "茉莉邑薫の事務所公式には本作の淡島世理／伏見木佐の兼役が掲載。公演一覧にない兼役も併記して保存し、声のみ・映像等の方法は推定しない。計16配役行、役名を分けると17役。",
+        "近藤頌利は2015年第二章ではアンサンブル、今回は湊秋人役。公演ごとの公式区分を優先する。アンサンブル8名は全員クレジットへ。制作元には「珪珸」とあるが、公演公式・協会・キラハイ・配信元が「珪吾」で一致するため後者を採用。",
+        "旧丸目聖人の未採用候補は2021年・「アンサンブル ESORA」という混入済み内容。原文と状態を全項目保全し採用しない。今回の出演事実は現資料でクレジットへ保存。旧候補の整理は別工程。",
+        "新規3人物は所属や英字の未確認部分を補作しない。輝海は同名子役・読み違いの人物と区別し、身長の180／177の不一致はnullで保留。船岡の現公式157.7cmは整数列へ丸めない。前川の旧事務所・旧グループ表記は現所属にしない。",
+        "dアニメ作品ページは現在公開中の話がないと明示。視聴可能なリンクとして登録しない。2018年の同名アニメ映画や2016年の映像発売日・購入者イベントを混同しない。",
+        "日英の短い概要・英題・新規3人の紹介を追加。既存人物・既存作品・配役・候補・履歴は全項目保全。主演指定・詳細英訳・シリーズ全体点検は後続。"
+      ]
+    }
+  ],
+  "keptPlays": [
+    {
+      "id": "81bd7619-040a-4c08-b350-f5e73b14a219",
+      "slug": "k2017",
+      "title": "舞台『K-MISSING KINGS-』",
+      "franchise_id": "21e2a016-4301-4053-9b79-6763d362193a",
+      "summary": null,
+      "period": "2017年",
+      "venue": null,
+      "vod": {},
+      "genre": null,
+      "created_at": "2026-04-28T14:07:01.731224+00:00",
+      "updated_at": "2026-04-28T14:07:01.731224+00:00",
+      "tags": [],
+      "credits": null,
+      "related_franchise_ids": [],
+      "summary_en": null,
+      "title_en": null
+    },
+    {
+      "id": "bc4ff457-ed00-47ad-9c3d-831637b4b67a",
+      "slug": "k2015",
+      "title": "舞台『K』第二章 -AROUSAL OF KING-",
+      "franchise_id": "21e2a016-4301-4053-9b79-6763d362193a",
+      "summary": "アニメ『K』の舞台化第2弾。十束多々良殺害の疑いをかけられた伊佐那社をめぐり、赤と青のクランが動き出す。テレビアニメ第1期の結末までを描き、2015年8月に東京・大阪で上演された。",
+      "period": "2015年8月5日〜15日（東京）／8月19日〜22日（大阪）",
+      "venue": "AiiA 2.5 Theater Tokyo／大阪メルパルクホール",
+      "vod": {},
+      "genre": null,
+      "created_at": "2026-10-24T18:31:56.437536+00:00",
+      "updated_at": "2026-10-24T18:31:56.437536+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "GoRA",
+            "GoHands"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "脚本・演出",
+          "names": [
+            "末満健一"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "音楽",
+          "names": [
+            "遠藤幹雄"
+          ],
+          "is_core": true,
+          "sort_order": 3
+        },
+        {
+          "role": "振付",
+          "names": [
+            "豊田真吾"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "殺陣",
+          "names": [
+            "六本木康弘"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "主催",
+          "names": [
+            "stage k-project（マーベラス／キングレコード／セガ・ライブクリエイション）"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        },
+        {
+          "role": "声の出演",
+          "names": [
+            "速水奨"
+          ],
+          "is_core": false,
+          "sort_order": 7
+        },
+        {
+          "role": "アンサンブル",
+          "names": [
+            "安藤彩華",
+            "江口千夏",
+            "金魚わかな",
+            "有澤樟太郎",
+            "小波津亜廉",
+            "近藤頌利",
+            "高橋和志",
+            "南條良輔",
+            "日南田顕久（弁財酉次郎 / 出羽将臣 / 三科草太）",
+            "校條拳太朗（秋山氷杜）",
+            "矢ノ目光明"
+          ],
+          "is_core": false,
+          "sort_order": 8
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "The second stage adaptation of the anime K follows Yashiro Isana as the red and blue clans close in on him over the murder of Tatara Totsuka. Covering the conclusion of the first television season, it was performed in Tokyo and Osaka in August 2015.",
+      "title_en": "K: Chapter Two -AROUSAL OF KING- (Stage, 2015)"
+    },
+    {
+      "id": "f12ac503-a8a0-4b10-b2ed-fb086469ecd9",
+      "slug": "k-stage-first",
+      "title": "舞台『K』",
+      "franchise_id": "21e2a016-4301-4053-9b79-6763d362193a",
+      "summary": "GoRA×GoHandsによるアニメ『K』の初の舞台化。現実とは異なる歴史を歩んだ現代日本を舞台に、異能を持つ「王」たちの争いと、そこへ巻き込まれる少年の運命を描く。脚本・演出は末満健一。2014年8月に六本木ブルーシアターで上演された。",
+      "period": "2014年8月6日〜10日",
+      "venue": "六本木ブルーシアター",
+      "vod": {
+        "dmm": "#",
+        "unext": "#"
+      },
+      "genre": "fantasy",
+      "created_at": "2025-12-13T05:12:12.983557+00:00",
+      "updated_at": "2026-10-24T18:17:05.544152+00:00",
+      "tags": [
+        "異能力",
+        "スタイリッシュ",
+        "アニメ原作"
+      ],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "GoRA×GoHands"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "脚本・演出",
+          "names": [
+            "末満健一"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "アンサンブル",
+          "names": [
+            "校條拳太朗（秋山氷杜）",
+            "日南田顕久（弁財酉次郎 / 出羽将臣）",
+            "滝川広大（加茂劉芳）",
+            "田中涼星（道明寺アンディ）",
+            "緒方陽太",
+            "由月杏奈",
+            "江口千夏",
+            "藤本貴行"
+          ],
+          "is_core": false,
+          "sort_order": 3
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "The first stage adaptation of the anime K by GoRA and GoHands. Set in an alternate modern Japan, it follows conflicts between superpowered Kings and the fate of a boy caught between them. Written and directed by Kenichi Suemitsu, it ran at Roppongi Blue Theater in August 2014.",
+      "title_en": "K (Stage, 2014)"
+    },
+    {
+      "id": "fc9a2da7-9195-4fa0-9c94-b56bf788bc86",
+      "slug": "k2019",
+      "title": "舞台『K -RETURN OF KINGS-』",
+      "franchise_id": "21e2a016-4301-4053-9b79-6763d362193a",
+      "summary": null,
+      "period": "2019年",
+      "venue": null,
+      "vod": {},
+      "genre": null,
+      "created_at": "2026-04-28T14:04:10.76815+00:00",
+      "updated_at": "2026-04-28T14:04:10.76815+00:00",
+      "tags": [],
+      "credits": null,
+      "related_franchise_ids": [],
+      "summary_en": null,
+      "title_en": null
+    }
+  ],
+  "evidence": {
+    "links": [
+      {
+        "url": "https://kira-hai.net/k2016",
+        "checkedAt": "2026-10-24T18:38:25.141Z",
+        "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+      },
+      {
+        "url": "https://www.marv.jp/special/stage-k-3/",
+        "checkedAt": "2026-10-24T18:38:25.195Z",
+        "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+      },
+      {
+        "url": "https://www.marv.jp/titles/st/761/",
+        "checkedAt": "2026-10-24T18:38:25.194Z",
+        "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+      },
+      {
+        "url": "https://www.j25musical.jp/stage/135",
+        "checkedAt": "2026-10-24T18:41:35.799Z",
+        "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+      },
+      {
+        "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=21077",
+        "checkedAt": "2026-10-24T18:41:35.541Z",
+        "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+      },
+      {
+        "url": "https://www.office-anemone.com/?page_id=3194",
+        "checkedAt": "2026-10-24T18:41:35.635Z",
+        "note": "採用項目と表記差・兼役・未確認事項は人物notesと作品exceptions参照。"
+      }
+    ],
+    "sources": [
+      {
+        "label": "kira",
+        "url": "https://kira-hai.net/k2016",
+        "finalUrl": "https://kira-hai.net/k2016",
+        "status": 200,
+        "checkedAt": "2026-10-24T18:38:25.141Z",
+        "sha256": "becd2f0268b8b4ba89c3517c19c41c6e02d7961ad911d358ca91b493ff9013ac",
+        "title": "舞台『K -Lost Small World-』 | kirakira俳優ちゃんネット｜若手俳優まとめ｜舞台・ミュージカル感想"
+      },
+      {
+        "label": "changelog",
+        "url": "https://supabase.com/changelog.md",
+        "finalUrl": "https://supabase.com/changelog.md",
+        "status": 200,
+        "checkedAt": "2026-10-24T18:38:25.166Z",
+        "sha256": "45528009025b8ad8487ccb73f7c769b66d4b0e7aa4560157047899dcb5b5a006",
+        "title": ""
+      },
+      {
+        "label": "producer",
+        "url": "https://www.marv.jp/titles/st/761/",
+        "finalUrl": "https://www.marv.jp/titles/st/761/",
+        "status": 200,
+        "checkedAt": "2026-10-24T18:38:25.194Z",
+        "sha256": "d1599f4d7e15c594bb218dc84f4bbbb879622429682c76d3ba222dd921e7045e",
+        "title": "舞台『Ｋ-Lost Small World-』 - マーベラス"
+      },
+      {
+        "label": "official",
+        "url": "https://www.marv.jp/special/stage-k-3/",
+        "finalUrl": "https://www.marv.jp/special/stage-k-3/",
+        "status": 200,
+        "checkedAt": "2026-10-24T18:38:25.195Z",
+        "sha256": "af922a07b32d50a9690c7e0e3496ff15f4f6b08b71d4ebf02ea72e90ece43364",
+        "title": "舞台「Ｋ -Lost Small World-」2016年7月東京・京都にて上演！"
+      },
+      {
+        "label": "terumiKira",
+        "url": "https://kira-hai.net/terumi",
+        "finalUrl": "https://kira-hai.net/terumi",
+        "status": 200,
+        "checkedAt": "2026-10-24T18:38:25.209Z",
+        "sha256": "c9650d804edf5cb04c1861ebeb2194d01b025f1c8329a0f0e2a2c7b9a28d3ecd",
+        "title": "輝海 | kirakira俳優ちゃんネット｜若手俳優まとめ｜舞台・ミュージカル感想"
+      },
+      {
+        "label": "maekawaKira",
+        "url": "https://kira-hai.net/maekawa-yuki",
+        "finalUrl": "https://kira-hai.net/maekawa-yuki",
+        "status": 200,
+        "checkedAt": "2026-10-24T18:38:25.235Z",
+        "sha256": "7b06a1f0d9462a005730bdfec6270059af12bd8b1272522f4d38ddb79685cc4b",
+        "title": "前川優希 | kirakira俳優ちゃんネット｜若手俳優まとめ｜舞台・ミュージカル感想"
+      },
+      {
+        "label": "maekawaLabel",
+        "url": "https://www.kingrecords.co.jp/cs/artist/artist.aspx?artist=50025",
+        "finalUrl": "https://www.kingrecords.co.jp/cs/artist/artist.aspx?artist=50025",
+        "status": 200,
+        "checkedAt": "2026-10-24T18:38:25.416Z",
+        "sha256": "fa78442e2c9e7e5a8f0c3d72635fe5cadd915bfb344b94d9aa752df8553ce974",
+        "title": "前川優希 | キングレコードオフィシャルサイト"
+      },
+      {
+        "label": "funaokaAgency",
+        "url": "https://catalog.oscarpro.co.jp/search/talent/1000004100",
+        "finalUrl": "https://catalog.oscarpro.co.jp/search/talent/1000004100",
+        "status": 200,
+        "checkedAt": "2026-10-24T18:38:25.534Z",
+        "sha256": "870c8bad56626dc05d797c4239b6fb075a54d34e856ba5c06de9fe1cf717d134",
+        "title": "タレント詳細"
+      },
+      {
+        "label": "funaokaCast",
+        "url": "https://www.marv.jp/special/stage-k-3/cast03.html",
+        "finalUrl": "https://www.marv.jp/special/stage-k-3/cast03.html",
+        "status": 200,
+        "checkedAt": "2026-10-24T18:40:12.577Z",
+        "sha256": "ad485626029cbe848d9a688d6e7464251f0c3d53e2f16787dd8e1adcbb710852",
+        "title": "舞台『Ｋ -Lost Small World-』2016年7月東京・京都にて上演！"
+      },
+      {
+        "label": "terumiCast",
+        "url": "https://www.marv.jp/special/stage-k-3/cast06.html",
+        "finalUrl": "https://www.marv.jp/special/stage-k-3/cast06.html",
+        "status": 200,
+        "checkedAt": "2026-10-24T18:40:12.593Z",
+        "sha256": "b6574014505cd5fd535e7f34215b2a4c5bbcb61ddd4de2f667652dab0bd753f4",
+        "title": "舞台『Ｋ -Lost Small World-』2016年7月東京・京都にて上演！"
+      },
+      {
+        "label": "maekawaCast",
+        "url": "https://www.marv.jp/special/stage-k-3/cast12.html",
+        "finalUrl": "https://www.marv.jp/special/stage-k-3/cast12.html",
+        "status": 200,
+        "checkedAt": "2026-10-24T18:40:12.646Z",
+        "sha256": "837cd0b59b63d57c22befa2b68781fa3bfa0db0109aa0177ca674b27bb501370",
+        "title": "舞台『Ｋ -Lost Small World-』2016年7月東京・京都にて上演！"
+      },
+      {
+        "label": "terumiBlog",
+        "url": "https://www.ameba.jp/profile/general/terumi-0213/",
+        "finalUrl": "https://www.ameba.jp/profile/general/terumi-0213/",
+        "status": 404,
+        "checkedAt": "2026-10-24T18:40:12.664Z",
+        "sha256": "b94eda356707392a1cf85bf51518ff5f9ad9b08b4c4951a811cdb58d1f412873",
+        "title": "404エラー｜Amebaプロフィール"
+      },
+      {
+        "label": "funaokaThetv",
+        "url": "https://thetv.jp/person/2000041433/",
+        "finalUrl": "https://thetv.jp/person/2000041433/",
+        "status": 200,
+        "checkedAt": "2026-10-24T18:40:12.919Z",
+        "sha256": "04d91d02185bee6ab952ab19cfdfc3304e30d846ade196558f3ac52a37912580",
+        "title": "船岡咲のプロフィール・画像・写真 | WEBザテレビジョン"
+      },
+      {
+        "label": "terumiToei",
+        "url": "https://www.kamen-rider-official.com/zukan/characters/2534",
+        "finalUrl": "https://www.kamen-rider-official.com/zukan/characters/2534",
+        "status": 200,
+        "checkedAt": "2026-10-24T18:40:12.991Z",
+        "sha256": "844b8b1d815d8856f494eee03f3f97876dcdbb3138be50dc74aeecad4c55eb1a",
+        "title": "カミーユ | 仮面ライダー図鑑 | 東映"
+      },
+      {
+        "label": "maekawaOfficial",
+        "url": "https://maekawa-yuki.com/",
+        "finalUrl": "https://maekawa-yuki.com/",
+        "status": 200,
+        "checkedAt": "2026-10-24T18:40:13.038Z",
+        "sha256": "dedd5a38feb80b8cbcfc0466bc9fc3b6f37abf89928e91ad173167c726e2e39e",
+        "title": "前川優希 OFFICIAL FANCLUB「ElatioN」"
+      },
+      {
+        "label": "terumiAgency",
+        "url": "https://www.gfa.tokyo/telumi",
+        "finalUrl": "https://www.gfa.tokyo/telumi",
+        "status": 404,
+        "checkedAt": "2026-10-24T18:40:13.048Z",
+        "sha256": "25d3abcd0189dc8fc99d0e34ce54c4584de5465f234ef1cee3a8e034b015906e",
+        "title": "404 Error: Page Not Found"
+      },
+      {
+        "label": "streaming",
+        "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=21077",
+        "finalUrl": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=21077",
+        "status": 200,
+        "checkedAt": "2026-10-24T18:41:35.541Z",
+        "sha256": "340f061ceeb123a400962351b36112d7cd6096f073aaa83cfa8d67e02abadae6",
+        "title": "\n舞台『K -Lost Small World-』 | アニメ動画見放題 | dアニメストア\n"
+      },
+      {
+        "label": "marimura",
+        "url": "https://www.office-anemone.com/?page_id=3194",
+        "finalUrl": "https://www.office-anemone.com/?page_id=3194",
+        "status": 200,
+        "checkedAt": "2026-10-24T18:41:35.635Z",
+        "sha256": "e8d331466f839730f961ff10ee4678cfdb6f4c68ce7b1fca9b1436f4f042b4c3",
+        "title": "オフィスアネモネ | 茉莉邑薫・プロフィール"
+      },
+      {
+        "label": "association",
+        "url": "https://www.j25musical.jp/stage/135",
+        "finalUrl": "https://www.j25musical.jp/stage/135",
+        "status": 200,
+        "checkedAt": "2026-10-24T18:41:35.799Z",
+        "sha256": "aad23d9cadfd83be982a48a9e553b471dee7786b784164eba2c823f5f70b71d5",
+        "title": "舞台『Ｋ-Lost Small World-』 | 日本2.5次元ミュージカル協会"
+      }
+    ],
+    "notes": [
+      "既存候補保存・採用RPCを利用し、新規人物・作品と既存未採用候補を区別して登録する。原文・兼役／映像出演の変換判断と根拠を保存。",
+      "Supabase changelogを取得確認。通常のNode HTTPSと既存DML/RPCを使用しスキーマ・RLS・権限は変更しない。"
+    ],
+    "unresolved": [
+      "2017年MISSING KINGSと2019年RETURN OF KINGSの仮登録補完、全作品完了後のKシリーズ点検は後続。",
+      "輝海の身長・現所属、船岡の小数身長の表示方針、既存人物総合監査・詳細英訳・現行配信の網羅確認・主演指定は後続。",
+      "旧丸目聖人の混入済み未採用候補は原文保全。履歴整理は別工程。"
+    ]
+  },
+  "requestKey": "efcfe35c4020a45e8fb3bb5e807a702a5a54151d544e2663e0d8f19e5ef451f2"
+}
