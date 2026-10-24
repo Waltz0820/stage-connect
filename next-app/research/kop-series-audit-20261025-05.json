@@ -1,0 +1,158 @@
+{
+  "checkedAt": "2026-10-24T16:55:40.286Z",
+  "scope": "キラハイのシリーズ一覧4件と公式告知の年末イベント1件を、収録済み5作品へ照合。85配役・27人物、作品年月順・日英タイトル／概要抜粋・全人物との相互リンクを確認。年末イベントは開催予定。既存人物属性や全技術スタッフの総合監査は対象外。",
+  "franchiseId": "8cd271e6-0156-4216-b66c-b5f014366cca",
+  "slug": "king-of-prism",
+  "registeredWorks": 5,
+  "castRows": 85,
+  "uniqueActors": 27,
+  "sourceListedWorks": 4,
+  "officialOnlyEvents": 1,
+  "currentBatchWorks": 1,
+  "currentBatchCastRows": 19,
+  "newActors": 0,
+  "existingActorsPreserved": 19,
+  "newCastRows": 19,
+  "existingRowsModified": 0,
+  "publicPages": 66,
+  "currentWorkPublicPages": 50,
+  "creditOnlyNames": 3,
+  "creditCategories": 3,
+  "identitySources": 0,
+  "timeline": [
+    "2026/12",
+    "2026/02",
+    "2020/02",
+    "2019/10",
+    "2017/11"
+  ],
+  "seriesSource": {
+    "url": "https://kira-hai.net/kop",
+    "fetchedAt": "2026-10-24T16:46:46.161Z",
+    "sha256": "c3cab072cdcbe23e45b2564ee8963557ace39351dfd8e14c774dc5bdb5a1da22",
+    "workUrls": [
+      "https://kira-hai.net/kop2017",
+      "https://kira-hai.net/kop2019",
+      "https://kira-hai.net/kop2020",
+      "https://kira-hai.net/kop2026"
+    ]
+  },
+  "officialEventSource": {
+    "url": "https://kinpri-stage.com/news/detail/?id=1135536",
+    "checkedAt": "2026-10-24T16:46:46.158Z",
+    "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+  },
+  "seriesVerificationPassed": true,
+  "performanceStatus": {
+    "performedWorks": 4,
+    "announcedEvents": 1,
+    "currentEventDate": "2026-12-31",
+    "currentEventStatus": "announced_not_yet_performed",
+    "venue": "大宮ソニックシティ 大ホール",
+    "currentStreamingVerified": false
+  },
+  "works": [
+    {
+      "id": "12b4ddee-cc88-41fd-86da-1afa031e8803",
+      "slug": "kop2017",
+      "title": "舞台「KING OF PRISM-Over the Sunshine!-」",
+      "title_en": "KING OF PRISM -Over the Sunshine!- (2017)",
+      "period": "大阪：2017年11月2日〜5日／東京：2017年11月8日〜12日",
+      "venue": "大阪：梅田芸術劇場 シアター・ドラマシティ／東京：AiiA 2.5 Theater Tokyo",
+      "castRows": 15,
+      "source": "https://kira-hai.net/kop2017",
+      "research": "next-app/research/kop2017-20261025.json",
+      "summaryPresent": true,
+      "englishSummaryPresent": true,
+      "status": "performed",
+      "completedInThisBatch": false,
+      "exceptions": [
+        "前工程で補完した作品・配役の全項目を保全し、シリーズ点検で再確認。"
+      ]
+    },
+    {
+      "id": "576d6488-3b91-4506-b021-29bab01bf1d9",
+      "slug": "kop2019",
+      "title": "舞台「KING OF PRISM-Rose Party on STAGE 2019-」",
+      "title_en": "KING OF PRISM -Rose Party on STAGE 2019-",
+      "period": "2019年10月12日（会場の昼夜公演は中止／夜の部は無観客ライブ・生配信）",
+      "venue": "パシフィコ横浜 国立大ホール（無観客実施）",
+      "castRows": 14,
+      "source": "https://kira-hai.net/kop2019",
+      "research": "next-app/research/kop2019-20261025.json",
+      "summaryPresent": true,
+      "englishSummaryPresent": true,
+      "status": "performed",
+      "completedInThisBatch": false,
+      "exceptions": [
+        "前工程で補完した作品・配役の全項目を保全し、シリーズ点検で再確認。"
+      ]
+    },
+    {
+      "id": "64c8e12a-9d60-4a81-a05a-a7480e057b21",
+      "slug": "kop2020",
+      "title": "舞台「KING OF PRISM -Shiny Rose Stars-」",
+      "title_en": "KING OF PRISM -Shiny Rose Stars-",
+      "period": "2020年2月20日〜3月1日（2月27日〜3月1日の公演は中止）",
+      "venue": "TOKYO DOME CITY HALL",
+      "castRows": 18,
+      "source": "https://kira-hai.net/kop2020",
+      "research": "next-app/research/kop2020-20261025.json",
+      "summaryPresent": true,
+      "englishSummaryPresent": true,
+      "status": "performed",
+      "completedInThisBatch": false,
+      "exceptions": [
+        "前工程で補完した作品・配役の全項目を保全し、シリーズ点検で再確認。"
+      ]
+    },
+    {
+      "id": "b6647aaa-07a8-43f5-8ff8-64ea1fdefe98",
+      "slug": "kop2026-kirameki-live",
+      "title": "舞台「KING OF PRISM」Special Event み～んなときめけ！キラメキ☆LIVE",
+      "title_en": "KING OF PRISM Special Event: Minna Tokimeke! Kirameki LIVE (2026)",
+      "period": "2026年12月31日（開催予定／昼14:00・夜18:00開演）",
+      "venue": "大宮ソニックシティ 大ホール",
+      "castRows": 19,
+      "source": "https://kinpri-stage.com/news/detail/?id=1135536",
+      "research": "next-app/research/kop-live2026-20261025.json",
+      "summaryPresent": true,
+      "englishSummaryPresent": true,
+      "status": "announced_not_yet_performed",
+      "completedInThisBatch": true,
+      "exceptions": [
+        "2026年12月31日の開催予定イベント。日英概要と公演期間に予定であることを明記し、告知済み配役を実施済みの確定履歴と説明しない。候補の根拠にも予定状態と確認日時を保持する。",
+        "2026年2〜3月のYour Endless Call本公演とは別作品。19配役は公式と出演者側の告知から全件独立に抽出・照合し、現DBの配役一致は二重確認にのみ使用。",
+        "アンサンブルは相澤友輝・東間颯太・岩澤健三郎の3人。本公演の伊阪颯馬を本イベントへ流用しない。既存本公演の19配役とアンサンブル4人は全項目保全。",
+        "公式の人名・役名内の空白と全半角差だけを採用側で正規化し、原文の各行・順序をrawSourceと候補根拠に保持。読み・別名のグローバル置換は行わない。",
+        "キラハイの現シリーズ一覧は既存4作品のみで、本イベントは未掲載。出典をofficial、実際の公式告知URLで候補へ保存し、Kira専用の候補保存RPCには偽URLを渡さない。採用は既存の汎用RPCを使用する。",
+        "企画・主催は公式のエイベックス・ピクチャーズ。未確認の脚本・演出・音楽等を本公演から流用しない。チケットの料金・受付期限や未発表の配信をvodとして登録しない。",
+        "英題・英訳は編集表記。全19人は既存人物を再利用し、人物プロフィール・過去4作品・過去配役は全項目保全する。"
+      ]
+    },
+    {
+      "id": "fe8e30c4-1573-493b-8e4f-950d7c793d2e",
+      "slug": "kop2026",
+      "title": "舞台「KING OF PRISM-Your Endless Call-み～んなきらめけ！キンプリ☆ツアーズ」",
+      "title_en": "KING OF PRISM -Your Endless Call- Minna Kirameke! Kinpri Tours (Stage, 2026)",
+      "period": "2026年2月21日〜3月1日",
+      "venue": "日本青年館ホール",
+      "castRows": 19,
+      "source": "https://kira-hai.net/kop2026",
+      "research": "next-app/research/kop2026-20261025.json",
+      "summaryPresent": true,
+      "englishSummaryPresent": true,
+      "status": "performed",
+      "completedInThisBatch": false,
+      "exceptions": [
+        "前工程で補完した作品・配役の全項目を保全し、シリーズ点検で再確認。"
+      ]
+    }
+  ],
+  "pendingChecks": [
+    "年末イベントは未上演。今後の出演変更・開催状況は公式発表で差分確認が必要で、実施結果の監査は開催後。自動監視は設定しない。",
+    "既存人物総合監査、役名・スタッフ等の詳細英訳、現在配信の網羅確認、全技術スタッフ・主演指定は後続。",
+    "過去のspi候補にあるHTML混入の重複採用履歴は保全。"
+  ],
+  "report": "docs/kop-live2026-2026-10-25.md"
+}

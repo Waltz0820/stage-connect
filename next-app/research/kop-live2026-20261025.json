@@ -1,0 +1,2537 @@
+{
+  "version": 1,
+  "batchId": "kop-live2026-20261025-01",
+  "expectedFranchise": {
+    "id": "8cd271e6-0156-4216-b66c-b5f014366cca",
+    "name": "舞台「KING OF PRISM」（ブタキン）",
+    "created_at": "2026-02-08T16:26:41.990203+00:00",
+    "updated_at": "2026-10-24T15:28:00.483227+00:00",
+    "slug": "king-of-prism",
+    "intro": null,
+    "description": "劇場版アニメ『KING OF PRISM』を原作とする舞台シリーズ。プリズムスタァを目指す少年たちを歌やダンスで描く。2017年『Over the Sunshine!』で始まり、脚本は青葉譲、演出は宇治川まさなりが担当する。",
+    "origin_type": "アニメ原作",
+    "origin_note": "原作：T-ARTS / syn Sophia / エイベックス・ピクチャーズ / タツノコプロ",
+    "production_companies": [
+      "エイベックス・ピクチャーズ"
+    ],
+    "related_franchise_ids": [],
+    "format": "stage",
+    "description_en": "A stage series based on the theatrical anime KING OF PRISM, following boys who aspire to become Prism Stars through song and dance. It began with Over the Sunshine! in 2017, written by Jou Aoba and directed by Masanari Ujikawa.",
+    "name_en": "KING OF PRISM (Stage)"
+  },
+  "actors": [],
+  "works": [
+    {
+      "year": 2026,
+      "before": null,
+      "play": {
+        "id": "b6647aaa-07a8-43f5-8ff8-64ea1fdefe98",
+        "slug": "kop2026-kirameki-live",
+        "title": "舞台「KING OF PRISM」Special Event み～んなときめけ！キラメキ☆LIVE",
+        "franchise_id": "8cd271e6-0156-4216-b66c-b5f014366cca",
+        "summary": "舞台『KING OF PRISM』のキャスト19人によるスペシャルライブ。『Your Endless Call』の出演者が再集結し、ライブとトークコーナーを予定する。2026年12月31日に大宮ソニックシティ大ホールで昼夜2公演を開催予定。",
+        "period": "2026年12月31日（開催予定／昼14:00・夜18:00開演）",
+        "venue": "大宮ソニックシティ 大ホール",
+        "vod": {},
+        "genre": null,
+        "tags": [],
+        "credits": [
+          {
+            "role": "原作",
+            "names": [
+              "タカラトミーアーツ",
+              "シンソフィア",
+              "エイベックス・ピクチャーズ",
+              "タツノコプロ"
+            ],
+            "is_core": true,
+            "sort_order": 1
+          },
+          {
+            "role": "企画・主催",
+            "names": [
+              "エイベックス・ピクチャーズ"
+            ],
+            "is_core": false,
+            "sort_order": 2
+          },
+          {
+            "role": "アンサンブル",
+            "names": [
+              "相澤友輝",
+              "東間颯太",
+              "岩澤健三郎"
+            ],
+            "is_core": false,
+            "sort_order": 3
+          }
+        ],
+        "related_franchise_ids": [],
+        "summary_en": "A special live event featuring the 19 principal cast members of the KING OF PRISM stage production Your Endless Call. Live performances and a talk segment are planned, with afternoon and evening shows scheduled for December 31, 2026, at Omiya Sonic City Main Hall. The shows are scheduled to start at 2:00 p.m. and 6:00 p.m.",
+        "title_en": "KING OF PRISM Special Event: Minna Tokimeke! Kirameki LIVE (2026)"
+      },
+      "rawSource": {
+        "sourceUrl": "https://kinpri-stage.com/news/detail/?id=1135536",
+        "title": "舞台「KING OF PRISM」Special Event み～んなときめけ！キラメキ☆LIVE",
+        "scheduleLines": [
+          "2026年12月31日(木)",
+          "昼の部：13：00開場/14：00開演（16：00終演予定）",
+          "夜の部：17：00開場/18：00開演（20：00終演予定）",
+          "大宮ソニックシティ大ホール"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "田村升吾",
+            "sourceActorUrl": null,
+            "role_name": "一条シン",
+            "cast_group": null,
+            "rawLine": "一条シン：田村升吾"
+          },
+          {
+            "sourceActorName": "横井翔二郎",
+            "sourceActorUrl": null,
+            "role_name": "太刀花ユキノジョウ",
+            "cast_group": null,
+            "rawLine": "太刀花ユキノジョウ：横井翔二郎"
+          },
+          {
+            "sourceActorName": "長江崚行",
+            "sourceActorUrl": null,
+            "role_name": "香賀美タイガ",
+            "cast_group": null,
+            "rawLine": "香賀美タイガ：長江崚行"
+          },
+          {
+            "sourceActorName": "村上喜紀",
+            "sourceActorUrl": null,
+            "role_name": "十王院カケル",
+            "cast_group": null,
+            "rawLine": "十王院カケル：村上喜紀"
+          },
+          {
+            "sourceActorName": "五十嵐雅",
+            "sourceActorUrl": null,
+            "role_name": "鷹梁ミナト",
+            "cast_group": null,
+            "rawLine": "鷹梁ミナト：五十嵐雅"
+          },
+          {
+            "sourceActorName": "高梨 怜",
+            "sourceActorUrl": null,
+            "role_name": "西園寺レオ",
+            "cast_group": null,
+            "rawLine": "西園寺レオ：高梨 怜"
+          },
+          {
+            "sourceActorName": "中西智也",
+            "sourceActorUrl": null,
+            "role_name": "涼野ユウ",
+            "cast_group": null,
+            "rawLine": "涼野ユウ：中西智也"
+          },
+          {
+            "sourceActorName": "小南光司",
+            "sourceActorUrl": null,
+            "role_name": "神浜コウジ",
+            "cast_group": null,
+            "rawLine": "神浜コウジ：小南光司"
+          },
+          {
+            "sourceActorName": "杉江大志",
+            "sourceActorUrl": null,
+            "role_name": "速水ヒロ",
+            "cast_group": null,
+            "rawLine": "速水ヒロ：杉江大志"
+          },
+          {
+            "sourceActorName": "大見拓土",
+            "sourceActorUrl": null,
+            "role_name": "仁科カヅキ",
+            "cast_group": null,
+            "rawLine": "仁科カヅキ：大見拓土"
+          },
+          {
+            "sourceActorName": "前内孝文",
+            "sourceActorUrl": null,
+            "role_name": "法月 仁",
+            "cast_group": null,
+            "rawLine": "法月 仁：前内孝文"
+          },
+          {
+            "sourceActorName": "小野健斗",
+            "sourceActorUrl": null,
+            "role_name": "氷室 聖",
+            "cast_group": null,
+            "rawLine": "氷室 聖：小野健斗"
+          },
+          {
+            "sourceActorName": "及川 洸",
+            "sourceActorUrl": null,
+            "role_name": "黒川 冷",
+            "cast_group": null,
+            "rawLine": "黒川 冷：及川 洸"
+          },
+          {
+            "sourceActorName": "安里勇哉",
+            "sourceActorUrl": null,
+            "role_name": "山田リョウ",
+            "cast_group": null,
+            "rawLine": "山田リョウ：安里勇哉"
+          },
+          {
+            "sourceActorName": "加藤 将",
+            "sourceActorUrl": null,
+            "role_name": "大和アレクサンダー",
+            "cast_group": null,
+            "rawLine": "大和アレクサンダー：加藤 将"
+          },
+          {
+            "sourceActorName": "古谷大和",
+            "sourceActorUrl": null,
+            "role_name": "高田馬場ジョージ",
+            "cast_group": null,
+            "rawLine": "高田馬場ジョージ：古谷大和"
+          },
+          {
+            "sourceActorName": "小林竜之",
+            "sourceActorUrl": null,
+            "role_name": "池袋エィス",
+            "cast_group": null,
+            "rawLine": "池袋エィス：小林竜之"
+          },
+          {
+            "sourceActorName": "中山咲月",
+            "sourceActorUrl": null,
+            "role_name": "神無月アヰ",
+            "cast_group": null,
+            "rawLine": "神無月アヰ：中山咲月"
+          },
+          {
+            "sourceActorName": "佐々木喜英",
+            "sourceActorUrl": null,
+            "role_name": "如月ルヰ",
+            "cast_group": null,
+            "rawLine": "如月ルヰ：佐々木喜英"
+          },
+          {
+            "sourceActorName": "相澤友輝",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル",
+            "rawLine": "相澤友輝/東間颯太/岩澤健三郎"
+          },
+          {
+            "sourceActorName": "東間颯太",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル",
+            "rawLine": "相澤友輝/東間颯太/岩澤健三郎"
+          },
+          {
+            "sourceActorName": "岩澤健三郎",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル",
+            "rawLine": "相澤友輝/東間颯太/岩澤健三郎"
+          }
+        ],
+        "unparsed": []
+      },
+      "source": {
+        "sourceUrl": "https://kinpri-stage.com/news/detail/?id=1135536",
+        "title": "舞台「KING OF PRISM」Special Event み～んなときめけ！キラメキ☆LIVE",
+        "scheduleLines": [
+          "2026年12月31日(木)",
+          "昼の部：13：00開場/14：00開演（16：00終演予定）",
+          "夜の部：17：00開場/18：00開演（20：00終演予定）",
+          "大宮ソニックシティ大ホール"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "田村升吾",
+            "sourceActorUrl": null,
+            "role_name": "一条シン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "横井翔二郎",
+            "sourceActorUrl": null,
+            "role_name": "太刀花ユキノジョウ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "長江崚行",
+            "sourceActorUrl": null,
+            "role_name": "香賀美タイガ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "村上喜紀",
+            "sourceActorUrl": null,
+            "role_name": "十王院カケル",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "五十嵐雅",
+            "sourceActorUrl": null,
+            "role_name": "鷹梁ミナト",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "高梨怜",
+            "sourceActorUrl": null,
+            "role_name": "西園寺レオ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "中西智也",
+            "sourceActorUrl": null,
+            "role_name": "涼野ユウ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "小南光司",
+            "sourceActorUrl": null,
+            "role_name": "神浜コウジ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "杉江大志",
+            "sourceActorUrl": null,
+            "role_name": "速水ヒロ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "大見拓土",
+            "sourceActorUrl": null,
+            "role_name": "仁科カヅキ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "前内孝文",
+            "sourceActorUrl": null,
+            "role_name": "法月仁",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "小野健斗",
+            "sourceActorUrl": null,
+            "role_name": "氷室聖",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "及川洸",
+            "sourceActorUrl": null,
+            "role_name": "黒川冷",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "安里勇哉",
+            "sourceActorUrl": null,
+            "role_name": "山田リョウ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "加藤将",
+            "sourceActorUrl": null,
+            "role_name": "大和アレクサンダー",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "古谷大和",
+            "sourceActorUrl": null,
+            "role_name": "高田馬場ジョージ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "小林竜之",
+            "sourceActorUrl": null,
+            "role_name": "池袋エィス",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "中山咲月",
+            "sourceActorUrl": null,
+            "role_name": "神無月アヰ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "佐々木喜英",
+            "sourceActorUrl": null,
+            "role_name": "如月ルヰ",
+            "cast_group": null
+          }
+        ],
+        "unparsed": []
+      },
+      "sourceFingerprint": "edf70cc12f707f384dc98f8bb28361b972e6b4756a46f2550826505b343c00af",
+      "stage": {
+        "source": "official",
+        "workUrl": "https://kinpri-stage.com/news/detail/?id=1135536",
+        "key": "5dbf7389288a85d1f9df95e9c18be7058aee48eb25d9fb4e026d543593af9161",
+        "items": [
+          {
+            "id": "c28eff67-4c87-481e-a14c-450d92b8dfaa",
+            "source": "official",
+            "source_actor_name": "田村升吾",
+            "source_actor_url": null,
+            "source_work_title": "舞台「KING OF PRISM」Special Event み～んなときめけ！キラメキ☆LIVE",
+            "source_work_url": "https://kinpri-stage.com/news/detail/?id=1135536",
+            "source_year": 2026,
+            "source_role_raw": "一条シン",
+            "source_role_names": [
+              "一条シン"
+            ],
+            "source_cast_group": null,
+            "source_order": 1,
+            "source_credit_key": "f46c177bcc0d17d38b43",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kinpri-stage.com/news/detail/?id=1135536",
+                  "checkedAt": "2026-10-24T16:46:46.158Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                },
+                {
+                  "url": "https://sugietaishi.com/contents/1109129",
+                  "checkedAt": "2026-10-24T16:46:46.197Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                },
+                {
+                  "url": "https://fc-sui.net/contents/1102483",
+                  "checkedAt": "2026-10-24T16:46:46.281Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                }
+              ],
+              "source_fingerprint": "edf70cc12f707f384dc98f8bb28361b972e6b4756a46f2550826505b343c00af",
+              "review_fingerprint": "c97b1d6f5894fcbe3a1886ab417895873516958b1eff3480a612a5f874a3590d",
+              "snapshot_fingerprint": "c70fcd902f667812ba1255d89b454069c1c62afe972877ee37aa7c71c35f11ba",
+              "identity": "reviewed_link",
+              "raw_credit": {
+                "sourceActorName": "田村升吾",
+                "sourceActorUrl": null,
+                "role_name": "一条シン",
+                "cast_group": null,
+                "rawLine": "一条シン：田村升吾"
+              },
+              "performance_status": "announced_not_yet_performed",
+              "checked_at": "2026-10-24T16:46:46.158Z"
+            },
+            "matched_actor_id": "8c763fc9-8fdf-4f23-9558-51c5b053ab2e",
+            "matched_play_id": "b6647aaa-07a8-43f5-8ff8-64ea1fdefe98",
+            "status": "pending"
+          },
+          {
+            "id": "65012ea0-ee13-441b-9022-5a803794e73e",
+            "source": "official",
+            "source_actor_name": "横井翔二郎",
+            "source_actor_url": null,
+            "source_work_title": "舞台「KING OF PRISM」Special Event み～んなときめけ！キラメキ☆LIVE",
+            "source_work_url": "https://kinpri-stage.com/news/detail/?id=1135536",
+            "source_year": 2026,
+            "source_role_raw": "太刀花ユキノジョウ",
+            "source_role_names": [
+              "太刀花ユキノジョウ"
+            ],
+            "source_cast_group": null,
+            "source_order": 2,
+            "source_credit_key": "ea52a424e7cf94038ee7",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kinpri-stage.com/news/detail/?id=1135536",
+                  "checkedAt": "2026-10-24T16:46:46.158Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                },
+                {
+                  "url": "https://sugietaishi.com/contents/1109129",
+                  "checkedAt": "2026-10-24T16:46:46.197Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                },
+                {
+                  "url": "https://fc-sui.net/contents/1102483",
+                  "checkedAt": "2026-10-24T16:46:46.281Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                }
+              ],
+              "source_fingerprint": "edf70cc12f707f384dc98f8bb28361b972e6b4756a46f2550826505b343c00af",
+              "review_fingerprint": "c97b1d6f5894fcbe3a1886ab417895873516958b1eff3480a612a5f874a3590d",
+              "snapshot_fingerprint": "c70fcd902f667812ba1255d89b454069c1c62afe972877ee37aa7c71c35f11ba",
+              "identity": "reviewed_link",
+              "raw_credit": {
+                "sourceActorName": "横井翔二郎",
+                "sourceActorUrl": null,
+                "role_name": "太刀花ユキノジョウ",
+                "cast_group": null,
+                "rawLine": "太刀花ユキノジョウ：横井翔二郎"
+              },
+              "performance_status": "announced_not_yet_performed",
+              "checked_at": "2026-10-24T16:46:46.158Z"
+            },
+            "matched_actor_id": "5b634cd8-f8b7-4f15-8430-ef2288a2e77f",
+            "matched_play_id": "b6647aaa-07a8-43f5-8ff8-64ea1fdefe98",
+            "status": "pending"
+          },
+          {
+            "id": "b91e99cd-459a-4826-8f9e-0f30afb869d6",
+            "source": "official",
+            "source_actor_name": "長江崚行",
+            "source_actor_url": null,
+            "source_work_title": "舞台「KING OF PRISM」Special Event み～んなときめけ！キラメキ☆LIVE",
+            "source_work_url": "https://kinpri-stage.com/news/detail/?id=1135536",
+            "source_year": 2026,
+            "source_role_raw": "香賀美タイガ",
+            "source_role_names": [
+              "香賀美タイガ"
+            ],
+            "source_cast_group": null,
+            "source_order": 3,
+            "source_credit_key": "04190d2f067c99336e1d",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kinpri-stage.com/news/detail/?id=1135536",
+                  "checkedAt": "2026-10-24T16:46:46.158Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                },
+                {
+                  "url": "https://sugietaishi.com/contents/1109129",
+                  "checkedAt": "2026-10-24T16:46:46.197Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                },
+                {
+                  "url": "https://fc-sui.net/contents/1102483",
+                  "checkedAt": "2026-10-24T16:46:46.281Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                }
+              ],
+              "source_fingerprint": "edf70cc12f707f384dc98f8bb28361b972e6b4756a46f2550826505b343c00af",
+              "review_fingerprint": "c97b1d6f5894fcbe3a1886ab417895873516958b1eff3480a612a5f874a3590d",
+              "snapshot_fingerprint": "c70fcd902f667812ba1255d89b454069c1c62afe972877ee37aa7c71c35f11ba",
+              "identity": "reviewed_link",
+              "raw_credit": {
+                "sourceActorName": "長江崚行",
+                "sourceActorUrl": null,
+                "role_name": "香賀美タイガ",
+                "cast_group": null,
+                "rawLine": "香賀美タイガ：長江崚行"
+              },
+              "performance_status": "announced_not_yet_performed",
+              "checked_at": "2026-10-24T16:46:46.158Z"
+            },
+            "matched_actor_id": "4b3110ab-0d88-4a68-8a1d-ed0fcac335ff",
+            "matched_play_id": "b6647aaa-07a8-43f5-8ff8-64ea1fdefe98",
+            "status": "pending"
+          },
+          {
+            "id": "2160a007-2c56-435a-81cf-4ff460cbb593",
+            "source": "official",
+            "source_actor_name": "村上喜紀",
+            "source_actor_url": null,
+            "source_work_title": "舞台「KING OF PRISM」Special Event み～んなときめけ！キラメキ☆LIVE",
+            "source_work_url": "https://kinpri-stage.com/news/detail/?id=1135536",
+            "source_year": 2026,
+            "source_role_raw": "十王院カケル",
+            "source_role_names": [
+              "十王院カケル"
+            ],
+            "source_cast_group": null,
+            "source_order": 4,
+            "source_credit_key": "3e5e4916d2371501e436",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kinpri-stage.com/news/detail/?id=1135536",
+                  "checkedAt": "2026-10-24T16:46:46.158Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                },
+                {
+                  "url": "https://sugietaishi.com/contents/1109129",
+                  "checkedAt": "2026-10-24T16:46:46.197Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                },
+                {
+                  "url": "https://fc-sui.net/contents/1102483",
+                  "checkedAt": "2026-10-24T16:46:46.281Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                }
+              ],
+              "source_fingerprint": "edf70cc12f707f384dc98f8bb28361b972e6b4756a46f2550826505b343c00af",
+              "review_fingerprint": "c97b1d6f5894fcbe3a1886ab417895873516958b1eff3480a612a5f874a3590d",
+              "snapshot_fingerprint": "c70fcd902f667812ba1255d89b454069c1c62afe972877ee37aa7c71c35f11ba",
+              "identity": "reviewed_link",
+              "raw_credit": {
+                "sourceActorName": "村上喜紀",
+                "sourceActorUrl": null,
+                "role_name": "十王院カケル",
+                "cast_group": null,
+                "rawLine": "十王院カケル：村上喜紀"
+              },
+              "performance_status": "announced_not_yet_performed",
+              "checked_at": "2026-10-24T16:46:46.158Z"
+            },
+            "matched_actor_id": "7e766d26-1dcc-48ec-971c-65074b978609",
+            "matched_play_id": "b6647aaa-07a8-43f5-8ff8-64ea1fdefe98",
+            "status": "pending"
+          },
+          {
+            "id": "ca1c7307-48a3-4c78-8363-2780b6c6889d",
+            "source": "official",
+            "source_actor_name": "五十嵐雅",
+            "source_actor_url": null,
+            "source_work_title": "舞台「KING OF PRISM」Special Event み～んなときめけ！キラメキ☆LIVE",
+            "source_work_url": "https://kinpri-stage.com/news/detail/?id=1135536",
+            "source_year": 2026,
+            "source_role_raw": "鷹梁ミナト",
+            "source_role_names": [
+              "鷹梁ミナト"
+            ],
+            "source_cast_group": null,
+            "source_order": 5,
+            "source_credit_key": "789b107db752ebc9db0a",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kinpri-stage.com/news/detail/?id=1135536",
+                  "checkedAt": "2026-10-24T16:46:46.158Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                },
+                {
+                  "url": "https://sugietaishi.com/contents/1109129",
+                  "checkedAt": "2026-10-24T16:46:46.197Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                },
+                {
+                  "url": "https://fc-sui.net/contents/1102483",
+                  "checkedAt": "2026-10-24T16:46:46.281Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                }
+              ],
+              "source_fingerprint": "edf70cc12f707f384dc98f8bb28361b972e6b4756a46f2550826505b343c00af",
+              "review_fingerprint": "c97b1d6f5894fcbe3a1886ab417895873516958b1eff3480a612a5f874a3590d",
+              "snapshot_fingerprint": "c70fcd902f667812ba1255d89b454069c1c62afe972877ee37aa7c71c35f11ba",
+              "identity": "reviewed_link",
+              "raw_credit": {
+                "sourceActorName": "五十嵐雅",
+                "sourceActorUrl": null,
+                "role_name": "鷹梁ミナト",
+                "cast_group": null,
+                "rawLine": "鷹梁ミナト：五十嵐雅"
+              },
+              "performance_status": "announced_not_yet_performed",
+              "checked_at": "2026-10-24T16:46:46.158Z"
+            },
+            "matched_actor_id": "2b667657-04d1-470b-9120-2a83bc8e9478",
+            "matched_play_id": "b6647aaa-07a8-43f5-8ff8-64ea1fdefe98",
+            "status": "pending"
+          },
+          {
+            "id": "058ad9bb-0ac3-4bdc-a5e1-117604c3781c",
+            "source": "official",
+            "source_actor_name": "高梨怜",
+            "source_actor_url": null,
+            "source_work_title": "舞台「KING OF PRISM」Special Event み～んなときめけ！キラメキ☆LIVE",
+            "source_work_url": "https://kinpri-stage.com/news/detail/?id=1135536",
+            "source_year": 2026,
+            "source_role_raw": "西園寺レオ",
+            "source_role_names": [
+              "西園寺レオ"
+            ],
+            "source_cast_group": null,
+            "source_order": 6,
+            "source_credit_key": "6af6806b37c089c9886a",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kinpri-stage.com/news/detail/?id=1135536",
+                  "checkedAt": "2026-10-24T16:46:46.158Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                },
+                {
+                  "url": "https://sugietaishi.com/contents/1109129",
+                  "checkedAt": "2026-10-24T16:46:46.197Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                },
+                {
+                  "url": "https://fc-sui.net/contents/1102483",
+                  "checkedAt": "2026-10-24T16:46:46.281Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                }
+              ],
+              "source_fingerprint": "edf70cc12f707f384dc98f8bb28361b972e6b4756a46f2550826505b343c00af",
+              "review_fingerprint": "c97b1d6f5894fcbe3a1886ab417895873516958b1eff3480a612a5f874a3590d",
+              "snapshot_fingerprint": "c70fcd902f667812ba1255d89b454069c1c62afe972877ee37aa7c71c35f11ba",
+              "identity": "reviewed_link",
+              "raw_credit": {
+                "sourceActorName": "高梨 怜",
+                "sourceActorUrl": null,
+                "role_name": "西園寺レオ",
+                "cast_group": null,
+                "rawLine": "西園寺レオ：高梨 怜"
+              },
+              "performance_status": "announced_not_yet_performed",
+              "checked_at": "2026-10-24T16:46:46.158Z"
+            },
+            "matched_actor_id": "fc26f546-a09d-4061-b112-a2ea051cc7b1",
+            "matched_play_id": "b6647aaa-07a8-43f5-8ff8-64ea1fdefe98",
+            "status": "pending"
+          },
+          {
+            "id": "53111ac4-c387-40b7-838e-8d6e271eba24",
+            "source": "official",
+            "source_actor_name": "中西智也",
+            "source_actor_url": null,
+            "source_work_title": "舞台「KING OF PRISM」Special Event み～んなときめけ！キラメキ☆LIVE",
+            "source_work_url": "https://kinpri-stage.com/news/detail/?id=1135536",
+            "source_year": 2026,
+            "source_role_raw": "涼野ユウ",
+            "source_role_names": [
+              "涼野ユウ"
+            ],
+            "source_cast_group": null,
+            "source_order": 7,
+            "source_credit_key": "a995ee6b364d4bdec544",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kinpri-stage.com/news/detail/?id=1135536",
+                  "checkedAt": "2026-10-24T16:46:46.158Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                },
+                {
+                  "url": "https://sugietaishi.com/contents/1109129",
+                  "checkedAt": "2026-10-24T16:46:46.197Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                },
+                {
+                  "url": "https://fc-sui.net/contents/1102483",
+                  "checkedAt": "2026-10-24T16:46:46.281Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                }
+              ],
+              "source_fingerprint": "edf70cc12f707f384dc98f8bb28361b972e6b4756a46f2550826505b343c00af",
+              "review_fingerprint": "c97b1d6f5894fcbe3a1886ab417895873516958b1eff3480a612a5f874a3590d",
+              "snapshot_fingerprint": "c70fcd902f667812ba1255d89b454069c1c62afe972877ee37aa7c71c35f11ba",
+              "identity": "reviewed_link",
+              "raw_credit": {
+                "sourceActorName": "中西智也",
+                "sourceActorUrl": null,
+                "role_name": "涼野ユウ",
+                "cast_group": null,
+                "rawLine": "涼野ユウ：中西智也"
+              },
+              "performance_status": "announced_not_yet_performed",
+              "checked_at": "2026-10-24T16:46:46.158Z"
+            },
+            "matched_actor_id": "14eb7849-874e-49ad-8729-793890561b40",
+            "matched_play_id": "b6647aaa-07a8-43f5-8ff8-64ea1fdefe98",
+            "status": "pending"
+          },
+          {
+            "id": "0891fde7-2f9e-4595-8d8d-f2b190151530",
+            "source": "official",
+            "source_actor_name": "小南光司",
+            "source_actor_url": null,
+            "source_work_title": "舞台「KING OF PRISM」Special Event み～んなときめけ！キラメキ☆LIVE",
+            "source_work_url": "https://kinpri-stage.com/news/detail/?id=1135536",
+            "source_year": 2026,
+            "source_role_raw": "神浜コウジ",
+            "source_role_names": [
+              "神浜コウジ"
+            ],
+            "source_cast_group": null,
+            "source_order": 8,
+            "source_credit_key": "e7c7cc2cb4448516eba9",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kinpri-stage.com/news/detail/?id=1135536",
+                  "checkedAt": "2026-10-24T16:46:46.158Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                },
+                {
+                  "url": "https://sugietaishi.com/contents/1109129",
+                  "checkedAt": "2026-10-24T16:46:46.197Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                },
+                {
+                  "url": "https://fc-sui.net/contents/1102483",
+                  "checkedAt": "2026-10-24T16:46:46.281Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                }
+              ],
+              "source_fingerprint": "edf70cc12f707f384dc98f8bb28361b972e6b4756a46f2550826505b343c00af",
+              "review_fingerprint": "c97b1d6f5894fcbe3a1886ab417895873516958b1eff3480a612a5f874a3590d",
+              "snapshot_fingerprint": "c70fcd902f667812ba1255d89b454069c1c62afe972877ee37aa7c71c35f11ba",
+              "identity": "reviewed_link",
+              "raw_credit": {
+                "sourceActorName": "小南光司",
+                "sourceActorUrl": null,
+                "role_name": "神浜コウジ",
+                "cast_group": null,
+                "rawLine": "神浜コウジ：小南光司"
+              },
+              "performance_status": "announced_not_yet_performed",
+              "checked_at": "2026-10-24T16:46:46.158Z"
+            },
+            "matched_actor_id": "f228ab9b-58cc-4660-98c6-d86cca07cb1e",
+            "matched_play_id": "b6647aaa-07a8-43f5-8ff8-64ea1fdefe98",
+            "status": "pending"
+          },
+          {
+            "id": "c4bd344d-9ad4-494e-9a20-ee12e42db73c",
+            "source": "official",
+            "source_actor_name": "杉江大志",
+            "source_actor_url": null,
+            "source_work_title": "舞台「KING OF PRISM」Special Event み～んなときめけ！キラメキ☆LIVE",
+            "source_work_url": "https://kinpri-stage.com/news/detail/?id=1135536",
+            "source_year": 2026,
+            "source_role_raw": "速水ヒロ",
+            "source_role_names": [
+              "速水ヒロ"
+            ],
+            "source_cast_group": null,
+            "source_order": 9,
+            "source_credit_key": "c76cb1ec51678799a34e",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kinpri-stage.com/news/detail/?id=1135536",
+                  "checkedAt": "2026-10-24T16:46:46.158Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                },
+                {
+                  "url": "https://sugietaishi.com/contents/1109129",
+                  "checkedAt": "2026-10-24T16:46:46.197Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                },
+                {
+                  "url": "https://fc-sui.net/contents/1102483",
+                  "checkedAt": "2026-10-24T16:46:46.281Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                }
+              ],
+              "source_fingerprint": "edf70cc12f707f384dc98f8bb28361b972e6b4756a46f2550826505b343c00af",
+              "review_fingerprint": "c97b1d6f5894fcbe3a1886ab417895873516958b1eff3480a612a5f874a3590d",
+              "snapshot_fingerprint": "c70fcd902f667812ba1255d89b454069c1c62afe972877ee37aa7c71c35f11ba",
+              "identity": "reviewed_link",
+              "raw_credit": {
+                "sourceActorName": "杉江大志",
+                "sourceActorUrl": null,
+                "role_name": "速水ヒロ",
+                "cast_group": null,
+                "rawLine": "速水ヒロ：杉江大志"
+              },
+              "performance_status": "announced_not_yet_performed",
+              "checked_at": "2026-10-24T16:46:46.158Z"
+            },
+            "matched_actor_id": "1ae8e0b4-b42c-46aa-8d23-bac885531af6",
+            "matched_play_id": "b6647aaa-07a8-43f5-8ff8-64ea1fdefe98",
+            "status": "pending"
+          },
+          {
+            "id": "4b232fbb-73ca-453f-93a6-b7fcbed7739d",
+            "source": "official",
+            "source_actor_name": "大見拓土",
+            "source_actor_url": null,
+            "source_work_title": "舞台「KING OF PRISM」Special Event み～んなときめけ！キラメキ☆LIVE",
+            "source_work_url": "https://kinpri-stage.com/news/detail/?id=1135536",
+            "source_year": 2026,
+            "source_role_raw": "仁科カヅキ",
+            "source_role_names": [
+              "仁科カヅキ"
+            ],
+            "source_cast_group": null,
+            "source_order": 10,
+            "source_credit_key": "bde06e8cda868d393a3e",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kinpri-stage.com/news/detail/?id=1135536",
+                  "checkedAt": "2026-10-24T16:46:46.158Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                },
+                {
+                  "url": "https://sugietaishi.com/contents/1109129",
+                  "checkedAt": "2026-10-24T16:46:46.197Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                },
+                {
+                  "url": "https://fc-sui.net/contents/1102483",
+                  "checkedAt": "2026-10-24T16:46:46.281Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                }
+              ],
+              "source_fingerprint": "edf70cc12f707f384dc98f8bb28361b972e6b4756a46f2550826505b343c00af",
+              "review_fingerprint": "c97b1d6f5894fcbe3a1886ab417895873516958b1eff3480a612a5f874a3590d",
+              "snapshot_fingerprint": "c70fcd902f667812ba1255d89b454069c1c62afe972877ee37aa7c71c35f11ba",
+              "identity": "reviewed_link",
+              "raw_credit": {
+                "sourceActorName": "大見拓土",
+                "sourceActorUrl": null,
+                "role_name": "仁科カヅキ",
+                "cast_group": null,
+                "rawLine": "仁科カヅキ：大見拓土"
+              },
+              "performance_status": "announced_not_yet_performed",
+              "checked_at": "2026-10-24T16:46:46.158Z"
+            },
+            "matched_actor_id": "29728783-f36a-46b4-b1b3-d1cd59456b6c",
+            "matched_play_id": "b6647aaa-07a8-43f5-8ff8-64ea1fdefe98",
+            "status": "pending"
+          },
+          {
+            "id": "9fc4a6b8-92fe-46b7-913c-eeb153f69b06",
+            "source": "official",
+            "source_actor_name": "前内孝文",
+            "source_actor_url": null,
+            "source_work_title": "舞台「KING OF PRISM」Special Event み～んなときめけ！キラメキ☆LIVE",
+            "source_work_url": "https://kinpri-stage.com/news/detail/?id=1135536",
+            "source_year": 2026,
+            "source_role_raw": "法月仁",
+            "source_role_names": [
+              "法月仁"
+            ],
+            "source_cast_group": null,
+            "source_order": 11,
+            "source_credit_key": "3c0793df2f0d69569078",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kinpri-stage.com/news/detail/?id=1135536",
+                  "checkedAt": "2026-10-24T16:46:46.158Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                },
+                {
+                  "url": "https://sugietaishi.com/contents/1109129",
+                  "checkedAt": "2026-10-24T16:46:46.197Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                },
+                {
+                  "url": "https://fc-sui.net/contents/1102483",
+                  "checkedAt": "2026-10-24T16:46:46.281Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                }
+              ],
+              "source_fingerprint": "edf70cc12f707f384dc98f8bb28361b972e6b4756a46f2550826505b343c00af",
+              "review_fingerprint": "c97b1d6f5894fcbe3a1886ab417895873516958b1eff3480a612a5f874a3590d",
+              "snapshot_fingerprint": "c70fcd902f667812ba1255d89b454069c1c62afe972877ee37aa7c71c35f11ba",
+              "identity": "reviewed_link",
+              "raw_credit": {
+                "sourceActorName": "前内孝文",
+                "sourceActorUrl": null,
+                "role_name": "法月 仁",
+                "cast_group": null,
+                "rawLine": "法月 仁：前内孝文"
+              },
+              "performance_status": "announced_not_yet_performed",
+              "checked_at": "2026-10-24T16:46:46.158Z"
+            },
+            "matched_actor_id": "0f9ba9b7-eb3e-4fee-a5bb-4a77acbc42b0",
+            "matched_play_id": "b6647aaa-07a8-43f5-8ff8-64ea1fdefe98",
+            "status": "pending"
+          },
+          {
+            "id": "52bf6f3e-cbde-47f8-858a-cd61c32ee263",
+            "source": "official",
+            "source_actor_name": "小野健斗",
+            "source_actor_url": null,
+            "source_work_title": "舞台「KING OF PRISM」Special Event み～んなときめけ！キラメキ☆LIVE",
+            "source_work_url": "https://kinpri-stage.com/news/detail/?id=1135536",
+            "source_year": 2026,
+            "source_role_raw": "氷室聖",
+            "source_role_names": [
+              "氷室聖"
+            ],
+            "source_cast_group": null,
+            "source_order": 12,
+            "source_credit_key": "2d30dd48d14f1c62086b",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kinpri-stage.com/news/detail/?id=1135536",
+                  "checkedAt": "2026-10-24T16:46:46.158Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                },
+                {
+                  "url": "https://sugietaishi.com/contents/1109129",
+                  "checkedAt": "2026-10-24T16:46:46.197Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                },
+                {
+                  "url": "https://fc-sui.net/contents/1102483",
+                  "checkedAt": "2026-10-24T16:46:46.281Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                }
+              ],
+              "source_fingerprint": "edf70cc12f707f384dc98f8bb28361b972e6b4756a46f2550826505b343c00af",
+              "review_fingerprint": "c97b1d6f5894fcbe3a1886ab417895873516958b1eff3480a612a5f874a3590d",
+              "snapshot_fingerprint": "c70fcd902f667812ba1255d89b454069c1c62afe972877ee37aa7c71c35f11ba",
+              "identity": "reviewed_link",
+              "raw_credit": {
+                "sourceActorName": "小野健斗",
+                "sourceActorUrl": null,
+                "role_name": "氷室 聖",
+                "cast_group": null,
+                "rawLine": "氷室 聖：小野健斗"
+              },
+              "performance_status": "announced_not_yet_performed",
+              "checked_at": "2026-10-24T16:46:46.158Z"
+            },
+            "matched_actor_id": "6e2be005-e320-4dd1-90f2-bee991a3db3c",
+            "matched_play_id": "b6647aaa-07a8-43f5-8ff8-64ea1fdefe98",
+            "status": "pending"
+          },
+          {
+            "id": "cf5e0565-2b33-4800-965b-60a9836df78e",
+            "source": "official",
+            "source_actor_name": "及川洸",
+            "source_actor_url": null,
+            "source_work_title": "舞台「KING OF PRISM」Special Event み～んなときめけ！キラメキ☆LIVE",
+            "source_work_url": "https://kinpri-stage.com/news/detail/?id=1135536",
+            "source_year": 2026,
+            "source_role_raw": "黒川冷",
+            "source_role_names": [
+              "黒川冷"
+            ],
+            "source_cast_group": null,
+            "source_order": 13,
+            "source_credit_key": "35d77b3aed7a00816a30",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kinpri-stage.com/news/detail/?id=1135536",
+                  "checkedAt": "2026-10-24T16:46:46.158Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                },
+                {
+                  "url": "https://sugietaishi.com/contents/1109129",
+                  "checkedAt": "2026-10-24T16:46:46.197Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                },
+                {
+                  "url": "https://fc-sui.net/contents/1102483",
+                  "checkedAt": "2026-10-24T16:46:46.281Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                }
+              ],
+              "source_fingerprint": "edf70cc12f707f384dc98f8bb28361b972e6b4756a46f2550826505b343c00af",
+              "review_fingerprint": "c97b1d6f5894fcbe3a1886ab417895873516958b1eff3480a612a5f874a3590d",
+              "snapshot_fingerprint": "c70fcd902f667812ba1255d89b454069c1c62afe972877ee37aa7c71c35f11ba",
+              "identity": "reviewed_link",
+              "raw_credit": {
+                "sourceActorName": "及川 洸",
+                "sourceActorUrl": null,
+                "role_name": "黒川 冷",
+                "cast_group": null,
+                "rawLine": "黒川 冷：及川 洸"
+              },
+              "performance_status": "announced_not_yet_performed",
+              "checked_at": "2026-10-24T16:46:46.158Z"
+            },
+            "matched_actor_id": "9b029540-868d-4398-bfaf-0af0035178ee",
+            "matched_play_id": "b6647aaa-07a8-43f5-8ff8-64ea1fdefe98",
+            "status": "pending"
+          },
+          {
+            "id": "85f91b2d-04a0-4210-9059-7962e49ac6c5",
+            "source": "official",
+            "source_actor_name": "安里勇哉",
+            "source_actor_url": null,
+            "source_work_title": "舞台「KING OF PRISM」Special Event み～んなときめけ！キラメキ☆LIVE",
+            "source_work_url": "https://kinpri-stage.com/news/detail/?id=1135536",
+            "source_year": 2026,
+            "source_role_raw": "山田リョウ",
+            "source_role_names": [
+              "山田リョウ"
+            ],
+            "source_cast_group": null,
+            "source_order": 14,
+            "source_credit_key": "844839bd65196e4ca2e7",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kinpri-stage.com/news/detail/?id=1135536",
+                  "checkedAt": "2026-10-24T16:46:46.158Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                },
+                {
+                  "url": "https://sugietaishi.com/contents/1109129",
+                  "checkedAt": "2026-10-24T16:46:46.197Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                },
+                {
+                  "url": "https://fc-sui.net/contents/1102483",
+                  "checkedAt": "2026-10-24T16:46:46.281Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                }
+              ],
+              "source_fingerprint": "edf70cc12f707f384dc98f8bb28361b972e6b4756a46f2550826505b343c00af",
+              "review_fingerprint": "c97b1d6f5894fcbe3a1886ab417895873516958b1eff3480a612a5f874a3590d",
+              "snapshot_fingerprint": "c70fcd902f667812ba1255d89b454069c1c62afe972877ee37aa7c71c35f11ba",
+              "identity": "reviewed_link",
+              "raw_credit": {
+                "sourceActorName": "安里勇哉",
+                "sourceActorUrl": null,
+                "role_name": "山田リョウ",
+                "cast_group": null,
+                "rawLine": "山田リョウ：安里勇哉"
+              },
+              "performance_status": "announced_not_yet_performed",
+              "checked_at": "2026-10-24T16:46:46.158Z"
+            },
+            "matched_actor_id": "6415d71e-7608-4ed2-bac0-dc5b3e6d4b80",
+            "matched_play_id": "b6647aaa-07a8-43f5-8ff8-64ea1fdefe98",
+            "status": "pending"
+          },
+          {
+            "id": "2b6fe745-0840-4c7f-adbd-fb87161d7136",
+            "source": "official",
+            "source_actor_name": "加藤将",
+            "source_actor_url": null,
+            "source_work_title": "舞台「KING OF PRISM」Special Event み～んなときめけ！キラメキ☆LIVE",
+            "source_work_url": "https://kinpri-stage.com/news/detail/?id=1135536",
+            "source_year": 2026,
+            "source_role_raw": "大和アレクサンダー",
+            "source_role_names": [
+              "大和アレクサンダー"
+            ],
+            "source_cast_group": null,
+            "source_order": 15,
+            "source_credit_key": "cdade7dc2d4fd6821c17",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kinpri-stage.com/news/detail/?id=1135536",
+                  "checkedAt": "2026-10-24T16:46:46.158Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                },
+                {
+                  "url": "https://sugietaishi.com/contents/1109129",
+                  "checkedAt": "2026-10-24T16:46:46.197Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                },
+                {
+                  "url": "https://fc-sui.net/contents/1102483",
+                  "checkedAt": "2026-10-24T16:46:46.281Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                }
+              ],
+              "source_fingerprint": "edf70cc12f707f384dc98f8bb28361b972e6b4756a46f2550826505b343c00af",
+              "review_fingerprint": "c97b1d6f5894fcbe3a1886ab417895873516958b1eff3480a612a5f874a3590d",
+              "snapshot_fingerprint": "c70fcd902f667812ba1255d89b454069c1c62afe972877ee37aa7c71c35f11ba",
+              "identity": "reviewed_link",
+              "raw_credit": {
+                "sourceActorName": "加藤 将",
+                "sourceActorUrl": null,
+                "role_name": "大和アレクサンダー",
+                "cast_group": null,
+                "rawLine": "大和アレクサンダー：加藤 将"
+              },
+              "performance_status": "announced_not_yet_performed",
+              "checked_at": "2026-10-24T16:46:46.158Z"
+            },
+            "matched_actor_id": "f77be081-0690-4fef-b86e-10790f78e1df",
+            "matched_play_id": "b6647aaa-07a8-43f5-8ff8-64ea1fdefe98",
+            "status": "pending"
+          },
+          {
+            "id": "76ac564d-ee21-43c5-90fd-b31455c064a5",
+            "source": "official",
+            "source_actor_name": "古谷大和",
+            "source_actor_url": null,
+            "source_work_title": "舞台「KING OF PRISM」Special Event み～んなときめけ！キラメキ☆LIVE",
+            "source_work_url": "https://kinpri-stage.com/news/detail/?id=1135536",
+            "source_year": 2026,
+            "source_role_raw": "高田馬場ジョージ",
+            "source_role_names": [
+              "高田馬場ジョージ"
+            ],
+            "source_cast_group": null,
+            "source_order": 16,
+            "source_credit_key": "8c5a9715b3d24889d204",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kinpri-stage.com/news/detail/?id=1135536",
+                  "checkedAt": "2026-10-24T16:46:46.158Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                },
+                {
+                  "url": "https://sugietaishi.com/contents/1109129",
+                  "checkedAt": "2026-10-24T16:46:46.197Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                },
+                {
+                  "url": "https://fc-sui.net/contents/1102483",
+                  "checkedAt": "2026-10-24T16:46:46.281Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                }
+              ],
+              "source_fingerprint": "edf70cc12f707f384dc98f8bb28361b972e6b4756a46f2550826505b343c00af",
+              "review_fingerprint": "c97b1d6f5894fcbe3a1886ab417895873516958b1eff3480a612a5f874a3590d",
+              "snapshot_fingerprint": "c70fcd902f667812ba1255d89b454069c1c62afe972877ee37aa7c71c35f11ba",
+              "identity": "reviewed_link",
+              "raw_credit": {
+                "sourceActorName": "古谷大和",
+                "sourceActorUrl": null,
+                "role_name": "高田馬場ジョージ",
+                "cast_group": null,
+                "rawLine": "高田馬場ジョージ：古谷大和"
+              },
+              "performance_status": "announced_not_yet_performed",
+              "checked_at": "2026-10-24T16:46:46.158Z"
+            },
+            "matched_actor_id": "73a7a70b-d661-445f-82de-5a7d81d95c55",
+            "matched_play_id": "b6647aaa-07a8-43f5-8ff8-64ea1fdefe98",
+            "status": "pending"
+          },
+          {
+            "id": "17130197-82e0-4114-9404-dd3c5d76ae62",
+            "source": "official",
+            "source_actor_name": "小林竜之",
+            "source_actor_url": null,
+            "source_work_title": "舞台「KING OF PRISM」Special Event み～んなときめけ！キラメキ☆LIVE",
+            "source_work_url": "https://kinpri-stage.com/news/detail/?id=1135536",
+            "source_year": 2026,
+            "source_role_raw": "池袋エィス",
+            "source_role_names": [
+              "池袋エィス"
+            ],
+            "source_cast_group": null,
+            "source_order": 17,
+            "source_credit_key": "927f26af0596580623f5",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kinpri-stage.com/news/detail/?id=1135536",
+                  "checkedAt": "2026-10-24T16:46:46.158Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                },
+                {
+                  "url": "https://sugietaishi.com/contents/1109129",
+                  "checkedAt": "2026-10-24T16:46:46.197Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                },
+                {
+                  "url": "https://fc-sui.net/contents/1102483",
+                  "checkedAt": "2026-10-24T16:46:46.281Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                }
+              ],
+              "source_fingerprint": "edf70cc12f707f384dc98f8bb28361b972e6b4756a46f2550826505b343c00af",
+              "review_fingerprint": "c97b1d6f5894fcbe3a1886ab417895873516958b1eff3480a612a5f874a3590d",
+              "snapshot_fingerprint": "c70fcd902f667812ba1255d89b454069c1c62afe972877ee37aa7c71c35f11ba",
+              "identity": "reviewed_link",
+              "raw_credit": {
+                "sourceActorName": "小林竜之",
+                "sourceActorUrl": null,
+                "role_name": "池袋エィス",
+                "cast_group": null,
+                "rawLine": "池袋エィス：小林竜之"
+              },
+              "performance_status": "announced_not_yet_performed",
+              "checked_at": "2026-10-24T16:46:46.158Z"
+            },
+            "matched_actor_id": "4a750bf8-2ca2-4aef-8248-ad3a8e8ecdb8",
+            "matched_play_id": "b6647aaa-07a8-43f5-8ff8-64ea1fdefe98",
+            "status": "pending"
+          },
+          {
+            "id": "8da4ac73-ecb3-455b-aa03-df7348094a9f",
+            "source": "official",
+            "source_actor_name": "中山咲月",
+            "source_actor_url": null,
+            "source_work_title": "舞台「KING OF PRISM」Special Event み～んなときめけ！キラメキ☆LIVE",
+            "source_work_url": "https://kinpri-stage.com/news/detail/?id=1135536",
+            "source_year": 2026,
+            "source_role_raw": "神無月アヰ",
+            "source_role_names": [
+              "神無月アヰ"
+            ],
+            "source_cast_group": null,
+            "source_order": 18,
+            "source_credit_key": "66e5b05ecf477dce783b",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kinpri-stage.com/news/detail/?id=1135536",
+                  "checkedAt": "2026-10-24T16:46:46.158Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                },
+                {
+                  "url": "https://sugietaishi.com/contents/1109129",
+                  "checkedAt": "2026-10-24T16:46:46.197Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                },
+                {
+                  "url": "https://fc-sui.net/contents/1102483",
+                  "checkedAt": "2026-10-24T16:46:46.281Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                }
+              ],
+              "source_fingerprint": "edf70cc12f707f384dc98f8bb28361b972e6b4756a46f2550826505b343c00af",
+              "review_fingerprint": "c97b1d6f5894fcbe3a1886ab417895873516958b1eff3480a612a5f874a3590d",
+              "snapshot_fingerprint": "c70fcd902f667812ba1255d89b454069c1c62afe972877ee37aa7c71c35f11ba",
+              "identity": "reviewed_link",
+              "raw_credit": {
+                "sourceActorName": "中山咲月",
+                "sourceActorUrl": null,
+                "role_name": "神無月アヰ",
+                "cast_group": null,
+                "rawLine": "神無月アヰ：中山咲月"
+              },
+              "performance_status": "announced_not_yet_performed",
+              "checked_at": "2026-10-24T16:46:46.158Z"
+            },
+            "matched_actor_id": "2bc144f2-1d70-4e2a-8499-ba183e454769",
+            "matched_play_id": "b6647aaa-07a8-43f5-8ff8-64ea1fdefe98",
+            "status": "pending"
+          },
+          {
+            "id": "de6de8f8-9e5c-4223-9cbf-9dbbeb785c4c",
+            "source": "official",
+            "source_actor_name": "佐々木喜英",
+            "source_actor_url": null,
+            "source_work_title": "舞台「KING OF PRISM」Special Event み～んなときめけ！キラメキ☆LIVE",
+            "source_work_url": "https://kinpri-stage.com/news/detail/?id=1135536",
+            "source_year": 2026,
+            "source_role_raw": "如月ルヰ",
+            "source_role_names": [
+              "如月ルヰ"
+            ],
+            "source_cast_group": null,
+            "source_order": 19,
+            "source_credit_key": "0317fed887a18a831428",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kinpri-stage.com/news/detail/?id=1135536",
+                  "checkedAt": "2026-10-24T16:46:46.158Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                },
+                {
+                  "url": "https://sugietaishi.com/contents/1109129",
+                  "checkedAt": "2026-10-24T16:46:46.197Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                },
+                {
+                  "url": "https://fc-sui.net/contents/1102483",
+                  "checkedAt": "2026-10-24T16:46:46.281Z",
+                  "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+                }
+              ],
+              "source_fingerprint": "edf70cc12f707f384dc98f8bb28361b972e6b4756a46f2550826505b343c00af",
+              "review_fingerprint": "c97b1d6f5894fcbe3a1886ab417895873516958b1eff3480a612a5f874a3590d",
+              "snapshot_fingerprint": "c70fcd902f667812ba1255d89b454069c1c62afe972877ee37aa7c71c35f11ba",
+              "identity": "reviewed_link",
+              "raw_credit": {
+                "sourceActorName": "佐々木喜英",
+                "sourceActorUrl": null,
+                "role_name": "如月ルヰ",
+                "cast_group": null,
+                "rawLine": "如月ルヰ：佐々木喜英"
+              },
+              "performance_status": "announced_not_yet_performed",
+              "checked_at": "2026-10-24T16:46:46.158Z"
+            },
+            "matched_actor_id": "2138a9e5-e342-4e25-949e-be41e86910c2",
+            "matched_play_id": "b6647aaa-07a8-43f5-8ff8-64ea1fdefe98",
+            "status": "pending"
+          }
+        ]
+      },
+      "records": [
+        {
+          "actor": {
+            "id": "8c763fc9-8fdf-4f23-9558-51c5b053ab2e",
+            "slug": "tamura-shogo",
+            "name": "田村 升吾",
+            "kana": "たむら しょうご",
+            "profile": "栃木県出身の俳優。SUI所属。ミュージカル『テニスの王子様』3rdシーズン（芥川慈郎役）やミュージカル『刀剣乱舞』シリーズ（篭手切江役）、舞台『魔法使いの約束』シリーズ（シノ役）等の舞台作品を中心に出演している。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/shogo_tamura",
+              "official": "https://fc-sui.net/tamura_shogo"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:10:00.631722+00:00",
+            "updated_at": "2026-03-21T15:10:00.631722+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1998-05-30",
+            "height_cm": 170,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Tochigi Prefecture. Affiliated with SUI. He primarily appears in stage works such as the musical \"The Prince of Tennis\" 3rd season (as Jiro Akutagawa), the musical \"Touken Ranbu\" series (as Kotegiri Gou), and the stage play \"Promise of Wizard\" series (as Shino).",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "田村升吾",
+            "sourceActorUrl": null,
+            "role_name": "一条シン",
+            "cast_group": null
+          },
+          "sourceCreditKey": "f46c177bcc0d17d38b43",
+          "sourceOrder": 1,
+          "billingOrder": 1,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "5b634cd8-f8b7-4f15-8430-ef2288a2e77f",
+            "slug": "yokoi-shojiro",
+            "name": "横井翔二郎",
+            "kana": "よこいしょうじろう",
+            "profile": null,
+            "image_url": null,
+            "sns": null,
+            "gender": null,
+            "created_at": "2026-10-18T10:25:13.748723+00:00",
+            "updated_at": "2026-10-18T10:25:13.748723+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1991-01-28",
+            "height_cm": 175,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "横井翔二郎",
+            "sourceActorUrl": null,
+            "role_name": "太刀花ユキノジョウ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "ea52a424e7cf94038ee7",
+          "sourceOrder": 2,
+          "billingOrder": 2,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "4b3110ab-0d88-4a68-8a1d-ed0fcac335ff",
+            "slug": "nagae-ryoki",
+            "name": "長江崚行",
+            "kana": "ながえ りょうき",
+            "profile": "大阪府出身の俳優。NHK『天才てれびくん』シリーズに出演。ミュージカル『ヘタリア』のイタリア役、舞台『文豪ストレイドッグス』の江戸川乱歩役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-19T12:13:27.742892+00:00",
+            "updated_at": "2026-10-19T12:13:27.742892+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1998-08-26",
+            "height_cm": 177,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": "Ryoki Nagae",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "長江崚行",
+            "sourceActorUrl": null,
+            "role_name": "香賀美タイガ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "04190d2f067c99336e1d",
+          "sourceOrder": 3,
+          "billingOrder": 3,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "7e766d26-1dcc-48ec-971c-65074b978609",
+            "slug": "murakami-yoshiki",
+            "name": "村上喜紀",
+            "kana": "むらかみ よしき",
+            "profile": "京都府出身の声優・俳優。アクロス エンタテインメント所属。アニメ『美男高校地球防衛部LOVE!LOVE!』の別府日彦役、舞台『KING OF PRISM』の十王院カケル役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-24T15:28:00.483227+00:00",
+            "updated_at": "2026-10-24T15:28:00.483227+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1993-10-29",
+            "height_cm": 173,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": "Yoshiki Murakami",
+            "profile_en": "A voice actor and stage actor from Kyoto, represented by ACROSS ENTERTAINMENT. His credits include the anime Cute High Earth Defense Club LOVE! LOVE! and the role of Kakeru Juoin in the stage series KING OF PRISM.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "村上喜紀",
+            "sourceActorUrl": null,
+            "role_name": "十王院カケル",
+            "cast_group": null
+          },
+          "sourceCreditKey": "3e5e4916d2371501e436",
+          "sourceOrder": 4,
+          "billingOrder": 4,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "2b667657-04d1-470b-9120-2a83bc8e9478",
+            "slug": "igarashi-masashi",
+            "name": "五十嵐雅",
+            "kana": "いがらし まさし",
+            "profile": "静岡県出身の声優・俳優。アクロス エンタテインメント所属。『KING OF PRISM』の鷹梁ミナトをアニメと舞台で演じ、ゲーム『A3!』ではシトロン役を務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-24T15:28:00.483227+00:00",
+            "updated_at": "2026-10-24T15:28:00.483227+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1983-11-04",
+            "height_cm": 166,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Masashi Igarashi",
+            "profile_en": "A voice actor and stage actor from Shizuoka, represented by ACROSS ENTERTAINMENT. He plays Minato Takahashi in both the anime and stage versions of KING OF PRISM and voices Citron in the game A3!.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "五十嵐雅",
+            "sourceActorUrl": null,
+            "role_name": "鷹梁ミナト",
+            "cast_group": null
+          },
+          "sourceCreditKey": "789b107db752ebc9db0a",
+          "sourceOrder": 5,
+          "billingOrder": 5,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "fc26f546-a09d-4061-b112-a2ea051cc7b1",
+            "slug": "takanashi-ren",
+            "name": "高梨怜",
+            "kana": "たかなし れん",
+            "profile": "京都府出身の俳優。SUI所属。Experimental Theater『結合男子』の鍛炭六花役、MANKAI STAGE『A3!』の瑠璃川幸役などを務める。舞台『KING OF PRISM』では西園寺レオを演じる。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-24T16:38:12.297755+00:00",
+            "updated_at": "2026-10-24T16:38:12.297755+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1998-07-06",
+            "height_cm": 163,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": "Takanashi Ren",
+            "profile_en": "An actor from Kyoto, represented by SUI. His stage credits include Experimental Theater Ketsugou Danshi and MANKAI STAGE A3!. He plays Leo Saionji in the stage series KING OF PRISM.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "高梨怜",
+            "sourceActorUrl": null,
+            "role_name": "西園寺レオ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "6af6806b37c089c9886a",
+          "sourceOrder": 6,
+          "billingOrder": 6,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "14eb7849-874e-49ad-8729-793890561b40",
+            "slug": "nakanishi-tomoya",
+            "name": "中西 智也",
+            "kana": "なかにし ともや",
+            "profile": "福島県出身の俳優。マリー社所属。代々木アニメーション学院2.5次元演劇科在学中より舞台に出演し、2021年の舞台『あんさんぶるスターズ！ エクストラ・ステージ』～Meteor Lights～（南雲鉄虎役）で本格的にデビューを果たした。ミュージカル『新テニスの王子様』The First Stageにおいて「テニミュボーイズ」として出演したほか、舞台『ヒプノシスマイク -Division Rap Battle-』Rule the Stage（波羅夷空却役）、ミュージカル『進撃の巨人』-the Musical-等の舞台作品を中心に出演している。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/nkns__tomoya",
+              "official": "https://tomoyanakanishi.com/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:13:20.008797+00:00",
+            "updated_at": "2026-03-21T15:13:20.008797+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1999-11-30",
+            "height_cm": 165,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Fukushima Prefecture. Affiliated with Marrysha. He appeared on stage while studying in the 2.5D Theater Department at Yoyogi Animation Academy and made his full-fledged debut in the 2021 stage play \"Ensemble Stars! Extra Stage\" ~Meteor Lights~ (as Tetora Nagumo). He appeared as a member of the \"Tennimyu Boys\" in the musical \"The New Prince of Tennis\" The First Stage, and primarily appears in stage works such as \"Hypnosis Mic -Division Rap Battle-\" Rule the Stage (as Kuko Harai) and \"Attack on Titan: The Musical\".",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "中西智也",
+            "sourceActorUrl": null,
+            "role_name": "涼野ユウ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "a995ee6b364d4bdec544",
+          "sourceOrder": 7,
+          "billingOrder": 7,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "f228ab9b-58cc-4660-98c6-d86cca07cb1e",
+            "slug": "kominami-koji",
+            "name": "小南光司",
+            "kana": "こみなみこうじ",
+            "profile": null,
+            "image_url": null,
+            "sns": null,
+            "gender": null,
+            "created_at": "2026-10-17T08:00:21.084443+00:00",
+            "updated_at": "2026-10-17T08:00:21.084443+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1994-12-12",
+            "height_cm": 181,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "小南光司",
+            "sourceActorUrl": null,
+            "role_name": "神浜コウジ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "e7c7cc2cb4448516eba9",
+          "sourceOrder": 8,
+          "billingOrder": 8,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "1ae8e0b4-b42c-46aa-8d23-bac885531af6",
+            "slug": "sugie-taishi",
+            "name": "杉江 大志",
+            "kana": "すぎえ たいし",
+            "profile": "滋賀県出身の俳優。えりオフィス所属。ミュージカル『テニスの王子様』2ndシーズン（一氏ユウジ役）や舞台『刀剣乱舞』（鯰尾藤四郎役）、ミュージカル『ヘタリア』（中国役）、ミュージカル『スタミュ』（星谷悠太役）等の舞台作品に出演。また、映画やテレビドラマ等の映像作品にも出演している。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/SugieTaishi",
+              "official": "https://sugietaishi.com/",
+              "instagram": "https://www.instagram.com/taishisugie?igsh=MXA3b3A3NnIzZTRjMw%3D%3D&utm_source=qr"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:06:19.306372+00:00",
+            "updated_at": "2026-03-21T15:06:19.306372+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1992-05-07",
+            "height_cm": 171,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Shiga Prefecture. Affiliated with Eri Office. He has appeared in stage works such as the musical \"The Prince of Tennis\" 2nd season (as Yuji Hitouji), the stage play \"Touken Ranbu\" (as Namazuo Toushirou), the musical \"Hetalia\" (as China), and the musical \"STARMYU\" (as Yuta Hoshitani). He has also appeared in film and television works.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "杉江大志",
+            "sourceActorUrl": null,
+            "role_name": "速水ヒロ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "c76cb1ec51678799a34e",
+          "sourceOrder": 9,
+          "billingOrder": 9,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "29728783-f36a-46b4-b1b3-d1cd59456b6c",
+            "slug": "ohmi-takuto",
+            "name": "大見 拓土",
+            "kana": "おおみ たくと",
+            "profile": "青森県出身の俳優。AYRTON所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/ohmi_takuto",
+              "official": "https://ohmi-takuto.com/",
+              "instagram": "https://www.instagram.com/takuto_ohmi/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-31T16:11:44.437175+00:00",
+            "updated_at": "2026-03-31T16:11:44.437175+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1994-07-05",
+            "height_cm": 165,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "大見拓土",
+            "sourceActorUrl": null,
+            "role_name": "仁科カヅキ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "bde06e8cda868d393a3e",
+          "sourceOrder": 10,
+          "billingOrder": 10,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "0f9ba9b7-eb3e-4fee-a5bb-4a77acbc42b0",
+            "slug": "maeuchi-takafumi",
+            "name": "前内孝文",
+            "kana": "まえうち たかふみ",
+            "profile": "俳優・声優。ミュージカル『忍たま乱太郎』の食満留三郎役、ミュージカル『薄桜鬼』の大鳥圭介役などを務める。舞台『KING OF PRISM』では法月仁を演じる。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-24T15:28:00.483227+00:00",
+            "updated_at": "2026-10-24T15:28:00.483227+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1985-12-25",
+            "height_cm": 174,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": "Takafumi Maeuchi",
+            "profile_en": "An actor and voice actor whose roles include Tomesaburo Kema in the Nintama Rantaro musical and Keisuke Otori in the Hakuoki musical. He plays Jin Norizuki in the stage production KING OF PRISM.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "前内孝文",
+            "sourceActorUrl": null,
+            "role_name": "法月仁",
+            "cast_group": null
+          },
+          "sourceCreditKey": "3c0793df2f0d69569078",
+          "sourceOrder": 11,
+          "billingOrder": 11,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "6e2be005-e320-4dd1-90f2-bee991a3db3c",
+            "slug": "ono-kento",
+            "name": "小野 健斗",
+            "kana": "おの けんと",
+            "profile": "神奈川県横浜市生まれ、東京都育ちの俳優・モデル。フロムファーストプロダクション所属",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/kento_leo9",
+              "instagram": "https://www.instagram.com/kento_ono/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T14:53:11.103962+00:00",
+            "updated_at": "2026-03-21T14:53:11.103962+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1989-08-09",
+            "height_cm": 187,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "小野健斗",
+            "sourceActorUrl": null,
+            "role_name": "氷室聖",
+            "cast_group": null
+          },
+          "sourceCreditKey": "2d30dd48d14f1c62086b",
+          "sourceOrder": 12,
+          "billingOrder": 12,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "9b029540-868d-4398-bfaf-0af0035178ee",
+            "slug": "oikawa-ko",
+            "name": "及川洸",
+            "kana": "おいかわ こう",
+            "profile": "北海道出身の俳優・モデル。舞台『KING OF PRISM -Shiny Rose Stars-』で黒川冷を演じる。東京ワンピースタワーのライブアトラクションではウソップ役やエース役を務めた。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-24T16:06:38.32371+00:00",
+            "updated_at": "2026-10-24T16:06:38.32371+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1989-05-22",
+            "height_cm": 175,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor and model from Hokkaido. He plays Rei Kurokawa in KING OF PRISM -Shiny Rose Stars-. His credits at Tokyo One Piece Tower include Usopp and Ace in its live attractions.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "及川洸",
+            "sourceActorUrl": null,
+            "role_name": "黒川冷",
+            "cast_group": null
+          },
+          "sourceCreditKey": "35d77b3aed7a00816a30",
+          "sourceOrder": 13,
+          "billingOrder": 13,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "6415d71e-7608-4ed2-bac0-dc5b3e6d4b80",
+            "slug": "asato-yuya",
+            "name": "安里勇哉",
+            "kana": "あさと ゆうや",
+            "profile": "沖縄県出身の俳優。ルビーパレード所属。ショーボーイユニット『TOKYO流星群』のメンバー。舞台『フルーツバスケット』の草摩紫呉役など、舞台を中心に活動している。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-20T13:06:44.037599+00:00",
+            "updated_at": "2026-10-20T13:06:44.037599+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1987-12-04",
+            "height_cm": 180,
+            "blood_type": "AB",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "安里勇哉",
+            "sourceActorUrl": null,
+            "role_name": "山田リョウ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "844839bd65196e4ca2e7",
+          "sourceOrder": 14,
+          "billingOrder": 14,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "f77be081-0690-4fef-b86e-10790f78e1df",
+            "slug": "kato-sho",
+            "name": "加藤 将",
+            "kana": "かとう しょう",
+            "profile": "兵庫県出身の俳優。TRUSTAR所属。ミュージカル『テニスの王子様』3rdシーズン（乾貞治役）をはじめ、舞台『刀剣乱舞』シリーズ（大包平役）、舞台『逆転裁判 -逆転のGOLD MEDAL-』（成歩堂龍一役）等の舞台作品を中心に出演。また、映画『刀剣乱舞-黎明-』やテレビドラマ等の映像作品にも出演している。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/sho_kato_",
+              "official": "https://kato-sho.com/",
+              "instagram": "https://www.instagram.com/sho_kato0921"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:10:00.631722+00:00",
+            "updated_at": "2026-03-21T15:10:00.631722+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1992-09-21",
+            "height_cm": 186,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Hyogo Prefecture. Affiliated with TRUSTAR. He primarily appears in stage works such as the musical \"The Prince of Tennis\" 3rd season (as Sadaharu Inui), the stage play \"Touken Ranbu\" series (as Ookanehira), and the stage play \"Ace Attorney -Gyakuten no GOLD MEDAL-\" (as Ryuichi Naruhodo). He has also appeared in film and television works such as the movie \"Touken Ranbu The Movie -Dawn-\".",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "加藤将",
+            "sourceActorUrl": null,
+            "role_name": "大和アレクサンダー",
+            "cast_group": null
+          },
+          "sourceCreditKey": "cdade7dc2d4fd6821c17",
+          "sourceOrder": 15,
+          "billingOrder": 15,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "73a7a70b-d661-445f-82de-5a7d81d95c55",
+            "slug": "furuya-yamato",
+            "name": "古谷大和",
+            "kana": "ふるや やまと",
+            "profile": "東京都出身の俳優。タイムリーオフィス所属。MANKAI STAGE『A3!』のシトロン役、舞台『KING OF PRISM』の高田馬場ジョージ役などを務める。舞台の演出も手掛ける。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-24T15:28:00.483227+00:00",
+            "updated_at": "2026-10-24T15:28:00.483227+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1991-05-04",
+            "height_cm": 176,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Tokyo, represented by Timely Office. His roles include Citron in MANKAI STAGE A3! and Joji Takadanobaba in the stage series KING OF PRISM. He also directs stage productions.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "古谷大和",
+            "sourceActorUrl": null,
+            "role_name": "高田馬場ジョージ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "8c5a9715b3d24889d204",
+          "sourceOrder": 16,
+          "billingOrder": 16,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "4a750bf8-2ca2-4aef-8248-ad3a8e8ecdb8",
+            "slug": "kobayashi-tatsuyuki",
+            "name": "小林竜之",
+            "kana": "こばやし たつゆき",
+            "profile": "千葉県出身の声優・歌手・俳優。『アイドルタイムプリパラ』の三鷹アサヒ役、舞台『KING OF PRISM』の池袋エィス役などを務める。ミュージカル『Dance with Devils』ではD.C.とFermataでシダ役を担当した。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-20T14:07:42.36094+00:00",
+            "updated_at": "2026-10-20T14:07:42.36094+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1989-04-13",
+            "height_cm": 173,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": "Kobayashi Tatsuyuki",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "小林竜之",
+            "sourceActorUrl": null,
+            "role_name": "池袋エィス",
+            "cast_group": null
+          },
+          "sourceCreditKey": "927f26af0596580623f5",
+          "sourceOrder": 17,
+          "billingOrder": 17,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "2bc144f2-1d70-4e2a-8499-ba183e454769",
+            "slug": "nakayama-satsuki",
+            "name": "中山咲月",
+            "kana": "なかやま さつき",
+            "profile": "東京都出身の俳優・モデル。テンカラット所属。『仮面ライダーゼロワン』の亡役などを務める。『KING OF PRISM』では劇場版アニメと舞台の両方で神無月アヰを演じる。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-24T16:38:12.297755+00:00",
+            "updated_at": "2026-10-24T16:38:12.297755+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1998-09-17",
+            "height_cm": 167,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": "Nakayama Satsuki",
+            "profile_en": "An actor and model from Tokyo, represented by TEN CARAT. Credits include Naki in Kamen Rider Zero-One. Nakayama plays Ai Kannazuki in both the theatrical anime and the stage production KING OF PRISM.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "中山咲月",
+            "sourceActorUrl": null,
+            "role_name": "神無月アヰ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "66e5b05ecf477dce783b",
+          "sourceOrder": 18,
+          "billingOrder": 18,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "2138a9e5-e342-4e25-949e-be41e86910c2",
+            "slug": "sasaki-yoshihide",
+            "name": "佐々木 喜英",
+            "kana": "ささき よしひで",
+            "profile": "東京都出身の俳優・アーティスト。現在はフリーで活動している。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/yoshihidesasaki",
+              "youtube": "https://www.youtube.com/channel/UCY84RM9qp9wducHJJ1q61ig"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:01:26.311999+00:00",
+            "updated_at": "2026-03-21T15:01:26.311999+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1987-10-04",
+            "height_cm": 175,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "佐々木喜英",
+            "sourceActorUrl": null,
+            "role_name": "如月ルヰ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "0317fed887a18a831428",
+          "sourceOrder": 19,
+          "billingOrder": 19,
+          "expectedNote": null,
+          "existingCast": null
+        }
+      ],
+      "legacyCandidates": [],
+      "performanceStatus": "announced_not_yet_performed",
+      "creditOnly": [
+        {
+          "sourceActorName": "相澤友輝",
+          "sourceActorUrl": null,
+          "role_name": null,
+          "cast_group": "アンサンブル",
+          "rawLine": "相澤友輝/東間颯太/岩澤健三郎",
+          "storageDecision": {
+            "target": "plays.credits",
+            "reason": "公式・出演者側で一致するアンサンブル3人。個別俳優ページは作らず本公演の4人と区別。"
+          }
+        },
+        {
+          "sourceActorName": "東間颯太",
+          "sourceActorUrl": null,
+          "role_name": null,
+          "cast_group": "アンサンブル",
+          "rawLine": "相澤友輝/東間颯太/岩澤健三郎",
+          "storageDecision": {
+            "target": "plays.credits",
+            "reason": "公式・出演者側で一致するアンサンブル3人。個別俳優ページは作らず本公演の4人と区別。"
+          }
+        },
+        {
+          "sourceActorName": "岩澤健三郎",
+          "sourceActorUrl": null,
+          "role_name": null,
+          "cast_group": "アンサンブル",
+          "rawLine": "相澤友輝/東間颯太/岩澤健三郎",
+          "storageDecision": {
+            "target": "plays.credits",
+            "reason": "公式・出演者側で一致するアンサンブル3人。個別俳優ページは作らず本公演の4人と区別。"
+          }
+        }
+      ],
+      "exceptions": [
+        "2026年12月31日の開催予定イベント。日英概要と公演期間に予定であることを明記し、告知済み配役を実施済みの確定履歴と説明しない。候補の根拠にも予定状態と確認日時を保持する。",
+        "2026年2〜3月のYour Endless Call本公演とは別作品。19配役は公式と出演者側の告知から全件独立に抽出・照合し、現DBの配役一致は二重確認にのみ使用。",
+        "アンサンブルは相澤友輝・東間颯太・岩澤健三郎の3人。本公演の伊阪颯馬を本イベントへ流用しない。既存本公演の19配役とアンサンブル4人は全項目保全。",
+        "公式の人名・役名内の空白と全半角差だけを採用側で正規化し、原文の各行・順序をrawSourceと候補根拠に保持。読み・別名のグローバル置換は行わない。",
+        "キラハイの現シリーズ一覧は既存4作品のみで、本イベントは未掲載。出典をofficial、実際の公式告知URLで候補へ保存し、Kira専用の候補保存RPCには偽URLを渡さない。採用は既存の汎用RPCを使用する。",
+        "企画・主催は公式のエイベックス・ピクチャーズ。未確認の脚本・演出・音楽等を本公演から流用しない。チケットの料金・受付期限や未発表の配信をvodとして登録しない。",
+        "英題・英訳は編集表記。全19人は既存人物を再利用し、人物プロフィール・過去4作品・過去配役は全項目保全する。"
+      ]
+    }
+  ],
+  "keptPlays": [
+    {
+      "id": "12b4ddee-cc88-41fd-86da-1afa031e8803",
+      "slug": "kop2017",
+      "title": "舞台「KING OF PRISM-Over the Sunshine!-」",
+      "franchise_id": "8cd271e6-0156-4216-b66c-b5f014366cca",
+      "summary": "劇場版アニメ『KING OF PRISM』を原作とする舞台第1作。一条シン役の橋本祥平、神浜コウジ役の小南光司らが出演し、プリズムショーの世界を舞台化する。2017年11月に大阪と東京で上演された。",
+      "period": "大阪：2017年11月2日〜5日／東京：2017年11月8日〜12日",
+      "venue": "大阪：梅田芸術劇場 シアター・ドラマシティ／東京：AiiA 2.5 Theater Tokyo",
+      "vod": {},
+      "genre": null,
+      "created_at": "2026-04-27T16:07:44.469744+00:00",
+      "updated_at": "2026-10-24T15:28:00.483227+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "タカラトミーアーツ",
+            "シンソフィア",
+            "エイベックス・ピクチャーズ",
+            "タツノコプロ"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "脚本",
+          "names": [
+            "青葉譲"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "演出",
+          "names": [
+            "宇治川まさなり"
+          ],
+          "is_core": true,
+          "sort_order": 3
+        },
+        {
+          "role": "音楽",
+          "names": [
+            "石塚玲依"
+          ],
+          "is_core": true,
+          "sort_order": 4
+        },
+        {
+          "role": "主催",
+          "names": [
+            "「KING OF PRISM -Over the Sunshine!-」製作委員会2017"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "劇中歌",
+          "names": [
+            "AstroNoteS"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        },
+        {
+          "role": "美術",
+          "names": [
+            "青木拓也"
+          ],
+          "is_core": false,
+          "sort_order": 7
+        },
+        {
+          "role": "技術監督",
+          "names": [
+            "寅川英司"
+          ],
+          "is_core": false,
+          "sort_order": 8
+        },
+        {
+          "role": "舞台監督",
+          "names": [
+            "山下翼"
+          ],
+          "is_core": false,
+          "sort_order": 9
+        },
+        {
+          "role": "照明",
+          "names": [
+            "田中徹（テイク・ワン）"
+          ],
+          "is_core": false,
+          "sort_order": 10
+        },
+        {
+          "role": "音響",
+          "names": [
+            "ヨシモトシンヤ（カムストック）"
+          ],
+          "is_core": false,
+          "sort_order": 11
+        },
+        {
+          "role": "映像",
+          "names": [
+            "ノアド株式会社"
+          ],
+          "is_core": false,
+          "sort_order": 12
+        },
+        {
+          "role": "衣裳",
+          "names": [
+            "八重樫伸登"
+          ],
+          "is_core": false,
+          "sort_order": 13
+        },
+        {
+          "role": "ヘアメイク",
+          "names": [
+            "車谷結（raftel）"
+          ],
+          "is_core": false,
+          "sort_order": 14
+        },
+        {
+          "role": "小道具",
+          "names": [
+            "羽鳥健一"
+          ],
+          "is_core": false,
+          "sort_order": 15
+        },
+        {
+          "role": "振付",
+          "names": [
+            "FunX（ファンクス）"
+          ],
+          "is_core": false,
+          "sort_order": 16
+        },
+        {
+          "role": "歌唱指導",
+          "names": [
+            "設樂咲枝"
+          ],
+          "is_core": false,
+          "sort_order": 17
+        },
+        {
+          "role": "演出助手",
+          "names": [
+            "村山歩"
+          ],
+          "is_core": false,
+          "sort_order": 18
+        },
+        {
+          "role": "宣伝美術",
+          "names": [
+            "IMAGE JACK"
+          ],
+          "is_core": false,
+          "sort_order": 19
+        },
+        {
+          "role": "制作プロデューサー",
+          "names": [
+            "杉田智彦（アズプロジェクト）"
+          ],
+          "is_core": false,
+          "sort_order": 20
+        },
+        {
+          "role": "アンサンブル",
+          "names": [
+            "梅津大輝",
+            "佐藤一輝",
+            "竹井弘樹",
+            "松田健太郎",
+            "宮越大貴"
+          ],
+          "is_core": false,
+          "sort_order": 21
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "The first stage adaptation of the theatrical anime KING OF PRISM, bringing the world of Prism Shows to the theatre. Shohei Hashimoto plays Shin Ichijo and Koji Kominami plays Koji Mihama. It ran in Osaka and Tokyo in November 2017.",
+      "title_en": "KING OF PRISM -Over the Sunshine!- (2017)"
+    },
+    {
+      "id": "576d6488-3b91-4506-b021-29bab01bf1d9",
+      "slug": "kop2019",
+      "title": "舞台「KING OF PRISM-Rose Party on STAGE 2019-」",
+      "franchise_id": "8cd271e6-0156-4216-b66c-b5f014366cca",
+      "summary": "舞台『KING OF PRISM』のキャストによる単独ライブイベント。台風19号の影響で会場の昼夜公演は中止となり、夜の部を無観客で実施した。2019年10月12日にパシフィコ横浜 国立大ホールからニコニコ生放送で配信され、橋本祥平ら14人が出演した。",
+      "period": "2019年10月12日（会場の昼夜公演は中止／夜の部は無観客ライブ・生配信）",
+      "venue": "パシフィコ横浜 国立大ホール（無観客実施）",
+      "vod": {},
+      "genre": null,
+      "created_at": "2026-04-27T16:02:31.416915+00:00",
+      "updated_at": "2026-10-24T15:50:23.215527+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "総合演出",
+          "names": [
+            "宇治川まさなり"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "主催",
+          "names": [
+            "エイベックス・ピクチャーズ株式会社"
+          ],
+          "is_core": false,
+          "sort_order": 2
+        },
+        {
+          "role": "アンサンブル（公式告知）",
+          "names": [
+            "梅津大輝",
+            "竹井弘樹",
+            "松田健太郎",
+            "宮越大貴"
+          ],
+          "is_core": false,
+          "sort_order": 3
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "A standalone live event featuring the cast of the KING OF PRISM stage production. Typhoon Hagibis forced the cancellation of both ticketed performances, but the evening show went ahead without an audience. It was streamed live on Niconico from Pacifico Yokohama National Convention Hall on October 12, 2019, with a cast of 14 including Shohei Hashimoto.",
+      "title_en": "KING OF PRISM -Rose Party on STAGE 2019-"
+    },
+    {
+      "id": "64c8e12a-9d60-4a81-a05a-a7480e057b21",
+      "slug": "kop2020",
+      "title": "舞台「KING OF PRISM -Shiny Rose Stars-」",
+      "franchise_id": "8cd271e6-0156-4216-b66c-b5f014366cca",
+      "summary": "劇場版アニメ『KING OF PRISM』を原作とする舞台第2弾。一条シンたちがスクールの枠を超えてデュオを組み、ストリート大会「KIDUNA climax」に挑む。2020年2月に東京で上演され、2月27日以降の公演は新型コロナウイルス感染拡大を受けて中止となった。",
+      "period": "2020年2月20日〜3月1日（2月27日〜3月1日の公演は中止）",
+      "venue": "TOKYO DOME CITY HALL",
+      "vod": {},
+      "genre": null,
+      "created_at": "2026-04-27T16:02:06.01831+00:00",
+      "updated_at": "2026-10-24T16:06:38.32371+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "タカラトミーアーツ",
+            "シンソフィア",
+            "エイベックス・ピクチャーズ",
+            "タツノコプロ"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "脚本",
+          "names": [
+            "青葉譲"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "演出",
+          "names": [
+            "宇治川まさなり"
+          ],
+          "is_core": true,
+          "sort_order": 3
+        },
+        {
+          "role": "音楽",
+          "names": [
+            "石塚玲依"
+          ],
+          "is_core": true,
+          "sort_order": 4
+        },
+        {
+          "role": "劇中歌",
+          "names": [
+            "AstroNoteS"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "主催",
+          "names": [
+            "舞台「KING OF PRISM -Shiny Rose Stars-」製作委員会2020"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        },
+        {
+          "role": "アンサンブル",
+          "names": [
+            "梅津大輝",
+            "佐藤一輝",
+            "竹井弘樹",
+            "宮越大貴",
+            "小林駿太"
+          ],
+          "is_core": false,
+          "sort_order": 7
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "The second stage production based on the theatrical anime KING OF PRISM. Shin Ichijo and his fellow Prism Stars form duos across school boundaries to compete in KIDUNA climax. It opened in Tokyo in February 2020; performances from February 27 through the planned closing date of March 1 were cancelled due to the COVID-19 outbreak.",
+      "title_en": "KING OF PRISM -Shiny Rose Stars-"
+    },
+    {
+      "id": "fe8e30c4-1573-493b-8e4f-950d7c793d2e",
+      "slug": "kop2026",
+      "title": "舞台「KING OF PRISM-Your Endless Call-み～んなきらめけ！キンプリ☆ツアーズ」",
+      "franchise_id": "8cd271e6-0156-4216-b66c-b5f014366cca",
+      "summary": "劇場版アニメ『KING OF PRISM -Your Endless Call-』をもとにした舞台オリジナルストーリー。一条シン役に田村升吾を迎え、プリズムスタァたちの物語を描く。2026年2月21日から3月1日まで日本青年館ホールで上演された。",
+      "period": "2026年2月21日〜3月1日",
+      "venue": "日本青年館ホール",
+      "vod": {},
+      "genre": null,
+      "created_at": "2026-10-24T16:38:12.297755+00:00",
+      "updated_at": "2026-10-24T16:38:12.297755+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "タカラトミーアーツ",
+            "シンソフィア",
+            "エイベックス・ピクチャーズ",
+            "タツノコプロ"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "脚本",
+          "names": [
+            "青葉譲"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "演出",
+          "names": [
+            "宇治川まさなり"
+          ],
+          "is_core": true,
+          "sort_order": 3
+        },
+        {
+          "role": "音楽",
+          "names": [
+            "石塚玲依"
+          ],
+          "is_core": true,
+          "sort_order": 4
+        },
+        {
+          "role": "主催",
+          "names": [
+            "舞台「KING OF PRISM」製作委員会2026"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "アンサンブル",
+          "names": [
+            "相澤友輝",
+            "東間颯太",
+            "伊阪颯馬",
+            "岩澤健三郎"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "An original stage story based on the theatrical anime KING OF PRISM -Your Endless Call-. Shogo Tamura takes over as Shin Ichijo in a new production following the Prism Stars. It ran at Nippon Seinenkan Hall in Tokyo from February 21 to March 1, 2026.",
+      "title_en": "KING OF PRISM -Your Endless Call- Minna Kirameke! Kinpri Tours (Stage, 2026)"
+    }
+  ],
+  "evidence": {
+    "links": [
+      {
+        "url": "https://kinpri-stage.com/news/detail/?id=1135536",
+        "checkedAt": "2026-10-24T16:46:46.158Z",
+        "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+      },
+      {
+        "url": "https://sugietaishi.com/contents/1109129",
+        "checkedAt": "2026-10-24T16:46:46.197Z",
+        "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+      },
+      {
+        "url": "https://fc-sui.net/contents/1102483",
+        "checkedAt": "2026-10-24T16:46:46.281Z",
+        "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
+      }
+    ],
+    "sources": [
+      {
+        "label": "changelog",
+        "url": "https://supabase.com/changelog.md",
+        "finalUrl": "https://supabase.com/changelog.md",
+        "status": 200,
+        "checkedAt": "2026-10-24T16:46:46.117Z",
+        "sha256": "45528009025b8ad8487ccb73f7c769b66d4b0e7aa4560157047899dcb5b5a006",
+        "title": ""
+      },
+      {
+        "label": "official",
+        "url": "https://kinpri-stage.com/news/detail/?id=1135536",
+        "finalUrl": "https://kinpri-stage.com/news/detail/?id=1135536",
+        "status": 200,
+        "checkedAt": "2026-10-24T16:46:46.158Z",
+        "sha256": "279c212aa7db39f3d15a26e0474503e524b75d90321b02e087e112fdfa9dd21d",
+        "title": "NEWS｜舞台「KING OF PRISM -Your Endless Call-み～んなきらめけ！キンプリ☆ツアーズ」公式サイト"
+      },
+      {
+        "label": "series",
+        "url": "https://kira-hai.net/kop",
+        "finalUrl": "https://kira-hai.net/kop",
+        "status": 200,
+        "checkedAt": "2026-10-24T16:46:46.197Z",
+        "sha256": "c3cab072cdcbe23e45b2564ee8963557ace39351dfd8e14c774dc5bdb5a1da22",
+        "title": "舞台「KING OF PRISM」シリーズ | kirakira俳優ちゃんネット｜若手俳優まとめ｜舞台・ミュージカル感想"
+      },
+      {
+        "label": "sugie",
+        "url": "https://sugietaishi.com/contents/1109129",
+        "finalUrl": "https://sugietaishi.com/contents/1109129",
+        "status": 200,
+        "checkedAt": "2026-10-24T16:46:46.197Z",
+        "sha256": "7d7ab3f116d343929419419048cd0070a7ccb297f7a8b8db1275416f18a940c0",
+        "title": "『舞台「KING OF PRISM」Special Event み～んなときめけ！キラメキ☆LIVE』出演決定、FC先行実施！ | 杉江大志オフィシャルサイトBitfan"
+      },
+      {
+        "label": "sui",
+        "url": "https://fc-sui.net/contents/1102483",
+        "finalUrl": "https://fc-sui.net/contents/1102483",
+        "status": 200,
+        "checkedAt": "2026-10-24T16:46:46.281Z",
+        "sha256": "ee60fa8b755cbc3e0a7e85d419a71d9ab283ec568a02d299a19de5769b82e454",
+        "title": "【田村升吾・高梨怜】舞台「KING OF PRISM 」Special Event み～んなときめけ！キラメキ☆LIVE FC先行（抽選）のお知らせ | SUI Fan Club"
+      }
+    ],
+    "notes": [
+      "Supabase changelogを取得確認。通常DMLと既存の汎用配役採用RPCを使用し、DB関数・RLS・スキーマ・アプリコードは変更しない。",
+      "新規候補は固定ID・人物ID・作品ID・出典・原文・指紋を限定トランザクションで検証して保存。変更前と再実行結果を全8テーブルで比較する。"
+    ],
+    "unresolved": [
+      "年末イベントは未上演。今後の出演変更・開催状況は公式発表で差分確認が必要で、実施結果の監査は開催後。自動監視は設定しない。",
+      "既存人物総合監査、役名・スタッフ等の詳細英訳、現在配信の網羅確認、全技術スタッフ・主演指定は後続。",
+      "過去のspi候補にあるHTML混入の重複採用履歴は保全。"
+    ]
+  },
+  "requestKey": "5c8ecad3eaa96a87812fee4713c10146eae5d87c1a9b01ec9565759a7e16a299"
+}

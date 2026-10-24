@@ -1379,32 +1379,33 @@
       "slug": "king-of-prism",
       "name": "舞台「KING OF PRISM」（ブタキン）",
       "registeredDay": "2026-02-09",
-      "plays": 4,
+      "plays": 5,
       "protected": false,
-      "castRows": 66,
-      "castCoverageNote": "2026年Your Endless Call本公演を新規登録。舞台副題「キンプリ☆ツアーズ」を映画名と区別し、主要19配役・新規高梨怜／中山咲月2人物・アンサンブル4名を公式照合。既存17人物と他全既存行を保全。終了したミクチャ配信や別の年末ライブ・宣伝番組の出演者は混在させない。キラハイのシリーズ一覧4作品とDB4作品66配役27人物を全件点検し、日英64ページの年月順・タイトル・概要抜粋・配役順・人物相互リンクを確認。8テーブル全行保全・再実行0変更。キラハイ掲載4作品の収録とシリーズ点検は完了。2026年12月31日Special Eventは未上演の別ライブとして独立登録待ち。詳細英訳・既存人物総合監査・現在配信の網羅確認等は後続。",
+      "castRows": 85,
+      "castCoverageNote": "公式告知に基づき2026年12月31日のSpecial Eventを独立登録。19配役はすべて既存俳優を再利用、アンサンブル3名をクレジットへ。日英概要・公演期間・根拠に開催予定を明記し、本公演の伊阪颯馬や未確認スタッフ・配信を流用しない。出典officialと実公式URLの候補を保存し、既存汎用RPCで採用。過去4作品・人物・配役など8テーブルの既存全行を保全し、再実行0変更。キラハイ掲載4作品と公式のみの予定イベント1件、合計5作品85配役27人物を点検。日英66ページの年月順・概要抜粋・配役順・人物相互リンクを確認。発表済み範囲の収録は完了。年末イベントの今後の変更や実施結果、詳細英訳・人物総合監査等は後続。",
       "seriesAudit": {
-        "checkedAt": "2026-10-24T16:42:38.787Z",
-        "scope": "キラハイのシリーズ一覧4件と収録済み4作品を照合。2017/2019/2020/2026の66配役・27人物、作品年月順・日英タイトル／概要抜粋・全人物との相互リンクを確認。既存人物属性や全技術スタッフの総合監査は対象外。",
+        "checkedAt": "2026-10-24T16:55:40.286Z",
+        "scope": "キラハイのシリーズ一覧4件と公式告知の年末イベント1件を、収録済み5作品へ照合。85配役・27人物、作品年月順・日英タイトル／概要抜粋・全人物との相互リンクを確認。年末イベントは開催予定。既存人物属性や全技術スタッフの総合監査は対象外。",
         "franchiseId": "8cd271e6-0156-4216-b66c-b5f014366cca",
         "slug": "king-of-prism",
-        "registeredWorks": 4,
-        "castRows": 66,
+        "registeredWorks": 5,
+        "castRows": 85,
         "uniqueActors": 27,
-        "completedWorks": 4,
-        "completedCastRows": 66,
+        "sourceListedWorks": 4,
+        "officialOnlyEvents": 1,
         "currentBatchWorks": 1,
         "currentBatchCastRows": 19,
-        "newActors": 2,
-        "existingActorsPreserved": 17,
+        "newActors": 0,
+        "existingActorsPreserved": 19,
         "newCastRows": 19,
         "existingRowsModified": 0,
-        "publicPages": 64,
-        "currentWorkPublicPages": 48,
-        "creditOnlyNames": 4,
-        "creditCategories": 6,
-        "identitySources": 2,
+        "publicPages": 66,
+        "currentWorkPublicPages": 50,
+        "creditOnlyNames": 3,
+        "creditCategories": 3,
+        "identitySources": 0,
         "timeline": [
+          "2026/12",
           "2026/02",
           "2020/02",
           "2019/10",
@@ -1412,7 +1413,7 @@
         ],
         "seriesSource": {
           "url": "https://kira-hai.net/kop",
-          "fetchedAt": "2026-10-24T16:40:17.130Z",
+          "fetchedAt": "2026-10-24T16:46:46.161Z",
           "sha256": "c3cab072cdcbe23e45b2564ee8963557ace39351dfd8e14c774dc5bdb5a1da22",
           "workUrls": [
             "https://kira-hai.net/kop2017",
@@ -1421,51 +1422,32 @@
             "https://kira-hai.net/kop2026"
           ]
         },
-        "seriesVerificationPassed": true,
-        "separateEvents": [
-          {
-            "url": "https://kinpri-stage.com/news/detail/?id=1135536",
-            "title": "舞台「KING OF PRISM」Special Event み～んなときめけ！キラメキ☆LIVE",
-            "date": "2026-12-31",
-            "venue": "大宮ソニックシティ大ホール",
-            "status": "announced_not_yet_performed",
-            "mainCast": 19,
-            "ensemble": [
-              "相澤友輝",
-              "東間颯太",
-              "岩澤健三郎"
-            ],
-            "decision": "独立イベント登録は後続。本公演へ混在させない。"
-          },
-          {
-            "url": "https://avex-pictures.co.jp/topic/91309/",
-            "date": "2025-09-20",
-            "decision": "宣伝YouTube番組。橋本祥平の本公演出演根拠にしない。"
-          },
-          {
-            "url": "https://kinpri-stage.com/news/detail/?id=1131433",
-            "date": "2026-08-11",
-            "decision": "映像商品トーク＆ハイタッチ会。本公演の別公演として登録しない。"
-          }
-        ],
-        "performanceStatus": {
-          "period": "2026-02-21 / 2026-03-01",
-          "venue": "日本青年館ホール",
-          "expiredStreaming": "MixChannel archive ended 2026-03-15; not added to current VOD",
-          "futureEvent": "2026-12-31 announced, separate registration pending"
+        "officialEventSource": {
+          "url": "https://kinpri-stage.com/news/detail/?id=1135536",
+          "checkedAt": "2026-10-24T16:46:46.158Z",
+          "note": "主催者または出演者側の公開告知。配役・順序・日程・予定状態を照合し、実施済みと断定しない。"
         },
-        "works": 4,
+        "seriesVerificationPassed": true,
+        "performanceStatus": {
+          "performedWorks": 4,
+          "announcedEvents": 1,
+          "currentEventDate": "2026-12-31",
+          "currentEventStatus": "announced_not_yet_performed",
+          "venue": "大宮ソニックシティ 大ホール",
+          "currentStreamingVerified": false
+        },
+        "works": 5,
         "pendingChecks": [
-          "2026年12月31日Special Eventの独立登録は後続。公式告知は19主要配役と3アンサンブル。現時点で未上演として扱う。",
-          "既存人物プロフィール総合監査・詳細英訳・現在配信の網羅確認・技術スタッフ全件・主演指定は後続。",
-          "旧spiのHTML混入済み重複採用履歴は原文保全。"
+          "年末イベントは未上演。今後の出演変更・開催状況は公式発表で差分確認が必要で、実施結果の監査は開催後。自動監視は設定しない。",
+          "既存人物総合監査、役名・スタッフ等の詳細英訳、現在配信の網羅確認、全技術スタッフ・主演指定は後続。",
+          "過去のspi候補にあるHTML混入の重複採用履歴は保全。"
         ],
-        "report": "docs/kop2026-2026-10-25.md",
+        "report": "docs/kop-live2026-2026-10-25.md",
         "remainingSeriesWorkItems": [
-          "2026年12月31日Special Eventの独立登録（未上演の告知として扱う）"
+          "年末イベントの出演変更・開催状況は公式発表に応じて差分確認し、実施結果は開催後に点検"
         ],
-        "research": "next-app/research/kop2026-20261025.json",
-        "seriesResearch": "next-app/research/kop-series-audit-20261025-04.json"
+        "research": "next-app/research/kop-live2026-20261025.json",
+        "seriesResearch": "next-app/research/kop-series-audit-20261025-05.json"
       }
     },
     {
