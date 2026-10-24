@@ -41,8 +41,6 @@ export default function DmmTvLanding({ locale }: { locale: SiteLocale }) {
           <h1 id="dmm-hero-title"><span className="dmm-lp__brand">DMM TV<small>{copy.withDmm}</small></span>{copy.hero.map(line => <span className="dmm-lp__headline-line" key={line}>{line}</span>)}</h1>
           <p className="dmm-lp__intro">{copy.intro.map(line => <span key={line}>{line}</span>)}</p>
           <div className="dmm-lp__hero-actions">{trial('watch_hero')}{price}</div>
-          <p className="dmm-lp__conditions">{copy.conditions}</p>
-          <small className="dmm-lp__ad">{copy.ad}</small>
         </div>
         <div className="dmm-lp__hero-art" data-dmm-reveal="art" aria-hidden="true"><Image src="/images/dmm-tv/hero.webp" alt="" fill sizes="(min-width: 1000px) 55vw, 100vw" priority/></div>
       </div>

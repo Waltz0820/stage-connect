@@ -2,7 +2,7 @@ export const DMM_TV_REVIEWED_ON = '2026-10-24';
 
 export const DMM_TV_COPY = {
   ja: {
-    withDmm: 'で', hero: ['舞台は', '一度じゃ終わらない。'],
+    withDmm: 'で', hero: ['舞台は一度じゃ終わらない'],
     intro: ['観るたびに、新しい発見がある。', '好きな俳優から、知らなかった作品へ。', '2.5次元舞台をもっと楽しもう。'],
     tryLabel: '日間無料で試してみる', after: 'その後', monthly: '月額', yen: '円', web: '税込・Web登録',
     conditions: '※無料体験には適用条件あり。終了後は自動更新',

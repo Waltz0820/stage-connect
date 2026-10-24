@@ -7,16 +7,18 @@
 .dmm-lp__hero { color: #fff; background: var(--dmm-night); overflow: clip; }
 .dmm-lp__hero-inner { position: relative; isolation: isolate; display: grid; }
 .dmm-lp__hero-copy { position: relative; z-index: 2; min-width: 0; padding: 0 22px 26px; }
-.stage-v2 .dmm-tv-landing .breadcrumbs { min-height: 48px; margin: 0 0 12px; padding: 12px 0; color: #b8c5dc; font-size: 10px; }
+.stage-v2 .dmm-tv-landing .breadcrumbs { min-height: 40px; margin: 0 0 10px; padding: 10px 0; color: #b8c5dc; font-size: 10px; }
 .dmm-tv-landing .breadcrumbs :is(a,span) { color: inherit; }
 .stage-v2 .dmm-tv-landing h1 { margin: 0; font: 800 clamp(24px,7.3vw,47px)/1.5 var(--dmm-heading); letter-spacing: -.055em; color: #fff; }
-.dmm-lp__brand { display: block; margin-bottom: 12px; color: var(--ed-lime); font: 850 29px/1.2 var(--ed-font); letter-spacing: -.025em; }
+.stage-v2 .dmm-tv-landing:lang(ja) h1 { font-size: clamp(22px,6.9vw,47px); }
+.dmm-lp__brand { display: block; margin-bottom: 10px; color: var(--ed-lime); font: 850 29px/1.2 var(--ed-font); letter-spacing: -.025em; }
 .dmm-lp__brand small { margin-left: 5px; color: #fff; font-size: 16px; font-weight: 500; }
-.dmm-lp__intro { margin: 18px 0 22px; font-size: 13px; line-height: 1.95; }
+.dmm-lp__intro { margin: 14px 0 18px; font-size: 13px; line-height: 1.8; }
 .dmm-lp__intro > span { display: block; }
 .dmm-lp__hero-actions { display: grid; gap: 10px; }
+.dmm-lp__hero-actions .dmm-lp__cta { max-width: 300px; }
 .dmm-lp__cta { display: inline-flex; align-items: center; justify-content: space-between; gap: 16px; width: 100%; max-width: 380px; min-height: 56px; padding: 14px 22px; border: 1px solid var(--ed-lime); border-radius: 48px; background: var(--ed-lime); color: #111923; font-size: 16px; line-height: 1.4; font-weight: 800; transition: scale 180ms ease,background-color 180ms ease; }
-.dmm-lp__cta > span { flex: none; font-size: 27px; font-weight: 400; transition: translate 200ms ease; }
+.dmm-lp__cta > span { flex: none; font-size: 27px; line-height: 1; font-weight: 400; transition: translate 200ms ease; }
 .dmm-lp__cta:active { scale: .97; }
 .dmm-lp__cta:focus-visible { outline-color: #fff; }
 .dmm-lp__cta:focus-visible > span { translate: 4px 0; }
@@ -27,8 +29,8 @@
 .dmm-lp__conditions { max-width: 580px; margin: 8px 0 5px; color: #c8d1df; font-size: 11px; line-height: 1.8; }
 .dmm-lp__ad { display: block; color: #c8d1df; font-size: 10px; line-height: 1.7; }
 .dmm-lp__hero-art { position: absolute; z-index: 0; inset: 0; pointer-events: none; }
-.dmm-lp__hero-art::after { content: ''; position: absolute; inset: 0; background: linear-gradient(0deg,var(--dmm-night),#101926e6 22%,transparent 72%),linear-gradient(90deg,var(--dmm-night),#101926db 42%,#10192626); }
-.dmm-lp__hero-art img { object-fit: cover; object-position: 72% 50%; }
+.dmm-lp__hero-art::after { content: ''; position: absolute; inset: 0; background: linear-gradient(0deg,var(--dmm-night),transparent 50%),linear-gradient(90deg,var(--dmm-night) 5%,#101926e6 35%,#101926b3 60%,#10192680 80%,transparent); }
+.dmm-lp__hero-art img { object-fit: cover; object-position: 50% 50%; }
 .dmm-lp__viewings { display: grid; margin-top: 20px; }
 .dmm-lp__viewing { position: relative; display: grid; grid-template-columns: .93fr 1.07fr; align-items: center; min-width: 0; padding: 16px 0; border-bottom: 1px solid #e0e8f4; }
 .dmm-lp__viewing:last-child { border-bottom: 0; }
@@ -104,13 +106,14 @@
   .dmm-lp__hero-copy { padding: 0 0 42px max(36px,calc((100vw - 1250px)/2)); }
   .stage-v2 .dmm-tv-landing .breadcrumbs { margin-bottom: 22px; }
   .stage-v2 .dmm-tv-landing h1 { position: relative; width: max-content; max-width: 730px; font-size: clamp(40px,4.1vw,62px); line-height: 1.4; }
+  .stage-v2 .dmm-tv-landing:lang(ja) h1 { font-size: clamp(32px,3.6vw,52px); }
   .dmm-lp__brand { font-size: 34px; margin-bottom: 16px; }
   .dmm-lp__intro { margin-block: 20px 26px; font-size: 15px; }
   .dmm-lp__hero-art { position: absolute; inset: 0 0 0 40%; height: 100%; }
   .dmm-lp__hero-art::after { background: linear-gradient(90deg,var(--dmm-night),transparent 28%); }
   .dmm-lp__hero-art img { object-position: 68% 50%; }
   .dmm-lp__hero-actions { position: relative; width: max-content; max-width: 650px; }
-  .dmm-lp__hero-actions .dmm-lp__cta { width: 340px; }
+  .dmm-lp__hero-actions .dmm-lp__cta { width: 340px; max-width: 340px; }
   .dmm-lp__hero .dmm-lp__conditions { max-width: 610px; }
   .dmm-lp__viewings { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 38px; margin-top: 34px; }
   .dmm-lp__viewing { display: flex; flex-direction: column; align-items: stretch; padding: 0; border: 0; }
