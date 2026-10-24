@@ -1,0 +1,90 @@
+{
+  "checkedAt": "2026-10-24T18:19:27.532Z",
+  "scope": "2014年初演1作品の14配役を補完・点検。登録済み3作品18配役のうち2017/2019年の4配役は仮登録のまま。2015/2016年は未登録で、シリーズ全体の収録完了・総合監査とは扱わない。",
+  "franchiseId": "21e2a016-4301-4053-9b79-6763d362193a",
+  "slug": "k",
+  "registeredWorks": 3,
+  "castRows": 18,
+  "uniqueActors": 17,
+  "completedWorks": 1,
+  "completedCastRows": 14,
+  "currentBatchWorks": 1,
+  "currentBatchCastRows": 14,
+  "newActors": 5,
+  "existingActorsPreserved": 9,
+  "newCastRows": 9,
+  "existingCastRowsPreserved": 5,
+  "rolesFilled": 4,
+  "publicPages": 36,
+  "creditOnlyNames": 8,
+  "roleNamedEnsembleCredits": 4,
+  "creditCategories": 3,
+  "identitySources": 5,
+  "timeline": "2014/08",
+  "works": [
+    {
+      "id": "81bd7619-040a-4c08-b350-f5e73b14a219",
+      "slug": "k2017",
+      "title": "舞台『K-MISSING KINGS-』",
+      "title_en": null,
+      "period": "2017年",
+      "venue": null,
+      "castRows": 2,
+      "source": null,
+      "research": null,
+      "summaryPresent": false,
+      "englishSummaryPresent": false,
+      "completedInThisBatch": false,
+      "exceptions": [
+        "既存仮登録を全項目保全。作品・配役の補完は後続。"
+      ]
+    },
+    {
+      "id": "f12ac503-a8a0-4b10-b2ed-fb086469ecd9",
+      "slug": "k-stage-first",
+      "title": "舞台『K』",
+      "title_en": "K (Stage, 2014)",
+      "period": "2014年8月6日〜10日",
+      "venue": "六本木ブルーシアター",
+      "castRows": 14,
+      "source": "https://kira-hai.net/k2014",
+      "research": "next-app/research/k2014-20261025.json",
+      "summaryPresent": true,
+      "englishSummaryPresent": true,
+      "completedInThisBatch": true,
+      "exceptions": [
+        "主要11人だけでなく公式に別行で記載された十束多々良・雪染菊理・三科草太の3役も収録。計14配役を公式と照合し新規9配役・人物5人を追加。",
+        "既存松田凌・荒牧慶彦・植田圭輔・鈴木拡樹の役名空欄を公式に基づき補完。中村誠治郎の周防尊と合わせて既存5配役ID・作成日時・出演区分・補足・主演指定を保持し、掲載順を公式順へ補完する。旧主演指定の妥当性は別監査。",
+        "公式アンサンブル8人はクレジットへ。校條の秋山氷杜、日南田の弁財酉次郎／出羽将臣、滝川の加茂劉芳、田中の道明寺アンディは第一参照先の役名として原文とともに保持し、役名のない他4人にも架空の役名を付けない。既存俳優を削除しない。",
+        "中村の旧採用候補は別作品の文章が混入しており原文と採用履歴を保全。今回の清潔な周防尊候補を新設し既存配役へ接続する。旧候補の誤年2021は履歴整理工程へ回し、その値を作品の公演年へ流用しない。",
+        "茉莉邑は元宝塚星組男役と現オフィスアネモネとの業務提携を保持。生年不明のため月日だけを保存。亜里沙・荻野・松本・椎名の旧所属や活動状態を現在の確定情報として転記しない。",
+        "既存作品ID・URL・タイトル・会場・ジャンル・タグ・配信設定と既存全人物を保全。vodの#は仮リンクで、視聴可能性を今回確認済みとは扱わない。",
+        "シリーズの冗長な評価文を短い客観説明と英語名・概要へ整理。原作区分・関連設定は保持。2015年第二章・2016年Lost Small Worldは未登録、既存2017/2019年の補完と全体点検は後続。",
+        "公式ページtitleの曜日は木曜だが本文日程は水曜。2014年8月6日という日付を両公式と第一参照先で照合し、曜日の誤記は転記しない。英題・日英概要・新規人物英訳は編集表記。"
+      ]
+    },
+    {
+      "id": "fc9a2da7-9195-4fa0-9c94-b56bf788bc86",
+      "slug": "k2019",
+      "title": "舞台『K -RETURN OF KINGS-』",
+      "title_en": null,
+      "period": "2019年",
+      "venue": null,
+      "castRows": 2,
+      "source": null,
+      "research": null,
+      "summaryPresent": false,
+      "englishSummaryPresent": false,
+      "completedInThisBatch": false,
+      "exceptions": [
+        "既存仮登録を全項目保全。作品・配役の補完は後続。"
+      ]
+    }
+  ],
+  "pendingChecks": [
+    "2015年第二章、2016年Lost Small Worldの登録、既存2017/2019年の補完とシリーズ全体点検は後続。",
+    "旧主演指定・仮配信リンク#、全人物プロフィール・役名等の詳細英訳・現在配信の確認・全技術スタッフは別工程。",
+    "亜里沙の現在活動・所属・身長、荻野の現在所属・身長、松本・椎名の現在所属、公式英字未確認の4人、旧取り込み混入候補の履歴整理は後続。"
+  ],
+  "report": "docs/k2014-2026-10-25.md"
+}
