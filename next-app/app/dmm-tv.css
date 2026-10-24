@@ -45,7 +45,7 @@
 .dmm-lp__discovery-copy > p { max-width: 590px; margin: 20px 0 22px; font-size: 13px; line-height: 1.95; text-wrap: pretty; }
 .dmm-lp__discovery-copy > p > span { display: block; }
 .dmm-lp__discovery h2 { font-size: clamp(24px,6.6vw,44px); }
-.dmm-lp__internal { display: inline-flex; align-items: center; justify-content: space-between; gap: 14px; width: 100%; max-width: 440px; min-height: 50px; padding: 12px 18px; border: 1px solid var(--ed-blue); border-radius: 40px; background: #fff; color: #244ad8; font-size: 12px; font-weight: 750; line-height: 1.5; transition: scale 180ms ease,background-color 180ms ease; }
+.dmm-lp__internal { display: inline-flex; align-items: center; justify-content: space-between; gap: 14px; width: 100%; max-width: 440px; min-height: 50px; padding: 12px 18px; border: 1px solid var(--ed-blue); border-radius: 40px; background: var(--ed-blue); color: #fff; font-size: 12px; font-weight: 750; line-height: 1.5; transition: scale 180ms ease,background-color 180ms ease; }
 .dmm-lp__internal > span,.dmm-lp__listing > span { flex: none; font-size: 24px; transition: translate 200ms ease; }
 .dmm-lp__internal:active { scale: .98; }
 .dmm-lp__loop { display: grid; gap: 26px; margin: 30px 0 0; padding: 0; list-style: none; }
@@ -139,7 +139,7 @@
 }
 @media (hover:hover) and (pointer:fine) {
   .dmm-lp__cta:hover { background: #efff91; }
-  .dmm-lp__internal:hover { background: #f0f5ff; }
+  .dmm-lp__internal:hover { background: #244ad8; }
   .dmm-tv-landing :is(.dmm-lp__cta,.dmm-lp__internal,.dmm-lp__listing):hover > span { translate: 5px 0; }
 }
 @media (prefers-reduced-motion:reduce) {
