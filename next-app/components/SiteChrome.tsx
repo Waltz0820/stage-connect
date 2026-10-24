@@ -224,7 +224,7 @@ function PublicSiteChrome({ pathname, children }: { pathname: string | null; chi
 
       <footer className="site-footer" data-streaming-placement="footer">
         <div className="container site-footer__upper">
-          <div className="editorial-footer-intro"><span className="editorial-brand">STAGE CONNECT</span><p>{locale === 'ja' ? <>好きな俳優から<br/>新しい舞台へ。</> : <>Follow an actor.<br/>Find your next stage.</>}</p></div>
+          <div className="editorial-footer-intro"><span className="editorial-brand">STAGE CONNECT</span></div>
           <div className="site-footer__grid">
             <section className="site-footer__column">
               <h3>{labels.footerContent}</h3>

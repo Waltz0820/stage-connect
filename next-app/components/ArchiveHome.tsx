@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { getEnglishSeriesName } from '../lib/en-copy';
 import { getGuideList, getHomeStats, getSeriesList } from '../lib/stage-connect';
 import { ArchiveHomeMotion } from './ArchiveHomeMotion';
@@ -92,6 +93,17 @@ export default async function ArchiveHome({ locale }: { locale: 'ja' | 'en' }) {
       <Link className="archive-streaming-link" data-streaming-placement="home_banner" href={prefix + '/watch/dmm'}>
         <strong>DMM TV</strong><span>{en ? 'Browse stage streaming links' : '舞台の配信情報を見る'}</span><span aria-hidden="true">→</span>
       </Link>
+    </section>
+
+    <section className="archive-about" aria-labelledby="home-about-heading">
+      <div className="archive-about__copy" data-reveal="about-copy">
+        <h2 id="home-about-heading">{en ? <>The curtain falls.<br/>The connections live on.</> : <>幕が下りても、<br/>つながりは続く。</>}</h2>
+        <p>{en ? <>Productions and actors. Roles and co-stars.<br/>Keeping the connections made on stage for the future.</> : <>作品と俳優、役柄と共演。<br/><span className="copy-phrase">舞台で生まれたつながりを、</span><span className="copy-phrase">記録として未来へ。</span></>}</p>
+        <Link href={prefix + '/about'} className="archive-about__link">{en ? 'About Stage Connect' : 'Stage Connectについて'}<span aria-hidden="true">→</span></Link>
+      </div>
+      <div className="archive-about__art" data-reveal="about-art" aria-hidden="true">
+        <Image src="/images/about/stage-illustration.webp" alt="" width={1536} height={1024} sizes="(min-width: 1000px) 54vw, 100vw" />
+      </div>
     </section>
   </main>;
 }

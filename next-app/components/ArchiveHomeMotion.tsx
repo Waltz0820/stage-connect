@@ -48,6 +48,11 @@ export function ArchiveHomeMotion() {
           play(element, [{ clipPath: 'inset(0 100% 0 0)' }, { clipPath: 'inset(0 0 0 0)' }], 650, index * 90);
           const label = element.firstElementChild;
           if (label) play(label, [{ transform: 'translateX(-18px)' }, { transform: 'translateX(0)' }], 650, index * 90);
+        } else if (kind === 'about-art') {
+          play(element, [
+            { opacity: .4, transform: 'translateY(18px)' },
+            { opacity: 1, transform: 'translateY(0)' },
+          ], 750, 100);
         } else if (kind === 'series') {
           play(element, [
             { opacity: .35, transform: 'translateY(30px) scale(.97)', clipPath: 'inset(0 0 9% 0)' },
