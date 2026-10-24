@@ -1,0 +1,172 @@
+{
+  "checkedAt": "2026-10-24T19:36:50.463Z",
+  "scope": "第一参照先のK舞台シリーズ全5作の収録照合と、今回までに保存した公演公式／人物資料に基づく配役・兼役・クレジット・日程・日英概要および公開回遊の点検。人物全属性・詳細英訳・現行VOD網羅・主演指定の総合監査は含まない。",
+  "franchiseId": "21e2a016-4301-4053-9b79-6763d362193a",
+  "slug": "k",
+  "registeredWorks": 5,
+  "castRows": 69,
+  "uniqueActors": 41,
+  "completedWorks": 5,
+  "completedCastRows": 69,
+  "currentBatchWorks": 1,
+  "currentBatchCastRows": 14,
+  "currentWorkActors": 14,
+  "newActors": 3,
+  "existingActorsPreserved": 11,
+  "newCastRows": 13,
+  "existingCastRowsPreserved": 1,
+  "existingCastOrdersFilled": 1,
+  "legacyAcceptedCandidatesPreserved": 1,
+  "movedEnsembleCastRows": 1,
+  "retainedEnsembleActor": "nakanishi-tomoya",
+  "ensembleCandidateStorageDecision": "rejected denotes moved to plays.credits; original cast/candidate and actor preserved in audit log; actor and other casts retained",
+  "publicPages": 96,
+  "currentWorkPublicPages": 42,
+  "currentWorkCreditOnlyNames": 8,
+  "totalEnsembleCredits": 43,
+  "currentWorkCreditCategories": 16,
+  "identitySources": 3,
+  "timeline": [
+    "2019/03",
+    "2017/10",
+    "2016/07",
+    "2015/08",
+    "2014/08"
+  ],
+  "seriesSource": {
+    "label": "series",
+    "url": "https://kira-hai.net/k",
+    "finalUrl": "https://kira-hai.net/k",
+    "status": 200,
+    "checkedAt": "2026-10-24T19:21:17.797Z",
+    "sha256": "bbc7a11413fc9bb726e3399ae19a7b208e55c5277bc2b8830d52a33d0ce62b9d",
+    "title": "舞台『K』シリーズ | kirakira俳優ちゃんネット｜若手俳優まとめ｜舞台・ミュージカル感想"
+  },
+  "seriesVerificationPassed": true,
+  "works": [
+    {
+      "year": 2014,
+      "id": "f12ac503-a8a0-4b10-b2ed-fb086469ecd9",
+      "slug": "k-stage-first",
+      "title": "舞台『K』",
+      "title_en": "K (Stage, 2014)",
+      "period": "2014年8月6日〜10日",
+      "venue": "六本木ブルーシアター",
+      "castRows": 14,
+      "uniqueActors": 14,
+      "ensemble": 8,
+      "voiceCredits": [],
+      "source": "https://kira-hai.net/k2014",
+      "summaryPresent": true,
+      "englishSummaryPresent": true,
+      "research": "next-app/research/k2014-20261025.json",
+      "completedInThisBatch": false,
+      "exceptions": [
+        "前工程の収録記録と全項目を比較して保全確認。今回のシリーズ公開点検で再確認。"
+      ]
+    },
+    {
+      "year": 2015,
+      "id": "bc4ff457-ed00-47ad-9c3d-831637b4b67a",
+      "slug": "k2015",
+      "title": "舞台『K』第二章 -AROUSAL OF KING-",
+      "title_en": "K: Chapter Two -AROUSAL OF KING- (Stage, 2015)",
+      "period": "2015年8月5日〜15日（東京）／8月19日〜22日（大阪）",
+      "venue": "AiiA 2.5 Theater Tokyo／大阪メルパルクホール",
+      "castRows": 11,
+      "uniqueActors": 11,
+      "ensemble": 11,
+      "voiceCredits": [
+        "速水奨"
+      ],
+      "source": "https://kira-hai.net/k2015",
+      "summaryPresent": true,
+      "englishSummaryPresent": true,
+      "research": "next-app/research/k2015-20261025.json",
+      "completedInThisBatch": false,
+      "exceptions": [
+        "前工程の収録記録と全項目を比較して保全確認。今回のシリーズ公開点検で再確認。"
+      ]
+    },
+    {
+      "year": 2016,
+      "id": "79389152-3b95-46a5-82e8-1b7fe9dfe7f4",
+      "slug": "k2016",
+      "title": "舞台『K -Lost Small World-』",
+      "title_en": "K -Lost Small World- (Stage, 2016)",
+      "period": "2016年7月22日〜24日（東京）／7月30日〜31日（京都）",
+      "venue": "AiiA 2.5 Theater Tokyo／京都劇場",
+      "castRows": 16,
+      "uniqueActors": 15,
+      "ensemble": 8,
+      "voiceCredits": [],
+      "source": "https://kira-hai.net/k2016",
+      "summaryPresent": true,
+      "englishSummaryPresent": true,
+      "research": "next-app/research/k2016-20261025.json",
+      "completedInThisBatch": false,
+      "exceptions": [
+        "前工程の収録記録と全項目を比較して保全確認。今回のシリーズ公開点検で再確認。"
+      ]
+    },
+    {
+      "year": 2017,
+      "id": "81bd7619-040a-4c08-b350-f5e73b14a219",
+      "slug": "k2017",
+      "title": "舞台『K-MISSING KINGS-』",
+      "title_en": "K -MISSING KINGS- (Stage, 2017)",
+      "period": "2017年10月19日〜22日（京都）／10月26日〜29日（東京）",
+      "venue": "京都劇場／天王洲 銀河劇場",
+      "castRows": 14,
+      "uniqueActors": 14,
+      "ensemble": 8,
+      "voiceCredits": [],
+      "source": "https://kira-hai.net/k2017",
+      "summaryPresent": true,
+      "englishSummaryPresent": true,
+      "research": "next-app/research/k2017-20261025.json",
+      "completedInThisBatch": false,
+      "exceptions": [
+        "前工程の収録記録と全項目を比較して保全確認。今回のシリーズ公開点検で再確認。"
+      ]
+    },
+    {
+      "year": 2019,
+      "id": "fc9a2da7-9195-4fa0-9c94-b56bf788bc86",
+      "slug": "k2019",
+      "title": "舞台『K -RETURN OF KINGS-』",
+      "title_en": "K -RETURN OF KINGS- (Stage, 2019)",
+      "period": "2019年3月1日〜10日（東京）／3月15日〜17日（大阪）",
+      "venue": "天王洲 銀河劇場／大阪メルパルクホール",
+      "castRows": 14,
+      "uniqueActors": 14,
+      "ensemble": 8,
+      "voiceCredits": [],
+      "source": "https://kira-hai.net/k2019",
+      "summaryPresent": true,
+      "englishSummaryPresent": true,
+      "research": "next-app/research/k2019-20261025.json",
+      "completedInThisBatch": true,
+      "exceptions": [
+        "既存2019年作品のID・slug・タイトル・vod・ジャンル・タグ・関連設定を保持し、年だけの期間、会場、日英概要・英題・クレジットを補完。2015年のテレビアニメ放送年、2019年映像発売や関連イベントと混同しない。",
+        "公式の主要14人のうち既存11人物を再利用し、新規3人物と13配役を追加。佐々木喜英の御芍神紫は既存ID・役名・作成日時・補足・主演指定等を保全し未指定の掲載順のみ公式順へ。旧採用候補の誤年2021は履歴として原文保全し、重複候補を作らない。",
+        "中西智也の既存アンサンブル配役1件をplays.creditsへ転記。公式区分と本人の別作品の通常役を確認し、人物と他作品の全配役を保持。採用候補は保存先変更としてrejected・accepted_cast_id=null・accepted_at=nullとし、元の配役／候補・人物ID・採用日時等を履歴に保存する。出演事実の否定ではない。転記候補の誤年は当該公演2019へ訂正し理由も記録。",
+        "アンサンブル8名は公式順でクレジット。既存の中西・佐藤等の人物ページを理由に主要配役へ追加しない。公式スタッフ15区分も氏名・担当をそのまま保存し、演出家・技術スタッフの俳優登録は行わない。",
+        "桑江の現事務所でDOB・143cm・O型・英字を確認。吉高は現スターダスト所属と幼少期・語学を採用し旧アシストを転載しない。とまんは現公式A型を優先し、編集媒体に混在するO型や旧LEXINGTON所属を採用しない。",
+        "dアニメ当該作品ページは現在公開中の話がないと明示。作品ページの存在で視聴可能とせずvodは既存の空設定を維持。初演の既存#配信設定等は今回変更しない。",
+        "短い日英概要・新規3人物の紹介を追加。詳細役名英訳、既存人物総合監査、現在配信の網羅確認と主演指定は別工程。全5作収録後の点検で範囲を明示する。"
+      ]
+    }
+  ],
+  "notes": [
+    "2016年は16配役行が15人物カードにまとまり、荒牧の二役・茉莉邑の兼役と松田の映像区分を保持。",
+    "2017年小山の二役を保持。2014年の既存主演指定と#仮配信設定、2015年の役名未確認の声の出演は別途監査事項として保持。",
+    "2019年中西のアンサンブル1配役はクレジットへ転記し、人物と他作配役を保全。全作品のアンサンブル延べ43人の記載を確認。",
+    "公開作品・シリーズ12ページ、役付き41人物82ページ、転記後も保持する中西2ページの計96ページ。再取得を減らすため同一実行の確認済みHTMLを再利用。"
+  ],
+  "pendingChecks": [
+    "既存人物総合監査・詳細英訳・現在配信の網羅確認・主演指定・旧誤年履歴の整理は後続。",
+    "初演の既存主演指定と#仮配信設定、第二章の役名未確認の声の出演、柴・輝海の未確認属性などは根拠を保持して後続の総合監査へ。"
+  ],
+  "report": "docs/k2019-2026-10-25.md"
+}
