@@ -1,0 +1,3983 @@
+{
+  "version": 1,
+  "batchId": "diaace5-20261024-01",
+  "expectedFranchise": {
+    "id": "f9806a0c-a8e2-4de0-8c47-531fd6b6df6b",
+    "name": "「ダイヤのA」The LIVE（ダイステ）",
+    "created_at": "2026-02-08T16:26:41.990203+00:00",
+    "updated_at": "2026-10-23T20:09:25.809484+00:00",
+    "slug": "diamond-no-ace",
+    "intro": null,
+    "description": "寺嶋裕二の漫画『ダイヤのA』を原作とする舞台シリーズ。青道高校の投手・沢村栄純と野球部の仲間たちを描く。2015年に初演され、初演の脚本・演出は浅沼晋太郎、制作はOffice ENDLESS。",
+    "origin_type": "漫画原作",
+    "origin_note": "原作：寺嶋裕二 『ダイヤのA』（講談社「週刊少年マガジン」連載）",
+    "production_companies": [
+      "Office ENDLESS"
+    ],
+    "related_franchise_ids": [
+      "5045a4a0-3591-450d-bd31-5f8682ffb0e8"
+    ],
+    "format": "stage",
+    "description_en": "A stage series based on Yuji Terajima’s manga Ace of Diamond, following pitcher Eijun Sawamura and his Seido High teammates. The first production opened in 2015, written and directed by Shintaro Asanuma and produced by Office ENDLESS.",
+    "name_en": "Ace of Diamond The LIVE"
+  },
+  "franchisePatch": {},
+  "actors": [
+    {
+      "actor": {
+        "id": "9e9b243a-c3e6-4fad-b162-df337e908a71",
+        "slug": "nozawa-so",
+        "name": "野沢聡",
+        "kana": "のざわ そう",
+        "profile": "東京都出身の俳優・声優。81プロデュース所属。ミュージカル『エリザベート』のジュラ役、舞台『ダイヤのA』The LIVE Vの国友広重役などを務める。吹替では『ジュラシック・ワールド』のハマダ役を担当。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1973-04-03",
+        "height_cm": 185,
+        "blood_type": "AB",
+        "birthday_label": null,
+        "name_en": "So Nozawa",
+        "profile_en": null,
+        "death_date": null
+      },
+      "sourceActorName": "野沢聡",
+      "profileUrl": "https://www.81produce.co.jp/actor_search/index.php/item?id=406",
+      "evidence": [
+        {
+          "url": "https://www.81produce.co.jp/actor_search/index.php/item?id=406",
+          "checkedAt": "2026-10-24T08:38:23.948Z",
+          "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+        },
+        {
+          "url": "https://www.excite.co.jp/news/dictionary/person/PE932f10793af206429bd7885cc07826aaaff42f14/",
+          "checkedAt": "2026-10-24T08:38:23.848Z",
+          "note": "編集人物辞典。生年・身長・血液型の補足資料。"
+        },
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000172.000009198.html",
+          "checkedAt": "2026-10-24T08:41:26.271Z",
+          "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+        }
+      ],
+      "notes": [
+        "現事務所の氏名・読み・月日・東京出身・公式英字と本作国友広重役、エリザベート・吹替歴を接続。生年1973・185cm・AB型は編集人物辞典由来で、事務所の月日と矛盾なし。全項目を一次確認済みとは扱わない。写真・性別は推測で埋めない。"
+      ]
+    }
+  ],
+  "works": [
+    {
+      "year": 2017,
+      "before": null,
+      "patch": null,
+      "play": {
+        "id": "1ccde89f-df2c-4c2b-a607-90d5adeeec86",
+        "slug": "diaace2017-2",
+        "title": "「ダイヤのA」The LIVE V",
+        "franchise_id": "f9806a0c-a8e2-4de0-8c47-531fd6b6df6b",
+        "summary": "寺嶋裕二の高校野球漫画を原作とする舞台シリーズ第5作。西東京地区大会の決勝に進んだ青道高校は、成宮鳴や原田雅功を擁する稲城実業高校と甲子園出場をかけて対戦する。脚本・演出は御笠ノ忠次。2017年9月に兵庫、広島、福岡、東京の4都市で上演された。",
+        "period": "兵庫：2017年9月7日〜10日／広島：2017年9月12日〜14日／福岡：2017年9月17日〜18日／東京：2017年9月20日〜24日",
+        "venue": "兵庫：新神戸オリエンタル劇場／広島：JMSアステールプラザ 中ホール／福岡：北九州芸術劇場 大ホール／東京：シアター1010",
+        "vod": null,
+        "genre": null,
+        "tags": [],
+        "credits": [
+          {
+            "role": "原作",
+            "names": [
+              "寺嶋裕二（週刊少年マガジン／講談社）"
+            ],
+            "is_core": true,
+            "sort_order": 1
+          },
+          {
+            "role": "脚本・演出",
+            "names": [
+              "御笠ノ忠次"
+            ],
+            "is_core": true,
+            "sort_order": 2
+          },
+          {
+            "role": "共同演出",
+            "names": [
+              "中島大地"
+            ],
+            "is_core": false,
+            "sort_order": 3
+          },
+          {
+            "role": "演出助手",
+            "names": [
+              "相田剛志",
+              "岸京子"
+            ],
+            "is_core": false,
+            "sort_order": 4
+          },
+          {
+            "role": "技術監督",
+            "names": [
+              "寅川英司"
+            ],
+            "is_core": false,
+            "sort_order": 5
+          },
+          {
+            "role": "舞台監督",
+            "names": [
+              "弘光哲也"
+            ],
+            "is_core": false,
+            "sort_order": 6
+          },
+          {
+            "role": "舞台美術",
+            "names": [
+              "青木拓也"
+            ],
+            "is_core": false,
+            "sort_order": 7
+          },
+          {
+            "role": "映像製作",
+            "names": [
+              "ワタナベカズキ"
+            ],
+            "is_core": false,
+            "sort_order": 8
+          },
+          {
+            "role": "制作",
+            "names": [
+              "Office ENDLESS"
+            ],
+            "is_core": false,
+            "sort_order": 9
+          },
+          {
+            "role": "アンサンブル",
+            "names": [
+              "秋山皓郎",
+              "網代将悟",
+              "石毛元貴",
+              "小野原幸一",
+              "儀間裕士",
+              "笹岡幸司",
+              "佐藤和斗",
+              "佐藤ケンタロー",
+              "濱屋博嗣",
+              "結城駿"
+            ],
+            "is_core": false,
+            "sort_order": 10
+          }
+        ],
+        "related_franchise_ids": [],
+        "title_en": "Ace of Diamond The LIVE V",
+        "summary_en": "The fifth stage production based on Yuji Terajima’s baseball manga Ace of Diamond. Seido High reaches the West Tokyo tournament final and faces Inashiro Industrial, whose team includes Mei Narumiya and Masatoshi Harada, for a place at Koshien. Written and directed by Chuji Mikasano, it was staged in Hyogo, Hiroshima, Fukuoka and Tokyo in September 2017."
+      },
+      "rawSource": {
+        "sourceUrl": "https://kira-hai.net/diaace2017-2",
+        "title": "ダイヤのA TheLIVEV",
+        "scheduleLines": [
+          "2017年9月7日-10日 新神戸オリエンタル劇場",
+          "2017年9月12日-14日 JMSアステールプラザ",
+          "2017年9月17日-18日 北九州芸術劇場",
+          "2017年9月20日-24日 シアター1010"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "小澤廉",
+            "sourceActorUrl": "https://kira-hai.net/ozawa-ren",
+            "role_name": "沢村栄純",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "廣瀬智紀",
+            "sourceActorUrl": "https://kira-hai.net/hirose-tomoki",
+            "role_name": "降谷暁",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "和田琢磨",
+            "sourceActorUrl": "https://kira-hai.net/wada-takuma",
+            "role_name": "御幸一也",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "深澤大河",
+            "sourceActorUrl": "https://kira-hai.net/fukazawa-taiga",
+            "role_name": "小湊春市",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "葉山昴",
+            "sourceActorUrl": "https://kira-hai.net/hayama-subaru",
+            "role_name": "倉持洋一",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "椎名鯛造",
+            "sourceActorUrl": "https://kira-hai.net/shiina-taizo",
+            "role_name": "小湊亮介",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "高橋良輔",
+            "sourceActorUrl": "https://kira-hai.net/takahashi-ryosuke",
+            "role_name": "伊佐敷純",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "上田悠介",
+            "sourceActorUrl": "https://kira-hai.net/ueda-yusuke",
+            "role_name": "結城哲也",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "水沼天孝",
+            "sourceActorUrl": "https://kira-hai.net/mizunuma-hiroyoshi",
+            "role_name": "増子透",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "NAO-G",
+            "sourceActorUrl": "https://kira-hai.net/nao-g",
+            "role_name": "丹波光一郎",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "中島大地",
+            "sourceActorUrl": "https://kira-hai.net/nakashima-daichi",
+            "role_name": "宮内啓介",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "大見拓土",
+            "sourceActorUrl": "https://kira-hai.net/omi-takuto",
+            "role_name": "川上憲史",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "澤田拓郎",
+            "sourceActorUrl": "https://kira-hai.net/sawada-takuro",
+            "role_name": "前園健太",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "加藤靖久",
+            "sourceActorUrl": "https://kira-hai.net/kato-yasuhisa",
+            "role_name": "片岡鉄心",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "藤田慶輔",
+            "sourceActorUrl": null,
+            "role_name": "太田一義",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "一内侑",
+            "sourceActorUrl": "https://kira-hai.net/kazuuchi-yu",
+            "role_name": "真中要",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "太田光る / 秋山皓郎",
+            "sourceActorUrl": null,
+            "role_name": "神谷カルロス俊樹",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "伊藤孝太郎",
+            "sourceActorUrl": "https://kira-hai.net/ito-kotaro",
+            "role_name": "白河勝之",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "八巻貴紀",
+            "sourceActorUrl": "https://kira-hai.net/yamaki-takanori",
+            "role_name": "原田雅功",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "小西成弥",
+            "sourceActorUrl": "https://kira-hai.net/konishi-seiya",
+            "role_name": "成宮鳴",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "野沢聡",
+            "sourceActorUrl": null,
+            "role_name": "国友広重",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "秋山皓郎",
+            "sourceActorUrl": "https://kira-hai.net/akiyama-hiroo",
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "網代将悟",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "石毛元貴",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "小野原幸一",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "儀間裕士",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "笹岡幸司",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "佐藤和斗",
+            "sourceActorUrl": "https://kira-hai.net/sato-kazuto",
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "佐藤ケンタロー",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "濱屋博嗣",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "結城駿",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          }
+        ],
+        "unparsed": []
+      },
+      "source": {
+        "sourceUrl": "https://kira-hai.net/diaace2017-2",
+        "title": "「ダイヤのA」The LIVE V",
+        "scheduleLines": [
+          "2017年9月7日-10日 新神戸オリエンタル劇場",
+          "2017年9月12日-14日 JMSアステールプラザ",
+          "2017年9月17日-18日 北九州芸術劇場",
+          "2017年9月20日-24日 シアター1010"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "小澤廉",
+            "sourceActorUrl": "https://kira-hai.net/ozawa-ren",
+            "role_name": "沢村栄純",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "廣瀬智紀",
+            "sourceActorUrl": "https://kira-hai.net/hirose-tomoki",
+            "role_name": "降谷暁",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "和田琢磨",
+            "sourceActorUrl": "https://kira-hai.net/wada-takuma",
+            "role_name": "御幸一也",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "深澤大河",
+            "sourceActorUrl": "https://kira-hai.net/fukazawa-taiga",
+            "role_name": "小湊春市",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "葉山昴",
+            "sourceActorUrl": "https://kira-hai.net/hayama-subaru",
+            "role_name": "倉持洋一",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "椎名鯛造",
+            "sourceActorUrl": "https://kira-hai.net/shiina-taizo",
+            "role_name": "小湊亮介",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "高橋良輔",
+            "sourceActorUrl": "https://kira-hai.net/takahashi-ryosuke",
+            "role_name": "伊佐敷純",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "上田悠介",
+            "sourceActorUrl": "https://kira-hai.net/ueda-yusuke",
+            "role_name": "結城哲也",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "水沼天孝",
+            "sourceActorUrl": "https://kira-hai.net/mizunuma-hiroyoshi",
+            "role_name": "増子透",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "NAO-G",
+            "sourceActorUrl": "https://kira-hai.net/nao-g",
+            "role_name": "丹波光一郎",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "中島大地",
+            "sourceActorUrl": "https://kira-hai.net/nakashima-daichi",
+            "role_name": "宮内啓介",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "大見拓土",
+            "sourceActorUrl": "https://kira-hai.net/omi-takuto",
+            "role_name": "川上憲史",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "澤田拓郎",
+            "sourceActorUrl": "https://kira-hai.net/sawada-takuro",
+            "role_name": "前園健太",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "加藤靖久",
+            "sourceActorUrl": "https://kira-hai.net/kato-yasuhisa",
+            "role_name": "片岡鉄心",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "藤田慶輔",
+            "sourceActorUrl": null,
+            "role_name": "太田一義",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "一内侑",
+            "sourceActorUrl": "https://kira-hai.net/kazuuchi-yu",
+            "role_name": "真中要",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "太田光る",
+            "sourceActorUrl": "https://kira-hai.net/ota-hikaru",
+            "role_name": "神谷カルロス俊樹",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "秋山皓郎",
+            "sourceActorUrl": "https://kira-hai.net/akiyama-hiroo",
+            "role_name": "神谷カルロス俊樹",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "伊藤孝太郎",
+            "sourceActorUrl": "https://kira-hai.net/ito-kotaro",
+            "role_name": "白河勝之",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "八巻貴紀",
+            "sourceActorUrl": "https://kira-hai.net/yamaki-takanori",
+            "role_name": "原田雅功",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "小西成弥",
+            "sourceActorUrl": "https://kira-hai.net/konishi-seiya",
+            "role_name": "成宮鳴",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "野沢聡",
+            "sourceActorUrl": null,
+            "role_name": "国友広重",
+            "cast_group": null
+          }
+        ],
+        "unparsed": []
+      },
+      "stage": {
+        "workUrl": "https://kira-hai.net/diaace2017-2",
+        "key": "6e5af541f44b2ef240407d4be7515cecb8641b12fd5f0f6b554e4c4952891b41",
+        "items": [
+          {
+            "source_actor_name": "小澤廉",
+            "source_actor_url": "https://kira-hai.net/ozawa-ren",
+            "source_work_title": "「ダイヤのA」The LIVE V",
+            "source_year": 2017,
+            "source_role_raw": "沢村栄純",
+            "source_role_names": [
+              "沢村栄純"
+            ],
+            "source_cast_group": null,
+            "source_order": 1,
+            "source_credit_key": "3f5ce5d3ecdf135af9f5",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/diaace2017-2",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/diaace2017-2",
+                  "checkedAt": "2026-10-24T08:36:28.104Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://l-tike.com/play/mevent/?mid=293535",
+                  "checkedAt": "2026-10-24T08:39:06.285Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://engekisengen.com/genre/engekisengenbeta/85672/",
+                  "checkedAt": "2026-10-24T08:38:23.870Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://engekisengen.com/genre/engekisengenbeta/86100/",
+                  "checkedAt": "2026-10-24T08:36:28.863Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://prtimes.jp/main/html/rd/p/000000172.000009198.html",
+                  "checkedAt": "2026-10-24T08:41:26.271Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://natalie.mu/comic/news/241739",
+                  "checkedAt": "2026-10-24T08:37:45.192Z",
+                  "note": "当時のキャスト・スタッフ発表を報じた編集記事。"
+                },
+                {
+                  "url": "https://kira-hai.net/akiyama-hiroo",
+                  "checkedAt": "2026-10-24T08:38:23.881Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                }
+              ],
+              "source_fingerprint": "f0e19e79f1d457e92eb0c7b7eb020faeae0163fb73c615fb4b0efe911f4cfdae",
+              "review_fingerprint": "2565a71ca897847070600d1755bd846f09f4ffebf364a34824944d184a501b95",
+              "snapshot_fingerprint": "add6385bee049bab5498c713acf0cc0356ad8afa7401a93063149dce8842ab75",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "52c14831-6a77-4c78-adad-08f8750f6d2d",
+            "matched_play_id": "1ccde89f-df2c-4c2b-a607-90d5adeeec86",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "廣瀬智紀",
+            "source_actor_url": "https://kira-hai.net/hirose-tomoki",
+            "source_work_title": "「ダイヤのA」The LIVE V",
+            "source_year": 2017,
+            "source_role_raw": "降谷暁",
+            "source_role_names": [
+              "降谷暁"
+            ],
+            "source_cast_group": null,
+            "source_order": 2,
+            "source_credit_key": "37d6492118eee934cd61",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/diaace2017-2",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/diaace2017-2",
+                  "checkedAt": "2026-10-24T08:36:28.104Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://l-tike.com/play/mevent/?mid=293535",
+                  "checkedAt": "2026-10-24T08:39:06.285Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://engekisengen.com/genre/engekisengenbeta/85672/",
+                  "checkedAt": "2026-10-24T08:38:23.870Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://engekisengen.com/genre/engekisengenbeta/86100/",
+                  "checkedAt": "2026-10-24T08:36:28.863Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://prtimes.jp/main/html/rd/p/000000172.000009198.html",
+                  "checkedAt": "2026-10-24T08:41:26.271Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://natalie.mu/comic/news/241739",
+                  "checkedAt": "2026-10-24T08:37:45.192Z",
+                  "note": "当時のキャスト・スタッフ発表を報じた編集記事。"
+                },
+                {
+                  "url": "https://kira-hai.net/akiyama-hiroo",
+                  "checkedAt": "2026-10-24T08:38:23.881Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                }
+              ],
+              "source_fingerprint": "f0e19e79f1d457e92eb0c7b7eb020faeae0163fb73c615fb4b0efe911f4cfdae",
+              "review_fingerprint": "2565a71ca897847070600d1755bd846f09f4ffebf364a34824944d184a501b95",
+              "snapshot_fingerprint": "add6385bee049bab5498c713acf0cc0356ad8afa7401a93063149dce8842ab75",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "957e0d89-2bd7-4a5b-8b1a-b151daa3fb57",
+            "matched_play_id": "1ccde89f-df2c-4c2b-a607-90d5adeeec86",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "和田琢磨",
+            "source_actor_url": "https://kira-hai.net/wada-takuma",
+            "source_work_title": "「ダイヤのA」The LIVE V",
+            "source_year": 2017,
+            "source_role_raw": "御幸一也",
+            "source_role_names": [
+              "御幸一也"
+            ],
+            "source_cast_group": null,
+            "source_order": 3,
+            "source_credit_key": "cb56b97c9743bda6a9f0",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/diaace2017-2",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/diaace2017-2",
+                  "checkedAt": "2026-10-24T08:36:28.104Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://l-tike.com/play/mevent/?mid=293535",
+                  "checkedAt": "2026-10-24T08:39:06.285Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://engekisengen.com/genre/engekisengenbeta/85672/",
+                  "checkedAt": "2026-10-24T08:38:23.870Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://engekisengen.com/genre/engekisengenbeta/86100/",
+                  "checkedAt": "2026-10-24T08:36:28.863Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://prtimes.jp/main/html/rd/p/000000172.000009198.html",
+                  "checkedAt": "2026-10-24T08:41:26.271Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://natalie.mu/comic/news/241739",
+                  "checkedAt": "2026-10-24T08:37:45.192Z",
+                  "note": "当時のキャスト・スタッフ発表を報じた編集記事。"
+                },
+                {
+                  "url": "https://kira-hai.net/akiyama-hiroo",
+                  "checkedAt": "2026-10-24T08:38:23.881Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                }
+              ],
+              "source_fingerprint": "f0e19e79f1d457e92eb0c7b7eb020faeae0163fb73c615fb4b0efe911f4cfdae",
+              "review_fingerprint": "2565a71ca897847070600d1755bd846f09f4ffebf364a34824944d184a501b95",
+              "snapshot_fingerprint": "add6385bee049bab5498c713acf0cc0356ad8afa7401a93063149dce8842ab75",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "fe1af02f-afc1-47f9-a8f3-1d0490811772",
+            "matched_play_id": "1ccde89f-df2c-4c2b-a607-90d5adeeec86",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "深澤大河",
+            "source_actor_url": "https://kira-hai.net/fukazawa-taiga",
+            "source_work_title": "「ダイヤのA」The LIVE V",
+            "source_year": 2017,
+            "source_role_raw": "小湊春市",
+            "source_role_names": [
+              "小湊春市"
+            ],
+            "source_cast_group": null,
+            "source_order": 4,
+            "source_credit_key": "fe980507f236977be7f5",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/diaace2017-2",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/diaace2017-2",
+                  "checkedAt": "2026-10-24T08:36:28.104Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://l-tike.com/play/mevent/?mid=293535",
+                  "checkedAt": "2026-10-24T08:39:06.285Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://engekisengen.com/genre/engekisengenbeta/85672/",
+                  "checkedAt": "2026-10-24T08:38:23.870Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://engekisengen.com/genre/engekisengenbeta/86100/",
+                  "checkedAt": "2026-10-24T08:36:28.863Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://prtimes.jp/main/html/rd/p/000000172.000009198.html",
+                  "checkedAt": "2026-10-24T08:41:26.271Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://natalie.mu/comic/news/241739",
+                  "checkedAt": "2026-10-24T08:37:45.192Z",
+                  "note": "当時のキャスト・スタッフ発表を報じた編集記事。"
+                },
+                {
+                  "url": "https://kira-hai.net/akiyama-hiroo",
+                  "checkedAt": "2026-10-24T08:38:23.881Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                }
+              ],
+              "source_fingerprint": "f0e19e79f1d457e92eb0c7b7eb020faeae0163fb73c615fb4b0efe911f4cfdae",
+              "review_fingerprint": "2565a71ca897847070600d1755bd846f09f4ffebf364a34824944d184a501b95",
+              "snapshot_fingerprint": "add6385bee049bab5498c713acf0cc0356ad8afa7401a93063149dce8842ab75",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "5f8af5f7-01e8-41e4-84a4-e0b27f85795a",
+            "matched_play_id": "1ccde89f-df2c-4c2b-a607-90d5adeeec86",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "葉山昴",
+            "source_actor_url": "https://kira-hai.net/hayama-subaru",
+            "source_work_title": "「ダイヤのA」The LIVE V",
+            "source_year": 2017,
+            "source_role_raw": "倉持洋一",
+            "source_role_names": [
+              "倉持洋一"
+            ],
+            "source_cast_group": null,
+            "source_order": 5,
+            "source_credit_key": "ddbb746d37ae997ca5ee",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/diaace2017-2",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/diaace2017-2",
+                  "checkedAt": "2026-10-24T08:36:28.104Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://l-tike.com/play/mevent/?mid=293535",
+                  "checkedAt": "2026-10-24T08:39:06.285Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://engekisengen.com/genre/engekisengenbeta/85672/",
+                  "checkedAt": "2026-10-24T08:38:23.870Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://engekisengen.com/genre/engekisengenbeta/86100/",
+                  "checkedAt": "2026-10-24T08:36:28.863Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://prtimes.jp/main/html/rd/p/000000172.000009198.html",
+                  "checkedAt": "2026-10-24T08:41:26.271Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://natalie.mu/comic/news/241739",
+                  "checkedAt": "2026-10-24T08:37:45.192Z",
+                  "note": "当時のキャスト・スタッフ発表を報じた編集記事。"
+                },
+                {
+                  "url": "https://kira-hai.net/akiyama-hiroo",
+                  "checkedAt": "2026-10-24T08:38:23.881Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                }
+              ],
+              "source_fingerprint": "f0e19e79f1d457e92eb0c7b7eb020faeae0163fb73c615fb4b0efe911f4cfdae",
+              "review_fingerprint": "2565a71ca897847070600d1755bd846f09f4ffebf364a34824944d184a501b95",
+              "snapshot_fingerprint": "add6385bee049bab5498c713acf0cc0356ad8afa7401a93063149dce8842ab75",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "3186d576-6e84-4a9c-9f89-f0ac16948e0e",
+            "matched_play_id": "1ccde89f-df2c-4c2b-a607-90d5adeeec86",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "椎名鯛造",
+            "source_actor_url": "https://kira-hai.net/shiina-taizo",
+            "source_work_title": "「ダイヤのA」The LIVE V",
+            "source_year": 2017,
+            "source_role_raw": "小湊亮介",
+            "source_role_names": [
+              "小湊亮介"
+            ],
+            "source_cast_group": null,
+            "source_order": 6,
+            "source_credit_key": "1e9080dc55e86bafd821",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/diaace2017-2",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/diaace2017-2",
+                  "checkedAt": "2026-10-24T08:36:28.104Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://l-tike.com/play/mevent/?mid=293535",
+                  "checkedAt": "2026-10-24T08:39:06.285Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://engekisengen.com/genre/engekisengenbeta/85672/",
+                  "checkedAt": "2026-10-24T08:38:23.870Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://engekisengen.com/genre/engekisengenbeta/86100/",
+                  "checkedAt": "2026-10-24T08:36:28.863Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://prtimes.jp/main/html/rd/p/000000172.000009198.html",
+                  "checkedAt": "2026-10-24T08:41:26.271Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://natalie.mu/comic/news/241739",
+                  "checkedAt": "2026-10-24T08:37:45.192Z",
+                  "note": "当時のキャスト・スタッフ発表を報じた編集記事。"
+                },
+                {
+                  "url": "https://kira-hai.net/akiyama-hiroo",
+                  "checkedAt": "2026-10-24T08:38:23.881Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                }
+              ],
+              "source_fingerprint": "f0e19e79f1d457e92eb0c7b7eb020faeae0163fb73c615fb4b0efe911f4cfdae",
+              "review_fingerprint": "2565a71ca897847070600d1755bd846f09f4ffebf364a34824944d184a501b95",
+              "snapshot_fingerprint": "add6385bee049bab5498c713acf0cc0356ad8afa7401a93063149dce8842ab75",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "346488a0-ec1a-434a-bed2-cdc766dca326",
+            "matched_play_id": "1ccde89f-df2c-4c2b-a607-90d5adeeec86",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "高橋良輔",
+            "source_actor_url": "https://kira-hai.net/takahashi-ryosuke",
+            "source_work_title": "「ダイヤのA」The LIVE V",
+            "source_year": 2017,
+            "source_role_raw": "伊佐敷純",
+            "source_role_names": [
+              "伊佐敷純"
+            ],
+            "source_cast_group": null,
+            "source_order": 7,
+            "source_credit_key": "4857d280d45463fb61dd",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/diaace2017-2",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/diaace2017-2",
+                  "checkedAt": "2026-10-24T08:36:28.104Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://l-tike.com/play/mevent/?mid=293535",
+                  "checkedAt": "2026-10-24T08:39:06.285Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://engekisengen.com/genre/engekisengenbeta/85672/",
+                  "checkedAt": "2026-10-24T08:38:23.870Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://engekisengen.com/genre/engekisengenbeta/86100/",
+                  "checkedAt": "2026-10-24T08:36:28.863Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://prtimes.jp/main/html/rd/p/000000172.000009198.html",
+                  "checkedAt": "2026-10-24T08:41:26.271Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://natalie.mu/comic/news/241739",
+                  "checkedAt": "2026-10-24T08:37:45.192Z",
+                  "note": "当時のキャスト・スタッフ発表を報じた編集記事。"
+                },
+                {
+                  "url": "https://kira-hai.net/akiyama-hiroo",
+                  "checkedAt": "2026-10-24T08:38:23.881Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                }
+              ],
+              "source_fingerprint": "f0e19e79f1d457e92eb0c7b7eb020faeae0163fb73c615fb4b0efe911f4cfdae",
+              "review_fingerprint": "2565a71ca897847070600d1755bd846f09f4ffebf364a34824944d184a501b95",
+              "snapshot_fingerprint": "add6385bee049bab5498c713acf0cc0356ad8afa7401a93063149dce8842ab75",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "6eda51b3-858b-44fe-ad2d-8df469fb03cc",
+            "matched_play_id": "1ccde89f-df2c-4c2b-a607-90d5adeeec86",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "上田悠介",
+            "source_actor_url": "https://kira-hai.net/ueda-yusuke",
+            "source_work_title": "「ダイヤのA」The LIVE V",
+            "source_year": 2017,
+            "source_role_raw": "結城哲也",
+            "source_role_names": [
+              "結城哲也"
+            ],
+            "source_cast_group": null,
+            "source_order": 8,
+            "source_credit_key": "3ba0d02c69ebefb04026",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/diaace2017-2",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/diaace2017-2",
+                  "checkedAt": "2026-10-24T08:36:28.104Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://l-tike.com/play/mevent/?mid=293535",
+                  "checkedAt": "2026-10-24T08:39:06.285Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://engekisengen.com/genre/engekisengenbeta/85672/",
+                  "checkedAt": "2026-10-24T08:38:23.870Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://engekisengen.com/genre/engekisengenbeta/86100/",
+                  "checkedAt": "2026-10-24T08:36:28.863Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://prtimes.jp/main/html/rd/p/000000172.000009198.html",
+                  "checkedAt": "2026-10-24T08:41:26.271Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://natalie.mu/comic/news/241739",
+                  "checkedAt": "2026-10-24T08:37:45.192Z",
+                  "note": "当時のキャスト・スタッフ発表を報じた編集記事。"
+                },
+                {
+                  "url": "https://kira-hai.net/akiyama-hiroo",
+                  "checkedAt": "2026-10-24T08:38:23.881Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                }
+              ],
+              "source_fingerprint": "f0e19e79f1d457e92eb0c7b7eb020faeae0163fb73c615fb4b0efe911f4cfdae",
+              "review_fingerprint": "2565a71ca897847070600d1755bd846f09f4ffebf364a34824944d184a501b95",
+              "snapshot_fingerprint": "add6385bee049bab5498c713acf0cc0356ad8afa7401a93063149dce8842ab75",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "a36372ce-61e5-43f5-ae9c-e1bf2fb5226b",
+            "matched_play_id": "1ccde89f-df2c-4c2b-a607-90d5adeeec86",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "水沼天孝",
+            "source_actor_url": "https://kira-hai.net/mizunuma-hiroyoshi",
+            "source_work_title": "「ダイヤのA」The LIVE V",
+            "source_year": 2017,
+            "source_role_raw": "増子透",
+            "source_role_names": [
+              "増子透"
+            ],
+            "source_cast_group": null,
+            "source_order": 9,
+            "source_credit_key": "4135244ddf2c792f76ce",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/diaace2017-2",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/diaace2017-2",
+                  "checkedAt": "2026-10-24T08:36:28.104Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://l-tike.com/play/mevent/?mid=293535",
+                  "checkedAt": "2026-10-24T08:39:06.285Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://engekisengen.com/genre/engekisengenbeta/85672/",
+                  "checkedAt": "2026-10-24T08:38:23.870Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://engekisengen.com/genre/engekisengenbeta/86100/",
+                  "checkedAt": "2026-10-24T08:36:28.863Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://prtimes.jp/main/html/rd/p/000000172.000009198.html",
+                  "checkedAt": "2026-10-24T08:41:26.271Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://natalie.mu/comic/news/241739",
+                  "checkedAt": "2026-10-24T08:37:45.192Z",
+                  "note": "当時のキャスト・スタッフ発表を報じた編集記事。"
+                },
+                {
+                  "url": "https://kira-hai.net/akiyama-hiroo",
+                  "checkedAt": "2026-10-24T08:38:23.881Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                }
+              ],
+              "source_fingerprint": "f0e19e79f1d457e92eb0c7b7eb020faeae0163fb73c615fb4b0efe911f4cfdae",
+              "review_fingerprint": "2565a71ca897847070600d1755bd846f09f4ffebf364a34824944d184a501b95",
+              "snapshot_fingerprint": "add6385bee049bab5498c713acf0cc0356ad8afa7401a93063149dce8842ab75",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "b632a7a8-3457-4a48-9bad-32d13de64726",
+            "matched_play_id": "1ccde89f-df2c-4c2b-a607-90d5adeeec86",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "NAO-G",
+            "source_actor_url": "https://kira-hai.net/nao-g",
+            "source_work_title": "「ダイヤのA」The LIVE V",
+            "source_year": 2017,
+            "source_role_raw": "丹波光一郎",
+            "source_role_names": [
+              "丹波光一郎"
+            ],
+            "source_cast_group": null,
+            "source_order": 10,
+            "source_credit_key": "c8634ba42f85d1085cd1",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/diaace2017-2",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/diaace2017-2",
+                  "checkedAt": "2026-10-24T08:36:28.104Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://l-tike.com/play/mevent/?mid=293535",
+                  "checkedAt": "2026-10-24T08:39:06.285Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://engekisengen.com/genre/engekisengenbeta/85672/",
+                  "checkedAt": "2026-10-24T08:38:23.870Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://engekisengen.com/genre/engekisengenbeta/86100/",
+                  "checkedAt": "2026-10-24T08:36:28.863Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://prtimes.jp/main/html/rd/p/000000172.000009198.html",
+                  "checkedAt": "2026-10-24T08:41:26.271Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://natalie.mu/comic/news/241739",
+                  "checkedAt": "2026-10-24T08:37:45.192Z",
+                  "note": "当時のキャスト・スタッフ発表を報じた編集記事。"
+                },
+                {
+                  "url": "https://kira-hai.net/akiyama-hiroo",
+                  "checkedAt": "2026-10-24T08:38:23.881Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                }
+              ],
+              "source_fingerprint": "f0e19e79f1d457e92eb0c7b7eb020faeae0163fb73c615fb4b0efe911f4cfdae",
+              "review_fingerprint": "2565a71ca897847070600d1755bd846f09f4ffebf364a34824944d184a501b95",
+              "snapshot_fingerprint": "add6385bee049bab5498c713acf0cc0356ad8afa7401a93063149dce8842ab75",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "d97d5598-e6ca-4cfb-8603-654b9b9d0106",
+            "matched_play_id": "1ccde89f-df2c-4c2b-a607-90d5adeeec86",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "中島大地",
+            "source_actor_url": "https://kira-hai.net/nakashima-daichi",
+            "source_work_title": "「ダイヤのA」The LIVE V",
+            "source_year": 2017,
+            "source_role_raw": "宮内啓介",
+            "source_role_names": [
+              "宮内啓介"
+            ],
+            "source_cast_group": null,
+            "source_order": 11,
+            "source_credit_key": "be42afd44b135ab5f81a",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/diaace2017-2",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/diaace2017-2",
+                  "checkedAt": "2026-10-24T08:36:28.104Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://l-tike.com/play/mevent/?mid=293535",
+                  "checkedAt": "2026-10-24T08:39:06.285Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://engekisengen.com/genre/engekisengenbeta/85672/",
+                  "checkedAt": "2026-10-24T08:38:23.870Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://engekisengen.com/genre/engekisengenbeta/86100/",
+                  "checkedAt": "2026-10-24T08:36:28.863Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://prtimes.jp/main/html/rd/p/000000172.000009198.html",
+                  "checkedAt": "2026-10-24T08:41:26.271Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://natalie.mu/comic/news/241739",
+                  "checkedAt": "2026-10-24T08:37:45.192Z",
+                  "note": "当時のキャスト・スタッフ発表を報じた編集記事。"
+                },
+                {
+                  "url": "https://kira-hai.net/akiyama-hiroo",
+                  "checkedAt": "2026-10-24T08:38:23.881Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                }
+              ],
+              "source_fingerprint": "f0e19e79f1d457e92eb0c7b7eb020faeae0163fb73c615fb4b0efe911f4cfdae",
+              "review_fingerprint": "2565a71ca897847070600d1755bd846f09f4ffebf364a34824944d184a501b95",
+              "snapshot_fingerprint": "add6385bee049bab5498c713acf0cc0356ad8afa7401a93063149dce8842ab75",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "f500eb8f-d147-480b-a7d1-a0c025649a34",
+            "matched_play_id": "1ccde89f-df2c-4c2b-a607-90d5adeeec86",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "大見拓土",
+            "source_actor_url": "https://kira-hai.net/omi-takuto",
+            "source_work_title": "「ダイヤのA」The LIVE V",
+            "source_year": 2017,
+            "source_role_raw": "川上憲史",
+            "source_role_names": [
+              "川上憲史"
+            ],
+            "source_cast_group": null,
+            "source_order": 12,
+            "source_credit_key": "f8addc7622ca0f224932",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/diaace2017-2",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/diaace2017-2",
+                  "checkedAt": "2026-10-24T08:36:28.104Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://l-tike.com/play/mevent/?mid=293535",
+                  "checkedAt": "2026-10-24T08:39:06.285Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://engekisengen.com/genre/engekisengenbeta/85672/",
+                  "checkedAt": "2026-10-24T08:38:23.870Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://engekisengen.com/genre/engekisengenbeta/86100/",
+                  "checkedAt": "2026-10-24T08:36:28.863Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://prtimes.jp/main/html/rd/p/000000172.000009198.html",
+                  "checkedAt": "2026-10-24T08:41:26.271Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://natalie.mu/comic/news/241739",
+                  "checkedAt": "2026-10-24T08:37:45.192Z",
+                  "note": "当時のキャスト・スタッフ発表を報じた編集記事。"
+                },
+                {
+                  "url": "https://kira-hai.net/akiyama-hiroo",
+                  "checkedAt": "2026-10-24T08:38:23.881Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                }
+              ],
+              "source_fingerprint": "f0e19e79f1d457e92eb0c7b7eb020faeae0163fb73c615fb4b0efe911f4cfdae",
+              "review_fingerprint": "2565a71ca897847070600d1755bd846f09f4ffebf364a34824944d184a501b95",
+              "snapshot_fingerprint": "add6385bee049bab5498c713acf0cc0356ad8afa7401a93063149dce8842ab75",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "29728783-f36a-46b4-b1b3-d1cd59456b6c",
+            "matched_play_id": "1ccde89f-df2c-4c2b-a607-90d5adeeec86",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "澤田拓郎",
+            "source_actor_url": "https://kira-hai.net/sawada-takuro",
+            "source_work_title": "「ダイヤのA」The LIVE V",
+            "source_year": 2017,
+            "source_role_raw": "前園健太",
+            "source_role_names": [
+              "前園健太"
+            ],
+            "source_cast_group": null,
+            "source_order": 13,
+            "source_credit_key": "3285d374a47ce04c89a6",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/diaace2017-2",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/diaace2017-2",
+                  "checkedAt": "2026-10-24T08:36:28.104Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://l-tike.com/play/mevent/?mid=293535",
+                  "checkedAt": "2026-10-24T08:39:06.285Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://engekisengen.com/genre/engekisengenbeta/85672/",
+                  "checkedAt": "2026-10-24T08:38:23.870Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://engekisengen.com/genre/engekisengenbeta/86100/",
+                  "checkedAt": "2026-10-24T08:36:28.863Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://prtimes.jp/main/html/rd/p/000000172.000009198.html",
+                  "checkedAt": "2026-10-24T08:41:26.271Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://natalie.mu/comic/news/241739",
+                  "checkedAt": "2026-10-24T08:37:45.192Z",
+                  "note": "当時のキャスト・スタッフ発表を報じた編集記事。"
+                },
+                {
+                  "url": "https://kira-hai.net/akiyama-hiroo",
+                  "checkedAt": "2026-10-24T08:38:23.881Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                }
+              ],
+              "source_fingerprint": "f0e19e79f1d457e92eb0c7b7eb020faeae0163fb73c615fb4b0efe911f4cfdae",
+              "review_fingerprint": "2565a71ca897847070600d1755bd846f09f4ffebf364a34824944d184a501b95",
+              "snapshot_fingerprint": "add6385bee049bab5498c713acf0cc0356ad8afa7401a93063149dce8842ab75",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "cd1d3dc5-8830-43ba-b22a-475f588264cc",
+            "matched_play_id": "1ccde89f-df2c-4c2b-a607-90d5adeeec86",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "加藤靖久",
+            "source_actor_url": "https://kira-hai.net/kato-yasuhisa",
+            "source_work_title": "「ダイヤのA」The LIVE V",
+            "source_year": 2017,
+            "source_role_raw": "片岡鉄心",
+            "source_role_names": [
+              "片岡鉄心"
+            ],
+            "source_cast_group": null,
+            "source_order": 14,
+            "source_credit_key": "3b44e6c716646ccd4ada",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/diaace2017-2",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/diaace2017-2",
+                  "checkedAt": "2026-10-24T08:36:28.104Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://l-tike.com/play/mevent/?mid=293535",
+                  "checkedAt": "2026-10-24T08:39:06.285Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://engekisengen.com/genre/engekisengenbeta/85672/",
+                  "checkedAt": "2026-10-24T08:38:23.870Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://engekisengen.com/genre/engekisengenbeta/86100/",
+                  "checkedAt": "2026-10-24T08:36:28.863Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://prtimes.jp/main/html/rd/p/000000172.000009198.html",
+                  "checkedAt": "2026-10-24T08:41:26.271Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://natalie.mu/comic/news/241739",
+                  "checkedAt": "2026-10-24T08:37:45.192Z",
+                  "note": "当時のキャスト・スタッフ発表を報じた編集記事。"
+                },
+                {
+                  "url": "https://kira-hai.net/akiyama-hiroo",
+                  "checkedAt": "2026-10-24T08:38:23.881Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                }
+              ],
+              "source_fingerprint": "f0e19e79f1d457e92eb0c7b7eb020faeae0163fb73c615fb4b0efe911f4cfdae",
+              "review_fingerprint": "2565a71ca897847070600d1755bd846f09f4ffebf364a34824944d184a501b95",
+              "snapshot_fingerprint": "add6385bee049bab5498c713acf0cc0356ad8afa7401a93063149dce8842ab75",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "91f4f069-ea97-42f0-936f-c25315a123f4",
+            "matched_play_id": "1ccde89f-df2c-4c2b-a607-90d5adeeec86",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "藤田慶輔",
+            "source_actor_url": null,
+            "source_work_title": "「ダイヤのA」The LIVE V",
+            "source_year": 2017,
+            "source_role_raw": "太田一義",
+            "source_role_names": [
+              "太田一義"
+            ],
+            "source_cast_group": null,
+            "source_order": 15,
+            "source_credit_key": "900c02769094dbf54a33",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/diaace2017-2",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/diaace2017-2",
+                  "checkedAt": "2026-10-24T08:36:28.104Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://l-tike.com/play/mevent/?mid=293535",
+                  "checkedAt": "2026-10-24T08:39:06.285Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://engekisengen.com/genre/engekisengenbeta/85672/",
+                  "checkedAt": "2026-10-24T08:38:23.870Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://engekisengen.com/genre/engekisengenbeta/86100/",
+                  "checkedAt": "2026-10-24T08:36:28.863Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://prtimes.jp/main/html/rd/p/000000172.000009198.html",
+                  "checkedAt": "2026-10-24T08:41:26.271Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://natalie.mu/comic/news/241739",
+                  "checkedAt": "2026-10-24T08:37:45.192Z",
+                  "note": "当時のキャスト・スタッフ発表を報じた編集記事。"
+                },
+                {
+                  "url": "https://kira-hai.net/akiyama-hiroo",
+                  "checkedAt": "2026-10-24T08:38:23.881Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                }
+              ],
+              "source_fingerprint": "f0e19e79f1d457e92eb0c7b7eb020faeae0163fb73c615fb4b0efe911f4cfdae",
+              "review_fingerprint": "2565a71ca897847070600d1755bd846f09f4ffebf364a34824944d184a501b95",
+              "snapshot_fingerprint": "add6385bee049bab5498c713acf0cc0356ad8afa7401a93063149dce8842ab75",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "38f9107b-dabf-4e78-bc96-77809669d6d7",
+            "matched_play_id": "1ccde89f-df2c-4c2b-a607-90d5adeeec86",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "一内侑",
+            "source_actor_url": "https://kira-hai.net/kazuuchi-yu",
+            "source_work_title": "「ダイヤのA」The LIVE V",
+            "source_year": 2017,
+            "source_role_raw": "真中要",
+            "source_role_names": [
+              "真中要"
+            ],
+            "source_cast_group": null,
+            "source_order": 16,
+            "source_credit_key": "3c51fcc48d09ae6d2933",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/diaace2017-2",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/diaace2017-2",
+                  "checkedAt": "2026-10-24T08:36:28.104Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://l-tike.com/play/mevent/?mid=293535",
+                  "checkedAt": "2026-10-24T08:39:06.285Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://engekisengen.com/genre/engekisengenbeta/85672/",
+                  "checkedAt": "2026-10-24T08:38:23.870Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://engekisengen.com/genre/engekisengenbeta/86100/",
+                  "checkedAt": "2026-10-24T08:36:28.863Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://prtimes.jp/main/html/rd/p/000000172.000009198.html",
+                  "checkedAt": "2026-10-24T08:41:26.271Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://natalie.mu/comic/news/241739",
+                  "checkedAt": "2026-10-24T08:37:45.192Z",
+                  "note": "当時のキャスト・スタッフ発表を報じた編集記事。"
+                },
+                {
+                  "url": "https://kira-hai.net/akiyama-hiroo",
+                  "checkedAt": "2026-10-24T08:38:23.881Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                }
+              ],
+              "source_fingerprint": "f0e19e79f1d457e92eb0c7b7eb020faeae0163fb73c615fb4b0efe911f4cfdae",
+              "review_fingerprint": "2565a71ca897847070600d1755bd846f09f4ffebf364a34824944d184a501b95",
+              "snapshot_fingerprint": "add6385bee049bab5498c713acf0cc0356ad8afa7401a93063149dce8842ab75",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "1b8363f5-7fa1-4b82-b654-2b2c9bc3e0b4",
+            "matched_play_id": "1ccde89f-df2c-4c2b-a607-90d5adeeec86",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "太田光る",
+            "source_actor_url": "https://kira-hai.net/ota-hikaru",
+            "source_work_title": "「ダイヤのA」The LIVE V",
+            "source_year": 2017,
+            "source_role_raw": "神谷カルロス俊樹",
+            "source_role_names": [
+              "神谷カルロス俊樹"
+            ],
+            "source_cast_group": null,
+            "source_order": 17,
+            "source_credit_key": "24dcb1f5af3cf2fdc84c",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/diaace2017-2",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/diaace2017-2",
+                  "checkedAt": "2026-10-24T08:36:28.104Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://l-tike.com/play/mevent/?mid=293535",
+                  "checkedAt": "2026-10-24T08:39:06.285Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://engekisengen.com/genre/engekisengenbeta/85672/",
+                  "checkedAt": "2026-10-24T08:38:23.870Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://engekisengen.com/genre/engekisengenbeta/86100/",
+                  "checkedAt": "2026-10-24T08:36:28.863Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://prtimes.jp/main/html/rd/p/000000172.000009198.html",
+                  "checkedAt": "2026-10-24T08:41:26.271Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://natalie.mu/comic/news/241739",
+                  "checkedAt": "2026-10-24T08:37:45.192Z",
+                  "note": "当時のキャスト・スタッフ発表を報じた編集記事。"
+                },
+                {
+                  "url": "https://kira-hai.net/akiyama-hiroo",
+                  "checkedAt": "2026-10-24T08:38:23.881Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                }
+              ],
+              "source_fingerprint": "f0e19e79f1d457e92eb0c7b7eb020faeae0163fb73c615fb4b0efe911f4cfdae",
+              "review_fingerprint": "2565a71ca897847070600d1755bd846f09f4ffebf364a34824944d184a501b95",
+              "snapshot_fingerprint": "add6385bee049bab5498c713acf0cc0356ad8afa7401a93063149dce8842ab75",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "ba2d965f-7f22-4c38-9eeb-54679adff497",
+            "matched_play_id": "1ccde89f-df2c-4c2b-a607-90d5adeeec86",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "秋山皓郎",
+            "source_actor_url": "https://kira-hai.net/akiyama-hiroo",
+            "source_work_title": "「ダイヤのA」The LIVE V",
+            "source_year": 2017,
+            "source_role_raw": "神谷カルロス俊樹",
+            "source_role_names": [
+              "神谷カルロス俊樹"
+            ],
+            "source_cast_group": null,
+            "source_order": 18,
+            "source_credit_key": "e933d87fc0a1a2a42a97",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/diaace2017-2",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/diaace2017-2",
+                  "checkedAt": "2026-10-24T08:36:28.104Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://l-tike.com/play/mevent/?mid=293535",
+                  "checkedAt": "2026-10-24T08:39:06.285Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://engekisengen.com/genre/engekisengenbeta/85672/",
+                  "checkedAt": "2026-10-24T08:38:23.870Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://engekisengen.com/genre/engekisengenbeta/86100/",
+                  "checkedAt": "2026-10-24T08:36:28.863Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://prtimes.jp/main/html/rd/p/000000172.000009198.html",
+                  "checkedAt": "2026-10-24T08:41:26.271Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://natalie.mu/comic/news/241739",
+                  "checkedAt": "2026-10-24T08:37:45.192Z",
+                  "note": "当時のキャスト・スタッフ発表を報じた編集記事。"
+                },
+                {
+                  "url": "https://kira-hai.net/akiyama-hiroo",
+                  "checkedAt": "2026-10-24T08:38:23.881Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                }
+              ],
+              "source_fingerprint": "f0e19e79f1d457e92eb0c7b7eb020faeae0163fb73c615fb4b0efe911f4cfdae",
+              "review_fingerprint": "2565a71ca897847070600d1755bd846f09f4ffebf364a34824944d184a501b95",
+              "snapshot_fingerprint": "add6385bee049bab5498c713acf0cc0356ad8afa7401a93063149dce8842ab75",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "27092ed0-887a-4ab9-b468-a419ed1bce7c",
+            "matched_play_id": "1ccde89f-df2c-4c2b-a607-90d5adeeec86",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "伊藤孝太郎",
+            "source_actor_url": "https://kira-hai.net/ito-kotaro",
+            "source_work_title": "「ダイヤのA」The LIVE V",
+            "source_year": 2017,
+            "source_role_raw": "白河勝之",
+            "source_role_names": [
+              "白河勝之"
+            ],
+            "source_cast_group": null,
+            "source_order": 19,
+            "source_credit_key": "a7888be3bbcecf7668d8",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/diaace2017-2",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/diaace2017-2",
+                  "checkedAt": "2026-10-24T08:36:28.104Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://l-tike.com/play/mevent/?mid=293535",
+                  "checkedAt": "2026-10-24T08:39:06.285Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://engekisengen.com/genre/engekisengenbeta/85672/",
+                  "checkedAt": "2026-10-24T08:38:23.870Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://engekisengen.com/genre/engekisengenbeta/86100/",
+                  "checkedAt": "2026-10-24T08:36:28.863Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://prtimes.jp/main/html/rd/p/000000172.000009198.html",
+                  "checkedAt": "2026-10-24T08:41:26.271Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://natalie.mu/comic/news/241739",
+                  "checkedAt": "2026-10-24T08:37:45.192Z",
+                  "note": "当時のキャスト・スタッフ発表を報じた編集記事。"
+                },
+                {
+                  "url": "https://kira-hai.net/akiyama-hiroo",
+                  "checkedAt": "2026-10-24T08:38:23.881Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                }
+              ],
+              "source_fingerprint": "f0e19e79f1d457e92eb0c7b7eb020faeae0163fb73c615fb4b0efe911f4cfdae",
+              "review_fingerprint": "2565a71ca897847070600d1755bd846f09f4ffebf364a34824944d184a501b95",
+              "snapshot_fingerprint": "add6385bee049bab5498c713acf0cc0356ad8afa7401a93063149dce8842ab75",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "08c7ae9e-e50e-4ba4-806d-50b9cf1a59f6",
+            "matched_play_id": "1ccde89f-df2c-4c2b-a607-90d5adeeec86",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "八巻貴紀",
+            "source_actor_url": "https://kira-hai.net/yamaki-takanori",
+            "source_work_title": "「ダイヤのA」The LIVE V",
+            "source_year": 2017,
+            "source_role_raw": "原田雅功",
+            "source_role_names": [
+              "原田雅功"
+            ],
+            "source_cast_group": null,
+            "source_order": 20,
+            "source_credit_key": "cc113592b7acecf2ad10",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/diaace2017-2",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/diaace2017-2",
+                  "checkedAt": "2026-10-24T08:36:28.104Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://l-tike.com/play/mevent/?mid=293535",
+                  "checkedAt": "2026-10-24T08:39:06.285Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://engekisengen.com/genre/engekisengenbeta/85672/",
+                  "checkedAt": "2026-10-24T08:38:23.870Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://engekisengen.com/genre/engekisengenbeta/86100/",
+                  "checkedAt": "2026-10-24T08:36:28.863Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://prtimes.jp/main/html/rd/p/000000172.000009198.html",
+                  "checkedAt": "2026-10-24T08:41:26.271Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://natalie.mu/comic/news/241739",
+                  "checkedAt": "2026-10-24T08:37:45.192Z",
+                  "note": "当時のキャスト・スタッフ発表を報じた編集記事。"
+                },
+                {
+                  "url": "https://kira-hai.net/akiyama-hiroo",
+                  "checkedAt": "2026-10-24T08:38:23.881Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                }
+              ],
+              "source_fingerprint": "f0e19e79f1d457e92eb0c7b7eb020faeae0163fb73c615fb4b0efe911f4cfdae",
+              "review_fingerprint": "2565a71ca897847070600d1755bd846f09f4ffebf364a34824944d184a501b95",
+              "snapshot_fingerprint": "add6385bee049bab5498c713acf0cc0356ad8afa7401a93063149dce8842ab75",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "c85bbe6b-a0ae-476f-9132-4ac820e06aa2",
+            "matched_play_id": "1ccde89f-df2c-4c2b-a607-90d5adeeec86",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "小西成弥",
+            "source_actor_url": "https://kira-hai.net/konishi-seiya",
+            "source_work_title": "「ダイヤのA」The LIVE V",
+            "source_year": 2017,
+            "source_role_raw": "成宮鳴",
+            "source_role_names": [
+              "成宮鳴"
+            ],
+            "source_cast_group": null,
+            "source_order": 21,
+            "source_credit_key": "e39d99a5b0bafd6232df",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/diaace2017-2",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/diaace2017-2",
+                  "checkedAt": "2026-10-24T08:36:28.104Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://l-tike.com/play/mevent/?mid=293535",
+                  "checkedAt": "2026-10-24T08:39:06.285Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://engekisengen.com/genre/engekisengenbeta/85672/",
+                  "checkedAt": "2026-10-24T08:38:23.870Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://engekisengen.com/genre/engekisengenbeta/86100/",
+                  "checkedAt": "2026-10-24T08:36:28.863Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://prtimes.jp/main/html/rd/p/000000172.000009198.html",
+                  "checkedAt": "2026-10-24T08:41:26.271Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://natalie.mu/comic/news/241739",
+                  "checkedAt": "2026-10-24T08:37:45.192Z",
+                  "note": "当時のキャスト・スタッフ発表を報じた編集記事。"
+                },
+                {
+                  "url": "https://kira-hai.net/akiyama-hiroo",
+                  "checkedAt": "2026-10-24T08:38:23.881Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                }
+              ],
+              "source_fingerprint": "f0e19e79f1d457e92eb0c7b7eb020faeae0163fb73c615fb4b0efe911f4cfdae",
+              "review_fingerprint": "2565a71ca897847070600d1755bd846f09f4ffebf364a34824944d184a501b95",
+              "snapshot_fingerprint": "add6385bee049bab5498c713acf0cc0356ad8afa7401a93063149dce8842ab75",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "a81ef8e3-1545-4cd2-b932-08feed0a4786",
+            "matched_play_id": "1ccde89f-df2c-4c2b-a607-90d5adeeec86",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "野沢聡",
+            "source_actor_url": null,
+            "source_work_title": "「ダイヤのA」The LIVE V",
+            "source_year": 2017,
+            "source_role_raw": "国友広重",
+            "source_role_names": [
+              "国友広重"
+            ],
+            "source_cast_group": null,
+            "source_order": 22,
+            "source_credit_key": "9247008f815636cc4d6b",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/diaace2017-2",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/diaace2017-2",
+                  "checkedAt": "2026-10-24T08:36:28.104Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://l-tike.com/play/mevent/?mid=293535",
+                  "checkedAt": "2026-10-24T08:39:06.285Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://engekisengen.com/genre/engekisengenbeta/85672/",
+                  "checkedAt": "2026-10-24T08:38:23.870Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://engekisengen.com/genre/engekisengenbeta/86100/",
+                  "checkedAt": "2026-10-24T08:36:28.863Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://prtimes.jp/main/html/rd/p/000000172.000009198.html",
+                  "checkedAt": "2026-10-24T08:41:26.271Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                },
+                {
+                  "url": "https://natalie.mu/comic/news/241739",
+                  "checkedAt": "2026-10-24T08:37:45.192Z",
+                  "note": "当時のキャスト・スタッフ発表を報じた編集記事。"
+                },
+                {
+                  "url": "https://kira-hai.net/akiyama-hiroo",
+                  "checkedAt": "2026-10-24T08:38:23.881Z",
+                  "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+                }
+              ],
+              "source_fingerprint": "f0e19e79f1d457e92eb0c7b7eb020faeae0163fb73c615fb4b0efe911f4cfdae",
+              "review_fingerprint": "2565a71ca897847070600d1755bd846f09f4ffebf364a34824944d184a501b95",
+              "snapshot_fingerprint": "add6385bee049bab5498c713acf0cc0356ad8afa7401a93063149dce8842ab75",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "9e9b243a-c3e6-4fad-b162-df337e908a71",
+            "matched_play_id": "1ccde89f-df2c-4c2b-a607-90d5adeeec86",
+            "status": "pending"
+          }
+        ]
+      },
+      "records": [
+        {
+          "actor": {
+            "id": "52c14831-6a77-4c78-adad-08f8750f6d2d",
+            "slug": "ozawa-ren",
+            "name": "小澤廉",
+            "kana": "おざわれん",
+            "profile": null,
+            "image_url": null,
+            "sns": null,
+            "gender": null,
+            "created_at": "2026-10-17T08:22:48.968908+00:00",
+            "updated_at": "2026-10-17T08:22:48.968908+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1991-08-12",
+            "height_cm": 170,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "小澤廉",
+            "sourceActorUrl": "https://kira-hai.net/ozawa-ren",
+            "role_name": "沢村栄純",
+            "cast_group": null
+          },
+          "sourceCreditKey": "3f5ce5d3ecdf135af9f5",
+          "sourceOrder": 1,
+          "billingOrder": 1,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "957e0d89-2bd7-4a5b-8b1a-b151daa3fb57",
+            "slug": "hirose-tomoki",
+            "name": "廣瀬 智紀",
+            "kana": "ひろせ ともき",
+            "profile": "埼玉県出身の俳優。スターダストプロモーション所属。舞台『弱虫ペダル』（巻島裕介役）や映画『刀剣乱舞』（鶯丸役）等に出演。",
+            "image_url": null,
+            "sns": {
+              "x": "https://twitter.com/hirosetomoki214",
+              "official": "http://ameblo.jp/tomoki-hirose/",
+              "instagram": "https://www.instagram.com/hirose_tomoki.0214/"
+            },
+            "gender": "male",
+            "created_at": "2025-12-13T04:41:02.052969+00:00",
+            "updated_at": "2025-12-13T04:41:02.052969+00:00",
+            "tags": [
+              "天然",
+              "美形"
+            ],
+            "featured_play_slugs": [],
+            "birthday": "1987-02-14",
+            "height_cm": 179,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "廣瀬智紀",
+            "sourceActorUrl": "https://kira-hai.net/hirose-tomoki",
+            "role_name": "降谷暁",
+            "cast_group": null
+          },
+          "sourceCreditKey": "37d6492118eee934cd61",
+          "sourceOrder": 2,
+          "billingOrder": 2,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "fe1af02f-afc1-47f9-a8f3-1d0490811772",
+            "slug": "wada-takuma",
+            "name": "和田 琢磨",
+            "kana": "わだ たくま",
+            "profile": "山形県出身の俳優。株式会社HeHe所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/wadatakuma_",
+              "official": "https://wadatakuma.com/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:01:26.311999+00:00",
+            "updated_at": "2026-03-21T15:01:26.311999+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1986-01-04",
+            "height_cm": 178,
+            "blood_type": "AB",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "和田琢磨",
+            "sourceActorUrl": "https://kira-hai.net/wada-takuma",
+            "role_name": "御幸一也",
+            "cast_group": null
+          },
+          "sourceCreditKey": "cb56b97c9743bda6a9f0",
+          "sourceOrder": 3,
+          "billingOrder": 3,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "5f8af5f7-01e8-41e4-84a4-e0b27f85795a",
+            "slug": "fukasawa-taiga",
+            "name": "深澤 大河",
+            "kana": "ふかざわ たいが",
+            "profile": "静岡県出身の俳優。株式会社トリプルエー所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/fukazawataiga",
+              "official": "http://www.aaa-triple-a.co.jp/artist/%e6%b7%b1%e6%be%a4%e5%a4%a7%e6%b2%b3/",
+              "instagram": "https://www.instagram.com/taiga_fukazawa_official"
+            },
+            "gender": "male",
+            "created_at": "2026-04-01T13:43:16.276849+00:00",
+            "updated_at": "2026-04-01T13:43:16.276849+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1994-12-08",
+            "height_cm": 162,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "深澤大河",
+            "sourceActorUrl": "https://kira-hai.net/fukazawa-taiga",
+            "role_name": "小湊春市",
+            "cast_group": null
+          },
+          "sourceCreditKey": "fe980507f236977be7f5",
+          "sourceOrder": 4,
+          "billingOrder": 4,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "3186d576-6e84-4a9c-9f89-f0ac16948e0e",
+            "slug": "hayama-subaru",
+            "name": "葉山昴",
+            "kana": "はやま すばる",
+            "profile": "俳優。舞台『ダイヤのA』The LIVEシリーズの倉持洋一役を務める。『To Row ～二匹の狼～』の桂小五郎役などで出演。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-23T20:09:25.809484+00:00",
+            "updated_at": "2026-10-23T20:09:25.809484+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1985-06-17",
+            "height_cm": 170,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": "葉山昴",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "葉山昴",
+            "sourceActorUrl": "https://kira-hai.net/hayama-subaru",
+            "role_name": "倉持洋一",
+            "cast_group": null
+          },
+          "sourceCreditKey": "ddbb746d37ae997ca5ee",
+          "sourceOrder": 5,
+          "billingOrder": 5,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "346488a0-ec1a-434a-bed2-cdc766dca326",
+            "slug": "shiina-taizo",
+            "name": "椎名 鯛造",
+            "kana": "しいな たいぞう",
+            "profile": "岐阜県出身の俳優。株式会社GVM所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/TaizoShiina"
+            },
+            "gender": "male",
+            "created_at": "2026-03-29T15:49:11.130151+00:00",
+            "updated_at": "2026-03-29T15:49:11.130151+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1986-06-17",
+            "height_cm": 164,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "椎名鯛造",
+            "sourceActorUrl": "https://kira-hai.net/shiina-taizo",
+            "role_name": "小湊亮介",
+            "cast_group": null
+          },
+          "sourceCreditKey": "1e9080dc55e86bafd821",
+          "sourceOrder": 6,
+          "billingOrder": 6,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "6eda51b3-858b-44fe-ad2d-8df469fb03cc",
+            "slug": "takahashi-ryosuke",
+            "name": "高橋良輔",
+            "kana": "たかはし りょうすけ",
+            "profile": "東京都出身の俳優・声優。スワロウ所属。舞台『ダイヤのA』The LIVEシリーズの伊佐敷純役、『モブサイコ100』の佐川役、アニメ『SSSS.GRIDMAN』のサムライ・キャリバー役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-23T20:09:25.809484+00:00",
+            "updated_at": "2026-10-23T20:09:25.809484+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1984-05-14",
+            "height_cm": 171,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": "Ryosuke Takahashi",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "高橋良輔",
+            "sourceActorUrl": "https://kira-hai.net/takahashi-ryosuke",
+            "role_name": "伊佐敷純",
+            "cast_group": null
+          },
+          "sourceCreditKey": "4857d280d45463fb61dd",
+          "sourceOrder": 7,
+          "billingOrder": 7,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "a36372ce-61e5-43f5-ae9c-e1bf2fb5226b",
+            "slug": "ueda-yusuke",
+            "name": "上田 悠介",
+            "kana": "うえだ ゆうすけ",
+            "profile": "奈良県出身の俳優。ミュージカル『テニスの王子様』2ndシーズン（橘桔平役）やミュージカル『ヘタリア』（ドイツ役）等に出演。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/yskued0402",
+              "youtube": "https://www.youtube.com/channel/UCAnkbgwDTBfvlU29Vzcj5ZQ",
+              "instagram": "https://www.instagram.com/yskued0402"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:03:44.295565+00:00",
+            "updated_at": "2026-03-21T15:03:44.295565+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1989-04-02",
+            "height_cm": 182,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "上田悠介",
+            "sourceActorUrl": "https://kira-hai.net/ueda-yusuke",
+            "role_name": "結城哲也",
+            "cast_group": null
+          },
+          "sourceCreditKey": "3ba0d02c69ebefb04026",
+          "sourceOrder": 8,
+          "billingOrder": 8,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "b632a7a8-3457-4a48-9bad-32d13de64726",
+            "slug": "mizunuma-hiroyoshi",
+            "name": "水沼天孝",
+            "kana": "みずぬま ひろよし",
+            "profile": "東京都出身の元俳優。舞台『ダイヤのA』The LIVEの増子透役、『ALL OUT!! THE STAGE』の久川久美男役などを務めた。少年時代にラグビーを経験している。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-20T08:06:57.079051+00:00",
+            "updated_at": "2026-10-20T08:06:57.079051+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1988-08-24",
+            "height_cm": 182,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "水沼天孝",
+            "sourceActorUrl": "https://kira-hai.net/mizunuma-hiroyoshi",
+            "role_name": "増子透",
+            "cast_group": null
+          },
+          "sourceCreditKey": "4135244ddf2c792f76ce",
+          "sourceOrder": 9,
+          "billingOrder": 9,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "d97d5598-e6ca-4cfb-8603-654b9b9d0106",
+            "slug": "nao-g",
+            "name": "NAO-G",
+            "kana": "なおじー",
+            "profile": "俳優・アクション振付師。舞台『ダイヤのA The LIVE』の丹波光一郎役、『ノラガミ－神と絆－』の禄丸役などを務める。舞台『黒執事』ではアクション振付を担当した。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-20T14:36:28.442341+00:00",
+            "updated_at": "2026-10-20T14:36:28.442341+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1983-12-19",
+            "height_cm": 178,
+            "blood_type": "AB",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "NAO-G",
+            "sourceActorUrl": "https://kira-hai.net/nao-g",
+            "role_name": "丹波光一郎",
+            "cast_group": null
+          },
+          "sourceCreditKey": "c8634ba42f85d1085cd1",
+          "sourceOrder": 10,
+          "billingOrder": 10,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "f500eb8f-d147-480b-a7d1-a0c025649a34",
+            "slug": "nakashima-daichi",
+            "name": "中島大地",
+            "kana": "なかしま だいち",
+            "profile": "俳優。舞台『ダイヤのA』The LIVEシリーズで宮内啓介役を務める。人狼TLPTでは旅芸人ゲイリー役で出演。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-23T20:09:25.809484+00:00",
+            "updated_at": "2026-10-23T20:09:25.809484+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1988-11-14",
+            "height_cm": 170,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": "中島大地",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "中島大地",
+            "sourceActorUrl": "https://kira-hai.net/nakashima-daichi",
+            "role_name": "宮内啓介",
+            "cast_group": null
+          },
+          "sourceCreditKey": "be42afd44b135ab5f81a",
+          "sourceOrder": 11,
+          "billingOrder": 11,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "29728783-f36a-46b4-b1b3-d1cd59456b6c",
+            "slug": "ohmi-takuto",
+            "name": "大見 拓土",
+            "kana": "おおみ たくと",
+            "profile": "青森県出身の俳優。AYRTON所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/ohmi_takuto",
+              "official": "https://ohmi-takuto.com/",
+              "instagram": "https://www.instagram.com/takuto_ohmi/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-31T16:11:44.437175+00:00",
+            "updated_at": "2026-03-31T16:11:44.437175+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1994-07-05",
+            "height_cm": 165,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "大見拓土",
+            "sourceActorUrl": "https://kira-hai.net/omi-takuto",
+            "role_name": "川上憲史",
+            "cast_group": null
+          },
+          "sourceCreditKey": "f8addc7622ca0f224932",
+          "sourceOrder": 12,
+          "billingOrder": 12,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "cd1d3dc5-8830-43ba-b22a-475f588264cc",
+            "slug": "sawada-takuro",
+            "name": "澤田拓郎",
+            "kana": "さわだ たくろう",
+            "profile": "京都府出身の俳優・声優。スワロウ所属。舞台『ブルーロック』の伊右衛門送人役、舞台『機動戦士ガンダム00』のラッセ・アイオン役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-21T16:16:29.615669+00:00",
+            "updated_at": "2026-10-21T16:16:29.615669+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1993-01-23",
+            "height_cm": 182,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": "Takuro Sawada",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "澤田拓郎",
+            "sourceActorUrl": "https://kira-hai.net/sawada-takuro",
+            "role_name": "前園健太",
+            "cast_group": null
+          },
+          "sourceCreditKey": "3285d374a47ce04c89a6",
+          "sourceOrder": 13,
+          "billingOrder": 13,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "91f4f069-ea97-42f0-936f-c25315a123f4",
+            "slug": "kato-yasuhisa",
+            "name": "加藤靖久",
+            "kana": "かとう やすひさ",
+            "profile": "東京都出身の俳優。劇団AND ENDLESSの旗揚げメンバー。舞台『ダイヤのA』The LIVEシリーズの片岡監督役、『機動戦士ガンダム00』シリーズのセルゲイ・スミルノフ役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-23T20:09:25.809484+00:00",
+            "updated_at": "2026-10-23T20:09:25.809484+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1976-10-28",
+            "height_cm": 180,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": "加藤靖久",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "加藤靖久",
+            "sourceActorUrl": "https://kira-hai.net/kato-yasuhisa",
+            "role_name": "片岡鉄心",
+            "cast_group": null
+          },
+          "sourceCreditKey": "3b44e6c716646ccd4ada",
+          "sourceOrder": 14,
+          "billingOrder": 14,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "38f9107b-dabf-4e78-bc96-77809669d6d7",
+            "slug": "fujita-keisuke",
+            "name": "藤田慶輔",
+            "kana": "ふじた けいすけ",
+            "profile": "俳優。舞台『ダイヤのA』The LIVEシリーズの太田部長役を務める。アガリスクエンターテイメント『わが家の最終的解決』『卒業式、実行』などに出演。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-23T20:09:25.809484+00:00",
+            "updated_at": "2026-10-23T20:09:25.809484+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1975-10-01",
+            "height_cm": 169,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "藤田慶輔",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "藤田慶輔",
+            "sourceActorUrl": null,
+            "role_name": "太田一義",
+            "cast_group": null
+          },
+          "sourceCreditKey": "900c02769094dbf54a33",
+          "sourceOrder": 15,
+          "billingOrder": 15,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "1b8363f5-7fa1-4b82-b654-2b2c9bc3e0b4",
+            "slug": "kazuuchi-yu",
+            "name": "一内侑",
+            "kana": "かずうち ゆう",
+            "profile": "俳優。劇団AND ENDLESS所属。2006年に入団。舞台「機動戦士ガンダム00」シリーズのビリー・カタギリ役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-19T16:29:40.800387+00:00",
+            "updated_at": "2026-10-19T16:29:40.800387+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1981-02-02",
+            "height_cm": 176,
+            "blood_type": "AB",
+            "birthday_label": null,
+            "name_en": "Yu Kazuuchi",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "一内侑",
+            "sourceActorUrl": "https://kira-hai.net/kazuuchi-yu",
+            "role_name": "真中要",
+            "cast_group": null
+          },
+          "sourceCreditKey": "3c51fcc48d09ae6d2933",
+          "sourceOrder": 16,
+          "billingOrder": 16,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "ba2d965f-7f22-4c38-9eeb-54679adff497",
+            "slug": "ota-hikaru",
+            "name": "太田光る",
+            "kana": "おおた ひかる",
+            "profile": "モデル・俳優。2015年のGirlsAward・avex Boys Award AuditionでBoysAward賞を受賞し、2016年に『テラスハウス』へ出演。舞台『ダイヤのA』The LIVE IV・Vの神谷カルロス俊樹役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-24T08:21:56.679676+00:00",
+            "updated_at": "2026-10-24T08:21:56.679676+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1997-03-01",
+            "height_cm": 177,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": "太田光る",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "太田光る",
+            "sourceActorUrl": "https://kira-hai.net/ota-hikaru",
+            "role_name": "神谷カルロス俊樹",
+            "cast_group": null
+          },
+          "sourceCreditKey": "24dcb1f5af3cf2fdc84c",
+          "sourceOrder": 17,
+          "billingOrder": 17,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "27092ed0-887a-4ab9-b468-a419ed1bce7c",
+            "slug": "akiyama-hiroo",
+            "name": "秋山皓郎",
+            "kana": "あきやま ひろお",
+            "profile": "俳優・脚本家・演出家。2024年に佐伯亮と劇団7枠13番を結成し、旗揚げ公演『折り合いの終幕』で脚本・演出・出演を担当。舞台『ブルーロック』3rd STAGEではダダ・シウバほかを演じる。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-22T06:48:20.587396+00:00",
+            "updated_at": "2026-10-22T06:48:20.587396+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1994-04-01",
+            "height_cm": 175,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "秋山皓郎",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "秋山皓郎",
+            "sourceActorUrl": "https://kira-hai.net/akiyama-hiroo",
+            "role_name": "神谷カルロス俊樹",
+            "cast_group": null
+          },
+          "sourceCreditKey": "e933d87fc0a1a2a42a97",
+          "sourceOrder": 18,
+          "billingOrder": 18,
+          "expectedNote": "出演日未確認"
+        },
+        {
+          "actor": {
+            "id": "08c7ae9e-e50e-4ba4-806d-50b9cf1a59f6",
+            "slug": "ito-kotaro",
+            "name": "伊藤孝太郎",
+            "kana": "いとう こうたろう",
+            "profile": "俳優。舞台『天元突破グレンラガン～炎撃篇～』のシモン役、『ダイヤのA』The LIVE IVの白河勝之役などを務める。メサイアシリーズや『STAGE ホイッスル！』にも出演。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-24T08:21:56.679676+00:00",
+            "updated_at": "2026-10-24T08:21:56.679676+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1988-08-10",
+            "height_cm": 170,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "伊藤孝太郎",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "伊藤孝太郎",
+            "sourceActorUrl": "https://kira-hai.net/ito-kotaro",
+            "role_name": "白河勝之",
+            "cast_group": null
+          },
+          "sourceCreditKey": "a7888be3bbcecf7668d8",
+          "sourceOrder": 19,
+          "billingOrder": 19,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "c85bbe6b-a0ae-476f-9132-4ac820e06aa2",
+            "slug": "yamaki-takanori",
+            "name": "八巻 貴紀",
+            "kana": "やまき たかのり",
+            "profile": "東京都出身の俳優。ブロッサムエンターテイメント所属。ミュージカル『テニスの王子様』3rdシーズン（樺地崇弘役）や舞台『ダイヤのA The LIVE V』（原田雅功役）、舞台『信長の野望・大志』シリーズ等の舞台作品に出演している。また、グレート・ピレニーズの愛犬との日常をYouTube等で発信している。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/yamaki_takanori",
+              "youtube": "https://www.youtube.com/channel/UCLZaB5r5MtntfXu_no1dCOQ"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:10:00.631722+00:00",
+            "updated_at": "2026-03-21T15:10:00.631722+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1992-11-08",
+            "height_cm": 190,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Tokyo. Affiliated with Blossom Entertainment. He has appeared in stage works such as the musical \"The Prince of Tennis\" 3rd season (as Munehiro Kabaji), the stage play \"Ace of Diamond The LIVE V\" (as Masatoshi Harada), and the stage play \"Nobunaga's Ambition: Taishi\" series. He also shares his daily life with his Great Pyrenees dog on platforms like YouTube.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "八巻貴紀",
+            "sourceActorUrl": "https://kira-hai.net/yamaki-takanori",
+            "role_name": "原田雅功",
+            "cast_group": null
+          },
+          "sourceCreditKey": "cc113592b7acecf2ad10",
+          "sourceOrder": 20,
+          "billingOrder": 20,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "a81ef8e3-1545-4cd2-b932-08feed0a4786",
+            "slug": "konishi-seiya",
+            "name": "小西 成弥",
+            "kana": "こにし せいや",
+            "profile": "大阪府出身の俳優。現在はフリーで活動。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/seiya0906",
+              "official": "https://seiyakonishi.com/",
+              "instagram": "https://www.instagram.com/seiya_konishi"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:03:44.295565+00:00",
+            "updated_at": "2026-03-21T15:03:44.295565+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1994-09-06",
+            "height_cm": 171,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "小西成弥",
+            "sourceActorUrl": "https://kira-hai.net/konishi-seiya",
+            "role_name": "成宮鳴",
+            "cast_group": null
+          },
+          "sourceCreditKey": "e39d99a5b0bafd6232df",
+          "sourceOrder": 21,
+          "billingOrder": 21,
+          "expectedNote": null
+        },
+        {
+          "actor": {
+            "id": "9e9b243a-c3e6-4fad-b162-df337e908a71",
+            "slug": "nozawa-so",
+            "name": "野沢聡",
+            "kana": "のざわ そう",
+            "profile": "東京都出身の俳優・声優。81プロデュース所属。ミュージカル『エリザベート』のジュラ役、舞台『ダイヤのA』The LIVE Vの国友広重役などを務める。吹替では『ジュラシック・ワールド』のハマダ役を担当。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1973-04-03",
+            "height_cm": 185,
+            "blood_type": "AB",
+            "birthday_label": null,
+            "name_en": "So Nozawa",
+            "profile_en": null,
+            "death_date": null,
+            "created_at": "prepared",
+            "updated_at": "prepared"
+          },
+          "source": {
+            "sourceActorName": "野沢聡",
+            "sourceActorUrl": null,
+            "role_name": "国友広重",
+            "cast_group": null
+          },
+          "sourceCreditKey": "9247008f815636cc4d6b",
+          "sourceOrder": 22,
+          "billingOrder": 22,
+          "expectedNote": null
+        }
+      ],
+      "castPatches": [],
+      "keptCasts": [],
+      "legacyCandidates": [
+        {
+          "id": "5c7916ed-f2fc-4791-ad90-e3259da0477a",
+          "source": "kira-hai",
+          "external_actor_id": "76e81e5b-c716-4c18-b1ec-f20f9b651451",
+          "external_play_id": "f705bbe1-b9de-4166-b055-6cb4a9b67dd8",
+          "source_actor_name": "上田悠介",
+          "source_actor_url": "https://kira-hai.net/ueda-yusuke",
+          "source_work_title": "ダイヤのA TheLIVEⅤ",
+          "source_work_url": "https://kira-hai.net/diaace2017-2",
+          "source_year": 2021,
+          "source_role_raw": "結城哲也",
+          "source_role_names": [
+            "結城哲也"
+          ],
+          "matched_actor_id": "a36372ce-61e5-43f5-ae9c-e1bf2fb5226b",
+          "matched_play_id": null,
+          "accepted_cast_id": null,
+          "confidence": 60,
+          "status": "pending",
+          "note": null,
+          "scraped_at": "2026-04-27T17:43:43.256+00:00",
+          "created_at": "2026-04-27T17:43:42.476832+00:00",
+          "updated_at": "2026-04-27T17:43:43.256+00:00",
+          "accepted_at": null,
+          "rejected_at": null,
+          "source_cast_group": null,
+          "source_order": null,
+          "source_credit_key": null,
+          "source_evidence": null
+        }
+      ],
+      "sourceFingerprint": "f0e19e79f1d457e92eb0c7b7eb020faeae0163fb73c615fb4b0efe911f4cfdae",
+      "expectedCastCount": 22,
+      "evidence": [
+        {
+          "url": "https://kira-hai.net/diaace2017-2",
+          "checkedAt": "2026-10-24T08:36:28.104Z",
+          "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+        },
+        {
+          "url": "https://l-tike.com/play/mevent/?mid=293535",
+          "checkedAt": "2026-10-24T08:39:06.285Z",
+          "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+        },
+        {
+          "url": "https://engekisengen.com/genre/engekisengenbeta/85672/",
+          "checkedAt": "2026-10-24T08:38:23.870Z",
+          "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+        },
+        {
+          "url": "https://engekisengen.com/genre/engekisengenbeta/86100/",
+          "checkedAt": "2026-10-24T08:36:28.863Z",
+          "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+        },
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000172.000009198.html",
+          "checkedAt": "2026-10-24T08:41:26.271Z",
+          "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+        },
+        {
+          "url": "https://natalie.mu/comic/news/241739",
+          "checkedAt": "2026-10-24T08:37:45.192Z",
+          "note": "当時のキャスト・スタッフ発表を報じた編集記事。"
+        },
+        {
+          "url": "https://kira-hai.net/akiyama-hiroo",
+          "checkedAt": "2026-10-24T08:38:23.881Z",
+          "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+        }
+      ],
+      "creditOnly": [
+        {
+          "sourceActorName": "秋山皓郎",
+          "sourceActorUrl": "https://kira-hai.net/akiyama-hiroo",
+          "role_name": null,
+          "cast_group": "アンサンブル",
+          "storageDecision": {
+            "target": "plays.credits",
+            "reason": "役なしアンサンブルは作品クレジット。秋山のみ別の役付き出演を第一参照先で確認し、その配役は別途保持。"
+          }
+        },
+        {
+          "sourceActorName": "網代将悟",
+          "sourceActorUrl": null,
+          "role_name": null,
+          "cast_group": "アンサンブル",
+          "storageDecision": {
+            "target": "plays.credits",
+            "reason": "役なしアンサンブルは作品クレジット。秋山のみ別の役付き出演を第一参照先で確認し、その配役は別途保持。"
+          }
+        },
+        {
+          "sourceActorName": "石毛元貴",
+          "sourceActorUrl": null,
+          "role_name": null,
+          "cast_group": "アンサンブル",
+          "storageDecision": {
+            "target": "plays.credits",
+            "reason": "役なしアンサンブルは作品クレジット。秋山のみ別の役付き出演を第一参照先で確認し、その配役は別途保持。"
+          }
+        },
+        {
+          "sourceActorName": "小野原幸一",
+          "sourceActorUrl": null,
+          "role_name": null,
+          "cast_group": "アンサンブル",
+          "storageDecision": {
+            "target": "plays.credits",
+            "reason": "役なしアンサンブルは作品クレジット。秋山のみ別の役付き出演を第一参照先で確認し、その配役は別途保持。"
+          }
+        },
+        {
+          "sourceActorName": "儀間裕士",
+          "sourceActorUrl": null,
+          "role_name": null,
+          "cast_group": "アンサンブル",
+          "storageDecision": {
+            "target": "plays.credits",
+            "reason": "役なしアンサンブルは作品クレジット。秋山のみ別の役付き出演を第一参照先で確認し、その配役は別途保持。"
+          }
+        },
+        {
+          "sourceActorName": "笹岡幸司",
+          "sourceActorUrl": null,
+          "role_name": null,
+          "cast_group": "アンサンブル",
+          "storageDecision": {
+            "target": "plays.credits",
+            "reason": "役なしアンサンブルは作品クレジット。秋山のみ別の役付き出演を第一参照先で確認し、その配役は別途保持。"
+          }
+        },
+        {
+          "sourceActorName": "佐藤和斗",
+          "sourceActorUrl": "https://kira-hai.net/sato-kazuto",
+          "role_name": null,
+          "cast_group": "アンサンブル",
+          "storageDecision": {
+            "target": "plays.credits",
+            "reason": "役なしアンサンブルは作品クレジット。秋山のみ別の役付き出演を第一参照先で確認し、その配役は別途保持。"
+          }
+        },
+        {
+          "sourceActorName": "佐藤ケンタロー",
+          "sourceActorUrl": null,
+          "role_name": null,
+          "cast_group": "アンサンブル",
+          "storageDecision": {
+            "target": "plays.credits",
+            "reason": "役なしアンサンブルは作品クレジット。秋山のみ別の役付き出演を第一参照先で確認し、その配役は別途保持。"
+          }
+        },
+        {
+          "sourceActorName": "濱屋博嗣",
+          "sourceActorUrl": null,
+          "role_name": null,
+          "cast_group": "アンサンブル",
+          "storageDecision": {
+            "target": "plays.credits",
+            "reason": "役なしアンサンブルは作品クレジット。秋山のみ別の役付き出演を第一参照先で確認し、その配役は別途保持。"
+          }
+        },
+        {
+          "sourceActorName": "結城駿",
+          "sourceActorUrl": null,
+          "role_name": null,
+          "cast_group": "アンサンブル",
+          "storageDecision": {
+            "target": "plays.credits",
+            "reason": "役なしアンサンブルは作品クレジット。秋山のみ別の役付き出演を第一参照先で確認し、その配役は別途保持。"
+          }
+        }
+      ],
+      "exceptions": [
+        "公演公式のroot/cast/stageとindex.htmlはHTTP500で原文を取得できない。公式の確認済みとは称さず、第一参照先・ローチケ・放送局発表・当時の編集記事を採用し、失敗URLと取得情報も保持。",
+        "第一参照先のカルロス役「太田光る / 秋山皓郎」を別人物の2配役へ分離。秋山の人物ページにも本作のアンサンブルと同役があり採用するが、担当公演日・交代理由・ダブルキャスト等の区分は不明。公開補足は「出演日未確認」のみとし、役名や人物を結合しない。",
+        "秋山は公式告知を転載した放送局発表ではアンサンブル、第一参照先で別に役付き出演があるため両情報を保持。残る役なしアンサンブルは個別配役や人物を増やさない。",
+        "川上役は本作では既存の大見拓土へ。廣瀬の降谷は本作で通常出演。前作の映像出演や子供時代の注記を引き継がない。",
+        "藤田の太田一義は本作の第一参照先と放送局発表を採用。旧作の太田部長という表記を変更せず、公演ごとの元表記を残す。",
+        "上田悠介の旧候補は役・人物・作品URLが一致し年のみ2021と誤り。変更前全項目を履歴へ保存して2017へ訂正し既存IDを再利用。",
+        "野沢聡の現事務所は本作国友役を記載。月日は公式、完全な生年月日・身長・血液型は編集人物辞典由来。出典種別を保持。",
+        "本作で確認したスタッフ9区分とアンサンブル10人。公式検索キャッシュの詳細スタッフを原HTML照合済みとは扱わず、取得できた当時発表の範囲のみ収録。",
+        "既存シリーズ・4公演・21人物を全項目保全。現在配信は未確認でvod空欄。英題と概要は編集表記。詳細英訳・個人総合監査・未確定の配役条件は後続。"
+      ]
+    }
+  ],
+  "keptPlays": [
+    {
+      "id": "0347179a-fdb8-4c24-87c6-bbdc88711e15",
+      "slug": "diaace2016",
+      "title": "「ダイヤのA」The LIVE II",
+      "franchise_id": "f9806a0c-a8e2-4de0-8c47-531fd6b6df6b",
+      "summary": "寺嶋裕二の高校野球漫画を原作とする舞台シリーズ第2作。沢村栄純ら青道高校の部員に加え、和田雅成が演じる明川学園の楊舜臣が登場する。脚本・演出は浅沼晋太郎。2016年3月から4月に東京・名古屋・大阪で上演された。",
+      "period": "東京：2016年3月17日〜21日／名古屋：2016年3月24日／大阪：2016年4月1日〜3日",
+      "venue": "東京：天王洲 銀河劇場／名古屋：名古屋文理大学文化フォーラム 大ホール／大阪：森ノ宮ピロティホール",
+      "vod": null,
+      "genre": null,
+      "created_at": "2026-10-23T20:29:48.116611+00:00",
+      "updated_at": "2026-10-23T20:29:48.116611+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "寺嶋裕二（週刊少年マガジン／講談社）"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "脚本・演出",
+          "names": [
+            "浅沼晋太郎（bpm）"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "テーマ曲",
+          "names": [
+            "「Grateful Story」OxT"
+          ],
+          "is_core": true,
+          "sort_order": 3
+        },
+        {
+          "role": "音楽",
+          "names": [
+            "和田俊輔",
+            "南ゆに"
+          ],
+          "is_core": true,
+          "sort_order": 4
+        },
+        {
+          "role": "共同演出",
+          "names": [
+            "中島大地"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "映像監修",
+          "names": [
+            "NAO-G（bpm）"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        },
+        {
+          "role": "演出助手",
+          "names": [
+            "藤原理恵"
+          ],
+          "is_core": false,
+          "sort_order": 7
+        },
+        {
+          "role": "技術監督",
+          "names": [
+            "寅川英司"
+          ],
+          "is_core": false,
+          "sort_order": 8
+        },
+        {
+          "role": "舞台監督",
+          "names": [
+            "弘光哲也"
+          ],
+          "is_core": false,
+          "sort_order": 9
+        },
+        {
+          "role": "演出部",
+          "names": [
+            "横川奈保子",
+            "松澤紀昭"
+          ],
+          "is_core": false,
+          "sort_order": 10
+        },
+        {
+          "role": "舞台美術",
+          "names": [
+            "青木拓也"
+          ],
+          "is_core": false,
+          "sort_order": 11
+        },
+        {
+          "role": "大道具",
+          "names": [
+            "高橋英司（C-COM）"
+          ],
+          "is_core": false,
+          "sort_order": 12
+        },
+        {
+          "role": "小道具",
+          "names": [
+            "畠山直子"
+          ],
+          "is_core": false,
+          "sort_order": 13
+        },
+        {
+          "role": "照明",
+          "names": [
+            "大波多秀起（デイライト）"
+          ],
+          "is_core": false,
+          "sort_order": 14
+        },
+        {
+          "role": "音響",
+          "names": [
+            "前田規寛（SSED）"
+          ],
+          "is_core": false,
+          "sort_order": 15
+        },
+        {
+          "role": "映像監督",
+          "names": [
+            "常光博武",
+            "山岸賢太郎（Project Yamaken）"
+          ],
+          "is_core": false,
+          "sort_order": 16
+        },
+        {
+          "role": "映像製作",
+          "names": [
+            "吉川マッハスペシャル",
+            "曾根久光"
+          ],
+          "is_core": false,
+          "sort_order": 17
+        },
+        {
+          "role": "映像進行",
+          "names": [
+            "ZIPANG FILM WORX"
+          ],
+          "is_core": false,
+          "sort_order": 18
+        },
+        {
+          "role": "衣裳",
+          "names": [
+            "雲出三緒"
+          ],
+          "is_core": false,
+          "sort_order": 19
+        },
+        {
+          "role": "衣裳進行",
+          "names": [
+            "齊藤あかね"
+          ],
+          "is_core": false,
+          "sort_order": 20
+        },
+        {
+          "role": "ヘアメイク",
+          "names": [
+            "木村美和子",
+            "小川万理子（raftel）"
+          ],
+          "is_core": false,
+          "sort_order": 21
+        },
+        {
+          "role": "特殊造型",
+          "names": [
+            "石野大雅"
+          ],
+          "is_core": false,
+          "sort_order": 22
+        },
+        {
+          "role": "宣伝写真",
+          "names": [
+            "熊谷貫"
+          ],
+          "is_core": false,
+          "sort_order": 23
+        },
+        {
+          "role": "Web",
+          "names": [
+            "まめなり"
+          ],
+          "is_core": false,
+          "sort_order": 24
+        },
+        {
+          "role": "制作協力",
+          "names": [
+            "設樂敬子",
+            "市原瞳"
+          ],
+          "is_core": false,
+          "sort_order": 25
+        },
+        {
+          "role": "制作",
+          "names": [
+            "Office ENDLESS"
+          ],
+          "is_core": false,
+          "sort_order": 26
+        },
+        {
+          "role": "アシスタントプロデューサー",
+          "names": [
+            "濱田純司（Office ENDLESS）"
+          ],
+          "is_core": false,
+          "sort_order": 27
+        },
+        {
+          "role": "プロデューサー",
+          "names": [
+            "下浦貴敬（Office ENDLESS）"
+          ],
+          "is_core": false,
+          "sort_order": 28
+        },
+        {
+          "role": "特別協賛",
+          "names": [
+            "ミズノ"
+          ],
+          "is_core": false,
+          "sort_order": 29
+        },
+        {
+          "role": "小道具協力",
+          "names": [
+            "オンデーズ"
+          ],
+          "is_core": false,
+          "sort_order": 30
+        },
+        {
+          "role": "主催",
+          "names": [
+            "「ダイヤのA」The LIVEⅡ 製作委員会（講談社／エー・ティー・エックス／テレビ東京／ローソンＨＭＶエンタテイメント／ポニーキャニオン／Office ENDLESS）"
+          ],
+          "is_core": false,
+          "sort_order": 31
+        },
+        {
+          "role": "協力",
+          "names": [
+            "「ダイヤのＡ‐ＳＳ‐」製作委員会"
+          ],
+          "is_core": false,
+          "sort_order": 32
+        },
+        {
+          "role": "アンサンブル",
+          "names": [
+            "石毛元貴",
+            "書川勇輝",
+            "儀間裕士",
+            "笹岡幸司",
+            "佐藤ケンタロー",
+            "竹本凌",
+            "濱屋博嗣",
+            "森山遼",
+            "結城駿"
+          ],
+          "is_core": false,
+          "sort_order": 33
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "The second stage production based on Yuji Terajima’s baseball manga Ace of Diamond. Eijun Sawamura and the Seido High team are joined by Shunshin Yang of Akikawa Academy, played by Masanari Wada. Written and directed by Shintaro Asanuma, it toured Tokyo, Nagoya and Osaka in March and April 2016.",
+      "title_en": "Ace of Diamond The LIVE II"
+    },
+    {
+      "id": "86f38080-4172-4161-9af2-7ec508734e8f",
+      "slug": "diaace2015",
+      "title": "「ダイヤのA」The LIVE",
+      "franchise_id": "f9806a0c-a8e2-4de0-8c47-531fd6b6df6b",
+      "summary": "寺嶋裕二の高校野球漫画を原作とする舞台シリーズ第1作。沢村栄純、降谷暁、御幸一也ら青道高校の野球部員を中心に描く。脚本・演出は浅沼晋太郎、制作はOffice ENDLESS。2015年8月、東京・Zeppブルーシアター六本木で上演された。",
+      "period": "東京：2015年8月1日〜9日",
+      "venue": "東京：Zeppブルーシアター六本木",
+      "vod": null,
+      "genre": null,
+      "created_at": "2026-10-23T20:09:25.809484+00:00",
+      "updated_at": "2026-10-23T20:09:25.809484+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "寺嶋裕二（週刊少年マガジン／講談社）"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "脚本・演出",
+          "names": [
+            "浅沼晋太郎（bpm）"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "音楽",
+          "names": [
+            "和田俊輔"
+          ],
+          "is_core": true,
+          "sort_order": 3
+        },
+        {
+          "role": "技術監督",
+          "names": [
+            "寅川英司"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "舞台監督",
+          "names": [
+            "弘光哲也"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "演出部",
+          "names": [
+            "加藤由紀子"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        },
+        {
+          "role": "舞台美術",
+          "names": [
+            "青木拓也"
+          ],
+          "is_core": false,
+          "sort_order": 7
+        },
+        {
+          "role": "大道具",
+          "names": [
+            "高橋英司（C-COM）"
+          ],
+          "is_core": false,
+          "sort_order": 8
+        },
+        {
+          "role": "小道具",
+          "names": [
+            "畠山直子"
+          ],
+          "is_core": false,
+          "sort_order": 9
+        },
+        {
+          "role": "照明",
+          "names": [
+            "橋本剛（colore）"
+          ],
+          "is_core": false,
+          "sort_order": 10
+        },
+        {
+          "role": "音響",
+          "names": [
+            "田上篤志（atSound）"
+          ],
+          "is_core": false,
+          "sort_order": 11
+        },
+        {
+          "role": "映像監督",
+          "names": [
+            "浦島啓（colore）"
+          ],
+          "is_core": false,
+          "sort_order": 12
+        },
+        {
+          "role": "映像製作",
+          "names": [
+            "吉川マッハスペシャル",
+            "曾根久光"
+          ],
+          "is_core": false,
+          "sort_order": 13
+        },
+        {
+          "role": "映像進行",
+          "names": [
+            "NAO-G（bpm）",
+            "常光博武（zipang film works）",
+            "知久継道（zipang film works）",
+            "大平真嗣（zipang film works）"
+          ],
+          "is_core": false,
+          "sort_order": 14
+        },
+        {
+          "role": "アクションアドバイザー",
+          "names": [
+            "根本太樹（ATT）"
+          ],
+          "is_core": false,
+          "sort_order": 15
+        },
+        {
+          "role": "演出補",
+          "names": [
+            "中島大地"
+          ],
+          "is_core": false,
+          "sort_order": 16
+        },
+        {
+          "role": "衣裳",
+          "names": [
+            "雲出三緒"
+          ],
+          "is_core": false,
+          "sort_order": 17
+        },
+        {
+          "role": "衣裳進行",
+          "names": [
+            "齋藤あかね"
+          ],
+          "is_core": false,
+          "sort_order": 18
+        },
+        {
+          "role": "衣裳助手",
+          "names": [
+            "ののやまあき"
+          ],
+          "is_core": false,
+          "sort_order": 19
+        },
+        {
+          "role": "衣裳協力",
+          "names": [
+            "齋藤伽奈",
+            "松浦美幸",
+            "古宮麻耶"
+          ],
+          "is_core": false,
+          "sort_order": 20
+        },
+        {
+          "role": "ヘアメイク",
+          "names": [
+            "木村美和子",
+            "小川万理子（raftel）"
+          ],
+          "is_core": false,
+          "sort_order": 21
+        },
+        {
+          "role": "ビジュアルデザイン",
+          "names": [
+            "清水みちる（礼泉堂）"
+          ],
+          "is_core": false,
+          "sort_order": 22
+        },
+        {
+          "role": "宣伝写真",
+          "names": [
+            "渡辺慎一"
+          ],
+          "is_core": false,
+          "sort_order": 23
+        },
+        {
+          "role": "制作",
+          "names": [
+            "Office ENDLESS"
+          ],
+          "is_core": false,
+          "sort_order": 24
+        },
+        {
+          "role": "票券・制作協力",
+          "names": [
+            "設樂敬子"
+          ],
+          "is_core": false,
+          "sort_order": 25
+        },
+        {
+          "role": "アシスタントプロデューサー",
+          "names": [
+            "後藤徳子（Office ENDLESS）"
+          ],
+          "is_core": false,
+          "sort_order": 26
+        },
+        {
+          "role": "プロデューサー",
+          "names": [
+            "下浦貴敬（Office ENDLESS）"
+          ],
+          "is_core": false,
+          "sort_order": 27
+        },
+        {
+          "role": "アンサンブル",
+          "names": [
+            "石毛元貴",
+            "金原翔太朗",
+            "儀間裕士",
+            "佐藤ケンタロー",
+            "竹本凌",
+            "濱屋博嗣",
+            "森山遼"
+          ],
+          "is_core": false,
+          "sort_order": 28
+        },
+        {
+          "role": "主催",
+          "names": [
+            "「ダイヤのA」The LIVE 製作委員会"
+          ],
+          "is_core": false,
+          "sort_order": 29
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "The first production in the stage series based on Yuji Terajima’s baseball manga Ace of Diamond, focusing on the Seido High baseball team. Written and directed by Shintaro Asanuma and produced by Office ENDLESS, it was staged at Zepp Blue Theater Roppongi in Tokyo in August 2015.",
+      "title_en": "Ace of Diamond The LIVE"
+    },
+    {
+      "id": "db3297e3-a16c-4c48-a65a-880ff3a4ed60",
+      "slug": "diaace2016-2",
+      "title": "「ダイヤのA」The LIVE III",
+      "franchise_id": "f9806a0c-a8e2-4de0-8c47-531fd6b6df6b",
+      "summary": "寺嶋裕二の高校野球漫画を原作とする舞台シリーズ第3作。夏の西東京地区大会でベスト8へ進んだ青道高校が、1年生スラッガー・轟雷市を擁する薬師高校との準々決勝に挑む。脚本・演出は浅沼晋太郎。2016年8月から9月に東京・Zeppブルーシアター六本木で上演された。",
+      "period": "東京：2016年8月19日〜9月4日",
+      "venue": "東京：Zeppブルーシアター六本木",
+      "vod": null,
+      "genre": null,
+      "created_at": "2026-10-23T21:16:45.901172+00:00",
+      "updated_at": "2026-10-23T21:16:45.901172+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "寺嶋裕二（週刊少年マガジン／講談社）"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "脚本・演出",
+          "names": [
+            "浅沼晋太郎（bpm）"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "アンサンブル",
+          "names": [
+            "秋山皓郎",
+            "網代将悟",
+            "石毛元貴",
+            "佐藤ケンタロー",
+            "佐藤和斗",
+            "濱屋博嗣",
+            "陽田翔大",
+            "森山遼",
+            "結城駿"
+          ],
+          "is_core": false,
+          "sort_order": 3
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "The third stage production based on Yuji Terajima’s baseball manga Ace of Diamond. Having reached the last eight of the West Tokyo summer tournament, Seido High faces Yakushi High and first-year slugger Raichi Todoroki in the quarterfinals. Written and directed by Shintaro Asanuma, it ran at Zepp Blue Theater Roppongi in Tokyo from August to September 2016.",
+      "title_en": "Ace of Diamond The LIVE III"
+    },
+    {
+      "id": "dd5345a4-e13b-4009-96b7-e822332b8653",
+      "slug": "diaace2017",
+      "title": "「ダイヤのA」The LIVE IV",
+      "franchise_id": "f9806a0c-a8e2-4de0-8c47-531fd6b6df6b",
+      "summary": "寺嶋裕二の高校野球漫画を原作とする舞台シリーズ第4作。薬師高校を破った青道高校は、神宮球場で仙泉学園との準決勝に挑む。試合とともに小湊兄弟や倉持の過去が描かれ、成宮鳴ら稲城実業の選手も登場する。脚本・演出は浅沼晋太郎。2017年4月に東京と大阪で上演された。",
+      "period": "東京：2017年4月6日〜13日／大阪：2017年4月20日〜23日",
+      "venue": "東京：シアター1010／大阪：梅田芸術劇場 シアター・ドラマシティ",
+      "vod": null,
+      "genre": null,
+      "created_at": "2026-10-24T08:21:56.679676+00:00",
+      "updated_at": "2026-10-24T08:21:56.679676+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "寺嶋裕二（週刊少年マガジン／講談社）"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "脚本・演出",
+          "names": [
+            "浅沼晋太郎（bpm）"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "テーマ曲",
+          "names": [
+            "「Grateful Story」"
+          ],
+          "is_core": true,
+          "sort_order": 3
+        },
+        {
+          "role": "テーマ曲 作詞・作曲",
+          "names": [
+            "大石昌良"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "テーマ曲 編曲",
+          "names": [
+            "OxT（オーイシマサヨシ×Tom-H@ck）"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "共同演出",
+          "names": [
+            "中島大地"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        },
+        {
+          "role": "映像監修",
+          "names": [
+            "NAO-G（bpm）"
+          ],
+          "is_core": false,
+          "sort_order": 7
+        },
+        {
+          "role": "演出助手",
+          "names": [
+            "藤原理恵"
+          ],
+          "is_core": false,
+          "sort_order": 8
+        },
+        {
+          "role": "音楽監修",
+          "names": [
+            "和田俊輔"
+          ],
+          "is_core": false,
+          "sort_order": 9
+        },
+        {
+          "role": "音楽",
+          "names": [
+            "豊田健甫",
+            "和田俊輔",
+            "南ゆに"
+          ],
+          "is_core": true,
+          "sort_order": 10
+        },
+        {
+          "role": "技術監督",
+          "names": [
+            "寅川英司"
+          ],
+          "is_core": false,
+          "sort_order": 11
+        },
+        {
+          "role": "舞台監督",
+          "names": [
+            "弘光哲也"
+          ],
+          "is_core": false,
+          "sort_order": 12
+        },
+        {
+          "role": "演出部",
+          "names": [
+            "松澤紀昭",
+            "村上希"
+          ],
+          "is_core": false,
+          "sort_order": 13
+        },
+        {
+          "role": "舞台美術",
+          "names": [
+            "青木拓也"
+          ],
+          "is_core": false,
+          "sort_order": 14
+        },
+        {
+          "role": "大道具",
+          "names": [
+            "東宝舞台"
+          ],
+          "is_core": false,
+          "sort_order": 15
+        },
+        {
+          "role": "小道具",
+          "names": [
+            "畠山直子"
+          ],
+          "is_core": false,
+          "sort_order": 16
+        },
+        {
+          "role": "照明",
+          "names": [
+            "大波多秀起"
+          ],
+          "is_core": false,
+          "sort_order": 17
+        },
+        {
+          "role": "音響",
+          "names": [
+            "前田規寛"
+          ],
+          "is_core": false,
+          "sort_order": 18
+        },
+        {
+          "role": "映像監督",
+          "names": [
+            "西嶋美幸"
+          ],
+          "is_core": false,
+          "sort_order": 19
+        },
+        {
+          "role": "映像制作",
+          "names": [
+            "曾根久光",
+            "吉川マッハスペシャル",
+            "渡辺とんそく",
+            "ろくでなしきっず"
+          ],
+          "is_core": false,
+          "sort_order": 20
+        },
+        {
+          "role": "映像制作進行",
+          "names": [
+            "横山翼（オーベロン）",
+            "諸田奈美"
+          ],
+          "is_core": false,
+          "sort_order": 21
+        },
+        {
+          "role": "衣装",
+          "names": [
+            "雲出三緒"
+          ],
+          "is_core": false,
+          "sort_order": 22
+        },
+        {
+          "role": "衣装進行",
+          "names": [
+            "齊藤あかね"
+          ],
+          "is_core": false,
+          "sort_order": 23
+        },
+        {
+          "role": "ヘアメイク",
+          "names": [
+            "木村美和子（raftel）",
+            "小川万理子（raftel）",
+            "高石涼太"
+          ],
+          "is_core": false,
+          "sort_order": 24
+        },
+        {
+          "role": "Web",
+          "names": [
+            "まめなり"
+          ],
+          "is_core": false,
+          "sort_order": 25
+        },
+        {
+          "role": "制作協力",
+          "names": [
+            "岩崎麗奈",
+            "市原瞳",
+            "上野志津華",
+            "來生藍",
+            "漉橋真美",
+            "横倉友美"
+          ],
+          "is_core": false,
+          "sort_order": 26
+        },
+        {
+          "role": "運営協力",
+          "names": [
+            "atlas"
+          ],
+          "is_core": false,
+          "sort_order": 27
+        },
+        {
+          "role": "制作",
+          "names": [
+            "Office ENDLESS"
+          ],
+          "is_core": false,
+          "sort_order": 28
+        },
+        {
+          "role": "主催",
+          "names": [
+            "「ダイヤのA」The LIVE IV 製作委員会"
+          ],
+          "is_core": false,
+          "sort_order": 29
+        },
+        {
+          "role": "アンサンブル",
+          "names": [
+            "秋山皓郎",
+            "網代将悟",
+            "石毛元貴",
+            "書川勇輝",
+            "儀間裕士",
+            "笹岡幸司",
+            "佐藤ケンタロー",
+            "白石拓巳",
+            "森山遼",
+            "渡辺誠也"
+          ],
+          "is_core": false,
+          "sort_order": 30
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "The fourth stage production based on Yuji Terajima’s baseball manga Ace of Diamond. After defeating Yakushi High, Seido High faces Sensen Academy in the semifinals at Jingu Stadium. The story also explores the past of the Kominato brothers and Yoichi Kuramochi, while introducing Mei Narumiya and the Inashiro team. Written and directed by Shintaro Asanuma, it was staged in Tokyo and Osaka in April 2017.",
+      "title_en": "Ace of Diamond The LIVE IV"
+    }
+  ],
+  "evidence": {
+    "links": [
+      {
+        "url": "https://kira-hai.net/diaace2017-2",
+        "checkedAt": "2026-10-24T08:36:28.104Z",
+        "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+      },
+      {
+        "url": "https://l-tike.com/play/mevent/?mid=293535",
+        "checkedAt": "2026-10-24T08:39:06.285Z",
+        "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+      },
+      {
+        "url": "https://engekisengen.com/genre/engekisengenbeta/85672/",
+        "checkedAt": "2026-10-24T08:38:23.870Z",
+        "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+      },
+      {
+        "url": "https://engekisengen.com/genre/engekisengenbeta/86100/",
+        "checkedAt": "2026-10-24T08:36:28.863Z",
+        "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+      },
+      {
+        "url": "https://prtimes.jp/main/html/rd/p/000000172.000009198.html",
+        "checkedAt": "2026-10-24T08:41:26.271Z",
+        "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+      },
+      {
+        "url": "https://natalie.mu/comic/news/241739",
+        "checkedAt": "2026-10-24T08:37:45.192Z",
+        "note": "当時のキャスト・スタッフ発表を報じた編集記事。"
+      },
+      {
+        "url": "https://kira-hai.net/akiyama-hiroo",
+        "checkedAt": "2026-10-24T08:38:23.881Z",
+        "note": "採用箇所と未確認事項は個別notes・exceptions参照。"
+      }
+    ],
+    "sources": [
+      {
+        "name": "work",
+        "url": "https://kira-hai.net/diaace2017-2",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/diaace2017-2",
+        "checkedAt": "2026-10-24T08:36:28.104Z",
+        "sha256": "0f111f6b2eefce271fdaa07b96bf94af4f163d5ef0506a8cde8ccfaff8532437"
+      },
+      {
+        "name": "rehearsal",
+        "url": "https://engekisengen.com/genre/engekisengenbeta/86100/",
+        "status": 200,
+        "finalUrl": "https://engekisengen.com/genre/engekisengenbeta/86100/",
+        "checkedAt": "2026-10-24T08:36:28.863Z",
+        "sha256": "cdcbd275baf1119a756556696468695cf1d5fb4e224a7eba29b38e2d85853844"
+      },
+      {
+        "name": "changelog",
+        "url": "https://supabase.com/changelog.md",
+        "status": 200,
+        "finalUrl": "https://supabase.com/changelog.md",
+        "checkedAt": "2026-10-24T08:36:29.228Z",
+        "sha256": "45528009025b8ad8487ccb73f7c769b66d4b0e7aa4560157047899dcb5b5a006"
+      },
+      {
+        "name": "release",
+        "url": "https://natalie.mu/comic/news/241739",
+        "status": 200,
+        "finalUrl": "https://natalie.mu/comic/news/241739",
+        "checkedAt": "2026-10-24T08:37:45.192Z",
+        "sha256": "b167963708d8363e4009c8791010eb5bd1e730188d2fe824ea4d568da360ad3b"
+      },
+      {
+        "name": "nozawa-official",
+        "url": "https://www.81produce.co.jp/actor_search/index.php/item?id=406",
+        "status": 200,
+        "finalUrl": "https://www.81produce.co.jp/actor_search/index.php/item?id=406",
+        "checkedAt": "2026-10-24T08:38:23.948Z",
+        "sha256": "319f555bdf206c1289730fe0f353e4b7657aa027bd7998ce420252a1c1892dab"
+      },
+      {
+        "name": "nozawa-dictionary",
+        "url": "https://www.excite.co.jp/news/dictionary/person/PE932f10793af206429bd7885cc07826aaaff42f14/",
+        "status": 200,
+        "finalUrl": "https://www.excite.co.jp/news/dictionary/person/PE932f10793af206429bd7885cc07826aaaff42f14/",
+        "checkedAt": "2026-10-24T08:38:23.848Z",
+        "sha256": "e37dd6528ffc9d423d92b55bd3ec05cb8a3cea6bb91b6b69a60119219a79ccef"
+      },
+      {
+        "name": "interview",
+        "url": "https://engekisengen.com/genre/engekisengenbeta/85672/",
+        "status": 200,
+        "finalUrl": "https://engekisengen.com/genre/engekisengenbeta/85672/",
+        "checkedAt": "2026-10-24T08:38:23.870Z",
+        "sha256": "42914ae2c3233f19822cd5fda558420ce003df88eeed40732db6440d2a0eaf7b"
+      },
+      {
+        "name": "akiyama-kira",
+        "url": "https://kira-hai.net/akiyama-hiroo",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/akiyama-hiroo",
+        "checkedAt": "2026-10-24T08:38:23.881Z",
+        "sha256": "e84ac68c0647b0ad4fddb6b958c1220c3f22f8669d3e6ca73bb0a6e19e408e53"
+      },
+      {
+        "name": "ota-kira",
+        "url": "https://kira-hai.net/ota-hikaru",
+        "status": 200,
+        "finalUrl": "https://kira-hai.net/ota-hikaru",
+        "checkedAt": "2026-10-24T08:38:24.064Z",
+        "sha256": "296e2aa1bd12fe7a176c488cf3aff798ac7eaf1bc596832b70991b1b4f4e36a4"
+      },
+      {
+        "name": "l-tike",
+        "url": "https://l-tike.com/play/mevent/?mid=293535",
+        "status": 200,
+        "finalUrl": "https://l-tike.com/play/mevent/?mid=293535",
+        "checkedAt": "2026-10-24T08:39:06.285Z",
+        "sha256": "f049a9109fc3520c4bf85b24c0b9371fb6249eb694040d72d4fd0ff522f3a157"
+      },
+      {
+        "name": "broadcast",
+        "url": "https://prtimes.jp/main/html/rd/p/000000172.000009198.html",
+        "status": 200,
+        "finalUrl": "https://prtimes.jp/main/html/rd/p/000000172.000009198.html",
+        "checkedAt": "2026-10-24T08:41:26.271Z",
+        "sha256": "62f05c14ab125845d920f664354656723539515ae9435b661c00cb5a7d099185"
+      },
+      {
+        "name": "tls-change",
+        "url": "https://supabase.com/changelog/cbc-tls-ciphers-deprecated",
+        "status": 200,
+        "finalUrl": "https://supabase.com/changelog/cbc-tls-ciphers-deprecated",
+        "checkedAt": "2026-10-24T08:41:26.345Z",
+        "sha256": "b5d3657a8fce483197eee8aeb2579b467981e80b876c24d80f34d8873164c098"
+      }
+    ],
+    "unavailable": [
+      {
+        "name": "official",
+        "url": "https://officeendless.com/sp/diaace_live/",
+        "status": 500,
+        "finalUrl": "https://officeendless.com/sp/diaace_live/",
+        "checkedAt": "2026-10-24T08:36:26.816Z",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "official-cast",
+        "url": "https://officeendless.com/sp/diaace_live/cast/",
+        "status": 500,
+        "finalUrl": "https://officeendless.com/sp/diaace_live/cast/",
+        "checkedAt": "2026-10-24T08:36:27.057Z",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "official-stage",
+        "url": "https://officeendless.com/sp/diaace_live/stage/",
+        "status": 500,
+        "finalUrl": "https://officeendless.com/sp/diaace_live/stage/",
+        "checkedAt": "2026-10-24T08:36:27.557Z",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "official-cast-index",
+        "url": "https://officeendless.com/sp/diaace_live/cast/index.html",
+        "status": 500,
+        "finalUrl": "https://officeendless.com/sp/diaace_live/cast/index.html",
+        "checkedAt": "2026-10-24T08:37:44.940Z",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "official-stage-index",
+        "url": "https://officeendless.com/sp/diaace_live/stage/index.html",
+        "status": 500,
+        "finalUrl": "https://officeendless.com/sp/diaace_live/stage/index.html",
+        "checkedAt": "2026-10-24T08:37:44.945Z",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "official-news",
+        "url": "https://officeendless.com/sp/diaace_live/news/",
+        "status": 500,
+        "finalUrl": "https://officeendless.com/sp/diaace_live/news/",
+        "checkedAt": "2026-10-24T08:37:44.944Z",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "official-http",
+        "url": "http://officeendless.com/sp/diaace_live/cast/",
+        "status": 500,
+        "finalUrl": "http://officeendless.com/sp/diaace_live/cast/",
+        "checkedAt": "2026-10-24T08:39:05.105Z",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "official-www",
+        "url": "https://www.officeendless.com/sp/diaace_live/cast/",
+        "status": 500,
+        "finalUrl": "https://www.officeendless.com/sp/diaace_live/cast/",
+        "checkedAt": "2026-10-24T08:39:04.942Z",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "official-cast-query",
+        "url": "https://officeendless.com/sp/diaace_live/cast/?v=5",
+        "status": 500,
+        "finalUrl": "https://officeendless.com/sp/diaace_live/cast/?v=5",
+        "checkedAt": "2026-10-24T08:39:04.880Z",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ],
+    "notes": [
+      "第一参照先31行を原文保存。21役欄のうち1欄の複数人物を分離し22配役。新規1人物・既存21人物。",
+      "コード・スキーマ・RLS・権限変更なし。既存RPCと変更前比較を使用。",
+      "Supabase changelogとCBC TLS変更を取得確認。11/10予定の旧暗号無効化は現NodeでのHTTPS接続を妨げず、スキーマ・API機能変更は不要。"
+    ],
+    "unresolved": [
+      "秋山のカルロス役の具体的な公演日・出演区分。キラハイ作品・人物欄を根拠に収録し、日程や交代理由は未確認。",
+      "過去IVの河城兼役・結城駿の出演差分、榎本陸の属性、既存人物全体の精査・詳細英訳・現在配信・主演指定は後続。",
+      "5作品の作品・配役の収録と表示・保全を点検する。人物と全属性の総合監査完了とは扱わない。"
+    ]
+  },
+  "requestKey": "6d53242d7b4fcbbd6bc8200d1225df5c749465f119be3c58897613eea7642c6d"
+}

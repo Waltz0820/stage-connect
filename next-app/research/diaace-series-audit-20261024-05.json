@@ -1,0 +1,146 @@
+{
+  "checkedAt": "2026-10-24T09:00:39.937Z",
+  "scope": "初演〜Vの5作品135配役・50人物を収録し表示と既存保全を点検。人物全属性の総合監査・詳細英訳・秋山の担当公演日・IVの発表差分は未完。",
+  "franchiseId": "f9806a0c-a8e2-4de0-8c47-531fd6b6df6b",
+  "slug": "diamond-no-ace",
+  "registeredWorks": 5,
+  "castRows": 135,
+  "uniqueActors": 50,
+  "currentBatchWorks": 1,
+  "currentBatchCastRows": 22,
+  "newActors": 1,
+  "existingActorsPreserved": 21,
+  "publicPages": 56,
+  "seriesPublicPages": 112,
+  "videoCasts": 0,
+  "uncertainPerformanceNotes": 1,
+  "creditOnlyNames": 10,
+  "creditCategories": 10,
+  "identitySources": 1,
+  "legacyCandidatesCorrectedAndReused": 1,
+  "timeline": [
+    "2017/09",
+    "2017/04",
+    "2016/08",
+    "2016/03",
+    "2015/08"
+  ],
+  "structuredActorLimit": 20,
+  "previousAudit": "next-app/research/diaace-series-audit-20261024-04.json",
+  "works": [
+    {
+      "id": "0347179a-fdb8-4c24-87c6-bbdc88711e15",
+      "slug": "diaace2016",
+      "title": "「ダイヤのA」The LIVE II",
+      "title_en": "Ace of Diamond The LIVE II",
+      "period": "東京：2016年3月17日〜21日／名古屋：2016年3月24日／大阪：2016年4月1日〜3日",
+      "venue": "東京：天王洲 銀河劇場／名古屋：名古屋文理大学文化フォーラム 大ホール／大阪：森ノ宮ピロティホール",
+      "castRows": 28,
+      "source": "https://kira-hai.net/diaace2016",
+      "research": "next-app/research/diaace2-20261024.json",
+      "summaryPresent": true,
+      "englishSummaryPresent": true,
+      "streaming": null
+    },
+    {
+      "id": "1ccde89f-df2c-4c2b-a607-90d5adeeec86",
+      "slug": "diaace2017-2",
+      "title": "「ダイヤのA」The LIVE V",
+      "title_en": "Ace of Diamond The LIVE V",
+      "period": "兵庫：2017年9月7日〜10日／広島：2017年9月12日〜14日／福岡：2017年9月17日〜18日／東京：2017年9月20日〜24日",
+      "venue": "兵庫：新神戸オリエンタル劇場／広島：JMSアステールプラザ 中ホール／福岡：北九州芸術劇場 大ホール／東京：シアター1010",
+      "castRows": 22,
+      "source": "https://kira-hai.net/diaace2017-2",
+      "research": "next-app/research/diaace5-20261024.json",
+      "summaryPresent": true,
+      "englishSummaryPresent": true,
+      "streaming": null,
+      "exceptions": [
+        "公演公式のroot/cast/stageとindex.htmlはHTTP500で原文を取得できない。公式の確認済みとは称さず、第一参照先・ローチケ・放送局発表・当時の編集記事を採用し、失敗URLと取得情報も保持。",
+        "第一参照先のカルロス役「太田光る / 秋山皓郎」を別人物の2配役へ分離。秋山の人物ページにも本作のアンサンブルと同役があり採用するが、担当公演日・交代理由・ダブルキャスト等の区分は不明。公開補足は「出演日未確認」のみとし、役名や人物を結合しない。",
+        "秋山は公式告知を転載した放送局発表ではアンサンブル、第一参照先で別に役付き出演があるため両情報を保持。残る役なしアンサンブルは個別配役や人物を増やさない。",
+        "川上役は本作では既存の大見拓土へ。廣瀬の降谷は本作で通常出演。前作の映像出演や子供時代の注記を引き継がない。",
+        "藤田の太田一義は本作の第一参照先と放送局発表を採用。旧作の太田部長という表記を変更せず、公演ごとの元表記を残す。",
+        "上田悠介の旧候補は役・人物・作品URLが一致し年のみ2021と誤り。変更前全項目を履歴へ保存して2017へ訂正し既存IDを再利用。",
+        "野沢聡の現事務所は本作国友役を記載。月日は公式、完全な生年月日・身長・血液型は編集人物辞典由来。出典種別を保持。",
+        "本作で確認したスタッフ9区分とアンサンブル10人。公式検索キャッシュの詳細スタッフを原HTML照合済みとは扱わず、取得できた当時発表の範囲のみ収録。",
+        "既存シリーズ・4公演・21人物を全項目保全。現在配信は未確認でvod空欄。英題と概要は編集表記。詳細英訳・個人総合監査・未確定の配役条件は後続。"
+      ]
+    },
+    {
+      "id": "86f38080-4172-4161-9af2-7ec508734e8f",
+      "slug": "diaace2015",
+      "title": "「ダイヤのA」The LIVE",
+      "title_en": "Ace of Diamond The LIVE",
+      "period": "東京：2015年8月1日〜9日",
+      "venue": "東京：Zeppブルーシアター六本木",
+      "castRows": 26,
+      "source": "https://kira-hai.net/diaace2015",
+      "research": "next-app/research/diaace2015-20261024.json",
+      "summaryPresent": true,
+      "englishSummaryPresent": true,
+      "streaming": null
+    },
+    {
+      "id": "db3297e3-a16c-4c48-a65a-880ff3a4ed60",
+      "slug": "diaace2016-2",
+      "title": "「ダイヤのA」The LIVE III",
+      "title_en": "Ace of Diamond The LIVE III",
+      "period": "東京：2016年8月19日〜9月4日",
+      "venue": "東京：Zeppブルーシアター六本木",
+      "castRows": 32,
+      "source": "https://kira-hai.net/diaace2016-2",
+      "research": "next-app/research/diaace3-20261024.json",
+      "summaryPresent": true,
+      "englishSummaryPresent": true,
+      "streaming": null
+    },
+    {
+      "id": "dd5345a4-e13b-4009-96b7-e822332b8653",
+      "slug": "diaace2017",
+      "title": "「ダイヤのA」The LIVE IV",
+      "title_en": "Ace of Diamond The LIVE IV",
+      "period": "東京：2017年4月6日〜13日／大阪：2017年4月20日〜23日",
+      "venue": "東京：シアター1010／大阪：梅田芸術劇場 シアター・ドラマシティ",
+      "castRows": 27,
+      "source": "https://kira-hai.net/diaace2017",
+      "research": "next-app/research/diaace4-20261024.json",
+      "summaryPresent": true,
+      "englishSummaryPresent": true,
+      "streaming": null
+    }
+  ],
+  "seriesVerification": {
+    "passed": true,
+    "checkedAt": "2026-10-24T08:50:01.728Z",
+    "pages": 112,
+    "additionalPagesFetched": 56,
+    "plays": 5,
+    "castRows": 135,
+    "uniqueActors": 50,
+    "timeline": [
+      "2017/09",
+      "2017/04",
+      "2016/08",
+      "2016/03",
+      "2015/08"
+    ],
+    "reverseLinksChecked": 135,
+    "languages": [
+      "ja",
+      "en"
+    ],
+    "scope": "全5作品の配役順・役名・補足・クレジット・短い概要・投票・構造化データ、年表と全50人物からの135本の逆リンクを日英で点検。人物属性の総合監査・詳細英訳・未確定の出演条件は未完。",
+    "pendingChecks": [
+      "秋山のカルロス役の具体的な公演日・出演区分。キラハイ作品・人物欄を根拠に収録し、日程や交代理由は未確認。",
+      "過去IVの河城兼役・結城駿の出演差分、榎本陸の属性、既存人物全体の精査・詳細英訳・現在配信・主演指定は後続。",
+      "5作品の作品・配役の収録と表示・保全を点検する。人物と全属性の総合監査完了とは扱わない。"
+    ]
+  },
+  "pendingChecks": [
+    "秋山のカルロス役の具体的な公演日・出演区分。キラハイ作品・人物欄を根拠に収録し、日程や交代理由は未確認。",
+    "過去IVの河城兼役・結城駿の出演差分、榎本陸の属性、既存人物全体の精査・詳細英訳・現在配信・主演指定は後続。",
+    "5作品の作品・配役の収録と表示・保全を点検する。人物と全属性の総合監査完了とは扱わない。"
+  ],
+  "report": "docs/diaace5-2026-10-24.md"
+}
