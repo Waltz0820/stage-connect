@@ -43,7 +43,7 @@ export default async function ArchiveHome({ locale }: { locale: 'ja' | 'en' }) {
         <span className="archive-wordmark__line"><span className="archive-wordmark__ink">STAGE</span></span>
         <span className="archive-wordmark__line"><span className="archive-wordmark__ink">CONNECT</span></span>
       </div>
-      <h1>{en ? <>Explore 2.5D theatre.{' '}<br/>Find your next production.</> : <>2.5次元舞台を<br/>もっと深く。</>}</h1>
+      <h1>{en ? <>Explore 2.5D theatre.{' '}<br/>Find your next production.</> : '2.5次元舞台をもっと深く。'}</h1>
       <p className="archive-hero__description">{en ? 'Find casts, credits and streams through actors, productions and series.' : <><span className="copy-phrase">俳優・作品・シリーズから</span><span className="copy-phrase">配役や出演歴、配信情報を探せます。</span></>}</p>
       <SearchBarClient variant="hero"/>
       <nav className="archive-quick-series" aria-label={en ? 'Featured series' : 'シリーズからすぐ探す'}>
@@ -97,12 +97,12 @@ export default async function ArchiveHome({ locale }: { locale: 'ja' | 'en' }) {
 
     <section className="archive-about" aria-labelledby="home-about-heading">
       <div className="archive-about__copy" data-reveal="about-copy">
-        <h2 id="home-about-heading">{en ? <>The curtain falls.<br/>The connections live on.</> : <>幕が下りても、<br/>つながりは続く。</>}</h2>
+        <h2 id="home-about-heading">{en ? <>The curtain falls.<br/>The connections live on.</> : <>幕が下りても<br/>つながりは続く。</>}</h2>
         <p>{en ? <>Productions and actors. Roles and co-stars.<br/>Keeping the connections made on stage for the future.</> : <>作品と俳優、役柄と共演。<br/><span className="copy-phrase">舞台で生まれたつながりを、</span><span className="copy-phrase">記録として未来へ。</span></>}</p>
         <Link href={prefix + '/about'} className="archive-about__link">{en ? 'About Stage Connect' : 'Stage Connectについて'}<span aria-hidden="true">→</span></Link>
       </div>
       <div className="archive-about__art" data-reveal="about-art" aria-hidden="true">
-        <Image src="/images/about/stage-illustration.webp" alt="" width={1536} height={1024} sizes="(min-width: 1000px) 54vw, 100vw" />
+        <Image src="/images/about/stage-illustration.webp" alt="" width={1536} height={1024} sizes="(min-width: 1000px) 54vw, 44vw" />
       </div>
     </section>
   </main>;
