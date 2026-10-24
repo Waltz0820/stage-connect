@@ -21,7 +21,7 @@ export const DMM_TV_COPY = {
       { title: '推しができる', text: '心を動かす俳優に出会う', image: 'oshi' },
       { title: '次の作品へ', text: '出演作を辿ってもっと楽しむ', image: null },
     ],
-    closing: ['好きな舞台を、', 'もっと好きになる。'], closingText: '2.5次元舞台を楽しむなら、まずはDMM TV。', first: '初回', free: '日間無料',
+    closing: ['ようこそ、', 'こちら側の世界へ。'], closingText: '2.5次元舞台を楽しむなら、まずはDMM TV。', first: '初回', free: '日間無料',
     benefits: [
       { title: '豊富なラインナップ', text: '2.5次元舞台に加え、アニメや映画も。', icon: 'play' },
       { title: '手軽な価格', text: '好きな作品を見つけて、何度でも。', icon: 'yen' },
@@ -56,7 +56,7 @@ export const DMM_TV_COPY = {
       { title: 'Find a favourite', text: 'Meet an actor who moves you', image: 'oshi' },
       { title: 'Find your next play', text: 'Follow their credits further', image: null },
     ],
-    closing: ['Love your favourite stage.', 'Even more.'], closingText: 'Start exploring 2.5D theatre with DMM TV.', first: 'First', free: ' days free',
+    closing: ['Welcome to', 'this side of the curtain.'], closingText: 'Start exploring 2.5D theatre with DMM TV.', first: 'First', free: ' days free',
     benefits: [
       { title: 'Plenty to explore', text: '2.5D theatre, anime and films.', icon: 'play' },
       { title: 'An accessible price', text: 'Find a favourite. Watch it again.', icon: 'yen' },
