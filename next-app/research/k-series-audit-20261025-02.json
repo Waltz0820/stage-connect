@@ -1,0 +1,107 @@
+{
+  "checkedAt": "2026-10-24T18:34:57.759Z",
+  "scope": "2015年第二章1作品11配役を新規登録。Kは登録済み4作品29配役のうち2014年初演14役と第二章11役の計25配役を補完済み。2017/2019年の4配役は仮登録のまま。2016年未登録と残り作品の補完・シリーズ全体点検は後続。",
+  "franchiseId": "21e2a016-4301-4053-9b79-6763d362193a",
+  "slug": "k",
+  "registeredWorks": 4,
+  "castRows": 29,
+  "uniqueActors": 21,
+  "completedWorks": 2,
+  "completedCastRows": 25,
+  "currentBatchWorks": 1,
+  "currentBatchCastRows": 11,
+  "newActors": 2,
+  "existingActorsPreserved": 9,
+  "newCastRows": 11,
+  "existingRowsModified": 0,
+  "publicPages": 32,
+  "creditOnlyNames": 12,
+  "ensemble": 11,
+  "voiceOnly": 1,
+  "roleNamedEnsembleCredits": 2,
+  "creditCategories": 8,
+  "identitySources": 2,
+  "timeline": "2015/08",
+  "works": [
+    {
+      "id": "81bd7619-040a-4c08-b350-f5e73b14a219",
+      "slug": "k2017",
+      "title": "舞台『K-MISSING KINGS-』",
+      "title_en": null,
+      "period": "2017年",
+      "venue": null,
+      "castRows": 2,
+      "source": null,
+      "research": null,
+      "summaryPresent": false,
+      "englishSummaryPresent": false,
+      "completedInThisBatch": false,
+      "exceptions": [
+        "仮登録を全項目保全。補完は後続。"
+      ]
+    },
+    {
+      "id": "bc4ff457-ed00-47ad-9c3d-831637b4b67a",
+      "slug": "k2015",
+      "title": "舞台『K』第二章 -AROUSAL OF KING-",
+      "title_en": "K: Chapter Two -AROUSAL OF KING- (Stage, 2015)",
+      "period": "2015年8月5日〜15日（東京）／8月19日〜22日（大阪）",
+      "venue": "AiiA 2.5 Theater Tokyo／大阪メルパルクホール",
+      "castRows": 11,
+      "source": "https://kira-hai.net/k2015",
+      "research": "next-app/research/k2015-20261025.json",
+      "summaryPresent": true,
+      "englishSummaryPresent": true,
+      "completedInThisBatch": true,
+      "exceptions": [
+        "2015年8月の東京・大阪公演として新規登録。主要11役を公演公式本文と照合し既存9人物を再利用。初演の配役を流用せず、ネコ／楠本あずさ、周防尊／和田雅成、櫛名アンナ／礒部花凜、伏見猿比古／安西慎太郎を採用。",
+        "役名付きでも公式がアンサンブルとする11名はクレジットへ。有澤・小波津・近藤等の既存人物が存在しても主要配役扱いに変えない。日南田の弁財酉次郎／出羽将臣／三科草太、校條の秋山氷杜は第一参照先由来として氏名に添えて保持。",
+        "音楽・振付・殺陣・主催・声の出演はNDLの公演映像商品書誌に基づく。声の出演・速水奨の役名は同書誌にないため、アニメの配役から推定せず氏名のみクレジットへ。書誌の出演順は一部異なるため配役掲載順は公演公式を優先。",
+        "公演公式の安西の画像altは「見猿比古」と脱字しているが、本文・制作元・第一参照先の「伏見猿比古」を採用。制作元の「磯部花凜」は公演公式・現事務所の「礒部花凜」と照合して訂正。どちらも汎用置換にはしない。",
+        "楠本の生年等はマシェバラ運営元の人物ページまで辿って確認。公演公式にある当時のコラム連載は過去形とし、未確認の現所属・引退・現在の活動は断定しない。礒部は現事務所の所属に合わせ、血液型は空欄。",
+        "dアニメストアの作品ページは残るが「現在公開中の話が存在しません」と明示。現在視聴できる根拠にせずvodは空。2015年12月の映像発売日と2016年発売イベントを別公演として登録しない。",
+        "日英の作品概要・英題と新規2人物の短いプロフィールを追加。役名・会場・既存人物の詳細英訳や全体監査、主演指定は後続。既存全行を変更しない。"
+      ]
+    },
+    {
+      "id": "f12ac503-a8a0-4b10-b2ed-fb086469ecd9",
+      "slug": "k-stage-first",
+      "title": "舞台『K』",
+      "title_en": "K (Stage, 2014)",
+      "period": "2014年8月6日〜10日",
+      "venue": "六本木ブルーシアター",
+      "castRows": 14,
+      "source": "https://kira-hai.net/k2014",
+      "research": "next-app/research/k2014-20261025.json",
+      "summaryPresent": true,
+      "englishSummaryPresent": true,
+      "completedInThisBatch": false,
+      "exceptions": [
+        "前工程で補完済みの初演14役を全項目保全。"
+      ]
+    },
+    {
+      "id": "fc9a2da7-9195-4fa0-9c94-b56bf788bc86",
+      "slug": "k2019",
+      "title": "舞台『K -RETURN OF KINGS-』",
+      "title_en": null,
+      "period": "2019年",
+      "venue": null,
+      "castRows": 2,
+      "source": null,
+      "research": null,
+      "summaryPresent": false,
+      "englishSummaryPresent": false,
+      "completedInThisBatch": false,
+      "exceptions": [
+        "仮登録を全項目保全。補完は後続。"
+      ]
+    }
+  ],
+  "pendingChecks": [
+    "Kシリーズの2016年Lost Small World新規登録、2017年MISSING KINGSと2019年RETURN OF KINGSの仮登録補完、全作品完了後のシリーズ点検は後続。",
+    "速水奨の声の役名は未確認。アニメ配役から推定せずクレジットの氏名のみ保持。",
+    "既存人物の総合監査・詳細英訳・現行配信の網羅確認・主演指定は後続。"
+  ],
+  "report": "docs/k2015-2026-10-25.md"
+}
