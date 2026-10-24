@@ -2,10 +2,10 @@ export const DMM_TV_REVIEWED_ON = '2026-10-24';
 
 export const DMM_TV_COPY = {
   ja: {
-    withDmm: 'で', hero: ['舞台は、', '一度じゃ終わらない。'],
+    withDmm: 'で', hero: ['舞台は', '一度じゃ終わらない。'],
     intro: ['観るたびに、新しい発見がある。', '好きな俳優から、知らなかった作品へ。', '2.5次元舞台をもっと楽しもう。'],
     tryLabel: '日間無料で試してみる', after: 'その後', monthly: '月額', yen: '円', web: '税込・Web登録',
-    conditions: '初回無料体験は対象者・対象の申込方法に限ります。無料期間終了後は自動更新されます。',
+    conditions: '※無料体験には適用条件あり。終了後は自動更新',
     ad: '広告・アフィリエイトリンク',
     enjoy: ['同じ舞台を、', '違う視点で。'],
     viewings: [
@@ -40,7 +40,7 @@ export const DMM_TV_COPY = {
     withDmm: '', hero: ['The stage stays with you.', 'Watch it again.'],
     intro: ['A new discovery with every viewing.', 'Follow a favourite actor into an unfamiliar story.', 'Get more from 2.5D theatre.'],
     tryLabel: '-day free trial', after: 'Then', monthly: '', yen: '/ month', web: 'Tax included · Web signup',
-    conditions: 'For eligible first-time subscribers and signup methods. Renews automatically after the free trial.',
+    conditions: 'Trial conditions apply. Renews automatically after the trial.',
     ad: 'Ad · Affiliate link',
     enjoy: ['The same stage.', 'A different perspective.'],
     viewings: [
