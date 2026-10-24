@@ -1380,7 +1380,48 @@
       "name": "舞台「KING OF PRISM」（ブタキン）",
       "registeredDay": "2026-02-09",
       "plays": 3,
-      "protected": false
+      "protected": false,
+      "castRows": 17,
+      "castCoverageNote": "2017年初演を通常15配役・アンサンブル5人の作品クレジットまで補完。人物5・配役14追加、既存spi1配役と10人物を保全。日程・会場・日英概要・英題・21区分クレジットと短いシリーズ紹介を補完。正常spi候補の誤年2021と出典キー・順序・根拠を補完、HTML混入の重複履歴は保全。日英34ページ・年表2017/11・相互リンクを点検。8テーブル全行比較と再実行0変更。登録済み3作品のうち完了は初演1本。2019年の会場中止と生中継、2020年・未登録2026年公演、シリーズ全体点検は後続。",
+      "seriesAudit": {
+        "checkedAt": "2026-10-24T15:38:50.814Z",
+        "scope": "登録済み3作品のうち初演2017年1作品15配役を補完。残る2019・2020は薄い既存行、2026年作は未登録。シリーズ全体の点検完了ではない。",
+        "franchiseId": "8cd271e6-0156-4216-b66c-b5f014366cca",
+        "slug": "king-of-prism",
+        "registeredWorks": 3,
+        "castRows": 17,
+        "uniqueActors": 15,
+        "completedBatchWorks": 1,
+        "completedBatchCastRows": 15,
+        "newActors": 5,
+        "existingActorsPreserved": 10,
+        "newCastRows": 14,
+        "existingCastRowsPreserved": 1,
+        "publicPages": 34,
+        "creditOnlyNames": 5,
+        "creditCategories": 21,
+        "identitySources": 5,
+        "timeline": "2017/11",
+        "works": 3,
+        "nextEvent": {
+          "url": "https://kinpri.com/sss/news/detail.php?artist_cd=KOPST&id=1077466",
+          "finding": "2019年10月12日は会場の昼夜公演中止と夜の部生中継予定が併記。実施形態・配信・出演者を後続で確認。"
+        },
+        "pendingChecks": [
+          "KING OF PRISMの2019年イベント（中止範囲の確認）、2020年公演、2026年公演と全シリーズ点検は後続。",
+          "旧spiのHTML混入済み重複採用候補は履歴として保全し、旧取り込みの整理は後続。公開配役は1件だけを再利用。",
+          "古谷の公式英字姓名、前内の現在所属・出身相違、既存人物総合監査・全詳細英訳・現在配信・主演指定は後続。"
+        ],
+        "report": "docs/kop2017-2026-10-25.md",
+        "remainingSeriesWorkItems": [
+          "2019年イベントの会場中止・生中継の区別とキャスト確認",
+          "2020年Shiny Rose Starsの補完",
+          "2026年Your Endless Callの登録",
+          "全作品収録後のシリーズ点検"
+        ],
+        "research": "next-app/research/kop2017-20261025.json",
+        "seriesResearch": "next-app/research/kop-series-audit-20261025-01.json"
+      }
     },
     {
       "id": "8d36fc91-4300-431f-a738-63696bd0f824",
