@@ -1,0 +1,68 @@
+{
+  "checkedAt": "2026-10-24T09:23:11.059Z",
+  "scope": "2015年初演1作品13配役を収録。2017年作の既存仮登録と2016年スペシャルイベントは後続。人物総合監査・詳細翻訳・全シリーズ点検は未完。",
+  "franchiseId": "a2c39146-fa29-47c7-81f4-693b5bc1cfea",
+  "slug": "tokyo-ghoul",
+  "registeredWorks": 1,
+  "castRows": 13,
+  "uniqueActors": 13,
+  "currentBatchWorks": 1,
+  "currentBatchCastRows": 13,
+  "newActors": 7,
+  "existingActorsPreserved": 6,
+  "publicPages": 32,
+  "childhoodNotes": 1,
+  "creditOnlyNames": 7,
+  "creditCategories": 19,
+  "identitySources": 7,
+  "franchisePatch": {
+    "description": "石田スイの漫画『東京喰種トーキョーグール』を原作とする舞台シリーズ。人間と喰種の狭間で葛藤する金木研を描く。演出は茅野イサム、脚本は御笠ノ忠次。2015年7月に東京・京都で初演された。",
+    "name_en": "Tokyo Ghoul (Stage)",
+    "description_en": "A stage series based on Sui Ishida’s manga Tokyo Ghoul, following Ken Kaneki as he struggles between the worlds of humans and ghouls. Directed by Isamu Kayano and written by Chuji Mikasano, the first production premiered in Tokyo and Kyoto in July 2015."
+  },
+  "preserved2017Placeholder": [
+    {
+      "id": "90025557-43af-4af8-8976-ac95dc49cdda",
+      "slug": "tokyoghoul2017",
+      "title": "舞台『東京喰種トーキョーグール』",
+      "period": "2021年",
+      "franchiseId": null
+    }
+  ],
+  "timeline": [
+    "2015/07"
+  ],
+  "works": [
+    {
+      "id": "af7f0b41-ab8d-42aa-8b5c-cdeaf76d5f6d",
+      "slug": "tokyoghoul2015",
+      "title": "舞台『東京喰種トーキョーグール』（2015年）",
+      "title_en": "Tokyo Ghoul — Stage Production (2015)",
+      "period": "東京：2015年7月2日〜8日／京都：2015年7月18日〜20日",
+      "venue": "東京：AiiA 2.5 Theater Tokyo／京都：京都劇場",
+      "castRows": 13,
+      "source": "https://kira-hai.net/tokyoghou2015",
+      "research": "next-app/research/tokyoghoul2015-20261024.json",
+      "summaryPresent": true,
+      "englishSummaryPresent": true,
+      "streaming": null,
+      "exceptions": [
+        "キラハイの初演URLはtokyoghou2015。推定したtokyoghoul2015は404だったため小越の人物ページの実リンクを採用。公開作品URLは正綴りのtokyoghoul2015、原出典URLは改変しない。",
+        "原資料の霧島董香・亜門鋼太郎を、公演公式12配役と照合して霧嶋董香・亜門鋼太朗へ訂正。原文はrawSourceに保持。",
+        "宮崎秋人は公式注記と現事務所に基づき宮﨑秋人で人物登録。元表記を候補とrawSourceへ保持し、別人物として増やさない。",
+        "キラハイの未解析8人と公演公式の追加出演者を照合。阿久津は現事務所で本作の金木研幼少役と複数年の映画・ドラマ・吹替歴を確認して個別掲載。アニメ西尾錦幼少役との混同を避ける。",
+        "残る一瀬悠・齋藤洋平・清水泰雄・甚古萌・那須野智弘・馬庭良介・山際海斗は役名記載なしの出演クレジット。公式はアンサンブルと明記していないため区分を捏造しない。",
+        "公式トップには2016年上映・トーク・ライブのスペシャルイベントも載る。2015年の舞台日程やキャストへ混在させず別工程へ。2017年作の仮登録も既存ID・URL・配役のまま保全して後続で改修する。",
+        "主催者の商品ページの音響は青木のみだが公演公式には山本浩一／青木タクヘイ。公演公式に合わせ両名を収録。宣伝美術等も同ページを基準。",
+        "新規7人物・既存6人物、13配役と7人の出演クレジットを含む19区分。浜田の身長差、山神の未取得PDF属性、未確認公式英字を埋めず、過去事務所を現在所属として転載しない。",
+        "既存の未接続2017年作品と既存全人物・他シリーズは保全。対象シリーズの紹介を客観的な短文に整え日英名・紹介を補完。舞台タイトルの2015年は同名作品を区別する編集注記で、公式の副題ではない。",
+        "現在の本編配信は未確認でvod空欄。英題と概要は編集表記、詳細英訳・人物属性の総合監査・2017年作・2016年イベントは後続。"
+      ]
+    }
+  ],
+  "pendingChecks": [
+    "2017年作は既存tokyoghoul2017のID・URLを維持して次工程で年・正式副題・シリーズ・配役を補完。2016年スペシャルイベントも本編と分けて後続。",
+    "追加出演7人の詳細役名、山神の生年等、浜田の身長差、全人物総合監査・詳細英訳・現在配信・主演指定は後続。"
+  ],
+  "report": "docs/tokyoghoul2015-2026-10-24.md"
+}
