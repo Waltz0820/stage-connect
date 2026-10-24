@@ -20,14 +20,9 @@ export default async function ArchiveHome({ locale }: { locale: 'ja' | 'en' }) {
   const en = locale === 'en';
   const prefix = en ? '/en' : '';
   const actions = [
-    { href: '/actors', word: 'ACTORS', title: en ? 'Browse actors' : '俳優を探す', text: en ? 'Credits, roles and co-stars' : '出演作品・役柄・共演者から' },
-    { href: '/plays', word: 'PLAYS', title: en ? 'Browse plays' : '作品を探す', text: en ? 'Performances, casts and streaming' : '公演情報・キャスト・配信から' },
-    { href: '/series', word: 'SERIES', title: en ? 'Browse series' : 'シリーズを探す', text: en ? 'Follow each series through its history' : '歴代公演・シリーズの流れから' },
-  ];
-  const counts = [
-    { label: en ? 'Actors' : '俳優', value: stats.actorCount },
-    { label: en ? 'Works' : '作品', value: stats.playCount },
-    { label: en ? 'Series' : 'シリーズ', value: series.length },
+    { href: '/actors', word: 'ACTORS', count: stats.actorCount, text: en ? 'Actors by credits and co-stars' : '俳優を出演作品や共演から' },
+    { href: '/plays', word: 'PLAYS', count: stats.playCount, text: en ? 'Plays by performances and casts' : '作品を公演情報やキャストから' },
+    { href: '/series', word: 'SERIES', count: series.length, text: en ? 'Series through past productions' : 'シリーズを歴代公演から' },
   ];
   const quickSeries = [
     { slug: 'touken-ranbu-musical', ja: '刀ミュ', en: 'TOUMYU' },
@@ -53,21 +48,27 @@ export default async function ArchiveHome({ locale }: { locale: 'ja' | 'en' }) {
       <nav className="archive-quick-series" aria-label={en ? 'Featured series' : 'シリーズからすぐ探す'}>
         {quickSeries.map(item => <Link key={item.slug} href={`${prefix}/series/${item.slug}`}>{item[locale]}</Link>)}
       </nav>
-      <div className="archive-stats" aria-label={en ? 'Archive totals' : 'アーカイブの登録件数'}>
-        {counts.map(({ label, value }) => <div key={label}><strong>{value.toLocaleString(en ? 'en-US' : 'ja-JP')}</strong><span>{label}</span></div>)}
-      </div>
       <div className="archive-hero__bottom"><span>EXPLORE THE ARCHIVE</span><Link href="#archive-pathways" prefetch={false} aria-label={en ? 'Explore categories' : 'カテゴリーへスクロール'}>↓</Link></div>
     </section>
 
     <nav id="archive-pathways" className="archive-pathways" aria-label={en ? 'Explore the archive' : 'コンテンツを探す'}>
       <span className="archive-pathways__trace" aria-hidden="true"/>
       {actions.map(item => <Link key={item.href} href={prefix + item.href} className="archive-pathway" data-reveal="path">
-        <span><span className="archive-pathway__word">{item.word}</span><span className="archive-pathway__title">{item.title}</span><span className="archive-pathway__description">{item.text}</span></span><span className="archive-pathway__arrow" aria-hidden="true">→</span>
+        <span className="archive-pathway__content">
+          <span className="archive-pathway__row">
+            <span className="archive-pathway__word">{item.word}</span>
+            <span className="archive-pathway__count"><strong>{item.count.toLocaleString(en ? 'en-US' : 'ja-JP')}</strong><small aria-hidden="true">LISTED</small><span className="sr-only">{en ? ' listed' : '件掲載'}</span></span>
+          </span>
+          <span className="archive-pathway__row">
+            <span className="archive-pathway__description">{item.text}</span>
+            <span className="archive-pathway__arrow" aria-hidden="true">→</span>
+          </span>
+        </span>
       </Link>)}
     </nav>
 
     <section className="archive-section archive-series" aria-labelledby="home-series-heading">
-      <div className="archive-section__heading" data-reveal="heading"><div><span className="archive-kicker">01 / SERIES</span><h2 id="home-series-heading">{en ? 'Explore series' : 'シリーズから探す'}</h2><p>{en ? 'Explore productions and casts across each series.' : '歴代公演と出演キャストをまとめて見る。'}</p></div><Link href={prefix + '/series'}>{en ? 'View all' : 'すべて見る'} <span aria-hidden="true">↗</span></Link></div>
+      <div className="archive-section__heading" data-reveal="heading"><h2 id="home-series-heading">{en ? 'Start with the classics' : <><span className="copy-phrase">まずは定番</span><span className="copy-phrase">シリーズから</span></>}</h2><Link href={prefix + '/series'}>{en ? 'View all' : 'すべて見る'} <span aria-hidden="true">↗</span></Link></div>
       <div className="archive-series__grid">
         {series.slice(0, 4).map(item => <Link key={item.slug} href={prefix + '/series/' + item.slug} className="archive-series__tile" data-reveal="series">
           <span className="archive-series__top"><span>{item.format === 'musical' ? 'MUSICAL' : item.format === 'stage' ? 'STAGE PLAY' : 'SERIES'}</span><span>{en ? item.playCount + ' works' : item.playCount + '作品'}</span></span>
