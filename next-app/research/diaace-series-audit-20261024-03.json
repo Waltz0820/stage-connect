@@ -1,0 +1,88 @@
+{
+  "checkedAt": "2026-10-23T21:21:05.215Z",
+  "scope": "初演・II・IIIの3作品86配役まで収録。今回は2016年IIIの通常31配役・映像1配役を点検。IV・Vの2作品、人物総合監査・詳細英訳・全シリーズ点検は未完。",
+  "franchiseId": "f9806a0c-a8e2-4de0-8c47-531fd6b6df6b",
+  "slug": "diamond-no-ace",
+  "registeredWorks": 3,
+  "castRows": 86,
+  "uniqueActors": 39,
+  "currentBatchWorks": 1,
+  "currentBatchCastRows": 32,
+  "newActors": 4,
+  "existingActorsPreserved": 28,
+  "publicPages": 72,
+  "videoCasts": 1,
+  "creditOnlyNames": 9,
+  "creditCategories": 3,
+  "identitySources": 4,
+  "legacyCandidatesCorrectedAndReused": 1,
+  "timeline": [
+    "2016/08",
+    "2016/03",
+    "2015/08"
+  ],
+  "structuredActorLimit": 20,
+  "previousAudit": "next-app/research/diaace-series-audit-20261024-02.json",
+  "works": [
+    {
+      "id": "0347179a-fdb8-4c24-87c6-bbdc88711e15",
+      "slug": "diaace2016",
+      "title": "「ダイヤのA」The LIVE II",
+      "title_en": "Ace of Diamond The LIVE II",
+      "period": "東京：2016年3月17日〜21日／名古屋：2016年3月24日／大阪：2016年4月1日〜3日",
+      "venue": "東京：天王洲 銀河劇場／名古屋：名古屋文理大学文化フォーラム 大ホール／大阪：森ノ宮ピロティホール",
+      "castRows": 28,
+      "source": "https://kira-hai.net/diaace2016",
+      "research": "next-app/research/diaace2-20261024.json",
+      "summaryPresent": true,
+      "englishSummaryPresent": true,
+      "streaming": null
+    },
+    {
+      "id": "86f38080-4172-4161-9af2-7ec508734e8f",
+      "slug": "diaace2015",
+      "title": "「ダイヤのA」The LIVE",
+      "title_en": "Ace of Diamond The LIVE",
+      "period": "東京：2015年8月1日〜9日",
+      "venue": "東京：Zeppブルーシアター六本木",
+      "castRows": 26,
+      "source": "https://kira-hai.net/diaace2015",
+      "research": "next-app/research/diaace2015-20261024.json",
+      "summaryPresent": true,
+      "englishSummaryPresent": true,
+      "streaming": null
+    },
+    {
+      "id": "db3297e3-a16c-4c48-a65a-880ff3a4ed60",
+      "slug": "diaace2016-2",
+      "title": "「ダイヤのA」The LIVE III",
+      "title_en": "Ace of Diamond The LIVE III",
+      "period": "東京：2016年8月19日〜9月4日",
+      "venue": "東京：Zeppブルーシアター六本木",
+      "castRows": 32,
+      "source": "https://kira-hai.net/diaace2016-2",
+      "research": "next-app/research/diaace3-20261024.json",
+      "summaryPresent": true,
+      "englishSummaryPresent": true,
+      "streaming": null,
+      "exceptions": [
+        "通常31配役・映像1配役を公式の掲載順で照合。章平の坂井一郎は映像出演、椎名鯛造の小湊亮介は本作では通常出演として保持し、IIの映像区分を横展開しない。",
+        "アンサンブル9人を原名・公式掲載順で作品クレジットへ保存。秋山皓郎の既存人物ページを維持するが本作の通常配役には増やさない。",
+        "真山勇樹は本人の2020年1月の改名記事と現事務所の本作役歴で真壁勇樹へ接続。原名はrawSource・sourceActorNameに保持。遠藤沙季は既存の遠藤さきへ。",
+        "太田部長は本作公式と第一参照先の表記を保持。放送局発表では太田一義とあるが、役名を推測で分割・別役にしない。滝川・クリス・優は前公演と同じ区切りに整え兼役扱いしない。",
+        "上田悠介の旧候補は役名・人物・作品URLが一致し、公演年のみ2021と誤っていた。変更前を履歴へ保存し2016へ訂正、既存候補IDを作品単位採用へ再利用する。",
+        "永田の現事務所に本シリーズIIとの表記があるが、当該公式・第一参照先・放送局発表はIIIの三島優太。現事務所の誤記疑いをIIの配役追加根拠に使わない。",
+        "本公演公式のスタッフ欄で確認できる原作・脚本演出を収録。IIの詳細スタッフ、音楽、制作等を同じと推定してコピーしない。アンサンブルを含む3区分。",
+        "新規4人物、既存28人物を再利用。現在所属は現事務所等で確認できる人物だけ。大曽根の旧所属・フリー表記、公式英字不明の永田・大曽根は推測補完しない。",
+        "既存2公演・全人物・シリーズは全項目保全。旧放送告知を現在の本編配信として扱わずvod空欄。英題は編集表記。",
+        "IV・V、人物総合監査・詳細英訳・主演指定・当時の詳細スタッフと全告知の網羅は後続。"
+      ]
+    }
+  ],
+  "pendingChecks": [
+    "IV・Vの2作品は後続。シリーズ全体の点検は全作品収録後。",
+    "大曽根敬大の現在所属、永田・大曽根の公式英字、既存の和田亮一の人物属性等は後続。",
+    "人物総合監査・詳細英訳・現在の本編配信・主演指定・詳細スタッフと当時告知の完全網羅は後続。"
+  ],
+  "report": "docs/diaace3-2026-10-24.md"
+}
