@@ -1,0 +1,95 @@
+{
+  "checkedAt": "2026-10-24T15:55:14.513Z",
+  "scope": "2017年15配役・2019年無観客ライブ14配役の2作品を補完済み。登録済み3作品・計30配役のうち2020年は既存1配役の仮登録。2026年作は未登録で、シリーズ全体点検は後続。",
+  "franchiseId": "8cd271e6-0156-4216-b66c-b5f014366cca",
+  "slug": "king-of-prism",
+  "registeredWorks": 3,
+  "castRows": 30,
+  "uniqueActors": 15,
+  "completedWorks": 2,
+  "completedCastRows": 29,
+  "currentBatchWorks": 1,
+  "currentBatchCastRows": 14,
+  "newActors": 0,
+  "existingActorsPreserved": 14,
+  "newCastRows": 13,
+  "existingCastRowsPreserved": 1,
+  "publicPages": 34,
+  "creditOnlyNames": 4,
+  "creditCategories": 3,
+  "identitySources": 0,
+  "timeline": "2019/10",
+  "performanceStatus": {
+    "ticketedAfternoon": "cancelled",
+    "ticketedEvening": "cancelled",
+    "eveningLive": "performed_without_audience",
+    "liveStream": "Niconico, 2019-10-12",
+    "currentStreamingVerified": false
+  },
+  "works": [
+    {
+      "id": "12b4ddee-cc88-41fd-86da-1afa031e8803",
+      "slug": "kop2017",
+      "title": "舞台「KING OF PRISM-Over the Sunshine!-」",
+      "title_en": "KING OF PRISM -Over the Sunshine!- (2017)",
+      "period": "大阪：2017年11月2日〜5日／東京：2017年11月8日〜12日",
+      "venue": "大阪：梅田芸術劇場 シアター・ドラマシティ／東京：AiiA 2.5 Theater Tokyo",
+      "castRows": 15,
+      "source": "https://kira-hai.net/kop2017",
+      "research": "next-app/research/kop2017-20261025.json",
+      "summaryPresent": true,
+      "englishSummaryPresent": true,
+      "completedInThisBatch": false,
+      "exceptions": [
+        "初演15配役・作品の全項目を前工程から保全。"
+      ]
+    },
+    {
+      "id": "576d6488-3b91-4506-b021-29bab01bf1d9",
+      "slug": "kop2019",
+      "title": "舞台「KING OF PRISM-Rose Party on STAGE 2019-」",
+      "title_en": "KING OF PRISM -Rose Party on STAGE 2019-",
+      "period": "2019年10月12日（会場の昼夜公演は中止／夜の部は無観客ライブ・生配信）",
+      "venue": "パシフィコ横浜 国立大ホール（無観客実施）",
+      "castRows": 14,
+      "source": "https://kira-hai.net/kop2019",
+      "research": "next-app/research/kop2019-20261025.json",
+      "summaryPresent": true,
+      "englishSummaryPresent": true,
+      "completedInThisBatch": true,
+      "exceptions": [
+        "昼夜の有観客公演は中止したが、夜の部は無観客ライブ・ニコニコ生配信として実施。事前の中止告知だけで未実施扱いせず、主催側の事後レポートと映像商品で14役を確認した。",
+        "既存作品のID・slug・タイトル・作成日時・シリーズ・配信設定と既存spi配役のID・役名・補足を保持し、掲載順のみ公式順11へ補完。",
+        "キラハイの「公演中止」接頭辞は原文に保存し、採用用の作品名は主催者の実施後表記と既存の正式タイトルを使用。実施形態は公演期間・会場・日英概要に明記した。",
+        "アンサンブル4人は公式告知クレジットとして保存。事後レポート・映像商品の主要14人一覧だけで、4人全員の実出演まで確認済みとは扱わない。2017年の佐藤一輝を流用しない。",
+        "翌10月13日のPrism Orchestra Concertは別イベント。アニメ声優の出演者や役柄を本作に混ぜず、2020年舞台版の横田龍儀・小林竜之も本作には追加しない。",
+        "正常spi候補の誤年2021を2019へ、キー・順序・根拠を変更前照合付きで補完。別作品HTML混入の重複採用履歴は原文ごと保持して再採用しない。",
+        "総合演出・主催は公式イベント告知を根拠とし、未確認の2017年の技術スタッフを流用しない。終了したニコ生URLや映像商品の発売日を現在の配信・公演日へ流用しない。",
+        "英題・日英概要は編集表記。全既存人物と2017年完成分・他作品を全項目保全。"
+      ]
+    },
+    {
+      "id": "64c8e12a-9d60-4a81-a05a-a7480e057b21",
+      "slug": "kop2020",
+      "title": "舞台「KING OF PRISM -Shiny Rose Stars-」",
+      "title_en": null,
+      "period": "2020年",
+      "venue": null,
+      "castRows": 1,
+      "source": null,
+      "research": null,
+      "summaryPresent": false,
+      "englishSummaryPresent": false,
+      "completedInThisBatch": false,
+      "exceptions": [
+        "既存の1配役を保持。補完と点検は後続。"
+      ]
+    }
+  ],
+  "pendingChecks": [
+    "アンサンブル4人の実出演に関する個別の事後確認、技術スタッフ全件・詳細英訳・現在配信の確認は後続。",
+    "2020年Shiny Rose Stars、未登録2026年Your Endless Call、シリーズ全体点検は後続。",
+    "旧spiのHTML混入済み重複採用履歴の整理、既存人物プロフィール総合監査・主演指定は後続。"
+  ],
+  "report": "docs/kop2019-2026-10-25.md"
+}

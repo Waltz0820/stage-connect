@@ -1381,46 +1381,50 @@
       "registeredDay": "2026-02-09",
       "plays": 3,
       "protected": false,
-      "castRows": 17,
-      "castCoverageNote": "2017年初演を通常15配役・アンサンブル5人の作品クレジットまで補完。人物5・配役14追加、既存spi1配役と10人物を保全。日程・会場・日英概要・英題・21区分クレジットと短いシリーズ紹介を補完。正常spi候補の誤年2021と出典キー・順序・根拠を補完、HTML混入の重複履歴は保全。日英34ページ・年表2017/11・相互リンクを点検。8テーブル全行比較と再実行0変更。登録済み3作品のうち完了は初演1本。2019年の会場中止と生中継、2020年・未登録2026年公演、シリーズ全体点検は後続。",
+      "castRows": 30,
+      "castCoverageNote": "2017年初演15役に加え2019年の無観客ライブ14役を補完。2019年は会場昼夜公演中止と実施された夜の無観客ライブ・ニコ生配信を分離し、公演情報・日英概要へ明記。全14人が既存俳優で13配役追加、既存spi配役ID等を保全し掲載順のみ補完。アンサンブル4人は公式告知クレジット。正常spi候補の誤年2021と照合キー・順序・根拠を補完し、HTML混入の重複履歴は保全。日英34ページ・年表2019/10・初演15配役・相互リンクと8テーブル全行比較、再実行0変更を確認。登録済み3作品計30配役のうち2作品29配役が補完済み。2020年と未登録2026年作、シリーズ全体点検は後続。",
       "seriesAudit": {
-        "checkedAt": "2026-10-24T15:38:50.814Z",
-        "scope": "登録済み3作品のうち初演2017年1作品15配役を補完。残る2019・2020は薄い既存行、2026年作は未登録。シリーズ全体の点検完了ではない。",
+        "checkedAt": "2026-10-24T15:55:14.513Z",
+        "scope": "2017年15配役・2019年無観客ライブ14配役の2作品を補完済み。登録済み3作品・計30配役のうち2020年は既存1配役の仮登録。2026年作は未登録で、シリーズ全体点検は後続。",
         "franchiseId": "8cd271e6-0156-4216-b66c-b5f014366cca",
         "slug": "king-of-prism",
         "registeredWorks": 3,
-        "castRows": 17,
+        "castRows": 30,
         "uniqueActors": 15,
-        "completedBatchWorks": 1,
-        "completedBatchCastRows": 15,
-        "newActors": 5,
-        "existingActorsPreserved": 10,
-        "newCastRows": 14,
+        "completedWorks": 2,
+        "completedCastRows": 29,
+        "currentBatchWorks": 1,
+        "currentBatchCastRows": 14,
+        "newActors": 0,
+        "existingActorsPreserved": 14,
+        "newCastRows": 13,
         "existingCastRowsPreserved": 1,
         "publicPages": 34,
-        "creditOnlyNames": 5,
-        "creditCategories": 21,
-        "identitySources": 5,
-        "timeline": "2017/11",
-        "works": 3,
-        "nextEvent": {
-          "url": "https://kinpri.com/sss/news/detail.php?artist_cd=KOPST&id=1077466",
-          "finding": "2019年10月12日は会場の昼夜公演中止と夜の部生中継予定が併記。実施形態・配信・出演者を後続で確認。"
+        "creditOnlyNames": 4,
+        "creditCategories": 3,
+        "identitySources": 0,
+        "timeline": "2019/10",
+        "performanceStatus": {
+          "ticketedAfternoon": "cancelled",
+          "ticketedEvening": "cancelled",
+          "eveningLive": "performed_without_audience",
+          "liveStream": "Niconico, 2019-10-12",
+          "currentStreamingVerified": false
         },
+        "works": 3,
         "pendingChecks": [
-          "KING OF PRISMの2019年イベント（中止範囲の確認）、2020年公演、2026年公演と全シリーズ点検は後続。",
-          "旧spiのHTML混入済み重複採用候補は履歴として保全し、旧取り込みの整理は後続。公開配役は1件だけを再利用。",
-          "古谷の公式英字姓名、前内の現在所属・出身相違、既存人物総合監査・全詳細英訳・現在配信・主演指定は後続。"
+          "アンサンブル4人の実出演に関する個別の事後確認、技術スタッフ全件・詳細英訳・現在配信の確認は後続。",
+          "2020年Shiny Rose Stars、未登録2026年Your Endless Call、シリーズ全体点検は後続。",
+          "旧spiのHTML混入済み重複採用履歴の整理、既存人物プロフィール総合監査・主演指定は後続。"
         ],
-        "report": "docs/kop2017-2026-10-25.md",
+        "report": "docs/kop2019-2026-10-25.md",
         "remainingSeriesWorkItems": [
-          "2019年イベントの会場中止・生中継の区別とキャスト確認",
           "2020年Shiny Rose Starsの補完",
           "2026年Your Endless Callの登録",
           "全作品収録後のシリーズ点検"
         ],
-        "research": "next-app/research/kop2017-20261025.json",
-        "seriesResearch": "next-app/research/kop-series-audit-20261025-01.json"
+        "research": "next-app/research/kop2019-20261025.json",
+        "seriesResearch": "next-app/research/kop-series-audit-20261025-02.json"
       }
     },
     {
