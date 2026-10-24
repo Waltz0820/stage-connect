@@ -1,0 +1,129 @@
+{
+  "checkedAt": "2026-10-24T19:05:45.743Z",
+  "scope": "2017年MISSING KINGSを主要14人物・14配役行まで補完。小山の兼役を分けると15役。Kは登録済み5作品57配役のうち2014/2015/2016/2017年の55配役行を補完済み。2019年の仮登録2配役を保全して後続へ。シリーズ全体の点検完了ではない。",
+  "franchiseId": "21e2a016-4301-4053-9b79-6763d362193a",
+  "slug": "k",
+  "registeredWorks": 5,
+  "castRows": 57,
+  "uniqueActors": 34,
+  "completedWorks": 4,
+  "completedCastRows": 55,
+  "currentBatchWorks": 1,
+  "currentBatchCastRows": 14,
+  "currentWorkActors": 14,
+  "currentWorkDistinctRoles": 15,
+  "newActors": 2,
+  "existingActorsPreserved": 12,
+  "newCastRows": 12,
+  "existingCastRowsPreserved": 2,
+  "existingCastOrdersFilled": 2,
+  "legacyAcceptedCandidatesPreserved": 2,
+  "publicPages": 40,
+  "creditOnlyNames": 8,
+  "dualRoleActors": [
+    "小山百代"
+  ],
+  "creditCategories": 4,
+  "identitySources": 2,
+  "timeline": "2017/10",
+  "works": [
+    {
+      "id": "79389152-3b95-46a5-82e8-1b7fe9dfe7f4",
+      "slug": "k2016",
+      "title": "舞台『K -Lost Small World-』",
+      "title_en": "K -Lost Small World- (Stage, 2016)",
+      "period": "2016年7月22日〜24日（東京）／7月30日〜31日（京都）",
+      "venue": "AiiA 2.5 Theater Tokyo／京都劇場",
+      "castRows": 16,
+      "source": "https://kira-hai.net/k2016",
+      "research": "next-app/research/k2016-20261025.json",
+      "summaryPresent": true,
+      "englishSummaryPresent": true,
+      "completedInThisBatch": false,
+      "exceptions": [
+        "前工程で補完済み。今回も全項目を保全。"
+      ]
+    },
+    {
+      "id": "81bd7619-040a-4c08-b350-f5e73b14a219",
+      "slug": "k2017",
+      "title": "舞台『K-MISSING KINGS-』",
+      "title_en": "K -MISSING KINGS- (Stage, 2017)",
+      "period": "2017年10月19日〜22日（京都）／10月26日〜29日（東京）",
+      "venue": "京都劇場／天王洲 銀河劇場",
+      "castRows": 14,
+      "source": "https://kira-hai.net/k2017",
+      "research": "next-app/research/k2017-20261025.json",
+      "summaryPresent": true,
+      "englishSummaryPresent": true,
+      "completedInThisBatch": true,
+      "exceptions": [
+        "既存2017年作品を補完。ID・slug・正式タイトル・vod・ジャンル・タグ・関連設定と既存人物全行は保持。公演期日と会場、短い日英概要・英題・スタッフ／アンサンブルを追加する。",
+        "主要14配役を公式順で照合。既存中尾拳也の鎌本力夫、佐々木喜英の御芍神紫のID・作成日時・補足・主演指定・出演区分を保全し、未指定の掲載順だけを公式順へ設定。新規12配役を追加し、過去公演の松田凌・安西慎太郎等を流用しない。",
+        "小山百代の現公式には当該作品の雪染菊理／平坂道反が記載。公演一覧にない二役を併記して保持し、映像／声／日替わり等の条件は推定しない。14配役行・14人物、役名を分けると15役。",
+        "アンサンブル8名をクレジットへ保存。既存の人物登録や役名推測を理由に主要配役へ昇格させない。佐々木の役名は公式の「御芍神 紫」の空白差を正規化し既存表記を保つ。",
+        "中尾と佐々木の旧採用候補は全項目保全。佐々木のsource_year=2021は誤年を含む旧履歴として残し、旧採用済み2件は候補保存RPCが保全する仕様のため重複候補を作らず再利用し、2017年の再照合根拠を配役補完の履歴へ残す。新しい候補は未登録の12配役だけに限定する。旧候補整理は別工程。",
+        "柴は第一参照先160cmと二次資料163cmの差、現所属ページ404を記録し身長と現所属は保留。小山は現公式の業務提携区分を採用し旧スターダスト所属を転載しない。両人物の読み・誕生日・代表作を公演公式と人物資料で照合。",
+        "dアニメの当該作品には現在公開中の話がないと明示。作品ページの存在だけを現在視聴可能の根拠にせずvodを変更しない。千秋楽のライブビューイングや2018年映像発売／イベントは独立舞台公演として追加しない。",
+        "主演は制作元に荒牧慶彦と明記されるが、新規・既存全体の主演指定の整備は別工程として今回はフラグを変更しない。日英概要と新規人物紹介を用意し、詳細役名英訳・既存人物総合監査・シリーズ全体点検は後続。"
+      ]
+    },
+    {
+      "id": "bc4ff457-ed00-47ad-9c3d-831637b4b67a",
+      "slug": "k2015",
+      "title": "舞台『K』第二章 -AROUSAL OF KING-",
+      "title_en": "K: Chapter Two -AROUSAL OF KING- (Stage, 2015)",
+      "period": "2015年8月5日〜15日（東京）／8月19日〜22日（大阪）",
+      "venue": "AiiA 2.5 Theater Tokyo／大阪メルパルクホール",
+      "castRows": 11,
+      "source": "https://kira-hai.net/k2015",
+      "research": "next-app/research/k2015-20261025.json",
+      "summaryPresent": true,
+      "englishSummaryPresent": true,
+      "completedInThisBatch": false,
+      "exceptions": [
+        "前工程で補完済み。今回も全項目を保全。"
+      ]
+    },
+    {
+      "id": "f12ac503-a8a0-4b10-b2ed-fb086469ecd9",
+      "slug": "k-stage-first",
+      "title": "舞台『K』",
+      "title_en": "K (Stage, 2014)",
+      "period": "2014年8月6日〜10日",
+      "venue": "六本木ブルーシアター",
+      "castRows": 14,
+      "source": "https://kira-hai.net/k2014",
+      "research": "next-app/research/k2014-20261025.json",
+      "summaryPresent": true,
+      "englishSummaryPresent": true,
+      "completedInThisBatch": false,
+      "exceptions": [
+        "前工程で補完済み。今回も全項目を保全。"
+      ]
+    },
+    {
+      "id": "fc9a2da7-9195-4fa0-9c94-b56bf788bc86",
+      "slug": "k2019",
+      "title": "舞台『K -RETURN OF KINGS-』",
+      "title_en": null,
+      "period": "2019年",
+      "venue": null,
+      "castRows": 2,
+      "source": null,
+      "research": null,
+      "summaryPresent": false,
+      "englishSummaryPresent": false,
+      "completedInThisBatch": false,
+      "exceptions": [
+        "既存仮登録を全項目保全。補完は後続。"
+      ]
+    }
+  ],
+  "pendingChecks": [
+    "2019年RETURN OF KINGSの仮登録補完、全作品収録後のKシリーズ点検は後続。",
+    "柴の現所属・身長、既存人物総合監査・詳細英訳・現行配信の網羅確認・主演指定は後続。",
+    "佐々木の誤年を含む旧採用候補は全項目保全し、履歴整理は後続。"
+  ],
+  "report": "docs/k2017-2026-10-25.md"
+}
