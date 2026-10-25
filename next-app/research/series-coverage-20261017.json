@@ -849,7 +849,73 @@
       "name": "『ワールドトリガー the Stage』（ワーステ）",
       "registeredDay": "2025-12-13",
       "plays": 1,
-      "protected": false
+      "protected": false,
+      "castRows": 21,
+      "castCoverageNote": "2021年初演を公式最終21配役へ補完。新規11人物・20配役を追加、植田の既存配役ID・主演指定を保持し役名補完。公式にない多和田の役名空欄の仮紐付け1件のみ解除、本人と他作を保全。木虎藍役の開幕前交代は沖の配役noteとクレジットへ。嵐林藤匠の誤記を林藤匠へ、仮vodの#2件を除去。日英48ページ・8テーブル保全比較・再実行0変更。次は2022年大規模侵攻編、以降と全体点検は後続。",
+      "seriesAudit": {
+        "checkedAt": "2026-10-25T09:51:07.518Z",
+        "scope": "2021年初演のみの補完。シリーズ全体点検は未完了。",
+        "registeredWorks": 1,
+        "castRows": 21,
+        "uniqueActors": 21,
+        "completedWorks": 1,
+        "completedCastRows": 21,
+        "newActors": 11,
+        "existingActorsReused": 10,
+        "preservedCasts": 1,
+        "removedSampleLinks": 1,
+        "creditCategories": 18,
+        "castNotes": 1,
+        "publicPages": 48,
+        "seriesVerificationPassed": false,
+        "source": "https://kira-hai.net/wt",
+        "sourceWorks": [
+          {
+            "title": "ワールドトリガー the Stage",
+            "url": "https://kira-hai.net/wt2021"
+          },
+          {
+            "title": "『ワールドトリガー the Stage』大規模侵攻編",
+            "url": "https://kira-hai.net/wt2022"
+          },
+          {
+            "title": "『ワールドトリガー the Stage』B級ランク戦開始編",
+            "url": "https://kira-hai.net/wt2023"
+          },
+          {
+            "title": "『ワールドトリガー the Stage』ガロプラ迎撃編",
+            "url": "https://kira-hai.net/wt2024"
+          },
+          {
+            "title": "『ワールドトリガー the Stage』B級ランク戦最終決戦編",
+            "url": "https://kira-hai.net/wt2025"
+          }
+        ],
+        "remainingSeriesWorkItems": [
+          {
+            "title": "『ワールドトリガー the Stage』大規模侵攻編",
+            "url": "https://kira-hai.net/wt2022"
+          },
+          {
+            "title": "『ワールドトリガー the Stage』B級ランク戦開始編",
+            "url": "https://kira-hai.net/wt2023"
+          },
+          {
+            "title": "『ワールドトリガー the Stage』ガロプラ迎撃編",
+            "url": "https://kira-hai.net/wt2024"
+          },
+          {
+            "title": "『ワールドトリガー the Stage』B級ランク戦最終決戦編",
+            "url": "https://kira-hai.net/wt2025"
+          }
+        ],
+        "pendingChecks": [
+          "2022年大規模侵攻編以降とシリーズ全体点検は後続。",
+          "人物属性・詳細英訳・現行配信の総合監査、山内の現所属と身長、宮尾の読み・出身、初演レプリカ兼役の追加一次確認は後続。"
+        ],
+        "research": "next-app/research/worldtrigger2021-20261025.json",
+        "report": "docs/worldtrigger2021-2026-10-25.md"
+      }
     },
     {
       "id": "39f67aba-cbf6-453e-9aa7-4a7da81c09a9",
