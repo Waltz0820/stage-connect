@@ -848,27 +848,28 @@
       "slug": "world-trigger",
       "name": "『ワールドトリガー the Stage』（ワーステ）",
       "registeredDay": "2025-12-13",
-      "plays": 3,
+      "plays": 4,
       "protected": false,
-      "castRows": 81,
-      "castCoverageNote": "2023年B級ランク戦開始編を新規登録。新規5人物・既存24人物、実人数29人。終演公式の51キャラクターを兼役として補完し舞台20行・映像7行・声4行の31配役へ。林藤匠の演技／声、鳩原未来の写真映像出演も保存。C級隊員とアナウンスはクレジット。日英66ページ・8テーブル既存行保全・再実行0変更。シリーズ3作品81配役。次は2024年ガロプラ迎撃編、全体点検は後続。",
+      "castRows": 110,
+      "castCoverageNote": "2024年ガロプラ迎撃編を新規登録。新規4人物・既存23人物。小南役の舞台／声／代役を分離し、主要子役Wキャストと確認済み忍田兼役を保存。アンサンブル2名はクレジット、東京凱旋11月23日2回中止を明記。日英64ページ・8テーブル既存行保全・再実行0変更。シリーズ4作品110配役。次は2025年最終決戦編と全体点検。2024年の他兼役の一次照合は別途保留。",
       "seriesAudit": {
-        "checkedAt": "2026-10-25T11:02:31.016Z",
-        "scope": "2021年初演・2022年大規模侵攻編・2023年B級ランク戦開始編の3作品を補完。全シリーズ点検は未完了。",
-        "registeredWorks": 3,
-        "castRows": 81,
-        "uniqueActors": 47,
-        "completedWorks": 3,
-        "completedCastRows": 81,
-        "newActors": 5,
-        "existingActorsReused": 24,
-        "currentWorkCreditCategories": 20,
-        "currentWorkVoiceCastRows": 4,
-        "currentWorkVideoCastRows": 7,
-        "currentWorkCastNotes": 3,
-        "currentWorkUniqueActors": 29,
-        "currentWorkNamedCharacters": 51,
-        "publicPages": 66,
+        "checkedAt": "2026-10-25T12:14:56.888Z",
+        "scope": "2021〜2024年の4作品の主要配役を補完。2024年の他兼役とシリーズ全体点検は未完了。",
+        "registeredWorks": 4,
+        "castRows": 110,
+        "uniqueActors": 56,
+        "completedWorks": 4,
+        "completedCastRows": 110,
+        "newActors": 4,
+        "existingActorsReused": 23,
+        "currentWorkCreditCategories": 21,
+        "currentWorkVoiceCastRows": 6,
+        "currentWorkCastNotes": 5,
+        "currentWorkUniqueActors": 27,
+        "currentWorkDisplayCards": 28,
+        "currentWorkEnsembleNames": 2,
+        "currentWorkChildDoubleCast": 2,
+        "publicPages": 64,
         "seriesVerificationPassed": false,
         "source": "https://kira-hai.net/wt",
         "sourceWorks": [
@@ -895,20 +896,17 @@
         ],
         "remainingSeriesWorkItems": [
           {
-            "title": "『ワールドトリガー the Stage』ガロプラ迎撃編",
-            "url": "https://kira-hai.net/wt2024"
-          },
-          {
             "title": "『ワールドトリガー the Stage』B級ランク戦最終決戦編",
             "url": "https://kira-hai.net/wt2025"
           }
         ],
         "pendingChecks": [
-          "次は2024年ガロプラ迎撃編、次いで2025年最終決戦編。揃えてからシリーズ全体点検。",
-          "人物属性・既存英訳・現行配信の総合監査は後続。石川・田中の生年と未確認属性は保留。"
+          "次は2025年B級ランク戦最終決戦編。揃えてからシリーズ全体点検。",
+          "2024年の他の兼役（ガロプラ各役・本部・柿崎隊ほか）は本人発表・公式資料の追加一次照合が必要。今回の主要配役補完とは分けて保留。",
+          "人物属性・既存英訳・現行配信の総合監査は後続。竹内の現公式身長・血液型、古賀の誕生日の日、子役の出身・血液型・公式英字は保留。"
         ],
-        "research": "next-app/research/worldtrigger2023-20261025.json",
-        "report": "docs/worldtrigger2023-2026-10-25.md"
+        "research": "next-app/research/worldtrigger2024-20261025.json",
+        "report": "docs/worldtrigger2024-2026-10-25.md"
       }
     },
     {
