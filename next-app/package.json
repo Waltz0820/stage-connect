@@ -11,7 +11,7 @@
     "preview:voting": "node scripts/serve-voting-preview.mjs",
     "verify:voting-preview": "node scripts/verify-voting-preview.mjs",
     "test:v2-pages": "node scripts/check-v2-pages.mjs",
-    "test:search": "node --test scripts/search-query.test.mjs scripts/localization.test.mjs",
+    "test:search": "node --test scripts/search-query.test.mjs scripts/localization.test.mjs scripts/directory-pagination.test.mjs scripts/directory-data.test.mjs",
     "test:streaming": "node --test scripts/streaming.test.mjs",
     "verify:search-api": "node scripts/check-search-api.mjs",
     "test:work-import": "node --test scripts/work-import-plan.test.mjs",

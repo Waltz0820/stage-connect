@@ -4,6 +4,7 @@ import { hasSupabaseEnv } from "./env";
 import { getEnglishActorName } from "./en-copy";
 import { createSupabaseServerClient } from "./supabase";
 import { buildSearchFilter, normalizeSearchQuery } from "./search-query";
+import { readDirectoryPages } from "./directory-pages";
 
 export type ActorLink = {
   slug: string;
@@ -1289,6 +1290,26 @@ export async function getSeriesDetailBySlug(slug: string): Promise<SeriesDetailD
   };
 }
 
+async function readCastSummaryRows(
+  supabase: ReturnType<typeof createSupabaseServerClient>,
+  playIds: string[],
+  includeEnglish: boolean,
+): Promise<any[]> {
+  const batches: string[][] = [];
+  for (let from = 0; from < playIds.length; from += 50) {
+    batches.push(playIds.slice(from, from + 50));
+  }
+  const rows = await Promise.all(batches.map((ids) => readDirectoryPages<any>((start, end) => supabase
+      .from("casts")
+      .select(`play_id, is_starring, billing_order, created_at, actor:actors (slug, name${includeEnglish ? ", name_en" : ""})`)
+      .in("play_id", ids)
+      .order("billing_order", { ascending: true, nullsFirst: false })
+      .order("created_at", { ascending: true })
+      .order("id", { ascending: true })
+      .range(start, end))));
+  return rows.flat();
+}
+
 export async function getPlayList(): Promise<PlayListItem[]> {
   if (!hasSupabaseEnv) return [];
   const supabase = createSupabaseServerClient();
@@ -1403,57 +1424,23 @@ export async function getPlayList(): Promise<PlayListItem[]> {
     let castRows: any[] | null = null;
     let castError: any = null;
 
-    {
-      const res = await supabase
-        .from("casts")
-        .select(
-          `
-          play_id,
-          is_starring,
-          billing_order,
-          created_at,
-          actor:actors (
-            slug,
-            name,
-            name_en
-          )
-        `
-        )
-        .in("play_id", playIds)
-        .order("billing_order", { ascending: true, nullsFirst: false })
-        .order("created_at", { ascending: true });
-      castRows = res.data as any[] | null;
-      castError = res.error;
+    try {
+      castRows = await readCastSummaryRows(supabase, playIds, true);
+    } catch (error) {
+      castError = error;
     }
 
     if (castError && /name_en/i.test(String(castError.message ?? ""))) {
-      const fallback = await supabase
-        .from("casts")
-        .select(
-          `
-          play_id,
-          is_starring,
-          billing_order,
-          created_at,
-          actor:actors (
-            slug,
-            name
-          )
-        `
-        )
-        .in("play_id", playIds)
-        .order("billing_order", { ascending: true, nullsFirst: false })
-        .order("created_at", { ascending: true });
       castRows =
-        (fallback.data as any[] | null)?.map((row) => ({
+        (await readCastSummaryRows(supabase, playIds, false)).map((row) => ({
           ...row,
           actor: Array.isArray(row?.actor)
             ? row.actor.map((item: any) => ({ ...item, name_en: null }))
             : row?.actor
               ? { ...row.actor, name_en: null }
               : row?.actor,
-        })) ?? null;
-      castError = fallback.error;
+        }));
+      castError = null;
     }
 
     if (castError) throw castError;
@@ -1610,6 +1597,15 @@ export async function getPlayMainCastSummariesBySlug(
   const normalizedSlugs = Array.from(new Set(slugs.map((slug) => String(slug ?? "").trim()).filter(Boolean)));
   if (normalizedSlugs.length === 0) return {};
 
+  // Long catalogues otherwise create an IN-filter URL larger than the HTTP header limit.
+  if (normalizedSlugs.length > 50) {
+    const summaries: Record<string, { ja: string | null; en: string | null }> = {};
+    for (let from = 0; from < normalizedSlugs.length; from += 50) {
+      Object.assign(summaries, await getPlayMainCastSummariesBySlug(normalizedSlugs.slice(from, from + 50)));
+    }
+    return summaries;
+  }
+
   const supabase = createSupabaseServerClient();
   const { data: plays, error: playError } = await supabase
     .from("plays")
@@ -1628,57 +1624,23 @@ export async function getPlayMainCastSummariesBySlug(
   let castRows: any[] | null = null;
   let castError: any = null;
 
-  {
-    const res = await supabase
-      .from("casts")
-      .select(
-        `
-        play_id,
-        is_starring,
-        billing_order,
-        created_at,
-        actor:actors (
-          slug,
-          name,
-          name_en
-        )
-      `
-      )
-      .in("play_id", playIds)
-      .order("billing_order", { ascending: true, nullsFirst: false })
-      .order("created_at", { ascending: true });
-    castRows = res.data as any[] | null;
-    castError = res.error;
+  try {
+    castRows = await readCastSummaryRows(supabase, playIds, true);
+  } catch (error) {
+    castError = error;
   }
 
   if (castError && /name_en/i.test(String(castError.message ?? ""))) {
-    const fallback = await supabase
-      .from("casts")
-      .select(
-        `
-        play_id,
-        is_starring,
-        billing_order,
-        created_at,
-        actor:actors (
-          slug,
-          name
-        )
-      `
-      )
-      .in("play_id", playIds)
-      .order("billing_order", { ascending: true, nullsFirst: false })
-      .order("created_at", { ascending: true });
     castRows =
-      (fallback.data as any[] | null)?.map((row) => ({
+      (await readCastSummaryRows(supabase, playIds, false)).map((row) => ({
         ...row,
         actor: Array.isArray(row?.actor)
           ? row.actor.map((item: any) => ({ ...item, name_en: null }))
           : row?.actor
             ? { ...row.actor, name_en: null }
             : row?.actor,
-      })) ?? null;
-    castError = fallback.error;
+      }));
+    castError = null;
   }
 
   if (castError) throw castError;
@@ -1779,37 +1741,29 @@ export async function getPlayMainCastSummariesBySlug(
 export async function getActorList(): Promise<ActorListItem[]> {
   if (!hasSupabaseEnv) return [];
   const supabase = createSupabaseServerClient();
-  let data: any[] | null = null;
-  let error: any = null;
+  let data: any[];
+  const readActors = (columns: string) => readDirectoryPages<any>((from, to) => supabase
+    .from("actors")
+    .select(columns)
+    .order("name", { ascending: true })
+    .order("id", { ascending: true })
+    .range(from, to));
 
-  {
-    const res = await supabase
-      .from("actors")
-      .select("slug, name, name_en, kana, birthday, birthday_label, death_date, profile, profile_en, gender")
-      .order("name", { ascending: true });
-    data = res.data as any[] | null;
-    error = res.error;
-  }
-
-  if (error && /(name_en|profile_en|birthday_label|death_date)/i.test(String(error.message ?? ""))) {
-    const fallback = await supabase
-      .from("actors")
-      .select("slug, name, kana, birthday, profile, gender")
-      .order("name", { ascending: true });
-    data =
-      (fallback.data as any[] | null)?.map((row) => ({
+  try {
+    data = await readActors("slug, name, name_en, kana, birthday, birthday_label, death_date, profile, profile_en, gender");
+  } catch (error) {
+    const message = error && typeof error === "object" && "message" in error ? String(error.message) : "";
+    if (!/(name_en|profile_en|birthday_label|death_date)/i.test(message)) throw error;
+    data = (await readActors("slug, name, kana, birthday, profile, gender")).map((row) => ({
         ...row,
         name_en: null,
         birthday_label: null,
         death_date: null,
         profile_en: null,
-      })) ?? null;
-    error = fallback.error;
+      }));
   }
 
-  if (error) throw error;
-
-  return ((data ?? []) as any[])
+  return data
     .filter((row) => row?.slug && row?.name)
     .map((row) => ({
       slug: row.slug as string,
