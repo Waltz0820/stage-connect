@@ -1559,8 +1559,56 @@
       "slug": "joker-game",
       "name": "舞台『ジョーカー・ゲーム』",
       "registeredDay": "2026-02-09",
-      "plays": 0,
-      "protected": false
+      "plays": 1,
+      "protected": false,
+      "castRows": 13,
+      "castCoverageNote": "2017年初演を1作品13配役で登録。新規3人物・既存10人物を再利用。公式アンサンブル9名は作品クレジットへ。前田のキラハイ誤属性を採用せず現公式の183cm・A型・岐阜を優先、DOBは未確認で空欄。大海の生年非公開は10月5日のラベルのみ。シリーズ英題・日英概要も補完。日英30ページ、8テーブル保全比較・再実行0変更を確認。次は2018年Ⅱ、2025年Ⅲと全体点検。",
+      "seriesAudit": {
+        "checkedAt": "2026-10-25T13:06:26.375Z",
+        "scope": "2017年初演の主要配役・掲載順・クレジット・日程・日英タイトル概要、シリーズ初演年表・抜粋・日英紹介、新規3人物の紹介・DOB／月日ラベル・既存10人物を含む逆リンク。2018/2025年の登録とシリーズ全体点検は後続。",
+        "registeredWorks": 1,
+        "castRows": 13,
+        "uniqueActors": 13,
+        "completedWorks": 1,
+        "completedCastRows": 13,
+        "newActors": 3,
+        "existingActorsReused": 10,
+        "currentWorkCreditCategories": 5,
+        "currentWorkEnsembleNames": 9,
+        "publicPages": 30,
+        "seriesVerificationPassed": false,
+        "source": "https://kira-hai.net/?s=%E3%82%B8%E3%83%A7%E3%83%BC%E3%82%AB%E3%83%BC",
+        "sourceWorks": [
+          {
+            "title": "舞台『ジョーカー・ゲームⅢ』",
+            "url": "https://kira-hai.net/jg2025"
+          },
+          {
+            "title": "舞台『ジョーカー・ゲームⅡ』",
+            "url": "https://kira-hai.net/jg2018"
+          },
+          {
+            "title": "舞台『ジョーカー・ゲーム』",
+            "url": "https://kira-hai.net/jg2017"
+          }
+        ],
+        "remainingSeriesWorkItems": [
+          {
+            "title": "舞台『ジョーカー・ゲームⅢ』",
+            "url": "https://kira-hai.net/jg2025"
+          },
+          {
+            "title": "舞台『ジョーカー・ゲームⅡ』",
+            "url": "https://kira-hai.net/jg2018"
+          }
+        ],
+        "pendingChecks": [
+          "次は2018年『ジョーカー・ゲームⅡ』、次いで2025年『Ⅲ』。シリーズが揃ってから全体点検。",
+          "前田の生年月日、大海の生年、オラキオの血液型は今回一次未確認で保留。既存人物の属性・英訳・現行配信の総合監査は別途。"
+        ],
+        "research": "next-app/research/jokergame2017-20261025.json",
+        "report": "docs/jokergame2017-2026-10-25.md"
+      }
     },
     {
       "id": "85a7410e-3899-460a-bed1-2ac3942ad4b9",
