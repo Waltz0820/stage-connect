@@ -848,24 +848,27 @@
       "slug": "world-trigger",
       "name": "『ワールドトリガー the Stage』（ワーステ）",
       "registeredDay": "2025-12-13",
-      "plays": 2,
+      "plays": 3,
       "protected": false,
-      "castRows": 50,
-      "castCoverageNote": "2022年大規模侵攻編を新規登録。主要舞台27名と声2名、計29配役。新規4人物と既存25人物を照合。東京代役・京都復帰の菊地原役を2行に分離し、東京11公演中止と声の兼役を保存。日英64ページ・8テーブル全既存行保全・再実行0変更。シリーズは2作品50配役まで。次は2023年B級ランク戦開始編、全体点検は後続。",
+      "castRows": 81,
+      "castCoverageNote": "2023年B級ランク戦開始編を新規登録。新規5人物・既存24人物、実人数29人。終演公式の51キャラクターを兼役として補完し舞台20行・映像7行・声4行の31配役へ。林藤匠の演技／声、鳩原未来の写真映像出演も保存。C級隊員とアナウンスはクレジット。日英66ページ・8テーブル既存行保全・再実行0変更。シリーズ3作品81配役。次は2024年ガロプラ迎撃編、全体点検は後続。",
       "seriesAudit": {
-        "checkedAt": "2026-10-25T10:20:47.584Z",
-        "scope": "2021年初演と2022年大規模侵攻編の2作品を補完。シリーズ全体点検は未完了。",
-        "registeredWorks": 2,
-        "castRows": 50,
-        "uniqueActors": 33,
-        "completedWorks": 2,
-        "completedCastRows": 50,
-        "newActors": 4,
-        "existingActorsReused": 25,
+        "checkedAt": "2026-10-25T11:02:31.016Z",
+        "scope": "2021年初演・2022年大規模侵攻編・2023年B級ランク戦開始編の3作品を補完。全シリーズ点検は未完了。",
+        "registeredWorks": 3,
+        "castRows": 81,
+        "uniqueActors": 47,
+        "completedWorks": 3,
+        "completedCastRows": 81,
+        "newActors": 5,
+        "existingActorsReused": 24,
         "currentWorkCreditCategories": 20,
-        "currentWorkVoiceCastRows": 2,
-        "currentWorkCastNotes": 2,
-        "publicPages": 64,
+        "currentWorkVoiceCastRows": 4,
+        "currentWorkVideoCastRows": 7,
+        "currentWorkCastNotes": 3,
+        "currentWorkUniqueActors": 29,
+        "currentWorkNamedCharacters": 51,
+        "publicPages": 66,
         "seriesVerificationPassed": false,
         "source": "https://kira-hai.net/wt",
         "sourceWorks": [
@@ -892,10 +895,6 @@
         ],
         "remainingSeriesWorkItems": [
           {
-            "title": "『ワールドトリガー the Stage』B級ランク戦開始編",
-            "url": "https://kira-hai.net/wt2023"
-          },
-          {
             "title": "『ワールドトリガー the Stage』ガロプラ迎撃編",
             "url": "https://kira-hai.net/wt2024"
           },
@@ -905,11 +904,11 @@
           }
         ],
         "pendingChecks": [
-          "次は2023年B級ランク戦開始編。残る2024/2025年まで揃えてからシリーズ全体点検。",
-          "人物属性・既存英訳・現行配信の総合監査は後続。松葉と田中の未確認属性は空欄を維持。"
+          "次は2024年ガロプラ迎撃編、次いで2025年最終決戦編。揃えてからシリーズ全体点検。",
+          "人物属性・既存英訳・現行配信の総合監査は後続。石川・田中の生年と未確認属性は保留。"
         ],
-        "research": "next-app/research/worldtrigger2022-20261025.json",
-        "report": "docs/worldtrigger2022-2026-10-25.md"
+        "research": "next-app/research/worldtrigger2023-20261025.json",
+        "report": "docs/worldtrigger2023-2026-10-25.md"
       }
     },
     {
