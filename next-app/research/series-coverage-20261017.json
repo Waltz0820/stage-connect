@@ -326,24 +326,33 @@
       "slug": "ao-no-exorcist",
       "name": "舞台『青の祓魔師』",
       "registeredDay": "2026-02-09",
-      "plays": 3,
+      "plays": 4,
       "protected": false,
-      "castRows": 47,
-      "castCoverageNote": "2016年京都紅蓮篇を新規登録。主要16配役、新規6人物と既存10人物を照合。宮崎秋人は既存宮﨑秋人を再利用。公式アンサンブル14名はクレジットへ。日英40ページ・8テーブル既存全行保全・同SQL再実行0変更。2012/2014/2016年の3作品47配役を補完済み。次は2017年島根イルミナティ篇とシリーズ全体点検。",
+      "castRows": 61,
+      "castCoverageNote": "2017年島根イルミナティ篇を新規登録。主要14配役、新規6人物と既存8人物を照合。公式アンサンブル17名はクレジットへ。全4制作61配役56人物、アンサンブル54名・ダンサー6名（延べ）を点検。2014年の11件の片編のみ条件と2012年の白鳥零二役を保全。シリーズ英題と日英概要を補完。日英122ページ、8テーブル保全比較・同SQL再実行0変更。通常収録は一区切り、人物属性差・詳細英訳・現行配信等は後続監査。",
       "seriesAudit": {
-        "checkedAt": "2026-10-25T02:23:50.567Z",
-        "scope": "2012/2014/2016年の3作品を補完。シリーズ全体点検は未完了。",
-        "registeredWorks": 3,
-        "castRows": 47,
-        "uniqueActors": 47,
-        "completedWorks": 3,
-        "completedCastRows": 47,
+        "checkedAt": "2026-10-25T04:05:10.408Z",
+        "scope": "第一参照先の青の祓魔師舞台全4制作の収録照合と、保存済み公演公式／人物資料に基づく配役・出演条件・クレジット・日程・日英概要および公開回遊の点検。人物全属性・詳細英訳・現行配信網羅・主演指定の総合監査は含まない。",
+        "registeredWorks": 4,
+        "castRows": 61,
+        "uniqueActors": 56,
+        "completedWorks": 4,
+        "completedCastRows": 61,
         "newActors": 6,
-        "existingActorsReused": 10,
-        "currentWorkCreditCategories": 21,
-        "currentWorkEnsembleNames": 14,
-        "publicPages": 40,
-        "seriesVerificationPassed": false,
+        "existingActorsReused": 8,
+        "currentWorkCreditCategories": 19,
+        "currentWorkEnsembleNames": 17,
+        "ensembleCredits": 54,
+        "dancerCredits": 6,
+        "ensembleAndDancerCredits": 60,
+        "publicPages": 122,
+        "timeline": [
+          "2017/10",
+          "2016/08",
+          "2014/06",
+          "2012/05"
+        ],
+        "seriesVerificationPassed": true,
         "source": "https://kira-hai.net/aoex",
         "sourceWorks": [
           {
@@ -363,18 +372,96 @@
             "url": "https://kira-hai.net/aoex2017"
           }
         ],
-        "remainingSeriesWorkItems": [
+        "verifiedWorks": [
           {
-            "title": "舞台『青の祓魔師』島根イルミナティ篇",
-            "url": "https://kira-hai.net/aoex2017"
+            "year": 2012,
+            "id": "e9e535f3-65d8-41b9-b114-7b00598537e1",
+            "slug": "aoex2012",
+            "title": "LIVE ACT 青の祓魔師 ～魔神の落胤～",
+            "title_en": "LIVE ACT Blue Exorcist: Satan no Rakuin (2012)",
+            "period": "2012年5月11日〜17日",
+            "venue": "日本青年館 大ホール（移転前）",
+            "castRows": 12,
+            "uniqueActors": 12,
+            "ensemble": 14,
+            "dancers": 0,
+            "creditedRoles": [
+              {
+                "role": "白鳥零二",
+                "names": [
+                  "岡田和也"
+                ],
+                "is_core": false,
+                "sort_order": 21
+              }
+            ],
+            "conditionalCastRows": 1,
+            "source": "https://kira-hai.net/aoex2012",
+            "summaryPresent": true,
+            "englishSummaryPresent": true
+          },
+          {
+            "year": 2014,
+            "id": "ad0cbfb6-95c3-4299-8887-fb7b920d9c99",
+            "slug": "aoex2014",
+            "title": "舞台「青の祓魔師」青の焔 覚醒編 / 京都 不浄王編",
+            "title_en": "Blue Exorcist: Awakening / Kyoto Impure King (Stage, 2014)",
+            "period": "2014年6月21日〜29日",
+            "venue": "サンシャイン劇場",
+            "castRows": 19,
+            "uniqueActors": 19,
+            "ensemble": 9,
+            "dancers": 6,
+            "creditedRoles": [],
+            "conditionalCastRows": 11,
+            "source": "https://kira-hai.net/aoex2014",
+            "summaryPresent": true,
+            "englishSummaryPresent": true
+          },
+          {
+            "year": 2016,
+            "id": "6a5d2e46-7041-46a7-946f-9d466c402741",
+            "slug": "aoex2016",
+            "title": "舞台「青の祓魔師」京都紅蓮篇",
+            "title_en": "Blue Exorcist: Kyoto Guren (Stage, 2016)",
+            "period": "2016年8月5日〜14日",
+            "venue": "Zeppブルーシアター六本木",
+            "castRows": 16,
+            "uniqueActors": 16,
+            "ensemble": 14,
+            "dancers": 0,
+            "creditedRoles": [],
+            "conditionalCastRows": 0,
+            "source": "https://kira-hai.net/aoex2016",
+            "summaryPresent": true,
+            "englishSummaryPresent": true
+          },
+          {
+            "year": 2017,
+            "id": "e2597b1b-71c8-4b42-afb8-bb97e0e594f4",
+            "slug": "aoex2017",
+            "title": "舞台「青の祓魔師」島根イルミナティ篇",
+            "title_en": "Blue Exorcist: Shimane Illuminati (Stage, 2017)",
+            "period": "2017年10月20日〜29日（東京）、11月2日〜5日（神戸）",
+            "venue": "Zeppブルーシアター六本木（東京）、新神戸オリエンタル劇場（神戸）",
+            "castRows": 14,
+            "uniqueActors": 14,
+            "ensemble": 17,
+            "dancers": 0,
+            "creditedRoles": [],
+            "conditionalCastRows": 0,
+            "source": "https://kira-hai.net/aoex2017",
+            "summaryPresent": true,
+            "englishSummaryPresent": true
           }
         ],
+        "remainingSeriesWorkItems": [],
         "pendingChecks": [
-          "2017年島根イルミナティ篇の登録後に全4作品のシリーズ点検を行う。",
-          "人物属性・既存英訳の総合監査、加藤の現所属と身長、土井の血液型と現所属、安枝の現所属、現行配信・主演指定・挿入歌差分は後続。"
+          "松岡DOBの資料間差と現所属、原・稲村の現所属、大久保の身長等は後続の人物属性監査で確認。",
+          "詳細役名・原作クレジットの英訳、既存人物の全英訳、現行配信、主演指定、旧混入候補整理、2014年のアンサンブル／ダンサーの追加一次照合、2016年挿入歌差分は後続。"
         ],
-        "research": "next-app/research/aoex2016-20261025.json",
-        "report": "docs/aoex2016-2026-10-25.md"
+        "research": "next-app/research/aoex2017-20261025.json",
+        "report": "docs/aoex2017-2026-10-25.md"
       }
     },
     {
