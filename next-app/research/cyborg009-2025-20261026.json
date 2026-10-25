@@ -1,0 +1,2333 @@
+{
+  "version": 1,
+  "batchId": "cyborg009-2025-20261026-01",
+  "expectedFranchise": {
+    "id": "91caff8a-ff55-46d4-b388-62b51aed2395",
+    "name": "舞台『サイボーグ009』",
+    "created_at": "2026-02-08T16:26:41.990203+00:00",
+    "updated_at": "2026-10-25T17:13:58.147614+00:00",
+    "slug": "cyborg-009",
+    "intro": null,
+    "description": "石ノ森章太郎の漫画『サイボーグ009』を原作とする舞台シリーズ。黒い幽霊団に改造された島村ジョーと仲間たちの戦いを描く。2024年に誕生60周年を記念して初舞台化。七海ひろきが009／島村ジョーを演じ、演出は植木豪、脚本は亀田真二郎が担当する。",
+    "origin_type": "漫画原作",
+    "origin_note": "原作：石ノ森章太郎『サイボーグ009』",
+    "production_companies": null,
+    "related_franchise_ids": [],
+    "format": null,
+    "description_en": "A stage series based on Shotaro Ishinomori’s manga Cyborg 009, following Joe Shimamura and fellow cyborgs in their fight against Black Ghost. First staged in 2024 for the manga’s 60th anniversary, with Hiroki Nanami as 009/Joe Shimamura. Directed by Go Ueki and written by Shinjiro Kameda.",
+    "name_en": "Cyborg 009 (Stage)"
+  },
+  "actors": [
+    {
+      "actor": {
+        "id": "9492c9fa-96b2-4c89-8b7d-0b3a01bde47e",
+        "slug": "nonoka-himari",
+        "name": "野々花ひまり",
+        "kana": "ののか ひまり",
+        "profile": "福岡県出身の俳優。&bition所属。元宝塚歌劇団雪組娘役で、2013年に入団し2024年に退団。『ほんものの魔法使』などでヒロインを務め、舞台『サイボーグ009 -13番目の追跡者-』では0012を演じる。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": null,
+        "height_cm": 163,
+        "blood_type": null,
+        "birthday_label": "1月18日",
+        "name_en": "Himari Nonoka",
+        "profile_en": "An actor from Fukuoka, represented by &bition. Formerly a female-role performer in Takarazuka Revue’s Snow Troupe, she joined in 2013 and left in 2024. Her credits include the heroine in The Man Who Was Magic and 0012 in Cyborg 009: The Thirteenth Pursuer.",
+        "death_date": null
+      },
+      "sourceActorName": "野々花ひまり",
+      "profileUrl": "https://and-bition.com/artist_themes/nonoka/",
+      "evidence": [
+        {
+          "url": "https://and-bition.com/artist_themes/nonoka/",
+          "checkedAt": "2026-10-25T17:21:34.371Z",
+          "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+        },
+        {
+          "url": "https://and-bition.com/",
+          "checkedAt": "2026-10-25T17:20:53.081Z",
+          "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+        },
+        {
+          "url": "https://www.tca-pictures.net/skystage/Prgm/Detail/12451.html",
+          "checkedAt": "2026-10-25T17:21:34.546Z",
+          "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+        },
+        {
+          "url": "https://musicbird.jp/cfm/news/guest/49154/",
+          "checkedAt": "2026-10-25T17:20:54.637Z",
+          "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+        },
+        {
+          "url": "https://takarazuka-fan.jp/uncategorized/nonokahimari/",
+          "checkedAt": "2026-10-25T17:20:53.428Z",
+          "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+        }
+      ],
+      "notes": [
+        "現所属&bition個別公式で英字・福岡・163cm・1月18日・元宝塚雪組・入退団・本作0012と代表歴を照合。宝塚系公式の退団日2024年10月13日とも照合した。",
+        "生年非確認なので完全DOBは空欄、公式月日のみ保存。CLOUDCASTINGの2025-01-18（1歳）は2013年入団と明らかに整合しないため不採用、登録年等を生年とみなさない。血液型も未確認。",
+        "かなは非公式宝塚ファンのプロフィール由来で、英字は所属公式のHimari Nonoka。公式FCは閉鎖案内があり直接取得失敗なのでリンク先・現在所属の根拠にしない。"
+      ]
+    }
+  ],
+  "works": [
+    {
+      "year": 2025,
+      "before": null,
+      "play": {
+        "id": "777ae807-d6bf-4397-8e8b-7b20944c0e21",
+        "slug": "cyborg009_2025",
+        "title": "舞台「サイボーグ009 -13番目の追跡者-」",
+        "franchise_id": "91caff8a-ff55-46d4-b388-62b51aed2395",
+        "summary": "石ノ森章太郎の漫画『サイボーグ009』を原作とする舞台第2弾。ギルモア博士が行方不明となり、捜索に動くサイボーグ戦士たち。004・005・007は怪しげな屋敷に迷い込み、ジョーは不思議な少年と出会う。2025年11月にステラボールで上演。七海ひろき主演、演出は植木豪、脚本は亀田真二郎。",
+        "period": "2025年11月14日〜24日",
+        "venue": "品川プリンスホテル ステラボール",
+        "vod": {},
+        "genre": null,
+        "tags": [],
+        "credits": [
+          {
+            "role": "原作",
+            "names": [
+              "石ノ森章太郎"
+            ],
+            "is_core": true,
+            "sort_order": 1
+          },
+          {
+            "role": "演出",
+            "names": [
+              "植木 豪"
+            ],
+            "is_core": true,
+            "sort_order": 2
+          },
+          {
+            "role": "脚本",
+            "names": [
+              "亀田真二郎"
+            ],
+            "is_core": true,
+            "sort_order": 3
+          },
+          {
+            "role": "音楽監督",
+            "names": [
+              "KEN THE 390"
+            ],
+            "is_core": false,
+            "sort_order": 4
+          },
+          {
+            "role": "音楽",
+            "names": [
+              "田中マッシュ",
+              "HILOMU"
+            ],
+            "is_core": false,
+            "sort_order": 5
+          },
+          {
+            "role": "美術",
+            "names": [
+              "松生紘子"
+            ],
+            "is_core": false,
+            "sort_order": 6
+          },
+          {
+            "role": "アクション監督",
+            "names": [
+              "冨田昌則"
+            ],
+            "is_core": false,
+            "sort_order": 7
+          },
+          {
+            "role": "照明",
+            "names": [
+              "大波多秀起"
+            ],
+            "is_core": false,
+            "sort_order": 8
+          },
+          {
+            "role": "音響",
+            "names": [
+              "山口剛史"
+            ],
+            "is_core": false,
+            "sort_order": 9
+          },
+          {
+            "role": "映像",
+            "names": [
+              "佐々木章介"
+            ],
+            "is_core": false,
+            "sort_order": 10
+          },
+          {
+            "role": "映像操作",
+            "names": [
+              "三好七海",
+              "中本 治"
+            ],
+            "is_core": false,
+            "sort_order": 11
+          },
+          {
+            "role": "フライング",
+            "names": [
+              "岩上弘数(BOS)"
+            ],
+            "is_core": false,
+            "sort_order": 12
+          },
+          {
+            "role": "衣裳",
+            "names": [
+              "永井省伍"
+            ],
+            "is_core": false,
+            "sort_order": 13
+          },
+          {
+            "role": "ヘアメイク",
+            "names": [
+              "瀬戸口清香"
+            ],
+            "is_core": false,
+            "sort_order": 14
+          },
+          {
+            "role": "演出助手",
+            "names": [
+              "杉山 恵"
+            ],
+            "is_core": false,
+            "sort_order": 15
+          },
+          {
+            "role": "舞台監督",
+            "names": [
+              "井上 卓",
+              "中田桃菜"
+            ],
+            "is_core": false,
+            "sort_order": 16
+          },
+          {
+            "role": "技術監督",
+            "names": [
+              "堀 吉行"
+            ],
+            "is_core": false,
+            "sort_order": 17
+          },
+          {
+            "role": "宣伝写真",
+            "names": [
+              "中村理生"
+            ],
+            "is_core": false,
+            "sort_order": 18
+          },
+          {
+            "role": "宣伝美術",
+            "names": [
+              "岡垣吏紗"
+            ],
+            "is_core": false,
+            "sort_order": 19
+          },
+          {
+            "role": "票券",
+            "names": [
+              "Mitt"
+            ],
+            "is_core": false,
+            "sort_order": 20
+          },
+          {
+            "role": "制作",
+            "names": [
+              "S-SIZE"
+            ],
+            "is_core": false,
+            "sort_order": 21
+          },
+          {
+            "role": "主催",
+            "names": [
+              "舞台「サイボーグ009」製作委員会"
+            ],
+            "is_core": false,
+            "sort_order": 22
+          },
+          {
+            "role": "BG SOLDIERS",
+            "names": [
+              "HILOMU",
+              "Dolton",
+              "KENTA",
+              "GeN",
+              "加藤貴彦",
+              "神谷亮太",
+              "佐久本歩夢",
+              "石田 創"
+            ],
+            "is_core": false,
+            "sort_order": 23
+          }
+        ],
+        "related_franchise_ids": [],
+        "summary_en": "The second stage adaptation of Shotaro Ishinomori’s manga Cyborg 009. When Dr. Gilmore disappears, the cyborg warriors set out to find him. 004, 005 and 007 become lost in a mysterious mansion, while Joe encounters a strange boy. Performed at Stellar Ball in November 2025. Starring Hiroki Nanami, directed by Go Ueki and written by Shinjiro Kameda.",
+        "title_en": "Cyborg 009: The Thirteenth Pursuer (Stage, 2025)"
+      },
+      "rawSource": {
+        "sourceUrl": "https://kira-hai.net/cyborg009_2025",
+        "title": "舞台「サイボーグ009 -13番目の追跡者-」",
+        "scheduleLines": [
+          "2025年11月14日-24日 品川プリンスホテル ステラボール"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "七海ひろき",
+            "sourceActorUrl": "https://kira-hai.net/nanami-hiroki",
+            "role_name": "009 島村ジョー",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "天華えま (声の出演)",
+            "sourceActorUrl": null,
+            "role_name": "001 イワン・ウイスキー",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "高橋駿一",
+            "sourceActorUrl": "https://kira-hai.net/takahashi-shunichi",
+            "role_name": "002 ジェット・リンク",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "音波みのり",
+            "sourceActorUrl": null,
+            "role_name": "003 フランソワーズ・アルヌール",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "里中将道",
+            "sourceActorUrl": "https://kira-hai.net/satonaka-masamichi",
+            "role_name": "004 アルベルト・ハインリヒ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "桜庭大翔",
+            "sourceActorUrl": "https://kira-hai.net/sakuraba-haruto",
+            "role_name": "005 ジェロニモ・ジュニア",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "酒井敏也",
+            "sourceActorUrl": null,
+            "role_name": "006 張々湖",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "川原一馬",
+            "sourceActorUrl": "https://kira-hai.net/kawahara-kazuma",
+            "role_name": "007 グレート・ブリテン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "Toyotaka",
+            "sourceActorUrl": null,
+            "role_name": "008 ピュンマ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "中塚皓平",
+            "sourceActorUrl": "https://kira-hai.net/nakatsuka-kohei",
+            "role_name": "スカール",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "野々花ひまり",
+            "sourceActorUrl": null,
+            "role_name": "0012",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "後藤大",
+            "sourceActorUrl": "https://kira-hai.net/goto-dai",
+            "role_name": "0013",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "大高洋夫",
+            "sourceActorUrl": null,
+            "role_name": "アイザック・ギルモア",
+            "cast_group": null
+          }
+        ],
+        "unparsed": [
+          "HILOMU",
+          "Dolton",
+          "KENTA",
+          "GeN",
+          "加藤貴彦",
+          "神谷亮太",
+          "佐久本歩夢",
+          "石田創"
+        ]
+      },
+      "source": {
+        "sourceUrl": "https://kira-hai.net/cyborg009_2025",
+        "title": "舞台「サイボーグ009 -13番目の追跡者-」",
+        "scheduleLines": [
+          "2025年11月14日-24日 品川プリンスホテル ステラボール"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "七海ひろき",
+            "sourceActorUrl": "https://kira-hai.net/nanami-hiroki",
+            "role_name": "009 島村ジョー",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "天華えま",
+            "sourceActorUrl": null,
+            "role_name": "001 イワン・ウイスキー",
+            "cast_group": "声の出演"
+          },
+          {
+            "sourceActorName": "高橋駿一",
+            "sourceActorUrl": "https://kira-hai.net/takahashi-shunichi",
+            "role_name": "002 ジェット・リンク",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "音波みのり",
+            "sourceActorUrl": null,
+            "role_name": "003 フランソワーズ・アルヌール",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "里中将道",
+            "sourceActorUrl": "https://kira-hai.net/satonaka-masamichi",
+            "role_name": "004 アルベルト・ハインリヒ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "桜庭大翔",
+            "sourceActorUrl": "https://kira-hai.net/sakuraba-haruto",
+            "role_name": "005 ジェロニモ・ジュニア",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "酒井敏也",
+            "sourceActorUrl": null,
+            "role_name": "006 張々湖",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "川原一馬",
+            "sourceActorUrl": "https://kira-hai.net/kawahara-kazuma",
+            "role_name": "007 グレート・ブリテン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "Toyotaka",
+            "sourceActorUrl": null,
+            "role_name": "008 ピュンマ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "中塚皓平",
+            "sourceActorUrl": "https://kira-hai.net/nakatsuka-kohei",
+            "role_name": "スカール",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "野々花ひまり",
+            "sourceActorUrl": null,
+            "role_name": "0012",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "後藤大",
+            "sourceActorUrl": "https://kira-hai.net/goto-dai",
+            "role_name": "0013",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "大高洋夫",
+            "sourceActorUrl": null,
+            "role_name": "アイザック・ギルモア",
+            "cast_group": null
+          }
+        ],
+        "unparsed": []
+      },
+      "sourceFingerprint": "95ec1915619d1df14186d10eae183fee6046bc471fc15f574e2e6f8dcced44c4",
+      "stage": {
+        "workUrl": "https://kira-hai.net/cyborg009_2025",
+        "key": "e319b1fa77872c976ec078b150860dbffb4ed98517b0b3dc852d345bc90742c7",
+        "items": [
+          {
+            "source_actor_name": "七海ひろき",
+            "source_actor_url": "https://kira-hai.net/nanami-hiroki",
+            "source_work_title": "舞台「サイボーグ009 -13番目の追跡者-」",
+            "source_year": 2025,
+            "source_role_raw": "009 島村ジョー",
+            "source_role_names": [
+              "009 島村ジョー"
+            ],
+            "source_cast_group": null,
+            "source_order": 1,
+            "source_credit_key": "3e826f4b00dcaa3eeff5",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/cyborg009_2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/cyborg009_2025",
+                  "checkedAt": "2026-10-25T17:19:29.085Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                },
+                {
+                  "url": "https://cyborg009-the-stage.com/",
+                  "checkedAt": "2026-10-25T17:19:29.574Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                },
+                {
+                  "url": "https://cyborg009-the-stage.com/cast_staff/",
+                  "checkedAt": "2026-10-25T17:19:29.438Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                },
+                {
+                  "url": "https://cyborg009-the-stage.com/schedule_ticket/",
+                  "checkedAt": "2026-10-25T17:19:29.756Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                }
+              ],
+              "source_fingerprint": "95ec1915619d1df14186d10eae183fee6046bc471fc15f574e2e6f8dcced44c4",
+              "review_fingerprint": "f8478fccd77cdfec8354c1d6d47e382a73eeb86be91aaebc076ac98d5c78ef87",
+              "snapshot_fingerprint": "18dd3ab7f0b74d0196e8fb82ff18abac0d68e88f6ae5473ecbe907e3a8c3935d",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2025,
+                "reason": "2025年11月続編。2024年初演・2025年12月再配信・アフターイベントと区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/cyborg009_2025",
+                    "checkedAt": "2026-10-25T17:19:29.085Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  },
+                  {
+                    "url": "https://cyborg009-the-stage.com/",
+                    "checkedAt": "2026-10-25T17:19:29.574Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  },
+                  {
+                    "url": "https://cyborg009-the-stage.com/cast_staff/",
+                    "checkedAt": "2026-10-25T17:19:29.438Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  },
+                  {
+                    "url": "https://cyborg009-the-stage.com/schedule_ticket/",
+                    "checkedAt": "2026-10-25T17:19:29.756Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "8a5803ac-9a5e-4a1a-bb8f-dddb4896e4aa",
+            "matched_play_id": "777ae807-d6bf-4397-8e8b-7b20944c0e21",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "天華えま",
+            "source_actor_url": null,
+            "source_work_title": "舞台「サイボーグ009 -13番目の追跡者-」",
+            "source_year": 2025,
+            "source_role_raw": "001 イワン・ウイスキー",
+            "source_role_names": [
+              "001 イワン・ウイスキー"
+            ],
+            "source_cast_group": "声の出演",
+            "source_order": 2,
+            "source_credit_key": "30c706c4b206305ac847",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/cyborg009_2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/cyborg009_2025",
+                  "checkedAt": "2026-10-25T17:19:29.085Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                },
+                {
+                  "url": "https://cyborg009-the-stage.com/",
+                  "checkedAt": "2026-10-25T17:19:29.574Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                },
+                {
+                  "url": "https://cyborg009-the-stage.com/cast_staff/",
+                  "checkedAt": "2026-10-25T17:19:29.438Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                },
+                {
+                  "url": "https://cyborg009-the-stage.com/schedule_ticket/",
+                  "checkedAt": "2026-10-25T17:19:29.756Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                }
+              ],
+              "source_fingerprint": "95ec1915619d1df14186d10eae183fee6046bc471fc15f574e2e6f8dcced44c4",
+              "review_fingerprint": "f8478fccd77cdfec8354c1d6d47e382a73eeb86be91aaebc076ac98d5c78ef87",
+              "snapshot_fingerprint": "18dd3ab7f0b74d0196e8fb82ff18abac0d68e88f6ae5473ecbe907e3a8c3935d",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2025,
+                "reason": "2025年11月続編。2024年初演・2025年12月再配信・アフターイベントと区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/cyborg009_2025",
+                    "checkedAt": "2026-10-25T17:19:29.085Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  },
+                  {
+                    "url": "https://cyborg009-the-stage.com/",
+                    "checkedAt": "2026-10-25T17:19:29.574Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  },
+                  {
+                    "url": "https://cyborg009-the-stage.com/cast_staff/",
+                    "checkedAt": "2026-10-25T17:19:29.438Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  },
+                  {
+                    "url": "https://cyborg009-the-stage.com/schedule_ticket/",
+                    "checkedAt": "2026-10-25T17:19:29.756Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "256e1ec0-a76f-49cf-9f3c-ef2fe1be6ed4",
+            "matched_play_id": "777ae807-d6bf-4397-8e8b-7b20944c0e21",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "高橋駿一",
+            "source_actor_url": "https://kira-hai.net/takahashi-shunichi",
+            "source_work_title": "舞台「サイボーグ009 -13番目の追跡者-」",
+            "source_year": 2025,
+            "source_role_raw": "002 ジェット・リンク",
+            "source_role_names": [
+              "002 ジェット・リンク"
+            ],
+            "source_cast_group": null,
+            "source_order": 3,
+            "source_credit_key": "e43d2b9500ed6f9755eb",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/cyborg009_2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/cyborg009_2025",
+                  "checkedAt": "2026-10-25T17:19:29.085Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                },
+                {
+                  "url": "https://cyborg009-the-stage.com/",
+                  "checkedAt": "2026-10-25T17:19:29.574Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                },
+                {
+                  "url": "https://cyborg009-the-stage.com/cast_staff/",
+                  "checkedAt": "2026-10-25T17:19:29.438Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                },
+                {
+                  "url": "https://cyborg009-the-stage.com/schedule_ticket/",
+                  "checkedAt": "2026-10-25T17:19:29.756Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                }
+              ],
+              "source_fingerprint": "95ec1915619d1df14186d10eae183fee6046bc471fc15f574e2e6f8dcced44c4",
+              "review_fingerprint": "f8478fccd77cdfec8354c1d6d47e382a73eeb86be91aaebc076ac98d5c78ef87",
+              "snapshot_fingerprint": "18dd3ab7f0b74d0196e8fb82ff18abac0d68e88f6ae5473ecbe907e3a8c3935d",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2025,
+                "reason": "2025年11月続編。2024年初演・2025年12月再配信・アフターイベントと区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/cyborg009_2025",
+                    "checkedAt": "2026-10-25T17:19:29.085Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  },
+                  {
+                    "url": "https://cyborg009-the-stage.com/",
+                    "checkedAt": "2026-10-25T17:19:29.574Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  },
+                  {
+                    "url": "https://cyborg009-the-stage.com/cast_staff/",
+                    "checkedAt": "2026-10-25T17:19:29.438Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  },
+                  {
+                    "url": "https://cyborg009-the-stage.com/schedule_ticket/",
+                    "checkedAt": "2026-10-25T17:19:29.756Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "2633f429-d101-44ce-a8e8-5841fd9e7919",
+            "matched_play_id": "777ae807-d6bf-4397-8e8b-7b20944c0e21",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "音波みのり",
+            "source_actor_url": null,
+            "source_work_title": "舞台「サイボーグ009 -13番目の追跡者-」",
+            "source_year": 2025,
+            "source_role_raw": "003 フランソワーズ・アルヌール",
+            "source_role_names": [
+              "003 フランソワーズ・アルヌール"
+            ],
+            "source_cast_group": null,
+            "source_order": 4,
+            "source_credit_key": "10c3a880e7aaca2f301a",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/cyborg009_2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/cyborg009_2025",
+                  "checkedAt": "2026-10-25T17:19:29.085Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                },
+                {
+                  "url": "https://cyborg009-the-stage.com/",
+                  "checkedAt": "2026-10-25T17:19:29.574Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                },
+                {
+                  "url": "https://cyborg009-the-stage.com/cast_staff/",
+                  "checkedAt": "2026-10-25T17:19:29.438Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                },
+                {
+                  "url": "https://cyborg009-the-stage.com/schedule_ticket/",
+                  "checkedAt": "2026-10-25T17:19:29.756Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                }
+              ],
+              "source_fingerprint": "95ec1915619d1df14186d10eae183fee6046bc471fc15f574e2e6f8dcced44c4",
+              "review_fingerprint": "f8478fccd77cdfec8354c1d6d47e382a73eeb86be91aaebc076ac98d5c78ef87",
+              "snapshot_fingerprint": "18dd3ab7f0b74d0196e8fb82ff18abac0d68e88f6ae5473ecbe907e3a8c3935d",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2025,
+                "reason": "2025年11月続編。2024年初演・2025年12月再配信・アフターイベントと区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/cyborg009_2025",
+                    "checkedAt": "2026-10-25T17:19:29.085Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  },
+                  {
+                    "url": "https://cyborg009-the-stage.com/",
+                    "checkedAt": "2026-10-25T17:19:29.574Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  },
+                  {
+                    "url": "https://cyborg009-the-stage.com/cast_staff/",
+                    "checkedAt": "2026-10-25T17:19:29.438Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  },
+                  {
+                    "url": "https://cyborg009-the-stage.com/schedule_ticket/",
+                    "checkedAt": "2026-10-25T17:19:29.756Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "be5ee194-3e41-491a-80e0-ffd0dc79b693",
+            "matched_play_id": "777ae807-d6bf-4397-8e8b-7b20944c0e21",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "里中将道",
+            "source_actor_url": "https://kira-hai.net/satonaka-masamichi",
+            "source_work_title": "舞台「サイボーグ009 -13番目の追跡者-」",
+            "source_year": 2025,
+            "source_role_raw": "004 アルベルト・ハインリヒ",
+            "source_role_names": [
+              "004 アルベルト・ハインリヒ"
+            ],
+            "source_cast_group": null,
+            "source_order": 5,
+            "source_credit_key": "427c23fc5241de2b189f",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/cyborg009_2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/cyborg009_2025",
+                  "checkedAt": "2026-10-25T17:19:29.085Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                },
+                {
+                  "url": "https://cyborg009-the-stage.com/",
+                  "checkedAt": "2026-10-25T17:19:29.574Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                },
+                {
+                  "url": "https://cyborg009-the-stage.com/cast_staff/",
+                  "checkedAt": "2026-10-25T17:19:29.438Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                },
+                {
+                  "url": "https://cyborg009-the-stage.com/schedule_ticket/",
+                  "checkedAt": "2026-10-25T17:19:29.756Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                }
+              ],
+              "source_fingerprint": "95ec1915619d1df14186d10eae183fee6046bc471fc15f574e2e6f8dcced44c4",
+              "review_fingerprint": "f8478fccd77cdfec8354c1d6d47e382a73eeb86be91aaebc076ac98d5c78ef87",
+              "snapshot_fingerprint": "18dd3ab7f0b74d0196e8fb82ff18abac0d68e88f6ae5473ecbe907e3a8c3935d",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2025,
+                "reason": "2025年11月続編。2024年初演・2025年12月再配信・アフターイベントと区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/cyborg009_2025",
+                    "checkedAt": "2026-10-25T17:19:29.085Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  },
+                  {
+                    "url": "https://cyborg009-the-stage.com/",
+                    "checkedAt": "2026-10-25T17:19:29.574Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  },
+                  {
+                    "url": "https://cyborg009-the-stage.com/cast_staff/",
+                    "checkedAt": "2026-10-25T17:19:29.438Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  },
+                  {
+                    "url": "https://cyborg009-the-stage.com/schedule_ticket/",
+                    "checkedAt": "2026-10-25T17:19:29.756Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "80fe3447-4a2c-4e8d-8cdb-3b213548f713",
+            "matched_play_id": "777ae807-d6bf-4397-8e8b-7b20944c0e21",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "桜庭大翔",
+            "source_actor_url": "https://kira-hai.net/sakuraba-haruto",
+            "source_work_title": "舞台「サイボーグ009 -13番目の追跡者-」",
+            "source_year": 2025,
+            "source_role_raw": "005 ジェロニモ・ジュニア",
+            "source_role_names": [
+              "005 ジェロニモ・ジュニア"
+            ],
+            "source_cast_group": null,
+            "source_order": 6,
+            "source_credit_key": "2ccbfed2e2d4f5897739",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/cyborg009_2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/cyborg009_2025",
+                  "checkedAt": "2026-10-25T17:19:29.085Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                },
+                {
+                  "url": "https://cyborg009-the-stage.com/",
+                  "checkedAt": "2026-10-25T17:19:29.574Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                },
+                {
+                  "url": "https://cyborg009-the-stage.com/cast_staff/",
+                  "checkedAt": "2026-10-25T17:19:29.438Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                },
+                {
+                  "url": "https://cyborg009-the-stage.com/schedule_ticket/",
+                  "checkedAt": "2026-10-25T17:19:29.756Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                }
+              ],
+              "source_fingerprint": "95ec1915619d1df14186d10eae183fee6046bc471fc15f574e2e6f8dcced44c4",
+              "review_fingerprint": "f8478fccd77cdfec8354c1d6d47e382a73eeb86be91aaebc076ac98d5c78ef87",
+              "snapshot_fingerprint": "18dd3ab7f0b74d0196e8fb82ff18abac0d68e88f6ae5473ecbe907e3a8c3935d",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2025,
+                "reason": "2025年11月続編。2024年初演・2025年12月再配信・アフターイベントと区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/cyborg009_2025",
+                    "checkedAt": "2026-10-25T17:19:29.085Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  },
+                  {
+                    "url": "https://cyborg009-the-stage.com/",
+                    "checkedAt": "2026-10-25T17:19:29.574Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  },
+                  {
+                    "url": "https://cyborg009-the-stage.com/cast_staff/",
+                    "checkedAt": "2026-10-25T17:19:29.438Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  },
+                  {
+                    "url": "https://cyborg009-the-stage.com/schedule_ticket/",
+                    "checkedAt": "2026-10-25T17:19:29.756Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "65b3d016-48b7-4a17-a8a6-87955f07096a",
+            "matched_play_id": "777ae807-d6bf-4397-8e8b-7b20944c0e21",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "酒井敏也",
+            "source_actor_url": null,
+            "source_work_title": "舞台「サイボーグ009 -13番目の追跡者-」",
+            "source_year": 2025,
+            "source_role_raw": "006 張々湖",
+            "source_role_names": [
+              "006 張々湖"
+            ],
+            "source_cast_group": null,
+            "source_order": 7,
+            "source_credit_key": "e96c5f3b0949ace5322a",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/cyborg009_2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/cyborg009_2025",
+                  "checkedAt": "2026-10-25T17:19:29.085Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                },
+                {
+                  "url": "https://cyborg009-the-stage.com/",
+                  "checkedAt": "2026-10-25T17:19:29.574Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                },
+                {
+                  "url": "https://cyborg009-the-stage.com/cast_staff/",
+                  "checkedAt": "2026-10-25T17:19:29.438Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                },
+                {
+                  "url": "https://cyborg009-the-stage.com/schedule_ticket/",
+                  "checkedAt": "2026-10-25T17:19:29.756Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                }
+              ],
+              "source_fingerprint": "95ec1915619d1df14186d10eae183fee6046bc471fc15f574e2e6f8dcced44c4",
+              "review_fingerprint": "f8478fccd77cdfec8354c1d6d47e382a73eeb86be91aaebc076ac98d5c78ef87",
+              "snapshot_fingerprint": "18dd3ab7f0b74d0196e8fb82ff18abac0d68e88f6ae5473ecbe907e3a8c3935d",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2025,
+                "reason": "2025年11月続編。2024年初演・2025年12月再配信・アフターイベントと区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/cyborg009_2025",
+                    "checkedAt": "2026-10-25T17:19:29.085Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  },
+                  {
+                    "url": "https://cyborg009-the-stage.com/",
+                    "checkedAt": "2026-10-25T17:19:29.574Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  },
+                  {
+                    "url": "https://cyborg009-the-stage.com/cast_staff/",
+                    "checkedAt": "2026-10-25T17:19:29.438Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  },
+                  {
+                    "url": "https://cyborg009-the-stage.com/schedule_ticket/",
+                    "checkedAt": "2026-10-25T17:19:29.756Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "23554df8-c4e3-45a2-94b3-0e0853266770",
+            "matched_play_id": "777ae807-d6bf-4397-8e8b-7b20944c0e21",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "川原一馬",
+            "source_actor_url": "https://kira-hai.net/kawahara-kazuma",
+            "source_work_title": "舞台「サイボーグ009 -13番目の追跡者-」",
+            "source_year": 2025,
+            "source_role_raw": "007 グレート・ブリテン",
+            "source_role_names": [
+              "007 グレート・ブリテン"
+            ],
+            "source_cast_group": null,
+            "source_order": 8,
+            "source_credit_key": "eaa9845e50f71fbdb91f",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/cyborg009_2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/cyborg009_2025",
+                  "checkedAt": "2026-10-25T17:19:29.085Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                },
+                {
+                  "url": "https://cyborg009-the-stage.com/",
+                  "checkedAt": "2026-10-25T17:19:29.574Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                },
+                {
+                  "url": "https://cyborg009-the-stage.com/cast_staff/",
+                  "checkedAt": "2026-10-25T17:19:29.438Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                },
+                {
+                  "url": "https://cyborg009-the-stage.com/schedule_ticket/",
+                  "checkedAt": "2026-10-25T17:19:29.756Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                }
+              ],
+              "source_fingerprint": "95ec1915619d1df14186d10eae183fee6046bc471fc15f574e2e6f8dcced44c4",
+              "review_fingerprint": "f8478fccd77cdfec8354c1d6d47e382a73eeb86be91aaebc076ac98d5c78ef87",
+              "snapshot_fingerprint": "18dd3ab7f0b74d0196e8fb82ff18abac0d68e88f6ae5473ecbe907e3a8c3935d",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2025,
+                "reason": "2025年11月続編。2024年初演・2025年12月再配信・アフターイベントと区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/cyborg009_2025",
+                    "checkedAt": "2026-10-25T17:19:29.085Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  },
+                  {
+                    "url": "https://cyborg009-the-stage.com/",
+                    "checkedAt": "2026-10-25T17:19:29.574Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  },
+                  {
+                    "url": "https://cyborg009-the-stage.com/cast_staff/",
+                    "checkedAt": "2026-10-25T17:19:29.438Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  },
+                  {
+                    "url": "https://cyborg009-the-stage.com/schedule_ticket/",
+                    "checkedAt": "2026-10-25T17:19:29.756Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "7d15ebf7-811c-4437-93cb-ea8d36ceb03b",
+            "matched_play_id": "777ae807-d6bf-4397-8e8b-7b20944c0e21",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "Toyotaka",
+            "source_actor_url": null,
+            "source_work_title": "舞台「サイボーグ009 -13番目の追跡者-」",
+            "source_year": 2025,
+            "source_role_raw": "008 ピュンマ",
+            "source_role_names": [
+              "008 ピュンマ"
+            ],
+            "source_cast_group": null,
+            "source_order": 9,
+            "source_credit_key": "3c02de0be0f54b8d859c",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/cyborg009_2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/cyborg009_2025",
+                  "checkedAt": "2026-10-25T17:19:29.085Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                },
+                {
+                  "url": "https://cyborg009-the-stage.com/",
+                  "checkedAt": "2026-10-25T17:19:29.574Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                },
+                {
+                  "url": "https://cyborg009-the-stage.com/cast_staff/",
+                  "checkedAt": "2026-10-25T17:19:29.438Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                },
+                {
+                  "url": "https://cyborg009-the-stage.com/schedule_ticket/",
+                  "checkedAt": "2026-10-25T17:19:29.756Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                }
+              ],
+              "source_fingerprint": "95ec1915619d1df14186d10eae183fee6046bc471fc15f574e2e6f8dcced44c4",
+              "review_fingerprint": "f8478fccd77cdfec8354c1d6d47e382a73eeb86be91aaebc076ac98d5c78ef87",
+              "snapshot_fingerprint": "18dd3ab7f0b74d0196e8fb82ff18abac0d68e88f6ae5473ecbe907e3a8c3935d",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2025,
+                "reason": "2025年11月続編。2024年初演・2025年12月再配信・アフターイベントと区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/cyborg009_2025",
+                    "checkedAt": "2026-10-25T17:19:29.085Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  },
+                  {
+                    "url": "https://cyborg009-the-stage.com/",
+                    "checkedAt": "2026-10-25T17:19:29.574Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  },
+                  {
+                    "url": "https://cyborg009-the-stage.com/cast_staff/",
+                    "checkedAt": "2026-10-25T17:19:29.438Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  },
+                  {
+                    "url": "https://cyborg009-the-stage.com/schedule_ticket/",
+                    "checkedAt": "2026-10-25T17:19:29.756Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "a646dc58-3a36-4512-905d-0d7dd1bc0de7",
+            "matched_play_id": "777ae807-d6bf-4397-8e8b-7b20944c0e21",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "中塚皓平",
+            "source_actor_url": "https://kira-hai.net/nakatsuka-kohei",
+            "source_work_title": "舞台「サイボーグ009 -13番目の追跡者-」",
+            "source_year": 2025,
+            "source_role_raw": "スカール",
+            "source_role_names": [
+              "スカール"
+            ],
+            "source_cast_group": null,
+            "source_order": 10,
+            "source_credit_key": "46d3f4484c7096cace11",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/cyborg009_2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/cyborg009_2025",
+                  "checkedAt": "2026-10-25T17:19:29.085Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                },
+                {
+                  "url": "https://cyborg009-the-stage.com/",
+                  "checkedAt": "2026-10-25T17:19:29.574Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                },
+                {
+                  "url": "https://cyborg009-the-stage.com/cast_staff/",
+                  "checkedAt": "2026-10-25T17:19:29.438Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                },
+                {
+                  "url": "https://cyborg009-the-stage.com/schedule_ticket/",
+                  "checkedAt": "2026-10-25T17:19:29.756Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                }
+              ],
+              "source_fingerprint": "95ec1915619d1df14186d10eae183fee6046bc471fc15f574e2e6f8dcced44c4",
+              "review_fingerprint": "f8478fccd77cdfec8354c1d6d47e382a73eeb86be91aaebc076ac98d5c78ef87",
+              "snapshot_fingerprint": "18dd3ab7f0b74d0196e8fb82ff18abac0d68e88f6ae5473ecbe907e3a8c3935d",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2025,
+                "reason": "2025年11月続編。2024年初演・2025年12月再配信・アフターイベントと区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/cyborg009_2025",
+                    "checkedAt": "2026-10-25T17:19:29.085Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  },
+                  {
+                    "url": "https://cyborg009-the-stage.com/",
+                    "checkedAt": "2026-10-25T17:19:29.574Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  },
+                  {
+                    "url": "https://cyborg009-the-stage.com/cast_staff/",
+                    "checkedAt": "2026-10-25T17:19:29.438Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  },
+                  {
+                    "url": "https://cyborg009-the-stage.com/schedule_ticket/",
+                    "checkedAt": "2026-10-25T17:19:29.756Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "f3d23a93-3967-4873-9cf0-a8ff41877276",
+            "matched_play_id": "777ae807-d6bf-4397-8e8b-7b20944c0e21",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "野々花ひまり",
+            "source_actor_url": null,
+            "source_work_title": "舞台「サイボーグ009 -13番目の追跡者-」",
+            "source_year": 2025,
+            "source_role_raw": "0012",
+            "source_role_names": [
+              "0012"
+            ],
+            "source_cast_group": null,
+            "source_order": 11,
+            "source_credit_key": "1a922ec4b262a28e3113",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/cyborg009_2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/cyborg009_2025",
+                  "checkedAt": "2026-10-25T17:19:29.085Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                },
+                {
+                  "url": "https://cyborg009-the-stage.com/",
+                  "checkedAt": "2026-10-25T17:19:29.574Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                },
+                {
+                  "url": "https://cyborg009-the-stage.com/cast_staff/",
+                  "checkedAt": "2026-10-25T17:19:29.438Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                },
+                {
+                  "url": "https://cyborg009-the-stage.com/schedule_ticket/",
+                  "checkedAt": "2026-10-25T17:19:29.756Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                }
+              ],
+              "source_fingerprint": "95ec1915619d1df14186d10eae183fee6046bc471fc15f574e2e6f8dcced44c4",
+              "review_fingerprint": "f8478fccd77cdfec8354c1d6d47e382a73eeb86be91aaebc076ac98d5c78ef87",
+              "snapshot_fingerprint": "18dd3ab7f0b74d0196e8fb82ff18abac0d68e88f6ae5473ecbe907e3a8c3935d",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2025,
+                "reason": "2025年11月続編。2024年初演・2025年12月再配信・アフターイベントと区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/cyborg009_2025",
+                    "checkedAt": "2026-10-25T17:19:29.085Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  },
+                  {
+                    "url": "https://cyborg009-the-stage.com/",
+                    "checkedAt": "2026-10-25T17:19:29.574Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  },
+                  {
+                    "url": "https://cyborg009-the-stage.com/cast_staff/",
+                    "checkedAt": "2026-10-25T17:19:29.438Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  },
+                  {
+                    "url": "https://cyborg009-the-stage.com/schedule_ticket/",
+                    "checkedAt": "2026-10-25T17:19:29.756Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "9492c9fa-96b2-4c89-8b7d-0b3a01bde47e",
+            "matched_play_id": "777ae807-d6bf-4397-8e8b-7b20944c0e21",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "後藤大",
+            "source_actor_url": "https://kira-hai.net/goto-dai",
+            "source_work_title": "舞台「サイボーグ009 -13番目の追跡者-」",
+            "source_year": 2025,
+            "source_role_raw": "0013",
+            "source_role_names": [
+              "0013"
+            ],
+            "source_cast_group": null,
+            "source_order": 12,
+            "source_credit_key": "493968ab597dd701002e",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/cyborg009_2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/cyborg009_2025",
+                  "checkedAt": "2026-10-25T17:19:29.085Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                },
+                {
+                  "url": "https://cyborg009-the-stage.com/",
+                  "checkedAt": "2026-10-25T17:19:29.574Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                },
+                {
+                  "url": "https://cyborg009-the-stage.com/cast_staff/",
+                  "checkedAt": "2026-10-25T17:19:29.438Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                },
+                {
+                  "url": "https://cyborg009-the-stage.com/schedule_ticket/",
+                  "checkedAt": "2026-10-25T17:19:29.756Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                }
+              ],
+              "source_fingerprint": "95ec1915619d1df14186d10eae183fee6046bc471fc15f574e2e6f8dcced44c4",
+              "review_fingerprint": "f8478fccd77cdfec8354c1d6d47e382a73eeb86be91aaebc076ac98d5c78ef87",
+              "snapshot_fingerprint": "18dd3ab7f0b74d0196e8fb82ff18abac0d68e88f6ae5473ecbe907e3a8c3935d",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2025,
+                "reason": "2025年11月続編。2024年初演・2025年12月再配信・アフターイベントと区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/cyborg009_2025",
+                    "checkedAt": "2026-10-25T17:19:29.085Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  },
+                  {
+                    "url": "https://cyborg009-the-stage.com/",
+                    "checkedAt": "2026-10-25T17:19:29.574Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  },
+                  {
+                    "url": "https://cyborg009-the-stage.com/cast_staff/",
+                    "checkedAt": "2026-10-25T17:19:29.438Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  },
+                  {
+                    "url": "https://cyborg009-the-stage.com/schedule_ticket/",
+                    "checkedAt": "2026-10-25T17:19:29.756Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "fa3a01a5-b285-4dd8-a96a-ce5a49044f1e",
+            "matched_play_id": "777ae807-d6bf-4397-8e8b-7b20944c0e21",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "大高洋夫",
+            "source_actor_url": null,
+            "source_work_title": "舞台「サイボーグ009 -13番目の追跡者-」",
+            "source_year": 2025,
+            "source_role_raw": "アイザック・ギルモア",
+            "source_role_names": [
+              "アイザック・ギルモア"
+            ],
+            "source_cast_group": null,
+            "source_order": 13,
+            "source_credit_key": "0a71ea9954bcfdd4b6d6",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/cyborg009_2025",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/cyborg009_2025",
+                  "checkedAt": "2026-10-25T17:19:29.085Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                },
+                {
+                  "url": "https://cyborg009-the-stage.com/",
+                  "checkedAt": "2026-10-25T17:19:29.574Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                },
+                {
+                  "url": "https://cyborg009-the-stage.com/cast_staff/",
+                  "checkedAt": "2026-10-25T17:19:29.438Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                },
+                {
+                  "url": "https://cyborg009-the-stage.com/schedule_ticket/",
+                  "checkedAt": "2026-10-25T17:19:29.756Z",
+                  "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                }
+              ],
+              "source_fingerprint": "95ec1915619d1df14186d10eae183fee6046bc471fc15f574e2e6f8dcced44c4",
+              "review_fingerprint": "f8478fccd77cdfec8354c1d6d47e382a73eeb86be91aaebc076ac98d5c78ef87",
+              "snapshot_fingerprint": "18dd3ab7f0b74d0196e8fb82ff18abac0d68e88f6ae5473ecbe907e3a8c3935d",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2025,
+                "reason": "2025年11月続編。2024年初演・2025年12月再配信・アフターイベントと区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/cyborg009_2025",
+                    "checkedAt": "2026-10-25T17:19:29.085Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  },
+                  {
+                    "url": "https://cyborg009-the-stage.com/",
+                    "checkedAt": "2026-10-25T17:19:29.574Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  },
+                  {
+                    "url": "https://cyborg009-the-stage.com/cast_staff/",
+                    "checkedAt": "2026-10-25T17:19:29.438Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  },
+                  {
+                    "url": "https://cyborg009-the-stage.com/schedule_ticket/",
+                    "checkedAt": "2026-10-25T17:19:29.756Z",
+                    "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "36a2584b-10ed-4d03-a1b1-8b71ebc68dfc",
+            "matched_play_id": "777ae807-d6bf-4397-8e8b-7b20944c0e21",
+            "status": "pending"
+          }
+        ]
+      },
+      "records": [
+        {
+          "actor": {
+            "id": "8a5803ac-9a5e-4a1a-bb8f-dddb4896e4aa",
+            "slug": "nanami-hiroki",
+            "name": "七海 ひろき",
+            "kana": "ななみ ひろき",
+            "profile": "茨城県出身の女優・声優・アーティスト。元宝塚歌劇団星組男役。ANDSTIR所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/hirokinanami773",
+              "official": "https://hiroki773.com/",
+              "instagram": "https://www.instagram.com/hirokinanami773/"
+            },
+            "gender": "female",
+            "created_at": "2026-03-31T17:24:37.399881+00:00",
+            "updated_at": "2026-03-31T17:24:37.399881+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": null,
+            "height_cm": 173,
+            "blood_type": "O",
+            "birthday_label": "1月16日",
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "七海ひろき",
+            "sourceActorUrl": "https://kira-hai.net/nanami-hiroki",
+            "role_name": "009 島村ジョー",
+            "cast_group": null
+          },
+          "sourceCreditKey": "3e826f4b00dcaa3eeff5",
+          "sourceOrder": 1,
+          "billingOrder": 1,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "256e1ec0-a76f-49cf-9f3c-ef2fe1be6ed4",
+            "slug": "amahana-ema",
+            "name": "天華えま",
+            "kana": null,
+            "profile": "滋賀県近江八幡市出身の俳優。元宝塚歌劇団星組男役で、2012年に98期生として入団し2024年に退団。舞台『サイボーグ009』では001／イワン・ウイスキーの声を担当。『Stella Voice』などで主演を務めた。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-25T17:13:58.147614+00:00",
+            "updated_at": "2026-10-25T17:13:58.147614+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1992-08-28",
+            "height_cm": 170,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Ema Amahana",
+            "profile_en": "An actor from Omihachiman, Shiga, and a former male-role performer in Takarazuka Revue’s Star Troupe. She joined in 2012 as part of its 98th class and left in 2024. Her credits include the lead in Stella Voice and the voice of 001/Ivan Whisky in Cyborg 009.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "天華えま",
+            "sourceActorUrl": null,
+            "role_name": "001 イワン・ウイスキー",
+            "cast_group": "声の出演"
+          },
+          "sourceCreditKey": "30c706c4b206305ac847",
+          "sourceOrder": 2,
+          "billingOrder": 2,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "2633f429-d101-44ce-a8e8-5841fd9e7919",
+            "slug": "takahashi-shunichi",
+            "name": "高橋 駿一",
+            "kana": "たかはし しゅんいち",
+            "profile": "東京都出身の俳優。アニモプロデュース所属。パフォーマンスチーム「PADMA」のメンバーであり、ダブルダッチの世界大会「Double Dutch Contest World」で2012年・2014年に優勝した経歴を持つ。ミュージカル『新テニスの王子様』シリーズ（鈴木惷役）をはじめ、舞台『鬼滅の刃』シリーズ（冨岡義勇役）、『ヒプノシスマイク -Division Rap Battle-』Rule the Stage（谷ケ崎伊吹役）、演劇「ハイキュー!!」（山形隼人役）等の舞台作品を中心に出演している。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/shun1waffle",
+              "official": "https://shunichi-takahashi-jumpjunkie.fanpla.jp/",
+              "instagram": "https://www.instagram.com/shun1official/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:13:20.008797+00:00",
+            "updated_at": "2026-03-21T15:13:20.008797+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1988-08-04",
+            "height_cm": 179,
+            "blood_type": "AB",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Tokyo. Affiliated with Animo Produce. He is a member of the performance team \"PADMA\" and has a history of winning the double dutch world championship \"Double Dutch Contest World\" in 2012 and 2014. He primarily appears in stage works such as the musical \"The New Prince of Tennis\" series (as Shun Suzuki), the stage play \"Demon Slayer: Kimetsu no Yaiba\" series (as Giyu Tomioka), \"Hypnosis Mic -Division Rap Battle-\" Rule the Stage (as Ibuki Yagasaki), and the Engeki \"Haikyu!!\" (as Hayato Yamagata).",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "高橋駿一",
+            "sourceActorUrl": "https://kira-hai.net/takahashi-shunichi",
+            "role_name": "002 ジェット・リンク",
+            "cast_group": null
+          },
+          "sourceCreditKey": "e43d2b9500ed6f9755eb",
+          "sourceOrder": 3,
+          "billingOrder": 3,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "be5ee194-3e41-491a-80e0-ffd0dc79b693",
+            "slug": "otoha-minori",
+            "name": "音波みのり",
+            "kana": "おとは みのり",
+            "profile": "神奈川県出身の俳優・ダンサー。元宝塚歌劇団星組娘役。2005年に入団し、2022年に退団。『メイちゃんの執事』『アルジェの男』などでヒロインを務め、舞台『サイボーグ009』では003／フランソワーズ・アルヌールを演じる。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-25T17:13:58.147614+00:00",
+            "updated_at": "2026-10-25T17:13:58.147614+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": null,
+            "height_cm": null,
+            "blood_type": "O",
+            "birthday_label": "11月29日",
+            "name_en": "Minori Otoha",
+            "profile_en": "An actor and dancer from Kanagawa, formerly a female-role performer in Takarazuka Revue’s Star Troupe. She joined in 2005 and left in 2022. Her credits include leading female roles in Mei-chan’s Butler and The Man from Algiers, and 003/Françoise Arnoul in Cyborg 009.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "音波みのり",
+            "sourceActorUrl": null,
+            "role_name": "003 フランソワーズ・アルヌール",
+            "cast_group": null
+          },
+          "sourceCreditKey": "10c3a880e7aaca2f301a",
+          "sourceOrder": 4,
+          "billingOrder": 4,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "80fe3447-4a2c-4e8d-8cdb-3b213548f713",
+            "slug": "satonaka-masamichi",
+            "name": "里中将道",
+            "kana": "さとなか まさみち",
+            "profile": "大阪府大阪市出身の俳優。『KYOTO SAMURAI BOYS』で活動し、『ヒプノシスマイク -Division Rap Battle-』Rule the Stageなどに出演。舞台『サイボーグ009』では004／アルベルト・ハインリヒを演じる。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-25T17:13:58.147614+00:00",
+            "updated_at": "2026-10-25T17:13:58.147614+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1994-04-14",
+            "height_cm": 179,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Masamichi Satonaka",
+            "profile_en": "An actor from Osaka City. He has performed in KYOTO SAMURAI BOYS and Hypnosis Mic: Division Rap Battle – Rule the Stage. He plays 004/Albert Heinrich in the stage adaptation of Cyborg 009.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "里中将道",
+            "sourceActorUrl": "https://kira-hai.net/satonaka-masamichi",
+            "role_name": "004 アルベルト・ハインリヒ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "427c23fc5241de2b189f",
+          "sourceOrder": 5,
+          "billingOrder": 5,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "65b3d016-48b7-4a17-a8a6-87955f07096a",
+            "slug": "sakuraba-haruto",
+            "name": "桜庭大翔",
+            "kana": "さくらば はると",
+            "profile": "大分県出身の俳優。ハイパープロジェクション演劇『ハイキュー!!』の木兎光太郎役、舞台『刃牙 THE GRAPPLER STAGE』の花山薫役、舞台『ブルーロック』4th STAGEのオリヴァ・愛空役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-22T07:08:32.721059+00:00",
+            "updated_at": "2026-10-22T07:08:32.721059+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1996-02-21",
+            "height_cm": 187,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Haruto Sakuraba",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "桜庭大翔",
+            "sourceActorUrl": "https://kira-hai.net/sakuraba-haruto",
+            "role_name": "005 ジェロニモ・ジュニア",
+            "cast_group": null
+          },
+          "sourceCreditKey": "2ccbfed2e2d4f5897739",
+          "sourceOrder": 6,
+          "billingOrder": 6,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "23554df8-c4e3-45a2-94b3-0e0853266770",
+            "slug": "sakai-toshiya",
+            "name": "酒井 敏也",
+            "kana": "さかい としや",
+            "profile": "岐阜県出身の俳優。阪口京子事務所所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/Sakai_Toshiya30"
+            },
+            "gender": "male",
+            "created_at": "2026-04-11T05:45:42.138531+00:00",
+            "updated_at": "2026-04-11T05:45:42.138531+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1959-05-30",
+            "height_cm": 165,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "酒井敏也",
+            "sourceActorUrl": null,
+            "role_name": "006 張々湖",
+            "cast_group": null
+          },
+          "sourceCreditKey": "e96c5f3b0949ace5322a",
+          "sourceOrder": 7,
+          "billingOrder": 7,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "7d15ebf7-811c-4437-93cb-ea8d36ceb03b",
+            "slug": "kawahara-kazuma",
+            "name": "川原 一馬",
+            "kana": "かわはら かずま",
+            "profile": "静岡県出身の俳優。キューブ所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/kazuma093",
+              "instagram": "https://www.instagram.com/kazuma_kawahara/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T14:53:11.103962+00:00",
+            "updated_at": "2026-03-21T14:53:11.103962+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1990-12-26",
+            "height_cm": 174,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "川原一馬",
+            "sourceActorUrl": "https://kira-hai.net/kawahara-kazuma",
+            "role_name": "007 グレート・ブリテン",
+            "cast_group": null
+          },
+          "sourceCreditKey": "eaa9845e50f71fbdb91f",
+          "sourceOrder": 8,
+          "billingOrder": 8,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "a646dc58-3a36-4512-905d-0d7dd1bc0de7",
+            "slug": "toyotaka",
+            "name": "Toyotaka",
+            "kana": "とよたか",
+            "profile": "大阪府出身のダンサー・ヒューマンビートボクサー・俳優。Beat Buddy Boiとして活動し、JAPAN DANCE DELIGHT VOL.18で優勝。舞台『サイボーグ009』の008／ピュンマ役などを務め、振付や演出も手がける。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-25T17:13:58.147614+00:00",
+            "updated_at": "2026-10-25T17:13:58.147614+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1987-11-05",
+            "height_cm": null,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Toyotaka",
+            "profile_en": "A dancer, human beatboxer and actor from Osaka. As part of Beat Buddy Boi, he won JAPAN DANCE DELIGHT Vol. 18. His stage roles include 008/Pyunma in Cyborg 009, and he also works as a choreographer and director.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "Toyotaka",
+            "sourceActorUrl": null,
+            "role_name": "008 ピュンマ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "3c02de0be0f54b8d859c",
+          "sourceOrder": 9,
+          "billingOrder": 9,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "f3d23a93-3967-4873-9cf0-a8ff41877276",
+            "slug": "nakatsuka-kohei",
+            "name": "中塚皓平",
+            "kana": "なかつか こうへい",
+            "profile": "千葉県出身の俳優・ダンサー・振付師。2005年に『GODSPELL』で本格的に舞台活動を始め、DIAMOND☆DOGSで活動。『ALTAR BOYZ』やミュージカル『コードギアス』などに出演し、舞台『サイボーグ009』ではスカールを演じる。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-25T17:13:58.147614+00:00",
+            "updated_at": "2026-10-25T17:13:58.147614+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1986-05-16",
+            "height_cm": 180,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": "Kohei Nakatsuka",
+            "profile_en": "An actor, dancer and choreographer from Chiba. He began his professional stage career in GODSPELL in 2005 and has performed with DIAMOND☆DOGS. His credits include ALTAR BOYZ, the Code Geass musical and Skull in Cyborg 009.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "中塚皓平",
+            "sourceActorUrl": "https://kira-hai.net/nakatsuka-kohei",
+            "role_name": "スカール",
+            "cast_group": null
+          },
+          "sourceCreditKey": "46d3f4484c7096cace11",
+          "sourceOrder": 10,
+          "billingOrder": 10,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "9492c9fa-96b2-4c89-8b7d-0b3a01bde47e",
+            "slug": "nonoka-himari",
+            "name": "野々花ひまり",
+            "kana": "ののか ひまり",
+            "profile": "福岡県出身の俳優。&bition所属。元宝塚歌劇団雪組娘役で、2013年に入団し2024年に退団。『ほんものの魔法使』などでヒロインを務め、舞台『サイボーグ009 -13番目の追跡者-』では0012を演じる。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": null,
+            "height_cm": 163,
+            "blood_type": null,
+            "birthday_label": "1月18日",
+            "name_en": "Himari Nonoka",
+            "profile_en": "An actor from Fukuoka, represented by &bition. Formerly a female-role performer in Takarazuka Revue’s Snow Troupe, she joined in 2013 and left in 2024. Her credits include the heroine in The Man Who Was Magic and 0012 in Cyborg 009: The Thirteenth Pursuer.",
+            "death_date": null,
+            "created_at": "prepared",
+            "updated_at": "prepared"
+          },
+          "source": {
+            "sourceActorName": "野々花ひまり",
+            "sourceActorUrl": null,
+            "role_name": "0012",
+            "cast_group": null
+          },
+          "sourceCreditKey": "1a922ec4b262a28e3113",
+          "sourceOrder": 11,
+          "billingOrder": 11,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "fa3a01a5-b285-4dd8-a96a-ce5a49044f1e",
+            "slug": "goto-dai",
+            "name": "後藤 大",
+            "kana": "ごとう だい",
+            "profile": "千葉県出身の俳優、アーティスト。マリー社所属。ミュージカル『テニスの王子様』3rdシーズン（仁王雅治役）をはじめ、ミュージカル『黒執事』〜寄宿学校の秘密〜（グレゴリー・バイオレット役）、『ヒプノシスマイク -Division Rap Battle-』Rule the Stageシリーズ（時空院丞武役）等の舞台作品を中心に出演。特撮テレビドラマ『仮面ライダーギーツ』（五十鈴大智／仮面ライダーナッジスパロウ役）等の映像作品にも出演している。また、個展を開催するなどアーティストとしても活動している。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/dai_vivigalaxy",
+              "official": "https://daigoto.jp/",
+              "instagram": "https://www.instagram.com/daaai.chan/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:10:00.631722+00:00",
+            "updated_at": "2026-03-21T15:10:00.631722+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1995-04-05",
+            "height_cm": 177,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor and artist from Chiba Prefecture. Affiliated with Marie Inc. He primarily appears in stage works such as the musical \"The Prince of Tennis\" 3rd season (as Masaharu Nio), the musical \"Black Butler\" -Secrets of the Boarding School- (as Gregory Violet), and the \"Hypnosis Mic -Division Rap Battle-\" Rule the Stage series (as Jobu Jikuin). He has also appeared in television works such as the tokusatsu drama \"Kamen Rider Geats\" (as Daichi Isuzu / Kamen Rider Nudge-Sparrow). He is also active as an artist, holding solo exhibitions.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "後藤大",
+            "sourceActorUrl": "https://kira-hai.net/goto-dai",
+            "role_name": "0013",
+            "cast_group": null
+          },
+          "sourceCreditKey": "493968ab597dd701002e",
+          "sourceOrder": 12,
+          "billingOrder": 12,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "36a2584b-10ed-4d03-a1b1-8b71ebc68dfc",
+            "slug": "otaka-hiroo",
+            "name": "大高 洋夫",
+            "kana": "おおたか ひろお",
+            "profile": "新潟県長岡市出身の俳優。株式会社フロム・ファーストプロダクション所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/gibson_703",
+              "official": "https://www.from1-pro.jp/talent/detail.php?id=233",
+              "instagram": "https://www.instagram.com/hiroo_ohtaka/"
+            },
+            "gender": "male",
+            "created_at": "2026-04-04T02:47:55.331417+00:00",
+            "updated_at": "2026-04-04T02:47:55.331417+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1959-06-27",
+            "height_cm": 170,
+            "blood_type": "AB",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "大高洋夫",
+            "sourceActorUrl": null,
+            "role_name": "アイザック・ギルモア",
+            "cast_group": null
+          },
+          "sourceCreditKey": "0a71ea9954bcfdd4b6d6",
+          "sourceOrder": 13,
+          "billingOrder": 13,
+          "expectedNote": null,
+          "existingCast": null
+        }
+      ],
+      "legacyCandidates": [],
+      "creditOnly": [
+        "HILOMU",
+        "Dolton",
+        "KENTA",
+        "GeN",
+        "加藤貴彦",
+        "神谷亮太",
+        "佐久本歩夢",
+        "石田 創"
+      ],
+      "transformations": [
+        {
+          "type": "voice_credit_name_separation",
+          "before": {
+            "sourceActorName": "天華えま (声の出演)",
+            "sourceActorUrl": null,
+            "role_name": "001 イワン・ウイスキー",
+            "cast_group": null
+          },
+          "after": {
+            "sourceActorName": "天華えま",
+            "sourceActorUrl": null,
+            "role_name": "001 イワン・ウイスキー",
+            "cast_group": "声の出演"
+          },
+          "evidence": [
+            {
+              "url": "https://cyborg009-the-stage.com/cast_staff/",
+              "checkedAt": "2026-10-25T17:19:29.438Z",
+              "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+            }
+          ],
+          "reason": "声の出演注記を人物名から区分へ分離。原文はrawSourceに保持。"
+        },
+        {
+          "type": "responsive_duplicate_deduplication",
+          "actor": "中塚皓平",
+          "role": "スカール",
+          "evidence": [
+            {
+              "url": "https://cyborg009-the-stage.com/cast_staff/",
+              "checkedAt": "2026-10-25T17:19:29.438Z",
+              "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+            }
+          ],
+          "reason": "公式HTMLのPC/モバイル別スカール重複欄を1人1配役として照合。"
+        },
+        {
+          "type": "unparsed_to_credits",
+          "names": [
+            "HILOMU",
+            "Dolton",
+            "KENTA",
+            "GeN",
+            "加藤貴彦",
+            "神谷亮太",
+            "佐久本歩夢",
+            "石田 創"
+          ],
+          "evidence": [
+            {
+              "url": "https://cyborg009-the-stage.com/cast_staff/",
+              "checkedAt": "2026-10-25T17:19:29.438Z",
+              "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+            }
+          ],
+          "reason": "BG SOLDIERS8人をクレジット。人物・配役ページを増やさない。"
+        }
+      ],
+      "exceptions": [
+        "舞台12人・声1人。天華えま001は今作も声のみ。公式スカール重複はレスポンシブ表示によるものとして1件にまとめる。",
+        "初演の0010滝澤・相澤を今作へ引き継がず、今作0012野々花・0013後藤を公式通り保存。0012/0013に未公表の人物名を補作しない。初演13配役は全項目保全。",
+        "BG SOLDIERS8人は最終公式通り。初演KIMUTAKUを今作へ流用しない。佐久本歩夢・石田創をクレジットへ追加し、スペースを含む石田 創の公式表記を保持。",
+        "スタッフ22項目＋BG SOLDIERS。音楽田中マッシュ・HILOMU、舞台監督井上卓・中田桃菜、アクション監督・フライング・技術監督・票券の項目を本作公式から照合。初演のスタッフを無条件にコピーしない。",
+        "野々花は現所属で月日のみ1月18日。CLOUDCASTINGの2025生年は経歴と整合せず不採用。FC閉鎖案内や取得失敗を現在所属の代用にしない。",
+        "2025年11月14〜24日・ステラボールの1作品。貸切回・お見送り・アフタートークは通常役の出演条件や別公演作品として増やさない。",
+        "あらすじは公式STORYに基づく短い日英文。翻訳英題は本サイトの英語表示であり公式英題と主張しない。現行配信未確認なのでvod空欄。",
+        "全既存人物・シリーズ・作品・配役を保全。新規1人物・作品1・13配役のみ追加。スキーマ・RLS・アプリ変更なし。"
+      ]
+    }
+  ],
+  "keptPlays": [
+    {
+      "id": "37473551-fb66-4787-9fb6-e9cd0cae2421",
+      "slug": "cyborg009_2024",
+      "title": "舞台「サイボーグ009」",
+      "franchise_id": "91caff8a-ff55-46d4-b388-62b51aed2395",
+      "summary": "石ノ森章太郎の漫画『サイボーグ009』の初舞台化。黒い幽霊団に誘拐されサイボーグに改造された少年・島村ジョーが、同じ境遇の8人の戦士とともに組織へ反旗を翻す。2024年5月に日本青年館ホールで上演。七海ひろき主演、演出は植木豪、脚本は亀田真二郎。",
+      "period": "2024年5月18日〜26日",
+      "venue": "日本青年館ホール",
+      "vod": {},
+      "genre": null,
+      "created_at": "2026-10-25T17:13:58.147614+00:00",
+      "updated_at": "2026-10-25T17:13:58.147614+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "石ノ森章太郎"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "演出",
+          "names": [
+            "植木 豪"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "脚本",
+          "names": [
+            "亀田真二郎"
+          ],
+          "is_core": true,
+          "sort_order": 3
+        },
+        {
+          "role": "音楽監督",
+          "names": [
+            "KEN THE 390"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "美術",
+          "names": [
+            "松生紘子"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "照明",
+          "names": [
+            "大波多秀起"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        },
+        {
+          "role": "音響",
+          "names": [
+            "山口剛史"
+          ],
+          "is_core": false,
+          "sort_order": 7
+        },
+        {
+          "role": "映像製作",
+          "names": [
+            "佐々木章介"
+          ],
+          "is_core": false,
+          "sort_order": 8
+        },
+        {
+          "role": "映像操作",
+          "names": [
+            "三好七海",
+            "中本 治"
+          ],
+          "is_core": false,
+          "sort_order": 9
+        },
+        {
+          "role": "衣裳",
+          "names": [
+            "永井省伍(I-Stage)"
+          ],
+          "is_core": false,
+          "sort_order": 10
+        },
+        {
+          "role": "ヘアメイク",
+          "names": [
+            "瀬戸口清香"
+          ],
+          "is_core": false,
+          "sort_order": 11
+        },
+        {
+          "role": "演出補佐",
+          "names": [
+            "冨田昌則"
+          ],
+          "is_core": false,
+          "sort_order": 12
+        },
+        {
+          "role": "演出助手",
+          "names": [
+            "杉山 恵"
+          ],
+          "is_core": false,
+          "sort_order": 13
+        },
+        {
+          "role": "舞台監督",
+          "names": [
+            "青木来美"
+          ],
+          "is_core": false,
+          "sort_order": 14
+        },
+        {
+          "role": "宣伝写真",
+          "names": [
+            "中村理生"
+          ],
+          "is_core": false,
+          "sort_order": 15
+        },
+        {
+          "role": "宣伝美術",
+          "names": [
+            "岡垣吏紗"
+          ],
+          "is_core": false,
+          "sort_order": 16
+        },
+        {
+          "role": "制作",
+          "names": [
+            "S-SIZE"
+          ],
+          "is_core": false,
+          "sort_order": 17
+        },
+        {
+          "role": "主催",
+          "names": [
+            "舞台「サイボーグ009」製作委員会"
+          ],
+          "is_core": false,
+          "sort_order": 18
+        },
+        {
+          "role": "BG SOLDIERS",
+          "names": [
+            "HILOMU",
+            "Dolton",
+            "KIMUTAKU",
+            "KENTA",
+            "GeN",
+            "加藤貴彦",
+            "神谷亮太"
+          ],
+          "is_core": false,
+          "sort_order": 19
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "The first stage adaptation of Shotaro Ishinomori’s manga Cyborg 009. Kidnapped and transformed into a cyborg by Black Ghost, Joe Shimamura rebels against the organization with eight fellow cyborg warriors. Performed at Nippon Seinenkan Hall in May 2024. Starring Hiroki Nanami, directed by Go Ueki and written by Shinjiro Kameda.",
+      "title_en": "Cyborg 009 (Stage, 2024)"
+    }
+  ],
+  "evidence": {
+    "links": [
+      {
+        "url": "https://kira-hai.net/cyborg009_2025",
+        "checkedAt": "2026-10-25T17:19:29.085Z",
+        "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+      },
+      {
+        "url": "https://cyborg009-the-stage.com/",
+        "checkedAt": "2026-10-25T17:19:29.574Z",
+        "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+      },
+      {
+        "url": "https://cyborg009-the-stage.com/cast_staff/",
+        "checkedAt": "2026-10-25T17:19:29.438Z",
+        "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+      },
+      {
+        "url": "https://cyborg009-the-stage.com/schedule_ticket/",
+        "checkedAt": "2026-10-25T17:19:29.756Z",
+        "note": "属性・資料差・未採用事項はnotesへ。原文とSHA256を保持。"
+      }
+    ],
+    "sources": [
+      {
+        "label": "changelog",
+        "url": "https://supabase.com/changelog.md",
+        "finalUrl": "https://supabase.com/changelog.md",
+        "status": 200,
+        "checkedAt": "2026-10-25T17:19:29.064Z",
+        "sha256": "45528009025b8ad8487ccb73f7c769b66d4b0e7aa4560157047899dcb5b5a006"
+      },
+      {
+        "label": "kira",
+        "url": "https://kira-hai.net/cyborg009_2025",
+        "finalUrl": "https://kira-hai.net/cyborg009_2025",
+        "status": 200,
+        "checkedAt": "2026-10-25T17:19:29.085Z",
+        "sha256": "49c1a749369497bf59428700e8c0ad5495bc2d45011b4b4ac30c5d07ecb488fb"
+      },
+      {
+        "label": "cast",
+        "url": "https://cyborg009-the-stage.com/cast_staff/",
+        "finalUrl": "https://cyborg009-the-stage.com/cast_staff/",
+        "status": 200,
+        "checkedAt": "2026-10-25T17:19:29.438Z",
+        "sha256": "3f5f7ac2c1c3005235a30475d41d65b6769c21b45abc789cc75734992d7cda3f"
+      },
+      {
+        "label": "archive",
+        "url": "https://cyborg009-the-stage.com/",
+        "finalUrl": "https://cyborg009-the-stage.com/",
+        "status": 200,
+        "checkedAt": "2026-10-25T17:19:29.574Z",
+        "sha256": "f1ea46d157bb75d2747356d00e077d6fca31b486f89568202edc204e33b8ae32"
+      },
+      {
+        "label": "stage",
+        "url": "https://cyborg009-the-stage.com/schedule_ticket/",
+        "finalUrl": "https://cyborg009-the-stage.com/schedule_ticket/",
+        "status": 200,
+        "checkedAt": "2026-10-25T17:19:29.756Z",
+        "sha256": "80d48b8353ffbfc7036b87b17872ccdd0dab15888eeb66d70bfb3270586e9ca6"
+      },
+      {
+        "label": "nonokaTca",
+        "url": "https://www.tca-pictures.net/skystage/Prgm/Detail/12451.html",
+        "finalUrl": "https://www.tca-pictures.net/skystage/Prgm/Detail/12451.html",
+        "status": 200,
+        "encoding": "shift_jis",
+        "checkedAt": "2026-10-25T17:21:34.546Z",
+        "sha256": "5363d6cceff01c32012f55f88721b16224ed19cfc48dd00ab10002693db00d1a"
+      },
+      {
+        "label": "nonokaEditorial",
+        "url": "https://talemecasting-next.com/talent/print/159725",
+        "finalUrl": "https://talemecasting-next.com/talent/print/159725",
+        "status": 503,
+        "checkedAt": "2026-10-25T17:20:53.040Z",
+        "sha256": "b68d718d8e6f966bb158b6508ed1a741742aad9df76564924a56b1b9736dcd50"
+      },
+      {
+        "label": "nonokaAgency",
+        "url": "https://and-bition.com/",
+        "finalUrl": "https://and-bition.com/",
+        "status": 200,
+        "checkedAt": "2026-10-25T17:20:53.081Z",
+        "sha256": "4ad201069d5dde63115ef9a1108216925b4b7d4b9e204b17276c5a3f2e600e3b"
+      },
+      {
+        "label": "nonokaFan",
+        "url": "https://takarazuka-fan.jp/uncategorized/nonokahimari/",
+        "finalUrl": "https://takarazuka-fan.jp/uncategorized/nonokahimari/",
+        "status": 200,
+        "checkedAt": "2026-10-25T17:20:53.428Z",
+        "sha256": "f1df58db76422e8a0a3575f3992eefce8b4d7b4984288cc2165d74dd66b60ff7"
+      },
+      {
+        "label": "nonokaInterview",
+        "url": "https://i-voce.jp/feed/3745960/5/",
+        "finalUrl": "https://i-voce.jp/feed/3745960/5/",
+        "status": 200,
+        "checkedAt": "2026-10-25T17:20:53.506Z",
+        "sha256": "3e69e4858d319f0b6d22049b64396dcfef778f34c73971d7d56f0ca04bfd781d"
+      },
+      {
+        "label": "nonokaCasting",
+        "url": "https://cloudcasting.jp/profile/ODg4OTQ0e87",
+        "finalUrl": "https://cloudcasting.jp/profile/ODg4OTQ0e87",
+        "status": 200,
+        "checkedAt": "2026-10-25T17:20:53.542Z",
+        "sha256": "56bfd900778c4f47dac543be15797e4c288d86abd50d73912056a559d0a5c261"
+      },
+      {
+        "label": "nonokaRadio",
+        "url": "https://musicbird.jp/cfm/news/guest/49154/",
+        "finalUrl": "https://musicbird.jp/cfm/news/guest/49154/",
+        "status": 200,
+        "checkedAt": "2026-10-25T17:20:54.637Z",
+        "sha256": "feea70e7b65296081e7b57c35ffb16c1f4755e5f2f162302210e581a7d8787c1"
+      },
+      {
+        "label": "nonokaFc",
+        "url": "https://himari-elianto.com/",
+        "finalUrl": "https://himari-elianto.com/",
+        "status": 0,
+        "checkedAt": "2026-10-25T17:21:03.315Z",
+        "sha256": "a357f1ac2ea5ce919987c0190e9af3fac61403022052a744dd9d2ccd994b5d70"
+      },
+      {
+        "label": "nonokaProfile",
+        "url": "https://and-bition.com/artist_themes/nonoka/",
+        "finalUrl": "https://and-bition.com/artist_themes/nonoka/",
+        "status": 200,
+        "encoding": "utf-8",
+        "checkedAt": "2026-10-25T17:21:34.371Z",
+        "sha256": "925dacdaa89126a8ae5285d0966b449d0c6e8179a184fbd3abbe17977b12c3ce"
+      }
+    ],
+    "sourceWorks": [
+      {
+        "title": "舞台「サイボーグ009」",
+        "url": "https://kira-hai.net/cyborg009_2024"
+      },
+      {
+        "title": "舞台「サイボーグ009 -13番目の追跡者-」",
+        "url": "https://kira-hai.net/cyborg009_2025"
+      }
+    ],
+    "notes": [
+      "Supabaseスキルと現changelogを確認し、既存DMLと出典付き候補保存・採用RPCのみ使用。",
+      "TCAの原文はShift_JISで保存・復号し、原バイトSHA256を保持。"
+    ],
+    "unresolved": [
+      "発表済み2作品の主要登録とシリーズ表示点検を行う。次は別の未補完シリーズへ。",
+      "野々花の生年・血液型、詳細役名英訳・現行配信・全人物属性監査は後続。",
+      "天華のかな・血液型・現在所属、音波の生年・身長・現在所属、里中の現所属・血液型、Toyotakaの一次DOB・身体属性・現所属、中塚の現在所属や詳細英訳・現行配信・全属性総合監査は後続。"
+    ]
+  },
+  "requestKey": "d39387c3c7f832ac3adb61c59c2285c66d7aaeb3f7104a7b813eded220c379f6"
+}

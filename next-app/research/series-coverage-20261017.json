@@ -1829,27 +1829,28 @@
       "slug": "cyborg-009",
       "name": "舞台『サイボーグ009』",
       "registeredDay": "2026-02-09",
-      "plays": 1,
+      "plays": 2,
       "protected": false,
-      "castRows": 13,
-      "castCoverageNote": "2024年初演を1作品13配役（舞台12・声1）で登録。新規6人物・既存7人物。BG SOLDIERS7人はクレジット。公式の001重複掲載は1件へ、0010の2人と名前表記を保持。七海の旧pending候補の誤年2021を2024へ直し同じIDで採用。対象シリーズ英題・短い日英紹介を補完。日英30ページ・8テーブル保全比較・再実行0変更。既存人物・作品・配役の更新削除0。次は2025年13番目の追跡者と全体点検。",
+      "castRows": 26,
+      "castCoverageNote": "2025年13番目の追跡者を1作品13配役（舞台12・声1）で追加。新規は野々花ひまり1人、既存12人を再利用。0012・0013を公演別に保存し、初演0010の2人を流用しない。BG SOLDIERS8人はクレジット。発表済み全2作品26配役15人物を本番日英36ページで点検。42クレジットカテゴリ、年表2025/11→2024/05・概要抜粋・相互リンクを確認。8テーブル全行保全・削除0・再実行0変更。主要収録と表示点検は一区切り。属性・詳細英訳・現行配信等は後続監査。",
       "seriesAudit": {
-        "checkedAt": "2026-10-25T17:17:23.319Z",
-        "scope": "2024年初演13配役の役名・声の区分・公式順・0010表記、19クレジット・日程会場・日英概要、シリーズ英題と日英紹介・年表・抜粋、13人物逆リンクと新規6人の紹介・DOB有無・月日表示を本番日英30ページで確認。2025年続編とシリーズ全体点検は後続。",
-        "registeredWorks": 1,
-        "castRows": 13,
-        "uniqueActors": 13,
-        "completedWorks": 1,
-        "completedCastRows": 13,
-        "newActors": 6,
-        "existingActorsReused": 7,
-        "reusedLegacyCandidates": 1,
-        "currentWorkCreditCategories": 19,
-        "currentWorkEnsembleNames": 7,
+        "checkedAt": "2026-10-25T17:27:23.534Z",
+        "scope": "発表済み全2作品26配役・15人物を本番日英36ページで点検。公式順・声区分・0010/0012/0013の公演別表記、42カテゴリのクレジット、期間会場・日英概要・年表順・抜粋・逆リンク・言語とcanonical・構造化データ・投票・配信導線を確認。野々花の紹介と生年なし月日表示、初演13配役保全を確認。",
+        "registeredWorks": 2,
+        "castRows": 26,
+        "uniqueActors": 15,
+        "completedWorks": 2,
+        "completedCastRows": 26,
+        "newActors": 1,
+        "existingActorsReused": 12,
+        "currentWorkCreditCategories": 23,
+        "currentWorkEnsembleNames": 8,
         "currentWorkVoiceCastRows": 1,
-        "publicPages": 30,
-        "seriesVerificationPassed": false,
-        "source": "https://kira-hai.net/cyborg009_2024",
+        "seriesCreditCategories": 42,
+        "seriesEnsembleCredits": 15,
+        "publicPages": 36,
+        "seriesVerificationPassed": true,
+        "source": "https://kira-hai.net/cyborg009_2025",
         "sourceWorks": [
           {
             "title": "舞台「サイボーグ009」",
@@ -1860,18 +1861,13 @@
             "url": "https://kira-hai.net/cyborg009_2025"
           }
         ],
-        "remainingSeriesWorkItems": [
-          {
-            "title": "舞台「サイボーグ009 -13番目の追跡者-」",
-            "url": "https://kira-hai.net/cyborg009_2025"
-          }
-        ],
+        "remainingSeriesWorkItems": [],
         "pendingChecks": [
-          "次は2025年13番目の追跡者を登録しシリーズ全体を点検。",
+          "野々花の生年・血液型、詳細役名英訳・現行配信・全人物属性監査は後続。",
           "天華のかな・血液型・現在所属、音波の生年・身長・現在所属、里中の現所属・血液型、Toyotakaの一次DOB・身体属性・現所属、中塚の現在所属や詳細英訳・現行配信・全属性総合監査は後続。"
         ],
-        "research": "next-app/research/cyborg009-2024-20261026.json",
-        "report": "docs/cyborg009-2024-2026-10-26.md"
+        "research": "next-app/research/cyborg009-2025-20261026.json",
+        "report": "docs/cyborg009-2025-2026-10-26.md"
       }
     },
     {
