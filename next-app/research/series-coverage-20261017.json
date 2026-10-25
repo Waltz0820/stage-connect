@@ -2597,25 +2597,26 @@
       "slug": "mob-psycho-100",
       "name": "舞台「モブサイコ100」",
       "registeredDay": "2026-02-09",
-      "plays": 1,
+      "plays": 2,
       "protected": false,
-      "castRows": 15,
-      "castCoverageNote": "2018年1月初演を1作品15配役で登録。主要10・肉体改造部2・脳感電波部3を公式と照合し、アンサンブル4人はクレジットへ。新規7人物・既存8人物を使用し、星乃勇太は根拠付きで既存星野勇太へ接続。伊藤と田代は月日のみ、匁山は公式同士のDOB差で保留。シリーズ英題・日英概要を補完。日英34ページ・8テーブル既存全行比較・再実行0変更。既存更新は対象シリーズの紹介3項目と更新日時のみ。次は2018年9月裏対裏、2021年激突！爪第7支部とシリーズ点検。",
+      "castRows": 36,
+      "castCoverageNote": "2018年9月裏対裏を1作品21配役（舞台20・映像1）で追加。新規5人物・既存16人物。肉体改造部と脳感電波部の役付き部員を登録し、田上真里奈は映像出演へ分離。初演15配役と全既存データを保全。スタッフ17項目・日英48ページ・8テーブル全行比較・再実行0変更を確認。シリーズ2作品36配役・25人物。次は2021年激突！爪第7支部とシリーズ点検。",
       "seriesAudit": {
-        "checkedAt": "2026-10-25T16:18:53.820Z",
-        "scope": "2018年1月初演15配役の役名・区分・公式順、18クレジット・日程・日英概要、シリーズの日英紹介・年表・抜粋、15人物の逆リンクと新規7人物の日英紹介・DOB有無・月日表示、星乃→既存星野の接続を確認。残る2018年続編・2021年第3弾は後続。",
-        "registeredWorks": 1,
-        "castRows": 15,
-        "uniqueActors": 15,
-        "completedWorks": 1,
-        "completedCastRows": 15,
-        "newActors": 7,
-        "existingActorsReused": 8,
-        "currentWorkCreditCategories": 18,
-        "currentWorkEnsembleNames": 4,
-        "publicPages": 34,
+        "checkedAt": "2026-10-25T16:35:35.982Z",
+        "scope": "2018年9月続編21配役の役名・区分・公式順、17クレジット・日程・日英概要、シリーズ2作品の年表・抜粋、初演15配役保全、21人物の逆リンクと新規5人物の日英紹介・DOB有無・月日表示を確認。映像1人を通常出演と分離し、旧名は既存星野へ接続。2021年第3弾と全体点検は後続。",
+        "registeredWorks": 2,
+        "castRows": 36,
+        "uniqueActors": 25,
+        "completedWorks": 2,
+        "completedCastRows": 36,
+        "newActors": 5,
+        "existingActorsReused": 16,
+        "currentWorkCreditCategories": 17,
+        "currentWorkEnsembleNames": 0,
+        "currentWorkVideoCastRows": 1,
+        "publicPages": 48,
         "seriesVerificationPassed": false,
-        "source": "https://kira-hai.net/mob2018",
+        "source": "https://kira-hai.net/mob2018-2",
         "sourceWorks": [
           {
             "title": "舞台「モブサイコ100」",
@@ -2632,20 +2633,17 @@
         ],
         "remainingSeriesWorkItems": [
           {
-            "title": "舞台『モブサイコ100』～裏対裏～",
-            "url": "https://kira-hai.net/mob2018-2"
-          },
-          {
             "title": "舞台『モブサイコ100』～激突!爪第7支部～",
             "url": "https://kira-hai.net/mob2021"
           }
         ],
         "pendingChecks": [
-          "次は2018年9月の裏対裏、2021年激突！爪第7支部を補完してシリーズを点検。",
+          "次は2021年激突！爪第7支部を補完しシリーズ全体の年表・日英・配役を点検。",
+          "本作の具体的兼役、和成の生年・現所属、赤谷の読み・英字・DOB・身体属性、米村・平尾・能登屋の現在所属、詳細英訳・現在配信は後続。",
           "伊藤・田代の生年、匁山の誕生日不一致、森と末永の現所属、詳細英訳・現在配信・人物全属性監査は後続。"
         ],
-        "research": "next-app/research/mobpsycho2018-20261026.json",
-        "report": "docs/mobpsycho2018-2026-10-26.md"
+        "research": "next-app/research/mobpsycho2018-2-20261026.json",
+        "report": "docs/mobpsycho2018-2-2026-10-26.md"
       }
     },
     {
