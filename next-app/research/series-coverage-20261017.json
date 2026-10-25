@@ -1559,25 +1559,29 @@
       "slug": "joker-game",
       "name": "舞台『ジョーカー・ゲーム』",
       "registeredDay": "2026-02-09",
-      "plays": 2,
+      "plays": 3,
       "protected": false,
-      "castRows": 29,
-      "castCoverageNote": "2018年Ⅱを1作品16配役で追加。新規2人物・既存14人物を再利用し、公式アンサンブル8名は作品クレジットへ。最終公式の掲載順・追加キャスト・原作ラスト・ワルツと2エピソードを保存。既存全行保全、日英38ページ・8テーブル比較・再実行0変更。シリーズ2作品29配役21人物。次は2025年Ⅲ、公式が発表した2027年Ⅳも後続登録対象。",
+      "castRows": 52,
+      "castCoverageNote": "2025年Ⅲを1作品23配役で追加。新規3人物・既存20人物を使用。主要13人の兼役4つ、実代演1人3公演、回替わりゲスト9人14公演と出演条件を保存。公式アンサンブル7人は役名付き作品クレジットへ。日英54ページ、登録済み3作品の年表・抜粋と既存29配役保全、8テーブル既存全行保全・再実行0変更を確認。シリーズ3作品52配役34人物。2027年Ⅳは後続登録対象。",
       "seriesAudit": {
-        "checkedAt": "2026-10-25T15:07:34.286Z",
-        "scope": "2018年続編の主要16配役・掲載順・全13クレジット・日程・日英紹介、シリーズ2作の年表・抜粋、初演13配役保全、16人物の逆リンクと新規2人物のDOB・日英紹介。2025/2027年の登録と全体点検は後続。",
-        "registeredWorks": 2,
-        "castRows": 29,
-        "uniqueActors": 21,
-        "completedWorks": 2,
-        "completedCastRows": 29,
-        "newActors": 2,
-        "existingActorsReused": 14,
-        "currentWorkCreditCategories": 13,
-        "currentWorkEnsembleNames": 8,
-        "publicPages": 38,
+        "checkedAt": "2026-10-25T15:37:02.718Z",
+        "scope": "登録済み2017・2018・2025の3作品の年表順・日英抜粋と旧配役の保全、2025年23配役の役名・掲載順・条件11件、21クレジット・日程・日英概要、23人物の逆リンクと新規3人物の日英紹介・DOBを確認。特殊代役note等の辞書未訳と2027年Ⅳは保留。",
+        "registeredWorks": 3,
+        "castRows": 52,
+        "uniqueActors": 34,
+        "completedWorks": 3,
+        "completedCastRows": 52,
+        "newActors": 3,
+        "existingActorsReused": 20,
+        "currentWorkCreditCategories": 21,
+        "currentWorkEnsembleNames": 7,
+        "currentWorkGuestActors": 9,
+        "currentWorkGuestPerformances": 14,
+        "currentWorkSubstitutePerformances": 3,
+        "publicPages": 54,
+        "registeredPastWorksVerificationPassed": true,
         "seriesVerificationPassed": false,
-        "source": "https://kira-hai.net/jg2018",
+        "source": "https://kira-hai.net/jg2025",
         "sourceWorks": [
           {
             "title": "舞台『ジョーカー・ゲームⅢ』",
@@ -1604,10 +1608,6 @@
         ],
         "remainingSeriesWorkItems": [
           {
-            "title": "舞台『ジョーカー・ゲームⅢ』",
-            "url": "https://kira-hai.net/jg2025"
-          },
-          {
             "title": "舞台『ジョーカー・ゲームⅣ』",
             "url": "https://www.marv.jp/special/jg-stage/",
             "year": 2027,
@@ -1617,12 +1617,12 @@
           }
         ],
         "pendingChecks": [
-          "次は2025年ジョーカー・ゲームⅢとシリーズ全体点検。公式現トップで2027年Ⅳの上演予定も確認したため、その後の追加対象として調査する。",
-          "本作の無名・持ち回り兼役は一次照合が必要。既存人物の総合監査・岩澤の血液型・現行配信は別途。",
-          "初演の前田DOB・大海の生年・オラキオ血液型の保留は引き継ぐ。"
+          "2027年Ⅳの公式発表済み公演を後続登録。2017・2018・2025の登録済み3公演はシリーズ年表と日英表示を点検する。",
+          "2018年の持ち回り兼役、初演の前田DOB・大海の生年・オラキオの血液型は引き続き保留。",
+          "特殊代役note・未登録の固有役名等の英訳、速川の現所属・身長、現行配信状況は後続照合。"
         ],
-        "research": "next-app/research/jokergame2018-20261025.json",
-        "report": "docs/jokergame2018-2026-10-26.md"
+        "research": "next-app/research/jokergame2025-20261026.json",
+        "report": "docs/jokergame2025-2026-10-26.md"
       }
     },
     {
