@@ -848,25 +848,24 @@
       "slug": "world-trigger",
       "name": "『ワールドトリガー the Stage』（ワーステ）",
       "registeredDay": "2025-12-13",
-      "plays": 1,
+      "plays": 2,
       "protected": false,
-      "castRows": 21,
-      "castCoverageNote": "2021年初演を公式最終21配役へ補完。新規11人物・20配役を追加、植田の既存配役ID・主演指定を保持し役名補完。公式にない多和田の役名空欄の仮紐付け1件のみ解除、本人と他作を保全。木虎藍役の開幕前交代は沖の配役noteとクレジットへ。嵐林藤匠の誤記を林藤匠へ、仮vodの#2件を除去。日英48ページ・8テーブル保全比較・再実行0変更。次は2022年大規模侵攻編、以降と全体点検は後続。",
+      "castRows": 50,
+      "castCoverageNote": "2022年大規模侵攻編を新規登録。主要舞台27名と声2名、計29配役。新規4人物と既存25人物を照合。東京代役・京都復帰の菊地原役を2行に分離し、東京11公演中止と声の兼役を保存。日英64ページ・8テーブル全既存行保全・再実行0変更。シリーズは2作品50配役まで。次は2023年B級ランク戦開始編、全体点検は後続。",
       "seriesAudit": {
-        "checkedAt": "2026-10-25T09:51:07.518Z",
-        "scope": "2021年初演のみの補完。シリーズ全体点検は未完了。",
-        "registeredWorks": 1,
-        "castRows": 21,
-        "uniqueActors": 21,
-        "completedWorks": 1,
-        "completedCastRows": 21,
-        "newActors": 11,
-        "existingActorsReused": 10,
-        "preservedCasts": 1,
-        "removedSampleLinks": 1,
-        "creditCategories": 18,
-        "castNotes": 1,
-        "publicPages": 48,
+        "checkedAt": "2026-10-25T10:20:47.584Z",
+        "scope": "2021年初演と2022年大規模侵攻編の2作品を補完。シリーズ全体点検は未完了。",
+        "registeredWorks": 2,
+        "castRows": 50,
+        "uniqueActors": 33,
+        "completedWorks": 2,
+        "completedCastRows": 50,
+        "newActors": 4,
+        "existingActorsReused": 25,
+        "currentWorkCreditCategories": 20,
+        "currentWorkVoiceCastRows": 2,
+        "currentWorkCastNotes": 2,
+        "publicPages": 64,
         "seriesVerificationPassed": false,
         "source": "https://kira-hai.net/wt",
         "sourceWorks": [
@@ -893,10 +892,6 @@
         ],
         "remainingSeriesWorkItems": [
           {
-            "title": "『ワールドトリガー the Stage』大規模侵攻編",
-            "url": "https://kira-hai.net/wt2022"
-          },
-          {
             "title": "『ワールドトリガー the Stage』B級ランク戦開始編",
             "url": "https://kira-hai.net/wt2023"
           },
@@ -910,11 +905,11 @@
           }
         ],
         "pendingChecks": [
-          "2022年大規模侵攻編以降とシリーズ全体点検は後続。",
-          "人物属性・詳細英訳・現行配信の総合監査、山内の現所属と身長、宮尾の読み・出身、初演レプリカ兼役の追加一次確認は後続。"
+          "次は2023年B級ランク戦開始編。残る2024/2025年まで揃えてからシリーズ全体点検。",
+          "人物属性・既存英訳・現行配信の総合監査は後続。松葉と田中の未確認属性は空欄を維持。"
         ],
-        "research": "next-app/research/worldtrigger2021-20261025.json",
-        "report": "docs/worldtrigger2021-2026-10-25.md"
+        "research": "next-app/research/worldtrigger2022-20261025.json",
+        "report": "docs/worldtrigger2022-2026-10-25.md"
       }
     },
     {
