@@ -1,0 +1,3456 @@
+{
+  "version": 1,
+  "batchId": "jokergame2027-20261026-01",
+  "expectedFranchise": {
+    "id": "82f11b02-0657-4fb3-89fe-2eacef7c61f1",
+    "name": "舞台『ジョーカー・ゲーム』",
+    "created_at": "2026-02-08T16:26:41.990203+00:00",
+    "updated_at": "2026-10-25T13:00:44.516863+00:00",
+    "slug": "joker-game",
+    "intro": null,
+    "description": "柳広司の小説を原案とするTVアニメ『ジョーカー・ゲーム』の舞台シリーズ。2017年に初演。昭和12年に結城中佐が設立したスパイ養成部門「D機関」と、各地で諜報活動に就く若者たちを描く。脚本・演出は西田大輔。",
+    "origin_type": "小説原作",
+    "origin_note": "原作：柳広司『ジョーカー・ゲーム』（KADOKAWA）",
+    "production_companies": null,
+    "related_franchise_ids": [],
+    "format": null,
+    "description_en": "A stage series adapted from the TV anime Joker Game, based on Koji Yanagi’s novels. First staged in 2017, it follows D Agency, a spy-training unit founded by Lieutenant Colonel Yuki in 1937, and the young agents dispatched on intelligence missions. Written and directed by Daisuke Nishida.",
+    "name_en": "Joker Game (Stage)"
+  },
+  "actors": [
+    {
+      "actor": {
+        "id": "7e424ff0-8780-4a1d-aa5c-79448dc1c060",
+        "slug": "tsutsui-shunsaku",
+        "name": "筒井俊作",
+        "kana": "つつい しゅんさく",
+        "profile": "東京都出身の俳優。演劇集団キャラメルボックス所属。2002年に入団し、劇団内外の舞台に出演。舞台『おおきく振りかぶって』の志賀役などを務める。ジャグリングを特技とする。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1982-11-03",
+        "height_cm": 171,
+        "blood_type": "B",
+        "birthday_label": null,
+        "name_en": "Shunsaku Tsutsui",
+        "profile_en": "An actor from Tokyo and a member of Caramelbox since 2002. He performs both with the company and in other productions, including as Shiga in Big Windup! His special skills include juggling.",
+        "death_date": null
+      },
+      "sourceActorName": "筒井俊作",
+      "profileUrl": "https://napposunited.com/artist/shunsaku-tsutsui",
+      "evidence": [
+        {
+          "url": "https://napposunited.com/artist/shunsaku-tsutsui",
+          "checkedAt": "2026-10-25T15:54:23.294Z",
+          "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+        },
+        {
+          "url": "https://caramelbox.com/actors/%E7%AD%92%E4%BA%95-%E4%BF%8A%E4%BD%9C/",
+          "checkedAt": "2026-10-25T15:54:23.814Z",
+          "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+        },
+        {
+          "url": "https://www.marv.jp/special/jg-stage/cast08.html",
+          "checkedAt": "2026-10-25T15:54:23.167Z",
+          "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+        }
+      ],
+      "notes": [
+        "現ナッポス公式と劇団公式で読み・完全DOB・東京・B型・171cm・2002年入団を確認。英字は公演公式とナッポスのShunsaku Tsutsuiを採用し、劇団独自Syunsaku表記と区別。新作は上演予定なので既上演の代表役は志賀を記載。性別は未採用。"
+      ]
+    }
+  ],
+  "works": [
+    {
+      "year": 2027,
+      "before": null,
+      "play": {
+        "id": "0db76952-7bd3-44bf-9792-4855d659d6df",
+        "slug": "jg2027",
+        "title": "舞台『ジョーカー・ゲームⅣ』",
+        "franchise_id": "82f11b02-0657-4fb3-89fe-2eacef7c61f1",
+        "summary": "TVアニメ『ジョーカー・ゲーム』と柳広司『ダブル・ジョーカー』を原作とする舞台第4弾。結城中佐が率いるD機関のスパイたちの諜報活動を描く。舞台化10周年となる2027年2月に東京・京都で上演予定。脚本・演出は西田大輔。",
+        "period": "2027年2月12日〜21日（東京）、2月27日〜28日（京都／上演予定）",
+        "venue": "天王洲 銀河劇場／京都劇場",
+        "vod": {},
+        "genre": null,
+        "tags": [],
+        "credits": [
+          {
+            "role": "原作",
+            "names": [
+              "TVアニメ『ジョーカー・ゲーム』",
+              "柳広司「ダブル・ジョーカー」（角川文庫刊）"
+            ],
+            "is_core": true,
+            "sort_order": 1
+          },
+          {
+            "role": "脚本・演出",
+            "names": [
+              "西田大輔"
+            ],
+            "is_core": true,
+            "sort_order": 2
+          },
+          {
+            "role": "主催",
+            "names": [
+              "JOKER GAME THE STAGE PROJECT"
+            ],
+            "is_core": false,
+            "sort_order": 3
+          }
+        ],
+        "related_franchise_ids": [],
+        "summary_en": "The fourth Joker Game stage production, based on the TV anime and Koji Yanagi’s Double Joker. It follows the spies of D Agency under Lieutenant Colonel Yuki. Scheduled for Tokyo and Kyoto in February 2027, marking ten years since the first stage production. Written and directed by Daisuke Nishida.",
+        "title_en": "Joker Game IV (Stage, 2027)"
+      },
+      "rawSource": {
+        "sourceUrl": "https://www.marv.jp/special/jg-stage/cast.html",
+        "title": "舞台『ジョーカー・ゲームⅣ』",
+        "scheduleLines": [
+          "2027年2月12日〜21日 天王洲 銀河劇場",
+          "2027年2月27日〜28日 京都劇場"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "矢田悠祐",
+            "sourceActorUrl": "https://www.marv.jp/special/jg-stage/cast01.html",
+            "role_name": "三好",
+            "cast_group": null,
+            "rawLine": "三好 役：矢田悠祐"
+          },
+          {
+            "sourceActorName": "本田礼生",
+            "sourceActorUrl": "https://www.marv.jp/special/jg-stage/cast02.html",
+            "role_name": "神永",
+            "cast_group": null,
+            "rawLine": "神永 役：本田礼生"
+          },
+          {
+            "sourceActorName": "橋本真一",
+            "sourceActorUrl": "https://www.marv.jp/special/jg-stage/cast03.html",
+            "role_name": "田崎",
+            "cast_group": null,
+            "rawLine": "田崎 役：橋本真一"
+          },
+          {
+            "sourceActorName": "塩田康平",
+            "sourceActorUrl": "https://www.marv.jp/special/jg-stage/cast04.html",
+            "role_name": "小田切",
+            "cast_group": null,
+            "rawLine": "小田切 役：塩田康平"
+          },
+          {
+            "sourceActorName": "野口 準",
+            "sourceActorUrl": "https://www.marv.jp/special/jg-stage/cast05.html",
+            "role_name": "実井",
+            "cast_group": null,
+            "rawLine": "実井 役：野口 準"
+          },
+          {
+            "sourceActorName": "原嶋元久",
+            "sourceActorUrl": "https://www.marv.jp/special/jg-stage/cast07.html",
+            "role_name": "仲根晋吾",
+            "cast_group": null,
+            "rawLine": "仲根晋吾 役：原嶋元久"
+          },
+          {
+            "sourceActorName": "筒井俊作",
+            "sourceActorUrl": "https://www.marv.jp/special/jg-stage/cast08.html",
+            "role_name": "カール・シュナイダー",
+            "cast_group": null,
+            "rawLine": "カール・シュナイダー 役：筒井俊作"
+          },
+          {
+            "sourceActorName": "茜屋日海夏",
+            "sourceActorUrl": "https://www.marv.jp/special/jg-stage/cast09.html",
+            "role_name": "野上百合子",
+            "cast_group": null,
+            "rawLine": "野上百合子 役：茜屋日海夏"
+          },
+          {
+            "sourceActorName": "田中梨瑚",
+            "sourceActorUrl": "https://www.marv.jp/special/jg-stage/cast10.html",
+            "role_name": "安原ミヨコ",
+            "cast_group": null,
+            "rawLine": "安原ミヨコ 役：田中梨瑚"
+          },
+          {
+            "sourceActorName": "村田 充",
+            "sourceActorUrl": "https://www.marv.jp/special/jg-stage/cast11.html",
+            "role_name": "ヘルマン・ヴォルフ大佐",
+            "cast_group": null,
+            "rawLine": "ヘルマン・ヴォルフ大佐 役：村田 充"
+          },
+          {
+            "sourceActorName": "谷口賢志",
+            "sourceActorUrl": "https://www.marv.jp/special/jg-stage/cast06.html",
+            "role_name": "結城中佐",
+            "cast_group": null,
+            "rawLine": "結城中佐 役：谷口賢志"
+          },
+          {
+            "sourceActorName": "蒼木 陣",
+            "sourceActorUrl": null,
+            "role_name": "ゲスト",
+            "cast_group": "回替わりゲスト",
+            "rawLine": "蒼木 陣…2/13(土)13:00、2/21(日)17:00",
+            "dates": [
+              {
+                "month": 2,
+                "day": 13,
+                "time": "13:00",
+                "venue": "天王洲 銀河劇場"
+              },
+              {
+                "month": 2,
+                "day": 21,
+                "time": "17:00",
+                "venue": "天王洲 銀河劇場"
+              }
+            ],
+            "note": "ゲスト出演：2月13日13:00、2月21日17:00公演。"
+          },
+          {
+            "sourceActorName": "阿部快征",
+            "sourceActorUrl": null,
+            "role_name": "ゲスト",
+            "cast_group": "回替わりゲスト",
+            "rawLine": "阿部快征…2/14(日)18:00、2/20(土)12:00",
+            "dates": [
+              {
+                "month": 2,
+                "day": 14,
+                "time": "18:00",
+                "venue": "天王洲 銀河劇場"
+              },
+              {
+                "month": 2,
+                "day": 20,
+                "time": "12:00",
+                "venue": "天王洲 銀河劇場"
+              }
+            ],
+            "note": "ゲスト出演：2月14日18:00、2月20日12:00公演。"
+          },
+          {
+            "sourceActorName": "奥谷知弘",
+            "sourceActorUrl": null,
+            "role_name": "ゲスト",
+            "cast_group": "回替わりゲスト",
+            "rawLine": "奥谷知弘…2/27(土)18:00",
+            "dates": [
+              {
+                "month": 2,
+                "day": 27,
+                "time": "18:00",
+                "venue": "京都劇場"
+              }
+            ],
+            "note": "ゲスト出演：2月27日18:00公演。"
+          },
+          {
+            "sourceActorName": "梶田拓希",
+            "sourceActorUrl": null,
+            "role_name": "ゲスト",
+            "cast_group": "回替わりゲスト",
+            "rawLine": "梶田拓希…2/27(土)13:00、2/28(日)12:00",
+            "dates": [
+              {
+                "month": 2,
+                "day": 27,
+                "time": "13:00",
+                "venue": "京都劇場"
+              },
+              {
+                "month": 2,
+                "day": 28,
+                "time": "12:00",
+                "venue": "京都劇場"
+              }
+            ],
+            "note": "ゲスト出演：2月27日13:00、2月28日12:00公演。"
+          },
+          {
+            "sourceActorName": "木戸邑弥",
+            "sourceActorUrl": null,
+            "role_name": "ゲスト",
+            "cast_group": "回替わりゲスト",
+            "rawLine": "木戸邑弥…2/18(木)13:00、2/21(日)12:00",
+            "dates": [
+              {
+                "month": 2,
+                "day": 18,
+                "time": "13:00",
+                "venue": "天王洲 銀河劇場"
+              },
+              {
+                "month": 2,
+                "day": 21,
+                "time": "12:00",
+                "venue": "天王洲 銀河劇場"
+              }
+            ],
+            "note": "ゲスト出演：2月18日13:00、2月21日12:00公演。"
+          },
+          {
+            "sourceActorName": "君沢ユウキ",
+            "sourceActorUrl": null,
+            "role_name": "ゲスト",
+            "cast_group": "回替わりゲスト",
+            "rawLine": "君沢ユウキ…2/12(金)18:00、2/16(火)13:00",
+            "dates": [
+              {
+                "month": 2,
+                "day": 12,
+                "time": "18:00",
+                "venue": "天王洲 銀河劇場"
+              },
+              {
+                "month": 2,
+                "day": 16,
+                "time": "13:00",
+                "venue": "天王洲 銀河劇場"
+              }
+            ],
+            "note": "ゲスト出演：2月12日18:00、2月16日13:00公演。"
+          },
+          {
+            "sourceActorName": "鈴木勝吾",
+            "sourceActorUrl": null,
+            "role_name": "ゲスト",
+            "cast_group": "回替わりゲスト",
+            "rawLine": "鈴木勝吾…2/17(水)13:00、2/19(金)18:00",
+            "dates": [
+              {
+                "month": 2,
+                "day": 17,
+                "time": "13:00",
+                "venue": "天王洲 銀河劇場"
+              },
+              {
+                "month": 2,
+                "day": 19,
+                "time": "18:00",
+                "venue": "天王洲 銀河劇場"
+              }
+            ],
+            "note": "ゲスト出演：2月17日13:00、2月19日18:00公演。"
+          },
+          {
+            "sourceActorName": "林田航平",
+            "sourceActorUrl": null,
+            "role_name": "ゲスト",
+            "cast_group": "回替わりゲスト",
+            "rawLine": "林田航平…2/13(土)18:00、2/16(火)18:00",
+            "dates": [
+              {
+                "month": 2,
+                "day": 13,
+                "time": "18:00",
+                "venue": "天王洲 銀河劇場"
+              },
+              {
+                "month": 2,
+                "day": 16,
+                "time": "18:00",
+                "venue": "天王洲 銀河劇場"
+              }
+            ],
+            "note": "ゲスト出演：2月13日18:00、2月16日18:00公演。"
+          },
+          {
+            "sourceActorName": "松本 岳",
+            "sourceActorUrl": null,
+            "role_name": "ゲスト",
+            "cast_group": "回替わりゲスト",
+            "rawLine": "松本 岳…2/14(日)13:00、2/20(土)17:00",
+            "dates": [
+              {
+                "month": 2,
+                "day": 14,
+                "time": "13:00",
+                "venue": "天王洲 銀河劇場"
+              },
+              {
+                "month": 2,
+                "day": 20,
+                "time": "17:00",
+                "venue": "天王洲 銀河劇場"
+              }
+            ],
+            "note": "ゲスト出演：2月14日13:00、2月20日17:00公演。"
+          }
+        ],
+        "unparsed": [],
+        "performanceStatus": "announced_not_yet_performed"
+      },
+      "source": {
+        "sourceUrl": "https://www.marv.jp/special/jg-stage/cast.html",
+        "title": "舞台『ジョーカー・ゲームⅣ』",
+        "scheduleLines": [
+          "2027年2月12日〜21日 天王洲 銀河劇場",
+          "2027年2月27日〜28日 京都劇場"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "矢田悠祐",
+            "sourceActorUrl": "https://www.marv.jp/special/jg-stage/cast01.html",
+            "role_name": "三好",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "本田礼生",
+            "sourceActorUrl": "https://www.marv.jp/special/jg-stage/cast02.html",
+            "role_name": "神永",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "橋本真一",
+            "sourceActorUrl": "https://www.marv.jp/special/jg-stage/cast03.html",
+            "role_name": "田崎",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "塩田康平",
+            "sourceActorUrl": "https://www.marv.jp/special/jg-stage/cast04.html",
+            "role_name": "小田切",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "野口準",
+            "sourceActorUrl": "https://www.marv.jp/special/jg-stage/cast05.html",
+            "role_name": "実井",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "原嶋元久",
+            "sourceActorUrl": "https://www.marv.jp/special/jg-stage/cast07.html",
+            "role_name": "仲根晋吾",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "筒井俊作",
+            "sourceActorUrl": "https://www.marv.jp/special/jg-stage/cast08.html",
+            "role_name": "カール・シュナイダー",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "茜屋日海夏",
+            "sourceActorUrl": "https://www.marv.jp/special/jg-stage/cast09.html",
+            "role_name": "野上百合子",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "田中梨瑚",
+            "sourceActorUrl": "https://www.marv.jp/special/jg-stage/cast10.html",
+            "role_name": "安原ミヨコ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "村田充",
+            "sourceActorUrl": "https://www.marv.jp/special/jg-stage/cast11.html",
+            "role_name": "ヘルマン・ヴォルフ大佐",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "谷口賢志",
+            "sourceActorUrl": "https://www.marv.jp/special/jg-stage/cast06.html",
+            "role_name": "結城中佐",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "蒼木陣",
+            "sourceActorUrl": null,
+            "role_name": "ゲスト",
+            "cast_group": "回替わりゲスト"
+          },
+          {
+            "sourceActorName": "阿部快征",
+            "sourceActorUrl": null,
+            "role_name": "ゲスト",
+            "cast_group": "回替わりゲスト"
+          },
+          {
+            "sourceActorName": "奥谷知弘",
+            "sourceActorUrl": null,
+            "role_name": "ゲスト",
+            "cast_group": "回替わりゲスト"
+          },
+          {
+            "sourceActorName": "梶田拓希",
+            "sourceActorUrl": null,
+            "role_name": "ゲスト",
+            "cast_group": "回替わりゲスト"
+          },
+          {
+            "sourceActorName": "木戸邑弥",
+            "sourceActorUrl": null,
+            "role_name": "ゲスト",
+            "cast_group": "回替わりゲスト"
+          },
+          {
+            "sourceActorName": "君沢ユウキ",
+            "sourceActorUrl": null,
+            "role_name": "ゲスト",
+            "cast_group": "回替わりゲスト"
+          },
+          {
+            "sourceActorName": "鈴木勝吾",
+            "sourceActorUrl": null,
+            "role_name": "ゲスト",
+            "cast_group": "回替わりゲスト"
+          },
+          {
+            "sourceActorName": "林田航平",
+            "sourceActorUrl": null,
+            "role_name": "ゲスト",
+            "cast_group": "回替わりゲスト"
+          },
+          {
+            "sourceActorName": "松本岳",
+            "sourceActorUrl": null,
+            "role_name": "ゲスト",
+            "cast_group": "回替わりゲスト"
+          }
+        ],
+        "unparsed": [],
+        "performanceStatus": "announced_not_yet_performed"
+      },
+      "sourceFingerprint": "21d012d355c63aad77dc7993e973d45a4b24ed50806aed3831a8819b6538fa40",
+      "stage": {
+        "source": "official",
+        "workUrl": "https://www.marv.jp/special/jg-stage/cast.html",
+        "key": "0f214ad0a2a1780e8542c01c7d02d71a63b3fa9c797d31cfd94c7a7555b36dd8",
+        "items": [
+          {
+            "id": "e80eb721-f26e-4de8-90c8-1036566f5160",
+            "source": "official",
+            "source_actor_name": "矢田悠祐",
+            "source_actor_url": "https://www.marv.jp/special/jg-stage/cast01.html",
+            "source_work_title": "舞台『ジョーカー・ゲームⅣ』",
+            "source_work_url": "https://www.marv.jp/special/jg-stage/cast.html",
+            "source_year": 2027,
+            "source_role_raw": "三好",
+            "source_role_names": [
+              "三好"
+            ],
+            "source_cast_group": null,
+            "source_order": 1,
+            "source_credit_key": "c90d2e50f7c0f8856d27",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/",
+                  "checkedAt": "2026-10-25T15:52:07.380Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/cast.html",
+                  "checkedAt": "2026-10-25T15:52:07.383Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/ticket.html",
+                  "checkedAt": "2026-10-25T15:52:07.403Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/intro.html",
+                  "checkedAt": "2026-10-25T15:52:07.392Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/11111/",
+                  "checkedAt": "2026-10-25T15:52:07.487Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://okutanichihiro.com/news/dS2rfXrzhtX5E98QmYCPQS",
+                  "checkedAt": "2026-10-25T15:52:09.474Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                }
+              ],
+              "source_fingerprint": "21d012d355c63aad77dc7993e973d45a4b24ed50806aed3831a8819b6538fa40",
+              "review_fingerprint": "4a51d149670ee685c90b771ae2b78c17ca4b9ced24ac01b9ec0521328f643392",
+              "snapshot_fingerprint": "49dbac7f8ce30d6916970f19f16cd2b8c098daceffe0fa515c4647d4177a56cd",
+              "identity": "reviewed_link",
+              "raw_credit": {
+                "sourceActorName": "矢田悠祐",
+                "sourceActorUrl": "https://www.marv.jp/special/jg-stage/cast01.html",
+                "role_name": "三好",
+                "cast_group": null,
+                "rawLine": "三好 役：矢田悠祐"
+              },
+              "performance_status": "announced_not_yet_performed",
+              "checked_at": "2026-10-25T15:52:07.383Z"
+            },
+            "matched_actor_id": "fcad1493-9b95-4d3a-a091-bb3c89cf9108",
+            "matched_play_id": "0db76952-7bd3-44bf-9792-4855d659d6df",
+            "status": "pending"
+          },
+          {
+            "id": "35cb414e-e89b-4c1d-8249-12df25274058",
+            "source": "official",
+            "source_actor_name": "本田礼生",
+            "source_actor_url": "https://www.marv.jp/special/jg-stage/cast02.html",
+            "source_work_title": "舞台『ジョーカー・ゲームⅣ』",
+            "source_work_url": "https://www.marv.jp/special/jg-stage/cast.html",
+            "source_year": 2027,
+            "source_role_raw": "神永",
+            "source_role_names": [
+              "神永"
+            ],
+            "source_cast_group": null,
+            "source_order": 2,
+            "source_credit_key": "1ef3416d619b61e0c6e8",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/",
+                  "checkedAt": "2026-10-25T15:52:07.380Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/cast.html",
+                  "checkedAt": "2026-10-25T15:52:07.383Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/ticket.html",
+                  "checkedAt": "2026-10-25T15:52:07.403Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/intro.html",
+                  "checkedAt": "2026-10-25T15:52:07.392Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/11111/",
+                  "checkedAt": "2026-10-25T15:52:07.487Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://okutanichihiro.com/news/dS2rfXrzhtX5E98QmYCPQS",
+                  "checkedAt": "2026-10-25T15:52:09.474Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                }
+              ],
+              "source_fingerprint": "21d012d355c63aad77dc7993e973d45a4b24ed50806aed3831a8819b6538fa40",
+              "review_fingerprint": "4a51d149670ee685c90b771ae2b78c17ca4b9ced24ac01b9ec0521328f643392",
+              "snapshot_fingerprint": "49dbac7f8ce30d6916970f19f16cd2b8c098daceffe0fa515c4647d4177a56cd",
+              "identity": "reviewed_link",
+              "raw_credit": {
+                "sourceActorName": "本田礼生",
+                "sourceActorUrl": "https://www.marv.jp/special/jg-stage/cast02.html",
+                "role_name": "神永",
+                "cast_group": null,
+                "rawLine": "神永 役：本田礼生"
+              },
+              "performance_status": "announced_not_yet_performed",
+              "checked_at": "2026-10-25T15:52:07.383Z"
+            },
+            "matched_actor_id": "8b7c86f6-a193-46a9-89b3-2662f03b7b2b",
+            "matched_play_id": "0db76952-7bd3-44bf-9792-4855d659d6df",
+            "status": "pending"
+          },
+          {
+            "id": "4eeb1ba3-4ced-415f-8c8c-697c9ab96b09",
+            "source": "official",
+            "source_actor_name": "橋本真一",
+            "source_actor_url": "https://www.marv.jp/special/jg-stage/cast03.html",
+            "source_work_title": "舞台『ジョーカー・ゲームⅣ』",
+            "source_work_url": "https://www.marv.jp/special/jg-stage/cast.html",
+            "source_year": 2027,
+            "source_role_raw": "田崎",
+            "source_role_names": [
+              "田崎"
+            ],
+            "source_cast_group": null,
+            "source_order": 3,
+            "source_credit_key": "05dfecc32951996931dd",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/",
+                  "checkedAt": "2026-10-25T15:52:07.380Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/cast.html",
+                  "checkedAt": "2026-10-25T15:52:07.383Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/ticket.html",
+                  "checkedAt": "2026-10-25T15:52:07.403Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/intro.html",
+                  "checkedAt": "2026-10-25T15:52:07.392Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/11111/",
+                  "checkedAt": "2026-10-25T15:52:07.487Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://okutanichihiro.com/news/dS2rfXrzhtX5E98QmYCPQS",
+                  "checkedAt": "2026-10-25T15:52:09.474Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                }
+              ],
+              "source_fingerprint": "21d012d355c63aad77dc7993e973d45a4b24ed50806aed3831a8819b6538fa40",
+              "review_fingerprint": "4a51d149670ee685c90b771ae2b78c17ca4b9ced24ac01b9ec0521328f643392",
+              "snapshot_fingerprint": "49dbac7f8ce30d6916970f19f16cd2b8c098daceffe0fa515c4647d4177a56cd",
+              "identity": "reviewed_link",
+              "raw_credit": {
+                "sourceActorName": "橋本真一",
+                "sourceActorUrl": "https://www.marv.jp/special/jg-stage/cast03.html",
+                "role_name": "田崎",
+                "cast_group": null,
+                "rawLine": "田崎 役：橋本真一"
+              },
+              "performance_status": "announced_not_yet_performed",
+              "checked_at": "2026-10-25T15:52:07.383Z"
+            },
+            "matched_actor_id": "231d0fed-4876-4ff7-ab9a-a91fac87652f",
+            "matched_play_id": "0db76952-7bd3-44bf-9792-4855d659d6df",
+            "status": "pending"
+          },
+          {
+            "id": "b81f669b-a9a5-4a59-9931-940804504302",
+            "source": "official",
+            "source_actor_name": "塩田康平",
+            "source_actor_url": "https://www.marv.jp/special/jg-stage/cast04.html",
+            "source_work_title": "舞台『ジョーカー・ゲームⅣ』",
+            "source_work_url": "https://www.marv.jp/special/jg-stage/cast.html",
+            "source_year": 2027,
+            "source_role_raw": "小田切",
+            "source_role_names": [
+              "小田切"
+            ],
+            "source_cast_group": null,
+            "source_order": 4,
+            "source_credit_key": "20fbddf6c75b934083dc",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/",
+                  "checkedAt": "2026-10-25T15:52:07.380Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/cast.html",
+                  "checkedAt": "2026-10-25T15:52:07.383Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/ticket.html",
+                  "checkedAt": "2026-10-25T15:52:07.403Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/intro.html",
+                  "checkedAt": "2026-10-25T15:52:07.392Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/11111/",
+                  "checkedAt": "2026-10-25T15:52:07.487Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://okutanichihiro.com/news/dS2rfXrzhtX5E98QmYCPQS",
+                  "checkedAt": "2026-10-25T15:52:09.474Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                }
+              ],
+              "source_fingerprint": "21d012d355c63aad77dc7993e973d45a4b24ed50806aed3831a8819b6538fa40",
+              "review_fingerprint": "4a51d149670ee685c90b771ae2b78c17ca4b9ced24ac01b9ec0521328f643392",
+              "snapshot_fingerprint": "49dbac7f8ce30d6916970f19f16cd2b8c098daceffe0fa515c4647d4177a56cd",
+              "identity": "reviewed_link",
+              "raw_credit": {
+                "sourceActorName": "塩田康平",
+                "sourceActorUrl": "https://www.marv.jp/special/jg-stage/cast04.html",
+                "role_name": "小田切",
+                "cast_group": null,
+                "rawLine": "小田切 役：塩田康平"
+              },
+              "performance_status": "announced_not_yet_performed",
+              "checked_at": "2026-10-25T15:52:07.383Z"
+            },
+            "matched_actor_id": "7e39a4bb-2931-46d4-be6b-5c3c0c1d72b5",
+            "matched_play_id": "0db76952-7bd3-44bf-9792-4855d659d6df",
+            "status": "pending"
+          },
+          {
+            "id": "61496de4-a57e-4050-a473-12cf8f27f214",
+            "source": "official",
+            "source_actor_name": "野口準",
+            "source_actor_url": "https://www.marv.jp/special/jg-stage/cast05.html",
+            "source_work_title": "舞台『ジョーカー・ゲームⅣ』",
+            "source_work_url": "https://www.marv.jp/special/jg-stage/cast.html",
+            "source_year": 2027,
+            "source_role_raw": "実井",
+            "source_role_names": [
+              "実井"
+            ],
+            "source_cast_group": null,
+            "source_order": 5,
+            "source_credit_key": "3bea9c2741cfacf49e25",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/",
+                  "checkedAt": "2026-10-25T15:52:07.380Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/cast.html",
+                  "checkedAt": "2026-10-25T15:52:07.383Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/ticket.html",
+                  "checkedAt": "2026-10-25T15:52:07.403Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/intro.html",
+                  "checkedAt": "2026-10-25T15:52:07.392Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/11111/",
+                  "checkedAt": "2026-10-25T15:52:07.487Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://okutanichihiro.com/news/dS2rfXrzhtX5E98QmYCPQS",
+                  "checkedAt": "2026-10-25T15:52:09.474Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                }
+              ],
+              "source_fingerprint": "21d012d355c63aad77dc7993e973d45a4b24ed50806aed3831a8819b6538fa40",
+              "review_fingerprint": "4a51d149670ee685c90b771ae2b78c17ca4b9ced24ac01b9ec0521328f643392",
+              "snapshot_fingerprint": "49dbac7f8ce30d6916970f19f16cd2b8c098daceffe0fa515c4647d4177a56cd",
+              "identity": "reviewed_link",
+              "raw_credit": {
+                "sourceActorName": "野口 準",
+                "sourceActorUrl": "https://www.marv.jp/special/jg-stage/cast05.html",
+                "role_name": "実井",
+                "cast_group": null,
+                "rawLine": "実井 役：野口 準"
+              },
+              "performance_status": "announced_not_yet_performed",
+              "checked_at": "2026-10-25T15:52:07.383Z"
+            },
+            "matched_actor_id": "a39fa69c-ac9b-4ed3-ba69-394ca3a921ad",
+            "matched_play_id": "0db76952-7bd3-44bf-9792-4855d659d6df",
+            "status": "pending"
+          },
+          {
+            "id": "d4e5b5ef-7b72-421a-8730-5a5935c77abd",
+            "source": "official",
+            "source_actor_name": "原嶋元久",
+            "source_actor_url": "https://www.marv.jp/special/jg-stage/cast07.html",
+            "source_work_title": "舞台『ジョーカー・ゲームⅣ』",
+            "source_work_url": "https://www.marv.jp/special/jg-stage/cast.html",
+            "source_year": 2027,
+            "source_role_raw": "仲根晋吾",
+            "source_role_names": [
+              "仲根晋吾"
+            ],
+            "source_cast_group": null,
+            "source_order": 6,
+            "source_credit_key": "2b2f155493411d9dd2dd",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/",
+                  "checkedAt": "2026-10-25T15:52:07.380Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/cast.html",
+                  "checkedAt": "2026-10-25T15:52:07.383Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/ticket.html",
+                  "checkedAt": "2026-10-25T15:52:07.403Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/intro.html",
+                  "checkedAt": "2026-10-25T15:52:07.392Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/11111/",
+                  "checkedAt": "2026-10-25T15:52:07.487Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://okutanichihiro.com/news/dS2rfXrzhtX5E98QmYCPQS",
+                  "checkedAt": "2026-10-25T15:52:09.474Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                }
+              ],
+              "source_fingerprint": "21d012d355c63aad77dc7993e973d45a4b24ed50806aed3831a8819b6538fa40",
+              "review_fingerprint": "4a51d149670ee685c90b771ae2b78c17ca4b9ced24ac01b9ec0521328f643392",
+              "snapshot_fingerprint": "49dbac7f8ce30d6916970f19f16cd2b8c098daceffe0fa515c4647d4177a56cd",
+              "identity": "reviewed_link",
+              "raw_credit": {
+                "sourceActorName": "原嶋元久",
+                "sourceActorUrl": "https://www.marv.jp/special/jg-stage/cast07.html",
+                "role_name": "仲根晋吾",
+                "cast_group": null,
+                "rawLine": "仲根晋吾 役：原嶋元久"
+              },
+              "performance_status": "announced_not_yet_performed",
+              "checked_at": "2026-10-25T15:52:07.383Z"
+            },
+            "matched_actor_id": "a70b1b46-0f89-4dca-9d76-3a553f5120f9",
+            "matched_play_id": "0db76952-7bd3-44bf-9792-4855d659d6df",
+            "status": "pending"
+          },
+          {
+            "id": "5099eb4e-3586-4a56-a41e-6840bfa171c5",
+            "source": "official",
+            "source_actor_name": "筒井俊作",
+            "source_actor_url": "https://www.marv.jp/special/jg-stage/cast08.html",
+            "source_work_title": "舞台『ジョーカー・ゲームⅣ』",
+            "source_work_url": "https://www.marv.jp/special/jg-stage/cast.html",
+            "source_year": 2027,
+            "source_role_raw": "カール・シュナイダー",
+            "source_role_names": [
+              "カール・シュナイダー"
+            ],
+            "source_cast_group": null,
+            "source_order": 7,
+            "source_credit_key": "f3881753556f46ec5a07",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/",
+                  "checkedAt": "2026-10-25T15:52:07.380Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/cast.html",
+                  "checkedAt": "2026-10-25T15:52:07.383Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/ticket.html",
+                  "checkedAt": "2026-10-25T15:52:07.403Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/intro.html",
+                  "checkedAt": "2026-10-25T15:52:07.392Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/11111/",
+                  "checkedAt": "2026-10-25T15:52:07.487Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://okutanichihiro.com/news/dS2rfXrzhtX5E98QmYCPQS",
+                  "checkedAt": "2026-10-25T15:52:09.474Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                }
+              ],
+              "source_fingerprint": "21d012d355c63aad77dc7993e973d45a4b24ed50806aed3831a8819b6538fa40",
+              "review_fingerprint": "4a51d149670ee685c90b771ae2b78c17ca4b9ced24ac01b9ec0521328f643392",
+              "snapshot_fingerprint": "49dbac7f8ce30d6916970f19f16cd2b8c098daceffe0fa515c4647d4177a56cd",
+              "identity": "reviewed_link",
+              "raw_credit": {
+                "sourceActorName": "筒井俊作",
+                "sourceActorUrl": "https://www.marv.jp/special/jg-stage/cast08.html",
+                "role_name": "カール・シュナイダー",
+                "cast_group": null,
+                "rawLine": "カール・シュナイダー 役：筒井俊作"
+              },
+              "performance_status": "announced_not_yet_performed",
+              "checked_at": "2026-10-25T15:52:07.383Z"
+            },
+            "matched_actor_id": "7e424ff0-8780-4a1d-aa5c-79448dc1c060",
+            "matched_play_id": "0db76952-7bd3-44bf-9792-4855d659d6df",
+            "status": "pending"
+          },
+          {
+            "id": "60a47aec-68b3-41f0-98d2-02f43218e6d6",
+            "source": "official",
+            "source_actor_name": "茜屋日海夏",
+            "source_actor_url": "https://www.marv.jp/special/jg-stage/cast09.html",
+            "source_work_title": "舞台『ジョーカー・ゲームⅣ』",
+            "source_work_url": "https://www.marv.jp/special/jg-stage/cast.html",
+            "source_year": 2027,
+            "source_role_raw": "野上百合子",
+            "source_role_names": [
+              "野上百合子"
+            ],
+            "source_cast_group": null,
+            "source_order": 8,
+            "source_credit_key": "63bc8eb1e4ac48cb98ab",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/",
+                  "checkedAt": "2026-10-25T15:52:07.380Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/cast.html",
+                  "checkedAt": "2026-10-25T15:52:07.383Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/ticket.html",
+                  "checkedAt": "2026-10-25T15:52:07.403Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/intro.html",
+                  "checkedAt": "2026-10-25T15:52:07.392Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/11111/",
+                  "checkedAt": "2026-10-25T15:52:07.487Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://okutanichihiro.com/news/dS2rfXrzhtX5E98QmYCPQS",
+                  "checkedAt": "2026-10-25T15:52:09.474Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                }
+              ],
+              "source_fingerprint": "21d012d355c63aad77dc7993e973d45a4b24ed50806aed3831a8819b6538fa40",
+              "review_fingerprint": "4a51d149670ee685c90b771ae2b78c17ca4b9ced24ac01b9ec0521328f643392",
+              "snapshot_fingerprint": "49dbac7f8ce30d6916970f19f16cd2b8c098daceffe0fa515c4647d4177a56cd",
+              "identity": "reviewed_link",
+              "raw_credit": {
+                "sourceActorName": "茜屋日海夏",
+                "sourceActorUrl": "https://www.marv.jp/special/jg-stage/cast09.html",
+                "role_name": "野上百合子",
+                "cast_group": null,
+                "rawLine": "野上百合子 役：茜屋日海夏"
+              },
+              "performance_status": "announced_not_yet_performed",
+              "checked_at": "2026-10-25T15:52:07.383Z"
+            },
+            "matched_actor_id": "bab581f4-5884-4493-8037-cf904b73b7eb",
+            "matched_play_id": "0db76952-7bd3-44bf-9792-4855d659d6df",
+            "status": "pending"
+          },
+          {
+            "id": "882b8d8b-9f37-417b-9bba-c4eee956facd",
+            "source": "official",
+            "source_actor_name": "田中梨瑚",
+            "source_actor_url": "https://www.marv.jp/special/jg-stage/cast10.html",
+            "source_work_title": "舞台『ジョーカー・ゲームⅣ』",
+            "source_work_url": "https://www.marv.jp/special/jg-stage/cast.html",
+            "source_year": 2027,
+            "source_role_raw": "安原ミヨコ",
+            "source_role_names": [
+              "安原ミヨコ"
+            ],
+            "source_cast_group": null,
+            "source_order": 9,
+            "source_credit_key": "975a0c027496f3d2967a",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/",
+                  "checkedAt": "2026-10-25T15:52:07.380Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/cast.html",
+                  "checkedAt": "2026-10-25T15:52:07.383Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/ticket.html",
+                  "checkedAt": "2026-10-25T15:52:07.403Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/intro.html",
+                  "checkedAt": "2026-10-25T15:52:07.392Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/11111/",
+                  "checkedAt": "2026-10-25T15:52:07.487Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://okutanichihiro.com/news/dS2rfXrzhtX5E98QmYCPQS",
+                  "checkedAt": "2026-10-25T15:52:09.474Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                }
+              ],
+              "source_fingerprint": "21d012d355c63aad77dc7993e973d45a4b24ed50806aed3831a8819b6538fa40",
+              "review_fingerprint": "4a51d149670ee685c90b771ae2b78c17ca4b9ced24ac01b9ec0521328f643392",
+              "snapshot_fingerprint": "49dbac7f8ce30d6916970f19f16cd2b8c098daceffe0fa515c4647d4177a56cd",
+              "identity": "reviewed_link",
+              "raw_credit": {
+                "sourceActorName": "田中梨瑚",
+                "sourceActorUrl": "https://www.marv.jp/special/jg-stage/cast10.html",
+                "role_name": "安原ミヨコ",
+                "cast_group": null,
+                "rawLine": "安原ミヨコ 役：田中梨瑚"
+              },
+              "performance_status": "announced_not_yet_performed",
+              "checked_at": "2026-10-25T15:52:07.383Z"
+            },
+            "matched_actor_id": "49520fea-c7a4-4c60-80eb-6d1ea4bf6ec5",
+            "matched_play_id": "0db76952-7bd3-44bf-9792-4855d659d6df",
+            "status": "pending"
+          },
+          {
+            "id": "e956525a-b1d6-4d32-8b20-e75472210969",
+            "source": "official",
+            "source_actor_name": "村田充",
+            "source_actor_url": "https://www.marv.jp/special/jg-stage/cast11.html",
+            "source_work_title": "舞台『ジョーカー・ゲームⅣ』",
+            "source_work_url": "https://www.marv.jp/special/jg-stage/cast.html",
+            "source_year": 2027,
+            "source_role_raw": "ヘルマン・ヴォルフ大佐",
+            "source_role_names": [
+              "ヘルマン・ヴォルフ大佐"
+            ],
+            "source_cast_group": null,
+            "source_order": 10,
+            "source_credit_key": "d2db699f63d066de3cec",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/",
+                  "checkedAt": "2026-10-25T15:52:07.380Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/cast.html",
+                  "checkedAt": "2026-10-25T15:52:07.383Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/ticket.html",
+                  "checkedAt": "2026-10-25T15:52:07.403Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/intro.html",
+                  "checkedAt": "2026-10-25T15:52:07.392Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/11111/",
+                  "checkedAt": "2026-10-25T15:52:07.487Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://okutanichihiro.com/news/dS2rfXrzhtX5E98QmYCPQS",
+                  "checkedAt": "2026-10-25T15:52:09.474Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                }
+              ],
+              "source_fingerprint": "21d012d355c63aad77dc7993e973d45a4b24ed50806aed3831a8819b6538fa40",
+              "review_fingerprint": "4a51d149670ee685c90b771ae2b78c17ca4b9ced24ac01b9ec0521328f643392",
+              "snapshot_fingerprint": "49dbac7f8ce30d6916970f19f16cd2b8c098daceffe0fa515c4647d4177a56cd",
+              "identity": "reviewed_link",
+              "raw_credit": {
+                "sourceActorName": "村田 充",
+                "sourceActorUrl": "https://www.marv.jp/special/jg-stage/cast11.html",
+                "role_name": "ヘルマン・ヴォルフ大佐",
+                "cast_group": null,
+                "rawLine": "ヘルマン・ヴォルフ大佐 役：村田 充"
+              },
+              "performance_status": "announced_not_yet_performed",
+              "checked_at": "2026-10-25T15:52:07.383Z"
+            },
+            "matched_actor_id": "5ea52785-4dd3-4d75-a38a-3de16098a173",
+            "matched_play_id": "0db76952-7bd3-44bf-9792-4855d659d6df",
+            "status": "pending"
+          },
+          {
+            "id": "2aa2fe34-c188-4f2b-8808-b12ebd0357bf",
+            "source": "official",
+            "source_actor_name": "谷口賢志",
+            "source_actor_url": "https://www.marv.jp/special/jg-stage/cast06.html",
+            "source_work_title": "舞台『ジョーカー・ゲームⅣ』",
+            "source_work_url": "https://www.marv.jp/special/jg-stage/cast.html",
+            "source_year": 2027,
+            "source_role_raw": "結城中佐",
+            "source_role_names": [
+              "結城中佐"
+            ],
+            "source_cast_group": null,
+            "source_order": 11,
+            "source_credit_key": "5aecbc2974cbb889a769",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/",
+                  "checkedAt": "2026-10-25T15:52:07.380Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/cast.html",
+                  "checkedAt": "2026-10-25T15:52:07.383Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/ticket.html",
+                  "checkedAt": "2026-10-25T15:52:07.403Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/intro.html",
+                  "checkedAt": "2026-10-25T15:52:07.392Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/11111/",
+                  "checkedAt": "2026-10-25T15:52:07.487Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://okutanichihiro.com/news/dS2rfXrzhtX5E98QmYCPQS",
+                  "checkedAt": "2026-10-25T15:52:09.474Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                }
+              ],
+              "source_fingerprint": "21d012d355c63aad77dc7993e973d45a4b24ed50806aed3831a8819b6538fa40",
+              "review_fingerprint": "4a51d149670ee685c90b771ae2b78c17ca4b9ced24ac01b9ec0521328f643392",
+              "snapshot_fingerprint": "49dbac7f8ce30d6916970f19f16cd2b8c098daceffe0fa515c4647d4177a56cd",
+              "identity": "reviewed_link",
+              "raw_credit": {
+                "sourceActorName": "谷口賢志",
+                "sourceActorUrl": "https://www.marv.jp/special/jg-stage/cast06.html",
+                "role_name": "結城中佐",
+                "cast_group": null,
+                "rawLine": "結城中佐 役：谷口賢志"
+              },
+              "performance_status": "announced_not_yet_performed",
+              "checked_at": "2026-10-25T15:52:07.383Z"
+            },
+            "matched_actor_id": "84e43961-444d-4831-99e7-b79a3e0e7548",
+            "matched_play_id": "0db76952-7bd3-44bf-9792-4855d659d6df",
+            "status": "pending"
+          },
+          {
+            "id": "0b40a013-d826-40e2-bacd-46129aa273cc",
+            "source": "official",
+            "source_actor_name": "蒼木陣",
+            "source_actor_url": null,
+            "source_work_title": "舞台『ジョーカー・ゲームⅣ』",
+            "source_work_url": "https://www.marv.jp/special/jg-stage/cast.html",
+            "source_year": 2027,
+            "source_role_raw": "ゲスト",
+            "source_role_names": [
+              "ゲスト"
+            ],
+            "source_cast_group": "回替わりゲスト",
+            "source_order": 12,
+            "source_credit_key": "3486f4c950af478db348",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/",
+                  "checkedAt": "2026-10-25T15:52:07.380Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/cast.html",
+                  "checkedAt": "2026-10-25T15:52:07.383Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/ticket.html",
+                  "checkedAt": "2026-10-25T15:52:07.403Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/intro.html",
+                  "checkedAt": "2026-10-25T15:52:07.392Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/11111/",
+                  "checkedAt": "2026-10-25T15:52:07.487Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://okutanichihiro.com/news/dS2rfXrzhtX5E98QmYCPQS",
+                  "checkedAt": "2026-10-25T15:52:09.474Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                }
+              ],
+              "source_fingerprint": "21d012d355c63aad77dc7993e973d45a4b24ed50806aed3831a8819b6538fa40",
+              "review_fingerprint": "4a51d149670ee685c90b771ae2b78c17ca4b9ced24ac01b9ec0521328f643392",
+              "snapshot_fingerprint": "49dbac7f8ce30d6916970f19f16cd2b8c098daceffe0fa515c4647d4177a56cd",
+              "identity": "reviewed_link",
+              "raw_credit": {
+                "sourceActorName": "蒼木 陣",
+                "sourceActorUrl": null,
+                "role_name": "ゲスト",
+                "cast_group": "回替わりゲスト",
+                "rawLine": "蒼木 陣…2/13(土)13:00、2/21(日)17:00",
+                "dates": [
+                  {
+                    "month": 2,
+                    "day": 13,
+                    "time": "13:00",
+                    "venue": "天王洲 銀河劇場"
+                  },
+                  {
+                    "month": 2,
+                    "day": 21,
+                    "time": "17:00",
+                    "venue": "天王洲 銀河劇場"
+                  }
+                ],
+                "note": "ゲスト出演：2月13日13:00、2月21日17:00公演。"
+              },
+              "performance_status": "announced_not_yet_performed",
+              "checked_at": "2026-10-25T15:52:07.383Z"
+            },
+            "matched_actor_id": "db8cc881-a613-4c16-ad95-e8fcf7084e8f",
+            "matched_play_id": "0db76952-7bd3-44bf-9792-4855d659d6df",
+            "status": "pending"
+          },
+          {
+            "id": "c73a163a-44fa-4510-aad5-0ef59f03f536",
+            "source": "official",
+            "source_actor_name": "阿部快征",
+            "source_actor_url": null,
+            "source_work_title": "舞台『ジョーカー・ゲームⅣ』",
+            "source_work_url": "https://www.marv.jp/special/jg-stage/cast.html",
+            "source_year": 2027,
+            "source_role_raw": "ゲスト",
+            "source_role_names": [
+              "ゲスト"
+            ],
+            "source_cast_group": "回替わりゲスト",
+            "source_order": 13,
+            "source_credit_key": "d27863fcbe2336f4b6be",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/",
+                  "checkedAt": "2026-10-25T15:52:07.380Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/cast.html",
+                  "checkedAt": "2026-10-25T15:52:07.383Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/ticket.html",
+                  "checkedAt": "2026-10-25T15:52:07.403Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/intro.html",
+                  "checkedAt": "2026-10-25T15:52:07.392Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/11111/",
+                  "checkedAt": "2026-10-25T15:52:07.487Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://okutanichihiro.com/news/dS2rfXrzhtX5E98QmYCPQS",
+                  "checkedAt": "2026-10-25T15:52:09.474Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                }
+              ],
+              "source_fingerprint": "21d012d355c63aad77dc7993e973d45a4b24ed50806aed3831a8819b6538fa40",
+              "review_fingerprint": "4a51d149670ee685c90b771ae2b78c17ca4b9ced24ac01b9ec0521328f643392",
+              "snapshot_fingerprint": "49dbac7f8ce30d6916970f19f16cd2b8c098daceffe0fa515c4647d4177a56cd",
+              "identity": "reviewed_link",
+              "raw_credit": {
+                "sourceActorName": "阿部快征",
+                "sourceActorUrl": null,
+                "role_name": "ゲスト",
+                "cast_group": "回替わりゲスト",
+                "rawLine": "阿部快征…2/14(日)18:00、2/20(土)12:00",
+                "dates": [
+                  {
+                    "month": 2,
+                    "day": 14,
+                    "time": "18:00",
+                    "venue": "天王洲 銀河劇場"
+                  },
+                  {
+                    "month": 2,
+                    "day": 20,
+                    "time": "12:00",
+                    "venue": "天王洲 銀河劇場"
+                  }
+                ],
+                "note": "ゲスト出演：2月14日18:00、2月20日12:00公演。"
+              },
+              "performance_status": "announced_not_yet_performed",
+              "checked_at": "2026-10-25T15:52:07.383Z"
+            },
+            "matched_actor_id": "07681a57-adcf-45f2-a0ea-41d66ab5469e",
+            "matched_play_id": "0db76952-7bd3-44bf-9792-4855d659d6df",
+            "status": "pending"
+          },
+          {
+            "id": "8a182dac-0bbd-4dbf-aa98-eb1671afe5a9",
+            "source": "official",
+            "source_actor_name": "奥谷知弘",
+            "source_actor_url": null,
+            "source_work_title": "舞台『ジョーカー・ゲームⅣ』",
+            "source_work_url": "https://www.marv.jp/special/jg-stage/cast.html",
+            "source_year": 2027,
+            "source_role_raw": "ゲスト",
+            "source_role_names": [
+              "ゲスト"
+            ],
+            "source_cast_group": "回替わりゲスト",
+            "source_order": 14,
+            "source_credit_key": "f9a44a1d73474e40070a",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/",
+                  "checkedAt": "2026-10-25T15:52:07.380Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/cast.html",
+                  "checkedAt": "2026-10-25T15:52:07.383Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/ticket.html",
+                  "checkedAt": "2026-10-25T15:52:07.403Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/intro.html",
+                  "checkedAt": "2026-10-25T15:52:07.392Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/11111/",
+                  "checkedAt": "2026-10-25T15:52:07.487Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://okutanichihiro.com/news/dS2rfXrzhtX5E98QmYCPQS",
+                  "checkedAt": "2026-10-25T15:52:09.474Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                }
+              ],
+              "source_fingerprint": "21d012d355c63aad77dc7993e973d45a4b24ed50806aed3831a8819b6538fa40",
+              "review_fingerprint": "4a51d149670ee685c90b771ae2b78c17ca4b9ced24ac01b9ec0521328f643392",
+              "snapshot_fingerprint": "49dbac7f8ce30d6916970f19f16cd2b8c098daceffe0fa515c4647d4177a56cd",
+              "identity": "reviewed_link",
+              "raw_credit": {
+                "sourceActorName": "奥谷知弘",
+                "sourceActorUrl": null,
+                "role_name": "ゲスト",
+                "cast_group": "回替わりゲスト",
+                "rawLine": "奥谷知弘…2/27(土)18:00",
+                "dates": [
+                  {
+                    "month": 2,
+                    "day": 27,
+                    "time": "18:00",
+                    "venue": "京都劇場"
+                  }
+                ],
+                "note": "ゲスト出演：2月27日18:00公演。"
+              },
+              "performance_status": "announced_not_yet_performed",
+              "checked_at": "2026-10-25T15:52:07.383Z"
+            },
+            "matched_actor_id": "4c706c63-3b21-4f32-8676-c4b7b740a483",
+            "matched_play_id": "0db76952-7bd3-44bf-9792-4855d659d6df",
+            "status": "pending"
+          },
+          {
+            "id": "6f919fe6-76c7-4f1e-ab5e-db9dad48d52b",
+            "source": "official",
+            "source_actor_name": "梶田拓希",
+            "source_actor_url": null,
+            "source_work_title": "舞台『ジョーカー・ゲームⅣ』",
+            "source_work_url": "https://www.marv.jp/special/jg-stage/cast.html",
+            "source_year": 2027,
+            "source_role_raw": "ゲスト",
+            "source_role_names": [
+              "ゲスト"
+            ],
+            "source_cast_group": "回替わりゲスト",
+            "source_order": 15,
+            "source_credit_key": "c6d8df0ea1a956895567",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/",
+                  "checkedAt": "2026-10-25T15:52:07.380Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/cast.html",
+                  "checkedAt": "2026-10-25T15:52:07.383Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/ticket.html",
+                  "checkedAt": "2026-10-25T15:52:07.403Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/intro.html",
+                  "checkedAt": "2026-10-25T15:52:07.392Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/11111/",
+                  "checkedAt": "2026-10-25T15:52:07.487Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://okutanichihiro.com/news/dS2rfXrzhtX5E98QmYCPQS",
+                  "checkedAt": "2026-10-25T15:52:09.474Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                }
+              ],
+              "source_fingerprint": "21d012d355c63aad77dc7993e973d45a4b24ed50806aed3831a8819b6538fa40",
+              "review_fingerprint": "4a51d149670ee685c90b771ae2b78c17ca4b9ced24ac01b9ec0521328f643392",
+              "snapshot_fingerprint": "49dbac7f8ce30d6916970f19f16cd2b8c098daceffe0fa515c4647d4177a56cd",
+              "identity": "reviewed_link",
+              "raw_credit": {
+                "sourceActorName": "梶田拓希",
+                "sourceActorUrl": null,
+                "role_name": "ゲスト",
+                "cast_group": "回替わりゲスト",
+                "rawLine": "梶田拓希…2/27(土)13:00、2/28(日)12:00",
+                "dates": [
+                  {
+                    "month": 2,
+                    "day": 27,
+                    "time": "13:00",
+                    "venue": "京都劇場"
+                  },
+                  {
+                    "month": 2,
+                    "day": 28,
+                    "time": "12:00",
+                    "venue": "京都劇場"
+                  }
+                ],
+                "note": "ゲスト出演：2月27日13:00、2月28日12:00公演。"
+              },
+              "performance_status": "announced_not_yet_performed",
+              "checked_at": "2026-10-25T15:52:07.383Z"
+            },
+            "matched_actor_id": "3089d89d-d5b6-4b15-ba00-9f89f42f8bdd",
+            "matched_play_id": "0db76952-7bd3-44bf-9792-4855d659d6df",
+            "status": "pending"
+          },
+          {
+            "id": "df86f1da-e525-412d-9fa0-275094f16ba2",
+            "source": "official",
+            "source_actor_name": "木戸邑弥",
+            "source_actor_url": null,
+            "source_work_title": "舞台『ジョーカー・ゲームⅣ』",
+            "source_work_url": "https://www.marv.jp/special/jg-stage/cast.html",
+            "source_year": 2027,
+            "source_role_raw": "ゲスト",
+            "source_role_names": [
+              "ゲスト"
+            ],
+            "source_cast_group": "回替わりゲスト",
+            "source_order": 16,
+            "source_credit_key": "45f747e3eccafdaefc62",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/",
+                  "checkedAt": "2026-10-25T15:52:07.380Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/cast.html",
+                  "checkedAt": "2026-10-25T15:52:07.383Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/ticket.html",
+                  "checkedAt": "2026-10-25T15:52:07.403Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/intro.html",
+                  "checkedAt": "2026-10-25T15:52:07.392Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/11111/",
+                  "checkedAt": "2026-10-25T15:52:07.487Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://okutanichihiro.com/news/dS2rfXrzhtX5E98QmYCPQS",
+                  "checkedAt": "2026-10-25T15:52:09.474Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                }
+              ],
+              "source_fingerprint": "21d012d355c63aad77dc7993e973d45a4b24ed50806aed3831a8819b6538fa40",
+              "review_fingerprint": "4a51d149670ee685c90b771ae2b78c17ca4b9ced24ac01b9ec0521328f643392",
+              "snapshot_fingerprint": "49dbac7f8ce30d6916970f19f16cd2b8c098daceffe0fa515c4647d4177a56cd",
+              "identity": "reviewed_link",
+              "raw_credit": {
+                "sourceActorName": "木戸邑弥",
+                "sourceActorUrl": null,
+                "role_name": "ゲスト",
+                "cast_group": "回替わりゲスト",
+                "rawLine": "木戸邑弥…2/18(木)13:00、2/21(日)12:00",
+                "dates": [
+                  {
+                    "month": 2,
+                    "day": 18,
+                    "time": "13:00",
+                    "venue": "天王洲 銀河劇場"
+                  },
+                  {
+                    "month": 2,
+                    "day": 21,
+                    "time": "12:00",
+                    "venue": "天王洲 銀河劇場"
+                  }
+                ],
+                "note": "ゲスト出演：2月18日13:00、2月21日12:00公演。"
+              },
+              "performance_status": "announced_not_yet_performed",
+              "checked_at": "2026-10-25T15:52:07.383Z"
+            },
+            "matched_actor_id": "4a732437-9080-4aea-8ea2-4c1a40f8f71d",
+            "matched_play_id": "0db76952-7bd3-44bf-9792-4855d659d6df",
+            "status": "pending"
+          },
+          {
+            "id": "c25fe82f-821d-4bc8-bb75-01873bb16e14",
+            "source": "official",
+            "source_actor_name": "君沢ユウキ",
+            "source_actor_url": null,
+            "source_work_title": "舞台『ジョーカー・ゲームⅣ』",
+            "source_work_url": "https://www.marv.jp/special/jg-stage/cast.html",
+            "source_year": 2027,
+            "source_role_raw": "ゲスト",
+            "source_role_names": [
+              "ゲスト"
+            ],
+            "source_cast_group": "回替わりゲスト",
+            "source_order": 17,
+            "source_credit_key": "ac8bbf101f6d1eb53bee",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/",
+                  "checkedAt": "2026-10-25T15:52:07.380Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/cast.html",
+                  "checkedAt": "2026-10-25T15:52:07.383Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/ticket.html",
+                  "checkedAt": "2026-10-25T15:52:07.403Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/intro.html",
+                  "checkedAt": "2026-10-25T15:52:07.392Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/11111/",
+                  "checkedAt": "2026-10-25T15:52:07.487Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://okutanichihiro.com/news/dS2rfXrzhtX5E98QmYCPQS",
+                  "checkedAt": "2026-10-25T15:52:09.474Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                }
+              ],
+              "source_fingerprint": "21d012d355c63aad77dc7993e973d45a4b24ed50806aed3831a8819b6538fa40",
+              "review_fingerprint": "4a51d149670ee685c90b771ae2b78c17ca4b9ced24ac01b9ec0521328f643392",
+              "snapshot_fingerprint": "49dbac7f8ce30d6916970f19f16cd2b8c098daceffe0fa515c4647d4177a56cd",
+              "identity": "reviewed_link",
+              "raw_credit": {
+                "sourceActorName": "君沢ユウキ",
+                "sourceActorUrl": null,
+                "role_name": "ゲスト",
+                "cast_group": "回替わりゲスト",
+                "rawLine": "君沢ユウキ…2/12(金)18:00、2/16(火)13:00",
+                "dates": [
+                  {
+                    "month": 2,
+                    "day": 12,
+                    "time": "18:00",
+                    "venue": "天王洲 銀河劇場"
+                  },
+                  {
+                    "month": 2,
+                    "day": 16,
+                    "time": "13:00",
+                    "venue": "天王洲 銀河劇場"
+                  }
+                ],
+                "note": "ゲスト出演：2月12日18:00、2月16日13:00公演。"
+              },
+              "performance_status": "announced_not_yet_performed",
+              "checked_at": "2026-10-25T15:52:07.383Z"
+            },
+            "matched_actor_id": "189ea368-c895-4564-b87d-f6bb287972dc",
+            "matched_play_id": "0db76952-7bd3-44bf-9792-4855d659d6df",
+            "status": "pending"
+          },
+          {
+            "id": "db62cd34-64a0-4870-9ca9-40e8c27ae7a3",
+            "source": "official",
+            "source_actor_name": "鈴木勝吾",
+            "source_actor_url": null,
+            "source_work_title": "舞台『ジョーカー・ゲームⅣ』",
+            "source_work_url": "https://www.marv.jp/special/jg-stage/cast.html",
+            "source_year": 2027,
+            "source_role_raw": "ゲスト",
+            "source_role_names": [
+              "ゲスト"
+            ],
+            "source_cast_group": "回替わりゲスト",
+            "source_order": 18,
+            "source_credit_key": "56f80a35b478f44ff580",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/",
+                  "checkedAt": "2026-10-25T15:52:07.380Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/cast.html",
+                  "checkedAt": "2026-10-25T15:52:07.383Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/ticket.html",
+                  "checkedAt": "2026-10-25T15:52:07.403Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/intro.html",
+                  "checkedAt": "2026-10-25T15:52:07.392Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/11111/",
+                  "checkedAt": "2026-10-25T15:52:07.487Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://okutanichihiro.com/news/dS2rfXrzhtX5E98QmYCPQS",
+                  "checkedAt": "2026-10-25T15:52:09.474Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                }
+              ],
+              "source_fingerprint": "21d012d355c63aad77dc7993e973d45a4b24ed50806aed3831a8819b6538fa40",
+              "review_fingerprint": "4a51d149670ee685c90b771ae2b78c17ca4b9ced24ac01b9ec0521328f643392",
+              "snapshot_fingerprint": "49dbac7f8ce30d6916970f19f16cd2b8c098daceffe0fa515c4647d4177a56cd",
+              "identity": "reviewed_link",
+              "raw_credit": {
+                "sourceActorName": "鈴木勝吾",
+                "sourceActorUrl": null,
+                "role_name": "ゲスト",
+                "cast_group": "回替わりゲスト",
+                "rawLine": "鈴木勝吾…2/17(水)13:00、2/19(金)18:00",
+                "dates": [
+                  {
+                    "month": 2,
+                    "day": 17,
+                    "time": "13:00",
+                    "venue": "天王洲 銀河劇場"
+                  },
+                  {
+                    "month": 2,
+                    "day": 19,
+                    "time": "18:00",
+                    "venue": "天王洲 銀河劇場"
+                  }
+                ],
+                "note": "ゲスト出演：2月17日13:00、2月19日18:00公演。"
+              },
+              "performance_status": "announced_not_yet_performed",
+              "checked_at": "2026-10-25T15:52:07.383Z"
+            },
+            "matched_actor_id": "d9b2e659-3fc1-49be-a56f-80989b0908e8",
+            "matched_play_id": "0db76952-7bd3-44bf-9792-4855d659d6df",
+            "status": "pending"
+          },
+          {
+            "id": "7e8afd1f-7ff8-4ce2-83f8-90f79a8b0540",
+            "source": "official",
+            "source_actor_name": "林田航平",
+            "source_actor_url": null,
+            "source_work_title": "舞台『ジョーカー・ゲームⅣ』",
+            "source_work_url": "https://www.marv.jp/special/jg-stage/cast.html",
+            "source_year": 2027,
+            "source_role_raw": "ゲスト",
+            "source_role_names": [
+              "ゲスト"
+            ],
+            "source_cast_group": "回替わりゲスト",
+            "source_order": 19,
+            "source_credit_key": "0ea711937d5e6a262dd2",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/",
+                  "checkedAt": "2026-10-25T15:52:07.380Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/cast.html",
+                  "checkedAt": "2026-10-25T15:52:07.383Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/ticket.html",
+                  "checkedAt": "2026-10-25T15:52:07.403Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/intro.html",
+                  "checkedAt": "2026-10-25T15:52:07.392Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/11111/",
+                  "checkedAt": "2026-10-25T15:52:07.487Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://okutanichihiro.com/news/dS2rfXrzhtX5E98QmYCPQS",
+                  "checkedAt": "2026-10-25T15:52:09.474Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                }
+              ],
+              "source_fingerprint": "21d012d355c63aad77dc7993e973d45a4b24ed50806aed3831a8819b6538fa40",
+              "review_fingerprint": "4a51d149670ee685c90b771ae2b78c17ca4b9ced24ac01b9ec0521328f643392",
+              "snapshot_fingerprint": "49dbac7f8ce30d6916970f19f16cd2b8c098daceffe0fa515c4647d4177a56cd",
+              "identity": "reviewed_link",
+              "raw_credit": {
+                "sourceActorName": "林田航平",
+                "sourceActorUrl": null,
+                "role_name": "ゲスト",
+                "cast_group": "回替わりゲスト",
+                "rawLine": "林田航平…2/13(土)18:00、2/16(火)18:00",
+                "dates": [
+                  {
+                    "month": 2,
+                    "day": 13,
+                    "time": "18:00",
+                    "venue": "天王洲 銀河劇場"
+                  },
+                  {
+                    "month": 2,
+                    "day": 16,
+                    "time": "18:00",
+                    "venue": "天王洲 銀河劇場"
+                  }
+                ],
+                "note": "ゲスト出演：2月13日18:00、2月16日18:00公演。"
+              },
+              "performance_status": "announced_not_yet_performed",
+              "checked_at": "2026-10-25T15:52:07.383Z"
+            },
+            "matched_actor_id": "760e5b29-ff23-43e6-970c-76586a32c646",
+            "matched_play_id": "0db76952-7bd3-44bf-9792-4855d659d6df",
+            "status": "pending"
+          },
+          {
+            "id": "83c4ccba-5b30-45a5-89e9-663704f04ffe",
+            "source": "official",
+            "source_actor_name": "松本岳",
+            "source_actor_url": null,
+            "source_work_title": "舞台『ジョーカー・ゲームⅣ』",
+            "source_work_url": "https://www.marv.jp/special/jg-stage/cast.html",
+            "source_year": 2027,
+            "source_role_raw": "ゲスト",
+            "source_role_names": [
+              "ゲスト"
+            ],
+            "source_cast_group": "回替わりゲスト",
+            "source_order": 20,
+            "source_credit_key": "af8b369e563782522756",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/",
+                  "checkedAt": "2026-10-25T15:52:07.380Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/cast.html",
+                  "checkedAt": "2026-10-25T15:52:07.383Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/ticket.html",
+                  "checkedAt": "2026-10-25T15:52:07.403Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/special/jg-stage/intro.html",
+                  "checkedAt": "2026-10-25T15:52:07.392Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/11111/",
+                  "checkedAt": "2026-10-25T15:52:07.487Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                },
+                {
+                  "url": "https://okutanichihiro.com/news/dS2rfXrzhtX5E98QmYCPQS",
+                  "checkedAt": "2026-10-25T15:52:09.474Z",
+                  "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+                }
+              ],
+              "source_fingerprint": "21d012d355c63aad77dc7993e973d45a4b24ed50806aed3831a8819b6538fa40",
+              "review_fingerprint": "4a51d149670ee685c90b771ae2b78c17ca4b9ced24ac01b9ec0521328f643392",
+              "snapshot_fingerprint": "49dbac7f8ce30d6916970f19f16cd2b8c098daceffe0fa515c4647d4177a56cd",
+              "identity": "reviewed_link",
+              "raw_credit": {
+                "sourceActorName": "松本 岳",
+                "sourceActorUrl": null,
+                "role_name": "ゲスト",
+                "cast_group": "回替わりゲスト",
+                "rawLine": "松本 岳…2/14(日)13:00、2/20(土)17:00",
+                "dates": [
+                  {
+                    "month": 2,
+                    "day": 14,
+                    "time": "13:00",
+                    "venue": "天王洲 銀河劇場"
+                  },
+                  {
+                    "month": 2,
+                    "day": 20,
+                    "time": "17:00",
+                    "venue": "天王洲 銀河劇場"
+                  }
+                ],
+                "note": "ゲスト出演：2月14日13:00、2月20日17:00公演。"
+              },
+              "performance_status": "announced_not_yet_performed",
+              "checked_at": "2026-10-25T15:52:07.383Z"
+            },
+            "matched_actor_id": "bb717597-891c-42dd-94a3-4b264f9a3ab6",
+            "matched_play_id": "0db76952-7bd3-44bf-9792-4855d659d6df",
+            "status": "pending"
+          }
+        ]
+      },
+      "records": [
+        {
+          "actor": {
+            "id": "fcad1493-9b95-4d3a-a091-bb3c89cf9108",
+            "slug": "yata-yusuke",
+            "name": "矢田 悠祐",
+            "kana": "やた ゆうすけ",
+            "profile": "大阪府出身の俳優・歌手。SUI所属。ミュージカル『テニスの王子様』2ndシーズン（不二周助役）やミュージカル『アルジャーノンに花束を』（チャーリィ・ゴードン役）等に出演。高い歌唱力を活かし、TVアニメ『SUPER LOVERS』の主題歌を担当するなどアーティストとしても活動しているほか、アプリゲーム『18TRIP』（百目鬼潜役）で声優も務めている。",
+            "image_url": "/actors/yata-yusuke.jpg",
+            "sns": {
+              "x": "https://x.com/yusukeyata",
+              "official": "https://www.sui-inc.net/yata-yusuke",
+              "instagram": "https://www.instagram.com/yatayusuke_official/"
+            },
+            "gender": "male",
+            "created_at": "2025-12-13T04:41:02.052969+00:00",
+            "updated_at": "2025-12-13T04:41:02.052969+00:00",
+            "tags": [
+              "歌唱力",
+              "実力派"
+            ],
+            "featured_play_slugs": [
+              "mahoyaku-stage-chapter1"
+            ],
+            "birthday": "1990-11-16",
+            "height_cm": 171,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor and singer from Osaka Prefecture. Affiliated with SUI. He appeared in the musical \"The Prince of Tennis\" 2nd season (as Syusuke Fuji) and the musical \"Flowers for Algernon\" (as Charlie Gordon). Utilizing his high singing ability, he is also active as an artist, providing the theme song for the TV anime \"SUPER LOVERS\", and works as a voice actor, playing Suguru Domeki in the app game \"18TRIP\".",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "矢田悠祐",
+            "sourceActorUrl": "https://www.marv.jp/special/jg-stage/cast01.html",
+            "role_name": "三好",
+            "cast_group": null
+          },
+          "sourceCreditKey": "c90d2e50f7c0f8856d27",
+          "sourceOrder": 1,
+          "billingOrder": 1,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "8b7c86f6-a193-46a9-89b3-2662f03b7b2b",
+            "slug": "honda-reo",
+            "name": "本田 礼生",
+            "kana": "ほんだ れお",
+            "profile": "愛媛県出身の俳優。ヤザ・パパ所属。ミュージカル『テニスの王子様』3rdシーズン（菊丸英二役）や舞台『刀剣乱舞』（一期一振役）、『MANKAI STAGE「A3!」』シリーズ（斑鳩三角役）等の舞台作品に出演。特技のアクロバットやブレイクダンスを活かした高い身体能力に定評があり、エンターテインメント集団「THE CONVOY（ザ・コンボイ）」の若手メンバーとしても活動している。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/honda_reo",
+              "official": "https://honda-reo.com/",
+              "instagram": "https://www.instagram.com/honda_reo_staff/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:06:19.306372+00:00",
+            "updated_at": "2026-03-21T15:06:19.306372+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1992-10-28",
+            "height_cm": 175,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Ehime Prefecture. Affiliated with Yaza Papa. He has appeared in stage works such as the musical \"The Prince of Tennis\" 3rd season (as Eiji Kikumaru), the stage play \"Touken Ranbu\" (as Ichigo Hitofuri), and the \"MANKAI STAGE 'A3!'\" series (as Misumi Ikaruga). He is highly regarded for his physical abilities, utilizing his special skills in acrobatics and breakdancing, and is also active as a younger member of the entertainment group \"THE CONVOY\".",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "本田礼生",
+            "sourceActorUrl": "https://www.marv.jp/special/jg-stage/cast02.html",
+            "role_name": "神永",
+            "cast_group": null
+          },
+          "sourceCreditKey": "1ef3416d619b61e0c6e8",
+          "sourceOrder": 2,
+          "billingOrder": 2,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "231d0fed-4876-4ff7-ab9a-a91fac87652f",
+            "slug": "hashimoto-shinichi",
+            "name": "橋本 真一",
+            "kana": "はしもと しんいち",
+            "profile": "大阪府出身の俳優・声優・ミュージシャン。マナセプロダクションを経て現在はフリーランスで活動中。メディアミックスプロジェクト『from ARGONAVIS』内のロックバンド「GYROAXIA」のギタリストとしても活動している。ミュージカル『テニスの王子様』2ndシーズン（樹希彦役）や『僕のヒーローアカデミア』The “Ultra” Stage（青山優雅役）、『あんさんぶるスターズ！THE STAGE』（七種茨役）等に出演。",
+            "image_url": null,
+            "sns": {
+              "x": "https://twitter.com/shinichi1109",
+              "official": "https://shinichi-h.bitfan.id/",
+              "instagram": "https://www.instagram.com/h.shinichi1009"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:03:44.295565+00:00",
+            "updated_at": "2026-03-21T15:03:44.295565+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1989-10-09",
+            "height_cm": 170,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor, voice actor, and musician from Osaka Prefecture. After working with Manase Productions, he is currently working freelance. He is also active as a guitarist for the rock band \"GYROAXIA\" in the media mix project \"from ARGONAVIS\". He appeared in the musical \"The Prince of Tennis\" 2nd season (as Marehiko Itsuki), \"My Hero Academia\" The \"Ultra\" Stage (as Yuga Aoyama), and \"Ensemble Stars! THE STAGE\" (as Ibara Saegusa).",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "橋本真一",
+            "sourceActorUrl": "https://www.marv.jp/special/jg-stage/cast03.html",
+            "role_name": "田崎",
+            "cast_group": null
+          },
+          "sourceCreditKey": "05dfecc32951996931dd",
+          "sourceOrder": 3,
+          "billingOrder": 3,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "7e39a4bb-2931-46d4-be6b-5c3c0c1d72b5",
+            "slug": "shiota-kohei",
+            "name": "塩田 康平",
+            "kana": "しおた こうへい",
+            "profile": "香川県出身の俳優・ミュージシャン。劇団ひまわり所属。俳優の山口賢人とのロックユニット「BUCKS」としても活動している。ミュージカル『テニスの王子様』2ndシーズン（ジャッカル桑原役）やハイパープロジェクション演劇『ハイキュー!!』（田中龍之介役）、『ワールドトリガー the Stage』（来馬辰也役）等に出演。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/0331Kouhei",
+              "official": "https://profile.himawari.net/view/1960",
+              "instagram": "https://www.instagram.com/kouhei0331/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:03:44.295565+00:00",
+            "updated_at": "2026-03-21T15:03:44.295565+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1990-03-31",
+            "height_cm": 174,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor and musician from Kagawa Prefecture. Affiliated with Himawari Theatre Group. He is also active in the rock unit \"BUCKS\" alongside actor Kento Yamaguchi. He appeared in the musical \"The Prince of Tennis\" 2nd season (as Jackal Kuwahara), the hyper projection stage play \"Haikyu!!\" (as Ryunosuke Tanaka), and \"World Trigger the Stage\" (as Tatsuya Kuruma).",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "塩田康平",
+            "sourceActorUrl": "https://www.marv.jp/special/jg-stage/cast04.html",
+            "role_name": "小田切",
+            "cast_group": null
+          },
+          "sourceCreditKey": "20fbddf6c75b934083dc",
+          "sourceOrder": 4,
+          "billingOrder": 4,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "a39fa69c-ac9b-4ed3-ba69-394ca3a921ad",
+            "slug": "noguchi-jun",
+            "name": "野口準",
+            "kana": "のぐち じゅん",
+            "profile": "大阪府出身の俳優。サンミュージックブレーン所属。MANKAI STAGE『A3!』や「東京リベンジャーズ」などの舞台に出演し、舞台『鋼の錬金術師』ではケイン・フュリー役を務める。アクロバットやアコースティックギターを特技とする。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-21T13:10:03.368542+00:00",
+            "updated_at": "2026-10-21T13:10:03.368542+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "2000-02-06",
+            "height_cm": 168,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": "Jun Noguchi",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "野口準",
+            "sourceActorUrl": "https://www.marv.jp/special/jg-stage/cast05.html",
+            "role_name": "実井",
+            "cast_group": null
+          },
+          "sourceCreditKey": "3bea9c2741cfacf49e25",
+          "sourceOrder": 5,
+          "billingOrder": 5,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "a70b1b46-0f89-4dca-9d76-3a553f5120f9",
+            "slug": "harashima-motohisa",
+            "name": "原嶋 元久",
+            "kana": "はらしま もとひさ",
+            "profile": "東京都出身の俳優。スタジオオーデュボン所属。ミュージカル『テニスの王子様』2ndシーズン（切原赤也役）やミュージカル『刀剣乱舞』〜葵咲本紀〜（徳川秀忠役）、舞台『ハリー・ポッターと呪いの子』（アルバス・ポッター役）等に出演。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/motohisa_0101",
+              "official": "https://studio-audubon.jp/actor/motohisa_harashima"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:03:44.295565+00:00",
+            "updated_at": "2026-03-21T15:03:44.295565+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1993-01-01",
+            "height_cm": 169,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Tokyo. Affiliated with Studio Audubon. He appeared in the musical \"The Prince of Tennis\" 2nd season (as Akaya Kirihara), the musical \"Touken Ranbu\" ~Kishouhonki~ (as Hidetada Tokugawa), and the stage play \"Harry Potter and the Cursed Child\" (as Albus Potter).",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "原嶋元久",
+            "sourceActorUrl": "https://www.marv.jp/special/jg-stage/cast07.html",
+            "role_name": "仲根晋吾",
+            "cast_group": null
+          },
+          "sourceCreditKey": "2b2f155493411d9dd2dd",
+          "sourceOrder": 6,
+          "billingOrder": 6,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "7e424ff0-8780-4a1d-aa5c-79448dc1c060",
+            "slug": "tsutsui-shunsaku",
+            "name": "筒井俊作",
+            "kana": "つつい しゅんさく",
+            "profile": "東京都出身の俳優。演劇集団キャラメルボックス所属。2002年に入団し、劇団内外の舞台に出演。舞台『おおきく振りかぶって』の志賀役などを務める。ジャグリングを特技とする。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1982-11-03",
+            "height_cm": 171,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": "Shunsaku Tsutsui",
+            "profile_en": "An actor from Tokyo and a member of Caramelbox since 2002. He performs both with the company and in other productions, including as Shiga in Big Windup! His special skills include juggling.",
+            "death_date": null,
+            "created_at": "prepared",
+            "updated_at": "prepared"
+          },
+          "source": {
+            "sourceActorName": "筒井俊作",
+            "sourceActorUrl": "https://www.marv.jp/special/jg-stage/cast08.html",
+            "role_name": "カール・シュナイダー",
+            "cast_group": null
+          },
+          "sourceCreditKey": "f3881753556f46ec5a07",
+          "sourceOrder": 7,
+          "billingOrder": 7,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "bab581f4-5884-4493-8037-cf904b73b7eb",
+            "slug": "akaneya-himika",
+            "name": "茜屋日海夏",
+            "kana": "あかねや ひみか",
+            "profile": "秋田県由利本荘市出身の声優・俳優・歌手。i☆Risのメンバー。アニメ『プリパラ』の真中らぁら役、『終末のイゼッタ』のイゼッタ役などを務める。『ワールドトリガー the Stage』では宇佐美栞を演じる。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-25T09:44:31.368847+00:00",
+            "updated_at": "2026-10-25T09:44:31.368847+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1994-07-16",
+            "height_cm": 161,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "A voice actor, actor and singer from Yurihonjo, Akita, and a member of i☆Ris. Her voice roles include Laala Manaka in PriPara and Izetta in Izetta: The Last Witch. She plays Shiori Usami on stage in World Trigger.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "茜屋日海夏",
+            "sourceActorUrl": "https://www.marv.jp/special/jg-stage/cast09.html",
+            "role_name": "野上百合子",
+            "cast_group": null
+          },
+          "sourceCreditKey": "63bc8eb1e4ac48cb98ab",
+          "sourceOrder": 8,
+          "billingOrder": 8,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "49520fea-c7a4-4c60-80eb-6d1ea4bf6ec5",
+            "slug": "tanaka-riko",
+            "name": "田中梨瑚",
+            "kana": "たなか りこ",
+            "profile": "東京都出身の俳優。ユーキース・エンタテインメント所属、MIT GATHERINGと業務提携。ミュージカル『美少女戦士セーラームーン』かぐや姫の恋人で月野うさぎ／セーラームーンを演じる。『ワールドトリガー the Stage』では那須玲役を務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-25T10:57:10.611204+00:00",
+            "updated_at": "2026-10-25T10:57:10.611204+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": null,
+            "height_cm": 164,
+            "blood_type": null,
+            "birthday_label": "2月27日",
+            "name_en": "Tanaka Riko",
+            "profile_en": "An actor from Tokyo, represented by Yuki’s Entertainment and partnered with MIT Gathering. She plays Usagi Tsukino / Sailor Moon in the Sailor Moon musical The Lover of Princess Kaguya, and Rei Nasu in World Trigger the Stage.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "田中梨瑚",
+            "sourceActorUrl": "https://www.marv.jp/special/jg-stage/cast10.html",
+            "role_name": "安原ミヨコ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "975a0c027496f3d2967a",
+          "sourceOrder": 9,
+          "billingOrder": 9,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "5ea52785-4dd3-4d75-a38a-3de16098a173",
+            "slug": "murata-mitsu",
+            "name": "村田充",
+            "kana": "むらた みつ",
+            "profile": "大阪府出身の俳優。舞台『弱虫ペダル』の御堂筋翔役、『HUNTER×HUNTER』THE STAGE 2のノブナガ役、「進撃の巨人」-the Musical-のハンネス役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-21T14:39:56.197436+00:00",
+            "updated_at": "2026-10-21T14:39:56.197436+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1977-08-18",
+            "height_cm": null,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": "Mitsu Murata",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "村田充",
+            "sourceActorUrl": "https://www.marv.jp/special/jg-stage/cast11.html",
+            "role_name": "ヘルマン・ヴォルフ大佐",
+            "cast_group": null
+          },
+          "sourceCreditKey": "d2db699f63d066de3cec",
+          "sourceOrder": 10,
+          "billingOrder": 10,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "84e43961-444d-4831-99e7-b79a3e0e7548",
+            "slug": "taniguchi-masashi",
+            "name": "谷口賢志",
+            "kana": "たにぐち まさし",
+            "profile": "東京都出身の俳優。1999年に『救急戦隊ゴーゴーファイブ』の巽流水／ゴーブルー役でデビュー。舞台『戦国BASARA』の明智光秀／天海役などを務め、「チェンソーマン」ザ・ステージでは岸辺役を担当した。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-21T10:12:58.005594+00:00",
+            "updated_at": "2026-10-21T10:12:58.005594+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1977-11-05",
+            "height_cm": 180,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": "Masashi Taniguchi",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "谷口賢志",
+            "sourceActorUrl": "https://www.marv.jp/special/jg-stage/cast06.html",
+            "role_name": "結城中佐",
+            "cast_group": null
+          },
+          "sourceCreditKey": "5aecbc2974cbb889a769",
+          "sourceOrder": 11,
+          "billingOrder": 11,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "db8cc881-a613-4c16-ad95-e8fcf7084e8f",
+            "slug": "aoki-jin",
+            "name": "蒼木 陣",
+            "kana": "あおき じん",
+            "profile": "大阪府出身の俳優。サンミュージックブレーン所属。ミュージカル『テニスの王子様』3rdシーズン（喜多一馬役）や舞台『刀剣乱舞』シリーズ（陸奥守吉行役）、舞台『鬼滅の刃』シリーズ（猗窩座役）、舞台『プリンス・オブ・ストライド THE LIVE STAGE』シリーズ（藤原尊役）、舞台『鋼の錬金術師』シリーズ（ロイ・マスタング役）等の舞台作品を中心に出演している。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/ORANGEJIN",
+              "official": "https://aokijin-fc.com/",
+              "instagram": "https://www.instagram.com/aokijin.526"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:10:00.631722+00:00",
+            "updated_at": "2026-03-21T15:10:00.631722+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1992-05-26",
+            "height_cm": 172,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Osaka Prefecture. Affiliated with Sun Music Brain. He primarily appears in stage works such as the musical \"The Prince of Tennis\" 3rd season (as Kazuma Kita), the stage play \"Touken Ranbu\" series (as Mutsunokami Yoshiyuki), the stage play \"Demon Slayer: Kimetsu no Yaiba\" series (as Akaza), the stage play \"Prince of Stride THE LIVE STAGE\" series (as Takeru Fujiwara), and the stage play \"Fullmetal Alchemist\" series (as Roy Mustang).",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "蒼木陣",
+            "sourceActorUrl": null,
+            "role_name": "ゲスト",
+            "cast_group": "回替わりゲスト"
+          },
+          "sourceCreditKey": "3486f4c950af478db348",
+          "sourceOrder": 12,
+          "billingOrder": 12,
+          "expectedNote": "ゲスト出演：2月13日13:00、2月21日17:00公演。",
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "07681a57-adcf-45f2-a0ea-41d66ab5469e",
+            "slug": "abe-kaisei",
+            "name": "阿部快征",
+            "kana": "あべかいせい",
+            "profile": null,
+            "image_url": null,
+            "sns": null,
+            "gender": null,
+            "created_at": "2026-10-17T08:00:21.084443+00:00",
+            "updated_at": "2026-10-17T08:00:21.084443+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1996-05-22",
+            "height_cm": 173,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "阿部快征",
+            "sourceActorUrl": null,
+            "role_name": "ゲスト",
+            "cast_group": "回替わりゲスト"
+          },
+          "sourceCreditKey": "d27863fcbe2336f4b6be",
+          "sourceOrder": 13,
+          "billingOrder": 13,
+          "expectedNote": "ゲスト出演：2月14日18:00、2月20日12:00公演。",
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "4c706c63-3b21-4f32-8676-c4b7b740a483",
+            "slug": "okutani-chihiro",
+            "name": "奥谷知弘",
+            "kana": "おくたにちひろ",
+            "profile": null,
+            "image_url": null,
+            "sns": null,
+            "gender": null,
+            "created_at": "2026-10-17T08:00:21.084443+00:00",
+            "updated_at": "2026-10-17T08:26:10.466959+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1994-12-26",
+            "height_cm": 175,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "奥谷知弘",
+            "sourceActorUrl": null,
+            "role_name": "ゲスト",
+            "cast_group": "回替わりゲスト"
+          },
+          "sourceCreditKey": "f9a44a1d73474e40070a",
+          "sourceOrder": 14,
+          "billingOrder": 14,
+          "expectedNote": "ゲスト出演：2月27日18:00公演。",
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "3089d89d-d5b6-4b15-ba00-9f89f42f8bdd",
+            "slug": "kajita-hiroki",
+            "name": "梶田 拓希",
+            "kana": "かじた ひろき",
+            "profile": "静岡県出身の俳優。株式会社エーライツ所属。サバイバルオーディション番組『PRODUCE 101 JAPAN SEASON2』への参加を経て俳優活動を本格化。主な出演作として、ミュージカル『新テニスの王子様』（立海・柳蓮二役）、Butlers' 歌劇『悪魔執事と黒い猫』～薔薇の薫りときみと～（フェネス・オズワルド役）、舞台『夢職人と忘れじの黒い妖精』（ユミル役）等の舞台作品がある。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/hiroki_kajita",
+              "official": "https://kajita-hiroki.com/",
+              "instagram": "https://www.instagram.com/hiroki_kajita"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:17:46.505362+00:00",
+            "updated_at": "2026-03-21T15:17:46.505362+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "2002-05-17",
+            "height_cm": 181,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Shizuoka Prefecture. Affiliated with A-Light. After participating in the survival audition program \"PRODUCE 101 JAPAN SEASON2,\" he began acting in earnest. His major appearances include stage works such as the musical \"The New Prince of Tennis\" (as Renji Yanagi of Rikkai), Butlers' Stage Play \"Devil Butler and Black Cat\" (as Fennes Oswald), and the stage play \"Yume Shokunin to Wasureji no Kuroi Yosei\" (as Ymir).",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "梶田拓希",
+            "sourceActorUrl": null,
+            "role_name": "ゲスト",
+            "cast_group": "回替わりゲスト"
+          },
+          "sourceCreditKey": "c6d8df0ea1a956895567",
+          "sourceOrder": 15,
+          "billingOrder": 15,
+          "expectedNote": "ゲスト出演：2月27日13:00、2月28日12:00公演。",
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "4a732437-9080-4aea-8ea2-4c1a40f8f71d",
+            "slug": "kido-yuya",
+            "name": "木戸 邑弥",
+            "kana": "きど ゆうや",
+            "profile": "奈良県出身の俳優。株式会社キューブ所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/yuya_kido_1109",
+              "instagram": "https://www.instagram.com/kido_yuya_official/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:01:26.311999+00:00",
+            "updated_at": "2026-03-21T15:01:26.311999+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1992-11-09",
+            "height_cm": 174,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "木戸邑弥",
+            "sourceActorUrl": null,
+            "role_name": "ゲスト",
+            "cast_group": "回替わりゲスト"
+          },
+          "sourceCreditKey": "45f747e3eccafdaefc62",
+          "sourceOrder": 16,
+          "billingOrder": 16,
+          "expectedNote": "ゲスト出演：2月18日13:00、2月21日12:00公演。",
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "189ea368-c895-4564-b87d-f6bb287972dc",
+            "slug": "kimisawa-yuki",
+            "name": "君沢 ユウキ",
+            "kana": "きみさわ ゆうき",
+            "profile": "京都府出身の俳優。株式会社オムニア所属。ミュージカル『テニスの王子様』2ndシーズン（渡邊オサム役）やライブ・スペクタクル『NARUTO-ナルト-』（はたけカカシ役）、舞台『文豪ストレイドッグス』（フランシス・F役）等の舞台作品に出演。また、特撮ドラマ『仮面ライダーW』（園咲霧彦役）などの映像作品にも出演している。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/yukikimisawa",
+              "official": "https://kimisawayuki.com/",
+              "instagram": "https://www.instagram.com/yukikimisawa"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:06:19.306372+00:00",
+            "updated_at": "2026-03-21T15:06:19.306372+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1985-01-31",
+            "height_cm": 181,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Kyoto Prefecture. Affiliated with OMNIA Co., Ltd. He has appeared in stage works such as the musical \"The Prince of Tennis\" 2nd season (as Osamu Watanabe), the Live Spectacle \"NARUTO\" (as Kakashi Hatake), and the stage play \"Bungo Stray Dogs\" (as Francis F). He has also appeared in television works such as the special effects drama \"Kamen Rider W\" (as Kirihiko Sonozaki).",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "君沢ユウキ",
+            "sourceActorUrl": null,
+            "role_name": "ゲスト",
+            "cast_group": "回替わりゲスト"
+          },
+          "sourceCreditKey": "ac8bbf101f6d1eb53bee",
+          "sourceOrder": 17,
+          "billingOrder": 17,
+          "expectedNote": "ゲスト出演：2月12日18:00、2月16日13:00公演。",
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "d9b2e659-3fc1-49be-a56f-80989b0908e8",
+            "slug": "suzuki-shogo",
+            "name": "鈴木 勝吾",
+            "kana": "すずき しょうご",
+            "profile": "1989年2月4日生まれ、神奈川県出身。『侍戦隊シンケンジャー』でデビュー。ミュージカル『薄桜鬼』風間千景役や『憂国のモリアーティ』ウィリアム役など、圧倒的な歌唱力と存在感を誇る。",
+            "image_url": "/actors/suzuki-shogo.jpg",
+            "sns": {
+              "x": "https://twitter.com/Shogo_Suzuki_",
+              "official": "https://smiling-days.com/"
+            },
+            "gender": "male",
+            "created_at": "2025-12-13T04:41:02.052969+00:00",
+            "updated_at": "2025-12-13T04:41:02.052969+00:00",
+            "tags": [
+              "歌唱力",
+              "熱演"
+            ],
+            "featured_play_slugs": [
+              "hakuoki-musical-saito",
+              "moriarty-musical"
+            ],
+            "birthday": "1989-02-04",
+            "height_cm": null,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "鈴木勝吾",
+            "sourceActorUrl": null,
+            "role_name": "ゲスト",
+            "cast_group": "回替わりゲスト"
+          },
+          "sourceCreditKey": "56f80a35b478f44ff580",
+          "sourceOrder": 18,
+          "billingOrder": 18,
+          "expectedNote": "ゲスト出演：2月17日13:00、2月19日18:00公演。",
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "760e5b29-ff23-43e6-970c-76586a32c646",
+            "slug": "hayashida-kohei",
+            "name": "林田航平",
+            "kana": "はやしだ こうへい",
+            "profile": "東京都出身の俳優。J.CLIP所属。新国立劇場演劇研修所第5期生。舞台『煉獄に笑う』の百地鈴太郎役のほか、『ジョーカー・ゲームⅢ』やドラマ『SUPER RICH』などに出演している。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-21T02:25:24.601911+00:00",
+            "updated_at": "2026-10-21T02:25:24.601911+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1988-07-17",
+            "height_cm": 180,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": "Kohei Hayashida",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "林田航平",
+            "sourceActorUrl": null,
+            "role_name": "ゲスト",
+            "cast_group": "回替わりゲスト"
+          },
+          "sourceCreditKey": "0ea711937d5e6a262dd2",
+          "sourceOrder": 19,
+          "billingOrder": 19,
+          "expectedNote": "ゲスト出演：2月13日18:00、2月16日18:00公演。",
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "bb717597-891c-42dd-94a3-4b264f9a3ab6",
+            "slug": "matsumoto-gaku",
+            "name": "松本岳",
+            "kana": "まつもと がく",
+            "profile": "富山県出身の俳優。イザワオフィス所属。2013年にドラマ『名もなき毒』で俳優デビュー。『手裏剣戦隊ニンニンジャー』のアオニンジャー役や、舞台『ブルーロック』4th STAGEの閃堂秋人役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-22T07:08:32.721059+00:00",
+            "updated_at": "2026-10-22T07:08:32.721059+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1993-04-08",
+            "height_cm": 174,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": "Gaku Matsumoto",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "松本岳",
+            "sourceActorUrl": null,
+            "role_name": "ゲスト",
+            "cast_group": "回替わりゲスト"
+          },
+          "sourceCreditKey": "af8b369e563782522756",
+          "sourceOrder": 20,
+          "billingOrder": 20,
+          "expectedNote": "ゲスト出演：2月14日13:00、2月20日17:00公演。",
+          "existingCast": null
+        }
+      ],
+      "legacyCandidates": [],
+      "guestSchedules": [
+        {
+          "sourceActorName": "蒼木 陣",
+          "sourceActorUrl": null,
+          "role_name": "ゲスト",
+          "cast_group": "回替わりゲスト",
+          "rawLine": "蒼木 陣…2/13(土)13:00、2/21(日)17:00",
+          "dates": [
+            {
+              "month": 2,
+              "day": 13,
+              "time": "13:00",
+              "venue": "天王洲 銀河劇場"
+            },
+            {
+              "month": 2,
+              "day": 21,
+              "time": "17:00",
+              "venue": "天王洲 銀河劇場"
+            }
+          ],
+          "note": "ゲスト出演：2月13日13:00、2月21日17:00公演。"
+        },
+        {
+          "sourceActorName": "阿部快征",
+          "sourceActorUrl": null,
+          "role_name": "ゲスト",
+          "cast_group": "回替わりゲスト",
+          "rawLine": "阿部快征…2/14(日)18:00、2/20(土)12:00",
+          "dates": [
+            {
+              "month": 2,
+              "day": 14,
+              "time": "18:00",
+              "venue": "天王洲 銀河劇場"
+            },
+            {
+              "month": 2,
+              "day": 20,
+              "time": "12:00",
+              "venue": "天王洲 銀河劇場"
+            }
+          ],
+          "note": "ゲスト出演：2月14日18:00、2月20日12:00公演。"
+        },
+        {
+          "sourceActorName": "奥谷知弘",
+          "sourceActorUrl": null,
+          "role_name": "ゲスト",
+          "cast_group": "回替わりゲスト",
+          "rawLine": "奥谷知弘…2/27(土)18:00",
+          "dates": [
+            {
+              "month": 2,
+              "day": 27,
+              "time": "18:00",
+              "venue": "京都劇場"
+            }
+          ],
+          "note": "ゲスト出演：2月27日18:00公演。"
+        },
+        {
+          "sourceActorName": "梶田拓希",
+          "sourceActorUrl": null,
+          "role_name": "ゲスト",
+          "cast_group": "回替わりゲスト",
+          "rawLine": "梶田拓希…2/27(土)13:00、2/28(日)12:00",
+          "dates": [
+            {
+              "month": 2,
+              "day": 27,
+              "time": "13:00",
+              "venue": "京都劇場"
+            },
+            {
+              "month": 2,
+              "day": 28,
+              "time": "12:00",
+              "venue": "京都劇場"
+            }
+          ],
+          "note": "ゲスト出演：2月27日13:00、2月28日12:00公演。"
+        },
+        {
+          "sourceActorName": "木戸邑弥",
+          "sourceActorUrl": null,
+          "role_name": "ゲスト",
+          "cast_group": "回替わりゲスト",
+          "rawLine": "木戸邑弥…2/18(木)13:00、2/21(日)12:00",
+          "dates": [
+            {
+              "month": 2,
+              "day": 18,
+              "time": "13:00",
+              "venue": "天王洲 銀河劇場"
+            },
+            {
+              "month": 2,
+              "day": 21,
+              "time": "12:00",
+              "venue": "天王洲 銀河劇場"
+            }
+          ],
+          "note": "ゲスト出演：2月18日13:00、2月21日12:00公演。"
+        },
+        {
+          "sourceActorName": "君沢ユウキ",
+          "sourceActorUrl": null,
+          "role_name": "ゲスト",
+          "cast_group": "回替わりゲスト",
+          "rawLine": "君沢ユウキ…2/12(金)18:00、2/16(火)13:00",
+          "dates": [
+            {
+              "month": 2,
+              "day": 12,
+              "time": "18:00",
+              "venue": "天王洲 銀河劇場"
+            },
+            {
+              "month": 2,
+              "day": 16,
+              "time": "13:00",
+              "venue": "天王洲 銀河劇場"
+            }
+          ],
+          "note": "ゲスト出演：2月12日18:00、2月16日13:00公演。"
+        },
+        {
+          "sourceActorName": "鈴木勝吾",
+          "sourceActorUrl": null,
+          "role_name": "ゲスト",
+          "cast_group": "回替わりゲスト",
+          "rawLine": "鈴木勝吾…2/17(水)13:00、2/19(金)18:00",
+          "dates": [
+            {
+              "month": 2,
+              "day": 17,
+              "time": "13:00",
+              "venue": "天王洲 銀河劇場"
+            },
+            {
+              "month": 2,
+              "day": 19,
+              "time": "18:00",
+              "venue": "天王洲 銀河劇場"
+            }
+          ],
+          "note": "ゲスト出演：2月17日13:00、2月19日18:00公演。"
+        },
+        {
+          "sourceActorName": "林田航平",
+          "sourceActorUrl": null,
+          "role_name": "ゲスト",
+          "cast_group": "回替わりゲスト",
+          "rawLine": "林田航平…2/13(土)18:00、2/16(火)18:00",
+          "dates": [
+            {
+              "month": 2,
+              "day": 13,
+              "time": "18:00",
+              "venue": "天王洲 銀河劇場"
+            },
+            {
+              "month": 2,
+              "day": 16,
+              "time": "18:00",
+              "venue": "天王洲 銀河劇場"
+            }
+          ],
+          "note": "ゲスト出演：2月13日18:00、2月16日18:00公演。"
+        },
+        {
+          "sourceActorName": "松本 岳",
+          "sourceActorUrl": null,
+          "role_name": "ゲスト",
+          "cast_group": "回替わりゲスト",
+          "rawLine": "松本 岳…2/14(日)13:00、2/20(土)17:00",
+          "dates": [
+            {
+              "month": 2,
+              "day": 14,
+              "time": "13:00",
+              "venue": "天王洲 銀河劇場"
+            },
+            {
+              "month": 2,
+              "day": 20,
+              "time": "17:00",
+              "venue": "天王洲 銀河劇場"
+            }
+          ],
+          "note": "ゲスト出演：2月14日13:00、2月20日17:00公演。"
+        }
+      ],
+      "performanceStatus": "announced_not_yet_performed",
+      "creditOnly": [],
+      "exceptions": [
+        "主要11人とゲスト9人の計20配役は発表済み予定。上演前であることを日英概要・期間と候補根拠へ明記し、実施済みと断定しない。",
+        "ゲスト9人は東京14・京都3の計17公演。2月27日18:00奥谷、27日13:00と28日12:00梶田は京都。ゲストの旧作の役名を転記しない。",
+        "主公式は蒼木陣。奥谷本人側告知の青木陣は誤字として採用せず、既存蒼木のIDを再利用。制作元の旧ゲストComing Soonより最新公演公式の日時を優先。",
+        "公式のほかは未発表の省略記号。アンサンブル名・追加兼役・スタッフを旧作から推測流用しない。原作はTVアニメと柳広司ダブル・ジョーカーの2本で、Ⅱのラスト・ワルツとは区別。",
+        "9月29日の秋祭り・トークとアニメ上映会、Blu-ray発売・先行抽選は本公演として追加しない。現行配信・配信予定は未発表なのでvod空欄。",
+        "存在しないキラハイjg2027 URLを出典へ偽装しない。公式URLとsource=officialで固定ID候補を保存し、既存の汎用採用RPCを使う。アプリ・スキーマ・RLS変更なし。",
+        "今回新規は筒井1人のみで既存19人物・過去3作品52配役と全既存行を保全。9人の日時noteは現英訳対応の定型。固有役名等の辞書未訳は後続点検。"
+      ]
+    }
+  ],
+  "keptPlays": [
+    {
+      "id": "3795f414-fc08-406d-8fd5-9ad6a6376c4d",
+      "slug": "jg2018",
+      "title": "舞台『ジョーカー・ゲームⅡ』",
+      "franchise_id": "82f11b02-0657-4fb3-89fe-2eacef7c61f1",
+      "summary": "TVアニメ『ジョーカー・ゲーム』と柳広司の小説『ラスト・ワルツ』を原作とする舞台第2弾。結城中佐の「D機関」と対立する諜報組織「風機関」が設立され、互いの存続を懸けた情報戦が始まる。「ダブル・ジョーカー」と「ワルキューレ」を描く。脚本・演出は西田大輔。",
+      "period": "2018年6月14日〜20日（東京）、6月23日〜26日（大阪）",
+      "venue": "シアター1010／大阪メルパルクホール",
+      "vod": {},
+      "genre": null,
+      "created_at": "2026-10-25T14:59:30.964577+00:00",
+      "updated_at": "2026-10-25T14:59:30.964577+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "TVアニメ『ジョーカー・ゲーム』",
+            "柳広司『ラスト・ワルツ』（角川文庫刊）"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "脚本・演出",
+          "names": [
+            "西田大輔"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "主催",
+          "names": [
+            "JOKER GAME THE STAGE PROJECT（マーベラス／KADOKAWA／BS-TBS／Production I.G）"
+          ],
+          "is_core": false,
+          "sort_order": 3
+        },
+        {
+          "role": "舞台監督",
+          "names": [
+            "野口岳大"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "美術",
+          "names": [
+            "秋山光洋"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "照明",
+          "names": [
+            "鶴田美鈴"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        },
+        {
+          "role": "音響",
+          "names": [
+            "戸田雄樹"
+          ],
+          "is_core": false,
+          "sort_order": 7
+        },
+        {
+          "role": "映像",
+          "names": [
+            "横山翼"
+          ],
+          "is_core": false,
+          "sort_order": 8
+        },
+        {
+          "role": "衣裳",
+          "names": [
+            "摩耶"
+          ],
+          "is_core": false,
+          "sort_order": 9
+        },
+        {
+          "role": "ヘアメイク",
+          "names": [
+            "中原雅子"
+          ],
+          "is_core": false,
+          "sort_order": 10
+        },
+        {
+          "role": "宣伝・グッズデザイナー",
+          "names": [
+            "大沢寿恵"
+          ],
+          "is_core": false,
+          "sort_order": 11
+        },
+        {
+          "role": "宣伝・グッズカメラマン",
+          "names": [
+            "トヨダリョウ"
+          ],
+          "is_core": false,
+          "sort_order": 12
+        },
+        {
+          "role": "アンサンブル",
+          "names": [
+            "伊藤あいみ",
+            "今井直人",
+            "書川勇輝",
+            "杉山健一",
+            "仲本詩菜",
+            "平野雅史",
+            "光永蓮",
+            "米村秀人"
+          ],
+          "is_core": false,
+          "sort_order": 13
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "The second Joker Game stage production, based on the TV anime and Koji Yanagi’s novel Last Waltz. A rival intelligence organization, Wind Agency, is formed to challenge Lieutenant Colonel Yuki’s D Agency in a battle for survival. The production adapts Double Joker and Walkure. Written and directed by Daisuke Nishida.",
+      "title_en": "Joker Game II (Stage, 2018)"
+    },
+    {
+      "id": "45d26700-c48c-4a9c-9a24-dad80678cf20",
+      "slug": "jg2017",
+      "title": "舞台『ジョーカー・ゲーム』",
+      "franchise_id": "82f11b02-0657-4fb3-89fe-2eacef7c61f1",
+      "summary": "柳広司の小説を原案とするTVアニメ『ジョーカー・ゲーム』の舞台化。昭和12年秋、結城中佐が秘密裏に設立したスパイ養成部門「D機関」。厳しい選抜を経た若者たちが諜報活動に就く一方、陸軍から佐久間中尉が査察のため送り込まれる。脚本・演出は西田大輔。",
+      "period": "2017年5月4日〜7日",
+      "venue": "Zeppブルーシアター六本木",
+      "vod": {},
+      "genre": null,
+      "created_at": "2026-10-25T13:00:44.516863+00:00",
+      "updated_at": "2026-10-25T13:00:44.516863+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "TVアニメ『ジョーカー・ゲーム』"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "原案",
+          "names": [
+            "小説『ジョーカー・ゲーム』（柳広司著／KADOKAWA）"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "脚本・演出",
+          "names": [
+            "西田大輔"
+          ],
+          "is_core": true,
+          "sort_order": 3
+        },
+        {
+          "role": "主催",
+          "names": [
+            "JOKER GAME THE STAGE PROJECT（マーベラス／KADOKAWA／BS-TBS／Production I.G）"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "アンサンブル",
+          "names": [
+            "下道純一",
+            "川口龍",
+            "𠮷田雄樹",
+            "斎藤直紀",
+            "長谷川裕",
+            "辻大樹",
+            "時松研斗",
+            "米村秀人",
+            "平野雅史"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "A stage adaptation of the TV anime Joker Game, based on Koji Yanagi’s novels. In autumn 1937, Lieutenant Colonel Yuki secretly establishes D Agency to train spies. As its carefully selected young agents set out on intelligence missions, Lieutenant Sakuma is sent by the army to inspect the unit. Written and directed by Daisuke Nishida.",
+      "title_en": "Joker Game (Stage, 2017)"
+    },
+    {
+      "id": "c0906d24-5c0a-482e-8b20-405811cec2e3",
+      "slug": "jg2025",
+      "title": "舞台『ジョーカー・ゲームⅢ』",
+      "franchise_id": "82f11b02-0657-4fb3-89fe-2eacef7c61f1",
+      "summary": "TVアニメ『ジョーカー・ゲーム』を原作とする舞台第3弾。D機関員に新たなキャストを迎え、シリーズの原点となる表題作と舞台オリジナルのエピソードを描く。1940年のアメリカ・日本・ベルリンを舞台に、スパイたちの任務が交錯する。脚本・演出は西田大輔。",
+      "period": "2025年11月21日〜30日",
+      "venue": "天王洲 銀河劇場",
+      "vod": {},
+      "genre": null,
+      "created_at": "2026-10-25T15:33:13.573214+00:00",
+      "updated_at": "2026-10-25T15:33:13.573214+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "TVアニメ『ジョーカー・ゲーム』"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "原案",
+          "names": [
+            "柳広司「ジョーカー・ゲーム」シリーズ（角川文庫刊）"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "脚本・演出",
+          "names": [
+            "西田大輔"
+          ],
+          "is_core": true,
+          "sort_order": 3
+        },
+        {
+          "role": "舞台監督",
+          "names": [
+            "辻 泰平"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "美術",
+          "names": [
+            "秋山光洋"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "照明",
+          "names": [
+            "鶴田美鈴"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        },
+        {
+          "role": "音響",
+          "names": [
+            "高橋秀雄",
+            "石井雄太"
+          ],
+          "is_core": false,
+          "sort_order": 7
+        },
+        {
+          "role": "映像",
+          "names": [
+            "O-beron inc."
+          ],
+          "is_core": false,
+          "sort_order": 8
+        },
+        {
+          "role": "衣裳",
+          "names": [
+            "摩耶"
+          ],
+          "is_core": false,
+          "sort_order": 9
+        },
+        {
+          "role": "ヘアメイク",
+          "names": [
+            "中原雅子"
+          ],
+          "is_core": false,
+          "sort_order": 10
+        },
+        {
+          "role": "特殊小道具",
+          "names": [
+            "林屋陽二"
+          ],
+          "is_core": false,
+          "sort_order": 11
+        },
+        {
+          "role": "設定協力",
+          "names": [
+            "白土晴一"
+          ],
+          "is_core": false,
+          "sort_order": 12
+        },
+        {
+          "role": "演出助手",
+          "names": [
+            "佐久間祐人"
+          ],
+          "is_core": false,
+          "sort_order": 13
+        },
+        {
+          "role": "演出補佐",
+          "names": [
+            "梅澤良太"
+          ],
+          "is_core": false,
+          "sort_order": 14
+        },
+        {
+          "role": "制作進行",
+          "names": [
+            "Office ENDLESS"
+          ],
+          "is_core": false,
+          "sort_order": 15
+        },
+        {
+          "role": "宣伝・グッズデザイナー",
+          "names": [
+            "大沢寿恵"
+          ],
+          "is_core": false,
+          "sort_order": 16
+        },
+        {
+          "role": "宣伝・グッズカメラマン",
+          "names": [
+            "加藤 翔"
+          ],
+          "is_core": false,
+          "sort_order": 17
+        },
+        {
+          "role": "主催",
+          "names": [
+            "JOKER GAME THE STAGE PROJECT"
+          ],
+          "is_core": false,
+          "sort_order": 18
+        },
+        {
+          "role": "アンサンブル",
+          "names": [
+            "赤石ノブ（料亭“花菱”の旦那 ほか）",
+            "後藤裕磨（旧友 ほか）",
+            "関修人（國崎 ほか）",
+            "石井凌（白 来西 ほか）",
+            "木ノ花大空矢（カール・シュナイダー ほか）",
+            "成尾征吾（旧友 ほか）",
+            "土屋暖（地下反戦グループの一員 ほか）"
+          ],
+          "is_core": false,
+          "sort_order": 19
+        },
+        {
+          "role": "アンダースタディ",
+          "names": [
+            "大津夕陽"
+          ],
+          "is_core": false,
+          "sort_order": 20
+        },
+        {
+          "role": "出演変更",
+          "names": [
+            "波多野役：11月28日18:00、29日12:00・17:00は大津夕陽が代役出演。土屋直武は11月30日12:00公演より復帰。"
+          ],
+          "is_core": false,
+          "sort_order": 21
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "The third Joker Game stage production, based on the TV anime. A new D Agency cast performs the original Joker Game story alongside an episode created for the stage. Set in 1940, the new story follows spy missions across America, Japan and Berlin. Written and directed by Daisuke Nishida.",
+      "title_en": "Joker Game III (Stage, 2025)"
+    }
+  ],
+  "evidence": {
+    "links": [
+      {
+        "url": "https://www.marv.jp/special/jg-stage/",
+        "checkedAt": "2026-10-25T15:52:07.380Z",
+        "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+      },
+      {
+        "url": "https://www.marv.jp/special/jg-stage/cast.html",
+        "checkedAt": "2026-10-25T15:52:07.383Z",
+        "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+      },
+      {
+        "url": "https://www.marv.jp/special/jg-stage/ticket.html",
+        "checkedAt": "2026-10-25T15:52:07.403Z",
+        "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+      },
+      {
+        "url": "https://www.marv.jp/special/jg-stage/intro.html",
+        "checkedAt": "2026-10-25T15:52:07.392Z",
+        "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+      },
+      {
+        "url": "https://www.marv.jp/titles/st/11111/",
+        "checkedAt": "2026-10-25T15:52:07.487Z",
+        "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+      },
+      {
+        "url": "https://okutanichihiro.com/news/dS2rfXrzhtX5E98QmYCPQS",
+        "checkedAt": "2026-10-25T15:52:09.474Z",
+        "note": "公式の公開発表。採用範囲と未発表事項はexceptionsを参照。2027年公演は上演予定で、実施済みの確定履歴とは扱わない。"
+      }
+    ],
+    "sources": [
+      {
+        "label": "official",
+        "url": "https://www.marv.jp/special/jg-stage/",
+        "finalUrl": "https://www.marv.jp/special/jg-stage/",
+        "status": 200,
+        "checkedAt": "2026-10-25T15:52:07.380Z",
+        "sha256": "8c39356ee1ee678d7014447dc6b5867656e5e49db26b49af22a0c68cd9a4b639"
+      },
+      {
+        "label": "cast",
+        "url": "https://www.marv.jp/special/jg-stage/cast.html",
+        "finalUrl": "https://www.marv.jp/special/jg-stage/cast.html",
+        "status": 200,
+        "checkedAt": "2026-10-25T15:52:07.383Z",
+        "sha256": "f604f7ca3c54bd2e1b7acd76e18153da088cd018ff20ae5019fb8c3e06bfb51d"
+      },
+      {
+        "label": "profiles",
+        "url": "https://www.marv.jp/special/jg-stage/profile.html",
+        "finalUrl": "https://www.marv.jp/special/jg-stage/profile.html",
+        "status": 404,
+        "checkedAt": "2026-10-25T15:52:07.385Z",
+        "sha256": "80c3fe2ae1062abf56456f52518bd670f9ec3917b7f85e152b347ac6b6faf880"
+      },
+      {
+        "label": "intro",
+        "url": "https://www.marv.jp/special/jg-stage/intro.html",
+        "finalUrl": "https://www.marv.jp/special/jg-stage/intro.html",
+        "status": 200,
+        "checkedAt": "2026-10-25T15:52:07.392Z",
+        "sha256": "d76cff6fb1c4031c069b82173018402168abbc94355b31aaa86a965d0497e652"
+      },
+      {
+        "label": "ticket",
+        "url": "https://www.marv.jp/special/jg-stage/ticket.html",
+        "finalUrl": "https://www.marv.jp/special/jg-stage/ticket.html",
+        "status": 200,
+        "checkedAt": "2026-10-25T15:52:07.403Z",
+        "sha256": "a560e5952625e37f9b2507afb9afc92876f6bb7314385f2e8091678b4e8c53b6"
+      },
+      {
+        "label": "kiraProbe",
+        "url": "https://kira-hai.net/jg2027",
+        "finalUrl": "https://kira-hai.net/jg2027",
+        "status": 404,
+        "checkedAt": "2026-10-25T15:52:07.451Z",
+        "sha256": "260b2690f4608b95020acbc0eedcbcfe0b6806629020f65f3a035a207593dc9b"
+      },
+      {
+        "label": "changelog",
+        "url": "https://supabase.com/changelog.md",
+        "finalUrl": "https://supabase.com/changelog.md",
+        "status": 200,
+        "checkedAt": "2026-10-25T15:52:07.470Z",
+        "sha256": "45528009025b8ad8487ccb73f7c769b66d4b0e7aa4560157047899dcb5b5a006"
+      },
+      {
+        "label": "marv",
+        "url": "https://www.marv.jp/titles/st/11111/",
+        "finalUrl": "https://www.marv.jp/titles/st/11111/",
+        "status": 200,
+        "checkedAt": "2026-10-25T15:52:07.487Z",
+        "sha256": "d57d0eb446ec58d361e56ff9cec41876a99aae53521d7a20fb5f46ef6a7e64b4"
+      },
+      {
+        "label": "guestOfficial",
+        "url": "https://okutanichihiro.com/news/dS2rfXrzhtX5E98QmYCPQS",
+        "finalUrl": "https://okutanichihiro.com/news/dS2rfXrzhtX5E98QmYCPQS",
+        "status": 200,
+        "checkedAt": "2026-10-25T15:52:09.474Z",
+        "sha256": "82c002cab22831530efab368835483d204b4d85e5adbc51318aa5ca7303a1cf3"
+      },
+      {
+        "label": "castTsutsui",
+        "url": "https://www.marv.jp/special/jg-stage/cast08.html",
+        "finalUrl": "https://www.marv.jp/special/jg-stage/cast08.html",
+        "status": 200,
+        "checkedAt": "2026-10-25T15:54:23.167Z",
+        "sha256": "e2a96c6f6d1308b558758418f71b7194b8aaff749430b13353a1c00b1f6f94c7"
+      },
+      {
+        "label": "tsutsui",
+        "url": "https://napposunited.com/artist/shunsaku-tsutsui",
+        "finalUrl": "https://napposunited.com/artist/shunsaku-tsutsui",
+        "status": 200,
+        "checkedAt": "2026-10-25T15:54:23.294Z",
+        "sha256": "c56db825173066959a5389e118c7f39f24d207de717ef720c1ce2209086f27cd"
+      },
+      {
+        "label": "caramel",
+        "url": "https://caramelbox.com/actors/%E7%AD%92%E4%BA%95-%E4%BF%8A%E4%BD%9C/",
+        "finalUrl": "https://caramelbox.com/actors/%E7%AD%92%E4%BA%95-%E4%BF%8A%E4%BD%9C/",
+        "status": 200,
+        "checkedAt": "2026-10-25T15:54:23.814Z",
+        "sha256": "5b0c3e7b5678567a27e1dc6386f76e4335ed65daa2affeb72d125fa4676f00ff"
+      }
+    ],
+    "notes": [
+      "Supabaseスキルと現changelog確認済み。既存DML・候補採用RPCだけ使用。",
+      "公演公式に未発表の詳細は埋めず、上演予定と出典取得日時を記録。"
+    ],
+    "unresolved": [
+      "2027年Ⅳは未上演。アンサンブル・追加兼役・技術スタッフ等の続報と実施結果は発表／上演後に差分確認。自動監視は設定しない。",
+      "2018年の持ち回り兼役、初演の前田DOB・大海の生年・オラキオの血液型は引き続き保留。",
+      "特殊代役note・未登録の固有役名等の英訳、速川の現所属・身長、現行配信状況は後続照合。",
+      "2018年新規の岩澤晶範の血液型、既存人物の全属性・プロフィールの総合監査は後続。"
+    ]
+  },
+  "requestKey": "dd0cc252db5e43768a3010639819003e542bb9ba80aa359bec6c8a1102870379"
+}

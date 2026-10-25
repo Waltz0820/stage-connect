@@ -1559,29 +1559,31 @@
       "slug": "joker-game",
       "name": "舞台『ジョーカー・ゲーム』",
       "registeredDay": "2026-02-09",
-      "plays": 3,
+      "plays": 4,
       "protected": false,
-      "castRows": 52,
-      "castCoverageNote": "2025年Ⅲを1作品23配役で追加。新規3人物・既存20人物を使用。主要13人の兼役4つ、実代演1人3公演、回替わりゲスト9人14公演と出演条件を保存。公式アンサンブル7人は役名付き作品クレジットへ。日英54ページ、登録済み3作品の年表・抜粋と既存29配役保全、8テーブル既存全行保全・再実行0変更を確認。シリーズ3作品52配役34人物。2027年Ⅳは後続登録対象。",
+      "castRows": 72,
+      "castCoverageNote": "2027年Ⅳを上演予定1作品20配役（主要11・回替わりゲスト9）で追加。新規は筒井俊作1人、既存19人物を再利用。ゲスト日時17公演（東京14・京都3）を保存し、キラハイ未掲載なので公式URL・source=officialで候補保存と既存汎用RPC採用。4作品72配役39人物を日英88ページで点検し、全役名・掲載順・注記・クレジット・年表2027/02→2025/11→2018/06→2017/05・抜粋・相互リンクを確認。既存52配役と全8テーブル既存行を保全、再実行0変更。発表済み4作品の収録は一区切り。Ⅳの未発表追加情報・実施後差分、2018年持ち回り兼役・人物総合監査・詳細英訳等は後続。",
       "seriesAudit": {
-        "checkedAt": "2026-10-25T15:37:02.718Z",
-        "scope": "登録済み2017・2018・2025の3作品の年表順・日英抜粋と旧配役の保全、2025年23配役の役名・掲載順・条件11件、21クレジット・日程・日英概要、23人物の逆リンクと新規3人物の日英紹介・DOBを確認。特殊代役note等の辞書未訳と2027年Ⅳは保留。",
-        "registeredWorks": 3,
-        "castRows": 52,
-        "uniqueActors": 34,
+        "checkedAt": "2026-10-25T16:02:23.470Z",
+        "scope": "公式発表済み4作品・72配役・39人物を日英88ページで点検。配役順・役名・全注記・全クレジット・日程会場・概要・年表と抜粋・相互リンクを確認。Ⅳは上演予定20配役であり、未発表情報や実施結果の最終監査・詳細英訳は未完了。",
+        "registeredWorks": 4,
+        "castRows": 72,
+        "uniqueActors": 39,
         "completedWorks": 3,
+        "announcedWorks": 1,
         "completedCastRows": 52,
-        "newActors": 3,
-        "existingActorsReused": 20,
-        "currentWorkCreditCategories": 21,
-        "currentWorkEnsembleNames": 7,
+        "announcedCastRows": 20,
+        "newActors": 1,
+        "existingActorsReused": 19,
+        "currentWorkCreditCategories": 3,
+        "currentWorkEnsembleNames": 0,
         "currentWorkGuestActors": 9,
-        "currentWorkGuestPerformances": 14,
-        "currentWorkSubstitutePerformances": 3,
-        "publicPages": 54,
+        "currentWorkGuestPerformances": 17,
+        "publicPages": 88,
+        "announcedWorksCoverageVerified": true,
         "registeredPastWorksVerificationPassed": true,
         "seriesVerificationPassed": false,
-        "source": "https://kira-hai.net/jg2025",
+        "source": "https://www.marv.jp/special/jg-stage/cast.html",
         "sourceWorks": [
           {
             "title": "舞台『ジョーカー・ゲームⅢ』",
@@ -1601,28 +1603,23 @@
             "title": "舞台『ジョーカー・ゲームⅣ』",
             "url": "https://www.marv.jp/special/jg-stage/",
             "year": 2027,
-            "status": "announced",
+            "status": "registered_announced_not_yet_performed",
             "source": "official",
-            "reason": "現公式トップが2027年2月の東京・京都公演を発表。今後の登録対象として保存し、2018年の配役には混入しない。"
+            "reason": "現公式トップが2027年2月の東京・京都公演を発表。今後の登録対象として保存し、2018年の配役には混入しない。",
+            "registeredPlayId": "0db76952-7bd3-44bf-9792-4855d659d6df",
+            "registeredSlug": "jg2027"
           }
         ],
-        "remainingSeriesWorkItems": [
-          {
-            "title": "舞台『ジョーカー・ゲームⅣ』",
-            "url": "https://www.marv.jp/special/jg-stage/",
-            "year": 2027,
-            "status": "announced",
-            "source": "official",
-            "reason": "現公式トップが2027年2月の東京・京都公演を発表。今後の登録対象として保存し、2018年の配役には混入しない。"
-          }
-        ],
+        "remainingSeriesWorkItems": [],
         "pendingChecks": [
-          "2027年Ⅳの公式発表済み公演を後続登録。2017・2018・2025の登録済み3公演はシリーズ年表と日英表示を点検する。",
+          "2027年Ⅳは未上演。アンサンブル・追加兼役・技術スタッフ等の続報と実施結果は発表／上演後に差分確認。自動監視は設定しない。",
           "2018年の持ち回り兼役、初演の前田DOB・大海の生年・オラキオの血液型は引き続き保留。",
-          "特殊代役note・未登録の固有役名等の英訳、速川の現所属・身長、現行配信状況は後続照合。"
+          "特殊代役note・未登録の固有役名等の英訳、速川の現所属・身長、現行配信状況は後続照合。",
+          "2018年新規の岩澤晶範の血液型、既存人物の全属性・プロフィールの総合監査は後続。"
         ],
-        "research": "next-app/research/jokergame2025-20261026.json",
-        "report": "docs/jokergame2025-2026-10-26.md"
+        "research": "next-app/research/jokergame2027-20261026.json",
+        "report": "docs/jokergame2027-2026-10-26.md",
+        "audit": "next-app/research/jokergame-series-audit-20261026.json"
       }
     },
     {
