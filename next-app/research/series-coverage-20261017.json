@@ -328,22 +328,30 @@
       "registeredDay": "2026-02-09",
       "plays": 2,
       "protected": false,
-      "castRows": 14,
-      "castCoverageNote": "2012年LIVE ACTを新規登録。主要12配役、新規8人物と既存4人物を照合。岡田和也の白鳥零二役と公式アンサンブル14名はクレジットに保存。中原裕也は現名の内田裕也へ集約し旧名義を配役noteへ。日英30ページ・8テーブル既存全行保全・同SQL再実行0変更。登録済み2作品14配役のうち2012年のみ補完済み。2014年の二本立て公演の補完、2016/2017年の新規登録とシリーズ全体点検は後続。",
+      "castRows": 31,
+      "castCoverageNote": "2014年二本立てを既存1作品として補完。主要19配役、新規12人物と既存7人物を照合し17配役追加。既存2配役のID・採用履歴を保全して公式順へ。覚醒編のみ4名・京都編のみ7名を配役noteへ、アンサンブル9名とダンサー6名をクレジットへ。未解析ダンサー6名は同じ保存HTMLの該当段落から抽出し原文・判断を記録。日英44ページ・8テーブル保全比較・同SQL再実行0変更。登録済み2作品31配役は2012/2014年とも補完済み。2016/2017年の新規登録とシリーズ全体点検は後続。",
       "seriesAudit": {
-        "checkedAt": "2026-10-24T19:57:45.086Z",
-        "scope": "2012年の1作品のみ。シリーズ全体点検は未完了。",
+        "checkedAt": "2026-10-25T01:57:03.195Z",
+        "scope": "2014年の既存1作品を補完。2012/2014年は収録済みで、シリーズ全体点検は未完了。",
         "registeredWorks": 2,
-        "castRows": 14,
-        "uniqueActors": 14,
-        "completedWorks": 1,
-        "completedCastRows": 12,
-        "newActors": 8,
-        "existingActorsReused": 4,
-        "currentWorkCreditCategories": 22,
-        "currentWorkEnsembleNames": 14,
-        "currentWorkCreditedRole": "白鳥零二：岡田和也",
-        "publicPages": 30,
+        "castRows": 31,
+        "uniqueActors": 31,
+        "completedWorks": 2,
+        "completedCastRows": 31,
+        "currentBatchCastRows": 19,
+        "newActors": 12,
+        "newCastRows": 17,
+        "existingActorsReused": 7,
+        "existingCastIdsPreserved": 2,
+        "legacyAcceptedCandidatesPreserved": 2,
+        "currentWorkCreditCategories": 7,
+        "currentWorkEnsembleNames": 9,
+        "currentWorkDancerNames": 6,
+        "conditionalCasts": 11,
+        "awakeningOnly": 4,
+        "kyotoOnly": 7,
+        "sharedCasts": 8,
+        "publicPages": 44,
         "seriesVerificationPassed": false,
         "source": "https://kira-hai.net/aoex",
         "sourceWorks": [
@@ -364,11 +372,17 @@
             "url": "https://kira-hai.net/aoex2017"
           }
         ],
-        "remainingSeriesWorkItems": [
+        "completedWorkItems": [
+          {
+            "title": "LIVE ACT 青の祓魔師 -魔神の落胤-",
+            "url": "https://kira-hai.net/aoex2012"
+          },
           {
             "title": "舞台「青の祓魔師」青の焔 覚醒編 / 京都 不浄王編",
             "url": "https://kira-hai.net/aoex2014"
-          },
+          }
+        ],
+        "remainingSeriesWorkItems": [
           {
             "title": "舞台「青の祓魔師」京都紅蓮篇",
             "url": "https://kira-hai.net/aoex2016"
@@ -379,11 +393,11 @@
           }
         ],
         "pendingChecks": [
-          "2014年の二本立て公演の補完、2016年京都紅蓮篇・2017年島根イルミナティ篇の登録と全作品終了後のシリーズ点検は後続。",
-          "既存人物の属性・英訳の総合監査、渡辺の身長・鉢嶺と内田の現所属、今井の生年、旧混入候補の整理・現行配信の網羅確認・主演指定は後続。"
+          "2016年京都紅蓮篇・2017年島根イルミナティ篇の登録と全作品終了後のシリーズ点検は後続。",
+          "アンサンブル／ダンサー名簿の追加一次照合、既存人物全属性・詳細役名英訳・現行配信・主演指定・旧混入候補の整理、はねゆりの身長と現所属未確認項目は後続。"
         ],
-        "research": "next-app/research/aoex2012-20261025.json",
-        "report": "docs/aoex2012-2026-10-25.md"
+        "research": "next-app/research/aoex2014-20261025.json",
+        "report": "docs/aoex2014-2026-10-25.md"
       }
     },
     {
