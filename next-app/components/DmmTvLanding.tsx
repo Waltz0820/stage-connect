@@ -68,11 +68,11 @@ export default function DmmTvLanding({ locale }: { locale: SiteLocale }) {
     </section>
 
     <section className="dmm-lp__discovery" aria-labelledby="dmm-discovery-title">
-      <Image className="dmm-lp__discovery-image" src="/images/dmm-tv/discovery-smile.webp" alt="" fill sizes="(min-width: 900px) 55vw, 100vw"/>
+      <div className="dmm-lp__discovery-art"><Image className="dmm-lp__discovery-image" src="/images/dmm-tv/discovery-smile.webp" alt="" fill sizes="(min-width: 900px) 55vw, 100vw"/></div>
       <div className="dmm-lp__discovery-copy" data-dmm-reveal="copy">
         <h2 id="dmm-discovery-title">{title(copy.discovery)}</h2><p>{title(copy.discoveryText)}</p>
-        <Link className="dmm-lp__internal" href={prefix + '/actors'}>{copy.discoverLink}<span aria-hidden="true">→</span></Link>
       </div>
+      <Link className="dmm-lp__internal" href={prefix + '/actors'}>{copy.discoverLink}<span aria-hidden="true">→</span></Link>
     </section>
 
     <section className="dmm-lp__series dmm-lp__section" aria-labelledby="dmm-series-title">

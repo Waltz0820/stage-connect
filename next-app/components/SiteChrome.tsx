@@ -38,7 +38,6 @@ const copy = {
     contact: "お問い合わせ",
     privacy: "プライバシーポリシー",
     footerCopy: "2.5次元舞台とキャストをつなぐデジタルアーカイブ。",
-    ctaButton: "DMMプレミアム",
     localeLabel: "言語切替",
   },
   en: {
@@ -69,7 +68,6 @@ const copy = {
     contact: "Contact",
     privacy: "Privacy Policy",
     footerCopy: "A digital archive connecting 2.5D stage productions and cast history.",
-    ctaButton: "DMM Premium",
     localeLabel: "Language switcher",
   },
 } as const;
@@ -243,15 +241,6 @@ function PublicSiteChrome({ pathname, children }: { pathname: string | null; chi
               <ul>
                 <li><Link href={locale === 'en' ? '/en/watch' : '/watch'}>{labels.watch}</Link></li>
                 <li><Link href={locale === 'en' ? '/en/watch/dmm' : '/watch/dmm'}>DMM TV</Link></li>
-                <li>
-                  <a
-                    href="https://al.dmm.com/?lurl=https%3A%2F%2Fpremium.dmm.com%2F&af_id=stageconnect-001&ch=link_tool&ch_id=text"
-                    rel="sponsored noopener"
-                    target="_blank"
-                  >
-                    {labels.ctaButton}
-                  </a>
-                </li>
                 <li><Link href="/contact">{labels.contact}</Link></li>
                 <li><Link href="/privacy">{labels.privacy}</Link></li>
               </ul>

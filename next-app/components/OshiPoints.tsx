@@ -5,7 +5,7 @@ const paths: Record<string, React.ReactNode> = {
   person: <><circle cx="12" cy="7" r="4"/><path d="M4 22v-3a8 8 0 0 1 16 0v3Z"/></>,
   music: <><path d="M9 18V5l12-3v13M9 9l12-3"/><ellipse cx="5.5" cy="18" rx="3.5" ry="3"/><ellipse cx="17.5" cy="15" rx="3.5" ry="3"/></>,
   dance: <><circle cx="12" cy="4" r="2"/><path d="m3 5 6 5h6l6-5M12 10v5m0 0-6 7m6-7 6 7"/></>,
-  swords: <><path d="m4 2 16 16m0-16L4 18M2 15l7 7m6-20L2 2l1 5M15 22l7-7M17 3l5-1-1 5"/></>,
+  swords: <><path d="M3 3 20 20M21 3 4 20M3 7V3h4m10 0h4v4"/><path d="m12 18 6-6m-12 0 6 6m6 3 3-3M3 18l3 3"/></>,
   book: <><path d="M12 5C8 2 4 3 2 4v16c4-2 7-1 10 1 3-2 6-3 10-1V4c-2-1-6-2-10 1Zm0 0v16"/></>,
   curtain: <><path d="M2 3h20v18h-3V6H5v15H2Zm3 3 7 3 7-3M5 6l4 8-4 7m14-15-4 8 4 7"/></>,
   shirt: <path d="m8 3-6 4 3 5 3-2v12h8V10l3 2 3-5-6-4a4 4 0 0 1-8 0Z"/>,
