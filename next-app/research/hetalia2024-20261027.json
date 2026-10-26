@@ -1,0 +1,4269 @@
+{
+  "version": 1,
+  "batchId": "hetalia2024-20261027-01",
+  "expectedFranchise": {
+    "id": "1ebeffff-4df9-47a1-8449-251fa80a56c1",
+    "name": "ミュージカル「ヘタリア」（ヘタミュ）",
+    "created_at": "2026-02-08T16:26:41.990203+00:00",
+    "updated_at": "2026-10-26T17:06:09.184766+00:00",
+    "slug": "hetalia",
+    "intro": null,
+    "description": "日丸屋秀和『ヘタリア Axis Powers』を原作とするミュージカルシリーズ。国を擬人化したキャラクターたちの日常や交流を歌とダンスで描く。2015年12月に『Singin’ in the World』で初演を迎えた。通称「ヘタミュ」。",
+    "origin_type": "漫画原作",
+    "origin_note": "原作：日丸屋秀和『ヘタリア Axis Powers』",
+    "production_companies": null,
+    "related_franchise_ids": [],
+    "format": null,
+    "description_en": "A musical series based on Hidekaz Himaruya’s Hetalia: Axis Powers, depicting personified nations and their encounters through song and dance. The series began with Singin’ in the World in December 2015 and is known as Hetamyu.",
+    "name_en": "Musical Hetalia"
+  },
+  "franchisePatch": {},
+  "externalActorLinks": [],
+  "actors": [],
+  "works": [
+    {
+      "year": 2024,
+      "before": null,
+      "play": {
+        "id": "5c469004-2f49-42c6-8d3a-9f9aa570cb60",
+        "slug": "hetamu2024",
+        "title": "ミュージカル「ヘタリア～The glorious world～」",
+        "title_en": "Musical Hetalia: The glorious world",
+        "franchise_id": "1ebeffff-4df9-47a1-8449-251fa80a56c1",
+        "summary": "『ヘタリア World★Stars』を原作とするミュージカル新シリーズ第3弾。世界の頂点をめぐるイタリアとロマーノの議論が、いつしか兄弟げんかに発展する。そこへ現れたプロイセンは、競い合うことで互いを高めた二人の話を語り始める。京都・大阪・東京の3都市で上演された。",
+        "summary_en": "The third production in the new Musical Hetalia series, based on Hetalia: World Stars. Italy and Romano argue over reaching the top of the world, until their debate turns into a quarrel. Prussia arrives and tells them about two rivals who helped each other rise through competition. Performed in Kyoto, Osaka and Tokyo.",
+        "period": "2024年8月9日〜9月8日",
+        "venue": "京都：京都劇場／大阪：森ノ宮ピロティホール／東京：日本青年館ホール",
+        "vod": {},
+        "genre": null,
+        "tags": [],
+        "credits": [
+          {
+            "role": "原作",
+            "names": [
+              "日丸屋秀和『ヘタリア World★Stars』（集英社「少年ジャンプ＋」連載）"
+            ],
+            "is_core": true,
+            "sort_order": 1
+          },
+          {
+            "role": "演出",
+            "names": [
+              "吉谷晃太朗"
+            ],
+            "is_core": true,
+            "sort_order": 2
+          },
+          {
+            "role": "脚本",
+            "names": [
+              "なるせゆうせい"
+            ],
+            "is_core": true,
+            "sort_order": 3
+          },
+          {
+            "role": "音楽",
+            "names": [
+              "宮里豊"
+            ],
+            "is_core": false,
+            "sort_order": 4
+          },
+          {
+            "role": "振付",
+            "names": [
+              "MAMORU"
+            ],
+            "is_core": false,
+            "sort_order": 5
+          },
+          {
+            "role": "音楽監督",
+            "names": [
+              "田中葵"
+            ],
+            "is_core": false,
+            "sort_order": 6
+          },
+          {
+            "role": "歌唱指導・音楽助手",
+            "names": [
+              "水野里香"
+            ],
+            "is_core": false,
+            "sort_order": 7
+          },
+          {
+            "role": "舞台衣装デザイン",
+            "names": [
+              "新朋子（COMO Inc.）"
+            ],
+            "is_core": false,
+            "sort_order": 8
+          },
+          {
+            "role": "衣装製作",
+            "names": [
+              "COMO Inc."
+            ],
+            "is_core": false,
+            "sort_order": 9
+          },
+          {
+            "role": "ヘアメイク",
+            "names": [
+              "西村裕司（earch）"
+            ],
+            "is_core": false,
+            "sort_order": 10
+          },
+          {
+            "role": "カメラマン",
+            "names": [
+              "金山フヒト（Xallarap）"
+            ],
+            "is_core": false,
+            "sort_order": 11
+          },
+          {
+            "role": "宣伝美術",
+            "names": [
+              "羽尾万里子（Mujina:art）"
+            ],
+            "is_core": false,
+            "sort_order": 12
+          },
+          {
+            "role": "企画・プロデュース",
+            "names": [
+              "4cu（Frontier Works Inc.）"
+            ],
+            "is_core": false,
+            "sort_order": 13
+          },
+          {
+            "role": "制作",
+            "names": [
+              "株式会社FAB"
+            ],
+            "is_core": false,
+            "sort_order": 14
+          },
+          {
+            "role": "主催",
+            "names": [
+              "ミュージカル「ヘタリアGLW」製作委員会"
+            ],
+            "is_core": false,
+            "sort_order": 15
+          },
+          {
+            "role": "アンサンブル",
+            "names": [
+              "仲田祥司",
+              "町田尚規",
+              "伊東征哉",
+              "松崎友洸",
+              "安久真修",
+              "丸山武蔵",
+              "大嶌幸太",
+              "南舘優雄斗"
+            ],
+            "is_core": false,
+            "sort_order": 16
+          },
+          {
+            "role": "バンド",
+            "names": [
+              "畑野圭慧（Keyboard1&Cond.）",
+              "田中葵（Keyboard1&Cond.）",
+              "松岡美弥子（Keyboard2）",
+              "西川ノブユキ（Guitar）",
+              "よこやまこうだい（Bass）",
+              "奥村大爆発（Drums）",
+              "地行美穂（Violin）",
+              "大嶋世菜（Violin）"
+            ],
+            "is_core": false,
+            "sort_order": 17
+          },
+          {
+            "role": "公演日程",
+            "names": [
+              "京都：2024年8月9日〜12日（京都劇場）・全6公演",
+              "大阪：2024年8月17日〜19日（森ノ宮ピロティホール）・全5公演",
+              "東京：2024年8月24日〜9月8日（日本青年館ホール）・全20公演、8月26日・9月2日休演"
+            ],
+            "is_core": false,
+            "sort_order": 18
+          },
+          {
+            "role": "出演者変更",
+            "names": [
+              "2024年6月18日発表：船橋拓幹が降板し、南舘優雄斗の出演が決定。"
+            ],
+            "is_core": false,
+            "sort_order": 19
+          },
+          {
+            "role": "台風10号への対応",
+            "names": [
+              "8月30日〜9月1日の東京5公演は予定どおり上演する旨を告知し、交通機関の不通で来場困難な観客を対象に別公演への振替・払戻しを案内。"
+            ],
+            "is_core": false,
+            "sort_order": 20
+          },
+          {
+            "role": "上演時間（予定）",
+            "names": [
+              "約2時間55分（途中休憩15分予定）"
+            ],
+            "is_core": false,
+            "sort_order": 21
+          },
+          {
+            "role": "公演補足",
+            "names": [
+              "2024年8月9日18:00の京都初日公演でシリーズ通算100回公演を迎え、スペシャルカーテンコールを実施。"
+            ],
+            "is_core": false,
+            "sort_order": 22
+          }
+        ],
+        "related_franchise_ids": []
+      },
+      "rawSource": {
+        "sourceUrl": "https://kira-hai.net/hetamu2024",
+        "title": "ミュージカル「ヘタリア~The glorious world~」(2024)",
+        "scheduleLines": [
+          "2024年8月9日-12日 京都劇場",
+          "2024年8月17日-19日 森ノ宮ピロティホール",
+          "2024年8月24日-9月8日 日本青年館ホール"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "長江崚行",
+            "sourceActorUrl": "https://kira-hai.net/nagae-ryoki",
+            "role_name": "イタリア",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "上田悠介",
+            "sourceActorUrl": "https://kira-hai.net/ueda-yusuke",
+            "role_name": "ドイツ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "磯貝龍乎",
+            "sourceActorUrl": "https://kira-hai.net/isogai-ryuko",
+            "role_name": "アメリカ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "廣瀬大介",
+            "sourceActorUrl": "https://kira-hai.net/hirose-daisuke",
+            "role_name": "イギリス",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "寿里",
+            "sourceActorUrl": "https://kira-hai.net/juri",
+            "role_name": "フランス",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "山沖勇輝",
+            "sourceActorUrl": "https://kira-hai.net/yamaoki-yuki",
+            "role_name": "ロシア",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "高本学",
+            "sourceActorUrl": "https://kira-hai.net/takamoto-gaku",
+            "role_name": "プロイセン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "樋口裕太",
+            "sourceActorUrl": "https://kira-hai.net/higuchi-yuta",
+            "role_name": "ロマーノ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "磯野亨",
+            "sourceActorUrl": "https://kira-hai.net/isono-toru",
+            "role_name": "オランダ",
+            "cast_group": null
+          }
+        ],
+        "unparsed": [
+          "仲田祥司",
+          "町田尚規",
+          "伊東征哉",
+          "松崎友洸",
+          "安久真修",
+          "丸山武蔵",
+          "船橋拓幹",
+          "大嶌幸太",
+          "南舘優雄斗"
+        ]
+      },
+      "source": {
+        "sourceUrl": "https://kira-hai.net/hetamu2024",
+        "title": "ミュージカル「ヘタリア~The glorious world~」(2024)",
+        "scheduleLines": [
+          "2024年8月9日-12日 京都劇場",
+          "2024年8月17日-19日 森ノ宮ピロティホール",
+          "2024年8月24日-9月8日 日本青年館ホール"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "長江崚行",
+            "sourceActorUrl": "https://kira-hai.net/nagae-ryoki",
+            "role_name": "イタリア",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "上田悠介",
+            "sourceActorUrl": "https://kira-hai.net/ueda-yusuke",
+            "role_name": "ドイツ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "磯貝龍乎",
+            "sourceActorUrl": "https://kira-hai.net/isogai-ryuko",
+            "role_name": "アメリカ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "廣瀬大介",
+            "sourceActorUrl": "https://kira-hai.net/hirose-daisuke",
+            "role_name": "イギリス",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "寿里",
+            "sourceActorUrl": "https://kira-hai.net/juri",
+            "role_name": "フランス",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "山沖勇輝",
+            "sourceActorUrl": "https://kira-hai.net/yamaoki-yuki",
+            "role_name": "ロシア",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "高本学",
+            "sourceActorUrl": "https://kira-hai.net/takamoto-gaku",
+            "role_name": "プロイセン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "樋口裕太",
+            "sourceActorUrl": "https://kira-hai.net/higuchi-yuta",
+            "role_name": "ロマーノ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "磯野亨",
+            "sourceActorUrl": "https://kira-hai.net/isono-toru",
+            "role_name": "オランダ",
+            "cast_group": null
+          }
+        ],
+        "unparsed": []
+      },
+      "sourceFingerprint": "75d5c66a582a2adfe9799e9bf73fb56d4dd2e4f3e7fda00b3f343a710446c535",
+      "stage": {
+        "workUrl": "https://kira-hai.net/hetamu2024",
+        "key": "18e63ef60370b661de25ca0ac7e774b88f614cdf8286847d824df463c85c4e5d",
+        "items": [
+          {
+            "source_actor_name": "長江崚行",
+            "source_actor_url": "https://kira-hai.net/nagae-ryoki",
+            "source_work_title": "ミュージカル「ヘタリア~The glorious world~」(2024)",
+            "source_year": 2024,
+            "source_role_raw": "イタリア",
+            "source_role_names": [
+              "イタリア"
+            ],
+            "source_cast_group": null,
+            "source_order": 1,
+            "source_credit_key": "8e5f1c41b2108f245abb",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hetamu2024",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hetamu2024",
+                  "checkedAt": "2026-10-26T18:24:47.896Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/cast/",
+                  "checkedAt": "2026-10-26T18:25:16.716Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/story/",
+                  "checkedAt": "2026-10-26T18:25:17.144Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/schedule/",
+                  "checkedAt": "2026-10-26T18:25:17.530Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/qa/",
+                  "checkedAt": "2026-10-26T18:25:17.975Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://www.fwinc.co.jp/news/87920/",
+                  "checkedAt": "2026-10-26T18:24:48.843Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://www.fwinc.co.jp/live/97671/",
+                  "checkedAt": "2026-10-26T18:24:49.000Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/wp-content/themes/hetalia_glw/asset/img/txt-staff-pc.png",
+                  "checkedAt": "2026-10-26T18:26:16.437Z",
+                  "note": "当該公式スタッフ画像を目視確認して原表記を転記。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/news/page/2/",
+                  "checkedAt": "2026-10-26T18:25:18.797Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/news/page/3/",
+                  "checkedAt": "2026-10-26T18:25:19.189Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/news/374/",
+                  "checkedAt": "2026-10-26T18:28:23.445Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://kyodo-osaka.co.jp/search/detail/8569",
+                  "checkedAt": "2026-10-26T18:25:19.900Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                }
+              ],
+              "source_fingerprint": "75d5c66a582a2adfe9799e9bf73fb56d4dd2e4f3e7fda00b3f343a710446c535",
+              "review_fingerprint": "946d968b473db7adbcaf102ef031b450886bbf4ebee960bc031ea9859f8902d2",
+              "snapshot_fingerprint": "057e80ef5416c5ef0beb83fefa4d8f952203a2cfb254b1ecca8afd95f1adceab",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2024,
+                "reason": "2024年8〜9月の本公演。翌年の映像発売・応援上映・記念イベントと区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/hetamu2024",
+                    "checkedAt": "2026-10-26T18:24:47.896Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/cast/",
+                    "checkedAt": "2026-10-26T18:25:16.716Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/story/",
+                    "checkedAt": "2026-10-26T18:25:17.144Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/schedule/",
+                    "checkedAt": "2026-10-26T18:25:17.530Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/qa/",
+                    "checkedAt": "2026-10-26T18:25:17.975Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://www.fwinc.co.jp/news/87920/",
+                    "checkedAt": "2026-10-26T18:24:48.843Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://www.fwinc.co.jp/live/97671/",
+                    "checkedAt": "2026-10-26T18:24:49.000Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/wp-content/themes/hetalia_glw/asset/img/txt-staff-pc.png",
+                    "checkedAt": "2026-10-26T18:26:16.437Z",
+                    "note": "当該公式スタッフ画像を目視確認して原表記を転記。画像原本・SHA256を保存。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/news/page/2/",
+                    "checkedAt": "2026-10-26T18:25:18.797Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/news/page/3/",
+                    "checkedAt": "2026-10-26T18:25:19.189Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/news/374/",
+                    "checkedAt": "2026-10-26T18:28:23.445Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://kyodo-osaka.co.jp/search/detail/8569",
+                    "checkedAt": "2026-10-26T18:25:19.900Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  }
+                ]
+              },
+              "original_source_row": {
+                "order": 1,
+                "cast": {
+                  "sourceActorName": "長江崚行",
+                  "sourceActorUrl": "https://kira-hai.net/nagae-ryoki",
+                  "role_name": "イタリア",
+                  "cast_group": null
+                }
+              }
+            },
+            "matched_actor_id": "4b3110ab-0d88-4a68-8a1d-ed0fcac335ff",
+            "matched_play_id": "5c469004-2f49-42c6-8d3a-9f9aa570cb60",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "上田悠介",
+            "source_actor_url": "https://kira-hai.net/ueda-yusuke",
+            "source_work_title": "ミュージカル「ヘタリア~The glorious world~」(2024)",
+            "source_year": 2024,
+            "source_role_raw": "ドイツ",
+            "source_role_names": [
+              "ドイツ"
+            ],
+            "source_cast_group": null,
+            "source_order": 2,
+            "source_credit_key": "1122648243e9073fe695",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hetamu2024",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hetamu2024",
+                  "checkedAt": "2026-10-26T18:24:47.896Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/cast/",
+                  "checkedAt": "2026-10-26T18:25:16.716Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/story/",
+                  "checkedAt": "2026-10-26T18:25:17.144Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/schedule/",
+                  "checkedAt": "2026-10-26T18:25:17.530Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/qa/",
+                  "checkedAt": "2026-10-26T18:25:17.975Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://www.fwinc.co.jp/news/87920/",
+                  "checkedAt": "2026-10-26T18:24:48.843Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://www.fwinc.co.jp/live/97671/",
+                  "checkedAt": "2026-10-26T18:24:49.000Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/wp-content/themes/hetalia_glw/asset/img/txt-staff-pc.png",
+                  "checkedAt": "2026-10-26T18:26:16.437Z",
+                  "note": "当該公式スタッフ画像を目視確認して原表記を転記。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/news/page/2/",
+                  "checkedAt": "2026-10-26T18:25:18.797Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/news/page/3/",
+                  "checkedAt": "2026-10-26T18:25:19.189Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/news/374/",
+                  "checkedAt": "2026-10-26T18:28:23.445Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://kyodo-osaka.co.jp/search/detail/8569",
+                  "checkedAt": "2026-10-26T18:25:19.900Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                }
+              ],
+              "source_fingerprint": "75d5c66a582a2adfe9799e9bf73fb56d4dd2e4f3e7fda00b3f343a710446c535",
+              "review_fingerprint": "946d968b473db7adbcaf102ef031b450886bbf4ebee960bc031ea9859f8902d2",
+              "snapshot_fingerprint": "057e80ef5416c5ef0beb83fefa4d8f952203a2cfb254b1ecca8afd95f1adceab",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2024,
+                "reason": "2024年8〜9月の本公演。翌年の映像発売・応援上映・記念イベントと区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/hetamu2024",
+                    "checkedAt": "2026-10-26T18:24:47.896Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/cast/",
+                    "checkedAt": "2026-10-26T18:25:16.716Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/story/",
+                    "checkedAt": "2026-10-26T18:25:17.144Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/schedule/",
+                    "checkedAt": "2026-10-26T18:25:17.530Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/qa/",
+                    "checkedAt": "2026-10-26T18:25:17.975Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://www.fwinc.co.jp/news/87920/",
+                    "checkedAt": "2026-10-26T18:24:48.843Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://www.fwinc.co.jp/live/97671/",
+                    "checkedAt": "2026-10-26T18:24:49.000Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/wp-content/themes/hetalia_glw/asset/img/txt-staff-pc.png",
+                    "checkedAt": "2026-10-26T18:26:16.437Z",
+                    "note": "当該公式スタッフ画像を目視確認して原表記を転記。画像原本・SHA256を保存。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/news/page/2/",
+                    "checkedAt": "2026-10-26T18:25:18.797Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/news/page/3/",
+                    "checkedAt": "2026-10-26T18:25:19.189Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/news/374/",
+                    "checkedAt": "2026-10-26T18:28:23.445Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://kyodo-osaka.co.jp/search/detail/8569",
+                    "checkedAt": "2026-10-26T18:25:19.900Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  }
+                ]
+              },
+              "original_source_row": {
+                "order": 2,
+                "cast": {
+                  "sourceActorName": "上田悠介",
+                  "sourceActorUrl": "https://kira-hai.net/ueda-yusuke",
+                  "role_name": "ドイツ",
+                  "cast_group": null
+                }
+              }
+            },
+            "matched_actor_id": "a36372ce-61e5-43f5-ae9c-e1bf2fb5226b",
+            "matched_play_id": "5c469004-2f49-42c6-8d3a-9f9aa570cb60",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "磯貝龍乎",
+            "source_actor_url": "https://kira-hai.net/isogai-ryuko",
+            "source_work_title": "ミュージカル「ヘタリア~The glorious world~」(2024)",
+            "source_year": 2024,
+            "source_role_raw": "アメリカ",
+            "source_role_names": [
+              "アメリカ"
+            ],
+            "source_cast_group": null,
+            "source_order": 3,
+            "source_credit_key": "8d901f37bfe7b4c20639",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hetamu2024",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hetamu2024",
+                  "checkedAt": "2026-10-26T18:24:47.896Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/cast/",
+                  "checkedAt": "2026-10-26T18:25:16.716Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/story/",
+                  "checkedAt": "2026-10-26T18:25:17.144Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/schedule/",
+                  "checkedAt": "2026-10-26T18:25:17.530Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/qa/",
+                  "checkedAt": "2026-10-26T18:25:17.975Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://www.fwinc.co.jp/news/87920/",
+                  "checkedAt": "2026-10-26T18:24:48.843Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://www.fwinc.co.jp/live/97671/",
+                  "checkedAt": "2026-10-26T18:24:49.000Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/wp-content/themes/hetalia_glw/asset/img/txt-staff-pc.png",
+                  "checkedAt": "2026-10-26T18:26:16.437Z",
+                  "note": "当該公式スタッフ画像を目視確認して原表記を転記。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/news/page/2/",
+                  "checkedAt": "2026-10-26T18:25:18.797Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/news/page/3/",
+                  "checkedAt": "2026-10-26T18:25:19.189Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/news/374/",
+                  "checkedAt": "2026-10-26T18:28:23.445Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://kyodo-osaka.co.jp/search/detail/8569",
+                  "checkedAt": "2026-10-26T18:25:19.900Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                }
+              ],
+              "source_fingerprint": "75d5c66a582a2adfe9799e9bf73fb56d4dd2e4f3e7fda00b3f343a710446c535",
+              "review_fingerprint": "946d968b473db7adbcaf102ef031b450886bbf4ebee960bc031ea9859f8902d2",
+              "snapshot_fingerprint": "057e80ef5416c5ef0beb83fefa4d8f952203a2cfb254b1ecca8afd95f1adceab",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2024,
+                "reason": "2024年8〜9月の本公演。翌年の映像発売・応援上映・記念イベントと区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/hetamu2024",
+                    "checkedAt": "2026-10-26T18:24:47.896Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/cast/",
+                    "checkedAt": "2026-10-26T18:25:16.716Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/story/",
+                    "checkedAt": "2026-10-26T18:25:17.144Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/schedule/",
+                    "checkedAt": "2026-10-26T18:25:17.530Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/qa/",
+                    "checkedAt": "2026-10-26T18:25:17.975Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://www.fwinc.co.jp/news/87920/",
+                    "checkedAt": "2026-10-26T18:24:48.843Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://www.fwinc.co.jp/live/97671/",
+                    "checkedAt": "2026-10-26T18:24:49.000Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/wp-content/themes/hetalia_glw/asset/img/txt-staff-pc.png",
+                    "checkedAt": "2026-10-26T18:26:16.437Z",
+                    "note": "当該公式スタッフ画像を目視確認して原表記を転記。画像原本・SHA256を保存。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/news/page/2/",
+                    "checkedAt": "2026-10-26T18:25:18.797Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/news/page/3/",
+                    "checkedAt": "2026-10-26T18:25:19.189Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/news/374/",
+                    "checkedAt": "2026-10-26T18:28:23.445Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://kyodo-osaka.co.jp/search/detail/8569",
+                    "checkedAt": "2026-10-26T18:25:19.900Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  }
+                ]
+              },
+              "original_source_row": {
+                "order": 3,
+                "cast": {
+                  "sourceActorName": "磯貝龍乎",
+                  "sourceActorUrl": "https://kira-hai.net/isogai-ryuko",
+                  "role_name": "アメリカ",
+                  "cast_group": null
+                }
+              }
+            },
+            "matched_actor_id": "b15c5d1c-b38b-4604-bee6-f19f4a8ab1db",
+            "matched_play_id": "5c469004-2f49-42c6-8d3a-9f9aa570cb60",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "廣瀬大介",
+            "source_actor_url": "https://kira-hai.net/hirose-daisuke",
+            "source_work_title": "ミュージカル「ヘタリア~The glorious world~」(2024)",
+            "source_year": 2024,
+            "source_role_raw": "イギリス",
+            "source_role_names": [
+              "イギリス"
+            ],
+            "source_cast_group": null,
+            "source_order": 4,
+            "source_credit_key": "3d1561ded8f329f5b474",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hetamu2024",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hetamu2024",
+                  "checkedAt": "2026-10-26T18:24:47.896Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/cast/",
+                  "checkedAt": "2026-10-26T18:25:16.716Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/story/",
+                  "checkedAt": "2026-10-26T18:25:17.144Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/schedule/",
+                  "checkedAt": "2026-10-26T18:25:17.530Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/qa/",
+                  "checkedAt": "2026-10-26T18:25:17.975Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://www.fwinc.co.jp/news/87920/",
+                  "checkedAt": "2026-10-26T18:24:48.843Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://www.fwinc.co.jp/live/97671/",
+                  "checkedAt": "2026-10-26T18:24:49.000Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/wp-content/themes/hetalia_glw/asset/img/txt-staff-pc.png",
+                  "checkedAt": "2026-10-26T18:26:16.437Z",
+                  "note": "当該公式スタッフ画像を目視確認して原表記を転記。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/news/page/2/",
+                  "checkedAt": "2026-10-26T18:25:18.797Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/news/page/3/",
+                  "checkedAt": "2026-10-26T18:25:19.189Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/news/374/",
+                  "checkedAt": "2026-10-26T18:28:23.445Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://kyodo-osaka.co.jp/search/detail/8569",
+                  "checkedAt": "2026-10-26T18:25:19.900Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                }
+              ],
+              "source_fingerprint": "75d5c66a582a2adfe9799e9bf73fb56d4dd2e4f3e7fda00b3f343a710446c535",
+              "review_fingerprint": "946d968b473db7adbcaf102ef031b450886bbf4ebee960bc031ea9859f8902d2",
+              "snapshot_fingerprint": "057e80ef5416c5ef0beb83fefa4d8f952203a2cfb254b1ecca8afd95f1adceab",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2024,
+                "reason": "2024年8〜9月の本公演。翌年の映像発売・応援上映・記念イベントと区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/hetamu2024",
+                    "checkedAt": "2026-10-26T18:24:47.896Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/cast/",
+                    "checkedAt": "2026-10-26T18:25:16.716Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/story/",
+                    "checkedAt": "2026-10-26T18:25:17.144Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/schedule/",
+                    "checkedAt": "2026-10-26T18:25:17.530Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/qa/",
+                    "checkedAt": "2026-10-26T18:25:17.975Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://www.fwinc.co.jp/news/87920/",
+                    "checkedAt": "2026-10-26T18:24:48.843Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://www.fwinc.co.jp/live/97671/",
+                    "checkedAt": "2026-10-26T18:24:49.000Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/wp-content/themes/hetalia_glw/asset/img/txt-staff-pc.png",
+                    "checkedAt": "2026-10-26T18:26:16.437Z",
+                    "note": "当該公式スタッフ画像を目視確認して原表記を転記。画像原本・SHA256を保存。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/news/page/2/",
+                    "checkedAt": "2026-10-26T18:25:18.797Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/news/page/3/",
+                    "checkedAt": "2026-10-26T18:25:19.189Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/news/374/",
+                    "checkedAt": "2026-10-26T18:28:23.445Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://kyodo-osaka.co.jp/search/detail/8569",
+                    "checkedAt": "2026-10-26T18:25:19.900Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  }
+                ]
+              },
+              "original_source_row": {
+                "order": 4,
+                "cast": {
+                  "sourceActorName": "廣瀬大介",
+                  "sourceActorUrl": "https://kira-hai.net/hirose-daisuke",
+                  "role_name": "イギリス",
+                  "cast_group": null
+                }
+              }
+            },
+            "matched_actor_id": "ea847f48-42b3-40d0-8b2b-5fe9c11d53f7",
+            "matched_play_id": "5c469004-2f49-42c6-8d3a-9f9aa570cb60",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "寿里",
+            "source_actor_url": "https://kira-hai.net/juri",
+            "source_work_title": "ミュージカル「ヘタリア~The glorious world~」(2024)",
+            "source_year": 2024,
+            "source_role_raw": "フランス",
+            "source_role_names": [
+              "フランス"
+            ],
+            "source_cast_group": null,
+            "source_order": 5,
+            "source_credit_key": "2be6d8342e2d78b3cfe1",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hetamu2024",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hetamu2024",
+                  "checkedAt": "2026-10-26T18:24:47.896Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/cast/",
+                  "checkedAt": "2026-10-26T18:25:16.716Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/story/",
+                  "checkedAt": "2026-10-26T18:25:17.144Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/schedule/",
+                  "checkedAt": "2026-10-26T18:25:17.530Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/qa/",
+                  "checkedAt": "2026-10-26T18:25:17.975Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://www.fwinc.co.jp/news/87920/",
+                  "checkedAt": "2026-10-26T18:24:48.843Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://www.fwinc.co.jp/live/97671/",
+                  "checkedAt": "2026-10-26T18:24:49.000Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/wp-content/themes/hetalia_glw/asset/img/txt-staff-pc.png",
+                  "checkedAt": "2026-10-26T18:26:16.437Z",
+                  "note": "当該公式スタッフ画像を目視確認して原表記を転記。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/news/page/2/",
+                  "checkedAt": "2026-10-26T18:25:18.797Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/news/page/3/",
+                  "checkedAt": "2026-10-26T18:25:19.189Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/news/374/",
+                  "checkedAt": "2026-10-26T18:28:23.445Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://kyodo-osaka.co.jp/search/detail/8569",
+                  "checkedAt": "2026-10-26T18:25:19.900Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                }
+              ],
+              "source_fingerprint": "75d5c66a582a2adfe9799e9bf73fb56d4dd2e4f3e7fda00b3f343a710446c535",
+              "review_fingerprint": "946d968b473db7adbcaf102ef031b450886bbf4ebee960bc031ea9859f8902d2",
+              "snapshot_fingerprint": "057e80ef5416c5ef0beb83fefa4d8f952203a2cfb254b1ecca8afd95f1adceab",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2024,
+                "reason": "2024年8〜9月の本公演。翌年の映像発売・応援上映・記念イベントと区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/hetamu2024",
+                    "checkedAt": "2026-10-26T18:24:47.896Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/cast/",
+                    "checkedAt": "2026-10-26T18:25:16.716Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/story/",
+                    "checkedAt": "2026-10-26T18:25:17.144Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/schedule/",
+                    "checkedAt": "2026-10-26T18:25:17.530Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/qa/",
+                    "checkedAt": "2026-10-26T18:25:17.975Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://www.fwinc.co.jp/news/87920/",
+                    "checkedAt": "2026-10-26T18:24:48.843Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://www.fwinc.co.jp/live/97671/",
+                    "checkedAt": "2026-10-26T18:24:49.000Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/wp-content/themes/hetalia_glw/asset/img/txt-staff-pc.png",
+                    "checkedAt": "2026-10-26T18:26:16.437Z",
+                    "note": "当該公式スタッフ画像を目視確認して原表記を転記。画像原本・SHA256を保存。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/news/page/2/",
+                    "checkedAt": "2026-10-26T18:25:18.797Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/news/page/3/",
+                    "checkedAt": "2026-10-26T18:25:19.189Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/news/374/",
+                    "checkedAt": "2026-10-26T18:28:23.445Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://kyodo-osaka.co.jp/search/detail/8569",
+                    "checkedAt": "2026-10-26T18:25:19.900Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  }
+                ]
+              },
+              "original_source_row": {
+                "order": 5,
+                "cast": {
+                  "sourceActorName": "寿里",
+                  "sourceActorUrl": "https://kira-hai.net/juri",
+                  "role_name": "フランス",
+                  "cast_group": null
+                }
+              }
+            },
+            "matched_actor_id": "a862c0c0-8fd8-458b-8b9d-391c6fe69a0c",
+            "matched_play_id": "5c469004-2f49-42c6-8d3a-9f9aa570cb60",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "山沖勇輝",
+            "source_actor_url": "https://kira-hai.net/yamaoki-yuki",
+            "source_work_title": "ミュージカル「ヘタリア~The glorious world~」(2024)",
+            "source_year": 2024,
+            "source_role_raw": "ロシア",
+            "source_role_names": [
+              "ロシア"
+            ],
+            "source_cast_group": null,
+            "source_order": 6,
+            "source_credit_key": "67183cf5d741877e86d3",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hetamu2024",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hetamu2024",
+                  "checkedAt": "2026-10-26T18:24:47.896Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/cast/",
+                  "checkedAt": "2026-10-26T18:25:16.716Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/story/",
+                  "checkedAt": "2026-10-26T18:25:17.144Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/schedule/",
+                  "checkedAt": "2026-10-26T18:25:17.530Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/qa/",
+                  "checkedAt": "2026-10-26T18:25:17.975Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://www.fwinc.co.jp/news/87920/",
+                  "checkedAt": "2026-10-26T18:24:48.843Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://www.fwinc.co.jp/live/97671/",
+                  "checkedAt": "2026-10-26T18:24:49.000Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/wp-content/themes/hetalia_glw/asset/img/txt-staff-pc.png",
+                  "checkedAt": "2026-10-26T18:26:16.437Z",
+                  "note": "当該公式スタッフ画像を目視確認して原表記を転記。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/news/page/2/",
+                  "checkedAt": "2026-10-26T18:25:18.797Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/news/page/3/",
+                  "checkedAt": "2026-10-26T18:25:19.189Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/news/374/",
+                  "checkedAt": "2026-10-26T18:28:23.445Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://kyodo-osaka.co.jp/search/detail/8569",
+                  "checkedAt": "2026-10-26T18:25:19.900Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                }
+              ],
+              "source_fingerprint": "75d5c66a582a2adfe9799e9bf73fb56d4dd2e4f3e7fda00b3f343a710446c535",
+              "review_fingerprint": "946d968b473db7adbcaf102ef031b450886bbf4ebee960bc031ea9859f8902d2",
+              "snapshot_fingerprint": "057e80ef5416c5ef0beb83fefa4d8f952203a2cfb254b1ecca8afd95f1adceab",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2024,
+                "reason": "2024年8〜9月の本公演。翌年の映像発売・応援上映・記念イベントと区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/hetamu2024",
+                    "checkedAt": "2026-10-26T18:24:47.896Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/cast/",
+                    "checkedAt": "2026-10-26T18:25:16.716Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/story/",
+                    "checkedAt": "2026-10-26T18:25:17.144Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/schedule/",
+                    "checkedAt": "2026-10-26T18:25:17.530Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/qa/",
+                    "checkedAt": "2026-10-26T18:25:17.975Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://www.fwinc.co.jp/news/87920/",
+                    "checkedAt": "2026-10-26T18:24:48.843Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://www.fwinc.co.jp/live/97671/",
+                    "checkedAt": "2026-10-26T18:24:49.000Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/wp-content/themes/hetalia_glw/asset/img/txt-staff-pc.png",
+                    "checkedAt": "2026-10-26T18:26:16.437Z",
+                    "note": "当該公式スタッフ画像を目視確認して原表記を転記。画像原本・SHA256を保存。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/news/page/2/",
+                    "checkedAt": "2026-10-26T18:25:18.797Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/news/page/3/",
+                    "checkedAt": "2026-10-26T18:25:19.189Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/news/374/",
+                    "checkedAt": "2026-10-26T18:28:23.445Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://kyodo-osaka.co.jp/search/detail/8569",
+                    "checkedAt": "2026-10-26T18:25:19.900Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  }
+                ]
+              },
+              "original_source_row": {
+                "order": 6,
+                "cast": {
+                  "sourceActorName": "山沖勇輝",
+                  "sourceActorUrl": "https://kira-hai.net/yamaoki-yuki",
+                  "role_name": "ロシア",
+                  "cast_group": null
+                }
+              }
+            },
+            "matched_actor_id": "3ecf714c-ad02-4356-af65-dcfb2952dfac",
+            "matched_play_id": "5c469004-2f49-42c6-8d3a-9f9aa570cb60",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "高本学",
+            "source_actor_url": "https://kira-hai.net/takamoto-gaku",
+            "source_work_title": "ミュージカル「ヘタリア~The glorious world~」(2024)",
+            "source_year": 2024,
+            "source_role_raw": "プロイセン",
+            "source_role_names": [
+              "プロイセン"
+            ],
+            "source_cast_group": null,
+            "source_order": 7,
+            "source_credit_key": "5fddd0ee40512acef518",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hetamu2024",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hetamu2024",
+                  "checkedAt": "2026-10-26T18:24:47.896Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/cast/",
+                  "checkedAt": "2026-10-26T18:25:16.716Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/story/",
+                  "checkedAt": "2026-10-26T18:25:17.144Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/schedule/",
+                  "checkedAt": "2026-10-26T18:25:17.530Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/qa/",
+                  "checkedAt": "2026-10-26T18:25:17.975Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://www.fwinc.co.jp/news/87920/",
+                  "checkedAt": "2026-10-26T18:24:48.843Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://www.fwinc.co.jp/live/97671/",
+                  "checkedAt": "2026-10-26T18:24:49.000Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/wp-content/themes/hetalia_glw/asset/img/txt-staff-pc.png",
+                  "checkedAt": "2026-10-26T18:26:16.437Z",
+                  "note": "当該公式スタッフ画像を目視確認して原表記を転記。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/news/page/2/",
+                  "checkedAt": "2026-10-26T18:25:18.797Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/news/page/3/",
+                  "checkedAt": "2026-10-26T18:25:19.189Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/news/374/",
+                  "checkedAt": "2026-10-26T18:28:23.445Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://kyodo-osaka.co.jp/search/detail/8569",
+                  "checkedAt": "2026-10-26T18:25:19.900Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                }
+              ],
+              "source_fingerprint": "75d5c66a582a2adfe9799e9bf73fb56d4dd2e4f3e7fda00b3f343a710446c535",
+              "review_fingerprint": "946d968b473db7adbcaf102ef031b450886bbf4ebee960bc031ea9859f8902d2",
+              "snapshot_fingerprint": "057e80ef5416c5ef0beb83fefa4d8f952203a2cfb254b1ecca8afd95f1adceab",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2024,
+                "reason": "2024年8〜9月の本公演。翌年の映像発売・応援上映・記念イベントと区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/hetamu2024",
+                    "checkedAt": "2026-10-26T18:24:47.896Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/cast/",
+                    "checkedAt": "2026-10-26T18:25:16.716Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/story/",
+                    "checkedAt": "2026-10-26T18:25:17.144Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/schedule/",
+                    "checkedAt": "2026-10-26T18:25:17.530Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/qa/",
+                    "checkedAt": "2026-10-26T18:25:17.975Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://www.fwinc.co.jp/news/87920/",
+                    "checkedAt": "2026-10-26T18:24:48.843Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://www.fwinc.co.jp/live/97671/",
+                    "checkedAt": "2026-10-26T18:24:49.000Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/wp-content/themes/hetalia_glw/asset/img/txt-staff-pc.png",
+                    "checkedAt": "2026-10-26T18:26:16.437Z",
+                    "note": "当該公式スタッフ画像を目視確認して原表記を転記。画像原本・SHA256を保存。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/news/page/2/",
+                    "checkedAt": "2026-10-26T18:25:18.797Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/news/page/3/",
+                    "checkedAt": "2026-10-26T18:25:19.189Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/news/374/",
+                    "checkedAt": "2026-10-26T18:28:23.445Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://kyodo-osaka.co.jp/search/detail/8569",
+                    "checkedAt": "2026-10-26T18:25:19.900Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  }
+                ]
+              },
+              "original_source_row": {
+                "order": 7,
+                "cast": {
+                  "sourceActorName": "高本学",
+                  "sourceActorUrl": "https://kira-hai.net/takamoto-gaku",
+                  "role_name": "プロイセン",
+                  "cast_group": null
+                }
+              }
+            },
+            "matched_actor_id": "8f714e97-ff9f-4178-86aa-e3df3e067ea5",
+            "matched_play_id": "5c469004-2f49-42c6-8d3a-9f9aa570cb60",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "樋口裕太",
+            "source_actor_url": "https://kira-hai.net/higuchi-yuta",
+            "source_work_title": "ミュージカル「ヘタリア~The glorious world~」(2024)",
+            "source_year": 2024,
+            "source_role_raw": "ロマーノ",
+            "source_role_names": [
+              "ロマーノ"
+            ],
+            "source_cast_group": null,
+            "source_order": 8,
+            "source_credit_key": "a85725bc0e9a29e5ff60",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hetamu2024",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hetamu2024",
+                  "checkedAt": "2026-10-26T18:24:47.896Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/cast/",
+                  "checkedAt": "2026-10-26T18:25:16.716Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/story/",
+                  "checkedAt": "2026-10-26T18:25:17.144Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/schedule/",
+                  "checkedAt": "2026-10-26T18:25:17.530Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/qa/",
+                  "checkedAt": "2026-10-26T18:25:17.975Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://www.fwinc.co.jp/news/87920/",
+                  "checkedAt": "2026-10-26T18:24:48.843Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://www.fwinc.co.jp/live/97671/",
+                  "checkedAt": "2026-10-26T18:24:49.000Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/wp-content/themes/hetalia_glw/asset/img/txt-staff-pc.png",
+                  "checkedAt": "2026-10-26T18:26:16.437Z",
+                  "note": "当該公式スタッフ画像を目視確認して原表記を転記。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/news/page/2/",
+                  "checkedAt": "2026-10-26T18:25:18.797Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/news/page/3/",
+                  "checkedAt": "2026-10-26T18:25:19.189Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/news/374/",
+                  "checkedAt": "2026-10-26T18:28:23.445Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://kyodo-osaka.co.jp/search/detail/8569",
+                  "checkedAt": "2026-10-26T18:25:19.900Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                }
+              ],
+              "source_fingerprint": "75d5c66a582a2adfe9799e9bf73fb56d4dd2e4f3e7fda00b3f343a710446c535",
+              "review_fingerprint": "946d968b473db7adbcaf102ef031b450886bbf4ebee960bc031ea9859f8902d2",
+              "snapshot_fingerprint": "057e80ef5416c5ef0beb83fefa4d8f952203a2cfb254b1ecca8afd95f1adceab",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2024,
+                "reason": "2024年8〜9月の本公演。翌年の映像発売・応援上映・記念イベントと区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/hetamu2024",
+                    "checkedAt": "2026-10-26T18:24:47.896Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/cast/",
+                    "checkedAt": "2026-10-26T18:25:16.716Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/story/",
+                    "checkedAt": "2026-10-26T18:25:17.144Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/schedule/",
+                    "checkedAt": "2026-10-26T18:25:17.530Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/qa/",
+                    "checkedAt": "2026-10-26T18:25:17.975Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://www.fwinc.co.jp/news/87920/",
+                    "checkedAt": "2026-10-26T18:24:48.843Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://www.fwinc.co.jp/live/97671/",
+                    "checkedAt": "2026-10-26T18:24:49.000Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/wp-content/themes/hetalia_glw/asset/img/txt-staff-pc.png",
+                    "checkedAt": "2026-10-26T18:26:16.437Z",
+                    "note": "当該公式スタッフ画像を目視確認して原表記を転記。画像原本・SHA256を保存。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/news/page/2/",
+                    "checkedAt": "2026-10-26T18:25:18.797Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/news/page/3/",
+                    "checkedAt": "2026-10-26T18:25:19.189Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/news/374/",
+                    "checkedAt": "2026-10-26T18:28:23.445Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://kyodo-osaka.co.jp/search/detail/8569",
+                    "checkedAt": "2026-10-26T18:25:19.900Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  }
+                ]
+              },
+              "original_source_row": {
+                "order": 8,
+                "cast": {
+                  "sourceActorName": "樋口裕太",
+                  "sourceActorUrl": "https://kira-hai.net/higuchi-yuta",
+                  "role_name": "ロマーノ",
+                  "cast_group": null
+                }
+              }
+            },
+            "matched_actor_id": "76f521b4-43a3-4f34-a1f2-bbb7664519a0",
+            "matched_play_id": "5c469004-2f49-42c6-8d3a-9f9aa570cb60",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "磯野亨",
+            "source_actor_url": "https://kira-hai.net/isono-toru",
+            "source_work_title": "ミュージカル「ヘタリア~The glorious world~」(2024)",
+            "source_year": 2024,
+            "source_role_raw": "オランダ",
+            "source_role_names": [
+              "オランダ"
+            ],
+            "source_cast_group": null,
+            "source_order": 9,
+            "source_credit_key": "580afb4adb294e4a7ce7",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hetamu2024",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hetamu2024",
+                  "checkedAt": "2026-10-26T18:24:47.896Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/cast/",
+                  "checkedAt": "2026-10-26T18:25:16.716Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/story/",
+                  "checkedAt": "2026-10-26T18:25:17.144Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/schedule/",
+                  "checkedAt": "2026-10-26T18:25:17.530Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/qa/",
+                  "checkedAt": "2026-10-26T18:25:17.975Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://www.fwinc.co.jp/news/87920/",
+                  "checkedAt": "2026-10-26T18:24:48.843Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://www.fwinc.co.jp/live/97671/",
+                  "checkedAt": "2026-10-26T18:24:49.000Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/wp-content/themes/hetalia_glw/asset/img/txt-staff-pc.png",
+                  "checkedAt": "2026-10-26T18:26:16.437Z",
+                  "note": "当該公式スタッフ画像を目視確認して原表記を転記。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/news/page/2/",
+                  "checkedAt": "2026-10-26T18:25:18.797Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/news/page/3/",
+                  "checkedAt": "2026-10-26T18:25:19.189Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/glw/news/374/",
+                  "checkedAt": "2026-10-26T18:28:23.445Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                },
+                {
+                  "url": "https://kyodo-osaka.co.jp/search/detail/8569",
+                  "checkedAt": "2026-10-26T18:25:19.900Z",
+                  "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                }
+              ],
+              "source_fingerprint": "75d5c66a582a2adfe9799e9bf73fb56d4dd2e4f3e7fda00b3f343a710446c535",
+              "review_fingerprint": "946d968b473db7adbcaf102ef031b450886bbf4ebee960bc031ea9859f8902d2",
+              "snapshot_fingerprint": "057e80ef5416c5ef0beb83fefa4d8f952203a2cfb254b1ecca8afd95f1adceab",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2024,
+                "reason": "2024年8〜9月の本公演。翌年の映像発売・応援上映・記念イベントと区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/hetamu2024",
+                    "checkedAt": "2026-10-26T18:24:47.896Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/cast/",
+                    "checkedAt": "2026-10-26T18:25:16.716Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/story/",
+                    "checkedAt": "2026-10-26T18:25:17.144Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/schedule/",
+                    "checkedAt": "2026-10-26T18:25:17.530Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/qa/",
+                    "checkedAt": "2026-10-26T18:25:17.975Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://www.fwinc.co.jp/news/87920/",
+                    "checkedAt": "2026-10-26T18:24:48.843Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://www.fwinc.co.jp/live/97671/",
+                    "checkedAt": "2026-10-26T18:24:49.000Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/wp-content/themes/hetalia_glw/asset/img/txt-staff-pc.png",
+                    "checkedAt": "2026-10-26T18:26:16.437Z",
+                    "note": "当該公式スタッフ画像を目視確認して原表記を転記。画像原本・SHA256を保存。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/news/page/2/",
+                    "checkedAt": "2026-10-26T18:25:18.797Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/news/page/3/",
+                    "checkedAt": "2026-10-26T18:25:19.189Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/glw/news/374/",
+                    "checkedAt": "2026-10-26T18:28:23.445Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  },
+                  {
+                    "url": "https://kyodo-osaka.co.jp/search/detail/8569",
+                    "checkedAt": "2026-10-26T18:25:19.900Z",
+                    "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+                  }
+                ]
+              },
+              "original_source_row": {
+                "order": 9,
+                "cast": {
+                  "sourceActorName": "磯野亨",
+                  "sourceActorUrl": "https://kira-hai.net/isono-toru",
+                  "role_name": "オランダ",
+                  "cast_group": null
+                }
+              }
+            },
+            "matched_actor_id": "009b40fb-7855-4acc-b06d-c4b9299db647",
+            "matched_play_id": "5c469004-2f49-42c6-8d3a-9f9aa570cb60",
+            "status": "pending"
+          }
+        ]
+      },
+      "records": [
+        {
+          "actor": {
+            "id": "4b3110ab-0d88-4a68-8a1d-ed0fcac335ff",
+            "slug": "nagae-ryoki",
+            "name": "長江 崚行",
+            "kana": "ながえ りょうき",
+            "profile": "大阪府出身の俳優。NHK『天才てれびくん』シリーズに出演。ミュージカル『ヘタリア』のイタリア役、舞台『文豪ストレイドッグス』の江戸川乱歩役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-19T12:13:27.742892+00:00",
+            "updated_at": "2026-10-25T20:21:04.903274+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1998-08-26",
+            "height_cm": 177,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": "Ryoki Nagae",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "長江崚行",
+            "sourceActorUrl": "https://kira-hai.net/nagae-ryoki",
+            "role_name": "イタリア",
+            "cast_group": null
+          },
+          "sourceCreditKey": "8e5f1c41b2108f245abb",
+          "sourceOrder": 1,
+          "rawSourceOrder": 1,
+          "billingOrder": 1,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "a36372ce-61e5-43f5-ae9c-e1bf2fb5226b",
+            "slug": "ueda-yusuke",
+            "name": "上田 悠介",
+            "kana": "うえだ ゆうすけ",
+            "profile": "奈良県出身の俳優。ミュージカル『テニスの王子様』2ndシーズン（橘桔平役）やミュージカル『ヘタリア』（ドイツ役）等に出演。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/yskued0402",
+              "youtube": "https://www.youtube.com/channel/UCAnkbgwDTBfvlU29Vzcj5ZQ",
+              "instagram": "https://www.instagram.com/yskued0402"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:03:44.295565+00:00",
+            "updated_at": "2026-03-21T15:03:44.295565+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1989-04-02",
+            "height_cm": 182,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "上田悠介",
+            "sourceActorUrl": "https://kira-hai.net/ueda-yusuke",
+            "role_name": "ドイツ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "1122648243e9073fe695",
+          "sourceOrder": 2,
+          "rawSourceOrder": 2,
+          "billingOrder": 2,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "b15c5d1c-b38b-4604-bee6-f19f4a8ab1db",
+            "slug": "isogai-ryuko",
+            "name": "磯貝 龍乎",
+            "kana": "いそがい りゅうこ",
+            "profile": "北海道出身の俳優・演出家。旧芸名は磯貝龍虎。現在はフリーで活動している。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/ryukonbu",
+              "official": "https://ameblo.jp/rk3939/",
+              "instagram": "https://www.instagram.com/ryuco_isogai/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:01:26.311999+00:00",
+            "updated_at": "2026-03-21T15:01:26.311999+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1987-03-14",
+            "height_cm": 185,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "磯貝龍乎",
+            "sourceActorUrl": "https://kira-hai.net/isogai-ryuko",
+            "role_name": "アメリカ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "8d901f37bfe7b4c20639",
+          "sourceOrder": 3,
+          "rawSourceOrder": 3,
+          "billingOrder": 3,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "ea847f48-42b3-40d0-8b2b-5fe9c11d53f7",
+            "slug": "hirose-daisuke",
+            "name": "廣瀬 大介",
+            "kana": "ひろせ だいすけ",
+            "profile": "東京都出身の声優・俳優。ケッケコーポレーション所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/da_sukemaru",
+              "youtube": "https://www.youtube.com/channel/UCQHV65qO-YB8KeFkLUr6Yjw",
+              "official": "https://www.kekke.co.jp/talent/male/hw/hirose.html"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:03:44.295565+00:00",
+            "updated_at": "2026-03-21T15:03:44.295565+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1991-06-03",
+            "height_cm": 177,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "廣瀬大介",
+            "sourceActorUrl": "https://kira-hai.net/hirose-daisuke",
+            "role_name": "イギリス",
+            "cast_group": null
+          },
+          "sourceCreditKey": "3d1561ded8f329f5b474",
+          "sourceOrder": 4,
+          "rawSourceOrder": 4,
+          "billingOrder": 4,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "a862c0c0-8fd8-458b-8b9d-391c6fe69a0c",
+            "slug": "juri",
+            "name": "寿里",
+            "kana": "じゅり",
+            "profile": "千葉県市川市出身の俳優・ファッションモデル。本名は相川 寿里、過去にJURIとして活動。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/jurigig",
+              "official": "https://ameblo.jp/jurigig/",
+              "instagram": "https://www.instagram.com/jurigig/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-19T18:36:37.662481+00:00",
+            "updated_at": "2026-03-19T18:36:37.662481+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1981-02-16",
+            "height_cm": 186,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "寿里",
+            "sourceActorUrl": "https://kira-hai.net/juri",
+            "role_name": "フランス",
+            "cast_group": null
+          },
+          "sourceCreditKey": "2be6d8342e2d78b3cfe1",
+          "sourceOrder": 5,
+          "rawSourceOrder": 5,
+          "billingOrder": 5,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "3ecf714c-ad02-4356-af65-dcfb2952dfac",
+            "slug": "yamaoki-yuki",
+            "name": "山沖 勇輝",
+            "kana": "やまおき ゆうき",
+            "profile": "東京都出身の俳優。株式会社De-PRO所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/y_yuki0305",
+              "official": "https://ameblo.jp/y-yuki0305/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:01:26.311999+00:00",
+            "updated_at": "2026-03-21T15:01:26.311999+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1991-03-05",
+            "height_cm": 182,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "山沖勇輝",
+            "sourceActorUrl": "https://kira-hai.net/yamaoki-yuki",
+            "role_name": "ロシア",
+            "cast_group": null
+          },
+          "sourceCreditKey": "67183cf5d741877e86d3",
+          "sourceOrder": 6,
+          "rawSourceOrder": 6,
+          "billingOrder": 6,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "8f714e97-ff9f-4178-86aa-e3df3e067ea5",
+            "slug": "takamoto-gaku",
+            "name": "高本 学",
+            "kana": "たかもと がく",
+            "profile": "大阪府出身の俳優・モデル。ソニー・ミュージックエンタテインメント所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/C1Wo705",
+              "official": "https://takamotogaku.com/",
+              "instagram": "https://www.instagram.com/gaku.takamoto/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-31T19:58:24.352073+00:00",
+            "updated_at": "2026-03-31T19:58:24.352073+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1993-12-31",
+            "height_cm": 180,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "高本学",
+            "sourceActorUrl": "https://kira-hai.net/takamoto-gaku",
+            "role_name": "プロイセン",
+            "cast_group": null
+          },
+          "sourceCreditKey": "5fddd0ee40512acef518",
+          "sourceOrder": 7,
+          "rawSourceOrder": 7,
+          "billingOrder": 7,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "76f521b4-43a3-4f34-a1f2-bbb7664519a0",
+            "slug": "higuchi-yuta",
+            "name": "樋口 裕太",
+            "kana": "ひぐちゆうた",
+            "profile": null,
+            "image_url": null,
+            "sns": null,
+            "gender": null,
+            "created_at": "2026-10-17T08:00:21.084443+00:00",
+            "updated_at": "2026-10-25T20:21:04.903274+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1995-02-14",
+            "height_cm": 172,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "樋口裕太",
+            "sourceActorUrl": "https://kira-hai.net/higuchi-yuta",
+            "role_name": "ロマーノ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "a85725bc0e9a29e5ff60",
+          "sourceOrder": 8,
+          "rawSourceOrder": 8,
+          "billingOrder": 8,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "009b40fb-7855-4acc-b06d-c4b9299db647",
+            "slug": "isono-toru",
+            "name": "磯野 亨",
+            "kana": "いその とおる",
+            "profile": "福岡県出身の俳優。ライジングプロダクション所属。ミュージカル『ヘタリア』でオランダを演じ、劇団『ハイキュー!!』では澤村大地役を務める。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/tooru_1211",
+              "official": "https://rising-pro.jp/artist/isono/",
+              "instagram": "https://www.instagram.com/tooru_iso_1211/"
+            },
+            "gender": "male",
+            "created_at": "2026-10-26T18:18:06.133482+00:00",
+            "updated_at": "2026-10-26T18:18:06.133482+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1999-12-11",
+            "height_cm": 180,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Toru Isono",
+            "profile_en": "An actor from Fukuoka Prefecture represented by Rising Production. He plays the Netherlands in Musical Hetalia and Daichi Sawamura in the Gekidan Haikyu!! stage productions.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "磯野亨",
+            "sourceActorUrl": "https://kira-hai.net/isono-toru",
+            "role_name": "オランダ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "580afb4adb294e4a7ce7",
+          "sourceOrder": 9,
+          "rawSourceOrder": 9,
+          "billingOrder": 9,
+          "expectedNote": null,
+          "existingCast": null
+        }
+      ],
+      "creditOnly": [
+        "仲田祥司",
+        "町田尚規",
+        "伊東征哉",
+        "松崎友洸",
+        "安久真修",
+        "丸山武蔵",
+        "大嶌幸太",
+        "南舘優雄斗",
+        "畑野圭慧（Keyboard1&Cond.）",
+        "田中葵（Keyboard1&Cond.）",
+        "松岡美弥子（Keyboard2）",
+        "西川ノブユキ（Guitar）",
+        "よこやまこうだい（Bass）",
+        "奥村大爆発（Drums）",
+        "地行美穂（Violin）",
+        "大嶋世菜（Violin）"
+      ],
+      "ensembles": [
+        "仲田祥司",
+        "町田尚規",
+        "伊東征哉",
+        "松崎友洸",
+        "安久真修",
+        "丸山武蔵",
+        "大嶌幸太",
+        "南舘優雄斗"
+      ],
+      "band": [
+        {
+          "instrument": "Keyboard1&Cond.",
+          "names": [
+            "畑野圭慧",
+            "田中葵"
+          ]
+        },
+        {
+          "instrument": "Keyboard2",
+          "names": [
+            "松岡美弥子"
+          ]
+        },
+        {
+          "instrument": "Guitar",
+          "names": [
+            "西川ノブユキ"
+          ]
+        },
+        {
+          "instrument": "Bass",
+          "names": [
+            "よこやまこうだい"
+          ]
+        },
+        {
+          "instrument": "Drums",
+          "names": [
+            "奥村大爆発"
+          ]
+        },
+        {
+          "instrument": "Violin",
+          "names": [
+            "地行美穂",
+            "大嶋世菜"
+          ]
+        }
+      ],
+      "bandCredits": [
+        "畑野圭慧（Keyboard1&Cond.）",
+        "田中葵（Keyboard1&Cond.）",
+        "松岡美弥子（Keyboard2）",
+        "西川ノブユキ（Guitar）",
+        "よこやまこうだい（Bass）",
+        "奥村大爆発（Drums）",
+        "地行美穂（Violin）",
+        "大嶋世菜（Violin）"
+      ],
+      "officialOrder": [
+        {
+          "role": "イタリア",
+          "name": "長江崚行"
+        },
+        {
+          "role": "ドイツ",
+          "name": "上田悠介"
+        },
+        {
+          "role": "アメリカ",
+          "name": "磯貝龍乎"
+        },
+        {
+          "role": "イギリス",
+          "name": "廣瀬大介"
+        },
+        {
+          "role": "フランス",
+          "name": "寿里"
+        },
+        {
+          "role": "ロシア",
+          "name": "山沖勇輝"
+        },
+        {
+          "role": "プロイセン",
+          "name": "高本学"
+        },
+        {
+          "role": "ロマーノ",
+          "name": "樋口裕太"
+        },
+        {
+          "role": "オランダ",
+          "name": "磯野亨"
+        }
+      ],
+      "schedules": [
+        {
+          "city": "京都",
+          "date": "2024/08/09 18:00"
+        },
+        {
+          "city": "京都",
+          "date": "2024/08/10 12:30"
+        },
+        {
+          "city": "京都",
+          "date": "2024/08/10 18:00"
+        },
+        {
+          "city": "京都",
+          "date": "2024/08/11 12:30"
+        },
+        {
+          "city": "京都",
+          "date": "2024/08/11 18:00"
+        },
+        {
+          "city": "京都",
+          "date": "2024/08/12 13:00"
+        },
+        {
+          "city": "大阪",
+          "date": "2024/08/17 12:30"
+        },
+        {
+          "city": "大阪",
+          "date": "2024/08/17 18:00"
+        },
+        {
+          "city": "大阪",
+          "date": "2024/08/18 12:30"
+        },
+        {
+          "city": "大阪",
+          "date": "2024/08/18 18:00"
+        },
+        {
+          "city": "大阪",
+          "date": "2024/08/19 13:00"
+        },
+        {
+          "city": "東京",
+          "date": "2024/08/24 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2024/08/25 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2024/08/25 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2024/08/27 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2024/08/28 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2024/08/28 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2024/08/29 14:00"
+        },
+        {
+          "city": "東京",
+          "date": "2024/08/30 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2024/08/31 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2024/08/31 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2024/09/01 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2024/09/01 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2024/09/03 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2024/09/04 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2024/09/04 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2024/09/05 14:00"
+        },
+        {
+          "city": "東京",
+          "date": "2024/09/06 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2024/09/07 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2024/09/07 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2024/09/08 13:00"
+        }
+      ],
+      "staffImageTranscription": [
+        [
+          "原作",
+          "日丸屋秀和『ヘタリア World★Stars』（集英社「少年ジャンプ＋」連載）"
+        ],
+        [
+          "演出",
+          "吉谷晃太朗"
+        ],
+        [
+          "脚本",
+          "なるせゆうせい"
+        ],
+        [
+          "音楽",
+          "宮里豊"
+        ],
+        [
+          "振付",
+          "MAMORU"
+        ],
+        [
+          "音楽監督",
+          "田中葵"
+        ],
+        [
+          "歌唱指導・音楽助手",
+          "水野里香"
+        ],
+        [
+          "舞台衣装デザイン",
+          "新朋子（COMO Inc.）"
+        ],
+        [
+          "衣装製作",
+          "COMO Inc."
+        ],
+        [
+          "ヘアメイク",
+          "西村裕司（earch）"
+        ],
+        [
+          "カメラマン",
+          "金山フヒト（Xallarap）"
+        ],
+        [
+          "宣伝美術",
+          "羽尾万里子（Mujina:art）"
+        ],
+        [
+          "企画・プロデュース",
+          "4cu（Frontier Works Inc.）"
+        ],
+        [
+          "制作",
+          "株式会社FAB"
+        ],
+        [
+          "主催",
+          "ミュージカル「ヘタリアGLW」製作委員会"
+        ]
+      ],
+      "ensembleChange": {
+        "withdrawn": "船橋拓幹",
+        "replacement": "南舘優雄斗",
+        "announced": "2024-06-18",
+        "originalKiraRows": [
+          "仲田祥司",
+          "町田尚規",
+          "伊東征哉",
+          "松崎友洸",
+          "安久真修",
+          "丸山武蔵",
+          "船橋拓幹",
+          "大嶌幸太",
+          "南舘優雄斗"
+        ],
+        "evidence": [
+          {
+            "url": "https://musical-hetalia.com/glw/cast/",
+            "checkedAt": "2026-10-26T18:25:16.716Z",
+            "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+          },
+          {
+            "url": "https://musical-hetalia.com/glw/news/page/3/",
+            "checkedAt": "2026-10-26T18:25:19.189Z",
+            "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+          }
+        ]
+      },
+      "typhoonResponse": {
+        "announcementAsOf": "2024-08-31T22:00:00+09:00",
+        "announcedSchedule": "すべての公演を現時点では予定通り上演",
+        "eligibleReason": "交通機関の不通で来場が難しい観客",
+        "affectedPerformances": [
+          "2024/08/30 18:00",
+          "2024/08/31 12:30",
+          "2024/08/31 18:00",
+          "2024/09/01 12:30",
+          "2024/09/01 18:00"
+        ],
+        "transferToExistingPerformances": [
+          "2024/09/03 18:00",
+          "2024/09/04 12:30",
+          "2024/09/04 18:00",
+          "2024/09/05 14:00",
+          "2024/09/06 18:00"
+        ],
+        "refundAnnounced": "2024-09-03",
+        "evidence": [
+          {
+            "url": "https://musical-hetalia.com/glw/news/page/2/",
+            "checkedAt": "2026-10-26T18:25:18.797Z",
+            "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+          },
+          {
+            "url": "https://musical-hetalia.com/glw/news/374/",
+            "checkedAt": "2026-10-26T18:28:23.445Z",
+            "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+          }
+        ],
+        "note": "上演中止や追加公演と解釈しない。各公演が全て予定時刻どおり実施されたとの独立監査ではない。"
+      },
+      "legacyCandidates": [],
+      "legacyUpgrades": [],
+      "legacyKept": [],
+      "transformations": [
+        {
+          "type": "credit_only",
+          "ensembles": [
+            "仲田祥司",
+            "町田尚規",
+            "伊東征哉",
+            "松崎友洸",
+            "安久真修",
+            "丸山武蔵",
+            "大嶌幸太",
+            "南舘優雄斗"
+          ],
+          "band": [
+            "畑野圭慧（Keyboard1&Cond.）",
+            "田中葵（Keyboard1&Cond.）",
+            "松岡美弥子（Keyboard2）",
+            "西川ノブユキ（Guitar）",
+            "よこやまこうだい（Bass）",
+            "奥村大爆発（Drums）",
+            "地行美穂（Violin）",
+            "大嶋世菜（Violin）"
+          ],
+          "evidence": [
+            {
+              "url": "https://musical-hetalia.com/glw/cast/",
+              "checkedAt": "2026-10-26T18:25:16.716Z",
+              "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+            }
+          ]
+        },
+        {
+          "type": "ensemble_withdrawal",
+          "withdrawn": "船橋拓幹",
+          "replacement": "南舘優雄斗",
+          "evidence": [
+            {
+              "url": "https://musical-hetalia.com/glw/news/page/3/",
+              "checkedAt": "2026-10-26T18:25:19.189Z",
+              "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+            }
+          ]
+        },
+        {
+          "type": "staff_image_transcription",
+          "sha256": "a1d43ec159e95848a0e584f3a95e16dd7cecca96ebd2cbbea33e64ceb7185528",
+          "evidence": [
+            {
+              "url": "https://musical-hetalia.com/glw/wp-content/themes/hetalia_glw/asset/img/txt-staff-pc.png",
+              "checkedAt": "2026-10-26T18:26:16.437Z",
+              "note": "当該公式スタッフ画像を目視確認して原表記を転記。画像原本・SHA256を保存。"
+            },
+            {
+              "url": "https://www.fwinc.co.jp/live/97671/",
+              "checkedAt": "2026-10-26T18:24:49.000Z",
+              "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+            }
+          ]
+        }
+      ],
+      "exceptions": [
+        "主要9配役は全員既存人物を再利用。姓名半角スペース・性別・プロフィール・翻訳など既存属性を全項目保全。",
+        "キラハイ未解析9行には降板者船橋拓幹を含む。最終公式8人から出演クレジットを作り、船橋は出演者変更の注記と原資料に残す。取消線HTMLは見つからず、公式6/18変更告知を根拠とする。",
+        "アンサンブル8人・バンド8人は作品クレジット。バンドは公式の名義・楽器を保持し、旧作の横山航大・奥村眞也等へ推測で置換しない。Keyboard1とViolin各2人の公演別担当日は未確認。全員が全回同時出演と断定しない。",
+        "京都6・大阪5・東京20の全31公演。東京は8月26日と9月2日休演で、8月・9月の2表を同一東京公演として扱う。",
+        "台風10号対応は東京8/30〜9/1の5公演を対象とする観客の振替・払戻し。予定どおり上演告知と併記し、中止5回を引いたり振替先の既存5公演を追加したりしない。",
+        "公式スタッフ画像・主催者本文から今作音楽宮里豊、音楽監督田中葵等を採用。旧作tak音楽などを継承しない。175分・休憩15分は公式予定で映像版時間を流用しない。",
+        "初日シリーズ通算100回は公式告知の値を記録。過去作品の登録回数を再集計してその通算値を独自に訂正する監査へ広げない。",
+        "日本・中国・スペイン・オーストリアは今作公式に掲載されていないため過去作から継承しない。詳細英訳・2025年以降・現在配信・人物属性総合監査は後続。vodは空欄。"
+      ]
+    }
+  ],
+  "keptPlays": [
+    {
+      "id": "0e248a7c-a0af-4a9c-bdfe-e3405ccdec37",
+      "slug": "hetamu2017",
+      "title": "ミュージカル「ヘタリア～in the new world～」",
+      "franchise_id": "1ebeffff-4df9-47a1-8449-251fa80a56c1",
+      "summary": "長い戦いの後、それぞれの地で再出発するドイツと日本。変わらず元気なイタリアを交えた三人は、以前のように心が通わずにいた。かつて強国と渡り合った男の残した日記をきっかけに、離れた心が再び向き合い始める。プロイセンが新登場するミュージカル第3弾。",
+      "period": "2017年7月15日〜8月2日",
+      "venue": "大阪：NHK大阪ホール／東京：シアター1010",
+      "vod": {},
+      "genre": null,
+      "created_at": "2026-10-26T17:32:58.362083+00:00",
+      "updated_at": "2026-10-26T17:32:58.362083+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "日丸屋秀和『ヘタリア Axis Powers』"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "演出",
+          "names": [
+            "吉谷光太郎"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "脚本",
+          "names": [
+            "なるせゆうせい"
+          ],
+          "is_core": true,
+          "sort_order": 3
+        },
+        {
+          "role": "音楽",
+          "names": [
+            "tak"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "振付",
+          "names": [
+            "MAMORU"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "企画製作",
+          "names": [
+            "フロンティアワークス"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        },
+        {
+          "role": "制作",
+          "names": [
+            "ポリゴンマジック"
+          ],
+          "is_core": false,
+          "sort_order": 7
+        },
+        {
+          "role": "主催",
+          "names": [
+            "ミュージカル「ヘタリアNW」製作委員会"
+          ],
+          "is_core": false,
+          "sort_order": 8
+        },
+        {
+          "role": "アンサンブル",
+          "names": [
+            "仲田祥司",
+            "帯金遼太",
+            "山田諒",
+            "茶谷健太",
+            "新開理雄",
+            "町田尚規",
+            "山内涼平",
+            "一之瀬達也",
+            "山口渓",
+            "橋本佳貴"
+          ],
+          "is_core": false,
+          "sort_order": 9
+        },
+        {
+          "role": "公演日程",
+          "names": [
+            "大阪：2017年7月15日〜17日（NHK大阪ホール、5公演）",
+            "東京：2017年7月21日〜8月2日（シアター1010、18公演）"
+          ],
+          "is_core": false,
+          "sort_order": 10
+        },
+        {
+          "role": "上演時間（予定）",
+          "names": [
+            "約150分"
+          ],
+          "is_core": false,
+          "sort_order": 11
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "After a long war, Germany and Japan make new beginnings in their own lands. Italy remains as cheerful as ever, yet the three struggle to connect as they once did. A diary left by a man who fought the great powers draws them toward one another again. The third Hetalia musical introduces Prussia.",
+      "title_en": "Musical Hetalia: in the new world"
+    },
+    {
+      "id": "22f8df30-5598-459d-9cc1-9020ee966790",
+      "slug": "hetamu2021",
+      "title": "ミュージカル「ヘタリア～The world is wonderful～」",
+      "franchise_id": "1ebeffff-4df9-47a1-8449-251fa80a56c1",
+      "summary": "国を擬人化したキャラクターたちを描く『ヘタリア World★Stars』を原作とするミュージカル。ローマ爺ちゃんと陽気に暮らしていたイタリアとロマーノの兄弟は、時代の移り変わりの中で離れ離れに。いつか再会し、強くなろうという約束を胸に、それぞれの歩みを重ねていく。",
+      "period": "2021年12月16日〜31日",
+      "venue": "大阪：COOL JAPAN PARK OSAKA WWホール／東京：品川プリンスホテル ステラボール",
+      "vod": {},
+      "genre": null,
+      "created_at": "2026-10-26T18:02:27.192389+00:00",
+      "updated_at": "2026-10-26T18:02:27.192389+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "日丸屋秀和『ヘタリア World★Stars』（集英社「少年ジャンプ＋」連載）"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "演出",
+          "names": [
+            "吉谷晃太朗"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "脚本",
+          "names": [
+            "なるせゆうせい"
+          ],
+          "is_core": true,
+          "sort_order": 3
+        },
+        {
+          "role": "振付",
+          "names": [
+            "MAMORU"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "音楽",
+          "names": [
+            "tak"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "歌唱指導",
+          "names": [
+            "水野里香"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        },
+        {
+          "role": "舞台衣装デザイン",
+          "names": [
+            "新朋子(COMO)"
+          ],
+          "is_core": false,
+          "sort_order": 7
+        },
+        {
+          "role": "衣装製作",
+          "names": [
+            "COMO"
+          ],
+          "is_core": false,
+          "sort_order": 8
+        },
+        {
+          "role": "ヘアメイク",
+          "names": [
+            "earch"
+          ],
+          "is_core": false,
+          "sort_order": 9
+        },
+        {
+          "role": "カメラマン",
+          "names": [
+            "金山フヒト"
+          ],
+          "is_core": false,
+          "sort_order": 10
+        },
+        {
+          "role": "宣伝美術",
+          "names": [
+            "Mujina:art"
+          ],
+          "is_core": false,
+          "sort_order": 11
+        },
+        {
+          "role": "企画・プロデュース",
+          "names": [
+            "4cu"
+          ],
+          "is_core": false,
+          "sort_order": 12
+        },
+        {
+          "role": "制作",
+          "names": [
+            "ポリゴンマジック"
+          ],
+          "is_core": false,
+          "sort_order": 13
+        },
+        {
+          "role": "主催",
+          "names": [
+            "ミュージカル「ヘタリアWW」製作委員会"
+          ],
+          "is_core": false,
+          "sort_order": 14
+        },
+        {
+          "role": "大阪公演協賛",
+          "names": [
+            "株式会社ヌマタ印刷"
+          ],
+          "is_core": false,
+          "sort_order": 15
+        },
+        {
+          "role": "アンサンブル",
+          "names": [
+            "仲田祥司",
+            "松永健太郎",
+            "町田尚規",
+            "伊東征哉",
+            "松崎友洸",
+            "平澤佑樹"
+          ],
+          "is_core": false,
+          "sort_order": 16
+        },
+        {
+          "role": "公演日程",
+          "names": [
+            "大阪：2021年12月16日〜19日（COOL JAPAN PARK OSAKA WWホール）・全6公演",
+            "東京：2021年12月23日〜31日（品川プリンスホテル ステラボール）・全13公演、12月27日休演"
+          ],
+          "is_core": false,
+          "sort_order": 17
+        },
+        {
+          "role": "開演時刻変更",
+          "names": [
+            "機材輸送時の事故の影響により、2021年12月16日の大阪公演は18:00から19:00開演へ変更。"
+          ],
+          "is_core": false,
+          "sort_order": 18
+        },
+        {
+          "role": "上演時間（予定）",
+          "names": [
+            "約2時間50分（途中休憩15分予定）"
+          ],
+          "is_core": false,
+          "sort_order": 19
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "A musical based on Hetalia: World Stars and its personified nations. Italy and Romano once lived happily with Grandpa Rome, but changing times leave the brothers separated. They set out on their own paths, holding on to their promise to meet again and grow strong like him.",
+      "title_en": "Musical Hetalia: The world is wonderful"
+    },
+    {
+      "id": "42af489f-2553-4038-a1da-5427709777ca",
+      "slug": "hetamu2015",
+      "title": "ミュージカル「ヘタリア～Singin’ in the World～」",
+      "franchise_id": "1ebeffff-4df9-47a1-8449-251fa80a56c1",
+      "summary": "世界会議を進めようとするドイツだが、アメリカやイギリス、フランスたちの発言で会議は混乱。そこへイタリアが加わり、さらに賑やかな騒動へ発展する。国を擬人化したキャラクターたちのやりとりを歌とダンスで描く『ヘタリア』初のミュージカル。",
+      "period": "2015年12月24日〜29日",
+      "venue": "Zeppブルーシアター六本木",
+      "vod": {},
+      "genre": null,
+      "created_at": "2026-10-26T17:06:09.184766+00:00",
+      "updated_at": "2026-10-26T17:06:09.184766+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "日丸屋秀和『ヘタリア Axis Powers』"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "脚本",
+          "names": [
+            "なるせゆうせい"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "演出",
+          "names": [
+            "吉谷光太郎"
+          ],
+          "is_core": true,
+          "sort_order": 3
+        },
+        {
+          "role": "音楽",
+          "names": [
+            "tak"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "振付",
+          "names": [
+            "MAMORU"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "制作",
+          "names": [
+            "ポリゴンマジック"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        },
+        {
+          "role": "主催",
+          "names": [
+            "ミュージカル「ヘタリア」製作委員会（フロンティアワークス、ポリゴンマジック、セガ・ライブクリエイション、KADOKAWA）"
+          ],
+          "is_core": false,
+          "sort_order": 7
+        },
+        {
+          "role": "アンサンブル",
+          "names": [
+            "仲田祥司",
+            "池田謙信",
+            "原野正章",
+            "今田竜人",
+            "三原大樹",
+            "帯金遼太",
+            "山本哲平",
+            "岡本笙"
+          ],
+          "is_core": false,
+          "sort_order": 8
+        },
+        {
+          "role": "公演日程",
+          "names": [
+            "2015年12月24日〜29日（Zeppブルーシアター六本木、追加公演を含む全11公演）"
+          ],
+          "is_core": false,
+          "sort_order": 9
+        },
+        {
+          "role": "追加公演",
+          "names": [
+            "2015年12月28日13:00（2015年11月12日発表）"
+          ],
+          "is_core": false,
+          "sort_order": 10
+        },
+        {
+          "role": "上演時間（予定）",
+          "names": [
+            "約2時間"
+          ],
+          "is_core": false,
+          "sort_order": 11
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "Germany tries to keep a world meeting on track, but America, England and France turn the discussion into chaos. Italy’s arrival only adds to the commotion. The first Hetalia musical brings the encounters between personified nations to the stage through song and dance.",
+      "title_en": "Musical Hetalia: Singin’ in the World"
+    },
+    {
+      "id": "9126ffbf-ef6b-4bde-809a-5984804093bb",
+      "slug": "hetamu2016",
+      "title": "ミュージカル「ヘタリア～The Great World～」",
+      "franchise_id": "1ebeffff-4df9-47a1-8449-251fa80a56c1",
+      "summary": "新天地を目指し、国々が海へ乗り出す「大航海ブーム」の時代。イタリアたちにスペインも加わり、個性豊かな国々の交流と競い合いを歌とダンスで描く。『ヘタリア』ミュージカル第2弾として東京・大阪で上演された。",
+      "period": "2016年11月10日〜27日",
+      "venue": "東京：シアター1010／大阪：森ノ宮ピロティホール",
+      "vod": {},
+      "genre": null,
+      "created_at": "2026-10-26T17:23:27.573227+00:00",
+      "updated_at": "2026-10-26T17:23:27.573227+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "日丸屋秀和『ヘタリア Axis Powers』"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "演出",
+          "names": [
+            "吉谷光太郎"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "脚本",
+          "names": [
+            "なるせゆうせい"
+          ],
+          "is_core": true,
+          "sort_order": 3
+        },
+        {
+          "role": "音楽",
+          "names": [
+            "tak"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "振付",
+          "names": [
+            "MAMORU"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "企画製作",
+          "names": [
+            "フロンティアワークス"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        },
+        {
+          "role": "制作",
+          "names": [
+            "ポリゴンマジック"
+          ],
+          "is_core": false,
+          "sort_order": 7
+        },
+        {
+          "role": "主催",
+          "names": [
+            "ミュージカル「ヘタリアGW」製作委員会"
+          ],
+          "is_core": false,
+          "sort_order": 8
+        },
+        {
+          "role": "アンサンブル",
+          "names": [
+            "池田謙信",
+            "今田竜人",
+            "帯金遼太",
+            "山本哲平",
+            "山田 諒",
+            "喜多野章太郎",
+            "茶谷健太",
+            "大澤信児",
+            "田村公典",
+            "徳留達也"
+          ],
+          "is_core": false,
+          "sort_order": 9
+        },
+        {
+          "role": "公演日程",
+          "names": [
+            "東京：2016年11月10日〜20日（シアター1010、17公演）",
+            "大阪：2016年11月25日〜27日（森ノ宮ピロティホール、5公演）"
+          ],
+          "is_core": false,
+          "sort_order": 10
+        },
+        {
+          "role": "追加公演",
+          "names": [
+            "東京：2016年11月15日14:00",
+            "大阪：2016年11月25日19:00"
+          ],
+          "is_core": false,
+          "sort_order": 11
+        },
+        {
+          "role": "上演時間（予定）",
+          "names": [
+            "約130分"
+          ],
+          "is_core": false,
+          "sort_order": 12
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "During an age of exploration, the nations set sail in search of new lands. Spain joins Italy and the other personified nations in a story of encounters and rivalry told through song and dance. The second Hetalia musical was staged in Tokyo and Osaka.",
+      "title_en": "Musical Hetalia: The Great World"
+    },
+    {
+      "id": "abd86e39-7f70-40c1-8ef3-e9dacc769f7f",
+      "slug": "hetamu2023",
+      "title": "ミュージカル「ヘタリア～The Fantastic World～」",
+      "franchise_id": "1ebeffff-4df9-47a1-8449-251fa80a56c1",
+      "summary": "『ヘタリア World★Stars』を原作とするミュージカル新シリーズ第2弾。世界の問題を協力して解決するために集まった面々は、ドイツの意外な提案で混乱に陥る。話し合いを収めるために選んだのは、くじ引き。思いがけない当たりの行方を軸に、国々のにぎやかなやりとりが描かれる。",
+      "period": "2023年4月7日〜23日",
+      "venue": "大阪：東大阪市文化創造館 Dream House 大ホール／東京：日本青年館ホール",
+      "vod": {},
+      "genre": null,
+      "created_at": "2026-10-26T18:18:06.133482+00:00",
+      "updated_at": "2026-10-26T18:18:06.133482+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "日丸屋秀和『ヘタリア World★Stars』（集英社「少年ジャンプ＋」連載）"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "演出",
+          "names": [
+            "吉谷晃太朗"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "脚本",
+          "names": [
+            "なるせゆうせい"
+          ],
+          "is_core": true,
+          "sort_order": 3
+        },
+        {
+          "role": "振付",
+          "names": [
+            "MAMORU"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "音楽",
+          "names": [
+            "tak"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "音楽監督＆歌唱指導",
+          "names": [
+            "水野里香"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        },
+        {
+          "role": "舞台衣装デザイン",
+          "names": [
+            "新朋子（COMO Inc.）"
+          ],
+          "is_core": false,
+          "sort_order": 7
+        },
+        {
+          "role": "衣装製作",
+          "names": [
+            "COMO Inc."
+          ],
+          "is_core": false,
+          "sort_order": 8
+        },
+        {
+          "role": "ヘアメイク",
+          "names": [
+            "西村裕司（earch）"
+          ],
+          "is_core": false,
+          "sort_order": 9
+        },
+        {
+          "role": "カメラマン",
+          "names": [
+            "金山フヒト"
+          ],
+          "is_core": false,
+          "sort_order": 10
+        },
+        {
+          "role": "宣伝美術",
+          "names": [
+            "羽尾万里子（Mujina:art）"
+          ],
+          "is_core": false,
+          "sort_order": 11
+        },
+        {
+          "role": "企画制作・プロデュース",
+          "names": [
+            "4cu"
+          ],
+          "is_core": false,
+          "sort_order": 12
+        },
+        {
+          "role": "制作",
+          "names": [
+            "株式会社FAB"
+          ],
+          "is_core": false,
+          "sort_order": 13
+        },
+        {
+          "role": "大阪共催",
+          "names": [
+            "PFI東大阪文化創造館株式会社"
+          ],
+          "is_core": false,
+          "sort_order": 14
+        },
+        {
+          "role": "主催",
+          "names": [
+            "ミュージカル「ヘタリアFW」製作委員会"
+          ],
+          "is_core": false,
+          "sort_order": 15
+        },
+        {
+          "role": "アンサンブル",
+          "names": [
+            "仲田祥司",
+            "町田尚規",
+            "伊東征哉",
+            "山口渓",
+            "松崎友洸",
+            "安久真修",
+            "丸山武蔵",
+            "船橋拓幹"
+          ],
+          "is_core": false,
+          "sort_order": 16
+        },
+        {
+          "role": "公演日程",
+          "names": [
+            "大阪：2023年4月7日〜10日（東大阪市文化創造館 Dream House 大ホール）・全6公演",
+            "東京：2023年4月15日〜23日（日本青年館ホール）・全13公演、4月17日休演"
+          ],
+          "is_core": false,
+          "sort_order": 17
+        },
+        {
+          "role": "上演時間（予定）",
+          "names": [
+            "約3時間（途中休憩15分予定）"
+          ],
+          "is_core": false,
+          "sort_order": 18
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "The second production in the new Musical Hetalia series, based on Hetalia: World Stars. The nations gather for a world conference to tackle shared problems, but an unexpected proposal from Germany throws the meeting into confusion. To settle matters, they decide to draw lots—with a surprising result.",
+      "title_en": "Musical Hetalia: The Fantastic World"
+    },
+    {
+      "id": "b8d95913-ad9c-46b3-b315-6134546e31fe",
+      "slug": "hetamu2018",
+      "title": "ミュージカル「ヘタリア」FINAL LIVE～A World in the Universe～",
+      "franchise_id": "1ebeffff-4df9-47a1-8449-251fa80a56c1",
+      "summary": "ミュージカル『ヘタリア』初演から第3弾までの楽曲を、生バンドとダンスで届けるライブイベント。イタリア役の長江崚行ら11キャラクターが参加し、幕張・大阪で開催された。楽曲に加え、シリーズを振り返るキャラクター同士のやりとりも盛り込まれている。",
+      "period": "2018年3月17日〜21日",
+      "venue": "幕張：幕張メッセ イベントホール／大阪：フェスティバルホール",
+      "vod": {},
+      "genre": null,
+      "created_at": "2026-10-26T17:45:27.14878+00:00",
+      "updated_at": "2026-10-26T17:45:27.14878+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "日丸屋秀和『ヘタリア Axis Powers』"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "演出",
+          "names": [
+            "吉谷光太郎"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "音楽",
+          "names": [
+            "tak"
+          ],
+          "is_core": false,
+          "sort_order": 3
+        },
+        {
+          "role": "振付",
+          "names": [
+            "MAMORU"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "企画プロデュース",
+          "names": [
+            "4cu（フロンティアワークス）"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "制作協力",
+          "names": [
+            "ポリゴンマジック"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        },
+        {
+          "role": "LIVE制作",
+          "names": [
+            "バンダイナムコ ライブクリエイティブ"
+          ],
+          "is_core": false,
+          "sort_order": 7
+        },
+        {
+          "role": "主催",
+          "names": [
+            "ミュージカル「ヘタリアWU」製作委員会"
+          ],
+          "is_core": false,
+          "sort_order": 8
+        },
+        {
+          "role": "ダンサー",
+          "names": [
+            "浅山順大",
+            "五十嵐胤人",
+            "伊藤翔",
+            "岡本笙",
+            "帯金遼太",
+            "河野健太",
+            "木本雄",
+            "佐藤優次",
+            "竹井弘樹",
+            "多田滉",
+            "成田凌",
+            "徳留達也",
+            "町田尚規",
+            "三宅柊大",
+            "村上雅貴",
+            "吉田 邑樹"
+          ],
+          "is_core": false,
+          "sort_order": 9
+        },
+        {
+          "role": "バンド",
+          "names": [
+            "宮里豊（ギター）",
+            "西川ノブユキ（ギター）",
+            "菊池亮太（キーボード）",
+            "奥村眞也（ドラム）",
+            "横山航大（ベース）"
+          ],
+          "is_core": false,
+          "sort_order": 10
+        },
+        {
+          "role": "公演形式",
+          "names": [
+            "ライブ"
+          ],
+          "is_core": false,
+          "sort_order": 11
+        },
+        {
+          "role": "公演日程",
+          "names": [
+            "幕張：2018年3月17日18:00・18日12:00／18:00（幕張メッセ イベントホール）",
+            "大阪：2018年3月21日12:00／18:00（フェスティバルホール）"
+          ],
+          "is_core": false,
+          "sort_order": 12
+        },
+        {
+          "role": "上演時間（予定）",
+          "names": [
+            "約180分（休憩なし）"
+          ],
+          "is_core": false,
+          "sort_order": 13
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "A live event featuring songs from the first three Hetalia musicals, performed with a live band and dancers. Eleven characters take part, led by Ryoki Nagae as Italy, across performances in Makuhari and Osaka. Alongside the music, exchanges between the characters revisit the musical series.",
+      "title_en": "Musical Hetalia FINAL LIVE: A World in the Universe"
+    }
+  ],
+  "evidence": {
+    "links": [
+      {
+        "url": "https://kira-hai.net/hetamu2024",
+        "checkedAt": "2026-10-26T18:24:47.896Z",
+        "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+      },
+      {
+        "url": "https://musical-hetalia.com/glw/cast/",
+        "checkedAt": "2026-10-26T18:25:16.716Z",
+        "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+      },
+      {
+        "url": "https://musical-hetalia.com/glw/story/",
+        "checkedAt": "2026-10-26T18:25:17.144Z",
+        "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+      },
+      {
+        "url": "https://musical-hetalia.com/glw/schedule/",
+        "checkedAt": "2026-10-26T18:25:17.530Z",
+        "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+      },
+      {
+        "url": "https://musical-hetalia.com/glw/qa/",
+        "checkedAt": "2026-10-26T18:25:17.975Z",
+        "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+      },
+      {
+        "url": "https://www.fwinc.co.jp/news/87920/",
+        "checkedAt": "2026-10-26T18:24:48.843Z",
+        "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+      },
+      {
+        "url": "https://www.fwinc.co.jp/live/97671/",
+        "checkedAt": "2026-10-26T18:24:49.000Z",
+        "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+      },
+      {
+        "url": "https://musical-hetalia.com/glw/wp-content/themes/hetalia_glw/asset/img/txt-staff-pc.png",
+        "checkedAt": "2026-10-26T18:26:16.437Z",
+        "note": "当該公式スタッフ画像を目視確認して原表記を転記。画像原本・SHA256を保存。"
+      },
+      {
+        "url": "https://musical-hetalia.com/glw/news/page/2/",
+        "checkedAt": "2026-10-26T18:25:18.797Z",
+        "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+      },
+      {
+        "url": "https://musical-hetalia.com/glw/news/page/3/",
+        "checkedAt": "2026-10-26T18:25:19.189Z",
+        "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+      },
+      {
+        "url": "https://musical-hetalia.com/glw/news/374/",
+        "checkedAt": "2026-10-26T18:28:23.445Z",
+        "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+      },
+      {
+        "url": "https://kyodo-osaka.co.jp/search/detail/8569",
+        "checkedAt": "2026-10-26T18:25:19.900Z",
+        "note": "取得原文・指紋を保存。キラハイを土台とし当該公式の役名・区分・順序・日程・交代・台風対応告知を照合。"
+      }
+    ],
+    "sources": [
+      {
+        "label": "kira",
+        "url": "https://kira-hai.net/hetamu2024",
+        "status": 200,
+        "checkedAt": "2026-10-26T18:24:47.896Z",
+        "sha256": "5284f6dca51fbd85b0e94748bbf55c537661ef882946b3800e5d1ce0e7aee99b",
+        "bytes": 53706
+      },
+      {
+        "label": "home",
+        "url": "https://musical-hetalia.com/glw/",
+        "status": 200,
+        "checkedAt": "2026-10-26T18:24:48.402Z",
+        "sha256": "a6f6b5295728deea769d7456cb3eb61ba067e924ebbd8914b76d0562b9bf3d66",
+        "bytes": 18614
+      },
+      {
+        "label": "producer",
+        "url": "https://www.fwinc.co.jp/news/87920/",
+        "status": 200,
+        "checkedAt": "2026-10-26T18:24:48.843Z",
+        "sha256": "2995341530fceed5f04529265dcfdf57fb35ed514a6ed52b8db0071feddf74d1",
+        "bytes": 76635
+      },
+      {
+        "label": "producerStaff",
+        "url": "https://www.fwinc.co.jp/live/97671/",
+        "status": 200,
+        "checkedAt": "2026-10-26T18:24:49.000Z",
+        "sha256": "faf274d69f2cc04a9484a71ac0a0b9832de66c9820edb61c8c080981595c01fb",
+        "bytes": 80350
+      },
+      {
+        "label": "changelog",
+        "url": "https://supabase.com/changelog.md",
+        "status": 200,
+        "checkedAt": "2026-10-26T18:24:49.260Z",
+        "sha256": "45528009025b8ad8487ccb73f7c769b66d4b0e7aa4560157047899dcb5b5a006",
+        "bytes": 102641
+      },
+      {
+        "label": "official",
+        "url": "https://musical-hetalia.com/glw/cast/",
+        "status": 200,
+        "checkedAt": "2026-10-26T18:25:16.716Z",
+        "sha256": "629b31dbd1862101cc86c86070902f39b9cb9c904592997ff6e2664bd32b5326",
+        "bytes": 24471
+      },
+      {
+        "label": "story",
+        "url": "https://musical-hetalia.com/glw/story/",
+        "status": 200,
+        "checkedAt": "2026-10-26T18:25:17.144Z",
+        "sha256": "87985226786857e4d39e98c6bfe33c83c9455e67c22b864c1c86a0b63065e07f",
+        "bytes": 16408
+      },
+      {
+        "label": "schedule",
+        "url": "https://musical-hetalia.com/glw/schedule/",
+        "status": 200,
+        "checkedAt": "2026-10-26T18:25:17.530Z",
+        "sha256": "2a521cab6755abd2c0ebf47cc001282183e2c808702f09315f89a3d46b364dce",
+        "bytes": 27090
+      },
+      {
+        "label": "qa",
+        "url": "https://musical-hetalia.com/glw/qa/",
+        "status": 200,
+        "checkedAt": "2026-10-26T18:25:17.975Z",
+        "sha256": "bc4a83ab557dac7586e7e3b52ed89cb17c03f23625511639f439f909947942ed",
+        "bytes": 29660
+      },
+      {
+        "label": "news",
+        "url": "https://musical-hetalia.com/glw/news/",
+        "status": 200,
+        "checkedAt": "2026-10-26T18:25:18.384Z",
+        "sha256": "b650fb1c65a48da36c2676eb4bf032bb9b192a4c3b07c884011a25c563c4f04d",
+        "bytes": 48300
+      },
+      {
+        "label": "news2",
+        "url": "https://musical-hetalia.com/glw/news/page/2/",
+        "status": 200,
+        "checkedAt": "2026-10-26T18:25:18.797Z",
+        "sha256": "79d62730c5a24b27306cde6379b14d7d14dd3b1a2d8ff7467c46faf7fe8c832f",
+        "bytes": 41595
+      },
+      {
+        "label": "news3",
+        "url": "https://musical-hetalia.com/glw/news/page/3/",
+        "status": 200,
+        "checkedAt": "2026-10-26T18:25:19.189Z",
+        "sha256": "a21cf674cf6e4b23df5cb478584c7a418727eb1c29452d606e3322b8f3f2261a",
+        "bytes": 36896
+      },
+      {
+        "label": "kyoto",
+        "url": "https://kyodo-osaka.co.jp/search/detail/8569",
+        "status": 200,
+        "checkedAt": "2026-10-26T18:25:19.900Z",
+        "sha256": "be70431c957ca63e697c33102ea51ebf2328586b7bbaf753c33a366af784a155",
+        "bytes": 47409
+      },
+      {
+        "label": "staffImage",
+        "url": "https://musical-hetalia.com/glw/wp-content/themes/hetalia_glw/asset/img/txt-staff-pc.png",
+        "status": 200,
+        "checkedAt": "2026-10-26T18:26:16.437Z",
+        "sha256": "a1d43ec159e95848a0e584f3a95e16dd7cecca96ebd2cbbea33e64ceb7185528",
+        "bytes": 52924
+      },
+      {
+        "label": "news4",
+        "url": "https://musical-hetalia.com/glw/news/page/4/",
+        "status": 200,
+        "checkedAt": "2026-10-26T18:28:22.958Z",
+        "sha256": "d6d9f9368a7605d59eb90779af18d6074b382c7f98ff8db7e31a745c8339c0e1",
+        "bytes": 16654
+      },
+      {
+        "label": "refund",
+        "url": "https://musical-hetalia.com/glw/news/374/",
+        "status": 200,
+        "checkedAt": "2026-10-26T18:28:23.445Z",
+        "sha256": "94fbb5f65ff4c44ac1669b3799aca119a43d90e5d3b51c5f03141cf2433ab8e9",
+        "bytes": 25407
+      }
+    ],
+    "unresolved": [
+      "バンドの公演別担当日、2025年以降の収録・現在配信・詳細英訳・人物属性総合監査は後続。"
+    ],
+    "notes": [
+      "既存候補保存・採用RPCを使用。Supabase changelogは前回と同SHA256。当該DML/RPC利用に新たな破壊的変更なし。",
+      "既登録6作品60配役・人物・シリーズ・対象外候補を全項目保全。スキーマ・RLS・アプリ・UI変更なし。"
+    ]
+  },
+  "requestKey": "d92bd22ed6d7c075e24d89982576fb4efca07d129ffc17202d24f84b2ebb831b",
+  "verification": {
+    "passed": true,
+    "requestKey": "d92bd22ed6d7c075e24d89982576fb4efca07d129ffc17202d24f84b2ebb831b",
+    "changes": {
+      "actors": {
+        "before": 1167,
+        "after": 1167,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "plays": {
+        "before": 416,
+        "after": 417,
+        "added": 1,
+        "modified": 0,
+        "deleted": 0
+      },
+      "franchises": {
+        "before": 198,
+        "after": 198,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "casts": {
+        "before": 4274,
+        "after": 4283,
+        "added": 9,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_actors": {
+        "before": 1701,
+        "after": 1701,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_cast_candidates": {
+        "before": 3620,
+        "after": 3629,
+        "added": 9,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_import_logs": {
+        "before": 5861,
+        "after": 5882,
+        "added": 21,
+        "modified": 0,
+        "deleted": 0
+      },
+      "actor_identity_sources": {
+        "before": 513,
+        "after": 513,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      }
+    },
+    "newActors": 0,
+    "reusedActors": 9,
+    "newPlays": 1,
+    "newCasts": 9,
+    "creditOnlyNames": 16,
+    "ensembles": 8,
+    "band": 8,
+    "creditCategories": 22,
+    "scheduleCount": 31,
+    "kyotoPerformances": 6,
+    "osakaPerformances": 5,
+    "tokyoPerformances": 20,
+    "legacyCorrected": 0,
+    "seriesWorks": 7,
+    "seriesCastRows": 69,
+    "seriesActors": 14,
+    "totals": {
+      "actors": 1167,
+      "plays": 417,
+      "casts": 4283
+    }
+  },
+  "publicVerification": {
+    "passed": true,
+    "pages": 44,
+    "seriesWorks": 7,
+    "seriesCastRows": 69,
+    "seriesActors": 14,
+    "newCastRows": 9,
+    "newActors": 0,
+    "creditOnlyNames": 16,
+    "scheduleCount": 31,
+    "results": [
+      {
+        "path": "/series/hetalia",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/hetamu2017",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/hetamu2015",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/hetamu2021",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/hetamu2023",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/hetamu2016",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/nagae-ryoki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/hetamu2018",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/ueda-yusuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/hetamu2024",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/isogai-ryuko",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/hirose-daisuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/ueda-keisuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/juri",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/sugie-taishi",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/kikuchi-takuya",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/yamaoki-yuki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/takamoto-gaku",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/higuchi-yuta",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/yamada-james-takeshi",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/omi-yoichiro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/isono-toru",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/series/hetalia",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/hetamu2017",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/hetamu2021",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/hetamu2015",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/hetamu2016",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/hetamu2023",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/hetamu2018",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/nagae-ryoki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/hetamu2024",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/ueda-yusuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/isogai-ryuko",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/hirose-daisuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/ueda-keisuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/juri",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/yamaoki-yuki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/sugie-taishi",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/takamoto-gaku",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/kikuchi-takuya",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/yamada-james-takeshi",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/higuchi-yuta",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/isono-toru",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/omi-yoichiro",
+        "passed": true,
+        "status": 200
+      }
+    ]
+  },
+  "searchVerification": {
+    "passed": true,
+    "checks": 34,
+    "spaceAndNoSpace": true,
+    "genderAttributesUnchanged": true,
+    "results": [
+      {
+        "path": "/actors?q=%E4%B8%8A%E7%94%B0+%E6%82%A0%E4%BB%8B",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E9%95%B7%E6%B1%9F%E5%B4%9A%E8%A1%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E9%95%B7%E6%B1%9F+%E5%B4%9A%E8%A1%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E4%B8%8A%E7%94%B0%E6%82%A0%E4%BB%8B",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%BB%A3%E7%80%AC+%E5%A4%A7%E4%BB%8B",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%A3%AF%E8%B2%9D+%E9%BE%8D%E4%B9%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%A3%AF%E8%B2%9D%E9%BE%8D%E4%B9%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%BB%A3%E7%80%AC%E5%A4%A7%E4%BB%8B",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E9%AB%98%E6%9C%AC+%E5%AD%A6",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%B1%B1%E6%B2%96+%E5%8B%87%E8%BC%9D",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%AF%BF%E9%87%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%B1%B1%E6%B2%96%E5%8B%87%E8%BC%9D",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%A3%AF%E9%87%8E+%E4%BA%A8",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%A8%8B%E5%8F%A3+%E8%A3%95%E5%A4%AA",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E9%AB%98%E6%9C%AC%E5%AD%A6",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%A8%8B%E5%8F%A3%E8%A3%95%E5%A4%AA",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%A3%AF%E9%87%8E%E4%BA%A8",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E9%95%B7%E6%B1%9F+%E5%B4%9A%E8%A1%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E9%95%B7%E6%B1%9F%E5%B4%9A%E8%A1%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E4%B8%8A%E7%94%B0+%E6%82%A0%E4%BB%8B",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E4%B8%8A%E7%94%B0%E6%82%A0%E4%BB%8B",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%A3%AF%E8%B2%9D%E9%BE%8D%E4%B9%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%A3%AF%E8%B2%9D+%E9%BE%8D%E4%B9%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%BB%A3%E7%80%AC+%E5%A4%A7%E4%BB%8B",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%BB%A3%E7%80%AC%E5%A4%A7%E4%BB%8B",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%AF%BF%E9%87%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%B1%B1%E6%B2%96+%E5%8B%87%E8%BC%9D",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%B1%B1%E6%B2%96%E5%8B%87%E8%BC%9D",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E9%AB%98%E6%9C%AC+%E5%AD%A6",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%A8%8B%E5%8F%A3+%E8%A3%95%E5%A4%AA",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E9%AB%98%E6%9C%AC%E5%AD%A6",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%A8%8B%E5%8F%A3%E8%A3%95%E5%A4%AA",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%A3%AF%E9%87%8E+%E4%BA%A8",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%A3%AF%E9%87%8E%E4%BA%A8",
+        "status": 200,
+        "passed": true
+      }
+    ]
+  },
+  "replayVerification": {
+    "passed": true,
+    "tables": {
+      "actors": {
+        "rows": 1167,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "plays": {
+        "rows": 417,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "franchises": {
+        "rows": 198,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "casts": {
+        "rows": 4283,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_actors": {
+        "rows": 1701,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_cast_candidates": {
+        "rows": 3629,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_import_logs": {
+        "rows": 5882,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "actor_identity_sources": {
+        "rows": 513,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      }
+    }
+  },
+  "sourceValidation": {
+    "allActorsReused": true,
+    "officialBillingOrder": true,
+    "originalSourceRowRetained": true,
+    "kiraWithdrawnNameNotCreditedAsPerformer": true,
+    "ensembleCreditOnly": 8,
+    "bandCreditOnly": 8,
+    "bandInstrumentsAndOriginalNamesRetained": true,
+    "unknownBandDutyDatesNotInferred": true,
+    "staffImageVisuallyTranscribed": true,
+    "staffImageFingerprintRetained": true,
+    "currentMusicCreditsConfirmed": true,
+    "ensembleReplacementAnnouncementConfirmed": true,
+    "typhoonRefundNotMistakenForCancellation": true,
+    "transferTargetsNotCountedAsNewShows": true,
+    "typhoonAffectedExistingShows": 5,
+    "typhoonTransferTargetExistingShows": 5,
+    "finalScheduleCount": 31,
+    "kyotoScheduleCount": 6,
+    "osakaScheduleCount": 5,
+    "tokyoScheduleCount": 20,
+    "tokyoAugustAndSeptemberTablesCombined": true,
+    "plannedRuntimeMinutes": 175,
+    "plannedIntermissionMinutes": 15,
+    "officialHundredthPerformanceNoteRetained": true,
+    "oldRowsPreserved": true
+  },
+  "nextWork": {
+    "title": "ミュージカル「ヘタリア～A tender world～」",
+    "year": 2025,
+    "status": "not_registered",
+    "note": "2025年以降は後続。今回でヘタリア全体の登録完了とは扱わない。"
+  },
+  "verificationScope": "2024年The glorious world1作品9配役を追加、全9人物再利用。最終アンサンブル8人と楽器付きバンド8人をクレジットへ。キラハイ未解析9行に残る船橋拓幹の降板と南舘優雄斗への交代を公式告知で確認。京都6大阪5東京20の31公演、台風10号時の観客振替・払戻しと予定どおり上演告知を区別し既存振替先5回を追加しない。スタッフ画像と主催者本文を照合し予定175分（休憩15分）と初日通算100回を記録。既登録6作品60配役を含む7作品69配役14人物の日英44ページ・姓名検索34件、8テーブル既存全行保全比較・同一SQL再実行0変更を確認。バンド公演別担当日・人物属性総合監査・現在配信・詳細英訳とは区別。"
+}
