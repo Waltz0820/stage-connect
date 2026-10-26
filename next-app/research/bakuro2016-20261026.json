@@ -1,0 +1,2578 @@
+{
+  "version": 1,
+  "batchId": "bakuro2016-20261026-01",
+  "expectedFranchise": {
+    "id": "6594b20a-2b13-4217-b062-8a28b1baf1de",
+    "name": "超歌劇（ウルトラミュージカル）『幕末Rock』",
+    "created_at": "2026-02-08T16:26:41.990203+00:00",
+    "updated_at": "2026-10-26T05:58:00.39156+00:00",
+    "slug": "bakumatsu-rock",
+    "intro": null,
+    "description": "マーベラスのゲーム『幕末Rock』を原作とするミュージカルシリーズ。2014年に初演。坂本龍馬らがRockを通して自由を求める物語を描き、再演や新作、雷舞形式の公演へ展開した。",
+    "origin_type": "ゲーム原作",
+    "origin_note": "原作：マーベラス『幕末Rock』",
+    "production_companies": null,
+    "related_franchise_ids": [],
+    "format": null,
+    "description_en": "A musical series based on Marvelous’s game Bakumatsu Rock, first staged in 2014. Ryoma Sakamoto and his fellow rockers seek freedom through music. The series includes revivals, new productions and live-concert performances.",
+    "name_en": "Bakumatsu Rock: Ultra Musical"
+  },
+  "actors": [
+    {
+      "actor": {
+        "id": "0991dc78-9f33-454e-aa98-7ab7a2cdc993",
+        "slug": "iwasaki-dai",
+        "name": "岩﨑 大",
+        "kana": "いわさき だい",
+        "profile": "東京都出身の俳優。スタジオライフ公演『トーマの心臓』のオスカー役や、ミュージカル『黒執事』のバルドロイ役などを務める。超歌劇『幕末Rock』では勝海舟を演じた。",
+        "image_url": null,
+        "sns": {},
+        "gender": "male",
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1977-07-02",
+        "height_cm": 183,
+        "blood_type": "AB",
+        "birthday_label": null,
+        "name_en": "Dai Iwasaki",
+        "profile_en": "An actor from Tokyo. His stage credits include Oskar in Studio Life’s The Heart of Thomas and Baldroy in Black Butler: The Musical. He played Kaishu Katsu in Bakumatsu Rock: Arrival of the Black Ships.",
+        "death_date": null
+      },
+      "sourceActorName": "岩崎大",
+      "profileUrl": "https://kira-hai.net/iwasaki-dai",
+      "evidence": [
+        {
+          "url": "https://kira-hai.net/iwasaki-dai",
+          "checkedAt": "2026-10-26T06:25:23.777Z",
+          "note": "第一参照先の人物属性・出演歴。一次資料とは区別して採用範囲を記録。"
+        },
+        {
+          "url": "https://bakumatsu.marv.jp/stage-3/cast.html",
+          "checkedAt": "2026-10-26T06:23:11.132Z",
+          "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+        },
+        {
+          "url": "https://profile.ameba.jp/ameba/oobanburumaiplus/",
+          "checkedAt": "2026-10-26T06:25:24.978Z",
+          "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+        },
+        {
+          "url": "https://www.excite.co.jp/news/dictionary/person/PEd28821245a6ec2389848d63086287abdadc4868a/",
+          "checkedAt": "2026-10-26T06:28:05.677Z",
+          "note": "エキサイト人物辞典の本人欄。生年月日・読み・身長を照合。関連ニュース欄の岩崎大昇は別人として除外。"
+        },
+        {
+          "url": "https://www.set1979.com/stage/stageinfo202401/",
+          "checkedAt": "2026-10-26T06:26:15.258Z",
+          "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+        }
+      ],
+      "notes": [
+        "表記は公演公式・主催者・本人のSET公演紹介の岩﨑大。第一参照先の岩崎大、ブログのいわさきだいを、7月2日・東京都・AB・トーマの心臓オスカー・本作勝海舟で照合。姓名の間は半角スペース。",
+        "生年1977・183cmは第一参照先とエキサイト人物辞典で一致。月日・東京は公演公式、AB・東京は公式リンク先の本人ブログでも確認。全属性が現所属の一次確認済みとは主張しない。",
+        "性別男性は2024年SET公式が本人を含む三人組を四十路を過ぎた男達と紹介した本人文脈。演じた役や写真から推定しない。",
+        "旧スタジオライフ個別公式は404。現在の劇団員一覧にも見つからず、現在所属・兼所属は未確認。現行所属を断定しない。古いプロフィールURLを有効な本人出典として登録しない。",
+        "英語表示Dai IwasakiはエキサイトのIwasaki Daiを姓名順調整した本サイト表示。現所属による公式英字確認とはしていない。",
+        "同名の哲学者岩崎大、岩﨑大昇、岩﨑大翔の情報は不採用。エキサイトの関連ニュースは大昇が混在し本人属性の根拠にしない。"
+      ]
+    }
+  ],
+  "works": [
+    {
+      "year": 2016,
+      "before": {
+        "id": "eeda508b-9d1a-44b8-9adf-ccb4f857d762",
+        "slug": "bakuro2016",
+        "title": "超歌劇(ウルトラミュージカル)『幕末Rock 黒船来航』",
+        "franchise_id": "6594b20a-2b13-4217-b062-8a28b1baf1de",
+        "summary": null,
+        "period": "2016年",
+        "venue": null,
+        "vod": {},
+        "genre": null,
+        "created_at": "2026-04-28T14:11:20.925879+00:00",
+        "updated_at": "2026-04-28T14:11:20.925879+00:00",
+        "tags": [],
+        "credits": null,
+        "related_franchise_ids": [],
+        "summary_en": null,
+        "title_en": null
+      },
+      "patch": {
+        "title": "超歌劇（ウルトラミュージカル）『幕末Rock』黒船来航",
+        "period": "京都: 2016/08/20〜08/21 / 東京: 2016/09/03〜09/09",
+        "venue": "京都劇場 / EX THEATER ROPPONGI",
+        "summary": "マーベラスのゲーム『幕末Rock』を原作とする新作ミュージカル。Rock修行から江戸へ戻った坂本龍馬は、勝海舟にペリー・ジュニアとの雷舞対決を依頼される。高杉晋作や桂小五郎、新選組の仲間たちと再集結し、本場のRockに挑む。2016年に京都と東京で上演。脚本・演出は吉谷光太郎。",
+        "summary_en": "A new musical based on Marvelous’s game Bakumatsu Rock. Returning to Edo after a journey to hone his rock music, Ryoma Sakamoto is asked by Kaishu Katsu to face Perry Junior in a live music showdown. He reunites with Shinsaku Takasugi, Kogoro Katsura and their Shinsengumi allies. Performed in Kyoto and Tokyo in 2016, with a script and direction by Kotaro Yoshitani.",
+        "title_en": "Bakumatsu Rock: Arrival of the Black Ships (2016)",
+        "credits": [
+          {
+            "role": "原作",
+            "names": [
+              "『幕末Rock』（マーベラス）"
+            ],
+            "is_core": true,
+            "sort_order": 1
+          },
+          {
+            "role": "脚本・演出",
+            "names": [
+              "吉谷光太郎"
+            ],
+            "is_core": true,
+            "sort_order": 2
+          },
+          {
+            "role": "音楽制作",
+            "names": [
+              "テレビ朝日ミュージック",
+              "マーベラス"
+            ],
+            "is_core": false,
+            "sort_order": 3
+          },
+          {
+            "role": "振付",
+            "names": [
+              "MAMORU"
+            ],
+            "is_core": false,
+            "sort_order": 4
+          },
+          {
+            "role": "主催",
+            "names": [
+              "マーベラス",
+              "テレビ朝日ミュージック",
+              "NBCユニバーサル・エンターテイメント",
+              "NAS"
+            ],
+            "is_core": false,
+            "sort_order": 5
+          },
+          {
+            "role": "協力",
+            "names": [
+              "Gibson"
+            ],
+            "is_core": false,
+            "sort_order": 6
+          },
+          {
+            "role": "アンサンブル",
+            "names": [
+              "山沖勇輝",
+              "山田諒",
+              "佐藤優次",
+              "仲田祥司",
+              "池田謙信",
+              "吉田邑樹",
+              "新開理雄",
+              "狩野新之介",
+              "市川耕大",
+              "竹井弘樹"
+            ],
+            "is_core": false,
+            "sort_order": 7
+          }
+        ]
+      },
+      "play": {
+        "id": "eeda508b-9d1a-44b8-9adf-ccb4f857d762",
+        "slug": "bakuro2016",
+        "title": "超歌劇（ウルトラミュージカル）『幕末Rock』黒船来航",
+        "franchise_id": "6594b20a-2b13-4217-b062-8a28b1baf1de",
+        "summary": "マーベラスのゲーム『幕末Rock』を原作とする新作ミュージカル。Rock修行から江戸へ戻った坂本龍馬は、勝海舟にペリー・ジュニアとの雷舞対決を依頼される。高杉晋作や桂小五郎、新選組の仲間たちと再集結し、本場のRockに挑む。2016年に京都と東京で上演。脚本・演出は吉谷光太郎。",
+        "period": "京都: 2016/08/20〜08/21 / 東京: 2016/09/03〜09/09",
+        "venue": "京都劇場 / EX THEATER ROPPONGI",
+        "vod": {},
+        "genre": null,
+        "tags": [],
+        "credits": [
+          {
+            "role": "原作",
+            "names": [
+              "『幕末Rock』（マーベラス）"
+            ],
+            "is_core": true,
+            "sort_order": 1
+          },
+          {
+            "role": "脚本・演出",
+            "names": [
+              "吉谷光太郎"
+            ],
+            "is_core": true,
+            "sort_order": 2
+          },
+          {
+            "role": "音楽制作",
+            "names": [
+              "テレビ朝日ミュージック",
+              "マーベラス"
+            ],
+            "is_core": false,
+            "sort_order": 3
+          },
+          {
+            "role": "振付",
+            "names": [
+              "MAMORU"
+            ],
+            "is_core": false,
+            "sort_order": 4
+          },
+          {
+            "role": "主催",
+            "names": [
+              "マーベラス",
+              "テレビ朝日ミュージック",
+              "NBCユニバーサル・エンターテイメント",
+              "NAS"
+            ],
+            "is_core": false,
+            "sort_order": 5
+          },
+          {
+            "role": "協力",
+            "names": [
+              "Gibson"
+            ],
+            "is_core": false,
+            "sort_order": 6
+          },
+          {
+            "role": "アンサンブル",
+            "names": [
+              "山沖勇輝",
+              "山田諒",
+              "佐藤優次",
+              "仲田祥司",
+              "池田謙信",
+              "吉田邑樹",
+              "新開理雄",
+              "狩野新之介",
+              "市川耕大",
+              "竹井弘樹"
+            ],
+            "is_core": false,
+            "sort_order": 7
+          }
+        ],
+        "related_franchise_ids": [],
+        "summary_en": "A new musical based on Marvelous’s game Bakumatsu Rock. Returning to Edo after a journey to hone his rock music, Ryoma Sakamoto is asked by Kaishu Katsu to face Perry Junior in a live music showdown. He reunites with Shinsaku Takasugi, Kogoro Katsura and their Shinsengumi allies. Performed in Kyoto and Tokyo in 2016, with a script and direction by Kotaro Yoshitani.",
+        "title_en": "Bakumatsu Rock: Arrival of the Black Ships (2016)"
+      },
+      "rawSource": {
+        "sourceUrl": "https://kira-hai.net/bakuro2016",
+        "title": "超歌劇(ウルトラミュージカル)『幕末Rock 黒船来航』 (2016)",
+        "scheduleLines": [
+          "2016年8月20日-21日 京都劇場",
+          "2016年9月3日-9日 EX THEATER ROPPONGI"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "良知真次",
+            "sourceActorUrl": "https://kira-hai.net/rachi-shinji",
+            "role_name": "坂本龍馬",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "糸川耀士郎",
+            "sourceActorUrl": "https://kira-hai.net/itokawa-yojiro",
+            "role_name": "高杉晋作",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "三津谷亮",
+            "sourceActorUrl": "https://kira-hai.net/mitsuya-ryo",
+            "role_name": "桂小五郎",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "輝馬",
+            "sourceActorUrl": "https://kira-hai.net/teruma",
+            "role_name": "土方歳三",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "佐々木喜英",
+            "sourceActorUrl": "https://kira-hai.net/sasaki-yoshihide",
+            "role_name": "沖田総司",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "輝馬",
+            "sourceActorUrl": "https://kira-hai.net/teruma",
+            "role_name": "誠仮面",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "山岸拓生",
+            "sourceActorUrl": "https://kira-hai.net/yamagishi-takuo",
+            "role_name": "お登勢",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "岩崎大",
+            "sourceActorUrl": "https://kira-hai.net/iwasaki-dai",
+            "role_name": "勝海舟",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "吉岡佑",
+            "sourceActorUrl": "https://kira-hai.net/yoshioka-yu",
+            "role_name": "井伊直弼",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "Kimeru",
+            "sourceActorUrl": "https://kira-hai.net/kimeru",
+            "role_name": "徳川慶喜",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "兼崎健太郎",
+            "sourceActorUrl": "https://kira-hai.net/kanesaki-kentaro",
+            "role_name": "マシュー・カルブレイス・ペリー・ジュニア",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "山沖勇輝",
+            "sourceActorUrl": "https://kira-hai.net/yamaoki-yuki",
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "山田諒",
+            "sourceActorUrl": "https://kira-hai.net/yamada-ryo",
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "佐藤優次",
+            "sourceActorUrl": "https://kira-hai.net/sato-yuji",
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "仲田祥司",
+            "sourceActorUrl": "https://kira-hai.net/nakata-shoji",
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "池田謙信",
+            "sourceActorUrl": "https://kira-hai.net/ikeda-kenshin",
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "吉田邑樹",
+            "sourceActorUrl": "https://kira-hai.net/yuki-yoshida",
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "新開理雄",
+            "sourceActorUrl": "https://kira-hai.net/shinkai-rio",
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "狩野新之介",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "市川耕大",
+            "sourceActorUrl": "https://kira-hai.net/ichikawa-kodai",
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "竹井弘樹",
+            "sourceActorUrl": "https://kira-hai.net/takei-hiroki",
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          }
+        ],
+        "unparsed": []
+      },
+      "source": {
+        "sourceUrl": "https://kira-hai.net/bakuro2016",
+        "title": "超歌劇(ウルトラミュージカル)『幕末Rock 黒船来航』 (2016)",
+        "scheduleLines": [
+          "2016年8月20日-21日 京都劇場",
+          "2016年9月3日-9日 EX THEATER ROPPONGI"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "良知真次",
+            "sourceActorUrl": "https://kira-hai.net/rachi-shinji",
+            "role_name": "坂本龍馬",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "糸川耀士郎",
+            "sourceActorUrl": "https://kira-hai.net/itokawa-yojiro",
+            "role_name": "高杉晋作",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "三津谷亮",
+            "sourceActorUrl": "https://kira-hai.net/mitsuya-ryo",
+            "role_name": "桂小五郎",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "輝馬",
+            "sourceActorUrl": "https://kira-hai.net/teruma",
+            "role_name": "土方歳三 / 誠仮面",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "佐々木喜英",
+            "sourceActorUrl": "https://kira-hai.net/sasaki-yoshihide",
+            "role_name": "沖田総司",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "山岸拓生",
+            "sourceActorUrl": "https://kira-hai.net/yamagishi-takuo",
+            "role_name": "お登勢",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "岩崎大",
+            "sourceActorUrl": "https://kira-hai.net/iwasaki-dai",
+            "role_name": "勝海舟",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "吉岡佑",
+            "sourceActorUrl": "https://kira-hai.net/yoshioka-yu",
+            "role_name": "井伊直弼",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "Kimeru",
+            "sourceActorUrl": "https://kira-hai.net/kimeru",
+            "role_name": "徳川慶喜",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "兼崎健太郎",
+            "sourceActorUrl": "https://kira-hai.net/kanesaki-kentaro",
+            "role_name": "マシュー・カルブレイス・ペリー・ジュニア",
+            "cast_group": null
+          }
+        ],
+        "unparsed": []
+      },
+      "sourceFingerprint": "c15afa317b6dc3d2a9aaa30dd94776012ec0f87c804074793491c1a8c2d71862",
+      "stage": {
+        "workUrl": "https://kira-hai.net/bakuro2016",
+        "key": "f7f5f4da4238094e487c3fd6b09c8074929d3efe40e0c90d002424a212b3e4a3",
+        "items": [
+          {
+            "source_actor_name": "良知真次",
+            "source_actor_url": "https://kira-hai.net/rachi-shinji",
+            "source_work_title": "超歌劇(ウルトラミュージカル)『幕末Rock 黒船来航』 (2016)",
+            "source_year": 2016,
+            "source_role_raw": "坂本龍馬",
+            "source_role_names": [
+              "坂本龍馬"
+            ],
+            "source_cast_group": null,
+            "source_order": 1,
+            "source_credit_key": "256802a726e6b37e650d",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bakuro2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bakuro2016",
+                  "checkedAt": "2026-10-26T06:22:30.565Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://bakumatsu.marv.jp/stage-3/cast.html",
+                  "checkedAt": "2026-10-26T06:23:11.132Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/765/",
+                  "checkedAt": "2026-10-26T06:22:31.048Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://bakumatsu.marv.jp/stage-3/stage.html",
+                  "checkedAt": "2026-10-26T06:23:11.324Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://db.epad.jp/s/6758",
+                  "checkedAt": "2026-10-26T06:23:11.627Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://bakumatsu.marv.jp/stage-3/story.html",
+                  "checkedAt": "2026-10-26T06:23:11.271Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                }
+              ],
+              "source_fingerprint": "c15afa317b6dc3d2a9aaa30dd94776012ec0f87c804074793491c1a8c2d71862",
+              "review_fingerprint": "4a1364fc3533c4a247a6a2d8c883c166d6df4457e172174009e498b046e2e781",
+              "snapshot_fingerprint": "ae4e923194d52efb86b159d402d06b771a82edc9dc377b3d66176e968cd07810",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "82f21efb-ea5f-40a3-9e38-99b4dab7b9d7",
+            "matched_play_id": "eeda508b-9d1a-44b8-9adf-ccb4f857d762",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "糸川耀士郎",
+            "source_actor_url": "https://kira-hai.net/itokawa-yojiro",
+            "source_work_title": "超歌劇(ウルトラミュージカル)『幕末Rock 黒船来航』 (2016)",
+            "source_year": 2016,
+            "source_role_raw": "高杉晋作",
+            "source_role_names": [
+              "高杉晋作"
+            ],
+            "source_cast_group": null,
+            "source_order": 2,
+            "source_credit_key": "20a88b6c24aea72de01a",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bakuro2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bakuro2016",
+                  "checkedAt": "2026-10-26T06:22:30.565Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://bakumatsu.marv.jp/stage-3/cast.html",
+                  "checkedAt": "2026-10-26T06:23:11.132Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/765/",
+                  "checkedAt": "2026-10-26T06:22:31.048Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://bakumatsu.marv.jp/stage-3/stage.html",
+                  "checkedAt": "2026-10-26T06:23:11.324Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://db.epad.jp/s/6758",
+                  "checkedAt": "2026-10-26T06:23:11.627Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://bakumatsu.marv.jp/stage-3/story.html",
+                  "checkedAt": "2026-10-26T06:23:11.271Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                }
+              ],
+              "source_fingerprint": "c15afa317b6dc3d2a9aaa30dd94776012ec0f87c804074793491c1a8c2d71862",
+              "review_fingerprint": "4a1364fc3533c4a247a6a2d8c883c166d6df4457e172174009e498b046e2e781",
+              "snapshot_fingerprint": "ae4e923194d52efb86b159d402d06b771a82edc9dc377b3d66176e968cd07810",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "cad82806-61cb-402a-933c-fd6c35c991f9",
+            "matched_play_id": "eeda508b-9d1a-44b8-9adf-ccb4f857d762",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "三津谷亮",
+            "source_actor_url": "https://kira-hai.net/mitsuya-ryo",
+            "source_work_title": "超歌劇(ウルトラミュージカル)『幕末Rock 黒船来航』 (2016)",
+            "source_year": 2016,
+            "source_role_raw": "桂小五郎",
+            "source_role_names": [
+              "桂小五郎"
+            ],
+            "source_cast_group": null,
+            "source_order": 3,
+            "source_credit_key": "a14521dcb7834241a16e",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bakuro2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bakuro2016",
+                  "checkedAt": "2026-10-26T06:22:30.565Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://bakumatsu.marv.jp/stage-3/cast.html",
+                  "checkedAt": "2026-10-26T06:23:11.132Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/765/",
+                  "checkedAt": "2026-10-26T06:22:31.048Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://bakumatsu.marv.jp/stage-3/stage.html",
+                  "checkedAt": "2026-10-26T06:23:11.324Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://db.epad.jp/s/6758",
+                  "checkedAt": "2026-10-26T06:23:11.627Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://bakumatsu.marv.jp/stage-3/story.html",
+                  "checkedAt": "2026-10-26T06:23:11.271Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                }
+              ],
+              "source_fingerprint": "c15afa317b6dc3d2a9aaa30dd94776012ec0f87c804074793491c1a8c2d71862",
+              "review_fingerprint": "4a1364fc3533c4a247a6a2d8c883c166d6df4457e172174009e498b046e2e781",
+              "snapshot_fingerprint": "ae4e923194d52efb86b159d402d06b771a82edc9dc377b3d66176e968cd07810",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "a03b3f80-b2b8-482d-b221-aa4c19be9767",
+            "matched_play_id": "eeda508b-9d1a-44b8-9adf-ccb4f857d762",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "輝馬",
+            "source_actor_url": "https://kira-hai.net/teruma",
+            "source_work_title": "超歌劇(ウルトラミュージカル)『幕末Rock 黒船来航』 (2016)",
+            "source_year": 2016,
+            "source_role_raw": "土方歳三 / 誠仮面",
+            "source_role_names": [
+              "土方歳三",
+              "誠仮面"
+            ],
+            "source_cast_group": null,
+            "source_order": 4,
+            "source_credit_key": "b66bcaa77c3fb7c72ace",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bakuro2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bakuro2016",
+                  "checkedAt": "2026-10-26T06:22:30.565Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://bakumatsu.marv.jp/stage-3/cast.html",
+                  "checkedAt": "2026-10-26T06:23:11.132Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/765/",
+                  "checkedAt": "2026-10-26T06:22:31.048Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://bakumatsu.marv.jp/stage-3/stage.html",
+                  "checkedAt": "2026-10-26T06:23:11.324Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://db.epad.jp/s/6758",
+                  "checkedAt": "2026-10-26T06:23:11.627Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://bakumatsu.marv.jp/stage-3/story.html",
+                  "checkedAt": "2026-10-26T06:23:11.271Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                }
+              ],
+              "source_fingerprint": "c15afa317b6dc3d2a9aaa30dd94776012ec0f87c804074793491c1a8c2d71862",
+              "review_fingerprint": "4a1364fc3533c4a247a6a2d8c883c166d6df4457e172174009e498b046e2e781",
+              "snapshot_fingerprint": "ae4e923194d52efb86b159d402d06b771a82edc9dc377b3d66176e968cd07810",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "d4088fc7-e039-4ff5-b1a6-d8c240d25467",
+            "matched_play_id": "eeda508b-9d1a-44b8-9adf-ccb4f857d762",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "佐々木喜英",
+            "source_actor_url": "https://kira-hai.net/sasaki-yoshihide",
+            "source_work_title": "超歌劇(ウルトラミュージカル)『幕末Rock 黒船来航』 (2016)",
+            "source_year": 2016,
+            "source_role_raw": "沖田総司",
+            "source_role_names": [
+              "沖田総司"
+            ],
+            "source_cast_group": null,
+            "source_order": 5,
+            "source_credit_key": "d4ddc1533b37f7f2a411",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bakuro2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bakuro2016",
+                  "checkedAt": "2026-10-26T06:22:30.565Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://bakumatsu.marv.jp/stage-3/cast.html",
+                  "checkedAt": "2026-10-26T06:23:11.132Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/765/",
+                  "checkedAt": "2026-10-26T06:22:31.048Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://bakumatsu.marv.jp/stage-3/stage.html",
+                  "checkedAt": "2026-10-26T06:23:11.324Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://db.epad.jp/s/6758",
+                  "checkedAt": "2026-10-26T06:23:11.627Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://bakumatsu.marv.jp/stage-3/story.html",
+                  "checkedAt": "2026-10-26T06:23:11.271Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                }
+              ],
+              "source_fingerprint": "c15afa317b6dc3d2a9aaa30dd94776012ec0f87c804074793491c1a8c2d71862",
+              "review_fingerprint": "4a1364fc3533c4a247a6a2d8c883c166d6df4457e172174009e498b046e2e781",
+              "snapshot_fingerprint": "ae4e923194d52efb86b159d402d06b771a82edc9dc377b3d66176e968cd07810",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "2138a9e5-e342-4e25-949e-be41e86910c2",
+            "matched_play_id": "eeda508b-9d1a-44b8-9adf-ccb4f857d762",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "山岸拓生",
+            "source_actor_url": "https://kira-hai.net/yamagishi-takuo",
+            "source_work_title": "超歌劇(ウルトラミュージカル)『幕末Rock 黒船来航』 (2016)",
+            "source_year": 2016,
+            "source_role_raw": "お登勢",
+            "source_role_names": [
+              "お登勢"
+            ],
+            "source_cast_group": null,
+            "source_order": 6,
+            "source_credit_key": "ce8a7e0992810c8885f2",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bakuro2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bakuro2016",
+                  "checkedAt": "2026-10-26T06:22:30.565Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://bakumatsu.marv.jp/stage-3/cast.html",
+                  "checkedAt": "2026-10-26T06:23:11.132Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/765/",
+                  "checkedAt": "2026-10-26T06:22:31.048Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://bakumatsu.marv.jp/stage-3/stage.html",
+                  "checkedAt": "2026-10-26T06:23:11.324Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://db.epad.jp/s/6758",
+                  "checkedAt": "2026-10-26T06:23:11.627Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://bakumatsu.marv.jp/stage-3/story.html",
+                  "checkedAt": "2026-10-26T06:23:11.271Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                }
+              ],
+              "source_fingerprint": "c15afa317b6dc3d2a9aaa30dd94776012ec0f87c804074793491c1a8c2d71862",
+              "review_fingerprint": "4a1364fc3533c4a247a6a2d8c883c166d6df4457e172174009e498b046e2e781",
+              "snapshot_fingerprint": "ae4e923194d52efb86b159d402d06b771a82edc9dc377b3d66176e968cd07810",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "c265529a-ef75-4352-b99e-22ebe83cb3cc",
+            "matched_play_id": "eeda508b-9d1a-44b8-9adf-ccb4f857d762",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "岩崎大",
+            "source_actor_url": "https://kira-hai.net/iwasaki-dai",
+            "source_work_title": "超歌劇(ウルトラミュージカル)『幕末Rock 黒船来航』 (2016)",
+            "source_year": 2016,
+            "source_role_raw": "勝海舟",
+            "source_role_names": [
+              "勝海舟"
+            ],
+            "source_cast_group": null,
+            "source_order": 7,
+            "source_credit_key": "aaf0ca2062d5f51c4fbc",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bakuro2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bakuro2016",
+                  "checkedAt": "2026-10-26T06:22:30.565Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://bakumatsu.marv.jp/stage-3/cast.html",
+                  "checkedAt": "2026-10-26T06:23:11.132Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/765/",
+                  "checkedAt": "2026-10-26T06:22:31.048Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://bakumatsu.marv.jp/stage-3/stage.html",
+                  "checkedAt": "2026-10-26T06:23:11.324Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://db.epad.jp/s/6758",
+                  "checkedAt": "2026-10-26T06:23:11.627Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://bakumatsu.marv.jp/stage-3/story.html",
+                  "checkedAt": "2026-10-26T06:23:11.271Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                }
+              ],
+              "source_fingerprint": "c15afa317b6dc3d2a9aaa30dd94776012ec0f87c804074793491c1a8c2d71862",
+              "review_fingerprint": "4a1364fc3533c4a247a6a2d8c883c166d6df4457e172174009e498b046e2e781",
+              "snapshot_fingerprint": "ae4e923194d52efb86b159d402d06b771a82edc9dc377b3d66176e968cd07810",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "0991dc78-9f33-454e-aa98-7ab7a2cdc993",
+            "matched_play_id": "eeda508b-9d1a-44b8-9adf-ccb4f857d762",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "吉岡佑",
+            "source_actor_url": "https://kira-hai.net/yoshioka-yu",
+            "source_work_title": "超歌劇(ウルトラミュージカル)『幕末Rock 黒船来航』 (2016)",
+            "source_year": 2016,
+            "source_role_raw": "井伊直弼",
+            "source_role_names": [
+              "井伊直弼"
+            ],
+            "source_cast_group": null,
+            "source_order": 8,
+            "source_credit_key": "46b69ede506c4be2565a",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bakuro2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bakuro2016",
+                  "checkedAt": "2026-10-26T06:22:30.565Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://bakumatsu.marv.jp/stage-3/cast.html",
+                  "checkedAt": "2026-10-26T06:23:11.132Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/765/",
+                  "checkedAt": "2026-10-26T06:22:31.048Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://bakumatsu.marv.jp/stage-3/stage.html",
+                  "checkedAt": "2026-10-26T06:23:11.324Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://db.epad.jp/s/6758",
+                  "checkedAt": "2026-10-26T06:23:11.627Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://bakumatsu.marv.jp/stage-3/story.html",
+                  "checkedAt": "2026-10-26T06:23:11.271Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                }
+              ],
+              "source_fingerprint": "c15afa317b6dc3d2a9aaa30dd94776012ec0f87c804074793491c1a8c2d71862",
+              "review_fingerprint": "4a1364fc3533c4a247a6a2d8c883c166d6df4457e172174009e498b046e2e781",
+              "snapshot_fingerprint": "ae4e923194d52efb86b159d402d06b771a82edc9dc377b3d66176e968cd07810",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "9b46bf21-6695-42ab-b043-81801014ab3c",
+            "matched_play_id": "eeda508b-9d1a-44b8-9adf-ccb4f857d762",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "Kimeru",
+            "source_actor_url": "https://kira-hai.net/kimeru",
+            "source_work_title": "超歌劇(ウルトラミュージカル)『幕末Rock 黒船来航』 (2016)",
+            "source_year": 2016,
+            "source_role_raw": "徳川慶喜",
+            "source_role_names": [
+              "徳川慶喜"
+            ],
+            "source_cast_group": null,
+            "source_order": 9,
+            "source_credit_key": "3cd1861d468ae984ec3b",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bakuro2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bakuro2016",
+                  "checkedAt": "2026-10-26T06:22:30.565Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://bakumatsu.marv.jp/stage-3/cast.html",
+                  "checkedAt": "2026-10-26T06:23:11.132Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/765/",
+                  "checkedAt": "2026-10-26T06:22:31.048Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://bakumatsu.marv.jp/stage-3/stage.html",
+                  "checkedAt": "2026-10-26T06:23:11.324Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://db.epad.jp/s/6758",
+                  "checkedAt": "2026-10-26T06:23:11.627Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://bakumatsu.marv.jp/stage-3/story.html",
+                  "checkedAt": "2026-10-26T06:23:11.271Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                }
+              ],
+              "source_fingerprint": "c15afa317b6dc3d2a9aaa30dd94776012ec0f87c804074793491c1a8c2d71862",
+              "review_fingerprint": "4a1364fc3533c4a247a6a2d8c883c166d6df4457e172174009e498b046e2e781",
+              "snapshot_fingerprint": "ae4e923194d52efb86b159d402d06b771a82edc9dc377b3d66176e968cd07810",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "2f24923b-56e2-48ae-bd46-e76d2dc4763f",
+            "matched_play_id": "eeda508b-9d1a-44b8-9adf-ccb4f857d762",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "兼崎健太郎",
+            "source_actor_url": "https://kira-hai.net/kanesaki-kentaro",
+            "source_work_title": "超歌劇(ウルトラミュージカル)『幕末Rock 黒船来航』 (2016)",
+            "source_year": 2016,
+            "source_role_raw": "マシュー・カルブレイス・ペリー・ジュニア",
+            "source_role_names": [
+              "マシュー・カルブレイス・ペリー・ジュニア"
+            ],
+            "source_cast_group": null,
+            "source_order": 10,
+            "source_credit_key": "a48fa9470147db601242",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bakuro2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bakuro2016",
+                  "checkedAt": "2026-10-26T06:22:30.565Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://bakumatsu.marv.jp/stage-3/cast.html",
+                  "checkedAt": "2026-10-26T06:23:11.132Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/765/",
+                  "checkedAt": "2026-10-26T06:22:31.048Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://bakumatsu.marv.jp/stage-3/stage.html",
+                  "checkedAt": "2026-10-26T06:23:11.324Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://db.epad.jp/s/6758",
+                  "checkedAt": "2026-10-26T06:23:11.627Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://bakumatsu.marv.jp/stage-3/story.html",
+                  "checkedAt": "2026-10-26T06:23:11.271Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                }
+              ],
+              "source_fingerprint": "c15afa317b6dc3d2a9aaa30dd94776012ec0f87c804074793491c1a8c2d71862",
+              "review_fingerprint": "4a1364fc3533c4a247a6a2d8c883c166d6df4457e172174009e498b046e2e781",
+              "snapshot_fingerprint": "ae4e923194d52efb86b159d402d06b771a82edc9dc377b3d66176e968cd07810",
+              "identity": "reviewed_link"
+            },
+            "matched_actor_id": "b98df308-6b62-417b-9c5b-acfabe671605",
+            "matched_play_id": "eeda508b-9d1a-44b8-9adf-ccb4f857d762",
+            "status": "pending"
+          }
+        ]
+      },
+      "records": [
+        {
+          "sourceKind": "kira-hai",
+          "sourceUrl": "https://kira-hai.net/bakuro2016",
+          "actor": {
+            "id": "82f21efb-ea5f-40a3-9e38-99b4dab7b9d7",
+            "slug": "rachi-shinji",
+            "name": "良知 真次",
+            "kana": "らち しんじ",
+            "profile": "東京都出身の俳優・演出家・振付師。World Code代表取締役。ジャニーズJr.、劇団四季、東宝芸能での活動を経て2018年に同社を設立。ミュージカル『Code：Realize ～創世の姫君～』ではアルセーヌ・ルパン役を務めた。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-20T18:23:08.200269+00:00",
+            "updated_at": "2026-10-25T20:21:04.903274+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1983-03-16",
+            "height_cm": 175,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": "Shinji Rachi",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "良知真次",
+            "sourceActorUrl": "https://kira-hai.net/rachi-shinji",
+            "role_name": "坂本龍馬",
+            "cast_group": null
+          },
+          "sourceCreditKey": "256802a726e6b37e650d",
+          "sourceOrder": 1,
+          "billingOrder": 1,
+          "expectedNote": null,
+          "expectedStarring": false,
+          "existingCast": null
+        },
+        {
+          "sourceKind": "kira-hai",
+          "sourceUrl": "https://kira-hai.net/bakuro2016",
+          "actor": {
+            "id": "cad82806-61cb-402a-933c-fd6c35c991f9",
+            "slug": "itokawa-yojiro",
+            "name": "糸川 耀士郎",
+            "kana": "いとかわ ようじろう",
+            "profile": "島根県出身の俳優・声優。元劇団番町ボーイズ☆メンバー。株式会社Stova所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/yohhg",
+              "official": "https://yojiro-itokawa.com/",
+              "instagram": "https://www.instagram.com/yojiroitokawa"
+            },
+            "gender": "male",
+            "created_at": "2026-04-08T00:34:26.348411+00:00",
+            "updated_at": "2026-04-08T00:34:26.348411+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1993-05-28",
+            "height_cm": 171,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "糸川耀士郎",
+            "sourceActorUrl": "https://kira-hai.net/itokawa-yojiro",
+            "role_name": "高杉晋作",
+            "cast_group": null
+          },
+          "sourceCreditKey": "20a88b6c24aea72de01a",
+          "sourceOrder": 2,
+          "billingOrder": 2,
+          "expectedNote": null,
+          "expectedStarring": false,
+          "existingCast": null
+        },
+        {
+          "sourceKind": "kira-hai",
+          "sourceUrl": "https://kira-hai.net/bakuro2016",
+          "actor": {
+            "id": "a03b3f80-b2b8-482d-b221-aa4c19be9767",
+            "slug": "mitsuya-ryo",
+            "name": "三津谷 亮",
+            "kana": "みつや りょう",
+            "profile": "青森県出身の元俳優。元D-BOYSメンバー。",
+            "image_url": null,
+            "sns": {},
+            "gender": "male",
+            "created_at": "2026-03-21T15:01:26.311999+00:00",
+            "updated_at": "2026-03-21T15:01:26.311999+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1988-02-11",
+            "height_cm": 170,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "三津谷亮",
+            "sourceActorUrl": "https://kira-hai.net/mitsuya-ryo",
+            "role_name": "桂小五郎",
+            "cast_group": null
+          },
+          "sourceCreditKey": "a14521dcb7834241a16e",
+          "sourceOrder": 3,
+          "billingOrder": 3,
+          "expectedNote": null,
+          "expectedStarring": false,
+          "existingCast": {
+            "id": "75e2038d-75a1-414b-a43c-f9e8f329eff3",
+            "play_id": "eeda508b-9d1a-44b8-9adf-ccb4f857d762",
+            "actor_id": "a03b3f80-b2b8-482d-b221-aa4c19be9767",
+            "role_name": "桂小五郎",
+            "is_starring": false,
+            "created_at": "2026-05-04T19:23:44.143658+00:00",
+            "billing_order": null,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null,
+            "updated_at": "2026-05-04T19:23:44.143658+00:00"
+          }
+        },
+        {
+          "sourceKind": "kira-hai",
+          "sourceUrl": "https://kira-hai.net/bakuro2016",
+          "actor": {
+            "id": "d4088fc7-e039-4ff5-b1a6-d8c240d25467",
+            "slug": "teruma",
+            "name": "輝馬",
+            "kana": "てるま",
+            "profile": "島根県出身の俳優。Star Dream Company所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/teruma_0606",
+              "official": "https://teruma-official.net/",
+              "instagram": "https://www.instagram.com/_t_e_r_u_m_a_/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:01:26.311999+00:00",
+            "updated_at": "2026-03-21T15:01:26.311999+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1989-06-06",
+            "height_cm": 182,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "輝馬",
+            "sourceActorUrl": "https://kira-hai.net/teruma",
+            "role_name": "土方歳三 / 誠仮面",
+            "cast_group": null
+          },
+          "sourceCreditKey": "b66bcaa77c3fb7c72ace",
+          "sourceOrder": 4,
+          "billingOrder": 4,
+          "expectedNote": null,
+          "expectedStarring": false,
+          "existingCast": null
+        },
+        {
+          "sourceKind": "kira-hai",
+          "sourceUrl": "https://kira-hai.net/bakuro2016",
+          "actor": {
+            "id": "2138a9e5-e342-4e25-949e-be41e86910c2",
+            "slug": "sasaki-yoshihide",
+            "name": "佐々木 喜英",
+            "kana": "ささき よしひで",
+            "profile": "東京都出身の俳優・アーティスト。現在はフリーで活動している。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/yoshihidesasaki",
+              "youtube": "https://www.youtube.com/channel/UCY84RM9qp9wducHJJ1q61ig"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:01:26.311999+00:00",
+            "updated_at": "2026-03-21T15:01:26.311999+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1987-10-04",
+            "height_cm": 175,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "佐々木喜英",
+            "sourceActorUrl": "https://kira-hai.net/sasaki-yoshihide",
+            "role_name": "沖田総司",
+            "cast_group": null
+          },
+          "sourceCreditKey": "d4ddc1533b37f7f2a411",
+          "sourceOrder": 5,
+          "billingOrder": 5,
+          "expectedNote": null,
+          "expectedStarring": false,
+          "existingCast": {
+            "id": "d6190a25-23b6-4adb-81f5-f138ef08b776",
+            "play_id": "eeda508b-9d1a-44b8-9adf-ccb4f857d762",
+            "actor_id": "2138a9e5-e342-4e25-949e-be41e86910c2",
+            "role_name": "沖田総司",
+            "is_starring": false,
+            "created_at": "2026-04-28T14:11:22.093602+00:00",
+            "billing_order": null,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null,
+            "updated_at": "2026-04-28T14:11:22.093602+00:00"
+          }
+        },
+        {
+          "sourceKind": "kira-hai",
+          "sourceUrl": "https://kira-hai.net/bakuro2016",
+          "actor": {
+            "id": "c265529a-ef75-4352-b99e-22ebe83cb3cc",
+            "slug": "yamagishi-takuo",
+            "name": "山岸 拓生",
+            "kana": "やまぎし たくお",
+            "profile": "富山県出身の俳優。ミュージカル『憂国のモリアーティ』ではレニー・ダブリン男爵役、超歌劇『幕末Rock』ではお登勢役を務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-19T11:12:32.816674+00:00",
+            "updated_at": "2026-10-25T20:21:04.903274+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1973-09-01",
+            "height_cm": 178,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": "Takuo Yamagishi",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "山岸拓生",
+            "sourceActorUrl": "https://kira-hai.net/yamagishi-takuo",
+            "role_name": "お登勢",
+            "cast_group": null
+          },
+          "sourceCreditKey": "ce8a7e0992810c8885f2",
+          "sourceOrder": 6,
+          "billingOrder": 6,
+          "expectedNote": null,
+          "expectedStarring": false,
+          "existingCast": null
+        },
+        {
+          "sourceKind": "kira-hai",
+          "sourceUrl": "https://kira-hai.net/bakuro2016",
+          "actor": {
+            "id": "0991dc78-9f33-454e-aa98-7ab7a2cdc993",
+            "slug": "iwasaki-dai",
+            "name": "岩﨑 大",
+            "kana": "いわさき だい",
+            "profile": "東京都出身の俳優。スタジオライフ公演『トーマの心臓』のオスカー役や、ミュージカル『黒執事』のバルドロイ役などを務める。超歌劇『幕末Rock』では勝海舟を演じた。",
+            "image_url": null,
+            "sns": {},
+            "gender": "male",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1977-07-02",
+            "height_cm": 183,
+            "blood_type": "AB",
+            "birthday_label": null,
+            "name_en": "Dai Iwasaki",
+            "profile_en": "An actor from Tokyo. His stage credits include Oskar in Studio Life’s The Heart of Thomas and Baldroy in Black Butler: The Musical. He played Kaishu Katsu in Bakumatsu Rock: Arrival of the Black Ships.",
+            "death_date": null,
+            "created_at": "prepared",
+            "updated_at": "prepared"
+          },
+          "source": {
+            "sourceActorName": "岩崎大",
+            "sourceActorUrl": "https://kira-hai.net/iwasaki-dai",
+            "role_name": "勝海舟",
+            "cast_group": null
+          },
+          "sourceCreditKey": "aaf0ca2062d5f51c4fbc",
+          "sourceOrder": 7,
+          "billingOrder": 7,
+          "expectedNote": null,
+          "expectedStarring": false,
+          "existingCast": null
+        },
+        {
+          "sourceKind": "kira-hai",
+          "sourceUrl": "https://kira-hai.net/bakuro2016",
+          "actor": {
+            "id": "9b46bf21-6695-42ab-b043-81801014ab3c",
+            "slug": "yoshioka-yu",
+            "name": "吉岡 佑",
+            "kana": "よしおか ゆう",
+            "profile": "沖縄県出身の俳優・モデル。現在はフリーランスとして活動している。ミュージカル『テニスの王子様』2ndシーズン（知念寛役）や舞台『戦国BASARA3』（真田幸村役）等の舞台作品に出演。また、音楽ユニット「メンズヘラクレス」のメンバーとしても活動していた。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/yoshioka_yu725",
+              "youtube": "https://www.youtube.com/channel/UCigXn6-J0moPesyqHbqZlyQ",
+              "instagram": "https://www.instagram.com/yu.yoshioka.yy/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:06:19.306372+00:00",
+            "updated_at": "2026-03-21T15:06:19.306372+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1985-07-25",
+            "height_cm": 187,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor and model from Okinawa Prefecture. He is currently working as a freelance actor. He appeared in stage works such as the musical \"The Prince of Tennis\" 2nd season (as Hiroshi Chinen) and the stage play \"Sengoku BASARA 3\" (as Yukimura Sanada). He was also a member of the music unit \"Men's Hercules\".",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "吉岡佑",
+            "sourceActorUrl": "https://kira-hai.net/yoshioka-yu",
+            "role_name": "井伊直弼",
+            "cast_group": null
+          },
+          "sourceCreditKey": "46b69ede506c4be2565a",
+          "sourceOrder": 8,
+          "billingOrder": 8,
+          "expectedNote": null,
+          "expectedStarring": false,
+          "existingCast": null
+        },
+        {
+          "sourceKind": "kira-hai",
+          "sourceUrl": "https://kira-hai.net/bakuro2016",
+          "actor": {
+            "id": "2f24923b-56e2-48ae-bd46-e76d2dc4763f",
+            "slug": "kimeru",
+            "name": "KIMERU",
+            "kana": "きめる",
+            "profile": "熊本県出身の日本の俳優・歌手。舞台および音楽活動を中心に活動。過去にKimeru名義で活動。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/Kimeru_",
+              "official": "https://www.kimeru.com/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-15T14:56:10.043831+00:00",
+            "updated_at": "2026-03-15T14:56:10.043831+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1980-06-17",
+            "height_cm": 163,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "Kimeru",
+            "sourceActorUrl": "https://kira-hai.net/kimeru",
+            "role_name": "徳川慶喜",
+            "cast_group": null
+          },
+          "sourceCreditKey": "3cd1861d468ae984ec3b",
+          "sourceOrder": 9,
+          "billingOrder": 9,
+          "expectedNote": null,
+          "expectedStarring": false,
+          "existingCast": {
+            "id": "173f80ad-4a2a-4084-9223-7f6679afbde1",
+            "play_id": "eeda508b-9d1a-44b8-9adf-ccb4f857d762",
+            "actor_id": "2f24923b-56e2-48ae-bd46-e76d2dc4763f",
+            "role_name": "徳川慶喜",
+            "is_starring": false,
+            "created_at": "2026-05-05T20:23:10.304333+00:00",
+            "billing_order": null,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null,
+            "updated_at": "2026-05-05T20:23:10.304333+00:00"
+          }
+        },
+        {
+          "sourceKind": "kira-hai",
+          "sourceUrl": "https://kira-hai.net/bakuro2016",
+          "actor": {
+            "id": "b98df308-6b62-417b-9c5b-acfabe671605",
+            "slug": "kanesaki-kentaro",
+            "name": "兼崎 健太郎",
+            "kana": "かねさき けんたろう",
+            "profile": "山口県出身の俳優・モデル。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/kanesaki0602",
+              "official": "https://kanesakikentaro.com/",
+              "instagram": "https://www.instagram.com/kanesaki0602"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T14:53:11.103962+00:00",
+            "updated_at": "2026-03-21T14:53:11.103962+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1984-06-02",
+            "height_cm": 186,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "兼崎健太郎",
+            "sourceActorUrl": "https://kira-hai.net/kanesaki-kentaro",
+            "role_name": "マシュー・カルブレイス・ペリー・ジュニア",
+            "cast_group": null
+          },
+          "sourceCreditKey": "a48fa9470147db601242",
+          "sourceOrder": 10,
+          "billingOrder": 10,
+          "expectedNote": null,
+          "expectedStarring": false,
+          "existingCast": null
+        }
+      ],
+      "legacyCandidates": [
+        {
+          "id": "3b499781-5710-4e22-90b0-e034317e56e1",
+          "source": "kira-hai",
+          "external_actor_id": "4eb99079-080d-47d3-9eff-f1e8bebedb41",
+          "external_play_id": "7f7aa79d-4292-4a68-a5b8-64e3503adfdb",
+          "source_actor_name": "KIMERU",
+          "source_actor_url": "https://kira-hai.net/kimeru",
+          "source_work_title": "超歌劇(ウルトラミュージカル)『幕末Rock 黒船来航』 (2016)",
+          "source_work_url": "https://kira-hai.net/bakuro2016",
+          "source_year": 2021,
+          "source_role_raw": "徳川慶喜 <img decoding=\"async\" src=\"https://kira-hai.net/wp-content/uploads/2015/03/059.gif\" alt=\"★\" width=\"12\" height=\"13\" class=\"alignnone size-full wp-image-368\" /> おそ松さん on STAGE ～SIX MEN’S SHOW TIME～：チビ太 <img decoding=\"async\" src=\"https://kira-hai.net/wp-content/uploads/2015/03/059.gif\" alt=\"★\" width=\"12\" height=\"13\" class=\"alignnone size-full wp-image-368\" /> ミュージカル『青春-AOHARU-鉄道』2 ～信越地方よりアイをこめて～：西武池袋線",
+          "source_role_names": [
+            "徳川慶喜 <img decoding=\"async\" src=\"https:",
+            "kira-hai.net",
+            "wp-content",
+            "uploads",
+            "2015",
+            "03",
+            "059.gif\" alt=\"★\" width=\"12\" height=\"13\" class=\"alignnone size-full wp-image-368\"",
+            "> おそ松さん on STAGE ～SIX MEN’S SHOW TIME～：チビ太 <img decoding=\"async\" src=\"https:",
+            "kira-hai.net",
+            "wp-content",
+            "uploads",
+            "2015",
+            "03",
+            "059.gif\" alt=\"★\" width=\"12\" height=\"13\" class=\"alignnone size-full wp-image-368\"",
+            "> ミュージカル『青春-AOHARU-鉄道』2 ～信越地方よりアイをこめて～：西武池袋線"
+          ],
+          "matched_actor_id": "2f24923b-56e2-48ae-bd46-e76d2dc4763f",
+          "matched_play_id": "eeda508b-9d1a-44b8-9adf-ccb4f857d762",
+          "accepted_cast_id": "173f80ad-4a2a-4084-9223-7f6679afbde1",
+          "confidence": 60,
+          "status": "accepted",
+          "note": null,
+          "scraped_at": "2026-04-26T06:33:43.639+00:00",
+          "created_at": "2026-04-25T07:40:05.777936+00:00",
+          "updated_at": "2026-05-05T20:39:29.108+00:00",
+          "accepted_at": "2026-05-05T20:39:29.108+00:00",
+          "rejected_at": null,
+          "source_cast_group": null,
+          "source_order": null,
+          "source_credit_key": null,
+          "source_evidence": null
+        },
+        {
+          "id": "4a3886d9-dbcf-4125-8544-023e9595c821",
+          "source": "kira-hai",
+          "external_actor_id": "c6295eef-a6d8-4338-8578-7610f1df6ba2",
+          "external_play_id": "7f7aa79d-4292-4a68-a5b8-64e3503adfdb",
+          "source_actor_name": "三津谷亮",
+          "source_actor_url": "https://kira-hai.net/mitsuya-ryo",
+          "source_work_title": "超歌劇(ウルトラミュージカル)『幕末Rock 黒船来航』 (2016)",
+          "source_work_url": "https://kira-hai.net/bakuro2016",
+          "source_year": 2021,
+          "source_role_raw": "桂小五郎",
+          "source_role_names": [
+            "桂小五郎"
+          ],
+          "matched_actor_id": "a03b3f80-b2b8-482d-b221-aa4c19be9767",
+          "matched_play_id": "eeda508b-9d1a-44b8-9adf-ccb4f857d762",
+          "accepted_cast_id": "75e2038d-75a1-414b-a43c-f9e8f329eff3",
+          "confidence": 60,
+          "status": "accepted",
+          "note": null,
+          "scraped_at": "2026-04-27T17:37:51.401+00:00",
+          "created_at": "2026-04-27T17:23:33.451039+00:00",
+          "updated_at": "2026-05-04T19:23:44.78+00:00",
+          "accepted_at": "2026-05-04T19:23:44.78+00:00",
+          "rejected_at": null,
+          "source_cast_group": null,
+          "source_order": null,
+          "source_credit_key": null,
+          "source_evidence": null
+        },
+        {
+          "id": "e480a467-4e15-4e19-bb1e-b2825197e082",
+          "source": "kira-hai",
+          "external_actor_id": "4eb99079-080d-47d3-9eff-f1e8bebedb41",
+          "external_play_id": "7f7aa79d-4292-4a68-a5b8-64e3503adfdb",
+          "source_actor_name": "KIMERU",
+          "source_actor_url": "https://kira-hai.net/kimeru",
+          "source_work_title": "超歌劇(ウルトラミュージカル)『幕末Rock 黒船来航』 (2016)",
+          "source_work_url": "https://kira-hai.net/bakuro2016",
+          "source_year": 2021,
+          "source_role_raw": "徳川慶喜",
+          "source_role_names": [
+            "徳川慶喜"
+          ],
+          "matched_actor_id": "2f24923b-56e2-48ae-bd46-e76d2dc4763f",
+          "matched_play_id": "eeda508b-9d1a-44b8-9adf-ccb4f857d762",
+          "accepted_cast_id": "173f80ad-4a2a-4084-9223-7f6679afbde1",
+          "confidence": 60,
+          "status": "accepted",
+          "note": null,
+          "scraped_at": "2026-04-27T17:28:21.961+00:00",
+          "created_at": "2026-04-27T15:22:39.385702+00:00",
+          "updated_at": "2026-05-05T20:23:13.475+00:00",
+          "accepted_at": "2026-05-05T20:23:13.475+00:00",
+          "rejected_at": null,
+          "source_cast_group": null,
+          "source_order": null,
+          "source_credit_key": null,
+          "source_evidence": null
+        },
+        {
+          "id": "fb7185b3-692a-4f1a-876c-2418b8c23541",
+          "source": "kira-hai",
+          "external_actor_id": "357b824e-7585-4988-b7f7-8fbd05706f02",
+          "external_play_id": "7f7aa79d-4292-4a68-a5b8-64e3503adfdb",
+          "source_actor_name": "佐々木喜英",
+          "source_actor_url": "https://kira-hai.net/sasaki-yoshihide",
+          "source_work_title": "超歌劇(ウルトラミュージカル)『幕末Rock 黒船来航』 (2016)",
+          "source_work_url": "https://kira-hai.net/bakuro2016",
+          "source_year": 2021,
+          "source_role_raw": "沖田総司",
+          "source_role_names": [
+            "沖田総司"
+          ],
+          "matched_actor_id": "2138a9e5-e342-4e25-949e-be41e86910c2",
+          "matched_play_id": "eeda508b-9d1a-44b8-9adf-ccb4f857d762",
+          "accepted_cast_id": "d6190a25-23b6-4adb-81f5-f138ef08b776",
+          "confidence": 60,
+          "status": "accepted",
+          "note": null,
+          "scraped_at": "2026-04-27T18:24:06.647+00:00",
+          "created_at": "2026-04-27T18:24:05.840364+00:00",
+          "updated_at": "2026-04-28T14:11:25.341+00:00",
+          "accepted_at": "2026-04-28T14:11:25.341+00:00",
+          "rejected_at": null,
+          "source_cast_group": null,
+          "source_order": null,
+          "source_credit_key": null,
+          "source_evidence": null
+        }
+      ],
+      "legacyUpgrades": [
+        {
+          "before": {
+            "id": "4a3886d9-dbcf-4125-8544-023e9595c821",
+            "source": "kira-hai",
+            "external_actor_id": "c6295eef-a6d8-4338-8578-7610f1df6ba2",
+            "external_play_id": "7f7aa79d-4292-4a68-a5b8-64e3503adfdb",
+            "source_actor_name": "三津谷亮",
+            "source_actor_url": "https://kira-hai.net/mitsuya-ryo",
+            "source_work_title": "超歌劇(ウルトラミュージカル)『幕末Rock 黒船来航』 (2016)",
+            "source_work_url": "https://kira-hai.net/bakuro2016",
+            "source_year": 2021,
+            "source_role_raw": "桂小五郎",
+            "source_role_names": [
+              "桂小五郎"
+            ],
+            "matched_actor_id": "a03b3f80-b2b8-482d-b221-aa4c19be9767",
+            "matched_play_id": "eeda508b-9d1a-44b8-9adf-ccb4f857d762",
+            "accepted_cast_id": "75e2038d-75a1-414b-a43c-f9e8f329eff3",
+            "confidence": 60,
+            "status": "accepted",
+            "note": null,
+            "scraped_at": "2026-04-27T17:37:51.401+00:00",
+            "created_at": "2026-04-27T17:23:33.451039+00:00",
+            "updated_at": "2026-05-04T19:23:44.78+00:00",
+            "accepted_at": "2026-05-04T19:23:44.78+00:00",
+            "rejected_at": null,
+            "source_cast_group": null,
+            "source_order": null,
+            "source_credit_key": null,
+            "source_evidence": null
+          },
+          "patch": {
+            "source_actor_name": "三津谷亮",
+            "source_year": 2016,
+            "source_credit_key": "a14521dcb7834241a16e",
+            "source_order": 3,
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bakuro2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bakuro2016",
+                  "checkedAt": "2026-10-26T06:22:30.565Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://bakumatsu.marv.jp/stage-3/cast.html",
+                  "checkedAt": "2026-10-26T06:23:11.132Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/765/",
+                  "checkedAt": "2026-10-26T06:22:31.048Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://bakumatsu.marv.jp/stage-3/stage.html",
+                  "checkedAt": "2026-10-26T06:23:11.324Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://db.epad.jp/s/6758",
+                  "checkedAt": "2026-10-26T06:23:11.627Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://bakumatsu.marv.jp/stage-3/story.html",
+                  "checkedAt": "2026-10-26T06:23:11.271Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                }
+              ],
+              "source_fingerprint": "c15afa317b6dc3d2a9aaa30dd94776012ec0f87c804074793491c1a8c2d71862",
+              "review_fingerprint": "4a1364fc3533c4a247a6a2d8c883c166d6df4457e172174009e498b046e2e781",
+              "snapshot_fingerprint": "ae4e923194d52efb86b159d402d06b771a82edc9dc377b3d66176e968cd07810",
+              "identity": "reviewed_link",
+              "legacy_review": {
+                "original_year": 2021,
+                "correct_year": 2016,
+                "reason": "2016年公演別公式の日程・役名で誤年を訂正。採用IDを保持。別作品混入の旧重複1件は原文保全。"
+              }
+            }
+          }
+        },
+        {
+          "before": {
+            "id": "e480a467-4e15-4e19-bb1e-b2825197e082",
+            "source": "kira-hai",
+            "external_actor_id": "4eb99079-080d-47d3-9eff-f1e8bebedb41",
+            "external_play_id": "7f7aa79d-4292-4a68-a5b8-64e3503adfdb",
+            "source_actor_name": "KIMERU",
+            "source_actor_url": "https://kira-hai.net/kimeru",
+            "source_work_title": "超歌劇(ウルトラミュージカル)『幕末Rock 黒船来航』 (2016)",
+            "source_work_url": "https://kira-hai.net/bakuro2016",
+            "source_year": 2021,
+            "source_role_raw": "徳川慶喜",
+            "source_role_names": [
+              "徳川慶喜"
+            ],
+            "matched_actor_id": "2f24923b-56e2-48ae-bd46-e76d2dc4763f",
+            "matched_play_id": "eeda508b-9d1a-44b8-9adf-ccb4f857d762",
+            "accepted_cast_id": "173f80ad-4a2a-4084-9223-7f6679afbde1",
+            "confidence": 60,
+            "status": "accepted",
+            "note": null,
+            "scraped_at": "2026-04-27T17:28:21.961+00:00",
+            "created_at": "2026-04-27T15:22:39.385702+00:00",
+            "updated_at": "2026-05-05T20:23:13.475+00:00",
+            "accepted_at": "2026-05-05T20:23:13.475+00:00",
+            "rejected_at": null,
+            "source_cast_group": null,
+            "source_order": null,
+            "source_credit_key": null,
+            "source_evidence": null
+          },
+          "patch": {
+            "source_actor_name": "Kimeru",
+            "source_year": 2016,
+            "source_credit_key": "3cd1861d468ae984ec3b",
+            "source_order": 9,
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bakuro2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bakuro2016",
+                  "checkedAt": "2026-10-26T06:22:30.565Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://bakumatsu.marv.jp/stage-3/cast.html",
+                  "checkedAt": "2026-10-26T06:23:11.132Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/765/",
+                  "checkedAt": "2026-10-26T06:22:31.048Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://bakumatsu.marv.jp/stage-3/stage.html",
+                  "checkedAt": "2026-10-26T06:23:11.324Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://db.epad.jp/s/6758",
+                  "checkedAt": "2026-10-26T06:23:11.627Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://bakumatsu.marv.jp/stage-3/story.html",
+                  "checkedAt": "2026-10-26T06:23:11.271Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                }
+              ],
+              "source_fingerprint": "c15afa317b6dc3d2a9aaa30dd94776012ec0f87c804074793491c1a8c2d71862",
+              "review_fingerprint": "4a1364fc3533c4a247a6a2d8c883c166d6df4457e172174009e498b046e2e781",
+              "snapshot_fingerprint": "ae4e923194d52efb86b159d402d06b771a82edc9dc377b3d66176e968cd07810",
+              "identity": "reviewed_link",
+              "legacy_review": {
+                "original_year": 2021,
+                "correct_year": 2016,
+                "reason": "2016年公演別公式の日程・役名で誤年を訂正。採用IDを保持。別作品混入の旧重複1件は原文保全。"
+              }
+            }
+          }
+        },
+        {
+          "before": {
+            "id": "fb7185b3-692a-4f1a-876c-2418b8c23541",
+            "source": "kira-hai",
+            "external_actor_id": "357b824e-7585-4988-b7f7-8fbd05706f02",
+            "external_play_id": "7f7aa79d-4292-4a68-a5b8-64e3503adfdb",
+            "source_actor_name": "佐々木喜英",
+            "source_actor_url": "https://kira-hai.net/sasaki-yoshihide",
+            "source_work_title": "超歌劇(ウルトラミュージカル)『幕末Rock 黒船来航』 (2016)",
+            "source_work_url": "https://kira-hai.net/bakuro2016",
+            "source_year": 2021,
+            "source_role_raw": "沖田総司",
+            "source_role_names": [
+              "沖田総司"
+            ],
+            "matched_actor_id": "2138a9e5-e342-4e25-949e-be41e86910c2",
+            "matched_play_id": "eeda508b-9d1a-44b8-9adf-ccb4f857d762",
+            "accepted_cast_id": "d6190a25-23b6-4adb-81f5-f138ef08b776",
+            "confidence": 60,
+            "status": "accepted",
+            "note": null,
+            "scraped_at": "2026-04-27T18:24:06.647+00:00",
+            "created_at": "2026-04-27T18:24:05.840364+00:00",
+            "updated_at": "2026-04-28T14:11:25.341+00:00",
+            "accepted_at": "2026-04-28T14:11:25.341+00:00",
+            "rejected_at": null,
+            "source_cast_group": null,
+            "source_order": null,
+            "source_credit_key": null,
+            "source_evidence": null
+          },
+          "patch": {
+            "source_actor_name": "佐々木喜英",
+            "source_year": 2016,
+            "source_credit_key": "d4ddc1533b37f7f2a411",
+            "source_order": 5,
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/bakuro2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/bakuro2016",
+                  "checkedAt": "2026-10-26T06:22:30.565Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://bakumatsu.marv.jp/stage-3/cast.html",
+                  "checkedAt": "2026-10-26T06:23:11.132Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.marv.jp/titles/st/765/",
+                  "checkedAt": "2026-10-26T06:22:31.048Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://bakumatsu.marv.jp/stage-3/stage.html",
+                  "checkedAt": "2026-10-26T06:23:11.324Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://db.epad.jp/s/6758",
+                  "checkedAt": "2026-10-26T06:23:11.627Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                },
+                {
+                  "url": "https://bakumatsu.marv.jp/stage-3/story.html",
+                  "checkedAt": "2026-10-26T06:23:11.271Z",
+                  "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+                }
+              ],
+              "source_fingerprint": "c15afa317b6dc3d2a9aaa30dd94776012ec0f87c804074793491c1a8c2d71862",
+              "review_fingerprint": "4a1364fc3533c4a247a6a2d8c883c166d6df4457e172174009e498b046e2e781",
+              "snapshot_fingerprint": "ae4e923194d52efb86b159d402d06b771a82edc9dc377b3d66176e968cd07810",
+              "identity": "reviewed_link",
+              "legacy_review": {
+                "original_year": 2021,
+                "correct_year": 2016,
+                "reason": "2016年公演別公式の日程・役名で誤年を訂正。採用IDを保持。別作品混入の旧重複1件は原文保全。"
+              }
+            }
+          }
+        }
+      ],
+      "legacyKept": [
+        {
+          "id": "3b499781-5710-4e22-90b0-e034317e56e1",
+          "source": "kira-hai",
+          "external_actor_id": "4eb99079-080d-47d3-9eff-f1e8bebedb41",
+          "external_play_id": "7f7aa79d-4292-4a68-a5b8-64e3503adfdb",
+          "source_actor_name": "KIMERU",
+          "source_actor_url": "https://kira-hai.net/kimeru",
+          "source_work_title": "超歌劇(ウルトラミュージカル)『幕末Rock 黒船来航』 (2016)",
+          "source_work_url": "https://kira-hai.net/bakuro2016",
+          "source_year": 2021,
+          "source_role_raw": "徳川慶喜 <img decoding=\"async\" src=\"https://kira-hai.net/wp-content/uploads/2015/03/059.gif\" alt=\"★\" width=\"12\" height=\"13\" class=\"alignnone size-full wp-image-368\" /> おそ松さん on STAGE ～SIX MEN’S SHOW TIME～：チビ太 <img decoding=\"async\" src=\"https://kira-hai.net/wp-content/uploads/2015/03/059.gif\" alt=\"★\" width=\"12\" height=\"13\" class=\"alignnone size-full wp-image-368\" /> ミュージカル『青春-AOHARU-鉄道』2 ～信越地方よりアイをこめて～：西武池袋線",
+          "source_role_names": [
+            "徳川慶喜 <img decoding=\"async\" src=\"https:",
+            "kira-hai.net",
+            "wp-content",
+            "uploads",
+            "2015",
+            "03",
+            "059.gif\" alt=\"★\" width=\"12\" height=\"13\" class=\"alignnone size-full wp-image-368\"",
+            "> おそ松さん on STAGE ～SIX MEN’S SHOW TIME～：チビ太 <img decoding=\"async\" src=\"https:",
+            "kira-hai.net",
+            "wp-content",
+            "uploads",
+            "2015",
+            "03",
+            "059.gif\" alt=\"★\" width=\"12\" height=\"13\" class=\"alignnone size-full wp-image-368\"",
+            "> ミュージカル『青春-AOHARU-鉄道』2 ～信越地方よりアイをこめて～：西武池袋線"
+          ],
+          "matched_actor_id": "2f24923b-56e2-48ae-bd46-e76d2dc4763f",
+          "matched_play_id": "eeda508b-9d1a-44b8-9adf-ccb4f857d762",
+          "accepted_cast_id": "173f80ad-4a2a-4084-9223-7f6679afbde1",
+          "confidence": 60,
+          "status": "accepted",
+          "note": null,
+          "scraped_at": "2026-04-26T06:33:43.639+00:00",
+          "created_at": "2026-04-25T07:40:05.777936+00:00",
+          "updated_at": "2026-05-05T20:39:29.108+00:00",
+          "accepted_at": "2026-05-05T20:39:29.108+00:00",
+          "rejected_at": null,
+          "source_cast_group": null,
+          "source_order": null,
+          "source_credit_key": null,
+          "source_evidence": null
+        }
+      ],
+      "creditOnly": [
+        "山沖勇輝",
+        "山田諒",
+        "佐藤優次",
+        "仲田祥司",
+        "池田謙信",
+        "吉田邑樹",
+        "新開理雄",
+        "狩野新之介",
+        "市川耕大",
+        "竹井弘樹"
+      ],
+      "transformations": [
+        {
+          "type": "merge_same_performer_roles",
+          "sourceRows": [
+            {
+              "sourceActorName": "輝馬",
+              "sourceActorUrl": "https://kira-hai.net/teruma",
+              "role_name": "土方歳三",
+              "cast_group": null,
+              "sourceOrder": 4
+            },
+            {
+              "sourceActorName": "輝馬",
+              "sourceActorUrl": "https://kira-hai.net/teruma",
+              "role_name": "誠仮面",
+              "cast_group": null,
+              "sourceOrder": 6
+            }
+          ],
+          "result": {
+            "sourceActorName": "輝馬",
+            "sourceActorUrl": "https://kira-hai.net/teruma",
+            "role_name": "土方歳三 / 誠仮面",
+            "cast_group": null
+          },
+          "reason": "同一人物の土方歳三と誠仮面を既存仕様のスラッシュ区切り役名へ。両役と原文・掲載位置を保持し出演者カードの重複を避ける。",
+          "evidence": [
+            {
+              "url": "https://bakumatsu.marv.jp/stage-3/cast.html",
+              "checkedAt": "2026-10-26T06:23:11.132Z",
+              "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+            },
+            {
+              "url": "https://www.marv.jp/titles/st/765/",
+              "checkedAt": "2026-10-26T06:22:31.048Z",
+              "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+            }
+          ]
+        }
+      ],
+      "exceptions": [
+        "10人・11役。輝馬の土方歳三と誠仮面を一つの出演枠で保存。原資料の2行は保持。",
+        "高杉は糸川耀士郎、桂は三津谷亮、井伊は吉岡佑。初演・2015年の太田基裕・矢田悠祐・小谷嘉一を自動継承しない。近藤勇・吉田松陰の出演も本作の資料で未確認なので継承しない。",
+        "現在のstage/cast.htmlは後年雷舞の構成・6アンサンブルへ更新済み。2016年根拠には使わずstage-3/cast.htmlと公演別主催者資料で確認。",
+        "EPADは土方・沖田欄が欠落するが、2016年公演公式・主催者が明記するため保持する。EPADの短いキャスト一覧を全出演者の完全表とみなさない。",
+        "アンサンブル10人は2016年の公演別公式・主催者で照合しクレジット。現在ページの6人へ減らさない。",
+        "岩崎大と岩﨑大は個別出典で同一人物を確認。異体字のグローバル置換は作らない。",
+        "旧候補4件中3件の誤年2021を2016へ訂正。HTML・別作品混入のKIMERU旧重複1件は原文保持し、現行候補や配役の作成根拠にはしない。",
+        "京都8/20-21、東京9/3-9。8/7製作発表や映像収録・DVD発売日を公演日へ混ぜない。配信未確認のvodは保全。"
+      ]
+    }
+  ],
+  "keptPlays": [
+    {
+      "id": "79fa824d-94a5-44a5-805a-1072dede78b9",
+      "slug": "bakuro2017",
+      "title": "超歌劇『幕末Rock』絶叫!熱狂!雷舞 (2017)",
+      "franchise_id": "6594b20a-2b13-4217-b062-8a28b1baf1de",
+      "summary": null,
+      "period": "2017年",
+      "venue": null,
+      "vod": {},
+      "genre": null,
+      "created_at": "2026-04-28T14:05:45.85268+00:00",
+      "updated_at": "2026-04-28T14:05:45.85268+00:00",
+      "tags": [],
+      "credits": null,
+      "related_franchise_ids": [],
+      "summary_en": null,
+      "title_en": null
+    },
+    {
+      "id": "d11fa316-5669-40a8-af45-4cc1506b69c9",
+      "slug": "bakuro2014",
+      "title": "超歌劇(ウルトラミュージカル)『幕末Rock』",
+      "franchise_id": "6594b20a-2b13-4217-b062-8a28b1baf1de",
+      "summary": "マーベラスのゲーム『幕末Rock』を原作とするミュージカル初演。徳川幕府が「天歌」で人々を支配する時代に、坂本龍馬は高杉晋作や桂小五郎と出会い、自由とRockのために立ち上がる。2014年12月に天王洲 銀河劇場で上演。脚本・演出は吉谷光太郎。",
+      "period": "2014年12月24日〜29日",
+      "venue": "天王洲 銀河劇場",
+      "vod": {},
+      "genre": null,
+      "created_at": "2026-04-28T14:20:06.188966+00:00",
+      "updated_at": "2026-10-26T05:58:00.39156+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "『幕末Rock』（マーベラス）"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "脚本・演出",
+          "names": [
+            "吉谷光太郎"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "音楽制作",
+          "names": [
+            "テレビ朝日ミュージック",
+            "マーベラス"
+          ],
+          "is_core": false,
+          "sort_order": 3
+        },
+        {
+          "role": "主催",
+          "names": [
+            "マーベラス",
+            "テレビ朝日ミュージック",
+            "NBCユニバーサル・エンターテイメント",
+            "NAS"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "協力",
+          "names": [
+            "ギブソン"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "アンサンブル",
+          "names": [
+            "斎藤准一郎",
+            "山沖勇輝",
+            "阿部直生",
+            "風太",
+            "福野麗生馬",
+            "仲田祥司",
+            "池田謙信",
+            "新開理雄"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "The first stage musical based on Marvelous’s game Bakumatsu Rock. In an era controlled by the Tokugawa shogunate through Heaven’s Songs, Ryoma Sakamoto meets Shinsaku Takasugi and Kogoro Katsura and joins their struggle for freedom and rock music. Performed at The Galaxy Theatre in December 2014, with a script and direction by Kotaro Yoshitani.",
+      "title_en": "Bakumatsu Rock: Ultra Musical (2014)"
+    },
+    {
+      "id": "e8d91249-e073-4d08-9ac9-2dea8e0fbe13",
+      "slug": "bakuro2015",
+      "title": "超★超歌劇（ちょう・ウルトラミュージカル）『幕末Rock』",
+      "franchise_id": "6594b20a-2b13-4217-b062-8a28b1baf1de",
+      "summary": "マーベラスのゲーム『幕末Rock』を原作とするミュージカルの2015年再演。幕府の「天歌」に対し、坂本龍馬や高杉晋作、桂小五郎らが自由とRockを求めて立ち上がる。2014年初演に新曲と新演出を加え、大阪と東京で上演。脚本・演出は吉谷光太郎。",
+      "period": "大阪: 2015/08/08〜08/09 / 東京: 2015/08/13〜08/16",
+      "venue": "梅田芸術劇場シアター・ドラマシティ / Zeppブルーシアター六本木",
+      "vod": {},
+      "genre": null,
+      "created_at": "2026-04-28T14:19:11.276819+00:00",
+      "updated_at": "2026-10-26T06:15:41.216275+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "『幕末Rock』（マーベラス）"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "脚本・演出",
+          "names": [
+            "吉谷光太郎"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "音楽制作",
+          "names": [
+            "テレビ朝日ミュージック",
+            "マーベラス"
+          ],
+          "is_core": false,
+          "sort_order": 3
+        },
+        {
+          "role": "主催",
+          "names": [
+            "マーベラス",
+            "テレビ朝日ミュージック",
+            "NBCユニバーサル・エンターテイメント",
+            "NAS"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "協力",
+          "names": [
+            "ギブソン"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "アンサンブル",
+          "names": [
+            "山沖勇輝",
+            "山田諒",
+            "佐藤優次",
+            "仲田祥司",
+            "池田謙信",
+            "吉田邑樹",
+            "浦島崇史",
+            "新開理雄"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "The 2015 revival of the musical based on Marvelous’s game Bakumatsu Rock. Ryoma Sakamoto, Shinsaku Takasugi and Kogoro Katsura rise against the shogunate’s Heaven’s Songs in pursuit of freedom and rock music. New songs and staging were added to the 2014 production for performances in Osaka and Tokyo, with a script and direction by Kotaro Yoshitani.",
+      "title_en": "Bakumatsu Rock: Cho Ultra Musical (2015 Revival)"
+    }
+  ],
+  "evidence": {
+    "links": [
+      {
+        "url": "https://kira-hai.net/bakuro2016",
+        "checkedAt": "2026-10-26T06:22:30.565Z",
+        "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+      },
+      {
+        "url": "https://bakumatsu.marv.jp/stage-3/cast.html",
+        "checkedAt": "2026-10-26T06:23:11.132Z",
+        "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+      },
+      {
+        "url": "https://www.marv.jp/titles/st/765/",
+        "checkedAt": "2026-10-26T06:22:31.048Z",
+        "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+      },
+      {
+        "url": "https://bakumatsu.marv.jp/stage-3/stage.html",
+        "checkedAt": "2026-10-26T06:23:11.324Z",
+        "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+      },
+      {
+        "url": "https://db.epad.jp/s/6758",
+        "checkedAt": "2026-10-26T06:23:11.627Z",
+        "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+      },
+      {
+        "url": "https://bakumatsu.marv.jp/stage-3/story.html",
+        "checkedAt": "2026-10-26T06:23:11.271Z",
+        "note": "2016年公演または本人の記述を個別確認。原文とSHA256を保存。"
+      }
+    ],
+    "sources": [
+      {
+        "label": "kira",
+        "url": "https://kira-hai.net/bakuro2016",
+        "status": 200,
+        "checkedAt": "2026-10-26T06:22:30.565Z",
+        "sha256": "cf8fd321dd079cf7cf38dc6ca13cab3d4d6ef4194a404256cb9f9e3a208db58c"
+      },
+      {
+        "label": "official",
+        "url": "https://www.marv.jp/titles/st/765/",
+        "status": 200,
+        "checkedAt": "2026-10-26T06:22:31.048Z",
+        "sha256": "c6d62022c38fd37e2a956ceabb79f2468e50f28b353d68b2199e077dd5cd934e"
+      },
+      {
+        "label": "currentCast",
+        "url": "https://bakumatsu.marv.jp/stage/cast.html",
+        "status": 200,
+        "checkedAt": "2026-10-26T06:22:31.332Z",
+        "sha256": "ca666b5298455cfc4383cfbb5c16de66003eccc3688fb0fa9d68fba3040f1812"
+      },
+      {
+        "label": "changelog",
+        "url": "https://supabase.com/changelog.md",
+        "status": 200,
+        "checkedAt": "2026-10-26T06:22:31.556Z",
+        "sha256": "45528009025b8ad8487ccb73f7c769b66d4b0e7aa4560157047899dcb5b5a006"
+      },
+      {
+        "label": "cast",
+        "url": "https://bakumatsu.marv.jp/stage-3/cast.html",
+        "status": 200,
+        "checkedAt": "2026-10-26T06:23:11.132Z",
+        "sha256": "eb663134ffc352c15bd61ca7684ca052d44a6b716b63343711664a71b2d0a163"
+      },
+      {
+        "label": "story",
+        "url": "https://bakumatsu.marv.jp/stage-3/story.html",
+        "status": 200,
+        "checkedAt": "2026-10-26T06:23:11.271Z",
+        "sha256": "fd82fa7c03fd3484cd6b042ae5488de90bf66baf384cd2669666ddc912e67dec"
+      },
+      {
+        "label": "stage",
+        "url": "https://bakumatsu.marv.jp/stage-3/stage.html",
+        "status": 200,
+        "checkedAt": "2026-10-26T06:23:11.324Z",
+        "sha256": "211c0470c6b6c4a226a4cf63a00fa3ae895905275cc26c7ec5c67aaeb793ebfc"
+      },
+      {
+        "label": "epad",
+        "url": "https://db.epad.jp/s/6758",
+        "status": 200,
+        "checkedAt": "2026-10-26T06:23:11.627Z",
+        "sha256": "25b3ca2b09d01b0609b327aa1cb1c541b59601c24cd60945a405de244064eb4e"
+      },
+      {
+        "label": "release",
+        "url": "https://prtimes.jp/main/html/rd/p/000000066.000016719.html",
+        "status": 200,
+        "checkedAt": "2026-10-26T06:23:12.013Z",
+        "sha256": "8b907a839c2d1ee732f75b782e903244c6cec4d0161e07b77eacca0cbc46ba29"
+      },
+      {
+        "label": "iwasakiKira",
+        "url": "https://kira-hai.net/iwasaki-dai",
+        "status": 200,
+        "checkedAt": "2026-10-26T06:25:23.777Z",
+        "sha256": "3606dcd3fb183c14744dfc003404691f2f544ecd477e234200af92e2a1396888"
+      },
+      {
+        "label": "iwasakiProfile",
+        "url": "https://www.studio-life.com/actor/iwasaki.html",
+        "status": 404,
+        "checkedAt": "2026-10-26T06:25:24.209Z",
+        "sha256": "a010b4cefb338f712e96cab3cf97d2a94d14577e95b441a88c8c0b9c2d83ffb0"
+      },
+      {
+        "label": "iwasakiBlog",
+        "url": "https://profile.ameba.jp/ameba/oobanburumaiplus/",
+        "status": 200,
+        "checkedAt": "2026-10-26T06:25:24.978Z",
+        "sha256": "09bb3874f67379f6dbb0462e9b521250d981e9a95dc7dc20e7b8ea275bd4ab6e"
+      },
+      {
+        "label": "studioHome",
+        "url": "https://studio-life.com/",
+        "status": 200,
+        "checkedAt": "2026-10-26T06:26:14.906Z",
+        "sha256": "c7125ab9836765b5f8cbe7350e78f77900d34b0f2ec6b5b155adb069a8226cef"
+      },
+      {
+        "label": "iwasakiSet",
+        "url": "https://www.set1979.com/stage/stageinfo202401/",
+        "status": 200,
+        "checkedAt": "2026-10-26T06:26:15.258Z",
+        "sha256": "19da078ec3800e4595de250431f28dc66bb766c7e3e271a4feb11106926d1f80"
+      },
+      {
+        "label": "studioActors",
+        "url": "https://studio-life.com/actor/",
+        "status": 200,
+        "checkedAt": "2026-10-26T06:26:55.868Z",
+        "sha256": "2b1bcb4815456c863ae46c0e6102e5d22fcfc1cff7dff927d525ef85640913f9"
+      },
+      {
+        "label": "iwasakiDirectory",
+        "url": "https://www.excite.co.jp/news/dictionary/person/PEd28821245a6ec2389848d63086287abdadc4868a/",
+        "status": 200,
+        "checkedAt": "2026-10-26T06:28:05.677Z",
+        "sha256": "0914e53af1f2c1693d73a9903f9ebe371e7335323dd3f9b0d5c6d65870104667"
+      }
+    ],
+    "unresolved": [
+      "次は2017年絶叫！熱狂！雷舞の補完、その後にシリーズ全体点検。",
+      "岩﨑大の現所属・兼所属、詳細役名英訳、現在配信、人物総合監査は後続。",
+      "旧KIMERU重複候補1件は採用原文として未変更。"
+    ]
+  },
+  "requestKey": "318a41e8ff6557691fbb02fc23bcf7eefec5f8dad93bafd58575bcbfe46ee3ff",
+  "verification": {
+    "batchId": "bakuro2016-20261026-01",
+    "requestKey": "318a41e8ff6557691fbb02fc23bcf7eefec5f8dad93bafd58575bcbfe46ee3ff",
+    "deltas": {
+      "actors": {
+        "before": 1147,
+        "after": 1148,
+        "changed": 0,
+        "added": 1,
+        "deleted": 0
+      },
+      "plays": {
+        "before": 402,
+        "after": 402,
+        "changed": 1,
+        "added": 0,
+        "deleted": 0
+      },
+      "franchises": {
+        "before": 198,
+        "after": 198,
+        "changed": 0,
+        "added": 0,
+        "deleted": 0
+      },
+      "casts": {
+        "before": 4091,
+        "after": 4098,
+        "changed": 3,
+        "added": 7,
+        "deleted": 0
+      },
+      "external_actors": {
+        "before": 1701,
+        "after": 1701,
+        "changed": 0,
+        "added": 0,
+        "deleted": 0
+      },
+      "external_cast_candidates": {
+        "before": 3445,
+        "after": 3452,
+        "changed": 3,
+        "added": 7,
+        "deleted": 0
+      },
+      "external_import_logs": {
+        "before": 5393,
+        "after": 5417,
+        "changed": 0,
+        "added": 24,
+        "deleted": 0
+      },
+      "actor_identity_sources": {
+        "before": 493,
+        "after": 494,
+        "changed": 0,
+        "added": 1,
+        "deleted": 0
+      }
+    },
+    "existingFieldsPreserved": true,
+    "keptCastIds": [
+      "75e2038d-75a1-414b-a43c-f9e8f329eff3",
+      "d6190a25-23b6-4adb-81f5-f138ef08b776",
+      "173f80ad-4a2a-4084-9223-7f6679afbde1"
+    ],
+    "onstage": 10,
+    "voice": 0,
+    "ensembleNames": 10,
+    "canonicalLegacyUpdated": 3,
+    "legacyDuplicatePreserved": 1,
+    "allActors": 1148,
+    "allPlays": 402,
+    "allCasts": 4098
+  },
+  "publicVerification": [
+    {
+      "path": "/series/bakumatsu-rock",
+      "passed": true,
+      "status": 200
+    },
+    {
+      "path": "/actors/itokawa-yojiro",
+      "passed": true,
+      "status": 200
+    },
+    {
+      "path": "/actors/rachi-shinji",
+      "passed": true,
+      "status": 200
+    },
+    {
+      "path": "/actors/teruma",
+      "passed": true,
+      "status": 200
+    },
+    {
+      "path": "/actors/mitsuya-ryo",
+      "passed": true,
+      "status": 200
+    },
+    {
+      "path": "/plays/bakuro2016",
+      "passed": true,
+      "status": 200
+    },
+    {
+      "path": "/actors/yamagishi-takuo",
+      "passed": true,
+      "status": 200
+    },
+    {
+      "path": "/actors/iwasaki-dai",
+      "passed": true,
+      "status": 200
+    },
+    {
+      "path": "/actors/sasaki-yoshihide",
+      "passed": true,
+      "status": 200
+    },
+    {
+      "path": "/actors/kanesaki-kentaro",
+      "passed": true,
+      "status": 200
+    },
+    {
+      "path": "/actors/kimeru",
+      "passed": true,
+      "status": 200
+    },
+    {
+      "path": "/actors/yoshioka-yu",
+      "passed": true,
+      "status": 200
+    },
+    {
+      "path": "/en/plays/bakuro2016",
+      "passed": true,
+      "status": 200
+    },
+    {
+      "path": "/en/actors/rachi-shinji",
+      "passed": true,
+      "status": 200
+    },
+    {
+      "path": "/en/actors/itokawa-yojiro",
+      "passed": true,
+      "status": 200
+    },
+    {
+      "path": "/en/series/bakumatsu-rock",
+      "passed": true,
+      "status": 200
+    },
+    {
+      "path": "/en/actors/mitsuya-ryo",
+      "passed": true,
+      "status": 200
+    },
+    {
+      "path": "/en/actors/teruma",
+      "passed": true,
+      "status": 200
+    },
+    {
+      "path": "/en/actors/yamagishi-takuo",
+      "passed": true,
+      "status": 200
+    },
+    {
+      "path": "/en/actors/sasaki-yoshihide",
+      "passed": true,
+      "status": 200
+    },
+    {
+      "path": "/en/actors/iwasaki-dai",
+      "passed": true,
+      "status": 200
+    },
+    {
+      "path": "/en/actors/yoshioka-yu",
+      "passed": true,
+      "status": 200
+    },
+    {
+      "path": "/en/actors/kimeru",
+      "passed": true,
+      "status": 200
+    },
+    {
+      "path": "/en/actors/kanesaki-kentaro",
+      "passed": true,
+      "status": 200
+    }
+  ],
+  "chronologyVerification": [
+    {
+      "lang": "ja",
+      "slugs": [
+        "bakuro2017",
+        "bakuro2016",
+        "bakuro2015",
+        "bakuro2014"
+      ],
+      "completedSynopsisCount": 3,
+      "terumaCardCount": 1
+    },
+    {
+      "lang": "en",
+      "slugs": [
+        "bakuro2017",
+        "bakuro2016",
+        "bakuro2015",
+        "bakuro2014"
+      ],
+      "completedSynopsisCount": 3,
+      "terumaCardCount": 1
+    }
+  ],
+  "searchVerification": [
+    {
+      "url": "https://stageconnect.jp/actors?gender=male&q=%E5%B2%A9%EF%A8%91%E5%A4%A7",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "url": "https://stageconnect.jp/actors?gender=male&q=%E5%B2%A9%EF%A8%91+%E5%A4%A7",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "url": "https://stageconnect.jp/en/actors?gender=male&q=%E5%B2%A9%EF%A8%91%E5%A4%A7",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "url": "https://stageconnect.jp/en/actors?gender=male&q=%E5%B2%A9%EF%A8%91+%E5%A4%A7",
+      "status": 200,
+      "passed": true
+    }
+  ],
+  "replayVerification": {
+    "allTablesUnchanged": true,
+    "added": 0,
+    "changed": 0,
+    "deleted": 0
+  }
+}
