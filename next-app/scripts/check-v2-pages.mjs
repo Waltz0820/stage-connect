@@ -32,7 +32,7 @@ for(const path of paths){
   if(/^\/(en\/)?watch(?:\/|$)/.test(path)) {
     const dmmLanding=path.endsWith('/watch/dmm');
     if(dmmLanding) {
-      assert.equal($('.dmm-lp__cta').length,2,path+' hero and closing signup links');
+      assert.equal($('.dmm-lp__cta').length,3,path+' hero, plan and closing signup links');
       assert.ok($(`main a[href="${en?'/en':''}/plays?streaming=available&service=dmm"]`).length,path+' existing DMM discovery route');
       assert.equal($('.dmm-lp__viewing').length,3,path+' three viewing perspectives');
     } else assert.equal($('main form input[name="q"]').length,1,path+' search for a production');
@@ -40,7 +40,7 @@ for(const path of paths){
     assert.equal($('link[rel="canonical"]').attr('href'),'https://stageconnect.jp'+path,path+' canonical');
     assert.equal($('link[rel="alternate"][hreflang="en"]').attr('href'),'https://stageconnect.jp'+(en?path:'/en'+path),path+' English alternate');
     const faq=JSON.parse($('script[type="application/ld+json"]').toArray().map(node=>$(node).text()).find(text=>text.includes('FAQPage')));
-    for(const question of faq.mainEntity) assert.ok($(dmmLanding?'.dmm-lp__notes':'.faq-card').text().includes(question.acceptedAnswer.text),path+' visible FAQ equals structured FAQ');
+    for(const question of faq.mainEntity) assert.ok($(dmmLanding?'.dmm-lp__support':'.faq-card').text().includes(question.acceptedAnswer.text),path+' visible FAQ equals structured FAQ');
     assert.ok(!/国内最多クラス|かなり限定的|一部のみ/.test($('main').text()),path+' no unverified catalogue comparison');
     if(path.endsWith('/danime')) assert.ok($('.streaming-service-card__price').text().includes('660'),path+' current Web price');
     if(path.endsWith('/u-next')||path.endsWith('/danime')) {
