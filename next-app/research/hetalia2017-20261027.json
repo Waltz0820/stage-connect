@@ -1,0 +1,3559 @@
+{
+  "version": 1,
+  "batchId": "hetalia2017-20261027-01",
+  "expectedFranchise": {
+    "id": "1ebeffff-4df9-47a1-8449-251fa80a56c1",
+    "name": "ミュージカル「ヘタリア」（ヘタミュ）",
+    "created_at": "2026-02-08T16:26:41.990203+00:00",
+    "updated_at": "2026-10-26T17:06:09.184766+00:00",
+    "slug": "hetalia",
+    "intro": null,
+    "description": "日丸屋秀和『ヘタリア Axis Powers』を原作とするミュージカルシリーズ。国を擬人化したキャラクターたちの日常や交流を歌とダンスで描く。2015年12月に『Singin’ in the World』で初演を迎えた。通称「ヘタミュ」。",
+    "origin_type": "漫画原作",
+    "origin_note": "原作：日丸屋秀和『ヘタリア Axis Powers』",
+    "production_companies": null,
+    "related_franchise_ids": [],
+    "format": null,
+    "description_en": "A musical series based on Hidekaz Himaruya’s Hetalia: Axis Powers, depicting personified nations and their encounters through song and dance. The series began with Singin’ in the World in December 2015 and is known as Hetamyu.",
+    "name_en": "Musical Hetalia"
+  },
+  "franchisePatch": {},
+  "externalActorLinks": [],
+  "actors": [],
+  "works": [
+    {
+      "year": 2017,
+      "before": null,
+      "play": {
+        "id": "0e248a7c-a0af-4a9c-bdfe-e3405ccdec37",
+        "slug": "hetamu2017",
+        "title": "ミュージカル「ヘタリア～in the new world～」",
+        "title_en": "Musical Hetalia: in the new world",
+        "franchise_id": "1ebeffff-4df9-47a1-8449-251fa80a56c1",
+        "summary": "長い戦いの後、それぞれの地で再出発するドイツと日本。変わらず元気なイタリアを交えた三人は、以前のように心が通わずにいた。かつて強国と渡り合った男の残した日記をきっかけに、離れた心が再び向き合い始める。プロイセンが新登場するミュージカル第3弾。",
+        "summary_en": "After a long war, Germany and Japan make new beginnings in their own lands. Italy remains as cheerful as ever, yet the three struggle to connect as they once did. A diary left by a man who fought the great powers draws them toward one another again. The third Hetalia musical introduces Prussia.",
+        "period": "2017年7月15日〜8月2日",
+        "venue": "大阪：NHK大阪ホール／東京：シアター1010",
+        "vod": {},
+        "genre": null,
+        "tags": [],
+        "credits": [
+          {
+            "role": "原作",
+            "names": [
+              "日丸屋秀和『ヘタリア Axis Powers』"
+            ],
+            "is_core": true,
+            "sort_order": 1
+          },
+          {
+            "role": "演出",
+            "names": [
+              "吉谷光太郎"
+            ],
+            "is_core": true,
+            "sort_order": 2
+          },
+          {
+            "role": "脚本",
+            "names": [
+              "なるせゆうせい"
+            ],
+            "is_core": true,
+            "sort_order": 3
+          },
+          {
+            "role": "音楽",
+            "names": [
+              "tak"
+            ],
+            "is_core": false,
+            "sort_order": 4
+          },
+          {
+            "role": "振付",
+            "names": [
+              "MAMORU"
+            ],
+            "is_core": false,
+            "sort_order": 5
+          },
+          {
+            "role": "企画製作",
+            "names": [
+              "フロンティアワークス"
+            ],
+            "is_core": false,
+            "sort_order": 6
+          },
+          {
+            "role": "制作",
+            "names": [
+              "ポリゴンマジック"
+            ],
+            "is_core": false,
+            "sort_order": 7
+          },
+          {
+            "role": "主催",
+            "names": [
+              "ミュージカル「ヘタリアNW」製作委員会"
+            ],
+            "is_core": false,
+            "sort_order": 8
+          },
+          {
+            "role": "アンサンブル",
+            "names": [
+              "仲田祥司",
+              "帯金遼太",
+              "山田諒",
+              "茶谷健太",
+              "新開理雄",
+              "町田尚規",
+              "山内涼平",
+              "一之瀬達也",
+              "山口渓",
+              "橋本佳貴"
+            ],
+            "is_core": false,
+            "sort_order": 9
+          },
+          {
+            "role": "公演日程",
+            "names": [
+              "大阪：2017年7月15日〜17日（NHK大阪ホール、5公演）",
+              "東京：2017年7月21日〜8月2日（シアター1010、18公演）"
+            ],
+            "is_core": false,
+            "sort_order": 10
+          },
+          {
+            "role": "上演時間（予定）",
+            "names": [
+              "約150分"
+            ],
+            "is_core": false,
+            "sort_order": 11
+          }
+        ],
+        "related_franchise_ids": []
+      },
+      "rawSource": {
+        "sourceUrl": "https://kira-hai.net/hetamu2017",
+        "title": "ミュージカル「ヘタリア~in the new world~」(2017)",
+        "scheduleLines": [
+          "2017年7月15日-17日 NHK大阪ホール",
+          "2017年7月21日-8月2日 シアター1010"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "長江崚行",
+            "sourceActorUrl": "https://kira-hai.net/nagae-ryoki",
+            "role_name": "イタリア",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "上田悠介",
+            "sourceActorUrl": "https://kira-hai.net/ueda-yusuke",
+            "role_name": "ドイツ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "植田圭輔",
+            "sourceActorUrl": "https://kira-hai.net/ueda-keisuke",
+            "role_name": "日本",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "磯貝龍虎",
+            "sourceActorUrl": "https://kira-hai.net/isogai-ryuko",
+            "role_name": "アメリカ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "廣瀬大介",
+            "sourceActorUrl": "https://kira-hai.net/hirose-daisuke",
+            "role_name": "イギリス",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "寿里",
+            "sourceActorUrl": "https://kira-hai.net/juri",
+            "role_name": "フランス",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "山沖勇輝",
+            "sourceActorUrl": "https://kira-hai.net/yamaoki-yuki",
+            "role_name": "ロシア",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "杉江大志",
+            "sourceActorUrl": "https://kira-hai.net/sugie-taishi",
+            "role_name": "中国",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "ROU",
+            "sourceActorUrl": "https://kira-hai.net/kikuchi-takuya",
+            "role_name": "オーストリア",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "高本学",
+            "sourceActorUrl": "https://kira-hai.net/takamoto-gaku",
+            "role_name": "プロイセン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "仲田祥司",
+            "sourceActorUrl": "https://kira-hai.net/nakata-shoji",
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "帯金遼太",
+            "sourceActorUrl": "https://kira-hai.net/obigane-ryota",
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "山田諒",
+            "sourceActorUrl": "https://kira-hai.net/yamada-ryo",
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "茶谷健太",
+            "sourceActorUrl": "https://kira-hai.net/chatani-kenta",
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "新開理雄",
+            "sourceActorUrl": "https://kira-hai.net/shinkai-rio",
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "町田尚規",
+            "sourceActorUrl": "https://kira-hai.net/machida-naoki",
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "山内涼平",
+            "sourceActorUrl": "https://kira-hai.net/yamauchi-ryohei",
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "一之瀬達也",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "山口渓",
+            "sourceActorUrl": "https://kira-hai.net/yamaguchi-kei",
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          },
+          {
+            "sourceActorName": "橋本佳貴",
+            "sourceActorUrl": null,
+            "role_name": null,
+            "cast_group": "アンサンブル"
+          }
+        ],
+        "unparsed": []
+      },
+      "source": {
+        "sourceUrl": "https://kira-hai.net/hetamu2017",
+        "title": "ミュージカル「ヘタリア~in the new world~」(2017)",
+        "scheduleLines": [
+          "2017年7月15日-17日 NHK大阪ホール",
+          "2017年7月21日-8月2日 シアター1010"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "長江崚行",
+            "sourceActorUrl": "https://kira-hai.net/nagae-ryoki",
+            "role_name": "イタリア",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "上田悠介",
+            "sourceActorUrl": "https://kira-hai.net/ueda-yusuke",
+            "role_name": "ドイツ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "植田圭輔",
+            "sourceActorUrl": "https://kira-hai.net/ueda-keisuke",
+            "role_name": "日本",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "磯貝龍虎",
+            "sourceActorUrl": "https://kira-hai.net/isogai-ryuko",
+            "role_name": "アメリカ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "廣瀬大介",
+            "sourceActorUrl": "https://kira-hai.net/hirose-daisuke",
+            "role_name": "イギリス",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "寿里",
+            "sourceActorUrl": "https://kira-hai.net/juri",
+            "role_name": "フランス",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "山沖勇輝",
+            "sourceActorUrl": "https://kira-hai.net/yamaoki-yuki",
+            "role_name": "ロシア",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "杉江大志",
+            "sourceActorUrl": "https://kira-hai.net/sugie-taishi",
+            "role_name": "中国",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "ROU",
+            "sourceActorUrl": "https://kira-hai.net/kikuchi-takuya",
+            "role_name": "オーストリア",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "高本学",
+            "sourceActorUrl": "https://kira-hai.net/takamoto-gaku",
+            "role_name": "プロイセン",
+            "cast_group": null
+          }
+        ],
+        "unparsed": []
+      },
+      "sourceFingerprint": "3392d794c4b28fd11e0661455a9ac82c53c36b990441bdba6bb94b0772bdb07f",
+      "stage": {
+        "workUrl": "https://kira-hai.net/hetamu2017",
+        "key": "cb4aaab6558b280f20063c14e30410f47c8ce612cc48ad398be2732db656e925",
+        "items": [
+          {
+            "source_actor_name": "長江崚行",
+            "source_actor_url": "https://kira-hai.net/nagae-ryoki",
+            "source_work_title": "ミュージカル「ヘタリア~in the new world~」(2017)",
+            "source_year": 2017,
+            "source_role_raw": "イタリア",
+            "source_role_names": [
+              "イタリア"
+            ],
+            "source_cast_group": null,
+            "source_order": 1,
+            "source_credit_key": "8e5f1c41b2108f245abb",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hetamu2017",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hetamu2017",
+                  "checkedAt": "2026-10-26T17:29:13.449Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/cast/",
+                  "checkedAt": "2026-10-26T17:29:14.380Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/story/",
+                  "checkedAt": "2026-10-26T17:29:14.752Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/schedule/",
+                  "checkedAt": "2026-10-26T17:29:15.194Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/qa/",
+                  "checkedAt": "2026-10-26T17:29:15.581Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/dvd/",
+                  "checkedAt": "2026-10-26T17:29:15.902Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/isogai-ryuko",
+                  "checkedAt": "2026-10-26T17:29:16.581Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/kikuchi-takuya",
+                  "checkedAt": "2026-10-26T17:29:16.437Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/takamoto-gaku",
+                  "checkedAt": "2026-10-26T17:29:16.742Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                }
+              ],
+              "source_fingerprint": "3392d794c4b28fd11e0661455a9ac82c53c36b990441bdba6bb94b0772bdb07f",
+              "review_fingerprint": "b45761008395066755972dfcb9c8d455605ef2c7e54b3284a101b23de3c05f2e",
+              "snapshot_fingerprint": "31b4db84f30a04d861bde8c1c965ff8de69546011bfda7afd5b5a8d549fe63cf",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2017,
+                "reason": "2017年7〜8月の第3弾。旧候補の2021や2018年ライブと区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/hetamu2017",
+                    "checkedAt": "2026-10-26T17:29:13.449Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/cast/",
+                    "checkedAt": "2026-10-26T17:29:14.380Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/story/",
+                    "checkedAt": "2026-10-26T17:29:14.752Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/schedule/",
+                    "checkedAt": "2026-10-26T17:29:15.194Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/qa/",
+                    "checkedAt": "2026-10-26T17:29:15.581Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/dvd/",
+                    "checkedAt": "2026-10-26T17:29:15.902Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/isogai-ryuko",
+                    "checkedAt": "2026-10-26T17:29:16.581Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/kikuchi-takuya",
+                    "checkedAt": "2026-10-26T17:29:16.437Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/takamoto-gaku",
+                    "checkedAt": "2026-10-26T17:29:16.742Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  }
+                ]
+              },
+              "original_source_row": {
+                "order": 1,
+                "cast": {
+                  "sourceActorName": "長江崚行",
+                  "sourceActorUrl": "https://kira-hai.net/nagae-ryoki",
+                  "role_name": "イタリア",
+                  "cast_group": null
+                }
+              }
+            },
+            "matched_actor_id": "4b3110ab-0d88-4a68-8a1d-ed0fcac335ff",
+            "matched_play_id": "0e248a7c-a0af-4a9c-bdfe-e3405ccdec37",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "上田悠介",
+            "source_actor_url": "https://kira-hai.net/ueda-yusuke",
+            "source_work_title": "ミュージカル「ヘタリア~in the new world~」(2017)",
+            "source_year": 2017,
+            "source_role_raw": "ドイツ",
+            "source_role_names": [
+              "ドイツ"
+            ],
+            "source_cast_group": null,
+            "source_order": 2,
+            "source_credit_key": "1122648243e9073fe695",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hetamu2017",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hetamu2017",
+                  "checkedAt": "2026-10-26T17:29:13.449Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/cast/",
+                  "checkedAt": "2026-10-26T17:29:14.380Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/story/",
+                  "checkedAt": "2026-10-26T17:29:14.752Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/schedule/",
+                  "checkedAt": "2026-10-26T17:29:15.194Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/qa/",
+                  "checkedAt": "2026-10-26T17:29:15.581Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/dvd/",
+                  "checkedAt": "2026-10-26T17:29:15.902Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/isogai-ryuko",
+                  "checkedAt": "2026-10-26T17:29:16.581Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/kikuchi-takuya",
+                  "checkedAt": "2026-10-26T17:29:16.437Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/takamoto-gaku",
+                  "checkedAt": "2026-10-26T17:29:16.742Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                }
+              ],
+              "source_fingerprint": "3392d794c4b28fd11e0661455a9ac82c53c36b990441bdba6bb94b0772bdb07f",
+              "review_fingerprint": "b45761008395066755972dfcb9c8d455605ef2c7e54b3284a101b23de3c05f2e",
+              "snapshot_fingerprint": "31b4db84f30a04d861bde8c1c965ff8de69546011bfda7afd5b5a8d549fe63cf",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2017,
+                "reason": "2017年7〜8月の第3弾。旧候補の2021や2018年ライブと区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/hetamu2017",
+                    "checkedAt": "2026-10-26T17:29:13.449Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/cast/",
+                    "checkedAt": "2026-10-26T17:29:14.380Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/story/",
+                    "checkedAt": "2026-10-26T17:29:14.752Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/schedule/",
+                    "checkedAt": "2026-10-26T17:29:15.194Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/qa/",
+                    "checkedAt": "2026-10-26T17:29:15.581Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/dvd/",
+                    "checkedAt": "2026-10-26T17:29:15.902Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/isogai-ryuko",
+                    "checkedAt": "2026-10-26T17:29:16.581Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/kikuchi-takuya",
+                    "checkedAt": "2026-10-26T17:29:16.437Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/takamoto-gaku",
+                    "checkedAt": "2026-10-26T17:29:16.742Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  }
+                ]
+              },
+              "original_source_row": {
+                "order": 2,
+                "cast": {
+                  "sourceActorName": "上田悠介",
+                  "sourceActorUrl": "https://kira-hai.net/ueda-yusuke",
+                  "role_name": "ドイツ",
+                  "cast_group": null
+                }
+              }
+            },
+            "matched_actor_id": "a36372ce-61e5-43f5-ae9c-e1bf2fb5226b",
+            "matched_play_id": "0e248a7c-a0af-4a9c-bdfe-e3405ccdec37",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "植田圭輔",
+            "source_actor_url": "https://kira-hai.net/ueda-keisuke",
+            "source_work_title": "ミュージカル「ヘタリア~in the new world~」(2017)",
+            "source_year": 2017,
+            "source_role_raw": "日本",
+            "source_role_names": [
+              "日本"
+            ],
+            "source_cast_group": null,
+            "source_order": 3,
+            "source_credit_key": "c6cee9c6fb6d8005481d",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hetamu2017",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hetamu2017",
+                  "checkedAt": "2026-10-26T17:29:13.449Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/cast/",
+                  "checkedAt": "2026-10-26T17:29:14.380Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/story/",
+                  "checkedAt": "2026-10-26T17:29:14.752Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/schedule/",
+                  "checkedAt": "2026-10-26T17:29:15.194Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/qa/",
+                  "checkedAt": "2026-10-26T17:29:15.581Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/dvd/",
+                  "checkedAt": "2026-10-26T17:29:15.902Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/isogai-ryuko",
+                  "checkedAt": "2026-10-26T17:29:16.581Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/kikuchi-takuya",
+                  "checkedAt": "2026-10-26T17:29:16.437Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/takamoto-gaku",
+                  "checkedAt": "2026-10-26T17:29:16.742Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                }
+              ],
+              "source_fingerprint": "3392d794c4b28fd11e0661455a9ac82c53c36b990441bdba6bb94b0772bdb07f",
+              "review_fingerprint": "b45761008395066755972dfcb9c8d455605ef2c7e54b3284a101b23de3c05f2e",
+              "snapshot_fingerprint": "31b4db84f30a04d861bde8c1c965ff8de69546011bfda7afd5b5a8d549fe63cf",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2017,
+                "reason": "2017年7〜8月の第3弾。旧候補の2021や2018年ライブと区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/hetamu2017",
+                    "checkedAt": "2026-10-26T17:29:13.449Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/cast/",
+                    "checkedAt": "2026-10-26T17:29:14.380Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/story/",
+                    "checkedAt": "2026-10-26T17:29:14.752Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/schedule/",
+                    "checkedAt": "2026-10-26T17:29:15.194Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/qa/",
+                    "checkedAt": "2026-10-26T17:29:15.581Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/dvd/",
+                    "checkedAt": "2026-10-26T17:29:15.902Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/isogai-ryuko",
+                    "checkedAt": "2026-10-26T17:29:16.581Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/kikuchi-takuya",
+                    "checkedAt": "2026-10-26T17:29:16.437Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/takamoto-gaku",
+                    "checkedAt": "2026-10-26T17:29:16.742Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  }
+                ]
+              },
+              "original_source_row": {
+                "order": 3,
+                "cast": {
+                  "sourceActorName": "植田圭輔",
+                  "sourceActorUrl": "https://kira-hai.net/ueda-keisuke",
+                  "role_name": "日本",
+                  "cast_group": null
+                }
+              }
+            },
+            "matched_actor_id": "efec4bde-6be0-4d8f-80e6-0d1c3accf066",
+            "matched_play_id": "0e248a7c-a0af-4a9c-bdfe-e3405ccdec37",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "磯貝龍虎",
+            "source_actor_url": "https://kira-hai.net/isogai-ryuko",
+            "source_work_title": "ミュージカル「ヘタリア~in the new world~」(2017)",
+            "source_year": 2017,
+            "source_role_raw": "アメリカ",
+            "source_role_names": [
+              "アメリカ"
+            ],
+            "source_cast_group": null,
+            "source_order": 4,
+            "source_credit_key": "9cab14cac02b36ecbd29",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hetamu2017",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hetamu2017",
+                  "checkedAt": "2026-10-26T17:29:13.449Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/cast/",
+                  "checkedAt": "2026-10-26T17:29:14.380Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/story/",
+                  "checkedAt": "2026-10-26T17:29:14.752Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/schedule/",
+                  "checkedAt": "2026-10-26T17:29:15.194Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/qa/",
+                  "checkedAt": "2026-10-26T17:29:15.581Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/dvd/",
+                  "checkedAt": "2026-10-26T17:29:15.902Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/isogai-ryuko",
+                  "checkedAt": "2026-10-26T17:29:16.581Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/kikuchi-takuya",
+                  "checkedAt": "2026-10-26T17:29:16.437Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/takamoto-gaku",
+                  "checkedAt": "2026-10-26T17:29:16.742Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                }
+              ],
+              "source_fingerprint": "3392d794c4b28fd11e0661455a9ac82c53c36b990441bdba6bb94b0772bdb07f",
+              "review_fingerprint": "b45761008395066755972dfcb9c8d455605ef2c7e54b3284a101b23de3c05f2e",
+              "snapshot_fingerprint": "31b4db84f30a04d861bde8c1c965ff8de69546011bfda7afd5b5a8d549fe63cf",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2017,
+                "reason": "2017年7〜8月の第3弾。旧候補の2021や2018年ライブと区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/hetamu2017",
+                    "checkedAt": "2026-10-26T17:29:13.449Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/cast/",
+                    "checkedAt": "2026-10-26T17:29:14.380Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/story/",
+                    "checkedAt": "2026-10-26T17:29:14.752Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/schedule/",
+                    "checkedAt": "2026-10-26T17:29:15.194Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/qa/",
+                    "checkedAt": "2026-10-26T17:29:15.581Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/dvd/",
+                    "checkedAt": "2026-10-26T17:29:15.902Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/isogai-ryuko",
+                    "checkedAt": "2026-10-26T17:29:16.581Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/kikuchi-takuya",
+                    "checkedAt": "2026-10-26T17:29:16.437Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/takamoto-gaku",
+                    "checkedAt": "2026-10-26T17:29:16.742Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  }
+                ]
+              },
+              "original_source_row": {
+                "order": 4,
+                "cast": {
+                  "sourceActorName": "磯貝龍虎",
+                  "sourceActorUrl": "https://kira-hai.net/isogai-ryuko",
+                  "role_name": "アメリカ",
+                  "cast_group": null
+                }
+              }
+            },
+            "matched_actor_id": "b15c5d1c-b38b-4604-bee6-f19f4a8ab1db",
+            "matched_play_id": "0e248a7c-a0af-4a9c-bdfe-e3405ccdec37",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "廣瀬大介",
+            "source_actor_url": "https://kira-hai.net/hirose-daisuke",
+            "source_work_title": "ミュージカル「ヘタリア~in the new world~」(2017)",
+            "source_year": 2017,
+            "source_role_raw": "イギリス",
+            "source_role_names": [
+              "イギリス"
+            ],
+            "source_cast_group": null,
+            "source_order": 5,
+            "source_credit_key": "3d1561ded8f329f5b474",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hetamu2017",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hetamu2017",
+                  "checkedAt": "2026-10-26T17:29:13.449Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/cast/",
+                  "checkedAt": "2026-10-26T17:29:14.380Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/story/",
+                  "checkedAt": "2026-10-26T17:29:14.752Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/schedule/",
+                  "checkedAt": "2026-10-26T17:29:15.194Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/qa/",
+                  "checkedAt": "2026-10-26T17:29:15.581Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/dvd/",
+                  "checkedAt": "2026-10-26T17:29:15.902Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/isogai-ryuko",
+                  "checkedAt": "2026-10-26T17:29:16.581Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/kikuchi-takuya",
+                  "checkedAt": "2026-10-26T17:29:16.437Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/takamoto-gaku",
+                  "checkedAt": "2026-10-26T17:29:16.742Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                }
+              ],
+              "source_fingerprint": "3392d794c4b28fd11e0661455a9ac82c53c36b990441bdba6bb94b0772bdb07f",
+              "review_fingerprint": "b45761008395066755972dfcb9c8d455605ef2c7e54b3284a101b23de3c05f2e",
+              "snapshot_fingerprint": "31b4db84f30a04d861bde8c1c965ff8de69546011bfda7afd5b5a8d549fe63cf",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2017,
+                "reason": "2017年7〜8月の第3弾。旧候補の2021や2018年ライブと区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/hetamu2017",
+                    "checkedAt": "2026-10-26T17:29:13.449Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/cast/",
+                    "checkedAt": "2026-10-26T17:29:14.380Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/story/",
+                    "checkedAt": "2026-10-26T17:29:14.752Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/schedule/",
+                    "checkedAt": "2026-10-26T17:29:15.194Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/qa/",
+                    "checkedAt": "2026-10-26T17:29:15.581Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/dvd/",
+                    "checkedAt": "2026-10-26T17:29:15.902Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/isogai-ryuko",
+                    "checkedAt": "2026-10-26T17:29:16.581Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/kikuchi-takuya",
+                    "checkedAt": "2026-10-26T17:29:16.437Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/takamoto-gaku",
+                    "checkedAt": "2026-10-26T17:29:16.742Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  }
+                ]
+              },
+              "original_source_row": {
+                "order": 5,
+                "cast": {
+                  "sourceActorName": "廣瀬大介",
+                  "sourceActorUrl": "https://kira-hai.net/hirose-daisuke",
+                  "role_name": "イギリス",
+                  "cast_group": null
+                }
+              }
+            },
+            "matched_actor_id": "ea847f48-42b3-40d0-8b2b-5fe9c11d53f7",
+            "matched_play_id": "0e248a7c-a0af-4a9c-bdfe-e3405ccdec37",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "寿里",
+            "source_actor_url": "https://kira-hai.net/juri",
+            "source_work_title": "ミュージカル「ヘタリア~in the new world~」(2017)",
+            "source_year": 2017,
+            "source_role_raw": "フランス",
+            "source_role_names": [
+              "フランス"
+            ],
+            "source_cast_group": null,
+            "source_order": 6,
+            "source_credit_key": "2be6d8342e2d78b3cfe1",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hetamu2017",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hetamu2017",
+                  "checkedAt": "2026-10-26T17:29:13.449Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/cast/",
+                  "checkedAt": "2026-10-26T17:29:14.380Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/story/",
+                  "checkedAt": "2026-10-26T17:29:14.752Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/schedule/",
+                  "checkedAt": "2026-10-26T17:29:15.194Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/qa/",
+                  "checkedAt": "2026-10-26T17:29:15.581Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/dvd/",
+                  "checkedAt": "2026-10-26T17:29:15.902Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/isogai-ryuko",
+                  "checkedAt": "2026-10-26T17:29:16.581Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/kikuchi-takuya",
+                  "checkedAt": "2026-10-26T17:29:16.437Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/takamoto-gaku",
+                  "checkedAt": "2026-10-26T17:29:16.742Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                }
+              ],
+              "source_fingerprint": "3392d794c4b28fd11e0661455a9ac82c53c36b990441bdba6bb94b0772bdb07f",
+              "review_fingerprint": "b45761008395066755972dfcb9c8d455605ef2c7e54b3284a101b23de3c05f2e",
+              "snapshot_fingerprint": "31b4db84f30a04d861bde8c1c965ff8de69546011bfda7afd5b5a8d549fe63cf",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2017,
+                "reason": "2017年7〜8月の第3弾。旧候補の2021や2018年ライブと区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/hetamu2017",
+                    "checkedAt": "2026-10-26T17:29:13.449Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/cast/",
+                    "checkedAt": "2026-10-26T17:29:14.380Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/story/",
+                    "checkedAt": "2026-10-26T17:29:14.752Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/schedule/",
+                    "checkedAt": "2026-10-26T17:29:15.194Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/qa/",
+                    "checkedAt": "2026-10-26T17:29:15.581Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/dvd/",
+                    "checkedAt": "2026-10-26T17:29:15.902Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/isogai-ryuko",
+                    "checkedAt": "2026-10-26T17:29:16.581Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/kikuchi-takuya",
+                    "checkedAt": "2026-10-26T17:29:16.437Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/takamoto-gaku",
+                    "checkedAt": "2026-10-26T17:29:16.742Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  }
+                ]
+              },
+              "original_source_row": {
+                "order": 6,
+                "cast": {
+                  "sourceActorName": "寿里",
+                  "sourceActorUrl": "https://kira-hai.net/juri",
+                  "role_name": "フランス",
+                  "cast_group": null
+                }
+              }
+            },
+            "matched_actor_id": "a862c0c0-8fd8-458b-8b9d-391c6fe69a0c",
+            "matched_play_id": "0e248a7c-a0af-4a9c-bdfe-e3405ccdec37",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "山沖勇輝",
+            "source_actor_url": "https://kira-hai.net/yamaoki-yuki",
+            "source_work_title": "ミュージカル「ヘタリア~in the new world~」(2017)",
+            "source_year": 2017,
+            "source_role_raw": "ロシア",
+            "source_role_names": [
+              "ロシア"
+            ],
+            "source_cast_group": null,
+            "source_order": 7,
+            "source_credit_key": "67183cf5d741877e86d3",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hetamu2017",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hetamu2017",
+                  "checkedAt": "2026-10-26T17:29:13.449Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/cast/",
+                  "checkedAt": "2026-10-26T17:29:14.380Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/story/",
+                  "checkedAt": "2026-10-26T17:29:14.752Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/schedule/",
+                  "checkedAt": "2026-10-26T17:29:15.194Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/qa/",
+                  "checkedAt": "2026-10-26T17:29:15.581Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/dvd/",
+                  "checkedAt": "2026-10-26T17:29:15.902Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/isogai-ryuko",
+                  "checkedAt": "2026-10-26T17:29:16.581Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/kikuchi-takuya",
+                  "checkedAt": "2026-10-26T17:29:16.437Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/takamoto-gaku",
+                  "checkedAt": "2026-10-26T17:29:16.742Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                }
+              ],
+              "source_fingerprint": "3392d794c4b28fd11e0661455a9ac82c53c36b990441bdba6bb94b0772bdb07f",
+              "review_fingerprint": "b45761008395066755972dfcb9c8d455605ef2c7e54b3284a101b23de3c05f2e",
+              "snapshot_fingerprint": "31b4db84f30a04d861bde8c1c965ff8de69546011bfda7afd5b5a8d549fe63cf",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2017,
+                "reason": "2017年7〜8月の第3弾。旧候補の2021や2018年ライブと区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/hetamu2017",
+                    "checkedAt": "2026-10-26T17:29:13.449Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/cast/",
+                    "checkedAt": "2026-10-26T17:29:14.380Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/story/",
+                    "checkedAt": "2026-10-26T17:29:14.752Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/schedule/",
+                    "checkedAt": "2026-10-26T17:29:15.194Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/qa/",
+                    "checkedAt": "2026-10-26T17:29:15.581Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/dvd/",
+                    "checkedAt": "2026-10-26T17:29:15.902Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/isogai-ryuko",
+                    "checkedAt": "2026-10-26T17:29:16.581Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/kikuchi-takuya",
+                    "checkedAt": "2026-10-26T17:29:16.437Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/takamoto-gaku",
+                    "checkedAt": "2026-10-26T17:29:16.742Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  }
+                ]
+              },
+              "original_source_row": {
+                "order": 7,
+                "cast": {
+                  "sourceActorName": "山沖勇輝",
+                  "sourceActorUrl": "https://kira-hai.net/yamaoki-yuki",
+                  "role_name": "ロシア",
+                  "cast_group": null
+                }
+              }
+            },
+            "matched_actor_id": "3ecf714c-ad02-4356-af65-dcfb2952dfac",
+            "matched_play_id": "0e248a7c-a0af-4a9c-bdfe-e3405ccdec37",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "杉江大志",
+            "source_actor_url": "https://kira-hai.net/sugie-taishi",
+            "source_work_title": "ミュージカル「ヘタリア~in the new world~」(2017)",
+            "source_year": 2017,
+            "source_role_raw": "中国",
+            "source_role_names": [
+              "中国"
+            ],
+            "source_cast_group": null,
+            "source_order": 8,
+            "source_credit_key": "bfea5cae0d68970b1733",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hetamu2017",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hetamu2017",
+                  "checkedAt": "2026-10-26T17:29:13.449Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/cast/",
+                  "checkedAt": "2026-10-26T17:29:14.380Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/story/",
+                  "checkedAt": "2026-10-26T17:29:14.752Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/schedule/",
+                  "checkedAt": "2026-10-26T17:29:15.194Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/qa/",
+                  "checkedAt": "2026-10-26T17:29:15.581Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/dvd/",
+                  "checkedAt": "2026-10-26T17:29:15.902Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/isogai-ryuko",
+                  "checkedAt": "2026-10-26T17:29:16.581Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/kikuchi-takuya",
+                  "checkedAt": "2026-10-26T17:29:16.437Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/takamoto-gaku",
+                  "checkedAt": "2026-10-26T17:29:16.742Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                }
+              ],
+              "source_fingerprint": "3392d794c4b28fd11e0661455a9ac82c53c36b990441bdba6bb94b0772bdb07f",
+              "review_fingerprint": "b45761008395066755972dfcb9c8d455605ef2c7e54b3284a101b23de3c05f2e",
+              "snapshot_fingerprint": "31b4db84f30a04d861bde8c1c965ff8de69546011bfda7afd5b5a8d549fe63cf",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2017,
+                "reason": "2017年7〜8月の第3弾。旧候補の2021や2018年ライブと区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/hetamu2017",
+                    "checkedAt": "2026-10-26T17:29:13.449Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/cast/",
+                    "checkedAt": "2026-10-26T17:29:14.380Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/story/",
+                    "checkedAt": "2026-10-26T17:29:14.752Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/schedule/",
+                    "checkedAt": "2026-10-26T17:29:15.194Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/qa/",
+                    "checkedAt": "2026-10-26T17:29:15.581Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/dvd/",
+                    "checkedAt": "2026-10-26T17:29:15.902Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/isogai-ryuko",
+                    "checkedAt": "2026-10-26T17:29:16.581Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/kikuchi-takuya",
+                    "checkedAt": "2026-10-26T17:29:16.437Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/takamoto-gaku",
+                    "checkedAt": "2026-10-26T17:29:16.742Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  }
+                ]
+              },
+              "original_source_row": {
+                "order": 8,
+                "cast": {
+                  "sourceActorName": "杉江大志",
+                  "sourceActorUrl": "https://kira-hai.net/sugie-taishi",
+                  "role_name": "中国",
+                  "cast_group": null
+                }
+              }
+            },
+            "matched_actor_id": "1ae8e0b4-b42c-46aa-8d23-bac885531af6",
+            "matched_play_id": "0e248a7c-a0af-4a9c-bdfe-e3405ccdec37",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "ROU",
+            "source_actor_url": "https://kira-hai.net/kikuchi-takuya",
+            "source_work_title": "ミュージカル「ヘタリア~in the new world~」(2017)",
+            "source_year": 2017,
+            "source_role_raw": "オーストリア",
+            "source_role_names": [
+              "オーストリア"
+            ],
+            "source_cast_group": null,
+            "source_order": 9,
+            "source_credit_key": "a500c87d3dc7bb0561fd",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hetamu2017",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hetamu2017",
+                  "checkedAt": "2026-10-26T17:29:13.449Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/cast/",
+                  "checkedAt": "2026-10-26T17:29:14.380Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/story/",
+                  "checkedAt": "2026-10-26T17:29:14.752Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/schedule/",
+                  "checkedAt": "2026-10-26T17:29:15.194Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/qa/",
+                  "checkedAt": "2026-10-26T17:29:15.581Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/dvd/",
+                  "checkedAt": "2026-10-26T17:29:15.902Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/isogai-ryuko",
+                  "checkedAt": "2026-10-26T17:29:16.581Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/kikuchi-takuya",
+                  "checkedAt": "2026-10-26T17:29:16.437Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/takamoto-gaku",
+                  "checkedAt": "2026-10-26T17:29:16.742Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                }
+              ],
+              "source_fingerprint": "3392d794c4b28fd11e0661455a9ac82c53c36b990441bdba6bb94b0772bdb07f",
+              "review_fingerprint": "b45761008395066755972dfcb9c8d455605ef2c7e54b3284a101b23de3c05f2e",
+              "snapshot_fingerprint": "31b4db84f30a04d861bde8c1c965ff8de69546011bfda7afd5b5a8d549fe63cf",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2017,
+                "reason": "2017年7〜8月の第3弾。旧候補の2021や2018年ライブと区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/hetamu2017",
+                    "checkedAt": "2026-10-26T17:29:13.449Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/cast/",
+                    "checkedAt": "2026-10-26T17:29:14.380Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/story/",
+                    "checkedAt": "2026-10-26T17:29:14.752Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/schedule/",
+                    "checkedAt": "2026-10-26T17:29:15.194Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/qa/",
+                    "checkedAt": "2026-10-26T17:29:15.581Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/dvd/",
+                    "checkedAt": "2026-10-26T17:29:15.902Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/isogai-ryuko",
+                    "checkedAt": "2026-10-26T17:29:16.581Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/kikuchi-takuya",
+                    "checkedAt": "2026-10-26T17:29:16.437Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/takamoto-gaku",
+                    "checkedAt": "2026-10-26T17:29:16.742Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  }
+                ]
+              },
+              "original_source_row": {
+                "order": 9,
+                "cast": {
+                  "sourceActorName": "ROU",
+                  "sourceActorUrl": "https://kira-hai.net/kikuchi-takuya",
+                  "role_name": "オーストリア",
+                  "cast_group": null
+                }
+              }
+            },
+            "matched_actor_id": "d9767d3f-8414-45e0-a8e2-45bfb8ec7bc3",
+            "matched_play_id": "0e248a7c-a0af-4a9c-bdfe-e3405ccdec37",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "高本学",
+            "source_actor_url": "https://kira-hai.net/takamoto-gaku",
+            "source_work_title": "ミュージカル「ヘタリア~in the new world~」(2017)",
+            "source_year": 2017,
+            "source_role_raw": "プロイセン",
+            "source_role_names": [
+              "プロイセン"
+            ],
+            "source_cast_group": null,
+            "source_order": 10,
+            "source_credit_key": "5fddd0ee40512acef518",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hetamu2017",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hetamu2017",
+                  "checkedAt": "2026-10-26T17:29:13.449Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/cast/",
+                  "checkedAt": "2026-10-26T17:29:14.380Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/story/",
+                  "checkedAt": "2026-10-26T17:29:14.752Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/schedule/",
+                  "checkedAt": "2026-10-26T17:29:15.194Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/qa/",
+                  "checkedAt": "2026-10-26T17:29:15.581Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/dvd/",
+                  "checkedAt": "2026-10-26T17:29:15.902Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/isogai-ryuko",
+                  "checkedAt": "2026-10-26T17:29:16.581Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/kikuchi-takuya",
+                  "checkedAt": "2026-10-26T17:29:16.437Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/takamoto-gaku",
+                  "checkedAt": "2026-10-26T17:29:16.742Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                }
+              ],
+              "source_fingerprint": "3392d794c4b28fd11e0661455a9ac82c53c36b990441bdba6bb94b0772bdb07f",
+              "review_fingerprint": "b45761008395066755972dfcb9c8d455605ef2c7e54b3284a101b23de3c05f2e",
+              "snapshot_fingerprint": "31b4db84f30a04d861bde8c1c965ff8de69546011bfda7afd5b5a8d549fe63cf",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2017,
+                "reason": "2017年7〜8月の第3弾。旧候補の2021や2018年ライブと区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/hetamu2017",
+                    "checkedAt": "2026-10-26T17:29:13.449Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/cast/",
+                    "checkedAt": "2026-10-26T17:29:14.380Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/story/",
+                    "checkedAt": "2026-10-26T17:29:14.752Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/schedule/",
+                    "checkedAt": "2026-10-26T17:29:15.194Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/qa/",
+                    "checkedAt": "2026-10-26T17:29:15.581Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/dvd/",
+                    "checkedAt": "2026-10-26T17:29:15.902Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/isogai-ryuko",
+                    "checkedAt": "2026-10-26T17:29:16.581Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/kikuchi-takuya",
+                    "checkedAt": "2026-10-26T17:29:16.437Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/takamoto-gaku",
+                    "checkedAt": "2026-10-26T17:29:16.742Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  }
+                ]
+              },
+              "original_source_row": {
+                "order": 10,
+                "cast": {
+                  "sourceActorName": "高本学",
+                  "sourceActorUrl": "https://kira-hai.net/takamoto-gaku",
+                  "role_name": "プロイセン",
+                  "cast_group": null
+                }
+              }
+            },
+            "matched_actor_id": "8f714e97-ff9f-4178-86aa-e3df3e067ea5",
+            "matched_play_id": "0e248a7c-a0af-4a9c-bdfe-e3405ccdec37",
+            "status": "pending"
+          }
+        ]
+      },
+      "records": [
+        {
+          "actor": {
+            "id": "4b3110ab-0d88-4a68-8a1d-ed0fcac335ff",
+            "slug": "nagae-ryoki",
+            "name": "長江 崚行",
+            "kana": "ながえ りょうき",
+            "profile": "大阪府出身の俳優。NHK『天才てれびくん』シリーズに出演。ミュージカル『ヘタリア』のイタリア役、舞台『文豪ストレイドッグス』の江戸川乱歩役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-19T12:13:27.742892+00:00",
+            "updated_at": "2026-10-25T20:21:04.903274+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1998-08-26",
+            "height_cm": 177,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": "Ryoki Nagae",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "長江崚行",
+            "sourceActorUrl": "https://kira-hai.net/nagae-ryoki",
+            "role_name": "イタリア",
+            "cast_group": null
+          },
+          "sourceCreditKey": "8e5f1c41b2108f245abb",
+          "sourceOrder": 1,
+          "rawSourceOrder": 1,
+          "billingOrder": 1,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "a36372ce-61e5-43f5-ae9c-e1bf2fb5226b",
+            "slug": "ueda-yusuke",
+            "name": "上田 悠介",
+            "kana": "うえだ ゆうすけ",
+            "profile": "奈良県出身の俳優。ミュージカル『テニスの王子様』2ndシーズン（橘桔平役）やミュージカル『ヘタリア』（ドイツ役）等に出演。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/yskued0402",
+              "youtube": "https://www.youtube.com/channel/UCAnkbgwDTBfvlU29Vzcj5ZQ",
+              "instagram": "https://www.instagram.com/yskued0402"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:03:44.295565+00:00",
+            "updated_at": "2026-03-21T15:03:44.295565+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1989-04-02",
+            "height_cm": 182,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "上田悠介",
+            "sourceActorUrl": "https://kira-hai.net/ueda-yusuke",
+            "role_name": "ドイツ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "1122648243e9073fe695",
+          "sourceOrder": 2,
+          "rawSourceOrder": 2,
+          "billingOrder": 2,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "efec4bde-6be0-4d8f-80e6-0d1c3accf066",
+            "slug": "ueda-keisuke",
+            "name": "植田 圭輔",
+            "kana": "うえだ けいすけ",
+            "profile": "大阪府出身の俳優。株式会社Pasture所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/uechan_0905",
+              "official": "https://keisuke-ueda.jp/",
+              "instagram": "https://www.instagram.com/keisukeueda0905/"
+            },
+            "gender": "male",
+            "created_at": "2025-12-13T04:41:02.052969+00:00",
+            "updated_at": "2025-12-13T04:41:02.052969+00:00",
+            "tags": [
+              "ベテラン",
+              "ツッコミ"
+            ],
+            "featured_play_slugs": [],
+            "birthday": "1989-09-05",
+            "height_cm": 164,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "植田圭輔",
+            "sourceActorUrl": "https://kira-hai.net/ueda-keisuke",
+            "role_name": "日本",
+            "cast_group": null
+          },
+          "sourceCreditKey": "c6cee9c6fb6d8005481d",
+          "sourceOrder": 3,
+          "rawSourceOrder": 3,
+          "billingOrder": 3,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "b15c5d1c-b38b-4604-bee6-f19f4a8ab1db",
+            "slug": "isogai-ryuko",
+            "name": "磯貝 龍乎",
+            "kana": "いそがい りゅうこ",
+            "profile": "北海道出身の俳優・演出家。旧芸名は磯貝龍虎。現在はフリーで活動している。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/ryukonbu",
+              "official": "https://ameblo.jp/rk3939/",
+              "instagram": "https://www.instagram.com/ryuco_isogai/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:01:26.311999+00:00",
+            "updated_at": "2026-03-21T15:01:26.311999+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1987-03-14",
+            "height_cm": 185,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "磯貝龍虎",
+            "sourceActorUrl": "https://kira-hai.net/isogai-ryuko",
+            "role_name": "アメリカ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "9cab14cac02b36ecbd29",
+          "sourceOrder": 4,
+          "rawSourceOrder": 4,
+          "billingOrder": 4,
+          "expectedNote": "当時の出演名義：磯貝 龍虎（現名義：磯貝 龍乎）。",
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "ea847f48-42b3-40d0-8b2b-5fe9c11d53f7",
+            "slug": "hirose-daisuke",
+            "name": "廣瀬 大介",
+            "kana": "ひろせ だいすけ",
+            "profile": "東京都出身の声優・俳優。ケッケコーポレーション所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/da_sukemaru",
+              "youtube": "https://www.youtube.com/channel/UCQHV65qO-YB8KeFkLUr6Yjw",
+              "official": "https://www.kekke.co.jp/talent/male/hw/hirose.html"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:03:44.295565+00:00",
+            "updated_at": "2026-03-21T15:03:44.295565+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1991-06-03",
+            "height_cm": 177,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "廣瀬大介",
+            "sourceActorUrl": "https://kira-hai.net/hirose-daisuke",
+            "role_name": "イギリス",
+            "cast_group": null
+          },
+          "sourceCreditKey": "3d1561ded8f329f5b474",
+          "sourceOrder": 5,
+          "rawSourceOrder": 5,
+          "billingOrder": 5,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "a862c0c0-8fd8-458b-8b9d-391c6fe69a0c",
+            "slug": "juri",
+            "name": "寿里",
+            "kana": "じゅり",
+            "profile": "千葉県市川市出身の俳優・ファッションモデル。本名は相川 寿里、過去にJURIとして活動。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/jurigig",
+              "official": "https://ameblo.jp/jurigig/",
+              "instagram": "https://www.instagram.com/jurigig/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-19T18:36:37.662481+00:00",
+            "updated_at": "2026-03-19T18:36:37.662481+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1981-02-16",
+            "height_cm": 186,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "寿里",
+            "sourceActorUrl": "https://kira-hai.net/juri",
+            "role_name": "フランス",
+            "cast_group": null
+          },
+          "sourceCreditKey": "2be6d8342e2d78b3cfe1",
+          "sourceOrder": 6,
+          "rawSourceOrder": 6,
+          "billingOrder": 6,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "3ecf714c-ad02-4356-af65-dcfb2952dfac",
+            "slug": "yamaoki-yuki",
+            "name": "山沖 勇輝",
+            "kana": "やまおき ゆうき",
+            "profile": "東京都出身の俳優。株式会社De-PRO所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/y_yuki0305",
+              "official": "https://ameblo.jp/y-yuki0305/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:01:26.311999+00:00",
+            "updated_at": "2026-03-21T15:01:26.311999+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1991-03-05",
+            "height_cm": 182,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "山沖勇輝",
+            "sourceActorUrl": "https://kira-hai.net/yamaoki-yuki",
+            "role_name": "ロシア",
+            "cast_group": null
+          },
+          "sourceCreditKey": "67183cf5d741877e86d3",
+          "sourceOrder": 7,
+          "rawSourceOrder": 7,
+          "billingOrder": 7,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "1ae8e0b4-b42c-46aa-8d23-bac885531af6",
+            "slug": "sugie-taishi",
+            "name": "杉江 大志",
+            "kana": "すぎえ たいし",
+            "profile": "滋賀県出身の俳優。えりオフィス所属。ミュージカル『テニスの王子様』2ndシーズン（一氏ユウジ役）や舞台『刀剣乱舞』（鯰尾藤四郎役）、ミュージカル『ヘタリア』（中国役）、ミュージカル『スタミュ』（星谷悠太役）等の舞台作品に出演。また、映画やテレビドラマ等の映像作品にも出演している。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/SugieTaishi",
+              "official": "https://sugietaishi.com/",
+              "instagram": "https://www.instagram.com/taishisugie?igsh=MXA3b3A3NnIzZTRjMw%3D%3D&utm_source=qr"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:06:19.306372+00:00",
+            "updated_at": "2026-03-21T15:06:19.306372+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1992-05-07",
+            "height_cm": 171,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Shiga Prefecture. Affiliated with Eri Office. He has appeared in stage works such as the musical \"The Prince of Tennis\" 2nd season (as Yuji Hitouji), the stage play \"Touken Ranbu\" (as Namazuo Toushirou), the musical \"Hetalia\" (as China), and the musical \"STARMYU\" (as Yuta Hoshitani). He has also appeared in film and television works.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "杉江大志",
+            "sourceActorUrl": "https://kira-hai.net/sugie-taishi",
+            "role_name": "中国",
+            "cast_group": null
+          },
+          "sourceCreditKey": "bfea5cae0d68970b1733",
+          "sourceOrder": 8,
+          "rawSourceOrder": 8,
+          "billingOrder": 8,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "d9767d3f-8414-45e0-a8e2-45bfb8ec7bc3",
+            "slug": "kikuchi-takuya",
+            "name": "菊池 卓也",
+            "kana": "きくち たくや",
+            "profile": "熊本県出身の俳優・シンガーソングライター。ROU名義でも活動。ミュージカル『テニスの王子様』2ndシーズン（忍足侑士役）等に出演。",
+            "image_url": null,
+            "sns": {
+              "official": "https://ameblo.jp/012717/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:03:44.295565+00:00",
+            "updated_at": "2026-03-21T15:03:44.295565+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1991-05-01",
+            "height_cm": 183,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor and singer-songwriter from Kumamoto Prefecture. Also active under the name ROU. He appeared in the musical \"The Prince of Tennis\" 2nd season (as Yushi Oshitari).",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "ROU",
+            "sourceActorUrl": "https://kira-hai.net/kikuchi-takuya",
+            "role_name": "オーストリア",
+            "cast_group": null
+          },
+          "sourceCreditKey": "a500c87d3dc7bb0561fd",
+          "sourceOrder": 9,
+          "rawSourceOrder": 9,
+          "billingOrder": 9,
+          "expectedNote": "当時の出演名義：ROU（菊池 卓也）。",
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "8f714e97-ff9f-4178-86aa-e3df3e067ea5",
+            "slug": "takamoto-gaku",
+            "name": "高本 学",
+            "kana": "たかもと がく",
+            "profile": "大阪府出身の俳優・モデル。ソニー・ミュージックエンタテインメント所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/C1Wo705",
+              "official": "https://takamotogaku.com/",
+              "instagram": "https://www.instagram.com/gaku.takamoto/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-31T19:58:24.352073+00:00",
+            "updated_at": "2026-03-31T19:58:24.352073+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1993-12-31",
+            "height_cm": 180,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "高本学",
+            "sourceActorUrl": "https://kira-hai.net/takamoto-gaku",
+            "role_name": "プロイセン",
+            "cast_group": null
+          },
+          "sourceCreditKey": "5fddd0ee40512acef518",
+          "sourceOrder": 10,
+          "rawSourceOrder": 10,
+          "billingOrder": 10,
+          "expectedNote": null,
+          "existingCast": null
+        }
+      ],
+      "creditOnly": [
+        "仲田祥司",
+        "帯金遼太",
+        "山田諒",
+        "茶谷健太",
+        "新開理雄",
+        "町田尚規",
+        "山内涼平",
+        "一之瀬達也",
+        "山口渓",
+        "橋本佳貴"
+      ],
+      "creditRows": [
+        {
+          "sourceActorName": "仲田祥司",
+          "sourceActorUrl": "https://kira-hai.net/nakata-shoji",
+          "role_name": null,
+          "cast_group": "アンサンブル"
+        },
+        {
+          "sourceActorName": "帯金遼太",
+          "sourceActorUrl": "https://kira-hai.net/obigane-ryota",
+          "role_name": null,
+          "cast_group": "アンサンブル"
+        },
+        {
+          "sourceActorName": "山田諒",
+          "sourceActorUrl": "https://kira-hai.net/yamada-ryo",
+          "role_name": null,
+          "cast_group": "アンサンブル"
+        },
+        {
+          "sourceActorName": "茶谷健太",
+          "sourceActorUrl": "https://kira-hai.net/chatani-kenta",
+          "role_name": null,
+          "cast_group": "アンサンブル"
+        },
+        {
+          "sourceActorName": "新開理雄",
+          "sourceActorUrl": "https://kira-hai.net/shinkai-rio",
+          "role_name": null,
+          "cast_group": "アンサンブル"
+        },
+        {
+          "sourceActorName": "町田尚規",
+          "sourceActorUrl": "https://kira-hai.net/machida-naoki",
+          "role_name": null,
+          "cast_group": "アンサンブル"
+        },
+        {
+          "sourceActorName": "山内涼平",
+          "sourceActorUrl": "https://kira-hai.net/yamauchi-ryohei",
+          "role_name": null,
+          "cast_group": "アンサンブル"
+        },
+        {
+          "sourceActorName": "一之瀬達也",
+          "sourceActorUrl": null,
+          "role_name": null,
+          "cast_group": "アンサンブル"
+        },
+        {
+          "sourceActorName": "山口渓",
+          "sourceActorUrl": "https://kira-hai.net/yamaguchi-kei",
+          "role_name": null,
+          "cast_group": "アンサンブル"
+        },
+        {
+          "sourceActorName": "橋本佳貴",
+          "sourceActorUrl": null,
+          "role_name": null,
+          "cast_group": "アンサンブル"
+        }
+      ],
+      "officialOrder": [
+        {
+          "role": "イタリア",
+          "name": "長江崚行"
+        },
+        {
+          "role": "ドイツ",
+          "name": "上田悠介"
+        },
+        {
+          "role": "日本",
+          "name": "植田圭輔"
+        },
+        {
+          "role": "アメリカ",
+          "name": "磯貝龍虎"
+        },
+        {
+          "role": "イギリス",
+          "name": "廣瀬大介"
+        },
+        {
+          "role": "フランス",
+          "name": "寿里"
+        },
+        {
+          "role": "ロシア",
+          "name": "山沖勇輝"
+        },
+        {
+          "role": "中国",
+          "name": "杉江大志"
+        },
+        {
+          "role": "オーストリア",
+          "name": "ROU（菊池卓也）"
+        },
+        {
+          "role": "プロイセン",
+          "name": "高本学"
+        }
+      ],
+      "schedules": [
+        {
+          "city": "大阪",
+          "date": "2017/07/16 13:00"
+        },
+        {
+          "city": "大阪",
+          "date": "2017/07/17 12:00"
+        },
+        {
+          "city": "大阪",
+          "date": "2017/07/15 18:00"
+        },
+        {
+          "city": "大阪",
+          "date": "2017/07/16 18:00"
+        },
+        {
+          "city": "大阪",
+          "date": "2017/07/17 16:30"
+        },
+        {
+          "city": "東京",
+          "date": "2017/07/22 13:00"
+        },
+        {
+          "city": "東京",
+          "date": "2017/07/23 13:00"
+        },
+        {
+          "city": "東京",
+          "date": "2017/07/26 13:30"
+        },
+        {
+          "city": "東京",
+          "date": "2017/07/27 13:30"
+        },
+        {
+          "city": "東京",
+          "date": "2017/07/21 18:30"
+        },
+        {
+          "city": "東京",
+          "date": "2017/07/22 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2017/07/23 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2017/07/25 18:30"
+        },
+        {
+          "city": "東京",
+          "date": "2017/07/26 18:30"
+        },
+        {
+          "city": "東京",
+          "date": "2017/07/27 18:30"
+        },
+        {
+          "city": "東京",
+          "date": "2017/07/29 13:00"
+        },
+        {
+          "city": "東京",
+          "date": "2017/07/30 13:00"
+        },
+        {
+          "city": "東京",
+          "date": "2017/08/01 13:30"
+        },
+        {
+          "city": "東京",
+          "date": "2017/08/02 13:00"
+        },
+        {
+          "city": "東京",
+          "date": "2017/07/29 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2017/07/30 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2017/07/31 18:30"
+        },
+        {
+          "city": "東京",
+          "date": "2017/08/01 18:30"
+        }
+      ],
+      "legacyCandidates": [
+        {
+          "id": "ce8d3276-6be2-4b09-a8ea-fafeaa327b39",
+          "source": "kira-hai",
+          "external_actor_id": "76e81e5b-c716-4c18-b1ec-f20f9b651451",
+          "external_play_id": "4562ba22-de8f-418b-900e-8a62018c6d39",
+          "source_actor_name": "上田悠介",
+          "source_actor_url": "https://kira-hai.net/ueda-yusuke",
+          "source_work_title": "ミュージカル「ヘタリア～in the new world～」(2017)",
+          "source_work_url": "https://kira-hai.net/hetamu2017",
+          "source_year": 2021,
+          "source_role_raw": "ドイツ",
+          "source_role_names": [
+            "ドイツ"
+          ],
+          "matched_actor_id": "a36372ce-61e5-43f5-ae9c-e1bf2fb5226b",
+          "matched_play_id": null,
+          "accepted_cast_id": null,
+          "confidence": 60,
+          "status": "pending",
+          "note": null,
+          "scraped_at": "2026-04-27T17:43:40.471+00:00",
+          "created_at": "2026-04-27T17:43:39.716309+00:00",
+          "updated_at": "2026-04-27T17:43:40.471+00:00",
+          "accepted_at": null,
+          "rejected_at": null,
+          "source_cast_group": null,
+          "source_order": null,
+          "source_credit_key": null,
+          "source_evidence": null
+        }
+      ],
+      "legacyUpgrades": [
+        {
+          "before": {
+            "id": "ce8d3276-6be2-4b09-a8ea-fafeaa327b39",
+            "source": "kira-hai",
+            "external_actor_id": "76e81e5b-c716-4c18-b1ec-f20f9b651451",
+            "external_play_id": "4562ba22-de8f-418b-900e-8a62018c6d39",
+            "source_actor_name": "上田悠介",
+            "source_actor_url": "https://kira-hai.net/ueda-yusuke",
+            "source_work_title": "ミュージカル「ヘタリア～in the new world～」(2017)",
+            "source_work_url": "https://kira-hai.net/hetamu2017",
+            "source_year": 2021,
+            "source_role_raw": "ドイツ",
+            "source_role_names": [
+              "ドイツ"
+            ],
+            "matched_actor_id": "a36372ce-61e5-43f5-ae9c-e1bf2fb5226b",
+            "matched_play_id": null,
+            "accepted_cast_id": null,
+            "confidence": 60,
+            "status": "pending",
+            "note": null,
+            "scraped_at": "2026-04-27T17:43:40.471+00:00",
+            "created_at": "2026-04-27T17:43:39.716309+00:00",
+            "updated_at": "2026-04-27T17:43:40.471+00:00",
+            "accepted_at": null,
+            "rejected_at": null,
+            "source_cast_group": null,
+            "source_order": null,
+            "source_credit_key": null,
+            "source_evidence": null
+          },
+          "patch": {
+            "source_year": 2017,
+            "source_work_title": "ミュージカル「ヘタリア~in the new world~」(2017)",
+            "source_role_raw": "ドイツ",
+            "source_role_names": [
+              "ドイツ"
+            ],
+            "source_cast_group": null,
+            "source_order": 2,
+            "source_credit_key": "1122648243e9073fe695",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hetamu2017",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hetamu2017",
+                  "checkedAt": "2026-10-26T17:29:13.449Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/cast/",
+                  "checkedAt": "2026-10-26T17:29:14.380Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/story/",
+                  "checkedAt": "2026-10-26T17:29:14.752Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/schedule/",
+                  "checkedAt": "2026-10-26T17:29:15.194Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/qa/",
+                  "checkedAt": "2026-10-26T17:29:15.581Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/nw/dvd/",
+                  "checkedAt": "2026-10-26T17:29:15.902Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/isogai-ryuko",
+                  "checkedAt": "2026-10-26T17:29:16.581Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/kikuchi-takuya",
+                  "checkedAt": "2026-10-26T17:29:16.437Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/takamoto-gaku",
+                  "checkedAt": "2026-10-26T17:29:16.742Z",
+                  "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                }
+              ],
+              "source_fingerprint": "3392d794c4b28fd11e0661455a9ac82c53c36b990441bdba6bb94b0772bdb07f",
+              "review_fingerprint": "b45761008395066755972dfcb9c8d455605ef2c7e54b3284a101b23de3c05f2e",
+              "snapshot_fingerprint": "31b4db84f30a04d861bde8c1c965ff8de69546011bfda7afd5b5a8d549fe63cf",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2017,
+                "reason": "2017年7〜8月の第3弾。旧候補の2021や2018年ライブと区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/hetamu2017",
+                    "checkedAt": "2026-10-26T17:29:13.449Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/cast/",
+                    "checkedAt": "2026-10-26T17:29:14.380Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/story/",
+                    "checkedAt": "2026-10-26T17:29:14.752Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/schedule/",
+                    "checkedAt": "2026-10-26T17:29:15.194Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/qa/",
+                    "checkedAt": "2026-10-26T17:29:15.581Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/nw/dvd/",
+                    "checkedAt": "2026-10-26T17:29:15.902Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/isogai-ryuko",
+                    "checkedAt": "2026-10-26T17:29:16.581Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/kikuchi-takuya",
+                    "checkedAt": "2026-10-26T17:29:16.437Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/takamoto-gaku",
+                    "checkedAt": "2026-10-26T17:29:16.742Z",
+                    "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+                  }
+                ]
+              },
+              "original_source_row": {
+                "order": 2,
+                "cast": {
+                  "sourceActorName": "上田悠介",
+                  "sourceActorUrl": "https://kira-hai.net/ueda-yusuke",
+                  "role_name": "ドイツ",
+                  "cast_group": null
+                }
+              }
+            },
+            "matched_play_id": "0e248a7c-a0af-4a9c-bdfe-e3405ccdec37"
+          }
+        }
+      ],
+      "legacyKept": [],
+      "transformations": [
+        {
+          "type": "credit_only",
+          "names": [
+            "仲田祥司",
+            "帯金遼太",
+            "山田諒",
+            "茶谷健太",
+            "新開理雄",
+            "町田尚規",
+            "山内涼平",
+            "一之瀬達也",
+            "山口渓",
+            "橋本佳貴"
+          ],
+          "sourceRows": [
+            {
+              "sourceActorName": "仲田祥司",
+              "sourceActorUrl": "https://kira-hai.net/nakata-shoji",
+              "role_name": null,
+              "cast_group": "アンサンブル"
+            },
+            {
+              "sourceActorName": "帯金遼太",
+              "sourceActorUrl": "https://kira-hai.net/obigane-ryota",
+              "role_name": null,
+              "cast_group": "アンサンブル"
+            },
+            {
+              "sourceActorName": "山田諒",
+              "sourceActorUrl": "https://kira-hai.net/yamada-ryo",
+              "role_name": null,
+              "cast_group": "アンサンブル"
+            },
+            {
+              "sourceActorName": "茶谷健太",
+              "sourceActorUrl": "https://kira-hai.net/chatani-kenta",
+              "role_name": null,
+              "cast_group": "アンサンブル"
+            },
+            {
+              "sourceActorName": "新開理雄",
+              "sourceActorUrl": "https://kira-hai.net/shinkai-rio",
+              "role_name": null,
+              "cast_group": "アンサンブル"
+            },
+            {
+              "sourceActorName": "町田尚規",
+              "sourceActorUrl": "https://kira-hai.net/machida-naoki",
+              "role_name": null,
+              "cast_group": "アンサンブル"
+            },
+            {
+              "sourceActorName": "山内涼平",
+              "sourceActorUrl": "https://kira-hai.net/yamauchi-ryohei",
+              "role_name": null,
+              "cast_group": "アンサンブル"
+            },
+            {
+              "sourceActorName": "一之瀬達也",
+              "sourceActorUrl": null,
+              "role_name": null,
+              "cast_group": "アンサンブル"
+            },
+            {
+              "sourceActorName": "山口渓",
+              "sourceActorUrl": "https://kira-hai.net/yamaguchi-kei",
+              "role_name": null,
+              "cast_group": "アンサンブル"
+            },
+            {
+              "sourceActorName": "橋本佳貴",
+              "sourceActorUrl": null,
+              "role_name": null,
+              "cast_group": "アンサンブル"
+            }
+          ],
+          "evidence": [
+            {
+              "url": "https://musical-hetalia.com/nw/cast/",
+              "checkedAt": "2026-10-26T17:29:14.380Z",
+              "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+            }
+          ]
+        },
+        {
+          "type": "former_name_link",
+          "sourceName": "磯貝龍虎",
+          "currentName": "磯貝 龍乎",
+          "evidence": [
+            {
+              "url": "https://kira-hai.net/isogai-ryuko",
+              "checkedAt": "2026-10-26T17:29:16.581Z",
+              "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+            },
+            {
+              "url": "https://musical-hetalia.com/nw/cast/",
+              "checkedAt": "2026-10-26T17:29:14.380Z",
+              "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+            }
+          ]
+        },
+        {
+          "type": "official_alias_link",
+          "sourceName": "ROU",
+          "databaseName": "菊池 卓也",
+          "evidence": [
+            {
+              "url": "https://musical-hetalia.com/nw/cast/",
+              "checkedAt": "2026-10-26T17:29:14.380Z",
+              "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+            },
+            {
+              "url": "https://kira-hai.net/kikuchi-takuya",
+              "checkedAt": "2026-10-26T17:29:16.437Z",
+              "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+            }
+          ]
+        },
+        {
+          "type": "legacy_year_correction",
+          "from": 2021,
+          "to": 2017,
+          "actor": "上田悠介",
+          "candidateId": "ce8d3276-6be2-4b09-a8ea-fafeaa327b39",
+          "evidence": [
+            {
+              "url": "https://kira-hai.net/hetamu2017",
+              "checkedAt": "2026-10-26T17:29:13.449Z",
+              "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+            },
+            {
+              "url": "https://musical-hetalia.com/nw/schedule/",
+              "checkedAt": "2026-10-26T17:29:15.194Z",
+              "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+            }
+          ]
+        },
+        {
+          "type": "separate_productions",
+          "reason": "大阪5公演→東京18公演。2016年大阪会場・初演キャスト・2018年ライブを継承しない。",
+          "evidence": [
+            {
+              "url": "https://musical-hetalia.com/nw/schedule/",
+              "checkedAt": "2026-10-26T17:29:15.194Z",
+              "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+            },
+            {
+              "url": "https://musical-hetalia.com/nw/cast/",
+              "checkedAt": "2026-10-26T17:29:14.380Z",
+              "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+            }
+          ]
+        }
+      ],
+      "exceptions": [
+        "10配役全て既存人物を再利用。オーストリアROUは公式併記の菊池卓也へ接続、プロイセン高本学も既存人物。前作のスペイン役は当該キャスト欄にないため自動追加しない。",
+        "ROUと磯貝龍虎の当時名義を配役noteと原資料に残す。既存人物の名称・URL・プロフィール・性別・翻訳は変更しない。",
+        "アンサンブル10人は公式区分に従いクレジット。原20行・区分・URLを研究記録へ残し、主要10行だけ採用候補へ渡す。",
+        "旧上田候補1件の誤年2021を2017へ訂正し同IDで採用。外部人物・外部作品ID、作成日時等を維持し変更前全行を履歴に保存。",
+        "大阪先行で7/15〜17はNHK大阪ホール（5公演）、東京7/21〜8/2はシアター1010（18公演）。2016年の森ノ宮ピロティホールを流用しない。7/24・28は表で公演なし、7/31夜公演を休演扱いしない。",
+        "上演約150分は公式の予定値。過去作の130分やDVD特典の長さを転用せず、休憩有無は補作しない。DVD発売記念イベントや生配信を同じ本公演の追加配役として数えない。",
+        "詳細英訳・現行配信・2018年以降の登録・人物属性総合監査は後続。vodは空欄で過去配信から現在状況を断定しない。"
+      ]
+    }
+  ],
+  "keptPlays": [
+    {
+      "id": "42af489f-2553-4038-a1da-5427709777ca",
+      "slug": "hetamu2015",
+      "title": "ミュージカル「ヘタリア～Singin’ in the World～」",
+      "franchise_id": "1ebeffff-4df9-47a1-8449-251fa80a56c1",
+      "summary": "世界会議を進めようとするドイツだが、アメリカやイギリス、フランスたちの発言で会議は混乱。そこへイタリアが加わり、さらに賑やかな騒動へ発展する。国を擬人化したキャラクターたちのやりとりを歌とダンスで描く『ヘタリア』初のミュージカル。",
+      "period": "2015年12月24日〜29日",
+      "venue": "Zeppブルーシアター六本木",
+      "vod": {},
+      "genre": null,
+      "created_at": "2026-10-26T17:06:09.184766+00:00",
+      "updated_at": "2026-10-26T17:06:09.184766+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "日丸屋秀和『ヘタリア Axis Powers』"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "脚本",
+          "names": [
+            "なるせゆうせい"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "演出",
+          "names": [
+            "吉谷光太郎"
+          ],
+          "is_core": true,
+          "sort_order": 3
+        },
+        {
+          "role": "音楽",
+          "names": [
+            "tak"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "振付",
+          "names": [
+            "MAMORU"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "制作",
+          "names": [
+            "ポリゴンマジック"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        },
+        {
+          "role": "主催",
+          "names": [
+            "ミュージカル「ヘタリア」製作委員会（フロンティアワークス、ポリゴンマジック、セガ・ライブクリエイション、KADOKAWA）"
+          ],
+          "is_core": false,
+          "sort_order": 7
+        },
+        {
+          "role": "アンサンブル",
+          "names": [
+            "仲田祥司",
+            "池田謙信",
+            "原野正章",
+            "今田竜人",
+            "三原大樹",
+            "帯金遼太",
+            "山本哲平",
+            "岡本笙"
+          ],
+          "is_core": false,
+          "sort_order": 8
+        },
+        {
+          "role": "公演日程",
+          "names": [
+            "2015年12月24日〜29日（Zeppブルーシアター六本木、追加公演を含む全11公演）"
+          ],
+          "is_core": false,
+          "sort_order": 9
+        },
+        {
+          "role": "追加公演",
+          "names": [
+            "2015年12月28日13:00（2015年11月12日発表）"
+          ],
+          "is_core": false,
+          "sort_order": 10
+        },
+        {
+          "role": "上演時間（予定）",
+          "names": [
+            "約2時間"
+          ],
+          "is_core": false,
+          "sort_order": 11
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "Germany tries to keep a world meeting on track, but America, England and France turn the discussion into chaos. Italy’s arrival only adds to the commotion. The first Hetalia musical brings the encounters between personified nations to the stage through song and dance.",
+      "title_en": "Musical Hetalia: Singin’ in the World"
+    },
+    {
+      "id": "9126ffbf-ef6b-4bde-809a-5984804093bb",
+      "slug": "hetamu2016",
+      "title": "ミュージカル「ヘタリア～The Great World～」",
+      "franchise_id": "1ebeffff-4df9-47a1-8449-251fa80a56c1",
+      "summary": "新天地を目指し、国々が海へ乗り出す「大航海ブーム」の時代。イタリアたちにスペインも加わり、個性豊かな国々の交流と競い合いを歌とダンスで描く。『ヘタリア』ミュージカル第2弾として東京・大阪で上演された。",
+      "period": "2016年11月10日〜27日",
+      "venue": "東京：シアター1010／大阪：森ノ宮ピロティホール",
+      "vod": {},
+      "genre": null,
+      "created_at": "2026-10-26T17:23:27.573227+00:00",
+      "updated_at": "2026-10-26T17:23:27.573227+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "日丸屋秀和『ヘタリア Axis Powers』"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "演出",
+          "names": [
+            "吉谷光太郎"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "脚本",
+          "names": [
+            "なるせゆうせい"
+          ],
+          "is_core": true,
+          "sort_order": 3
+        },
+        {
+          "role": "音楽",
+          "names": [
+            "tak"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "振付",
+          "names": [
+            "MAMORU"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "企画製作",
+          "names": [
+            "フロンティアワークス"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        },
+        {
+          "role": "制作",
+          "names": [
+            "ポリゴンマジック"
+          ],
+          "is_core": false,
+          "sort_order": 7
+        },
+        {
+          "role": "主催",
+          "names": [
+            "ミュージカル「ヘタリアGW」製作委員会"
+          ],
+          "is_core": false,
+          "sort_order": 8
+        },
+        {
+          "role": "アンサンブル",
+          "names": [
+            "池田謙信",
+            "今田竜人",
+            "帯金遼太",
+            "山本哲平",
+            "山田 諒",
+            "喜多野章太郎",
+            "茶谷健太",
+            "大澤信児",
+            "田村公典",
+            "徳留達也"
+          ],
+          "is_core": false,
+          "sort_order": 9
+        },
+        {
+          "role": "公演日程",
+          "names": [
+            "東京：2016年11月10日〜20日（シアター1010、17公演）",
+            "大阪：2016年11月25日〜27日（森ノ宮ピロティホール、5公演）"
+          ],
+          "is_core": false,
+          "sort_order": 10
+        },
+        {
+          "role": "追加公演",
+          "names": [
+            "東京：2016年11月15日14:00",
+            "大阪：2016年11月25日19:00"
+          ],
+          "is_core": false,
+          "sort_order": 11
+        },
+        {
+          "role": "上演時間（予定）",
+          "names": [
+            "約130分"
+          ],
+          "is_core": false,
+          "sort_order": 12
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "During an age of exploration, the nations set sail in search of new lands. Spain joins Italy and the other personified nations in a story of encounters and rivalry told through song and dance. The second Hetalia musical was staged in Tokyo and Osaka.",
+      "title_en": "Musical Hetalia: The Great World"
+    }
+  ],
+  "evidence": {
+    "links": [
+      {
+        "url": "https://kira-hai.net/hetamu2017",
+        "checkedAt": "2026-10-26T17:29:13.449Z",
+        "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+      },
+      {
+        "url": "https://musical-hetalia.com/nw/cast/",
+        "checkedAt": "2026-10-26T17:29:14.380Z",
+        "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+      },
+      {
+        "url": "https://musical-hetalia.com/nw/story/",
+        "checkedAt": "2026-10-26T17:29:14.752Z",
+        "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+      },
+      {
+        "url": "https://musical-hetalia.com/nw/schedule/",
+        "checkedAt": "2026-10-26T17:29:15.194Z",
+        "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+      },
+      {
+        "url": "https://musical-hetalia.com/nw/qa/",
+        "checkedAt": "2026-10-26T17:29:15.581Z",
+        "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+      },
+      {
+        "url": "https://musical-hetalia.com/nw/dvd/",
+        "checkedAt": "2026-10-26T17:29:15.902Z",
+        "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+      },
+      {
+        "url": "https://kira-hai.net/isogai-ryuko",
+        "checkedAt": "2026-10-26T17:29:16.581Z",
+        "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+      },
+      {
+        "url": "https://kira-hai.net/kikuchi-takuya",
+        "checkedAt": "2026-10-26T17:29:16.437Z",
+        "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+      },
+      {
+        "url": "https://kira-hai.net/takamoto-gaku",
+        "checkedAt": "2026-10-26T17:29:16.742Z",
+        "note": "取得原文・指紋を保存。採用範囲と留保は個別記録参照。"
+      }
+    ],
+    "sources": [
+      {
+        "label": "kira",
+        "url": "https://kira-hai.net/hetamu2017",
+        "status": 200,
+        "checkedAt": "2026-10-26T17:29:13.449Z",
+        "sha256": "2340db9b0ef9447d550e5e5713ab18097e41ff16142f5c6ee578c578b3e1d9d9",
+        "bytes": 55821
+      },
+      {
+        "label": "officialCast",
+        "url": "https://musical-hetalia.com/nw/cast/",
+        "status": 200,
+        "checkedAt": "2026-10-26T17:29:14.380Z",
+        "sha256": "6fd6b691e4f11e8fd16a5a08a6b8e2fd89c1c7f60d0360cb54ea7ee3f0fbae69",
+        "bytes": 32497
+      },
+      {
+        "label": "officialStory",
+        "url": "https://musical-hetalia.com/nw/story/",
+        "status": 200,
+        "checkedAt": "2026-10-26T17:29:14.752Z",
+        "sha256": "a7e67cf607e293f2f17b21c9a80a2574764ce030b40b69d1048fb46d1f006675",
+        "bytes": 25709
+      },
+      {
+        "label": "officialSchedule",
+        "url": "https://musical-hetalia.com/nw/schedule/",
+        "status": 200,
+        "checkedAt": "2026-10-26T17:29:15.194Z",
+        "sha256": "fbd02983a6712a8563e56da086ab5e75149b06537b23545291855569f678600d",
+        "bytes": 26236
+      },
+      {
+        "label": "officialGuide",
+        "url": "https://musical-hetalia.com/nw/qa/",
+        "status": 200,
+        "checkedAt": "2026-10-26T17:29:15.581Z",
+        "sha256": "f9422f8981afbe30f8a6cbb1f41a8e88aabd7ea16de1a051417f3de668c91466",
+        "bytes": 32994
+      },
+      {
+        "label": "officialDvd",
+        "url": "https://musical-hetalia.com/nw/dvd/",
+        "status": 200,
+        "checkedAt": "2026-10-26T17:29:15.902Z",
+        "sha256": "52b52af8ee408d60fb353e2c3d0583cf1b939ac93ce3fd4f0dd9b60de6f71dca",
+        "bytes": 26642
+      },
+      {
+        "label": "officialNews",
+        "url": "https://musical-hetalia.com/nw/news/",
+        "status": 200,
+        "checkedAt": "2026-10-26T17:29:16.237Z",
+        "sha256": "607e9ca273a6deb2198a562ed9eb4a3624377c09eb72fcb44a2d689b36412003",
+        "bytes": 50585
+      },
+      {
+        "label": "kiraKikuchi",
+        "url": "https://kira-hai.net/kikuchi-takuya",
+        "status": 200,
+        "checkedAt": "2026-10-26T17:29:16.437Z",
+        "sha256": "82d31a8125a1f5911ec733a484dbdf2747a21e6014daa41da7ca066629871105",
+        "bytes": 66281
+      },
+      {
+        "label": "kiraIsogai",
+        "url": "https://kira-hai.net/isogai-ryuko",
+        "status": 200,
+        "checkedAt": "2026-10-26T17:29:16.581Z",
+        "sha256": "95b6f48f9e38162a5a644f05a89ef43a508a59ca93c49ed6785868f7e24f812d",
+        "bytes": 125407
+      },
+      {
+        "label": "kiraTakamoto",
+        "url": "https://kira-hai.net/takamoto-gaku",
+        "status": 200,
+        "checkedAt": "2026-10-26T17:29:16.742Z",
+        "sha256": "5af089ff955fb448e67baa07be819c2a1a9a3465d5ca2c3531fcbc5cb104bd54",
+        "bytes": 86201
+      },
+      {
+        "label": "changelog",
+        "url": "https://supabase.com/changelog.md",
+        "status": 200,
+        "checkedAt": "2026-10-26T17:29:17.081Z",
+        "sha256": "45528009025b8ad8487ccb73f7c769b66d4b0e7aa4560157047899dcb5b5a006",
+        "bytes": 102641
+      }
+    ],
+    "unresolved": [
+      "シリーズ2018年以降、詳細英訳、現在配信、人物属性総合監査は後続。"
+    ],
+    "notes": [
+      "既存の出典付き候補保存・採用RPCを使用。Supabase changelog取得、当該JSONB DML/RPC使用に関わる新たな破壊的変更なし。スキーマ・RLS・アプリ・UI変更なし。",
+      "既登録2作品18配役・クレジットとシリーズ全項目を保全する。"
+    ]
+  },
+  "requestKey": "ea5dcdd95351e0297d8a1b780055a9d724af2dad35ee97966736ef2b3aef6769",
+  "verification": {
+    "passed": true,
+    "requestKey": "ea5dcdd95351e0297d8a1b780055a9d724af2dad35ee97966736ef2b3aef6769",
+    "changes": {
+      "actors": {
+        "before": 1166,
+        "after": 1166,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "plays": {
+        "before": 412,
+        "after": 413,
+        "added": 1,
+        "modified": 0,
+        "deleted": 0
+      },
+      "franchises": {
+        "before": 198,
+        "after": 198,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "casts": {
+        "before": 4232,
+        "after": 4242,
+        "added": 10,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_actors": {
+        "before": 1701,
+        "after": 1701,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_cast_candidates": {
+        "before": 3580,
+        "after": 3589,
+        "added": 9,
+        "modified": 1,
+        "deleted": 0
+      },
+      "external_import_logs": {
+        "before": 5761,
+        "after": 5785,
+        "added": 24,
+        "modified": 0,
+        "deleted": 0
+      },
+      "actor_identity_sources": {
+        "before": 512,
+        "after": 512,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      }
+    },
+    "newActors": 0,
+    "reusedActors": 10,
+    "newPlays": 1,
+    "newCasts": 10,
+    "creditOnlyNames": 10,
+    "creditCategories": 11,
+    "scheduleCount": 23,
+    "tokyoPerformances": 18,
+    "osakaPerformances": 5,
+    "legacyCorrected": 1,
+    "seriesWorks": 3,
+    "seriesCastRows": 28,
+    "seriesActors": 12,
+    "totals": {
+      "actors": 1166,
+      "plays": 413,
+      "casts": 4242
+    }
+  },
+  "publicVerification": {
+    "passed": true,
+    "pages": 32,
+    "seriesWorks": 3,
+    "seriesCastRows": 28,
+    "seriesActors": 12,
+    "newCastRows": 10,
+    "newActors": 0,
+    "creditOnlyNames": 10,
+    "scheduleCount": 23,
+    "results": [
+      {
+        "path": "/series/hetalia",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/hetamu2017",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/hetamu2016",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/hetamu2015",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/nagae-ryoki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/omi-yoichiro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/ueda-keisuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/hirose-daisuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/isogai-ryuko",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/juri",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/sugie-taishi",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/kikuchi-takuya",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/yamaoki-yuki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/ueda-yusuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/yamada-james-takeshi",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/takamoto-gaku",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/series/hetalia",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/hetamu2015",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/hetamu2016",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/nagae-ryoki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/hetamu2017",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/ueda-keisuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/omi-yoichiro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/isogai-ryuko",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/hirose-daisuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/yamaoki-yuki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/juri",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/sugie-taishi",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/kikuchi-takuya",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/ueda-yusuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/yamada-james-takeshi",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/takamoto-gaku",
+        "passed": true,
+        "status": 200
+      }
+    ]
+  },
+  "searchVerification": {
+    "passed": true,
+    "checks": 38,
+    "spaceAndNoSpace": true,
+    "genderAttributesUnchanged": true,
+    "results": [
+      {
+        "path": "/actors?q=%E4%B8%8A%E7%94%B0%E6%82%A0%E4%BB%8B",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E9%95%B7%E6%B1%9F%E5%B4%9A%E8%A1%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E4%B8%8A%E7%94%B0+%E6%82%A0%E4%BB%8B",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E9%95%B7%E6%B1%9F+%E5%B4%9A%E8%A1%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%A4%8D%E7%94%B0+%E5%9C%AD%E8%BC%94",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%A3%AF%E8%B2%9D%E9%BE%8D%E4%B9%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%A3%AF%E8%B2%9D+%E9%BE%8D%E4%B9%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%A4%8D%E7%94%B0%E5%9C%AD%E8%BC%94",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%BB%A3%E7%80%AC%E5%A4%A7%E4%BB%8B",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%AF%BF%E9%87%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%BB%A3%E7%80%AC+%E5%A4%A7%E4%BB%8B",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%B1%B1%E6%B2%96+%E5%8B%87%E8%BC%9D",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E8%8F%8A%E6%B1%A0+%E5%8D%93%E4%B9%9F",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%9D%89%E6%B1%9F+%E5%A4%A7%E5%BF%97",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%9D%89%E6%B1%9F%E5%A4%A7%E5%BF%97",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%B1%B1%E6%B2%96%E5%8B%87%E8%BC%9D",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E8%8F%8A%E6%B1%A0%E5%8D%93%E4%B9%9F",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E9%AB%98%E6%9C%AC%E5%AD%A6",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E9%AB%98%E6%9C%AC+%E5%AD%A6",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E9%95%B7%E6%B1%9F+%E5%B4%9A%E8%A1%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E4%B8%8A%E7%94%B0+%E6%82%A0%E4%BB%8B",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E9%95%B7%E6%B1%9F%E5%B4%9A%E8%A1%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%A4%8D%E7%94%B0+%E5%9C%AD%E8%BC%94",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E4%B8%8A%E7%94%B0%E6%82%A0%E4%BB%8B",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%A3%AF%E8%B2%9D%E9%BE%8D%E4%B9%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%A4%8D%E7%94%B0%E5%9C%AD%E8%BC%94",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%A3%AF%E8%B2%9D+%E9%BE%8D%E4%B9%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%BB%A3%E7%80%AC+%E5%A4%A7%E4%BB%8B",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%BB%A3%E7%80%AC%E5%A4%A7%E4%BB%8B",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%AF%BF%E9%87%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%B1%B1%E6%B2%96+%E5%8B%87%E8%BC%9D",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%B1%B1%E6%B2%96%E5%8B%87%E8%BC%9D",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%9D%89%E6%B1%9F%E5%A4%A7%E5%BF%97",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%9D%89%E6%B1%9F+%E5%A4%A7%E5%BF%97",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E8%8F%8A%E6%B1%A0+%E5%8D%93%E4%B9%9F",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E8%8F%8A%E6%B1%A0%E5%8D%93%E4%B9%9F",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E9%AB%98%E6%9C%AC+%E5%AD%A6",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E9%AB%98%E6%9C%AC%E5%AD%A6",
+        "status": 200,
+        "passed": true
+      }
+    ]
+  },
+  "replayVerification": {
+    "passed": true,
+    "tables": {
+      "actors": {
+        "rows": 1166,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "plays": {
+        "rows": 413,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "franchises": {
+        "rows": 198,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "casts": {
+        "rows": 4242,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_actors": {
+        "rows": 1701,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_cast_candidates": {
+        "rows": 3589,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_import_logs": {
+        "rows": 5785,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "actor_identity_sources": {
+        "rows": 512,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      }
+    }
+  },
+  "sourceValidation": {
+    "allActorsReused": true,
+    "rouExplicitOfficialAliasLinkedToExistingActor": true,
+    "formerIsogaiNameRetained": true,
+    "prussiaAddedWithoutCarryingSpainOver": true,
+    "officialBillingOrder": true,
+    "originalSourceRowRetained": true,
+    "ensembleCreditOnly": true,
+    "legacyCandidateReusedAndWrongYearCorrected": true,
+    "finalScheduleCount": 23,
+    "osakaFirst": true,
+    "osakaScheduleCount": 5,
+    "tokyoScheduleCount": 18,
+    "plannedRuntimeMinutes": 150,
+    "existingActorPlayCastAndFranchiseRowsPreserved": true
+  },
+  "nextWork": {
+    "title": "ミュージカル「ヘタリア」FINAL LIVE～A World in the Universe～",
+    "year": 2018,
+    "sourceUrl": "https://kira-hai.net/hetamu2018",
+    "officialUrl": "https://musical-hetalia.com/wu/",
+    "status": "not_registered",
+    "note": "ライブを本公演と分け、幕張／大阪、スペイン映像出演等の公演別条件と旧候補を確認。"
+  },
+  "verificationScope": "2017年第3弾1作品10配役を追加、全10人物再利用。アンサンブル10人クレジット、ROUと磯貝龍虎の当時名義、大阪5→東京18の最終23公演・予定150分を保存。上田旧候補を同IDで誤年2021から2017へ訂正採用。3作品28配役12人物の日英32ページ・検索38件、8テーブル全行保全比較・再実行0変更を確認。シリーズ全体の収録や人物属性・現在配信の総合監査とは区別。"
+}
