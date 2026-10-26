@@ -1,0 +1,2089 @@
+{
+  "version": 1,
+  "batchId": "makaiouji2016-20261026-01",
+  "expectedFranchise": {
+    "id": "4cef99cd-c68e-4649-9bcf-67779aa91dcf",
+    "name": "舞台「魔界王子」",
+    "created_at": "2026-02-08T16:26:41.990203+00:00",
+    "updated_at": "2026-02-08T16:26:41.990203+00:00",
+    "slug": "makai-ouji",
+    "intro": null,
+    "description": "高殿円・雪広うたこ原作の漫画『魔界王子 devils and realist』を原案とした2.5次元ミュージカル作品。悪魔たちが魔界の代理王候補を巡って争うファンタジーストーリーを、キャッチーなミュージカルナンバーに乗せて描く。演出は元吉庸泰が手掛け、制作はCLIEが担当している。",
+    "origin_type": "漫画原作",
+    "origin_note": "原作：高殿円・雪広うたこ『魔界王子 devils and realist』（スクウェア・エニックス）",
+    "production_companies": null,
+    "related_franchise_ids": [],
+    "format": null,
+    "description_en": null,
+    "name_en": null
+  },
+  "franchisePatch": {
+    "name": "ミュージカル「魔界王子 devils and realist」",
+    "name_en": "Devils and Realist (Musical)",
+    "origin_note": "原作：高殿円・漫画：雪広うたこ『魔界王子 devils and realist』（一迅社）",
+    "description": "高殿円原作・雪広うたこ漫画『魔界王子 devils and realist』を原作とするミュージカルシリーズ。悪魔の代理王を選ぶ権利を持つ英国の少年ウイリアムと、彼のもとに集まる悪魔たちを描く。演出は元吉庸泰、脚本は伊勢直弘。CLIEが制作。",
+    "description_en": "A musical series based on Devils and Realist, written by Madoka Takadono and illustrated by Utako Yukihiro. William, a British schoolboy, discovers that he can choose the demons’ acting ruler. Directed by Tsuneyasu Motoyoshi, written by Naohiro Ise and produced by CLIE."
+  },
+  "externalActorLinks": [
+    {
+      "before": {
+        "id": "8285449a-4964-4083-b7f5-643c03d5c219",
+        "source": "kira-hai",
+        "source_actor_name": "米原幸佑",
+        "source_actor_url": "https://kira-hai.net/yonehara-kosuke",
+        "alias_from": null,
+        "alias_to": null,
+        "note": null,
+        "matched_actor_id": null,
+        "match_status": "unmatched",
+        "match_confidence": 0,
+        "scraped_at": "2026-04-27T17:11:21.759+00:00",
+        "created_at": "2026-04-25T07:26:09.109677+00:00",
+        "updated_at": "2026-04-27T17:11:21.759+00:00",
+        "source_profile_facts_raw": null,
+        "source_birthday_raw": null,
+        "source_birthday": null,
+        "source_height_cm": null,
+        "source_blood_type": null,
+        "source_affiliation_raw": null,
+        "source_actor_kana": null
+      },
+      "patch": {
+        "matched_actor_id": "c84c1fe6-8f7b-4404-9a5b-7f3c04772f1e",
+        "match_status": "matched",
+        "match_confidence": 90
+      }
+    }
+  ],
+  "actors": [
+    {
+      "actor": {
+        "id": "c84c1fe6-8f7b-4404-9a5b-7f3c04772f1e",
+        "slug": "yonehara-kosuke",
+        "name": "米原 幸佑",
+        "kana": "よねはら こうすけ",
+        "profile": "大阪府出身の俳優・歌手。吉本興業所属。RUN＆GUN、ヨースケコースケのメンバー。Live Musical『SHOW BY ROCK!!』のクロウ役や映画『どうしても触れたくない』の主演を務め、舞台では脚本・演出にも携わる。",
+        "image_url": null,
+        "sns": {},
+        "gender": "male",
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1986-03-13",
+        "height_cm": 163,
+        "blood_type": "AB",
+        "birthday_label": null,
+        "name_en": "Kosuke Yonehara",
+        "profile_en": "An actor and singer from Osaka, represented by Yoshimoto Kogyo. A member of RUN&GUN and Yosuke Kosuke, he plays Crow in Live Musical SHOW BY ROCK!! and starred in the film No Touching At All. His theater work also includes writing and directing.",
+        "death_date": null
+      },
+      "sourceActorName": "米原幸佑",
+      "profileUrl": "https://profile.yoshimoto.co.jp/talent/detail?id=3128",
+      "evidence": [
+        {
+          "url": "https://profile.yoshimoto.co.jp/talent/detail?id=3128",
+          "checkedAt": "2026-10-26T08:27:18.180Z",
+          "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+        },
+        {
+          "url": "https://kira-hai.net/yonehara-kosuke",
+          "checkedAt": "2026-10-26T08:27:18.672Z",
+          "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+        },
+        {
+          "url": "https://www.clie.asia/makaiouji_1/",
+          "checkedAt": "2026-10-26T08:21:09.491Z",
+          "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+        }
+      ],
+      "notes": [
+        "現吉本公式で読み・完全DOB・163cm・AB型・大阪・男性・職業と略歴を確認。英字は確認済み読みの転写で公式英字と断定しない。姓名半角スペース。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "4e2f2346-e3de-478f-a3eb-eda37e0276c0",
+        "slug": "endo-makoto",
+        "name": "遠藤 誠",
+        "kana": "えんどう まこと",
+        "profile": "千葉県出身の俳優。アクションや殺陣を担い、ジャパンアクションエンタープライズ在籍を経て梅棒でも活動。ミュージカル『魔界王子』のバアルベリト役、演劇調異譚『xxxHOLiC』の鴉天狗役などを務める。",
+        "image_url": null,
+        "sns": {},
+        "gender": "male",
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1984-07-01",
+        "height_cm": 169,
+        "blood_type": "A",
+        "birthday_label": null,
+        "name_en": "Makoto Endo",
+        "profile_en": "An actor from Chiba whose work includes action and sword fighting. After working with Japan Action Enterprise, he also performed with Umebou. His stage roles include Baalberith in Devils and Realist and a Karasu-Tengu in xxxHOLiC.",
+        "death_date": null
+      },
+      "sourceActorName": "遠藤誠",
+      "profileUrl": "https://www.umebou.com/endo-makoto",
+      "evidence": [
+        {
+          "url": "https://www.umebou.com/endo-makoto",
+          "checkedAt": "2026-10-26T08:27:19.263Z",
+          "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+        },
+        {
+          "url": "https://ameblo.jp/tokomaudone3636/entry-12463140974.html",
+          "checkedAt": "2026-10-26T09:04:05.851Z",
+          "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+        },
+        {
+          "url": "https://www.dimora.jp/talent-info/4/342517/?areaId=088",
+          "checkedAt": "2026-10-26T09:04:07.687Z",
+          "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+        },
+        {
+          "url": "https://ameblo.jp/umebou-official/entry-12156520890.html",
+          "checkedAt": "2026-10-26T09:04:06.123Z",
+          "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+        },
+        {
+          "url": "https://www.clie.asia/makaiouji_1/",
+          "checkedAt": "2026-10-26T08:21:09.491Z",
+          "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+        }
+      ],
+      "notes": [
+        "梅棒公式人物ページの英字・完全DOB・身長・血液型・千葉と同役出演を本人の告知で接続。本人ブログの明示男性、番組表の読みを採用。現ナビには人物名がないため、現在所属・退団・引退を推測せず経歴として記載。姓名半角スペース。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "be7f2bfd-0c6d-42ae-a622-e62b0281e940",
+        "slug": "ken-ebisawa",
+        "name": "KEN EBISAWA",
+        "kana": "けん えびさわ",
+        "profile": "茨城県古河市出身の歌手・作詞作曲家。楽曲制作と書道作品の制作を行い、ミュージカル『魔界王子 devils and realist』や『錆色のアーマ』に出演。『魔界王子』ではKEN名義でバフォメットを演じる。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": null,
+        "height_cm": null,
+        "blood_type": "O",
+        "birthday_label": null,
+        "name_en": "KEN EBISAWA",
+        "profile_en": "A singer, songwriter and calligraphy artist from Koga, Ibaraki. His stage credits include Devils and Realist and Rusted Armors. He performed as Baphomet in Devils and Realist under the name KEN.",
+        "death_date": null
+      },
+      "sourceActorName": "KEN",
+      "profileUrl": "https://www.2ps-twopeace.com/ken-ebisawa/",
+      "evidence": [
+        {
+          "url": "https://www.2ps-twopeace.com/ken-ebisawa/",
+          "checkedAt": "2026-10-26T08:27:19.866Z",
+          "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+        },
+        {
+          "url": "https://eplus.jp/sf/word/0000061117",
+          "checkedAt": "2026-10-26T09:04:06.910Z",
+          "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+        },
+        {
+          "url": "https://blogtag.ameba.jp/news/%E3%83%9F%E3%83%A5%E9%AD%94%E7%95%8C%E7%8E%8B%E5%AD%90",
+          "checkedAt": "2026-10-26T09:04:07.327Z",
+          "note": "ファン記録。S☆RUSHのKENからKEN EBISAWAへの活動名接続を補助照合。属性の一次根拠にはしない。"
+        },
+        {
+          "url": "https://www.clie.asia/makaiouji_1/",
+          "checkedAt": "2026-10-26T08:21:09.491Z",
+          "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+        },
+        {
+          "url": "https://www.clie.asia/makaiouji/",
+          "checkedAt": "2026-10-26T08:21:09.751Z",
+          "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+        }
+      ],
+      "notes": [
+        "2PSの本人資料に魔界王子と錆色のアーマの出演歴。公演公式のKEN、イープラスのKEN EBISAWA(ex.S☆RUSH)、当時から後年までのファン記録を併用して活動名を接続。出演表記KENは配役noteと原文に残し、既存KENNやDA PUMPのKENとは統合しない。かなはイープラスのケンエビサワによる。現在の2PSは業務提携表記のため所属と断定しない。本人プロフィールURLは503で直取得できず、DOB・身長・性別は今回は未確認としてnull。検索キャッシュの1982年4月15日を無条件採用しない。"
+      ]
+    }
+  ],
+  "works": [
+    {
+      "year": 2016,
+      "before": null,
+      "play": {
+        "id": "44b46d1f-42a5-4f6b-bdfa-9383228e5131",
+        "slug": "makaiouji2016",
+        "title": "ミュージカル「魔界王子 devils and realist」",
+        "franchise_id": "4cef99cd-c68e-4649-9bcf-67779aa91dcf",
+        "summary": "19世紀の英国。名門校に通う現実主義者のウイリアムは、叔父の事業失敗で財産を失う。学費を工面しようと屋敷を探るうちに悪魔ダンタリオンを呼び出し、魔界の代理王を選ぶ権利があると告げられる。次々と現れる悪魔たちとの学園生活を描く初演。",
+        "summary_en": "In 19th-century Britain, rationalist schoolboy William loses his fortune after his uncle’s business fails. While searching the family estate for a way to pay his school fees, he summons the demon Dantalion and learns that he has the right to choose the demons’ acting ruler. The first musical adaptation follows the demons who enter his school life.",
+        "title_en": "Devils and Realist (Musical, 2016)",
+        "period": "2016年6月1日〜5日",
+        "venue": "全労済ホール／スペース・ゼロ",
+        "vod": {},
+        "genre": null,
+        "tags": [],
+        "credits": [
+          {
+            "role": "原作",
+            "names": [
+              "高殿円・雪広うたこ『魔界王子 devils and realist』（一迅社）"
+            ],
+            "is_core": true,
+            "sort_order": 1
+          },
+          {
+            "role": "演出",
+            "names": [
+              "元吉庸泰（エムキチビート）"
+            ],
+            "is_core": true,
+            "sort_order": 2
+          },
+          {
+            "role": "脚本",
+            "names": [
+              "伊勢直弘"
+            ],
+            "is_core": true,
+            "sort_order": 3
+          },
+          {
+            "role": "楽曲制作",
+            "names": [
+              "吉田仁郎",
+              "桑原まこ"
+            ],
+            "is_core": false,
+            "sort_order": 4
+          },
+          {
+            "role": "振付",
+            "names": [
+              "三井聡"
+            ],
+            "is_core": false,
+            "sort_order": 5
+          },
+          {
+            "role": "殺陣",
+            "names": [
+              "大岩主弥"
+            ],
+            "is_core": false,
+            "sort_order": 6
+          },
+          {
+            "role": "歌唱指導",
+            "names": [
+              "カサノボー晃"
+            ],
+            "is_core": false,
+            "sort_order": 7
+          },
+          {
+            "role": "音響",
+            "names": [
+              "吉村卓宏（エディスグローヴ）"
+            ],
+            "is_core": false,
+            "sort_order": 8
+          },
+          {
+            "role": "照明",
+            "names": [
+              "江口剛史",
+              "萱島亜希子（CAT）"
+            ],
+            "is_core": false,
+            "sort_order": 9
+          },
+          {
+            "role": "美術",
+            "names": [
+              "深瀬元喜"
+            ],
+            "is_core": false,
+            "sort_order": 10
+          },
+          {
+            "role": "衣装",
+            "names": [
+              "小泉美都"
+            ],
+            "is_core": false,
+            "sort_order": 11
+          },
+          {
+            "role": "ヘア＆メイク",
+            "names": [
+              "工藤聡美"
+            ],
+            "is_core": false,
+            "sort_order": 12
+          },
+          {
+            "role": "演出助手",
+            "names": [
+              "荻原秋裕（エムキチビート）"
+            ],
+            "is_core": false,
+            "sort_order": 13
+          },
+          {
+            "role": "制作協力",
+            "names": [
+              "近藤たえ（アンデム）"
+            ],
+            "is_core": false,
+            "sort_order": 14
+          },
+          {
+            "role": "舞台監督",
+            "names": [
+              "中西輝彦"
+            ],
+            "is_core": false,
+            "sort_order": 15
+          },
+          {
+            "role": "宣伝",
+            "names": [
+              "谷中理音",
+              "荒井沙樹"
+            ],
+            "is_core": false,
+            "sort_order": 16
+          },
+          {
+            "role": "アシスタントプロデューサー",
+            "names": [
+              "小川文乃",
+              "織内孝子"
+            ],
+            "is_core": false,
+            "sort_order": 17
+          },
+          {
+            "role": "プロデューサー",
+            "names": [
+              "吉井敏久",
+              "渡辺詩織"
+            ],
+            "is_core": false,
+            "sort_order": 18
+          },
+          {
+            "role": "制作",
+            "names": [
+              "CLIE"
+            ],
+            "is_core": false,
+            "sort_order": 19
+          },
+          {
+            "role": "製作",
+            "names": [
+              "ストラドフォード校歌劇部"
+            ],
+            "is_core": false,
+            "sort_order": 20
+          },
+          {
+            "role": "Clothemble（アンサンブル）",
+            "names": [
+              "大岩主弥",
+              "石丸隆義",
+              "梅津瑞樹",
+              "福井将太"
+            ],
+            "is_core": false,
+            "sort_order": 21
+          }
+        ],
+        "related_franchise_ids": []
+      },
+      "rawSource": {
+        "sourceUrl": "https://kira-hai.net/makaiouji2016",
+        "title": "MUSICAL『魔界王子devils and realist』",
+        "scheduleLines": [
+          "2016年6月1日-6月5日 全労済ホール/スペース・ゼロ"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "石渡真修",
+            "sourceActorUrl": "https://kira-hai.net/ishiwatari-mashu",
+            "role_name": "ウイリアム",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "鮎川太陽",
+            "sourceActorUrl": "https://kira-hai.net/ayukawa-taiyo",
+            "role_name": "ダンタリオン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "法月康平",
+            "sourceActorUrl": "https://kira-hai.net/norizuki-kohei",
+            "role_name": "ケヴィン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "小西成弥",
+            "sourceActorUrl": "https://kira-hai.net/konishi-seiya",
+            "role_name": "アイザック",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "松本祐一",
+            "sourceActorUrl": "https://kira-hai.net/matsumoto-yuichi",
+            "role_name": "クロスビー牧師",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "河原田巧也",
+            "sourceActorUrl": "https://kira-hai.net/kawarada-takuya",
+            "role_name": "シトリー",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "碕理人",
+            "sourceActorUrl": "https://kira-hai.net/saki-masato",
+            "role_name": "ジル・ド・レイ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "米原幸佑",
+            "sourceActorUrl": "https://kira-hai.net/yonehara-kosuke",
+            "role_name": "カミオ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "遠藤誠",
+            "sourceActorUrl": null,
+            "role_name": "バアルベリト",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "KEN",
+            "sourceActorUrl": null,
+            "role_name": "バフォメット",
+            "cast_group": null
+          }
+        ],
+        "unparsed": [
+          "大岩主弥",
+          "石丸隆義",
+          "梅津瑞樹",
+          "福井将太"
+        ]
+      },
+      "source": {
+        "sourceUrl": "https://kira-hai.net/makaiouji2016",
+        "title": "MUSICAL『魔界王子devils and realist』",
+        "scheduleLines": [
+          "2016年6月1日-6月5日 全労済ホール/スペース・ゼロ"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "石渡真修",
+            "sourceActorUrl": "https://kira-hai.net/ishiwatari-mashu",
+            "role_name": "ウイリアム",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "鮎川太陽",
+            "sourceActorUrl": "https://kira-hai.net/ayukawa-taiyo",
+            "role_name": "ダンタリオン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "法月康平",
+            "sourceActorUrl": "https://kira-hai.net/norizuki-kohei",
+            "role_name": "ケヴィン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "小西成弥",
+            "sourceActorUrl": "https://kira-hai.net/konishi-seiya",
+            "role_name": "アイザック",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "松本祐一",
+            "sourceActorUrl": "https://kira-hai.net/matsumoto-yuichi",
+            "role_name": "クロスビー牧師",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "河原田巧也",
+            "sourceActorUrl": "https://kira-hai.net/kawarada-takuya",
+            "role_name": "シトリー",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "碕理人",
+            "sourceActorUrl": "https://kira-hai.net/saki-masato",
+            "role_name": "ジル・ド・レイ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "米原幸佑",
+            "sourceActorUrl": "https://kira-hai.net/yonehara-kosuke",
+            "role_name": "カミオ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "遠藤誠",
+            "sourceActorUrl": null,
+            "role_name": "バアルベリト",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "KEN",
+            "sourceActorUrl": null,
+            "role_name": "バフォメット",
+            "cast_group": null
+          }
+        ],
+        "unparsed": []
+      },
+      "sourceFingerprint": "75ed812e8e8d886c72194a528f4e8003a5c6599e3f85921a6e25226cf2f7fb49",
+      "stage": {
+        "workUrl": "https://kira-hai.net/makaiouji2016",
+        "key": "35d78c75c526e85cb6370371f4dc92b786f629cccf0f3b3a63ff366f4ceb504c",
+        "items": [
+          {
+            "source_actor_name": "石渡真修",
+            "source_actor_url": "https://kira-hai.net/ishiwatari-mashu",
+            "source_work_title": "MUSICAL『魔界王子devils and realist』",
+            "source_year": 2016,
+            "source_role_raw": "ウイリアム",
+            "source_role_names": [
+              "ウイリアム"
+            ],
+            "source_cast_group": null,
+            "source_order": 1,
+            "source_credit_key": "1fa82358293dd6c152ec",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/makaiouji2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/makaiouji2016",
+                  "checkedAt": "2026-10-26T08:21:08.932Z",
+                  "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://www.clie.asia/makaiouji_1/",
+                  "checkedAt": "2026-10-26T08:21:09.491Z",
+                  "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                }
+              ],
+              "source_fingerprint": "75ed812e8e8d886c72194a528f4e8003a5c6599e3f85921a6e25226cf2f7fb49",
+              "review_fingerprint": "73829cd7adb7ca41cc46c6e3a788b4e9de5493eab1a39fc2ea34e43c0b4e8a6a",
+              "snapshot_fingerprint": "c95b260ae73b90f2d07d13cb2a11250460c324ecdfbd344f7ae27c21903349af",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2016,
+                "reason": "公演公式と第一参照先の2016/06/01〜06/05。2015年告知・2017年続編・4月のプレイベントを混同しない。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/makaiouji2016",
+                    "checkedAt": "2026-10-26T08:21:08.932Z",
+                    "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                  },
+                  {
+                    "url": "https://www.clie.asia/makaiouji_1/",
+                    "checkedAt": "2026-10-26T08:21:09.491Z",
+                    "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "da42531a-5a27-4b09-a25d-9af162b1d006",
+            "matched_play_id": "44b46d1f-42a5-4f6b-bdfa-9383228e5131",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "鮎川太陽",
+            "source_actor_url": "https://kira-hai.net/ayukawa-taiyo",
+            "source_work_title": "MUSICAL『魔界王子devils and realist』",
+            "source_year": 2016,
+            "source_role_raw": "ダンタリオン",
+            "source_role_names": [
+              "ダンタリオン"
+            ],
+            "source_cast_group": null,
+            "source_order": 2,
+            "source_credit_key": "35fabe875b4e1ce6f209",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/makaiouji2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/makaiouji2016",
+                  "checkedAt": "2026-10-26T08:21:08.932Z",
+                  "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://www.clie.asia/makaiouji_1/",
+                  "checkedAt": "2026-10-26T08:21:09.491Z",
+                  "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                }
+              ],
+              "source_fingerprint": "75ed812e8e8d886c72194a528f4e8003a5c6599e3f85921a6e25226cf2f7fb49",
+              "review_fingerprint": "73829cd7adb7ca41cc46c6e3a788b4e9de5493eab1a39fc2ea34e43c0b4e8a6a",
+              "snapshot_fingerprint": "c95b260ae73b90f2d07d13cb2a11250460c324ecdfbd344f7ae27c21903349af",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2016,
+                "reason": "公演公式と第一参照先の2016/06/01〜06/05。2015年告知・2017年続編・4月のプレイベントを混同しない。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/makaiouji2016",
+                    "checkedAt": "2026-10-26T08:21:08.932Z",
+                    "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                  },
+                  {
+                    "url": "https://www.clie.asia/makaiouji_1/",
+                    "checkedAt": "2026-10-26T08:21:09.491Z",
+                    "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "66b93389-ff18-4aa9-aa0f-684aeb07d6c4",
+            "matched_play_id": "44b46d1f-42a5-4f6b-bdfa-9383228e5131",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "法月康平",
+            "source_actor_url": "https://kira-hai.net/norizuki-kohei",
+            "source_work_title": "MUSICAL『魔界王子devils and realist』",
+            "source_year": 2016,
+            "source_role_raw": "ケヴィン",
+            "source_role_names": [
+              "ケヴィン"
+            ],
+            "source_cast_group": null,
+            "source_order": 3,
+            "source_credit_key": "57583544a82af4faedd5",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/makaiouji2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/makaiouji2016",
+                  "checkedAt": "2026-10-26T08:21:08.932Z",
+                  "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://www.clie.asia/makaiouji_1/",
+                  "checkedAt": "2026-10-26T08:21:09.491Z",
+                  "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                }
+              ],
+              "source_fingerprint": "75ed812e8e8d886c72194a528f4e8003a5c6599e3f85921a6e25226cf2f7fb49",
+              "review_fingerprint": "73829cd7adb7ca41cc46c6e3a788b4e9de5493eab1a39fc2ea34e43c0b4e8a6a",
+              "snapshot_fingerprint": "c95b260ae73b90f2d07d13cb2a11250460c324ecdfbd344f7ae27c21903349af",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2016,
+                "reason": "公演公式と第一参照先の2016/06/01〜06/05。2015年告知・2017年続編・4月のプレイベントを混同しない。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/makaiouji2016",
+                    "checkedAt": "2026-10-26T08:21:08.932Z",
+                    "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                  },
+                  {
+                    "url": "https://www.clie.asia/makaiouji_1/",
+                    "checkedAt": "2026-10-26T08:21:09.491Z",
+                    "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "55b2914f-9665-4e8e-b8e9-f3b9b4d27cd4",
+            "matched_play_id": "44b46d1f-42a5-4f6b-bdfa-9383228e5131",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "小西成弥",
+            "source_actor_url": "https://kira-hai.net/konishi-seiya",
+            "source_work_title": "MUSICAL『魔界王子devils and realist』",
+            "source_year": 2016,
+            "source_role_raw": "アイザック",
+            "source_role_names": [
+              "アイザック"
+            ],
+            "source_cast_group": null,
+            "source_order": 4,
+            "source_credit_key": "386e046fce0c355dc411",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/makaiouji2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/makaiouji2016",
+                  "checkedAt": "2026-10-26T08:21:08.932Z",
+                  "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://www.clie.asia/makaiouji_1/",
+                  "checkedAt": "2026-10-26T08:21:09.491Z",
+                  "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                }
+              ],
+              "source_fingerprint": "75ed812e8e8d886c72194a528f4e8003a5c6599e3f85921a6e25226cf2f7fb49",
+              "review_fingerprint": "73829cd7adb7ca41cc46c6e3a788b4e9de5493eab1a39fc2ea34e43c0b4e8a6a",
+              "snapshot_fingerprint": "c95b260ae73b90f2d07d13cb2a11250460c324ecdfbd344f7ae27c21903349af",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2016,
+                "reason": "公演公式と第一参照先の2016/06/01〜06/05。2015年告知・2017年続編・4月のプレイベントを混同しない。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/makaiouji2016",
+                    "checkedAt": "2026-10-26T08:21:08.932Z",
+                    "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                  },
+                  {
+                    "url": "https://www.clie.asia/makaiouji_1/",
+                    "checkedAt": "2026-10-26T08:21:09.491Z",
+                    "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "a81ef8e3-1545-4cd2-b932-08feed0a4786",
+            "matched_play_id": "44b46d1f-42a5-4f6b-bdfa-9383228e5131",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "松本祐一",
+            "source_actor_url": "https://kira-hai.net/matsumoto-yuichi",
+            "source_work_title": "MUSICAL『魔界王子devils and realist』",
+            "source_year": 2016,
+            "source_role_raw": "クロスビー牧師",
+            "source_role_names": [
+              "クロスビー牧師"
+            ],
+            "source_cast_group": null,
+            "source_order": 5,
+            "source_credit_key": "1440deab789618c1a5f2",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/makaiouji2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/makaiouji2016",
+                  "checkedAt": "2026-10-26T08:21:08.932Z",
+                  "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://www.clie.asia/makaiouji_1/",
+                  "checkedAt": "2026-10-26T08:21:09.491Z",
+                  "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                }
+              ],
+              "source_fingerprint": "75ed812e8e8d886c72194a528f4e8003a5c6599e3f85921a6e25226cf2f7fb49",
+              "review_fingerprint": "73829cd7adb7ca41cc46c6e3a788b4e9de5493eab1a39fc2ea34e43c0b4e8a6a",
+              "snapshot_fingerprint": "c95b260ae73b90f2d07d13cb2a11250460c324ecdfbd344f7ae27c21903349af",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2016,
+                "reason": "公演公式と第一参照先の2016/06/01〜06/05。2015年告知・2017年続編・4月のプレイベントを混同しない。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/makaiouji2016",
+                    "checkedAt": "2026-10-26T08:21:08.932Z",
+                    "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                  },
+                  {
+                    "url": "https://www.clie.asia/makaiouji_1/",
+                    "checkedAt": "2026-10-26T08:21:09.491Z",
+                    "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "c964f6a4-adeb-4cc5-b098-818c727ab7de",
+            "matched_play_id": "44b46d1f-42a5-4f6b-bdfa-9383228e5131",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "河原田巧也",
+            "source_actor_url": "https://kira-hai.net/kawarada-takuya",
+            "source_work_title": "MUSICAL『魔界王子devils and realist』",
+            "source_year": 2016,
+            "source_role_raw": "シトリー",
+            "source_role_names": [
+              "シトリー"
+            ],
+            "source_cast_group": null,
+            "source_order": 6,
+            "source_credit_key": "723a5bd879dfe461b6a4",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/makaiouji2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/makaiouji2016",
+                  "checkedAt": "2026-10-26T08:21:08.932Z",
+                  "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://www.clie.asia/makaiouji_1/",
+                  "checkedAt": "2026-10-26T08:21:09.491Z",
+                  "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                }
+              ],
+              "source_fingerprint": "75ed812e8e8d886c72194a528f4e8003a5c6599e3f85921a6e25226cf2f7fb49",
+              "review_fingerprint": "73829cd7adb7ca41cc46c6e3a788b4e9de5493eab1a39fc2ea34e43c0b4e8a6a",
+              "snapshot_fingerprint": "c95b260ae73b90f2d07d13cb2a11250460c324ecdfbd344f7ae27c21903349af",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2016,
+                "reason": "公演公式と第一参照先の2016/06/01〜06/05。2015年告知・2017年続編・4月のプレイベントを混同しない。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/makaiouji2016",
+                    "checkedAt": "2026-10-26T08:21:08.932Z",
+                    "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                  },
+                  {
+                    "url": "https://www.clie.asia/makaiouji_1/",
+                    "checkedAt": "2026-10-26T08:21:09.491Z",
+                    "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "27c164fb-41c3-41fd-ae92-857afd330801",
+            "matched_play_id": "44b46d1f-42a5-4f6b-bdfa-9383228e5131",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "碕理人",
+            "source_actor_url": "https://kira-hai.net/saki-masato",
+            "source_work_title": "MUSICAL『魔界王子devils and realist』",
+            "source_year": 2016,
+            "source_role_raw": "ジル・ド・レイ",
+            "source_role_names": [
+              "ジル・ド・レイ"
+            ],
+            "source_cast_group": null,
+            "source_order": 7,
+            "source_credit_key": "7c25843a2b842e395b02",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/makaiouji2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/makaiouji2016",
+                  "checkedAt": "2026-10-26T08:21:08.932Z",
+                  "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://www.clie.asia/makaiouji_1/",
+                  "checkedAt": "2026-10-26T08:21:09.491Z",
+                  "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                }
+              ],
+              "source_fingerprint": "75ed812e8e8d886c72194a528f4e8003a5c6599e3f85921a6e25226cf2f7fb49",
+              "review_fingerprint": "73829cd7adb7ca41cc46c6e3a788b4e9de5493eab1a39fc2ea34e43c0b4e8a6a",
+              "snapshot_fingerprint": "c95b260ae73b90f2d07d13cb2a11250460c324ecdfbd344f7ae27c21903349af",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2016,
+                "reason": "公演公式と第一参照先の2016/06/01〜06/05。2015年告知・2017年続編・4月のプレイベントを混同しない。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/makaiouji2016",
+                    "checkedAt": "2026-10-26T08:21:08.932Z",
+                    "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                  },
+                  {
+                    "url": "https://www.clie.asia/makaiouji_1/",
+                    "checkedAt": "2026-10-26T08:21:09.491Z",
+                    "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "56d9c715-c9f0-4a5d-ab3c-a4f8ffc25f79",
+            "matched_play_id": "44b46d1f-42a5-4f6b-bdfa-9383228e5131",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "米原幸佑",
+            "source_actor_url": "https://kira-hai.net/yonehara-kosuke",
+            "source_work_title": "MUSICAL『魔界王子devils and realist』",
+            "source_year": 2016,
+            "source_role_raw": "カミオ",
+            "source_role_names": [
+              "カミオ"
+            ],
+            "source_cast_group": null,
+            "source_order": 8,
+            "source_credit_key": "70b334a038985f4f8111",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/makaiouji2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/makaiouji2016",
+                  "checkedAt": "2026-10-26T08:21:08.932Z",
+                  "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://www.clie.asia/makaiouji_1/",
+                  "checkedAt": "2026-10-26T08:21:09.491Z",
+                  "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://profile.yoshimoto.co.jp/talent/detail?id=3128",
+                  "checkedAt": "2026-10-26T08:27:18.180Z",
+                  "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/yonehara-kosuke",
+                  "checkedAt": "2026-10-26T08:27:18.672Z",
+                  "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://www.clie.asia/makaiouji_1/",
+                  "checkedAt": "2026-10-26T08:21:09.491Z",
+                  "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                }
+              ],
+              "source_fingerprint": "75ed812e8e8d886c72194a528f4e8003a5c6599e3f85921a6e25226cf2f7fb49",
+              "review_fingerprint": "73829cd7adb7ca41cc46c6e3a788b4e9de5493eab1a39fc2ea34e43c0b4e8a6a",
+              "snapshot_fingerprint": "c95b260ae73b90f2d07d13cb2a11250460c324ecdfbd344f7ae27c21903349af",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2016,
+                "reason": "公演公式と第一参照先の2016/06/01〜06/05。2015年告知・2017年続編・4月のプレイベントを混同しない。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/makaiouji2016",
+                    "checkedAt": "2026-10-26T08:21:08.932Z",
+                    "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                  },
+                  {
+                    "url": "https://www.clie.asia/makaiouji_1/",
+                    "checkedAt": "2026-10-26T08:21:09.491Z",
+                    "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "c84c1fe6-8f7b-4404-9a5b-7f3c04772f1e",
+            "matched_play_id": "44b46d1f-42a5-4f6b-bdfa-9383228e5131",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "遠藤誠",
+            "source_actor_url": null,
+            "source_work_title": "MUSICAL『魔界王子devils and realist』",
+            "source_year": 2016,
+            "source_role_raw": "バアルベリト",
+            "source_role_names": [
+              "バアルベリト"
+            ],
+            "source_cast_group": null,
+            "source_order": 9,
+            "source_credit_key": "fce758fe9f6212ba23ea",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/makaiouji2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/makaiouji2016",
+                  "checkedAt": "2026-10-26T08:21:08.932Z",
+                  "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://www.clie.asia/makaiouji_1/",
+                  "checkedAt": "2026-10-26T08:21:09.491Z",
+                  "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://www.umebou.com/endo-makoto",
+                  "checkedAt": "2026-10-26T08:27:19.263Z",
+                  "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://ameblo.jp/tokomaudone3636/entry-12463140974.html",
+                  "checkedAt": "2026-10-26T09:04:05.851Z",
+                  "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://www.dimora.jp/talent-info/4/342517/?areaId=088",
+                  "checkedAt": "2026-10-26T09:04:07.687Z",
+                  "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://ameblo.jp/umebou-official/entry-12156520890.html",
+                  "checkedAt": "2026-10-26T09:04:06.123Z",
+                  "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://www.clie.asia/makaiouji_1/",
+                  "checkedAt": "2026-10-26T08:21:09.491Z",
+                  "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                }
+              ],
+              "source_fingerprint": "75ed812e8e8d886c72194a528f4e8003a5c6599e3f85921a6e25226cf2f7fb49",
+              "review_fingerprint": "73829cd7adb7ca41cc46c6e3a788b4e9de5493eab1a39fc2ea34e43c0b4e8a6a",
+              "snapshot_fingerprint": "c95b260ae73b90f2d07d13cb2a11250460c324ecdfbd344f7ae27c21903349af",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2016,
+                "reason": "公演公式と第一参照先の2016/06/01〜06/05。2015年告知・2017年続編・4月のプレイベントを混同しない。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/makaiouji2016",
+                    "checkedAt": "2026-10-26T08:21:08.932Z",
+                    "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                  },
+                  {
+                    "url": "https://www.clie.asia/makaiouji_1/",
+                    "checkedAt": "2026-10-26T08:21:09.491Z",
+                    "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "4e2f2346-e3de-478f-a3eb-eda37e0276c0",
+            "matched_play_id": "44b46d1f-42a5-4f6b-bdfa-9383228e5131",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "KEN",
+            "source_actor_url": null,
+            "source_work_title": "MUSICAL『魔界王子devils and realist』",
+            "source_year": 2016,
+            "source_role_raw": "バフォメット",
+            "source_role_names": [
+              "バフォメット"
+            ],
+            "source_cast_group": null,
+            "source_order": 10,
+            "source_credit_key": "76d6c973ec4e44c94900",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/makaiouji2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/makaiouji2016",
+                  "checkedAt": "2026-10-26T08:21:08.932Z",
+                  "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://www.clie.asia/makaiouji_1/",
+                  "checkedAt": "2026-10-26T08:21:09.491Z",
+                  "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://www.2ps-twopeace.com/ken-ebisawa/",
+                  "checkedAt": "2026-10-26T08:27:19.866Z",
+                  "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://eplus.jp/sf/word/0000061117",
+                  "checkedAt": "2026-10-26T09:04:06.910Z",
+                  "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://blogtag.ameba.jp/news/%E3%83%9F%E3%83%A5%E9%AD%94%E7%95%8C%E7%8E%8B%E5%AD%90",
+                  "checkedAt": "2026-10-26T09:04:07.327Z",
+                  "note": "ファン記録。S☆RUSHのKENからKEN EBISAWAへの活動名接続を補助照合。属性の一次根拠にはしない。"
+                },
+                {
+                  "url": "https://www.clie.asia/makaiouji_1/",
+                  "checkedAt": "2026-10-26T08:21:09.491Z",
+                  "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://www.clie.asia/makaiouji/",
+                  "checkedAt": "2026-10-26T08:21:09.751Z",
+                  "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                }
+              ],
+              "source_fingerprint": "75ed812e8e8d886c72194a528f4e8003a5c6599e3f85921a6e25226cf2f7fb49",
+              "review_fingerprint": "73829cd7adb7ca41cc46c6e3a788b4e9de5493eab1a39fc2ea34e43c0b4e8a6a",
+              "snapshot_fingerprint": "c95b260ae73b90f2d07d13cb2a11250460c324ecdfbd344f7ae27c21903349af",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2016,
+                "reason": "公演公式と第一参照先の2016/06/01〜06/05。2015年告知・2017年続編・4月のプレイベントを混同しない。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/makaiouji2016",
+                    "checkedAt": "2026-10-26T08:21:08.932Z",
+                    "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                  },
+                  {
+                    "url": "https://www.clie.asia/makaiouji_1/",
+                    "checkedAt": "2026-10-26T08:21:09.491Z",
+                    "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "be7f2bfd-0c6d-42ae-a622-e62b0281e940",
+            "matched_play_id": "44b46d1f-42a5-4f6b-bdfa-9383228e5131",
+            "status": "pending"
+          }
+        ]
+      },
+      "records": [
+        {
+          "actor": {
+            "id": "da42531a-5a27-4b09-a25d-9af162b1d006",
+            "slug": "ishiwatari-mashu",
+            "name": "石渡 真修",
+            "kana": "いしわたり ましゅう",
+            "profile": "神奈川県出身の俳優。タイムリーオフィス所属。ミュージカル『テニスの王子様』2ndシーズン（桃城武役）やミュージカル『青春-AOHARU-鉄道』シリーズ（東北新幹線役・半蔵門線役）、2.5次元ダンスライブ『ALIVESTAGE』シリーズ（在原守人役）、舞台『スタンドマイヒーローズ』シリーズ（夏目春役）等に出演。",
+            "image_url": null,
+            "sns": {
+              "x": "https://twitter.com/masyumarochan",
+              "official": "https://ishiwatari-mashu.bitfan.id/",
+              "instagram": "https://www.instagram.com/masyutarochan"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:06:19.306372+00:00",
+            "updated_at": "2026-03-21T15:06:19.306372+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1993-01-07",
+            "height_cm": 174,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Kanagawa Prefecture. Affiliated with Timely Office. He appeared in the musical \"The Prince of Tennis\" 2nd season (as Takeshi Momoshiro), the musical \"Aoharu-Tetsudo\" series (as Tohoku Shinkansen and Hanzomon Line), the 2.5D Dance Live \"ALIVESTAGE\" series (as Morihito Arihara), and the stage play \"Stand My Heroes\" series (as Haru Natsume).",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "石渡真修",
+            "sourceActorUrl": "https://kira-hai.net/ishiwatari-mashu",
+            "role_name": "ウイリアム",
+            "cast_group": null
+          },
+          "sourceCreditKey": "1fa82358293dd6c152ec",
+          "sourceOrder": 1,
+          "billingOrder": 1,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "66b93389-ff18-4aa9-aa0f-684aeb07d6c4",
+            "slug": "ayukawa-taiyo",
+            "name": "鮎川 太陽",
+            "kana": "あゆかわ たいよう",
+            "profile": "東京都出身の俳優、声優。現在はフリーランスで活動している。子役時代から活動を開始し、テレビドラマ等への出演を経て、現在は主に舞台を中心に活躍している。長身を活かしたキャラクターを演じることが多い。主な出演作として、ミュージカル『新テニスの王子様』（U-17W杯 フランス代表 トリスタン・バルドー役）、『ヒプノシスマイク-Division Rap Battle-』Rule the Stage（神宮寺寂雷役）、舞台『黒子のバスケ』（紫原敦役）、舞台『最遊記歌劇伝』（沙悟浄役）などの数多くの舞台作品がある。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/ayukawa_taiyou",
+              "official": "https://taiyo-ayukawa.com/",
+              "instagram": "https://www.instagram.com/ayukawa_taiyo/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:17:46.505362+00:00",
+            "updated_at": "2026-03-21T15:17:46.505362+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1991-01-18",
+            "height_cm": 188,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor and voice actor from Tokyo. Currently active as a freelance artist. He began his career as a child actor, appearing in TV dramas before transitioning to work primarily in stage plays. He often utilizes his tall stature to portray specific characters. His major appearances include stage works such as the musical \"The New Prince of Tennis\" (as Tristan Bardot, French Representative for the U-17 World Cup), \"Hypnosis Mic -Division Rap Battle- Rule the Stage\" (as Jakurai Jinguji), the stage play \"Kuroko's Basketball\" (as Atsushi Murasakibara), and the stage play \"Saiyuki Kagekiden\" (as Sha Gojyo).",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "鮎川太陽",
+            "sourceActorUrl": "https://kira-hai.net/ayukawa-taiyo",
+            "role_name": "ダンタリオン",
+            "cast_group": null
+          },
+          "sourceCreditKey": "35fabe875b4e1ce6f209",
+          "sourceOrder": 2,
+          "billingOrder": 2,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "55b2914f-9665-4e8e-b8e9-f3b9b4d27cd4",
+            "slug": "norizuki-kohei",
+            "name": "法月 康平",
+            "kana": "のりづき こうへい",
+            "profile": "俳優。2011年のBLEACH連載10周年記念公演『ROCK MUSICAL BLEACH』で黒崎一護役を務め、2012年の『REprise』にも出演。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-19T03:51:20.959718+00:00",
+            "updated_at": "2026-10-25T20:21:04.903274+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1990-06-18",
+            "height_cm": 178,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "法月康平",
+            "sourceActorUrl": "https://kira-hai.net/norizuki-kohei",
+            "role_name": "ケヴィン",
+            "cast_group": null
+          },
+          "sourceCreditKey": "57583544a82af4faedd5",
+          "sourceOrder": 3,
+          "billingOrder": 3,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "a81ef8e3-1545-4cd2-b932-08feed0a4786",
+            "slug": "konishi-seiya",
+            "name": "小西 成弥",
+            "kana": "こにし せいや",
+            "profile": "大阪府出身の俳優。現在はフリーで活動。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/seiya0906",
+              "official": "https://seiyakonishi.com/",
+              "instagram": "https://www.instagram.com/seiya_konishi"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:03:44.295565+00:00",
+            "updated_at": "2026-03-21T15:03:44.295565+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1994-09-06",
+            "height_cm": 171,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "小西成弥",
+            "sourceActorUrl": "https://kira-hai.net/konishi-seiya",
+            "role_name": "アイザック",
+            "cast_group": null
+          },
+          "sourceCreditKey": "386e046fce0c355dc411",
+          "sourceOrder": 4,
+          "billingOrder": 4,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "c964f6a4-adeb-4cc5-b098-818c727ab7de",
+            "slug": "matsumoto-yuichi",
+            "name": "松本 祐一",
+            "kana": "まつもと ゆういち",
+            "profile": "高知県出身の俳優。舞台『K』の三科草太役、『PERSONA3 the Weird Masquerade』のジン役などを務める。『Club SLAZY』シリーズではJiggy役で出演。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-24T18:17:05.544152+00:00",
+            "updated_at": "2026-10-25T20:21:04.903274+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1990-02-27",
+            "height_cm": 177,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Kochi whose stage credits include K, PERSONA3 the Weird Masquerade and the role of Jiggy in Club SLAZY.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "松本祐一",
+            "sourceActorUrl": "https://kira-hai.net/matsumoto-yuichi",
+            "role_name": "クロスビー牧師",
+            "cast_group": null
+          },
+          "sourceCreditKey": "1440deab789618c1a5f2",
+          "sourceOrder": 5,
+          "billingOrder": 5,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "27c164fb-41c3-41fd-ae92-857afd330801",
+            "slug": "kawaharada-takuya",
+            "name": "河原田 巧也",
+            "kana": "かわはらだ たくや",
+            "profile": "東京都出身の俳優・演出家。現在はフリーで活動中。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/takuminari",
+              "instagram": "https://www.instagram.com/takuminari"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:01:26.311999+00:00",
+            "updated_at": "2026-03-21T15:01:26.311999+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1991-05-06",
+            "height_cm": 167,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "河原田巧也",
+            "sourceActorUrl": "https://kira-hai.net/kawarada-takuya",
+            "role_name": "シトリー",
+            "cast_group": null
+          },
+          "sourceCreditKey": "723a5bd879dfe461b6a4",
+          "sourceOrder": 6,
+          "billingOrder": 6,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "56d9c715-c9f0-4a5d-ab3c-a4f8ffc25f79",
+            "slug": "saki-masato",
+            "name": "碕 理人",
+            "kana": "さき まさと",
+            "profile": "京都府出身の俳優。株式会社トキエンタテインメント所属。ミュージカル『テニスの王子様』においては、2ndシーズン（忍足謙也役）に出演後、3rdシーズン（渡邊オサム役）にも異なる役柄で出演している。その他、『劇団「ハイキュー!!」』（烏養繋心役）やミュージカル『青春-AOHARU-鉄道』（山手線役）、音楽劇『金色のコルダ Blue♪Sky』（東金千秋役）等の舞台作品に出演。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/rito03",
+              "official": "https://tokientertainment.co.jp/product/masatosaki/",
+              "instagram": "https://www.instagram.com/sakima0301/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:06:19.306372+00:00",
+            "updated_at": "2026-03-21T15:06:19.306372+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1991-03-01",
+            "height_cm": 179,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Kyoto Prefecture. Affiliated with Toki Entertainment. In the musical \"The Prince of Tennis\", he appeared in the 2nd season (as Kenya Oshitari) and later returned in the 3rd season in a different role (as Osamu Watanabe). He has also appeared in stage works such as \"Gekidan Haikyu!!\" (as Keishin Ukai), the musical \"Aoharu-Tetsudo\" (as Yamanote Line), and the music play \"Kiniro no Corda Blue Sky\" (as Chiaki Tohgane).",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "碕理人",
+            "sourceActorUrl": "https://kira-hai.net/saki-masato",
+            "role_name": "ジル・ド・レイ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "7c25843a2b842e395b02",
+          "sourceOrder": 7,
+          "billingOrder": 7,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "c84c1fe6-8f7b-4404-9a5b-7f3c04772f1e",
+            "slug": "yonehara-kosuke",
+            "name": "米原 幸佑",
+            "kana": "よねはら こうすけ",
+            "profile": "大阪府出身の俳優・歌手。吉本興業所属。RUN＆GUN、ヨースケコースケのメンバー。Live Musical『SHOW BY ROCK!!』のクロウ役や映画『どうしても触れたくない』の主演を務め、舞台では脚本・演出にも携わる。",
+            "image_url": null,
+            "sns": {},
+            "gender": "male",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1986-03-13",
+            "height_cm": 163,
+            "blood_type": "AB",
+            "birthday_label": null,
+            "name_en": "Kosuke Yonehara",
+            "profile_en": "An actor and singer from Osaka, represented by Yoshimoto Kogyo. A member of RUN&GUN and Yosuke Kosuke, he plays Crow in Live Musical SHOW BY ROCK!! and starred in the film No Touching At All. His theater work also includes writing and directing.",
+            "death_date": null,
+            "created_at": "prepared",
+            "updated_at": "prepared"
+          },
+          "source": {
+            "sourceActorName": "米原幸佑",
+            "sourceActorUrl": "https://kira-hai.net/yonehara-kosuke",
+            "role_name": "カミオ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "70b334a038985f4f8111",
+          "sourceOrder": 8,
+          "billingOrder": 8,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "4e2f2346-e3de-478f-a3eb-eda37e0276c0",
+            "slug": "endo-makoto",
+            "name": "遠藤 誠",
+            "kana": "えんどう まこと",
+            "profile": "千葉県出身の俳優。アクションや殺陣を担い、ジャパンアクションエンタープライズ在籍を経て梅棒でも活動。ミュージカル『魔界王子』のバアルベリト役、演劇調異譚『xxxHOLiC』の鴉天狗役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": "male",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1984-07-01",
+            "height_cm": 169,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": "Makoto Endo",
+            "profile_en": "An actor from Chiba whose work includes action and sword fighting. After working with Japan Action Enterprise, he also performed with Umebou. His stage roles include Baalberith in Devils and Realist and a Karasu-Tengu in xxxHOLiC.",
+            "death_date": null,
+            "created_at": "prepared",
+            "updated_at": "prepared"
+          },
+          "source": {
+            "sourceActorName": "遠藤誠",
+            "sourceActorUrl": null,
+            "role_name": "バアルベリト",
+            "cast_group": null
+          },
+          "sourceCreditKey": "fce758fe9f6212ba23ea",
+          "sourceOrder": 9,
+          "billingOrder": 9,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "be7f2bfd-0c6d-42ae-a622-e62b0281e940",
+            "slug": "ken-ebisawa",
+            "name": "KEN EBISAWA",
+            "kana": "けん えびさわ",
+            "profile": "茨城県古河市出身の歌手・作詞作曲家。楽曲制作と書道作品の制作を行い、ミュージカル『魔界王子 devils and realist』や『錆色のアーマ』に出演。『魔界王子』ではKEN名義でバフォメットを演じる。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": null,
+            "height_cm": null,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": "KEN EBISAWA",
+            "profile_en": "A singer, songwriter and calligraphy artist from Koga, Ibaraki. His stage credits include Devils and Realist and Rusted Armors. He performed as Baphomet in Devils and Realist under the name KEN.",
+            "death_date": null,
+            "created_at": "prepared",
+            "updated_at": "prepared"
+          },
+          "source": {
+            "sourceActorName": "KEN",
+            "sourceActorUrl": null,
+            "role_name": "バフォメット",
+            "cast_group": null
+          },
+          "sourceCreditKey": "76d6c973ec4e44c94900",
+          "sourceOrder": 10,
+          "billingOrder": 10,
+          "expectedNote": "当時の出演名義：KEN",
+          "existingCast": null
+        }
+      ],
+      "legacyCandidates": [],
+      "creditOnly": [
+        "大岩主弥",
+        "石丸隆義",
+        "梅津瑞樹",
+        "福井将太"
+      ],
+      "transformations": [
+        {
+          "type": "reviewed_unparsed_to_ensemble",
+          "rawLines": [
+            "大岩主弥",
+            "石丸隆義",
+            "梅津瑞樹",
+            "福井将太"
+          ],
+          "evidence": {
+            "url": "https://www.clie.asia/makaiouji_1/",
+            "checkedAt": "2026-10-26T08:21:09.491Z",
+            "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+          },
+          "reason": "キラハイはClothembleの独自見出しを使用し汎用解析では4行が未解析。公式の同一区分と照合して原文を保持し作品クレジットへ。パーサー全体は変更しない。"
+        },
+        {
+          "type": "verified_local_actor_alias",
+          "sourceName": "KEN",
+          "actorName": "KEN EBISAWA",
+          "evidence": [
+            {
+              "url": "https://www.2ps-twopeace.com/ken-ebisawa/",
+              "checkedAt": "2026-10-26T08:27:19.866Z",
+              "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+            },
+            {
+              "url": "https://eplus.jp/sf/word/0000061117",
+              "checkedAt": "2026-10-26T09:04:06.910Z",
+              "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+            },
+            {
+              "url": "https://blogtag.ameba.jp/news/%E3%83%9F%E3%83%A5%E9%AD%94%E7%95%8C%E7%8E%8B%E5%AD%90",
+              "checkedAt": "2026-10-26T09:04:07.327Z",
+              "note": "ファン記録。S☆RUSHのKENからKEN EBISAWAへの活動名接続を補助照合。属性の一次根拠にはしない。"
+            },
+            {
+              "url": "https://www.clie.asia/makaiouji_1/",
+              "checkedAt": "2026-10-26T08:21:09.491Z",
+              "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+            },
+            {
+              "url": "https://www.clie.asia/makaiouji/",
+              "checkedAt": "2026-10-26T08:21:09.751Z",
+              "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+            }
+          ],
+          "reason": "所属先の作品出演歴、S☆RUSH経歴、当時公演名義を接続。KENNへ名前だけの統合をしない。"
+        }
+      ],
+      "exceptions": [
+        "主要10配役は公式キャストと同じ順番。Clothemble4人は既存俳優がいてもクレジットにまとめ、配役や新規人物にしない。",
+        "2016/06/01〜06/05の東京1会場。公式HTMLコメント内に残る別公演の2016/01/22大阪日程を読み込まない。2015年末は告知更新、4月3日はプレイベント。",
+        "2017年the Second spiritは別作品。ケヴィンの田村・シトリーの櫻井・特別出演注記等を初演へ逆用しない。",
+        "既存シリーズの出版社スクウェア・エニックスは誤り。一迅社と原作／漫画の役割を公式で訂正し、舞台という仮タイトルを正式ミュージカル名へ。既存slugとIDは保全。",
+        "KENは現活動名KEN EBISAWAで新規登録。当時名義は配役補足へ。DOB・身長・性別は根拠未確認でnull。新規米原・遠藤は公表男性を確認。未確認値を男性初期値にしない。",
+        "当時のニコ生配信告知・DVD/CD発売は現行配信の証拠にしない。vod空欄、DMMリンク推測なし。",
+        "原資料のClothemble表記をクレジットで保持。劇団での現所属や主演指定は推測しない。役名の詳細英訳は後続。"
+      ]
+    }
+  ],
+  "keptPlays": [],
+  "evidence": {
+    "links": [
+      {
+        "url": "https://kira-hai.net/makaiouji2016",
+        "checkedAt": "2026-10-26T08:21:08.932Z",
+        "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+      },
+      {
+        "url": "https://www.clie.asia/makaiouji_1/",
+        "checkedAt": "2026-10-26T08:21:09.491Z",
+        "note": "公演・人物の原文とSHA256を保存。採用項目と留保は人物notes・作品exceptionsを参照。"
+      }
+    ],
+    "sources": [
+      {
+        "label": "kira",
+        "url": "https://kira-hai.net/makaiouji2016",
+        "status": 200,
+        "checkedAt": "2026-10-26T08:21:08.932Z",
+        "sha256": "ad0f72ed52b128c1adea7ab9d65252a6d69fe823f8ef31297cc2a4dae0615272"
+      },
+      {
+        "label": "official",
+        "url": "https://www.clie.asia/makaiouji_1/",
+        "status": 200,
+        "checkedAt": "2026-10-26T08:21:09.491Z",
+        "sha256": "d2b78657b1b639a22f8a228162a2785023050feaa59c9e2ce0e5e813fe9f2668"
+      },
+      {
+        "label": "official2017",
+        "url": "https://www.clie.asia/makaiouji/",
+        "status": 200,
+        "checkedAt": "2026-10-26T08:21:09.751Z",
+        "sha256": "03360c3a40478908cd585f99e8f8082ebdeefa3ac73beb5df6d5f1a344a69678"
+      },
+      {
+        "label": "yonehara",
+        "url": "https://profile.yoshimoto.co.jp/talent/detail?id=3128",
+        "status": 200,
+        "checkedAt": "2026-10-26T08:27:18.180Z",
+        "sha256": "9f1da0f3453cacf3b63864212b9530e6e2b218132774f7e243a126832ce67d09"
+      },
+      {
+        "label": "kiraYonehara",
+        "url": "https://kira-hai.net/yonehara-kosuke",
+        "status": 200,
+        "checkedAt": "2026-10-26T08:27:18.672Z",
+        "sha256": "a6dc1e10761cfc1ba254d634d1e86543caef3eeaa9046497285ee0563f89d679"
+      },
+      {
+        "label": "endo",
+        "url": "https://www.umebou.com/endo-makoto",
+        "status": 200,
+        "checkedAt": "2026-10-26T08:27:19.263Z",
+        "sha256": "6d7c3c1ad1119ee1dbdc136c6b8cce09bbc10133d200e362b64df75c200f36a3"
+      },
+      {
+        "label": "ken",
+        "url": "https://www.2ps-twopeace.com/ken-ebisawa/",
+        "status": 200,
+        "checkedAt": "2026-10-26T08:27:19.866Z",
+        "sha256": "b7c6f2db34a6582dc4f08da4eecc98e2fd4a1c1c88309f23371929c4c9a94507"
+      },
+      {
+        "label": "kenProfile",
+        "url": "https://kenebisawa.localinfo.jp/pages/3103638/profile",
+        "status": 503,
+        "checkedAt": "2026-10-26T09:04:05.427Z",
+        "sha256": "35f2ec1a804898dc14151d69636180ff4c089e9123805d3798e319476e21f9c3"
+      },
+      {
+        "label": "endoBlog",
+        "url": "https://ameblo.jp/tokomaudone3636/entry-12463140974.html",
+        "status": 200,
+        "checkedAt": "2026-10-26T09:04:05.851Z",
+        "sha256": "810727eb05cb128f35d3fbedf840bf1a21a42d1c3b993ce0f1c33f90cf57dfde"
+      },
+      {
+        "label": "endoStage",
+        "url": "https://ameblo.jp/umebou-official/entry-12156520890.html",
+        "status": 200,
+        "checkedAt": "2026-10-26T09:04:06.123Z",
+        "sha256": "73adaa9b467755f1ac3ae1811ea6a33a466c1aa39809a8f7d77b6d75c076a0f0"
+      },
+      {
+        "label": "kenEplus",
+        "url": "https://eplus.jp/sf/word/0000061117",
+        "status": 200,
+        "checkedAt": "2026-10-26T09:04:06.910Z",
+        "sha256": "b82d1c270959363a310587061b15c6310c387244bd1600a159bb5f001f95cfc2"
+      },
+      {
+        "label": "kenFan",
+        "url": "https://blogtag.ameba.jp/news/%E3%83%9F%E3%83%A5%E9%AD%94%E7%95%8C%E7%8E%8B%E5%AD%90",
+        "status": 200,
+        "checkedAt": "2026-10-26T09:04:07.327Z",
+        "sha256": "c6690d9535ec217ea03ec3459f3b14162865fd0b0491271e6160619c80321cf5"
+      },
+      {
+        "label": "endoReading",
+        "url": "https://www.dimora.jp/talent-info/4/342517/?areaId=088",
+        "status": 200,
+        "checkedAt": "2026-10-26T09:04:07.687Z",
+        "sha256": "acd1153a3e070523921c0413b5031e5361a1df1b90b7966c9c5dc0095380f006"
+      },
+      {
+        "label": "tls",
+        "url": "https://supabase.com/changelog/cbc-tls-ciphers-deprecated",
+        "status": 200,
+        "checkedAt": "2026-10-26T09:04:08.112Z",
+        "sha256": "2016aa566e8cb75c726fd00f4c99f660b629b446c3a06dabe30c303c179e17f6"
+      },
+      {
+        "label": "supabaseDocs",
+        "url": "https://supabase.com/docs/reference/javascript/insert",
+        "status": 200,
+        "checkedAt": "2026-10-26T09:04:08.340Z",
+        "sha256": "0c4a7962a506e88a50f093f1c438a3eeefbabec1b5bea40e486a0c380c45fddc"
+      }
+    ],
+    "notes": [
+      "Supabase changelogの11/10旧TLS暗号無効化はNode24の現行TLSによるこのDMLに影響なし。既存候補登録・採用RPC使用、スキーマ・RLS・アプリ変更なし。"
+    ],
+    "unresolved": [
+      "次は2017年the Second spirit、その後シリーズ全体点検。",
+      "KENのDOB・身長・性別、遠藤の現在所属、詳細英訳・現行配信・人物属性の総合監査は後続。"
+    ]
+  },
+  "requestKey": "42e5dd21f3404e00fdc7b050f58c5a78d9c1e30d14116abe2496036f2357ebef",
+  "verification": {
+    "passed": true,
+    "requestKey": "42e5dd21f3404e00fdc7b050f58c5a78d9c1e30d14116abe2496036f2357ebef",
+    "changes": {
+      "actors": {
+        "before": 1148,
+        "after": 1151,
+        "modified": 0,
+        "added": 3,
+        "deleted": 0
+      },
+      "plays": {
+        "before": 402,
+        "after": 403,
+        "modified": 0,
+        "added": 1,
+        "deleted": 0
+      },
+      "franchises": {
+        "before": 198,
+        "after": 198,
+        "modified": 1,
+        "added": 0,
+        "deleted": 0
+      },
+      "casts": {
+        "before": 4105,
+        "after": 4115,
+        "modified": 0,
+        "added": 10,
+        "deleted": 0
+      },
+      "external_actors": {
+        "before": 1701,
+        "after": 1701,
+        "modified": 1,
+        "added": 0,
+        "deleted": 0
+      },
+      "external_cast_candidates": {
+        "before": 3459,
+        "after": 3469,
+        "modified": 0,
+        "added": 10,
+        "deleted": 0
+      },
+      "external_import_logs": {
+        "before": 5440,
+        "after": 5468,
+        "modified": 0,
+        "added": 28,
+        "deleted": 0
+      },
+      "actor_identity_sources": {
+        "before": 494,
+        "after": 497,
+        "modified": 0,
+        "added": 3,
+        "deleted": 0
+      }
+    },
+    "newActors": 3,
+    "newPlays": 1,
+    "newCasts": 10,
+    "existingActorsReused": 7,
+    "uniqueWorkActors": 10,
+    "existingRowsModified": 2,
+    "modifiedFields": [
+      "franchises.name",
+      "franchises.name_en",
+      "franchises.origin_note",
+      "franchises.description",
+      "franchises.description_en",
+      "franchises.updated_at",
+      "external_actors.matched_actor_id",
+      "external_actors.match_status",
+      "external_actors.match_confidence",
+      "external_actors.updated_at"
+    ],
+    "creditCategories": 21,
+    "ensembleNames": 4,
+    "seriesWorks": 1,
+    "seriesCastRows": 10,
+    "logActions": {
+      "create_cast": 10,
+      "register_reviewed_actor_with_identity": 3,
+      "complete_reviewed_cast_order": 10,
+      "complete_reviewed_series_copy": 1,
+      "stage_work_candidates": 1,
+      "complete_reviewed_makaiouji2016": 1,
+      "register_reviewed_play": 1,
+      "link_reviewed_external_actor": 1
+    },
+    "pendingChecks": [
+      "次は2017年the Second spirit、その後シリーズ全体点検。",
+      "KENのDOB・身長・性別、遠藤の現在所属、詳細英訳・現行配信・人物属性の総合監査は後続。"
+    ]
+  },
+  "publicVerification": {
+    "passed": true,
+    "pages": 24,
+    "castRows": 10,
+    "newActors": 3,
+    "creditCategories": 21,
+    "ensembleNames": 4,
+    "timeline": "2016/06",
+    "results": [
+      {
+        "path": "/actors/ayukawa-taiyo",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/norizuki-kohei",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/makaiouji2016",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/ishiwatari-mashu",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/series/makai-ouji",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/konishi-seiya",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/matsumoto-yuichi",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/kawaharada-takuya",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/saki-masato",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/yonehara-kosuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/endo-makoto",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/ken-ebisawa",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/series/makai-ouji",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/ayukawa-taiyo",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/makaiouji2016",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/ishiwatari-mashu",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/norizuki-kohei",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/matsumoto-yuichi",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/saki-masato",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/kawaharada-takuya",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/konishi-seiya",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/yonehara-kosuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/ken-ebisawa",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/endo-makoto",
+        "passed": true,
+        "status": 200
+      }
+    ]
+  },
+  "searchVerification": {
+    "passed": true,
+    "checks": 14,
+    "spaceAndNoSpace": true,
+    "knownGenderFilter": true,
+    "results": [
+      {
+        "path": "/actors?q=%E9%81%A0%E8%97%A4+%E8%AA%A0",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%B1%B3%E5%8E%9F+%E5%B9%B8%E4%BD%91&gender=male",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%B1%B3%E5%8E%9F%E5%B9%B8%E4%BD%91",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%B1%B3%E5%8E%9F+%E5%B9%B8%E4%BD%91",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E9%81%A0%E8%97%A4+%E8%AA%A0&gender=male",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E9%81%A0%E8%97%A4%E8%AA%A0",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=KEN+EBISAWA",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%B1%B3%E5%8E%9F+%E5%B9%B8%E4%BD%91",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%B1%B3%E5%8E%9F+%E5%B9%B8%E4%BD%91&gender=male",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%B1%B3%E5%8E%9F%E5%B9%B8%E4%BD%91",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E9%81%A0%E8%97%A4+%E8%AA%A0",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E9%81%A0%E8%97%A4%E8%AA%A0",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E9%81%A0%E8%97%A4+%E8%AA%A0&gender=male",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=KEN+EBISAWA",
+        "status": 200,
+        "passed": true
+      }
+    ]
+  },
+  "replayVerification": {
+    "passed": true,
+    "tables": {
+      "actors": {
+        "rows": 1151,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "plays": {
+        "rows": 403,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "franchises": {
+        "rows": 198,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "casts": {
+        "rows": 4115,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_actors": {
+        "rows": 1701,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_cast_candidates": {
+        "rows": 3469,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_import_logs": {
+        "rows": 5468,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "actor_identity_sources": {
+        "rows": 497,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      }
+    }
+  },
+  "sourceValidation": {
+    "officialRolePairs": true,
+    "officialCastOrder": true,
+    "unparsedClothembleLinesReviewed": true,
+    "commentsExcludedFromOfficialSchedule": true
+  },
+  "verificationScope": "2016年初演の10配役・21クレジットと日英24ページ、検索14件を確認。既存8テーブル全行保全と再実行0変更。2017年第2作は未登録でありシリーズ全体点検は未完。"
+}
