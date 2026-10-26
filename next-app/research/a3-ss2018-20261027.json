@@ -1,0 +1,4608 @@
+{
+  "version": 1,
+  "batchId": "a3-ss2018-20261027-01",
+  "expectedFranchise": {
+    "id": "03404164-26f0-476f-92e9-5b438984fe0d",
+    "name": "MANKAI STAGE『A3!』ACT1（エーステACT1）",
+    "created_at": "2025-12-13T04:58:27.220101+00:00",
+    "updated_at": "2025-12-13T04:58:27.220101+00:00",
+    "slug": "a3",
+    "intro": null,
+    "description": "MANKAI STAGE『A3!』シリーズの記念すべき第1作目。原作ゲームのメインストーリー第1部（劇団再生から各組の旗揚げ公演まで）を描く。物語の始まりとなる2組合同公演「SPRING & SUMMER 2018」「AUTUMN & WINTER 2019」から始まり、その後の各組単独公演（SPRING、SUMMER、AUTUMN、WINTER）へと続く、エーステの基礎を築いたシリーズ。劇団員たちが借金まみれのボロ劇団を立て直す軌跡と、春夏秋冬の4組・計20人の劇団員が揃うまでの物語が集約されている。",
+    "origin_type": "ゲーム原作",
+    "origin_note": "原作：イケメン役者育成ゲーム『A3!』（リベル・エンタテインメント）",
+    "production_companies": [
+      "ネルケプランニング",
+      "MANKAI STAGE『A3!』製作委員会"
+    ],
+    "related_franchise_ids": [
+      "d8d36e4f-9a0d-4a91-aac3-e6b8f24a8a5d",
+      "8d36fc91-4300-431f-a738-63696bd0f824",
+      "7eefe33e-9b9c-4cca-9c9f-5b67a37d701e"
+    ],
+    "format": "stage",
+    "description_en": "The memorable inaugural series of the MANKAI STAGE A3! franchise, adapting the first act of the original game's main story. It covers the complete journey of the theater company's revival and the inaugural performances of each troupe. Starting with the joint productions SPRING & SUMMER 2018 and AUTUMN & WINTER 2019, and leading into the dedicated solo performances for the Spring, Summer, Autumn, and Winter troupes, this series laid the foundation for the \"A-Ste\" legacy. It encapsulates the moving story of rebuilding a debt-ridden, run-down theater, capturing the journey until all 20 members across the four troupes are finally brought together.",
+    "name_en": "MANKAI STAGE A3! Act1 (A-Ste Act 1)"
+  },
+  "franchisePatch": {},
+  "actors": [
+    {
+      "actor": {
+        "id": "523f6dd4-9c56-4b48-a264-463ebb52f068",
+        "slug": "taguchi-ryo",
+        "name": "田口 涼",
+        "kana": "たぐち りょう",
+        "profile": "京都府出身の俳優。スワロウ準所属。MANKAI STAGE『A3!』で劇場支配人・松川伊助を演じる。舞台『クジラの子らは砂上に歌う』ではニビ役を務める。",
+        "image_url": null,
+        "sns": {
+          "official": "https://swallow-p.com/actor/taguchi-ryo/",
+          "x": "https://x.com/ryo_tagu0218"
+        },
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1989-02-18",
+        "height_cm": 175,
+        "blood_type": "AB",
+        "birthday_label": null,
+        "name_en": "Ryo Taguchi",
+        "profile_en": "An actor from Kyoto Prefecture and an associate member of Swallow. He plays theater manager Isuke Matsukawa in MANKAI STAGE A3! and Nibi in the stage adaptation of Children of the Whales.",
+        "death_date": null
+      },
+      "sourceActorName": "田口涼",
+      "profileUrl": "https://swallow-p.com/actor/taguchi-ryo/",
+      "evidence": [
+        {
+          "url": "https://swallow-p.com/actor/taguchi-ryo/",
+          "checkedAt": "2026-10-26T23:38:12.633Z",
+          "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+        },
+        {
+          "url": "https://swallow-p.com/actor/",
+          "checkedAt": "2026-10-26T23:37:36.888Z",
+          "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+        },
+        {
+          "url": "https://kira-hai.net/taguchi-ryo",
+          "checkedAt": "2026-10-26T23:37:35.603Z",
+          "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+        },
+        {
+          "url": "https://www.mankai-stage.jp/archive/ss2018/",
+          "checkedAt": "2026-10-26T23:33:22.952Z",
+          "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+        },
+        {
+          "url": "https://www.mankai-stage.jp/archive/ss2018/cast/detail.html",
+          "checkedAt": "2026-10-26T23:33:57.882Z",
+          "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+        }
+      ],
+      "notes": [
+        "公式は2/18、完全生年1989はキラハイと照合。京都府・175cm・ABは現行公式。キラハイ旧フリーランスを現行所属としない。準所属区分を保持。",
+        "性別は今回本人・名鑑の明示資料まで確定していないためnull。役柄・写真から推測しない。男性一覧の検索キャッシュは取得本文で本人行を確認できず根拠としない。",
+        "175cmは現行公式を採用し二次資料の174cmや他人の170cmを混ぜない。東京都出身とする他媒体より当該公式の京都府を優先。",
+        "松川伊助役は今作公式、ニビ役はキラハイ出演歴と公式当該出演を照合。姓名半角スペース。英字は公式Taguchi Ryoを姓名順Ryo Taguchiに配置。"
+      ]
+    }
+  ],
+  "externalActorLinks": [
+    {
+      "before": {
+        "id": "b2b10ec6-49f3-43b9-a27d-9b7044c49741",
+        "source": "kira-hai",
+        "source_actor_name": "田口涼",
+        "source_actor_url": "https://kira-hai.net/taguchi-ryo",
+        "alias_from": null,
+        "alias_to": null,
+        "note": null,
+        "matched_actor_id": null,
+        "match_status": "unmatched",
+        "match_confidence": 0,
+        "scraped_at": "2026-04-27T17:11:21.759+00:00",
+        "created_at": "2026-04-25T07:23:22.4174+00:00",
+        "updated_at": "2026-04-27T17:11:21.759+00:00",
+        "source_profile_facts_raw": null,
+        "source_birthday_raw": null,
+        "source_birthday": null,
+        "source_height_cm": null,
+        "source_blood_type": null,
+        "source_affiliation_raw": null,
+        "source_actor_kana": null
+      },
+      "patch": {
+        "matched_actor_id": "523f6dd4-9c56-4b48-a264-463ebb52f068",
+        "match_status": "matched",
+        "match_confidence": 100
+      }
+    }
+  ],
+  "works": [
+    {
+      "year": 2018,
+      "before": {
+        "id": "3b5f34b5-40a1-45fe-bfcf-d70060695251",
+        "slug": "ace-stage-ss",
+        "title": "MANKAI STAGE『A3!』～SPRING & SUMMER 2018～",
+        "franchise_id": "03404164-26f0-476f-92e9-5b438984fe0d",
+        "summary": "イケメン役者育成ゲーム『A3!』の舞台化シリーズ第一弾。借金まみれの劇団「MANKAIカンパニー」を立て直すため、春組と夏組が奮闘する。",
+        "period": "2018年6月",
+        "venue": "天王洲 銀河劇場 他",
+        "vod": {
+          "dmm": "#",
+          "unext": "#"
+        },
+        "genre": "comedy",
+        "created_at": "2025-12-13T05:12:12.983557+00:00",
+        "updated_at": "2025-12-13T05:12:12.983557+00:00",
+        "tags": [
+          "アイドル",
+          "コメディ",
+          "育成"
+        ],
+        "credits": null,
+        "related_franchise_ids": [],
+        "summary_en": null,
+        "title_en": null
+      },
+      "patch": {
+        "title": "MANKAI STAGE『A3!』～SPRING & SUMMER 2018～",
+        "period": "2018年6月28日〜11月4日",
+        "venue": "東京・東京凱旋：天王洲 銀河劇場／京都：京都劇場",
+        "summary": "イケメン役者育成ゲーム『A3!』の舞台化シリーズ第一弾。借金まみれの劇団「MANKAIカンパニー」を立て直すため、春組と夏組が奮闘する。",
+        "summary_en": "The first stage adaptation of the actor-training game A3!. The Spring and Summer Troupes work to rebuild the debt-ridden MANKAI Company.",
+        "title_en": "MANKAI STAGE A3! ~SPRING & SUMMER 2018~",
+        "credits": [
+          {
+            "role": "原作",
+            "names": [
+              "イケメン役者育成ゲーム『A3!（エースリー）』（リベル・エンタテインメント）"
+            ],
+            "is_core": true,
+            "sort_order": 1
+          },
+          {
+            "role": "演出",
+            "names": [
+              "松崎史也"
+            ],
+            "is_core": true,
+            "sort_order": 2
+          },
+          {
+            "role": "脚本",
+            "names": [
+              "亀田真二郎（東京パチプロデュース）"
+            ],
+            "is_core": true,
+            "sort_order": 3
+          },
+          {
+            "role": "音楽",
+            "names": [
+              "Yu（vague）"
+            ],
+            "is_core": false,
+            "sort_order": 4
+          },
+          {
+            "role": "振付",
+            "names": [
+              "梅棒"
+            ],
+            "is_core": false,
+            "sort_order": 5
+          },
+          {
+            "role": "メインテーマ制作",
+            "names": [
+              "大石昌良"
+            ],
+            "is_core": false,
+            "sort_order": 6
+          },
+          {
+            "role": "協力",
+            "names": [
+              "一般社団法人 日本2.5次元ミュージカル協会"
+            ],
+            "is_core": false,
+            "sort_order": 7
+          },
+          {
+            "role": "主催",
+            "names": [
+              "MANKAI STAGE『A3!』製作委員会（ネルケプランニング、ポニーキャニオン、リベル・エンタテインメント）"
+            ],
+            "is_core": false,
+            "sort_order": 8
+          },
+          {
+            "role": "公演日程",
+            "names": [
+              "東京：2018年6月28日〜7月8日（天王洲 銀河劇場）・全16公演、7月2日休演",
+              "京都：2018年7月13日〜16日（京都劇場）・全7公演",
+              "東京凱旋：2018年10月26日〜11月4日（天王洲 銀河劇場）・全15公演、10月29日休演"
+            ],
+            "is_core": false,
+            "sort_order": 9
+          },
+          {
+            "role": "上演時間（予定）",
+            "names": [
+              "約2時間35分（途中休憩あり・休憩分数未確認）"
+            ],
+            "is_core": false,
+            "sort_order": 10
+          }
+        ],
+        "vod": {}
+      },
+      "play": {
+        "id": "3b5f34b5-40a1-45fe-bfcf-d70060695251",
+        "slug": "ace-stage-ss",
+        "title": "MANKAI STAGE『A3!』～SPRING & SUMMER 2018～",
+        "franchise_id": "03404164-26f0-476f-92e9-5b438984fe0d",
+        "summary": "イケメン役者育成ゲーム『A3!』の舞台化シリーズ第一弾。借金まみれの劇団「MANKAIカンパニー」を立て直すため、春組と夏組が奮闘する。",
+        "period": "2018年6月28日〜11月4日",
+        "venue": "東京・東京凱旋：天王洲 銀河劇場／京都：京都劇場",
+        "vod": {},
+        "genre": "comedy",
+        "tags": [
+          "アイドル",
+          "コメディ",
+          "育成"
+        ],
+        "credits": [
+          {
+            "role": "原作",
+            "names": [
+              "イケメン役者育成ゲーム『A3!（エースリー）』（リベル・エンタテインメント）"
+            ],
+            "is_core": true,
+            "sort_order": 1
+          },
+          {
+            "role": "演出",
+            "names": [
+              "松崎史也"
+            ],
+            "is_core": true,
+            "sort_order": 2
+          },
+          {
+            "role": "脚本",
+            "names": [
+              "亀田真二郎（東京パチプロデュース）"
+            ],
+            "is_core": true,
+            "sort_order": 3
+          },
+          {
+            "role": "音楽",
+            "names": [
+              "Yu（vague）"
+            ],
+            "is_core": false,
+            "sort_order": 4
+          },
+          {
+            "role": "振付",
+            "names": [
+              "梅棒"
+            ],
+            "is_core": false,
+            "sort_order": 5
+          },
+          {
+            "role": "メインテーマ制作",
+            "names": [
+              "大石昌良"
+            ],
+            "is_core": false,
+            "sort_order": 6
+          },
+          {
+            "role": "協力",
+            "names": [
+              "一般社団法人 日本2.5次元ミュージカル協会"
+            ],
+            "is_core": false,
+            "sort_order": 7
+          },
+          {
+            "role": "主催",
+            "names": [
+              "MANKAI STAGE『A3!』製作委員会（ネルケプランニング、ポニーキャニオン、リベル・エンタテインメント）"
+            ],
+            "is_core": false,
+            "sort_order": 8
+          },
+          {
+            "role": "公演日程",
+            "names": [
+              "東京：2018年6月28日〜7月8日（天王洲 銀河劇場）・全16公演、7月2日休演",
+              "京都：2018年7月13日〜16日（京都劇場）・全7公演",
+              "東京凱旋：2018年10月26日〜11月4日（天王洲 銀河劇場）・全15公演、10月29日休演"
+            ],
+            "is_core": false,
+            "sort_order": 9
+          },
+          {
+            "role": "上演時間（予定）",
+            "names": [
+              "約2時間35分（途中休憩あり・休憩分数未確認）"
+            ],
+            "is_core": false,
+            "sort_order": 10
+          }
+        ],
+        "related_franchise_ids": [],
+        "summary_en": "The first stage adaptation of the actor-training game A3!. The Spring and Summer Troupes work to rebuild the debt-ridden MANKAI Company.",
+        "title_en": "MANKAI STAGE A3! ~SPRING & SUMMER 2018~"
+      },
+      "rawSource": {
+        "sourceUrl": "https://kira-hai.net/a3_2018",
+        "title": "MANKAI STAGE『A3!』~SPRING & SUMMER 2018~",
+        "scheduleLines": [
+          "2018年6月28日-7月8日 天王洲 銀河劇場",
+          "2018年7月13日-16日 京都劇場",
+          "2018年10月26日-11月4日 天王洲 銀河劇場"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "横田龍儀",
+            "sourceActorUrl": "https://kira-hai.net/yokota-ryugi",
+            "role_name": "佐久間咲也",
+            "cast_group": "春組"
+          },
+          {
+            "sourceActorName": "牧島輝",
+            "sourceActorUrl": "https://kira-hai.net/makishima-hikaru",
+            "role_name": "碓氷真澄",
+            "cast_group": "春組"
+          },
+          {
+            "sourceActorName": "前川優希",
+            "sourceActorUrl": "https://kira-hai.net/maekawa-yuki",
+            "role_name": "皆木綴",
+            "cast_group": "春組"
+          },
+          {
+            "sourceActorName": "立石俊樹",
+            "sourceActorUrl": "https://kira-hai.net/tateishi-toshiki",
+            "role_name": "茅ヶ崎至",
+            "cast_group": "春組"
+          },
+          {
+            "sourceActorName": "古谷大和",
+            "sourceActorUrl": "https://kira-hai.net/furuya-yamato",
+            "role_name": "シトロン",
+            "cast_group": "春組"
+          },
+          {
+            "sourceActorName": "陳内将",
+            "sourceActorUrl": "https://kira-hai.net/jinnai-sho",
+            "role_name": "皇天馬",
+            "cast_group": "夏組"
+          },
+          {
+            "sourceActorName": "宮崎湧",
+            "sourceActorUrl": "https://kira-hai.net/miyazaki-yu",
+            "role_name": "瑠璃川幸",
+            "cast_group": "夏組"
+          },
+          {
+            "sourceActorName": "野口準",
+            "sourceActorUrl": "https://kira-hai.net/noguchi-jun",
+            "role_name": "向坂椋",
+            "cast_group": "夏組"
+          },
+          {
+            "sourceActorName": "本田礼生",
+            "sourceActorUrl": "https://kira-hai.net/honda-reo",
+            "role_name": "斑鳩三角",
+            "cast_group": "夏組"
+          },
+          {
+            "sourceActorName": "赤澤燈",
+            "sourceActorUrl": "https://kira-hai.net/akazawa-tomoru",
+            "role_name": "三好一成",
+            "cast_group": "夏組"
+          },
+          {
+            "sourceActorName": "滝口幸広",
+            "sourceActorUrl": "https://kira-hai.net/takiguchi-yukihiro",
+            "role_name": "鹿島雄三(初代春組OB)",
+            "cast_group": "夏組"
+          },
+          {
+            "sourceActorName": "田口涼",
+            "sourceActorUrl": "https://kira-hai.net/taguchi-ryo",
+            "role_name": "松川伊助(劇場支配人)",
+            "cast_group": "夏組"
+          },
+          {
+            "sourceActorName": "田内季宇",
+            "sourceActorUrl": "https://kira-hai.net/tauchi-tokihiro",
+            "role_name": "迫田ケン(ヤクザ)",
+            "cast_group": "夏組"
+          },
+          {
+            "sourceActorName": "藤田玲",
+            "sourceActorUrl": "https://kira-hai.net/fujita-rei",
+            "role_name": "古市左京(ヤクザ)",
+            "cast_group": "夏組"
+          }
+        ],
+        "unparsed": []
+      },
+      "source": {
+        "sourceUrl": "https://kira-hai.net/a3_2018",
+        "title": "MANKAI STAGE『A3!』~SPRING & SUMMER 2018~",
+        "scheduleLines": [
+          "2018年6月28日-7月8日 天王洲 銀河劇場",
+          "2018年7月13日-16日 京都劇場",
+          "2018年10月26日-11月4日 天王洲 銀河劇場"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "横田龍儀",
+            "sourceActorUrl": "https://kira-hai.net/yokota-ryugi",
+            "role_name": "佐久間咲也",
+            "cast_group": "春組"
+          },
+          {
+            "sourceActorName": "牧島輝",
+            "sourceActorUrl": "https://kira-hai.net/makishima-hikaru",
+            "role_name": "碓氷真澄",
+            "cast_group": "春組"
+          },
+          {
+            "sourceActorName": "前川優希",
+            "sourceActorUrl": "https://kira-hai.net/maekawa-yuki",
+            "role_name": "皆木綴",
+            "cast_group": "春組"
+          },
+          {
+            "sourceActorName": "立石俊樹",
+            "sourceActorUrl": "https://kira-hai.net/tateishi-toshiki",
+            "role_name": "茅ヶ崎至",
+            "cast_group": "春組"
+          },
+          {
+            "sourceActorName": "古谷大和",
+            "sourceActorUrl": "https://kira-hai.net/furuya-yamato",
+            "role_name": "シトロン",
+            "cast_group": "春組"
+          },
+          {
+            "sourceActorName": "陳内将",
+            "sourceActorUrl": "https://kira-hai.net/jinnai-sho",
+            "role_name": "皇天馬",
+            "cast_group": "夏組"
+          },
+          {
+            "sourceActorName": "宮崎湧",
+            "sourceActorUrl": "https://kira-hai.net/miyazaki-yu",
+            "role_name": "瑠璃川幸",
+            "cast_group": "夏組"
+          },
+          {
+            "sourceActorName": "野口準",
+            "sourceActorUrl": "https://kira-hai.net/noguchi-jun",
+            "role_name": "向坂椋",
+            "cast_group": "夏組"
+          },
+          {
+            "sourceActorName": "本田礼生",
+            "sourceActorUrl": "https://kira-hai.net/honda-reo",
+            "role_name": "斑鳩三角",
+            "cast_group": "夏組"
+          },
+          {
+            "sourceActorName": "赤澤燈",
+            "sourceActorUrl": "https://kira-hai.net/akazawa-tomoru",
+            "role_name": "三好一成",
+            "cast_group": "夏組"
+          },
+          {
+            "sourceActorName": "滝口幸広",
+            "sourceActorUrl": "https://kira-hai.net/takiguchi-yukihiro",
+            "role_name": "鹿島雄三",
+            "cast_group": null,
+            "sourceAnnotation": "初代春組OB"
+          },
+          {
+            "sourceActorName": "田口涼",
+            "sourceActorUrl": "https://kira-hai.net/taguchi-ryo",
+            "role_name": "松川伊助",
+            "cast_group": null,
+            "sourceAnnotation": "劇場支配人"
+          },
+          {
+            "sourceActorName": "田内季宇",
+            "sourceActorUrl": "https://kira-hai.net/tauchi-tokihiro",
+            "role_name": "迫田ケン",
+            "cast_group": null,
+            "sourceAnnotation": "ヤクザ"
+          },
+          {
+            "sourceActorName": "藤田玲",
+            "sourceActorUrl": "https://kira-hai.net/fujita-rei",
+            "role_name": "古市左京",
+            "cast_group": null,
+            "sourceAnnotation": "ヤクザ"
+          }
+        ],
+        "unparsed": []
+      },
+      "sourceFingerprint": "0d73d0258adf0c26a0c3fd58ef425d50d65cb970da227e6b10a7278d9f71191b",
+      "stage": {
+        "workUrl": "https://kira-hai.net/a3_2018",
+        "key": "0f34997d14a18462eb799e1e803169a543f79f7544560942e72b92a0f6db238e",
+        "items": [
+          {
+            "source_actor_name": "横田龍儀",
+            "source_actor_url": "https://kira-hai.net/yokota-ryugi",
+            "source_work_title": "MANKAI STAGE『A3!』~SPRING & SUMMER 2018~",
+            "source_year": 2018,
+            "source_role_raw": "佐久間咲也",
+            "source_role_names": [
+              "佐久間咲也"
+            ],
+            "source_cast_group": "春組",
+            "source_order": 1,
+            "source_credit_key": "2e5f50e5da29dc743e1c",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/a3_2018",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/a3_2018",
+                  "checkedAt": "2026-10-26T23:33:57.538Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/",
+                  "checkedAt": "2026-10-26T23:33:22.952Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/cast/index.html",
+                  "checkedAt": "2026-10-26T23:33:22.934Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/mankai-stage2018/",
+                  "checkedAt": "2026-10-26T23:33:23.138Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://liberent.co.jp/news/2018/02/15/a3_stage-2/",
+                  "checkedAt": "2026-10-26T23:33:23.012Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/ticket/index.html",
+                  "checkedAt": "2026-10-26T23:33:57.699Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/guide/index.html",
+                  "checkedAt": "2026-10-26T23:33:57.760Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/introduction/index.html",
+                  "checkedAt": "2026-10-26T23:33:57.838Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/news/index.html",
+                  "checkedAt": "2026-10-26T23:33:22.974Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_01.png",
+                  "checkedAt": "2026-10-26T23:40:49.210Z",
+                  "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_02.png",
+                  "checkedAt": "2026-10-26T23:40:49.365Z",
+                  "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_03.png",
+                  "checkedAt": "2026-10-26T23:40:49.413Z",
+                  "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://swallow-p.com/actor/taguchi-ryo/",
+                  "checkedAt": "2026-10-26T23:38:12.633Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://swallow-p.com/actor/",
+                  "checkedAt": "2026-10-26T23:37:36.888Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://kira-hai.net/taguchi-ryo",
+                  "checkedAt": "2026-10-26T23:37:35.603Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                }
+              ],
+              "source_fingerprint": "0d73d0258adf0c26a0c3fd58ef425d50d65cb970da227e6b10a7278d9f71191b",
+              "review_fingerprint": "c4394e7b462d7ee3e3864172df64f7486d6b6556ce262241b34d8f1360b0a1ba",
+              "snapshot_fingerprint": "e541cc2e27179251eb58342172d92c57b1be3fd7795eeb4f69577bf69b6b9763",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 1,
+                "cast": {
+                  "sourceActorName": "横田龍儀",
+                  "sourceActorUrl": "https://kira-hai.net/yokota-ryugi",
+                  "role_name": "佐久間咲也",
+                  "cast_group": "春組"
+                }
+              },
+              "normalization_review": {
+                "group": "春組",
+                "role": "佐久間咲也",
+                "annotation": null,
+                "evidence": [
+                  {
+                    "url": "https://www.mankai-stage.jp/archive/ss2018/",
+                    "checkedAt": "2026-10-26T23:33:22.952Z",
+                    "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/a3_2018",
+                    "checkedAt": "2026-10-26T23:33:57.538Z",
+                    "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "ed310757-4569-4539-896d-6a8a5c326ac2",
+            "matched_play_id": "3b5f34b5-40a1-45fe-bfcf-d70060695251",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "牧島輝",
+            "source_actor_url": "https://kira-hai.net/makishima-hikaru",
+            "source_work_title": "MANKAI STAGE『A3!』~SPRING & SUMMER 2018~",
+            "source_year": 2018,
+            "source_role_raw": "碓氷真澄",
+            "source_role_names": [
+              "碓氷真澄"
+            ],
+            "source_cast_group": "春組",
+            "source_order": 2,
+            "source_credit_key": "53bd06232de0984bbc72",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/a3_2018",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/a3_2018",
+                  "checkedAt": "2026-10-26T23:33:57.538Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/",
+                  "checkedAt": "2026-10-26T23:33:22.952Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/cast/index.html",
+                  "checkedAt": "2026-10-26T23:33:22.934Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/mankai-stage2018/",
+                  "checkedAt": "2026-10-26T23:33:23.138Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://liberent.co.jp/news/2018/02/15/a3_stage-2/",
+                  "checkedAt": "2026-10-26T23:33:23.012Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/ticket/index.html",
+                  "checkedAt": "2026-10-26T23:33:57.699Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/guide/index.html",
+                  "checkedAt": "2026-10-26T23:33:57.760Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/introduction/index.html",
+                  "checkedAt": "2026-10-26T23:33:57.838Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/news/index.html",
+                  "checkedAt": "2026-10-26T23:33:22.974Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_01.png",
+                  "checkedAt": "2026-10-26T23:40:49.210Z",
+                  "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_02.png",
+                  "checkedAt": "2026-10-26T23:40:49.365Z",
+                  "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_03.png",
+                  "checkedAt": "2026-10-26T23:40:49.413Z",
+                  "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://swallow-p.com/actor/taguchi-ryo/",
+                  "checkedAt": "2026-10-26T23:38:12.633Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://swallow-p.com/actor/",
+                  "checkedAt": "2026-10-26T23:37:36.888Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://kira-hai.net/taguchi-ryo",
+                  "checkedAt": "2026-10-26T23:37:35.603Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                }
+              ],
+              "source_fingerprint": "0d73d0258adf0c26a0c3fd58ef425d50d65cb970da227e6b10a7278d9f71191b",
+              "review_fingerprint": "c4394e7b462d7ee3e3864172df64f7486d6b6556ce262241b34d8f1360b0a1ba",
+              "snapshot_fingerprint": "e541cc2e27179251eb58342172d92c57b1be3fd7795eeb4f69577bf69b6b9763",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 2,
+                "cast": {
+                  "sourceActorName": "牧島輝",
+                  "sourceActorUrl": "https://kira-hai.net/makishima-hikaru",
+                  "role_name": "碓氷真澄",
+                  "cast_group": "春組"
+                }
+              },
+              "normalization_review": {
+                "group": "春組",
+                "role": "碓氷真澄",
+                "annotation": null,
+                "evidence": [
+                  {
+                    "url": "https://www.mankai-stage.jp/archive/ss2018/",
+                    "checkedAt": "2026-10-26T23:33:22.952Z",
+                    "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/a3_2018",
+                    "checkedAt": "2026-10-26T23:33:57.538Z",
+                    "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "5533574d-232b-492a-bad8-2aadc44b2e63",
+            "matched_play_id": "3b5f34b5-40a1-45fe-bfcf-d70060695251",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "前川優希",
+            "source_actor_url": "https://kira-hai.net/maekawa-yuki",
+            "source_work_title": "MANKAI STAGE『A3!』~SPRING & SUMMER 2018~",
+            "source_year": 2018,
+            "source_role_raw": "皆木綴",
+            "source_role_names": [
+              "皆木綴"
+            ],
+            "source_cast_group": "春組",
+            "source_order": 3,
+            "source_credit_key": "a3f4beefff62b1e47515",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/a3_2018",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/a3_2018",
+                  "checkedAt": "2026-10-26T23:33:57.538Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/",
+                  "checkedAt": "2026-10-26T23:33:22.952Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/cast/index.html",
+                  "checkedAt": "2026-10-26T23:33:22.934Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/mankai-stage2018/",
+                  "checkedAt": "2026-10-26T23:33:23.138Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://liberent.co.jp/news/2018/02/15/a3_stage-2/",
+                  "checkedAt": "2026-10-26T23:33:23.012Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/ticket/index.html",
+                  "checkedAt": "2026-10-26T23:33:57.699Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/guide/index.html",
+                  "checkedAt": "2026-10-26T23:33:57.760Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/introduction/index.html",
+                  "checkedAt": "2026-10-26T23:33:57.838Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/news/index.html",
+                  "checkedAt": "2026-10-26T23:33:22.974Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_01.png",
+                  "checkedAt": "2026-10-26T23:40:49.210Z",
+                  "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_02.png",
+                  "checkedAt": "2026-10-26T23:40:49.365Z",
+                  "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_03.png",
+                  "checkedAt": "2026-10-26T23:40:49.413Z",
+                  "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://swallow-p.com/actor/taguchi-ryo/",
+                  "checkedAt": "2026-10-26T23:38:12.633Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://swallow-p.com/actor/",
+                  "checkedAt": "2026-10-26T23:37:36.888Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://kira-hai.net/taguchi-ryo",
+                  "checkedAt": "2026-10-26T23:37:35.603Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                }
+              ],
+              "source_fingerprint": "0d73d0258adf0c26a0c3fd58ef425d50d65cb970da227e6b10a7278d9f71191b",
+              "review_fingerprint": "c4394e7b462d7ee3e3864172df64f7486d6b6556ce262241b34d8f1360b0a1ba",
+              "snapshot_fingerprint": "e541cc2e27179251eb58342172d92c57b1be3fd7795eeb4f69577bf69b6b9763",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 3,
+                "cast": {
+                  "sourceActorName": "前川優希",
+                  "sourceActorUrl": "https://kira-hai.net/maekawa-yuki",
+                  "role_name": "皆木綴",
+                  "cast_group": "春組"
+                }
+              },
+              "normalization_review": {
+                "group": "春組",
+                "role": "皆木綴",
+                "annotation": null,
+                "evidence": [
+                  {
+                    "url": "https://www.mankai-stage.jp/archive/ss2018/",
+                    "checkedAt": "2026-10-26T23:33:22.952Z",
+                    "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/a3_2018",
+                    "checkedAt": "2026-10-26T23:33:57.538Z",
+                    "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "6f56fa1e-493d-4f17-917a-2559ecf800f5",
+            "matched_play_id": "3b5f34b5-40a1-45fe-bfcf-d70060695251",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "立石俊樹",
+            "source_actor_url": "https://kira-hai.net/tateishi-toshiki",
+            "source_work_title": "MANKAI STAGE『A3!』~SPRING & SUMMER 2018~",
+            "source_year": 2018,
+            "source_role_raw": "茅ヶ崎至",
+            "source_role_names": [
+              "茅ヶ崎至"
+            ],
+            "source_cast_group": "春組",
+            "source_order": 4,
+            "source_credit_key": "03fcec3f2e308076e43a",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/a3_2018",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/a3_2018",
+                  "checkedAt": "2026-10-26T23:33:57.538Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/",
+                  "checkedAt": "2026-10-26T23:33:22.952Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/cast/index.html",
+                  "checkedAt": "2026-10-26T23:33:22.934Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/mankai-stage2018/",
+                  "checkedAt": "2026-10-26T23:33:23.138Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://liberent.co.jp/news/2018/02/15/a3_stage-2/",
+                  "checkedAt": "2026-10-26T23:33:23.012Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/ticket/index.html",
+                  "checkedAt": "2026-10-26T23:33:57.699Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/guide/index.html",
+                  "checkedAt": "2026-10-26T23:33:57.760Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/introduction/index.html",
+                  "checkedAt": "2026-10-26T23:33:57.838Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/news/index.html",
+                  "checkedAt": "2026-10-26T23:33:22.974Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_01.png",
+                  "checkedAt": "2026-10-26T23:40:49.210Z",
+                  "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_02.png",
+                  "checkedAt": "2026-10-26T23:40:49.365Z",
+                  "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_03.png",
+                  "checkedAt": "2026-10-26T23:40:49.413Z",
+                  "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://swallow-p.com/actor/taguchi-ryo/",
+                  "checkedAt": "2026-10-26T23:38:12.633Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://swallow-p.com/actor/",
+                  "checkedAt": "2026-10-26T23:37:36.888Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://kira-hai.net/taguchi-ryo",
+                  "checkedAt": "2026-10-26T23:37:35.603Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                }
+              ],
+              "source_fingerprint": "0d73d0258adf0c26a0c3fd58ef425d50d65cb970da227e6b10a7278d9f71191b",
+              "review_fingerprint": "c4394e7b462d7ee3e3864172df64f7486d6b6556ce262241b34d8f1360b0a1ba",
+              "snapshot_fingerprint": "e541cc2e27179251eb58342172d92c57b1be3fd7795eeb4f69577bf69b6b9763",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 4,
+                "cast": {
+                  "sourceActorName": "立石俊樹",
+                  "sourceActorUrl": "https://kira-hai.net/tateishi-toshiki",
+                  "role_name": "茅ヶ崎至",
+                  "cast_group": "春組"
+                }
+              },
+              "normalization_review": {
+                "group": "春組",
+                "role": "茅ヶ崎至",
+                "annotation": null,
+                "evidence": [
+                  {
+                    "url": "https://www.mankai-stage.jp/archive/ss2018/",
+                    "checkedAt": "2026-10-26T23:33:22.952Z",
+                    "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/a3_2018",
+                    "checkedAt": "2026-10-26T23:33:57.538Z",
+                    "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "6f47cce5-7122-45ea-adcb-ce1dd8a6beaf",
+            "matched_play_id": "3b5f34b5-40a1-45fe-bfcf-d70060695251",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "古谷大和",
+            "source_actor_url": "https://kira-hai.net/furuya-yamato",
+            "source_work_title": "MANKAI STAGE『A3!』~SPRING & SUMMER 2018~",
+            "source_year": 2018,
+            "source_role_raw": "シトロン",
+            "source_role_names": [
+              "シトロン"
+            ],
+            "source_cast_group": "春組",
+            "source_order": 5,
+            "source_credit_key": "7df6bbb5ba3fc3851cb3",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/a3_2018",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/a3_2018",
+                  "checkedAt": "2026-10-26T23:33:57.538Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/",
+                  "checkedAt": "2026-10-26T23:33:22.952Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/cast/index.html",
+                  "checkedAt": "2026-10-26T23:33:22.934Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/mankai-stage2018/",
+                  "checkedAt": "2026-10-26T23:33:23.138Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://liberent.co.jp/news/2018/02/15/a3_stage-2/",
+                  "checkedAt": "2026-10-26T23:33:23.012Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/ticket/index.html",
+                  "checkedAt": "2026-10-26T23:33:57.699Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/guide/index.html",
+                  "checkedAt": "2026-10-26T23:33:57.760Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/introduction/index.html",
+                  "checkedAt": "2026-10-26T23:33:57.838Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/news/index.html",
+                  "checkedAt": "2026-10-26T23:33:22.974Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_01.png",
+                  "checkedAt": "2026-10-26T23:40:49.210Z",
+                  "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_02.png",
+                  "checkedAt": "2026-10-26T23:40:49.365Z",
+                  "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_03.png",
+                  "checkedAt": "2026-10-26T23:40:49.413Z",
+                  "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://swallow-p.com/actor/taguchi-ryo/",
+                  "checkedAt": "2026-10-26T23:38:12.633Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://swallow-p.com/actor/",
+                  "checkedAt": "2026-10-26T23:37:36.888Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://kira-hai.net/taguchi-ryo",
+                  "checkedAt": "2026-10-26T23:37:35.603Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                }
+              ],
+              "source_fingerprint": "0d73d0258adf0c26a0c3fd58ef425d50d65cb970da227e6b10a7278d9f71191b",
+              "review_fingerprint": "c4394e7b462d7ee3e3864172df64f7486d6b6556ce262241b34d8f1360b0a1ba",
+              "snapshot_fingerprint": "e541cc2e27179251eb58342172d92c57b1be3fd7795eeb4f69577bf69b6b9763",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 5,
+                "cast": {
+                  "sourceActorName": "古谷大和",
+                  "sourceActorUrl": "https://kira-hai.net/furuya-yamato",
+                  "role_name": "シトロン",
+                  "cast_group": "春組"
+                }
+              },
+              "normalization_review": {
+                "group": "春組",
+                "role": "シトロン",
+                "annotation": null,
+                "evidence": [
+                  {
+                    "url": "https://www.mankai-stage.jp/archive/ss2018/",
+                    "checkedAt": "2026-10-26T23:33:22.952Z",
+                    "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/a3_2018",
+                    "checkedAt": "2026-10-26T23:33:57.538Z",
+                    "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "73a7a70b-d661-445f-82de-5a7d81d95c55",
+            "matched_play_id": "3b5f34b5-40a1-45fe-bfcf-d70060695251",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "陳内将",
+            "source_actor_url": "https://kira-hai.net/jinnai-sho",
+            "source_work_title": "MANKAI STAGE『A3!』~SPRING & SUMMER 2018~",
+            "source_year": 2018,
+            "source_role_raw": "皇天馬",
+            "source_role_names": [
+              "皇天馬"
+            ],
+            "source_cast_group": "夏組",
+            "source_order": 6,
+            "source_credit_key": "3217459388615fda05ad",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/a3_2018",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/a3_2018",
+                  "checkedAt": "2026-10-26T23:33:57.538Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/",
+                  "checkedAt": "2026-10-26T23:33:22.952Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/cast/index.html",
+                  "checkedAt": "2026-10-26T23:33:22.934Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/mankai-stage2018/",
+                  "checkedAt": "2026-10-26T23:33:23.138Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://liberent.co.jp/news/2018/02/15/a3_stage-2/",
+                  "checkedAt": "2026-10-26T23:33:23.012Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/ticket/index.html",
+                  "checkedAt": "2026-10-26T23:33:57.699Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/guide/index.html",
+                  "checkedAt": "2026-10-26T23:33:57.760Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/introduction/index.html",
+                  "checkedAt": "2026-10-26T23:33:57.838Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/news/index.html",
+                  "checkedAt": "2026-10-26T23:33:22.974Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_01.png",
+                  "checkedAt": "2026-10-26T23:40:49.210Z",
+                  "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_02.png",
+                  "checkedAt": "2026-10-26T23:40:49.365Z",
+                  "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_03.png",
+                  "checkedAt": "2026-10-26T23:40:49.413Z",
+                  "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://swallow-p.com/actor/taguchi-ryo/",
+                  "checkedAt": "2026-10-26T23:38:12.633Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://swallow-p.com/actor/",
+                  "checkedAt": "2026-10-26T23:37:36.888Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://kira-hai.net/taguchi-ryo",
+                  "checkedAt": "2026-10-26T23:37:35.603Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                }
+              ],
+              "source_fingerprint": "0d73d0258adf0c26a0c3fd58ef425d50d65cb970da227e6b10a7278d9f71191b",
+              "review_fingerprint": "c4394e7b462d7ee3e3864172df64f7486d6b6556ce262241b34d8f1360b0a1ba",
+              "snapshot_fingerprint": "e541cc2e27179251eb58342172d92c57b1be3fd7795eeb4f69577bf69b6b9763",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 6,
+                "cast": {
+                  "sourceActorName": "陳内将",
+                  "sourceActorUrl": "https://kira-hai.net/jinnai-sho",
+                  "role_name": "皇天馬",
+                  "cast_group": "夏組"
+                }
+              },
+              "normalization_review": {
+                "group": "夏組",
+                "role": "皇天馬",
+                "annotation": null,
+                "evidence": [
+                  {
+                    "url": "https://www.mankai-stage.jp/archive/ss2018/",
+                    "checkedAt": "2026-10-26T23:33:22.952Z",
+                    "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/a3_2018",
+                    "checkedAt": "2026-10-26T23:33:57.538Z",
+                    "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "3ec32fb6-f2f3-4388-b8d1-8bede9472e44",
+            "matched_play_id": "3b5f34b5-40a1-45fe-bfcf-d70060695251",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "宮崎湧",
+            "source_actor_url": "https://kira-hai.net/miyazaki-yu",
+            "source_work_title": "MANKAI STAGE『A3!』~SPRING & SUMMER 2018~",
+            "source_year": 2018,
+            "source_role_raw": "瑠璃川幸",
+            "source_role_names": [
+              "瑠璃川幸"
+            ],
+            "source_cast_group": "夏組",
+            "source_order": 7,
+            "source_credit_key": "ea674c446244498995da",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/a3_2018",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/a3_2018",
+                  "checkedAt": "2026-10-26T23:33:57.538Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/",
+                  "checkedAt": "2026-10-26T23:33:22.952Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/cast/index.html",
+                  "checkedAt": "2026-10-26T23:33:22.934Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/mankai-stage2018/",
+                  "checkedAt": "2026-10-26T23:33:23.138Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://liberent.co.jp/news/2018/02/15/a3_stage-2/",
+                  "checkedAt": "2026-10-26T23:33:23.012Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/ticket/index.html",
+                  "checkedAt": "2026-10-26T23:33:57.699Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/guide/index.html",
+                  "checkedAt": "2026-10-26T23:33:57.760Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/introduction/index.html",
+                  "checkedAt": "2026-10-26T23:33:57.838Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/news/index.html",
+                  "checkedAt": "2026-10-26T23:33:22.974Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_01.png",
+                  "checkedAt": "2026-10-26T23:40:49.210Z",
+                  "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_02.png",
+                  "checkedAt": "2026-10-26T23:40:49.365Z",
+                  "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_03.png",
+                  "checkedAt": "2026-10-26T23:40:49.413Z",
+                  "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://swallow-p.com/actor/taguchi-ryo/",
+                  "checkedAt": "2026-10-26T23:38:12.633Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://swallow-p.com/actor/",
+                  "checkedAt": "2026-10-26T23:37:36.888Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://kira-hai.net/taguchi-ryo",
+                  "checkedAt": "2026-10-26T23:37:35.603Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                }
+              ],
+              "source_fingerprint": "0d73d0258adf0c26a0c3fd58ef425d50d65cb970da227e6b10a7278d9f71191b",
+              "review_fingerprint": "c4394e7b462d7ee3e3864172df64f7486d6b6556ce262241b34d8f1360b0a1ba",
+              "snapshot_fingerprint": "e541cc2e27179251eb58342172d92c57b1be3fd7795eeb4f69577bf69b6b9763",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 7,
+                "cast": {
+                  "sourceActorName": "宮崎湧",
+                  "sourceActorUrl": "https://kira-hai.net/miyazaki-yu",
+                  "role_name": "瑠璃川幸",
+                  "cast_group": "夏組"
+                }
+              },
+              "normalization_review": {
+                "group": "夏組",
+                "role": "瑠璃川幸",
+                "annotation": null,
+                "evidence": [
+                  {
+                    "url": "https://www.mankai-stage.jp/archive/ss2018/",
+                    "checkedAt": "2026-10-26T23:33:22.952Z",
+                    "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/a3_2018",
+                    "checkedAt": "2026-10-26T23:33:57.538Z",
+                    "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "fb1a7fa3-c90d-4c6c-86b8-af012fccf368",
+            "matched_play_id": "3b5f34b5-40a1-45fe-bfcf-d70060695251",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "野口準",
+            "source_actor_url": "https://kira-hai.net/noguchi-jun",
+            "source_work_title": "MANKAI STAGE『A3!』~SPRING & SUMMER 2018~",
+            "source_year": 2018,
+            "source_role_raw": "向坂椋",
+            "source_role_names": [
+              "向坂椋"
+            ],
+            "source_cast_group": "夏組",
+            "source_order": 8,
+            "source_credit_key": "ca58e405f21051a52411",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/a3_2018",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/a3_2018",
+                  "checkedAt": "2026-10-26T23:33:57.538Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/",
+                  "checkedAt": "2026-10-26T23:33:22.952Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/cast/index.html",
+                  "checkedAt": "2026-10-26T23:33:22.934Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/mankai-stage2018/",
+                  "checkedAt": "2026-10-26T23:33:23.138Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://liberent.co.jp/news/2018/02/15/a3_stage-2/",
+                  "checkedAt": "2026-10-26T23:33:23.012Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/ticket/index.html",
+                  "checkedAt": "2026-10-26T23:33:57.699Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/guide/index.html",
+                  "checkedAt": "2026-10-26T23:33:57.760Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/introduction/index.html",
+                  "checkedAt": "2026-10-26T23:33:57.838Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/news/index.html",
+                  "checkedAt": "2026-10-26T23:33:22.974Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_01.png",
+                  "checkedAt": "2026-10-26T23:40:49.210Z",
+                  "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_02.png",
+                  "checkedAt": "2026-10-26T23:40:49.365Z",
+                  "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_03.png",
+                  "checkedAt": "2026-10-26T23:40:49.413Z",
+                  "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://swallow-p.com/actor/taguchi-ryo/",
+                  "checkedAt": "2026-10-26T23:38:12.633Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://swallow-p.com/actor/",
+                  "checkedAt": "2026-10-26T23:37:36.888Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://kira-hai.net/taguchi-ryo",
+                  "checkedAt": "2026-10-26T23:37:35.603Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                }
+              ],
+              "source_fingerprint": "0d73d0258adf0c26a0c3fd58ef425d50d65cb970da227e6b10a7278d9f71191b",
+              "review_fingerprint": "c4394e7b462d7ee3e3864172df64f7486d6b6556ce262241b34d8f1360b0a1ba",
+              "snapshot_fingerprint": "e541cc2e27179251eb58342172d92c57b1be3fd7795eeb4f69577bf69b6b9763",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 8,
+                "cast": {
+                  "sourceActorName": "野口準",
+                  "sourceActorUrl": "https://kira-hai.net/noguchi-jun",
+                  "role_name": "向坂椋",
+                  "cast_group": "夏組"
+                }
+              },
+              "normalization_review": {
+                "group": "夏組",
+                "role": "向坂椋",
+                "annotation": null,
+                "evidence": [
+                  {
+                    "url": "https://www.mankai-stage.jp/archive/ss2018/",
+                    "checkedAt": "2026-10-26T23:33:22.952Z",
+                    "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/a3_2018",
+                    "checkedAt": "2026-10-26T23:33:57.538Z",
+                    "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "a39fa69c-ac9b-4ed3-ba69-394ca3a921ad",
+            "matched_play_id": "3b5f34b5-40a1-45fe-bfcf-d70060695251",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "本田礼生",
+            "source_actor_url": "https://kira-hai.net/honda-reo",
+            "source_work_title": "MANKAI STAGE『A3!』~SPRING & SUMMER 2018~",
+            "source_year": 2018,
+            "source_role_raw": "斑鳩三角",
+            "source_role_names": [
+              "斑鳩三角"
+            ],
+            "source_cast_group": "夏組",
+            "source_order": 9,
+            "source_credit_key": "9cd2bf2e8c48dff09310",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/a3_2018",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/a3_2018",
+                  "checkedAt": "2026-10-26T23:33:57.538Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/",
+                  "checkedAt": "2026-10-26T23:33:22.952Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/cast/index.html",
+                  "checkedAt": "2026-10-26T23:33:22.934Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/mankai-stage2018/",
+                  "checkedAt": "2026-10-26T23:33:23.138Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://liberent.co.jp/news/2018/02/15/a3_stage-2/",
+                  "checkedAt": "2026-10-26T23:33:23.012Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/ticket/index.html",
+                  "checkedAt": "2026-10-26T23:33:57.699Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/guide/index.html",
+                  "checkedAt": "2026-10-26T23:33:57.760Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/introduction/index.html",
+                  "checkedAt": "2026-10-26T23:33:57.838Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/news/index.html",
+                  "checkedAt": "2026-10-26T23:33:22.974Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_01.png",
+                  "checkedAt": "2026-10-26T23:40:49.210Z",
+                  "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_02.png",
+                  "checkedAt": "2026-10-26T23:40:49.365Z",
+                  "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_03.png",
+                  "checkedAt": "2026-10-26T23:40:49.413Z",
+                  "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://swallow-p.com/actor/taguchi-ryo/",
+                  "checkedAt": "2026-10-26T23:38:12.633Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://swallow-p.com/actor/",
+                  "checkedAt": "2026-10-26T23:37:36.888Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://kira-hai.net/taguchi-ryo",
+                  "checkedAt": "2026-10-26T23:37:35.603Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                }
+              ],
+              "source_fingerprint": "0d73d0258adf0c26a0c3fd58ef425d50d65cb970da227e6b10a7278d9f71191b",
+              "review_fingerprint": "c4394e7b462d7ee3e3864172df64f7486d6b6556ce262241b34d8f1360b0a1ba",
+              "snapshot_fingerprint": "e541cc2e27179251eb58342172d92c57b1be3fd7795eeb4f69577bf69b6b9763",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 9,
+                "cast": {
+                  "sourceActorName": "本田礼生",
+                  "sourceActorUrl": "https://kira-hai.net/honda-reo",
+                  "role_name": "斑鳩三角",
+                  "cast_group": "夏組"
+                }
+              },
+              "normalization_review": {
+                "group": "夏組",
+                "role": "斑鳩三角",
+                "annotation": null,
+                "evidence": [
+                  {
+                    "url": "https://www.mankai-stage.jp/archive/ss2018/",
+                    "checkedAt": "2026-10-26T23:33:22.952Z",
+                    "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/a3_2018",
+                    "checkedAt": "2026-10-26T23:33:57.538Z",
+                    "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "8b7c86f6-a193-46a9-89b3-2662f03b7b2b",
+            "matched_play_id": "3b5f34b5-40a1-45fe-bfcf-d70060695251",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "赤澤燈",
+            "source_actor_url": "https://kira-hai.net/akazawa-tomoru",
+            "source_work_title": "MANKAI STAGE『A3!』~SPRING & SUMMER 2018~",
+            "source_year": 2018,
+            "source_role_raw": "三好一成",
+            "source_role_names": [
+              "三好一成"
+            ],
+            "source_cast_group": "夏組",
+            "source_order": 10,
+            "source_credit_key": "7f19a1a572329682fd9c",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/a3_2018",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/a3_2018",
+                  "checkedAt": "2026-10-26T23:33:57.538Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/",
+                  "checkedAt": "2026-10-26T23:33:22.952Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/cast/index.html",
+                  "checkedAt": "2026-10-26T23:33:22.934Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/mankai-stage2018/",
+                  "checkedAt": "2026-10-26T23:33:23.138Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://liberent.co.jp/news/2018/02/15/a3_stage-2/",
+                  "checkedAt": "2026-10-26T23:33:23.012Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/ticket/index.html",
+                  "checkedAt": "2026-10-26T23:33:57.699Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/guide/index.html",
+                  "checkedAt": "2026-10-26T23:33:57.760Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/introduction/index.html",
+                  "checkedAt": "2026-10-26T23:33:57.838Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/news/index.html",
+                  "checkedAt": "2026-10-26T23:33:22.974Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_01.png",
+                  "checkedAt": "2026-10-26T23:40:49.210Z",
+                  "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_02.png",
+                  "checkedAt": "2026-10-26T23:40:49.365Z",
+                  "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_03.png",
+                  "checkedAt": "2026-10-26T23:40:49.413Z",
+                  "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://swallow-p.com/actor/taguchi-ryo/",
+                  "checkedAt": "2026-10-26T23:38:12.633Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://swallow-p.com/actor/",
+                  "checkedAt": "2026-10-26T23:37:36.888Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://kira-hai.net/taguchi-ryo",
+                  "checkedAt": "2026-10-26T23:37:35.603Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                }
+              ],
+              "source_fingerprint": "0d73d0258adf0c26a0c3fd58ef425d50d65cb970da227e6b10a7278d9f71191b",
+              "review_fingerprint": "c4394e7b462d7ee3e3864172df64f7486d6b6556ce262241b34d8f1360b0a1ba",
+              "snapshot_fingerprint": "e541cc2e27179251eb58342172d92c57b1be3fd7795eeb4f69577bf69b6b9763",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 10,
+                "cast": {
+                  "sourceActorName": "赤澤燈",
+                  "sourceActorUrl": "https://kira-hai.net/akazawa-tomoru",
+                  "role_name": "三好一成",
+                  "cast_group": "夏組"
+                }
+              },
+              "normalization_review": {
+                "group": "夏組",
+                "role": "三好一成",
+                "annotation": null,
+                "evidence": [
+                  {
+                    "url": "https://www.mankai-stage.jp/archive/ss2018/",
+                    "checkedAt": "2026-10-26T23:33:22.952Z",
+                    "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/a3_2018",
+                    "checkedAt": "2026-10-26T23:33:57.538Z",
+                    "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "ac91e41a-2db0-4f49-8389-a7d9786a4201",
+            "matched_play_id": "3b5f34b5-40a1-45fe-bfcf-d70060695251",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "滝口幸広",
+            "source_actor_url": "https://kira-hai.net/takiguchi-yukihiro",
+            "source_work_title": "MANKAI STAGE『A3!』~SPRING & SUMMER 2018~",
+            "source_year": 2018,
+            "source_role_raw": "鹿島雄三",
+            "source_role_names": [
+              "鹿島雄三"
+            ],
+            "source_cast_group": null,
+            "source_order": 11,
+            "source_credit_key": "b732b0904afe2477faf1",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/a3_2018",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/a3_2018",
+                  "checkedAt": "2026-10-26T23:33:57.538Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/",
+                  "checkedAt": "2026-10-26T23:33:22.952Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/cast/index.html",
+                  "checkedAt": "2026-10-26T23:33:22.934Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/mankai-stage2018/",
+                  "checkedAt": "2026-10-26T23:33:23.138Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://liberent.co.jp/news/2018/02/15/a3_stage-2/",
+                  "checkedAt": "2026-10-26T23:33:23.012Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/ticket/index.html",
+                  "checkedAt": "2026-10-26T23:33:57.699Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/guide/index.html",
+                  "checkedAt": "2026-10-26T23:33:57.760Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/introduction/index.html",
+                  "checkedAt": "2026-10-26T23:33:57.838Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/news/index.html",
+                  "checkedAt": "2026-10-26T23:33:22.974Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_01.png",
+                  "checkedAt": "2026-10-26T23:40:49.210Z",
+                  "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_02.png",
+                  "checkedAt": "2026-10-26T23:40:49.365Z",
+                  "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_03.png",
+                  "checkedAt": "2026-10-26T23:40:49.413Z",
+                  "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://swallow-p.com/actor/taguchi-ryo/",
+                  "checkedAt": "2026-10-26T23:38:12.633Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://swallow-p.com/actor/",
+                  "checkedAt": "2026-10-26T23:37:36.888Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://kira-hai.net/taguchi-ryo",
+                  "checkedAt": "2026-10-26T23:37:35.603Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                }
+              ],
+              "source_fingerprint": "0d73d0258adf0c26a0c3fd58ef425d50d65cb970da227e6b10a7278d9f71191b",
+              "review_fingerprint": "c4394e7b462d7ee3e3864172df64f7486d6b6556ce262241b34d8f1360b0a1ba",
+              "snapshot_fingerprint": "e541cc2e27179251eb58342172d92c57b1be3fd7795eeb4f69577bf69b6b9763",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 11,
+                "cast": {
+                  "sourceActorName": "滝口幸広",
+                  "sourceActorUrl": "https://kira-hai.net/takiguchi-yukihiro",
+                  "role_name": "鹿島雄三(初代春組OB)",
+                  "cast_group": "夏組"
+                }
+              },
+              "normalization_review": {
+                "group": null,
+                "role": "鹿島雄三",
+                "annotation": "初代春組OB",
+                "evidence": [
+                  {
+                    "url": "https://www.mankai-stage.jp/archive/ss2018/",
+                    "checkedAt": "2026-10-26T23:33:22.952Z",
+                    "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/a3_2018",
+                    "checkedAt": "2026-10-26T23:33:57.538Z",
+                    "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "33f1f008-551f-4406-8a12-7c38705e7fc5",
+            "matched_play_id": "3b5f34b5-40a1-45fe-bfcf-d70060695251",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "田口涼",
+            "source_actor_url": "https://kira-hai.net/taguchi-ryo",
+            "source_work_title": "MANKAI STAGE『A3!』~SPRING & SUMMER 2018~",
+            "source_year": 2018,
+            "source_role_raw": "松川伊助",
+            "source_role_names": [
+              "松川伊助"
+            ],
+            "source_cast_group": null,
+            "source_order": 12,
+            "source_credit_key": "b427e92f1af5625981f3",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/a3_2018",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/a3_2018",
+                  "checkedAt": "2026-10-26T23:33:57.538Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/",
+                  "checkedAt": "2026-10-26T23:33:22.952Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/cast/index.html",
+                  "checkedAt": "2026-10-26T23:33:22.934Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/mankai-stage2018/",
+                  "checkedAt": "2026-10-26T23:33:23.138Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://liberent.co.jp/news/2018/02/15/a3_stage-2/",
+                  "checkedAt": "2026-10-26T23:33:23.012Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/ticket/index.html",
+                  "checkedAt": "2026-10-26T23:33:57.699Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/guide/index.html",
+                  "checkedAt": "2026-10-26T23:33:57.760Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/introduction/index.html",
+                  "checkedAt": "2026-10-26T23:33:57.838Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/news/index.html",
+                  "checkedAt": "2026-10-26T23:33:22.974Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_01.png",
+                  "checkedAt": "2026-10-26T23:40:49.210Z",
+                  "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_02.png",
+                  "checkedAt": "2026-10-26T23:40:49.365Z",
+                  "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_03.png",
+                  "checkedAt": "2026-10-26T23:40:49.413Z",
+                  "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://swallow-p.com/actor/taguchi-ryo/",
+                  "checkedAt": "2026-10-26T23:38:12.633Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://swallow-p.com/actor/",
+                  "checkedAt": "2026-10-26T23:37:36.888Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://kira-hai.net/taguchi-ryo",
+                  "checkedAt": "2026-10-26T23:37:35.603Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                }
+              ],
+              "source_fingerprint": "0d73d0258adf0c26a0c3fd58ef425d50d65cb970da227e6b10a7278d9f71191b",
+              "review_fingerprint": "c4394e7b462d7ee3e3864172df64f7486d6b6556ce262241b34d8f1360b0a1ba",
+              "snapshot_fingerprint": "e541cc2e27179251eb58342172d92c57b1be3fd7795eeb4f69577bf69b6b9763",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 12,
+                "cast": {
+                  "sourceActorName": "田口涼",
+                  "sourceActorUrl": "https://kira-hai.net/taguchi-ryo",
+                  "role_name": "松川伊助(劇場支配人)",
+                  "cast_group": "夏組"
+                }
+              },
+              "normalization_review": {
+                "group": null,
+                "role": "松川伊助",
+                "annotation": "劇場支配人",
+                "evidence": [
+                  {
+                    "url": "https://www.mankai-stage.jp/archive/ss2018/",
+                    "checkedAt": "2026-10-26T23:33:22.952Z",
+                    "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/a3_2018",
+                    "checkedAt": "2026-10-26T23:33:57.538Z",
+                    "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "523f6dd4-9c56-4b48-a264-463ebb52f068",
+            "matched_play_id": "3b5f34b5-40a1-45fe-bfcf-d70060695251",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "田内季宇",
+            "source_actor_url": "https://kira-hai.net/tauchi-tokihiro",
+            "source_work_title": "MANKAI STAGE『A3!』~SPRING & SUMMER 2018~",
+            "source_year": 2018,
+            "source_role_raw": "迫田ケン",
+            "source_role_names": [
+              "迫田ケン"
+            ],
+            "source_cast_group": null,
+            "source_order": 13,
+            "source_credit_key": "02d780776d84089ea47d",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/a3_2018",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/a3_2018",
+                  "checkedAt": "2026-10-26T23:33:57.538Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/",
+                  "checkedAt": "2026-10-26T23:33:22.952Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/cast/index.html",
+                  "checkedAt": "2026-10-26T23:33:22.934Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/mankai-stage2018/",
+                  "checkedAt": "2026-10-26T23:33:23.138Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://liberent.co.jp/news/2018/02/15/a3_stage-2/",
+                  "checkedAt": "2026-10-26T23:33:23.012Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/ticket/index.html",
+                  "checkedAt": "2026-10-26T23:33:57.699Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/guide/index.html",
+                  "checkedAt": "2026-10-26T23:33:57.760Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/introduction/index.html",
+                  "checkedAt": "2026-10-26T23:33:57.838Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/news/index.html",
+                  "checkedAt": "2026-10-26T23:33:22.974Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_01.png",
+                  "checkedAt": "2026-10-26T23:40:49.210Z",
+                  "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_02.png",
+                  "checkedAt": "2026-10-26T23:40:49.365Z",
+                  "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_03.png",
+                  "checkedAt": "2026-10-26T23:40:49.413Z",
+                  "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://swallow-p.com/actor/taguchi-ryo/",
+                  "checkedAt": "2026-10-26T23:38:12.633Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://swallow-p.com/actor/",
+                  "checkedAt": "2026-10-26T23:37:36.888Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://kira-hai.net/taguchi-ryo",
+                  "checkedAt": "2026-10-26T23:37:35.603Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                }
+              ],
+              "source_fingerprint": "0d73d0258adf0c26a0c3fd58ef425d50d65cb970da227e6b10a7278d9f71191b",
+              "review_fingerprint": "c4394e7b462d7ee3e3864172df64f7486d6b6556ce262241b34d8f1360b0a1ba",
+              "snapshot_fingerprint": "e541cc2e27179251eb58342172d92c57b1be3fd7795eeb4f69577bf69b6b9763",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 13,
+                "cast": {
+                  "sourceActorName": "田内季宇",
+                  "sourceActorUrl": "https://kira-hai.net/tauchi-tokihiro",
+                  "role_name": "迫田ケン(ヤクザ)",
+                  "cast_group": "夏組"
+                }
+              },
+              "normalization_review": {
+                "group": null,
+                "role": "迫田ケン",
+                "annotation": "ヤクザ",
+                "evidence": [
+                  {
+                    "url": "https://www.mankai-stage.jp/archive/ss2018/",
+                    "checkedAt": "2026-10-26T23:33:22.952Z",
+                    "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/a3_2018",
+                    "checkedAt": "2026-10-26T23:33:57.538Z",
+                    "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "73dd3751-ae6e-4922-b252-a9cdbae324e6",
+            "matched_play_id": "3b5f34b5-40a1-45fe-bfcf-d70060695251",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "藤田玲",
+            "source_actor_url": "https://kira-hai.net/fujita-rei",
+            "source_work_title": "MANKAI STAGE『A3!』~SPRING & SUMMER 2018~",
+            "source_year": 2018,
+            "source_role_raw": "古市左京",
+            "source_role_names": [
+              "古市左京"
+            ],
+            "source_cast_group": null,
+            "source_order": 14,
+            "source_credit_key": "bee4b7b26624eacb979e",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/a3_2018",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/a3_2018",
+                  "checkedAt": "2026-10-26T23:33:57.538Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/",
+                  "checkedAt": "2026-10-26T23:33:22.952Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/cast/index.html",
+                  "checkedAt": "2026-10-26T23:33:22.934Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/mankai-stage2018/",
+                  "checkedAt": "2026-10-26T23:33:23.138Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://liberent.co.jp/news/2018/02/15/a3_stage-2/",
+                  "checkedAt": "2026-10-26T23:33:23.012Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/ticket/index.html",
+                  "checkedAt": "2026-10-26T23:33:57.699Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/guide/index.html",
+                  "checkedAt": "2026-10-26T23:33:57.760Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/introduction/index.html",
+                  "checkedAt": "2026-10-26T23:33:57.838Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/news/index.html",
+                  "checkedAt": "2026-10-26T23:33:22.974Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_01.png",
+                  "checkedAt": "2026-10-26T23:40:49.210Z",
+                  "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_02.png",
+                  "checkedAt": "2026-10-26T23:40:49.365Z",
+                  "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_03.png",
+                  "checkedAt": "2026-10-26T23:40:49.413Z",
+                  "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://swallow-p.com/actor/taguchi-ryo/",
+                  "checkedAt": "2026-10-26T23:38:12.633Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://swallow-p.com/actor/",
+                  "checkedAt": "2026-10-26T23:37:36.888Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://kira-hai.net/taguchi-ryo",
+                  "checkedAt": "2026-10-26T23:37:35.603Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                }
+              ],
+              "source_fingerprint": "0d73d0258adf0c26a0c3fd58ef425d50d65cb970da227e6b10a7278d9f71191b",
+              "review_fingerprint": "c4394e7b462d7ee3e3864172df64f7486d6b6556ce262241b34d8f1360b0a1ba",
+              "snapshot_fingerprint": "e541cc2e27179251eb58342172d92c57b1be3fd7795eeb4f69577bf69b6b9763",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 14,
+                "cast": {
+                  "sourceActorName": "藤田玲",
+                  "sourceActorUrl": "https://kira-hai.net/fujita-rei",
+                  "role_name": "古市左京(ヤクザ)",
+                  "cast_group": "夏組"
+                }
+              },
+              "normalization_review": {
+                "group": null,
+                "role": "古市左京",
+                "annotation": "ヤクザ",
+                "evidence": [
+                  {
+                    "url": "https://www.mankai-stage.jp/archive/ss2018/",
+                    "checkedAt": "2026-10-26T23:33:22.952Z",
+                    "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/a3_2018",
+                    "checkedAt": "2026-10-26T23:33:57.538Z",
+                    "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "68212e7c-6d5e-4ce2-b1d7-c42583019a3f",
+            "matched_play_id": "3b5f34b5-40a1-45fe-bfcf-d70060695251",
+            "status": "pending"
+          }
+        ]
+      },
+      "records": [
+        {
+          "actor": {
+            "id": "ed310757-4569-4539-896d-6a8a5c326ac2",
+            "slug": "yokota-ryugi",
+            "name": "横田 龍儀",
+            "kana": "よこた りゅうぎ",
+            "profile": "福島県川内村出身の俳優。現在はフリーで活動。",
+            "image_url": null,
+            "sns": {
+              "x": "https://twitter.com/0909Ryugi",
+              "official": "https://ameblo.jp/ryugiyokota/",
+              "instagram": "https://www.instagram.com/Ryugi0909/"
+            },
+            "gender": "male",
+            "created_at": "2025-12-13T04:41:02.052969+00:00",
+            "updated_at": "2025-12-13T04:41:02.052969+00:00",
+            "tags": [
+              "フレッシュ",
+              "ダンス"
+            ],
+            "featured_play_slugs": [],
+            "birthday": "1994-09-09",
+            "height_cm": 170,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "横田龍儀",
+            "sourceActorUrl": "https://kira-hai.net/yokota-ryugi",
+            "role_name": "佐久間咲也",
+            "cast_group": "春組"
+          },
+          "sourceCreditKey": "2e5f50e5da29dc743e1c",
+          "sourceOrder": 1,
+          "rawSourceOrder": 1,
+          "billingOrder": 1,
+          "expectedNote": null,
+          "expectedStarring": true,
+          "existingCast": {
+            "id": "9f58ce6c-dbe9-443f-8b3b-58d2f275fee4",
+            "play_id": "3b5f34b5-40a1-45fe-bfcf-d70060695251",
+            "actor_id": "ed310757-4569-4539-896d-6a8a5c326ac2",
+            "role_name": null,
+            "is_starring": true,
+            "created_at": "2025-12-13T05:18:03.3201+00:00",
+            "billing_order": null,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null,
+            "updated_at": "2025-12-16T17:25:29.486976+00:00"
+          },
+          "wasAccepted": false
+        },
+        {
+          "actor": {
+            "id": "5533574d-232b-492a-bad8-2aadc44b2e63",
+            "slug": "makishima-hikaru",
+            "name": "牧島 輝",
+            "kana": "まきしま ひかる",
+            "profile": "埼玉県出身の俳優・アーティスト。現在はフリーランスとして活動し、株式会社ワイケーエージェントと業務提携を行っている。ミュージカル『テニスの王子様』3rdシーズン（海堂薫役）をはじめ、MANKAI STAGE『A3!』シリーズ（碓氷真澄役）、ミュージカル『刀剣乱舞』シリーズ（大倶利伽羅役）、舞台『キングダム』（嬴政 / 漂役）等の舞台作品を中心に出演している。また、音楽アーティストとしても活動しており、現在は日本コロムビアにて「牧島輝」名義で楽曲リリースを行っている。",
+            "image_url": null,
+            "sns": {
+              "x": "https://twitter.com/maximum083",
+              "youtube": "https://www.youtube.com/@makishimahikaru-musicofficial",
+              "official": "https://makishima-hikaru.net/",
+              "instagram": "https://www.instagram.com/maximumhikaru/?hl=ja"
+            },
+            "gender": "male",
+            "created_at": "2025-12-13T04:41:02.052969+00:00",
+            "updated_at": "2025-12-13T04:41:02.052969+00:00",
+            "tags": [
+              "クール",
+              "歌唱力"
+            ],
+            "featured_play_slugs": [
+              "ace-stage-ss",
+              "kingdom-stage"
+            ],
+            "birthday": "1995-08-03",
+            "height_cm": 177,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor and artist from Saitama Prefecture. He is currently working as a freelancer with a business tie-up with YK Agent. He primarily appears in stage works such as the musical \"The Prince of Tennis\" 3rd season (as Kaoru Kaido), MANKAI STAGE \"A3!\" series (as Masumi Usui), the musical \"Touken Ranbu\" series (as Okurikara), and the stage play \"Kingdom\" (as Ei Sei / Hyo). He is also active as a music artist, currently releasing music under the name \"Hikaru Makishima\" with Nippon Columbia.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "牧島輝",
+            "sourceActorUrl": "https://kira-hai.net/makishima-hikaru",
+            "role_name": "碓氷真澄",
+            "cast_group": "春組"
+          },
+          "sourceCreditKey": "53bd06232de0984bbc72",
+          "sourceOrder": 2,
+          "rawSourceOrder": 2,
+          "billingOrder": 2,
+          "expectedNote": null,
+          "expectedStarring": true,
+          "existingCast": {
+            "id": "f866b2c1-8638-4f8f-bcf5-fdbb2f982a92",
+            "play_id": "3b5f34b5-40a1-45fe-bfcf-d70060695251",
+            "actor_id": "5533574d-232b-492a-bad8-2aadc44b2e63",
+            "role_name": null,
+            "is_starring": true,
+            "created_at": "2025-12-13T05:18:03.3201+00:00",
+            "billing_order": null,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null,
+            "updated_at": "2025-12-16T17:25:29.486976+00:00"
+          },
+          "wasAccepted": false
+        },
+        {
+          "actor": {
+            "id": "6f56fa1e-493d-4f17-917a-2559ecf800f5",
+            "slug": "maekawa-yuki",
+            "name": "前川 優希",
+            "kana": "まえかわ ゆうき",
+            "profile": "東京都出身の俳優・歌手。舞台『K -Lost Small World-』の湊速人役、MANKAI STAGE『A3!』の皆木綴役などを務める。舞台のプロデュースや脚本も手がける。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-24T18:45:20.734732+00:00",
+            "updated_at": "2026-10-25T20:21:04.903274+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1997-12-17",
+            "height_cm": 179,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Maekawa Yuki",
+            "profile_en": "An actor and singer from Tokyo. Stage credits include Hayato Minato in K -Lost Small World- and Tsuzuru Minagi in MANKAI STAGE A3!. He also produces stage works and writes scripts.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "前川優希",
+            "sourceActorUrl": "https://kira-hai.net/maekawa-yuki",
+            "role_name": "皆木綴",
+            "cast_group": "春組"
+          },
+          "sourceCreditKey": "a3f4beefff62b1e47515",
+          "sourceOrder": 3,
+          "rawSourceOrder": 3,
+          "billingOrder": 3,
+          "expectedNote": null,
+          "expectedStarring": false,
+          "existingCast": null,
+          "wasAccepted": false
+        },
+        {
+          "actor": {
+            "id": "6f47cce5-7122-45ea-adcb-ce1dd8a6beaf",
+            "slug": "tateishi-toshiki",
+            "name": "立石 俊樹",
+            "kana": "たていし としき",
+            "profile": "秋田県出身の俳優。エーライツ所属。ミュージカル『テニスの王子様』3rdシーズン（幸村精市役）をはじめ、MANKAI STAGE『A3!』シリーズ（茅ヶ崎至役）、ミュージカル「黒執事」シリーズ（セバスチャン・ミカエリス役）、ミュージカル『エリザベート』（ルドルフ役）等の舞台作品を中心に出演している。かつては男性ダンス&ボーカルグループ「IVVY」のメンバーとしても活動し、2021年末をもって同グループを卒業した。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/t___tateishi",
+              "official": "https://a-light.jp/talent/tateishi-toshiki",
+              "instagram": "https://www.instagram.com/toshiki_tateishi/"
+            },
+            "gender": "male",
+            "created_at": "2025-12-13T04:41:02.052969+00:00",
+            "updated_at": "2025-12-13T04:41:02.052969+00:00",
+            "tags": [
+              "アーティスト",
+              "王子様系"
+            ],
+            "featured_play_slugs": [],
+            "birthday": "1993-12-19",
+            "height_cm": 181,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Akita Prefecture. Affiliated with A-Light. He primarily appears in stage works such as the musical \"The Prince of Tennis\" 3rd season (as Seiichi Yukimura), the MANKAI STAGE \"A3!\" series (as Itaru Chigasaki), the musical \"Black Butler\" series (as Sebastian Michaelis), and the musical \"Elisabeth\" (as Rudolf). He was formerly a member of the male dance and vocal group \"IVVY\" and graduated from the group at the end of 2021.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "立石俊樹",
+            "sourceActorUrl": "https://kira-hai.net/tateishi-toshiki",
+            "role_name": "茅ヶ崎至",
+            "cast_group": "春組"
+          },
+          "sourceCreditKey": "03fcec3f2e308076e43a",
+          "sourceOrder": 4,
+          "rawSourceOrder": 4,
+          "billingOrder": 4,
+          "expectedNote": null,
+          "expectedStarring": true,
+          "existingCast": {
+            "id": "d3727287-137c-4f97-a92e-1ad0ee4d51f3",
+            "play_id": "3b5f34b5-40a1-45fe-bfcf-d70060695251",
+            "actor_id": "6f47cce5-7122-45ea-adcb-ce1dd8a6beaf",
+            "role_name": null,
+            "is_starring": true,
+            "created_at": "2025-12-13T05:18:03.3201+00:00",
+            "billing_order": null,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null,
+            "updated_at": "2025-12-16T17:25:29.486976+00:00"
+          },
+          "wasAccepted": false
+        },
+        {
+          "actor": {
+            "id": "73a7a70b-d661-445f-82de-5a7d81d95c55",
+            "slug": "furuya-yamato",
+            "name": "古谷 大和",
+            "kana": "ふるや やまと",
+            "profile": "東京都出身の俳優。タイムリーオフィス所属。MANKAI STAGE『A3!』のシトロン役、舞台『KING OF PRISM』の高田馬場ジョージ役などを務める。舞台の演出も手掛ける。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-24T15:28:00.483227+00:00",
+            "updated_at": "2026-10-25T20:21:04.903274+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1991-05-04",
+            "height_cm": 176,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Tokyo, represented by Timely Office. His roles include Citron in MANKAI STAGE A3! and Joji Takadanobaba in the stage series KING OF PRISM. He also directs stage productions.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "古谷大和",
+            "sourceActorUrl": "https://kira-hai.net/furuya-yamato",
+            "role_name": "シトロン",
+            "cast_group": "春組"
+          },
+          "sourceCreditKey": "7df6bbb5ba3fc3851cb3",
+          "sourceOrder": 5,
+          "rawSourceOrder": 5,
+          "billingOrder": 5,
+          "expectedNote": null,
+          "expectedStarring": false,
+          "existingCast": null,
+          "wasAccepted": false
+        },
+        {
+          "actor": {
+            "id": "3ec32fb6-f2f3-4388-b8d1-8bede9472e44",
+            "slug": "jinnai-sho",
+            "name": "陳内 将",
+            "kana": "じんない しょう",
+            "profile": "熊本県出身の俳優。D-BOYSのメンバー。ミュージカル『テニスの王子様』2ndシーズン（柳沢慎也役）や『MANKAI STAGE「A3!」』（皇天馬役）等に出演。",
+            "image_url": null,
+            "sns": {
+              "x": "https://twitter.com/chanjin0116",
+              "official": "https://www.watanabepro.co.jp/mypage/10000036/",
+              "instagram": "https://www.instagram.com/chanjin0116/"
+            },
+            "gender": "male",
+            "created_at": "2025-12-13T04:41:02.052969+00:00",
+            "updated_at": "2025-12-13T04:41:02.052969+00:00",
+            "tags": [
+              "リーダー",
+              "コメディ"
+            ],
+            "featured_play_slugs": [],
+            "birthday": "1988-01-16",
+            "height_cm": 178,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Kumamoto Prefecture. A member of D-BOYS. He appeared in the musical \"The Prince of Tennis\" 2nd season (as Shinya Yanagisawa) and \"MANKAI STAGE 'A3!'\" (as Tenma Sumeragi).",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "陳内将",
+            "sourceActorUrl": "https://kira-hai.net/jinnai-sho",
+            "role_name": "皇天馬",
+            "cast_group": "夏組"
+          },
+          "sourceCreditKey": "3217459388615fda05ad",
+          "sourceOrder": 6,
+          "rawSourceOrder": 6,
+          "billingOrder": 6,
+          "expectedNote": null,
+          "expectedStarring": false,
+          "existingCast": null,
+          "wasAccepted": false
+        },
+        {
+          "actor": {
+            "id": "fb1a7fa3-c90d-4c6c-86b8-af012fccf368",
+            "slug": "miyazaki-yu",
+            "name": "宮崎 湧",
+            "kana": "みやざきゆう",
+            "profile": null,
+            "image_url": null,
+            "sns": null,
+            "gender": null,
+            "created_at": "2026-10-17T13:27:59.664418+00:00",
+            "updated_at": "2026-10-25T20:21:04.903274+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1995-01-25",
+            "height_cm": 165,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "宮崎湧",
+            "sourceActorUrl": "https://kira-hai.net/miyazaki-yu",
+            "role_name": "瑠璃川幸",
+            "cast_group": "夏組"
+          },
+          "sourceCreditKey": "ea674c446244498995da",
+          "sourceOrder": 7,
+          "rawSourceOrder": 7,
+          "billingOrder": 7,
+          "expectedNote": null,
+          "expectedStarring": false,
+          "existingCast": null,
+          "wasAccepted": false
+        },
+        {
+          "actor": {
+            "id": "a39fa69c-ac9b-4ed3-ba69-394ca3a921ad",
+            "slug": "noguchi-jun",
+            "name": "野口 準",
+            "kana": "のぐち じゅん",
+            "profile": "大阪府出身の俳優。サンミュージックブレーン所属。MANKAI STAGE『A3!』や「東京リベンジャーズ」などの舞台に出演し、舞台『鋼の錬金術師』ではケイン・フュリー役を務める。アクロバットやアコースティックギターを特技とする。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-21T13:10:03.368542+00:00",
+            "updated_at": "2026-10-25T20:21:04.903274+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "2000-02-06",
+            "height_cm": 168,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": "Jun Noguchi",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "野口準",
+            "sourceActorUrl": "https://kira-hai.net/noguchi-jun",
+            "role_name": "向坂椋",
+            "cast_group": "夏組"
+          },
+          "sourceCreditKey": "ca58e405f21051a52411",
+          "sourceOrder": 8,
+          "rawSourceOrder": 8,
+          "billingOrder": 8,
+          "expectedNote": null,
+          "expectedStarring": false,
+          "existingCast": null,
+          "wasAccepted": false
+        },
+        {
+          "actor": {
+            "id": "8b7c86f6-a193-46a9-89b3-2662f03b7b2b",
+            "slug": "honda-reo",
+            "name": "本田 礼生",
+            "kana": "ほんだ れお",
+            "profile": "愛媛県出身の俳優。ヤザ・パパ所属。ミュージカル『テニスの王子様』3rdシーズン（菊丸英二役）や舞台『刀剣乱舞』（一期一振役）、『MANKAI STAGE「A3!」』シリーズ（斑鳩三角役）等の舞台作品に出演。特技のアクロバットやブレイクダンスを活かした高い身体能力に定評があり、エンターテインメント集団「THE CONVOY（ザ・コンボイ）」の若手メンバーとしても活動している。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/honda_reo",
+              "official": "https://honda-reo.com/",
+              "instagram": "https://www.instagram.com/honda_reo_staff/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:06:19.306372+00:00",
+            "updated_at": "2026-03-21T15:06:19.306372+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1992-10-28",
+            "height_cm": 175,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Ehime Prefecture. Affiliated with Yaza Papa. He has appeared in stage works such as the musical \"The Prince of Tennis\" 3rd season (as Eiji Kikumaru), the stage play \"Touken Ranbu\" (as Ichigo Hitofuri), and the \"MANKAI STAGE 'A3!'\" series (as Misumi Ikaruga). He is highly regarded for his physical abilities, utilizing his special skills in acrobatics and breakdancing, and is also active as a younger member of the entertainment group \"THE CONVOY\".",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "本田礼生",
+            "sourceActorUrl": "https://kira-hai.net/honda-reo",
+            "role_name": "斑鳩三角",
+            "cast_group": "夏組"
+          },
+          "sourceCreditKey": "9cd2bf2e8c48dff09310",
+          "sourceOrder": 9,
+          "rawSourceOrder": 9,
+          "billingOrder": 9,
+          "expectedNote": null,
+          "expectedStarring": false,
+          "existingCast": null,
+          "wasAccepted": false
+        },
+        {
+          "actor": {
+            "id": "ac91e41a-2db0-4f49-8389-a7d9786a4201",
+            "slug": "akazawa-tomoru",
+            "name": "赤澤 燈",
+            "kana": "あかざわ ともる",
+            "profile": "東京都出身の俳優。ミュージカル『テニスの王子様』2ndシーズン（芥川慈郎役）や『MANKAI STAGE「A3!」』（三好一成役）等に出演。",
+            "image_url": null,
+            "sns": {
+              "x": "https://twitter.com/tmr_akzw",
+              "official": "https://tomoru-akazawa.net/",
+              "instagram": "https://www.instagram.com/akzw_tmr/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:03:44.295565+00:00",
+            "updated_at": "2026-03-21T15:03:44.295565+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1990-03-14",
+            "height_cm": 172,
+            "blood_type": "AB",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Tokyo. He appeared in the musical \"The Prince of Tennis\" 2nd season (as Jiro Akutagawa) and \"MANKAI STAGE 'A3!'\" (as Kazunari Miyoshi).",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "赤澤燈",
+            "sourceActorUrl": "https://kira-hai.net/akazawa-tomoru",
+            "role_name": "三好一成",
+            "cast_group": "夏組"
+          },
+          "sourceCreditKey": "7f19a1a572329682fd9c",
+          "sourceOrder": 10,
+          "rawSourceOrder": 10,
+          "billingOrder": 10,
+          "expectedNote": null,
+          "expectedStarring": false,
+          "existingCast": {
+            "id": "0e7dce7f-9221-4a22-9d58-6d274151b4e8",
+            "play_id": "3b5f34b5-40a1-45fe-bfcf-d70060695251",
+            "actor_id": "ac91e41a-2db0-4f49-8389-a7d9786a4201",
+            "role_name": "三好一成",
+            "is_starring": false,
+            "created_at": "2026-05-05T20:47:13.064216+00:00",
+            "billing_order": null,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null,
+            "updated_at": "2026-05-05T20:47:13.064216+00:00"
+          },
+          "wasAccepted": true
+        },
+        {
+          "actor": {
+            "id": "33f1f008-551f-4406-8a12-7c38705e7fc5",
+            "slug": "takiguchi-yukihiro",
+            "name": "滝口 幸広",
+            "kana": "たきぐち ゆきひろ",
+            "profile": "千葉県出身の元俳優・タレント。",
+            "image_url": null,
+            "sns": {
+              "official": "https://ameblo.jp/takiguchi-sd/",
+              "instagram": "https://www.instagram.com/yukihiro_takiguchi_official/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T14:53:11.103962+00:00",
+            "updated_at": "2026-03-21T14:53:11.103962+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1985-05-29",
+            "height_cm": 179,
+            "blood_type": "AB",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "滝口幸広",
+            "sourceActorUrl": "https://kira-hai.net/takiguchi-yukihiro",
+            "role_name": "鹿島雄三",
+            "cast_group": null,
+            "sourceAnnotation": "初代春組OB"
+          },
+          "sourceCreditKey": "b732b0904afe2477faf1",
+          "sourceOrder": 11,
+          "rawSourceOrder": 11,
+          "billingOrder": 11,
+          "expectedNote": "役柄補足：初代春組OB。",
+          "expectedStarring": false,
+          "existingCast": null,
+          "wasAccepted": false
+        },
+        {
+          "actor": {
+            "id": "523f6dd4-9c56-4b48-a264-463ebb52f068",
+            "slug": "taguchi-ryo",
+            "name": "田口 涼",
+            "kana": "たぐち りょう",
+            "profile": "京都府出身の俳優。スワロウ準所属。MANKAI STAGE『A3!』で劇場支配人・松川伊助を演じる。舞台『クジラの子らは砂上に歌う』ではニビ役を務める。",
+            "image_url": null,
+            "sns": {
+              "official": "https://swallow-p.com/actor/taguchi-ryo/",
+              "x": "https://x.com/ryo_tagu0218"
+            },
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1989-02-18",
+            "height_cm": 175,
+            "blood_type": "AB",
+            "birthday_label": null,
+            "name_en": "Ryo Taguchi",
+            "profile_en": "An actor from Kyoto Prefecture and an associate member of Swallow. He plays theater manager Isuke Matsukawa in MANKAI STAGE A3! and Nibi in the stage adaptation of Children of the Whales.",
+            "death_date": null,
+            "created_at": "prepared",
+            "updated_at": "prepared"
+          },
+          "source": {
+            "sourceActorName": "田口涼",
+            "sourceActorUrl": "https://kira-hai.net/taguchi-ryo",
+            "role_name": "松川伊助",
+            "cast_group": null,
+            "sourceAnnotation": "劇場支配人"
+          },
+          "sourceCreditKey": "b427e92f1af5625981f3",
+          "sourceOrder": 12,
+          "rawSourceOrder": 12,
+          "billingOrder": 12,
+          "expectedNote": "役柄補足：劇場支配人。",
+          "expectedStarring": false,
+          "existingCast": null,
+          "wasAccepted": false
+        },
+        {
+          "actor": {
+            "id": "73dd3751-ae6e-4922-b252-a9cdbae324e6",
+            "slug": "tauchi-tokihiro",
+            "name": "田内 季宇",
+            "kana": "たうち ときひろ",
+            "profile": "東京都出身の俳優。fennec所属。ミュージカル『新テニスの王子様』シリーズ（松平親彦役）をはじめ、MANKAI STAGE『A3!』シリーズ（迫田ケン役）、RICE on STAGE「ラブ米」シリーズ（黒太閤役）、ミュージカル『刀剣乱舞』〜幕末天狼傳〜等の舞台作品を中心に出演している。また、『MANKAI MOVIE「A3!」』等の映像作品への出演経歴も持つ。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/toki_hiro8",
+              "official": "https://tauchi-tokihiro.bitfan.id/",
+              "instagram": "https://www.instagram.com/tokitokihiro/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:13:20.008797+00:00",
+            "updated_at": "2026-03-21T15:13:20.008797+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1992-04-18",
+            "height_cm": 175,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Tokyo. Affiliated with fennec. He primarily appears in stage works such as the musical \"The New Prince of Tennis\" series (as Chikahiko Matsudaira), the MANKAI STAGE \"A3!\" series (as Ken Sakoda), the RICE on STAGE \"Love Kome\" series (as Kurotaiko), and the musical \"Touken Ranbu\" ~Bakumatsu Tenrouden~. He also has experience appearing in film and television works such as \"MANKAI MOVIE 'A3!'\".",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "田内季宇",
+            "sourceActorUrl": "https://kira-hai.net/tauchi-tokihiro",
+            "role_name": "迫田ケン",
+            "cast_group": null,
+            "sourceAnnotation": "ヤクザ"
+          },
+          "sourceCreditKey": "02d780776d84089ea47d",
+          "sourceOrder": 13,
+          "rawSourceOrder": 13,
+          "billingOrder": 13,
+          "expectedNote": "役柄補足：ヤクザ。",
+          "expectedStarring": false,
+          "existingCast": null,
+          "wasAccepted": false
+        },
+        {
+          "actor": {
+            "id": "68212e7c-6d5e-4ce2-b1d7-c42583019a3f",
+            "slug": "fujita-ray",
+            "name": "藤田 玲",
+            "kana": "ふじた れい",
+            "profile": "東京都出身の俳優、ミュージシャン。株式会社ドルチェスター所属。フランス人の父と日本人の母を持つバイリンガル。ロックバンド「DUSTZ」のボーカル・Rayとしても活動を行っている。主な出演作として、特撮テレビドラマ『仮面ライダー555』（北崎役）、『牙狼-GARO-』シリーズ（涼邑零 / 銀牙騎士・絶狼役）などの映像作品のほか、舞台『刀剣乱舞』維伝 朧の志士たち（榎本武揚役）、MANKAI STAGE『A3!』（古市左京役）、ミュージカル『レ・ミゼラブル』等の多岐にわたる舞台作品がある。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/Ray_FJT",
+              "official": "http://fujitaray.com/"
+            },
+            "gender": "male",
+            "created_at": "2025-12-13T04:41:02.052969+00:00",
+            "updated_at": "2025-12-13T04:41:02.052969+00:00",
+            "tags": [
+              "バイリンガル",
+              "ロック"
+            ],
+            "featured_play_slugs": [],
+            "birthday": "1988-09-06",
+            "height_cm": 179,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor and musician from Tokyo. Affiliated with Dolce Star. He is bilingual, with a French father and a Japanese mother. He is also active as \"Ray,\" the vocalist of the rock band \"DUSTZ.\" His major appearances include video works such as the tokusatsu television drama \"Kamen Rider 555\" (as Kitazaki) and the \"Garo\" series (as Rei Suzumura / ZERO), as well as a wide variety of stage works including the stage play \"Touken Ranbu\" Iden Oboro no Shishitachi (as Takeaki Enomoto), MANKAI STAGE \"A3!\" (as Sakyo Furuichi), and the musical \"Les Misérables\".",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "藤田玲",
+            "sourceActorUrl": "https://kira-hai.net/fujita-rei",
+            "role_name": "古市左京",
+            "cast_group": null,
+            "sourceAnnotation": "ヤクザ"
+          },
+          "sourceCreditKey": "bee4b7b26624eacb979e",
+          "sourceOrder": 14,
+          "rawSourceOrder": 14,
+          "billingOrder": 14,
+          "expectedNote": "役柄補足：ヤクザ。",
+          "expectedStarring": false,
+          "existingCast": null,
+          "wasAccepted": false
+        }
+      ],
+      "castPatches": [
+        {
+          "before": {
+            "id": "9f58ce6c-dbe9-443f-8b3b-58d2f275fee4",
+            "play_id": "3b5f34b5-40a1-45fe-bfcf-d70060695251",
+            "actor_id": "ed310757-4569-4539-896d-6a8a5c326ac2",
+            "role_name": null,
+            "is_starring": true,
+            "created_at": "2025-12-13T05:18:03.3201+00:00",
+            "billing_order": null,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null,
+            "updated_at": "2025-12-16T17:25:29.486976+00:00"
+          },
+          "patch": {
+            "role_name": "佐久間咲也",
+            "cast_group": "春組",
+            "billing_order": 1,
+            "note": null
+          }
+        },
+        {
+          "before": {
+            "id": "f866b2c1-8638-4f8f-bcf5-fdbb2f982a92",
+            "play_id": "3b5f34b5-40a1-45fe-bfcf-d70060695251",
+            "actor_id": "5533574d-232b-492a-bad8-2aadc44b2e63",
+            "role_name": null,
+            "is_starring": true,
+            "created_at": "2025-12-13T05:18:03.3201+00:00",
+            "billing_order": null,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null,
+            "updated_at": "2025-12-16T17:25:29.486976+00:00"
+          },
+          "patch": {
+            "role_name": "碓氷真澄",
+            "cast_group": "春組",
+            "billing_order": 2,
+            "note": null
+          }
+        },
+        {
+          "before": {
+            "id": "d3727287-137c-4f97-a92e-1ad0ee4d51f3",
+            "play_id": "3b5f34b5-40a1-45fe-bfcf-d70060695251",
+            "actor_id": "6f47cce5-7122-45ea-adcb-ce1dd8a6beaf",
+            "role_name": null,
+            "is_starring": true,
+            "created_at": "2025-12-13T05:18:03.3201+00:00",
+            "billing_order": null,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null,
+            "updated_at": "2025-12-16T17:25:29.486976+00:00"
+          },
+          "patch": {
+            "role_name": "茅ヶ崎至",
+            "cast_group": "春組",
+            "billing_order": 4,
+            "note": null
+          }
+        },
+        {
+          "before": {
+            "id": "0e7dce7f-9221-4a22-9d58-6d274151b4e8",
+            "play_id": "3b5f34b5-40a1-45fe-bfcf-d70060695251",
+            "actor_id": "ac91e41a-2db0-4f49-8389-a7d9786a4201",
+            "role_name": "三好一成",
+            "is_starring": false,
+            "created_at": "2026-05-05T20:47:13.064216+00:00",
+            "billing_order": null,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null,
+            "updated_at": "2026-05-05T20:47:13.064216+00:00"
+          },
+          "patch": {
+            "role_name": "三好一成",
+            "cast_group": "夏組",
+            "billing_order": 10,
+            "note": null
+          }
+        }
+      ],
+      "officialOrder": [
+        {
+          "name": "横田龍儀",
+          "role": "佐久間咲也",
+          "group": "春組"
+        },
+        {
+          "name": "牧島 輝",
+          "role": "碓氷真澄",
+          "group": "春組"
+        },
+        {
+          "name": "前川優希",
+          "role": "皆木 綴",
+          "group": "春組"
+        },
+        {
+          "name": "立石俊樹",
+          "role": "茅ヶ崎 至",
+          "group": "春組"
+        },
+        {
+          "name": "古谷大和",
+          "role": "シトロン",
+          "group": "春組"
+        },
+        {
+          "name": "陳内 将",
+          "role": "皇 天馬",
+          "group": "夏組"
+        },
+        {
+          "name": "宮崎 湧",
+          "role": "瑠璃川 幸",
+          "group": "夏組"
+        },
+        {
+          "name": "野口 準",
+          "role": "向坂 椋",
+          "group": "夏組"
+        },
+        {
+          "name": "本田礼生",
+          "role": "斑鳩三角",
+          "group": "夏組"
+        },
+        {
+          "name": "赤澤 燈",
+          "role": "三好一成",
+          "group": "夏組"
+        },
+        {
+          "name": "滝口幸広",
+          "role": "鹿島雄三",
+          "group": null
+        },
+        {
+          "name": "田口 涼",
+          "role": "松川伊助",
+          "group": null
+        },
+        {
+          "name": "田内季宇",
+          "role": "迫田ケン",
+          "group": null
+        },
+        {
+          "name": "藤田 玲",
+          "role": "古市左京",
+          "group": null
+        }
+      ],
+      "schedules": [
+        {
+          "city": "東京",
+          "date": "2018/06/28 19:00"
+        },
+        {
+          "city": "東京",
+          "date": "2018/06/29 19:00"
+        },
+        {
+          "city": "東京",
+          "date": "2018/06/30 13:00"
+        },
+        {
+          "city": "東京",
+          "date": "2018/06/30 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2018/07/01 13:00"
+        },
+        {
+          "city": "東京",
+          "date": "2018/07/01 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2018/07/03 14:00"
+        },
+        {
+          "city": "東京",
+          "date": "2018/07/03 19:00"
+        },
+        {
+          "city": "東京",
+          "date": "2018/07/04 14:00"
+        },
+        {
+          "city": "東京",
+          "date": "2018/07/04 19:00"
+        },
+        {
+          "city": "東京",
+          "date": "2018/07/05 19:00"
+        },
+        {
+          "city": "東京",
+          "date": "2018/07/06 19:00"
+        },
+        {
+          "city": "東京",
+          "date": "2018/07/07 13:00"
+        },
+        {
+          "city": "東京",
+          "date": "2018/07/07 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2018/07/08 13:00"
+        },
+        {
+          "city": "東京",
+          "date": "2018/07/08 18:00"
+        },
+        {
+          "city": "京都",
+          "date": "2018/07/13 19:00"
+        },
+        {
+          "city": "京都",
+          "date": "2018/07/14 13:00"
+        },
+        {
+          "city": "京都",
+          "date": "2018/07/14 18:00"
+        },
+        {
+          "city": "京都",
+          "date": "2018/07/15 13:00"
+        },
+        {
+          "city": "京都",
+          "date": "2018/07/15 18:00"
+        },
+        {
+          "city": "京都",
+          "date": "2018/07/16 13:00"
+        },
+        {
+          "city": "京都",
+          "date": "2018/07/16 18:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2018/10/26 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2018/10/27 13:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2018/10/27 18:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2018/10/28 13:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2018/10/28 18:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2018/10/30 14:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2018/10/30 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2018/10/31 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2018/11/01 14:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2018/11/01 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2018/11/02 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2018/11/03 13:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2018/11/03 18:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2018/11/04 13:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2018/11/04 18:00"
+        }
+      ],
+      "staff": [
+        [
+          "原作",
+          [
+            "イケメン役者育成ゲーム『A3!（エースリー）』（リベル・エンタテインメント）"
+          ]
+        ],
+        [
+          "演出",
+          [
+            "松崎史也"
+          ]
+        ],
+        [
+          "脚本",
+          [
+            "亀田真二郎（東京パチプロデュース）"
+          ]
+        ],
+        [
+          "音楽",
+          [
+            "Yu（vague）"
+          ]
+        ],
+        [
+          "振付",
+          [
+            "梅棒"
+          ]
+        ],
+        [
+          "メインテーマ制作",
+          [
+            "大石昌良"
+          ]
+        ],
+        [
+          "協力",
+          [
+            "一般社団法人 日本2.5次元ミュージカル協会"
+          ]
+        ],
+        [
+          "主催",
+          [
+            "MANKAI STAGE『A3!』製作委員会（ネルケプランニング、ポニーキャニオン、リベル・エンタテインメント）"
+          ]
+        ]
+      ],
+      "creditOnly": [],
+      "legacyCandidates": [
+        {
+          "id": "e7c07e46-a495-47a8-9c83-c3779e0ea7ef",
+          "source": "kira-hai",
+          "external_actor_id": "5fca366e-e1af-482e-ab0e-e846b88f5779",
+          "external_play_id": "d8ad2241-4a3c-46ee-909e-d7f61d20da62",
+          "source_actor_name": "赤澤燈",
+          "source_actor_url": "https://kira-hai.net/akazawa-tomoru",
+          "source_work_title": "MANKAI STAGE『A3!』～SPRING & SUMMER 2018～",
+          "source_work_url": "https://kira-hai.net/a3_2018",
+          "source_year": 2021,
+          "source_role_raw": "三好一成 <img decoding=\"async\" src=\"https://kira-hai.net/wp-content/uploads/2015/03/059.gif\" alt=\"★\" width=\"12\" height=\"13\" class=\"alignnone size-full wp-image-368\" /> 舞台『戦刻ナイトブラッド』：豊臣秀吉",
+          "source_role_names": [
+            "三好一成 <img decoding=\"async\" src=\"https:",
+            "kira-hai.net",
+            "wp-content",
+            "uploads",
+            "2015",
+            "03",
+            "059.gif\" alt=\"★\" width=\"12\" height=\"13\" class=\"alignnone size-full wp-image-368\"",
+            "> 舞台『戦刻ナイトブラッド』：豊臣秀吉"
+          ],
+          "matched_actor_id": "ac91e41a-2db0-4f49-8389-a7d9786a4201",
+          "matched_play_id": "3b5f34b5-40a1-45fe-bfcf-d70060695251",
+          "accepted_cast_id": "0e7dce7f-9221-4a22-9d58-6d274151b4e8",
+          "confidence": 90,
+          "status": "accepted",
+          "note": null,
+          "scraped_at": "2026-04-25T07:33:41.478+00:00",
+          "created_at": "2026-04-25T07:33:41.771244+00:00",
+          "updated_at": "2026-05-05T20:47:16.397+00:00",
+          "accepted_at": "2026-05-05T20:47:16.397+00:00",
+          "rejected_at": null,
+          "source_cast_group": null,
+          "source_order": null,
+          "source_credit_key": null,
+          "source_evidence": null
+        }
+      ],
+      "legacyUpgrades": [
+        {
+          "before": {
+            "id": "e7c07e46-a495-47a8-9c83-c3779e0ea7ef",
+            "source": "kira-hai",
+            "external_actor_id": "5fca366e-e1af-482e-ab0e-e846b88f5779",
+            "external_play_id": "d8ad2241-4a3c-46ee-909e-d7f61d20da62",
+            "source_actor_name": "赤澤燈",
+            "source_actor_url": "https://kira-hai.net/akazawa-tomoru",
+            "source_work_title": "MANKAI STAGE『A3!』～SPRING & SUMMER 2018～",
+            "source_work_url": "https://kira-hai.net/a3_2018",
+            "source_year": 2021,
+            "source_role_raw": "三好一成 <img decoding=\"async\" src=\"https://kira-hai.net/wp-content/uploads/2015/03/059.gif\" alt=\"★\" width=\"12\" height=\"13\" class=\"alignnone size-full wp-image-368\" /> 舞台『戦刻ナイトブラッド』：豊臣秀吉",
+            "source_role_names": [
+              "三好一成 <img decoding=\"async\" src=\"https:",
+              "kira-hai.net",
+              "wp-content",
+              "uploads",
+              "2015",
+              "03",
+              "059.gif\" alt=\"★\" width=\"12\" height=\"13\" class=\"alignnone size-full wp-image-368\"",
+              "> 舞台『戦刻ナイトブラッド』：豊臣秀吉"
+            ],
+            "matched_actor_id": "ac91e41a-2db0-4f49-8389-a7d9786a4201",
+            "matched_play_id": "3b5f34b5-40a1-45fe-bfcf-d70060695251",
+            "accepted_cast_id": "0e7dce7f-9221-4a22-9d58-6d274151b4e8",
+            "confidence": 90,
+            "status": "accepted",
+            "note": null,
+            "scraped_at": "2026-04-25T07:33:41.478+00:00",
+            "created_at": "2026-04-25T07:33:41.771244+00:00",
+            "updated_at": "2026-05-05T20:47:16.397+00:00",
+            "accepted_at": "2026-05-05T20:47:16.397+00:00",
+            "rejected_at": null,
+            "source_cast_group": null,
+            "source_order": null,
+            "source_credit_key": null,
+            "source_evidence": null
+          },
+          "patch": {
+            "source_year": 2018,
+            "source_work_title": "MANKAI STAGE『A3!』~SPRING & SUMMER 2018~",
+            "source_role_raw": "三好一成",
+            "source_role_names": [
+              "三好一成"
+            ],
+            "source_cast_group": "夏組",
+            "source_credit_key": "7f19a1a572329682fd9c",
+            "source_order": 10,
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/a3_2018",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/a3_2018",
+                  "checkedAt": "2026-10-26T23:33:57.538Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/",
+                  "checkedAt": "2026-10-26T23:33:22.952Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/cast/index.html",
+                  "checkedAt": "2026-10-26T23:33:22.934Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/mankai-stage2018/",
+                  "checkedAt": "2026-10-26T23:33:23.138Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://liberent.co.jp/news/2018/02/15/a3_stage-2/",
+                  "checkedAt": "2026-10-26T23:33:23.012Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/ticket/index.html",
+                  "checkedAt": "2026-10-26T23:33:57.699Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/guide/index.html",
+                  "checkedAt": "2026-10-26T23:33:57.760Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/introduction/index.html",
+                  "checkedAt": "2026-10-26T23:33:57.838Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/news/index.html",
+                  "checkedAt": "2026-10-26T23:33:22.974Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_01.png",
+                  "checkedAt": "2026-10-26T23:40:49.210Z",
+                  "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_02.png",
+                  "checkedAt": "2026-10-26T23:40:49.365Z",
+                  "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_03.png",
+                  "checkedAt": "2026-10-26T23:40:49.413Z",
+                  "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://swallow-p.com/actor/taguchi-ryo/",
+                  "checkedAt": "2026-10-26T23:38:12.633Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://swallow-p.com/actor/",
+                  "checkedAt": "2026-10-26T23:37:36.888Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                },
+                {
+                  "url": "https://kira-hai.net/taguchi-ryo",
+                  "checkedAt": "2026-10-26T23:37:35.603Z",
+                  "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                }
+              ],
+              "source_fingerprint": "0d73d0258adf0c26a0c3fd58ef425d50d65cb970da227e6b10a7278d9f71191b",
+              "review_fingerprint": "c4394e7b462d7ee3e3864172df64f7486d6b6556ce262241b34d8f1360b0a1ba",
+              "snapshot_fingerprint": "e541cc2e27179251eb58342172d92c57b1be3fd7795eeb4f69577bf69b6b9763",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 10,
+                "cast": {
+                  "sourceActorName": "赤澤燈",
+                  "sourceActorUrl": "https://kira-hai.net/akazawa-tomoru",
+                  "role_name": "三好一成",
+                  "cast_group": "夏組"
+                }
+              },
+              "normalization_review": {
+                "group": "夏組",
+                "role": "三好一成",
+                "annotation": null,
+                "evidence": [
+                  {
+                    "url": "https://www.mankai-stage.jp/archive/ss2018/",
+                    "checkedAt": "2026-10-26T23:33:22.952Z",
+                    "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/a3_2018",
+                    "checkedAt": "2026-10-26T23:33:57.538Z",
+                    "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "legacyKept": [],
+      "transformations": [
+        {
+          "type": "group_carry_forward_correction",
+          "rows": [
+            {
+              "sourceActorName": "滝口幸広",
+              "sourceActorUrl": "https://kira-hai.net/takiguchi-yukihiro",
+              "role_name": "鹿島雄三(初代春組OB)",
+              "cast_group": "夏組"
+            },
+            {
+              "sourceActorName": "田口涼",
+              "sourceActorUrl": "https://kira-hai.net/taguchi-ryo",
+              "role_name": "松川伊助(劇場支配人)",
+              "cast_group": "夏組"
+            },
+            {
+              "sourceActorName": "田内季宇",
+              "sourceActorUrl": "https://kira-hai.net/tauchi-tokihiro",
+              "role_name": "迫田ケン(ヤクザ)",
+              "cast_group": "夏組"
+            },
+            {
+              "sourceActorName": "藤田玲",
+              "sourceActorUrl": "https://kira-hai.net/fujita-rei",
+              "role_name": "古市左京(ヤクザ)",
+              "cast_group": "夏組"
+            }
+          ],
+          "evidence": [
+            {
+              "url": "https://www.mankai-stage.jp/archive/ss2018/",
+              "checkedAt": "2026-10-26T23:33:22.952Z",
+              "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+            },
+            {
+              "url": "https://kira-hai.net/a3_2018",
+              "checkedAt": "2026-10-26T23:33:57.538Z",
+              "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+            }
+          ]
+        },
+        {
+          "type": "role_annotation_to_note",
+          "rows": [
+            {
+              "sourceActorName": "滝口幸広",
+              "sourceActorUrl": "https://kira-hai.net/takiguchi-yukihiro",
+              "role_name": "鹿島雄三",
+              "cast_group": null,
+              "sourceAnnotation": "初代春組OB"
+            },
+            {
+              "sourceActorName": "田口涼",
+              "sourceActorUrl": "https://kira-hai.net/taguchi-ryo",
+              "role_name": "松川伊助",
+              "cast_group": null,
+              "sourceAnnotation": "劇場支配人"
+            },
+            {
+              "sourceActorName": "田内季宇",
+              "sourceActorUrl": "https://kira-hai.net/tauchi-tokihiro",
+              "role_name": "迫田ケン",
+              "cast_group": null,
+              "sourceAnnotation": "ヤクザ"
+            },
+            {
+              "sourceActorName": "藤田玲",
+              "sourceActorUrl": "https://kira-hai.net/fujita-rei",
+              "role_name": "古市左京",
+              "cast_group": null,
+              "sourceAnnotation": "ヤクザ"
+            }
+          ],
+          "evidence": [
+            {
+              "url": "https://kira-hai.net/a3_2018",
+              "checkedAt": "2026-10-26T23:33:57.538Z",
+              "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+            }
+          ]
+        },
+        {
+          "type": "official_schedule_image_priority",
+          "reason": "公式東京凱旋画像とaltは11/1 14:00を含む15回。ネルケのテキスト表は当該セルが欠け14回になるため公式画像を採用。",
+          "evidence": [
+            {
+              "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_03.png",
+              "checkedAt": "2026-10-26T23:40:49.413Z",
+              "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+            },
+            {
+              "url": "https://www.mankai-stage.jp/archive/ss2018/ticket/index.html",
+              "checkedAt": "2026-10-26T23:33:57.699Z",
+              "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+            },
+            {
+              "url": "https://www.nelke.co.jp/stage/mankai-stage2018/",
+              "checkedAt": "2026-10-26T23:33:23.138Z",
+              "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+            }
+          ]
+        },
+        {
+          "type": "invalid_vod_placeholder_removed",
+          "before": {
+            "dmm": "#",
+            "unext": "#"
+          },
+          "after": {},
+          "reason": "#は実際の視聴先ではない。過去の配信開始告知のみで2026年の提供中と判断せず実URL補完は別工程。"
+        }
+      ],
+      "exceptions": [
+        "既存4配役は人物が公式と一致するため削除しない。空役名3を補完し、4行とも既存ID・作成日時・主演フラグ等を維持。主演フラグ3件の根拠監査は別途。",
+        "主要14役、既存13人物再利用・田口涼1人新規。アンサンブル追加なし。",
+        "末尾の鹿島雄三・松川伊助・迫田ケン・古市左京は公式で夏組5人とは別配置。夏組を持ち越さず区分null。役柄補足はnoteへ分離し原名・原区分は原資料と候補証跡に残す。",
+        "赤澤の採用済み候補はHTMLと戦刻ナイトブラッド情報混入・誤年2021を訂正。同じ候補ID・採用配役ID・採用状態・日時・外部IDを保全し、旧原文は履歴へ保存。",
+        "既存作品ID・slugを維持。東京16京都7東京凱旋15の38公演、7/2と10/29休演。公式凱旋日程画像で11/1昼公演を確認し欠けているネルケ表より優先。",
+        "上演時間は公式guide予定155分・途中休憩あり。休憩分数は未確認。映像上映・ライブビューイング・追加席を新公演と数えない。",
+        "既存JPあらすじを保持し英訳を補完。ジャンル・旧タグ・関連シリーズ等は保全。vodの#サンプルだけ解除。現在配信は未確認。",
+        "田口は現行公式175cm・京都府・AB型、スワロウ準所属を優先。生年はキラハイ1989。性別は明示資料未確定null。",
+        "他の2作品8配役・既存人物全属性・シリーズ全項目を保全。A3!全体点検・現在配信・既存主演フラグ監査は後続。"
+      ]
+    }
+  ],
+  "keptPlays": [
+    {
+      "id": "3a9939c9-ee4c-42e5-a545-a0d0a9c1c46b",
+      "slug": "a3_2019-3",
+      "title": "MANKAI STAGE『A3!』～SUMMER 2019～",
+      "franchise_id": "03404164-26f0-476f-92e9-5b438984fe0d",
+      "summary": null,
+      "period": "2019年",
+      "venue": null,
+      "vod": {},
+      "genre": null,
+      "created_at": "2026-04-30T18:29:43.324193+00:00",
+      "updated_at": "2026-04-30T18:29:43.324193+00:00",
+      "tags": [],
+      "credits": null,
+      "related_franchise_ids": [],
+      "summary_en": null,
+      "title_en": null
+    },
+    {
+      "id": "a1377573-d4aa-4ffe-b89e-7221614dbb7e",
+      "slug": "ace-stage-aw",
+      "title": "MANKAI STAGE『A3!』～AUTUMN & WINTER 2019～",
+      "franchise_id": "03404164-26f0-476f-92e9-5b438984fe0d",
+      "summary": "『A3!』舞台化シリーズ第二弾。秋組と冬組の物語を描く。",
+      "period": "2019年1月",
+      "venue": "日本青年館ホール 他",
+      "vod": {
+        "dmm": "#",
+        "unext": "#"
+      },
+      "genre": "comedy",
+      "created_at": "2025-12-13T05:12:12.983557+00:00",
+      "updated_at": "2025-12-13T05:12:12.983557+00:00",
+      "tags": [
+        "アイドル",
+        "コメディ",
+        "育成"
+      ],
+      "credits": null,
+      "related_franchise_ids": [],
+      "summary_en": null,
+      "title_en": null
+    }
+  ],
+  "evidence": {
+    "links": [
+      {
+        "url": "https://kira-hai.net/a3_2018",
+        "checkedAt": "2026-10-26T23:33:57.538Z",
+        "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+      },
+      {
+        "url": "https://www.mankai-stage.jp/archive/ss2018/",
+        "checkedAt": "2026-10-26T23:33:22.952Z",
+        "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+      },
+      {
+        "url": "https://www.mankai-stage.jp/archive/ss2018/cast/index.html",
+        "checkedAt": "2026-10-26T23:33:22.934Z",
+        "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+      },
+      {
+        "url": "https://www.nelke.co.jp/stage/mankai-stage2018/",
+        "checkedAt": "2026-10-26T23:33:23.138Z",
+        "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+      },
+      {
+        "url": "https://liberent.co.jp/news/2018/02/15/a3_stage-2/",
+        "checkedAt": "2026-10-26T23:33:23.012Z",
+        "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+      },
+      {
+        "url": "https://www.mankai-stage.jp/archive/ss2018/ticket/index.html",
+        "checkedAt": "2026-10-26T23:33:57.699Z",
+        "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+      },
+      {
+        "url": "https://www.mankai-stage.jp/archive/ss2018/guide/index.html",
+        "checkedAt": "2026-10-26T23:33:57.760Z",
+        "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+      },
+      {
+        "url": "https://www.mankai-stage.jp/archive/ss2018/introduction/index.html",
+        "checkedAt": "2026-10-26T23:33:57.838Z",
+        "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+      },
+      {
+        "url": "https://www.mankai-stage.jp/archive/ss2018/news/index.html",
+        "checkedAt": "2026-10-26T23:33:22.974Z",
+        "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+      },
+      {
+        "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_01.png",
+        "checkedAt": "2026-10-26T23:40:49.210Z",
+        "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+      },
+      {
+        "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_02.png",
+        "checkedAt": "2026-10-26T23:40:49.365Z",
+        "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+      },
+      {
+        "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_03.png",
+        "checkedAt": "2026-10-26T23:40:49.413Z",
+        "note": "公式日程画像を目視確認しalt日時と照合。画像原本・SHA256を保存。"
+      },
+      {
+        "url": "https://swallow-p.com/actor/taguchi-ryo/",
+        "checkedAt": "2026-10-26T23:38:12.633Z",
+        "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+      },
+      {
+        "url": "https://swallow-p.com/actor/",
+        "checkedAt": "2026-10-26T23:37:36.888Z",
+        "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+      },
+      {
+        "url": "https://kira-hai.net/taguchi-ryo",
+        "checkedAt": "2026-10-26T23:37:35.603Z",
+        "note": "取得原文・SHA256を保存。氏名・配役・区分・当該年の日程・プロフィールを採用範囲ごとに照合。"
+      }
+    ],
+    "sources": [
+      {
+        "label": "official",
+        "url": "https://www.mankai-stage.jp/archive/ss2018/",
+        "status": 200,
+        "checkedAt": "2026-10-26T23:33:22.952Z",
+        "sha256": "5239ca1fca86c5ae7134af1ee366cf1dd6618bfcf68e87ba7b5c3cc20e6a3b51",
+        "bytes": 17199
+      },
+      {
+        "label": "cast",
+        "url": "https://www.mankai-stage.jp/archive/ss2018/cast/index.html",
+        "status": 200,
+        "checkedAt": "2026-10-26T23:33:22.934Z",
+        "sha256": "0844079925a838bc7a8a3fbea0534ac48fcc92c052ddf602631888337fdb8304",
+        "bytes": 12127
+      },
+      {
+        "label": "news",
+        "url": "https://www.mankai-stage.jp/archive/ss2018/news/index.html",
+        "status": 200,
+        "checkedAt": "2026-10-26T23:33:22.974Z",
+        "sha256": "8280c94f6ac71ad2772f93636bc5acbfbbfb8e9097e81a2d5c6b92326a4c21cd",
+        "bytes": 86583
+      },
+      {
+        "label": "producer",
+        "url": "https://www.nelke.co.jp/stage/mankai-stage2018/",
+        "status": 200,
+        "checkedAt": "2026-10-26T23:33:23.138Z",
+        "sha256": "9032cb0cc07d69ed3d1de10df588fd3b27543023286d7fdd9eed6450630d21a8",
+        "bytes": 52432
+      },
+      {
+        "label": "original",
+        "url": "https://liberent.co.jp/news/2018/02/15/a3_stage-2/",
+        "status": 200,
+        "checkedAt": "2026-10-26T23:33:23.012Z",
+        "sha256": "c0199a96d360ed4c4f57c55756f3b7bf04f68194bd02adc1f3777a69a5211edd",
+        "bytes": 13506
+      },
+      {
+        "label": "kiraYokota",
+        "url": "https://kira-hai.net/yokota-ryugi",
+        "status": 200,
+        "checkedAt": "2026-10-26T23:33:23.073Z",
+        "sha256": "f40ed73c6f6608e6b18db8856c8d21aa059bed7841f10af74b515cd004d0477d",
+        "bytes": 87679
+      },
+      {
+        "label": "changelog",
+        "url": "https://supabase.com/changelog.md",
+        "status": 200,
+        "checkedAt": "2026-10-26T23:33:23.043Z",
+        "sha256": "45528009025b8ad8487ccb73f7c769b66d4b0e7aa4560157047899dcb5b5a006",
+        "bytes": 102641
+      },
+      {
+        "label": "kira",
+        "url": "https://kira-hai.net/a3_2018",
+        "status": 200,
+        "checkedAt": "2026-10-26T23:33:57.538Z",
+        "sha256": "daddcb1786607d6df54d599afce5352991c4344ed5ffd2b3538ef0283e11321f",
+        "bytes": 57264
+      },
+      {
+        "label": "ticket",
+        "url": "https://www.mankai-stage.jp/archive/ss2018/ticket/index.html",
+        "status": 200,
+        "checkedAt": "2026-10-26T23:33:57.699Z",
+        "sha256": "f587775cd4e3c433a2e9dd6d089378b771a484b1ab6c209010c744ae1e8208aa",
+        "bytes": 17807
+      },
+      {
+        "label": "guide",
+        "url": "https://www.mankai-stage.jp/archive/ss2018/guide/index.html",
+        "status": 200,
+        "checkedAt": "2026-10-26T23:33:57.760Z",
+        "sha256": "802e626869680896718484db2b11730f0212a5eaa399d4fccae7c8be3fa1ec77",
+        "bytes": 30316
+      },
+      {
+        "label": "intro",
+        "url": "https://www.mankai-stage.jp/archive/ss2018/introduction/index.html",
+        "status": 200,
+        "checkedAt": "2026-10-26T23:33:57.838Z",
+        "sha256": "f6fcc381e1afb3d773f156662de778bcde4150778d9fe6c3e76455646c61eb45",
+        "bytes": 7202
+      },
+      {
+        "label": "castDetail",
+        "url": "https://www.mankai-stage.jp/archive/ss2018/cast/detail.html",
+        "status": 200,
+        "checkedAt": "2026-10-26T23:33:57.882Z",
+        "sha256": "aa514af3a8c29ea2c7d6d8c4ed5d1d9d486b7e96ad4c3f19a3da4d0d8191f542",
+        "bytes": 26334
+      },
+      {
+        "label": "taguchiKira",
+        "url": "https://kira-hai.net/taguchi-ryo",
+        "status": 200,
+        "checkedAt": "2026-10-26T23:37:35.603Z",
+        "sha256": "3fc64a5efc7ae0d2555ce3814fdd5b0e86c35a044d6ecedcfc0b800943c5e77c",
+        "bytes": 96594
+      },
+      {
+        "label": "agency",
+        "url": "https://swallow-p.com/actor/",
+        "status": 200,
+        "checkedAt": "2026-10-26T23:37:36.888Z",
+        "sha256": "15aac518aaef87aa9b09bf7ddbe2883bf33e768cf893aced114809d69a4f5b82",
+        "bytes": 29052
+      },
+      {
+        "label": "taguchiOfficial",
+        "url": "https://swallow-p.com/actor/taguchi-ryo/",
+        "status": 200,
+        "checkedAt": "2026-10-26T23:38:12.633Z",
+        "sha256": "85dd8e962263a33faa2e3523e151e96ff7288d894548d594a0de9b5014843a67",
+        "bytes": 9790
+      },
+      {
+        "label": "taguchiMale",
+        "url": "https://jimbutsu.jitenon.jp/cat/jobkentown3_26_man.php?page=9",
+        "status": 200,
+        "checkedAt": "2026-10-26T23:38:12.846Z",
+        "sha256": "db0c7dc545da21e34d84c31f2b4dcbbe3d2d2b6fcb158f19ad5d28eaa757e20d",
+        "bytes": 33503
+      },
+      {
+        "label": "scheduleImage01",
+        "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_01.png",
+        "status": 200,
+        "checkedAt": "2026-10-26T23:40:49.210Z",
+        "sha256": "1efad8e4241a1a5d54fde9e7c25e76a3653e9ce05970555c7ca9a5052e30696e",
+        "bytes": 7724
+      },
+      {
+        "label": "scheduleImage02",
+        "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_02.png",
+        "status": 200,
+        "checkedAt": "2026-10-26T23:40:49.365Z",
+        "sha256": "7bc7bbfa28fac628d176b4c59809487a55f9f31c5600f23de5100cda2db08af1",
+        "bytes": 3922
+      },
+      {
+        "label": "scheduleImage03",
+        "url": "https://www.mankai-stage.jp/archive/ss2018/assets/img/ticket/schedule_03.png",
+        "status": 200,
+        "checkedAt": "2026-10-26T23:40:49.413Z",
+        "sha256": "ff817ebf812eb09b364fe84fbbeec69d724ed354598ff7c45ad7d0a766597a5a",
+        "bytes": 8174
+      }
+    ],
+    "unresolved": [
+      "田口性別・既存主演フラグの根拠・現在配信・2019以降の作品は後続。"
+    ],
+    "notes": [
+      "既存作品更新・4配役IDを保った補完・10配役追加。新規俳優登録と一般採用は既存の検証付きSQL/RPC。スキーマ・RLS・アプリ変更なし。",
+      "Supabase changelogは前回と同SHA256。今回のDML/RPCへの新たな関連破壊的変更なし。"
+    ]
+  },
+  "requestKey": "beb00235f5c29375959f6ab181894a0694d4494713f77616b3e1dee15fd24131",
+  "verification": {
+    "passed": true,
+    "requestKey": "beb00235f5c29375959f6ab181894a0694d4494713f77616b3e1dee15fd24131",
+    "changes": {
+      "actors": {
+        "before": 1169,
+        "after": 1170,
+        "added": 1,
+        "modified": 0,
+        "deleted": 0
+      },
+      "plays": {
+        "before": 420,
+        "after": 420,
+        "added": 0,
+        "modified": 1,
+        "deleted": 0
+      },
+      "franchises": {
+        "before": 198,
+        "after": 198,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "casts": {
+        "before": 4321,
+        "after": 4331,
+        "added": 10,
+        "modified": 4,
+        "deleted": 0
+      },
+      "external_actors": {
+        "before": 1701,
+        "after": 1701,
+        "added": 0,
+        "modified": 1,
+        "deleted": 0
+      },
+      "external_cast_candidates": {
+        "before": 3667,
+        "after": 3680,
+        "added": 13,
+        "modified": 1,
+        "deleted": 0
+      },
+      "external_import_logs": {
+        "before": 5971,
+        "after": 6004,
+        "added": 33,
+        "modified": 0,
+        "deleted": 0
+      },
+      "actor_identity_sources": {
+        "before": 515,
+        "after": 516,
+        "added": 1,
+        "modified": 0,
+        "deleted": 0
+      }
+    },
+    "newActors": 1,
+    "reusedActors": 13,
+    "newPlays": 0,
+    "updatedPlays": 1,
+    "newCasts": 10,
+    "completedExistingCasts": 4,
+    "correctedAcceptedCandidates": 1,
+    "newCandidates": 13,
+    "noDeletions": true,
+    "keptExistingStarringFlags": 3,
+    "scheduleCount": 38,
+    "tokyoPerformances": 16,
+    "kyotoPerformances": 7,
+    "tokyoReturnPerformances": 15,
+    "november1MatineeConfirmed": true,
+    "creditCategories": 10,
+    "seriesWorks": 3,
+    "seriesCastRows": 22,
+    "seriesActors": 18,
+    "totals": {
+      "actors": 1170,
+      "plays": 420,
+      "casts": 4331
+    }
+  },
+  "publicVerification": {
+    "passed": true,
+    "pages": 32,
+    "reviewedWorks": 1,
+    "targetCastRows": 14,
+    "newActors": 1,
+    "seriesWorks": 3,
+    "seriesCastRows": 22,
+    "scheduleCount": 38,
+    "results": [
+      {
+        "path": "/actors/yokota-ryugi",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/makishima-hikaru",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/maekawa-yuki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/ace-stage-ss",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/tateishi-toshiki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/furuya-yamato",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/jinnai-sho",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/noguchi-jun",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/miyazaki-yu",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/akazawa-tomoru",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/honda-reo",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/taguchi-ryo",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/takiguchi-yukihiro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/tauchi-tokihiro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/fujita-ray",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/makishima-hikaru",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/yokota-ryugi",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/ace-stage-ss",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/maekawa-yuki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/furuya-yamato",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/jinnai-sho",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/tateishi-toshiki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/honda-reo",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/noguchi-jun",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/miyazaki-yu",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/akazawa-tomoru",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/takiguchi-yukihiro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/fujita-ray",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/tauchi-tokihiro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/taguchi-ryo",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/series/a3",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/series/a3",
+        "passed": true,
+        "status": 200
+      }
+    ]
+  },
+  "searchVerification": {
+    "passed": true,
+    "checks": 56,
+    "spaceAndNoSpace": true,
+    "genderAttributesUnchanged": true,
+    "results": [
+      {
+        "path": "/actors?q=%E7%89%A7%E5%B3%B6+%E8%BC%9D",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%A8%AA%E7%94%B0%E9%BE%8D%E5%84%80",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%A8%AA%E7%94%B0+%E9%BE%8D%E5%84%80",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%89%A7%E5%B3%B6%E8%BC%9D",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%89%8D%E5%B7%9D%E5%84%AA%E5%B8%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%89%8D%E5%B7%9D+%E5%84%AA%E5%B8%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%AB%8B%E7%9F%B3%E4%BF%8A%E6%A8%B9",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%AB%8B%E7%9F%B3+%E4%BF%8A%E6%A8%B9",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%8F%A4%E8%B0%B7%E5%A4%A7%E5%92%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%8F%A4%E8%B0%B7+%E5%A4%A7%E5%92%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E9%99%B3%E5%86%85%E5%B0%86",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E9%99%B3%E5%86%85+%E5%B0%86",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%AE%AE%E5%B4%8E+%E6%B9%A7",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E9%87%8E%E5%8F%A3+%E6%BA%96",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E9%87%8E%E5%8F%A3%E6%BA%96",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%AE%AE%E5%B4%8E%E6%B9%A7",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%9C%AC%E7%94%B0+%E7%A4%BC%E7%94%9F",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%9C%AC%E7%94%B0%E7%A4%BC%E7%94%9F",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E8%B5%A4%E6%BE%A4%E7%87%88",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E8%B5%A4%E6%BE%A4+%E7%87%88",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%BB%9D%E5%8F%A3+%E5%B9%B8%E5%BA%83",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%BB%9D%E5%8F%A3%E5%B9%B8%E5%BA%83",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%94%B0%E5%8F%A3+%E6%B6%BC",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%94%B0%E5%8F%A3%E6%B6%BC",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%94%B0%E5%86%85+%E5%AD%A3%E5%AE%87",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E8%97%A4%E7%94%B0%E7%8E%B2",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E8%97%A4%E7%94%B0+%E7%8E%B2",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%94%B0%E5%86%85%E5%AD%A3%E5%AE%87",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%A8%AA%E7%94%B0+%E9%BE%8D%E5%84%80",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%89%A7%E5%B3%B6+%E8%BC%9D",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%A8%AA%E7%94%B0%E9%BE%8D%E5%84%80",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%89%8D%E5%B7%9D+%E5%84%AA%E5%B8%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%89%A7%E5%B3%B6%E8%BC%9D",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%89%8D%E5%B7%9D%E5%84%AA%E5%B8%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%AB%8B%E7%9F%B3+%E4%BF%8A%E6%A8%B9",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%AB%8B%E7%9F%B3%E4%BF%8A%E6%A8%B9",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%8F%A4%E8%B0%B7+%E5%A4%A7%E5%92%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%8F%A4%E8%B0%B7%E5%A4%A7%E5%92%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E9%99%B3%E5%86%85+%E5%B0%86",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E9%99%B3%E5%86%85%E5%B0%86",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%AE%AE%E5%B4%8E+%E6%B9%A7",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%AE%AE%E5%B4%8E%E6%B9%A7",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E9%87%8E%E5%8F%A3+%E6%BA%96",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E9%87%8E%E5%8F%A3%E6%BA%96",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%9C%AC%E7%94%B0+%E7%A4%BC%E7%94%9F",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%9C%AC%E7%94%B0%E7%A4%BC%E7%94%9F",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E8%B5%A4%E6%BE%A4+%E7%87%88",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%BB%9D%E5%8F%A3+%E5%B9%B8%E5%BA%83",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E8%B5%A4%E6%BE%A4%E7%87%88",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%BB%9D%E5%8F%A3%E5%B9%B8%E5%BA%83",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%94%B0%E5%8F%A3+%E6%B6%BC",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%94%B0%E5%8F%A3%E6%B6%BC",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%94%B0%E5%86%85+%E5%AD%A3%E5%AE%87",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%94%B0%E5%86%85%E5%AD%A3%E5%AE%87",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E8%97%A4%E7%94%B0+%E7%8E%B2",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E8%97%A4%E7%94%B0%E7%8E%B2",
+        "status": 200,
+        "passed": true
+      }
+    ]
+  },
+  "replayVerification": {
+    "passed": true,
+    "tables": {
+      "actors": {
+        "rows": 1170,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "plays": {
+        "rows": 420,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "franchises": {
+        "rows": 198,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "casts": {
+        "rows": 4331,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_actors": {
+        "rows": 1701,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_cast_candidates": {
+        "rows": 3680,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_import_logs": {
+        "rows": 6004,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "actor_identity_sources": {
+        "rows": 516,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      }
+    }
+  },
+  "sourceValidation": {
+    "officialFourteenRolesConfirmed": true,
+    "existingCastIdsRetained": 4,
+    "existingCastRolesCompleted": 3,
+    "reusedActors": 13,
+    "newActors": 1,
+    "springMembers": 5,
+    "summerMembers": 5,
+    "otherCharacters": 4,
+    "groupCarryForwardCorrected": true,
+    "roleAnnotationsRetainedAsNotes": true,
+    "acceptedLegacyCandidateCorrectedWithoutChangingIdentity": true,
+    "legacyAcceptedAtRetained": true,
+    "legacyHtmlAndUnrelatedPlayPreservedInAuditLog": true,
+    "scheduleImagesVisuallyChecked": true,
+    "officialScheduleImagePriority": true,
+    "november1MatineeRetained": true,
+    "scheduleCount": 38,
+    "tokyoScheduleCount": 16,
+    "kyotoScheduleCount": 7,
+    "tokyoReturnScheduleCount": 15,
+    "plannedRuntimeMinutes": 155,
+    "intermissionMinutes": null,
+    "currentTaguchiAffiliationAssociate": true,
+    "currentTaguchiHeightCm": 175,
+    "taguchiGender": null,
+    "existingStarringFlagsRetainedWithoutClaimingAudit": true,
+    "invalidVodPlaceholdersCleared": true,
+    "existingJapaneseSummaryPreserved": true,
+    "unrelatedRowsPreserved": true,
+    "noDeletions": true
+  },
+  "nextWork": {
+    "title": "MANKAI STAGE『A3!』～AUTUMN & WINTER 2019～",
+    "slug": "ace-stage-aw",
+    "year": 2019,
+    "status": "existing_incomplete",
+    "note": "既存5配役は今回未変更。次の作品単位で当該公式と照合し、空役名やGOD座補足を確認する。"
+  },
+  "verificationScope": "既存SPRING & SUMMER 2018を同ID・slugで補完し、4配役IDを保全して役名・春夏組・掲載順を補完、10配役追加。13人物再利用・田口涼1人新規。採用済み赤澤候補の誤年2021と別作品HTML混入を訂正し採用状態・採用日時・配役ID・外部IDを維持。春5夏5と関係者4を区別し役柄補足4件をnoteへ保存。東京16京都7東京凱旋15の38公演・予定155分休憩あり、11/1昼公演は公式画像を優先。既存JPあらすじ・既存主演フラグを保持し英訳を補完、無効なvodの#のみ解除。8テーブルの対象変更7行以外を全項目保全、削除0・同一SQL再実行0変更、日英32ページ・姓名検索56件を確認。他の2作品8配役は未点検、シリーズは現状3作品22配役18人物。田口性別・既存主演フラグ根拠・配信・A3全体監査は後続。"
+}
