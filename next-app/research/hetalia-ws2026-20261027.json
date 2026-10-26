@@ -1,0 +1,4883 @@
+{
+  "version": 1,
+  "batchId": "hetalia-ws2026-20261027-01",
+  "expectedFranchise": {
+    "id": "1ebeffff-4df9-47a1-8449-251fa80a56c1",
+    "name": "ミュージカル「ヘタリア」（ヘタミュ）",
+    "created_at": "2026-02-08T16:26:41.990203+00:00",
+    "updated_at": "2026-10-26T17:06:09.184766+00:00",
+    "slug": "hetalia",
+    "intro": null,
+    "description": "日丸屋秀和『ヘタリア Axis Powers』を原作とするミュージカルシリーズ。国を擬人化したキャラクターたちの日常や交流を歌とダンスで描く。2015年12月に『Singin’ in the World』で初演を迎えた。通称「ヘタミュ」。",
+    "origin_type": "漫画原作",
+    "origin_note": "原作：日丸屋秀和『ヘタリア Axis Powers』",
+    "production_companies": null,
+    "related_franchise_ids": [],
+    "format": null,
+    "description_en": "A musical series based on Hidekaz Himaruya’s Hetalia: Axis Powers, depicting personified nations and their encounters through song and dance. The series began with Singin’ in the World in December 2015 and is known as Hetamyu.",
+    "name_en": "Musical Hetalia"
+  },
+  "franchisePatch": {},
+  "externalActorLinks": [],
+  "actors": [],
+  "works": [
+    {
+      "year": 2026,
+      "before": null,
+      "play": {
+        "id": "d566334c-3bce-4c3b-80e0-5ec90550ce9c",
+        "slug": "hetamu2026-ws",
+        "title": "10th Anniversary ミュージカル「ヘタリア～World☆Starts～」",
+        "title_en": "Musical Hetalia 10th Anniversary: World☆Starts",
+        "franchise_id": "1ebeffff-4df9-47a1-8449-251fa80a56c1",
+        "summary": "ミュージカル『ヘタリア』の10周年記念公演。古代の面影が残るイタリア某所で開かれた世界会議に、イタリアが遅れて到着する。ドイツの議題をきっかけに各国が主張を始め、ある帝国にまつわる謎とそれぞれの思惑が会議を揺り動かしていく。",
+        "summary_en": "A tenth-anniversary production of Musical Hetalia. Italy arrives late to a world conference held in an Italian setting rich with traces of antiquity. A proposal from Germany sets the nations arguing, while a mystery surrounding an empire and their competing intentions drive the meeting in unexpected directions.",
+        "period": "2026年10月23日〜11月23日",
+        "venue": "大阪：COOL JAPAN PARK OSAKA WWホール／東京：日本青年館ホール／愛知：愛知県芸術劇場 大ホール",
+        "vod": {},
+        "genre": null,
+        "tags": [],
+        "credits": [
+          {
+            "role": "原作",
+            "names": [
+              "日丸屋秀和『ヘタリア World★Stars』（集英社 ジャンプコミックス刊）"
+            ],
+            "is_core": true,
+            "sort_order": 1
+          },
+          {
+            "role": "演出・作詞",
+            "names": [
+              "吉谷晃太朗"
+            ],
+            "is_core": true,
+            "sort_order": 2
+          },
+          {
+            "role": "脚本",
+            "names": [
+              "広瀬格",
+              "吉谷晃太朗"
+            ],
+            "is_core": true,
+            "sort_order": 3
+          },
+          {
+            "role": "脚本協力",
+            "names": [
+              "なるせゆうせい"
+            ],
+            "is_core": false,
+            "sort_order": 4
+          },
+          {
+            "role": "音楽",
+            "names": [
+              "宮里豊"
+            ],
+            "is_core": false,
+            "sort_order": 5
+          },
+          {
+            "role": "振付",
+            "names": [
+              "MAMORU"
+            ],
+            "is_core": false,
+            "sort_order": 6
+          },
+          {
+            "role": "歌唱指導",
+            "names": [
+              "水野里香"
+            ],
+            "is_core": false,
+            "sort_order": 7
+          },
+          {
+            "role": "舞台衣装デザイン",
+            "names": [
+              "新朋子（COMO Inc.）"
+            ],
+            "is_core": false,
+            "sort_order": 8
+          },
+          {
+            "role": "衣装製作",
+            "names": [
+              "COMO Inc."
+            ],
+            "is_core": false,
+            "sort_order": 9
+          },
+          {
+            "role": "ヘアメイク",
+            "names": [
+              "西村裕司（earch）"
+            ],
+            "is_core": false,
+            "sort_order": 10
+          },
+          {
+            "role": "カメラマン",
+            "names": [
+              "金山フヒト（Xallarap）"
+            ],
+            "is_core": false,
+            "sort_order": 11
+          },
+          {
+            "role": "宣伝美術",
+            "names": [
+              "羽尾万里子（Mujina:art）"
+            ],
+            "is_core": false,
+            "sort_order": 12
+          },
+          {
+            "role": "企画制作・プロデュース",
+            "names": [
+              "4cu（Frontier Works Inc.）"
+            ],
+            "is_core": false,
+            "sort_order": 13
+          },
+          {
+            "role": "制作",
+            "names": [
+              "株式会社FAB"
+            ],
+            "is_core": false,
+            "sort_order": 14
+          },
+          {
+            "role": "主催",
+            "names": [
+              "ミュージカル「ヘタリアWS」製作委員会"
+            ],
+            "is_core": false,
+            "sort_order": 15
+          },
+          {
+            "role": "DANCE CAST",
+            "names": [
+              "伊東征哉",
+              "町田尚規",
+              "多田滉",
+              "山口渓",
+              "竹井弘樹",
+              "春口凌芽"
+            ],
+            "is_core": false,
+            "sort_order": 16
+          },
+          {
+            "role": "CHORUS CAST",
+            "names": [
+              "森さとる",
+              "喜久田大和",
+              "松崎友洸",
+              "沼田来蕗"
+            ],
+            "is_core": false,
+            "sort_order": 17
+          },
+          {
+            "role": "公演日程",
+            "names": [
+              "大阪：2026年10月23日〜26日（COOL JAPAN PARK OSAKA WWホール）・全5公演",
+              "東京：2026年10月30日〜11月8日（日本青年館ホール）・全13公演、11月2日休演",
+              "愛知：2026年11月21日〜23日（愛知県芸術劇場 大ホール）・全4公演"
+            ],
+            "is_core": false,
+            "sort_order": 18
+          },
+          {
+            "role": "上演時間（予定）",
+            "names": [
+              "約3時間10分（途中休憩あり・休憩分数未確認）"
+            ],
+            "is_core": false,
+            "sort_order": 19
+          },
+          {
+            "role": "脚本変更",
+            "names": [
+              "2026年8月7日発表：脚本は広瀬格・吉谷晃太朗、脚本協力はなるせゆうせいへ変更。"
+            ],
+            "is_core": false,
+            "sort_order": 20
+          }
+        ],
+        "related_franchise_ids": []
+      },
+      "rawSource": {
+        "sourceUrl": "https://musical-hetalia.com/ws/cast/",
+        "title": "10th Anniversary ミュージカル「ヘタリア～World☆Starts～」 (2026)",
+        "checkedAt": "2026-10-26T23:18:14.234Z",
+        "scheduleLines": [
+          "2026年10月23日〜26日 COOL JAPAN PARK OSAKA WWホール",
+          "2026年10月30日〜11月8日 日本青年館ホール",
+          "2026年11月21日〜23日 愛知県芸術劇場 大ホール"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "長江崚行",
+            "sourceActorUrl": "https://twitter.com/Ryoki_N0826",
+            "role_name": "イタリア",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "上田悠介",
+            "sourceActorUrl": "https://twitter.com/yskued0402",
+            "role_name": "ドイツ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "植田圭輔",
+            "sourceActorUrl": "https://x.com/uechan_0905",
+            "role_name": "日本",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "磯貝龍乎",
+            "sourceActorUrl": "https://twitter.com/Ryukonbu",
+            "role_name": "アメリカ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "廣瀬大介",
+            "sourceActorUrl": "https://twitter.com/da_sukemaru",
+            "role_name": "イギリス",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "寿里",
+            "sourceActorUrl": "https://twitter.com/jurigig",
+            "role_name": "フランス",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "山沖勇輝",
+            "sourceActorUrl": "https://twitter.com/y_yuki0305",
+            "role_name": "ロシア",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "杉江大志",
+            "sourceActorUrl": "https://twitter.com/SugieTaishi",
+            "role_name": "中国",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "山田ジェームス武",
+            "sourceActorUrl": "https://x.com/takezo0507",
+            "role_name": "スペイン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "高本学",
+            "sourceActorUrl": "https://twitter.com/C1Wo705",
+            "role_name": "プロイセン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "樋口裕太",
+            "sourceActorUrl": "https://x.com/official_yuta14",
+            "role_name": "ロマーノ",
+            "cast_group": null
+          }
+        ],
+        "unparsed": [
+          {
+            "sourceActorName": "伊東征哉",
+            "cast_group": "DANCE CAST",
+            "role_name": null
+          },
+          {
+            "sourceActorName": "町田尚規",
+            "cast_group": "DANCE CAST",
+            "role_name": null
+          },
+          {
+            "sourceActorName": "多田滉",
+            "cast_group": "DANCE CAST",
+            "role_name": null
+          },
+          {
+            "sourceActorName": "山口渓",
+            "cast_group": "DANCE CAST",
+            "role_name": null
+          },
+          {
+            "sourceActorName": "竹井弘樹",
+            "cast_group": "DANCE CAST",
+            "role_name": null
+          },
+          {
+            "sourceActorName": "春口凌芽",
+            "cast_group": "DANCE CAST",
+            "role_name": null
+          },
+          {
+            "sourceActorName": "森さとる",
+            "cast_group": "CHORUS CAST",
+            "role_name": null
+          },
+          {
+            "sourceActorName": "喜久田大和",
+            "cast_group": "CHORUS CAST",
+            "role_name": null
+          },
+          {
+            "sourceActorName": "松崎友洸",
+            "cast_group": "CHORUS CAST",
+            "role_name": null
+          },
+          {
+            "sourceActorName": "沼田来蕗",
+            "cast_group": "CHORUS CAST",
+            "role_name": null
+          }
+        ]
+      },
+      "source": {
+        "sourceUrl": "https://musical-hetalia.com/ws/cast/",
+        "title": "10th Anniversary ミュージカル「ヘタリア～World☆Starts～」 (2026)",
+        "checkedAt": "2026-10-26T23:18:14.234Z",
+        "scheduleLines": [
+          "2026年10月23日〜26日 COOL JAPAN PARK OSAKA WWホール",
+          "2026年10月30日〜11月8日 日本青年館ホール",
+          "2026年11月21日〜23日 愛知県芸術劇場 大ホール"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "長江崚行",
+            "sourceActorUrl": "https://twitter.com/Ryoki_N0826",
+            "role_name": "イタリア",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "上田悠介",
+            "sourceActorUrl": "https://twitter.com/yskued0402",
+            "role_name": "ドイツ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "植田圭輔",
+            "sourceActorUrl": "https://x.com/uechan_0905",
+            "role_name": "日本",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "磯貝龍乎",
+            "sourceActorUrl": "https://twitter.com/Ryukonbu",
+            "role_name": "アメリカ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "廣瀬大介",
+            "sourceActorUrl": "https://twitter.com/da_sukemaru",
+            "role_name": "イギリス",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "寿里",
+            "sourceActorUrl": "https://twitter.com/jurigig",
+            "role_name": "フランス",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "山沖勇輝",
+            "sourceActorUrl": "https://twitter.com/y_yuki0305",
+            "role_name": "ロシア",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "杉江大志",
+            "sourceActorUrl": "https://twitter.com/SugieTaishi",
+            "role_name": "中国",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "山田ジェームス武",
+            "sourceActorUrl": "https://x.com/takezo0507",
+            "role_name": "スペイン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "高本学",
+            "sourceActorUrl": "https://twitter.com/C1Wo705",
+            "role_name": "プロイセン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "樋口裕太",
+            "sourceActorUrl": "https://x.com/official_yuta14",
+            "role_name": "ロマーノ",
+            "cast_group": null
+          }
+        ],
+        "unparsed": []
+      },
+      "sourceKind": "official",
+      "sourceFingerprint": "94b16ea5cad2e2321af356566427c254a35da05e3948b34245dfec66fe10feba",
+      "stage": {
+        "workUrl": "https://musical-hetalia.com/ws/cast/",
+        "key": "0114e9b4fca880039b4d1046f03874f7d98524201f97c1c5e282a67bd5db4c79",
+        "items": [
+          {
+            "source_actor_name": "長江崚行",
+            "source_actor_url": "https://twitter.com/Ryoki_N0826",
+            "source_work_title": "10th Anniversary ミュージカル「ヘタリア～World☆Starts～」 (2026)",
+            "source_year": 2026,
+            "source_role_raw": "イタリア",
+            "source_role_names": [
+              "イタリア"
+            ],
+            "source_cast_group": null,
+            "source_order": 1,
+            "source_credit_key": "8e5f1c41b2108f245abb",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://musical-hetalia.com/ws/cast/",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/cast/",
+                  "checkedAt": "2026-10-26T23:18:14.234Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/story/",
+                  "checkedAt": "2026-10-26T23:18:14.393Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/schedule/",
+                  "checkedAt": "2026-10-26T23:18:14.402Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/qa/",
+                  "checkedAt": "2026-10-26T23:18:14.372Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/wp-content/themes/ws/asset/img/txt-staff-pc.png",
+                  "checkedAt": "2026-10-26T23:19:16.491Z",
+                  "note": "当該公式スタッフ画像を白背景で目視転記。透明原画像・SHA256を保存。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/news/87/",
+                  "checkedAt": "2026-10-26T23:20:59.309Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/news/",
+                  "checkedAt": "2026-10-26T23:18:14.389Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/news/page/2/",
+                  "checkedAt": "2026-10-26T23:18:14.324Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://kyodo-osaka.co.jp/search/detail/13185",
+                  "checkedAt": "2026-10-26T23:18:14.312Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://www.unext.co.jp/ja/press-room/musical-hetalia-ws-2026-10-02",
+                  "checkedAt": "2026-10-26T23:18:14.039Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://kira-hai.net/nagae-ryoki",
+                  "checkedAt": "2026-10-26T23:18:14.030Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://kira-hai.net/schedule2026",
+                  "checkedAt": "2026-10-26T23:19:16.752Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                }
+              ],
+              "source_kind": "official",
+              "source_fingerprint": "94b16ea5cad2e2321af356566427c254a35da05e3948b34245dfec66fe10feba",
+              "review_fingerprint": "e7848e950b18922b359ec6ea3c8ca115c4cf90164cb5539caa6684ad76f45e5c",
+              "snapshot_fingerprint": "1710f5e7ed4bdc6206b0d3b03ca0b2a0cef7b27cc89608e916d14b800b2e0628",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 1,
+                "cast": {
+                  "sourceActorName": "長江崚行",
+                  "sourceActorUrl": "https://twitter.com/Ryoki_N0826",
+                  "role_name": "イタリア",
+                  "cast_group": null
+                }
+              },
+              "year_review": {
+                "value": 2026,
+                "evidence": [
+                  {
+                    "url": "https://musical-hetalia.com/ws/schedule/",
+                    "checkedAt": "2026-10-26T23:18:14.402Z",
+                    "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "4b3110ab-0d88-4a68-8a1d-ed0fcac335ff",
+            "matched_play_id": "d566334c-3bce-4c3b-80e0-5ec90550ce9c",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "上田悠介",
+            "source_actor_url": "https://twitter.com/yskued0402",
+            "source_work_title": "10th Anniversary ミュージカル「ヘタリア～World☆Starts～」 (2026)",
+            "source_year": 2026,
+            "source_role_raw": "ドイツ",
+            "source_role_names": [
+              "ドイツ"
+            ],
+            "source_cast_group": null,
+            "source_order": 2,
+            "source_credit_key": "1122648243e9073fe695",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://musical-hetalia.com/ws/cast/",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/cast/",
+                  "checkedAt": "2026-10-26T23:18:14.234Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/story/",
+                  "checkedAt": "2026-10-26T23:18:14.393Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/schedule/",
+                  "checkedAt": "2026-10-26T23:18:14.402Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/qa/",
+                  "checkedAt": "2026-10-26T23:18:14.372Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/wp-content/themes/ws/asset/img/txt-staff-pc.png",
+                  "checkedAt": "2026-10-26T23:19:16.491Z",
+                  "note": "当該公式スタッフ画像を白背景で目視転記。透明原画像・SHA256を保存。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/news/87/",
+                  "checkedAt": "2026-10-26T23:20:59.309Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/news/",
+                  "checkedAt": "2026-10-26T23:18:14.389Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/news/page/2/",
+                  "checkedAt": "2026-10-26T23:18:14.324Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://kyodo-osaka.co.jp/search/detail/13185",
+                  "checkedAt": "2026-10-26T23:18:14.312Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://www.unext.co.jp/ja/press-room/musical-hetalia-ws-2026-10-02",
+                  "checkedAt": "2026-10-26T23:18:14.039Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://kira-hai.net/nagae-ryoki",
+                  "checkedAt": "2026-10-26T23:18:14.030Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://kira-hai.net/schedule2026",
+                  "checkedAt": "2026-10-26T23:19:16.752Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                }
+              ],
+              "source_kind": "official",
+              "source_fingerprint": "94b16ea5cad2e2321af356566427c254a35da05e3948b34245dfec66fe10feba",
+              "review_fingerprint": "e7848e950b18922b359ec6ea3c8ca115c4cf90164cb5539caa6684ad76f45e5c",
+              "snapshot_fingerprint": "1710f5e7ed4bdc6206b0d3b03ca0b2a0cef7b27cc89608e916d14b800b2e0628",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 2,
+                "cast": {
+                  "sourceActorName": "上田悠介",
+                  "sourceActorUrl": "https://twitter.com/yskued0402",
+                  "role_name": "ドイツ",
+                  "cast_group": null
+                }
+              },
+              "year_review": {
+                "value": 2026,
+                "evidence": [
+                  {
+                    "url": "https://musical-hetalia.com/ws/schedule/",
+                    "checkedAt": "2026-10-26T23:18:14.402Z",
+                    "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "a36372ce-61e5-43f5-ae9c-e1bf2fb5226b",
+            "matched_play_id": "d566334c-3bce-4c3b-80e0-5ec90550ce9c",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "植田圭輔",
+            "source_actor_url": "https://x.com/uechan_0905",
+            "source_work_title": "10th Anniversary ミュージカル「ヘタリア～World☆Starts～」 (2026)",
+            "source_year": 2026,
+            "source_role_raw": "日本",
+            "source_role_names": [
+              "日本"
+            ],
+            "source_cast_group": null,
+            "source_order": 3,
+            "source_credit_key": "c6cee9c6fb6d8005481d",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://musical-hetalia.com/ws/cast/",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/cast/",
+                  "checkedAt": "2026-10-26T23:18:14.234Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/story/",
+                  "checkedAt": "2026-10-26T23:18:14.393Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/schedule/",
+                  "checkedAt": "2026-10-26T23:18:14.402Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/qa/",
+                  "checkedAt": "2026-10-26T23:18:14.372Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/wp-content/themes/ws/asset/img/txt-staff-pc.png",
+                  "checkedAt": "2026-10-26T23:19:16.491Z",
+                  "note": "当該公式スタッフ画像を白背景で目視転記。透明原画像・SHA256を保存。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/news/87/",
+                  "checkedAt": "2026-10-26T23:20:59.309Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/news/",
+                  "checkedAt": "2026-10-26T23:18:14.389Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/news/page/2/",
+                  "checkedAt": "2026-10-26T23:18:14.324Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://kyodo-osaka.co.jp/search/detail/13185",
+                  "checkedAt": "2026-10-26T23:18:14.312Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://www.unext.co.jp/ja/press-room/musical-hetalia-ws-2026-10-02",
+                  "checkedAt": "2026-10-26T23:18:14.039Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://kira-hai.net/nagae-ryoki",
+                  "checkedAt": "2026-10-26T23:18:14.030Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://kira-hai.net/schedule2026",
+                  "checkedAt": "2026-10-26T23:19:16.752Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                }
+              ],
+              "source_kind": "official",
+              "source_fingerprint": "94b16ea5cad2e2321af356566427c254a35da05e3948b34245dfec66fe10feba",
+              "review_fingerprint": "e7848e950b18922b359ec6ea3c8ca115c4cf90164cb5539caa6684ad76f45e5c",
+              "snapshot_fingerprint": "1710f5e7ed4bdc6206b0d3b03ca0b2a0cef7b27cc89608e916d14b800b2e0628",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 3,
+                "cast": {
+                  "sourceActorName": "植田圭輔",
+                  "sourceActorUrl": "https://x.com/uechan_0905",
+                  "role_name": "日本",
+                  "cast_group": null
+                }
+              },
+              "year_review": {
+                "value": 2026,
+                "evidence": [
+                  {
+                    "url": "https://musical-hetalia.com/ws/schedule/",
+                    "checkedAt": "2026-10-26T23:18:14.402Z",
+                    "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "efec4bde-6be0-4d8f-80e6-0d1c3accf066",
+            "matched_play_id": "d566334c-3bce-4c3b-80e0-5ec90550ce9c",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "磯貝龍乎",
+            "source_actor_url": "https://twitter.com/Ryukonbu",
+            "source_work_title": "10th Anniversary ミュージカル「ヘタリア～World☆Starts～」 (2026)",
+            "source_year": 2026,
+            "source_role_raw": "アメリカ",
+            "source_role_names": [
+              "アメリカ"
+            ],
+            "source_cast_group": null,
+            "source_order": 4,
+            "source_credit_key": "8d901f37bfe7b4c20639",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://musical-hetalia.com/ws/cast/",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/cast/",
+                  "checkedAt": "2026-10-26T23:18:14.234Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/story/",
+                  "checkedAt": "2026-10-26T23:18:14.393Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/schedule/",
+                  "checkedAt": "2026-10-26T23:18:14.402Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/qa/",
+                  "checkedAt": "2026-10-26T23:18:14.372Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/wp-content/themes/ws/asset/img/txt-staff-pc.png",
+                  "checkedAt": "2026-10-26T23:19:16.491Z",
+                  "note": "当該公式スタッフ画像を白背景で目視転記。透明原画像・SHA256を保存。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/news/87/",
+                  "checkedAt": "2026-10-26T23:20:59.309Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/news/",
+                  "checkedAt": "2026-10-26T23:18:14.389Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/news/page/2/",
+                  "checkedAt": "2026-10-26T23:18:14.324Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://kyodo-osaka.co.jp/search/detail/13185",
+                  "checkedAt": "2026-10-26T23:18:14.312Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://www.unext.co.jp/ja/press-room/musical-hetalia-ws-2026-10-02",
+                  "checkedAt": "2026-10-26T23:18:14.039Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://kira-hai.net/nagae-ryoki",
+                  "checkedAt": "2026-10-26T23:18:14.030Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://kira-hai.net/schedule2026",
+                  "checkedAt": "2026-10-26T23:19:16.752Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                }
+              ],
+              "source_kind": "official",
+              "source_fingerprint": "94b16ea5cad2e2321af356566427c254a35da05e3948b34245dfec66fe10feba",
+              "review_fingerprint": "e7848e950b18922b359ec6ea3c8ca115c4cf90164cb5539caa6684ad76f45e5c",
+              "snapshot_fingerprint": "1710f5e7ed4bdc6206b0d3b03ca0b2a0cef7b27cc89608e916d14b800b2e0628",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 4,
+                "cast": {
+                  "sourceActorName": "磯貝龍乎",
+                  "sourceActorUrl": "https://twitter.com/Ryukonbu",
+                  "role_name": "アメリカ",
+                  "cast_group": null
+                }
+              },
+              "year_review": {
+                "value": 2026,
+                "evidence": [
+                  {
+                    "url": "https://musical-hetalia.com/ws/schedule/",
+                    "checkedAt": "2026-10-26T23:18:14.402Z",
+                    "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "b15c5d1c-b38b-4604-bee6-f19f4a8ab1db",
+            "matched_play_id": "d566334c-3bce-4c3b-80e0-5ec90550ce9c",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "廣瀬大介",
+            "source_actor_url": "https://twitter.com/da_sukemaru",
+            "source_work_title": "10th Anniversary ミュージカル「ヘタリア～World☆Starts～」 (2026)",
+            "source_year": 2026,
+            "source_role_raw": "イギリス",
+            "source_role_names": [
+              "イギリス"
+            ],
+            "source_cast_group": null,
+            "source_order": 5,
+            "source_credit_key": "3d1561ded8f329f5b474",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://musical-hetalia.com/ws/cast/",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/cast/",
+                  "checkedAt": "2026-10-26T23:18:14.234Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/story/",
+                  "checkedAt": "2026-10-26T23:18:14.393Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/schedule/",
+                  "checkedAt": "2026-10-26T23:18:14.402Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/qa/",
+                  "checkedAt": "2026-10-26T23:18:14.372Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/wp-content/themes/ws/asset/img/txt-staff-pc.png",
+                  "checkedAt": "2026-10-26T23:19:16.491Z",
+                  "note": "当該公式スタッフ画像を白背景で目視転記。透明原画像・SHA256を保存。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/news/87/",
+                  "checkedAt": "2026-10-26T23:20:59.309Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/news/",
+                  "checkedAt": "2026-10-26T23:18:14.389Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/news/page/2/",
+                  "checkedAt": "2026-10-26T23:18:14.324Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://kyodo-osaka.co.jp/search/detail/13185",
+                  "checkedAt": "2026-10-26T23:18:14.312Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://www.unext.co.jp/ja/press-room/musical-hetalia-ws-2026-10-02",
+                  "checkedAt": "2026-10-26T23:18:14.039Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://kira-hai.net/nagae-ryoki",
+                  "checkedAt": "2026-10-26T23:18:14.030Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://kira-hai.net/schedule2026",
+                  "checkedAt": "2026-10-26T23:19:16.752Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                }
+              ],
+              "source_kind": "official",
+              "source_fingerprint": "94b16ea5cad2e2321af356566427c254a35da05e3948b34245dfec66fe10feba",
+              "review_fingerprint": "e7848e950b18922b359ec6ea3c8ca115c4cf90164cb5539caa6684ad76f45e5c",
+              "snapshot_fingerprint": "1710f5e7ed4bdc6206b0d3b03ca0b2a0cef7b27cc89608e916d14b800b2e0628",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 5,
+                "cast": {
+                  "sourceActorName": "廣瀬大介",
+                  "sourceActorUrl": "https://twitter.com/da_sukemaru",
+                  "role_name": "イギリス",
+                  "cast_group": null
+                }
+              },
+              "year_review": {
+                "value": 2026,
+                "evidence": [
+                  {
+                    "url": "https://musical-hetalia.com/ws/schedule/",
+                    "checkedAt": "2026-10-26T23:18:14.402Z",
+                    "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "ea847f48-42b3-40d0-8b2b-5fe9c11d53f7",
+            "matched_play_id": "d566334c-3bce-4c3b-80e0-5ec90550ce9c",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "寿里",
+            "source_actor_url": "https://twitter.com/jurigig",
+            "source_work_title": "10th Anniversary ミュージカル「ヘタリア～World☆Starts～」 (2026)",
+            "source_year": 2026,
+            "source_role_raw": "フランス",
+            "source_role_names": [
+              "フランス"
+            ],
+            "source_cast_group": null,
+            "source_order": 6,
+            "source_credit_key": "2be6d8342e2d78b3cfe1",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://musical-hetalia.com/ws/cast/",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/cast/",
+                  "checkedAt": "2026-10-26T23:18:14.234Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/story/",
+                  "checkedAt": "2026-10-26T23:18:14.393Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/schedule/",
+                  "checkedAt": "2026-10-26T23:18:14.402Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/qa/",
+                  "checkedAt": "2026-10-26T23:18:14.372Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/wp-content/themes/ws/asset/img/txt-staff-pc.png",
+                  "checkedAt": "2026-10-26T23:19:16.491Z",
+                  "note": "当該公式スタッフ画像を白背景で目視転記。透明原画像・SHA256を保存。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/news/87/",
+                  "checkedAt": "2026-10-26T23:20:59.309Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/news/",
+                  "checkedAt": "2026-10-26T23:18:14.389Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/news/page/2/",
+                  "checkedAt": "2026-10-26T23:18:14.324Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://kyodo-osaka.co.jp/search/detail/13185",
+                  "checkedAt": "2026-10-26T23:18:14.312Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://www.unext.co.jp/ja/press-room/musical-hetalia-ws-2026-10-02",
+                  "checkedAt": "2026-10-26T23:18:14.039Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://kira-hai.net/nagae-ryoki",
+                  "checkedAt": "2026-10-26T23:18:14.030Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://kira-hai.net/schedule2026",
+                  "checkedAt": "2026-10-26T23:19:16.752Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                }
+              ],
+              "source_kind": "official",
+              "source_fingerprint": "94b16ea5cad2e2321af356566427c254a35da05e3948b34245dfec66fe10feba",
+              "review_fingerprint": "e7848e950b18922b359ec6ea3c8ca115c4cf90164cb5539caa6684ad76f45e5c",
+              "snapshot_fingerprint": "1710f5e7ed4bdc6206b0d3b03ca0b2a0cef7b27cc89608e916d14b800b2e0628",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 6,
+                "cast": {
+                  "sourceActorName": "寿里",
+                  "sourceActorUrl": "https://twitter.com/jurigig",
+                  "role_name": "フランス",
+                  "cast_group": null
+                }
+              },
+              "year_review": {
+                "value": 2026,
+                "evidence": [
+                  {
+                    "url": "https://musical-hetalia.com/ws/schedule/",
+                    "checkedAt": "2026-10-26T23:18:14.402Z",
+                    "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "a862c0c0-8fd8-458b-8b9d-391c6fe69a0c",
+            "matched_play_id": "d566334c-3bce-4c3b-80e0-5ec90550ce9c",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "山沖勇輝",
+            "source_actor_url": "https://twitter.com/y_yuki0305",
+            "source_work_title": "10th Anniversary ミュージカル「ヘタリア～World☆Starts～」 (2026)",
+            "source_year": 2026,
+            "source_role_raw": "ロシア",
+            "source_role_names": [
+              "ロシア"
+            ],
+            "source_cast_group": null,
+            "source_order": 7,
+            "source_credit_key": "67183cf5d741877e86d3",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://musical-hetalia.com/ws/cast/",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/cast/",
+                  "checkedAt": "2026-10-26T23:18:14.234Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/story/",
+                  "checkedAt": "2026-10-26T23:18:14.393Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/schedule/",
+                  "checkedAt": "2026-10-26T23:18:14.402Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/qa/",
+                  "checkedAt": "2026-10-26T23:18:14.372Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/wp-content/themes/ws/asset/img/txt-staff-pc.png",
+                  "checkedAt": "2026-10-26T23:19:16.491Z",
+                  "note": "当該公式スタッフ画像を白背景で目視転記。透明原画像・SHA256を保存。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/news/87/",
+                  "checkedAt": "2026-10-26T23:20:59.309Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/news/",
+                  "checkedAt": "2026-10-26T23:18:14.389Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/news/page/2/",
+                  "checkedAt": "2026-10-26T23:18:14.324Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://kyodo-osaka.co.jp/search/detail/13185",
+                  "checkedAt": "2026-10-26T23:18:14.312Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://www.unext.co.jp/ja/press-room/musical-hetalia-ws-2026-10-02",
+                  "checkedAt": "2026-10-26T23:18:14.039Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://kira-hai.net/nagae-ryoki",
+                  "checkedAt": "2026-10-26T23:18:14.030Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://kira-hai.net/schedule2026",
+                  "checkedAt": "2026-10-26T23:19:16.752Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                }
+              ],
+              "source_kind": "official",
+              "source_fingerprint": "94b16ea5cad2e2321af356566427c254a35da05e3948b34245dfec66fe10feba",
+              "review_fingerprint": "e7848e950b18922b359ec6ea3c8ca115c4cf90164cb5539caa6684ad76f45e5c",
+              "snapshot_fingerprint": "1710f5e7ed4bdc6206b0d3b03ca0b2a0cef7b27cc89608e916d14b800b2e0628",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 7,
+                "cast": {
+                  "sourceActorName": "山沖勇輝",
+                  "sourceActorUrl": "https://twitter.com/y_yuki0305",
+                  "role_name": "ロシア",
+                  "cast_group": null
+                }
+              },
+              "year_review": {
+                "value": 2026,
+                "evidence": [
+                  {
+                    "url": "https://musical-hetalia.com/ws/schedule/",
+                    "checkedAt": "2026-10-26T23:18:14.402Z",
+                    "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "3ecf714c-ad02-4356-af65-dcfb2952dfac",
+            "matched_play_id": "d566334c-3bce-4c3b-80e0-5ec90550ce9c",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "杉江大志",
+            "source_actor_url": "https://twitter.com/SugieTaishi",
+            "source_work_title": "10th Anniversary ミュージカル「ヘタリア～World☆Starts～」 (2026)",
+            "source_year": 2026,
+            "source_role_raw": "中国",
+            "source_role_names": [
+              "中国"
+            ],
+            "source_cast_group": null,
+            "source_order": 8,
+            "source_credit_key": "bfea5cae0d68970b1733",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://musical-hetalia.com/ws/cast/",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/cast/",
+                  "checkedAt": "2026-10-26T23:18:14.234Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/story/",
+                  "checkedAt": "2026-10-26T23:18:14.393Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/schedule/",
+                  "checkedAt": "2026-10-26T23:18:14.402Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/qa/",
+                  "checkedAt": "2026-10-26T23:18:14.372Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/wp-content/themes/ws/asset/img/txt-staff-pc.png",
+                  "checkedAt": "2026-10-26T23:19:16.491Z",
+                  "note": "当該公式スタッフ画像を白背景で目視転記。透明原画像・SHA256を保存。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/news/87/",
+                  "checkedAt": "2026-10-26T23:20:59.309Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/news/",
+                  "checkedAt": "2026-10-26T23:18:14.389Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/news/page/2/",
+                  "checkedAt": "2026-10-26T23:18:14.324Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://kyodo-osaka.co.jp/search/detail/13185",
+                  "checkedAt": "2026-10-26T23:18:14.312Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://www.unext.co.jp/ja/press-room/musical-hetalia-ws-2026-10-02",
+                  "checkedAt": "2026-10-26T23:18:14.039Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://kira-hai.net/nagae-ryoki",
+                  "checkedAt": "2026-10-26T23:18:14.030Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://kira-hai.net/schedule2026",
+                  "checkedAt": "2026-10-26T23:19:16.752Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                }
+              ],
+              "source_kind": "official",
+              "source_fingerprint": "94b16ea5cad2e2321af356566427c254a35da05e3948b34245dfec66fe10feba",
+              "review_fingerprint": "e7848e950b18922b359ec6ea3c8ca115c4cf90164cb5539caa6684ad76f45e5c",
+              "snapshot_fingerprint": "1710f5e7ed4bdc6206b0d3b03ca0b2a0cef7b27cc89608e916d14b800b2e0628",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 8,
+                "cast": {
+                  "sourceActorName": "杉江大志",
+                  "sourceActorUrl": "https://twitter.com/SugieTaishi",
+                  "role_name": "中国",
+                  "cast_group": null
+                }
+              },
+              "year_review": {
+                "value": 2026,
+                "evidence": [
+                  {
+                    "url": "https://musical-hetalia.com/ws/schedule/",
+                    "checkedAt": "2026-10-26T23:18:14.402Z",
+                    "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "1ae8e0b4-b42c-46aa-8d23-bac885531af6",
+            "matched_play_id": "d566334c-3bce-4c3b-80e0-5ec90550ce9c",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "山田ジェームス武",
+            "source_actor_url": "https://x.com/takezo0507",
+            "source_work_title": "10th Anniversary ミュージカル「ヘタリア～World☆Starts～」 (2026)",
+            "source_year": 2026,
+            "source_role_raw": "スペイン",
+            "source_role_names": [
+              "スペイン"
+            ],
+            "source_cast_group": null,
+            "source_order": 9,
+            "source_credit_key": "60adf8fbe12be9bf7392",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://musical-hetalia.com/ws/cast/",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/cast/",
+                  "checkedAt": "2026-10-26T23:18:14.234Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/story/",
+                  "checkedAt": "2026-10-26T23:18:14.393Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/schedule/",
+                  "checkedAt": "2026-10-26T23:18:14.402Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/qa/",
+                  "checkedAt": "2026-10-26T23:18:14.372Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/wp-content/themes/ws/asset/img/txt-staff-pc.png",
+                  "checkedAt": "2026-10-26T23:19:16.491Z",
+                  "note": "当該公式スタッフ画像を白背景で目視転記。透明原画像・SHA256を保存。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/news/87/",
+                  "checkedAt": "2026-10-26T23:20:59.309Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/news/",
+                  "checkedAt": "2026-10-26T23:18:14.389Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/news/page/2/",
+                  "checkedAt": "2026-10-26T23:18:14.324Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://kyodo-osaka.co.jp/search/detail/13185",
+                  "checkedAt": "2026-10-26T23:18:14.312Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://www.unext.co.jp/ja/press-room/musical-hetalia-ws-2026-10-02",
+                  "checkedAt": "2026-10-26T23:18:14.039Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://kira-hai.net/nagae-ryoki",
+                  "checkedAt": "2026-10-26T23:18:14.030Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://kira-hai.net/schedule2026",
+                  "checkedAt": "2026-10-26T23:19:16.752Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                }
+              ],
+              "source_kind": "official",
+              "source_fingerprint": "94b16ea5cad2e2321af356566427c254a35da05e3948b34245dfec66fe10feba",
+              "review_fingerprint": "e7848e950b18922b359ec6ea3c8ca115c4cf90164cb5539caa6684ad76f45e5c",
+              "snapshot_fingerprint": "1710f5e7ed4bdc6206b0d3b03ca0b2a0cef7b27cc89608e916d14b800b2e0628",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 9,
+                "cast": {
+                  "sourceActorName": "山田ジェームス武",
+                  "sourceActorUrl": "https://x.com/takezo0507",
+                  "role_name": "スペイン",
+                  "cast_group": null
+                }
+              },
+              "year_review": {
+                "value": 2026,
+                "evidence": [
+                  {
+                    "url": "https://musical-hetalia.com/ws/schedule/",
+                    "checkedAt": "2026-10-26T23:18:14.402Z",
+                    "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "cea80c66-8201-4fa6-a4cf-3eef46ebfee0",
+            "matched_play_id": "d566334c-3bce-4c3b-80e0-5ec90550ce9c",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "高本学",
+            "source_actor_url": "https://twitter.com/C1Wo705",
+            "source_work_title": "10th Anniversary ミュージカル「ヘタリア～World☆Starts～」 (2026)",
+            "source_year": 2026,
+            "source_role_raw": "プロイセン",
+            "source_role_names": [
+              "プロイセン"
+            ],
+            "source_cast_group": null,
+            "source_order": 10,
+            "source_credit_key": "5fddd0ee40512acef518",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://musical-hetalia.com/ws/cast/",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/cast/",
+                  "checkedAt": "2026-10-26T23:18:14.234Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/story/",
+                  "checkedAt": "2026-10-26T23:18:14.393Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/schedule/",
+                  "checkedAt": "2026-10-26T23:18:14.402Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/qa/",
+                  "checkedAt": "2026-10-26T23:18:14.372Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/wp-content/themes/ws/asset/img/txt-staff-pc.png",
+                  "checkedAt": "2026-10-26T23:19:16.491Z",
+                  "note": "当該公式スタッフ画像を白背景で目視転記。透明原画像・SHA256を保存。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/news/87/",
+                  "checkedAt": "2026-10-26T23:20:59.309Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/news/",
+                  "checkedAt": "2026-10-26T23:18:14.389Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/news/page/2/",
+                  "checkedAt": "2026-10-26T23:18:14.324Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://kyodo-osaka.co.jp/search/detail/13185",
+                  "checkedAt": "2026-10-26T23:18:14.312Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://www.unext.co.jp/ja/press-room/musical-hetalia-ws-2026-10-02",
+                  "checkedAt": "2026-10-26T23:18:14.039Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://kira-hai.net/nagae-ryoki",
+                  "checkedAt": "2026-10-26T23:18:14.030Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://kira-hai.net/schedule2026",
+                  "checkedAt": "2026-10-26T23:19:16.752Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                }
+              ],
+              "source_kind": "official",
+              "source_fingerprint": "94b16ea5cad2e2321af356566427c254a35da05e3948b34245dfec66fe10feba",
+              "review_fingerprint": "e7848e950b18922b359ec6ea3c8ca115c4cf90164cb5539caa6684ad76f45e5c",
+              "snapshot_fingerprint": "1710f5e7ed4bdc6206b0d3b03ca0b2a0cef7b27cc89608e916d14b800b2e0628",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 10,
+                "cast": {
+                  "sourceActorName": "高本学",
+                  "sourceActorUrl": "https://twitter.com/C1Wo705",
+                  "role_name": "プロイセン",
+                  "cast_group": null
+                }
+              },
+              "year_review": {
+                "value": 2026,
+                "evidence": [
+                  {
+                    "url": "https://musical-hetalia.com/ws/schedule/",
+                    "checkedAt": "2026-10-26T23:18:14.402Z",
+                    "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "8f714e97-ff9f-4178-86aa-e3df3e067ea5",
+            "matched_play_id": "d566334c-3bce-4c3b-80e0-5ec90550ce9c",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "樋口裕太",
+            "source_actor_url": "https://x.com/official_yuta14",
+            "source_work_title": "10th Anniversary ミュージカル「ヘタリア～World☆Starts～」 (2026)",
+            "source_year": 2026,
+            "source_role_raw": "ロマーノ",
+            "source_role_names": [
+              "ロマーノ"
+            ],
+            "source_cast_group": null,
+            "source_order": 11,
+            "source_credit_key": "a85725bc0e9a29e5ff60",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://musical-hetalia.com/ws/cast/",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/cast/",
+                  "checkedAt": "2026-10-26T23:18:14.234Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/story/",
+                  "checkedAt": "2026-10-26T23:18:14.393Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/schedule/",
+                  "checkedAt": "2026-10-26T23:18:14.402Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/qa/",
+                  "checkedAt": "2026-10-26T23:18:14.372Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/wp-content/themes/ws/asset/img/txt-staff-pc.png",
+                  "checkedAt": "2026-10-26T23:19:16.491Z",
+                  "note": "当該公式スタッフ画像を白背景で目視転記。透明原画像・SHA256を保存。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/news/87/",
+                  "checkedAt": "2026-10-26T23:20:59.309Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/news/",
+                  "checkedAt": "2026-10-26T23:18:14.389Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/ws/news/page/2/",
+                  "checkedAt": "2026-10-26T23:18:14.324Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://kyodo-osaka.co.jp/search/detail/13185",
+                  "checkedAt": "2026-10-26T23:18:14.312Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://www.unext.co.jp/ja/press-room/musical-hetalia-ws-2026-10-02",
+                  "checkedAt": "2026-10-26T23:18:14.039Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://kira-hai.net/nagae-ryoki",
+                  "checkedAt": "2026-10-26T23:18:14.030Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                },
+                {
+                  "url": "https://kira-hai.net/schedule2026",
+                  "checkedAt": "2026-10-26T23:19:16.752Z",
+                  "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                }
+              ],
+              "source_kind": "official",
+              "source_fingerprint": "94b16ea5cad2e2321af356566427c254a35da05e3948b34245dfec66fe10feba",
+              "review_fingerprint": "e7848e950b18922b359ec6ea3c8ca115c4cf90164cb5539caa6684ad76f45e5c",
+              "snapshot_fingerprint": "1710f5e7ed4bdc6206b0d3b03ca0b2a0cef7b27cc89608e916d14b800b2e0628",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 11,
+                "cast": {
+                  "sourceActorName": "樋口裕太",
+                  "sourceActorUrl": "https://x.com/official_yuta14",
+                  "role_name": "ロマーノ",
+                  "cast_group": null
+                }
+              },
+              "year_review": {
+                "value": 2026,
+                "evidence": [
+                  {
+                    "url": "https://musical-hetalia.com/ws/schedule/",
+                    "checkedAt": "2026-10-26T23:18:14.402Z",
+                    "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "76f521b4-43a3-4f34-a1f2-bbb7664519a0",
+            "matched_play_id": "d566334c-3bce-4c3b-80e0-5ec90550ce9c",
+            "status": "pending"
+          }
+        ]
+      },
+      "records": [
+        {
+          "actor": {
+            "id": "4b3110ab-0d88-4a68-8a1d-ed0fcac335ff",
+            "slug": "nagae-ryoki",
+            "name": "長江 崚行",
+            "kana": "ながえ りょうき",
+            "profile": "大阪府出身の俳優。NHK『天才てれびくん』シリーズに出演。ミュージカル『ヘタリア』のイタリア役、舞台『文豪ストレイドッグス』の江戸川乱歩役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-19T12:13:27.742892+00:00",
+            "updated_at": "2026-10-25T20:21:04.903274+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1998-08-26",
+            "height_cm": 177,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": "Ryoki Nagae",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "長江崚行",
+            "sourceActorUrl": "https://twitter.com/Ryoki_N0826",
+            "role_name": "イタリア",
+            "cast_group": null
+          },
+          "sourceKind": "official",
+          "sourceCreditKey": "8e5f1c41b2108f245abb",
+          "sourceOrder": 1,
+          "rawSourceOrder": 1,
+          "billingOrder": 1,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "a36372ce-61e5-43f5-ae9c-e1bf2fb5226b",
+            "slug": "ueda-yusuke",
+            "name": "上田 悠介",
+            "kana": "うえだ ゆうすけ",
+            "profile": "奈良県出身の俳優。ミュージカル『テニスの王子様』2ndシーズン（橘桔平役）やミュージカル『ヘタリア』（ドイツ役）等に出演。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/yskued0402",
+              "youtube": "https://www.youtube.com/channel/UCAnkbgwDTBfvlU29Vzcj5ZQ",
+              "instagram": "https://www.instagram.com/yskued0402"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:03:44.295565+00:00",
+            "updated_at": "2026-03-21T15:03:44.295565+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1989-04-02",
+            "height_cm": 182,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "上田悠介",
+            "sourceActorUrl": "https://twitter.com/yskued0402",
+            "role_name": "ドイツ",
+            "cast_group": null
+          },
+          "sourceKind": "official",
+          "sourceCreditKey": "1122648243e9073fe695",
+          "sourceOrder": 2,
+          "rawSourceOrder": 2,
+          "billingOrder": 2,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "efec4bde-6be0-4d8f-80e6-0d1c3accf066",
+            "slug": "ueda-keisuke",
+            "name": "植田 圭輔",
+            "kana": "うえだ けいすけ",
+            "profile": "大阪府出身の俳優。株式会社Pasture所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/uechan_0905",
+              "official": "https://keisuke-ueda.jp/",
+              "instagram": "https://www.instagram.com/keisukeueda0905/"
+            },
+            "gender": "male",
+            "created_at": "2025-12-13T04:41:02.052969+00:00",
+            "updated_at": "2025-12-13T04:41:02.052969+00:00",
+            "tags": [
+              "ベテラン",
+              "ツッコミ"
+            ],
+            "featured_play_slugs": [],
+            "birthday": "1989-09-05",
+            "height_cm": 164,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "植田圭輔",
+            "sourceActorUrl": "https://x.com/uechan_0905",
+            "role_name": "日本",
+            "cast_group": null
+          },
+          "sourceKind": "official",
+          "sourceCreditKey": "c6cee9c6fb6d8005481d",
+          "sourceOrder": 3,
+          "rawSourceOrder": 3,
+          "billingOrder": 3,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "b15c5d1c-b38b-4604-bee6-f19f4a8ab1db",
+            "slug": "isogai-ryuko",
+            "name": "磯貝 龍乎",
+            "kana": "いそがい りゅうこ",
+            "profile": "北海道出身の俳優・演出家。旧芸名は磯貝龍虎。現在はフリーで活動している。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/ryukonbu",
+              "official": "https://ameblo.jp/rk3939/",
+              "instagram": "https://www.instagram.com/ryuco_isogai/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:01:26.311999+00:00",
+            "updated_at": "2026-03-21T15:01:26.311999+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1987-03-14",
+            "height_cm": 185,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "磯貝龍乎",
+            "sourceActorUrl": "https://twitter.com/Ryukonbu",
+            "role_name": "アメリカ",
+            "cast_group": null
+          },
+          "sourceKind": "official",
+          "sourceCreditKey": "8d901f37bfe7b4c20639",
+          "sourceOrder": 4,
+          "rawSourceOrder": 4,
+          "billingOrder": 4,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "ea847f48-42b3-40d0-8b2b-5fe9c11d53f7",
+            "slug": "hirose-daisuke",
+            "name": "廣瀬 大介",
+            "kana": "ひろせ だいすけ",
+            "profile": "東京都出身の声優・俳優。ケッケコーポレーション所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/da_sukemaru",
+              "youtube": "https://www.youtube.com/channel/UCQHV65qO-YB8KeFkLUr6Yjw",
+              "official": "https://www.kekke.co.jp/talent/male/hw/hirose.html"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:03:44.295565+00:00",
+            "updated_at": "2026-03-21T15:03:44.295565+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1991-06-03",
+            "height_cm": 177,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "廣瀬大介",
+            "sourceActorUrl": "https://twitter.com/da_sukemaru",
+            "role_name": "イギリス",
+            "cast_group": null
+          },
+          "sourceKind": "official",
+          "sourceCreditKey": "3d1561ded8f329f5b474",
+          "sourceOrder": 5,
+          "rawSourceOrder": 5,
+          "billingOrder": 5,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "a862c0c0-8fd8-458b-8b9d-391c6fe69a0c",
+            "slug": "juri",
+            "name": "寿里",
+            "kana": "じゅり",
+            "profile": "千葉県市川市出身の俳優・ファッションモデル。本名は相川 寿里、過去にJURIとして活動。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/jurigig",
+              "official": "https://ameblo.jp/jurigig/",
+              "instagram": "https://www.instagram.com/jurigig/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-19T18:36:37.662481+00:00",
+            "updated_at": "2026-03-19T18:36:37.662481+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1981-02-16",
+            "height_cm": 186,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "寿里",
+            "sourceActorUrl": "https://twitter.com/jurigig",
+            "role_name": "フランス",
+            "cast_group": null
+          },
+          "sourceKind": "official",
+          "sourceCreditKey": "2be6d8342e2d78b3cfe1",
+          "sourceOrder": 6,
+          "rawSourceOrder": 6,
+          "billingOrder": 6,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "3ecf714c-ad02-4356-af65-dcfb2952dfac",
+            "slug": "yamaoki-yuki",
+            "name": "山沖 勇輝",
+            "kana": "やまおき ゆうき",
+            "profile": "東京都出身の俳優。株式会社De-PRO所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/y_yuki0305",
+              "official": "https://ameblo.jp/y-yuki0305/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:01:26.311999+00:00",
+            "updated_at": "2026-03-21T15:01:26.311999+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1991-03-05",
+            "height_cm": 182,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "山沖勇輝",
+            "sourceActorUrl": "https://twitter.com/y_yuki0305",
+            "role_name": "ロシア",
+            "cast_group": null
+          },
+          "sourceKind": "official",
+          "sourceCreditKey": "67183cf5d741877e86d3",
+          "sourceOrder": 7,
+          "rawSourceOrder": 7,
+          "billingOrder": 7,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "1ae8e0b4-b42c-46aa-8d23-bac885531af6",
+            "slug": "sugie-taishi",
+            "name": "杉江 大志",
+            "kana": "すぎえ たいし",
+            "profile": "滋賀県出身の俳優。えりオフィス所属。ミュージカル『テニスの王子様』2ndシーズン（一氏ユウジ役）や舞台『刀剣乱舞』（鯰尾藤四郎役）、ミュージカル『ヘタリア』（中国役）、ミュージカル『スタミュ』（星谷悠太役）等の舞台作品に出演。また、映画やテレビドラマ等の映像作品にも出演している。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/SugieTaishi",
+              "official": "https://sugietaishi.com/",
+              "instagram": "https://www.instagram.com/taishisugie?igsh=MXA3b3A3NnIzZTRjMw%3D%3D&utm_source=qr"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:06:19.306372+00:00",
+            "updated_at": "2026-03-21T15:06:19.306372+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1992-05-07",
+            "height_cm": 171,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Shiga Prefecture. Affiliated with Eri Office. He has appeared in stage works such as the musical \"The Prince of Tennis\" 2nd season (as Yuji Hitouji), the stage play \"Touken Ranbu\" (as Namazuo Toushirou), the musical \"Hetalia\" (as China), and the musical \"STARMYU\" (as Yuta Hoshitani). He has also appeared in film and television works.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "杉江大志",
+            "sourceActorUrl": "https://twitter.com/SugieTaishi",
+            "role_name": "中国",
+            "cast_group": null
+          },
+          "sourceKind": "official",
+          "sourceCreditKey": "bfea5cae0d68970b1733",
+          "sourceOrder": 8,
+          "rawSourceOrder": 8,
+          "billingOrder": 8,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "cea80c66-8201-4fa6-a4cf-3eef46ebfee0",
+            "slug": "yamada-james-takeshi",
+            "name": "山田 ジェームス武",
+            "kana": "やまだ じぇーむす たけし",
+            "profile": "俳優・モデル。舞台『黒子のバスケ』の高尾和成役、ミュージカル『Dance with Devils～D.C.～』のホランド役などを務める。ミュージカル『ヘタリア』シリーズではスペイン役で出演している。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-20T14:07:42.36094+00:00",
+            "updated_at": "2026-10-25T20:21:04.903274+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1990-05-07",
+            "height_cm": 176,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "山田ジェームス武",
+            "sourceActorUrl": "https://x.com/takezo0507",
+            "role_name": "スペイン",
+            "cast_group": null
+          },
+          "sourceKind": "official",
+          "sourceCreditKey": "60adf8fbe12be9bf7392",
+          "sourceOrder": 9,
+          "rawSourceOrder": 9,
+          "billingOrder": 9,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "8f714e97-ff9f-4178-86aa-e3df3e067ea5",
+            "slug": "takamoto-gaku",
+            "name": "高本 学",
+            "kana": "たかもと がく",
+            "profile": "大阪府出身の俳優・モデル。ソニー・ミュージックエンタテインメント所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/C1Wo705",
+              "official": "https://takamotogaku.com/",
+              "instagram": "https://www.instagram.com/gaku.takamoto/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-31T19:58:24.352073+00:00",
+            "updated_at": "2026-03-31T19:58:24.352073+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1993-12-31",
+            "height_cm": 180,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "高本学",
+            "sourceActorUrl": "https://twitter.com/C1Wo705",
+            "role_name": "プロイセン",
+            "cast_group": null
+          },
+          "sourceKind": "official",
+          "sourceCreditKey": "5fddd0ee40512acef518",
+          "sourceOrder": 10,
+          "rawSourceOrder": 10,
+          "billingOrder": 10,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "76f521b4-43a3-4f34-a1f2-bbb7664519a0",
+            "slug": "higuchi-yuta",
+            "name": "樋口 裕太",
+            "kana": "ひぐちゆうた",
+            "profile": null,
+            "image_url": null,
+            "sns": null,
+            "gender": null,
+            "created_at": "2026-10-17T08:00:21.084443+00:00",
+            "updated_at": "2026-10-25T20:21:04.903274+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1995-02-14",
+            "height_cm": 172,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "樋口裕太",
+            "sourceActorUrl": "https://x.com/official_yuta14",
+            "role_name": "ロマーノ",
+            "cast_group": null
+          },
+          "sourceKind": "official",
+          "sourceCreditKey": "a85725bc0e9a29e5ff60",
+          "sourceOrder": 11,
+          "rawSourceOrder": 11,
+          "billingOrder": 11,
+          "expectedNote": null,
+          "existingCast": null
+        }
+      ],
+      "creditOnly": [
+        "伊東征哉",
+        "町田尚規",
+        "多田滉",
+        "山口渓",
+        "竹井弘樹",
+        "春口凌芽",
+        "森さとる",
+        "喜久田大和",
+        "松崎友洸",
+        "沼田来蕗"
+      ],
+      "creditGroups": [
+        {
+          "label": "DANCE CAST",
+          "names": [
+            "伊東征哉",
+            "町田尚規",
+            "多田滉",
+            "山口渓",
+            "竹井弘樹",
+            "春口凌芽"
+          ]
+        },
+        {
+          "label": "CHORUS CAST",
+          "names": [
+            "森さとる",
+            "喜久田大和",
+            "松崎友洸",
+            "沼田来蕗"
+          ]
+        }
+      ],
+      "officialOrder": [
+        {
+          "role": "イタリア",
+          "name": "長江崚行",
+          "actorUrl": "https://twitter.com/Ryoki_N0826",
+          "conditions": []
+        },
+        {
+          "role": "ドイツ",
+          "name": "上田悠介",
+          "actorUrl": "https://twitter.com/yskued0402",
+          "conditions": []
+        },
+        {
+          "role": "日本",
+          "name": "植田圭輔",
+          "actorUrl": "https://x.com/uechan_0905",
+          "conditions": []
+        },
+        {
+          "role": "アメリカ",
+          "name": "磯貝龍乎",
+          "actorUrl": "https://twitter.com/Ryukonbu",
+          "conditions": []
+        },
+        {
+          "role": "イギリス",
+          "name": "廣瀬大介",
+          "actorUrl": "https://twitter.com/da_sukemaru",
+          "conditions": []
+        },
+        {
+          "role": "フランス",
+          "name": "寿里",
+          "actorUrl": "https://twitter.com/jurigig",
+          "conditions": []
+        },
+        {
+          "role": "ロシア",
+          "name": "山沖勇輝",
+          "actorUrl": "https://twitter.com/y_yuki0305",
+          "conditions": []
+        },
+        {
+          "role": "中国",
+          "name": "杉江大志",
+          "actorUrl": "https://twitter.com/SugieTaishi",
+          "conditions": []
+        },
+        {
+          "role": "スペイン",
+          "name": "山田ジェームス武",
+          "actorUrl": "https://x.com/takezo0507",
+          "conditions": []
+        },
+        {
+          "role": "プロイセン",
+          "name": "高本学",
+          "actorUrl": "https://twitter.com/C1Wo705",
+          "conditions": []
+        },
+        {
+          "role": "ロマーノ",
+          "name": "樋口裕太",
+          "actorUrl": "https://x.com/official_yuta14",
+          "conditions": []
+        }
+      ],
+      "schedules": [
+        {
+          "city": "大阪",
+          "date": "2026/10/23 18:00"
+        },
+        {
+          "city": "大阪",
+          "date": "2026/10/24 12:30"
+        },
+        {
+          "city": "大阪",
+          "date": "2026/10/24 17:30"
+        },
+        {
+          "city": "大阪",
+          "date": "2026/10/25 16:00"
+        },
+        {
+          "city": "大阪",
+          "date": "2026/10/26 13:00"
+        },
+        {
+          "city": "東京",
+          "date": "2026/10/30 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2026/10/31 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2026/10/31 17:30"
+        },
+        {
+          "city": "東京",
+          "date": "2026/11/01 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2026/11/01 17:30"
+        },
+        {
+          "city": "東京",
+          "date": "2026/11/03 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2026/11/04 14:00"
+        },
+        {
+          "city": "東京",
+          "date": "2026/11/05 13:00"
+        },
+        {
+          "city": "東京",
+          "date": "2026/11/05 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2026/11/06 14:00"
+        },
+        {
+          "city": "東京",
+          "date": "2026/11/07 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2026/11/07 17:30"
+        },
+        {
+          "city": "東京",
+          "date": "2026/11/08 13:00"
+        },
+        {
+          "city": "愛知",
+          "date": "2026/11/21 18:00"
+        },
+        {
+          "city": "愛知",
+          "date": "2026/11/22 12:30"
+        },
+        {
+          "city": "愛知",
+          "date": "2026/11/22 17:30"
+        },
+        {
+          "city": "愛知",
+          "date": "2026/11/23 13:00"
+        }
+      ],
+      "scheduleStatus": {
+        "asOfDate": "2026/10/27",
+        "elapsedScheduledPerformances": [
+          {
+            "city": "大阪",
+            "date": "2026/10/23 18:00"
+          },
+          {
+            "city": "大阪",
+            "date": "2026/10/24 12:30"
+          },
+          {
+            "city": "大阪",
+            "date": "2026/10/24 17:30"
+          },
+          {
+            "city": "大阪",
+            "date": "2026/10/25 16:00"
+          },
+          {
+            "city": "大阪",
+            "date": "2026/10/26 13:00"
+          }
+        ],
+        "upcomingScheduledPerformances": [
+          {
+            "city": "東京",
+            "date": "2026/10/30 18:00"
+          },
+          {
+            "city": "東京",
+            "date": "2026/10/31 12:30"
+          },
+          {
+            "city": "東京",
+            "date": "2026/10/31 17:30"
+          },
+          {
+            "city": "東京",
+            "date": "2026/11/01 12:30"
+          },
+          {
+            "city": "東京",
+            "date": "2026/11/01 17:30"
+          },
+          {
+            "city": "東京",
+            "date": "2026/11/03 18:00"
+          },
+          {
+            "city": "東京",
+            "date": "2026/11/04 14:00"
+          },
+          {
+            "city": "東京",
+            "date": "2026/11/05 13:00"
+          },
+          {
+            "city": "東京",
+            "date": "2026/11/05 18:00"
+          },
+          {
+            "city": "東京",
+            "date": "2026/11/06 14:00"
+          },
+          {
+            "city": "東京",
+            "date": "2026/11/07 12:30"
+          },
+          {
+            "city": "東京",
+            "date": "2026/11/07 17:30"
+          },
+          {
+            "city": "東京",
+            "date": "2026/11/08 13:00"
+          },
+          {
+            "city": "愛知",
+            "date": "2026/11/21 18:00"
+          },
+          {
+            "city": "愛知",
+            "date": "2026/11/22 12:30"
+          },
+          {
+            "city": "愛知",
+            "date": "2026/11/22 17:30"
+          },
+          {
+            "city": "愛知",
+            "date": "2026/11/23 13:00"
+          }
+        ],
+        "note": "日付が経過した5公演と今後予定17公演を区別。経過した各公演の実施状況の独立監査ではなく公式予定表の確認。"
+      },
+      "scriptChange": {
+        "date": "2026-08-07",
+        "before": {
+          "script": [
+            "なるせゆうせい"
+          ]
+        },
+        "after": {
+          "script": [
+            "広瀬格",
+            "吉谷晃太朗"
+          ],
+          "scriptCooperation": [
+            "なるせゆうせい"
+          ]
+        },
+        "oldProducerInformationRetainedInRawSource": true,
+        "evidence": [
+          {
+            "url": "https://musical-hetalia.com/ws/news/87/",
+            "checkedAt": "2026-10-26T23:20:59.309Z",
+            "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+          },
+          {
+            "url": "https://musical-hetalia.com/ws/wp-content/themes/ws/asset/img/txt-staff-pc.png",
+            "checkedAt": "2026-10-26T23:19:16.491Z",
+            "note": "当該公式スタッフ画像を白背景で目視転記。透明原画像・SHA256を保存。"
+          }
+        ]
+      },
+      "staffImageTranscription": [
+        [
+          "原作",
+          [
+            "日丸屋秀和『ヘタリア World★Stars』（集英社 ジャンプコミックス刊）"
+          ]
+        ],
+        [
+          "演出・作詞",
+          [
+            "吉谷晃太朗"
+          ]
+        ],
+        [
+          "脚本",
+          [
+            "広瀬格",
+            "吉谷晃太朗"
+          ]
+        ],
+        [
+          "脚本協力",
+          [
+            "なるせゆうせい"
+          ]
+        ],
+        [
+          "音楽",
+          [
+            "宮里豊"
+          ]
+        ],
+        [
+          "振付",
+          [
+            "MAMORU"
+          ]
+        ],
+        [
+          "歌唱指導",
+          [
+            "水野里香"
+          ]
+        ],
+        [
+          "舞台衣装デザイン",
+          [
+            "新朋子（COMO Inc.）"
+          ]
+        ],
+        [
+          "衣装製作",
+          [
+            "COMO Inc."
+          ]
+        ],
+        [
+          "ヘアメイク",
+          [
+            "西村裕司（earch）"
+          ]
+        ],
+        [
+          "カメラマン",
+          [
+            "金山フヒト（Xallarap）"
+          ]
+        ],
+        [
+          "宣伝美術",
+          [
+            "羽尾万里子（Mujina:art）"
+          ]
+        ],
+        [
+          "企画制作・プロデュース",
+          [
+            "4cu（Frontier Works Inc.）"
+          ]
+        ],
+        [
+          "制作",
+          [
+            "株式会社FAB"
+          ]
+        ],
+        [
+          "主催",
+          [
+            "ミュージカル「ヘタリアWS」製作委員会"
+          ]
+        ]
+      ],
+      "legacyCandidates": [],
+      "legacyUpgrades": [],
+      "legacyKept": [],
+      "transformations": [
+        {
+          "type": "credit_only",
+          "groups": [
+            {
+              "label": "DANCE CAST",
+              "names": [
+                "伊東征哉",
+                "町田尚規",
+                "多田滉",
+                "山口渓",
+                "竹井弘樹",
+                "春口凌芽"
+              ]
+            },
+            {
+              "label": "CHORUS CAST",
+              "names": [
+                "森さとる",
+                "喜久田大和",
+                "松崎友洸",
+                "沼田来蕗"
+              ]
+            }
+          ],
+          "evidence": [
+            {
+              "url": "https://musical-hetalia.com/ws/cast/",
+              "checkedAt": "2026-10-26T23:18:14.234Z",
+              "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+            }
+          ]
+        },
+        {
+          "type": "official_source_fallback",
+          "reason": "キラハイ人物出演歴と2026一覧に秋作品掲載を確認できず。春concertのURLを秋公演へ転用しない。",
+          "evidence": [
+            {
+              "url": "https://kira-hai.net/nagae-ryoki",
+              "checkedAt": "2026-10-26T23:18:14.030Z",
+              "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+            },
+            {
+              "url": "https://kira-hai.net/schedule2026",
+              "checkedAt": "2026-10-26T23:19:16.752Z",
+              "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+            },
+            {
+              "url": "https://musical-hetalia.com/ws/cast/",
+              "checkedAt": "2026-10-26T23:18:14.234Z",
+              "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+            }
+          ]
+        },
+        {
+          "type": "staff_image_transcription",
+          "sha256": "1582c742158d601911a467b62f653231b16ad38a819d0ff4f0d8139634df150b",
+          "evidence": [
+            {
+              "url": "https://musical-hetalia.com/ws/wp-content/themes/ws/asset/img/txt-staff-pc.png",
+              "checkedAt": "2026-10-26T23:19:16.491Z",
+              "note": "当該公式スタッフ画像を白背景で目視転記。透明原画像・SHA256を保存。"
+            }
+          ]
+        },
+        {
+          "type": "script_credit_update",
+          "evidence": [
+            {
+              "url": "https://musical-hetalia.com/ws/news/87/",
+              "checkedAt": "2026-10-26T23:20:59.309Z",
+              "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+            },
+            {
+              "url": "https://musical-hetalia.com/ws/wp-content/themes/ws/asset/img/txt-staff-pc.png",
+              "checkedAt": "2026-10-26T23:19:16.491Z",
+              "note": "当該公式スタッフ画像を白背景で目視転記。透明原画像・SHA256を保存。"
+            }
+          ]
+        }
+      ],
+      "exceptions": [
+        "主要11役すべて既存人物を再利用。半角姓名スペース・性別・プロフィール・翻訳・slug等を全項目保全。",
+        "DANCE CAST6人・CHORUS CAST4人は公式区分のままクレジットへ。個別人物ページ・配役を増やさない。",
+        "春のThe World Concertとは別作品。ROU、オランダ、北欧5役を春から継承しない。スペインは今作公式に映像条件がないため春の日付限定条件を引き継がない。",
+        "2026/8/7の脚本変更後は広瀬格・吉谷晃太朗、脚本協力なるせゆうせい。キョードー大阪の初期情報は旧脚本のままなので転記しない。演出・作詞と原作ジャンプコミックス刊は現行公式画像表記。",
+        "大阪5東京13愛知4の22公演。東京月またぎ表を日付へ正しく対応し11/2休演を保存。2026/10/27時点で予定日経過5・今後予定17。今後の回まで上演済みと断定しない。",
+        "開放席・サイド席追加は公演追加ではない。コラボ映像・Blu-ray予約・配信対象6回を新しい公演と数えない。",
+        "現行公式Q&Aは予定190分・途中休憩あり。休憩分数未確認で15分を推測しない。検索キャッシュの上演時間未定と現行本文を区別。",
+        "U-NEXTの有料ライブ6公演と期間限定見逃しを確認したが見放題と誤表示しないためvodは空欄。配信導線補完は別工程。",
+        "人物属性総合監査・詳細英訳・配信は後続。原資料・公式変更の履歴を保全。"
+      ]
+    }
+  ],
+  "keptPlays": [
+    {
+      "id": "0e248a7c-a0af-4a9c-bdfe-e3405ccdec37",
+      "slug": "hetamu2017",
+      "title": "ミュージカル「ヘタリア～in the new world～」",
+      "franchise_id": "1ebeffff-4df9-47a1-8449-251fa80a56c1",
+      "summary": "長い戦いの後、それぞれの地で再出発するドイツと日本。変わらず元気なイタリアを交えた三人は、以前のように心が通わずにいた。かつて強国と渡り合った男の残した日記をきっかけに、離れた心が再び向き合い始める。プロイセンが新登場するミュージカル第3弾。",
+      "period": "2017年7月15日〜8月2日",
+      "venue": "大阪：NHK大阪ホール／東京：シアター1010",
+      "vod": {},
+      "genre": null,
+      "created_at": "2026-10-26T17:32:58.362083+00:00",
+      "updated_at": "2026-10-26T17:32:58.362083+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "日丸屋秀和『ヘタリア Axis Powers』"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "演出",
+          "names": [
+            "吉谷光太郎"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "脚本",
+          "names": [
+            "なるせゆうせい"
+          ],
+          "is_core": true,
+          "sort_order": 3
+        },
+        {
+          "role": "音楽",
+          "names": [
+            "tak"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "振付",
+          "names": [
+            "MAMORU"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "企画製作",
+          "names": [
+            "フロンティアワークス"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        },
+        {
+          "role": "制作",
+          "names": [
+            "ポリゴンマジック"
+          ],
+          "is_core": false,
+          "sort_order": 7
+        },
+        {
+          "role": "主催",
+          "names": [
+            "ミュージカル「ヘタリアNW」製作委員会"
+          ],
+          "is_core": false,
+          "sort_order": 8
+        },
+        {
+          "role": "アンサンブル",
+          "names": [
+            "仲田祥司",
+            "帯金遼太",
+            "山田諒",
+            "茶谷健太",
+            "新開理雄",
+            "町田尚規",
+            "山内涼平",
+            "一之瀬達也",
+            "山口渓",
+            "橋本佳貴"
+          ],
+          "is_core": false,
+          "sort_order": 9
+        },
+        {
+          "role": "公演日程",
+          "names": [
+            "大阪：2017年7月15日〜17日（NHK大阪ホール、5公演）",
+            "東京：2017年7月21日〜8月2日（シアター1010、18公演）"
+          ],
+          "is_core": false,
+          "sort_order": 10
+        },
+        {
+          "role": "上演時間（予定）",
+          "names": [
+            "約150分"
+          ],
+          "is_core": false,
+          "sort_order": 11
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "After a long war, Germany and Japan make new beginnings in their own lands. Italy remains as cheerful as ever, yet the three struggle to connect as they once did. A diary left by a man who fought the great powers draws them toward one another again. The third Hetalia musical introduces Prussia.",
+      "title_en": "Musical Hetalia: in the new world"
+    },
+    {
+      "id": "172b0c46-fc6b-4fee-8b56-30860075540f",
+      "slug": "hetamu2025",
+      "title": "ミュージカル「ヘタリア～A tender world～」",
+      "franchise_id": "1ebeffff-4df9-47a1-8449-251fa80a56c1",
+      "summary": "『ヘタリア World★Stars』を原作とするミュージカル新シリーズ第4弾。いつもの世界会議は、イタリアが持ち出した思いがけない議題で動き始める。一方、別の場所では北欧5人による会議が開かれようとしていた。フィンランドら北欧のキャラクターが初登場し、東京・大阪・福島で上演された。",
+      "period": "2025年6月9日〜7月19日",
+      "venue": "東京：日本青年館ホール／大阪：COOL JAPAN PARK OSAKA WWホール／福島：けんしん郡山文化センター（郡山市民文化センター）大ホール",
+      "vod": {},
+      "genre": null,
+      "created_at": "2026-10-26T19:11:17.569754+00:00",
+      "updated_at": "2026-10-26T19:11:17.569754+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "日丸屋秀和『ヘタリア World★Stars』（集英社「少年ジャンプ＋」連載）"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "演出",
+          "names": [
+            "吉谷晃太朗"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "脚本",
+          "names": [
+            "なるせゆうせい"
+          ],
+          "is_core": true,
+          "sort_order": 3
+        },
+        {
+          "role": "音楽",
+          "names": [
+            "宮里豊"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "振付",
+          "names": [
+            "MAMORU"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "音楽監督・歌唱指導",
+          "names": [
+            "水野里香"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        },
+        {
+          "role": "舞台衣装デザイン",
+          "names": [
+            "新朋子（COMO Inc.）"
+          ],
+          "is_core": false,
+          "sort_order": 7
+        },
+        {
+          "role": "衣装製作",
+          "names": [
+            "COMO Inc."
+          ],
+          "is_core": false,
+          "sort_order": 8
+        },
+        {
+          "role": "ヘアメイク",
+          "names": [
+            "西村裕司（earch）"
+          ],
+          "is_core": false,
+          "sort_order": 9
+        },
+        {
+          "role": "カメラマン",
+          "names": [
+            "金山フヒト（Xallarap）"
+          ],
+          "is_core": false,
+          "sort_order": 10
+        },
+        {
+          "role": "宣伝美術",
+          "names": [
+            "羽尾万里子（Mujina:art）"
+          ],
+          "is_core": false,
+          "sort_order": 11
+        },
+        {
+          "role": "企画制作・プロデュース",
+          "names": [
+            "4cu（Frontier Works Inc.）"
+          ],
+          "is_core": false,
+          "sort_order": 12
+        },
+        {
+          "role": "制作",
+          "names": [
+            "株式会社FAB"
+          ],
+          "is_core": false,
+          "sort_order": 13
+        },
+        {
+          "role": "福島共催",
+          "names": [
+            "公益財団法人郡山市文化・学び振興公社"
+          ],
+          "is_core": false,
+          "sort_order": 14
+        },
+        {
+          "role": "主催",
+          "names": [
+            "ミュージカル「ヘタリアTW」製作委員会"
+          ],
+          "is_core": false,
+          "sort_order": 15
+        },
+        {
+          "role": "アンサンブル",
+          "names": [
+            "帯金遼太",
+            "多田滉",
+            "竹井弘樹",
+            "春口凌芽",
+            "Chion",
+            "清水天琴",
+            "杉山湧哉",
+            "高橋晴輝",
+            "沼田来蕗",
+            "平井颯太"
+          ],
+          "is_core": false,
+          "sort_order": 16
+        },
+        {
+          "role": "公演日程",
+          "names": [
+            "東京：2025年6月9日〜26日（日本青年館ホール）・全18公演、6月10日・13日・16日・20日・23日休演",
+            "大阪：2025年7月3日〜6日（COOL JAPAN PARK OSAKA WWホール）・全6公演",
+            "福島：2025年7月18日〜19日（けんしん郡山文化センター〔郡山市民文化センター〕大ホール）・全3公演"
+          ],
+          "is_core": false,
+          "sort_order": 17
+        },
+        {
+          "role": "上演時間（予定）",
+          "names": [
+            "約3時間15分（途中休憩あり）"
+          ],
+          "is_core": false,
+          "sort_order": 18
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "The fourth production in the new Musical Hetalia series, based on Hetalia: World Stars. An unexpected agenda proposed by Italy sets the world conference in motion. Meanwhile, Finland, Sweden, Denmark, Norway and Iceland gather for a Nordic conference of their own. Performed in Tokyo, Osaka and Fukushima.",
+      "title_en": "Musical Hetalia: A tender world"
+    },
+    {
+      "id": "22f8df30-5598-459d-9cc1-9020ee966790",
+      "slug": "hetamu2021",
+      "title": "ミュージカル「ヘタリア～The world is wonderful～」",
+      "franchise_id": "1ebeffff-4df9-47a1-8449-251fa80a56c1",
+      "summary": "国を擬人化したキャラクターたちを描く『ヘタリア World★Stars』を原作とするミュージカル。ローマ爺ちゃんと陽気に暮らしていたイタリアとロマーノの兄弟は、時代の移り変わりの中で離れ離れに。いつか再会し、強くなろうという約束を胸に、それぞれの歩みを重ねていく。",
+      "period": "2021年12月16日〜31日",
+      "venue": "大阪：COOL JAPAN PARK OSAKA WWホール／東京：品川プリンスホテル ステラボール",
+      "vod": {},
+      "genre": null,
+      "created_at": "2026-10-26T18:02:27.192389+00:00",
+      "updated_at": "2026-10-26T18:02:27.192389+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "日丸屋秀和『ヘタリア World★Stars』（集英社「少年ジャンプ＋」連載）"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "演出",
+          "names": [
+            "吉谷晃太朗"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "脚本",
+          "names": [
+            "なるせゆうせい"
+          ],
+          "is_core": true,
+          "sort_order": 3
+        },
+        {
+          "role": "振付",
+          "names": [
+            "MAMORU"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "音楽",
+          "names": [
+            "tak"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "歌唱指導",
+          "names": [
+            "水野里香"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        },
+        {
+          "role": "舞台衣装デザイン",
+          "names": [
+            "新朋子(COMO)"
+          ],
+          "is_core": false,
+          "sort_order": 7
+        },
+        {
+          "role": "衣装製作",
+          "names": [
+            "COMO"
+          ],
+          "is_core": false,
+          "sort_order": 8
+        },
+        {
+          "role": "ヘアメイク",
+          "names": [
+            "earch"
+          ],
+          "is_core": false,
+          "sort_order": 9
+        },
+        {
+          "role": "カメラマン",
+          "names": [
+            "金山フヒト"
+          ],
+          "is_core": false,
+          "sort_order": 10
+        },
+        {
+          "role": "宣伝美術",
+          "names": [
+            "Mujina:art"
+          ],
+          "is_core": false,
+          "sort_order": 11
+        },
+        {
+          "role": "企画・プロデュース",
+          "names": [
+            "4cu"
+          ],
+          "is_core": false,
+          "sort_order": 12
+        },
+        {
+          "role": "制作",
+          "names": [
+            "ポリゴンマジック"
+          ],
+          "is_core": false,
+          "sort_order": 13
+        },
+        {
+          "role": "主催",
+          "names": [
+            "ミュージカル「ヘタリアWW」製作委員会"
+          ],
+          "is_core": false,
+          "sort_order": 14
+        },
+        {
+          "role": "大阪公演協賛",
+          "names": [
+            "株式会社ヌマタ印刷"
+          ],
+          "is_core": false,
+          "sort_order": 15
+        },
+        {
+          "role": "アンサンブル",
+          "names": [
+            "仲田祥司",
+            "松永健太郎",
+            "町田尚規",
+            "伊東征哉",
+            "松崎友洸",
+            "平澤佑樹"
+          ],
+          "is_core": false,
+          "sort_order": 16
+        },
+        {
+          "role": "公演日程",
+          "names": [
+            "大阪：2021年12月16日〜19日（COOL JAPAN PARK OSAKA WWホール）・全6公演",
+            "東京：2021年12月23日〜31日（品川プリンスホテル ステラボール）・全13公演、12月27日休演"
+          ],
+          "is_core": false,
+          "sort_order": 17
+        },
+        {
+          "role": "開演時刻変更",
+          "names": [
+            "機材輸送時の事故の影響により、2021年12月16日の大阪公演は18:00から19:00開演へ変更。"
+          ],
+          "is_core": false,
+          "sort_order": 18
+        },
+        {
+          "role": "上演時間（予定）",
+          "names": [
+            "約2時間50分（途中休憩15分予定）"
+          ],
+          "is_core": false,
+          "sort_order": 19
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "A musical based on Hetalia: World Stars and its personified nations. Italy and Romano once lived happily with Grandpa Rome, but changing times leave the brothers separated. They set out on their own paths, holding on to their promise to meet again and grow strong like him.",
+      "title_en": "Musical Hetalia: The world is wonderful"
+    },
+    {
+      "id": "42af489f-2553-4038-a1da-5427709777ca",
+      "slug": "hetamu2015",
+      "title": "ミュージカル「ヘタリア～Singin’ in the World～」",
+      "franchise_id": "1ebeffff-4df9-47a1-8449-251fa80a56c1",
+      "summary": "世界会議を進めようとするドイツだが、アメリカやイギリス、フランスたちの発言で会議は混乱。そこへイタリアが加わり、さらに賑やかな騒動へ発展する。国を擬人化したキャラクターたちのやりとりを歌とダンスで描く『ヘタリア』初のミュージカル。",
+      "period": "2015年12月24日〜29日",
+      "venue": "Zeppブルーシアター六本木",
+      "vod": {},
+      "genre": null,
+      "created_at": "2026-10-26T17:06:09.184766+00:00",
+      "updated_at": "2026-10-26T17:06:09.184766+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "日丸屋秀和『ヘタリア Axis Powers』"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "脚本",
+          "names": [
+            "なるせゆうせい"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "演出",
+          "names": [
+            "吉谷光太郎"
+          ],
+          "is_core": true,
+          "sort_order": 3
+        },
+        {
+          "role": "音楽",
+          "names": [
+            "tak"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "振付",
+          "names": [
+            "MAMORU"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "制作",
+          "names": [
+            "ポリゴンマジック"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        },
+        {
+          "role": "主催",
+          "names": [
+            "ミュージカル「ヘタリア」製作委員会（フロンティアワークス、ポリゴンマジック、セガ・ライブクリエイション、KADOKAWA）"
+          ],
+          "is_core": false,
+          "sort_order": 7
+        },
+        {
+          "role": "アンサンブル",
+          "names": [
+            "仲田祥司",
+            "池田謙信",
+            "原野正章",
+            "今田竜人",
+            "三原大樹",
+            "帯金遼太",
+            "山本哲平",
+            "岡本笙"
+          ],
+          "is_core": false,
+          "sort_order": 8
+        },
+        {
+          "role": "公演日程",
+          "names": [
+            "2015年12月24日〜29日（Zeppブルーシアター六本木、追加公演を含む全11公演）"
+          ],
+          "is_core": false,
+          "sort_order": 9
+        },
+        {
+          "role": "追加公演",
+          "names": [
+            "2015年12月28日13:00（2015年11月12日発表）"
+          ],
+          "is_core": false,
+          "sort_order": 10
+        },
+        {
+          "role": "上演時間（予定）",
+          "names": [
+            "約2時間"
+          ],
+          "is_core": false,
+          "sort_order": 11
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "Germany tries to keep a world meeting on track, but America, England and France turn the discussion into chaos. Italy’s arrival only adds to the commotion. The first Hetalia musical brings the encounters between personified nations to the stage through song and dance.",
+      "title_en": "Musical Hetalia: Singin’ in the World"
+    },
+    {
+      "id": "5c469004-2f49-42c6-8d3a-9f9aa570cb60",
+      "slug": "hetamu2024",
+      "title": "ミュージカル「ヘタリア～The glorious world～」",
+      "franchise_id": "1ebeffff-4df9-47a1-8449-251fa80a56c1",
+      "summary": "『ヘタリア World★Stars』を原作とするミュージカル新シリーズ第3弾。世界の頂点をめぐるイタリアとロマーノの議論が、いつしか兄弟げんかに発展する。そこへ現れたプロイセンは、競い合うことで互いを高めた二人の話を語り始める。京都・大阪・東京の3都市で上演された。",
+      "period": "2024年8月9日〜9月8日",
+      "venue": "京都：京都劇場／大阪：森ノ宮ピロティホール／東京：日本青年館ホール",
+      "vod": {},
+      "genre": null,
+      "created_at": "2026-10-26T18:32:02.487186+00:00",
+      "updated_at": "2026-10-26T18:32:02.487186+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "日丸屋秀和『ヘタリア World★Stars』（集英社「少年ジャンプ＋」連載）"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "演出",
+          "names": [
+            "吉谷晃太朗"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "脚本",
+          "names": [
+            "なるせゆうせい"
+          ],
+          "is_core": true,
+          "sort_order": 3
+        },
+        {
+          "role": "音楽",
+          "names": [
+            "宮里豊"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "振付",
+          "names": [
+            "MAMORU"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "音楽監督",
+          "names": [
+            "田中葵"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        },
+        {
+          "role": "歌唱指導・音楽助手",
+          "names": [
+            "水野里香"
+          ],
+          "is_core": false,
+          "sort_order": 7
+        },
+        {
+          "role": "舞台衣装デザイン",
+          "names": [
+            "新朋子（COMO Inc.）"
+          ],
+          "is_core": false,
+          "sort_order": 8
+        },
+        {
+          "role": "衣装製作",
+          "names": [
+            "COMO Inc."
+          ],
+          "is_core": false,
+          "sort_order": 9
+        },
+        {
+          "role": "ヘアメイク",
+          "names": [
+            "西村裕司（earch）"
+          ],
+          "is_core": false,
+          "sort_order": 10
+        },
+        {
+          "role": "カメラマン",
+          "names": [
+            "金山フヒト（Xallarap）"
+          ],
+          "is_core": false,
+          "sort_order": 11
+        },
+        {
+          "role": "宣伝美術",
+          "names": [
+            "羽尾万里子（Mujina:art）"
+          ],
+          "is_core": false,
+          "sort_order": 12
+        },
+        {
+          "role": "企画・プロデュース",
+          "names": [
+            "4cu（Frontier Works Inc.）"
+          ],
+          "is_core": false,
+          "sort_order": 13
+        },
+        {
+          "role": "制作",
+          "names": [
+            "株式会社FAB"
+          ],
+          "is_core": false,
+          "sort_order": 14
+        },
+        {
+          "role": "主催",
+          "names": [
+            "ミュージカル「ヘタリアGLW」製作委員会"
+          ],
+          "is_core": false,
+          "sort_order": 15
+        },
+        {
+          "role": "アンサンブル",
+          "names": [
+            "仲田祥司",
+            "町田尚規",
+            "伊東征哉",
+            "松崎友洸",
+            "安久真修",
+            "丸山武蔵",
+            "大嶌幸太",
+            "南舘優雄斗"
+          ],
+          "is_core": false,
+          "sort_order": 16
+        },
+        {
+          "role": "バンド",
+          "names": [
+            "畑野圭慧（Keyboard1&Cond.）",
+            "田中葵（Keyboard1&Cond.）",
+            "松岡美弥子（Keyboard2）",
+            "西川ノブユキ（Guitar）",
+            "よこやまこうだい（Bass）",
+            "奥村大爆発（Drums）",
+            "地行美穂（Violin）",
+            "大嶋世菜（Violin）"
+          ],
+          "is_core": false,
+          "sort_order": 17
+        },
+        {
+          "role": "公演日程",
+          "names": [
+            "京都：2024年8月9日〜12日（京都劇場）・全6公演",
+            "大阪：2024年8月17日〜19日（森ノ宮ピロティホール）・全5公演",
+            "東京：2024年8月24日〜9月8日（日本青年館ホール）・全20公演、8月26日・9月2日休演"
+          ],
+          "is_core": false,
+          "sort_order": 18
+        },
+        {
+          "role": "出演者変更",
+          "names": [
+            "2024年6月18日発表：船橋拓幹が降板し、南舘優雄斗の出演が決定。"
+          ],
+          "is_core": false,
+          "sort_order": 19
+        },
+        {
+          "role": "台風10号への対応",
+          "names": [
+            "8月30日〜9月1日の東京5公演は予定どおり上演する旨を告知し、交通機関の不通で来場困難な観客を対象に別公演への振替・払戻しを案内。"
+          ],
+          "is_core": false,
+          "sort_order": 20
+        },
+        {
+          "role": "上演時間（予定）",
+          "names": [
+            "約2時間55分（途中休憩15分予定）"
+          ],
+          "is_core": false,
+          "sort_order": 21
+        },
+        {
+          "role": "公演補足",
+          "names": [
+            "2024年8月9日18:00の京都初日公演でシリーズ通算100回公演を迎え、スペシャルカーテンコールを実施。"
+          ],
+          "is_core": false,
+          "sort_order": 22
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "The third production in the new Musical Hetalia series, based on Hetalia: World Stars. Italy and Romano argue over reaching the top of the world, until their debate turns into a quarrel. Prussia arrives and tells them about two rivals who helped each other rise through competition. Performed in Kyoto, Osaka and Tokyo.",
+      "title_en": "Musical Hetalia: The glorious world"
+    },
+    {
+      "id": "9126ffbf-ef6b-4bde-809a-5984804093bb",
+      "slug": "hetamu2016",
+      "title": "ミュージカル「ヘタリア～The Great World～」",
+      "franchise_id": "1ebeffff-4df9-47a1-8449-251fa80a56c1",
+      "summary": "新天地を目指し、国々が海へ乗り出す「大航海ブーム」の時代。イタリアたちにスペインも加わり、個性豊かな国々の交流と競い合いを歌とダンスで描く。『ヘタリア』ミュージカル第2弾として東京・大阪で上演された。",
+      "period": "2016年11月10日〜27日",
+      "venue": "東京：シアター1010／大阪：森ノ宮ピロティホール",
+      "vod": {},
+      "genre": null,
+      "created_at": "2026-10-26T17:23:27.573227+00:00",
+      "updated_at": "2026-10-26T17:23:27.573227+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "日丸屋秀和『ヘタリア Axis Powers』"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "演出",
+          "names": [
+            "吉谷光太郎"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "脚本",
+          "names": [
+            "なるせゆうせい"
+          ],
+          "is_core": true,
+          "sort_order": 3
+        },
+        {
+          "role": "音楽",
+          "names": [
+            "tak"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "振付",
+          "names": [
+            "MAMORU"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "企画製作",
+          "names": [
+            "フロンティアワークス"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        },
+        {
+          "role": "制作",
+          "names": [
+            "ポリゴンマジック"
+          ],
+          "is_core": false,
+          "sort_order": 7
+        },
+        {
+          "role": "主催",
+          "names": [
+            "ミュージカル「ヘタリアGW」製作委員会"
+          ],
+          "is_core": false,
+          "sort_order": 8
+        },
+        {
+          "role": "アンサンブル",
+          "names": [
+            "池田謙信",
+            "今田竜人",
+            "帯金遼太",
+            "山本哲平",
+            "山田 諒",
+            "喜多野章太郎",
+            "茶谷健太",
+            "大澤信児",
+            "田村公典",
+            "徳留達也"
+          ],
+          "is_core": false,
+          "sort_order": 9
+        },
+        {
+          "role": "公演日程",
+          "names": [
+            "東京：2016年11月10日〜20日（シアター1010、17公演）",
+            "大阪：2016年11月25日〜27日（森ノ宮ピロティホール、5公演）"
+          ],
+          "is_core": false,
+          "sort_order": 10
+        },
+        {
+          "role": "追加公演",
+          "names": [
+            "東京：2016年11月15日14:00",
+            "大阪：2016年11月25日19:00"
+          ],
+          "is_core": false,
+          "sort_order": 11
+        },
+        {
+          "role": "上演時間（予定）",
+          "names": [
+            "約130分"
+          ],
+          "is_core": false,
+          "sort_order": 12
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "During an age of exploration, the nations set sail in search of new lands. Spain joins Italy and the other personified nations in a story of encounters and rivalry told through song and dance. The second Hetalia musical was staged in Tokyo and Osaka.",
+      "title_en": "Musical Hetalia: The Great World"
+    },
+    {
+      "id": "abd86e39-7f70-40c1-8ef3-e9dacc769f7f",
+      "slug": "hetamu2023",
+      "title": "ミュージカル「ヘタリア～The Fantastic World～」",
+      "franchise_id": "1ebeffff-4df9-47a1-8449-251fa80a56c1",
+      "summary": "『ヘタリア World★Stars』を原作とするミュージカル新シリーズ第2弾。世界の問題を協力して解決するために集まった面々は、ドイツの意外な提案で混乱に陥る。話し合いを収めるために選んだのは、くじ引き。思いがけない当たりの行方を軸に、国々のにぎやかなやりとりが描かれる。",
+      "period": "2023年4月7日〜23日",
+      "venue": "大阪：東大阪市文化創造館 Dream House 大ホール／東京：日本青年館ホール",
+      "vod": {},
+      "genre": null,
+      "created_at": "2026-10-26T18:18:06.133482+00:00",
+      "updated_at": "2026-10-26T18:18:06.133482+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "日丸屋秀和『ヘタリア World★Stars』（集英社「少年ジャンプ＋」連載）"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "演出",
+          "names": [
+            "吉谷晃太朗"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "脚本",
+          "names": [
+            "なるせゆうせい"
+          ],
+          "is_core": true,
+          "sort_order": 3
+        },
+        {
+          "role": "振付",
+          "names": [
+            "MAMORU"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "音楽",
+          "names": [
+            "tak"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "音楽監督＆歌唱指導",
+          "names": [
+            "水野里香"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        },
+        {
+          "role": "舞台衣装デザイン",
+          "names": [
+            "新朋子（COMO Inc.）"
+          ],
+          "is_core": false,
+          "sort_order": 7
+        },
+        {
+          "role": "衣装製作",
+          "names": [
+            "COMO Inc."
+          ],
+          "is_core": false,
+          "sort_order": 8
+        },
+        {
+          "role": "ヘアメイク",
+          "names": [
+            "西村裕司（earch）"
+          ],
+          "is_core": false,
+          "sort_order": 9
+        },
+        {
+          "role": "カメラマン",
+          "names": [
+            "金山フヒト"
+          ],
+          "is_core": false,
+          "sort_order": 10
+        },
+        {
+          "role": "宣伝美術",
+          "names": [
+            "羽尾万里子（Mujina:art）"
+          ],
+          "is_core": false,
+          "sort_order": 11
+        },
+        {
+          "role": "企画制作・プロデュース",
+          "names": [
+            "4cu"
+          ],
+          "is_core": false,
+          "sort_order": 12
+        },
+        {
+          "role": "制作",
+          "names": [
+            "株式会社FAB"
+          ],
+          "is_core": false,
+          "sort_order": 13
+        },
+        {
+          "role": "大阪共催",
+          "names": [
+            "PFI東大阪文化創造館株式会社"
+          ],
+          "is_core": false,
+          "sort_order": 14
+        },
+        {
+          "role": "主催",
+          "names": [
+            "ミュージカル「ヘタリアFW」製作委員会"
+          ],
+          "is_core": false,
+          "sort_order": 15
+        },
+        {
+          "role": "アンサンブル",
+          "names": [
+            "仲田祥司",
+            "町田尚規",
+            "伊東征哉",
+            "山口渓",
+            "松崎友洸",
+            "安久真修",
+            "丸山武蔵",
+            "船橋拓幹"
+          ],
+          "is_core": false,
+          "sort_order": 16
+        },
+        {
+          "role": "公演日程",
+          "names": [
+            "大阪：2023年4月7日〜10日（東大阪市文化創造館 Dream House 大ホール）・全6公演",
+            "東京：2023年4月15日〜23日（日本青年館ホール）・全13公演、4月17日休演"
+          ],
+          "is_core": false,
+          "sort_order": 17
+        },
+        {
+          "role": "上演時間（予定）",
+          "names": [
+            "約3時間（途中休憩15分予定）"
+          ],
+          "is_core": false,
+          "sort_order": 18
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "The second production in the new Musical Hetalia series, based on Hetalia: World Stars. The nations gather for a world conference to tackle shared problems, but an unexpected proposal from Germany throws the meeting into confusion. To settle matters, they decide to draw lots—with a surprising result.",
+      "title_en": "Musical Hetalia: The Fantastic World"
+    },
+    {
+      "id": "b8d95913-ad9c-46b3-b315-6134546e31fe",
+      "slug": "hetamu2018",
+      "title": "ミュージカル「ヘタリア」FINAL LIVE～A World in the Universe～",
+      "franchise_id": "1ebeffff-4df9-47a1-8449-251fa80a56c1",
+      "summary": "ミュージカル『ヘタリア』初演から第3弾までの楽曲を、生バンドとダンスで届けるライブイベント。イタリア役の長江崚行ら11キャラクターが参加し、幕張・大阪で開催された。楽曲に加え、シリーズを振り返るキャラクター同士のやりとりも盛り込まれている。",
+      "period": "2018年3月17日〜21日",
+      "venue": "幕張：幕張メッセ イベントホール／大阪：フェスティバルホール",
+      "vod": {},
+      "genre": null,
+      "created_at": "2026-10-26T17:45:27.14878+00:00",
+      "updated_at": "2026-10-26T17:45:27.14878+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "日丸屋秀和『ヘタリア Axis Powers』"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "演出",
+          "names": [
+            "吉谷光太郎"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "音楽",
+          "names": [
+            "tak"
+          ],
+          "is_core": false,
+          "sort_order": 3
+        },
+        {
+          "role": "振付",
+          "names": [
+            "MAMORU"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "企画プロデュース",
+          "names": [
+            "4cu（フロンティアワークス）"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "制作協力",
+          "names": [
+            "ポリゴンマジック"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        },
+        {
+          "role": "LIVE制作",
+          "names": [
+            "バンダイナムコ ライブクリエイティブ"
+          ],
+          "is_core": false,
+          "sort_order": 7
+        },
+        {
+          "role": "主催",
+          "names": [
+            "ミュージカル「ヘタリアWU」製作委員会"
+          ],
+          "is_core": false,
+          "sort_order": 8
+        },
+        {
+          "role": "ダンサー",
+          "names": [
+            "浅山順大",
+            "五十嵐胤人",
+            "伊藤翔",
+            "岡本笙",
+            "帯金遼太",
+            "河野健太",
+            "木本雄",
+            "佐藤優次",
+            "竹井弘樹",
+            "多田滉",
+            "成田凌",
+            "徳留達也",
+            "町田尚規",
+            "三宅柊大",
+            "村上雅貴",
+            "吉田 邑樹"
+          ],
+          "is_core": false,
+          "sort_order": 9
+        },
+        {
+          "role": "バンド",
+          "names": [
+            "宮里豊（ギター）",
+            "西川ノブユキ（ギター）",
+            "菊池亮太（キーボード）",
+            "奥村眞也（ドラム）",
+            "横山航大（ベース）"
+          ],
+          "is_core": false,
+          "sort_order": 10
+        },
+        {
+          "role": "公演形式",
+          "names": [
+            "ライブ"
+          ],
+          "is_core": false,
+          "sort_order": 11
+        },
+        {
+          "role": "公演日程",
+          "names": [
+            "幕張：2018年3月17日18:00・18日12:00／18:00（幕張メッセ イベントホール）",
+            "大阪：2018年3月21日12:00／18:00（フェスティバルホール）"
+          ],
+          "is_core": false,
+          "sort_order": 12
+        },
+        {
+          "role": "上演時間（予定）",
+          "names": [
+            "約180分（休憩なし）"
+          ],
+          "is_core": false,
+          "sort_order": 13
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "A live event featuring songs from the first three Hetalia musicals, performed with a live band and dancers. Eleven characters take part, led by Ryoki Nagae as Italy, across performances in Makuhari and Osaka. Alongside the music, exchanges between the characters revisit the musical series.",
+      "title_en": "Musical Hetalia FINAL LIVE: A World in the Universe"
+    },
+    {
+      "id": "dc635a01-4a93-418f-a6ac-1d25a3e03868",
+      "slug": "hetamu2026-wc",
+      "title": "10th Anniversary ミュージカル「ヘタリア～The World Concert～」",
+      "franchise_id": "1ebeffff-4df9-47a1-8449-251fa80a56c1",
+      "summary": "ミュージカル『ヘタリア』の10周年を記念したアリーナライブ。これまでのシリーズに登場した18キャラクターが、会場出演と映像出演で参加する。東京の京王アリーナTOKYOと神戸のGLION ARENA KOBEで開催され、バンドの生演奏とともにシリーズの楽曲を届ける。",
+      "period": "2026年4月18日〜29日",
+      "venue": "東京：京王アリーナTOKYO／神戸：GLION ARENA KOBE",
+      "vod": {},
+      "genre": null,
+      "created_at": "2026-10-26T23:09:29.086442+00:00",
+      "updated_at": "2026-10-26T23:09:29.086442+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "日丸屋秀和『ヘタリア World★Stars』（集英社「少年ジャンプ＋」連載）"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "構成・総合演出",
+          "names": [
+            "吉谷晃太朗"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "作詞協力",
+          "names": [
+            "なるせゆうせい"
+          ],
+          "is_core": false,
+          "sort_order": 3
+        },
+        {
+          "role": "音楽",
+          "names": [
+            "tak",
+            "宮里豊"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "振付",
+          "names": [
+            "MAMORU"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "歌唱指導",
+          "names": [
+            "水野里香"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        },
+        {
+          "role": "舞台衣装デザイン",
+          "names": [
+            "新朋子（COMO Inc.）"
+          ],
+          "is_core": false,
+          "sort_order": 7
+        },
+        {
+          "role": "衣装製作",
+          "names": [
+            "COMO Inc."
+          ],
+          "is_core": false,
+          "sort_order": 8
+        },
+        {
+          "role": "ヘアメイク",
+          "names": [
+            "西村裕司（earch）"
+          ],
+          "is_core": false,
+          "sort_order": 9
+        },
+        {
+          "role": "カメラマン",
+          "names": [
+            "金山フヒト（Xallarap）"
+          ],
+          "is_core": false,
+          "sort_order": 10
+        },
+        {
+          "role": "宣伝美術",
+          "names": [
+            "羽尾万里子（Mujina:art）"
+          ],
+          "is_core": false,
+          "sort_order": 11
+        },
+        {
+          "role": "企画制作・プロデュース",
+          "names": [
+            "4cu（Frontier Works Inc.）"
+          ],
+          "is_core": false,
+          "sort_order": 12
+        },
+        {
+          "role": "LIVE制作",
+          "names": [
+            "バンダイナムコミュージックライブ"
+          ],
+          "is_core": false,
+          "sort_order": 13
+        },
+        {
+          "role": "主催",
+          "names": [
+            "ミュージカル「ヘタリアWC」製作委員会"
+          ],
+          "is_core": false,
+          "sort_order": 14
+        },
+        {
+          "role": "アンサンブル",
+          "names": [
+            "伊東 征哉",
+            "丸山 武蔵",
+            "竹井 弘樹",
+            "南舘 優雄斗",
+            "平井 颯太",
+            "志賀 遼馬",
+            "宮原 龍平",
+            "古川 左京",
+            "増田 幸太",
+            "玉垣 大知",
+            "渡邊 気",
+            "松本 惣己"
+          ],
+          "is_core": false,
+          "sort_order": 15
+        },
+        {
+          "role": "バンド",
+          "names": [
+            "宮里豊（Guitar1）",
+            "西川ノブユキ（Guitar2）",
+            "奥村大爆発（Drums）",
+            "よこやまこうだい（Bass）",
+            "鮎京春輝（Keyboard）",
+            "山縣賢太郎（Trumpet&Percussion）",
+            "雨宮麻未子（1st.Violin）",
+            "大嶋世菜（2nd.Violin）",
+            "角谷奈緒子（Viola）",
+            "原口梓（Cello）"
+          ],
+          "is_core": false,
+          "sort_order": 16
+        },
+        {
+          "role": "公演形式",
+          "names": [
+            "アリーナライブ"
+          ],
+          "is_core": false,
+          "sort_order": 17
+        },
+        {
+          "role": "公演日程",
+          "names": [
+            "東京：2026年4月18日17:30・19日12:00／17:30（京王アリーナTOKYO）・全3公演",
+            "神戸：2026年4月29日12:00／18:00（GLION ARENA KOBE）・全2公演"
+          ],
+          "is_core": false,
+          "sort_order": 18
+        },
+        {
+          "role": "上演時間（予定）",
+          "names": [
+            "約180分（途中休憩なし）"
+          ],
+          "is_core": false,
+          "sort_order": 19
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "An arena concert celebrating the tenth anniversary of Musical Hetalia. Eighteen characters from the series participate through live and recorded appearances. Held in Tokyo and Kobe, the concert features music from the series with a live band.",
+      "title_en": "Musical Hetalia 10th Anniversary: The World Concert"
+    }
+  ],
+  "evidence": {
+    "links": [
+      {
+        "url": "https://musical-hetalia.com/ws/cast/",
+        "checkedAt": "2026-10-26T23:18:14.234Z",
+        "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+      },
+      {
+        "url": "https://musical-hetalia.com/ws/story/",
+        "checkedAt": "2026-10-26T23:18:14.393Z",
+        "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+      },
+      {
+        "url": "https://musical-hetalia.com/ws/schedule/",
+        "checkedAt": "2026-10-26T23:18:14.402Z",
+        "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+      },
+      {
+        "url": "https://musical-hetalia.com/ws/qa/",
+        "checkedAt": "2026-10-26T23:18:14.372Z",
+        "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+      },
+      {
+        "url": "https://musical-hetalia.com/ws/wp-content/themes/ws/asset/img/txt-staff-pc.png",
+        "checkedAt": "2026-10-26T23:19:16.491Z",
+        "note": "当該公式スタッフ画像を白背景で目視転記。透明原画像・SHA256を保存。"
+      },
+      {
+        "url": "https://musical-hetalia.com/ws/news/87/",
+        "checkedAt": "2026-10-26T23:20:59.309Z",
+        "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+      },
+      {
+        "url": "https://musical-hetalia.com/ws/news/",
+        "checkedAt": "2026-10-26T23:18:14.389Z",
+        "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+      },
+      {
+        "url": "https://musical-hetalia.com/ws/news/page/2/",
+        "checkedAt": "2026-10-26T23:18:14.324Z",
+        "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+      },
+      {
+        "url": "https://kyodo-osaka.co.jp/search/detail/13185",
+        "checkedAt": "2026-10-26T23:18:14.312Z",
+        "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+      },
+      {
+        "url": "https://www.unext.co.jp/ja/press-room/musical-hetalia-ws-2026-10-02",
+        "checkedAt": "2026-10-26T23:18:14.039Z",
+        "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+      },
+      {
+        "url": "https://kira-hai.net/nagae-ryoki",
+        "checkedAt": "2026-10-26T23:18:14.030Z",
+        "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+      },
+      {
+        "url": "https://kira-hai.net/schedule2026",
+        "checkedAt": "2026-10-26T23:19:16.752Z",
+        "note": "取得原文・SHA256を保存。今作の公式配役・区分・日程・変更告知を照合。主催者初期案内の旧脚本は採用しない。"
+      }
+    ],
+    "sources": [
+      {
+        "label": "home",
+        "url": "https://musical-hetalia.com/ws/",
+        "status": 200,
+        "checkedAt": "2026-10-26T23:18:14.376Z",
+        "sha256": "51c249819d1a454d126a3a4e920c686ac81275060e99b3783eb742934421e262",
+        "bytes": 33030
+      },
+      {
+        "label": "official",
+        "url": "https://musical-hetalia.com/ws/cast/",
+        "status": 200,
+        "checkedAt": "2026-10-26T23:18:14.234Z",
+        "sha256": "458f39549f3336740f6decb1c665d77477377715aca7880bb4c9c505c1d5bb62",
+        "bytes": 40181
+      },
+      {
+        "label": "schedule",
+        "url": "https://musical-hetalia.com/ws/schedule/",
+        "status": 200,
+        "checkedAt": "2026-10-26T23:18:14.402Z",
+        "sha256": "c68c0250e2e6b6d9e7a5fe37ab97effee00ba10596c7e3c4c8f41f3ffb1f51a9",
+        "bytes": 41871
+      },
+      {
+        "label": "qa",
+        "url": "https://musical-hetalia.com/ws/qa/",
+        "status": 200,
+        "checkedAt": "2026-10-26T23:18:14.372Z",
+        "sha256": "5790b48185e8969adc981f72e7e0ec8c192c685648624692e617d1808fd58bf8",
+        "bytes": 40496
+      },
+      {
+        "label": "story",
+        "url": "https://musical-hetalia.com/ws/story/",
+        "status": 200,
+        "checkedAt": "2026-10-26T23:18:14.393Z",
+        "sha256": "1f7d44e2963e29b57ec4b04677318b59e01dc748b26c9509e4e38446b8c2d87b",
+        "bytes": 28659
+      },
+      {
+        "label": "news",
+        "url": "https://musical-hetalia.com/ws/news/",
+        "status": 200,
+        "checkedAt": "2026-10-26T23:18:14.389Z",
+        "sha256": "dba46187c0d214a188102bd275e8c7ec14640325795d47df81a2778068f15aa8",
+        "bytes": 72857
+      },
+      {
+        "label": "news2",
+        "url": "https://musical-hetalia.com/ws/news/page/2/",
+        "status": 200,
+        "checkedAt": "2026-10-26T23:18:14.324Z",
+        "sha256": "fe9e4d403f8bbe626c4b786a907cf919271a5ed6366c859d576256f141dbdf74",
+        "bytes": 47238
+      },
+      {
+        "label": "kiraNagae",
+        "url": "https://kira-hai.net/nagae-ryoki",
+        "status": 200,
+        "checkedAt": "2026-10-26T23:18:14.030Z",
+        "sha256": "6e02dd9d6272f7ddeb0a9b71aa77698917b40624427926d31de738c0766fea56",
+        "bytes": 97507
+      },
+      {
+        "label": "producer",
+        "url": "https://kyodo-osaka.co.jp/search/detail/13185",
+        "status": 200,
+        "checkedAt": "2026-10-26T23:18:14.312Z",
+        "sha256": "5532d4fcd507081652a28b5261f4dd4420d020c58d75bc62889360d0c3200002",
+        "bytes": 49014
+      },
+      {
+        "label": "unext",
+        "url": "https://www.unext.co.jp/ja/press-room/musical-hetalia-ws-2026-10-02",
+        "status": 200,
+        "checkedAt": "2026-10-26T23:18:14.039Z",
+        "sha256": "35a1db817dfaf0a39c08d4c10388ee6513c003faf47e13e9ec21a8f585bcba35",
+        "bytes": 46192
+      },
+      {
+        "label": "changelog",
+        "url": "https://supabase.com/changelog.md",
+        "status": 200,
+        "checkedAt": "2026-10-26T23:18:13.982Z",
+        "sha256": "45528009025b8ad8487ccb73f7c769b66d4b0e7aa4560157047899dcb5b5a006",
+        "bytes": 102641
+      },
+      {
+        "label": "staffImage",
+        "url": "https://musical-hetalia.com/ws/wp-content/themes/ws/asset/img/txt-staff-pc.png",
+        "status": 200,
+        "checkedAt": "2026-10-26T23:19:16.491Z",
+        "sha256": "1582c742158d601911a467b62f653231b16ad38a819d0ff4f0d8139634df150b",
+        "bytes": 35097
+      },
+      {
+        "label": "kiraSchedule",
+        "url": "https://kira-hai.net/schedule2026",
+        "status": 200,
+        "checkedAt": "2026-10-26T23:19:16.752Z",
+        "sha256": "8446496d69d953d28460bac7cb7a43269c0374728360af402791731866b2b9fc",
+        "bytes": 155526
+      },
+      {
+        "label": "scriptChange",
+        "url": "https://musical-hetalia.com/ws/news/87/",
+        "status": 200,
+        "checkedAt": "2026-10-26T23:20:59.309Z",
+        "sha256": "a181d480351c6d4d3f001bcf4c533960a9f4cbbcd84aec5a01649d678944386c",
+        "bytes": 31954
+      }
+    ],
+    "unresolved": [
+      "今後予定17公演の実施確認・人物属性総合監査・詳細英訳・現在配信導線は後続。"
+    ],
+    "notes": [
+      "既存の一般採用RPCを利用。キラハイ専用候補保存RPCへ公式URLを偽装せずsource=officialで検証付き候補保存、採用は既存RPCに統一。スキーマ・RLS・アプリ変更なし。",
+      "Supabase changelogは前回と同SHA256、当該DML/RPCへの関連破壊的変更なし。",
+      "既登録9作品96配役と人物・シリーズ・対象外候補を全項目保全。"
+    ]
+  },
+  "requestKey": "ef5dfa9f74fadade0ec60fc5973ad89bd72e20a3bb7f6d4883229ec4942e7c83",
+  "verification": {
+    "passed": true,
+    "requestKey": "ef5dfa9f74fadade0ec60fc5973ad89bd72e20a3bb7f6d4883229ec4942e7c83",
+    "changes": {
+      "actors": {
+        "before": 1169,
+        "after": 1169,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "plays": {
+        "before": 419,
+        "after": 420,
+        "added": 1,
+        "modified": 0,
+        "deleted": 0
+      },
+      "franchises": {
+        "before": 198,
+        "after": 198,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "casts": {
+        "before": 4310,
+        "after": 4321,
+        "added": 11,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_actors": {
+        "before": 1701,
+        "after": 1701,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_cast_candidates": {
+        "before": 3656,
+        "after": 3667,
+        "added": 11,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_import_logs": {
+        "before": 5946,
+        "after": 5971,
+        "added": 25,
+        "modified": 0,
+        "deleted": 0
+      },
+      "actor_identity_sources": {
+        "before": 515,
+        "after": 515,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      }
+    },
+    "newActors": 0,
+    "reusedActors": 11,
+    "newPlays": 1,
+    "newCasts": 11,
+    "creditOnlyNames": 10,
+    "danceCast": 6,
+    "chorusCast": 4,
+    "creditCategories": 20,
+    "scheduleCount": 22,
+    "osakaPerformances": 5,
+    "tokyoPerformances": 13,
+    "aichiPerformances": 4,
+    "elapsedScheduledPerformances": 5,
+    "upcomingScheduledPerformances": 17,
+    "scriptChangeConfirmed": true,
+    "sourceKind": "official",
+    "legacyCorrected": 0,
+    "seriesWorks": 10,
+    "seriesCastRows": 107,
+    "seriesActors": 19,
+    "totals": {
+      "actors": 1169,
+      "plays": 420,
+      "casts": 4321
+    }
+  },
+  "publicVerification": {
+    "passed": true,
+    "pages": 60,
+    "seriesWorks": 10,
+    "seriesCastRows": 107,
+    "seriesActors": 19,
+    "newCastRows": 11,
+    "newActors": 0,
+    "creditOnlyNames": 10,
+    "scheduleCount": 22,
+    "results": [
+      {
+        "path": "/plays/hetamu2017",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/hetamu2021",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/series/hetalia",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/hetamu2025",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/hetamu2016",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/hetamu2024",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/hetamu2015",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/hetamu2018",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/hetamu2023",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/hetamu2026-ws",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/hetamu2026-wc",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/nagae-ryoki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/ueda-yusuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/isogai-ryuko",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/ueda-keisuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/hirose-daisuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/juri",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/sugie-taishi",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/yamaoki-yuki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/takamoto-gaku",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/kikuchi-takuya",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/tsukamoto-ryo",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/munakata-shoya",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/matsui-kenta",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/niino-nao",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/maeda-yuki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/yamada-james-takeshi",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/higuchi-yuta",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/omi-yoichiro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/isono-toru",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/series/hetalia",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/hetamu2025",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/hetamu2017",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/hetamu2021",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/hetamu2015",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/hetamu2024",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/hetamu2016",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/hetamu2023",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/hetamu2018",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/nagae-ryoki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/hetamu2026-wc",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/hetamu2026-ws",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/ueda-yusuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/ueda-keisuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/hirose-daisuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/isogai-ryuko",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/juri",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/yamaoki-yuki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/sugie-taishi",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/kikuchi-takuya",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/takamoto-gaku",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/munakata-shoya",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/matsui-kenta",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/tsukamoto-ryo",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/niino-nao",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/maeda-yuki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/omi-yoichiro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/yamada-james-takeshi",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/higuchi-yuta",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/isono-toru",
+        "passed": true,
+        "status": 200
+      }
+    ]
+  },
+  "searchVerification": {
+    "passed": true,
+    "checks": 42,
+    "spaceAndNoSpace": true,
+    "genderAttributesUnchanged": true,
+    "results": [
+      {
+        "path": "/actors?q=%E9%95%B7%E6%B1%9F%E5%B4%9A%E8%A1%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E9%95%B7%E6%B1%9F+%E5%B4%9A%E8%A1%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E4%B8%8A%E7%94%B0+%E6%82%A0%E4%BB%8B",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E4%B8%8A%E7%94%B0%E6%82%A0%E4%BB%8B",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%A4%8D%E7%94%B0%E5%9C%AD%E8%BC%94",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%A4%8D%E7%94%B0+%E5%9C%AD%E8%BC%94",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%A3%AF%E8%B2%9D+%E9%BE%8D%E4%B9%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%A3%AF%E8%B2%9D%E9%BE%8D%E4%B9%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%BB%A3%E7%80%AC+%E5%A4%A7%E4%BB%8B",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%BB%A3%E7%80%AC%E5%A4%A7%E4%BB%8B",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%B1%B1%E6%B2%96+%E5%8B%87%E8%BC%9D",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%AF%BF%E9%87%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%B1%B1%E6%B2%96%E5%8B%87%E8%BC%9D",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%9D%89%E6%B1%9F+%E5%A4%A7%E5%BF%97",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%9D%89%E6%B1%9F%E5%A4%A7%E5%BF%97",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%B1%B1%E7%94%B0+%E3%82%B8%E3%82%A7%E3%83%BC%E3%83%A0%E3%82%B9%E6%AD%A6",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%B1%B1%E7%94%B0%E3%82%B8%E3%82%A7%E3%83%BC%E3%83%A0%E3%82%B9%E6%AD%A6",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E9%AB%98%E6%9C%AC+%E5%AD%A6",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E9%AB%98%E6%9C%AC%E5%AD%A6",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%A8%8B%E5%8F%A3+%E8%A3%95%E5%A4%AA",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%A8%8B%E5%8F%A3%E8%A3%95%E5%A4%AA",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E9%95%B7%E6%B1%9F%E5%B4%9A%E8%A1%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E9%95%B7%E6%B1%9F+%E5%B4%9A%E8%A1%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E4%B8%8A%E7%94%B0+%E6%82%A0%E4%BB%8B",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%A4%8D%E7%94%B0+%E5%9C%AD%E8%BC%94",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%A4%8D%E7%94%B0%E5%9C%AD%E8%BC%94",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E4%B8%8A%E7%94%B0%E6%82%A0%E4%BB%8B",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%A3%AF%E8%B2%9D+%E9%BE%8D%E4%B9%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%BB%A3%E7%80%AC+%E5%A4%A7%E4%BB%8B",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%BB%A3%E7%80%AC%E5%A4%A7%E4%BB%8B",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%A3%AF%E8%B2%9D%E9%BE%8D%E4%B9%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%AF%BF%E9%87%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%B1%B1%E6%B2%96+%E5%8B%87%E8%BC%9D",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%B1%B1%E6%B2%96%E5%8B%87%E8%BC%9D",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%9D%89%E6%B1%9F+%E5%A4%A7%E5%BF%97",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%9D%89%E6%B1%9F%E5%A4%A7%E5%BF%97",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%B1%B1%E7%94%B0+%E3%82%B8%E3%82%A7%E3%83%BC%E3%83%A0%E3%82%B9%E6%AD%A6",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E9%AB%98%E6%9C%AC+%E5%AD%A6",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%B1%B1%E7%94%B0%E3%82%B8%E3%82%A7%E3%83%BC%E3%83%A0%E3%82%B9%E6%AD%A6",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%A8%8B%E5%8F%A3+%E8%A3%95%E5%A4%AA",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E9%AB%98%E6%9C%AC%E5%AD%A6",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%A8%8B%E5%8F%A3%E8%A3%95%E5%A4%AA",
+        "status": 200,
+        "passed": true
+      }
+    ]
+  },
+  "replayVerification": {
+    "passed": true,
+    "tables": {
+      "actors": {
+        "rows": 1169,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "plays": {
+        "rows": 420,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "franchises": {
+        "rows": 198,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "casts": {
+        "rows": 4321,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_actors": {
+        "rows": 1701,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_cast_candidates": {
+        "rows": 3667,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_import_logs": {
+        "rows": 5971,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "actor_identity_sources": {
+        "rows": 515,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      }
+    }
+  },
+  "sourceValidation": {
+    "allActorsReused": true,
+    "officialBillingOrder": true,
+    "originalSourceRowRetained": true,
+    "officialSourceNotMislabelledAsKira": true,
+    "danceCreditOnly": 6,
+    "chorusCreditOnly": 4,
+    "officialCreditGroupsRetained": true,
+    "staffImageVisuallyTranscribed": true,
+    "staffImageFingerprintRetained": true,
+    "scriptChangeConfirmed": true,
+    "outdatedProducerScriptNotAdopted": true,
+    "plannedRuntimeMinutes": 190,
+    "intermissionPresent": true,
+    "intermissionMinutes": null,
+    "scheduleCount": 22,
+    "osakaScheduleCount": 5,
+    "tokyoScheduleCount": 13,
+    "aichiScheduleCount": 4,
+    "elapsedScheduledPerformances": 5,
+    "upcomingScheduledPerformances": 17,
+    "november2DarkDayRetained": true,
+    "monthBoundaryRestored": true,
+    "seatReleaseNotAdditionalShow": true,
+    "springVideoAppearanceConditionsNotInherited": true,
+    "paidLiveStreamingNotMislabelledAsSubscription": true,
+    "oldRowsPreserved": true
+  },
+  "nextSeries": {
+    "slug": "a3",
+    "title": "MANKAI STAGE『A3!』ACT1（エーステACT1）",
+    "status": "queued_for_source_review",
+    "existingPlays": 3,
+    "existingCastRows": 12,
+    "note": "既存作品3件に少数配役。公式・キラハイから初期公演を調べ直し、旧サンプル紐づけの可能性を点検して進める。今回A3データの更新はしていない。"
+  },
+  "verificationScope": "2026年秋World☆Starts1作品11配役を追加、全11人物再利用。DANCE CAST6人・CHORUS CAST4人を公式区分のままクレジットへ。8/7の脚本変更と現行スタッフ画像を優先し、初期主催者案内の旧脚本を採用しない。大阪5東京13愛知4の22予定公演、11/2休演、予定190分・途中休憩あり（休憩分数未確認）を保存。2026/10/27時点で予定日経過5・今後17、すべて実施済みとは扱わない。既登録9作品96配役を含む10作品107配役19人物の日英60ページ・姓名検索42件、8テーブル既存全行保全比較・同一SQL再実行0変更を確認。人物属性総合監査・現在配信・詳細英訳とは区別。"
+}
