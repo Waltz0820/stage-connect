@@ -1,0 +1,2829 @@
+{
+  "version": 1,
+  "batchId": "hetalia2015-20261027-01",
+  "expectedFranchise": {
+    "id": "1ebeffff-4df9-47a1-8449-251fa80a56c1",
+    "name": "舞台『ヘタリア』",
+    "created_at": "2026-02-08T16:26:41.990203+00:00",
+    "updated_at": "2026-02-08T16:26:41.990203+00:00",
+    "slug": "hetalia",
+    "intro": null,
+    "description": "日丸屋秀和による国擬人化コメディ漫画『ヘタリア Axis Powers』を原作としたミュージカル作品、通称「ヘタミュ」。個性豊かな国々が歌やダンスを交え、歴史上の出来事をベースにした物語をコミカルに繰り広げる。脚本はなるせゆうせい、演出は吉谷光太郎が一貫して手掛けている。",
+    "origin_type": "漫画原作",
+    "origin_note": "原作：日丸屋秀和『ヘタリア Axis Powers』",
+    "production_companies": null,
+    "related_franchise_ids": [],
+    "format": null,
+    "description_en": null,
+    "name_en": null
+  },
+  "franchisePatch": {
+    "name": "ミュージカル「ヘタリア」（ヘタミュ）",
+    "name_en": "Musical Hetalia",
+    "description": "日丸屋秀和『ヘタリア Axis Powers』を原作とするミュージカルシリーズ。国を擬人化したキャラクターたちの日常や交流を歌とダンスで描く。2015年12月に『Singin’ in the World』で初演を迎えた。通称「ヘタミュ」。",
+    "description_en": "A musical series based on Hidekaz Himaruya’s Hetalia: Axis Powers, depicting personified nations and their encounters through song and dance. The series began with Singin’ in the World in December 2015 and is known as Hetamyu."
+  },
+  "externalActorLinks": [],
+  "actors": [],
+  "works": [
+    {
+      "year": 2015,
+      "before": null,
+      "play": {
+        "id": "42af489f-2553-4038-a1da-5427709777ca",
+        "slug": "hetamu2015",
+        "title": "ミュージカル「ヘタリア～Singin’ in the World～」",
+        "title_en": "Musical Hetalia: Singin’ in the World",
+        "franchise_id": "1ebeffff-4df9-47a1-8449-251fa80a56c1",
+        "summary": "世界会議を進めようとするドイツだが、アメリカやイギリス、フランスたちの発言で会議は混乱。そこへイタリアが加わり、さらに賑やかな騒動へ発展する。国を擬人化したキャラクターたちのやりとりを歌とダンスで描く『ヘタリア』初のミュージカル。",
+        "summary_en": "Germany tries to keep a world meeting on track, but America, England and France turn the discussion into chaos. Italy’s arrival only adds to the commotion. The first Hetalia musical brings the encounters between personified nations to the stage through song and dance.",
+        "period": "2015年12月24日〜29日",
+        "venue": "Zeppブルーシアター六本木",
+        "vod": {},
+        "genre": null,
+        "tags": [],
+        "credits": [
+          {
+            "role": "原作",
+            "names": [
+              "日丸屋秀和『ヘタリア Axis Powers』"
+            ],
+            "is_core": true,
+            "sort_order": 1
+          },
+          {
+            "role": "脚本",
+            "names": [
+              "なるせゆうせい"
+            ],
+            "is_core": true,
+            "sort_order": 2
+          },
+          {
+            "role": "演出",
+            "names": [
+              "吉谷光太郎"
+            ],
+            "is_core": true,
+            "sort_order": 3
+          },
+          {
+            "role": "音楽",
+            "names": [
+              "tak"
+            ],
+            "is_core": false,
+            "sort_order": 4
+          },
+          {
+            "role": "振付",
+            "names": [
+              "MAMORU"
+            ],
+            "is_core": false,
+            "sort_order": 5
+          },
+          {
+            "role": "制作",
+            "names": [
+              "ポリゴンマジック"
+            ],
+            "is_core": false,
+            "sort_order": 6
+          },
+          {
+            "role": "主催",
+            "names": [
+              "ミュージカル「ヘタリア」製作委員会（フロンティアワークス、ポリゴンマジック、セガ・ライブクリエイション、KADOKAWA）"
+            ],
+            "is_core": false,
+            "sort_order": 7
+          },
+          {
+            "role": "アンサンブル",
+            "names": [
+              "仲田祥司",
+              "池田謙信",
+              "原野正章",
+              "今田竜人",
+              "三原大樹",
+              "帯金遼太",
+              "山本哲平",
+              "岡本笙"
+            ],
+            "is_core": false,
+            "sort_order": 8
+          },
+          {
+            "role": "公演日程",
+            "names": [
+              "2015年12月24日〜29日（Zeppブルーシアター六本木、追加公演を含む全11公演）"
+            ],
+            "is_core": false,
+            "sort_order": 9
+          },
+          {
+            "role": "追加公演",
+            "names": [
+              "2015年12月28日13:00（2015年11月12日発表）"
+            ],
+            "is_core": false,
+            "sort_order": 10
+          },
+          {
+            "role": "上演時間（予定）",
+            "names": [
+              "約2時間"
+            ],
+            "is_core": false,
+            "sort_order": 11
+          }
+        ],
+        "related_franchise_ids": []
+      },
+      "rawSource": {
+        "sourceUrl": "https://kira-hai.net/hetamu2015",
+        "title": "ミュージカル「ヘタリア~Singin’ in the World~」(2015)",
+        "scheduleLines": [
+          "2015年12月24日-29日 Zeppブルーシアター六本木"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "長江崚行",
+            "sourceActorUrl": "https://kira-hai.net/nagae-ryoki",
+            "role_name": "イタリア",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "近江陽一郎",
+            "sourceActorUrl": "https://kira-hai.net/omi-yoichiro",
+            "role_name": "ドイツ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "植田圭輔",
+            "sourceActorUrl": "https://kira-hai.net/ueda-keisuke",
+            "role_name": "日本",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "磯貝龍虎",
+            "sourceActorUrl": "https://kira-hai.net/isogai-ryuko",
+            "role_name": "アメリカ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "廣瀬大介",
+            "sourceActorUrl": "https://kira-hai.net/hirose-daisuke",
+            "role_name": "イギリス",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "寿里",
+            "sourceActorUrl": "https://kira-hai.net/juri",
+            "role_name": "フランス",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "山沖勇輝",
+            "sourceActorUrl": "https://kira-hai.net/yamaoki-yuki",
+            "role_name": "ロシア",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "杉江大志",
+            "sourceActorUrl": "https://kira-hai.net/sugie-taishi",
+            "role_name": "中国",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "菊池卓也",
+            "sourceActorUrl": "https://kira-hai.net/kikuchi-takuya",
+            "role_name": "オーストリア",
+            "cast_group": null
+          }
+        ],
+        "unparsed": [
+          "仲田祥司",
+          "池田謙信",
+          "原野正章",
+          "今田竜人",
+          "三原大樹",
+          "帯金遼太",
+          "山本哲平",
+          "岡本笙"
+        ]
+      },
+      "source": {
+        "sourceUrl": "https://kira-hai.net/hetamu2015",
+        "title": "ミュージカル「ヘタリア~Singin’ in the World~」(2015)",
+        "scheduleLines": [
+          "2015年12月24日-29日 Zeppブルーシアター六本木"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "長江崚行",
+            "sourceActorUrl": "https://kira-hai.net/nagae-ryoki",
+            "role_name": "イタリア",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "近江陽一郎",
+            "sourceActorUrl": "https://kira-hai.net/omi-yoichiro",
+            "role_name": "ドイツ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "植田圭輔",
+            "sourceActorUrl": "https://kira-hai.net/ueda-keisuke",
+            "role_name": "日本",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "磯貝龍虎",
+            "sourceActorUrl": "https://kira-hai.net/isogai-ryuko",
+            "role_name": "アメリカ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "廣瀬大介",
+            "sourceActorUrl": "https://kira-hai.net/hirose-daisuke",
+            "role_name": "イギリス",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "寿里",
+            "sourceActorUrl": "https://kira-hai.net/juri",
+            "role_name": "フランス",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "山沖勇輝",
+            "sourceActorUrl": "https://kira-hai.net/yamaoki-yuki",
+            "role_name": "ロシア",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "杉江大志",
+            "sourceActorUrl": "https://kira-hai.net/sugie-taishi",
+            "role_name": "中国",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "菊池卓也",
+            "sourceActorUrl": "https://kira-hai.net/kikuchi-takuya",
+            "role_name": "オーストリア",
+            "cast_group": null
+          }
+        ],
+        "unparsed": []
+      },
+      "sourceFingerprint": "eff0304b81911ade77b4b96bab7f75d71279b882c0f6426dc9b2fc94f23837f3",
+      "stage": {
+        "workUrl": "https://kira-hai.net/hetamu2015",
+        "key": "a6667640b463f20a92d71406eeefa95cad87e1b5e3f672a64a9a32152c834965",
+        "items": [
+          {
+            "source_actor_name": "長江崚行",
+            "source_actor_url": "https://kira-hai.net/nagae-ryoki",
+            "source_work_title": "ミュージカル「ヘタリア~Singin’ in the World~」(2015)",
+            "source_year": 2015,
+            "source_role_raw": "イタリア",
+            "source_role_names": [
+              "イタリア"
+            ],
+            "source_cast_group": null,
+            "source_order": 1,
+            "source_credit_key": "8e5f1c41b2108f245abb",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hetamu2015",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hetamu2015",
+                  "checkedAt": "2026-10-26T17:00:24.139Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/cast",
+                  "checkedAt": "2026-10-26T17:00:24.984Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/story",
+                  "checkedAt": "2026-10-26T17:00:25.267Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/schedule",
+                  "checkedAt": "2026-10-26T17:00:25.531Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/wp-content/themes/151028_hetalia/images/img_schedule_table.png",
+                  "checkedAt": "2026-10-26T17:01:36.762Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/news/page/2",
+                  "checkedAt": "2026-10-26T17:02:46.711Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/qa",
+                  "checkedAt": "2026-10-26T17:00:25.803Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://www.fwinc.co.jp/bd_dvd/32909/",
+                  "checkedAt": "2026-10-26T17:00:26.234Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/isogai-ryuko",
+                  "checkedAt": "2026-10-26T17:00:26.425Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/kikuchi-takuya",
+                  "checkedAt": "2026-10-26T17:00:26.561Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/wu/",
+                  "checkedAt": "2026-10-26T17:00:26.904Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                }
+              ],
+              "source_fingerprint": "eff0304b81911ade77b4b96bab7f75d71279b882c0f6426dc9b2fc94f23837f3",
+              "review_fingerprint": "2c81258848200dafee0c74834e714529a54f5922821c569801ea1bd2a4525dca",
+              "snapshot_fingerprint": "cd8513d242fd60eccd04c11a9f9338a5b96dc2161bfc981d2da2ae7fb707c501",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2015,
+                "reason": "2015年12月の初演。DVD発売年2016や他公演の年を混ぜない。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/hetamu2015",
+                    "checkedAt": "2026-10-26T17:00:24.139Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/cast",
+                    "checkedAt": "2026-10-26T17:00:24.984Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/story",
+                    "checkedAt": "2026-10-26T17:00:25.267Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/schedule",
+                    "checkedAt": "2026-10-26T17:00:25.531Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/wp-content/themes/151028_hetalia/images/img_schedule_table.png",
+                    "checkedAt": "2026-10-26T17:01:36.762Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/news/page/2",
+                    "checkedAt": "2026-10-26T17:02:46.711Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/qa",
+                    "checkedAt": "2026-10-26T17:00:25.803Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://www.fwinc.co.jp/bd_dvd/32909/",
+                    "checkedAt": "2026-10-26T17:00:26.234Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/isogai-ryuko",
+                    "checkedAt": "2026-10-26T17:00:26.425Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/kikuchi-takuya",
+                    "checkedAt": "2026-10-26T17:00:26.561Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/wu/",
+                    "checkedAt": "2026-10-26T17:00:26.904Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  }
+                ]
+              },
+              "original_source_row": {
+                "order": 1,
+                "cast": {
+                  "sourceActorName": "長江崚行",
+                  "sourceActorUrl": "https://kira-hai.net/nagae-ryoki",
+                  "role_name": "イタリア",
+                  "cast_group": null
+                }
+              }
+            },
+            "matched_actor_id": "4b3110ab-0d88-4a68-8a1d-ed0fcac335ff",
+            "matched_play_id": "42af489f-2553-4038-a1da-5427709777ca",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "近江陽一郎",
+            "source_actor_url": "https://kira-hai.net/omi-yoichiro",
+            "source_work_title": "ミュージカル「ヘタリア~Singin’ in the World~」(2015)",
+            "source_year": 2015,
+            "source_role_raw": "ドイツ",
+            "source_role_names": [
+              "ドイツ"
+            ],
+            "source_cast_group": null,
+            "source_order": 2,
+            "source_credit_key": "fcf8a93e576551bf75bf",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hetamu2015",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hetamu2015",
+                  "checkedAt": "2026-10-26T17:00:24.139Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/cast",
+                  "checkedAt": "2026-10-26T17:00:24.984Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/story",
+                  "checkedAt": "2026-10-26T17:00:25.267Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/schedule",
+                  "checkedAt": "2026-10-26T17:00:25.531Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/wp-content/themes/151028_hetalia/images/img_schedule_table.png",
+                  "checkedAt": "2026-10-26T17:01:36.762Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/news/page/2",
+                  "checkedAt": "2026-10-26T17:02:46.711Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/qa",
+                  "checkedAt": "2026-10-26T17:00:25.803Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://www.fwinc.co.jp/bd_dvd/32909/",
+                  "checkedAt": "2026-10-26T17:00:26.234Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/isogai-ryuko",
+                  "checkedAt": "2026-10-26T17:00:26.425Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/kikuchi-takuya",
+                  "checkedAt": "2026-10-26T17:00:26.561Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/wu/",
+                  "checkedAt": "2026-10-26T17:00:26.904Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                }
+              ],
+              "source_fingerprint": "eff0304b81911ade77b4b96bab7f75d71279b882c0f6426dc9b2fc94f23837f3",
+              "review_fingerprint": "2c81258848200dafee0c74834e714529a54f5922821c569801ea1bd2a4525dca",
+              "snapshot_fingerprint": "cd8513d242fd60eccd04c11a9f9338a5b96dc2161bfc981d2da2ae7fb707c501",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2015,
+                "reason": "2015年12月の初演。DVD発売年2016や他公演の年を混ぜない。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/hetamu2015",
+                    "checkedAt": "2026-10-26T17:00:24.139Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/cast",
+                    "checkedAt": "2026-10-26T17:00:24.984Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/story",
+                    "checkedAt": "2026-10-26T17:00:25.267Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/schedule",
+                    "checkedAt": "2026-10-26T17:00:25.531Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/wp-content/themes/151028_hetalia/images/img_schedule_table.png",
+                    "checkedAt": "2026-10-26T17:01:36.762Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/news/page/2",
+                    "checkedAt": "2026-10-26T17:02:46.711Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/qa",
+                    "checkedAt": "2026-10-26T17:00:25.803Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://www.fwinc.co.jp/bd_dvd/32909/",
+                    "checkedAt": "2026-10-26T17:00:26.234Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/isogai-ryuko",
+                    "checkedAt": "2026-10-26T17:00:26.425Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/kikuchi-takuya",
+                    "checkedAt": "2026-10-26T17:00:26.561Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/wu/",
+                    "checkedAt": "2026-10-26T17:00:26.904Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  }
+                ]
+              },
+              "original_source_row": {
+                "order": 2,
+                "cast": {
+                  "sourceActorName": "近江陽一郎",
+                  "sourceActorUrl": "https://kira-hai.net/omi-yoichiro",
+                  "role_name": "ドイツ",
+                  "cast_group": null
+                }
+              }
+            },
+            "matched_actor_id": "7945882d-4bde-46bb-87c3-932a2ac8ca23",
+            "matched_play_id": "42af489f-2553-4038-a1da-5427709777ca",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "植田圭輔",
+            "source_actor_url": "https://kira-hai.net/ueda-keisuke",
+            "source_work_title": "ミュージカル「ヘタリア~Singin’ in the World~」(2015)",
+            "source_year": 2015,
+            "source_role_raw": "日本",
+            "source_role_names": [
+              "日本"
+            ],
+            "source_cast_group": null,
+            "source_order": 3,
+            "source_credit_key": "c6cee9c6fb6d8005481d",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hetamu2015",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hetamu2015",
+                  "checkedAt": "2026-10-26T17:00:24.139Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/cast",
+                  "checkedAt": "2026-10-26T17:00:24.984Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/story",
+                  "checkedAt": "2026-10-26T17:00:25.267Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/schedule",
+                  "checkedAt": "2026-10-26T17:00:25.531Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/wp-content/themes/151028_hetalia/images/img_schedule_table.png",
+                  "checkedAt": "2026-10-26T17:01:36.762Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/news/page/2",
+                  "checkedAt": "2026-10-26T17:02:46.711Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/qa",
+                  "checkedAt": "2026-10-26T17:00:25.803Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://www.fwinc.co.jp/bd_dvd/32909/",
+                  "checkedAt": "2026-10-26T17:00:26.234Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/isogai-ryuko",
+                  "checkedAt": "2026-10-26T17:00:26.425Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/kikuchi-takuya",
+                  "checkedAt": "2026-10-26T17:00:26.561Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/wu/",
+                  "checkedAt": "2026-10-26T17:00:26.904Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                }
+              ],
+              "source_fingerprint": "eff0304b81911ade77b4b96bab7f75d71279b882c0f6426dc9b2fc94f23837f3",
+              "review_fingerprint": "2c81258848200dafee0c74834e714529a54f5922821c569801ea1bd2a4525dca",
+              "snapshot_fingerprint": "cd8513d242fd60eccd04c11a9f9338a5b96dc2161bfc981d2da2ae7fb707c501",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2015,
+                "reason": "2015年12月の初演。DVD発売年2016や他公演の年を混ぜない。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/hetamu2015",
+                    "checkedAt": "2026-10-26T17:00:24.139Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/cast",
+                    "checkedAt": "2026-10-26T17:00:24.984Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/story",
+                    "checkedAt": "2026-10-26T17:00:25.267Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/schedule",
+                    "checkedAt": "2026-10-26T17:00:25.531Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/wp-content/themes/151028_hetalia/images/img_schedule_table.png",
+                    "checkedAt": "2026-10-26T17:01:36.762Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/news/page/2",
+                    "checkedAt": "2026-10-26T17:02:46.711Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/qa",
+                    "checkedAt": "2026-10-26T17:00:25.803Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://www.fwinc.co.jp/bd_dvd/32909/",
+                    "checkedAt": "2026-10-26T17:00:26.234Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/isogai-ryuko",
+                    "checkedAt": "2026-10-26T17:00:26.425Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/kikuchi-takuya",
+                    "checkedAt": "2026-10-26T17:00:26.561Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/wu/",
+                    "checkedAt": "2026-10-26T17:00:26.904Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  }
+                ]
+              },
+              "original_source_row": {
+                "order": 3,
+                "cast": {
+                  "sourceActorName": "植田圭輔",
+                  "sourceActorUrl": "https://kira-hai.net/ueda-keisuke",
+                  "role_name": "日本",
+                  "cast_group": null
+                }
+              }
+            },
+            "matched_actor_id": "efec4bde-6be0-4d8f-80e6-0d1c3accf066",
+            "matched_play_id": "42af489f-2553-4038-a1da-5427709777ca",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "磯貝龍虎",
+            "source_actor_url": "https://kira-hai.net/isogai-ryuko",
+            "source_work_title": "ミュージカル「ヘタリア~Singin’ in the World~」(2015)",
+            "source_year": 2015,
+            "source_role_raw": "アメリカ",
+            "source_role_names": [
+              "アメリカ"
+            ],
+            "source_cast_group": null,
+            "source_order": 4,
+            "source_credit_key": "9cab14cac02b36ecbd29",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hetamu2015",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hetamu2015",
+                  "checkedAt": "2026-10-26T17:00:24.139Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/cast",
+                  "checkedAt": "2026-10-26T17:00:24.984Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/story",
+                  "checkedAt": "2026-10-26T17:00:25.267Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/schedule",
+                  "checkedAt": "2026-10-26T17:00:25.531Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/wp-content/themes/151028_hetalia/images/img_schedule_table.png",
+                  "checkedAt": "2026-10-26T17:01:36.762Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/news/page/2",
+                  "checkedAt": "2026-10-26T17:02:46.711Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/qa",
+                  "checkedAt": "2026-10-26T17:00:25.803Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://www.fwinc.co.jp/bd_dvd/32909/",
+                  "checkedAt": "2026-10-26T17:00:26.234Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/isogai-ryuko",
+                  "checkedAt": "2026-10-26T17:00:26.425Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/kikuchi-takuya",
+                  "checkedAt": "2026-10-26T17:00:26.561Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/wu/",
+                  "checkedAt": "2026-10-26T17:00:26.904Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                }
+              ],
+              "source_fingerprint": "eff0304b81911ade77b4b96bab7f75d71279b882c0f6426dc9b2fc94f23837f3",
+              "review_fingerprint": "2c81258848200dafee0c74834e714529a54f5922821c569801ea1bd2a4525dca",
+              "snapshot_fingerprint": "cd8513d242fd60eccd04c11a9f9338a5b96dc2161bfc981d2da2ae7fb707c501",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2015,
+                "reason": "2015年12月の初演。DVD発売年2016や他公演の年を混ぜない。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/hetamu2015",
+                    "checkedAt": "2026-10-26T17:00:24.139Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/cast",
+                    "checkedAt": "2026-10-26T17:00:24.984Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/story",
+                    "checkedAt": "2026-10-26T17:00:25.267Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/schedule",
+                    "checkedAt": "2026-10-26T17:00:25.531Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/wp-content/themes/151028_hetalia/images/img_schedule_table.png",
+                    "checkedAt": "2026-10-26T17:01:36.762Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/news/page/2",
+                    "checkedAt": "2026-10-26T17:02:46.711Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/qa",
+                    "checkedAt": "2026-10-26T17:00:25.803Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://www.fwinc.co.jp/bd_dvd/32909/",
+                    "checkedAt": "2026-10-26T17:00:26.234Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/isogai-ryuko",
+                    "checkedAt": "2026-10-26T17:00:26.425Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/kikuchi-takuya",
+                    "checkedAt": "2026-10-26T17:00:26.561Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/wu/",
+                    "checkedAt": "2026-10-26T17:00:26.904Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  }
+                ]
+              },
+              "original_source_row": {
+                "order": 4,
+                "cast": {
+                  "sourceActorName": "磯貝龍虎",
+                  "sourceActorUrl": "https://kira-hai.net/isogai-ryuko",
+                  "role_name": "アメリカ",
+                  "cast_group": null
+                }
+              }
+            },
+            "matched_actor_id": "b15c5d1c-b38b-4604-bee6-f19f4a8ab1db",
+            "matched_play_id": "42af489f-2553-4038-a1da-5427709777ca",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "廣瀬大介",
+            "source_actor_url": "https://kira-hai.net/hirose-daisuke",
+            "source_work_title": "ミュージカル「ヘタリア~Singin’ in the World~」(2015)",
+            "source_year": 2015,
+            "source_role_raw": "イギリス",
+            "source_role_names": [
+              "イギリス"
+            ],
+            "source_cast_group": null,
+            "source_order": 5,
+            "source_credit_key": "3d1561ded8f329f5b474",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hetamu2015",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hetamu2015",
+                  "checkedAt": "2026-10-26T17:00:24.139Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/cast",
+                  "checkedAt": "2026-10-26T17:00:24.984Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/story",
+                  "checkedAt": "2026-10-26T17:00:25.267Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/schedule",
+                  "checkedAt": "2026-10-26T17:00:25.531Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/wp-content/themes/151028_hetalia/images/img_schedule_table.png",
+                  "checkedAt": "2026-10-26T17:01:36.762Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/news/page/2",
+                  "checkedAt": "2026-10-26T17:02:46.711Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/qa",
+                  "checkedAt": "2026-10-26T17:00:25.803Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://www.fwinc.co.jp/bd_dvd/32909/",
+                  "checkedAt": "2026-10-26T17:00:26.234Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/isogai-ryuko",
+                  "checkedAt": "2026-10-26T17:00:26.425Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/kikuchi-takuya",
+                  "checkedAt": "2026-10-26T17:00:26.561Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/wu/",
+                  "checkedAt": "2026-10-26T17:00:26.904Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                }
+              ],
+              "source_fingerprint": "eff0304b81911ade77b4b96bab7f75d71279b882c0f6426dc9b2fc94f23837f3",
+              "review_fingerprint": "2c81258848200dafee0c74834e714529a54f5922821c569801ea1bd2a4525dca",
+              "snapshot_fingerprint": "cd8513d242fd60eccd04c11a9f9338a5b96dc2161bfc981d2da2ae7fb707c501",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2015,
+                "reason": "2015年12月の初演。DVD発売年2016や他公演の年を混ぜない。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/hetamu2015",
+                    "checkedAt": "2026-10-26T17:00:24.139Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/cast",
+                    "checkedAt": "2026-10-26T17:00:24.984Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/story",
+                    "checkedAt": "2026-10-26T17:00:25.267Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/schedule",
+                    "checkedAt": "2026-10-26T17:00:25.531Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/wp-content/themes/151028_hetalia/images/img_schedule_table.png",
+                    "checkedAt": "2026-10-26T17:01:36.762Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/news/page/2",
+                    "checkedAt": "2026-10-26T17:02:46.711Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/qa",
+                    "checkedAt": "2026-10-26T17:00:25.803Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://www.fwinc.co.jp/bd_dvd/32909/",
+                    "checkedAt": "2026-10-26T17:00:26.234Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/isogai-ryuko",
+                    "checkedAt": "2026-10-26T17:00:26.425Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/kikuchi-takuya",
+                    "checkedAt": "2026-10-26T17:00:26.561Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/wu/",
+                    "checkedAt": "2026-10-26T17:00:26.904Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  }
+                ]
+              },
+              "original_source_row": {
+                "order": 5,
+                "cast": {
+                  "sourceActorName": "廣瀬大介",
+                  "sourceActorUrl": "https://kira-hai.net/hirose-daisuke",
+                  "role_name": "イギリス",
+                  "cast_group": null
+                }
+              }
+            },
+            "matched_actor_id": "ea847f48-42b3-40d0-8b2b-5fe9c11d53f7",
+            "matched_play_id": "42af489f-2553-4038-a1da-5427709777ca",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "寿里",
+            "source_actor_url": "https://kira-hai.net/juri",
+            "source_work_title": "ミュージカル「ヘタリア~Singin’ in the World~」(2015)",
+            "source_year": 2015,
+            "source_role_raw": "フランス",
+            "source_role_names": [
+              "フランス"
+            ],
+            "source_cast_group": null,
+            "source_order": 6,
+            "source_credit_key": "2be6d8342e2d78b3cfe1",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hetamu2015",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hetamu2015",
+                  "checkedAt": "2026-10-26T17:00:24.139Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/cast",
+                  "checkedAt": "2026-10-26T17:00:24.984Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/story",
+                  "checkedAt": "2026-10-26T17:00:25.267Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/schedule",
+                  "checkedAt": "2026-10-26T17:00:25.531Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/wp-content/themes/151028_hetalia/images/img_schedule_table.png",
+                  "checkedAt": "2026-10-26T17:01:36.762Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/news/page/2",
+                  "checkedAt": "2026-10-26T17:02:46.711Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/qa",
+                  "checkedAt": "2026-10-26T17:00:25.803Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://www.fwinc.co.jp/bd_dvd/32909/",
+                  "checkedAt": "2026-10-26T17:00:26.234Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/isogai-ryuko",
+                  "checkedAt": "2026-10-26T17:00:26.425Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/kikuchi-takuya",
+                  "checkedAt": "2026-10-26T17:00:26.561Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/wu/",
+                  "checkedAt": "2026-10-26T17:00:26.904Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                }
+              ],
+              "source_fingerprint": "eff0304b81911ade77b4b96bab7f75d71279b882c0f6426dc9b2fc94f23837f3",
+              "review_fingerprint": "2c81258848200dafee0c74834e714529a54f5922821c569801ea1bd2a4525dca",
+              "snapshot_fingerprint": "cd8513d242fd60eccd04c11a9f9338a5b96dc2161bfc981d2da2ae7fb707c501",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2015,
+                "reason": "2015年12月の初演。DVD発売年2016や他公演の年を混ぜない。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/hetamu2015",
+                    "checkedAt": "2026-10-26T17:00:24.139Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/cast",
+                    "checkedAt": "2026-10-26T17:00:24.984Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/story",
+                    "checkedAt": "2026-10-26T17:00:25.267Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/schedule",
+                    "checkedAt": "2026-10-26T17:00:25.531Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/wp-content/themes/151028_hetalia/images/img_schedule_table.png",
+                    "checkedAt": "2026-10-26T17:01:36.762Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/news/page/2",
+                    "checkedAt": "2026-10-26T17:02:46.711Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/qa",
+                    "checkedAt": "2026-10-26T17:00:25.803Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://www.fwinc.co.jp/bd_dvd/32909/",
+                    "checkedAt": "2026-10-26T17:00:26.234Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/isogai-ryuko",
+                    "checkedAt": "2026-10-26T17:00:26.425Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/kikuchi-takuya",
+                    "checkedAt": "2026-10-26T17:00:26.561Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/wu/",
+                    "checkedAt": "2026-10-26T17:00:26.904Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  }
+                ]
+              },
+              "original_source_row": {
+                "order": 6,
+                "cast": {
+                  "sourceActorName": "寿里",
+                  "sourceActorUrl": "https://kira-hai.net/juri",
+                  "role_name": "フランス",
+                  "cast_group": null
+                }
+              }
+            },
+            "matched_actor_id": "a862c0c0-8fd8-458b-8b9d-391c6fe69a0c",
+            "matched_play_id": "42af489f-2553-4038-a1da-5427709777ca",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "山沖勇輝",
+            "source_actor_url": "https://kira-hai.net/yamaoki-yuki",
+            "source_work_title": "ミュージカル「ヘタリア~Singin’ in the World~」(2015)",
+            "source_year": 2015,
+            "source_role_raw": "ロシア",
+            "source_role_names": [
+              "ロシア"
+            ],
+            "source_cast_group": null,
+            "source_order": 7,
+            "source_credit_key": "67183cf5d741877e86d3",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hetamu2015",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hetamu2015",
+                  "checkedAt": "2026-10-26T17:00:24.139Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/cast",
+                  "checkedAt": "2026-10-26T17:00:24.984Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/story",
+                  "checkedAt": "2026-10-26T17:00:25.267Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/schedule",
+                  "checkedAt": "2026-10-26T17:00:25.531Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/wp-content/themes/151028_hetalia/images/img_schedule_table.png",
+                  "checkedAt": "2026-10-26T17:01:36.762Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/news/page/2",
+                  "checkedAt": "2026-10-26T17:02:46.711Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/qa",
+                  "checkedAt": "2026-10-26T17:00:25.803Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://www.fwinc.co.jp/bd_dvd/32909/",
+                  "checkedAt": "2026-10-26T17:00:26.234Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/isogai-ryuko",
+                  "checkedAt": "2026-10-26T17:00:26.425Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/kikuchi-takuya",
+                  "checkedAt": "2026-10-26T17:00:26.561Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/wu/",
+                  "checkedAt": "2026-10-26T17:00:26.904Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                }
+              ],
+              "source_fingerprint": "eff0304b81911ade77b4b96bab7f75d71279b882c0f6426dc9b2fc94f23837f3",
+              "review_fingerprint": "2c81258848200dafee0c74834e714529a54f5922821c569801ea1bd2a4525dca",
+              "snapshot_fingerprint": "cd8513d242fd60eccd04c11a9f9338a5b96dc2161bfc981d2da2ae7fb707c501",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2015,
+                "reason": "2015年12月の初演。DVD発売年2016や他公演の年を混ぜない。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/hetamu2015",
+                    "checkedAt": "2026-10-26T17:00:24.139Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/cast",
+                    "checkedAt": "2026-10-26T17:00:24.984Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/story",
+                    "checkedAt": "2026-10-26T17:00:25.267Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/schedule",
+                    "checkedAt": "2026-10-26T17:00:25.531Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/wp-content/themes/151028_hetalia/images/img_schedule_table.png",
+                    "checkedAt": "2026-10-26T17:01:36.762Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/news/page/2",
+                    "checkedAt": "2026-10-26T17:02:46.711Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/qa",
+                    "checkedAt": "2026-10-26T17:00:25.803Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://www.fwinc.co.jp/bd_dvd/32909/",
+                    "checkedAt": "2026-10-26T17:00:26.234Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/isogai-ryuko",
+                    "checkedAt": "2026-10-26T17:00:26.425Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/kikuchi-takuya",
+                    "checkedAt": "2026-10-26T17:00:26.561Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/wu/",
+                    "checkedAt": "2026-10-26T17:00:26.904Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  }
+                ]
+              },
+              "original_source_row": {
+                "order": 7,
+                "cast": {
+                  "sourceActorName": "山沖勇輝",
+                  "sourceActorUrl": "https://kira-hai.net/yamaoki-yuki",
+                  "role_name": "ロシア",
+                  "cast_group": null
+                }
+              }
+            },
+            "matched_actor_id": "3ecf714c-ad02-4356-af65-dcfb2952dfac",
+            "matched_play_id": "42af489f-2553-4038-a1da-5427709777ca",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "杉江大志",
+            "source_actor_url": "https://kira-hai.net/sugie-taishi",
+            "source_work_title": "ミュージカル「ヘタリア~Singin’ in the World~」(2015)",
+            "source_year": 2015,
+            "source_role_raw": "中国",
+            "source_role_names": [
+              "中国"
+            ],
+            "source_cast_group": null,
+            "source_order": 8,
+            "source_credit_key": "bfea5cae0d68970b1733",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hetamu2015",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hetamu2015",
+                  "checkedAt": "2026-10-26T17:00:24.139Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/cast",
+                  "checkedAt": "2026-10-26T17:00:24.984Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/story",
+                  "checkedAt": "2026-10-26T17:00:25.267Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/schedule",
+                  "checkedAt": "2026-10-26T17:00:25.531Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/wp-content/themes/151028_hetalia/images/img_schedule_table.png",
+                  "checkedAt": "2026-10-26T17:01:36.762Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/news/page/2",
+                  "checkedAt": "2026-10-26T17:02:46.711Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/qa",
+                  "checkedAt": "2026-10-26T17:00:25.803Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://www.fwinc.co.jp/bd_dvd/32909/",
+                  "checkedAt": "2026-10-26T17:00:26.234Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/isogai-ryuko",
+                  "checkedAt": "2026-10-26T17:00:26.425Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/kikuchi-takuya",
+                  "checkedAt": "2026-10-26T17:00:26.561Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/wu/",
+                  "checkedAt": "2026-10-26T17:00:26.904Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                }
+              ],
+              "source_fingerprint": "eff0304b81911ade77b4b96bab7f75d71279b882c0f6426dc9b2fc94f23837f3",
+              "review_fingerprint": "2c81258848200dafee0c74834e714529a54f5922821c569801ea1bd2a4525dca",
+              "snapshot_fingerprint": "cd8513d242fd60eccd04c11a9f9338a5b96dc2161bfc981d2da2ae7fb707c501",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2015,
+                "reason": "2015年12月の初演。DVD発売年2016や他公演の年を混ぜない。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/hetamu2015",
+                    "checkedAt": "2026-10-26T17:00:24.139Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/cast",
+                    "checkedAt": "2026-10-26T17:00:24.984Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/story",
+                    "checkedAt": "2026-10-26T17:00:25.267Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/schedule",
+                    "checkedAt": "2026-10-26T17:00:25.531Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/wp-content/themes/151028_hetalia/images/img_schedule_table.png",
+                    "checkedAt": "2026-10-26T17:01:36.762Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/news/page/2",
+                    "checkedAt": "2026-10-26T17:02:46.711Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/qa",
+                    "checkedAt": "2026-10-26T17:00:25.803Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://www.fwinc.co.jp/bd_dvd/32909/",
+                    "checkedAt": "2026-10-26T17:00:26.234Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/isogai-ryuko",
+                    "checkedAt": "2026-10-26T17:00:26.425Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/kikuchi-takuya",
+                    "checkedAt": "2026-10-26T17:00:26.561Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/wu/",
+                    "checkedAt": "2026-10-26T17:00:26.904Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  }
+                ]
+              },
+              "original_source_row": {
+                "order": 8,
+                "cast": {
+                  "sourceActorName": "杉江大志",
+                  "sourceActorUrl": "https://kira-hai.net/sugie-taishi",
+                  "role_name": "中国",
+                  "cast_group": null
+                }
+              }
+            },
+            "matched_actor_id": "1ae8e0b4-b42c-46aa-8d23-bac885531af6",
+            "matched_play_id": "42af489f-2553-4038-a1da-5427709777ca",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "菊池卓也",
+            "source_actor_url": "https://kira-hai.net/kikuchi-takuya",
+            "source_work_title": "ミュージカル「ヘタリア~Singin’ in the World~」(2015)",
+            "source_year": 2015,
+            "source_role_raw": "オーストリア",
+            "source_role_names": [
+              "オーストリア"
+            ],
+            "source_cast_group": null,
+            "source_order": 9,
+            "source_credit_key": "2e6233ad8726f43f27fb",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/hetamu2015",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/hetamu2015",
+                  "checkedAt": "2026-10-26T17:00:24.139Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/cast",
+                  "checkedAt": "2026-10-26T17:00:24.984Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/story",
+                  "checkedAt": "2026-10-26T17:00:25.267Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/schedule",
+                  "checkedAt": "2026-10-26T17:00:25.531Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/wp-content/themes/151028_hetalia/images/img_schedule_table.png",
+                  "checkedAt": "2026-10-26T17:01:36.762Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/news/page/2",
+                  "checkedAt": "2026-10-26T17:02:46.711Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/sw/qa",
+                  "checkedAt": "2026-10-26T17:00:25.803Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://www.fwinc.co.jp/bd_dvd/32909/",
+                  "checkedAt": "2026-10-26T17:00:26.234Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/isogai-ryuko",
+                  "checkedAt": "2026-10-26T17:00:26.425Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/kikuchi-takuya",
+                  "checkedAt": "2026-10-26T17:00:26.561Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                },
+                {
+                  "url": "https://musical-hetalia.com/wu/",
+                  "checkedAt": "2026-10-26T17:00:26.904Z",
+                  "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                }
+              ],
+              "source_fingerprint": "eff0304b81911ade77b4b96bab7f75d71279b882c0f6426dc9b2fc94f23837f3",
+              "review_fingerprint": "2c81258848200dafee0c74834e714529a54f5922821c569801ea1bd2a4525dca",
+              "snapshot_fingerprint": "cd8513d242fd60eccd04c11a9f9338a5b96dc2161bfc981d2da2ae7fb707c501",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2015,
+                "reason": "2015年12月の初演。DVD発売年2016や他公演の年を混ぜない。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/hetamu2015",
+                    "checkedAt": "2026-10-26T17:00:24.139Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/cast",
+                    "checkedAt": "2026-10-26T17:00:24.984Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/story",
+                    "checkedAt": "2026-10-26T17:00:25.267Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/schedule",
+                    "checkedAt": "2026-10-26T17:00:25.531Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/wp-content/themes/151028_hetalia/images/img_schedule_table.png",
+                    "checkedAt": "2026-10-26T17:01:36.762Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/news/page/2",
+                    "checkedAt": "2026-10-26T17:02:46.711Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/sw/qa",
+                    "checkedAt": "2026-10-26T17:00:25.803Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://www.fwinc.co.jp/bd_dvd/32909/",
+                    "checkedAt": "2026-10-26T17:00:26.234Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/isogai-ryuko",
+                    "checkedAt": "2026-10-26T17:00:26.425Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/kikuchi-takuya",
+                    "checkedAt": "2026-10-26T17:00:26.561Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  },
+                  {
+                    "url": "https://musical-hetalia.com/wu/",
+                    "checkedAt": "2026-10-26T17:00:26.904Z",
+                    "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+                  }
+                ]
+              },
+              "original_source_row": {
+                "order": 9,
+                "cast": {
+                  "sourceActorName": "菊池卓也",
+                  "sourceActorUrl": "https://kira-hai.net/kikuchi-takuya",
+                  "role_name": "オーストリア",
+                  "cast_group": null
+                }
+              }
+            },
+            "matched_actor_id": "d9767d3f-8414-45e0-a8e2-45bfb8ec7bc3",
+            "matched_play_id": "42af489f-2553-4038-a1da-5427709777ca",
+            "status": "pending"
+          }
+        ]
+      },
+      "records": [
+        {
+          "actor": {
+            "id": "4b3110ab-0d88-4a68-8a1d-ed0fcac335ff",
+            "slug": "nagae-ryoki",
+            "name": "長江 崚行",
+            "kana": "ながえ りょうき",
+            "profile": "大阪府出身の俳優。NHK『天才てれびくん』シリーズに出演。ミュージカル『ヘタリア』のイタリア役、舞台『文豪ストレイドッグス』の江戸川乱歩役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-19T12:13:27.742892+00:00",
+            "updated_at": "2026-10-25T20:21:04.903274+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1998-08-26",
+            "height_cm": 177,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": "Ryoki Nagae",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "長江崚行",
+            "sourceActorUrl": "https://kira-hai.net/nagae-ryoki",
+            "role_name": "イタリア",
+            "cast_group": null
+          },
+          "sourceCreditKey": "8e5f1c41b2108f245abb",
+          "sourceOrder": 1,
+          "rawSourceOrder": 1,
+          "billingOrder": 1,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "7945882d-4bde-46bb-87c3-932a2ac8ca23",
+            "slug": "omi-yoichiro",
+            "name": "近江 陽一郎",
+            "kana": "おおみ よういちろう",
+            "profile": "埼玉県出身の元俳優。元D-BOYS（D2）メンバー。ミュージカル『テニスの王子様』2ndシーズン（森辰徳役）等に出演。",
+            "image_url": null,
+            "sns": {},
+            "gender": "male",
+            "created_at": "2026-03-21T15:03:44.295565+00:00",
+            "updated_at": "2026-03-21T15:03:44.295565+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1989-04-05",
+            "height_cm": 181,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "A former actor from Saitama Prefecture. Former member of D-BOYS (D2). He appeared in the musical \"The Prince of Tennis\" 2nd season (as Tatsunori Mori).",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "近江陽一郎",
+            "sourceActorUrl": "https://kira-hai.net/omi-yoichiro",
+            "role_name": "ドイツ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "fcf8a93e576551bf75bf",
+          "sourceOrder": 2,
+          "rawSourceOrder": 2,
+          "billingOrder": 2,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "efec4bde-6be0-4d8f-80e6-0d1c3accf066",
+            "slug": "ueda-keisuke",
+            "name": "植田 圭輔",
+            "kana": "うえだ けいすけ",
+            "profile": "大阪府出身の俳優。株式会社Pasture所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/uechan_0905",
+              "official": "https://keisuke-ueda.jp/",
+              "instagram": "https://www.instagram.com/keisukeueda0905/"
+            },
+            "gender": "male",
+            "created_at": "2025-12-13T04:41:02.052969+00:00",
+            "updated_at": "2025-12-13T04:41:02.052969+00:00",
+            "tags": [
+              "ベテラン",
+              "ツッコミ"
+            ],
+            "featured_play_slugs": [],
+            "birthday": "1989-09-05",
+            "height_cm": 164,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "植田圭輔",
+            "sourceActorUrl": "https://kira-hai.net/ueda-keisuke",
+            "role_name": "日本",
+            "cast_group": null
+          },
+          "sourceCreditKey": "c6cee9c6fb6d8005481d",
+          "sourceOrder": 3,
+          "rawSourceOrder": 3,
+          "billingOrder": 3,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "b15c5d1c-b38b-4604-bee6-f19f4a8ab1db",
+            "slug": "isogai-ryuko",
+            "name": "磯貝 龍乎",
+            "kana": "いそがい りゅうこ",
+            "profile": "北海道出身の俳優・演出家。旧芸名は磯貝龍虎。現在はフリーで活動している。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/ryukonbu",
+              "official": "https://ameblo.jp/rk3939/",
+              "instagram": "https://www.instagram.com/ryuco_isogai/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:01:26.311999+00:00",
+            "updated_at": "2026-03-21T15:01:26.311999+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1987-03-14",
+            "height_cm": 185,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "磯貝龍虎",
+            "sourceActorUrl": "https://kira-hai.net/isogai-ryuko",
+            "role_name": "アメリカ",
+            "cast_group": null
+          },
+          "sourceCreditKey": "9cab14cac02b36ecbd29",
+          "sourceOrder": 4,
+          "rawSourceOrder": 4,
+          "billingOrder": 4,
+          "expectedNote": "当時の出演名義：磯貝 龍虎（現名義：磯貝 龍乎）。",
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "ea847f48-42b3-40d0-8b2b-5fe9c11d53f7",
+            "slug": "hirose-daisuke",
+            "name": "廣瀬 大介",
+            "kana": "ひろせ だいすけ",
+            "profile": "東京都出身の声優・俳優。ケッケコーポレーション所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/da_sukemaru",
+              "youtube": "https://www.youtube.com/channel/UCQHV65qO-YB8KeFkLUr6Yjw",
+              "official": "https://www.kekke.co.jp/talent/male/hw/hirose.html"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:03:44.295565+00:00",
+            "updated_at": "2026-03-21T15:03:44.295565+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1991-06-03",
+            "height_cm": 177,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "廣瀬大介",
+            "sourceActorUrl": "https://kira-hai.net/hirose-daisuke",
+            "role_name": "イギリス",
+            "cast_group": null
+          },
+          "sourceCreditKey": "3d1561ded8f329f5b474",
+          "sourceOrder": 5,
+          "rawSourceOrder": 5,
+          "billingOrder": 5,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "a862c0c0-8fd8-458b-8b9d-391c6fe69a0c",
+            "slug": "juri",
+            "name": "寿里",
+            "kana": "じゅり",
+            "profile": "千葉県市川市出身の俳優・ファッションモデル。本名は相川 寿里、過去にJURIとして活動。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/jurigig",
+              "official": "https://ameblo.jp/jurigig/",
+              "instagram": "https://www.instagram.com/jurigig/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-19T18:36:37.662481+00:00",
+            "updated_at": "2026-03-19T18:36:37.662481+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1981-02-16",
+            "height_cm": 186,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "寿里",
+            "sourceActorUrl": "https://kira-hai.net/juri",
+            "role_name": "フランス",
+            "cast_group": null
+          },
+          "sourceCreditKey": "2be6d8342e2d78b3cfe1",
+          "sourceOrder": 6,
+          "rawSourceOrder": 6,
+          "billingOrder": 6,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "3ecf714c-ad02-4356-af65-dcfb2952dfac",
+            "slug": "yamaoki-yuki",
+            "name": "山沖 勇輝",
+            "kana": "やまおき ゆうき",
+            "profile": "東京都出身の俳優。株式会社De-PRO所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/y_yuki0305",
+              "official": "https://ameblo.jp/y-yuki0305/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:01:26.311999+00:00",
+            "updated_at": "2026-03-21T15:01:26.311999+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1991-03-05",
+            "height_cm": 182,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "山沖勇輝",
+            "sourceActorUrl": "https://kira-hai.net/yamaoki-yuki",
+            "role_name": "ロシア",
+            "cast_group": null
+          },
+          "sourceCreditKey": "67183cf5d741877e86d3",
+          "sourceOrder": 7,
+          "rawSourceOrder": 7,
+          "billingOrder": 7,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "1ae8e0b4-b42c-46aa-8d23-bac885531af6",
+            "slug": "sugie-taishi",
+            "name": "杉江 大志",
+            "kana": "すぎえ たいし",
+            "profile": "滋賀県出身の俳優。えりオフィス所属。ミュージカル『テニスの王子様』2ndシーズン（一氏ユウジ役）や舞台『刀剣乱舞』（鯰尾藤四郎役）、ミュージカル『ヘタリア』（中国役）、ミュージカル『スタミュ』（星谷悠太役）等の舞台作品に出演。また、映画やテレビドラマ等の映像作品にも出演している。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/SugieTaishi",
+              "official": "https://sugietaishi.com/",
+              "instagram": "https://www.instagram.com/taishisugie?igsh=MXA3b3A3NnIzZTRjMw%3D%3D&utm_source=qr"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:06:19.306372+00:00",
+            "updated_at": "2026-03-21T15:06:19.306372+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1992-05-07",
+            "height_cm": 171,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Shiga Prefecture. Affiliated with Eri Office. He has appeared in stage works such as the musical \"The Prince of Tennis\" 2nd season (as Yuji Hitouji), the stage play \"Touken Ranbu\" (as Namazuo Toushirou), the musical \"Hetalia\" (as China), and the musical \"STARMYU\" (as Yuta Hoshitani). He has also appeared in film and television works.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "杉江大志",
+            "sourceActorUrl": "https://kira-hai.net/sugie-taishi",
+            "role_name": "中国",
+            "cast_group": null
+          },
+          "sourceCreditKey": "bfea5cae0d68970b1733",
+          "sourceOrder": 8,
+          "rawSourceOrder": 8,
+          "billingOrder": 8,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "d9767d3f-8414-45e0-a8e2-45bfb8ec7bc3",
+            "slug": "kikuchi-takuya",
+            "name": "菊池 卓也",
+            "kana": "きくち たくや",
+            "profile": "熊本県出身の俳優・シンガーソングライター。ROU名義でも活動。ミュージカル『テニスの王子様』2ndシーズン（忍足侑士役）等に出演。",
+            "image_url": null,
+            "sns": {
+              "official": "https://ameblo.jp/012717/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:03:44.295565+00:00",
+            "updated_at": "2026-03-21T15:03:44.295565+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1991-05-01",
+            "height_cm": 183,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor and singer-songwriter from Kumamoto Prefecture. Also active under the name ROU. He appeared in the musical \"The Prince of Tennis\" 2nd season (as Yushi Oshitari).",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "菊池卓也",
+            "sourceActorUrl": "https://kira-hai.net/kikuchi-takuya",
+            "role_name": "オーストリア",
+            "cast_group": null
+          },
+          "sourceCreditKey": "2e6233ad8726f43f27fb",
+          "sourceOrder": 9,
+          "rawSourceOrder": 9,
+          "billingOrder": 9,
+          "expectedNote": null,
+          "existingCast": null
+        }
+      ],
+      "creditOnly": [
+        "仲田祥司",
+        "池田謙信",
+        "原野正章",
+        "今田竜人",
+        "三原大樹",
+        "帯金遼太",
+        "山本哲平",
+        "岡本笙"
+      ],
+      "officialOrder": [
+        {
+          "role": "イタリア",
+          "name": "長江崚行",
+          "birthday": "1998-08-26"
+        },
+        {
+          "role": "ドイツ",
+          "name": "近江陽一郎",
+          "birthday": "1989-04-05"
+        },
+        {
+          "role": "日本",
+          "name": "植田圭輔",
+          "birthday": "1989-09-05"
+        },
+        {
+          "role": "アメリカ",
+          "name": "磯貝龍虎",
+          "birthday": "1987-03-14"
+        },
+        {
+          "role": "イギリス",
+          "name": "廣瀬大介",
+          "birthday": "1991-06-03"
+        },
+        {
+          "role": "フランス",
+          "name": "寿里",
+          "birthday": "1981-02-16"
+        },
+        {
+          "role": "ロシア",
+          "name": "山沖勇輝",
+          "birthday": "1991-03-05"
+        },
+        {
+          "role": "中国",
+          "name": "杉江大志",
+          "birthday": "1992-05-07"
+        },
+        {
+          "role": "オーストリア",
+          "name": "菊池卓也",
+          "birthday": "1991-05-01"
+        }
+      ],
+      "schedules": [
+        "2015/12/24 13:00",
+        "2015/12/24 19:00",
+        "2015/12/25 19:00",
+        "2015/12/26 12:00",
+        "2015/12/26 17:00",
+        "2015/12/27 12:00",
+        "2015/12/27 17:00",
+        "2015/12/28 13:00",
+        "2015/12/28 19:00",
+        "2015/12/29 12:00",
+        "2015/12/29 17:00"
+      ],
+      "additionalPerformance": "2015/12/28 13:00",
+      "legacyCandidates": [],
+      "legacyUpgrades": [],
+      "legacyKept": [],
+      "transformations": [
+        {
+          "type": "credit_only",
+          "names": [
+            "仲田祥司",
+            "池田謙信",
+            "原野正章",
+            "今田竜人",
+            "三原大樹",
+            "帯金遼太",
+            "山本哲平",
+            "岡本笙"
+          ],
+          "evidence": [
+            {
+              "url": "https://musical-hetalia.com/sw/cast",
+              "checkedAt": "2026-10-26T17:00:24.984Z",
+              "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+            }
+          ]
+        },
+        {
+          "type": "former_name_link",
+          "sourceName": "磯貝龍虎",
+          "currentName": "磯貝 龍乎",
+          "evidence": [
+            {
+              "url": "https://kira-hai.net/isogai-ryuko",
+              "checkedAt": "2026-10-26T17:00:26.425Z",
+              "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+            },
+            {
+              "url": "https://musical-hetalia.com/sw/cast",
+              "checkedAt": "2026-10-26T17:00:24.984Z",
+              "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+            }
+          ]
+        },
+        {
+          "type": "alias_identity_preserved",
+          "name": "菊池 卓也",
+          "alias": "ROU",
+          "evidence": [
+            {
+              "url": "https://musical-hetalia.com/wu/",
+              "checkedAt": "2026-10-26T17:00:26.904Z",
+              "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+            },
+            {
+              "url": "https://kira-hai.net/kikuchi-takuya",
+              "checkedAt": "2026-10-26T17:00:26.561Z",
+              "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+            }
+          ]
+        },
+        {
+          "type": "additional_performance",
+          "from": 10,
+          "to": 11,
+          "added": "2015/12/28 13:00",
+          "evidence": [
+            {
+              "url": "https://musical-hetalia.com/sw/news/page/2",
+              "checkedAt": "2026-10-26T17:02:46.711Z",
+              "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+            },
+            {
+              "url": "https://musical-hetalia.com/sw/wp-content/themes/151028_hetalia/images/img_schedule_table.png",
+              "checkedAt": "2026-10-26T17:01:36.762Z",
+              "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+            }
+          ]
+        }
+      ],
+      "exceptions": [
+        "主要9人全員を既存人物へ接続。公式プロフィールの完全DOBは既存9人と一致。新規人物作成なし、既存人物属性の変更なし。",
+        "アンサンブル8人はクレジットのみ。ファンWikiの人形操作・フィンランド等の兼役情報は今回確認した公式キャスト欄にないため、個別配役や補足へ補作しない。",
+        "磯貝龍虎は現磯貝龍乎へ接続し当時名義を配役補足に保全。菊池卓也は既存菊池卓也を使用、ROU名義の別人物を作らない。近江陽一郎のドイツ役を次作の上田悠介と混ぜない。",
+        "初期発表は10公演だが2015/11/12に12/28 13時を追加。公式最終日程画像を目視し11公演を保存。12/26の機材席解放は座席追加で公演追加とは異なる。",
+        "上演約2時間は公式予定。DVDの本編138分・特典79分を舞台上演時間へ転用しない。現在の配信状況は調査対象外でvodは空欄。",
+        "次は2016年The Great World。2017/2018候補に残る誤年等は当該公演の採用時に扱い、今回無関係な候補を変更しない。"
+      ]
+    }
+  ],
+  "keptPlays": [],
+  "evidence": {
+    "links": [
+      {
+        "url": "https://kira-hai.net/hetamu2015",
+        "checkedAt": "2026-10-26T17:00:24.139Z",
+        "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+      },
+      {
+        "url": "https://musical-hetalia.com/sw/cast",
+        "checkedAt": "2026-10-26T17:00:24.984Z",
+        "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+      },
+      {
+        "url": "https://musical-hetalia.com/sw/story",
+        "checkedAt": "2026-10-26T17:00:25.267Z",
+        "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+      },
+      {
+        "url": "https://musical-hetalia.com/sw/schedule",
+        "checkedAt": "2026-10-26T17:00:25.531Z",
+        "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+      },
+      {
+        "url": "https://musical-hetalia.com/sw/wp-content/themes/151028_hetalia/images/img_schedule_table.png",
+        "checkedAt": "2026-10-26T17:01:36.762Z",
+        "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+      },
+      {
+        "url": "https://musical-hetalia.com/sw/news/page/2",
+        "checkedAt": "2026-10-26T17:02:46.711Z",
+        "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+      },
+      {
+        "url": "https://musical-hetalia.com/sw/qa",
+        "checkedAt": "2026-10-26T17:00:25.803Z",
+        "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+      },
+      {
+        "url": "https://www.fwinc.co.jp/bd_dvd/32909/",
+        "checkedAt": "2026-10-26T17:00:26.234Z",
+        "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+      },
+      {
+        "url": "https://kira-hai.net/isogai-ryuko",
+        "checkedAt": "2026-10-26T17:00:26.425Z",
+        "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+      },
+      {
+        "url": "https://kira-hai.net/kikuchi-takuya",
+        "checkedAt": "2026-10-26T17:00:26.561Z",
+        "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+      },
+      {
+        "url": "https://musical-hetalia.com/wu/",
+        "checkedAt": "2026-10-26T17:00:26.904Z",
+        "note": "原文・指紋を保存。元表記と対象範囲は個別記録参照。"
+      }
+    ],
+    "sources": [
+      {
+        "label": "kira",
+        "url": "https://kira-hai.net/hetamu2015",
+        "status": 200,
+        "checkedAt": "2026-10-26T17:00:24.139Z",
+        "sha256": "e15e84d6783669232c50ffb3b7836617932dd304caf37fbc2ed58e74958b3d84",
+        "bytes": 59496
+      },
+      {
+        "label": "kiraSeries",
+        "url": "https://kira-hai.net/hetamu-series",
+        "status": 404,
+        "checkedAt": "2026-10-26T17:00:24.253Z",
+        "sha256": "062670b453c4ed07f55cf30e7cb78ab38ab4a5cdc98ec006be6469c857c8ce2e",
+        "bytes": 43665
+      },
+      {
+        "label": "officialHome",
+        "url": "https://musical-hetalia.com/sw/",
+        "status": 200,
+        "checkedAt": "2026-10-26T17:00:24.656Z",
+        "sha256": "9ecfbc837cf8e7a07f930e7c08764261855b8e9bbd12bf733932181bd6ef9372",
+        "bytes": 19067
+      },
+      {
+        "label": "officialCast",
+        "url": "https://musical-hetalia.com/sw/cast",
+        "status": 200,
+        "checkedAt": "2026-10-26T17:00:24.984Z",
+        "sha256": "03a48818bf1d87b37add9812595d36569e7c331360a52f21118635b2bd2a5219",
+        "bytes": 21571
+      },
+      {
+        "label": "officialStory",
+        "url": "https://musical-hetalia.com/sw/story",
+        "status": 200,
+        "checkedAt": "2026-10-26T17:00:25.267Z",
+        "sha256": "072bb40366ecc244e4b161320337ce0ebc4cb503ab97cba3a5a5755f70c017b2",
+        "bytes": 14874
+      },
+      {
+        "label": "officialSchedule",
+        "url": "https://musical-hetalia.com/sw/schedule",
+        "status": 200,
+        "checkedAt": "2026-10-26T17:00:25.531Z",
+        "sha256": "bd78876c2228845c1aaa69e0ca89a414841b1956c09f602004b8c7ef832d602c",
+        "bytes": 14904
+      },
+      {
+        "label": "officialGuide",
+        "url": "https://musical-hetalia.com/sw/qa",
+        "status": 200,
+        "checkedAt": "2026-10-26T17:00:25.803Z",
+        "sha256": "7e50e168f24851ea5a9eb801415d00db544d91178e6bf5c216311cd3e99a5e84",
+        "bytes": 24371
+      },
+      {
+        "label": "dvd",
+        "url": "https://www.fwinc.co.jp/bd_dvd/32909/",
+        "status": 200,
+        "checkedAt": "2026-10-26T17:00:26.234Z",
+        "sha256": "20da4ac5d6f8098c7a113805b2a0f8a59fb96b6d58fededd45f88668b1f7dd58",
+        "bytes": 80089
+      },
+      {
+        "label": "kiraIsogai",
+        "url": "https://kira-hai.net/isogai-ryuko",
+        "status": 200,
+        "checkedAt": "2026-10-26T17:00:26.425Z",
+        "sha256": "54fdc8a9ec0e2d02cf5fce130bce45984bfb66bc71b7bff6c2466027a59fe3f3",
+        "bytes": 125407
+      },
+      {
+        "label": "kiraKikuchi",
+        "url": "https://kira-hai.net/kikuchi-takuya",
+        "status": 200,
+        "checkedAt": "2026-10-26T17:00:26.561Z",
+        "sha256": "2b9501543c6759f62661e9d95db4e20da5a9a4e34c0ebd2917345d40cf107dd9",
+        "bytes": 66281
+      },
+      {
+        "label": "officialLive2018",
+        "url": "https://musical-hetalia.com/wu/",
+        "status": 200,
+        "checkedAt": "2026-10-26T17:00:26.904Z",
+        "sha256": "8d199bfef58ab2a23c6cc3551f548af160687eb75be82a99aebb7c5419f8b61d",
+        "bytes": 52267
+      },
+      {
+        "label": "officialCurrent",
+        "url": "https://musical-hetalia.com/wc/cast/",
+        "status": 200,
+        "checkedAt": "2026-10-26T17:00:27.236Z",
+        "sha256": "7275d582e294306db319d72e372e16ac5d34f734fa215cf51baa6b666864516d",
+        "bytes": 30012
+      },
+      {
+        "label": "changelog",
+        "url": "https://supabase.com/changelog.md",
+        "status": 200,
+        "checkedAt": "2026-10-26T17:00:27.442Z",
+        "sha256": "45528009025b8ad8487ccb73f7c769b66d4b0e7aa4560157047899dcb5b5a006",
+        "bytes": 102641
+      },
+      {
+        "label": "kiraSeriesActual",
+        "url": "https://kira-hai.net/hetamu",
+        "status": 200,
+        "checkedAt": "2026-10-26T17:01:36.576Z",
+        "sha256": "b02f59f34b2321e5ae05695f7e065e48ad07803bbe88b4c2922c91b1f91164d3",
+        "bytes": 50232,
+        "ext": ".html"
+      },
+      {
+        "label": "scheduleImage",
+        "url": "https://musical-hetalia.com/sw/wp-content/themes/151028_hetalia/images/img_schedule_table.png",
+        "status": 200,
+        "checkedAt": "2026-10-26T17:01:36.762Z",
+        "sha256": "41fc7db9b715faf3b20fd9860da0f7db7aa68623682a86d64ed415beb59f6df7",
+        "bytes": 47439,
+        "ext": ".png"
+      },
+      {
+        "label": "officialNews2",
+        "url": "https://musical-hetalia.com/sw/news/page/2",
+        "status": 200,
+        "checkedAt": "2026-10-26T17:02:46.711Z",
+        "sha256": "fa2c52d40c5e3cf78ac857fdd036585a7d6d6312bdd165b4844b939a685de2be",
+        "bytes": 27598
+      },
+      {
+        "label": "officialTicket",
+        "url": "https://musical-hetalia.com/sw/ticket",
+        "status": 200,
+        "checkedAt": "2026-10-26T17:02:47.079Z",
+        "sha256": "992289ab7c43de2853f2b67445762820d270db6b7f2b583be172ce2dceeb4dbe",
+        "bytes": 20398
+      }
+    ],
+    "unresolved": [
+      "アンサンブル兼役の一次確認、細部の英訳、現行配信調査、2016年以降の登録は後続。"
+    ],
+    "notes": [
+      "出典付きの既存候補保存・採用RPCを使用。スキーマ・RLS・アプリ・UI変更なし。Supabase changelogを取得し、既存JSONB DML/RPCの使用に関わる新たな破壊的変更なし。",
+      "シリーズ既存ID・slugと原作区分・関連等を保全。ミュージカルの名称と短い日英紹介を補完。推定取得して404だったhetamu-seriesは出典として不採用。実在リンクhetamuを使用。"
+    ]
+  },
+  "requestKey": "3419ce9de6d16d4936171cd9dafb954a02c3e32856cf16e8bbb82b2e82104fb9",
+  "verification": {
+    "passed": true,
+    "requestKey": "3419ce9de6d16d4936171cd9dafb954a02c3e32856cf16e8bbb82b2e82104fb9",
+    "changes": {
+      "actors": {
+        "before": 1166,
+        "after": 1166,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "plays": {
+        "before": 410,
+        "after": 411,
+        "added": 1,
+        "modified": 0,
+        "deleted": 0
+      },
+      "franchises": {
+        "before": 198,
+        "after": 198,
+        "added": 0,
+        "modified": 1,
+        "deleted": 0
+      },
+      "casts": {
+        "before": 4214,
+        "after": 4223,
+        "added": 9,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_actors": {
+        "before": 1701,
+        "after": 1701,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_cast_candidates": {
+        "before": 3563,
+        "after": 3572,
+        "added": 9,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_import_logs": {
+        "before": 5717,
+        "after": 5739,
+        "added": 22,
+        "modified": 0,
+        "deleted": 0
+      },
+      "actor_identity_sources": {
+        "before": 512,
+        "after": 512,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      }
+    },
+    "newActors": 0,
+    "reusedActors": 9,
+    "newPlays": 1,
+    "newCasts": 9,
+    "creditOnlyNames": 8,
+    "creditCategories": 11,
+    "performances": 11,
+    "addedPerformance": "2015/12/28 13:00",
+    "seriesWorks": 1,
+    "seriesCastRows": 9,
+    "seriesActors": 9,
+    "totals": {
+      "actors": 1166,
+      "plays": 411,
+      "casts": 4223
+    }
+  },
+  "publicVerification": {
+    "passed": true,
+    "pages": 22,
+    "seriesWorks": 1,
+    "seriesCastRows": 9,
+    "newCastRows": 9,
+    "newActors": 0,
+    "creditOnlyNames": 8,
+    "performances": 11,
+    "results": [
+      {
+        "path": "/actors/nagae-ryoki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/series/hetalia",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/hetamu2015",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/omi-yoichiro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/ueda-keisuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/isogai-ryuko",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/hirose-daisuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/juri",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/yamaoki-yuki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/kikuchi-takuya",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/series/hetalia",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/sugie-taishi",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/nagae-ryoki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/ueda-keisuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/hetamu2015",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/omi-yoichiro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/isogai-ryuko",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/hirose-daisuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/yamaoki-yuki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/juri",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/sugie-taishi",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/kikuchi-takuya",
+        "passed": true,
+        "status": 200
+      }
+    ]
+  },
+  "searchVerification": {
+    "passed": true,
+    "checks": 34,
+    "spaceAndNoSpace": true,
+    "genderAttributesUnchanged": true,
+    "results": [
+      {
+        "path": "/actors?q=%E8%BF%91%E6%B1%9F%E9%99%BD%E4%B8%80%E9%83%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E9%95%B7%E6%B1%9F%E5%B4%9A%E8%A1%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E9%95%B7%E6%B1%9F+%E5%B4%9A%E8%A1%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E8%BF%91%E6%B1%9F+%E9%99%BD%E4%B8%80%E9%83%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%A4%8D%E7%94%B0+%E5%9C%AD%E8%BC%94",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%A3%AF%E8%B2%9D%E9%BE%8D%E4%B9%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%A4%8D%E7%94%B0%E5%9C%AD%E8%BC%94",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%A3%AF%E8%B2%9D+%E9%BE%8D%E4%B9%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%BB%A3%E7%80%AC+%E5%A4%A7%E4%BB%8B",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%AF%BF%E9%87%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%BB%A3%E7%80%AC%E5%A4%A7%E4%BB%8B",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%B1%B1%E6%B2%96+%E5%8B%87%E8%BC%9D",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%9D%89%E6%B1%9F+%E5%A4%A7%E5%BF%97",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%B1%B1%E6%B2%96%E5%8B%87%E8%BC%9D",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%9D%89%E6%B1%9F%E5%A4%A7%E5%BF%97",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E8%8F%8A%E6%B1%A0+%E5%8D%93%E4%B9%9F",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E8%8F%8A%E6%B1%A0%E5%8D%93%E4%B9%9F",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E9%95%B7%E6%B1%9F%E5%B4%9A%E8%A1%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E8%BF%91%E6%B1%9F+%E9%99%BD%E4%B8%80%E9%83%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E9%95%B7%E6%B1%9F+%E5%B4%9A%E8%A1%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E8%BF%91%E6%B1%9F%E9%99%BD%E4%B8%80%E9%83%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%A4%8D%E7%94%B0+%E5%9C%AD%E8%BC%94",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%A3%AF%E8%B2%9D+%E9%BE%8D%E4%B9%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%A4%8D%E7%94%B0%E5%9C%AD%E8%BC%94",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%A3%AF%E8%B2%9D%E9%BE%8D%E4%B9%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%BB%A3%E7%80%AC+%E5%A4%A7%E4%BB%8B",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%BB%A3%E7%80%AC%E5%A4%A7%E4%BB%8B",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%AF%BF%E9%87%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%B1%B1%E6%B2%96+%E5%8B%87%E8%BC%9D",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%B1%B1%E6%B2%96%E5%8B%87%E8%BC%9D",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%9D%89%E6%B1%9F+%E5%A4%A7%E5%BF%97",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%9D%89%E6%B1%9F%E5%A4%A7%E5%BF%97",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E8%8F%8A%E6%B1%A0+%E5%8D%93%E4%B9%9F",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E8%8F%8A%E6%B1%A0%E5%8D%93%E4%B9%9F",
+        "status": 200,
+        "passed": true
+      }
+    ]
+  },
+  "replayVerification": {
+    "passed": true,
+    "tables": {
+      "actors": {
+        "rows": 1166,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "plays": {
+        "rows": 411,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "franchises": {
+        "rows": 198,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "casts": {
+        "rows": 4223,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_actors": {
+        "rows": 1701,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_cast_candidates": {
+        "rows": 3572,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_import_logs": {
+        "rows": 5739,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "actor_identity_sources": {
+        "rows": 512,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      }
+    }
+  },
+  "sourceValidation": {
+    "officialBirthdaysMatchedForAllNine": true,
+    "allActorsReused": true,
+    "formerNameRetained": true,
+    "rouIdentityNotDuplicated": true,
+    "officialBillingOrder": true,
+    "originalSourceRowRetained": true,
+    "ensembleCreditOnly": true,
+    "additionalPerformanceVerifiedByImageAndNotice": true,
+    "performanceCount": 11,
+    "plannedRuntimeNotDvdRuntime": true,
+    "existingActorAndCastRowsPreserved": true
+  },
+  "nextWork": {
+    "title": "ミュージカル「ヘタリア～The Great World～」",
+    "year": 2016,
+    "sourceUrl": "https://kira-hai.net/hetamu2016",
+    "officialUrl": "https://musical-hetalia.com/gw/",
+    "status": "not_registered",
+    "note": "ドイツ役は初演近江陽一郎から上田悠介へ交代。旧候補に誤年2021があるため同一人物・公演を確認して採用する。"
+  },
+  "verificationScope": "2015年初演1作品9配役を追加、9人物全員再利用。公式アンサンブル8人はクレジット。元行・当時名義・最終11公演と追加日時を保存。シリーズ名称と短い日英紹介を補完し既存ID・slug等を保持。日英22ページ・検索34件、8テーブル保全比較・再実行0変更を確認。シリーズ全体の収録・人物属性総合監査・現行配信の監査ではない。"
+}
