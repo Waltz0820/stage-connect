@@ -1,0 +1,3829 @@
+{
+  "version": 1,
+  "batchId": "sb692021-20261027-01",
+  "expectedFranchise": {
+    "id": "def83f64-c1c3-48d4-82d6-d785af1b2eda",
+    "name": "Live Musical「SHOW BY ROCK!!」（ショバミュ）",
+    "created_at": "2026-02-08T16:26:41.990203+00:00",
+    "updated_at": "2026-10-26T11:02:07.658788+00:00",
+    "slug": "show-by-rock",
+    "intro": null,
+    "description": "サンリオの音楽・バンドをテーマにしたキャラクタープロジェクト『SHOW BY ROCK!!』を原作とする舞台シリーズ。シンガンクリムゾンズやトライクロニカらの物語を、歌やライブパートを交えて描く。2016年に初演され、2017年からLive Musicalとして展開した。",
+    "origin_type": "メディアミックス",
+    "origin_note": "原作：サンリオ",
+    "production_companies": [
+      "ネルケプランニング"
+    ],
+    "related_franchise_ids": [],
+    "format": "musical",
+    "description_en": "A stage series based on Sanrio’s music and band-themed character project SHOW BY ROCK!!. It follows bands including Shingancrimsonz and Trichronika through stories, songs and live-performance segments. The first musical opened in 2016, followed by the Live Musical series from 2017.",
+    "name_en": "Live Musical SHOW BY ROCK!!"
+  },
+  "franchisePatch": {},
+  "externalActorLinks": [
+    {
+      "before": {
+        "id": "46ddeb43-69b3-43bb-a74c-55292f8b6664",
+        "source": "kira-hai",
+        "source_actor_name": "坂田隆一郎",
+        "source_actor_url": "https://kira-hai.net/sakata-ryuichiro",
+        "alias_from": null,
+        "alias_to": null,
+        "note": null,
+        "matched_actor_id": null,
+        "match_status": "unmatched",
+        "match_confidence": 0,
+        "scraped_at": "2026-04-27T17:11:21.759+00:00",
+        "created_at": "2026-04-25T07:22:07.371613+00:00",
+        "updated_at": "2026-04-27T17:11:21.759+00:00",
+        "source_profile_facts_raw": null,
+        "source_birthday_raw": null,
+        "source_birthday": null,
+        "source_height_cm": null,
+        "source_blood_type": null,
+        "source_affiliation_raw": null,
+        "source_actor_kana": null
+      },
+      "patch": {
+        "matched_actor_id": "2bd9a7b3-cfe3-4293-ad82-1ce92a7d3dad",
+        "match_status": "matched",
+        "match_confidence": 90
+      }
+    },
+    {
+      "before": {
+        "id": "cbf9e26c-0954-40b7-98cc-63705d438552",
+        "source": "kira-hai",
+        "source_actor_name": "タホリ玲央",
+        "source_actor_url": "https://kira-hai.net/tahori-reo",
+        "alias_from": null,
+        "alias_to": null,
+        "note": null,
+        "matched_actor_id": null,
+        "match_status": "unmatched",
+        "match_confidence": 0,
+        "scraped_at": "2026-04-27T17:11:21.759+00:00",
+        "created_at": "2026-04-25T07:23:44.665889+00:00",
+        "updated_at": "2026-04-27T17:11:21.759+00:00",
+        "source_profile_facts_raw": null,
+        "source_birthday_raw": null,
+        "source_birthday": null,
+        "source_height_cm": null,
+        "source_blood_type": null,
+        "source_affiliation_raw": null,
+        "source_actor_kana": null
+      },
+      "patch": {
+        "matched_actor_id": "48ba03fd-af97-487f-a05b-cd0941e44c0d",
+        "match_status": "matched",
+        "match_confidence": 90
+      }
+    }
+  ],
+  "actors": [
+    {
+      "actor": {
+        "id": "2bd9a7b3-cfe3-4293-ad82-1ce92a7d3dad",
+        "slug": "sakata-ryuichiro",
+        "name": "坂田 隆一郎",
+        "kana": "さかた りゅういちろう",
+        "profile": "福岡県出身の俳優・歌手。ソニー・ミュージックエンタテインメント所属。Live Musical『SHOW BY ROCK!!』のヤス役、『ヒプノシスマイク』Rule the Stageの夢野幻太郎役などを務める。ギターや作詞作曲も手がける。",
+        "image_url": null,
+        "sns": {},
+        "gender": "male",
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1994-05-15",
+        "height_cm": 174,
+        "blood_type": "A",
+        "birthday_label": null,
+        "name_en": "Ryuichiro Sakata",
+        "profile_en": "An actor and singer from Fukuoka, represented by Sony Music Entertainment. His stage roles include Yasu in Live Musical SHOW BY ROCK!! and Gentaro Yumeno in Hypnosis Mic: Rule the Stage. He also plays guitar and writes music and lyrics.",
+        "death_date": null
+      },
+      "sourceActorName": "坂田隆一郎",
+      "profileUrl": "https://kira-hai.net/sakata-ryuichiro",
+      "evidence": [
+        {
+          "url": "https://kira-hai.net/sakata-ryuichiro",
+          "checkedAt": "2026-10-26T16:13:06.680Z",
+          "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+        },
+        {
+          "url": "https://red-actors.com/artist/ryuichiro-sakata/",
+          "checkedAt": "2026-10-26T16:13:06.947Z",
+          "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+        },
+        {
+          "url": "https://www.animatetimes.com/tag/details.php?id=18622",
+          "checkedAt": "2026-10-26T16:13:07.631Z",
+          "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+        },
+        {
+          "url": "https://showbyrock-musical.com/cast",
+          "checkedAt": "2026-10-26T16:04:33.281Z",
+          "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+        }
+      ],
+      "notes": [
+        "氏名・読み・完全DOB・当該ヤス役を接続。所属公式で174cm・A型・福岡・英字名・ギター作詞作曲を確認。男性区分はアニメイトタイムズ明示属性。現在所属は所属公式と同媒体で確認。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "48ba03fd-af97-487f-a05b-cd0941e44c0d",
+        "slug": "tahori-reo",
+        "name": "タホリ 玲央",
+        "kana": "たほり れお",
+        "profile": "俳優。インフルエンサーとしても活動する。ハイパープロジェクション演劇『ハイキュー!!』“ゴミ捨て場の決戦”の灰羽リエーフ役、Live Musical『SHOW BY ROCK!!』の151（イコイ）役などを務める。",
+        "image_url": null,
+        "sns": {},
+        "gender": "male",
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1999-07-14",
+        "height_cm": 188,
+        "blood_type": null,
+        "birthday_label": null,
+        "name_en": "Reo Tahori",
+        "profile_en": "An actor who also works as an influencer. His stage roles include Lev Haiba in Hyper Projection Engeki Haikyu!!: The Dumpster Battle and Ecoy (151) in Live Musical SHOW BY ROCK!!.",
+        "death_date": null
+      },
+      "sourceActorName": "タホリ玲央",
+      "profileUrl": "https://kira-hai.net/tahori-reo",
+      "evidence": [
+        {
+          "url": "https://kira-hai.net/tahori-reo",
+          "checkedAt": "2026-10-26T16:13:07.823Z",
+          "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+        },
+        {
+          "url": "https://thetv.jp/person/2000059355/",
+          "checkedAt": "2026-10-26T16:13:08.380Z",
+          "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+        },
+        {
+          "url": "https://www.suruga-ya.jp/kaitori/kaitori_detail/GG666135",
+          "checkedAt": "2026-10-26T16:20:38.895Z",
+          "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+        },
+        {
+          "url": "https://showbyrock-musical.com/cast",
+          "checkedAt": "2026-10-26T16:04:33.281Z",
+          "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+        }
+      ],
+      "notes": [
+        "キラハイの読み・DOB・188cm・2つの役歴を採用。DOB・職種はWEBザテレビジョン一致。現所属リンクは取得不能なので古いプラチナム所属を現在属性として断定しない。出身地・血液型は未確認で補作しない。",
+        "男性区分は駿河屋の本人単独ブロマイド「生写真(男性)/俳優」商品分類の明示を補助採用。写真の容姿や役の性別から推定しない。英字は読みの編集上のローマ字化。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "684b813a-b65d-48c8-990a-d2e17bdf7209",
+        "slug": "omae-yuki",
+        "name": "大前 優樹",
+        "kana": "おおまえ ゆうき",
+        "profile": "ミュージカルを中心に出演する俳優。『ラブ・ネバー・ダイ』のグスタフ役、Live Musical『SHOW BY ROCK!!』のロッカー役などを務める。声楽にも取り組み、2025年の第4回東京国際管弦声楽コンクールで声楽部門高校1・2年生の部第1位を受賞。",
+        "image_url": null,
+        "sns": {},
+        "gender": null,
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": null,
+        "height_cm": null,
+        "blood_type": null,
+        "birthday_label": null,
+        "name_en": "Yuki Omae",
+        "profile_en": "An actor whose work includes musicals. His roles include Gustav in Love Never Dies and Rocker in Live Musical SHOW BY ROCK!!. He also studies classical singing and won first prize in the vocal division for first- and second-year high school students at the 4th Tokyo International Winds, Strings and Vocal Competition in 2025.",
+        "death_date": null
+      },
+      "sourceActorName": "大前優樹",
+      "profileUrl": "https://showbyrock-musical.com/cast",
+      "evidence": [
+        {
+          "url": "https://showbyrock-musical.com/cast",
+          "checkedAt": "2026-10-26T16:04:33.281Z",
+          "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+        },
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000112.000028143.html",
+          "checkedAt": "2026-10-26T16:13:09.339Z",
+          "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+        },
+        {
+          "url": "https://www.tiaa-jp.com/blog/2025/12/15/30283",
+          "checkedAt": "2026-10-26T16:13:09.002Z",
+          "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+        },
+        {
+          "url": "https://www.tiaa-jp.com/blog/2025/12/15/30298",
+          "checkedAt": "2026-10-26T16:20:39.355Z",
+          "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+        }
+      ],
+      "notes": [
+        "公式主要キャスト12人に含まれ、他の複数の主要子役歴も主催者資料で確認できるため個別人物として登録。アンサンブルではない。氏名境界・読みは東京国際芸術協会プロフィール。英字は読みの編集上のローマ字化。",
+        "生年月日・身長・血液型・出身・現在所属の信頼できる確定資料を確認できず全てnull。ファン資料の2009年・不完全な2009年1月日を完全DOBへ変換しない。テノールという声種を性別そのものとみなさずgenderもnull。学校の学年は変動するため公開プロフィールへ載せない。"
+      ]
+    }
+  ],
+  "works": [
+    {
+      "year": 2021,
+      "before": null,
+      "play": {
+        "id": "fd2f7d17-d925-463f-8dc7-b1764fb7f3ab",
+        "slug": "sb69_2021",
+        "title": "Live Musical「SHOW BY ROCK!!」－DO根性北学園編－夜と黒のReflection",
+        "franchise_id": "def83f64-c1c3-48d4-82d6-d785af1b2eda",
+        "summary": "退学を免れるためにバンドを組むことになったヤスたち4人。DOKONJOFINGERとして歩み始めた彼らは、大人のバンドYokazenohorizonと出会う。一方、音楽都市MIDICITYには黒船が近づいていた。新たなバンドを中心に描く『SHOW BY ROCK!!』のLive Musical。",
+        "summary_en": "Yasu and three fellow students form DOKONJOFINGER to avoid expulsion from school. As they begin playing together, they encounter the adult band Yokazenohorizon. Meanwhile, a black ship approaches the music city of MIDICITY. A Live Musical SHOW BY ROCK!! story centered on a new generation of bands.",
+        "title_en": "Live Musical SHOW BY ROCK!!: Dokonjo Kita Gakuen — Yoru to Kuro no Reflection",
+        "period": "2021年8月21日〜29日",
+        "venue": "天王洲 銀河劇場",
+        "vod": {},
+        "genre": null,
+        "tags": [],
+        "credits": [
+          {
+            "role": "原作",
+            "names": [
+              "サンリオ"
+            ],
+            "is_core": true,
+            "sort_order": 1
+          },
+          {
+            "role": "脚本・演出",
+            "names": [
+              "山崎 彬"
+            ],
+            "is_core": true,
+            "sort_order": 2
+          },
+          {
+            "role": "音楽",
+            "names": [
+              "伊 真吾（OVERCOME MUSIC）"
+            ],
+            "is_core": false,
+            "sort_order": 3
+          },
+          {
+            "role": "振付",
+            "names": [
+              "後藤健流"
+            ],
+            "is_core": false,
+            "sort_order": 4
+          },
+          {
+            "role": "アクション監督",
+            "names": [
+              "加藤 学"
+            ],
+            "is_core": false,
+            "sort_order": 5
+          },
+          {
+            "role": "美術",
+            "names": [
+              "原田 愛"
+            ],
+            "is_core": false,
+            "sort_order": 6
+          },
+          {
+            "role": "音響",
+            "names": [
+              "増澤 努"
+            ],
+            "is_core": false,
+            "sort_order": 7
+          },
+          {
+            "role": "照明",
+            "names": [
+              "大波多秀起"
+            ],
+            "is_core": false,
+            "sort_order": 8
+          },
+          {
+            "role": "映像",
+            "names": [
+              "本谷明人"
+            ],
+            "is_core": false,
+            "sort_order": 9
+          },
+          {
+            "role": "衣裳",
+            "names": [
+              "加藤佑里恵（藤衣裳）"
+            ],
+            "is_core": false,
+            "sort_order": 10
+          },
+          {
+            "role": "ヘアメイクデザイン",
+            "names": [
+              "井村祥子"
+            ],
+            "is_core": false,
+            "sort_order": 11
+          },
+          {
+            "role": "特殊造形",
+            "names": [
+              "林屋陽二"
+            ],
+            "is_core": false,
+            "sort_order": 12
+          },
+          {
+            "role": "歌唱指導",
+            "names": [
+              "楠瀬拓哉（OVERCOME MUSIC）"
+            ],
+            "is_core": false,
+            "sort_order": 13
+          },
+          {
+            "role": "演出助手",
+            "names": [
+              "小寺利光"
+            ],
+            "is_core": false,
+            "sort_order": 14
+          },
+          {
+            "role": "舞台監督",
+            "names": [
+              "中村貴彦"
+            ],
+            "is_core": false,
+            "sort_order": 15
+          },
+          {
+            "role": "制作",
+            "names": [
+              "ネルケプランニング"
+            ],
+            "is_core": false,
+            "sort_order": 16
+          },
+          {
+            "role": "宣伝美術",
+            "names": [
+              "EAST END CREATIVE"
+            ],
+            "is_core": false,
+            "sort_order": 17
+          },
+          {
+            "role": "宣伝写真",
+            "names": [
+              "宮沢 聡（D-CORD）"
+            ],
+            "is_core": false,
+            "sort_order": 18
+          },
+          {
+            "role": "主催",
+            "names": [
+              "SHOW BY ROCK!! MUSICAL製作委員会"
+            ],
+            "is_core": false,
+            "sort_order": 19
+          },
+          {
+            "role": "公演日程",
+            "names": [
+              "2021年8月21日〜29日（天王洲 銀河劇場、全10公演）"
+            ],
+            "is_core": false,
+            "sort_order": 20
+          },
+          {
+            "role": "当初予定",
+            "names": [
+              "2021年8月19日〜29日（天王洲 銀河劇場）"
+            ],
+            "is_core": false,
+            "sort_order": 21
+          },
+          {
+            "role": "中止公演",
+            "names": [
+              "2021年8月19日19:00・20日19:00の2公演は中止。8月21日に開幕。"
+            ],
+            "is_core": false,
+            "sort_order": 22
+          },
+          {
+            "role": "上演時間（予定）",
+            "names": [
+              "約2時間（休憩なし）"
+            ],
+            "is_core": false,
+            "sort_order": 23
+          }
+        ],
+        "related_franchise_ids": []
+      },
+      "rawSource": {
+        "sourceUrl": "https://kira-hai.net/sb69_2021",
+        "title": "Live Musical「SHOW BY ROCK!!」-DO根性北学園編-夜と黒のReflection",
+        "scheduleLines": [
+          "2021年8月19日-29日 天王洲 銀河劇場"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "坂田隆一郎",
+            "sourceActorUrl": "https://kira-hai.net/sakata-ryuichiro",
+            "role_name": "ヤス",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "Hayato",
+            "sourceActorUrl": null,
+            "role_name": "ハッチン",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "高本学",
+            "sourceActorUrl": "https://kira-hai.net/takamoto-gaku",
+            "role_name": "ジョウ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "雷太",
+            "sourceActorUrl": "https://kira-hai.net/raita",
+            "role_name": "双循",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "高橋怜也",
+            "sourceActorUrl": "https://kira-hai.net/takahashi-ryoya",
+            "role_name": "リカオ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "田村升吾",
+            "sourceActorUrl": "https://kira-hai.net/tamura-shogo",
+            "role_name": "ジャロップ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "高橋駿一",
+            "sourceActorUrl": "https://kira-hai.net/takahashi-shunichi",
+            "role_name": "クースカ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "楚南慧",
+            "sourceActorUrl": "https://kira-hai.net/sonan-kei",
+            "role_name": "ララギ",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "武本悠佑",
+            "sourceActorUrl": "https://kira-hai.net/takemoto-yusuke",
+            "role_name": "919(ナイク)",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "タホリ玲央",
+            "sourceActorUrl": "https://kira-hai.net/tahori-reo",
+            "role_name": "151(イコイ)",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "大前優樹",
+            "sourceActorUrl": null,
+            "role_name": "ロッカー",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "村上幸平",
+            "sourceActorUrl": "https://kira-hai.net/kohei-murakami",
+            "role_name": "ユーダス仁刃笛",
+            "cast_group": null
+          }
+        ],
+        "unparsed": []
+      },
+      "source": {
+        "sourceUrl": "https://kira-hai.net/sb69_2021",
+        "title": "Live Musical「SHOW BY ROCK!!」-DO根性北学園編-夜と黒のReflection",
+        "scheduleLines": [
+          "2021年8月19日-29日 天王洲 銀河劇場"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "坂田隆一郎",
+            "sourceActorUrl": "https://kira-hai.net/sakata-ryuichiro",
+            "role_name": "ヤス",
+            "cast_group": "DOKONJOFINGER"
+          },
+          {
+            "sourceActorName": "Hayato",
+            "sourceActorUrl": null,
+            "role_name": "ハッチン",
+            "cast_group": "DOKONJOFINGER"
+          },
+          {
+            "sourceActorName": "高本学",
+            "sourceActorUrl": "https://kira-hai.net/takamoto-gaku",
+            "role_name": "ジョウ",
+            "cast_group": "DOKONJOFINGER"
+          },
+          {
+            "sourceActorName": "雷太",
+            "sourceActorUrl": "https://kira-hai.net/raita",
+            "role_name": "双循",
+            "cast_group": "DOKONJOFINGER"
+          },
+          {
+            "sourceActorName": "高橋怜也",
+            "sourceActorUrl": "https://kira-hai.net/takahashi-ryoya",
+            "role_name": "リカオ",
+            "cast_group": "Yokazenohorizon"
+          },
+          {
+            "sourceActorName": "田村升吾",
+            "sourceActorUrl": "https://kira-hai.net/tamura-shogo",
+            "role_name": "ジャロップ",
+            "cast_group": "Yokazenohorizon"
+          },
+          {
+            "sourceActorName": "高橋駿一",
+            "sourceActorUrl": "https://kira-hai.net/takahashi-shunichi",
+            "role_name": "クースカ",
+            "cast_group": "Yokazenohorizon"
+          },
+          {
+            "sourceActorName": "楚南慧",
+            "sourceActorUrl": "https://kira-hai.net/sonan-kei",
+            "role_name": "ウララギ",
+            "cast_group": "Yokazenohorizon"
+          },
+          {
+            "sourceActorName": "武本悠佑",
+            "sourceActorUrl": "https://kira-hai.net/takemoto-yusuke",
+            "role_name": "919(ナイク)",
+            "cast_group": "Kuronoatmosphere"
+          },
+          {
+            "sourceActorName": "タホリ玲央",
+            "sourceActorUrl": "https://kira-hai.net/tahori-reo",
+            "role_name": "151(イコイ)",
+            "cast_group": "Kuronoatmosphere"
+          },
+          {
+            "sourceActorName": "大前優樹",
+            "sourceActorUrl": null,
+            "role_name": "ロッカー",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "村上幸平",
+            "sourceActorUrl": "https://kira-hai.net/kohei-murakami",
+            "role_name": "ユーダス仁刃笛",
+            "cast_group": null
+          }
+        ],
+        "unparsed": []
+      },
+      "sourceFingerprint": "7eafd40861a1cc06928b70fc905f5daf23771bd63466d225d1eb4e8caaa37e38",
+      "stage": {
+        "workUrl": "https://kira-hai.net/sb69_2021",
+        "key": "124ca4f13fa829c29817db7d0d39d749984737fa9feed87e0b9f707161a2131a",
+        "items": [
+          {
+            "source_actor_name": "坂田隆一郎",
+            "source_actor_url": "https://kira-hai.net/sakata-ryuichiro",
+            "source_work_title": "Live Musical「SHOW BY ROCK!!」-DO根性北学園編-夜と黒のReflection",
+            "source_year": 2021,
+            "source_role_raw": "ヤス",
+            "source_role_names": [
+              "ヤス"
+            ],
+            "source_cast_group": "DOKONJOFINGER",
+            "source_order": 1,
+            "source_credit_key": "f2b073efe265df3ccb26",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/sb69_2021",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/sb69_2021",
+                  "checkedAt": "2026-10-26T16:04:32.743Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/cast",
+                  "checkedAt": "2026-10-26T16:04:33.281Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/showbyrock-musical2021/index.html",
+                  "checkedAt": "2026-10-26T16:04:33.078Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/story",
+                  "checkedAt": "2026-10-26T16:04:33.383Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/news/?paged=2",
+                  "checkedAt": "2026-10-26T16:04:33.748Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/guide",
+                  "checkedAt": "2026-10-26T16:04:33.972Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://ameblo.jp/worldwideweber/entry-12807741073.html",
+                  "checkedAt": "2026-10-26T16:13:10.068Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/sakata-ryuichiro",
+                  "checkedAt": "2026-10-26T16:13:06.680Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://red-actors.com/artist/ryuichiro-sakata/",
+                  "checkedAt": "2026-10-26T16:13:06.947Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://www.animatetimes.com/tag/details.php?id=18622",
+                  "checkedAt": "2026-10-26T16:13:07.631Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/cast",
+                  "checkedAt": "2026-10-26T16:04:33.281Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                }
+              ],
+              "source_fingerprint": "7eafd40861a1cc06928b70fc905f5daf23771bd63466d225d1eb4e8caaa37e38",
+              "review_fingerprint": "1b045e597c999a145a1e8f7aa7b8d683baef82cca32d54ec773057119e2406e7",
+              "snapshot_fingerprint": "f800401c07fdb11200521ec23e3797fcb5933d0238b7c445427d9330ac68094c",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2021,
+                "reason": "2021年8月本公演。予定開始19日と実施開始21日を区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/sb69_2021",
+                    "checkedAt": "2026-10-26T16:04:32.743Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/cast",
+                    "checkedAt": "2026-10-26T16:04:33.281Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://www.nelke.co.jp/stage/showbyrock-musical2021/index.html",
+                    "checkedAt": "2026-10-26T16:04:33.078Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/story",
+                    "checkedAt": "2026-10-26T16:04:33.383Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/news/?paged=2",
+                    "checkedAt": "2026-10-26T16:04:33.748Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/guide",
+                    "checkedAt": "2026-10-26T16:04:33.972Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://ameblo.jp/worldwideweber/entry-12807741073.html",
+                    "checkedAt": "2026-10-26T16:13:10.068Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  }
+                ]
+              },
+              "original_source_row": {
+                "order": 1,
+                "cast": {
+                  "sourceActorName": "坂田隆一郎",
+                  "sourceActorUrl": "https://kira-hai.net/sakata-ryuichiro",
+                  "role_name": "ヤス",
+                  "cast_group": null
+                }
+              }
+            },
+            "matched_actor_id": "2bd9a7b3-cfe3-4293-ad82-1ce92a7d3dad",
+            "matched_play_id": "fd2f7d17-d925-463f-8dc7-b1764fb7f3ab",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "Hayato",
+            "source_actor_url": null,
+            "source_work_title": "Live Musical「SHOW BY ROCK!!」-DO根性北学園編-夜と黒のReflection",
+            "source_year": 2021,
+            "source_role_raw": "ハッチン",
+            "source_role_names": [
+              "ハッチン"
+            ],
+            "source_cast_group": "DOKONJOFINGER",
+            "source_order": 2,
+            "source_credit_key": "b40fea2fae84884d0ced",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/sb69_2021",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/sb69_2021",
+                  "checkedAt": "2026-10-26T16:04:32.743Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/cast",
+                  "checkedAt": "2026-10-26T16:04:33.281Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/showbyrock-musical2021/index.html",
+                  "checkedAt": "2026-10-26T16:04:33.078Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/story",
+                  "checkedAt": "2026-10-26T16:04:33.383Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/news/?paged=2",
+                  "checkedAt": "2026-10-26T16:04:33.748Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/guide",
+                  "checkedAt": "2026-10-26T16:04:33.972Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://ameblo.jp/worldwideweber/entry-12807741073.html",
+                  "checkedAt": "2026-10-26T16:13:10.068Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                }
+              ],
+              "source_fingerprint": "7eafd40861a1cc06928b70fc905f5daf23771bd63466d225d1eb4e8caaa37e38",
+              "review_fingerprint": "1b045e597c999a145a1e8f7aa7b8d683baef82cca32d54ec773057119e2406e7",
+              "snapshot_fingerprint": "f800401c07fdb11200521ec23e3797fcb5933d0238b7c445427d9330ac68094c",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2021,
+                "reason": "2021年8月本公演。予定開始19日と実施開始21日を区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/sb69_2021",
+                    "checkedAt": "2026-10-26T16:04:32.743Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/cast",
+                    "checkedAt": "2026-10-26T16:04:33.281Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://www.nelke.co.jp/stage/showbyrock-musical2021/index.html",
+                    "checkedAt": "2026-10-26T16:04:33.078Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/story",
+                    "checkedAt": "2026-10-26T16:04:33.383Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/news/?paged=2",
+                    "checkedAt": "2026-10-26T16:04:33.748Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/guide",
+                    "checkedAt": "2026-10-26T16:04:33.972Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://ameblo.jp/worldwideweber/entry-12807741073.html",
+                    "checkedAt": "2026-10-26T16:13:10.068Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  }
+                ]
+              },
+              "original_source_row": {
+                "order": 2,
+                "cast": {
+                  "sourceActorName": "Hayato",
+                  "sourceActorUrl": null,
+                  "role_name": "ハッチン",
+                  "cast_group": null
+                }
+              }
+            },
+            "matched_actor_id": "ea6f3e49-118a-4298-8239-5cb9b832c8fc",
+            "matched_play_id": "fd2f7d17-d925-463f-8dc7-b1764fb7f3ab",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "高本学",
+            "source_actor_url": "https://kira-hai.net/takamoto-gaku",
+            "source_work_title": "Live Musical「SHOW BY ROCK!!」-DO根性北学園編-夜と黒のReflection",
+            "source_year": 2021,
+            "source_role_raw": "ジョウ",
+            "source_role_names": [
+              "ジョウ"
+            ],
+            "source_cast_group": "DOKONJOFINGER",
+            "source_order": 3,
+            "source_credit_key": "15b1e40599b312e2626b",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/sb69_2021",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/sb69_2021",
+                  "checkedAt": "2026-10-26T16:04:32.743Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/cast",
+                  "checkedAt": "2026-10-26T16:04:33.281Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/showbyrock-musical2021/index.html",
+                  "checkedAt": "2026-10-26T16:04:33.078Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/story",
+                  "checkedAt": "2026-10-26T16:04:33.383Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/news/?paged=2",
+                  "checkedAt": "2026-10-26T16:04:33.748Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/guide",
+                  "checkedAt": "2026-10-26T16:04:33.972Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://ameblo.jp/worldwideweber/entry-12807741073.html",
+                  "checkedAt": "2026-10-26T16:13:10.068Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                }
+              ],
+              "source_fingerprint": "7eafd40861a1cc06928b70fc905f5daf23771bd63466d225d1eb4e8caaa37e38",
+              "review_fingerprint": "1b045e597c999a145a1e8f7aa7b8d683baef82cca32d54ec773057119e2406e7",
+              "snapshot_fingerprint": "f800401c07fdb11200521ec23e3797fcb5933d0238b7c445427d9330ac68094c",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2021,
+                "reason": "2021年8月本公演。予定開始19日と実施開始21日を区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/sb69_2021",
+                    "checkedAt": "2026-10-26T16:04:32.743Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/cast",
+                    "checkedAt": "2026-10-26T16:04:33.281Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://www.nelke.co.jp/stage/showbyrock-musical2021/index.html",
+                    "checkedAt": "2026-10-26T16:04:33.078Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/story",
+                    "checkedAt": "2026-10-26T16:04:33.383Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/news/?paged=2",
+                    "checkedAt": "2026-10-26T16:04:33.748Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/guide",
+                    "checkedAt": "2026-10-26T16:04:33.972Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://ameblo.jp/worldwideweber/entry-12807741073.html",
+                    "checkedAt": "2026-10-26T16:13:10.068Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  }
+                ]
+              },
+              "original_source_row": {
+                "order": 3,
+                "cast": {
+                  "sourceActorName": "高本学",
+                  "sourceActorUrl": "https://kira-hai.net/takamoto-gaku",
+                  "role_name": "ジョウ",
+                  "cast_group": null
+                }
+              }
+            },
+            "matched_actor_id": "8f714e97-ff9f-4178-86aa-e3df3e067ea5",
+            "matched_play_id": "fd2f7d17-d925-463f-8dc7-b1764fb7f3ab",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "雷太",
+            "source_actor_url": "https://kira-hai.net/raita",
+            "source_work_title": "Live Musical「SHOW BY ROCK!!」-DO根性北学園編-夜と黒のReflection",
+            "source_year": 2021,
+            "source_role_raw": "双循",
+            "source_role_names": [
+              "双循"
+            ],
+            "source_cast_group": "DOKONJOFINGER",
+            "source_order": 4,
+            "source_credit_key": "93cde3537a7560d5e528",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/sb69_2021",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/sb69_2021",
+                  "checkedAt": "2026-10-26T16:04:32.743Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/cast",
+                  "checkedAt": "2026-10-26T16:04:33.281Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/showbyrock-musical2021/index.html",
+                  "checkedAt": "2026-10-26T16:04:33.078Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/story",
+                  "checkedAt": "2026-10-26T16:04:33.383Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/news/?paged=2",
+                  "checkedAt": "2026-10-26T16:04:33.748Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/guide",
+                  "checkedAt": "2026-10-26T16:04:33.972Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://ameblo.jp/worldwideweber/entry-12807741073.html",
+                  "checkedAt": "2026-10-26T16:13:10.068Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                }
+              ],
+              "source_fingerprint": "7eafd40861a1cc06928b70fc905f5daf23771bd63466d225d1eb4e8caaa37e38",
+              "review_fingerprint": "1b045e597c999a145a1e8f7aa7b8d683baef82cca32d54ec773057119e2406e7",
+              "snapshot_fingerprint": "f800401c07fdb11200521ec23e3797fcb5933d0238b7c445427d9330ac68094c",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2021,
+                "reason": "2021年8月本公演。予定開始19日と実施開始21日を区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/sb69_2021",
+                    "checkedAt": "2026-10-26T16:04:32.743Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/cast",
+                    "checkedAt": "2026-10-26T16:04:33.281Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://www.nelke.co.jp/stage/showbyrock-musical2021/index.html",
+                    "checkedAt": "2026-10-26T16:04:33.078Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/story",
+                    "checkedAt": "2026-10-26T16:04:33.383Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/news/?paged=2",
+                    "checkedAt": "2026-10-26T16:04:33.748Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/guide",
+                    "checkedAt": "2026-10-26T16:04:33.972Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://ameblo.jp/worldwideweber/entry-12807741073.html",
+                    "checkedAt": "2026-10-26T16:13:10.068Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  }
+                ]
+              },
+              "original_source_row": {
+                "order": 4,
+                "cast": {
+                  "sourceActorName": "雷太",
+                  "sourceActorUrl": "https://kira-hai.net/raita",
+                  "role_name": "双循",
+                  "cast_group": null
+                }
+              }
+            },
+            "matched_actor_id": "e35338d4-6d3e-4bf7-b5b4-68f09c7fa737",
+            "matched_play_id": "fd2f7d17-d925-463f-8dc7-b1764fb7f3ab",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "高橋怜也",
+            "source_actor_url": "https://kira-hai.net/takahashi-ryoya",
+            "source_work_title": "Live Musical「SHOW BY ROCK!!」-DO根性北学園編-夜と黒のReflection",
+            "source_year": 2021,
+            "source_role_raw": "リカオ",
+            "source_role_names": [
+              "リカオ"
+            ],
+            "source_cast_group": "Yokazenohorizon",
+            "source_order": 5,
+            "source_credit_key": "5dcf13b447bbaf1e3e0a",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/sb69_2021",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/sb69_2021",
+                  "checkedAt": "2026-10-26T16:04:32.743Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/cast",
+                  "checkedAt": "2026-10-26T16:04:33.281Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/showbyrock-musical2021/index.html",
+                  "checkedAt": "2026-10-26T16:04:33.078Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/story",
+                  "checkedAt": "2026-10-26T16:04:33.383Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/news/?paged=2",
+                  "checkedAt": "2026-10-26T16:04:33.748Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/guide",
+                  "checkedAt": "2026-10-26T16:04:33.972Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://ameblo.jp/worldwideweber/entry-12807741073.html",
+                  "checkedAt": "2026-10-26T16:13:10.068Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                }
+              ],
+              "source_fingerprint": "7eafd40861a1cc06928b70fc905f5daf23771bd63466d225d1eb4e8caaa37e38",
+              "review_fingerprint": "1b045e597c999a145a1e8f7aa7b8d683baef82cca32d54ec773057119e2406e7",
+              "snapshot_fingerprint": "f800401c07fdb11200521ec23e3797fcb5933d0238b7c445427d9330ac68094c",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2021,
+                "reason": "2021年8月本公演。予定開始19日と実施開始21日を区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/sb69_2021",
+                    "checkedAt": "2026-10-26T16:04:32.743Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/cast",
+                    "checkedAt": "2026-10-26T16:04:33.281Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://www.nelke.co.jp/stage/showbyrock-musical2021/index.html",
+                    "checkedAt": "2026-10-26T16:04:33.078Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/story",
+                    "checkedAt": "2026-10-26T16:04:33.383Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/news/?paged=2",
+                    "checkedAt": "2026-10-26T16:04:33.748Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/guide",
+                    "checkedAt": "2026-10-26T16:04:33.972Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://ameblo.jp/worldwideweber/entry-12807741073.html",
+                    "checkedAt": "2026-10-26T16:13:10.068Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  }
+                ]
+              },
+              "original_source_row": {
+                "order": 5,
+                "cast": {
+                  "sourceActorName": "高橋怜也",
+                  "sourceActorUrl": "https://kira-hai.net/takahashi-ryoya",
+                  "role_name": "リカオ",
+                  "cast_group": null
+                }
+              }
+            },
+            "matched_actor_id": "4402c1c0-edf6-4e28-9342-6a89ba210c22",
+            "matched_play_id": "fd2f7d17-d925-463f-8dc7-b1764fb7f3ab",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "田村升吾",
+            "source_actor_url": "https://kira-hai.net/tamura-shogo",
+            "source_work_title": "Live Musical「SHOW BY ROCK!!」-DO根性北学園編-夜と黒のReflection",
+            "source_year": 2021,
+            "source_role_raw": "ジャロップ",
+            "source_role_names": [
+              "ジャロップ"
+            ],
+            "source_cast_group": "Yokazenohorizon",
+            "source_order": 6,
+            "source_credit_key": "7fe1864c1f58085edb96",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/sb69_2021",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/sb69_2021",
+                  "checkedAt": "2026-10-26T16:04:32.743Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/cast",
+                  "checkedAt": "2026-10-26T16:04:33.281Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/showbyrock-musical2021/index.html",
+                  "checkedAt": "2026-10-26T16:04:33.078Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/story",
+                  "checkedAt": "2026-10-26T16:04:33.383Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/news/?paged=2",
+                  "checkedAt": "2026-10-26T16:04:33.748Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/guide",
+                  "checkedAt": "2026-10-26T16:04:33.972Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://ameblo.jp/worldwideweber/entry-12807741073.html",
+                  "checkedAt": "2026-10-26T16:13:10.068Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                }
+              ],
+              "source_fingerprint": "7eafd40861a1cc06928b70fc905f5daf23771bd63466d225d1eb4e8caaa37e38",
+              "review_fingerprint": "1b045e597c999a145a1e8f7aa7b8d683baef82cca32d54ec773057119e2406e7",
+              "snapshot_fingerprint": "f800401c07fdb11200521ec23e3797fcb5933d0238b7c445427d9330ac68094c",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2021,
+                "reason": "2021年8月本公演。予定開始19日と実施開始21日を区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/sb69_2021",
+                    "checkedAt": "2026-10-26T16:04:32.743Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/cast",
+                    "checkedAt": "2026-10-26T16:04:33.281Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://www.nelke.co.jp/stage/showbyrock-musical2021/index.html",
+                    "checkedAt": "2026-10-26T16:04:33.078Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/story",
+                    "checkedAt": "2026-10-26T16:04:33.383Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/news/?paged=2",
+                    "checkedAt": "2026-10-26T16:04:33.748Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/guide",
+                    "checkedAt": "2026-10-26T16:04:33.972Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://ameblo.jp/worldwideweber/entry-12807741073.html",
+                    "checkedAt": "2026-10-26T16:13:10.068Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  }
+                ]
+              },
+              "original_source_row": {
+                "order": 6,
+                "cast": {
+                  "sourceActorName": "田村升吾",
+                  "sourceActorUrl": "https://kira-hai.net/tamura-shogo",
+                  "role_name": "ジャロップ",
+                  "cast_group": null
+                }
+              }
+            },
+            "matched_actor_id": "8c763fc9-8fdf-4f23-9558-51c5b053ab2e",
+            "matched_play_id": "fd2f7d17-d925-463f-8dc7-b1764fb7f3ab",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "高橋駿一",
+            "source_actor_url": "https://kira-hai.net/takahashi-shunichi",
+            "source_work_title": "Live Musical「SHOW BY ROCK!!」-DO根性北学園編-夜と黒のReflection",
+            "source_year": 2021,
+            "source_role_raw": "クースカ",
+            "source_role_names": [
+              "クースカ"
+            ],
+            "source_cast_group": "Yokazenohorizon",
+            "source_order": 7,
+            "source_credit_key": "ce082a95f367168d1738",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/sb69_2021",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/sb69_2021",
+                  "checkedAt": "2026-10-26T16:04:32.743Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/cast",
+                  "checkedAt": "2026-10-26T16:04:33.281Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/showbyrock-musical2021/index.html",
+                  "checkedAt": "2026-10-26T16:04:33.078Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/story",
+                  "checkedAt": "2026-10-26T16:04:33.383Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/news/?paged=2",
+                  "checkedAt": "2026-10-26T16:04:33.748Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/guide",
+                  "checkedAt": "2026-10-26T16:04:33.972Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://ameblo.jp/worldwideweber/entry-12807741073.html",
+                  "checkedAt": "2026-10-26T16:13:10.068Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                }
+              ],
+              "source_fingerprint": "7eafd40861a1cc06928b70fc905f5daf23771bd63466d225d1eb4e8caaa37e38",
+              "review_fingerprint": "1b045e597c999a145a1e8f7aa7b8d683baef82cca32d54ec773057119e2406e7",
+              "snapshot_fingerprint": "f800401c07fdb11200521ec23e3797fcb5933d0238b7c445427d9330ac68094c",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2021,
+                "reason": "2021年8月本公演。予定開始19日と実施開始21日を区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/sb69_2021",
+                    "checkedAt": "2026-10-26T16:04:32.743Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/cast",
+                    "checkedAt": "2026-10-26T16:04:33.281Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://www.nelke.co.jp/stage/showbyrock-musical2021/index.html",
+                    "checkedAt": "2026-10-26T16:04:33.078Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/story",
+                    "checkedAt": "2026-10-26T16:04:33.383Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/news/?paged=2",
+                    "checkedAt": "2026-10-26T16:04:33.748Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/guide",
+                    "checkedAt": "2026-10-26T16:04:33.972Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://ameblo.jp/worldwideweber/entry-12807741073.html",
+                    "checkedAt": "2026-10-26T16:13:10.068Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  }
+                ]
+              },
+              "original_source_row": {
+                "order": 7,
+                "cast": {
+                  "sourceActorName": "高橋駿一",
+                  "sourceActorUrl": "https://kira-hai.net/takahashi-shunichi",
+                  "role_name": "クースカ",
+                  "cast_group": null
+                }
+              }
+            },
+            "matched_actor_id": "2633f429-d101-44ce-a8e8-5841fd9e7919",
+            "matched_play_id": "fd2f7d17-d925-463f-8dc7-b1764fb7f3ab",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "楚南慧",
+            "source_actor_url": "https://kira-hai.net/sonan-kei",
+            "source_work_title": "Live Musical「SHOW BY ROCK!!」-DO根性北学園編-夜と黒のReflection",
+            "source_year": 2021,
+            "source_role_raw": "ウララギ",
+            "source_role_names": [
+              "ウララギ"
+            ],
+            "source_cast_group": "Yokazenohorizon",
+            "source_order": 8,
+            "source_credit_key": "42fe34cd1e9998eb66f4",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/sb69_2021",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/sb69_2021",
+                  "checkedAt": "2026-10-26T16:04:32.743Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/cast",
+                  "checkedAt": "2026-10-26T16:04:33.281Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/showbyrock-musical2021/index.html",
+                  "checkedAt": "2026-10-26T16:04:33.078Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/story",
+                  "checkedAt": "2026-10-26T16:04:33.383Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/news/?paged=2",
+                  "checkedAt": "2026-10-26T16:04:33.748Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/guide",
+                  "checkedAt": "2026-10-26T16:04:33.972Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://ameblo.jp/worldwideweber/entry-12807741073.html",
+                  "checkedAt": "2026-10-26T16:13:10.068Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                }
+              ],
+              "source_fingerprint": "7eafd40861a1cc06928b70fc905f5daf23771bd63466d225d1eb4e8caaa37e38",
+              "review_fingerprint": "1b045e597c999a145a1e8f7aa7b8d683baef82cca32d54ec773057119e2406e7",
+              "snapshot_fingerprint": "f800401c07fdb11200521ec23e3797fcb5933d0238b7c445427d9330ac68094c",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2021,
+                "reason": "2021年8月本公演。予定開始19日と実施開始21日を区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/sb69_2021",
+                    "checkedAt": "2026-10-26T16:04:32.743Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/cast",
+                    "checkedAt": "2026-10-26T16:04:33.281Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://www.nelke.co.jp/stage/showbyrock-musical2021/index.html",
+                    "checkedAt": "2026-10-26T16:04:33.078Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/story",
+                    "checkedAt": "2026-10-26T16:04:33.383Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/news/?paged=2",
+                    "checkedAt": "2026-10-26T16:04:33.748Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/guide",
+                    "checkedAt": "2026-10-26T16:04:33.972Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://ameblo.jp/worldwideweber/entry-12807741073.html",
+                    "checkedAt": "2026-10-26T16:13:10.068Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  }
+                ]
+              },
+              "original_source_row": {
+                "order": 8,
+                "cast": {
+                  "sourceActorName": "楚南慧",
+                  "sourceActorUrl": "https://kira-hai.net/sonan-kei",
+                  "role_name": "ララギ",
+                  "cast_group": null
+                }
+              }
+            },
+            "matched_actor_id": "98dc55d8-b350-4e8d-a98f-67baa4a0f948",
+            "matched_play_id": "fd2f7d17-d925-463f-8dc7-b1764fb7f3ab",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "武本悠佑",
+            "source_actor_url": "https://kira-hai.net/takemoto-yusuke",
+            "source_work_title": "Live Musical「SHOW BY ROCK!!」-DO根性北学園編-夜と黒のReflection",
+            "source_year": 2021,
+            "source_role_raw": "919(ナイク)",
+            "source_role_names": [
+              "919(ナイク)"
+            ],
+            "source_cast_group": "Kuronoatmosphere",
+            "source_order": 9,
+            "source_credit_key": "6aa1a68dd3a4f84d8760",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/sb69_2021",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/sb69_2021",
+                  "checkedAt": "2026-10-26T16:04:32.743Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/cast",
+                  "checkedAt": "2026-10-26T16:04:33.281Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/showbyrock-musical2021/index.html",
+                  "checkedAt": "2026-10-26T16:04:33.078Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/story",
+                  "checkedAt": "2026-10-26T16:04:33.383Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/news/?paged=2",
+                  "checkedAt": "2026-10-26T16:04:33.748Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/guide",
+                  "checkedAt": "2026-10-26T16:04:33.972Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://ameblo.jp/worldwideweber/entry-12807741073.html",
+                  "checkedAt": "2026-10-26T16:13:10.068Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                }
+              ],
+              "source_fingerprint": "7eafd40861a1cc06928b70fc905f5daf23771bd63466d225d1eb4e8caaa37e38",
+              "review_fingerprint": "1b045e597c999a145a1e8f7aa7b8d683baef82cca32d54ec773057119e2406e7",
+              "snapshot_fingerprint": "f800401c07fdb11200521ec23e3797fcb5933d0238b7c445427d9330ac68094c",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2021,
+                "reason": "2021年8月本公演。予定開始19日と実施開始21日を区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/sb69_2021",
+                    "checkedAt": "2026-10-26T16:04:32.743Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/cast",
+                    "checkedAt": "2026-10-26T16:04:33.281Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://www.nelke.co.jp/stage/showbyrock-musical2021/index.html",
+                    "checkedAt": "2026-10-26T16:04:33.078Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/story",
+                    "checkedAt": "2026-10-26T16:04:33.383Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/news/?paged=2",
+                    "checkedAt": "2026-10-26T16:04:33.748Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/guide",
+                    "checkedAt": "2026-10-26T16:04:33.972Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://ameblo.jp/worldwideweber/entry-12807741073.html",
+                    "checkedAt": "2026-10-26T16:13:10.068Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  }
+                ]
+              },
+              "original_source_row": {
+                "order": 9,
+                "cast": {
+                  "sourceActorName": "武本悠佑",
+                  "sourceActorUrl": "https://kira-hai.net/takemoto-yusuke",
+                  "role_name": "919(ナイク)",
+                  "cast_group": null
+                }
+              }
+            },
+            "matched_actor_id": "860e038e-312a-47a4-b165-b5d788d86dcb",
+            "matched_play_id": "fd2f7d17-d925-463f-8dc7-b1764fb7f3ab",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "タホリ玲央",
+            "source_actor_url": "https://kira-hai.net/tahori-reo",
+            "source_work_title": "Live Musical「SHOW BY ROCK!!」-DO根性北学園編-夜と黒のReflection",
+            "source_year": 2021,
+            "source_role_raw": "151(イコイ)",
+            "source_role_names": [
+              "151(イコイ)"
+            ],
+            "source_cast_group": "Kuronoatmosphere",
+            "source_order": 10,
+            "source_credit_key": "9222b8f14216f61260d5",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/sb69_2021",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/sb69_2021",
+                  "checkedAt": "2026-10-26T16:04:32.743Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/cast",
+                  "checkedAt": "2026-10-26T16:04:33.281Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/showbyrock-musical2021/index.html",
+                  "checkedAt": "2026-10-26T16:04:33.078Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/story",
+                  "checkedAt": "2026-10-26T16:04:33.383Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/news/?paged=2",
+                  "checkedAt": "2026-10-26T16:04:33.748Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/guide",
+                  "checkedAt": "2026-10-26T16:04:33.972Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://ameblo.jp/worldwideweber/entry-12807741073.html",
+                  "checkedAt": "2026-10-26T16:13:10.068Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/tahori-reo",
+                  "checkedAt": "2026-10-26T16:13:07.823Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://thetv.jp/person/2000059355/",
+                  "checkedAt": "2026-10-26T16:13:08.380Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://www.suruga-ya.jp/kaitori/kaitori_detail/GG666135",
+                  "checkedAt": "2026-10-26T16:20:38.895Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/cast",
+                  "checkedAt": "2026-10-26T16:04:33.281Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                }
+              ],
+              "source_fingerprint": "7eafd40861a1cc06928b70fc905f5daf23771bd63466d225d1eb4e8caaa37e38",
+              "review_fingerprint": "1b045e597c999a145a1e8f7aa7b8d683baef82cca32d54ec773057119e2406e7",
+              "snapshot_fingerprint": "f800401c07fdb11200521ec23e3797fcb5933d0238b7c445427d9330ac68094c",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2021,
+                "reason": "2021年8月本公演。予定開始19日と実施開始21日を区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/sb69_2021",
+                    "checkedAt": "2026-10-26T16:04:32.743Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/cast",
+                    "checkedAt": "2026-10-26T16:04:33.281Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://www.nelke.co.jp/stage/showbyrock-musical2021/index.html",
+                    "checkedAt": "2026-10-26T16:04:33.078Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/story",
+                    "checkedAt": "2026-10-26T16:04:33.383Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/news/?paged=2",
+                    "checkedAt": "2026-10-26T16:04:33.748Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/guide",
+                    "checkedAt": "2026-10-26T16:04:33.972Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://ameblo.jp/worldwideweber/entry-12807741073.html",
+                    "checkedAt": "2026-10-26T16:13:10.068Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  }
+                ]
+              },
+              "original_source_row": {
+                "order": 10,
+                "cast": {
+                  "sourceActorName": "タホリ玲央",
+                  "sourceActorUrl": "https://kira-hai.net/tahori-reo",
+                  "role_name": "151(イコイ)",
+                  "cast_group": null
+                }
+              }
+            },
+            "matched_actor_id": "48ba03fd-af97-487f-a05b-cd0941e44c0d",
+            "matched_play_id": "fd2f7d17-d925-463f-8dc7-b1764fb7f3ab",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "大前優樹",
+            "source_actor_url": null,
+            "source_work_title": "Live Musical「SHOW BY ROCK!!」-DO根性北学園編-夜と黒のReflection",
+            "source_year": 2021,
+            "source_role_raw": "ロッカー",
+            "source_role_names": [
+              "ロッカー"
+            ],
+            "source_cast_group": null,
+            "source_order": 11,
+            "source_credit_key": "0f657f5253a370af5894",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/sb69_2021",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/sb69_2021",
+                  "checkedAt": "2026-10-26T16:04:32.743Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/cast",
+                  "checkedAt": "2026-10-26T16:04:33.281Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/showbyrock-musical2021/index.html",
+                  "checkedAt": "2026-10-26T16:04:33.078Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/story",
+                  "checkedAt": "2026-10-26T16:04:33.383Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/news/?paged=2",
+                  "checkedAt": "2026-10-26T16:04:33.748Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/guide",
+                  "checkedAt": "2026-10-26T16:04:33.972Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://ameblo.jp/worldwideweber/entry-12807741073.html",
+                  "checkedAt": "2026-10-26T16:13:10.068Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/cast",
+                  "checkedAt": "2026-10-26T16:04:33.281Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://prtimes.jp/main/html/rd/p/000000112.000028143.html",
+                  "checkedAt": "2026-10-26T16:13:09.339Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://www.tiaa-jp.com/blog/2025/12/15/30283",
+                  "checkedAt": "2026-10-26T16:13:09.002Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://www.tiaa-jp.com/blog/2025/12/15/30298",
+                  "checkedAt": "2026-10-26T16:20:39.355Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                }
+              ],
+              "source_fingerprint": "7eafd40861a1cc06928b70fc905f5daf23771bd63466d225d1eb4e8caaa37e38",
+              "review_fingerprint": "1b045e597c999a145a1e8f7aa7b8d683baef82cca32d54ec773057119e2406e7",
+              "snapshot_fingerprint": "f800401c07fdb11200521ec23e3797fcb5933d0238b7c445427d9330ac68094c",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2021,
+                "reason": "2021年8月本公演。予定開始19日と実施開始21日を区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/sb69_2021",
+                    "checkedAt": "2026-10-26T16:04:32.743Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/cast",
+                    "checkedAt": "2026-10-26T16:04:33.281Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://www.nelke.co.jp/stage/showbyrock-musical2021/index.html",
+                    "checkedAt": "2026-10-26T16:04:33.078Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/story",
+                    "checkedAt": "2026-10-26T16:04:33.383Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/news/?paged=2",
+                    "checkedAt": "2026-10-26T16:04:33.748Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/guide",
+                    "checkedAt": "2026-10-26T16:04:33.972Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://ameblo.jp/worldwideweber/entry-12807741073.html",
+                    "checkedAt": "2026-10-26T16:13:10.068Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  }
+                ]
+              },
+              "original_source_row": {
+                "order": 11,
+                "cast": {
+                  "sourceActorName": "大前優樹",
+                  "sourceActorUrl": null,
+                  "role_name": "ロッカー",
+                  "cast_group": null
+                }
+              }
+            },
+            "matched_actor_id": "684b813a-b65d-48c8-990a-d2e17bdf7209",
+            "matched_play_id": "fd2f7d17-d925-463f-8dc7-b1764fb7f3ab",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "村上幸平",
+            "source_actor_url": "https://kira-hai.net/kohei-murakami",
+            "source_work_title": "Live Musical「SHOW BY ROCK!!」-DO根性北学園編-夜と黒のReflection",
+            "source_year": 2021,
+            "source_role_raw": "ユーダス仁刃笛",
+            "source_role_names": [
+              "ユーダス仁刃笛"
+            ],
+            "source_cast_group": null,
+            "source_order": 12,
+            "source_credit_key": "f2cd41e4d9146185efd0",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/sb69_2021",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/sb69_2021",
+                  "checkedAt": "2026-10-26T16:04:32.743Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/cast",
+                  "checkedAt": "2026-10-26T16:04:33.281Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/showbyrock-musical2021/index.html",
+                  "checkedAt": "2026-10-26T16:04:33.078Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/story",
+                  "checkedAt": "2026-10-26T16:04:33.383Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/news/?paged=2",
+                  "checkedAt": "2026-10-26T16:04:33.748Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/guide",
+                  "checkedAt": "2026-10-26T16:04:33.972Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                },
+                {
+                  "url": "https://ameblo.jp/worldwideweber/entry-12807741073.html",
+                  "checkedAt": "2026-10-26T16:13:10.068Z",
+                  "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                }
+              ],
+              "source_fingerprint": "7eafd40861a1cc06928b70fc905f5daf23771bd63466d225d1eb4e8caaa37e38",
+              "review_fingerprint": "1b045e597c999a145a1e8f7aa7b8d683baef82cca32d54ec773057119e2406e7",
+              "snapshot_fingerprint": "f800401c07fdb11200521ec23e3797fcb5933d0238b7c445427d9330ac68094c",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2021,
+                "reason": "2021年8月本公演。予定開始19日と実施開始21日を区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/sb69_2021",
+                    "checkedAt": "2026-10-26T16:04:32.743Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/cast",
+                    "checkedAt": "2026-10-26T16:04:33.281Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://www.nelke.co.jp/stage/showbyrock-musical2021/index.html",
+                    "checkedAt": "2026-10-26T16:04:33.078Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/story",
+                    "checkedAt": "2026-10-26T16:04:33.383Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/news/?paged=2",
+                    "checkedAt": "2026-10-26T16:04:33.748Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/guide",
+                    "checkedAt": "2026-10-26T16:04:33.972Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  },
+                  {
+                    "url": "https://ameblo.jp/worldwideweber/entry-12807741073.html",
+                    "checkedAt": "2026-10-26T16:13:10.068Z",
+                    "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+                  }
+                ]
+              },
+              "original_source_row": {
+                "order": 12,
+                "cast": {
+                  "sourceActorName": "村上幸平",
+                  "sourceActorUrl": "https://kira-hai.net/kohei-murakami",
+                  "role_name": "ユーダス仁刃笛",
+                  "cast_group": null
+                }
+              }
+            },
+            "matched_actor_id": "e522c807-a7a7-4cd1-8974-88ce326eac35",
+            "matched_play_id": "fd2f7d17-d925-463f-8dc7-b1764fb7f3ab",
+            "status": "pending"
+          }
+        ]
+      },
+      "records": [
+        {
+          "actor": {
+            "id": "2bd9a7b3-cfe3-4293-ad82-1ce92a7d3dad",
+            "slug": "sakata-ryuichiro",
+            "name": "坂田 隆一郎",
+            "kana": "さかた りゅういちろう",
+            "profile": "福岡県出身の俳優・歌手。ソニー・ミュージックエンタテインメント所属。Live Musical『SHOW BY ROCK!!』のヤス役、『ヒプノシスマイク』Rule the Stageの夢野幻太郎役などを務める。ギターや作詞作曲も手がける。",
+            "image_url": null,
+            "sns": {},
+            "gender": "male",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1994-05-15",
+            "height_cm": 174,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": "Ryuichiro Sakata",
+            "profile_en": "An actor and singer from Fukuoka, represented by Sony Music Entertainment. His stage roles include Yasu in Live Musical SHOW BY ROCK!! and Gentaro Yumeno in Hypnosis Mic: Rule the Stage. He also plays guitar and writes music and lyrics.",
+            "death_date": null,
+            "created_at": "prepared",
+            "updated_at": "prepared"
+          },
+          "source": {
+            "sourceActorName": "坂田隆一郎",
+            "sourceActorUrl": "https://kira-hai.net/sakata-ryuichiro",
+            "role_name": "ヤス",
+            "cast_group": "DOKONJOFINGER"
+          },
+          "sourceCreditKey": "f2b073efe265df3ccb26",
+          "sourceOrder": 1,
+          "rawSourceOrder": 1,
+          "billingOrder": 1,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "ea6f3e49-118a-4298-8239-5cb9b832c8fc",
+            "slug": "hayato-weber",
+            "name": "Hayato",
+            "kana": null,
+            "profile": "千葉県出身のボーカリスト・舞台出演者。ダンスボーカルグループ『WEBER』で歌とダンスを担当。2016年のミュージカル『Dance with Devils～D.C.～』ではワラビ役を務めた。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-20T14:07:42.36094+00:00",
+            "updated_at": "2026-10-20T14:07:42.36094+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1993-08-10",
+            "height_cm": null,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "Hayato",
+            "sourceActorUrl": null,
+            "role_name": "ハッチン",
+            "cast_group": "DOKONJOFINGER"
+          },
+          "sourceCreditKey": "b40fea2fae84884d0ced",
+          "sourceOrder": 2,
+          "rawSourceOrder": 2,
+          "billingOrder": 2,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "8f714e97-ff9f-4178-86aa-e3df3e067ea5",
+            "slug": "takamoto-gaku",
+            "name": "高本 学",
+            "kana": "たかもと がく",
+            "profile": "大阪府出身の俳優・モデル。ソニー・ミュージックエンタテインメント所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/C1Wo705",
+              "official": "https://takamotogaku.com/",
+              "instagram": "https://www.instagram.com/gaku.takamoto/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-31T19:58:24.352073+00:00",
+            "updated_at": "2026-03-31T19:58:24.352073+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1993-12-31",
+            "height_cm": 180,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "高本学",
+            "sourceActorUrl": "https://kira-hai.net/takamoto-gaku",
+            "role_name": "ジョウ",
+            "cast_group": "DOKONJOFINGER"
+          },
+          "sourceCreditKey": "15b1e40599b312e2626b",
+          "sourceOrder": 3,
+          "rawSourceOrder": 3,
+          "billingOrder": 3,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "e35338d4-6d3e-4bf7-b5b4-68f09c7fa737",
+            "slug": "raita",
+            "name": "雷太",
+            "kana": "らいた",
+            "profile": "埼玉県出身の俳優、モデル、DJ、ダンサー。現在はフリーランスとして活動している。ミュージカル『テニスの王子様』3rdシーズン（知念寛役）をはじめ、ミュージカル『刀剣乱舞』シリーズ（大典太光世役）、『僕のヒーローアカデミア』The “Ultra” Stage（死柄木弔役）等の舞台作品を中心に出演している。",
+            "image_url": null,
+            "sns": {
+              "x": "https://twitter.com/Raitterbird/",
+              "youtube": "https://www.youtube.com/channel/UCrFJ-5DkdYS7WGkJCZijeGQ",
+              "official": "https://raita-official.com/",
+              "instagram": "https://www.instagram.com/raitaphotos/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:10:00.631722+00:00",
+            "updated_at": "2026-03-21T15:10:00.631722+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1993-12-16",
+            "height_cm": 186,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor, model, DJ, and dancer from Saitama Prefecture. He is currently working as a freelancer. He primarily appears in stage works such as the musical \"The Prince of Tennis\" 3rd season (as Hiroshi Chinen), the musical \"Touken Ranbu\" series (as Mitsuyo Oodenta), and \"My Hero Academia\" The \"Ultra\" Stage (as Tomura Shigaraki).",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "雷太",
+            "sourceActorUrl": "https://kira-hai.net/raita",
+            "role_name": "双循",
+            "cast_group": "DOKONJOFINGER"
+          },
+          "sourceCreditKey": "93cde3537a7560d5e528",
+          "sourceOrder": 4,
+          "rawSourceOrder": 4,
+          "billingOrder": 4,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "4402c1c0-edf6-4e28-9342-6a89ba210c22",
+            "slug": "takahashi-ryoya",
+            "name": "高橋 怜也",
+            "kana": "たかはし りょうや",
+            "profile": "千葉県出身の俳優、歌手。ミュージカル『新テニスの王子様』およびミュージカル『テニスの王子様』4thシーズン（共に跡部景吾役）をはじめ、MANKAI STAGE『A3!』シリーズ（碓氷真澄役）、Live Musical「SHOW BY ROCK!!」（リカオ役）等の舞台作品を中心に出演している。また、アーティスト活動や映画・ドラマ等の映像作品への出演経歴も持つ。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/RyoyaTakahashi_",
+              "official": "https://ryoya-takahashi.net/",
+              "instagram": "https://www.instagram.com/ryoyatakahashi92/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:13:20.008797+00:00",
+            "updated_at": "2026-03-21T15:13:20.008797+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1996-09-02",
+            "height_cm": 176,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor and singer from Chiba Prefecture. He primarily appears in stage works such as the musical \"The New Prince of Tennis\" and the musical \"The Prince of Tennis\" 4th season (both as Keigo Atobe), the MANKAI STAGE \"A3!\" series (as Masumi Usui), and Live Musical \"SHOW BY ROCK!!\" (as Rikao). He also has experience with artist activities and appearing in film and television works.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "高橋怜也",
+            "sourceActorUrl": "https://kira-hai.net/takahashi-ryoya",
+            "role_name": "リカオ",
+            "cast_group": "Yokazenohorizon"
+          },
+          "sourceCreditKey": "5dcf13b447bbaf1e3e0a",
+          "sourceOrder": 5,
+          "rawSourceOrder": 5,
+          "billingOrder": 5,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "8c763fc9-8fdf-4f23-9558-51c5b053ab2e",
+            "slug": "tamura-shogo",
+            "name": "田村 升吾",
+            "kana": "たむら しょうご",
+            "profile": "栃木県出身の俳優。SUI所属。ミュージカル『テニスの王子様』3rdシーズン（芥川慈郎役）やミュージカル『刀剣乱舞』シリーズ（篭手切江役）、舞台『魔法使いの約束』シリーズ（シノ役）等の舞台作品を中心に出演している。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/shogo_tamura",
+              "official": "https://fc-sui.net/tamura_shogo"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:10:00.631722+00:00",
+            "updated_at": "2026-03-21T15:10:00.631722+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1998-05-30",
+            "height_cm": 170,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Tochigi Prefecture. Affiliated with SUI. He primarily appears in stage works such as the musical \"The Prince of Tennis\" 3rd season (as Jiro Akutagawa), the musical \"Touken Ranbu\" series (as Kotegiri Gou), and the stage play \"Promise of Wizard\" series (as Shino).",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "田村升吾",
+            "sourceActorUrl": "https://kira-hai.net/tamura-shogo",
+            "role_name": "ジャロップ",
+            "cast_group": "Yokazenohorizon"
+          },
+          "sourceCreditKey": "7fe1864c1f58085edb96",
+          "sourceOrder": 6,
+          "rawSourceOrder": 6,
+          "billingOrder": 6,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "2633f429-d101-44ce-a8e8-5841fd9e7919",
+            "slug": "takahashi-shunichi",
+            "name": "高橋 駿一",
+            "kana": "たかはし しゅんいち",
+            "profile": "東京都出身の俳優。アニモプロデュース所属。パフォーマンスチーム「PADMA」のメンバーであり、ダブルダッチの世界大会「Double Dutch Contest World」で2012年・2014年に優勝した経歴を持つ。ミュージカル『新テニスの王子様』シリーズ（鈴木惷役）をはじめ、舞台『鬼滅の刃』シリーズ（冨岡義勇役）、『ヒプノシスマイク -Division Rap Battle-』Rule the Stage（谷ケ崎伊吹役）、演劇「ハイキュー!!」（山形隼人役）等の舞台作品を中心に出演している。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/shun1waffle",
+              "official": "https://shunichi-takahashi-jumpjunkie.fanpla.jp/",
+              "instagram": "https://www.instagram.com/shun1official/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:13:20.008797+00:00",
+            "updated_at": "2026-03-21T15:13:20.008797+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1988-08-04",
+            "height_cm": 179,
+            "blood_type": "AB",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Tokyo. Affiliated with Animo Produce. He is a member of the performance team \"PADMA\" and has a history of winning the double dutch world championship \"Double Dutch Contest World\" in 2012 and 2014. He primarily appears in stage works such as the musical \"The New Prince of Tennis\" series (as Shun Suzuki), the stage play \"Demon Slayer: Kimetsu no Yaiba\" series (as Giyu Tomioka), \"Hypnosis Mic -Division Rap Battle-\" Rule the Stage (as Ibuki Yagasaki), and the Engeki \"Haikyu!!\" (as Hayato Yamagata).",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "高橋駿一",
+            "sourceActorUrl": "https://kira-hai.net/takahashi-shunichi",
+            "role_name": "クースカ",
+            "cast_group": "Yokazenohorizon"
+          },
+          "sourceCreditKey": "ce082a95f367168d1738",
+          "sourceOrder": 7,
+          "rawSourceOrder": 7,
+          "billingOrder": 7,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "98dc55d8-b350-4e8d-a98f-67baa4a0f948",
+            "slug": "sonan-kei",
+            "name": "楚南 慧",
+            "kana": "そなん けい",
+            "profile": "沖縄県出身の俳優、モデル、アーティスト（画家）。Gallery Models所属。モデルとして「MEN'S NON-NO」等の雑誌や広告で活動する傍ら、俳優として舞台作品にも出演。ミュージカル『新テニスの王子様』にてU-17（アンダーセブンティーン）日本代表の越知月光役を務めている。その他の主な出演作として、ハイパープロジェクション演劇「ハイキュー!!」（角名倫太郎役）、Live Musical「SHOW BY ROCK!!」（ウララギ役）等の舞台作品がある。また、個展を開催するなど画家としても活動している。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/sonan_kei",
+              "official": "https://www.gallerymodels.net/kei-sonan",
+              "instagram": "https://www.instagram.com/sonan_kei"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:15:49.295117+00:00",
+            "updated_at": "2026-03-21T15:15:49.295117+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1993-09-16",
+            "height_cm": 186,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor, model, and artist (painter) from Okinawa Prefecture. Affiliated with Gallery Models. While working as a model for magazines such as \"MEN'S NON-NO\" and advertisements, he also appears in stage works as an actor. He plays the role of Tsukimitsu Ochi of the U-17 Japan Representatives in the musical \"The New Prince of Tennis\". His other major appearances include stage works such as the Hyper Projection Engeki \"Haikyu!!\" (as Rintaro Suna) and the Live Musical \"SHOW BY ROCK!!\" (as Uraragi). He is also active as a painter, holding solo exhibitions.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "楚南慧",
+            "sourceActorUrl": "https://kira-hai.net/sonan-kei",
+            "role_name": "ウララギ",
+            "cast_group": "Yokazenohorizon"
+          },
+          "sourceCreditKey": "42fe34cd1e9998eb66f4",
+          "sourceOrder": 8,
+          "rawSourceOrder": 8,
+          "billingOrder": 8,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "860e038e-312a-47a4-b165-b5d788d86dcb",
+            "slug": "takemoto-yusuke",
+            "name": "武本 悠佑",
+            "kana": "たけもと ゆうすけ",
+            "profile": "佐賀県出身の俳優。現在はフリーランスとして活動している。ミュージカル『新テニスの王子様』（白石蔵ノ介役）をはじめ、ミュージカル『刀剣乱舞』シリーズ（南泉一文字役）等の舞台作品を中心に出演している。また、過去にはボーイズグループのメンバーとして活動していた経歴を持つ。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/yusuke_takemoto",
+              "instagram": "https://www.instagram.com/yuckejan_yukke/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:13:20.008797+00:00",
+            "updated_at": "2026-03-21T15:13:20.008797+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1998-05-01",
+            "height_cm": 175,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Saga Prefecture. He is currently working as a freelancer (previously affiliated with Starlay Production). He primarily appears in stage works such as the musical \"The New Prince of Tennis\" (as Kuranosuke Shiraishi) and the musical \"Touken Ranbu\" series (as Nansen Ichimonji). He also has a background of being active as a member of a boys group in the past.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "武本悠佑",
+            "sourceActorUrl": "https://kira-hai.net/takemoto-yusuke",
+            "role_name": "919(ナイク)",
+            "cast_group": "Kuronoatmosphere"
+          },
+          "sourceCreditKey": "6aa1a68dd3a4f84d8760",
+          "sourceOrder": 9,
+          "rawSourceOrder": 9,
+          "billingOrder": 9,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "48ba03fd-af97-487f-a05b-cd0941e44c0d",
+            "slug": "tahori-reo",
+            "name": "タホリ 玲央",
+            "kana": "たほり れお",
+            "profile": "俳優。インフルエンサーとしても活動する。ハイパープロジェクション演劇『ハイキュー!!』“ゴミ捨て場の決戦”の灰羽リエーフ役、Live Musical『SHOW BY ROCK!!』の151（イコイ）役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": "male",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1999-07-14",
+            "height_cm": 188,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Reo Tahori",
+            "profile_en": "An actor who also works as an influencer. His stage roles include Lev Haiba in Hyper Projection Engeki Haikyu!!: The Dumpster Battle and Ecoy (151) in Live Musical SHOW BY ROCK!!.",
+            "death_date": null,
+            "created_at": "prepared",
+            "updated_at": "prepared"
+          },
+          "source": {
+            "sourceActorName": "タホリ玲央",
+            "sourceActorUrl": "https://kira-hai.net/tahori-reo",
+            "role_name": "151(イコイ)",
+            "cast_group": "Kuronoatmosphere"
+          },
+          "sourceCreditKey": "9222b8f14216f61260d5",
+          "sourceOrder": 10,
+          "rawSourceOrder": 10,
+          "billingOrder": 10,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "684b813a-b65d-48c8-990a-d2e17bdf7209",
+            "slug": "omae-yuki",
+            "name": "大前 優樹",
+            "kana": "おおまえ ゆうき",
+            "profile": "ミュージカルを中心に出演する俳優。『ラブ・ネバー・ダイ』のグスタフ役、Live Musical『SHOW BY ROCK!!』のロッカー役などを務める。声楽にも取り組み、2025年の第4回東京国際管弦声楽コンクールで声楽部門高校1・2年生の部第1位を受賞。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": null,
+            "height_cm": null,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Yuki Omae",
+            "profile_en": "An actor whose work includes musicals. His roles include Gustav in Love Never Dies and Rocker in Live Musical SHOW BY ROCK!!. He also studies classical singing and won first prize in the vocal division for first- and second-year high school students at the 4th Tokyo International Winds, Strings and Vocal Competition in 2025.",
+            "death_date": null,
+            "created_at": "prepared",
+            "updated_at": "prepared"
+          },
+          "source": {
+            "sourceActorName": "大前優樹",
+            "sourceActorUrl": null,
+            "role_name": "ロッカー",
+            "cast_group": null
+          },
+          "sourceCreditKey": "0f657f5253a370af5894",
+          "sourceOrder": 11,
+          "rawSourceOrder": 11,
+          "billingOrder": 11,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "e522c807-a7a7-4cd1-8974-88ce326eac35",
+            "slug": "murakami-kohei",
+            "name": "村上 幸平",
+            "kana": "むらかみ こうへい",
+            "profile": "東京都出身の俳優。株式会社ドルチェスター所属。特撮ドラマ『仮面ライダー555』（草加雅人役）や『動物戦隊ジュウオウジャー』（バド役）等の映像作品で広く知られる。舞台作品では、ミュージカル『新テニスの王子様』シリーズ（黒部由起夫役）をはじめ、LIVEミュージカル演劇『チャージマン研!』（魔王役）等に出演している。また、日本甲殻類学会に所属するほどのザリガニ愛好家としての活動経歴も持つ。",
+            "image_url": null,
+            "sns": {
+              "x": "https://twitter.com/kohei__murakami",
+              "official": "http://blog.koheimurakami.com/",
+              "instagram": "https://www.instagram.com/kohei__murakami/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:13:20.008797+00:00",
+            "updated_at": "2026-03-21T15:13:20.008797+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1976-06-01",
+            "height_cm": 181,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Tokyo. Affiliated with Dolce Star. He is widely known for his roles in film and television works, including tokusatsu dramas such as \"Kamen Rider 555\" (as Masato Kusaka) and \"Doubutsu Sentai Zyuohger\" (as Bado). He appears in stage works such as the musical \"The New Prince of Tennis\" series (as Yukio Kurobe) and the LIVE Musical Engeki \"Charge-man Ken!\" (as Maou). He is also known for his activities as a crayfish enthusiast and is a member of the Carcinological Society of Japan.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "村上幸平",
+            "sourceActorUrl": "https://kira-hai.net/kohei-murakami",
+            "role_name": "ユーダス仁刃笛",
+            "cast_group": null
+          },
+          "sourceCreditKey": "f2cd41e4d9146185efd0",
+          "sourceOrder": 12,
+          "rawSourceOrder": 12,
+          "billingOrder": 12,
+          "expectedNote": null,
+          "existingCast": null
+        }
+      ],
+      "creditOnly": [],
+      "officialOrder": [
+        {
+          "role": "ヤス",
+          "name": "坂田隆一郎",
+          "group": "DOKONJOFINGER"
+        },
+        {
+          "role": "ハッチン",
+          "name": "Hayato",
+          "group": "DOKONJOFINGER"
+        },
+        {
+          "role": "ジョウ",
+          "name": "高本 学",
+          "group": "DOKONJOFINGER"
+        },
+        {
+          "role": "双循",
+          "name": "雷太",
+          "group": "DOKONJOFINGER"
+        },
+        {
+          "role": "リカオ",
+          "name": "高橋怜也",
+          "group": "Yokazenohorizon"
+        },
+        {
+          "role": "ジャロップ",
+          "name": "田村升吾",
+          "group": "Yokazenohorizon"
+        },
+        {
+          "role": "クースカ",
+          "name": "高橋駿一",
+          "group": "Yokazenohorizon"
+        },
+        {
+          "role": "ウララギ",
+          "name": "楚南 慧",
+          "group": "Yokazenohorizon"
+        },
+        {
+          "role": "919(ナイク)",
+          "name": "武本悠佑",
+          "group": "Kuronoatmosphere"
+        },
+        {
+          "role": "151(イコイ)",
+          "name": "タホリ玲央",
+          "group": "Kuronoatmosphere"
+        },
+        {
+          "role": "ロッカー",
+          "name": "大前優樹",
+          "group": null
+        },
+        {
+          "role": "ユーダス仁刃笛",
+          "name": "村上幸平",
+          "group": null
+        }
+      ],
+      "schedules": {
+        "planned": "2021-08-19/2021-08-29",
+        "performed": "2021-08-21/2021-08-29",
+        "cancelled": [
+          "2021-08-19T19:00:00+09:00",
+          "2021-08-20T19:00:00+09:00"
+        ],
+        "performedCount": 10
+      },
+      "legacyCandidates": [],
+      "legacyUpgrades": [],
+      "legacyKept": [],
+      "transformations": [
+        {
+          "type": "correct_role_typo",
+          "from": "ララギ",
+          "to": "ウララギ",
+          "sourceActorName": "楚南慧",
+          "evidence": [
+            {
+              "url": "https://showbyrock-musical.com/cast",
+              "checkedAt": "2026-10-26T16:04:33.281Z",
+              "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+            },
+            {
+              "url": "https://www.nelke.co.jp/stage/showbyrock-musical2021/index.html",
+              "checkedAt": "2026-10-26T16:04:33.078Z",
+              "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+            }
+          ]
+        },
+        {
+          "type": "add_official_band_groups",
+          "bands": [
+            "DOKONJOFINGER",
+            "Yokazenohorizon",
+            "Kuronoatmosphere"
+          ],
+          "independent": [
+            "ロッカー",
+            "ユーダス仁刃笛"
+          ],
+          "evidence": [
+            {
+              "url": "https://showbyrock-musical.com/cast",
+              "checkedAt": "2026-10-26T16:04:33.281Z",
+              "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+            }
+          ]
+        },
+        {
+          "type": "actual_opening_date",
+          "planned": "2021-08-19",
+          "actual": "2021-08-21",
+          "cancelledPerformances": 2,
+          "evidence": [
+            {
+              "url": "https://showbyrock-musical.com/news/?paged=2",
+              "checkedAt": "2026-10-26T16:04:33.748Z",
+              "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+            },
+            {
+              "url": "https://ameblo.jp/worldwideweber/entry-12807741073.html",
+              "checkedAt": "2026-10-26T16:13:10.068Z",
+              "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+            }
+          ]
+        },
+        {
+          "type": "billing_order",
+          "reason": "公式・元資料12行順は一致。誤字の元原文を別保存。",
+          "evidence": [
+            {
+              "url": "https://showbyrock-musical.com/cast",
+              "checkedAt": "2026-10-26T16:04:33.281Z",
+              "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+            }
+          ]
+        }
+      ],
+      "exceptions": [
+        "12人全員が公式の個別役を持つ主要キャスト。アンサンブル追加なし。既存9人物は全属性保全して再利用。",
+        "キラハイ「ララギ」を公式「ウララギ」へ訂正。元行順と誤字は候補source_evidence.original_source_rowおよびrawSourceに保全。",
+        "当初8/19開始だが19・20日19時の2公演は中止。8/21開幕し8/29まで全10公演。期間は実施日、当初予定と中止公演は別クレジットに保存。",
+        "チケット表の♪/#やY/Rは来場特典区分。キャスト交替・Wキャストにはしない。8/28の鎌苅健太・KIMERUは配信コメンタリーで本公演配役へ混ぜない。",
+        "大前優樹は主要子役歴と現在の声楽活動があるため個別登録。DOB・性別など未確定属性はnull。学校・学年の変動情報を公開プロフィールへ固定しない。",
+        "詳細な英語役名辞書・スタッフクレジット英訳の拡張、現行配信状況・混合STAGE FES等は後続。vodは空のまま、過去配信を現在配信とみなさない。"
+      ]
+    }
+  ],
+  "keptPlays": [
+    {
+      "id": "10701832-54d0-4d2b-b2aa-b6da6a0d20f9",
+      "slug": "sb69_2017",
+      "title": "Live Musical「SHOW BY ROCK!!」～THE FES Ⅱ-Thousand XVⅡ～",
+      "franchise_id": "def83f64-c1c3-48d4-82d6-d785af1b2eda",
+      "summary": "サンリオのキャラクタープロジェクト『SHOW BY ROCK!!』を原作とするシリーズ初のライブイベント。シンガンクリムゾンズ、トライクロニカ、アルカレアファクトが集い、セットリストの異なる「Genesis」「Destiny」の2種類の公演を届ける。MCはKimeru。",
+      "period": "2017年5月11日〜13日",
+      "venue": "品川プリンスホテル ステラボール",
+      "vod": {},
+      "genre": null,
+      "created_at": "2026-10-26T11:58:08.864303+00:00",
+      "updated_at": "2026-10-26T11:58:08.864303+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "サンリオ"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "ストーリー原案",
+          "names": [
+            "待田堂子"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "演出",
+          "names": [
+            "斎藤栄作"
+          ],
+          "is_core": true,
+          "sort_order": 3
+        },
+        {
+          "role": "MC",
+          "names": [
+            "Kimeru"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "主催",
+          "names": [
+            "SHOW BY ROCK!! MUSICAL 製作委員会"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "公演構成",
+          "names": [
+            "セットリストの異なる「Genesis」「Destiny」の2種類の公演。"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "The first live event in the stage series based on Sanrio’s SHOW BY ROCK!! character project. Shingancrimsonz, Trichronika and Arcareafact perform in two versions, Genesis and Destiny, with different set lists. Kimeru serves as MC.",
+      "title_en": "Live Musical SHOW BY ROCK!!: THE FES II-Thousand XVII"
+    },
+    {
+      "id": "5a931878-6f48-4363-ab4c-8978df464eb5",
+      "slug": "sb69_2018-2",
+      "title": "Live Musical「SHOW BY ROCK!!」―狂騒のBloodyLabyrinth―",
+      "franchise_id": "def83f64-c1c3-48d4-82d6-d785af1b2eda",
+      "summary": "シンガンクリムゾンズたちの前に、新たなバンド・フカシギミックが登場する。歌と演奏、バンド同士のやりとりで描く『SHOW BY ROCK!!』のLive Musical本公演第2弾。リク役はゆうたろうと宇佐卓真のWキャストで、東京・大阪で上演された。",
+      "period": "2018年8月30日〜9月17日",
+      "venue": "東京：天王洲 銀河劇場／大阪：梅田芸術劇場 シアター・ドラマシティ",
+      "vod": {},
+      "genre": null,
+      "created_at": "2026-10-26T15:36:49.496992+00:00",
+      "updated_at": "2026-10-26T15:36:49.496992+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "サンリオ"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "ストーリー原案",
+          "names": [
+            "待田堂子"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "脚本・演出",
+          "names": [
+            "斎藤栄作"
+          ],
+          "is_core": true,
+          "sort_order": 3
+        },
+        {
+          "role": "作詞",
+          "names": [
+            "三ツ矢雄二"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "音楽",
+          "names": [
+            "楠瀬タクヤ"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "振付",
+          "names": [
+            "當間里美"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        },
+        {
+          "role": "主催",
+          "names": [
+            "SHOW BY ROCK!! MUSICAL製作委員会"
+          ],
+          "is_core": false,
+          "sort_order": 7
+        },
+        {
+          "role": "ジューダスJr.",
+          "names": [
+            "阿部快征",
+            "大野紘幸",
+            "北川雄也",
+            "吉高志音"
+          ],
+          "is_core": false,
+          "sort_order": 8
+        },
+        {
+          "role": "公演日程",
+          "names": [
+            "東京：2018年8月30日〜9月9日（天王洲 銀河劇場）",
+            "大阪：2018年9月14日〜17日（梅田芸術劇場 シアター・ドラマシティ）"
+          ],
+          "is_core": false,
+          "sort_order": 9
+        },
+        {
+          "role": "上演時間（予定）",
+          "names": [
+            "約2時間（休憩なし）"
+          ],
+          "is_core": false,
+          "sort_order": 10
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "Fukashigimmick joins Shingancrimsonz and the other bands in the second full Live Musical production of SHOW BY ROCK!!. Songs, performances and encounters between the bands unfold on stage. Yutaro and Takuma Usa share the role of Riku in this Tokyo and Osaka production.",
+      "title_en": "Live Musical SHOW BY ROCK!!: Kyoso no BloodyLabyrinth"
+    },
+    {
+      "id": "66c6f699-0ec1-44eb-82dd-9fbba0dac861",
+      "slug": "sb69_2018",
+      "title": "Live Musical「SHOW BY ROCK!!」～THE FES 2018～",
+      "franchise_id": "def83f64-c1c3-48d4-82d6-d785af1b2eda",
+      "summary": "シンガンクリムゾンズ、トライクロニカ、アルカレアファクト、忍迅雷音、défendu aubeの5バンド17人が出演する、シリーズ2度目のライブイベント。Zepp DiverCity(TOKYO)を舞台に、各バンドの楽曲とパフォーマンスを届ける。",
+      "period": "2018年6月26日〜27日",
+      "venue": "Zepp DiverCity(TOKYO)",
+      "vod": {},
+      "genre": null,
+      "created_at": "2026-10-26T12:39:47.940822+00:00",
+      "updated_at": "2026-10-26T12:39:47.940822+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "サンリオ"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "ストーリー原案",
+          "names": [
+            "待田堂子"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "脚本・演出",
+          "names": [
+            "斎藤栄作"
+          ],
+          "is_core": true,
+          "sort_order": 3
+        },
+        {
+          "role": "作詞",
+          "names": [
+            "三ツ矢雄二"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "音楽",
+          "names": [
+            "楠瀬タクヤ"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "主催",
+          "names": [
+            "SHOW BY ROCK!! MUSICAL製作委員会"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        },
+        {
+          "role": "公演日程",
+          "names": [
+            "2018/06/26 19:30開演（18:30開場）",
+            "2018/06/27 19:00開演（18:00開場）"
+          ],
+          "is_core": false,
+          "sort_order": 7
+        },
+        {
+          "role": "上演時間（予定）",
+          "names": [
+            "約90分（途中休憩なし）"
+          ],
+          "is_core": false,
+          "sort_order": 8
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "The second live event in the series brings together 17 performers from five bands: Shingancrimsonz, Trichronika, Arcareafact, Ninjinriot and défendu aube. Each band presents its songs and performances at Zepp DiverCity (Tokyo).",
+      "title_en": "Live Musical SHOW BY ROCK!!: THE FES 2018"
+    },
+    {
+      "id": "7944fa96-0456-4e23-a0f8-eee9924b000d",
+      "slug": "sb69_2016",
+      "title": "SHOW BY ROCK!! MUSICAL ～唱え家畜共ッ！深紅色の堕天革命黙示録ッ！！～",
+      "franchise_id": "def83f64-c1c3-48d4-82d6-d785af1b2eda",
+      "summary": "音楽都市MIDI CITY。シンガンクリムゾンズは所属事務所の社長・有栖川メイプルが作った借金を返すため、賞金を目指して音楽フェスに挑む。人気アイドルバンドのトライクロニカも参加を表明し、ライバル同士の勝負が始まる。サンリオのキャラクタープロジェクトを原作とする初のミュージカル。",
+      "period": "2016年2月11日〜16日",
+      "venue": "Zeppブルーシアター六本木",
+      "vod": {},
+      "genre": null,
+      "created_at": "2026-10-26T11:02:07.658788+00:00",
+      "updated_at": "2026-10-26T11:02:07.658788+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "サンリオ"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "脚本・演出",
+          "names": [
+            "福島三郎"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "ストーリー原案",
+          "names": [
+            "待田堂子"
+          ],
+          "is_core": true,
+          "sort_order": 3
+        },
+        {
+          "role": "製作",
+          "names": [
+            "セガ・ライブクリエイション"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "主催",
+          "names": [
+            "SHOW BY ROCK!! MUSICAL製作委員会",
+            "Zeppブルーシアター六本木運営委員会"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "ダンサー",
+          "names": [
+            "高木裕和",
+            "石丸隆義",
+            "丸山泰右",
+            "中智紀"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        },
+        {
+          "role": "アフターイベント",
+          "names": [
+            "2016/02/11 19:00公演終演後：シンガンクリムゾンズのトークショー。出演：米原幸佑・輝馬・鳥越裕貴・滝川英治。",
+            "2016/02/15 19:00公演終演後：トライクロニカのトークショー。出演：三津谷亮・橋本祥平・月岡弘一。MC：野崎数馬。",
+            "2016/02/12 19:00・02/16 14:00公演終演後：シンガンクリムゾンズとトライクロニカのミニコンサート。"
+          ],
+          "is_core": false,
+          "sort_order": 7
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "In MIDI CITY, Shingancrimsonz enters a music festival to win enough prize money to repay the debts of its agency president, Maple Arisugawa. When popular idol band Trichronika also joins the contest, a rivalry unfolds. The first musical based on Sanrio’s SHOW BY ROCK!! character project.",
+      "title_en": "SHOW BY ROCK!! MUSICAL (2016)"
+    },
+    {
+      "id": "fb7e5d01-d53e-450b-ad44-324cb86ee2eb",
+      "slug": "sb69_2017-2",
+      "title": "Live Musical「SHOW BY ROCK!!」―深淵のCrossAmbivalence―",
+      "franchise_id": "def83f64-c1c3-48d4-82d6-d785af1b2eda",
+      "summary": "音楽都市MIDI CITYで頂点を目指すシンガンクリムゾンズ。大手レーベル・ジューダスのフェスへ代役として参加し、トライクロニカやアルカレアファクトと競演するが、その陰で不穏な動きが始まる。新たに忍迅雷音も加わり、バンドたちの物語が交差する。",
+      "period": "2017年10月19日〜29日",
+      "venue": "AiiA 2.5 Theater Tokyo",
+      "vod": {},
+      "genre": null,
+      "created_at": "2026-10-26T12:25:02.943435+00:00",
+      "updated_at": "2026-10-26T12:25:02.943435+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "サンリオ"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "ストーリー原案",
+          "names": [
+            "待田堂子"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "脚本・演出",
+          "names": [
+            "斎藤栄作"
+          ],
+          "is_core": true,
+          "sort_order": 3
+        },
+        {
+          "role": "作詞",
+          "names": [
+            "三ツ矢雄二"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "音楽",
+          "names": [
+            "楠瀬タクヤ"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "振付",
+          "names": [
+            "當間里美"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        },
+        {
+          "role": "美術",
+          "names": [
+            "湯浅美穂里"
+          ],
+          "is_core": false,
+          "sort_order": 7
+        },
+        {
+          "role": "音響",
+          "names": [
+            "増澤 努"
+          ],
+          "is_core": false,
+          "sort_order": 8
+        },
+        {
+          "role": "照明",
+          "names": [
+            "大波多秀起"
+          ],
+          "is_core": false,
+          "sort_order": 9
+        },
+        {
+          "role": "映像",
+          "names": [
+            "本谷明人"
+          ],
+          "is_core": false,
+          "sort_order": 10
+        },
+        {
+          "role": "歌唱指導",
+          "names": [
+            "カサノボー晃"
+          ],
+          "is_core": false,
+          "sort_order": 11
+        },
+        {
+          "role": "衣裳",
+          "names": [
+            "ヨシダミホ"
+          ],
+          "is_core": false,
+          "sort_order": 12
+        },
+        {
+          "role": "ヘアメイク",
+          "names": [
+            "アトリエレオパード"
+          ],
+          "is_core": false,
+          "sort_order": 13
+        },
+        {
+          "role": "演出助手",
+          "names": [
+            "山口美絵"
+          ],
+          "is_core": false,
+          "sort_order": 14
+        },
+        {
+          "role": "技術監督",
+          "names": [
+            "寅川英司"
+          ],
+          "is_core": false,
+          "sort_order": 15
+        },
+        {
+          "role": "舞台監督",
+          "names": [
+            "弘光哲也"
+          ],
+          "is_core": false,
+          "sort_order": 16
+        },
+        {
+          "role": "宣伝写真",
+          "names": [
+            "宮坂浩見"
+          ],
+          "is_core": false,
+          "sort_order": 17
+        },
+        {
+          "role": "デザイン",
+          "names": [
+            "西本恵理子"
+          ],
+          "is_core": false,
+          "sort_order": 18
+        },
+        {
+          "role": "プロデューサー",
+          "names": [
+            "髙橋卓也（サンリオ）",
+            "荒木田由紀（ネルケプランニング）"
+          ],
+          "is_core": false,
+          "sort_order": 19
+        },
+        {
+          "role": "主催",
+          "names": [
+            "SHOW BY ROCK!! MUSICAL 製作委員会"
+          ],
+          "is_core": false,
+          "sort_order": 20
+        },
+        {
+          "role": "ジューダスJr.",
+          "names": [
+            "増本健一",
+            "松本健人",
+            "阿部大地",
+            "久保順杜"
+          ],
+          "is_core": false,
+          "sort_order": 21
+        },
+        {
+          "role": "出演者変更",
+          "names": [
+            "ロム役は、怪我の治療のため降板した滝川英治に代わり郷本直也が出演。"
+          ],
+          "is_core": false,
+          "sort_order": 22
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "Shingancrimsonz pursues the top spot in the music city MIDI CITY. The band fills in at a festival organized by major label Judas, performing alongside Trichronika and Arcareafact as something ominous stirs behind the scenes. With Ninjinriot joining the stage, the bands’ stories intersect.",
+      "title_en": "Live Musical SHOW BY ROCK!!: Shin’en no CrossAmbivalence"
+    }
+  ],
+  "evidence": {
+    "links": [
+      {
+        "url": "https://kira-hai.net/sb69_2021",
+        "checkedAt": "2026-10-26T16:04:32.743Z",
+        "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+      },
+      {
+        "url": "https://showbyrock-musical.com/cast",
+        "checkedAt": "2026-10-26T16:04:33.281Z",
+        "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+      },
+      {
+        "url": "https://www.nelke.co.jp/stage/showbyrock-musical2021/index.html",
+        "checkedAt": "2026-10-26T16:04:33.078Z",
+        "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+      },
+      {
+        "url": "https://showbyrock-musical.com/story",
+        "checkedAt": "2026-10-26T16:04:33.383Z",
+        "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+      },
+      {
+        "url": "https://showbyrock-musical.com/news/?paged=2",
+        "checkedAt": "2026-10-26T16:04:33.748Z",
+        "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+      },
+      {
+        "url": "https://showbyrock-musical.com/guide",
+        "checkedAt": "2026-10-26T16:04:33.972Z",
+        "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+      },
+      {
+        "url": "https://ameblo.jp/worldwideweber/entry-12807741073.html",
+        "checkedAt": "2026-10-26T16:13:10.068Z",
+        "note": "原文とSHA256を保存。採用範囲・不採用属性は個別notes参照。"
+      }
+    ],
+    "sources": [
+      {
+        "label": "kira",
+        "url": "https://kira-hai.net/sb69_2021",
+        "status": 200,
+        "checkedAt": "2026-10-26T16:04:32.743Z",
+        "sha256": "e66e91d9519e43cc6e1c0abea86acfe6a29ad08bed91c12ff3141e209b0f0de3",
+        "bytes": 55205
+      },
+      {
+        "label": "nelke",
+        "url": "https://www.nelke.co.jp/stage/showbyrock-musical2021/index.html",
+        "status": 200,
+        "checkedAt": "2026-10-26T16:04:33.078Z",
+        "sha256": "424a217ea4e4d5005f4c650a4653e8996c4c98aea6ea444a2541b894f7fc170a",
+        "bytes": 44231
+      },
+      {
+        "label": "officialCast",
+        "url": "https://showbyrock-musical.com/cast",
+        "status": 200,
+        "checkedAt": "2026-10-26T16:04:33.281Z",
+        "sha256": "77919b82da257cfea2a1302d327a68f7bdc9f3b555df5d74205066b689cec11c",
+        "bytes": 22064
+      },
+      {
+        "label": "officialStory",
+        "url": "https://showbyrock-musical.com/story",
+        "status": 200,
+        "checkedAt": "2026-10-26T16:04:33.383Z",
+        "sha256": "28e01be3c8e0d949d88071d7fde861079231dbb4d34eda4d66667ad3b5e55895",
+        "bytes": 10267
+      },
+      {
+        "label": "officialTickets",
+        "url": "https://showbyrock-musical.com/tickets",
+        "status": 200,
+        "checkedAt": "2026-10-26T16:04:33.560Z",
+        "sha256": "1b9f2091d65a2982e7d3558528b8fc8f1baaf8c40f7d1b05c9f1eb2b91e6ccd5",
+        "bytes": 35226
+      },
+      {
+        "label": "news",
+        "url": "https://showbyrock-musical.com/news/",
+        "status": 200,
+        "checkedAt": "2026-10-26T16:04:33.658Z",
+        "sha256": "204a6ae37465eaebc4e35ec1af3dd977ac6530941fd17e2ebc729bf0eb76d205",
+        "bytes": 40760
+      },
+      {
+        "label": "news2",
+        "url": "https://showbyrock-musical.com/news/?paged=2",
+        "status": 200,
+        "checkedAt": "2026-10-26T16:04:33.748Z",
+        "sha256": "7df881d06324fd851298f04059569140956b1e949ea869254852f3d4835f1105",
+        "bytes": 31334
+      },
+      {
+        "label": "news3",
+        "url": "https://showbyrock-musical.com/news/?paged=3",
+        "status": 200,
+        "checkedAt": "2026-10-26T16:04:33.853Z",
+        "sha256": "2dc84d846778e9a764fdfe2f4306aa16229c6f099ac74a4d0ae40f4edb80c3ed",
+        "bytes": 17969
+      },
+      {
+        "label": "officialGuide",
+        "url": "https://showbyrock-musical.com/guide",
+        "status": 200,
+        "checkedAt": "2026-10-26T16:04:33.972Z",
+        "sha256": "dd0782a555e869d6ba96f943ed3248e55a52120df007da6344bd665226334bac",
+        "bytes": 33719
+      },
+      {
+        "label": "changelog",
+        "url": "https://supabase.com/changelog.md",
+        "status": 200,
+        "checkedAt": "2026-10-26T16:04:34.254Z",
+        "sha256": "45528009025b8ad8487ccb73f7c769b66d4b0e7aa4560157047899dcb5b5a006",
+        "bytes": 102641
+      },
+      {
+        "label": "sakataKira",
+        "url": "https://kira-hai.net/sakata-ryuichiro",
+        "status": 200,
+        "checkedAt": "2026-10-26T16:13:06.680Z",
+        "sha256": "a476a31519d0d621f6bc4a695d40aa861f2a562ccee74d8be9d09861a7bb71a2",
+        "bytes": 66340
+      },
+      {
+        "label": "sakataAgency",
+        "url": "https://red-actors.com/artist/ryuichiro-sakata/",
+        "status": 200,
+        "checkedAt": "2026-10-26T16:13:06.947Z",
+        "sha256": "81c244076e0085c278c2bdc97bc66a109e1e5eff4b5bcdb30ec673c096bea072",
+        "bytes": 45617
+      },
+      {
+        "label": "sakataGender",
+        "url": "https://www.animatetimes.com/tag/details.php?id=18622",
+        "status": 200,
+        "checkedAt": "2026-10-26T16:13:07.631Z",
+        "sha256": "15b64f92045fbd1b9f8406181e02d72692669ac5e165fd94b918512790bebdb7",
+        "bytes": 198823
+      },
+      {
+        "label": "tahoriKira",
+        "url": "https://kira-hai.net/tahori-reo",
+        "status": 200,
+        "checkedAt": "2026-10-26T16:13:07.823Z",
+        "sha256": "371615d369fc772b27230a817981f08fa3ed92e719a92e76d5ccb1178f2493bb",
+        "bytes": 54279
+      },
+      {
+        "label": "tahoriAgency",
+        "url": "https://talent.platinumproduction.jp/tahori",
+        "error": "fetch failed",
+        "checkedAt": "2026-10-26T16:13:08.038Z"
+      },
+      {
+        "label": "tahoriTv",
+        "url": "https://thetv.jp/person/2000059355/",
+        "status": 200,
+        "checkedAt": "2026-10-26T16:13:08.380Z",
+        "sha256": "edb214e861072a73d825a307dbeea1aefbbd5ba7c1b9d6975b5a6fe4e21d0ca8",
+        "bytes": 43390
+      },
+      {
+        "label": "tahoriGender",
+        "url": "https://www.suruga-ya.com/ja/product/GG666135",
+        "status": 403,
+        "checkedAt": "2026-10-26T16:13:08.590Z",
+        "sha256": "ff1fc175a451772ba8e32b3ca2f1af9f53970a0089f580f99174765f46fdff90",
+        "bytes": 5496
+      },
+      {
+        "label": "omaeAward",
+        "url": "https://www.tiaa-jp.com/blog/2025/12/15/30283",
+        "status": 200,
+        "checkedAt": "2026-10-26T16:13:09.002Z",
+        "sha256": "5982b62db2e93fc642777bcf209292367998094a1eed064df97349202acd3b57",
+        "bytes": 356239
+      },
+      {
+        "label": "omaeStage",
+        "url": "https://prtimes.jp/main/html/rd/p/000000112.000028143.html",
+        "status": 200,
+        "checkedAt": "2026-10-26T16:13:09.339Z",
+        "sha256": "aa392e486a6d7b385b248c4efc6900b95b2e4cb0b5c0c4f7f1a5bd87e3fa7fa7",
+        "bytes": 261195
+      },
+      {
+        "label": "hayatoBlog",
+        "url": "https://ameblo.jp/worldwideweber/entry-12807741073.html",
+        "status": 200,
+        "checkedAt": "2026-10-26T16:13:10.068Z",
+        "sha256": "be3e02fccdff39f3e25340fde30a835ae4f0fb053d3cd1e05af9343fbceaad2a",
+        "bytes": 131284
+      },
+      {
+        "label": "tahoriGenderJp",
+        "url": "https://www.suruga-ya.jp/kaitori/kaitori_detail/GG666135",
+        "status": 200,
+        "checkedAt": "2026-10-26T16:20:38.895Z",
+        "sha256": "4093494dea9f77479ea05173742c1b9601d04feeb4cf6af783c74163533aca78",
+        "bytes": 40096
+      },
+      {
+        "label": "omaeInterview",
+        "url": "https://www.tiaa-jp.com/blog/2025/12/15/30298",
+        "status": 200,
+        "checkedAt": "2026-10-26T16:20:39.355Z",
+        "sha256": "75e3f56038b6d8a298a841da1aa18709086a63356c299522f5a8b90d8058e932",
+        "bytes": 369656
+      }
+    ],
+    "unresolved": [
+      "大前優樹のDOB・性別・出身地・所属など未確認属性。タホリ玲央の現在所属。詳細英訳と現行配信、混合イベントは後続。"
+    ],
+    "notes": [
+      "既存RPCによる出典付き候補保存と採用。DBスキーマ・RLS・アプリ・デザインは変更しない。Supabase changelog確認済み、当該JSONB DML/RPC変更に影響する破壊的変更なし。",
+      "タホリ旧所属ページはfetch失敗、国際版駿河屋は403。属性の現所属根拠として採用しない。国内版駿河屋200で商品分類を保存。"
+    ]
+  },
+  "requestKey": "e46b6904a025eea18573e21def890da16a42623162cdafa6f8a6fa0fe16139d5",
+  "verification": {
+    "passed": true,
+    "requestKey": "e46b6904a025eea18573e21def890da16a42623162cdafa6f8a6fa0fe16139d5",
+    "changes": {
+      "actors": {
+        "before": 1163,
+        "after": 1166,
+        "added": 3,
+        "modified": 0,
+        "deleted": 0
+      },
+      "plays": {
+        "before": 409,
+        "after": 410,
+        "added": 1,
+        "modified": 0,
+        "deleted": 0
+      },
+      "franchises": {
+        "before": 198,
+        "after": 198,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "casts": {
+        "before": 4202,
+        "after": 4214,
+        "added": 12,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_actors": {
+        "before": 1701,
+        "after": 1701,
+        "added": 0,
+        "modified": 2,
+        "deleted": 0
+      },
+      "external_cast_candidates": {
+        "before": 3551,
+        "after": 3563,
+        "added": 12,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_import_logs": {
+        "before": 5685,
+        "after": 5717,
+        "added": 32,
+        "modified": 0,
+        "deleted": 0
+      },
+      "actor_identity_sources": {
+        "before": 509,
+        "after": 512,
+        "added": 3,
+        "modified": 0,
+        "deleted": 0
+      }
+    },
+    "newActors": 3,
+    "reusedActors": 9,
+    "newPlays": 1,
+    "newCasts": 12,
+    "creditOnlyNames": 0,
+    "creditCategories": 23,
+    "performedCount": 10,
+    "cancelledPerformances": 2,
+    "seriesWorks": 6,
+    "seriesCastRows": 89,
+    "seriesActors": 45,
+    "totals": {
+      "actors": 1166,
+      "plays": 410,
+      "casts": 4214
+    }
+  },
+  "publicVerification": {
+    "passed": true,
+    "pages": 38,
+    "seriesWorks": 6,
+    "seriesCastRows": 89,
+    "newCastRows": 12,
+    "newActors": 3,
+    "creditOnlyNames": 0,
+    "performedCount": 10,
+    "cancelledPerformances": 2,
+    "results": [
+      {
+        "path": "/series/show-by-rock",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/sb69_2017",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/sb69_2018-2",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/sb69_2018",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/sb69_2016",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/sakata-ryuichiro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/sb69_2017-2",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/hayato-weber",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/sb69_2021",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/takamoto-gaku",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/raita",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/tamura-shogo",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/takahashi-ryoya",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/takahashi-shunichi",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/tahori-reo",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/takemoto-yusuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/sonan-kei",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/omae-yuki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/murakami-kohei",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/series/show-by-rock",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/sb69_2018",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/sb69_2017",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/sb69_2018-2",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/sb69_2016",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/sb69_2017-2",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/sakata-ryuichiro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/sb69_2021",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/hayato-weber",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/raita",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/takamoto-gaku",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/takahashi-ryoya",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/tamura-shogo",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/sonan-kei",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/takahashi-shunichi",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/takemoto-yusuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/tahori-reo",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/omae-yuki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/murakami-kohei",
+        "passed": true,
+        "status": 200
+      }
+    ]
+  },
+  "searchVerification": {
+    "passed": true,
+    "checks": 16,
+    "spaceAndNoSpace": true,
+    "knownGenderFilter": true,
+    "results": [
+      {
+        "path": "/actors?q=%E5%9D%82%E7%94%B0+%E9%9A%86%E4%B8%80%E9%83%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%9D%82%E7%94%B0%E9%9A%86%E4%B8%80%E9%83%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E3%82%BF%E3%83%9B%E3%83%AA+%E7%8E%B2%E5%A4%AE",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%9D%82%E7%94%B0+%E9%9A%86%E4%B8%80%E9%83%8E&gender=male",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E3%82%BF%E3%83%9B%E3%83%AA%E7%8E%B2%E5%A4%AE",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%A4%A7%E5%89%8D+%E5%84%AA%E6%A8%B9",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E3%82%BF%E3%83%9B%E3%83%AA+%E7%8E%B2%E5%A4%AE&gender=male",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%A4%A7%E5%89%8D%E5%84%AA%E6%A8%B9",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%9D%82%E7%94%B0+%E9%9A%86%E4%B8%80%E9%83%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%9D%82%E7%94%B0%E9%9A%86%E4%B8%80%E9%83%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E3%82%BF%E3%83%9B%E3%83%AA+%E7%8E%B2%E5%A4%AE",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E3%82%BF%E3%83%9B%E3%83%AA%E7%8E%B2%E5%A4%AE",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%9D%82%E7%94%B0+%E9%9A%86%E4%B8%80%E9%83%8E&gender=male",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E3%82%BF%E3%83%9B%E3%83%AA+%E7%8E%B2%E5%A4%AE&gender=male",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%A4%A7%E5%89%8D+%E5%84%AA%E6%A8%B9",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%A4%A7%E5%89%8D%E5%84%AA%E6%A8%B9",
+        "status": 200,
+        "passed": true
+      }
+    ]
+  },
+  "replayVerification": {
+    "passed": true,
+    "tables": {
+      "actors": {
+        "rows": 1166,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "plays": {
+        "rows": 410,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "franchises": {
+        "rows": 198,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "casts": {
+        "rows": 4214,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_actors": {
+        "rows": 1701,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_cast_candidates": {
+        "rows": 3563,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_import_logs": {
+        "rows": 5717,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "actor_identity_sources": {
+        "rows": 512,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      }
+    }
+  },
+  "sourceValidation": {
+    "roleTypoCorrected": true,
+    "originalSourceRowRetained": true,
+    "officialBandGroups": true,
+    "officialBillingOrder": true,
+    "plannedAndActualOpeningSeparated": true,
+    "cancelledPerformances": 2,
+    "performedCount": 10,
+    "ticketBenefitSymbolsNotTreatedAsCastChanges": true,
+    "streamCommentaryGuestsExcludedFromCast": true,
+    "principalChildActorSupportedByOtherLeadRoles": true,
+    "unknownAttributesLeftNull": true,
+    "existingRowsPreserved": true
+  },
+  "nextWork": {
+    "status": "next_unfilled_series",
+    "note": "2016〜2021年の把握済み単独6作品を収録・表示点検して一区切り。混合STAGE FES等まで網羅したとは扱わない。次は別の未補完シリーズ。"
+  },
+  "verificationScope": "今回の2021年1作品12配役・新規3人物を登録。既存9人物再利用。シリーズ6作品89配役45人物の年表、日英タイトル・概要抜粋・配役表示・相互リンクを日英38ページ、検索16件で点検。8テーブル既存全行保全、同一SQL再実行0変更。旧作品の全事実再監査、混合イベントの網羅、現行配信調査とは区別。"
+}
