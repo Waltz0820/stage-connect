@@ -1,0 +1,2197 @@
+{
+  "version": 1,
+  "batchId": "sb692017fes-20261026-01",
+  "expectedFranchise": {
+    "id": "def83f64-c1c3-48d4-82d6-d785af1b2eda",
+    "name": "Live Musical「SHOW BY ROCK!!」（ショバミュ）",
+    "created_at": "2026-02-08T16:26:41.990203+00:00",
+    "updated_at": "2026-10-26T11:02:07.658788+00:00",
+    "slug": "show-by-rock",
+    "intro": null,
+    "description": "サンリオの音楽・バンドをテーマにしたキャラクタープロジェクト『SHOW BY ROCK!!』を原作とする舞台シリーズ。シンガンクリムゾンズやトライクロニカらの物語を、歌やライブパートを交えて描く。2016年に初演され、2017年からLive Musicalとして展開した。",
+    "origin_type": "メディアミックス",
+    "origin_note": "原作：サンリオ",
+    "production_companies": [
+      "ネルケプランニング"
+    ],
+    "related_franchise_ids": [],
+    "format": "musical",
+    "description_en": "A stage series based on Sanrio’s music and band-themed character project SHOW BY ROCK!!. It follows bands including Shingancrimsonz and Trichronika through stories, songs and live-performance segments. The first musical opened in 2016, followed by the Live Musical series from 2017.",
+    "name_en": "Live Musical SHOW BY ROCK!!"
+  },
+  "franchisePatch": {},
+  "externalActorLinks": [
+    {
+      "before": {
+        "id": "99e6f129-bbd6-4dc4-bc9d-ff6749b596e1",
+        "source": "kira-hai",
+        "source_actor_name": "板垣李光人",
+        "source_actor_url": "https://kira-hai.net/itagaki-rihito",
+        "alias_from": null,
+        "alias_to": null,
+        "note": null,
+        "matched_actor_id": null,
+        "match_status": "unmatched",
+        "match_confidence": 0,
+        "scraped_at": "2026-04-27T17:11:21.759+00:00",
+        "created_at": "2026-04-25T07:19:45.952813+00:00",
+        "updated_at": "2026-04-27T17:11:21.759+00:00",
+        "source_profile_facts_raw": null,
+        "source_birthday_raw": null,
+        "source_birthday": null,
+        "source_height_cm": null,
+        "source_blood_type": null,
+        "source_affiliation_raw": null,
+        "source_actor_kana": null
+      },
+      "patch": {
+        "matched_actor_id": "4edd471f-938d-43cb-ac10-f73d5cad2874",
+        "match_status": "matched",
+        "match_confidence": 90
+      }
+    },
+    {
+      "before": {
+        "id": "52f5dc33-a465-43cb-9439-622733a62c85",
+        "source": "kira-hai",
+        "source_actor_name": "ゆうたろう",
+        "source_actor_url": "https://kira-hai.net/yutaro",
+        "alias_from": null,
+        "alias_to": null,
+        "note": null,
+        "matched_actor_id": null,
+        "match_status": "unmatched",
+        "match_confidence": 0,
+        "scraped_at": "2026-04-27T17:11:21.759+00:00",
+        "created_at": "2026-04-25T07:26:09.109677+00:00",
+        "updated_at": "2026-04-27T17:11:21.759+00:00",
+        "source_profile_facts_raw": null,
+        "source_birthday_raw": null,
+        "source_birthday": null,
+        "source_height_cm": null,
+        "source_blood_type": null,
+        "source_affiliation_raw": null,
+        "source_actor_kana": null
+      },
+      "patch": {
+        "matched_actor_id": "8514fb16-715a-434d-a0fb-2c21bd6619af",
+        "match_status": "matched",
+        "match_confidence": 90
+      }
+    }
+  ],
+  "actors": [
+    {
+      "actor": {
+        "id": "4edd471f-938d-43cb-ac10-f73d5cad2874",
+        "slug": "itagaki-rihito",
+        "name": "板垣 李光人",
+        "kana": "いたがき りひと",
+        "profile": "山梨県出身の俳優。スターダストプロモーション所属。Live Musical『SHOW BY ROCK!!』のセレン役やミュージカル『青春-AOHARU-鉄道』シリーズに出演。2025年に第48回日本アカデミー賞新人俳優賞を受賞した。",
+        "image_url": null,
+        "sns": {},
+        "gender": "male",
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "2002-01-28",
+        "height_cm": 165,
+        "blood_type": "AB",
+        "birthday_label": null,
+        "name_en": "Rihito Itagaki",
+        "profile_en": "An actor from Yamanashi, represented by Stardust Promotion. His stage credits include Selen in Live Musical SHOW BY ROCK!! and the Aoharu Railway musical series. He received a Newcomer of the Year award at the 48th Japan Academy Film Prize in 2025.",
+        "death_date": null
+      },
+      "sourceActorName": "板垣李光人",
+      "profileUrl": "https://www.stardust.co.jp/talent/section1/itagakirihito/",
+      "evidence": [
+        {
+          "url": "https://kira-hai.net/itagaki-rihito",
+          "checkedAt": "2026-10-26T11:38:10.812Z",
+          "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+        },
+        {
+          "url": "https://www.stardust.co.jp/talent/section1/itagakirihito/",
+          "checkedAt": "2026-10-26T11:51:27.462Z",
+          "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+        },
+        {
+          "url": "https://www.animatetimes.com/tag/details.php?id=11118",
+          "checkedAt": "2026-10-26T11:51:28.430Z",
+          "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+        },
+        {
+          "url": "https://thetv.jp/person/2000035046/",
+          "checkedAt": "2026-10-26T11:51:28.817Z",
+          "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+        },
+        {
+          "url": "https://www.nelke.co.jp/stage/showbyrock-musical_fes/index.html",
+          "checkedAt": "2026-10-26T11:38:08.503Z",
+          "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+        }
+      ],
+      "notes": [
+        "姓名半角スペース。読み・DOB・AB型・所属・舞台歴・日本アカデミー賞は現所属公式を優先。出身は編集人物紹介、男性は編集媒体の明示分類。英字は公式のRIHITO ITAGAKIを姓名順の表示規則に整形。",
+        "身長165cmは第一参照先の公表値。成長期の旧情報の可能性を後続監査に残し、現所属公式に身長記載がないことを他値で補わない。プロフィールには身長を重複記載しない。"
+      ]
+    }
+  ],
+  "works": [
+    {
+      "year": 2017,
+      "before": null,
+      "play": {
+        "id": "10701832-54d0-4d2b-b2aa-b6da6a0d20f9",
+        "slug": "sb69_2017",
+        "title": "Live Musical「SHOW BY ROCK!!」～THE FES Ⅱ-Thousand XVⅡ～",
+        "franchise_id": "def83f64-c1c3-48d4-82d6-d785af1b2eda",
+        "summary": "サンリオのキャラクタープロジェクト『SHOW BY ROCK!!』を原作とするシリーズ初のライブイベント。シンガンクリムゾンズ、トライクロニカ、アルカレアファクトが集い、セットリストの異なる「Genesis」「Destiny」の2種類の公演を届ける。MCはKimeru。",
+        "summary_en": "The first live event in the stage series based on Sanrio’s SHOW BY ROCK!! character project. Shingancrimsonz, Trichronika and Arcareafact perform in two versions, Genesis and Destiny, with different set lists. Kimeru serves as MC.",
+        "title_en": "Live Musical SHOW BY ROCK!!: THE FES II-Thousand XVII",
+        "period": "2017年5月11日〜13日",
+        "venue": "品川プリンスホテル ステラボール",
+        "vod": {},
+        "genre": null,
+        "tags": [],
+        "credits": [
+          {
+            "role": "原作",
+            "names": [
+              "サンリオ"
+            ],
+            "is_core": true,
+            "sort_order": 1
+          },
+          {
+            "role": "ストーリー原案",
+            "names": [
+              "待田堂子"
+            ],
+            "is_core": true,
+            "sort_order": 2
+          },
+          {
+            "role": "演出",
+            "names": [
+              "斎藤栄作"
+            ],
+            "is_core": true,
+            "sort_order": 3
+          },
+          {
+            "role": "MC",
+            "names": [
+              "Kimeru"
+            ],
+            "is_core": false,
+            "sort_order": 4
+          },
+          {
+            "role": "主催",
+            "names": [
+              "SHOW BY ROCK!! MUSICAL 製作委員会"
+            ],
+            "is_core": false,
+            "sort_order": 5
+          },
+          {
+            "role": "公演構成",
+            "names": [
+              "セットリストの異なる「Genesis」「Destiny」の2種類の公演。"
+            ],
+            "is_core": false,
+            "sort_order": 6
+          }
+        ],
+        "related_franchise_ids": []
+      },
+      "rawSource": {
+        "sourceUrl": "https://kira-hai.net/sb69_2017",
+        "title": "Live Musical「SHOW BY ROCK!!」",
+        "scheduleLines": [
+          "2017年5月11日-13日 品川プリンスホテル ステラボール"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "米原幸佑",
+            "sourceActorUrl": "https://kira-hai.net/yonehara-kosuke",
+            "role_name": "クロウ",
+            "cast_group": "Shingancrimsonz"
+          },
+          {
+            "sourceActorName": "輝馬",
+            "sourceActorUrl": "https://kira-hai.net/teruma",
+            "role_name": "アイオーン",
+            "cast_group": "Shingancrimsonz"
+          },
+          {
+            "sourceActorName": "鳥越裕貴",
+            "sourceActorUrl": "https://kira-hai.net/torigoe-yuki",
+            "role_name": "ヤイバ",
+            "cast_group": "Shingancrimsonz"
+          },
+          {
+            "sourceActorName": "滝川英治",
+            "sourceActorUrl": "https://kira-hai.net/takigawa-eiji",
+            "role_name": "ロム",
+            "cast_group": "Shingancrimsonz"
+          },
+          {
+            "sourceActorName": "鎌苅健太",
+            "sourceActorUrl": "https://kira-hai.net/kamakari-kenta",
+            "role_name": "シュウ☆ゾー",
+            "cast_group": "Trichronika"
+          },
+          {
+            "sourceActorName": "ゆうたろう",
+            "sourceActorUrl": "https://kira-hai.net/yutaro",
+            "role_name": "リク",
+            "cast_group": "Trichronika"
+          },
+          {
+            "sourceActorName": "木原瑠生",
+            "sourceActorUrl": "https://kira-hai.net/kihara-rui",
+            "role_name": "カイ",
+            "cast_group": "Trichronika"
+          },
+          {
+            "sourceActorName": "糸川耀士郎",
+            "sourceActorUrl": "https://kira-hai.net/itokawa-yojiro",
+            "role_name": "チタン",
+            "cast_group": "ARCAREAFACT"
+          },
+          {
+            "sourceActorName": "田中涼星",
+            "sourceActorUrl": "https://kira-hai.net/tanaka-ryosei",
+            "role_name": "オリオン",
+            "cast_group": "ARCAREAFACT"
+          },
+          {
+            "sourceActorName": "板垣李光人",
+            "sourceActorUrl": "https://kira-hai.net/itagaki-rihito",
+            "role_name": "セレン",
+            "cast_group": "ARCAREAFACT"
+          },
+          {
+            "sourceActorName": "滝川広大",
+            "sourceActorUrl": "https://kira-hai.net/takigawa-kodai",
+            "role_name": "アルゴン",
+            "cast_group": "ARCAREAFACT"
+          }
+        ],
+        "unparsed": [
+          "Kimeru"
+        ]
+      },
+      "source": {
+        "sourceUrl": "https://kira-hai.net/sb69_2017",
+        "title": "Live Musical「SHOW BY ROCK!!」",
+        "scheduleLines": [
+          "2017年5月11日-13日 品川プリンスホテル ステラボール"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "米原幸佑",
+            "sourceActorUrl": "https://kira-hai.net/yonehara-kosuke",
+            "role_name": "クロウ",
+            "cast_group": "シンガンクリムゾンズ"
+          },
+          {
+            "sourceActorName": "輝馬",
+            "sourceActorUrl": "https://kira-hai.net/teruma",
+            "role_name": "アイオーン",
+            "cast_group": "シンガンクリムゾンズ"
+          },
+          {
+            "sourceActorName": "鳥越裕貴",
+            "sourceActorUrl": "https://kira-hai.net/torigoe-yuki",
+            "role_name": "ヤイバ",
+            "cast_group": "シンガンクリムゾンズ"
+          },
+          {
+            "sourceActorName": "滝川英治",
+            "sourceActorUrl": "https://kira-hai.net/takigawa-eiji",
+            "role_name": "ロム",
+            "cast_group": "シンガンクリムゾンズ"
+          },
+          {
+            "sourceActorName": "鎌苅健太",
+            "sourceActorUrl": "https://kira-hai.net/kamakari-kenta",
+            "role_name": "シュウ☆ゾー",
+            "cast_group": "トライクロニカ"
+          },
+          {
+            "sourceActorName": "ゆうたろう",
+            "sourceActorUrl": "https://kira-hai.net/yutaro",
+            "role_name": "リク",
+            "cast_group": "トライクロニカ"
+          },
+          {
+            "sourceActorName": "木原瑠生",
+            "sourceActorUrl": "https://kira-hai.net/kihara-rui",
+            "role_name": "カイ",
+            "cast_group": "トライクロニカ"
+          },
+          {
+            "sourceActorName": "糸川耀士郎",
+            "sourceActorUrl": "https://kira-hai.net/itokawa-yojiro",
+            "role_name": "チタン",
+            "cast_group": "アルカレアファクト"
+          },
+          {
+            "sourceActorName": "田中涼星",
+            "sourceActorUrl": "https://kira-hai.net/tanaka-ryosei",
+            "role_name": "オリオン",
+            "cast_group": "アルカレアファクト"
+          },
+          {
+            "sourceActorName": "板垣李光人",
+            "sourceActorUrl": "https://kira-hai.net/itagaki-rihito",
+            "role_name": "セレン",
+            "cast_group": "アルカレアファクト"
+          },
+          {
+            "sourceActorName": "滝川広大",
+            "sourceActorUrl": "https://kira-hai.net/takigawa-kodai",
+            "role_name": "アルゴン",
+            "cast_group": "アルカレアファクト"
+          }
+        ],
+        "unparsed": []
+      },
+      "sourceFingerprint": "76806d9def63cae98b92fac4cba706c6a8da528a34899fb0f0f69050fafb78e6",
+      "stage": {
+        "workUrl": "https://kira-hai.net/sb69_2017",
+        "key": "1eb7f12e22ddc41a476bbc5a30a6b0163852313d85c831a31aa1cc901425f1e7",
+        "items": [
+          {
+            "source_actor_name": "米原幸佑",
+            "source_actor_url": "https://kira-hai.net/yonehara-kosuke",
+            "source_work_title": "Live Musical「SHOW BY ROCK!!」",
+            "source_year": 2017,
+            "source_role_raw": "クロウ",
+            "source_role_names": [
+              "クロウ"
+            ],
+            "source_cast_group": "シンガンクリムゾンズ",
+            "source_order": 1,
+            "source_credit_key": "feb79505e44d69e1be3d",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/sb69_2017",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/sb69_2017",
+                  "checkedAt": "2026-10-26T11:35:39.728Z",
+                  "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/showbyrock-musical_fes/index.html",
+                  "checkedAt": "2026-10-26T11:38:08.503Z",
+                  "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://www.tbs.co.jp/tbs-ch/item/a0313/",
+                  "checkedAt": "2026-10-26T11:38:09.983Z",
+                  "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                }
+              ],
+              "source_fingerprint": "76806d9def63cae98b92fac4cba706c6a8da528a34899fb0f0f69050fafb78e6",
+              "review_fingerprint": "41d7c9d8b46d1e48c1952878d8dbaf8ee4792cf6a49adcc00d81c90018706203",
+              "snapshot_fingerprint": "84091beb4c768e011b485ef5fbbebd6803aafe9c2586e3cedd8a10cc22b051e6",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2017,
+                "reason": "2017年5月11〜13日の独立ライブ。秋の本公演・2018年ライブと分離。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/sb69_2017",
+                    "checkedAt": "2026-10-26T11:35:39.728Z",
+                    "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                  },
+                  {
+                    "url": "https://www.nelke.co.jp/stage/showbyrock-musical_fes/index.html",
+                    "checkedAt": "2026-10-26T11:38:08.503Z",
+                    "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                  },
+                  {
+                    "url": "https://www.tbs.co.jp/tbs-ch/item/a0313/",
+                    "checkedAt": "2026-10-26T11:38:09.983Z",
+                    "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "c84c1fe6-8f7b-4404-9a5b-7f3c04772f1e",
+            "matched_play_id": "10701832-54d0-4d2b-b2aa-b6da6a0d20f9",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "輝馬",
+            "source_actor_url": "https://kira-hai.net/teruma",
+            "source_work_title": "Live Musical「SHOW BY ROCK!!」",
+            "source_year": 2017,
+            "source_role_raw": "アイオーン",
+            "source_role_names": [
+              "アイオーン"
+            ],
+            "source_cast_group": "シンガンクリムゾンズ",
+            "source_order": 2,
+            "source_credit_key": "e4771d8e25b35d336e28",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/sb69_2017",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/sb69_2017",
+                  "checkedAt": "2026-10-26T11:35:39.728Z",
+                  "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/showbyrock-musical_fes/index.html",
+                  "checkedAt": "2026-10-26T11:38:08.503Z",
+                  "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://www.tbs.co.jp/tbs-ch/item/a0313/",
+                  "checkedAt": "2026-10-26T11:38:09.983Z",
+                  "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                }
+              ],
+              "source_fingerprint": "76806d9def63cae98b92fac4cba706c6a8da528a34899fb0f0f69050fafb78e6",
+              "review_fingerprint": "41d7c9d8b46d1e48c1952878d8dbaf8ee4792cf6a49adcc00d81c90018706203",
+              "snapshot_fingerprint": "84091beb4c768e011b485ef5fbbebd6803aafe9c2586e3cedd8a10cc22b051e6",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2017,
+                "reason": "2017年5月11〜13日の独立ライブ。秋の本公演・2018年ライブと分離。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/sb69_2017",
+                    "checkedAt": "2026-10-26T11:35:39.728Z",
+                    "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                  },
+                  {
+                    "url": "https://www.nelke.co.jp/stage/showbyrock-musical_fes/index.html",
+                    "checkedAt": "2026-10-26T11:38:08.503Z",
+                    "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                  },
+                  {
+                    "url": "https://www.tbs.co.jp/tbs-ch/item/a0313/",
+                    "checkedAt": "2026-10-26T11:38:09.983Z",
+                    "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "d4088fc7-e039-4ff5-b1a6-d8c240d25467",
+            "matched_play_id": "10701832-54d0-4d2b-b2aa-b6da6a0d20f9",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "鳥越裕貴",
+            "source_actor_url": "https://kira-hai.net/torigoe-yuki",
+            "source_work_title": "Live Musical「SHOW BY ROCK!!」",
+            "source_year": 2017,
+            "source_role_raw": "ヤイバ",
+            "source_role_names": [
+              "ヤイバ"
+            ],
+            "source_cast_group": "シンガンクリムゾンズ",
+            "source_order": 3,
+            "source_credit_key": "2075d97a64d99cec3784",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/sb69_2017",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/sb69_2017",
+                  "checkedAt": "2026-10-26T11:35:39.728Z",
+                  "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/showbyrock-musical_fes/index.html",
+                  "checkedAt": "2026-10-26T11:38:08.503Z",
+                  "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://www.tbs.co.jp/tbs-ch/item/a0313/",
+                  "checkedAt": "2026-10-26T11:38:09.983Z",
+                  "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                }
+              ],
+              "source_fingerprint": "76806d9def63cae98b92fac4cba706c6a8da528a34899fb0f0f69050fafb78e6",
+              "review_fingerprint": "41d7c9d8b46d1e48c1952878d8dbaf8ee4792cf6a49adcc00d81c90018706203",
+              "snapshot_fingerprint": "84091beb4c768e011b485ef5fbbebd6803aafe9c2586e3cedd8a10cc22b051e6",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2017,
+                "reason": "2017年5月11〜13日の独立ライブ。秋の本公演・2018年ライブと分離。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/sb69_2017",
+                    "checkedAt": "2026-10-26T11:35:39.728Z",
+                    "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                  },
+                  {
+                    "url": "https://www.nelke.co.jp/stage/showbyrock-musical_fes/index.html",
+                    "checkedAt": "2026-10-26T11:38:08.503Z",
+                    "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                  },
+                  {
+                    "url": "https://www.tbs.co.jp/tbs-ch/item/a0313/",
+                    "checkedAt": "2026-10-26T11:38:09.983Z",
+                    "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "cdec47ba-c45d-42c8-98d6-851606b0b321",
+            "matched_play_id": "10701832-54d0-4d2b-b2aa-b6da6a0d20f9",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "滝川英治",
+            "source_actor_url": "https://kira-hai.net/takigawa-eiji",
+            "source_work_title": "Live Musical「SHOW BY ROCK!!」",
+            "source_year": 2017,
+            "source_role_raw": "ロム",
+            "source_role_names": [
+              "ロム"
+            ],
+            "source_cast_group": "シンガンクリムゾンズ",
+            "source_order": 4,
+            "source_credit_key": "0a6f49c28b5b133aada6",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/sb69_2017",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/sb69_2017",
+                  "checkedAt": "2026-10-26T11:35:39.728Z",
+                  "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/showbyrock-musical_fes/index.html",
+                  "checkedAt": "2026-10-26T11:38:08.503Z",
+                  "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://www.tbs.co.jp/tbs-ch/item/a0313/",
+                  "checkedAt": "2026-10-26T11:38:09.983Z",
+                  "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                }
+              ],
+              "source_fingerprint": "76806d9def63cae98b92fac4cba706c6a8da528a34899fb0f0f69050fafb78e6",
+              "review_fingerprint": "41d7c9d8b46d1e48c1952878d8dbaf8ee4792cf6a49adcc00d81c90018706203",
+              "snapshot_fingerprint": "84091beb4c768e011b485ef5fbbebd6803aafe9c2586e3cedd8a10cc22b051e6",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2017,
+                "reason": "2017年5月11〜13日の独立ライブ。秋の本公演・2018年ライブと分離。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/sb69_2017",
+                    "checkedAt": "2026-10-26T11:35:39.728Z",
+                    "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                  },
+                  {
+                    "url": "https://www.nelke.co.jp/stage/showbyrock-musical_fes/index.html",
+                    "checkedAt": "2026-10-26T11:38:08.503Z",
+                    "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                  },
+                  {
+                    "url": "https://www.tbs.co.jp/tbs-ch/item/a0313/",
+                    "checkedAt": "2026-10-26T11:38:09.983Z",
+                    "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "53abfb49-1935-4f4c-a46f-89b27296c6d6",
+            "matched_play_id": "10701832-54d0-4d2b-b2aa-b6da6a0d20f9",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "鎌苅健太",
+            "source_actor_url": "https://kira-hai.net/kamakari-kenta",
+            "source_work_title": "Live Musical「SHOW BY ROCK!!」",
+            "source_year": 2017,
+            "source_role_raw": "シュウ☆ゾー",
+            "source_role_names": [
+              "シュウ☆ゾー"
+            ],
+            "source_cast_group": "トライクロニカ",
+            "source_order": 5,
+            "source_credit_key": "a1419f85af4042942244",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/sb69_2017",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/sb69_2017",
+                  "checkedAt": "2026-10-26T11:35:39.728Z",
+                  "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/showbyrock-musical_fes/index.html",
+                  "checkedAt": "2026-10-26T11:38:08.503Z",
+                  "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://www.tbs.co.jp/tbs-ch/item/a0313/",
+                  "checkedAt": "2026-10-26T11:38:09.983Z",
+                  "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                }
+              ],
+              "source_fingerprint": "76806d9def63cae98b92fac4cba706c6a8da528a34899fb0f0f69050fafb78e6",
+              "review_fingerprint": "41d7c9d8b46d1e48c1952878d8dbaf8ee4792cf6a49adcc00d81c90018706203",
+              "snapshot_fingerprint": "84091beb4c768e011b485ef5fbbebd6803aafe9c2586e3cedd8a10cc22b051e6",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2017,
+                "reason": "2017年5月11〜13日の独立ライブ。秋の本公演・2018年ライブと分離。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/sb69_2017",
+                    "checkedAt": "2026-10-26T11:35:39.728Z",
+                    "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                  },
+                  {
+                    "url": "https://www.nelke.co.jp/stage/showbyrock-musical_fes/index.html",
+                    "checkedAt": "2026-10-26T11:38:08.503Z",
+                    "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                  },
+                  {
+                    "url": "https://www.tbs.co.jp/tbs-ch/item/a0313/",
+                    "checkedAt": "2026-10-26T11:38:09.983Z",
+                    "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "4cd1fc6f-6d9a-447c-8c06-a82626a6eb7a",
+            "matched_play_id": "10701832-54d0-4d2b-b2aa-b6da6a0d20f9",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "ゆうたろう",
+            "source_actor_url": "https://kira-hai.net/yutaro",
+            "source_work_title": "Live Musical「SHOW BY ROCK!!」",
+            "source_year": 2017,
+            "source_role_raw": "リク",
+            "source_role_names": [
+              "リク"
+            ],
+            "source_cast_group": "トライクロニカ",
+            "source_order": 6,
+            "source_credit_key": "a1562596006f8f96dfab",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/sb69_2017",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/sb69_2017",
+                  "checkedAt": "2026-10-26T11:35:39.728Z",
+                  "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/showbyrock-musical_fes/index.html",
+                  "checkedAt": "2026-10-26T11:38:08.503Z",
+                  "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://www.tbs.co.jp/tbs-ch/item/a0313/",
+                  "checkedAt": "2026-10-26T11:38:09.983Z",
+                  "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/yutaro",
+                  "checkedAt": "2026-10-26T11:38:11.146Z",
+                  "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                }
+              ],
+              "source_fingerprint": "76806d9def63cae98b92fac4cba706c6a8da528a34899fb0f0f69050fafb78e6",
+              "review_fingerprint": "41d7c9d8b46d1e48c1952878d8dbaf8ee4792cf6a49adcc00d81c90018706203",
+              "snapshot_fingerprint": "84091beb4c768e011b485ef5fbbebd6803aafe9c2586e3cedd8a10cc22b051e6",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2017,
+                "reason": "2017年5月11〜13日の独立ライブ。秋の本公演・2018年ライブと分離。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/sb69_2017",
+                    "checkedAt": "2026-10-26T11:35:39.728Z",
+                    "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                  },
+                  {
+                    "url": "https://www.nelke.co.jp/stage/showbyrock-musical_fes/index.html",
+                    "checkedAt": "2026-10-26T11:38:08.503Z",
+                    "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                  },
+                  {
+                    "url": "https://www.tbs.co.jp/tbs-ch/item/a0313/",
+                    "checkedAt": "2026-10-26T11:38:09.983Z",
+                    "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "8514fb16-715a-434d-a0fb-2c21bd6619af",
+            "matched_play_id": "10701832-54d0-4d2b-b2aa-b6da6a0d20f9",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "木原瑠生",
+            "source_actor_url": "https://kira-hai.net/kihara-rui",
+            "source_work_title": "Live Musical「SHOW BY ROCK!!」",
+            "source_year": 2017,
+            "source_role_raw": "カイ",
+            "source_role_names": [
+              "カイ"
+            ],
+            "source_cast_group": "トライクロニカ",
+            "source_order": 7,
+            "source_credit_key": "598f512e33ec68af2ab9",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/sb69_2017",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/sb69_2017",
+                  "checkedAt": "2026-10-26T11:35:39.728Z",
+                  "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/showbyrock-musical_fes/index.html",
+                  "checkedAt": "2026-10-26T11:38:08.503Z",
+                  "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://www.tbs.co.jp/tbs-ch/item/a0313/",
+                  "checkedAt": "2026-10-26T11:38:09.983Z",
+                  "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                }
+              ],
+              "source_fingerprint": "76806d9def63cae98b92fac4cba706c6a8da528a34899fb0f0f69050fafb78e6",
+              "review_fingerprint": "41d7c9d8b46d1e48c1952878d8dbaf8ee4792cf6a49adcc00d81c90018706203",
+              "snapshot_fingerprint": "84091beb4c768e011b485ef5fbbebd6803aafe9c2586e3cedd8a10cc22b051e6",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2017,
+                "reason": "2017年5月11〜13日の独立ライブ。秋の本公演・2018年ライブと分離。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/sb69_2017",
+                    "checkedAt": "2026-10-26T11:35:39.728Z",
+                    "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                  },
+                  {
+                    "url": "https://www.nelke.co.jp/stage/showbyrock-musical_fes/index.html",
+                    "checkedAt": "2026-10-26T11:38:08.503Z",
+                    "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                  },
+                  {
+                    "url": "https://www.tbs.co.jp/tbs-ch/item/a0313/",
+                    "checkedAt": "2026-10-26T11:38:09.983Z",
+                    "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "564b69d7-fe00-4e0b-91eb-554608e67388",
+            "matched_play_id": "10701832-54d0-4d2b-b2aa-b6da6a0d20f9",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "糸川耀士郎",
+            "source_actor_url": "https://kira-hai.net/itokawa-yojiro",
+            "source_work_title": "Live Musical「SHOW BY ROCK!!」",
+            "source_year": 2017,
+            "source_role_raw": "チタン",
+            "source_role_names": [
+              "チタン"
+            ],
+            "source_cast_group": "アルカレアファクト",
+            "source_order": 8,
+            "source_credit_key": "de355d52a851a4b9f89b",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/sb69_2017",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/sb69_2017",
+                  "checkedAt": "2026-10-26T11:35:39.728Z",
+                  "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/showbyrock-musical_fes/index.html",
+                  "checkedAt": "2026-10-26T11:38:08.503Z",
+                  "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://www.tbs.co.jp/tbs-ch/item/a0313/",
+                  "checkedAt": "2026-10-26T11:38:09.983Z",
+                  "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                }
+              ],
+              "source_fingerprint": "76806d9def63cae98b92fac4cba706c6a8da528a34899fb0f0f69050fafb78e6",
+              "review_fingerprint": "41d7c9d8b46d1e48c1952878d8dbaf8ee4792cf6a49adcc00d81c90018706203",
+              "snapshot_fingerprint": "84091beb4c768e011b485ef5fbbebd6803aafe9c2586e3cedd8a10cc22b051e6",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2017,
+                "reason": "2017年5月11〜13日の独立ライブ。秋の本公演・2018年ライブと分離。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/sb69_2017",
+                    "checkedAt": "2026-10-26T11:35:39.728Z",
+                    "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                  },
+                  {
+                    "url": "https://www.nelke.co.jp/stage/showbyrock-musical_fes/index.html",
+                    "checkedAt": "2026-10-26T11:38:08.503Z",
+                    "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                  },
+                  {
+                    "url": "https://www.tbs.co.jp/tbs-ch/item/a0313/",
+                    "checkedAt": "2026-10-26T11:38:09.983Z",
+                    "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "cad82806-61cb-402a-933c-fd6c35c991f9",
+            "matched_play_id": "10701832-54d0-4d2b-b2aa-b6da6a0d20f9",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "田中涼星",
+            "source_actor_url": "https://kira-hai.net/tanaka-ryosei",
+            "source_work_title": "Live Musical「SHOW BY ROCK!!」",
+            "source_year": 2017,
+            "source_role_raw": "オリオン",
+            "source_role_names": [
+              "オリオン"
+            ],
+            "source_cast_group": "アルカレアファクト",
+            "source_order": 9,
+            "source_credit_key": "8ed4093d8a01e728228e",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/sb69_2017",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/sb69_2017",
+                  "checkedAt": "2026-10-26T11:35:39.728Z",
+                  "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/showbyrock-musical_fes/index.html",
+                  "checkedAt": "2026-10-26T11:38:08.503Z",
+                  "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://www.tbs.co.jp/tbs-ch/item/a0313/",
+                  "checkedAt": "2026-10-26T11:38:09.983Z",
+                  "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                }
+              ],
+              "source_fingerprint": "76806d9def63cae98b92fac4cba706c6a8da528a34899fb0f0f69050fafb78e6",
+              "review_fingerprint": "41d7c9d8b46d1e48c1952878d8dbaf8ee4792cf6a49adcc00d81c90018706203",
+              "snapshot_fingerprint": "84091beb4c768e011b485ef5fbbebd6803aafe9c2586e3cedd8a10cc22b051e6",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2017,
+                "reason": "2017年5月11〜13日の独立ライブ。秋の本公演・2018年ライブと分離。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/sb69_2017",
+                    "checkedAt": "2026-10-26T11:35:39.728Z",
+                    "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                  },
+                  {
+                    "url": "https://www.nelke.co.jp/stage/showbyrock-musical_fes/index.html",
+                    "checkedAt": "2026-10-26T11:38:08.503Z",
+                    "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                  },
+                  {
+                    "url": "https://www.tbs.co.jp/tbs-ch/item/a0313/",
+                    "checkedAt": "2026-10-26T11:38:09.983Z",
+                    "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "5a2e7a99-46c2-4369-a3ab-9ec8c4ac52aa",
+            "matched_play_id": "10701832-54d0-4d2b-b2aa-b6da6a0d20f9",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "板垣李光人",
+            "source_actor_url": "https://kira-hai.net/itagaki-rihito",
+            "source_work_title": "Live Musical「SHOW BY ROCK!!」",
+            "source_year": 2017,
+            "source_role_raw": "セレン",
+            "source_role_names": [
+              "セレン"
+            ],
+            "source_cast_group": "アルカレアファクト",
+            "source_order": 10,
+            "source_credit_key": "4a449383a7eb8aa1de85",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/sb69_2017",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/sb69_2017",
+                  "checkedAt": "2026-10-26T11:35:39.728Z",
+                  "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/showbyrock-musical_fes/index.html",
+                  "checkedAt": "2026-10-26T11:38:08.503Z",
+                  "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://www.tbs.co.jp/tbs-ch/item/a0313/",
+                  "checkedAt": "2026-10-26T11:38:09.983Z",
+                  "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/itagaki-rihito",
+                  "checkedAt": "2026-10-26T11:38:10.812Z",
+                  "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://www.stardust.co.jp/talent/section1/itagakirihito/",
+                  "checkedAt": "2026-10-26T11:51:27.462Z",
+                  "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://www.animatetimes.com/tag/details.php?id=11118",
+                  "checkedAt": "2026-10-26T11:51:28.430Z",
+                  "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://thetv.jp/person/2000035046/",
+                  "checkedAt": "2026-10-26T11:51:28.817Z",
+                  "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/showbyrock-musical_fes/index.html",
+                  "checkedAt": "2026-10-26T11:38:08.503Z",
+                  "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                }
+              ],
+              "source_fingerprint": "76806d9def63cae98b92fac4cba706c6a8da528a34899fb0f0f69050fafb78e6",
+              "review_fingerprint": "41d7c9d8b46d1e48c1952878d8dbaf8ee4792cf6a49adcc00d81c90018706203",
+              "snapshot_fingerprint": "84091beb4c768e011b485ef5fbbebd6803aafe9c2586e3cedd8a10cc22b051e6",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2017,
+                "reason": "2017年5月11〜13日の独立ライブ。秋の本公演・2018年ライブと分離。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/sb69_2017",
+                    "checkedAt": "2026-10-26T11:35:39.728Z",
+                    "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                  },
+                  {
+                    "url": "https://www.nelke.co.jp/stage/showbyrock-musical_fes/index.html",
+                    "checkedAt": "2026-10-26T11:38:08.503Z",
+                    "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                  },
+                  {
+                    "url": "https://www.tbs.co.jp/tbs-ch/item/a0313/",
+                    "checkedAt": "2026-10-26T11:38:09.983Z",
+                    "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "4edd471f-938d-43cb-ac10-f73d5cad2874",
+            "matched_play_id": "10701832-54d0-4d2b-b2aa-b6da6a0d20f9",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "滝川広大",
+            "source_actor_url": "https://kira-hai.net/takigawa-kodai",
+            "source_work_title": "Live Musical「SHOW BY ROCK!!」",
+            "source_year": 2017,
+            "source_role_raw": "アルゴン",
+            "source_role_names": [
+              "アルゴン"
+            ],
+            "source_cast_group": "アルカレアファクト",
+            "source_order": 11,
+            "source_credit_key": "91e8b06b8664b093af19",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/sb69_2017",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/sb69_2017",
+                  "checkedAt": "2026-10-26T11:35:39.728Z",
+                  "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/showbyrock-musical_fes/index.html",
+                  "checkedAt": "2026-10-26T11:38:08.503Z",
+                  "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://www.tbs.co.jp/tbs-ch/item/a0313/",
+                  "checkedAt": "2026-10-26T11:38:09.983Z",
+                  "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                }
+              ],
+              "source_fingerprint": "76806d9def63cae98b92fac4cba706c6a8da528a34899fb0f0f69050fafb78e6",
+              "review_fingerprint": "41d7c9d8b46d1e48c1952878d8dbaf8ee4792cf6a49adcc00d81c90018706203",
+              "snapshot_fingerprint": "84091beb4c768e011b485ef5fbbebd6803aafe9c2586e3cedd8a10cc22b051e6",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2017,
+                "reason": "2017年5月11〜13日の独立ライブ。秋の本公演・2018年ライブと分離。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/sb69_2017",
+                    "checkedAt": "2026-10-26T11:35:39.728Z",
+                    "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                  },
+                  {
+                    "url": "https://www.nelke.co.jp/stage/showbyrock-musical_fes/index.html",
+                    "checkedAt": "2026-10-26T11:38:08.503Z",
+                    "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                  },
+                  {
+                    "url": "https://www.tbs.co.jp/tbs-ch/item/a0313/",
+                    "checkedAt": "2026-10-26T11:38:09.983Z",
+                    "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "94b86411-33cb-45c7-a258-b2c8b9c39baa",
+            "matched_play_id": "10701832-54d0-4d2b-b2aa-b6da6a0d20f9",
+            "status": "pending"
+          }
+        ]
+      },
+      "records": [
+        {
+          "actor": {
+            "id": "c84c1fe6-8f7b-4404-9a5b-7f3c04772f1e",
+            "slug": "yonehara-kosuke",
+            "name": "米原 幸佑",
+            "kana": "よねはら こうすけ",
+            "profile": "大阪府出身の俳優・歌手。吉本興業所属。RUN＆GUN、ヨースケコースケのメンバー。Live Musical『SHOW BY ROCK!!』のクロウ役や映画『どうしても触れたくない』の主演を務め、舞台では脚本・演出にも携わる。",
+            "image_url": null,
+            "sns": {},
+            "gender": "male",
+            "created_at": "2026-10-26T09:14:19.477804+00:00",
+            "updated_at": "2026-10-26T09:14:19.477804+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1986-03-13",
+            "height_cm": 163,
+            "blood_type": "AB",
+            "birthday_label": null,
+            "name_en": "Kosuke Yonehara",
+            "profile_en": "An actor and singer from Osaka, represented by Yoshimoto Kogyo. A member of RUN&GUN and Yosuke Kosuke, he plays Crow in Live Musical SHOW BY ROCK!! and starred in the film No Touching At All. His theater work also includes writing and directing.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "米原幸佑",
+            "sourceActorUrl": "https://kira-hai.net/yonehara-kosuke",
+            "role_name": "クロウ",
+            "cast_group": "シンガンクリムゾンズ"
+          },
+          "sourceCreditKey": "feb79505e44d69e1be3d",
+          "sourceOrder": 1,
+          "billingOrder": 1,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "d4088fc7-e039-4ff5-b1a6-d8c240d25467",
+            "slug": "teruma",
+            "name": "輝馬",
+            "kana": "てるま",
+            "profile": "島根県出身の俳優。Star Dream Company所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/teruma_0606",
+              "official": "https://teruma-official.net/",
+              "instagram": "https://www.instagram.com/_t_e_r_u_m_a_/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:01:26.311999+00:00",
+            "updated_at": "2026-03-21T15:01:26.311999+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1989-06-06",
+            "height_cm": 182,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "輝馬",
+            "sourceActorUrl": "https://kira-hai.net/teruma",
+            "role_name": "アイオーン",
+            "cast_group": "シンガンクリムゾンズ"
+          },
+          "sourceCreditKey": "e4771d8e25b35d336e28",
+          "sourceOrder": 2,
+          "billingOrder": 2,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "cdec47ba-c45d-42c8-98d6-851606b0b321",
+            "slug": "torigoe-yuki",
+            "name": "鳥越 裕貴",
+            "kana": "とりごえ ゆうき",
+            "profile": "大阪府出身の俳優。ゴーチ・ブラザーズ所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://twitter.com/Torippiyo2",
+              "official": "https://yukitorigoe.bitfan.id/",
+              "instagram": "https://www.instagram.com/yuki_torigoe.cleftchin"
+            },
+            "gender": "male",
+            "created_at": "2025-12-13T04:41:02.052969+00:00",
+            "updated_at": "2025-12-13T04:41:02.052969+00:00",
+            "tags": [
+              "ムードメーカー",
+              "ダンス"
+            ],
+            "featured_play_slugs": [],
+            "birthday": "1991-03-31",
+            "height_cm": 169,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "鳥越裕貴",
+            "sourceActorUrl": "https://kira-hai.net/torigoe-yuki",
+            "role_name": "ヤイバ",
+            "cast_group": "シンガンクリムゾンズ"
+          },
+          "sourceCreditKey": "2075d97a64d99cec3784",
+          "sourceOrder": 3,
+          "billingOrder": 3,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "53abfb49-1935-4f4c-a46f-89b27296c6d6",
+            "slug": "takigawa-eiji",
+            "name": "滝川 英治",
+            "kana": "たきがわ えいじ",
+            "profile": "大阪府枚方市出身の元俳優・モデル・絵本作家。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/eiji_takigawa"
+            },
+            "gender": "male",
+            "created_at": "2026-03-15T14:42:38.572251+00:00",
+            "updated_at": "2026-03-15T14:42:38.572251+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1979-03-24",
+            "height_cm": 186,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "滝川英治",
+            "sourceActorUrl": "https://kira-hai.net/takigawa-eiji",
+            "role_name": "ロム",
+            "cast_group": "シンガンクリムゾンズ"
+          },
+          "sourceCreditKey": "0a6f49c28b5b133aada6",
+          "sourceOrder": 4,
+          "billingOrder": 4,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "4cd1fc6f-6d9a-447c-8c06-a82626a6eb7a",
+            "slug": "kamakari-kenta",
+            "name": "鎌苅 健太",
+            "kana": "かまかり けんた",
+            "profile": "大阪府出身の俳優・声優・歌手。ドルチェスター所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/kenta_kamakari",
+              "instagram": "https://www.instagram.com/kenta_kamakari0217/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-20T20:04:56.888138+00:00",
+            "updated_at": "2026-03-20T20:04:56.888138+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1984-02-17",
+            "height_cm": 172,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "鎌苅健太",
+            "sourceActorUrl": "https://kira-hai.net/kamakari-kenta",
+            "role_name": "シュウ☆ゾー",
+            "cast_group": "トライクロニカ"
+          },
+          "sourceCreditKey": "a1419f85af4042942244",
+          "sourceOrder": 5,
+          "billingOrder": 5,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "8514fb16-715a-434d-a0fb-2c21bd6619af",
+            "slug": "yutaro",
+            "name": "ゆうたろう",
+            "kana": "ゆうたろう",
+            "profile": "広島県出身の俳優・モデル。アソビシステム所属。ショップ店員を経て2016年に芸能界デビューし、映画『3D彼女 リアルガール』に出演。『30歳まで童貞だと魔法使いになれるらしい』の綿谷湊役、「チェンソーマン」ザ・ステージ レゼ篇の天使の悪魔役などを務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-21T10:55:10.911593+00:00",
+            "updated_at": "2026-10-21T10:55:10.911593+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1998-06-03",
+            "height_cm": 166,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Yutaro",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "ゆうたろう",
+            "sourceActorUrl": "https://kira-hai.net/yutaro",
+            "role_name": "リク",
+            "cast_group": "トライクロニカ"
+          },
+          "sourceCreditKey": "a1562596006f8f96dfab",
+          "sourceOrder": 6,
+          "billingOrder": 6,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "564b69d7-fe00-4e0b-91eb-554608e67388",
+            "slug": "kihara-rui",
+            "name": "木原 瑠生",
+            "kana": "きはら るい",
+            "profile": "東京都出身の日本の俳優・歌手。RED ACTORS所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/rui0915spsong",
+              "youtube": "https://www.youtube.com/channel/UC3shH73_kMr3QncguFT5rNg",
+              "official": "https://red-actors.com/artist/rui-kihara/",
+              "instagram": "https://www.instagram.com/rui_kihara/"
+            },
+            "gender": "male",
+            "created_at": "2026-04-10T21:37:15.380535+00:00",
+            "updated_at": "2026-04-10T21:37:15.380535+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1998-09-15",
+            "height_cm": 175,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "木原瑠生",
+            "sourceActorUrl": "https://kira-hai.net/kihara-rui",
+            "role_name": "カイ",
+            "cast_group": "トライクロニカ"
+          },
+          "sourceCreditKey": "598f512e33ec68af2ab9",
+          "sourceOrder": 7,
+          "billingOrder": 7,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "cad82806-61cb-402a-933c-fd6c35c991f9",
+            "slug": "itokawa-yojiro",
+            "name": "糸川 耀士郎",
+            "kana": "いとかわ ようじろう",
+            "profile": "島根県出身の俳優・声優。元劇団番町ボーイズ☆メンバー。株式会社Stova所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/yohhg",
+              "official": "https://yojiro-itokawa.com/",
+              "instagram": "https://www.instagram.com/yojiroitokawa"
+            },
+            "gender": "male",
+            "created_at": "2026-04-08T00:34:26.348411+00:00",
+            "updated_at": "2026-04-08T00:34:26.348411+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1993-05-28",
+            "height_cm": 171,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "糸川耀士郎",
+            "sourceActorUrl": "https://kira-hai.net/itokawa-yojiro",
+            "role_name": "チタン",
+            "cast_group": "アルカレアファクト"
+          },
+          "sourceCreditKey": "de355d52a851a4b9f89b",
+          "sourceOrder": 8,
+          "billingOrder": 8,
+          "expectedNote": "2017年5月13日は映像出演",
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "5a2e7a99-46c2-4369-a3ab-9ec8c4ac52aa",
+            "slug": "tanaka-ryosei",
+            "name": "田中 涼星",
+            "kana": "たなか りょうせい",
+            "profile": "新潟県出身の俳優・モデル。株式会社Pasture所属。ミュージカル『テニスの王子様』3rdシーズン（乾貞治役）や『MANKAI STAGE「A3!」』シリーズ（有栖川誉役）、ミュージカル『刀剣乱舞』（御手杵役）、舞台『黒子のバスケ』シリーズ（実渕玲央役）等の舞台作品に出演。また、モデルとしても活動している。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/ryousei_tanaka",
+              "official": "https://ryousei-tanaka.com/",
+              "instagram": "https://www.instagram.com/ryosei_tanaka1224/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:06:19.306372+00:00",
+            "updated_at": "2026-03-21T15:06:19.306372+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1994-12-24",
+            "height_cm": 186,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor and model from Niigata Prefecture. Affiliated with Pasture. He has appeared in stage works such as the musical \"The Prince of Tennis\" 3rd season (as Sadaharu Inui), the \"MANKAI STAGE 'A3!'\" series (as Homare Arisugawa), the musical \"Touken Ranbu\" (as Otegine), and the stage play \"Kuroko's Basketball\" series (as Reo Mibuchi). He is also active as a model.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "田中涼星",
+            "sourceActorUrl": "https://kira-hai.net/tanaka-ryosei",
+            "role_name": "オリオン",
+            "cast_group": "アルカレアファクト"
+          },
+          "sourceCreditKey": "8ed4093d8a01e728228e",
+          "sourceOrder": 9,
+          "billingOrder": 9,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "4edd471f-938d-43cb-ac10-f73d5cad2874",
+            "slug": "itagaki-rihito",
+            "name": "板垣 李光人",
+            "kana": "いたがき りひと",
+            "profile": "山梨県出身の俳優。スターダストプロモーション所属。Live Musical『SHOW BY ROCK!!』のセレン役やミュージカル『青春-AOHARU-鉄道』シリーズに出演。2025年に第48回日本アカデミー賞新人俳優賞を受賞した。",
+            "image_url": null,
+            "sns": {},
+            "gender": "male",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "2002-01-28",
+            "height_cm": 165,
+            "blood_type": "AB",
+            "birthday_label": null,
+            "name_en": "Rihito Itagaki",
+            "profile_en": "An actor from Yamanashi, represented by Stardust Promotion. His stage credits include Selen in Live Musical SHOW BY ROCK!! and the Aoharu Railway musical series. He received a Newcomer of the Year award at the 48th Japan Academy Film Prize in 2025.",
+            "death_date": null,
+            "created_at": "prepared",
+            "updated_at": "prepared"
+          },
+          "source": {
+            "sourceActorName": "板垣李光人",
+            "sourceActorUrl": "https://kira-hai.net/itagaki-rihito",
+            "role_name": "セレン",
+            "cast_group": "アルカレアファクト"
+          },
+          "sourceCreditKey": "4a449383a7eb8aa1de85",
+          "sourceOrder": 10,
+          "billingOrder": 10,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "94b86411-33cb-45c7-a258-b2c8b9c39baa",
+            "slug": "takigawa-kodai",
+            "name": "滝川 広大",
+            "kana": "たきがわ こうだい",
+            "profile": "群馬県出身の俳優。株式会社キャストコーポレーション所属。ミュージカル『テニスの王子様』3rdシーズン（河村隆役）や『イケメン戦国 THE STAGE』シリーズ（豊臣秀吉役）、舞台『弱虫ペダル』シリーズ（田所迅役）、舞台『鋼の錬金術師』（ハイマンス・ブレダ役）等の舞台作品に出演。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/KoudaiTakikawa",
+              "official": "https://ameblo.jp/koudai-takikawa/",
+              "instagram": "https://www.instagram.com/koudai.takikawa/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:06:19.306372+00:00",
+            "updated_at": "2026-03-21T15:06:19.306372+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1992-04-14",
+            "height_cm": 180,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Gunma Prefecture. Affiliated with Cast Corporation. He has appeared in stage works such as the musical \"The Prince of Tennis\" 3rd season (as Takashi Kawamura), the \"Ikemen Sengoku THE STAGE\" series (as Hideyoshi Toyotomi), the stage play \"Yowamushi Pedal\" series (as Jin Tadokoro), and the stage play \"Fullmetal Alchemist\" (as Heymans Breda).",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "滝川広大",
+            "sourceActorUrl": "https://kira-hai.net/takigawa-kodai",
+            "role_name": "アルゴン",
+            "cast_group": "アルカレアファクト"
+          },
+          "sourceCreditKey": "91e8b06b8664b093af19",
+          "sourceOrder": 11,
+          "billingOrder": 11,
+          "expectedNote": null,
+          "existingCast": null
+        }
+      ],
+      "legacyCandidates": [
+        {
+          "id": "08eda569-2bb4-4b15-ab1d-74b17fc9f747",
+          "source": "kira-hai",
+          "external_actor_id": "4eb99079-080d-47d3-9eff-f1e8bebedb41",
+          "external_play_id": "46c6b77e-a5a7-4bca-9c19-50abbb4ffa06",
+          "source_actor_name": "KIMERU",
+          "source_actor_url": "https://kira-hai.net/kimeru",
+          "source_work_title": "Live Musical「SHOW BY ROCK!!」",
+          "source_work_url": "https://kira-hai.net/sb69_2017",
+          "source_year": 2021,
+          "source_role_raw": "MC <img decoding=\"async\" src=\"https://kira-hai.net/wp-content/uploads/2015/03/059.gif\" alt=\"★\" width=\"12\" height=\"13\" class=\"alignnone size-full wp-image-368\" /> ミュージカライブ『アンプラネット―ボクの名は―』：日替わりゲスト <img decoding=\"async\" src=\"https://kira-hai.net/wp-content/uploads/2015/03/059.gif\" alt=\"★\" width=\"12\" height=\"13\" class=\"alignnone size-full wp-image-368\" /> 超!脱獄歌劇「ナンバカ」：三葉キジ <img decoding=\"async\" src=\"https://kira-hai.net/wp-content/uploads/2015/03/059.gif\" alt=\"★\" width=\"12\" height=\"13\" class=\"alignnone size-full wp-image-368\" /> Live Musical「SHOW BY ROCK!!」-深淵のCrossAmbivalence-：アダム <img decoding=\"async\" src=\"https://kira-hai.net/wp-content/uploads/2015/03/059.gif\" alt=\"★\" width=\"12\" height=\"13\" class=\"alignnone size-full wp-image-368\" /> 超歌劇『幕末Rock』絶叫!熱狂!雷舞 ：徳川慶喜",
+          "source_role_names": [
+            "MC <img decoding=\"async\" src=\"https:",
+            "kira-hai.net",
+            "wp-content",
+            "uploads",
+            "2015",
+            "03",
+            "059.gif\" alt=\"★\" width=\"12\" height=\"13\" class=\"alignnone size-full wp-image-368\"",
+            "> ミュージカライブ『アンプラネット―ボクの名は―』：日替わりゲスト <img decoding=\"async\" src=\"https:",
+            "kira-hai.net",
+            "wp-content",
+            "uploads",
+            "2015",
+            "03",
+            "059.gif\" alt=\"★\" width=\"12\" height=\"13\" class=\"alignnone size-full wp-image-368\"",
+            "> 超!脱獄歌劇「ナンバカ」：三葉キジ <img decoding=\"async\" src=\"https:",
+            "kira-hai.net",
+            "wp-content",
+            "uploads",
+            "2015",
+            "03",
+            "059.gif\" alt=\"★\" width=\"12\" height=\"13\" class=\"alignnone size-full wp-image-368\"",
+            "> Live Musical「SHOW BY ROCK!!」-深淵のCrossAmbivalence-：アダム <img decoding=\"async\" src=\"https:",
+            "kira-hai.net",
+            "wp-content",
+            "uploads",
+            "2015",
+            "03",
+            "059.gif\" alt=\"★\" width=\"12\" height=\"13\" class=\"alignnone size-full wp-image-368\"",
+            "> 超歌劇『幕末Rock』絶叫!熱狂!雷舞 ：徳川慶喜"
+          ],
+          "matched_actor_id": "2f24923b-56e2-48ae-bd46-e76d2dc4763f",
+          "matched_play_id": null,
+          "accepted_cast_id": null,
+          "confidence": 60,
+          "status": "pending",
+          "note": null,
+          "scraped_at": "2026-04-26T06:33:49.576+00:00",
+          "created_at": "2026-04-25T07:40:10.225967+00:00",
+          "updated_at": "2026-04-26T06:33:49.576+00:00",
+          "accepted_at": null,
+          "rejected_at": null,
+          "source_cast_group": null,
+          "source_order": null,
+          "source_credit_key": null,
+          "source_evidence": null
+        },
+        {
+          "id": "629f455d-8ae2-42e3-8f5b-4fe94d68f891",
+          "source": "kira-hai",
+          "external_actor_id": "4eb99079-080d-47d3-9eff-f1e8bebedb41",
+          "external_play_id": "46c6b77e-a5a7-4bca-9c19-50abbb4ffa06",
+          "source_actor_name": "KIMERU",
+          "source_actor_url": "https://kira-hai.net/kimeru",
+          "source_work_title": "Live Musical「SHOW BY ROCK!!」",
+          "source_work_url": "https://kira-hai.net/sb69_2017",
+          "source_year": 2021,
+          "source_role_raw": "MC",
+          "source_role_names": [
+            "MC"
+          ],
+          "matched_actor_id": "2f24923b-56e2-48ae-bd46-e76d2dc4763f",
+          "matched_play_id": null,
+          "accepted_cast_id": null,
+          "confidence": 60,
+          "status": "pending",
+          "note": null,
+          "scraped_at": "2026-04-27T17:28:34.366+00:00",
+          "created_at": "2026-04-27T15:22:43.381076+00:00",
+          "updated_at": "2026-04-27T17:28:34.366+00:00",
+          "accepted_at": null,
+          "rejected_at": null,
+          "source_cast_group": null,
+          "source_order": null,
+          "source_credit_key": null,
+          "source_evidence": null
+        }
+      ],
+      "legacyUpgrades": [],
+      "creditOnly": [
+        "Kimeru"
+      ],
+      "transformations": [
+        {
+          "type": "normalize_band_labels",
+          "mapping": {
+            "Shingancrimsonz": "シンガンクリムゾンズ",
+            "Trichronika": "トライクロニカ",
+            "ARCAREAFACT": "アルカレアファクト"
+          },
+          "evidence": [
+            {
+              "url": "https://www.nelke.co.jp/stage/showbyrock-musical_fes/index.html",
+              "checkedAt": "2026-10-26T11:38:08.503Z",
+              "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+            }
+          ],
+          "reason": "英字原表記を残し、表示区分は公演公式の日本語バンド名に合わせる。"
+        },
+        {
+          "type": "mc_to_credits",
+          "name": "Kimeru",
+          "actorId": "2f24923b-56e2-48ae-bd46-e76d2dc4763f",
+          "evidence": [
+            {
+              "url": "https://www.nelke.co.jp/stage/showbyrock-musical_fes/index.html",
+              "checkedAt": "2026-10-26T11:38:08.503Z",
+              "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+            }
+          ],
+          "reason": "役名のないMC。旧名義を公演クレジットに保全し、アダム等の秋公演の役名を逆用しない。"
+        }
+      ],
+      "exceptions": [
+        "主要11配役は公式掲載順、3バンド。主演指定は推測しない。5月13日のチタン映像出演を配役補足に保存し、全日映像出演とは扱わない。",
+        "MC Kimeruはクレジット。旧候補2件はMCのみと他作品混入の重複候補で、どちらも役柄付き配役として採用せず原文全保全。誤年2021も元の履歴として維持し公開データの2017へ流用しない。",
+        "現2017公式サイトは10月公演へ更新されロムが郷本直也に差替え済み。5月の主催者個別ページを正とし、滝川英治の出演へ後続の交代を混ぜない。",
+        "GenesisとDestinyはセットリストの違いで同じライブ制作に収録。映像の各エピソードを別舞台に増やさない。",
+        "TBSのストーリー原案「町田堂子」は主催者の待田堂子と相違。公式主催者を優先して待田を保存。放送未定・DVD発売は現行配信の根拠にしない。",
+        "板垣李光人のみ新規。既存10人物は全項目保全。ゆうたろうは同DOB・所属・舞台歴を照合して既存人物へ外部候補を接続。"
+      ]
+    }
+  ],
+  "keptPlays": [
+    {
+      "id": "7944fa96-0456-4e23-a0f8-eee9924b000d",
+      "slug": "sb69_2016",
+      "title": "SHOW BY ROCK!! MUSICAL ～唱え家畜共ッ！深紅色の堕天革命黙示録ッ！！～",
+      "franchise_id": "def83f64-c1c3-48d4-82d6-d785af1b2eda",
+      "summary": "音楽都市MIDI CITY。シンガンクリムゾンズは所属事務所の社長・有栖川メイプルが作った借金を返すため、賞金を目指して音楽フェスに挑む。人気アイドルバンドのトライクロニカも参加を表明し、ライバル同士の勝負が始まる。サンリオのキャラクタープロジェクトを原作とする初のミュージカル。",
+      "period": "2016年2月11日〜16日",
+      "venue": "Zeppブルーシアター六本木",
+      "vod": {},
+      "genre": null,
+      "created_at": "2026-10-26T11:02:07.658788+00:00",
+      "updated_at": "2026-10-26T11:02:07.658788+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "サンリオ"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "脚本・演出",
+          "names": [
+            "福島三郎"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "ストーリー原案",
+          "names": [
+            "待田堂子"
+          ],
+          "is_core": true,
+          "sort_order": 3
+        },
+        {
+          "role": "製作",
+          "names": [
+            "セガ・ライブクリエイション"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "主催",
+          "names": [
+            "SHOW BY ROCK!! MUSICAL製作委員会",
+            "Zeppブルーシアター六本木運営委員会"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "ダンサー",
+          "names": [
+            "高木裕和",
+            "石丸隆義",
+            "丸山泰右",
+            "中智紀"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        },
+        {
+          "role": "アフターイベント",
+          "names": [
+            "2016/02/11 19:00公演終演後：シンガンクリムゾンズのトークショー。出演：米原幸佑・輝馬・鳥越裕貴・滝川英治。",
+            "2016/02/15 19:00公演終演後：トライクロニカのトークショー。出演：三津谷亮・橋本祥平・月岡弘一。MC：野崎数馬。",
+            "2016/02/12 19:00・02/16 14:00公演終演後：シンガンクリムゾンズとトライクロニカのミニコンサート。"
+          ],
+          "is_core": false,
+          "sort_order": 7
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "In MIDI CITY, Shingancrimsonz enters a music festival to win enough prize money to repay the debts of its agency president, Maple Arisugawa. When popular idol band Trichronika also joins the contest, a rivalry unfolds. The first musical based on Sanrio’s SHOW BY ROCK!! character project.",
+      "title_en": "SHOW BY ROCK!! MUSICAL (2016)"
+    }
+  ],
+  "evidence": {
+    "links": [
+      {
+        "url": "https://kira-hai.net/sb69_2017",
+        "checkedAt": "2026-10-26T11:35:39.728Z",
+        "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+      },
+      {
+        "url": "https://www.nelke.co.jp/stage/showbyrock-musical_fes/index.html",
+        "checkedAt": "2026-10-26T11:38:08.503Z",
+        "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+      },
+      {
+        "url": "https://www.tbs.co.jp/tbs-ch/item/a0313/",
+        "checkedAt": "2026-10-26T11:38:09.983Z",
+        "note": "取得原文とSHA256を保存。採用値・資料種別・差異は人物notesと作品exceptionsを参照。"
+      }
+    ],
+    "sources": [
+      {
+        "label": "kira",
+        "url": "https://kira-hai.net/sb69_2017",
+        "status": 200,
+        "checkedAt": "2026-10-26T11:35:39.728Z",
+        "sha256": "00df42127ce4c5f15e8d84b71302107dbcfcf410b4aa7729e550df0b396a3464"
+      },
+      {
+        "label": "officialTop",
+        "url": "https://showbyrock-musical.com/2017/",
+        "status": 200,
+        "checkedAt": "2026-10-26T11:35:39.891Z",
+        "sha256": "ae459e9d316dd8ed286704eb6d97f2637ffd33148661e05e2b972f96dad4524b"
+      },
+      {
+        "label": "officialCast",
+        "url": "https://showbyrock-musical.com/2017/cast/index.html",
+        "status": 200,
+        "checkedAt": "2026-10-26T11:35:39.951Z",
+        "sha256": "87cd907c446264c82775ad001ff5c62891f216914cd8a81ce7bac2b48b069797"
+      },
+      {
+        "label": "officialNews",
+        "url": "https://showbyrock-musical.com/2017/news/index.html",
+        "status": 200,
+        "checkedAt": "2026-10-26T11:35:40.000Z",
+        "sha256": "113db67dc7c846aca43aeaa0f3ba7aa6c62fca294ff465f4848e1a41b92288dc"
+      },
+      {
+        "label": "changelog",
+        "url": "https://supabase.com/changelog.md",
+        "status": 200,
+        "checkedAt": "2026-10-26T11:35:40.264Z",
+        "sha256": "45528009025b8ad8487ccb73f7c769b66d4b0e7aa4560157047899dcb5b5a006"
+      },
+      {
+        "label": "nelke",
+        "url": "https://www.nelke.co.jp/stage/showbyrock-musical_fes/index.html",
+        "status": 200,
+        "checkedAt": "2026-10-26T11:38:08.503Z",
+        "sha256": "04f58935524df886dc4ad59681c8dab74ac58814890740762b75d375efd4837b"
+      },
+      {
+        "label": "tbs",
+        "url": "https://www.tbs.co.jp/tbs-ch/item/a0313/",
+        "status": 200,
+        "checkedAt": "2026-10-26T11:38:09.983Z",
+        "sha256": "afec03138c468b74558e1e4fad0586544dc8607b4de88bc0bfa91814af8336e0"
+      },
+      {
+        "label": "kiraItagaki",
+        "url": "https://kira-hai.net/itagaki-rihito",
+        "status": 200,
+        "checkedAt": "2026-10-26T11:38:10.812Z",
+        "sha256": "2c7eaae3eb8f29b56d7508f5471535309e849e0600e13ecfd5a97b7a59a7d017"
+      },
+      {
+        "label": "kiraYutaro",
+        "url": "https://kira-hai.net/yutaro",
+        "status": 200,
+        "checkedAt": "2026-10-26T11:38:11.146Z",
+        "sha256": "0a966ceea29a0d5b26dc770f9a4c052bc27a975f8d8293476294094a852c2fd1"
+      },
+      {
+        "label": "kiraKimeru",
+        "url": "https://kira-hai.net/kimeru",
+        "status": 200,
+        "checkedAt": "2026-10-26T11:38:11.521Z",
+        "sha256": "6496857906536c9b579139ee92ff21207baccd93c1ae27e772b4ab1ee00d0392"
+      },
+      {
+        "label": "tlsChange",
+        "url": "https://supabase.com/changelog/deprecating-legacy-tls-cbc-ciphers-for-supabase-apis",
+        "status": 404,
+        "checkedAt": "2026-10-26T11:38:16.305Z",
+        "sha256": "f64fe6ceba373a8c3d4b0b121ba7664970fbf6734b39878303e48f467cb60d8b"
+      },
+      {
+        "label": "itagakiOfficial",
+        "url": "https://www.stardust.co.jp/talent/section1/itagakirihito/",
+        "status": 200,
+        "checkedAt": "2026-10-26T11:51:27.462Z",
+        "sha256": "f012139f1601f9804b85e7794ec9731fc1e6e77c4521d1320c41834f0c185b0c"
+      },
+      {
+        "label": "itagakiGender",
+        "url": "https://www.animatetimes.com/tag/details.php?id=11118",
+        "status": 200,
+        "checkedAt": "2026-10-26T11:51:28.430Z",
+        "sha256": "983e02ab9097399041c3ed6b952b0b5d65b294a79e74d059a7b4c9c9e28a7b6f"
+      },
+      {
+        "label": "itagakiEditorial",
+        "url": "https://thetv.jp/person/2000035046/",
+        "status": 200,
+        "checkedAt": "2026-10-26T11:51:28.817Z",
+        "sha256": "e3e9fdcdc078d9f885154dc42542d6662c0ec7408e84f91937a69085fd866bcb"
+      },
+      {
+        "label": "tlsChangeCorrect",
+        "url": "https://supabase.com/changelog/cbc-tls-ciphers-deprecated",
+        "status": 200,
+        "checkedAt": "2026-10-26T11:51:29.287Z",
+        "sha256": "1bf16bc09823736d0a751a8b1ac8efc7c86d2e72dfe311c9840fe0f41ef283a2"
+      }
+    ],
+    "unresolved": [
+      "次は2017年深淵のCrossAmbivalence、2018年2作品とシリーズ全体点検。",
+      "板垣の身長は第一参照先由来。現行公式に記載なし、成長期の旧値の可能性は後続監査。詳細英訳・現行配信と既存人物属性の総合監査は後続。"
+    ],
+    "notes": [
+      "Supabase changelogを取得し、TLS CBCの廃止予定を確認。Node24の現行TLS利用と既存DML/RPCで、スキーマ・RLS変更なし。",
+      "MCのみの出演と役名のある配役を区別。旧候補2件を採用済みにするための架空役名は作らない。"
+    ]
+  },
+  "requestKey": "d40503e3af506b2a641a1af1db2b49fc761929734565f5f90f87f7f196a8063f",
+  "verification": {
+    "passed": true,
+    "requestKey": "d40503e3af506b2a641a1af1db2b49fc761929734565f5f90f87f7f196a8063f",
+    "changes": {
+      "actors": {
+        "before": 1157,
+        "after": 1158,
+        "modified": 0,
+        "added": 1,
+        "deleted": 0
+      },
+      "plays": {
+        "before": 405,
+        "after": 406,
+        "modified": 0,
+        "added": 1,
+        "deleted": 0
+      },
+      "franchises": {
+        "before": 198,
+        "after": 198,
+        "modified": 0,
+        "added": 0,
+        "deleted": 0
+      },
+      "casts": {
+        "before": 4137,
+        "after": 4148,
+        "modified": 0,
+        "added": 11,
+        "deleted": 0
+      },
+      "external_actors": {
+        "before": 1701,
+        "after": 1701,
+        "modified": 2,
+        "added": 0,
+        "deleted": 0
+      },
+      "external_cast_candidates": {
+        "before": 3490,
+        "after": 3501,
+        "modified": 0,
+        "added": 11,
+        "deleted": 0
+      },
+      "external_import_logs": {
+        "before": 5529,
+        "after": 5557,
+        "modified": 0,
+        "added": 28,
+        "deleted": 0
+      },
+      "actor_identity_sources": {
+        "before": 503,
+        "after": 504,
+        "modified": 0,
+        "added": 1,
+        "deleted": 0
+      }
+    },
+    "newActors": 1,
+    "newPlays": 1,
+    "newCasts": 11,
+    "existingActorsReused": 10,
+    "uniqueWorkActors": 11,
+    "existingRowsModified": 2,
+    "modifiedFields": [
+      "external_actors.matched_actor_id",
+      "external_actors.match_status",
+      "external_actors.match_confidence",
+      "external_actors.updated_at"
+    ],
+    "creditCategories": 6,
+    "mcCreditNames": 1,
+    "seriesWorks": 2,
+    "seriesCastRows": 23,
+    "logActions": {
+      "complete_reviewed_cast_order": 11,
+      "complete_reviewed_sb692017fes": 1,
+      "link_reviewed_external_actor": 2,
+      "create_cast": 11,
+      "register_reviewed_actor_with_identity": 1,
+      "stage_work_candidates": 1,
+      "register_reviewed_play": 1
+    },
+    "pendingChecks": [
+      "次は2017年深淵のCrossAmbivalence、2018年2作品とシリーズ全体点検。",
+      "板垣の身長は第一参照先由来。現行公式に記載なし、成長期の旧値の可能性は後続監査。詳細英訳・現行配信と既存人物属性の総合監査は後続。"
+    ]
+  },
+  "publicVerification": {
+    "passed": true,
+    "pages": 26,
+    "castRows": 11,
+    "newActors": 1,
+    "creditCategories": 6,
+    "mcCreditNames": 1,
+    "timeline": "2017/05",
+    "results": [
+      {
+        "path": "/actors/yonehara-kosuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/sb69_2017",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/teruma",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/torigoe-yuki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/takigawa-eiji",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/kamakari-kenta",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/yutaro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/kihara-rui",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/itagaki-rihito",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/itokawa-yojiro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/tanaka-ryosei",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/takigawa-kodai",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/sb69_2017",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/yonehara-kosuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/teruma",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/torigoe-yuki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/kamakari-kenta",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/takigawa-eiji",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/kihara-rui",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/itokawa-yojiro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/yutaro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/itagaki-rihito",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/tanaka-ryosei",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/takigawa-kodai",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/series/show-by-rock",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/series/show-by-rock",
+        "passed": true,
+        "status": 200
+      }
+    ]
+  },
+  "searchVerification": {
+    "passed": true,
+    "checks": 6,
+    "spaceAndNoSpace": true,
+    "knownGenderFilter": true,
+    "results": [
+      {
+        "path": "/en/actors?q=%E6%9D%BF%E5%9E%A3+%E6%9D%8E%E5%85%89%E4%BA%BA",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%9D%BF%E5%9E%A3+%E6%9D%8E%E5%85%89%E4%BA%BA&gender=male",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%9D%BF%E5%9E%A3+%E6%9D%8E%E5%85%89%E4%BA%BA",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%9D%BF%E5%9E%A3%E6%9D%8E%E5%85%89%E4%BA%BA",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%9D%BF%E5%9E%A3+%E6%9D%8E%E5%85%89%E4%BA%BA&gender=male",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%9D%BF%E5%9E%A3%E6%9D%8E%E5%85%89%E4%BA%BA",
+        "status": 200,
+        "passed": true
+      }
+    ]
+  },
+  "replayVerification": {
+    "passed": true,
+    "tables": {
+      "actors": {
+        "rows": 1158,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "plays": {
+        "rows": 406,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "franchises": {
+        "rows": 198,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "casts": {
+        "rows": 4148,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_actors": {
+        "rows": 1701,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_cast_candidates": {
+        "rows": 3501,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_import_logs": {
+        "rows": 5557,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "actor_identity_sources": {
+        "rows": 504,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      }
+    }
+  },
+  "sourceValidation": {
+    "officialRolePairs": true,
+    "officialCastOrder": true,
+    "mayAndOctoberProductionsSeparated": true,
+    "mcCreditOnly": true,
+    "titanMay13VideoAppearance": true,
+    "kimeruLegacyCandidatesPreserved": true
+  },
+  "verificationScope": "2017年5月ライブの11配役・6クレジット区分、日英26ページ・検索6件を確認。シリーズ年表の2017/05→2016/02と概要抜粋、8テーブル全行保全・再実行0変更。残る2017年秋と2018年2作の収録とシリーズ全体点検は後続。"
+}
