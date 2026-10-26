@@ -1,0 +1,2673 @@
+{
+  "version": 1,
+  "batchId": "sb692016-20261026-01",
+  "expectedFranchise": {
+    "id": "def83f64-c1c3-48d4-82d6-d785af1b2eda",
+    "name": "Live Musical「SHOW BY ROCK!!」（ショバミュ）",
+    "created_at": "2026-02-08T16:26:41.990203+00:00",
+    "updated_at": "2026-02-08T16:26:41.990203+00:00",
+    "slug": "show-by-rock",
+    "intro": null,
+    "description": "サンリオによる音楽・バンドをテーマにした大人気キャラクタープロジェクトおよびスマートフォン向けゲームアプリ『SHOW BY ROCK!!』を原作としたミュージカル作品。通称「ショバミュ」。2016年に初演され、その後「Live Musical」と銘打たれたシリーズとして本格展開された。「シンガンクリムゾンズ」や「DOKONJOFINGER」といった個性豊かな男性ロックバンドたちが、熱い音楽魂をぶつけ合う姿を描き出す。本作の最大の特徴は、舞台上のキャスト陣が実際に楽器を演奏しながらライブパフォーマンスを行う本格的なバンドサウンドと、サンリオ作品ならではのコミカルで熱い青春ストーリーが見事に融合している点にある。客席を煽りリアルな熱狂を生み出すライブシーンは多くのファンを虜にし、本編のお芝居公演だけでなく音楽フェス形式の単独ライブ公演も定期的に開催されるなど、ライブ演劇として高い熱量を誇るシリーズ。",
+    "origin_type": "メディアミックス",
+    "origin_note": "原作：サンリオ",
+    "production_companies": [
+      "ネルケプランニング"
+    ],
+    "related_franchise_ids": [],
+    "format": "musical",
+    "description_en": null,
+    "name_en": null
+  },
+  "franchisePatch": {
+    "name_en": "Live Musical SHOW BY ROCK!!",
+    "description": "サンリオの音楽・バンドをテーマにしたキャラクタープロジェクト『SHOW BY ROCK!!』を原作とする舞台シリーズ。シンガンクリムゾンズやトライクロニカらの物語を、歌やライブパートを交えて描く。2016年に初演され、2017年からLive Musicalとして展開した。",
+    "description_en": "A stage series based on Sanrio’s music and band-themed character project SHOW BY ROCK!!. It follows bands including Shingancrimsonz and Trichronika through stories, songs and live-performance segments. The first musical opened in 2016, followed by the Live Musical series from 2017."
+  },
+  "externalActorLinks": [
+    {
+      "before": {
+        "id": "3cd161b2-052b-4f3d-aad0-19723ce9c7e7",
+        "source": "kira-hai",
+        "source_actor_name": "月岡弘一",
+        "source_actor_url": "https://kira-hai.net/tsukioka-hirokadu",
+        "alias_from": null,
+        "alias_to": null,
+        "note": null,
+        "matched_actor_id": null,
+        "match_status": "unmatched",
+        "match_confidence": 0,
+        "scraped_at": "2026-04-27T17:11:21.759+00:00",
+        "created_at": "2026-04-25T07:23:52.711389+00:00",
+        "updated_at": "2026-04-27T17:11:21.759+00:00",
+        "source_profile_facts_raw": null,
+        "source_birthday_raw": null,
+        "source_birthday": null,
+        "source_height_cm": null,
+        "source_blood_type": null,
+        "source_affiliation_raw": null,
+        "source_actor_kana": null
+      },
+      "patch": {
+        "matched_actor_id": "e14aab7b-2c3a-4477-9fac-83e5da6a77da",
+        "match_status": "matched",
+        "match_confidence": 90
+      }
+    },
+    {
+      "before": {
+        "id": "cfbc4716-83cd-4467-a612-ca67abbf9415",
+        "source": "kira-hai",
+        "source_actor_name": "吉田雄樹",
+        "source_actor_url": "https://kira-hai.net/yoshida-yuki",
+        "alias_from": null,
+        "alias_to": null,
+        "note": null,
+        "matched_actor_id": null,
+        "match_status": "unmatched",
+        "match_confidence": 0,
+        "scraped_at": "2026-04-27T17:11:21.759+00:00",
+        "created_at": "2026-04-25T07:26:09.109677+00:00",
+        "updated_at": "2026-04-27T17:11:21.759+00:00",
+        "source_profile_facts_raw": null,
+        "source_birthday_raw": null,
+        "source_birthday": null,
+        "source_height_cm": null,
+        "source_blood_type": null,
+        "source_affiliation_raw": null,
+        "source_actor_kana": null
+      },
+      "patch": {
+        "matched_actor_id": "c562c32e-6bbb-424b-81dc-2c8766a9bad9",
+        "match_status": "matched",
+        "match_confidence": 90
+      }
+    }
+  ],
+  "actors": [
+    {
+      "actor": {
+        "id": "e14aab7b-2c3a-4477-9fac-83e5da6a77da",
+        "slug": "tsukioka-hirokadu",
+        "name": "月岡 弘一",
+        "kana": "つきおか ひろかづ",
+        "profile": "俳優。『SHOW BY ROCK!! MUSICAL』のカイ役や『最遊記歌劇伝―異聞―』の丸福役を務める。2022年にbambooに籍を残し、俳優活動を無期限休止すると発表した。",
+        "image_url": null,
+        "sns": {},
+        "gender": "male",
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1990-02-02",
+        "height_cm": 170,
+        "blood_type": "B",
+        "birthday_label": null,
+        "name_en": "Hirokazu Tsukioka",
+        "profile_en": "An actor whose roles include Kai in SHOW BY ROCK!! MUSICAL and Marufuku in Saiyuki Kagekiden: Ibun. In 2022, he announced an indefinite break from acting while remaining with bamboo.",
+        "death_date": null
+      },
+      "sourceActorName": "月岡弘一",
+      "profileUrl": "https://kira-hai.net/tsukioka-hirokadu",
+      "evidence": [
+        {
+          "url": "https://kira-hai.net/tsukioka-hirokadu",
+          "checkedAt": "2026-10-26T10:41:41.886Z",
+          "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+        },
+        {
+          "url": "https://ameblo.jp/hirokadu-tsukioka/",
+          "checkedAt": "2026-10-26T10:43:25.983Z",
+          "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+        },
+        {
+          "url": "https://bam-boo.biz/news_detail.php?id=1640",
+          "checkedAt": "2026-10-26T10:48:24.193Z",
+          "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+        },
+        {
+          "url": "https://showbyrock-musical.com/2016/",
+          "checkedAt": "2026-10-26T10:39:59.783Z",
+          "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+        }
+      ],
+      "notes": [
+        "姓名半角スペース。読みは本人ブログ見出しと第一参照先の「ひろかづ」を優先し、検索媒体のヒロカツや表記づ／ずを機械修正しない。DOB・170cm・B型は第一参照先。男性は本人ブログの公開プロフィール。英字はかなの転写で公式英字と断定しない。",
+        "旧所属プロフィール404、人物名鑑の直取得503。出身をこの失敗応答から補わない。所属公式の2022/10/31無期限休止と籍を残す告知を経歴として記載し、引退と書かない。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "b75c570e-6fe5-4623-ad94-f9acfb036512",
+        "slug": "ishikawa-seiya",
+        "name": "石川 誠也",
+        "kana": "いしかわ せいや",
+        "profile": "俳優。劇団丸福ボンバーズの公演で活動。『SHOW BY ROCK!! MUSICAL』のクワガタツヤ役や、舞台『結婚のススメ～NO SURPRISE,NO LIFE！～』などに出演する。",
+        "image_url": null,
+        "sns": {},
+        "gender": "male",
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": null,
+        "height_cm": null,
+        "blood_type": null,
+        "birthday_label": null,
+        "name_en": "Seiya Ishikawa",
+        "profile_en": "An actor who has performed with Marufuku Bombers. His credits include Kuwagatatsuya in SHOW BY ROCK!! MUSICAL and the stage production Kekkon no Susume: No Surprise, No Life!",
+        "death_date": null
+      },
+      "sourceActorName": "石川誠也",
+      "profileUrl": "https://note.com/ishikawaseiya/n/nfbfaa8e9d24c",
+      "evidence": [
+        {
+          "url": "https://note.com/ishikawaseiya/n/nfbfaa8e9d24c",
+          "checkedAt": "2026-10-26T10:46:18.691Z",
+          "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+        },
+        {
+          "url": "https://www.dimora.jp/talent-info/2/326749/?areaId=0952",
+          "checkedAt": "2026-10-26T10:46:18.236Z",
+          "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+        },
+        {
+          "url": "https://ricomotion.com/hephall20052021/40303/",
+          "checkedAt": "2026-10-26T10:46:19.558Z",
+          "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+        },
+        {
+          "url": "https://showbyrock-musical.com/2016/",
+          "checkedAt": "2026-10-26T10:39:59.783Z",
+          "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+        }
+      ],
+      "notes": [
+        "本人noteの俳優・丸福ボンバーズ、主催会場の劇団出演枠、公演公式の役名を照合。読みと男性は番組表の公開分類。英字は確認した読みの転写。",
+        "同名の会社経営者・研究者・講師へ接続しない。大河DBにある1989/02/14は今回本人資料と十分接続できないため保存しない。出身・身長・血液型・現在所属も推測せず空欄。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "c562c32e-6bbb-424b-81dc-2c8766a9bad9",
+        "slug": "yoshida-yuki",
+        "name": "吉田 雄樹",
+        "kana": "よしだ ゆうき",
+        "profile": "滋賀県出身の俳優。ドラマ『上地雄輔ひまわり物語』で約1500人のオーディションから主演に選ばれた。劇団丸福ボンバーズの公演に参加し、『SHOW BY ROCK!! MUSICAL』ではカブトモアキ役を務める。",
+        "image_url": null,
+        "sns": {},
+        "gender": "male",
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1989-01-22",
+        "height_cm": 174,
+        "blood_type": "A",
+        "birthday_label": null,
+        "name_en": "Yuki Yoshida",
+        "profile_en": "An actor from Shiga, selected from around 1,500 auditionees to play the lead in the TV drama Kamiji Yusuke Himawari Monogatari. He has performed with Marufuku Bombers and plays Kabutomoaki in SHOW BY ROCK!! MUSICAL.",
+        "death_date": null
+      },
+      "sourceActorName": "吉田雄樹",
+      "profileUrl": "https://kira-hai.net/yoshida-yuki",
+      "evidence": [
+        {
+          "url": "https://kira-hai.net/yoshida-yuki",
+          "checkedAt": "2026-10-26T10:41:42.084Z",
+          "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+        },
+        {
+          "url": "https://thetv.jp/person/1000070265/",
+          "checkedAt": "2026-10-26T10:46:17.636Z",
+          "note": "編集プロフィール。採用値・読みの差は人物notesを参照。"
+        },
+        {
+          "url": "https://www.dimora.jp/talent-info/38/77308/?areaId=093",
+          "checkedAt": "2026-10-26T10:46:18.021Z",
+          "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+        },
+        {
+          "url": "https://yoshiday.exblog.jp/profile/",
+          "checkedAt": "2026-10-26T10:43:26.441Z",
+          "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+        },
+        {
+          "url": "https://ricomotion.com/hephall20052021/40303/",
+          "checkedAt": "2026-10-26T10:46:19.558Z",
+          "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+        },
+        {
+          "url": "https://showbyrock-musical.com/2016/",
+          "checkedAt": "2026-10-26T10:39:59.783Z",
+          "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+        }
+      ],
+      "notes": [
+        "読み・完全DOB・滋賀・主演歴は第一参照先と編集人物紹介を照合。174cm・A型は第一参照先。男性は番組表の公開分類。本人公式ブログと主催会場の劇団枠も照合。英字は読みの転写。",
+        "同名のコンサルティング経営者、医学者、香港の音響デザイナーと統合しない。過去公演の所属表示を現在の所属の断定には使わない。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "612e7eda-0b0a-4e2b-80fa-050681d33bc4",
+        "slug": "nozaki-kazuma",
+        "name": "野崎 数馬",
+        "kana": "のざき かずま",
+        "profile": "熊本県出身の俳優・演出家。劇団丸福ボンバーズで活動。TBS『はなまるマーケット』のリポーターを務め、舞台『この街で～イリスと愉快な仲間たち～』では演出と主演を担当した。",
+        "image_url": null,
+        "sns": {},
+        "gender": "male",
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1969-05-30",
+        "height_cm": null,
+        "blood_type": null,
+        "birthday_label": null,
+        "name_en": "Kazuma Nozaki",
+        "profile_en": "An actor and director from Kumamoto who performs with Marufuku Bombers. He worked as a reporter on TBS’s Hanamaru Market and directed and starred in Kono Machi de: Iris and Her Friends.",
+        "death_date": null
+      },
+      "sourceActorName": "野崎数馬",
+      "profileUrl": "https://thetv.jp/person/0000135374/",
+      "evidence": [
+        {
+          "url": "https://thetv.jp/person/0000135374/",
+          "checkedAt": "2026-10-26T10:46:17.520Z",
+          "note": "編集プロフィール。採用値・読みの差は人物notesを参照。"
+        },
+        {
+          "url": "https://www.dimora.jp/talent-info/25/245579/?areaId=027",
+          "checkedAt": "2026-10-26T10:48:24.742Z",
+          "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+        },
+        {
+          "url": "https://ricomotion.com/hephall20052021/40303/",
+          "checkedAt": "2026-10-26T10:46:19.558Z",
+          "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+        },
+        {
+          "url": "https://showbyrock-musical.com/2016/",
+          "checkedAt": "2026-10-26T10:39:59.783Z",
+          "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+        }
+      ],
+      "notes": [
+        "読み・1969/05/30・熊本・経歴は編集人物紹介。男性は番組表。主催会場の丸福所属枠と当該公式の有栖川メイプル役で接続。劇団プロフィールはHTTP/HTTPSとも403のため取得できたふりをしない。身長・血液型は空欄。英字は読みの転写。"
+      ]
+    },
+    {
+      "actor": {
+        "id": "61e4026c-b149-43d5-9a54-97a5239d62ba",
+        "slug": "kimura-yasushi",
+        "name": "木村 靖司",
+        "kana": "きむら やすし",
+        "profile": "東京都出身の俳優。ミーアンドハーコーポレーション所属。玉川大学在学中にSCOTに参加し、1989年に劇団ラッパ屋へ入団。舞台や映像作品のほか、アニメ『スーパー・クルックス』のカーマイン役などで声の出演も行う。",
+        "image_url": null,
+        "sns": {},
+        "gender": "male",
+        "tags": [],
+        "featured_play_slugs": [],
+        "birthday": "1962-04-04",
+        "height_cm": 174,
+        "blood_type": "B",
+        "birthday_label": null,
+        "name_en": "Yasushi Kimura",
+        "profile_en": "An actor from Tokyo, represented by Me & Her Corporation. He joined SCOT while at Tamagawa University and entered the theater company Rappaya in 1989. His work spans theater, screen and voice acting, including Carmine in Super Crooks.",
+        "death_date": null
+      },
+      "sourceActorName": "木村靖司",
+      "profileUrl": "https://www.animatetimes.com/tag/details.php?id=13551",
+      "evidence": [
+        {
+          "url": "https://www.animatetimes.com/tag/details.php?id=13551",
+          "checkedAt": "2026-10-26T10:43:26.816Z",
+          "note": "編集プロフィール。採用値・読みの差は人物notesを参照。"
+        },
+        {
+          "url": "https://www.nntt.jac.go.jp/play/yotsuyakaidan/staff/",
+          "checkedAt": "2026-10-26T10:50:32.741Z",
+          "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+        },
+        {
+          "url": "http://www.me-her.co.jp/profile/kimura_yasushi/",
+          "checkedAt": "2026-10-26T10:48:25.147Z",
+          "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+        },
+        {
+          "url": "https://showbyrock-musical.com/2016/",
+          "checkedAt": "2026-10-26T10:39:59.783Z",
+          "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+        }
+      ],
+      "notes": [
+        "所属公式はHTTPS取得失敗、HTTP http://www.me-her.co.jp/profile/kimura_yasushi/ で取得。英字Yasushi Kimura・完全DOB・東京・174cm・大学とSCOT・ラッパ屋歴を採用。候補照合ではHTTPSの新国立劇場と編集人物紹介を使用し、HTTP本文も元のURL・SHA256付きで出典保全。",
+        "読みは新国立劇場の「きむら やすし」と公式英字に合わせる。アニメイトタイムズ等の「やすじ」は資料差として残して採用しない。同編集資料から明示男性・B型・カーマイン役を採用。"
+      ]
+    }
+  ],
+  "works": [
+    {
+      "year": 2016,
+      "before": null,
+      "play": {
+        "id": "7944fa96-0456-4e23-a0f8-eee9924b000d",
+        "slug": "sb69_2016",
+        "title": "SHOW BY ROCK!! MUSICAL ～唱え家畜共ッ！深紅色の堕天革命黙示録ッ！！～",
+        "franchise_id": "def83f64-c1c3-48d4-82d6-d785af1b2eda",
+        "summary": "音楽都市MIDI CITY。シンガンクリムゾンズは所属事務所の社長・有栖川メイプルが作った借金を返すため、賞金を目指して音楽フェスに挑む。人気アイドルバンドのトライクロニカも参加を表明し、ライバル同士の勝負が始まる。サンリオのキャラクタープロジェクトを原作とする初のミュージカル。",
+        "summary_en": "In MIDI CITY, Shingancrimsonz enters a music festival to win enough prize money to repay the debts of its agency president, Maple Arisugawa. When popular idol band Trichronika also joins the contest, a rivalry unfolds. The first musical based on Sanrio’s SHOW BY ROCK!! character project.",
+        "title_en": "SHOW BY ROCK!! MUSICAL (2016)",
+        "period": "2016年2月11日〜16日",
+        "venue": "Zeppブルーシアター六本木",
+        "vod": {},
+        "genre": null,
+        "tags": [],
+        "credits": [
+          {
+            "role": "原作",
+            "names": [
+              "サンリオ"
+            ],
+            "is_core": true,
+            "sort_order": 1
+          },
+          {
+            "role": "脚本・演出",
+            "names": [
+              "福島三郎"
+            ],
+            "is_core": true,
+            "sort_order": 2
+          },
+          {
+            "role": "ストーリー原案",
+            "names": [
+              "待田堂子"
+            ],
+            "is_core": true,
+            "sort_order": 3
+          },
+          {
+            "role": "製作",
+            "names": [
+              "セガ・ライブクリエイション"
+            ],
+            "is_core": false,
+            "sort_order": 4
+          },
+          {
+            "role": "主催",
+            "names": [
+              "SHOW BY ROCK!! MUSICAL製作委員会",
+              "Zeppブルーシアター六本木運営委員会"
+            ],
+            "is_core": false,
+            "sort_order": 5
+          },
+          {
+            "role": "ダンサー",
+            "names": [
+              "高木裕和",
+              "石丸隆義",
+              "丸山泰右",
+              "中智紀"
+            ],
+            "is_core": false,
+            "sort_order": 6
+          },
+          {
+            "role": "アフターイベント",
+            "names": [
+              "2016/02/11 19:00公演終演後：シンガンクリムゾンズのトークショー。出演：米原幸佑・輝馬・鳥越裕貴・滝川英治。",
+              "2016/02/15 19:00公演終演後：トライクロニカのトークショー。出演：三津谷亮・橋本祥平・月岡弘一。MC：野崎数馬。",
+              "2016/02/12 19:00・02/16 14:00公演終演後：シンガンクリムゾンズとトライクロニカのミニコンサート。"
+            ],
+            "is_core": false,
+            "sort_order": 7
+          }
+        ],
+        "related_franchise_ids": []
+      },
+      "rawSource": {
+        "sourceUrl": "https://kira-hai.net/sb69_2016",
+        "title": "SHOW BY ROCK!! MUSICAL ~唱え家畜共ッ!深紅色の堕天革命黙示録ッ!!~",
+        "scheduleLines": [
+          "2016年2月11日-16日 Zepp ブルーシアター 六本木"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "米原幸佑",
+            "sourceActorUrl": "https://kira-hai.net/yonehara-kosuke",
+            "role_name": "クロウ",
+            "cast_group": "シンガンクリムゾンズ"
+          },
+          {
+            "sourceActorName": "輝馬",
+            "sourceActorUrl": "https://kira-hai.net/teruma",
+            "role_name": "アイオーン",
+            "cast_group": "シンガンクリムゾンズ"
+          },
+          {
+            "sourceActorName": "鳥越裕貴",
+            "sourceActorUrl": "https://kira-hai.net/torigoe-yuki",
+            "role_name": "ヤイバ",
+            "cast_group": "シンガンクリムゾンズ"
+          },
+          {
+            "sourceActorName": "滝川英治",
+            "sourceActorUrl": "https://kira-hai.net/takigawa-eiji",
+            "role_name": "ロム",
+            "cast_group": "シンガンクリムゾンズ"
+          },
+          {
+            "sourceActorName": "三津谷亮",
+            "sourceActorUrl": "https://kira-hai.net/mitsuya-ryo",
+            "role_name": "シュウ☆ゾー",
+            "cast_group": "トライクロニカ"
+          },
+          {
+            "sourceActorName": "橋本祥平",
+            "sourceActorUrl": "https://kira-hai.net/hashimoto-shohei",
+            "role_name": "リク",
+            "cast_group": "トライクロニカ"
+          },
+          {
+            "sourceActorName": "月岡弘一",
+            "sourceActorUrl": "https://kira-hai.net/tsukioka-hirokadu",
+            "role_name": "カイ",
+            "cast_group": "トライクロニカ"
+          },
+          {
+            "sourceActorName": "石川誠也",
+            "sourceActorUrl": null,
+            "role_name": "クワガタツヤ",
+            "cast_group": "ドロップアウト先生"
+          },
+          {
+            "sourceActorName": "吉田雄樹",
+            "sourceActorUrl": "https://kira-hai.net/yoshida-yuki",
+            "role_name": "カブトモアキ",
+            "cast_group": "ドロップアウト先生"
+          },
+          {
+            "sourceActorName": "高樹京士郎",
+            "sourceActorUrl": "https://kira-hai.net/takagi-kyoshiro",
+            "role_name": "テントウムツミ",
+            "cast_group": "ドロップアウト先生"
+          },
+          {
+            "sourceActorName": "野崎数馬",
+            "sourceActorUrl": null,
+            "role_name": "有栖川メイプル",
+            "cast_group": "ドロップアウト先生"
+          },
+          {
+            "sourceActorName": "木村靖司",
+            "sourceActorUrl": null,
+            "role_name": "山之上メフィスト",
+            "cast_group": "ドロップアウト先生"
+          }
+        ],
+        "unparsed": [
+          "高木裕和",
+          "石丸隆義",
+          "丸山泰右",
+          "中智紀"
+        ]
+      },
+      "source": {
+        "sourceUrl": "https://kira-hai.net/sb69_2016",
+        "title": "SHOW BY ROCK!! MUSICAL ~唱え家畜共ッ!深紅色の堕天革命黙示録ッ!!~",
+        "scheduleLines": [
+          "2016年2月11日-16日 Zepp ブルーシアター 六本木"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "米原幸佑",
+            "sourceActorUrl": "https://kira-hai.net/yonehara-kosuke",
+            "role_name": "クロウ",
+            "cast_group": "シンガンクリムゾンズ"
+          },
+          {
+            "sourceActorName": "輝馬",
+            "sourceActorUrl": "https://kira-hai.net/teruma",
+            "role_name": "アイオーン",
+            "cast_group": "シンガンクリムゾンズ"
+          },
+          {
+            "sourceActorName": "鳥越裕貴",
+            "sourceActorUrl": "https://kira-hai.net/torigoe-yuki",
+            "role_name": "ヤイバ",
+            "cast_group": "シンガンクリムゾンズ"
+          },
+          {
+            "sourceActorName": "滝川英治",
+            "sourceActorUrl": "https://kira-hai.net/takigawa-eiji",
+            "role_name": "ロム",
+            "cast_group": "シンガンクリムゾンズ"
+          },
+          {
+            "sourceActorName": "三津谷亮",
+            "sourceActorUrl": "https://kira-hai.net/mitsuya-ryo",
+            "role_name": "シュウ☆ゾー",
+            "cast_group": "トライクロニカ"
+          },
+          {
+            "sourceActorName": "橋本祥平",
+            "sourceActorUrl": "https://kira-hai.net/hashimoto-shohei",
+            "role_name": "リク",
+            "cast_group": "トライクロニカ"
+          },
+          {
+            "sourceActorName": "月岡弘一",
+            "sourceActorUrl": "https://kira-hai.net/tsukioka-hirokadu",
+            "role_name": "カイ",
+            "cast_group": "トライクロニカ"
+          },
+          {
+            "sourceActorName": "石川誠也",
+            "sourceActorUrl": null,
+            "role_name": "クワガタツヤ",
+            "cast_group": "ドロップアウト先生"
+          },
+          {
+            "sourceActorName": "吉田雄樹",
+            "sourceActorUrl": "https://kira-hai.net/yoshida-yuki",
+            "role_name": "カブトモアキ",
+            "cast_group": "ドロップアウト先生"
+          },
+          {
+            "sourceActorName": "高樹京士郎",
+            "sourceActorUrl": "https://kira-hai.net/takagi-kyoshiro",
+            "role_name": "テントウムツミ",
+            "cast_group": "ドロップアウト先生"
+          },
+          {
+            "sourceActorName": "野崎数馬",
+            "sourceActorUrl": null,
+            "role_name": "有栖川メイプル",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "木村靖司",
+            "sourceActorUrl": null,
+            "role_name": "山之上メフィスト",
+            "cast_group": null
+          }
+        ],
+        "unparsed": []
+      },
+      "sourceFingerprint": "4a861e4e13edf657b3698c79c03213335eb934da63f9da9c351daf273f4ee322",
+      "stage": {
+        "workUrl": "https://kira-hai.net/sb69_2016",
+        "key": "8fa0d51d348f7ad0a4f5e52158ca9c757956f811b31d55cf0f22868bbb1e721a",
+        "items": [
+          {
+            "source_actor_name": "米原幸佑",
+            "source_actor_url": "https://kira-hai.net/yonehara-kosuke",
+            "source_work_title": "SHOW BY ROCK!! MUSICAL ~唱え家畜共ッ!深紅色の堕天革命黙示録ッ!!~",
+            "source_year": 2016,
+            "source_role_raw": "クロウ",
+            "source_role_names": [
+              "クロウ"
+            ],
+            "source_cast_group": "シンガンクリムゾンズ",
+            "source_order": 1,
+            "source_credit_key": "feb79505e44d69e1be3d",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/sb69_2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/sb69_2016",
+                  "checkedAt": "2026-10-26T10:40:41.449Z",
+                  "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/2016/",
+                  "checkedAt": "2026-10-26T10:39:59.783Z",
+                  "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                }
+              ],
+              "source_fingerprint": "4a861e4e13edf657b3698c79c03213335eb934da63f9da9c351daf273f4ee322",
+              "review_fingerprint": "ece151771f3f55b5078a2e567d7a9781e8c43d6ca25166fa1d98e438aea37227",
+              "snapshot_fingerprint": "9f10fc375d2b30fc42f88d765d2008f2e5a7fa0fc61c4c660856e81e33a44549",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2016,
+                "reason": "2016年2月11〜16日の初演。7月DVDイベント、2017年以降の公演と区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/sb69_2016",
+                    "checkedAt": "2026-10-26T10:40:41.449Z",
+                    "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/2016/",
+                    "checkedAt": "2026-10-26T10:39:59.783Z",
+                    "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "c84c1fe6-8f7b-4404-9a5b-7f3c04772f1e",
+            "matched_play_id": "7944fa96-0456-4e23-a0f8-eee9924b000d",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "輝馬",
+            "source_actor_url": "https://kira-hai.net/teruma",
+            "source_work_title": "SHOW BY ROCK!! MUSICAL ~唱え家畜共ッ!深紅色の堕天革命黙示録ッ!!~",
+            "source_year": 2016,
+            "source_role_raw": "アイオーン",
+            "source_role_names": [
+              "アイオーン"
+            ],
+            "source_cast_group": "シンガンクリムゾンズ",
+            "source_order": 2,
+            "source_credit_key": "e4771d8e25b35d336e28",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/sb69_2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/sb69_2016",
+                  "checkedAt": "2026-10-26T10:40:41.449Z",
+                  "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/2016/",
+                  "checkedAt": "2026-10-26T10:39:59.783Z",
+                  "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                }
+              ],
+              "source_fingerprint": "4a861e4e13edf657b3698c79c03213335eb934da63f9da9c351daf273f4ee322",
+              "review_fingerprint": "ece151771f3f55b5078a2e567d7a9781e8c43d6ca25166fa1d98e438aea37227",
+              "snapshot_fingerprint": "9f10fc375d2b30fc42f88d765d2008f2e5a7fa0fc61c4c660856e81e33a44549",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2016,
+                "reason": "2016年2月11〜16日の初演。7月DVDイベント、2017年以降の公演と区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/sb69_2016",
+                    "checkedAt": "2026-10-26T10:40:41.449Z",
+                    "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/2016/",
+                    "checkedAt": "2026-10-26T10:39:59.783Z",
+                    "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "d4088fc7-e039-4ff5-b1a6-d8c240d25467",
+            "matched_play_id": "7944fa96-0456-4e23-a0f8-eee9924b000d",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "鳥越裕貴",
+            "source_actor_url": "https://kira-hai.net/torigoe-yuki",
+            "source_work_title": "SHOW BY ROCK!! MUSICAL ~唱え家畜共ッ!深紅色の堕天革命黙示録ッ!!~",
+            "source_year": 2016,
+            "source_role_raw": "ヤイバ",
+            "source_role_names": [
+              "ヤイバ"
+            ],
+            "source_cast_group": "シンガンクリムゾンズ",
+            "source_order": 3,
+            "source_credit_key": "2075d97a64d99cec3784",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/sb69_2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/sb69_2016",
+                  "checkedAt": "2026-10-26T10:40:41.449Z",
+                  "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/2016/",
+                  "checkedAt": "2026-10-26T10:39:59.783Z",
+                  "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                }
+              ],
+              "source_fingerprint": "4a861e4e13edf657b3698c79c03213335eb934da63f9da9c351daf273f4ee322",
+              "review_fingerprint": "ece151771f3f55b5078a2e567d7a9781e8c43d6ca25166fa1d98e438aea37227",
+              "snapshot_fingerprint": "9f10fc375d2b30fc42f88d765d2008f2e5a7fa0fc61c4c660856e81e33a44549",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2016,
+                "reason": "2016年2月11〜16日の初演。7月DVDイベント、2017年以降の公演と区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/sb69_2016",
+                    "checkedAt": "2026-10-26T10:40:41.449Z",
+                    "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/2016/",
+                    "checkedAt": "2026-10-26T10:39:59.783Z",
+                    "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "cdec47ba-c45d-42c8-98d6-851606b0b321",
+            "matched_play_id": "7944fa96-0456-4e23-a0f8-eee9924b000d",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "滝川英治",
+            "source_actor_url": "https://kira-hai.net/takigawa-eiji",
+            "source_work_title": "SHOW BY ROCK!! MUSICAL ~唱え家畜共ッ!深紅色の堕天革命黙示録ッ!!~",
+            "source_year": 2016,
+            "source_role_raw": "ロム",
+            "source_role_names": [
+              "ロム"
+            ],
+            "source_cast_group": "シンガンクリムゾンズ",
+            "source_order": 4,
+            "source_credit_key": "0a6f49c28b5b133aada6",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/sb69_2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/sb69_2016",
+                  "checkedAt": "2026-10-26T10:40:41.449Z",
+                  "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/2016/",
+                  "checkedAt": "2026-10-26T10:39:59.783Z",
+                  "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                }
+              ],
+              "source_fingerprint": "4a861e4e13edf657b3698c79c03213335eb934da63f9da9c351daf273f4ee322",
+              "review_fingerprint": "ece151771f3f55b5078a2e567d7a9781e8c43d6ca25166fa1d98e438aea37227",
+              "snapshot_fingerprint": "9f10fc375d2b30fc42f88d765d2008f2e5a7fa0fc61c4c660856e81e33a44549",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2016,
+                "reason": "2016年2月11〜16日の初演。7月DVDイベント、2017年以降の公演と区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/sb69_2016",
+                    "checkedAt": "2026-10-26T10:40:41.449Z",
+                    "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/2016/",
+                    "checkedAt": "2026-10-26T10:39:59.783Z",
+                    "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "53abfb49-1935-4f4c-a46f-89b27296c6d6",
+            "matched_play_id": "7944fa96-0456-4e23-a0f8-eee9924b000d",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "三津谷亮",
+            "source_actor_url": "https://kira-hai.net/mitsuya-ryo",
+            "source_work_title": "SHOW BY ROCK!! MUSICAL ~唱え家畜共ッ!深紅色の堕天革命黙示録ッ!!~",
+            "source_year": 2016,
+            "source_role_raw": "シュウ☆ゾー",
+            "source_role_names": [
+              "シュウ☆ゾー"
+            ],
+            "source_cast_group": "トライクロニカ",
+            "source_order": 5,
+            "source_credit_key": "076c22e6c7e90e02b59d",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/sb69_2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/sb69_2016",
+                  "checkedAt": "2026-10-26T10:40:41.449Z",
+                  "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/2016/",
+                  "checkedAt": "2026-10-26T10:39:59.783Z",
+                  "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                }
+              ],
+              "source_fingerprint": "4a861e4e13edf657b3698c79c03213335eb934da63f9da9c351daf273f4ee322",
+              "review_fingerprint": "ece151771f3f55b5078a2e567d7a9781e8c43d6ca25166fa1d98e438aea37227",
+              "snapshot_fingerprint": "9f10fc375d2b30fc42f88d765d2008f2e5a7fa0fc61c4c660856e81e33a44549",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2016,
+                "reason": "2016年2月11〜16日の初演。7月DVDイベント、2017年以降の公演と区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/sb69_2016",
+                    "checkedAt": "2026-10-26T10:40:41.449Z",
+                    "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/2016/",
+                    "checkedAt": "2026-10-26T10:39:59.783Z",
+                    "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "a03b3f80-b2b8-482d-b221-aa4c19be9767",
+            "matched_play_id": "7944fa96-0456-4e23-a0f8-eee9924b000d",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "橋本祥平",
+            "source_actor_url": "https://kira-hai.net/hashimoto-shohei",
+            "source_work_title": "SHOW BY ROCK!! MUSICAL ~唱え家畜共ッ!深紅色の堕天革命黙示録ッ!!~",
+            "source_year": 2016,
+            "source_role_raw": "リク",
+            "source_role_names": [
+              "リク"
+            ],
+            "source_cast_group": "トライクロニカ",
+            "source_order": 6,
+            "source_credit_key": "ede0281f7fe8dce3febb",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/sb69_2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/sb69_2016",
+                  "checkedAt": "2026-10-26T10:40:41.449Z",
+                  "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/2016/",
+                  "checkedAt": "2026-10-26T10:39:59.783Z",
+                  "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                }
+              ],
+              "source_fingerprint": "4a861e4e13edf657b3698c79c03213335eb934da63f9da9c351daf273f4ee322",
+              "review_fingerprint": "ece151771f3f55b5078a2e567d7a9781e8c43d6ca25166fa1d98e438aea37227",
+              "snapshot_fingerprint": "9f10fc375d2b30fc42f88d765d2008f2e5a7fa0fc61c4c660856e81e33a44549",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2016,
+                "reason": "2016年2月11〜16日の初演。7月DVDイベント、2017年以降の公演と区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/sb69_2016",
+                    "checkedAt": "2026-10-26T10:40:41.449Z",
+                    "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/2016/",
+                    "checkedAt": "2026-10-26T10:39:59.783Z",
+                    "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "d9df8cc7-9c58-4ab5-bc19-3b5a75a2e9b6",
+            "matched_play_id": "7944fa96-0456-4e23-a0f8-eee9924b000d",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "月岡弘一",
+            "source_actor_url": "https://kira-hai.net/tsukioka-hirokadu",
+            "source_work_title": "SHOW BY ROCK!! MUSICAL ~唱え家畜共ッ!深紅色の堕天革命黙示録ッ!!~",
+            "source_year": 2016,
+            "source_role_raw": "カイ",
+            "source_role_names": [
+              "カイ"
+            ],
+            "source_cast_group": "トライクロニカ",
+            "source_order": 7,
+            "source_credit_key": "725713d37ddaf556463a",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/sb69_2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/sb69_2016",
+                  "checkedAt": "2026-10-26T10:40:41.449Z",
+                  "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/2016/",
+                  "checkedAt": "2026-10-26T10:39:59.783Z",
+                  "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/tsukioka-hirokadu",
+                  "checkedAt": "2026-10-26T10:41:41.886Z",
+                  "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://ameblo.jp/hirokadu-tsukioka/",
+                  "checkedAt": "2026-10-26T10:43:25.983Z",
+                  "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://bam-boo.biz/news_detail.php?id=1640",
+                  "checkedAt": "2026-10-26T10:48:24.193Z",
+                  "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/2016/",
+                  "checkedAt": "2026-10-26T10:39:59.783Z",
+                  "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                }
+              ],
+              "source_fingerprint": "4a861e4e13edf657b3698c79c03213335eb934da63f9da9c351daf273f4ee322",
+              "review_fingerprint": "ece151771f3f55b5078a2e567d7a9781e8c43d6ca25166fa1d98e438aea37227",
+              "snapshot_fingerprint": "9f10fc375d2b30fc42f88d765d2008f2e5a7fa0fc61c4c660856e81e33a44549",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2016,
+                "reason": "2016年2月11〜16日の初演。7月DVDイベント、2017年以降の公演と区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/sb69_2016",
+                    "checkedAt": "2026-10-26T10:40:41.449Z",
+                    "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/2016/",
+                    "checkedAt": "2026-10-26T10:39:59.783Z",
+                    "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "e14aab7b-2c3a-4477-9fac-83e5da6a77da",
+            "matched_play_id": "7944fa96-0456-4e23-a0f8-eee9924b000d",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "石川誠也",
+            "source_actor_url": null,
+            "source_work_title": "SHOW BY ROCK!! MUSICAL ~唱え家畜共ッ!深紅色の堕天革命黙示録ッ!!~",
+            "source_year": 2016,
+            "source_role_raw": "クワガタツヤ",
+            "source_role_names": [
+              "クワガタツヤ"
+            ],
+            "source_cast_group": "ドロップアウト先生",
+            "source_order": 8,
+            "source_credit_key": "d49dac100690c0d3d155",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/sb69_2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/sb69_2016",
+                  "checkedAt": "2026-10-26T10:40:41.449Z",
+                  "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/2016/",
+                  "checkedAt": "2026-10-26T10:39:59.783Z",
+                  "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://note.com/ishikawaseiya/n/nfbfaa8e9d24c",
+                  "checkedAt": "2026-10-26T10:46:18.691Z",
+                  "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://www.dimora.jp/talent-info/2/326749/?areaId=0952",
+                  "checkedAt": "2026-10-26T10:46:18.236Z",
+                  "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://ricomotion.com/hephall20052021/40303/",
+                  "checkedAt": "2026-10-26T10:46:19.558Z",
+                  "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/2016/",
+                  "checkedAt": "2026-10-26T10:39:59.783Z",
+                  "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                }
+              ],
+              "source_fingerprint": "4a861e4e13edf657b3698c79c03213335eb934da63f9da9c351daf273f4ee322",
+              "review_fingerprint": "ece151771f3f55b5078a2e567d7a9781e8c43d6ca25166fa1d98e438aea37227",
+              "snapshot_fingerprint": "9f10fc375d2b30fc42f88d765d2008f2e5a7fa0fc61c4c660856e81e33a44549",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2016,
+                "reason": "2016年2月11〜16日の初演。7月DVDイベント、2017年以降の公演と区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/sb69_2016",
+                    "checkedAt": "2026-10-26T10:40:41.449Z",
+                    "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/2016/",
+                    "checkedAt": "2026-10-26T10:39:59.783Z",
+                    "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "b75c570e-6fe5-4623-ad94-f9acfb036512",
+            "matched_play_id": "7944fa96-0456-4e23-a0f8-eee9924b000d",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "吉田雄樹",
+            "source_actor_url": "https://kira-hai.net/yoshida-yuki",
+            "source_work_title": "SHOW BY ROCK!! MUSICAL ~唱え家畜共ッ!深紅色の堕天革命黙示録ッ!!~",
+            "source_year": 2016,
+            "source_role_raw": "カブトモアキ",
+            "source_role_names": [
+              "カブトモアキ"
+            ],
+            "source_cast_group": "ドロップアウト先生",
+            "source_order": 9,
+            "source_credit_key": "c57b4905807e62084078",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/sb69_2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/sb69_2016",
+                  "checkedAt": "2026-10-26T10:40:41.449Z",
+                  "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/2016/",
+                  "checkedAt": "2026-10-26T10:39:59.783Z",
+                  "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/yoshida-yuki",
+                  "checkedAt": "2026-10-26T10:41:42.084Z",
+                  "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://thetv.jp/person/1000070265/",
+                  "checkedAt": "2026-10-26T10:46:17.636Z",
+                  "note": "編集プロフィール。採用値・読みの差は人物notesを参照。"
+                },
+                {
+                  "url": "https://www.dimora.jp/talent-info/38/77308/?areaId=093",
+                  "checkedAt": "2026-10-26T10:46:18.021Z",
+                  "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://yoshiday.exblog.jp/profile/",
+                  "checkedAt": "2026-10-26T10:43:26.441Z",
+                  "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://ricomotion.com/hephall20052021/40303/",
+                  "checkedAt": "2026-10-26T10:46:19.558Z",
+                  "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/2016/",
+                  "checkedAt": "2026-10-26T10:39:59.783Z",
+                  "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                }
+              ],
+              "source_fingerprint": "4a861e4e13edf657b3698c79c03213335eb934da63f9da9c351daf273f4ee322",
+              "review_fingerprint": "ece151771f3f55b5078a2e567d7a9781e8c43d6ca25166fa1d98e438aea37227",
+              "snapshot_fingerprint": "9f10fc375d2b30fc42f88d765d2008f2e5a7fa0fc61c4c660856e81e33a44549",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2016,
+                "reason": "2016年2月11〜16日の初演。7月DVDイベント、2017年以降の公演と区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/sb69_2016",
+                    "checkedAt": "2026-10-26T10:40:41.449Z",
+                    "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/2016/",
+                    "checkedAt": "2026-10-26T10:39:59.783Z",
+                    "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "c562c32e-6bbb-424b-81dc-2c8766a9bad9",
+            "matched_play_id": "7944fa96-0456-4e23-a0f8-eee9924b000d",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "高樹京士郎",
+            "source_actor_url": "https://kira-hai.net/takagi-kyoshiro",
+            "source_work_title": "SHOW BY ROCK!! MUSICAL ~唱え家畜共ッ!深紅色の堕天革命黙示録ッ!!~",
+            "source_year": 2016,
+            "source_role_raw": "テントウムツミ",
+            "source_role_names": [
+              "テントウムツミ"
+            ],
+            "source_cast_group": "ドロップアウト先生",
+            "source_order": 10,
+            "source_credit_key": "4a7a6c5bfb0c20610a6e",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/sb69_2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/sb69_2016",
+                  "checkedAt": "2026-10-26T10:40:41.449Z",
+                  "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/2016/",
+                  "checkedAt": "2026-10-26T10:39:59.783Z",
+                  "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://kira-hai.net/takagi-kyoshiro",
+                  "checkedAt": "2026-10-26T10:41:42.223Z",
+                  "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                }
+              ],
+              "source_fingerprint": "4a861e4e13edf657b3698c79c03213335eb934da63f9da9c351daf273f4ee322",
+              "review_fingerprint": "ece151771f3f55b5078a2e567d7a9781e8c43d6ca25166fa1d98e438aea37227",
+              "snapshot_fingerprint": "9f10fc375d2b30fc42f88d765d2008f2e5a7fa0fc61c4c660856e81e33a44549",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2016,
+                "reason": "2016年2月11〜16日の初演。7月DVDイベント、2017年以降の公演と区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/sb69_2016",
+                    "checkedAt": "2026-10-26T10:40:41.449Z",
+                    "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/2016/",
+                    "checkedAt": "2026-10-26T10:39:59.783Z",
+                    "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "dbb9a17d-74d2-4058-bf6a-ac60513204e4",
+            "matched_play_id": "7944fa96-0456-4e23-a0f8-eee9924b000d",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "野崎数馬",
+            "source_actor_url": null,
+            "source_work_title": "SHOW BY ROCK!! MUSICAL ~唱え家畜共ッ!深紅色の堕天革命黙示録ッ!!~",
+            "source_year": 2016,
+            "source_role_raw": "有栖川メイプル",
+            "source_role_names": [
+              "有栖川メイプル"
+            ],
+            "source_cast_group": null,
+            "source_order": 11,
+            "source_credit_key": "7cfff3be80ce0ecf1893",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/sb69_2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/sb69_2016",
+                  "checkedAt": "2026-10-26T10:40:41.449Z",
+                  "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/2016/",
+                  "checkedAt": "2026-10-26T10:39:59.783Z",
+                  "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://thetv.jp/person/0000135374/",
+                  "checkedAt": "2026-10-26T10:46:17.520Z",
+                  "note": "編集プロフィール。採用値・読みの差は人物notesを参照。"
+                },
+                {
+                  "url": "https://www.dimora.jp/talent-info/25/245579/?areaId=027",
+                  "checkedAt": "2026-10-26T10:48:24.742Z",
+                  "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://ricomotion.com/hephall20052021/40303/",
+                  "checkedAt": "2026-10-26T10:46:19.558Z",
+                  "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/2016/",
+                  "checkedAt": "2026-10-26T10:39:59.783Z",
+                  "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                }
+              ],
+              "source_fingerprint": "4a861e4e13edf657b3698c79c03213335eb934da63f9da9c351daf273f4ee322",
+              "review_fingerprint": "ece151771f3f55b5078a2e567d7a9781e8c43d6ca25166fa1d98e438aea37227",
+              "snapshot_fingerprint": "9f10fc375d2b30fc42f88d765d2008f2e5a7fa0fc61c4c660856e81e33a44549",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2016,
+                "reason": "2016年2月11〜16日の初演。7月DVDイベント、2017年以降の公演と区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/sb69_2016",
+                    "checkedAt": "2026-10-26T10:40:41.449Z",
+                    "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/2016/",
+                    "checkedAt": "2026-10-26T10:39:59.783Z",
+                    "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "612e7eda-0b0a-4e2b-80fa-050681d33bc4",
+            "matched_play_id": "7944fa96-0456-4e23-a0f8-eee9924b000d",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "木村靖司",
+            "source_actor_url": null,
+            "source_work_title": "SHOW BY ROCK!! MUSICAL ~唱え家畜共ッ!深紅色の堕天革命黙示録ッ!!~",
+            "source_year": 2016,
+            "source_role_raw": "山之上メフィスト",
+            "source_role_names": [
+              "山之上メフィスト"
+            ],
+            "source_cast_group": null,
+            "source_order": 12,
+            "source_credit_key": "2f04c445135deb70370e",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/sb69_2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/sb69_2016",
+                  "checkedAt": "2026-10-26T10:40:41.449Z",
+                  "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/2016/",
+                  "checkedAt": "2026-10-26T10:39:59.783Z",
+                  "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://www.animatetimes.com/tag/details.php?id=13551",
+                  "checkedAt": "2026-10-26T10:43:26.816Z",
+                  "note": "編集プロフィール。採用値・読みの差は人物notesを参照。"
+                },
+                {
+                  "url": "https://www.nntt.jac.go.jp/play/yotsuyakaidan/staff/",
+                  "checkedAt": "2026-10-26T10:50:32.741Z",
+                  "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/2016/",
+                  "checkedAt": "2026-10-26T10:39:59.783Z",
+                  "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                }
+              ],
+              "source_fingerprint": "4a861e4e13edf657b3698c79c03213335eb934da63f9da9c351daf273f4ee322",
+              "review_fingerprint": "ece151771f3f55b5078a2e567d7a9781e8c43d6ca25166fa1d98e438aea37227",
+              "snapshot_fingerprint": "9f10fc375d2b30fc42f88d765d2008f2e5a7fa0fc61c4c660856e81e33a44549",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2016,
+                "reason": "2016年2月11〜16日の初演。7月DVDイベント、2017年以降の公演と区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/sb69_2016",
+                    "checkedAt": "2026-10-26T10:40:41.449Z",
+                    "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/2016/",
+                    "checkedAt": "2026-10-26T10:39:59.783Z",
+                    "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "61e4026c-b149-43d5-9a54-97a5239d62ba",
+            "matched_play_id": "7944fa96-0456-4e23-a0f8-eee9924b000d",
+            "status": "pending"
+          }
+        ]
+      },
+      "records": [
+        {
+          "actor": {
+            "id": "c84c1fe6-8f7b-4404-9a5b-7f3c04772f1e",
+            "slug": "yonehara-kosuke",
+            "name": "米原 幸佑",
+            "kana": "よねはら こうすけ",
+            "profile": "大阪府出身の俳優・歌手。吉本興業所属。RUN＆GUN、ヨースケコースケのメンバー。Live Musical『SHOW BY ROCK!!』のクロウ役や映画『どうしても触れたくない』の主演を務め、舞台では脚本・演出にも携わる。",
+            "image_url": null,
+            "sns": {},
+            "gender": "male",
+            "created_at": "2026-10-26T09:14:19.477804+00:00",
+            "updated_at": "2026-10-26T09:14:19.477804+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1986-03-13",
+            "height_cm": 163,
+            "blood_type": "AB",
+            "birthday_label": null,
+            "name_en": "Kosuke Yonehara",
+            "profile_en": "An actor and singer from Osaka, represented by Yoshimoto Kogyo. A member of RUN&GUN and Yosuke Kosuke, he plays Crow in Live Musical SHOW BY ROCK!! and starred in the film No Touching At All. His theater work also includes writing and directing.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "米原幸佑",
+            "sourceActorUrl": "https://kira-hai.net/yonehara-kosuke",
+            "role_name": "クロウ",
+            "cast_group": "シンガンクリムゾンズ"
+          },
+          "sourceCreditKey": "feb79505e44d69e1be3d",
+          "sourceOrder": 1,
+          "billingOrder": 1,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "d4088fc7-e039-4ff5-b1a6-d8c240d25467",
+            "slug": "teruma",
+            "name": "輝馬",
+            "kana": "てるま",
+            "profile": "島根県出身の俳優。Star Dream Company所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/teruma_0606",
+              "official": "https://teruma-official.net/",
+              "instagram": "https://www.instagram.com/_t_e_r_u_m_a_/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:01:26.311999+00:00",
+            "updated_at": "2026-03-21T15:01:26.311999+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1989-06-06",
+            "height_cm": 182,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "輝馬",
+            "sourceActorUrl": "https://kira-hai.net/teruma",
+            "role_name": "アイオーン",
+            "cast_group": "シンガンクリムゾンズ"
+          },
+          "sourceCreditKey": "e4771d8e25b35d336e28",
+          "sourceOrder": 2,
+          "billingOrder": 2,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "cdec47ba-c45d-42c8-98d6-851606b0b321",
+            "slug": "torigoe-yuki",
+            "name": "鳥越 裕貴",
+            "kana": "とりごえ ゆうき",
+            "profile": "大阪府出身の俳優。ゴーチ・ブラザーズ所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://twitter.com/Torippiyo2",
+              "official": "https://yukitorigoe.bitfan.id/",
+              "instagram": "https://www.instagram.com/yuki_torigoe.cleftchin"
+            },
+            "gender": "male",
+            "created_at": "2025-12-13T04:41:02.052969+00:00",
+            "updated_at": "2025-12-13T04:41:02.052969+00:00",
+            "tags": [
+              "ムードメーカー",
+              "ダンス"
+            ],
+            "featured_play_slugs": [],
+            "birthday": "1991-03-31",
+            "height_cm": 169,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "鳥越裕貴",
+            "sourceActorUrl": "https://kira-hai.net/torigoe-yuki",
+            "role_name": "ヤイバ",
+            "cast_group": "シンガンクリムゾンズ"
+          },
+          "sourceCreditKey": "2075d97a64d99cec3784",
+          "sourceOrder": 3,
+          "billingOrder": 3,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "53abfb49-1935-4f4c-a46f-89b27296c6d6",
+            "slug": "takigawa-eiji",
+            "name": "滝川 英治",
+            "kana": "たきがわ えいじ",
+            "profile": "大阪府枚方市出身の元俳優・モデル・絵本作家。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/eiji_takigawa"
+            },
+            "gender": "male",
+            "created_at": "2026-03-15T14:42:38.572251+00:00",
+            "updated_at": "2026-03-15T14:42:38.572251+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1979-03-24",
+            "height_cm": 186,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "滝川英治",
+            "sourceActorUrl": "https://kira-hai.net/takigawa-eiji",
+            "role_name": "ロム",
+            "cast_group": "シンガンクリムゾンズ"
+          },
+          "sourceCreditKey": "0a6f49c28b5b133aada6",
+          "sourceOrder": 4,
+          "billingOrder": 4,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "a03b3f80-b2b8-482d-b221-aa4c19be9767",
+            "slug": "mitsuya-ryo",
+            "name": "三津谷 亮",
+            "kana": "みつや りょう",
+            "profile": "青森県出身の元俳優。元D-BOYSメンバー。",
+            "image_url": null,
+            "sns": {},
+            "gender": "male",
+            "created_at": "2026-03-21T15:01:26.311999+00:00",
+            "updated_at": "2026-03-21T15:01:26.311999+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1988-02-11",
+            "height_cm": 170,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "三津谷亮",
+            "sourceActorUrl": "https://kira-hai.net/mitsuya-ryo",
+            "role_name": "シュウ☆ゾー",
+            "cast_group": "トライクロニカ"
+          },
+          "sourceCreditKey": "076c22e6c7e90e02b59d",
+          "sourceOrder": 5,
+          "billingOrder": 5,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "d9df8cc7-9c58-4ab5-bc19-3b5a75a2e9b6",
+            "slug": "hashimoto-shohei",
+            "name": "橋本 祥平",
+            "kana": "はしもと しょうへい",
+            "profile": "神奈川県出身の俳優・声優。キャストコーポレーション所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://twitter.com/hashimotoshohey",
+              "official": "https://hashimoto-shohei.com/"
+            },
+            "gender": "male",
+            "created_at": "2025-12-13T04:41:02.052969+00:00",
+            "updated_at": "2025-12-13T04:41:02.052969+00:00",
+            "tags": [
+              "ドラム",
+              "愛されキャラ"
+            ],
+            "featured_play_slugs": [
+              "bungo-stage",
+              "yuyu-hakusho-stage"
+            ],
+            "birthday": "1993-12-31",
+            "height_cm": 170,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "橋本祥平",
+            "sourceActorUrl": "https://kira-hai.net/hashimoto-shohei",
+            "role_name": "リク",
+            "cast_group": "トライクロニカ"
+          },
+          "sourceCreditKey": "ede0281f7fe8dce3febb",
+          "sourceOrder": 6,
+          "billingOrder": 6,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "e14aab7b-2c3a-4477-9fac-83e5da6a77da",
+            "slug": "tsukioka-hirokadu",
+            "name": "月岡 弘一",
+            "kana": "つきおか ひろかづ",
+            "profile": "俳優。『SHOW BY ROCK!! MUSICAL』のカイ役や『最遊記歌劇伝―異聞―』の丸福役を務める。2022年にbambooに籍を残し、俳優活動を無期限休止すると発表した。",
+            "image_url": null,
+            "sns": {},
+            "gender": "male",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1990-02-02",
+            "height_cm": 170,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": "Hirokazu Tsukioka",
+            "profile_en": "An actor whose roles include Kai in SHOW BY ROCK!! MUSICAL and Marufuku in Saiyuki Kagekiden: Ibun. In 2022, he announced an indefinite break from acting while remaining with bamboo.",
+            "death_date": null,
+            "created_at": "prepared",
+            "updated_at": "prepared"
+          },
+          "source": {
+            "sourceActorName": "月岡弘一",
+            "sourceActorUrl": "https://kira-hai.net/tsukioka-hirokadu",
+            "role_name": "カイ",
+            "cast_group": "トライクロニカ"
+          },
+          "sourceCreditKey": "725713d37ddaf556463a",
+          "sourceOrder": 7,
+          "billingOrder": 7,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "b75c570e-6fe5-4623-ad94-f9acfb036512",
+            "slug": "ishikawa-seiya",
+            "name": "石川 誠也",
+            "kana": "いしかわ せいや",
+            "profile": "俳優。劇団丸福ボンバーズの公演で活動。『SHOW BY ROCK!! MUSICAL』のクワガタツヤ役や、舞台『結婚のススメ～NO SURPRISE,NO LIFE！～』などに出演する。",
+            "image_url": null,
+            "sns": {},
+            "gender": "male",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": null,
+            "height_cm": null,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Seiya Ishikawa",
+            "profile_en": "An actor who has performed with Marufuku Bombers. His credits include Kuwagatatsuya in SHOW BY ROCK!! MUSICAL and the stage production Kekkon no Susume: No Surprise, No Life!",
+            "death_date": null,
+            "created_at": "prepared",
+            "updated_at": "prepared"
+          },
+          "source": {
+            "sourceActorName": "石川誠也",
+            "sourceActorUrl": null,
+            "role_name": "クワガタツヤ",
+            "cast_group": "ドロップアウト先生"
+          },
+          "sourceCreditKey": "d49dac100690c0d3d155",
+          "sourceOrder": 8,
+          "billingOrder": 8,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "c562c32e-6bbb-424b-81dc-2c8766a9bad9",
+            "slug": "yoshida-yuki",
+            "name": "吉田 雄樹",
+            "kana": "よしだ ゆうき",
+            "profile": "滋賀県出身の俳優。ドラマ『上地雄輔ひまわり物語』で約1500人のオーディションから主演に選ばれた。劇団丸福ボンバーズの公演に参加し、『SHOW BY ROCK!! MUSICAL』ではカブトモアキ役を務める。",
+            "image_url": null,
+            "sns": {},
+            "gender": "male",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1989-01-22",
+            "height_cm": 174,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": "Yuki Yoshida",
+            "profile_en": "An actor from Shiga, selected from around 1,500 auditionees to play the lead in the TV drama Kamiji Yusuke Himawari Monogatari. He has performed with Marufuku Bombers and plays Kabutomoaki in SHOW BY ROCK!! MUSICAL.",
+            "death_date": null,
+            "created_at": "prepared",
+            "updated_at": "prepared"
+          },
+          "source": {
+            "sourceActorName": "吉田雄樹",
+            "sourceActorUrl": "https://kira-hai.net/yoshida-yuki",
+            "role_name": "カブトモアキ",
+            "cast_group": "ドロップアウト先生"
+          },
+          "sourceCreditKey": "c57b4905807e62084078",
+          "sourceOrder": 9,
+          "billingOrder": 9,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "dbb9a17d-74d2-4058-bf6a-ac60513204e4",
+            "slug": "takagi-hidekazu",
+            "name": "高木 英和",
+            "kana": "たかぎ ひでかず",
+            "profile": "東京都出身の俳優。別名義は京士郎（旧芸名：高樹京士郎）。ミュージカル『テニスの王子様』2ndシーズン（石田鉄役）等に出演。",
+            "image_url": null,
+            "sns": {},
+            "gender": "male",
+            "created_at": "2026-03-21T15:03:44.295565+00:00",
+            "updated_at": "2026-03-21T15:03:44.295565+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1986-09-23",
+            "height_cm": 183,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Tokyo. Also known as Kyoshiro. He appeared in the musical \"The Prince of Tennis\" 2nd season (as Tetsu Ishida).",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "高樹京士郎",
+            "sourceActorUrl": "https://kira-hai.net/takagi-kyoshiro",
+            "role_name": "テントウムツミ",
+            "cast_group": "ドロップアウト先生"
+          },
+          "sourceCreditKey": "4a7a6c5bfb0c20610a6e",
+          "sourceOrder": 10,
+          "billingOrder": 10,
+          "expectedNote": "当時の出演名義：高樹京士郎",
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "612e7eda-0b0a-4e2b-80fa-050681d33bc4",
+            "slug": "nozaki-kazuma",
+            "name": "野崎 数馬",
+            "kana": "のざき かずま",
+            "profile": "熊本県出身の俳優・演出家。劇団丸福ボンバーズで活動。TBS『はなまるマーケット』のリポーターを務め、舞台『この街で～イリスと愉快な仲間たち～』では演出と主演を担当した。",
+            "image_url": null,
+            "sns": {},
+            "gender": "male",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1969-05-30",
+            "height_cm": null,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Kazuma Nozaki",
+            "profile_en": "An actor and director from Kumamoto who performs with Marufuku Bombers. He worked as a reporter on TBS’s Hanamaru Market and directed and starred in Kono Machi de: Iris and Her Friends.",
+            "death_date": null,
+            "created_at": "prepared",
+            "updated_at": "prepared"
+          },
+          "source": {
+            "sourceActorName": "野崎数馬",
+            "sourceActorUrl": null,
+            "role_name": "有栖川メイプル",
+            "cast_group": null
+          },
+          "sourceCreditKey": "7cfff3be80ce0ecf1893",
+          "sourceOrder": 11,
+          "billingOrder": 11,
+          "expectedNote": null,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "61e4026c-b149-43d5-9a54-97a5239d62ba",
+            "slug": "kimura-yasushi",
+            "name": "木村 靖司",
+            "kana": "きむら やすし",
+            "profile": "東京都出身の俳優。ミーアンドハーコーポレーション所属。玉川大学在学中にSCOTに参加し、1989年に劇団ラッパ屋へ入団。舞台や映像作品のほか、アニメ『スーパー・クルックス』のカーマイン役などで声の出演も行う。",
+            "image_url": null,
+            "sns": {},
+            "gender": "male",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1962-04-04",
+            "height_cm": 174,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": "Yasushi Kimura",
+            "profile_en": "An actor from Tokyo, represented by Me & Her Corporation. He joined SCOT while at Tamagawa University and entered the theater company Rappaya in 1989. His work spans theater, screen and voice acting, including Carmine in Super Crooks.",
+            "death_date": null,
+            "created_at": "prepared",
+            "updated_at": "prepared"
+          },
+          "source": {
+            "sourceActorName": "木村靖司",
+            "sourceActorUrl": null,
+            "role_name": "山之上メフィスト",
+            "cast_group": null
+          },
+          "sourceCreditKey": "2f04c445135deb70370e",
+          "sourceOrder": 12,
+          "billingOrder": 12,
+          "expectedNote": null,
+          "existingCast": null
+        }
+      ],
+      "legacyCandidates": [
+        {
+          "id": "028b7a73-7812-45f3-b48a-0924a183c586",
+          "source": "kira-hai",
+          "external_actor_id": "c6295eef-a6d8-4338-8578-7610f1df6ba2",
+          "external_play_id": "d247ff1e-26a5-4e0f-b7e8-f9161deebc18",
+          "source_actor_name": "三津谷亮",
+          "source_actor_url": "https://kira-hai.net/mitsuya-ryo",
+          "source_work_title": "SHOW BY ROCK!! MUSICAL ～唱え家畜共ッ!深紅色の堕天革命黙示録ッ!!～",
+          "source_work_url": "https://kira-hai.net/sb69_2016",
+          "source_year": 2021,
+          "source_role_raw": "シュウ ゾー",
+          "source_role_names": [
+            "シュウ ゾー"
+          ],
+          "matched_actor_id": "a03b3f80-b2b8-482d-b221-aa4c19be9767",
+          "matched_play_id": null,
+          "accepted_cast_id": null,
+          "confidence": 60,
+          "status": "pending",
+          "note": null,
+          "scraped_at": "2026-04-27T17:37:46.858+00:00",
+          "created_at": "2026-04-27T17:23:28.972473+00:00",
+          "updated_at": "2026-04-27T17:37:46.858+00:00",
+          "accepted_at": null,
+          "rejected_at": null,
+          "source_cast_group": null,
+          "source_order": null,
+          "source_credit_key": null,
+          "source_evidence": null
+        }
+      ],
+      "legacyUpgrades": [
+        {
+          "before": {
+            "id": "028b7a73-7812-45f3-b48a-0924a183c586",
+            "source": "kira-hai",
+            "external_actor_id": "c6295eef-a6d8-4338-8578-7610f1df6ba2",
+            "external_play_id": "d247ff1e-26a5-4e0f-b7e8-f9161deebc18",
+            "source_actor_name": "三津谷亮",
+            "source_actor_url": "https://kira-hai.net/mitsuya-ryo",
+            "source_work_title": "SHOW BY ROCK!! MUSICAL ～唱え家畜共ッ!深紅色の堕天革命黙示録ッ!!～",
+            "source_work_url": "https://kira-hai.net/sb69_2016",
+            "source_year": 2021,
+            "source_role_raw": "シュウ ゾー",
+            "source_role_names": [
+              "シュウ ゾー"
+            ],
+            "matched_actor_id": "a03b3f80-b2b8-482d-b221-aa4c19be9767",
+            "matched_play_id": null,
+            "accepted_cast_id": null,
+            "confidence": 60,
+            "status": "pending",
+            "note": null,
+            "scraped_at": "2026-04-27T17:37:46.858+00:00",
+            "created_at": "2026-04-27T17:23:28.972473+00:00",
+            "updated_at": "2026-04-27T17:37:46.858+00:00",
+            "accepted_at": null,
+            "rejected_at": null,
+            "source_cast_group": null,
+            "source_order": null,
+            "source_credit_key": null,
+            "source_evidence": null
+          },
+          "patch": {
+            "source_year": 2016,
+            "source_work_title": "SHOW BY ROCK!! MUSICAL ~唱え家畜共ッ!深紅色の堕天革命黙示録ッ!!~",
+            "source_role_raw": "シュウ☆ゾー",
+            "source_role_names": [
+              "シュウ☆ゾー"
+            ],
+            "source_cast_group": "トライクロニカ",
+            "source_order": 5,
+            "source_credit_key": "076c22e6c7e90e02b59d",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/sb69_2016",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/sb69_2016",
+                  "checkedAt": "2026-10-26T10:40:41.449Z",
+                  "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                },
+                {
+                  "url": "https://showbyrock-musical.com/2016/",
+                  "checkedAt": "2026-10-26T10:39:59.783Z",
+                  "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                }
+              ],
+              "source_fingerprint": "4a861e4e13edf657b3698c79c03213335eb934da63f9da9c351daf273f4ee322",
+              "review_fingerprint": "ece151771f3f55b5078a2e567d7a9781e8c43d6ca25166fa1d98e438aea37227",
+              "snapshot_fingerprint": "9f10fc375d2b30fc42f88d765d2008f2e5a7fa0fc61c4c660856e81e33a44549",
+              "identity": "reviewed_link",
+              "year_review": {
+                "value": 2016,
+                "reason": "2016年2月11〜16日の初演。7月DVDイベント、2017年以降の公演と区別。",
+                "evidence": [
+                  {
+                    "url": "https://kira-hai.net/sb69_2016",
+                    "checkedAt": "2026-10-26T10:40:41.449Z",
+                    "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                  },
+                  {
+                    "url": "https://showbyrock-musical.com/2016/",
+                    "checkedAt": "2026-10-26T10:39:59.783Z",
+                    "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+                  }
+                ]
+              }
+            },
+            "matched_play_id": "7944fa96-0456-4e23-a0f8-eee9924b000d"
+          }
+        }
+      ],
+      "creditOnly": [
+        "高木裕和",
+        "石丸隆義",
+        "丸山泰右",
+        "中智紀"
+      ],
+      "transformations": [
+        {
+          "type": "reset_leaked_group",
+          "roles": [
+            "有栖川メイプル",
+            "山之上メフィスト"
+          ],
+          "from": "ドロップアウト先生",
+          "to": null,
+          "evidence": [
+            {
+              "url": "https://showbyrock-musical.com/2016/",
+              "checkedAt": "2026-10-26T10:39:59.783Z",
+              "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+            }
+          ],
+          "reason": "公式のバンド3人と区切られた独立人物2人を分離。キラハイの直前見出しの継承をそのまま採らない。"
+        },
+        {
+          "type": "ensemble_to_credits",
+          "names": [
+            "高木裕和",
+            "石丸隆義",
+            "丸山泰右",
+            "中智紀"
+          ],
+          "evidence": [
+            {
+              "url": "https://showbyrock-musical.com/2016/",
+              "checkedAt": "2026-10-26T10:39:59.783Z",
+              "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+            }
+          ]
+        },
+        {
+          "type": "verified_local_actor_alias",
+          "from": "高樹京士郎",
+          "to": "高木 英和",
+          "actorId": "dbb9a17d-74d2-4058-bf6a-ac60513204e4",
+          "evidence": [
+            {
+              "url": "https://kira-hai.net/takagi-kyoshiro",
+              "checkedAt": "2026-10-26T10:41:42.223Z",
+              "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+            }
+          ],
+          "reason": "第一参照先の明示旧名・同DOB・両役歴と既存プロフィールを照合。保護対象のテニミュ配役や本人属性は変更しない。"
+        }
+      ],
+      "exceptions": [
+        "シンガンクリムゾンズ4人・トライクロニカ3人・ドロップアウト先生3人・バンド外2人の計12配役。主役を推定指定しない。",
+        "ダンサー4人はクレジットへ。高木裕和と高木英和は別名で別人、取り違えない。高樹京士郎だけ明示旧名として既存高木英和へ接続。",
+        "旧三津谷pending候補の誤年2021、脱落した☆とバンド区分を2016公式へ訂正。同じ候補IDで採用し、元の値と理由は履歴に残す。",
+        "脚本・演出は初演の福島三郎。後続の斎藤栄作、米原以外への変更、ロム役後年の代役を今作へ逆用しない。",
+        "製作SEGA LIVE CREATIONは公演公式のロゴ画像を視認して保存。DVD発売元フリューを製作名へ流用しない。",
+        "2016/07/23のDVDイベントや同年3月の期間限定dアニメ配信を本公演の日程・現行配信へ混ぜない。アフターイベントは公演補足に保存。",
+        "既存シリーズの評価語・全キャストが楽器を実演するとの未確認の断定を短い客観的紹介へ整理。現在の制作会社等の分類は変更しない。",
+        "新規人物5人は姓名半角スペースと公表男性を確認。出身・身長等のない項目は補作しない。木村の読みは一次のやすしを採り、月岡は活動休止を引退へ変えない。"
+      ]
+    }
+  ],
+  "keptPlays": [],
+  "evidence": {
+    "links": [
+      {
+        "url": "https://kira-hai.net/sb69_2016",
+        "checkedAt": "2026-10-26T10:40:41.449Z",
+        "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+      },
+      {
+        "url": "https://showbyrock-musical.com/2016/",
+        "checkedAt": "2026-10-26T10:39:59.783Z",
+        "note": "採用原文・日時・SHA256を保存。資料の種別と留保は人物notes・作品exceptionsを参照。"
+      }
+    ],
+    "sources": [
+      {
+        "label": "yonehara",
+        "url": "https://kira-hai.net/yonehara-kosuke",
+        "status": 200,
+        "checkedAt": "2026-10-26T10:39:59.356Z",
+        "sha256": "9cf78712cf43115cfd05832c8e0571b90edf220f117021b0ea5143e168154171"
+      },
+      {
+        "label": "official",
+        "url": "https://showbyrock-musical.com/2016/",
+        "status": 200,
+        "checkedAt": "2026-10-26T10:39:59.783Z",
+        "sha256": "a02aeb8d8eb0c0003c9174317678570451e9dd0fe9dc483d0d7271ec07155c88"
+      },
+      {
+        "label": "changelog",
+        "url": "https://supabase.com/changelog.md",
+        "status": 200,
+        "checkedAt": "2026-10-26T10:40:00.026Z",
+        "sha256": "45528009025b8ad8487ccb73f7c769b66d4b0e7aa4560157047899dcb5b5a006"
+      },
+      {
+        "label": "kira",
+        "url": "https://kira-hai.net/sb69_2016",
+        "status": 200,
+        "checkedAt": "2026-10-26T10:40:41.449Z",
+        "sha256": "6dedba2c078b0442384eab5712c3be019811b8cb2fa9d78f2f76aca47340515a"
+      },
+      {
+        "label": "kiraTsukioka",
+        "url": "https://kira-hai.net/tsukioka-hirokadu",
+        "status": 200,
+        "checkedAt": "2026-10-26T10:41:41.886Z",
+        "sha256": "8f58c388248142c6d0cdfbd598a58c680497b76f201d7e175cec1af6058d6105"
+      },
+      {
+        "label": "kiraYoshida",
+        "url": "https://kira-hai.net/yoshida-yuki",
+        "status": 200,
+        "checkedAt": "2026-10-26T10:41:42.084Z",
+        "sha256": "a5e62dcd2cc0e23648e612976f9f4227afb1c00141cfa0e2d7c47bcd09cd010d"
+      },
+      {
+        "label": "kiraTakagi",
+        "url": "https://kira-hai.net/takagi-kyoshiro",
+        "status": 200,
+        "checkedAt": "2026-10-26T10:41:42.223Z",
+        "sha256": "8dc3d2bd988f92236804768789d8ecb432f78f66f911bd556556139e3d7c1d67"
+      },
+      {
+        "label": "tsukioka",
+        "url": "https://bam-boo.biz/management/201207post-12.html",
+        "status": 404,
+        "checkedAt": "2026-10-26T10:43:25.710Z",
+        "sha256": "80c3fe2ae1062abf56456f52518bd670f9ec3917b7f85e152b347ac6b6faf880"
+      },
+      {
+        "label": "tsukiokaBlog",
+        "url": "https://ameblo.jp/hirokadu-tsukioka/",
+        "status": 200,
+        "checkedAt": "2026-10-26T10:43:25.983Z",
+        "sha256": "2016bf14d5ea01bd6316e16fcd0ab68189ca97977b3dd5be00a0787e8d381330"
+      },
+      {
+        "label": "yoshidaBlog",
+        "url": "https://yoshiday.exblog.jp/profile/",
+        "status": 200,
+        "checkedAt": "2026-10-26T10:43:26.441Z",
+        "sha256": "a482cfc6522dba9c505e0d3d75f8c3438e8c682b02552654ec8d1bb60f7561f0"
+      },
+      {
+        "label": "kimuraEditorial",
+        "url": "https://www.animatetimes.com/tag/details.php?id=13551",
+        "status": 200,
+        "checkedAt": "2026-10-26T10:43:26.816Z",
+        "sha256": "fb6a00a01666864453cdd85c92b05c797f4622c92d896b21f35ab3a497b5f337"
+      },
+      {
+        "label": "nozaki",
+        "url": "https://marubon.net/bomber/kazuma-nozaki/",
+        "status": 403,
+        "checkedAt": "2026-10-26T10:46:17.234Z",
+        "sha256": "39c0e085363fa869f52bfb497599d6f01a05e54265cba20c8d18d1f53e761817"
+      },
+      {
+        "label": "nozakiEditorial",
+        "url": "https://thetv.jp/person/0000135374/",
+        "status": 200,
+        "checkedAt": "2026-10-26T10:46:17.520Z",
+        "sha256": "af3a3edc352358a4b5bf61102aa504174abf130a139a0bd81d75c5f9815b49a6"
+      },
+      {
+        "label": "yoshidaEditorial",
+        "url": "https://thetv.jp/person/1000070265/",
+        "status": 200,
+        "checkedAt": "2026-10-26T10:46:17.636Z",
+        "sha256": "b414673a285f224c3f560b72203bb6abf5758ad4a108b6aa77b137b9ce1b1b64"
+      },
+      {
+        "label": "yoshidaGender",
+        "url": "https://www.dimora.jp/talent-info/38/77308/?areaId=093",
+        "status": 200,
+        "checkedAt": "2026-10-26T10:46:18.021Z",
+        "sha256": "fa6c0bf7679e50bf4e8b8e10acb76c42af9ee14f5d1f445c8963082d725aefa7"
+      },
+      {
+        "label": "ishikawaGender",
+        "url": "https://www.dimora.jp/talent-info/2/326749/?areaId=0952",
+        "status": 200,
+        "checkedAt": "2026-10-26T10:46:18.236Z",
+        "sha256": "88bfbb910d48a5a74f1d5dbe4619dcbeecb6120d45ac4a7d6d21b278f8a663e3"
+      },
+      {
+        "label": "ishikawaNote",
+        "url": "https://note.com/ishikawaseiya/n/nfbfaa8e9d24c",
+        "status": 200,
+        "checkedAt": "2026-10-26T10:46:18.691Z",
+        "sha256": "a5ad7562e89bbc758c7e00814757a946c068c4a7e7bbef9a37d53ae0961adb54"
+      },
+      {
+        "label": "hephall",
+        "url": "https://ricomotion.com/hephall20052021/40303/",
+        "status": 200,
+        "checkedAt": "2026-10-26T10:46:19.558Z",
+        "sha256": "191282ada98ab52ea5e1ac700cd64c7b751bbe3285bfc19eb9581979ab58c648"
+      },
+      {
+        "label": "segaLogo",
+        "url": "https://showbyrock-musical.com/2016/img/sega.png",
+        "status": 200,
+        "checkedAt": "2026-10-26T10:46:19.823Z",
+        "sha256": "898fdcb12f9db5a7e4535e34a058a061db302383fddb74d19d86d21ca7df1174"
+      },
+      {
+        "label": "tsukiokaHiatus",
+        "url": "https://bam-boo.biz/news_detail.php?id=1640",
+        "status": 200,
+        "checkedAt": "2026-10-26T10:48:24.193Z",
+        "sha256": "3d95dd1d4f3a8b353063c6b7fad9e50d77a1cec645ff085cf0303c4e6e3266c6"
+      },
+      {
+        "label": "tsukiokaEditorial",
+        "url": "https://talemecasting-next.com/talent/print/15836",
+        "status": 503,
+        "checkedAt": "2026-10-26T10:48:24.398Z",
+        "sha256": "b68d718d8e6f966bb158b6508ed1a741742aad9df76564924a56b1b9736dcd50"
+      },
+      {
+        "label": "nozakiGender",
+        "url": "https://www.dimora.jp/talent-info/25/245579/?areaId=027",
+        "status": 200,
+        "checkedAt": "2026-10-26T10:48:24.742Z",
+        "sha256": "8818f913031d72e904c6ea504ede2b4e5af0e280da68c0c23ef5859b89f4f06b"
+      },
+      {
+        "label": "nozakiHttp",
+        "url": "http://marubon.net/bomber/kazuma-nozaki/",
+        "status": 403,
+        "checkedAt": "2026-10-26T10:48:24.853Z",
+        "sha256": "6ca7e1d05f9c73422218283f8bc072119838c1b8db11ff09447b3938f7d7117e"
+      },
+      {
+        "label": "kimuraHttp",
+        "url": "http://www.me-her.co.jp/profile/kimura_yasushi/",
+        "status": 200,
+        "checkedAt": "2026-10-26T10:48:25.147Z",
+        "sha256": "d99e1d3d028fd5005f2bd2899c790f5c6abcdb82a28ebaaa10d15b17d5b1a783"
+      },
+      {
+        "label": "kimuraTheatre",
+        "url": "https://www.nntt.jac.go.jp/play/yotsuyakaidan/staff/",
+        "status": 200,
+        "checkedAt": "2026-10-26T10:50:32.741Z",
+        "sha256": "7704e72917a81669c4e429a4d4f66db1efe90aefbcc1c2b2336148e9e4f27c38"
+      }
+    ],
+    "sourceWorks": [
+      {
+        "title": "SHOW BY ROCK!! MUSICAL ～唱え家畜共ッ!深紅色の堕天革命黙示録ッ!!～",
+        "url": "https://kira-hai.net/sb69_2016"
+      },
+      {
+        "title": "Live Musical「SHOW BY ROCK!!」",
+        "url": "https://kira-hai.net/sb69_2017"
+      },
+      {
+        "title": "Live Musical「SHOW BY ROCK!!」-深淵のCrossAmbivalence-",
+        "url": "https://kira-hai.net/sb69_2017-2"
+      },
+      {
+        "title": "Live Musical「SHOW BY ROCK!!」～THE FES 2018～",
+        "url": "https://kira-hai.net/sb69_2018"
+      },
+      {
+        "title": "Live Musical「SHOW BY ROCK!!」-狂騒のBloodyLabyrinth-",
+        "url": "https://kira-hai.net/sb69_2018-2"
+      }
+    ],
+    "visualSource": {
+      "label": "segaLogo",
+      "read": true,
+      "text": "SEGA LIVE CREATION",
+      "creditRole": "製作"
+    },
+    "unresolved": [
+      "次は2017年THE FES II-Thousand XVII、深淵のCrossAmbivalence。その後2018年2作と全体点検。",
+      "石川のDOB・出身等、野崎の身長・血液型等、現在所属と全人物属性、詳細英訳・現行配信は後続。"
+    ],
+    "notes": [
+      "Supabase changelogの旧TLS暗号変更はNode24の現行TLSに影響なし。既存候補登録・採用RPCを使い、スキーマ・RLS・アプリ変更なし。"
+    ]
+  },
+  "requestKey": "701f1d577db4705e1c6e76150ee3992b102019d725b4b6d7939cc98efde39b0d",
+  "verification": {
+    "passed": true,
+    "requestKey": "701f1d577db4705e1c6e76150ee3992b102019d725b4b6d7939cc98efde39b0d",
+    "changes": {
+      "actors": {
+        "before": 1152,
+        "after": 1157,
+        "modified": 0,
+        "added": 5,
+        "deleted": 0
+      },
+      "plays": {
+        "before": 404,
+        "after": 405,
+        "modified": 0,
+        "added": 1,
+        "deleted": 0
+      },
+      "franchises": {
+        "before": 198,
+        "after": 198,
+        "modified": 1,
+        "added": 0,
+        "deleted": 0
+      },
+      "casts": {
+        "before": 4125,
+        "after": 4137,
+        "modified": 0,
+        "added": 12,
+        "deleted": 0
+      },
+      "external_actors": {
+        "before": 1701,
+        "after": 1701,
+        "modified": 2,
+        "added": 0,
+        "deleted": 0
+      },
+      "external_cast_candidates": {
+        "before": 3479,
+        "after": 3490,
+        "modified": 1,
+        "added": 11,
+        "deleted": 0
+      },
+      "external_import_logs": {
+        "before": 5493,
+        "after": 5529,
+        "modified": 0,
+        "added": 36,
+        "deleted": 0
+      },
+      "actor_identity_sources": {
+        "before": 498,
+        "after": 503,
+        "modified": 0,
+        "added": 5,
+        "deleted": 0
+      }
+    },
+    "newActors": 5,
+    "newPlays": 1,
+    "newCasts": 12,
+    "existingActorsReused": 7,
+    "uniqueWorkActors": 12,
+    "existingRowsModified": 4,
+    "modifiedFields": [
+      "franchises.name_en",
+      "franchises.description",
+      "franchises.description_en",
+      "franchises.updated_at",
+      "external_actors.matched_actor_id",
+      "external_actors.match_status",
+      "external_actors.match_confidence",
+      "external_actors.updated_at",
+      "external_cast_candidates.legacyUpgrades"
+    ],
+    "creditCategories": 7,
+    "ensembleNames": 4,
+    "seriesWorks": 1,
+    "seriesCastRows": 12,
+    "logActions": {
+      "link_reviewed_external_actor": 2,
+      "register_reviewed_play": 1,
+      "complete_reviewed_cast_order": 12,
+      "create_cast": 12,
+      "register_reviewed_actor_with_identity": 5,
+      "correct_reviewed_legacy_candidate": 1,
+      "complete_reviewed_series_copy": 1,
+      "complete_reviewed_sb692016": 1,
+      "stage_work_candidates": 1
+    },
+    "pendingChecks": [
+      "次は2017年THE FES II-Thousand XVII、深淵のCrossAmbivalence。その後2018年2作と全体点検。",
+      "石川のDOB・出身等、野崎の身長・血液型等、現在所属と全人物属性、詳細英訳・現行配信は後続。"
+    ]
+  },
+  "publicVerification": {
+    "passed": true,
+    "pages": 28,
+    "castRows": 12,
+    "newActors": 5,
+    "creditCategories": 7,
+    "ensembleNames": 4,
+    "timeline": "2016/02",
+    "results": [
+      {
+        "path": "/series/show-by-rock",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/yonehara-kosuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/teruma",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/sb69_2016",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/torigoe-yuki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/mitsuya-ryo",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/takigawa-eiji",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/hashimoto-shohei",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/ishikawa-seiya",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/tsukioka-hirokadu",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/yoshida-yuki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/nozaki-kazuma",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/takagi-hidekazu",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/kimura-yasushi",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/series/show-by-rock",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/yonehara-kosuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/sb69_2016",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/teruma",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/torigoe-yuki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/takigawa-eiji",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/hashimoto-shohei",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/mitsuya-ryo",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/tsukioka-hirokadu",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/yoshida-yuki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/takagi-hidekazu",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/ishikawa-seiya",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/nozaki-kazuma",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/kimura-yasushi",
+        "passed": true,
+        "status": 200
+      }
+    ]
+  },
+  "searchVerification": {
+    "passed": true,
+    "checks": 30,
+    "spaceAndNoSpace": true,
+    "knownGenderFilter": true,
+    "results": [
+      {
+        "path": "/actors?q=%E6%9C%88%E5%B2%A1+%E5%BC%98%E4%B8%80",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%9F%B3%E5%B7%9D+%E8%AA%A0%E4%B9%9F",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%9C%88%E5%B2%A1+%E5%BC%98%E4%B8%80&gender=male",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%9C%88%E5%B2%A1%E5%BC%98%E4%B8%80",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%90%89%E7%94%B0+%E9%9B%84%E6%A8%B9",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%9F%B3%E5%B7%9D%E8%AA%A0%E4%B9%9F",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%90%89%E7%94%B0%E9%9B%84%E6%A8%B9",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%9F%B3%E5%B7%9D+%E8%AA%A0%E4%B9%9F&gender=male",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E9%87%8E%E5%B4%8E+%E6%95%B0%E9%A6%AC",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E9%87%8E%E5%B4%8E%E6%95%B0%E9%A6%AC",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%90%89%E7%94%B0+%E9%9B%84%E6%A8%B9&gender=male",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E9%87%8E%E5%B4%8E+%E6%95%B0%E9%A6%AC&gender=male",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%9C%A8%E6%9D%91+%E9%9D%96%E5%8F%B8",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%9C%A8%E6%9D%91%E9%9D%96%E5%8F%B8",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%9C%A8%E6%9D%91+%E9%9D%96%E5%8F%B8&gender=male",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%9C%88%E5%B2%A1+%E5%BC%98%E4%B8%80",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%9C%88%E5%B2%A1%E5%BC%98%E4%B8%80",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%9C%88%E5%B2%A1+%E5%BC%98%E4%B8%80&gender=male",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%9F%B3%E5%B7%9D+%E8%AA%A0%E4%B9%9F",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%9F%B3%E5%B7%9D%E8%AA%A0%E4%B9%9F",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%9F%B3%E5%B7%9D+%E8%AA%A0%E4%B9%9F&gender=male",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%90%89%E7%94%B0+%E9%9B%84%E6%A8%B9",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%90%89%E7%94%B0+%E9%9B%84%E6%A8%B9&gender=male",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%90%89%E7%94%B0%E9%9B%84%E6%A8%B9",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E9%87%8E%E5%B4%8E+%E6%95%B0%E9%A6%AC&gender=male",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E9%87%8E%E5%B4%8E+%E6%95%B0%E9%A6%AC",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E9%87%8E%E5%B4%8E%E6%95%B0%E9%A6%AC",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%9C%A8%E6%9D%91+%E9%9D%96%E5%8F%B8",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%9C%A8%E6%9D%91+%E9%9D%96%E5%8F%B8&gender=male",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%9C%A8%E6%9D%91%E9%9D%96%E5%8F%B8",
+        "status": 200,
+        "passed": true
+      }
+    ]
+  },
+  "replayVerification": {
+    "passed": true,
+    "tables": {
+      "actors": {
+        "rows": 1157,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "plays": {
+        "rows": 405,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "franchises": {
+        "rows": 198,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "casts": {
+        "rows": 4137,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_actors": {
+        "rows": 1701,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_cast_candidates": {
+        "rows": 3490,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_import_logs": {
+        "rows": 5529,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "actor_identity_sources": {
+        "rows": 503,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      }
+    }
+  },
+  "sourceValidation": {
+    "officialRolePairs": true,
+    "officialCastOrder": true,
+    "kiraGroupLeakCorrected": true,
+    "unparsedDancersReviewed": true,
+    "segaLogoVisuallyReviewed": true,
+    "formerNameLinkedToExistingActor": true,
+    "kimuraReadingPrioritizesOfficial": true
+  },
+  "verificationScope": "2016年初演の12配役・7クレジット区分と日英28ページ、検索30件を確認。8テーブル既存全行保全と再実行0変更。2017/2018年の4作品は未登録で、シリーズ全体点検は後続。"
+}
