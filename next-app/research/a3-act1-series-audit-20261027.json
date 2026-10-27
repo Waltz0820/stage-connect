@@ -1,0 +1,3736 @@
+{
+  "version": 1,
+  "batchId": "a3-act1-audit-20261027-01",
+  "checkedAt": "2026-10-27T09:25:03.061Z",
+  "franchise": {
+    "id": "03404164-26f0-476f-92e9-5b438984fe0d",
+    "name": "MANKAI STAGE『A3!』ACT1（エーステACT1）",
+    "created_at": "2025-12-13T04:58:27.220101+00:00",
+    "updated_at": "2025-12-13T04:58:27.220101+00:00",
+    "slug": "a3",
+    "intro": null,
+    "description": "MANKAI STAGE『A3!』シリーズの記念すべき第1作目。原作ゲームのメインストーリー第1部（劇団再生から各組の旗揚げ公演まで）を描く。物語の始まりとなる2組合同公演「SPRING & SUMMER 2018」「AUTUMN & WINTER 2019」から始まり、その後の各組単独公演（SPRING、SUMMER、AUTUMN、WINTER）へと続く、エーステの基礎を築いたシリーズ。劇団員たちが借金まみれのボロ劇団を立て直す軌跡と、春夏秋冬の4組・計20人の劇団員が揃うまでの物語が集約されている。",
+    "origin_type": "ゲーム原作",
+    "origin_note": "原作：イケメン役者育成ゲーム『A3!』（リベル・エンタテインメント）",
+    "production_companies": [
+      "ネルケプランニング",
+      "MANKAI STAGE『A3!』製作委員会"
+    ],
+    "related_franchise_ids": [
+      "d8d36e4f-9a0d-4a91-aac3-e6b8f24a8a5d",
+      "8d36fc91-4300-431f-a738-63696bd0f824",
+      "7eefe33e-9b9c-4cca-9c9f-5b67a37d701e"
+    ],
+    "format": "stage",
+    "description_en": "The memorable inaugural series of the MANKAI STAGE A3! franchise, adapting the first act of the original game's main story. It covers the complete journey of the theater company's revival and the inaugural performances of each troupe. Starting with the joint productions SPRING & SUMMER 2018 and AUTUMN & WINTER 2019, and leading into the dedicated solo performances for the Spring, Summer, Autumn, and Winter troupes, this series laid the foundation for the \"A-Ste\" legacy. It encapsulates the moving story of rebuilding a debt-ridden, run-down theater, capturing the journey until all 20 members across the four troupes are finally brought together.",
+    "name_en": "MANKAI STAGE A3! Act1 (A-Ste Act 1)"
+  },
+  "franchisePatch": {
+    "description": "俳優育成ゲーム『A3!』を原作とするMANKAI STAGE『A3!』の初期公演群。2018年の『SPRING & SUMMER』と2019年の『AUTUMN & WINTER』で各組の旗揚げ公演を描き、続く春・夏・秋・冬の単独公演では第二回・第三回公演へ進む劇団員たちを描く。2021年の冬組再演までを収録。楽曲を中心とするライブ公演は別シリーズにまとめている。",
+    "description_en": "The early MANKAI STAGE A3! productions, based on the actor-training game A3!. SPRING & SUMMER 2018 and AUTUMN & WINTER 2019 follow the troupes through their inaugural productions. The subsequent solo Spring, Summer, Autumn and Winter shows follow their second and third productions. This series covers these stage productions through the Winter revival in 2021. Music-focused live concerts are listed separately."
+  },
+  "castPatches": [
+    {
+      "before": {
+        "id": "9f58ce6c-dbe9-443f-8b3b-58d2f275fee4",
+        "play_id": "3b5f34b5-40a1-45fe-bfcf-d70060695251",
+        "actor_id": "ed310757-4569-4539-896d-6a8a5c326ac2",
+        "role_name": "佐久間咲也",
+        "is_starring": true,
+        "created_at": "2025-12-13T05:18:03.3201+00:00",
+        "billing_order": 1,
+        "cast_group": "春組",
+        "role_name_kana": null,
+        "role_type": null,
+        "note": null,
+        "updated_at": "2026-10-26T23:46:20.580937+00:00"
+      },
+      "patch": {
+        "is_starring": false
+      },
+      "reason": "旧サンプル由来の3人限定フラグ。当該公式14人一覧・個別プロフィールにこの3人を特別に選ぶ根拠を確認できないため、根拠未確認のMAIN CAST表示のみ解除。出演・掲載順・注記・人物接続は保全。"
+    },
+    {
+      "before": {
+        "id": "d3727287-137c-4f97-a92e-1ad0ee4d51f3",
+        "play_id": "3b5f34b5-40a1-45fe-bfcf-d70060695251",
+        "actor_id": "6f47cce5-7122-45ea-adcb-ce1dd8a6beaf",
+        "role_name": "茅ヶ崎至",
+        "is_starring": true,
+        "created_at": "2025-12-13T05:18:03.3201+00:00",
+        "billing_order": 4,
+        "cast_group": "春組",
+        "role_name_kana": null,
+        "role_type": null,
+        "note": null,
+        "updated_at": "2026-10-26T23:46:20.580937+00:00"
+      },
+      "patch": {
+        "is_starring": false
+      },
+      "reason": "旧サンプル由来の3人限定フラグ。当該公式14人一覧・個別プロフィールにこの3人を特別に選ぶ根拠を確認できないため、根拠未確認のMAIN CAST表示のみ解除。出演・掲載順・注記・人物接続は保全。"
+    },
+    {
+      "before": {
+        "id": "f866b2c1-8638-4f8f-bcf5-fdbb2f982a92",
+        "play_id": "3b5f34b5-40a1-45fe-bfcf-d70060695251",
+        "actor_id": "5533574d-232b-492a-bad8-2aadc44b2e63",
+        "role_name": "碓氷真澄",
+        "is_starring": true,
+        "created_at": "2025-12-13T05:18:03.3201+00:00",
+        "billing_order": 2,
+        "cast_group": "春組",
+        "role_name_kana": null,
+        "role_type": null,
+        "note": null,
+        "updated_at": "2026-10-26T23:46:20.580937+00:00"
+      },
+      "patch": {
+        "is_starring": false
+      },
+      "reason": "旧サンプル由来の3人限定フラグ。当該公式14人一覧・個別プロフィールにこの3人を特別に選ぶ根拠を確認できないため、根拠未確認のMAIN CAST表示のみ解除。出演・掲載順・注記・人物接続は保全。"
+    }
+  ],
+  "works": [
+    {
+      "batch": "ss2018",
+      "id": "3b5f34b5-40a1-45fe-bfcf-d70060695251",
+      "slug": "ace-stage-ss",
+      "title": "MANKAI STAGE『A3!』～SPRING & SUMMER 2018～",
+      "titleEn": "MANKAI STAGE A3! ~SPRING & SUMMER 2018~",
+      "period": "2018年6月28日〜11月4日",
+      "venue": "東京・東京凱旋：天王洲 銀河劇場／京都：京都劇場",
+      "summary": "イケメン役者育成ゲーム『A3!』の舞台化シリーズ第一弾。借金まみれの劇団「MANKAIカンパニー」を立て直すため、春組と夏組が奮闘する。",
+      "summaryEn": "The first stage adaptation of the actor-training game A3!. The Spring and Summer Troupes work to rebuild the debt-ridden MANKAI Company.",
+      "castRows": 14,
+      "uniqueActors": 14,
+      "creditCategories": 10,
+      "sourceRequestKey": "beb00235f5c29375959f6ab181894a0694d4494713f77616b3e1dee15fd24131",
+      "sourceRecord": {
+        "path": "next-app/research/a3-ss2018-20261027.json",
+        "sha256": "a7a5db623ce3d9ecb7783d502c11ff7f1b8380cd499108249d3f047ed613fc57"
+      },
+      "freshOfficialOrder": [
+        {
+          "name": "横田龍儀",
+          "role": "佐久間咲也"
+        },
+        {
+          "name": "牧島 輝",
+          "role": "碓氷真澄"
+        },
+        {
+          "name": "前川優希",
+          "role": "皆木 綴"
+        },
+        {
+          "name": "立石俊樹",
+          "role": "茅ヶ崎 至"
+        },
+        {
+          "name": "古谷大和",
+          "role": "シトロン"
+        },
+        {
+          "name": "陳内 将",
+          "role": "皇 天馬"
+        },
+        {
+          "name": "宮崎 湧",
+          "role": "瑠璃川 幸"
+        },
+        {
+          "name": "野口 準",
+          "role": "向坂 椋"
+        },
+        {
+          "name": "本田礼生",
+          "role": "斑鳩三角"
+        },
+        {
+          "name": "赤澤 燈",
+          "role": "三好一成"
+        },
+        {
+          "name": "滝口幸広",
+          "role": "鹿島雄三"
+        },
+        {
+          "name": "田口 涼",
+          "role": "松川伊助"
+        },
+        {
+          "name": "田内季宇",
+          "role": "迫田ケン"
+        },
+        {
+          "name": "藤田 玲",
+          "role": "古市左京"
+        }
+      ],
+      "announcedOnlyExcluded": [],
+      "scheduleCount": 38,
+      "scheduleScope": "Prior per-production image/table reconciliations retained; not a claim that every announced individual performance has been independently proven held.",
+      "schedules": [
+        {
+          "city": "東京",
+          "date": "2018/06/28 19:00"
+        },
+        {
+          "city": "東京",
+          "date": "2018/06/29 19:00"
+        },
+        {
+          "city": "東京",
+          "date": "2018/06/30 13:00"
+        },
+        {
+          "city": "東京",
+          "date": "2018/06/30 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2018/07/01 13:00"
+        },
+        {
+          "city": "東京",
+          "date": "2018/07/01 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2018/07/03 14:00"
+        },
+        {
+          "city": "東京",
+          "date": "2018/07/03 19:00"
+        },
+        {
+          "city": "東京",
+          "date": "2018/07/04 14:00"
+        },
+        {
+          "city": "東京",
+          "date": "2018/07/04 19:00"
+        },
+        {
+          "city": "東京",
+          "date": "2018/07/05 19:00"
+        },
+        {
+          "city": "東京",
+          "date": "2018/07/06 19:00"
+        },
+        {
+          "city": "東京",
+          "date": "2018/07/07 13:00"
+        },
+        {
+          "city": "東京",
+          "date": "2018/07/07 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2018/07/08 13:00"
+        },
+        {
+          "city": "東京",
+          "date": "2018/07/08 18:00"
+        },
+        {
+          "city": "京都",
+          "date": "2018/07/13 19:00"
+        },
+        {
+          "city": "京都",
+          "date": "2018/07/14 13:00"
+        },
+        {
+          "city": "京都",
+          "date": "2018/07/14 18:00"
+        },
+        {
+          "city": "京都",
+          "date": "2018/07/15 13:00"
+        },
+        {
+          "city": "京都",
+          "date": "2018/07/15 18:00"
+        },
+        {
+          "city": "京都",
+          "date": "2018/07/16 13:00"
+        },
+        {
+          "city": "京都",
+          "date": "2018/07/16 18:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2018/10/26 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2018/10/27 13:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2018/10/27 18:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2018/10/28 13:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2018/10/28 18:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2018/10/30 14:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2018/10/30 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2018/10/31 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2018/11/01 14:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2018/11/01 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2018/11/02 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2018/11/03 13:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2018/11/03 18:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2018/11/04 13:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2018/11/04 18:00"
+        }
+      ],
+      "notes": [
+        {
+          "castId": "fa6c155a-288d-4bd1-b26a-a87305ff9399",
+          "role": "鹿島雄三",
+          "note": "役柄補足：初代春組OB。"
+        },
+        {
+          "castId": "7a106b09-9f42-4b1e-9d84-36b8f307100d",
+          "role": "松川伊助",
+          "note": "役柄補足：劇場支配人。"
+        },
+        {
+          "castId": "d07799c0-1570-4c7a-882b-d7292f01aa26",
+          "role": "迫田ケン",
+          "note": "役柄補足：ヤクザ。"
+        },
+        {
+          "castId": "252b9a1d-b754-45db-972a-8216e88e2f1b",
+          "role": "古市左京",
+          "note": "役柄補足：ヤクザ。"
+        }
+      ],
+      "allRolesAndOrderVerified": true,
+      "groupsAndNotesVerified": true,
+      "sourceCandidateLinksVerified": true,
+      "summaryAndTimelineVerified": true,
+      "castIds": [
+        "9f58ce6c-dbe9-443f-8b3b-58d2f275fee4",
+        "f866b2c1-8638-4f8f-bcf5-fdbb2f982a92",
+        "2144737d-4b82-4fea-b68a-1430924bc552",
+        "d3727287-137c-4f97-a92e-1ad0ee4d51f3",
+        "5cb55f09-99db-40f0-b542-f38c4d876519",
+        "68fbc1a8-1201-4db2-9b22-80ec5bffdafb",
+        "3a735ec2-3603-4394-8db0-09430fa51423",
+        "a63281c0-fd4a-46fc-81d5-694a7643db11",
+        "267617f9-6c5c-4c5a-ae8c-86352a759bb6",
+        "0e7dce7f-9221-4a22-9d58-6d274151b4e8",
+        "fa6c155a-288d-4bd1-b26a-a87305ff9399",
+        "7a106b09-9f42-4b1e-9d84-36b8f307100d",
+        "d07799c0-1570-4c7a-882b-d7292f01aa26",
+        "252b9a1d-b754-45db-972a-8216e88e2f1b"
+      ]
+    },
+    {
+      "batch": "aw2019",
+      "id": "a1377573-d4aa-4ffe-b89e-7221614dbb7e",
+      "slug": "ace-stage-aw",
+      "title": "MANKAI STAGE『A3!』～AUTUMN & WINTER 2019～",
+      "titleEn": "MANKAI STAGE A3! ~AUTUMN & WINTER 2019~",
+      "period": "2019年1月31日〜3月24日",
+      "venue": "東京：日本青年館ホール／山口：下関市民会館 大ホール／大阪：梅田芸術劇場 メインホール／東京凱旋：天王洲 銀河劇場",
+      "summary": "『A3!』舞台化シリーズ第二弾。秋組と冬組の物語を描く。",
+      "summaryEn": "The second stage production based on A3!, following the stories of the Autumn and Winter Troupes.",
+      "castRows": 19,
+      "uniqueActors": 19,
+      "creditCategories": 11,
+      "sourceRequestKey": "bae60057603efc745c60e80257eca0f0867bd59f84c4966f6c93d2b5570ff1d2",
+      "sourceRecord": {
+        "path": "next-app/research/a3-aw2019-20261027.json",
+        "sha256": "f372bba0040d46bf013b5a4e2f5e53f1d985192d9e625d9266b077890fbaf00d"
+      },
+      "freshOfficialOrder": [
+        {
+          "name": "水江建太",
+          "role": "摂津万里"
+        },
+        {
+          "name": "中村太郎",
+          "role": "兵頭十座"
+        },
+        {
+          "name": "赤澤遼太郎",
+          "role": "七尾太一"
+        },
+        {
+          "name": "稲垣成弥",
+          "role": "伏見 臣"
+        },
+        {
+          "name": "藤田 玲",
+          "role": "古市左京"
+        },
+        {
+          "name": "荒牧慶彦",
+          "role": "月岡 紬"
+        },
+        {
+          "name": "北園 涼",
+          "role": "高遠 丞"
+        },
+        {
+          "name": "植田圭輔",
+          "role": "御影 密"
+        },
+        {
+          "name": "田中涼星",
+          "role": "有栖川 誉"
+        },
+        {
+          "name": "上田堪大",
+          "role": "雪白 東"
+        },
+        {
+          "name": "前川優希",
+          "role": "皆木 綴"
+        },
+        {
+          "name": "立石俊樹",
+          "role": "茅ヶ崎 至"
+        },
+        {
+          "name": "野口 準",
+          "role": "向坂 椋"
+        },
+        {
+          "name": "本田礼生",
+          "role": "斑鳩三角"
+        },
+        {
+          "name": "滝口幸広",
+          "role": "鹿島雄三"
+        },
+        {
+          "name": "田口 涼",
+          "role": "松川伊助"
+        },
+        {
+          "name": "田内季宇",
+          "role": "迫田ケン"
+        },
+        {
+          "name": "伊崎龍次郎",
+          "role": "飛鳥晴翔"
+        },
+        {
+          "name": "河合龍之介",
+          "role": "神木坂レニ"
+        }
+      ],
+      "announcedOnlyExcluded": [],
+      "scheduleCount": 42,
+      "scheduleScope": "Prior per-production image/table reconciliations retained; not a claim that every announced individual performance has been independently proven held.",
+      "schedules": [
+        {
+          "city": "東京",
+          "date": "2019/01/31 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/02/01 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/02/02 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2019/02/02 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/02/03 12:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/02/04 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2019/02/04 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/02/06 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2019/02/06 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/02/07 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/02/08 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2019/02/08 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/02/09 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2019/02/09 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/02/10 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2019/02/11 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2019/02/11 18:00"
+        },
+        {
+          "city": "山口",
+          "date": "2019/02/23 12:30"
+        },
+        {
+          "city": "山口",
+          "date": "2019/02/23 18:00"
+        },
+        {
+          "city": "山口",
+          "date": "2019/02/24 12:00"
+        },
+        {
+          "city": "大阪",
+          "date": "2019/02/27 18:00"
+        },
+        {
+          "city": "大阪",
+          "date": "2019/02/28 18:00"
+        },
+        {
+          "city": "大阪",
+          "date": "2019/03/01 12:30"
+        },
+        {
+          "city": "大阪",
+          "date": "2019/03/01 18:00"
+        },
+        {
+          "city": "大阪",
+          "date": "2019/03/02 12:30"
+        },
+        {
+          "city": "大阪",
+          "date": "2019/03/02 18:00"
+        },
+        {
+          "city": "大阪",
+          "date": "2019/03/03 12:30"
+        },
+        {
+          "city": "大阪",
+          "date": "2019/03/03 18:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/03/15 18:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/03/16 12:30"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/03/16 18:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/03/17 12:30"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/03/17 18:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/03/19 18:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/03/20 12:30"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/03/20 18:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/03/21 12:30"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/03/21 18:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/03/22 18:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/03/23 12:30"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/03/23 18:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/03/24 12:30"
+        }
+      ],
+      "notes": [
+        {
+          "castId": "e8c2f37f-ffbe-47bf-958a-0a8af0a9a268",
+          "role": "鹿島雄三",
+          "note": "役柄補足：初代春組OB。"
+        },
+        {
+          "castId": "d3f38e10-9600-4981-a21b-70a2c7d7bff1",
+          "role": "松川伊助",
+          "note": "役柄補足：劇場支配人。"
+        },
+        {
+          "castId": "b219b47c-3ed8-4d4b-9f6e-e97f8242e114",
+          "role": "迫田ケン",
+          "note": "役柄補足：ヤクザ。"
+        },
+        {
+          "castId": "79bde8cc-0751-4b71-bb99-9bb73255d9a4",
+          "role": "飛鳥晴翔",
+          "note": "役柄補足：GOD座。"
+        },
+        {
+          "castId": "4af8e295-a671-4816-9504-2486b9b7073c",
+          "role": "神木坂レニ",
+          "note": "役柄補足：GOD座主宰。"
+        }
+      ],
+      "allRolesAndOrderVerified": true,
+      "groupsAndNotesVerified": true,
+      "sourceCandidateLinksVerified": true,
+      "summaryAndTimelineVerified": true,
+      "castIds": [
+        "c5718d97-b008-46ed-8e0e-39eb22b20ea2",
+        "3c6d294e-c032-4d5c-825c-6bcc5b704a81",
+        "fb2f01b6-fad6-4050-863d-c45fef7ae7ec",
+        "ff3687ad-6da8-40e4-a3c2-21ed2f4816e1",
+        "2e6c6450-ec99-46b6-b782-d1384ffb3bd1",
+        "0db71ddb-bd00-4226-9f8a-def10e4aabee",
+        "61bc137a-36b2-45db-ba79-f2042a9d5e62",
+        "728ffff1-8168-4885-92b0-98bf1170a5b3",
+        "ff97c3c6-fd7e-40da-8fda-a04eff833838",
+        "eb92db30-18d3-46fa-b08f-1f7913c80024",
+        "93df6463-f4a6-4005-b3b5-0ba6cf17762f",
+        "66be1dc7-786a-4e33-b9c2-093fe67f680b",
+        "e40202dd-1568-4411-ac7e-97ed0819b3f8",
+        "566f6d36-ba64-4c58-a56b-af0e88b4da9c",
+        "e8c2f37f-ffbe-47bf-958a-0a8af0a9a268",
+        "d3f38e10-9600-4981-a21b-70a2c7d7bff1",
+        "b219b47c-3ed8-4d4b-9f6e-e97f8242e114",
+        "79bde8cc-0751-4b71-bb99-9bb73255d9a4",
+        "4af8e295-a671-4816-9504-2486b9b7073c"
+      ]
+    },
+    {
+      "batch": "spring2019",
+      "id": "05ef75aa-9f4b-4aae-bf02-c50294ceafd4",
+      "slug": "a3_2019-2",
+      "title": "MANKAI STAGE『A3!』～SPRING 2019～",
+      "titleEn": "MANKAI STAGE A3! ~SPRING 2019~",
+      "period": "2019年4月25日〜6月2日",
+      "venue": "東京・東京凱旋：天王洲 銀河劇場／大阪：大阪メルパルクホール／新潟：長岡市立劇場 大ホール",
+      "summary": "春組を中心に描く『A3!』の単独公演。旗揚げ公演を経た春組が、第2回公演『不思議の国の青年アリス』と第3回公演『ぜんまい仕掛けのココロ』に取り組む2つの物語を描く。",
+      "summaryEn": "The first standalone production focused on the Spring Troupe in MANKAI STAGE A3!. Following the troupe’s inaugural performance, it presents two stories about their second and third stage productions.",
+      "castRows": 13,
+      "uniqueActors": 13,
+      "creditCategories": 10,
+      "sourceRequestKey": "09957315126c26f092e6d1b9e45d112920d0b9f9203b433aba9c10c473868e24",
+      "sourceRecord": {
+        "path": "next-app/research/a3-spring2019-20261027.json",
+        "sha256": "8435a412e760f381f9f78588695c6c55faeff1898ba0b79609670055c9e1b685"
+      },
+      "freshOfficialOrder": [
+        {
+          "name": "横田龍儀",
+          "role": "佐久間咲也"
+        },
+        {
+          "name": "牧島 輝",
+          "role": "碓氷真澄"
+        },
+        {
+          "name": "前川優希",
+          "role": "皆木 綴"
+        },
+        {
+          "name": "立石俊樹",
+          "role": "茅ヶ崎 至"
+        },
+        {
+          "name": "古谷大和",
+          "role": "シトロン"
+        },
+        {
+          "name": "宮崎 湧",
+          "role": "瑠璃川 幸"
+        },
+        {
+          "name": "水江建太",
+          "role": "摂津万里"
+        },
+        {
+          "name": "藤田 玲",
+          "role": "古市左京"
+        },
+        {
+          "name": "荒牧慶彦",
+          "role": "月岡 紬"
+        },
+        {
+          "name": "上田堪大",
+          "role": "雪白 東"
+        },
+        {
+          "name": "笹森裕貴",
+          "role": "水野 茅"
+        },
+        {
+          "name": "田内季宇",
+          "role": "迫田ケン"
+        },
+        {
+          "name": "田口 涼",
+          "role": "松川伊助"
+        }
+      ],
+      "announcedOnlyExcluded": [],
+      "scheduleCount": 45,
+      "scheduleScope": "Prior per-production image/table reconciliations retained; not a claim that every announced individual performance has been independently proven held.",
+      "schedules": [
+        {
+          "city": "東京",
+          "date": "2019/04/25 19:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/04/26 19:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/04/27 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2019/04/27 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/04/28 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2019/04/28 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/04/30 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2019/04/30 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/05/01 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2019/05/01 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/05/02 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/05/03 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/05/04 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2019/05/04 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/05/05 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2019/05/05 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/05/06 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2019/05/06 18:00"
+        },
+        {
+          "city": "大阪",
+          "date": "2019/05/10 19:00"
+        },
+        {
+          "city": "大阪",
+          "date": "2019/05/11 12:30"
+        },
+        {
+          "city": "大阪",
+          "date": "2019/05/11 18:00"
+        },
+        {
+          "city": "大阪",
+          "date": "2019/05/12 12:30"
+        },
+        {
+          "city": "大阪",
+          "date": "2019/05/12 18:00"
+        },
+        {
+          "city": "大阪",
+          "date": "2019/05/13 19:00"
+        },
+        {
+          "city": "大阪",
+          "date": "2019/05/14 13:00"
+        },
+        {
+          "city": "新潟",
+          "date": "2019/05/18 12:30"
+        },
+        {
+          "city": "新潟",
+          "date": "2019/05/18 18:00"
+        },
+        {
+          "city": "新潟",
+          "date": "2019/05/19 12:30"
+        },
+        {
+          "city": "新潟",
+          "date": "2019/05/19 18:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/05/23 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/05/24 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/05/25 12:30"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/05/25 18:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/05/26 12:30"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/05/26 18:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/05/28 13:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/05/28 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/05/29 13:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/05/29 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/05/30 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/05/31 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/06/01 12:30"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/06/01 18:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/06/02 12:30"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/06/02 18:00"
+        }
+      ],
+      "notes": [
+        {
+          "castId": "3f73d0b2-2a53-4f63-9673-04a86aa01018",
+          "role": "迫田ケン",
+          "note": "役柄補足：ヤクザ。"
+        },
+        {
+          "castId": "28fdc1ac-e643-45d1-bc3b-7851226d9695",
+          "role": "松川伊助",
+          "note": "役柄補足：劇場支配人。"
+        }
+      ],
+      "allRolesAndOrderVerified": true,
+      "groupsAndNotesVerified": true,
+      "sourceCandidateLinksVerified": true,
+      "summaryAndTimelineVerified": true,
+      "castIds": [
+        "eaa075d2-d95f-4fdf-8a2b-2c074a0eaa65",
+        "10e8eb92-13fa-44ac-a88e-36450ed8299f",
+        "9ca227f3-35a9-47e8-b92a-405f7ea316cb",
+        "a68ba25d-16b1-44a8-b271-3ce3a42140cc",
+        "fa86375f-ad65-429b-8784-e8e682a6d0b9",
+        "fd5da454-09aa-4104-8cc2-dd0a153ec504",
+        "bd171965-7989-4db6-aee3-564d203ef702",
+        "991a3a86-3d15-4a01-9f19-242ab1fb5654",
+        "189e763e-179d-429a-b244-c6f2c14f2958",
+        "97f26994-bb63-4350-89e7-536f9e57135f",
+        "6261579e-d2c7-47ad-a5fd-ccdb06fd01da",
+        "3f73d0b2-2a53-4f63-9673-04a86aa01018",
+        "28fdc1ac-e643-45d1-bc3b-7851226d9695"
+      ]
+    },
+    {
+      "batch": "summer2019",
+      "id": "3a9939c9-ee4c-42e5-a545-a0d0a9c1c46b",
+      "slug": "a3_2019-3",
+      "title": "MANKAI STAGE『A3!』～SUMMER 2019～",
+      "titleEn": "MANKAI STAGE A3! ~SUMMER 2019~",
+      "period": "2019年8月8日〜9月29日",
+      "venue": "東京・東京凱旋：品川プリンスホテル ステラボール／兵庫：AiiA 2.5 Theater Kobe／愛知：名古屋市公会堂／新潟：長岡市立劇場 大ホール",
+      "summary": "俳優育成ゲーム『A3!』を原作とする夏組の単独公演。皇天馬たち夏組の第二回公演『にぼしを巡る冒険』と第三回公演『抜錨！スカイ海賊団』を軸に、劇団員たちの物語を描く。2019年に東京・兵庫・愛知・新潟を巡り、東京凱旋公演まで上演された。",
+      "summaryEn": "A solo Summer Troupe production based on the actor-training game A3!. It follows Tenma Sumeragi and his troupe through their second and third productions. The 2019 tour visited Tokyo, Hyogo, Aichi and Niigata before returning to Tokyo.",
+      "castRows": 13,
+      "uniqueActors": 13,
+      "creditCategories": 10,
+      "sourceRequestKey": "9eb03c25b4312aad5dec511d9580505a6462acdc978d97e17e0ed3b0658b11c4",
+      "sourceRecord": {
+        "path": "next-app/research/a3-summer2019-20261027.json",
+        "sha256": "379f20631a8dce7dd5373a7b733759446b6b19f5726d0249a973d559145d3d3f"
+      },
+      "freshOfficialOrder": [
+        {
+          "name": "陳内 将",
+          "role": "皇 天馬"
+        },
+        {
+          "name": "宮崎 湧",
+          "role": "瑠璃川 幸"
+        },
+        {
+          "name": "野口 準",
+          "role": "向坂 椋"
+        },
+        {
+          "name": "本田礼生",
+          "role": "斑鳩三角"
+        },
+        {
+          "name": "赤澤 燈",
+          "role": "三好一成"
+        },
+        {
+          "name": "横田龍儀",
+          "role": "佐久間咲也"
+        },
+        {
+          "name": "前川優希",
+          "role": "皆木 綴"
+        },
+        {
+          "name": "中村太郎",
+          "role": "兵頭十座"
+        },
+        {
+          "name": "宇佐卓真",
+          "role": "斑鳩 円"
+        },
+        {
+          "name": "滝口幸広",
+          "role": "鹿島雄三"
+        },
+        {
+          "name": "伊崎龍次郎",
+          "role": "飛鳥晴翔"
+        },
+        {
+          "name": "河合龍之介",
+          "role": "神木坂レニ"
+        }
+      ],
+      "announcedOnlyExcluded": [],
+      "scheduleCount": 56,
+      "scheduleScope": "Prior per-production image/table reconciliations retained; not a claim that every announced individual performance has been independently proven held.",
+      "schedules": [
+        {
+          "city": "東京",
+          "date": "2019/08/08 19:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/09 19:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/10 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/10 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/11 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/11 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/13 13:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/13 19:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/14 13:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/14 19:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/15 19:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/16 13:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/16 19:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/17 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/17 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/18 14:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/23 19:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/24 12:30"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/24 18:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/25 12:30"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/25 18:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/26 19:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/28 13:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/28 19:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/29 13:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/29 19:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/30 19:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/31 12:30"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/31 18:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/09/01 12:30"
+        },
+        {
+          "city": "愛知",
+          "date": "2019/09/06 12:30"
+        },
+        {
+          "city": "愛知",
+          "date": "2019/09/06 18:00"
+        },
+        {
+          "city": "愛知",
+          "date": "2019/09/07 12:30"
+        },
+        {
+          "city": "愛知",
+          "date": "2019/09/07 18:00"
+        },
+        {
+          "city": "愛知",
+          "date": "2019/09/08 12:30"
+        },
+        {
+          "city": "愛知",
+          "date": "2019/09/08 18:00"
+        },
+        {
+          "city": "新潟",
+          "date": "2019/09/13 19:00"
+        },
+        {
+          "city": "新潟",
+          "date": "2019/09/14 12:30"
+        },
+        {
+          "city": "新潟",
+          "date": "2019/09/14 18:00"
+        },
+        {
+          "city": "新潟",
+          "date": "2019/09/15 12:30"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/19 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/20 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/21 12:30"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/21 18:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/22 12:30"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/22 18:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/24 13:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/24 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/25 13:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/25 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/26 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/27 13:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/27 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/28 12:30"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/28 18:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/29 14:00"
+        }
+      ],
+      "notes": [
+        {
+          "castId": "7071704b-11db-4c77-95a5-a387bf876c6d",
+          "role": "鹿島雄三",
+          "note": "役柄補足：初代春組OB。"
+        },
+        {
+          "castId": "84948e46-5aa8-4638-9c03-9f87f77c6abe",
+          "role": "飛鳥晴翔",
+          "note": "役柄補足：GOD座。"
+        },
+        {
+          "castId": "bd9dddcf-5c1d-4811-9b98-b19deb049a09",
+          "role": "神木坂レニ",
+          "note": "役柄補足：GOD座主宰。"
+        },
+        {
+          "castId": "72410332-502c-4dea-a7e5-540fa12d135a",
+          "role": "斑鳩八角",
+          "note": "声の出演。"
+        }
+      ],
+      "allRolesAndOrderVerified": true,
+      "groupsAndNotesVerified": true,
+      "sourceCandidateLinksVerified": true,
+      "summaryAndTimelineVerified": true,
+      "castIds": [
+        "3703e05f-146e-4047-acca-728b953f9f4d",
+        "331ca7cf-d3a2-4449-bd91-3ecbb7c255b8",
+        "c32728f5-9b27-448e-a638-aff6d78b62e7",
+        "923041d4-5b32-48a4-9e9a-3167ccb58fb0",
+        "1f30f0e1-2073-4442-b633-8fc66644291d",
+        "4985173e-e883-4a7f-8ac0-f388efa045c9",
+        "94da08c3-bfdd-41ff-9d88-6d51ce5fa873",
+        "69dc344c-b93a-40e7-9157-75360988a218",
+        "8d5a7c67-bf1e-404e-8926-d03702e95f2d",
+        "7071704b-11db-4c77-95a5-a387bf876c6d",
+        "84948e46-5aa8-4638-9c03-9f87f77c6abe",
+        "bd9dddcf-5c1d-4811-9b98-b19deb049a09",
+        "72410332-502c-4dea-a7e5-540fa12d135a"
+      ]
+    },
+    {
+      "batch": "autumn2020",
+      "id": "f957d0ff-ff91-4cfc-a750-9784283ac0b5",
+      "slug": "a3_2020",
+      "title": "MANKAI STAGE『A3!』～AUTUMN 2020～",
+      "titleEn": "MANKAI STAGE A3! ~AUTUMN 2020~",
+      "period": "2020年1月18日〜3月1日",
+      "venue": "東京・東京凱旋：品川プリンスホテル ステラボール／愛知：アイプラザ豊橋／兵庫：AiiA 2.5 Theater Kobe",
+      "summary": "俳優育成ゲーム『A3!』を原作とする秋組の単独公演。摂津万里たち秋組が、第二回公演『異邦人』と第三回公演『任侠伝・流れ者銀二』に取り組む2つの物語を描く。2020年に東京・愛知・兵庫を巡り、東京凱旋公演まで上演された。",
+      "summaryEn": "A solo Autumn Troupe production based on the actor-training game A3!. It follows Banri Settsu and his troupe through two stories about their second and third productions. The 2020 tour visited Tokyo, Aichi and Hyogo before returning to Tokyo.",
+      "castRows": 12,
+      "uniqueActors": 12,
+      "creditCategories": 12,
+      "sourceRequestKey": "72fe0edc0388dcaf37609dcbdc5c785e51ae904115224c150649f4335c1e3b13",
+      "sourceRecord": {
+        "path": "next-app/research/a3-autumn2020-20261027.json",
+        "sha256": "bea8da0de67fdc04961f1e73d315e9164fae1feab3262763190197f2c37e0c93"
+      },
+      "freshOfficialOrder": [
+        {
+          "name": "水江建太",
+          "role": "摂津万里"
+        },
+        {
+          "name": "中村太郎",
+          "role": "兵頭十座"
+        },
+        {
+          "name": "赤澤遼太郎",
+          "role": "七尾太一"
+        },
+        {
+          "name": "稲垣成弥",
+          "role": "伏見 臣"
+        },
+        {
+          "name": "藤田 玲",
+          "role": "古市左京"
+        },
+        {
+          "name": "前川優希",
+          "role": "皆木 綴"
+        },
+        {
+          "name": "陳内 将",
+          "role": "皇 天馬"
+        },
+        {
+          "name": "野口 準",
+          "role": "向坂 椋"
+        },
+        {
+          "name": "上田堪大",
+          "role": "雪白 東"
+        },
+        {
+          "name": "里中将道",
+          "role": "新庄 リョウ"
+        },
+        {
+          "name": "田内季宇",
+          "role": "迫田ケン"
+        },
+        {
+          "name": "田口 涼",
+          "role": "松川伊助"
+        }
+      ],
+      "announcedOnlyExcluded": [
+        {
+          "name": "滝口幸広",
+          "role": "鹿島雄三"
+        }
+      ],
+      "scheduleCount": 50,
+      "scheduleScope": "Prior per-production image/table reconciliations retained; not a claim that every announced individual performance has been independently proven held.",
+      "schedules": [
+        {
+          "city": "東京",
+          "date": "2020/01/18 13:00"
+        },
+        {
+          "city": "東京",
+          "date": "2020/01/18 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2020/01/19 13:00"
+        },
+        {
+          "city": "東京",
+          "date": "2020/01/19 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2020/01/21 14:00"
+        },
+        {
+          "city": "東京",
+          "date": "2020/01/21 19:00"
+        },
+        {
+          "city": "東京",
+          "date": "2020/01/22 14:00"
+        },
+        {
+          "city": "東京",
+          "date": "2020/01/22 19:00"
+        },
+        {
+          "city": "東京",
+          "date": "2020/01/23 19:00"
+        },
+        {
+          "city": "東京",
+          "date": "2020/01/24 14:00"
+        },
+        {
+          "city": "東京",
+          "date": "2020/01/24 19:00"
+        },
+        {
+          "city": "東京",
+          "date": "2020/01/25 13:00"
+        },
+        {
+          "city": "東京",
+          "date": "2020/01/25 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2020/01/26 13:00"
+        },
+        {
+          "city": "愛知",
+          "date": "2020/01/31 14:00"
+        },
+        {
+          "city": "愛知",
+          "date": "2020/01/31 19:00"
+        },
+        {
+          "city": "愛知",
+          "date": "2020/02/01 13:00"
+        },
+        {
+          "city": "愛知",
+          "date": "2020/02/01 18:00"
+        },
+        {
+          "city": "愛知",
+          "date": "2020/02/02 13:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2020/02/06 19:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2020/02/07 19:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2020/02/08 13:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2020/02/08 18:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2020/02/09 13:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2020/02/09 18:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2020/02/11 13:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2020/02/11 18:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2020/02/12 14:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2020/02/12 19:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2020/02/13 19:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2020/02/14 14:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2020/02/14 19:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2020/02/15 13:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2020/02/15 18:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2020/02/16 13:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2020/02/20 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2020/02/21 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2020/02/22 13:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2020/02/22 18:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2020/02/23 13:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2020/02/23 18:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2020/02/24 14:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2020/02/26 14:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2020/02/26 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2020/02/27 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2020/02/28 14:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2020/02/28 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2020/02/29 13:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2020/02/29 18:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2020/03/01 13:00"
+        }
+      ],
+      "notes": [
+        {
+          "castId": "3d937248-dc86-49ae-8575-5e29079679cd",
+          "role": "迫田ケン",
+          "note": "役柄補足：ヤクザ。"
+        },
+        {
+          "castId": "410abecc-7abb-4e28-9a78-755e972f75ff",
+          "role": "松川伊助",
+          "note": "役柄補足：劇場支配人。"
+        }
+      ],
+      "allRolesAndOrderVerified": true,
+      "groupsAndNotesVerified": true,
+      "sourceCandidateLinksVerified": true,
+      "summaryAndTimelineVerified": true,
+      "castIds": [
+        "f423df00-ffff-428a-b927-ba6af377f485",
+        "8e97c771-79ed-45eb-94a7-c3857211dfc4",
+        "7c04ff5e-bae3-472b-ae82-c899639115c4",
+        "d3489eb8-f864-4023-b21a-5f232c1b7c14",
+        "f4014475-28cf-4ba8-9a0d-95feb0a57a58",
+        "315196e2-26cc-49fd-be7d-93e1dfbc7421",
+        "805757af-7375-4dbb-856a-0d341dde4a5a",
+        "0356075a-0fd7-4a1e-b673-68b2cefba8da",
+        "65f5f6f9-eb99-4069-9fe9-b21a8d36b41a",
+        "caa8516a-9c79-4963-ab11-a6a8c325b50e",
+        "3d937248-dc86-49ae-8575-5e29079679cd",
+        "410abecc-7abb-4e28-9a78-755e972f75ff"
+      ]
+    },
+    {
+      "batch": "winter2020",
+      "id": "4db9c288-f2e1-4c03-a3fc-2944a33fa7e2",
+      "slug": "a3_2020-2-2",
+      "title": "MANKAI STAGE『A3!』～WINTER 2020.08～",
+      "titleEn": "MANKAI STAGE A3! ~WINTER 2020.08~",
+      "period": "2020年8月16日〜22日",
+      "venue": "天王洲 銀河劇場（東京）",
+      "summary": "俳優育成ゲーム『A3!』を原作とする冬組の単独公演。月岡紬たち冬組が、第二回公演『主人はミステリにご執心』と第三回公演『真夜中の住人』に取り組む2つの物語を描く。当初4〜6月の公演中止を経て、2020年8月に天王洲 銀河劇場で上演された。",
+      "summaryEn": "A solo Winter Troupe production based on the actor-training game A3!. It follows Tsumugi Tsukioka and his troupe through their second and third productions. After the planned April–June tour was cancelled, it was staged at The Galaxy Theatre in Tokyo in August 2020.",
+      "castRows": 10,
+      "uniqueActors": 10,
+      "creditCategories": 10,
+      "sourceRequestKey": "553c69332caa4b1386b87ba265e330493a1be6ed314b604e394960e10a5d2d26",
+      "sourceRecord": {
+        "path": "next-app/research/a3-winter2020-20261027.json",
+        "sha256": "34d6df359b790e956e362cc922a740090a15f07d7d9cc915528e665c0beff711"
+      },
+      "freshOfficialOrder": [
+        {
+          "name": "荒牧慶彦",
+          "role": "月岡 紬"
+        },
+        {
+          "name": "北園  涼",
+          "role": "高遠 丞"
+        },
+        {
+          "name": "植田圭輔",
+          "role": "御影 密"
+        },
+        {
+          "name": "田中涼星",
+          "role": "有栖川 誉"
+        },
+        {
+          "name": "上田堪大",
+          "role": "雪白 東"
+        },
+        {
+          "name": "前川優希",
+          "role": "皆木 綴"
+        },
+        {
+          "name": "古谷大和",
+          "role": "シトロン"
+        },
+        {
+          "name": "赤澤 燈",
+          "role": "三好一成"
+        },
+        {
+          "name": "稲垣成弥",
+          "role": "伏見 臣"
+        },
+        {
+          "name": "田口 涼",
+          "role": "松川伊助"
+        }
+      ],
+      "announcedOnlyExcluded": [],
+      "scheduleCount": 11,
+      "scheduleScope": "Prior per-production image/table reconciliations retained; not a claim that every announced individual performance has been independently proven held.",
+      "schedules": [
+        {
+          "city": "東京",
+          "date": "2020/08/16 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2020/08/16 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2020/08/18 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2020/08/18 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2020/08/19 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2020/08/19 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2020/08/20 17:00"
+        },
+        {
+          "city": "東京",
+          "date": "2020/08/21 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2020/08/21 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2020/08/22 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2020/08/22 18:00"
+        }
+      ],
+      "notes": [
+        {
+          "castId": "6aa2ef6c-b198-4847-9eed-d6c1eeb3cbd9",
+          "role": "松川伊助",
+          "note": "役柄補足：劇場支配人。"
+        }
+      ],
+      "allRolesAndOrderVerified": true,
+      "groupsAndNotesVerified": true,
+      "sourceCandidateLinksVerified": true,
+      "summaryAndTimelineVerified": true,
+      "castIds": [
+        "c1be24de-5732-4cf9-9a7f-981208b8a7c1",
+        "3f26f650-870e-4ebb-a244-ad1dbb5f7a28",
+        "d8dcf15e-9bd2-407b-b8ee-afb88c4f29c2",
+        "e1044e1e-fdce-4e8a-a7e2-6fb3941ab67c",
+        "9a8b22ee-55ef-4629-a559-9586f7c52734",
+        "76c5d0df-8466-41f0-bd9b-d893a254d32d",
+        "5e0e1b82-8a67-4b70-a2d4-95e68d514743",
+        "cff5e3d2-815e-4ed0-855f-d0c5883a33a2",
+        "41af738c-1e5c-44f8-9cb8-69478cbb94f9",
+        "6aa2ef6c-b198-4847-9eed-d6c1eeb3cbd9"
+      ]
+    },
+    {
+      "batch": "winter2021",
+      "id": "4c31e544-861c-49b4-8461-bc06c314a087",
+      "slug": "a3_2021",
+      "title": "MANKAI STAGE『A3!』～WINTER 2021～",
+      "titleEn": "MANKAI STAGE A3! ~WINTER 2021~",
+      "period": "2021年5月20日〜6月13日",
+      "venue": "東京：TACHIKAWA STAGE GARDEN／大阪：梅田芸術劇場 シアター・ドラマシティ／愛知：アイプラザ豊橋",
+      "summary": "冬組単独公演『WINTER 2020』の再演。月岡紬たちが第二回公演『主人はミステリにご執心』と第三回公演『真夜中の住人』に取り組む。佐久間咲也が新たに加わり、鹿島雄三役は鯨井康介が務める。2021年に東京・大阪・愛知で上演された。",
+      "summaryEn": "A revival of the Winter Troupe’s WINTER 2020 production, following Tsumugi Tsukioka and his troupe through their second and third productions. Sakuya Sakuma joins the cast, and Kosuke Kujirai takes on the role of Yuzo Kashima. Staged in Tokyo, Osaka and Aichi in 2021.",
+      "castRows": 12,
+      "uniqueActors": 12,
+      "creditCategories": 11,
+      "sourceRequestKey": "9863fe7adb014a627d1e26152f1ef2c569aca6528fc7a86d2cecf3f68d50ccc9",
+      "sourceRecord": {
+        "path": "next-app/research/a3-winter2021-20261027.json",
+        "sha256": "1e789b5162b42eaac8900c159a84b6db3c6b79aef7c120c74b4f86e5cdf7dcf2"
+      },
+      "freshOfficialOrder": [
+        {
+          "name": "荒牧慶彦",
+          "role": "月岡 紬"
+        },
+        {
+          "name": "北園  涼",
+          "role": "高遠 丞"
+        },
+        {
+          "name": "植田圭輔",
+          "role": "御影 密"
+        },
+        {
+          "name": "田中涼星",
+          "role": "有栖川 誉"
+        },
+        {
+          "name": "上田堪大",
+          "role": "雪白 東"
+        },
+        {
+          "name": "横田龍儀",
+          "role": "佐久間咲也"
+        },
+        {
+          "name": "前川優希",
+          "role": "皆木 綴"
+        },
+        {
+          "name": "古谷大和",
+          "role": "シトロン"
+        },
+        {
+          "name": "赤澤 燈",
+          "role": "三好一成"
+        },
+        {
+          "name": "稲垣成弥",
+          "role": "伏見 臣"
+        },
+        {
+          "name": "鯨井 康介",
+          "role": "鹿島雄三"
+        },
+        {
+          "name": "田口 涼",
+          "role": "松川伊助"
+        }
+      ],
+      "announcedOnlyExcluded": [],
+      "scheduleCount": 25,
+      "scheduleScope": "Prior per-production image/table reconciliations retained; not a claim that every announced individual performance has been independently proven held.",
+      "schedules": [
+        {
+          "city": "東京",
+          "date": "2021/05/20 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2021/05/21 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2021/05/22 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2021/05/22 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2021/05/23 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2021/05/23 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2021/05/25 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2021/05/25 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2021/05/26 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2021/05/26 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2021/05/27 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2021/05/28 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2021/05/28 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2021/05/29 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2021/05/29 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2021/05/30 13:30"
+        },
+        {
+          "city": "大阪",
+          "date": "2021/06/03 17:30"
+        },
+        {
+          "city": "大阪",
+          "date": "2021/06/04 12:00"
+        },
+        {
+          "city": "大阪",
+          "date": "2021/06/04 17:30"
+        },
+        {
+          "city": "愛知",
+          "date": "2021/06/10 17:30"
+        },
+        {
+          "city": "愛知",
+          "date": "2021/06/11 12:00"
+        },
+        {
+          "city": "愛知",
+          "date": "2021/06/11 17:30"
+        },
+        {
+          "city": "愛知",
+          "date": "2021/06/12 12:00"
+        },
+        {
+          "city": "愛知",
+          "date": "2021/06/12 17:30"
+        },
+        {
+          "city": "愛知",
+          "date": "2021/06/13 13:30"
+        }
+      ],
+      "notes": [
+        {
+          "castId": "0ee78e6e-1818-4d1b-8d45-89fae81d991c",
+          "role": "鹿島雄三",
+          "note": "役柄補足：初代春組OB。"
+        },
+        {
+          "castId": "16512630-7980-400e-943d-fea806c395ea",
+          "role": "松川伊助",
+          "note": "役柄補足：劇場支配人。"
+        }
+      ],
+      "allRolesAndOrderVerified": true,
+      "groupsAndNotesVerified": true,
+      "sourceCandidateLinksVerified": true,
+      "summaryAndTimelineVerified": true,
+      "castIds": [
+        "2145d3e6-c3db-4b58-8991-2d43c3230010",
+        "e59ca9eb-a485-4772-be47-6b48e592715e",
+        "ac34b4fc-6a34-4636-a5e3-1a345e996aa9",
+        "0172ae1c-3271-4541-8074-72ab77978bfd",
+        "189b6b25-a0fd-4017-87ce-32c147943e08",
+        "cd46065a-4866-4da0-86e7-e2b25f921d44",
+        "368cf365-5718-4f79-8e4f-e5fa20f20e2c",
+        "69b560ab-6d46-47db-8958-26a2660e7532",
+        "ade966ae-7d36-4b07-a09c-5ae8ae8bd858",
+        "a82c67da-0921-4043-854b-3be51d2ba1aa",
+        "0ee78e6e-1818-4d1b-8d45-89fae81d991c",
+        "16512630-7980-400e-943d-fea806c395ea"
+      ]
+    }
+  ],
+  "actorIds": [
+    "ac91e41a-2db0-4f49-8389-a7d9786a4201",
+    "6f56fa1e-493d-4f17-917a-2559ecf800f5",
+    "68212e7c-6d5e-4ce2-b1d7-c42583019a3f",
+    "8b7c86f6-a193-46a9-89b3-2662f03b7b2b",
+    "fb1a7fa3-c90d-4c6c-86b8-af012fccf368",
+    "73a7a70b-d661-445f-82de-5a7d81d95c55",
+    "3ec32fb6-f2f3-4388-b8d1-8bede9472e44",
+    "523f6dd4-9c56-4b48-a264-463ebb52f068",
+    "ed310757-4569-4539-896d-6a8a5c326ac2",
+    "a39fa69c-ac9b-4ed3-ba69-394ca3a921ad",
+    "73dd3751-ae6e-4922-b252-a9cdbae324e6",
+    "6f47cce5-7122-45ea-adcb-ce1dd8a6beaf",
+    "5533574d-232b-492a-bad8-2aadc44b2e63",
+    "33f1f008-551f-4406-8a12-7c38705e7fc5",
+    "929888ac-3f6a-40d0-a856-41dd028b2753",
+    "57ead490-a42e-450f-9f27-5473b1b3468f",
+    "ed59b1c0-4ca3-432d-a241-4e40ea6bb9bd",
+    "ede60fa4-4b78-4607-b133-3ad237373f9e",
+    "efec4bde-6be0-4d8f-80e6-0d1c3accf066",
+    "50c00e50-2eff-418f-9569-8dbe6c122ddc",
+    "33ecd678-4e78-4841-b41a-5d0102762ae2",
+    "9dd007c7-a216-4d25-85fb-77fad853123e",
+    "5d7c1452-21f1-4835-859d-d2319a9db2c6",
+    "920f49d7-bb1f-4a46-ab8d-5c91dbd7d3ae",
+    "5a2e7a99-46c2-4369-a3ab-9ec8c4ac52aa",
+    "1e605310-a002-4bce-8b04-30b3d13985e3",
+    "4b10e54e-2585-44a8-8695-8a950c576820",
+    "1ea4b5de-f894-46c8-823c-0476087090fa",
+    "80fe3447-4a2c-4e8d-8cdb-3b213548f713",
+    "a9cc972e-f9e5-4874-9194-40cfca0c0003"
+  ],
+  "protectedLiveFranchise": {
+    "id": "d8d36e4f-9a0d-4a91-aac3-e6b8f24a8a5d",
+    "name": "MANKAI STAGE『A3!』LIVE（エーステライブ）",
+    "created_at": "2026-04-02T21:07:32.751768+00:00",
+    "updated_at": "2026-04-02T21:07:32.751768+00:00",
+    "slug": "a3-live",
+    "intro": null,
+    "description": "ストーリー本編の演劇公演とは独立した、楽曲パフォーマンスをメインとするライブイベントシリーズ。\n\n【主なライブの種類】\n・Troupe LIVE（トルライ）：各組の魅力を凝縮した組ごとの単独ライブ。\n・Four Seasons LIVE：春夏秋冬の全組が合同で開催する大型ライブ。\n\n本編の劇中劇で披露された楽曲や、お馴染みのテーマソング、ライブオリジナル楽曲などを中心に構成される、お祭り感の強いエンターテインメント公演。",
+    "origin_type": "ゲーム原作",
+    "origin_note": "原作：イケメン役者育成ゲーム『A3!』（リベル・エンタテインメント）",
+    "production_companies": [
+      "ネルケプランニング",
+      "MANKAI STAGE『A3!』製作委員会"
+    ],
+    "related_franchise_ids": [
+      "03404164-26f0-476f-92e9-5b438984fe0d",
+      "7eefe33e-9b9c-4cca-9c9f-5b67a37d701e",
+      "8d36fc91-4300-431f-a738-63696bd0f824"
+    ],
+    "format": "stage",
+    "description_en": "A live event series focused on musical performances, independent of the main theatrical productions.\n\n[Main Live Event Types]\n\nTroupe LIVE (Torurai): Dedicated solo live concerts that condense the unique charm of each individual troupe.\n\nFour Seasons LIVE: A large-scale joint concert featuring all four troupes (Spring, Summer, Autumn, and Winter) gathered together.\n\nStructured around songs featured in the in-story plays, familiar theme songs, and original live-exclusive tracks, these highly festive entertainment events offer a spectacular celebration of the franchise's music.",
+    "name_en": "MANKAI STAGE A3! LIVE (A-Ste LIVE)"
+  },
+  "freshSources": [
+    {
+      "label": "ss2018-cast",
+      "url": "https://www.mankai-stage.jp/archive/ss2018/cast/index.html",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:28.496Z",
+      "sha256": "0844079925a838bc7a8a3fbea0534ac48fcc92c052ddf602631888337fdb8304",
+      "bytes": 12127
+    },
+    {
+      "label": "archive2",
+      "url": "https://www.mankai-stage.jp/past_stage/?paged=2",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:28.514Z",
+      "sha256": "0af74852084e33bd9c1a4222126a225d65973b03432f4298d664bb2a63d5d6b1",
+      "bytes": 12578
+    },
+    {
+      "label": "ss2018-official",
+      "url": "https://www.mankai-stage.jp/archive/ss2018/",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:28.534Z",
+      "sha256": "5239ca1fca86c5ae7134af1ee366cf1dd6618bfcf68e87ba7b5c3cc20e6a3b51",
+      "bytes": 17199
+    },
+    {
+      "label": "archive1",
+      "url": "https://www.mankai-stage.jp/past_stage/",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:28.546Z",
+      "sha256": "9756870e2019c2ed2760b69c0a96898e5f05fa1256e34a111b25a9dd32d0839e",
+      "bytes": 27511
+    },
+    {
+      "label": "changelog",
+      "url": "https://supabase.com/changelog.md",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:28.575Z",
+      "sha256": "45528009025b8ad8487ccb73f7c769b66d4b0e7aa4560157047899dcb5b5a006",
+      "bytes": 102641
+    },
+    {
+      "label": "ss2018-intro",
+      "url": "https://www.mankai-stage.jp/archive/ss2018/introduction/index.html",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:28.600Z",
+      "sha256": "f6fcc381e1afb3d773f156662de778bcde4150778d9fe6c3e76455646c61eb45",
+      "bytes": 7202
+    },
+    {
+      "label": "ss2018-news",
+      "url": "https://www.mankai-stage.jp/archive/ss2018/news/index.html",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:28.641Z",
+      "sha256": "8280c94f6ac71ad2772f93636bc5acbfbbfb8e9097e81a2d5c6b92326a4c21cd",
+      "bytes": 86583
+    },
+    {
+      "label": "ss2018-guide",
+      "url": "https://www.mankai-stage.jp/archive/ss2018/guide/index.html",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:28.666Z",
+      "sha256": "802e626869680896718484db2b11730f0212a5eaa399d4fccae7c8be3fa1ec77",
+      "bytes": 30316
+    },
+    {
+      "label": "ss2018-castDetail",
+      "url": "https://www.mankai-stage.jp/archive/ss2018/cast/detail.html",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:28.676Z",
+      "sha256": "aa514af3a8c29ea2c7d6d8c4ed5d1d9d486b7e96ad4c3f19a3da4d0d8191f542",
+      "bytes": 26334
+    },
+    {
+      "label": "aw2019-official",
+      "url": "https://www.mankai-stage.jp/archive/aw2019/index.html",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:28.692Z",
+      "sha256": "863552fd75f076dd72537b9031fbf8bdb7d1bb275d597c76d7e9cd8f1e3500bd",
+      "bytes": 18199
+    },
+    {
+      "label": "aw2019-cast",
+      "url": "https://www.mankai-stage.jp/archive/aw2019/cast/index.html",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:28.732Z",
+      "sha256": "353472aa2c80954edd8b849ef7197b1474890703a635f7fe8c66014a5c8de09b",
+      "bytes": 14740
+    },
+    {
+      "label": "aw2019-intro",
+      "url": "https://www.mankai-stage.jp/archive/aw2019/introduction/index.html",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:28.740Z",
+      "sha256": "dc5251a2418504d2f93014a3a409d485e34843b065c7f12d11c04abb89aeb939",
+      "bytes": 7213
+    },
+    {
+      "label": "aw2019-guide",
+      "url": "https://www.mankai-stage.jp/archive/aw2019/guide/index.html",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:28.770Z",
+      "sha256": "4fceadc51b06dd7865b05615b427f6cbcb398bba2ed97dc16984b950d3fa059d",
+      "bytes": 33012
+    },
+    {
+      "label": "ss2018-original",
+      "url": "https://liberent.co.jp/news/2018/02/15/a3_stage-2/",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:28.786Z",
+      "sha256": "c0199a96d360ed4c4f57c55756f3b7bf04f68194bd02adc1f3777a69a5211edd",
+      "bytes": 13506
+    },
+    {
+      "label": "spring2019-cast",
+      "url": "https://www.mankai-stage.jp/archive/spring2019/cast/index.html",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:28.800Z",
+      "sha256": "be054493ed303d695890f0fd876f60334b6c71168c44796e5e54ab161241e700",
+      "bytes": 17166
+    },
+    {
+      "label": "spring2019-official",
+      "url": "https://www.mankai-stage.jp/archive/spring2019/",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:28.813Z",
+      "sha256": "d0cbef8a130e38bd3227c3edc78747a401bb0796806d265800671bd50279d1f9",
+      "bytes": 15876
+    },
+    {
+      "label": "aw2019-news",
+      "url": "https://www.mankai-stage.jp/archive/aw2019/news/index.html",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:28.828Z",
+      "sha256": "148e3f37c9696103d0f0f0b3fafe1728e034975ef136e115043b961cbececde2",
+      "bytes": 72576
+    },
+    {
+      "label": "spring2019-guide",
+      "url": "https://www.mankai-stage.jp/archive/spring2019/guide/index.html",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:28.847Z",
+      "sha256": "113828a98c0181a54e0d425b4adb8f0718315acdd8d0f5af2431764a7c1a7ec2",
+      "bytes": 52442
+    },
+    {
+      "label": "spring2019-castMore",
+      "url": "https://www.mankai-stage.jp/archive/spring2019/cast/more.html",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:28.890Z",
+      "sha256": "4e692435bb3542b4954742f52dad8ab8d4dc0082a4a615f5c4fc12be019d616f",
+      "bytes": 22515
+    },
+    {
+      "label": "spring2019-news",
+      "url": "https://www.mankai-stage.jp/archive/spring2019/news/index.html",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:28.903Z",
+      "sha256": "044c6e10b0c02046fd20700735e1e8b8b1ea8b6bd7e3090417156e994fa58b98",
+      "bytes": 67729
+    },
+    {
+      "label": "summer2019-official",
+      "url": "https://www.mankai-stage.jp/summer2019/",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:28.925Z",
+      "sha256": "d672bfa92c06bf7d7cf298a8e0a83bd71e75a18fab696797298b96692aebff1b",
+      "bytes": 22578
+    },
+    {
+      "label": "spring2019-original",
+      "url": "https://liberent.co.jp/news/2019/04/25/stage_spring/",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:28.946Z",
+      "sha256": "06df04ee20f1e7375980fe534d785e4a1c623e153af93c960b7e3f7ce1bfa1f5",
+      "bytes": 19639
+    },
+    {
+      "label": "summer2019-castMore",
+      "url": "https://www.mankai-stage.jp/summer2019/cast/more.html",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:28.964Z",
+      "sha256": "dda6414a9081d57057b5f44abc350439c65c76ff1da02462505bd96f3a1e3182",
+      "bytes": 21360
+    },
+    {
+      "label": "summer2019-cast",
+      "url": "https://www.mankai-stage.jp/summer2019/cast/index.html",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:28.972Z",
+      "sha256": "caa659bb873246e7dc245b227dd1aec8ccecd191f76633ab351a95e58f9bcf91",
+      "bytes": 16897
+    },
+    {
+      "label": "spring2019-intro",
+      "url": "https://www.mankai-stage.jp/archive/spring2019/introduction/index.html",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:28.979Z",
+      "sha256": "06ce000bec588f558a3845d522756656de5195dd089a2ddac23a1b5710886af5",
+      "bytes": 7609
+    },
+    {
+      "label": "summer2019-guide",
+      "url": "https://www.mankai-stage.jp/summer2019/guide/index.html",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:29.010Z",
+      "sha256": "53ef215541d075c82fb0d929cd7d14c8a47164a0dcec9c8410a31127ead7ebfd",
+      "bytes": 83462
+    },
+    {
+      "label": "summer2019-intro",
+      "url": "https://www.mankai-stage.jp/summer2019/introduction/index.html",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:29.049Z",
+      "sha256": "dc7c8eafe7918fe6a395f230c5219177560fbea2b1a87599ee37b79b287a8a89",
+      "bytes": 7532
+    },
+    {
+      "label": "autumn2020-official",
+      "url": "https://www.mankai-stage.jp/autumn2020/",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:29.054Z",
+      "sha256": "3d54f3d9511333bebde70398523879736e06607d4dbdef4446e37a9ba31be82f",
+      "bytes": 14693
+    },
+    {
+      "label": "autumn2020-cast",
+      "url": "https://www.mankai-stage.jp/autumn2020/cast/index.html",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:29.088Z",
+      "sha256": "919c1f49e1efeb346ab2c2107f5d55917cd381a84c980ec810136d418c497024",
+      "bytes": 17031
+    },
+    {
+      "label": "summer2019-news",
+      "url": "https://www.mankai-stage.jp/summer2019/news/index.html",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:29.108Z",
+      "sha256": "ee9cdb50436222f40eabefe01f8d7706db611edce3898cb41900edecbdd9e69d",
+      "bytes": 96008
+    },
+    {
+      "label": "autumn2020-castMore",
+      "url": "https://www.mankai-stage.jp/autumn2020/cast/more.html",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:29.126Z",
+      "sha256": "8a4b792c2c7d672453eeb208ed7833b1944d907f6cbf6ca2e20c6e776b2f487b",
+      "bytes": 23590
+    },
+    {
+      "label": "autumn2020-intro",
+      "url": "https://www.mankai-stage.jp/autumn2020/introduction/index.html",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:29.160Z",
+      "sha256": "0547a49bc9d97caf428ec3beeaff98c28474fac2b2212023fabff2b614341575",
+      "bytes": 7722
+    },
+    {
+      "label": "autumn2020-guide",
+      "url": "https://www.mankai-stage.jp/autumn2020/guide/index.html",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:29.172Z",
+      "sha256": "a596979013ecd6ae9c856a2d7c72418d69180933c5cd48b57264c894330fb794",
+      "bytes": 54650
+    },
+    {
+      "label": "autumn2020-news",
+      "url": "https://www.mankai-stage.jp/autumn2020/news/index.html",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:29.177Z",
+      "sha256": "c92a0bc74ad288c47be209b0ccf9e5853a5c4d455a563df78b9c315b64833965",
+      "bytes": 14553
+    },
+    {
+      "label": "winter2020-official",
+      "url": "https://www.mankai-stage.jp/winter2020-08/",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:29.205Z",
+      "sha256": "b25516d26a9ee4e292ac65dfa2af245c12e9010946e67ce6bc39f702d97e6c95",
+      "bytes": 15215
+    },
+    {
+      "label": "autumn2020-original",
+      "url": "https://liberent.co.jp/news/2020/01/18/mankaistage_autumn/",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:29.235Z",
+      "sha256": "7cafcb0cf01678a9322012ca5f2417e3c7e6b3507b900e3654520ebdf960aead",
+      "bytes": 18769
+    },
+    {
+      "label": "winter2020-castMore",
+      "url": "https://www.mankai-stage.jp/winter2020-08/cast/more.html",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:29.248Z",
+      "sha256": "068bea2a22d132b7526a7de45dbb4ea92e0e97556da1820de89bf1dbce64b0a6",
+      "bytes": 19006
+    },
+    {
+      "label": "winter2020-cast",
+      "url": "https://www.mankai-stage.jp/winter2020-08/cast/index.html",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:29.251Z",
+      "sha256": "5cf9f99b7b6b59d9b23a5272114b4de80b3e1830e2b8ba4c3ff1f176b67d63b3",
+      "bytes": 17217
+    },
+    {
+      "label": "winter2020-guide",
+      "url": "https://www.mankai-stage.jp/winter2020-08/guide/index.html",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:29.255Z",
+      "sha256": "a3ca803eb0eb0e880fa6304720cd54fed11e6f2d6994d14fae5fb86d0437081e",
+      "bytes": 22782
+    },
+    {
+      "label": "winter2020-intro",
+      "url": "https://www.mankai-stage.jp/winter2020-08/introduction/index.html",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:29.276Z",
+      "sha256": "d775e1c8d8d1e0a0a748dba4c298cbf5831d0e13317308055e3e8f825334a344",
+      "bytes": 7762
+    },
+    {
+      "label": "winter2021-official",
+      "url": "https://www.mankai-stage.jp/winter2021/",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:29.342Z",
+      "sha256": "dcd43fffb6e39ab80159c1f573c087a0b9ae79b886f7df121dbb91e012cd7a50",
+      "bytes": 15015
+    },
+    {
+      "label": "winter2021-cast",
+      "url": "https://www.mankai-stage.jp/winter2021/cast/index.html",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:29.354Z",
+      "sha256": "693a059ad7fbe95ec534c78e77cbe43e7151acba4c1fa063a7b90165b11aae13",
+      "bytes": 16908
+    },
+    {
+      "label": "winter2021-castMore",
+      "url": "https://www.mankai-stage.jp/winter2021/cast/more.html",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:29.362Z",
+      "sha256": "cbdf546f21671ac41a8a1d827f634df4070ee6e2b28e9e017284b60b691a51b6",
+      "bytes": 22142
+    },
+    {
+      "label": "winter2020-original",
+      "url": "https://liberent.co.jp/news/2020/08/16/mankai_stage_winter/",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:29.399Z",
+      "sha256": "6a552ab000679e9ef0323daf8c51ef20165e9309a003a5d82331f84d60d1622e",
+      "bytes": 21064
+    },
+    {
+      "label": "winter2020-news",
+      "url": "https://www.mankai-stage.jp/winter2020-08/news/index.html",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:29.460Z",
+      "sha256": "c3f820a60b5c86ff1c389b0b210d90e60af93daf0fac7fb5d714ff97cb482e45",
+      "bytes": 133073
+    },
+    {
+      "label": "winter2021-intro",
+      "url": "https://www.mankai-stage.jp/winter2021/introduction/index.html",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:29.476Z",
+      "sha256": "6e0b463fe10131dd1ba13e1bc45193ba370c39f07f4a7a825b519c4d586433fc",
+      "bytes": 7579
+    },
+    {
+      "label": "winter2021-guide",
+      "url": "https://www.mankai-stage.jp/winter2021/guide/index.html",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:29.482Z",
+      "sha256": "9ee9c0a66001f59db533f9880cd7ded0e2c3ca3b34dbcadc9c04249f1f6e25cc",
+      "bytes": 24783
+    },
+    {
+      "label": "winter2021-news",
+      "url": "https://www.mankai-stage.jp/winter2021/news/index.html",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:29.498Z",
+      "sha256": "d6c30d7e2786e0837306da69038a94ecbdc6d0740857dff728e230707099bda6",
+      "bytes": 66456
+    },
+    {
+      "label": "winter2021-original",
+      "url": "https://liberent.co.jp/news/2021/05/20/winter2021/",
+      "status": 200,
+      "checkedAt": "2026-10-27T09:22:29.573Z",
+      "sha256": "6b2052a44cc4405b5d00c4fa759739dd4b9b4719abed96beb5c6df1aeace8a06",
+      "bytes": 20183
+    }
+  ],
+  "registeredInitialWorksCoverageVerified": true,
+  "initialSevenWorksVerificationPassed": true,
+  "completeA3FranchiseAudit": false,
+  "totalWorks": 7,
+  "totalCastRows": 93,
+  "uniqueActors": 30,
+  "recordedScheduleRows": 267,
+  "appearanceNotes": 20,
+  "scope": "ACT1初期7作品の基本情報・公式93配役・区分と注記・日英紹介・既存日程の整合・年表・相互リンクを点検。人物属性総合監査、全267回の個別実施証明、現在配信、全A3!作品の網羅は対象外。",
+  "remaining": [
+    "人物属性の総合監査（田口涼の性別等の未確認欄を推測しない）",
+    "各回の個別実施結果の完全証明と未復旧の過去告知",
+    "既存作品ジャンル分類の独立監査",
+    "作品クレジット・役名の個別英訳は現行表示仕様を維持",
+    "未収録ライブ・ACT2・ACT3は別工程"
+  ],
+  "nextWork": {
+    "title": "MANKAI STAGE A3! Troupe LIVE SPRING 2021",
+    "status": "research_pending",
+    "note": "別のa3-live系統。公式公演一覧からライブの出演者・日程・回替わり条件を当該資料で確認する。"
+  },
+  "requestKey": "b1232dfd508c4958e55d132f6f889336d642b2754b8e564356115f569abe0e1c",
+  "franchiseAfter": {
+    "id": "03404164-26f0-476f-92e9-5b438984fe0d",
+    "name": "MANKAI STAGE『A3!』ACT1（エーステACT1）",
+    "created_at": "2025-12-13T04:58:27.220101+00:00",
+    "updated_at": "2026-10-27T09:31:14.629267+00:00",
+    "slug": "a3",
+    "intro": null,
+    "description": "俳優育成ゲーム『A3!』を原作とするMANKAI STAGE『A3!』の初期公演群。2018年の『SPRING & SUMMER』と2019年の『AUTUMN & WINTER』で各組の旗揚げ公演を描き、続く春・夏・秋・冬の単独公演では第二回・第三回公演へ進む劇団員たちを描く。2021年の冬組再演までを収録。楽曲を中心とするライブ公演は別シリーズにまとめている。",
+    "origin_type": "ゲーム原作",
+    "origin_note": "原作：イケメン役者育成ゲーム『A3!』（リベル・エンタテインメント）",
+    "production_companies": [
+      "ネルケプランニング",
+      "MANKAI STAGE『A3!』製作委員会"
+    ],
+    "related_franchise_ids": [
+      "d8d36e4f-9a0d-4a91-aac3-e6b8f24a8a5d",
+      "8d36fc91-4300-431f-a738-63696bd0f824",
+      "7eefe33e-9b9c-4cca-9c9f-5b67a37d701e"
+    ],
+    "format": "stage",
+    "description_en": "The early MANKAI STAGE A3! productions, based on the actor-training game A3!. SPRING & SUMMER 2018 and AUTUMN & WINTER 2019 follow the troupes through their inaugural productions. The subsequent solo Spring, Summer, Autumn and Winter shows follow their second and third productions. This series covers these stage productions through the Winter revival in 2021. Music-focused live concerts are listed separately.",
+    "name_en": "MANKAI STAGE A3! Act1 (A-Ste Act 1)"
+  },
+  "verification": {
+    "passed": true,
+    "changes": {
+      "actors": {
+        "before": 1170,
+        "after": 1170,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "plays": {
+        "before": 424,
+        "after": 424,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "franchises": {
+        "before": 198,
+        "after": 198,
+        "added": 0,
+        "modified": 1,
+        "deleted": 0
+      },
+      "casts": {
+        "before": 4426,
+        "after": 4426,
+        "added": 0,
+        "modified": 3,
+        "deleted": 0
+      },
+      "external_actors": {
+        "before": 1701,
+        "after": 1701,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_cast_candidates": {
+        "before": 3775,
+        "after": 3775,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_import_logs": {
+        "before": 6242,
+        "after": 6247,
+        "added": 5,
+        "modified": 0,
+        "deleted": 0
+      },
+      "actor_identity_sources": {
+        "before": 516,
+        "after": 516,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      }
+    },
+    "mainWorks": 7,
+    "mainCastRows": 93,
+    "mainActors": 30,
+    "appearanceNotes": 20,
+    "recordedScheduleRows": 267,
+    "updatedFranchises": 1,
+    "clearedUnverifiedMainCast": 3,
+    "newActors": 0,
+    "newPlays": 0,
+    "newCasts": 0,
+    "newLogs": 5,
+    "noDeletions": true,
+    "actorAttributesUnchanged": true,
+    "existingPlayDataUnchanged": true,
+    "all93CastIdsRetained": true,
+    "allRoleGroupNoteAndOrderFieldsUnchanged": true,
+    "protectedLiveSeriesUnchanged": true,
+    "totals": {
+      "actors": 1170,
+      "plays": 424,
+      "casts": 4426
+    }
+  },
+  "rollbackVerification": {
+    "passed": true,
+    "mode": "rollback",
+    "tables": {
+      "actors": {
+        "rows": 1170,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "plays": {
+        "rows": 424,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "franchises": {
+        "rows": 198,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "casts": {
+        "rows": 4426,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_actors": {
+        "rows": 1701,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_cast_candidates": {
+        "rows": 3775,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_import_logs": {
+        "rows": 6242,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "actor_identity_sources": {
+        "rows": 516,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      }
+    }
+  },
+  "publicVerification": {
+    "passed": true,
+    "pages": 80,
+    "mainWorks": 7,
+    "mainCastRows": 93,
+    "mainActors": 30,
+    "protectedLiveWorks": 1,
+    "protectedLiveCastRows": 27,
+    "combinedWorks": 8,
+    "combinedCastRows": 120,
+    "legacyBadgeRemovalVerified": true,
+    "descendingTimelineVerified": true,
+    "results": [
+      {
+        "path": "/series/a3",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/a3_2019-2",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/series/a3-live",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/a3_2019-3",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/ace-stage-ss",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/a3_2021",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/a3_2020-2-2",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/a3_2020-3",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/yokota-ryugi",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/ace-stage-aw",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/a3_2020",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/makishima-hikaru",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/maekawa-yuki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/tateishi-toshiki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/miyazaki-yu",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/furuya-yamato",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/fujita-ray",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/mizue-kenta",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/aramaki-yoshihiko",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/taguchi-ryo",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/ueda-kandai",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/tauchi-tokihiro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/sasamori-hiroki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/honda-reo",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/noguchi-jun",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/jinnai-sho",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/akazawa-tomoru",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/nakamura-taro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/usa-takuma",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/izaki-ryujiro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/takiguchi-yukihiro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/imamura-nezumi",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/kitazono-ryo",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/kawai-ryunosuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/ueda-keisuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/tanaka-ryosei",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/inagaki-seiya",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/kujirai-kosuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/akazawa-ryotaro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/satonaka-masamichi",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/series/a3-live",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/series/a3",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/a3_2019-2",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/ace-stage-ss",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/a3_2019-3",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/a3_2021",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/a3_2020-3",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/a3_2020-2-2",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/a3_2020",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/ace-stage-aw",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/yokota-ryugi",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/makishima-hikaru",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/tateishi-toshiki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/maekawa-yuki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/furuya-yamato",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/mizue-kenta",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/miyazaki-yu",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/fujita-ray",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/tauchi-tokihiro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/aramaki-yoshihiko",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/ueda-kandai",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/sasamori-hiroki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/noguchi-jun",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/taguchi-ryo",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/jinnai-sho",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/akazawa-tomoru",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/honda-reo",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/nakamura-taro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/usa-takuma",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/takiguchi-yukihiro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/kawai-ryunosuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/imamura-nezumi",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/kitazono-ryo",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/izaki-ryujiro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/tanaka-ryosei",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/ueda-keisuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/inagaki-seiya",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/kujirai-kosuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/satonaka-masamichi",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/akazawa-ryotaro",
+        "passed": true,
+        "status": 200
+      }
+    ]
+  },
+  "searchVerification": {
+    "passed": true,
+    "checks": 120,
+    "actors": 30,
+    "spaceAndNoSpace": true,
+    "results": [
+      {
+        "path": "/actors?q=%E8%B5%A4%E6%BE%A4+%E7%87%88",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%89%8D%E5%B7%9D%E5%84%AA%E5%B8%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E8%B5%A4%E6%BE%A4%E7%87%88",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%89%8D%E5%B7%9D+%E5%84%AA%E5%B8%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E8%97%A4%E7%94%B0%E7%8E%B2",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E8%97%A4%E7%94%B0+%E7%8E%B2",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%9C%AC%E7%94%B0+%E7%A4%BC%E7%94%9F",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%9C%AC%E7%94%B0%E7%A4%BC%E7%94%9F",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%AE%AE%E5%B4%8E+%E6%B9%A7",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%AE%AE%E5%B4%8E%E6%B9%A7",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%8F%A4%E8%B0%B7+%E5%A4%A7%E5%92%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%8F%A4%E8%B0%B7%E5%A4%A7%E5%92%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E9%99%B3%E5%86%85+%E5%B0%86",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E9%99%B3%E5%86%85%E5%B0%86",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%94%B0%E5%8F%A3+%E6%B6%BC",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%94%B0%E5%8F%A3%E6%B6%BC",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%A8%AA%E7%94%B0+%E9%BE%8D%E5%84%80",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%A8%AA%E7%94%B0%E9%BE%8D%E5%84%80",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E9%87%8E%E5%8F%A3+%E6%BA%96",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E9%87%8E%E5%8F%A3%E6%BA%96",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%94%B0%E5%86%85+%E5%AD%A3%E5%AE%87",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%94%B0%E5%86%85%E5%AD%A3%E5%AE%87",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%AB%8B%E7%9F%B3+%E4%BF%8A%E6%A8%B9",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%AB%8B%E7%9F%B3%E4%BF%8A%E6%A8%B9",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%89%A7%E5%B3%B6+%E8%BC%9D",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%89%A7%E5%B3%B6%E8%BC%9D",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%BB%9D%E5%8F%A3+%E5%B9%B8%E5%BA%83",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%BB%9D%E5%8F%A3%E5%B9%B8%E5%BA%83",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E8%8D%92%E7%89%A7%E6%85%B6%E5%BD%A6",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E8%8D%92%E7%89%A7+%E6%85%B6%E5%BD%A6",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E4%B8%AD%E6%9D%91+%E5%A4%AA%E9%83%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E4%B8%AD%E6%9D%91%E5%A4%AA%E9%83%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%B2%B3%E5%90%88%E9%BE%8D%E4%B9%8B%E4%BB%8B",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%B2%B3%E5%90%88+%E9%BE%8D%E4%B9%8B%E4%BB%8B",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%8C%97%E5%9C%92+%E6%B6%BC",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%8C%97%E5%9C%92%E6%B6%BC",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%A4%8D%E7%94%B0%E5%9C%AD%E8%BC%94",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%A4%8D%E7%94%B0+%E5%9C%AD%E8%BC%94",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E4%BC%8A%E5%B4%8E+%E9%BE%8D%E6%AC%A1%E9%83%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E4%BC%8A%E5%B4%8E%E9%BE%8D%E6%AC%A1%E9%83%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%B0%B4%E6%B1%9F+%E5%BB%BA%E5%A4%AA",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%B0%B4%E6%B1%9F%E5%BB%BA%E5%A4%AA",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E4%B8%8A%E7%94%B0+%E5%A0%AA%E5%A4%A7",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E4%B8%8A%E7%94%B0%E5%A0%AA%E5%A4%A7",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E8%B5%A4%E6%BE%A4+%E9%81%BC%E5%A4%AA%E9%83%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E8%B5%A4%E6%BE%A4%E9%81%BC%E5%A4%AA%E9%83%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%A8%B2%E5%9E%A3+%E6%88%90%E5%BC%A5",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%A8%B2%E5%9E%A3%E6%88%90%E5%BC%A5",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%94%B0%E4%B8%AD+%E6%B6%BC%E6%98%9F",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%94%B0%E4%B8%AD%E6%B6%BC%E6%98%9F",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%AC%B9%E6%A3%AE+%E8%A3%95%E8%B2%B4",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%AC%B9%E6%A3%AE%E8%A3%95%E8%B2%B4",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E4%BB%8A%E6%9D%91+%E3%81%AD%E3%81%9A%E3%81%BF",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%AE%87%E4%BD%90+%E5%8D%93%E7%9C%9F",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E4%BB%8A%E6%9D%91%E3%81%AD%E3%81%9A%E3%81%BF",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%AE%87%E4%BD%90%E5%8D%93%E7%9C%9F",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E9%87%8C%E4%B8%AD+%E5%B0%86%E9%81%93",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E9%AF%A8%E4%BA%95+%E5%BA%B7%E4%BB%8B",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E9%87%8C%E4%B8%AD%E5%B0%86%E9%81%93",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E9%AF%A8%E4%BA%95%E5%BA%B7%E4%BB%8B",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E8%B5%A4%E6%BE%A4+%E7%87%88",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%89%8D%E5%B7%9D%E5%84%AA%E5%B8%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%89%8D%E5%B7%9D+%E5%84%AA%E5%B8%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E8%B5%A4%E6%BE%A4%E7%87%88",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E8%97%A4%E7%94%B0+%E7%8E%B2",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E8%97%A4%E7%94%B0%E7%8E%B2",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%9C%AC%E7%94%B0+%E7%A4%BC%E7%94%9F",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%9C%AC%E7%94%B0%E7%A4%BC%E7%94%9F",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%AE%AE%E5%B4%8E+%E6%B9%A7",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%AE%AE%E5%B4%8E%E6%B9%A7",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E9%99%B3%E5%86%85+%E5%B0%86",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%8F%A4%E8%B0%B7+%E5%A4%A7%E5%92%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%8F%A4%E8%B0%B7%E5%A4%A7%E5%92%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%94%B0%E5%8F%A3%E6%B6%BC",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%94%B0%E5%8F%A3+%E6%B6%BC",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E9%99%B3%E5%86%85%E5%B0%86",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%A8%AA%E7%94%B0+%E9%BE%8D%E5%84%80",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%A8%AA%E7%94%B0%E9%BE%8D%E5%84%80",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E9%87%8E%E5%8F%A3+%E6%BA%96",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%94%B0%E5%86%85+%E5%AD%A3%E5%AE%87",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E9%87%8E%E5%8F%A3%E6%BA%96",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%89%A7%E5%B3%B6+%E8%BC%9D",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%94%B0%E5%86%85%E5%AD%A3%E5%AE%87",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%AB%8B%E7%9F%B3+%E4%BF%8A%E6%A8%B9",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%AB%8B%E7%9F%B3%E4%BF%8A%E6%A8%B9",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%89%A7%E5%B3%B6%E8%BC%9D",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%BB%9D%E5%8F%A3%E5%B9%B8%E5%BA%83",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%BB%9D%E5%8F%A3+%E5%B9%B8%E5%BA%83",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E8%8D%92%E7%89%A7+%E6%85%B6%E5%BD%A6",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E8%8D%92%E7%89%A7%E6%85%B6%E5%BD%A6",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E4%B8%AD%E6%9D%91+%E5%A4%AA%E9%83%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E4%B8%AD%E6%9D%91%E5%A4%AA%E9%83%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%B2%B3%E5%90%88+%E9%BE%8D%E4%B9%8B%E4%BB%8B",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%B2%B3%E5%90%88%E9%BE%8D%E4%B9%8B%E4%BB%8B",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%8C%97%E5%9C%92+%E6%B6%BC",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%8C%97%E5%9C%92%E6%B6%BC",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%A4%8D%E7%94%B0+%E5%9C%AD%E8%BC%94",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%A4%8D%E7%94%B0%E5%9C%AD%E8%BC%94",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E4%BC%8A%E5%B4%8E%E9%BE%8D%E6%AC%A1%E9%83%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E4%BC%8A%E5%B4%8E+%E9%BE%8D%E6%AC%A1%E9%83%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%B0%B4%E6%B1%9F%E5%BB%BA%E5%A4%AA",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E4%B8%8A%E7%94%B0+%E5%A0%AA%E5%A4%A7",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E4%B8%8A%E7%94%B0%E5%A0%AA%E5%A4%A7",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%B0%B4%E6%B1%9F+%E5%BB%BA%E5%A4%AA",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E8%B5%A4%E6%BE%A4%E9%81%BC%E5%A4%AA%E9%83%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E8%B5%A4%E6%BE%A4+%E9%81%BC%E5%A4%AA%E9%83%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%A8%B2%E5%9E%A3+%E6%88%90%E5%BC%A5",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%A8%B2%E5%9E%A3%E6%88%90%E5%BC%A5",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%94%B0%E4%B8%AD+%E6%B6%BC%E6%98%9F",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%94%B0%E4%B8%AD%E6%B6%BC%E6%98%9F",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%AC%B9%E6%A3%AE+%E8%A3%95%E8%B2%B4",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%AC%B9%E6%A3%AE%E8%A3%95%E8%B2%B4",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E4%BB%8A%E6%9D%91+%E3%81%AD%E3%81%9A%E3%81%BF",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E4%BB%8A%E6%9D%91%E3%81%AD%E3%81%9A%E3%81%BF",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%AE%87%E4%BD%90%E5%8D%93%E7%9C%9F",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%AE%87%E4%BD%90+%E5%8D%93%E7%9C%9F",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E9%87%8C%E4%B8%AD+%E5%B0%86%E9%81%93",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E9%87%8C%E4%B8%AD%E5%B0%86%E9%81%93",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E9%AF%A8%E4%BA%95+%E5%BA%B7%E4%BB%8B",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E9%AF%A8%E4%BA%95%E5%BA%B7%E4%BB%8B",
+        "status": 200,
+        "passed": true
+      }
+    ]
+  },
+  "replayVerification": {
+    "passed": true,
+    "mode": "replay",
+    "tables": {
+      "actors": {
+        "rows": 1170,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "plays": {
+        "rows": 424,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "franchises": {
+        "rows": 198,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "casts": {
+        "rows": 4426,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_actors": {
+        "rows": 1701,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_cast_candidates": {
+        "rows": 3775,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_import_logs": {
+        "rows": 6247,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "actor_identity_sources": {
+        "rows": 516,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      }
+    }
+  },
+  "metadataVerification": {
+    "passed": true,
+    "changedRows": 4,
+    "onlyField": "updated_at",
+    "applicationDataUnchanged": true,
+    "existingCastTimestampTrigger": "trg_casts_updated_at",
+    "franchiseTimestampSource": "audit completion log created_at",
+    "rows": [
+      {
+        "table": "franchises",
+        "id": "03404164-26f0-476f-92e9-5b438984fe0d",
+        "previous": "2025-12-13T04:58:27.220101+00:00",
+        "updated": "2026-10-27T09:31:14.629267+00:00"
+      },
+      {
+        "table": "casts",
+        "id": "9f58ce6c-dbe9-443f-8b3b-58d2f275fee4",
+        "previous": "2026-10-27T09:31:14.629267+00:00",
+        "updated": "2026-10-27T09:34:36.482599+00:00"
+      },
+      {
+        "table": "casts",
+        "id": "d3727287-137c-4f97-a92e-1ad0ee4d51f3",
+        "previous": "2026-10-27T09:31:14.629267+00:00",
+        "updated": "2026-10-27T09:34:36.482599+00:00"
+      },
+      {
+        "table": "casts",
+        "id": "f866b2c1-8638-4f8f-bcf5-fdbb2f982a92",
+        "previous": "2026-10-27T09:31:14.629267+00:00",
+        "updated": "2026-10-27T09:34:36.482599+00:00"
+      }
+    ]
+  },
+  "verificationScope": "ACT1初期7作品93配役30人物を横断点検。A3!公式48資料再取得と過去の公演別照合記録で人物・役名・公式順・組・20件の注記・当初予定者と声出演の例外、日英紹介・年表を確認。各組第二・第三回公演と2021年冬組再演までを含む収録範囲へシリーズ日英説明を訂正。SS2018の旧3人限定MAIN CASTは公式の特別指定を確認できないためフラグのみ解除、93配役ID・人物・役名・組・注記・順序を保持。267日時は過去の画像／主催者表照合済み日程の記録として確認し、全回の個別実施証明とは扱わない。大阪中止3回・時刻変更8件、冬2020当初全63回中止、秋2020滝口の実出演未接続、夏2019今村の斑鳩八角の声を区別。日英80ページ（ライブ含む8作品120配役）・検索120件、8テーブル対象外全行保全・削除0・再実行0変更。新規人物・作品・配役0。次は別ライブ系統Troupe LIVE SPRING2021。人物総合監査・現行配信・既存ジャンルの独立監査・細部英訳・未収録A3!全体は後続。",
+  "metadataTimestampCorrection": {
+    "applied": true,
+    "rows": 4,
+    "valueSource": "franchise: audit completion created_at; casts: existing trg_casts_updated_at trigger",
+    "reason": "franchises has no automatic timestamp trigger; casts already has one. Follow-up metadata-only update is verified separately.",
+    "businessDataUnchanged": true
+  },
+  "sourceValidation": {
+    "freshSuccessfulSources": 49,
+    "freshOfficialA3Sources": 48,
+    "all93RolesAndActorIdsConfirmed": true,
+    "mainCastRowsFromOfficialLists": 92,
+    "additionalNamedVoiceCastRows": 1,
+    "officialAutumnAnnouncedNonPerformerExcluded": true,
+    "ensembleCreditsOnly": true,
+    "all20NotesRetained": true,
+    "halfWidthNameSpacesVerifiedFor30Actors": true,
+    "noActorAttributeInference": true,
+    "sevenJapaneseAndEnglishSummariesPresent": true,
+    "officialArchiveCompared": true,
+    "liveSeriesSeparationPreserved": true,
+    "registeredInitialWorksCoverageVerified": true,
+    "fullA3FranchiseCoverageClaimed": false,
+    "individualPerformanceExecutionFullyAudited": false
+  }
+}
