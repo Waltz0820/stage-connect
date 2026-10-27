@@ -31,16 +31,23 @@ for(const path of paths){
   }
   if(/^\/(en\/)?watch(?:\/|$)/.test(path)) {
     const dmmLanding=path.endsWith('/watch/dmm');
+    const streamingHub=path==='/watch';
     if(dmmLanding) {
       assert.equal($('.dmm-lp__cta').length,3,path+' hero, plan and closing signup links');
       assert.ok($(`main a[href="${en?'/en':''}/plays?streaming=available&service=dmm"]`).length,path+' existing DMM discovery route');
       assert.equal($('.dmm-lp__viewing').length,3,path+' three viewing perspectives');
+    } else if(streamingHub) {
+      assert.equal($('[data-watch-hub]').length,1,path+' streaming hub');
+      assert.equal($('main a[href="/watch/dmm"]').length,2,path+' DMM primary and detail links');
+      assert.ok($('main a[href="/plays?streaming=available"]').length,path+' existing linked production search');
+      for(const slug of ['touken-ranbu-musical','butai-touken-ranbu']) assert.ok($(`main a[href="/series/${slug}"]`).length,path+' series discovery');
+      assert.equal($('main a[href="#"]').length,0,path+' no placeholder links');
     } else assert.equal($('main form input[name="q"]').length,1,path+' search for a production');
     assert.ok($('main time[datetime]').length,path+' reviewed date');
     assert.equal($('link[rel="canonical"]').attr('href'),'https://stageconnect.jp'+path,path+' canonical');
     assert.equal($('link[rel="alternate"][hreflang="en"]').attr('href'),'https://stageconnect.jp'+(en?path:'/en'+path),path+' English alternate');
     const faq=JSON.parse($('script[type="application/ld+json"]').toArray().map(node=>$(node).text()).find(text=>text.includes('FAQPage')));
-    for(const question of faq.mainEntity) assert.ok($(dmmLanding?'.dmm-lp__support':'.faq-card').text().includes(question.acceptedAnswer.text),path+' visible FAQ equals structured FAQ');
+    for(const question of faq.mainEntity) assert.ok($(dmmLanding?'.dmm-lp__support':streamingHub?'[data-watch-guide]':'.faq-card').text().includes(question.acceptedAnswer.text),path+' visible FAQ equals structured FAQ');
     assert.ok(!/国内最多クラス|かなり限定的|一部のみ/.test($('main').text()),path+' no unverified catalogue comparison');
     if(path.endsWith('/danime')) assert.ok($('.streaming-service-card__price').text().includes('660'),path+' current Web price');
     if(path.endsWith('/u-next')||path.endsWith('/danime')) {
