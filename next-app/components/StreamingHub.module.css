@@ -18,7 +18,7 @@
 .hero { position: relative; isolation: isolate; overflow: hidden; padding: 0 0 66px; background: linear-gradient(115deg, #fff 32%, #f0f9ff 75%, #cce9fc); border-bottom: 1px solid var(--hub-line); }
 .hero :global(.breadcrumbs) { padding: 19px 0 22px; margin: 0; color: var(--hub-muted); font-size: 10px; line-height: 1.6; }
 .hub .hero :global(.breadcrumbs__current), .hub .hero :global(.breadcrumbs__link), .hub .hero :global(.breadcrumbs__divider) { color: var(--hub-muted); }
-.hero h1 { position: relative; margin: 20px 0 18px; font: 850 clamp(38px,11.4vw,48px)/1.32 var(--ed-font); letter-spacing: -.06em; }
+.hero h1 { position: relative; margin: 20px 0 18px; font: 850 clamp(30px,9.7vw,48px)/1.32 var(--ed-font); letter-spacing: -.06em; }
 .hero h1 > span { white-space: nowrap; }
 .heroIntro { position: relative; font-size: 13px; line-height: 1.9; color: var(--hub-muted) !important; }
 .heroTexture { position: absolute; z-index: -1; inset: 0; pointer-events: none; overflow: hidden; }
@@ -82,6 +82,7 @@
 .closing { padding: 40px 0 42px; background: var(--hub-ink); color: #fff; }
 .closing > .inner > .eyebrow { font-size: 9px; color: #adc7e2 !important; }
 .closing h2 { margin-top: 16px; font: 800 clamp(27px,7vw,36px)/1.5 var(--ed-font); letter-spacing: -.045em; }
+.closing h2:first-child { margin-top: 0; }
 .closing > .inner > p:not(.eyebrow) { margin-top: 20px; font-size: 11px; line-height: 1.9; color: #bfd1e5; }
 .archiveLink { display: inline-flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 44px; margin-top: 22px; padding: 10px 18px; border: 1px solid #7295ba; border-radius: 30px; font-size: 11px; font-weight: 700; }
 .hub :is(.primaryCta, .productionCard, .serviceLink, .allProductions, .archiveLink) { -webkit-tap-highlight-color: transparent; transition: background-color 180ms, border-color 180ms, box-shadow 180ms, transform 180ms; }
