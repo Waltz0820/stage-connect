@@ -1,0 +1,4660 @@
+{
+  "version": 1,
+  "batchId": "a3-spring2019-20261027-01",
+  "expectedFranchise": {
+    "id": "03404164-26f0-476f-92e9-5b438984fe0d",
+    "name": "MANKAI STAGE『A3!』ACT1（エーステACT1）",
+    "created_at": "2025-12-13T04:58:27.220101+00:00",
+    "updated_at": "2025-12-13T04:58:27.220101+00:00",
+    "slug": "a3",
+    "intro": null,
+    "description": "MANKAI STAGE『A3!』シリーズの記念すべき第1作目。原作ゲームのメインストーリー第1部（劇団再生から各組の旗揚げ公演まで）を描く。物語の始まりとなる2組合同公演「SPRING & SUMMER 2018」「AUTUMN & WINTER 2019」から始まり、その後の各組単独公演（SPRING、SUMMER、AUTUMN、WINTER）へと続く、エーステの基礎を築いたシリーズ。劇団員たちが借金まみれのボロ劇団を立て直す軌跡と、春夏秋冬の4組・計20人の劇団員が揃うまでの物語が集約されている。",
+    "origin_type": "ゲーム原作",
+    "origin_note": "原作：イケメン役者育成ゲーム『A3!』（リベル・エンタテインメント）",
+    "production_companies": [
+      "ネルケプランニング",
+      "MANKAI STAGE『A3!』製作委員会"
+    ],
+    "related_franchise_ids": [
+      "d8d36e4f-9a0d-4a91-aac3-e6b8f24a8a5d",
+      "8d36fc91-4300-431f-a738-63696bd0f824",
+      "7eefe33e-9b9c-4cca-9c9f-5b67a37d701e"
+    ],
+    "format": "stage",
+    "description_en": "The memorable inaugural series of the MANKAI STAGE A3! franchise, adapting the first act of the original game's main story. It covers the complete journey of the theater company's revival and the inaugural performances of each troupe. Starting with the joint productions SPRING & SUMMER 2018 and AUTUMN & WINTER 2019, and leading into the dedicated solo performances for the Spring, Summer, Autumn, and Winter troupes, this series laid the foundation for the \"A-Ste\" legacy. It encapsulates the moving story of rebuilding a debt-ridden, run-down theater, capturing the journey until all 20 members across the four troupes are finally brought together.",
+    "name_en": "MANKAI STAGE A3! Act1 (A-Ste Act 1)"
+  },
+  "franchisePatch": {},
+  "actors": [],
+  "externalActorLinks": [],
+  "works": [
+    {
+      "year": 2019,
+      "before": null,
+      "play": {
+        "id": "05ef75aa-9f4b-4aae-bf02-c50294ceafd4",
+        "slug": "a3_2019-2",
+        "title": "MANKAI STAGE『A3!』～SPRING 2019～",
+        "title_en": "MANKAI STAGE A3! ~SPRING 2019~",
+        "franchise_id": "03404164-26f0-476f-92e9-5b438984fe0d",
+        "summary": "春組を中心に描く『A3!』の単独公演。旗揚げ公演を経た春組が、第2回公演『不思議の国の青年アリス』と第3回公演『ぜんまい仕掛けのココロ』に取り組む2つの物語を描く。",
+        "summary_en": "The first standalone production focused on the Spring Troupe in MANKAI STAGE A3!. Following the troupe’s inaugural performance, it presents two stories about their second and third stage productions.",
+        "period": "2019年4月25日〜6月2日",
+        "venue": "東京・東京凱旋：天王洲 銀河劇場／大阪：大阪メルパルクホール／新潟：長岡市立劇場 大ホール",
+        "vod": {},
+        "genre": null,
+        "tags": [],
+        "credits": [
+          {
+            "role": "原作",
+            "names": [
+              "イケメン役者育成ゲーム『A3!（エースリー）』（リベル・エンタテインメント）"
+            ],
+            "is_core": true,
+            "sort_order": 1
+          },
+          {
+            "role": "演出",
+            "names": [
+              "松崎史也"
+            ],
+            "is_core": true,
+            "sort_order": 2
+          },
+          {
+            "role": "脚本",
+            "names": [
+              "亀田真二郎（東京パチプロデュース）"
+            ],
+            "is_core": true,
+            "sort_order": 3
+          },
+          {
+            "role": "音楽",
+            "names": [
+              "Yu（vague）"
+            ],
+            "is_core": false,
+            "sort_order": 4
+          },
+          {
+            "role": "振付",
+            "names": [
+              "梅棒"
+            ],
+            "is_core": false,
+            "sort_order": 5
+          },
+          {
+            "role": "協力",
+            "names": [
+              "一般社団法人 日本2.5次元ミュージカル協会"
+            ],
+            "is_core": false,
+            "sort_order": 6
+          },
+          {
+            "role": "協賛",
+            "names": [
+              "ファミリーマート"
+            ],
+            "is_core": false,
+            "sort_order": 7
+          },
+          {
+            "role": "主催",
+            "names": [
+              "MANKAI STAGE『A3!』製作委員会（ネルケプランニング、ポニーキャニオン、リベル・エンタテインメント）"
+            ],
+            "is_core": false,
+            "sort_order": 8
+          },
+          {
+            "role": "公演日程",
+            "names": [
+              "東京：2019年4月25日〜5月6日（天王洲 銀河劇場）・全18公演、4月29日休演",
+              "大阪：2019年5月10日〜14日（大阪メルパルクホール）・全7公演",
+              "新潟：2019年5月18日〜19日（長岡市立劇場 大ホール）・全4公演",
+              "東京凱旋：2019年5月23日〜6月2日（天王洲 銀河劇場）・全16公演、5月27日休演"
+            ],
+            "is_core": false,
+            "sort_order": 9
+          },
+          {
+            "role": "上演時間（予定）",
+            "names": [
+              "約2時間30分（途中休憩あり・休憩分数未確認）"
+            ],
+            "is_core": false,
+            "sort_order": 10
+          }
+        ],
+        "related_franchise_ids": []
+      },
+      "rawSource": {
+        "sourceUrl": "https://kira-hai.net/a3_2019-2",
+        "title": "MANKAI STAGE『A3!』~SPRING 2019~",
+        "scheduleLines": [
+          "2019年4月25日-5月6日 天王洲 銀河劇場",
+          "2019年5月10日-14日 大阪メルパルクホール",
+          "2019年5月18日-19日 長岡市立劇場 大ホール",
+          "2019年5月23日-6月2日 天王洲 銀河劇場"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "横田龍儀",
+            "sourceActorUrl": "https://kira-hai.net/yokota-ryugi",
+            "role_name": "佐久間咲也",
+            "cast_group": "SPRING TROUPE 春組"
+          },
+          {
+            "sourceActorName": "牧島輝",
+            "sourceActorUrl": "https://kira-hai.net/makishima-hikaru",
+            "role_name": "碓氷真澄",
+            "cast_group": "SPRING TROUPE 春組"
+          },
+          {
+            "sourceActorName": "前川優希",
+            "sourceActorUrl": "https://kira-hai.net/maekawa-yuki",
+            "role_name": "皆木綴",
+            "cast_group": "SPRING TROUPE 春組"
+          },
+          {
+            "sourceActorName": "立石俊樹",
+            "sourceActorUrl": "https://kira-hai.net/tateishi-toshiki",
+            "role_name": "茅ヶ崎至",
+            "cast_group": "SPRING TROUPE 春組"
+          },
+          {
+            "sourceActorName": "古谷大和",
+            "sourceActorUrl": "https://kira-hai.net/furuya-yamato",
+            "role_name": "シトロン",
+            "cast_group": "SPRING TROUPE 春組"
+          },
+          {
+            "sourceActorName": "宮崎湧",
+            "sourceActorUrl": "https://kira-hai.net/miyazaki-yu",
+            "role_name": "瑠璃川幸",
+            "cast_group": "夏組"
+          },
+          {
+            "sourceActorName": "水江建太",
+            "sourceActorUrl": "https://kira-hai.net/mizue-kenta",
+            "role_name": "摂津万里",
+            "cast_group": "秋組"
+          },
+          {
+            "sourceActorName": "藤田玲",
+            "sourceActorUrl": "https://kira-hai.net/fujita-rei",
+            "role_name": "古市左京",
+            "cast_group": "秋組"
+          },
+          {
+            "sourceActorName": "荒牧慶彦",
+            "sourceActorUrl": "https://kira-hai.net/aramaki-yoshihiko",
+            "role_name": "月岡紬",
+            "cast_group": "冬組"
+          },
+          {
+            "sourceActorName": "上田堪大",
+            "sourceActorUrl": "https://kira-hai.net/ueda-kandai",
+            "role_name": "雪白東",
+            "cast_group": "冬組"
+          },
+          {
+            "sourceActorName": "笹森裕貴",
+            "sourceActorUrl": "https://kira-hai.net/sasamori-hiroki",
+            "role_name": "水野茅",
+            "cast_group": "冬組"
+          },
+          {
+            "sourceActorName": "田内季宇",
+            "sourceActorUrl": "https://kira-hai.net/tauchi-tokihiro",
+            "role_name": "迫田ケン(ヤクザ)",
+            "cast_group": "冬組"
+          },
+          {
+            "sourceActorName": "田口涼",
+            "sourceActorUrl": "https://kira-hai.net/taguchi-ryo",
+            "role_name": "松川伊助(劇場支配人)",
+            "cast_group": "冬組"
+          }
+        ],
+        "unparsed": []
+      },
+      "source": {
+        "sourceUrl": "https://kira-hai.net/a3_2019-2",
+        "title": "MANKAI STAGE『A3!』~SPRING 2019~",
+        "scheduleLines": [
+          "2019年4月25日-5月6日 天王洲 銀河劇場",
+          "2019年5月10日-14日 大阪メルパルクホール",
+          "2019年5月18日-19日 長岡市立劇場 大ホール",
+          "2019年5月23日-6月2日 天王洲 銀河劇場"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "横田龍儀",
+            "sourceActorUrl": "https://kira-hai.net/yokota-ryugi",
+            "role_name": "佐久間咲也",
+            "cast_group": "春組"
+          },
+          {
+            "sourceActorName": "牧島輝",
+            "sourceActorUrl": "https://kira-hai.net/makishima-hikaru",
+            "role_name": "碓氷真澄",
+            "cast_group": "春組"
+          },
+          {
+            "sourceActorName": "前川優希",
+            "sourceActorUrl": "https://kira-hai.net/maekawa-yuki",
+            "role_name": "皆木綴",
+            "cast_group": "春組"
+          },
+          {
+            "sourceActorName": "立石俊樹",
+            "sourceActorUrl": "https://kira-hai.net/tateishi-toshiki",
+            "role_name": "茅ヶ崎至",
+            "cast_group": "春組"
+          },
+          {
+            "sourceActorName": "古谷大和",
+            "sourceActorUrl": "https://kira-hai.net/furuya-yamato",
+            "role_name": "シトロン",
+            "cast_group": "春組"
+          },
+          {
+            "sourceActorName": "宮崎湧",
+            "sourceActorUrl": "https://kira-hai.net/miyazaki-yu",
+            "role_name": "瑠璃川幸",
+            "cast_group": "夏組"
+          },
+          {
+            "sourceActorName": "水江建太",
+            "sourceActorUrl": "https://kira-hai.net/mizue-kenta",
+            "role_name": "摂津万里",
+            "cast_group": "秋組"
+          },
+          {
+            "sourceActorName": "藤田玲",
+            "sourceActorUrl": "https://kira-hai.net/fujita-rei",
+            "role_name": "古市左京",
+            "cast_group": "秋組"
+          },
+          {
+            "sourceActorName": "荒牧慶彦",
+            "sourceActorUrl": "https://kira-hai.net/aramaki-yoshihiko",
+            "role_name": "月岡紬",
+            "cast_group": "冬組"
+          },
+          {
+            "sourceActorName": "上田堪大",
+            "sourceActorUrl": "https://kira-hai.net/ueda-kandai",
+            "role_name": "雪白東",
+            "cast_group": "冬組"
+          },
+          {
+            "sourceActorName": "笹森裕貴",
+            "sourceActorUrl": "https://kira-hai.net/sasamori-hiroki",
+            "role_name": "水野茅",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "田内季宇",
+            "sourceActorUrl": "https://kira-hai.net/tauchi-tokihiro",
+            "role_name": "迫田ケン",
+            "cast_group": null,
+            "sourceAnnotation": "ヤクザ"
+          },
+          {
+            "sourceActorName": "田口涼",
+            "sourceActorUrl": "https://kira-hai.net/taguchi-ryo",
+            "role_name": "松川伊助",
+            "cast_group": null,
+            "sourceAnnotation": "劇場支配人"
+          }
+        ],
+        "unparsed": []
+      },
+      "sourceFingerprint": "f47b1d335752f339f4e8c860a25a8f84ebd986c8123529558bd3c7c14784567c",
+      "stage": {
+        "workUrl": "https://kira-hai.net/a3_2019-2",
+        "key": "55cbee2fcfe01949732c242ca68b32361912fc15225421386481bffa8546a79d",
+        "items": [
+          {
+            "source_actor_name": "横田龍儀",
+            "source_actor_url": "https://kira-hai.net/yokota-ryugi",
+            "source_work_title": "MANKAI STAGE『A3!』~SPRING 2019~",
+            "source_year": 2019,
+            "source_role_raw": "佐久間咲也",
+            "source_role_names": [
+              "佐久間咲也"
+            ],
+            "source_cast_group": "春組",
+            "source_order": 1,
+            "source_credit_key": "2e5f50e5da29dc743e1c",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/a3_2019-2",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/a3_2019-2",
+                  "checkedAt": "2026-10-27T01:03:18.420Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/",
+                  "checkedAt": "2026-10-27T01:03:18.315Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/cast/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.353Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/cast/more.html",
+                  "checkedAt": "2026-10-27T01:04:46.772Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/ticket/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.336Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/guide/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.371Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/introduction/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.276Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/news/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.396Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/mankai-stage2019spring/index.html",
+                  "checkedAt": "2026-10-27T01:05:25.735Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://liberent.co.jp/news/2019/04/25/stage_spring/",
+                  "checkedAt": "2026-10-27T01:05:26.002Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_01.png",
+                  "checkedAt": "2026-10-27T01:04:46.866Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_02.png",
+                  "checkedAt": "2026-10-27T01:04:47.036Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_03.png",
+                  "checkedAt": "2026-10-27T01:04:47.112Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_04.png",
+                  "checkedAt": "2026-10-27T01:04:47.170Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                }
+              ],
+              "source_fingerprint": "f47b1d335752f339f4e8c860a25a8f84ebd986c8123529558bd3c7c14784567c",
+              "review_fingerprint": "f6c5511d0bae103bd07005bceac00cb56e5b2623d32aede9a2b7290737cca732",
+              "snapshot_fingerprint": "3da7e99d1a2b50bc4eaa5a601d5cfa1fcf74aa745367a3972247ff7b91779c0c",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 1,
+                "cast": {
+                  "sourceActorName": "横田龍儀",
+                  "sourceActorUrl": "https://kira-hai.net/yokota-ryugi",
+                  "role_name": "佐久間咲也",
+                  "cast_group": "SPRING TROUPE 春組"
+                }
+              },
+              "normalization_review": {
+                "group": "春組",
+                "role": "佐久間咲也",
+                "annotation": null,
+                "evidence": [
+                  {
+                    "url": "https://www.mankai-stage.jp/archive/spring2019/",
+                    "checkedAt": "2026-10-27T01:03:18.315Z",
+                    "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                  },
+                  {
+                    "url": "https://www.mankai-stage.jp/archive/spring2019/cast/more.html",
+                    "checkedAt": "2026-10-27T01:04:46.772Z",
+                    "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/a3_2019-2",
+                    "checkedAt": "2026-10-27T01:03:18.420Z",
+                    "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "ed310757-4569-4539-896d-6a8a5c326ac2",
+            "matched_play_id": "05ef75aa-9f4b-4aae-bf02-c50294ceafd4",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "牧島輝",
+            "source_actor_url": "https://kira-hai.net/makishima-hikaru",
+            "source_work_title": "MANKAI STAGE『A3!』~SPRING 2019~",
+            "source_year": 2019,
+            "source_role_raw": "碓氷真澄",
+            "source_role_names": [
+              "碓氷真澄"
+            ],
+            "source_cast_group": "春組",
+            "source_order": 2,
+            "source_credit_key": "53bd06232de0984bbc72",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/a3_2019-2",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/a3_2019-2",
+                  "checkedAt": "2026-10-27T01:03:18.420Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/",
+                  "checkedAt": "2026-10-27T01:03:18.315Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/cast/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.353Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/cast/more.html",
+                  "checkedAt": "2026-10-27T01:04:46.772Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/ticket/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.336Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/guide/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.371Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/introduction/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.276Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/news/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.396Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/mankai-stage2019spring/index.html",
+                  "checkedAt": "2026-10-27T01:05:25.735Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://liberent.co.jp/news/2019/04/25/stage_spring/",
+                  "checkedAt": "2026-10-27T01:05:26.002Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_01.png",
+                  "checkedAt": "2026-10-27T01:04:46.866Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_02.png",
+                  "checkedAt": "2026-10-27T01:04:47.036Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_03.png",
+                  "checkedAt": "2026-10-27T01:04:47.112Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_04.png",
+                  "checkedAt": "2026-10-27T01:04:47.170Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                }
+              ],
+              "source_fingerprint": "f47b1d335752f339f4e8c860a25a8f84ebd986c8123529558bd3c7c14784567c",
+              "review_fingerprint": "f6c5511d0bae103bd07005bceac00cb56e5b2623d32aede9a2b7290737cca732",
+              "snapshot_fingerprint": "3da7e99d1a2b50bc4eaa5a601d5cfa1fcf74aa745367a3972247ff7b91779c0c",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 2,
+                "cast": {
+                  "sourceActorName": "牧島輝",
+                  "sourceActorUrl": "https://kira-hai.net/makishima-hikaru",
+                  "role_name": "碓氷真澄",
+                  "cast_group": "SPRING TROUPE 春組"
+                }
+              },
+              "normalization_review": {
+                "group": "春組",
+                "role": "碓氷真澄",
+                "annotation": null,
+                "evidence": [
+                  {
+                    "url": "https://www.mankai-stage.jp/archive/spring2019/",
+                    "checkedAt": "2026-10-27T01:03:18.315Z",
+                    "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                  },
+                  {
+                    "url": "https://www.mankai-stage.jp/archive/spring2019/cast/more.html",
+                    "checkedAt": "2026-10-27T01:04:46.772Z",
+                    "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/a3_2019-2",
+                    "checkedAt": "2026-10-27T01:03:18.420Z",
+                    "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "5533574d-232b-492a-bad8-2aadc44b2e63",
+            "matched_play_id": "05ef75aa-9f4b-4aae-bf02-c50294ceafd4",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "前川優希",
+            "source_actor_url": "https://kira-hai.net/maekawa-yuki",
+            "source_work_title": "MANKAI STAGE『A3!』~SPRING 2019~",
+            "source_year": 2019,
+            "source_role_raw": "皆木綴",
+            "source_role_names": [
+              "皆木綴"
+            ],
+            "source_cast_group": "春組",
+            "source_order": 3,
+            "source_credit_key": "a3f4beefff62b1e47515",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/a3_2019-2",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/a3_2019-2",
+                  "checkedAt": "2026-10-27T01:03:18.420Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/",
+                  "checkedAt": "2026-10-27T01:03:18.315Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/cast/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.353Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/cast/more.html",
+                  "checkedAt": "2026-10-27T01:04:46.772Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/ticket/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.336Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/guide/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.371Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/introduction/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.276Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/news/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.396Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/mankai-stage2019spring/index.html",
+                  "checkedAt": "2026-10-27T01:05:25.735Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://liberent.co.jp/news/2019/04/25/stage_spring/",
+                  "checkedAt": "2026-10-27T01:05:26.002Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_01.png",
+                  "checkedAt": "2026-10-27T01:04:46.866Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_02.png",
+                  "checkedAt": "2026-10-27T01:04:47.036Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_03.png",
+                  "checkedAt": "2026-10-27T01:04:47.112Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_04.png",
+                  "checkedAt": "2026-10-27T01:04:47.170Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                }
+              ],
+              "source_fingerprint": "f47b1d335752f339f4e8c860a25a8f84ebd986c8123529558bd3c7c14784567c",
+              "review_fingerprint": "f6c5511d0bae103bd07005bceac00cb56e5b2623d32aede9a2b7290737cca732",
+              "snapshot_fingerprint": "3da7e99d1a2b50bc4eaa5a601d5cfa1fcf74aa745367a3972247ff7b91779c0c",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 3,
+                "cast": {
+                  "sourceActorName": "前川優希",
+                  "sourceActorUrl": "https://kira-hai.net/maekawa-yuki",
+                  "role_name": "皆木綴",
+                  "cast_group": "SPRING TROUPE 春組"
+                }
+              },
+              "normalization_review": {
+                "group": "春組",
+                "role": "皆木綴",
+                "annotation": null,
+                "evidence": [
+                  {
+                    "url": "https://www.mankai-stage.jp/archive/spring2019/",
+                    "checkedAt": "2026-10-27T01:03:18.315Z",
+                    "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                  },
+                  {
+                    "url": "https://www.mankai-stage.jp/archive/spring2019/cast/more.html",
+                    "checkedAt": "2026-10-27T01:04:46.772Z",
+                    "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/a3_2019-2",
+                    "checkedAt": "2026-10-27T01:03:18.420Z",
+                    "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "6f56fa1e-493d-4f17-917a-2559ecf800f5",
+            "matched_play_id": "05ef75aa-9f4b-4aae-bf02-c50294ceafd4",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "立石俊樹",
+            "source_actor_url": "https://kira-hai.net/tateishi-toshiki",
+            "source_work_title": "MANKAI STAGE『A3!』~SPRING 2019~",
+            "source_year": 2019,
+            "source_role_raw": "茅ヶ崎至",
+            "source_role_names": [
+              "茅ヶ崎至"
+            ],
+            "source_cast_group": "春組",
+            "source_order": 4,
+            "source_credit_key": "03fcec3f2e308076e43a",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/a3_2019-2",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/a3_2019-2",
+                  "checkedAt": "2026-10-27T01:03:18.420Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/",
+                  "checkedAt": "2026-10-27T01:03:18.315Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/cast/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.353Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/cast/more.html",
+                  "checkedAt": "2026-10-27T01:04:46.772Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/ticket/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.336Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/guide/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.371Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/introduction/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.276Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/news/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.396Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/mankai-stage2019spring/index.html",
+                  "checkedAt": "2026-10-27T01:05:25.735Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://liberent.co.jp/news/2019/04/25/stage_spring/",
+                  "checkedAt": "2026-10-27T01:05:26.002Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_01.png",
+                  "checkedAt": "2026-10-27T01:04:46.866Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_02.png",
+                  "checkedAt": "2026-10-27T01:04:47.036Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_03.png",
+                  "checkedAt": "2026-10-27T01:04:47.112Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_04.png",
+                  "checkedAt": "2026-10-27T01:04:47.170Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                }
+              ],
+              "source_fingerprint": "f47b1d335752f339f4e8c860a25a8f84ebd986c8123529558bd3c7c14784567c",
+              "review_fingerprint": "f6c5511d0bae103bd07005bceac00cb56e5b2623d32aede9a2b7290737cca732",
+              "snapshot_fingerprint": "3da7e99d1a2b50bc4eaa5a601d5cfa1fcf74aa745367a3972247ff7b91779c0c",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 4,
+                "cast": {
+                  "sourceActorName": "立石俊樹",
+                  "sourceActorUrl": "https://kira-hai.net/tateishi-toshiki",
+                  "role_name": "茅ヶ崎至",
+                  "cast_group": "SPRING TROUPE 春組"
+                }
+              },
+              "normalization_review": {
+                "group": "春組",
+                "role": "茅ヶ崎至",
+                "annotation": null,
+                "evidence": [
+                  {
+                    "url": "https://www.mankai-stage.jp/archive/spring2019/",
+                    "checkedAt": "2026-10-27T01:03:18.315Z",
+                    "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                  },
+                  {
+                    "url": "https://www.mankai-stage.jp/archive/spring2019/cast/more.html",
+                    "checkedAt": "2026-10-27T01:04:46.772Z",
+                    "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/a3_2019-2",
+                    "checkedAt": "2026-10-27T01:03:18.420Z",
+                    "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "6f47cce5-7122-45ea-adcb-ce1dd8a6beaf",
+            "matched_play_id": "05ef75aa-9f4b-4aae-bf02-c50294ceafd4",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "古谷大和",
+            "source_actor_url": "https://kira-hai.net/furuya-yamato",
+            "source_work_title": "MANKAI STAGE『A3!』~SPRING 2019~",
+            "source_year": 2019,
+            "source_role_raw": "シトロン",
+            "source_role_names": [
+              "シトロン"
+            ],
+            "source_cast_group": "春組",
+            "source_order": 5,
+            "source_credit_key": "7df6bbb5ba3fc3851cb3",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/a3_2019-2",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/a3_2019-2",
+                  "checkedAt": "2026-10-27T01:03:18.420Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/",
+                  "checkedAt": "2026-10-27T01:03:18.315Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/cast/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.353Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/cast/more.html",
+                  "checkedAt": "2026-10-27T01:04:46.772Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/ticket/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.336Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/guide/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.371Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/introduction/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.276Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/news/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.396Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/mankai-stage2019spring/index.html",
+                  "checkedAt": "2026-10-27T01:05:25.735Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://liberent.co.jp/news/2019/04/25/stage_spring/",
+                  "checkedAt": "2026-10-27T01:05:26.002Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_01.png",
+                  "checkedAt": "2026-10-27T01:04:46.866Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_02.png",
+                  "checkedAt": "2026-10-27T01:04:47.036Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_03.png",
+                  "checkedAt": "2026-10-27T01:04:47.112Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_04.png",
+                  "checkedAt": "2026-10-27T01:04:47.170Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                }
+              ],
+              "source_fingerprint": "f47b1d335752f339f4e8c860a25a8f84ebd986c8123529558bd3c7c14784567c",
+              "review_fingerprint": "f6c5511d0bae103bd07005bceac00cb56e5b2623d32aede9a2b7290737cca732",
+              "snapshot_fingerprint": "3da7e99d1a2b50bc4eaa5a601d5cfa1fcf74aa745367a3972247ff7b91779c0c",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 5,
+                "cast": {
+                  "sourceActorName": "古谷大和",
+                  "sourceActorUrl": "https://kira-hai.net/furuya-yamato",
+                  "role_name": "シトロン",
+                  "cast_group": "SPRING TROUPE 春組"
+                }
+              },
+              "normalization_review": {
+                "group": "春組",
+                "role": "シトロン",
+                "annotation": null,
+                "evidence": [
+                  {
+                    "url": "https://www.mankai-stage.jp/archive/spring2019/",
+                    "checkedAt": "2026-10-27T01:03:18.315Z",
+                    "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                  },
+                  {
+                    "url": "https://www.mankai-stage.jp/archive/spring2019/cast/more.html",
+                    "checkedAt": "2026-10-27T01:04:46.772Z",
+                    "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/a3_2019-2",
+                    "checkedAt": "2026-10-27T01:03:18.420Z",
+                    "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "73a7a70b-d661-445f-82de-5a7d81d95c55",
+            "matched_play_id": "05ef75aa-9f4b-4aae-bf02-c50294ceafd4",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "宮崎湧",
+            "source_actor_url": "https://kira-hai.net/miyazaki-yu",
+            "source_work_title": "MANKAI STAGE『A3!』~SPRING 2019~",
+            "source_year": 2019,
+            "source_role_raw": "瑠璃川幸",
+            "source_role_names": [
+              "瑠璃川幸"
+            ],
+            "source_cast_group": "夏組",
+            "source_order": 6,
+            "source_credit_key": "ea674c446244498995da",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/a3_2019-2",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/a3_2019-2",
+                  "checkedAt": "2026-10-27T01:03:18.420Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/",
+                  "checkedAt": "2026-10-27T01:03:18.315Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/cast/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.353Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/cast/more.html",
+                  "checkedAt": "2026-10-27T01:04:46.772Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/ticket/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.336Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/guide/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.371Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/introduction/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.276Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/news/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.396Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/mankai-stage2019spring/index.html",
+                  "checkedAt": "2026-10-27T01:05:25.735Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://liberent.co.jp/news/2019/04/25/stage_spring/",
+                  "checkedAt": "2026-10-27T01:05:26.002Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_01.png",
+                  "checkedAt": "2026-10-27T01:04:46.866Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_02.png",
+                  "checkedAt": "2026-10-27T01:04:47.036Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_03.png",
+                  "checkedAt": "2026-10-27T01:04:47.112Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_04.png",
+                  "checkedAt": "2026-10-27T01:04:47.170Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                }
+              ],
+              "source_fingerprint": "f47b1d335752f339f4e8c860a25a8f84ebd986c8123529558bd3c7c14784567c",
+              "review_fingerprint": "f6c5511d0bae103bd07005bceac00cb56e5b2623d32aede9a2b7290737cca732",
+              "snapshot_fingerprint": "3da7e99d1a2b50bc4eaa5a601d5cfa1fcf74aa745367a3972247ff7b91779c0c",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 6,
+                "cast": {
+                  "sourceActorName": "宮崎湧",
+                  "sourceActorUrl": "https://kira-hai.net/miyazaki-yu",
+                  "role_name": "瑠璃川幸",
+                  "cast_group": "夏組"
+                }
+              },
+              "normalization_review": {
+                "group": "夏組",
+                "role": "瑠璃川幸",
+                "annotation": null,
+                "evidence": [
+                  {
+                    "url": "https://www.mankai-stage.jp/archive/spring2019/",
+                    "checkedAt": "2026-10-27T01:03:18.315Z",
+                    "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                  },
+                  {
+                    "url": "https://www.mankai-stage.jp/archive/spring2019/cast/more.html",
+                    "checkedAt": "2026-10-27T01:04:46.772Z",
+                    "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/a3_2019-2",
+                    "checkedAt": "2026-10-27T01:03:18.420Z",
+                    "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "fb1a7fa3-c90d-4c6c-86b8-af012fccf368",
+            "matched_play_id": "05ef75aa-9f4b-4aae-bf02-c50294ceafd4",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "水江建太",
+            "source_actor_url": "https://kira-hai.net/mizue-kenta",
+            "source_work_title": "MANKAI STAGE『A3!』~SPRING 2019~",
+            "source_year": 2019,
+            "source_role_raw": "摂津万里",
+            "source_role_names": [
+              "摂津万里"
+            ],
+            "source_cast_group": "秋組",
+            "source_order": 7,
+            "source_credit_key": "a9b59db122050d458465",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/a3_2019-2",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/a3_2019-2",
+                  "checkedAt": "2026-10-27T01:03:18.420Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/",
+                  "checkedAt": "2026-10-27T01:03:18.315Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/cast/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.353Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/cast/more.html",
+                  "checkedAt": "2026-10-27T01:04:46.772Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/ticket/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.336Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/guide/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.371Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/introduction/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.276Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/news/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.396Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/mankai-stage2019spring/index.html",
+                  "checkedAt": "2026-10-27T01:05:25.735Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://liberent.co.jp/news/2019/04/25/stage_spring/",
+                  "checkedAt": "2026-10-27T01:05:26.002Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_01.png",
+                  "checkedAt": "2026-10-27T01:04:46.866Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_02.png",
+                  "checkedAt": "2026-10-27T01:04:47.036Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_03.png",
+                  "checkedAt": "2026-10-27T01:04:47.112Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_04.png",
+                  "checkedAt": "2026-10-27T01:04:47.170Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                }
+              ],
+              "source_fingerprint": "f47b1d335752f339f4e8c860a25a8f84ebd986c8123529558bd3c7c14784567c",
+              "review_fingerprint": "f6c5511d0bae103bd07005bceac00cb56e5b2623d32aede9a2b7290737cca732",
+              "snapshot_fingerprint": "3da7e99d1a2b50bc4eaa5a601d5cfa1fcf74aa745367a3972247ff7b91779c0c",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 7,
+                "cast": {
+                  "sourceActorName": "水江建太",
+                  "sourceActorUrl": "https://kira-hai.net/mizue-kenta",
+                  "role_name": "摂津万里",
+                  "cast_group": "秋組"
+                }
+              },
+              "normalization_review": {
+                "group": "秋組",
+                "role": "摂津万里",
+                "annotation": null,
+                "evidence": [
+                  {
+                    "url": "https://www.mankai-stage.jp/archive/spring2019/",
+                    "checkedAt": "2026-10-27T01:03:18.315Z",
+                    "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                  },
+                  {
+                    "url": "https://www.mankai-stage.jp/archive/spring2019/cast/more.html",
+                    "checkedAt": "2026-10-27T01:04:46.772Z",
+                    "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/a3_2019-2",
+                    "checkedAt": "2026-10-27T01:03:18.420Z",
+                    "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "33ecd678-4e78-4841-b41a-5d0102762ae2",
+            "matched_play_id": "05ef75aa-9f4b-4aae-bf02-c50294ceafd4",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "藤田玲",
+            "source_actor_url": "https://kira-hai.net/fujita-rei",
+            "source_work_title": "MANKAI STAGE『A3!』~SPRING 2019~",
+            "source_year": 2019,
+            "source_role_raw": "古市左京",
+            "source_role_names": [
+              "古市左京"
+            ],
+            "source_cast_group": "秋組",
+            "source_order": 8,
+            "source_credit_key": "b3883e79573ecf0e7fbd",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/a3_2019-2",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/a3_2019-2",
+                  "checkedAt": "2026-10-27T01:03:18.420Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/",
+                  "checkedAt": "2026-10-27T01:03:18.315Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/cast/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.353Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/cast/more.html",
+                  "checkedAt": "2026-10-27T01:04:46.772Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/ticket/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.336Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/guide/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.371Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/introduction/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.276Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/news/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.396Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/mankai-stage2019spring/index.html",
+                  "checkedAt": "2026-10-27T01:05:25.735Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://liberent.co.jp/news/2019/04/25/stage_spring/",
+                  "checkedAt": "2026-10-27T01:05:26.002Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_01.png",
+                  "checkedAt": "2026-10-27T01:04:46.866Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_02.png",
+                  "checkedAt": "2026-10-27T01:04:47.036Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_03.png",
+                  "checkedAt": "2026-10-27T01:04:47.112Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_04.png",
+                  "checkedAt": "2026-10-27T01:04:47.170Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                }
+              ],
+              "source_fingerprint": "f47b1d335752f339f4e8c860a25a8f84ebd986c8123529558bd3c7c14784567c",
+              "review_fingerprint": "f6c5511d0bae103bd07005bceac00cb56e5b2623d32aede9a2b7290737cca732",
+              "snapshot_fingerprint": "3da7e99d1a2b50bc4eaa5a601d5cfa1fcf74aa745367a3972247ff7b91779c0c",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 8,
+                "cast": {
+                  "sourceActorName": "藤田玲",
+                  "sourceActorUrl": "https://kira-hai.net/fujita-rei",
+                  "role_name": "古市左京",
+                  "cast_group": "秋組"
+                }
+              },
+              "normalization_review": {
+                "group": "秋組",
+                "role": "古市左京",
+                "annotation": null,
+                "evidence": [
+                  {
+                    "url": "https://www.mankai-stage.jp/archive/spring2019/",
+                    "checkedAt": "2026-10-27T01:03:18.315Z",
+                    "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                  },
+                  {
+                    "url": "https://www.mankai-stage.jp/archive/spring2019/cast/more.html",
+                    "checkedAt": "2026-10-27T01:04:46.772Z",
+                    "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/a3_2019-2",
+                    "checkedAt": "2026-10-27T01:03:18.420Z",
+                    "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "68212e7c-6d5e-4ce2-b1d7-c42583019a3f",
+            "matched_play_id": "05ef75aa-9f4b-4aae-bf02-c50294ceafd4",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "荒牧慶彦",
+            "source_actor_url": "https://kira-hai.net/aramaki-yoshihiko",
+            "source_work_title": "MANKAI STAGE『A3!』~SPRING 2019~",
+            "source_year": 2019,
+            "source_role_raw": "月岡紬",
+            "source_role_names": [
+              "月岡紬"
+            ],
+            "source_cast_group": "冬組",
+            "source_order": 9,
+            "source_credit_key": "ee1eab10c593eb28422f",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/a3_2019-2",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/a3_2019-2",
+                  "checkedAt": "2026-10-27T01:03:18.420Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/",
+                  "checkedAt": "2026-10-27T01:03:18.315Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/cast/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.353Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/cast/more.html",
+                  "checkedAt": "2026-10-27T01:04:46.772Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/ticket/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.336Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/guide/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.371Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/introduction/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.276Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/news/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.396Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/mankai-stage2019spring/index.html",
+                  "checkedAt": "2026-10-27T01:05:25.735Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://liberent.co.jp/news/2019/04/25/stage_spring/",
+                  "checkedAt": "2026-10-27T01:05:26.002Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_01.png",
+                  "checkedAt": "2026-10-27T01:04:46.866Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_02.png",
+                  "checkedAt": "2026-10-27T01:04:47.036Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_03.png",
+                  "checkedAt": "2026-10-27T01:04:47.112Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_04.png",
+                  "checkedAt": "2026-10-27T01:04:47.170Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                }
+              ],
+              "source_fingerprint": "f47b1d335752f339f4e8c860a25a8f84ebd986c8123529558bd3c7c14784567c",
+              "review_fingerprint": "f6c5511d0bae103bd07005bceac00cb56e5b2623d32aede9a2b7290737cca732",
+              "snapshot_fingerprint": "3da7e99d1a2b50bc4eaa5a601d5cfa1fcf74aa745367a3972247ff7b91779c0c",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 9,
+                "cast": {
+                  "sourceActorName": "荒牧慶彦",
+                  "sourceActorUrl": "https://kira-hai.net/aramaki-yoshihiko",
+                  "role_name": "月岡紬",
+                  "cast_group": "冬組"
+                }
+              },
+              "normalization_review": {
+                "group": "冬組",
+                "role": "月岡紬",
+                "annotation": null,
+                "evidence": [
+                  {
+                    "url": "https://www.mankai-stage.jp/archive/spring2019/",
+                    "checkedAt": "2026-10-27T01:03:18.315Z",
+                    "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                  },
+                  {
+                    "url": "https://www.mankai-stage.jp/archive/spring2019/cast/more.html",
+                    "checkedAt": "2026-10-27T01:04:46.772Z",
+                    "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/a3_2019-2",
+                    "checkedAt": "2026-10-27T01:03:18.420Z",
+                    "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "929888ac-3f6a-40d0-a856-41dd028b2753",
+            "matched_play_id": "05ef75aa-9f4b-4aae-bf02-c50294ceafd4",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "上田堪大",
+            "source_actor_url": "https://kira-hai.net/ueda-kandai",
+            "source_work_title": "MANKAI STAGE『A3!』~SPRING 2019~",
+            "source_year": 2019,
+            "source_role_raw": "雪白東",
+            "source_role_names": [
+              "雪白東"
+            ],
+            "source_cast_group": "冬組",
+            "source_order": 10,
+            "source_credit_key": "ef6211e776adc06c9de9",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/a3_2019-2",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/a3_2019-2",
+                  "checkedAt": "2026-10-27T01:03:18.420Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/",
+                  "checkedAt": "2026-10-27T01:03:18.315Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/cast/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.353Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/cast/more.html",
+                  "checkedAt": "2026-10-27T01:04:46.772Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/ticket/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.336Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/guide/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.371Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/introduction/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.276Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/news/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.396Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/mankai-stage2019spring/index.html",
+                  "checkedAt": "2026-10-27T01:05:25.735Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://liberent.co.jp/news/2019/04/25/stage_spring/",
+                  "checkedAt": "2026-10-27T01:05:26.002Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_01.png",
+                  "checkedAt": "2026-10-27T01:04:46.866Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_02.png",
+                  "checkedAt": "2026-10-27T01:04:47.036Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_03.png",
+                  "checkedAt": "2026-10-27T01:04:47.112Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_04.png",
+                  "checkedAt": "2026-10-27T01:04:47.170Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                }
+              ],
+              "source_fingerprint": "f47b1d335752f339f4e8c860a25a8f84ebd986c8123529558bd3c7c14784567c",
+              "review_fingerprint": "f6c5511d0bae103bd07005bceac00cb56e5b2623d32aede9a2b7290737cca732",
+              "snapshot_fingerprint": "3da7e99d1a2b50bc4eaa5a601d5cfa1fcf74aa745367a3972247ff7b91779c0c",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 10,
+                "cast": {
+                  "sourceActorName": "上田堪大",
+                  "sourceActorUrl": "https://kira-hai.net/ueda-kandai",
+                  "role_name": "雪白東",
+                  "cast_group": "冬組"
+                }
+              },
+              "normalization_review": {
+                "group": "冬組",
+                "role": "雪白東",
+                "annotation": null,
+                "evidence": [
+                  {
+                    "url": "https://www.mankai-stage.jp/archive/spring2019/",
+                    "checkedAt": "2026-10-27T01:03:18.315Z",
+                    "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                  },
+                  {
+                    "url": "https://www.mankai-stage.jp/archive/spring2019/cast/more.html",
+                    "checkedAt": "2026-10-27T01:04:46.772Z",
+                    "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/a3_2019-2",
+                    "checkedAt": "2026-10-27T01:03:18.420Z",
+                    "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "9dd007c7-a216-4d25-85fb-77fad853123e",
+            "matched_play_id": "05ef75aa-9f4b-4aae-bf02-c50294ceafd4",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "笹森裕貴",
+            "source_actor_url": "https://kira-hai.net/sasamori-hiroki",
+            "source_work_title": "MANKAI STAGE『A3!』~SPRING 2019~",
+            "source_year": 2019,
+            "source_role_raw": "水野茅",
+            "source_role_names": [
+              "水野茅"
+            ],
+            "source_cast_group": null,
+            "source_order": 11,
+            "source_credit_key": "814b247b19da48896623",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/a3_2019-2",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/a3_2019-2",
+                  "checkedAt": "2026-10-27T01:03:18.420Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/",
+                  "checkedAt": "2026-10-27T01:03:18.315Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/cast/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.353Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/cast/more.html",
+                  "checkedAt": "2026-10-27T01:04:46.772Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/ticket/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.336Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/guide/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.371Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/introduction/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.276Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/news/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.396Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/mankai-stage2019spring/index.html",
+                  "checkedAt": "2026-10-27T01:05:25.735Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://liberent.co.jp/news/2019/04/25/stage_spring/",
+                  "checkedAt": "2026-10-27T01:05:26.002Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_01.png",
+                  "checkedAt": "2026-10-27T01:04:46.866Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_02.png",
+                  "checkedAt": "2026-10-27T01:04:47.036Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_03.png",
+                  "checkedAt": "2026-10-27T01:04:47.112Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_04.png",
+                  "checkedAt": "2026-10-27T01:04:47.170Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                }
+              ],
+              "source_fingerprint": "f47b1d335752f339f4e8c860a25a8f84ebd986c8123529558bd3c7c14784567c",
+              "review_fingerprint": "f6c5511d0bae103bd07005bceac00cb56e5b2623d32aede9a2b7290737cca732",
+              "snapshot_fingerprint": "3da7e99d1a2b50bc4eaa5a601d5cfa1fcf74aa745367a3972247ff7b91779c0c",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 11,
+                "cast": {
+                  "sourceActorName": "笹森裕貴",
+                  "sourceActorUrl": "https://kira-hai.net/sasamori-hiroki",
+                  "role_name": "水野茅",
+                  "cast_group": "冬組"
+                }
+              },
+              "normalization_review": {
+                "group": null,
+                "role": "水野茅",
+                "annotation": null,
+                "evidence": [
+                  {
+                    "url": "https://www.mankai-stage.jp/archive/spring2019/",
+                    "checkedAt": "2026-10-27T01:03:18.315Z",
+                    "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                  },
+                  {
+                    "url": "https://www.mankai-stage.jp/archive/spring2019/cast/more.html",
+                    "checkedAt": "2026-10-27T01:04:46.772Z",
+                    "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/a3_2019-2",
+                    "checkedAt": "2026-10-27T01:03:18.420Z",
+                    "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "1e605310-a002-4bce-8b04-30b3d13985e3",
+            "matched_play_id": "05ef75aa-9f4b-4aae-bf02-c50294ceafd4",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "田内季宇",
+            "source_actor_url": "https://kira-hai.net/tauchi-tokihiro",
+            "source_work_title": "MANKAI STAGE『A3!』~SPRING 2019~",
+            "source_year": 2019,
+            "source_role_raw": "迫田ケン",
+            "source_role_names": [
+              "迫田ケン"
+            ],
+            "source_cast_group": null,
+            "source_order": 12,
+            "source_credit_key": "02d780776d84089ea47d",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/a3_2019-2",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/a3_2019-2",
+                  "checkedAt": "2026-10-27T01:03:18.420Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/",
+                  "checkedAt": "2026-10-27T01:03:18.315Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/cast/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.353Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/cast/more.html",
+                  "checkedAt": "2026-10-27T01:04:46.772Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/ticket/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.336Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/guide/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.371Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/introduction/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.276Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/news/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.396Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/mankai-stage2019spring/index.html",
+                  "checkedAt": "2026-10-27T01:05:25.735Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://liberent.co.jp/news/2019/04/25/stage_spring/",
+                  "checkedAt": "2026-10-27T01:05:26.002Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_01.png",
+                  "checkedAt": "2026-10-27T01:04:46.866Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_02.png",
+                  "checkedAt": "2026-10-27T01:04:47.036Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_03.png",
+                  "checkedAt": "2026-10-27T01:04:47.112Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_04.png",
+                  "checkedAt": "2026-10-27T01:04:47.170Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                }
+              ],
+              "source_fingerprint": "f47b1d335752f339f4e8c860a25a8f84ebd986c8123529558bd3c7c14784567c",
+              "review_fingerprint": "f6c5511d0bae103bd07005bceac00cb56e5b2623d32aede9a2b7290737cca732",
+              "snapshot_fingerprint": "3da7e99d1a2b50bc4eaa5a601d5cfa1fcf74aa745367a3972247ff7b91779c0c",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 12,
+                "cast": {
+                  "sourceActorName": "田内季宇",
+                  "sourceActorUrl": "https://kira-hai.net/tauchi-tokihiro",
+                  "role_name": "迫田ケン(ヤクザ)",
+                  "cast_group": "冬組"
+                }
+              },
+              "normalization_review": {
+                "group": null,
+                "role": "迫田ケン",
+                "annotation": "ヤクザ",
+                "evidence": [
+                  {
+                    "url": "https://www.mankai-stage.jp/archive/spring2019/",
+                    "checkedAt": "2026-10-27T01:03:18.315Z",
+                    "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                  },
+                  {
+                    "url": "https://www.mankai-stage.jp/archive/spring2019/cast/more.html",
+                    "checkedAt": "2026-10-27T01:04:46.772Z",
+                    "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/a3_2019-2",
+                    "checkedAt": "2026-10-27T01:03:18.420Z",
+                    "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "73dd3751-ae6e-4922-b252-a9cdbae324e6",
+            "matched_play_id": "05ef75aa-9f4b-4aae-bf02-c50294ceafd4",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "田口涼",
+            "source_actor_url": "https://kira-hai.net/taguchi-ryo",
+            "source_work_title": "MANKAI STAGE『A3!』~SPRING 2019~",
+            "source_year": 2019,
+            "source_role_raw": "松川伊助",
+            "source_role_names": [
+              "松川伊助"
+            ],
+            "source_cast_group": null,
+            "source_order": 13,
+            "source_credit_key": "b427e92f1af5625981f3",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/a3_2019-2",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/a3_2019-2",
+                  "checkedAt": "2026-10-27T01:03:18.420Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/",
+                  "checkedAt": "2026-10-27T01:03:18.315Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/cast/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.353Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/cast/more.html",
+                  "checkedAt": "2026-10-27T01:04:46.772Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/ticket/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.336Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/guide/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.371Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/introduction/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.276Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/news/index.html",
+                  "checkedAt": "2026-10-27T01:03:18.396Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/mankai-stage2019spring/index.html",
+                  "checkedAt": "2026-10-27T01:05:25.735Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://liberent.co.jp/news/2019/04/25/stage_spring/",
+                  "checkedAt": "2026-10-27T01:05:26.002Z",
+                  "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_01.png",
+                  "checkedAt": "2026-10-27T01:04:46.866Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_02.png",
+                  "checkedAt": "2026-10-27T01:04:47.036Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_03.png",
+                  "checkedAt": "2026-10-27T01:04:47.112Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_04.png",
+                  "checkedAt": "2026-10-27T01:04:47.170Z",
+                  "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+                }
+              ],
+              "source_fingerprint": "f47b1d335752f339f4e8c860a25a8f84ebd986c8123529558bd3c7c14784567c",
+              "review_fingerprint": "f6c5511d0bae103bd07005bceac00cb56e5b2623d32aede9a2b7290737cca732",
+              "snapshot_fingerprint": "3da7e99d1a2b50bc4eaa5a601d5cfa1fcf74aa745367a3972247ff7b91779c0c",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 13,
+                "cast": {
+                  "sourceActorName": "田口涼",
+                  "sourceActorUrl": "https://kira-hai.net/taguchi-ryo",
+                  "role_name": "松川伊助(劇場支配人)",
+                  "cast_group": "冬組"
+                }
+              },
+              "normalization_review": {
+                "group": null,
+                "role": "松川伊助",
+                "annotation": "劇場支配人",
+                "evidence": [
+                  {
+                    "url": "https://www.mankai-stage.jp/archive/spring2019/",
+                    "checkedAt": "2026-10-27T01:03:18.315Z",
+                    "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                  },
+                  {
+                    "url": "https://www.mankai-stage.jp/archive/spring2019/cast/more.html",
+                    "checkedAt": "2026-10-27T01:04:46.772Z",
+                    "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/a3_2019-2",
+                    "checkedAt": "2026-10-27T01:03:18.420Z",
+                    "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "523f6dd4-9c56-4b48-a264-463ebb52f068",
+            "matched_play_id": "05ef75aa-9f4b-4aae-bf02-c50294ceafd4",
+            "status": "pending"
+          }
+        ]
+      },
+      "records": [
+        {
+          "actor": {
+            "id": "ed310757-4569-4539-896d-6a8a5c326ac2",
+            "slug": "yokota-ryugi",
+            "name": "横田 龍儀",
+            "kana": "よこた りゅうぎ",
+            "profile": "福島県川内村出身の俳優。現在はフリーで活動。",
+            "image_url": null,
+            "sns": {
+              "x": "https://twitter.com/0909Ryugi",
+              "official": "https://ameblo.jp/ryugiyokota/",
+              "instagram": "https://www.instagram.com/Ryugi0909/"
+            },
+            "gender": "male",
+            "created_at": "2025-12-13T04:41:02.052969+00:00",
+            "updated_at": "2025-12-13T04:41:02.052969+00:00",
+            "tags": [
+              "フレッシュ",
+              "ダンス"
+            ],
+            "featured_play_slugs": [],
+            "birthday": "1994-09-09",
+            "height_cm": 170,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "横田龍儀",
+            "sourceActorUrl": "https://kira-hai.net/yokota-ryugi",
+            "role_name": "佐久間咲也",
+            "cast_group": "春組"
+          },
+          "sourceCreditKey": "2e5f50e5da29dc743e1c",
+          "sourceOrder": 1,
+          "rawSourceOrder": 1,
+          "billingOrder": 1,
+          "expectedNote": null,
+          "expectedStarring": false,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "5533574d-232b-492a-bad8-2aadc44b2e63",
+            "slug": "makishima-hikaru",
+            "name": "牧島 輝",
+            "kana": "まきしま ひかる",
+            "profile": "埼玉県出身の俳優・アーティスト。現在はフリーランスとして活動し、株式会社ワイケーエージェントと業務提携を行っている。ミュージカル『テニスの王子様』3rdシーズン（海堂薫役）をはじめ、MANKAI STAGE『A3!』シリーズ（碓氷真澄役）、ミュージカル『刀剣乱舞』シリーズ（大倶利伽羅役）、舞台『キングダム』（嬴政 / 漂役）等の舞台作品を中心に出演している。また、音楽アーティストとしても活動しており、現在は日本コロムビアにて「牧島輝」名義で楽曲リリースを行っている。",
+            "image_url": null,
+            "sns": {
+              "x": "https://twitter.com/maximum083",
+              "youtube": "https://www.youtube.com/@makishimahikaru-musicofficial",
+              "official": "https://makishima-hikaru.net/",
+              "instagram": "https://www.instagram.com/maximumhikaru/?hl=ja"
+            },
+            "gender": "male",
+            "created_at": "2025-12-13T04:41:02.052969+00:00",
+            "updated_at": "2025-12-13T04:41:02.052969+00:00",
+            "tags": [
+              "クール",
+              "歌唱力"
+            ],
+            "featured_play_slugs": [
+              "ace-stage-ss",
+              "kingdom-stage"
+            ],
+            "birthday": "1995-08-03",
+            "height_cm": 177,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor and artist from Saitama Prefecture. He is currently working as a freelancer with a business tie-up with YK Agent. He primarily appears in stage works such as the musical \"The Prince of Tennis\" 3rd season (as Kaoru Kaido), MANKAI STAGE \"A3!\" series (as Masumi Usui), the musical \"Touken Ranbu\" series (as Okurikara), and the stage play \"Kingdom\" (as Ei Sei / Hyo). He is also active as a music artist, currently releasing music under the name \"Hikaru Makishima\" with Nippon Columbia.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "牧島輝",
+            "sourceActorUrl": "https://kira-hai.net/makishima-hikaru",
+            "role_name": "碓氷真澄",
+            "cast_group": "春組"
+          },
+          "sourceCreditKey": "53bd06232de0984bbc72",
+          "sourceOrder": 2,
+          "rawSourceOrder": 2,
+          "billingOrder": 2,
+          "expectedNote": null,
+          "expectedStarring": false,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "6f56fa1e-493d-4f17-917a-2559ecf800f5",
+            "slug": "maekawa-yuki",
+            "name": "前川 優希",
+            "kana": "まえかわ ゆうき",
+            "profile": "東京都出身の俳優・歌手。舞台『K -Lost Small World-』の湊速人役、MANKAI STAGE『A3!』の皆木綴役などを務める。舞台のプロデュースや脚本も手がける。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-24T18:45:20.734732+00:00",
+            "updated_at": "2026-10-25T20:21:04.903274+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1997-12-17",
+            "height_cm": 179,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Maekawa Yuki",
+            "profile_en": "An actor and singer from Tokyo. Stage credits include Hayato Minato in K -Lost Small World- and Tsuzuru Minagi in MANKAI STAGE A3!. He also produces stage works and writes scripts.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "前川優希",
+            "sourceActorUrl": "https://kira-hai.net/maekawa-yuki",
+            "role_name": "皆木綴",
+            "cast_group": "春組"
+          },
+          "sourceCreditKey": "a3f4beefff62b1e47515",
+          "sourceOrder": 3,
+          "rawSourceOrder": 3,
+          "billingOrder": 3,
+          "expectedNote": null,
+          "expectedStarring": false,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "6f47cce5-7122-45ea-adcb-ce1dd8a6beaf",
+            "slug": "tateishi-toshiki",
+            "name": "立石 俊樹",
+            "kana": "たていし としき",
+            "profile": "秋田県出身の俳優。エーライツ所属。ミュージカル『テニスの王子様』3rdシーズン（幸村精市役）をはじめ、MANKAI STAGE『A3!』シリーズ（茅ヶ崎至役）、ミュージカル「黒執事」シリーズ（セバスチャン・ミカエリス役）、ミュージカル『エリザベート』（ルドルフ役）等の舞台作品を中心に出演している。かつては男性ダンス&ボーカルグループ「IVVY」のメンバーとしても活動し、2021年末をもって同グループを卒業した。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/t___tateishi",
+              "official": "https://a-light.jp/talent/tateishi-toshiki",
+              "instagram": "https://www.instagram.com/toshiki_tateishi/"
+            },
+            "gender": "male",
+            "created_at": "2025-12-13T04:41:02.052969+00:00",
+            "updated_at": "2025-12-13T04:41:02.052969+00:00",
+            "tags": [
+              "アーティスト",
+              "王子様系"
+            ],
+            "featured_play_slugs": [],
+            "birthday": "1993-12-19",
+            "height_cm": 181,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Akita Prefecture. Affiliated with A-Light. He primarily appears in stage works such as the musical \"The Prince of Tennis\" 3rd season (as Seiichi Yukimura), the MANKAI STAGE \"A3!\" series (as Itaru Chigasaki), the musical \"Black Butler\" series (as Sebastian Michaelis), and the musical \"Elisabeth\" (as Rudolf). He was formerly a member of the male dance and vocal group \"IVVY\" and graduated from the group at the end of 2021.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "立石俊樹",
+            "sourceActorUrl": "https://kira-hai.net/tateishi-toshiki",
+            "role_name": "茅ヶ崎至",
+            "cast_group": "春組"
+          },
+          "sourceCreditKey": "03fcec3f2e308076e43a",
+          "sourceOrder": 4,
+          "rawSourceOrder": 4,
+          "billingOrder": 4,
+          "expectedNote": null,
+          "expectedStarring": false,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "73a7a70b-d661-445f-82de-5a7d81d95c55",
+            "slug": "furuya-yamato",
+            "name": "古谷 大和",
+            "kana": "ふるや やまと",
+            "profile": "東京都出身の俳優。タイムリーオフィス所属。MANKAI STAGE『A3!』のシトロン役、舞台『KING OF PRISM』の高田馬場ジョージ役などを務める。舞台の演出も手掛ける。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-24T15:28:00.483227+00:00",
+            "updated_at": "2026-10-25T20:21:04.903274+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1991-05-04",
+            "height_cm": 176,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Tokyo, represented by Timely Office. His roles include Citron in MANKAI STAGE A3! and Joji Takadanobaba in the stage series KING OF PRISM. He also directs stage productions.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "古谷大和",
+            "sourceActorUrl": "https://kira-hai.net/furuya-yamato",
+            "role_name": "シトロン",
+            "cast_group": "春組"
+          },
+          "sourceCreditKey": "7df6bbb5ba3fc3851cb3",
+          "sourceOrder": 5,
+          "rawSourceOrder": 5,
+          "billingOrder": 5,
+          "expectedNote": null,
+          "expectedStarring": false,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "fb1a7fa3-c90d-4c6c-86b8-af012fccf368",
+            "slug": "miyazaki-yu",
+            "name": "宮崎 湧",
+            "kana": "みやざきゆう",
+            "profile": null,
+            "image_url": null,
+            "sns": null,
+            "gender": null,
+            "created_at": "2026-10-17T13:27:59.664418+00:00",
+            "updated_at": "2026-10-25T20:21:04.903274+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1995-01-25",
+            "height_cm": 165,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "宮崎湧",
+            "sourceActorUrl": "https://kira-hai.net/miyazaki-yu",
+            "role_name": "瑠璃川幸",
+            "cast_group": "夏組"
+          },
+          "sourceCreditKey": "ea674c446244498995da",
+          "sourceOrder": 6,
+          "rawSourceOrder": 6,
+          "billingOrder": 6,
+          "expectedNote": null,
+          "expectedStarring": false,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "33ecd678-4e78-4841-b41a-5d0102762ae2",
+            "slug": "mizue-kenta",
+            "name": "水江 建太",
+            "kana": "みずえ けんた",
+            "profile": "東京都出身の日本の俳優。現在はフリーで活動。",
+            "image_url": null,
+            "sns": {
+              "x": "https://twitter.com/mizue_kenta",
+              "official": "https://kentamizue.com/",
+              "instagram": "https://www.instagram.com/mizue_kenta/"
+            },
+            "gender": "male",
+            "created_at": "2025-12-13T04:41:02.052969+00:00",
+            "updated_at": "2025-12-13T04:41:02.052969+00:00",
+            "tags": [
+              "長身",
+              "色気"
+            ],
+            "featured_play_slugs": [],
+            "birthday": "1995-11-02",
+            "height_cm": 183,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "水江建太",
+            "sourceActorUrl": "https://kira-hai.net/mizue-kenta",
+            "role_name": "摂津万里",
+            "cast_group": "秋組"
+          },
+          "sourceCreditKey": "a9b59db122050d458465",
+          "sourceOrder": 7,
+          "rawSourceOrder": 7,
+          "billingOrder": 7,
+          "expectedNote": null,
+          "expectedStarring": false,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "68212e7c-6d5e-4ce2-b1d7-c42583019a3f",
+            "slug": "fujita-ray",
+            "name": "藤田 玲",
+            "kana": "ふじた れい",
+            "profile": "東京都出身の俳優、ミュージシャン。株式会社ドルチェスター所属。フランス人の父と日本人の母を持つバイリンガル。ロックバンド「DUSTZ」のボーカル・Rayとしても活動を行っている。主な出演作として、特撮テレビドラマ『仮面ライダー555』（北崎役）、『牙狼-GARO-』シリーズ（涼邑零 / 銀牙騎士・絶狼役）などの映像作品のほか、舞台『刀剣乱舞』維伝 朧の志士たち（榎本武揚役）、MANKAI STAGE『A3!』（古市左京役）、ミュージカル『レ・ミゼラブル』等の多岐にわたる舞台作品がある。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/Ray_FJT",
+              "official": "http://fujitaray.com/"
+            },
+            "gender": "male",
+            "created_at": "2025-12-13T04:41:02.052969+00:00",
+            "updated_at": "2025-12-13T04:41:02.052969+00:00",
+            "tags": [
+              "バイリンガル",
+              "ロック"
+            ],
+            "featured_play_slugs": [],
+            "birthday": "1988-09-06",
+            "height_cm": 179,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor and musician from Tokyo. Affiliated with Dolce Star. He is bilingual, with a French father and a Japanese mother. He is also active as \"Ray,\" the vocalist of the rock band \"DUSTZ.\" His major appearances include video works such as the tokusatsu television drama \"Kamen Rider 555\" (as Kitazaki) and the \"Garo\" series (as Rei Suzumura / ZERO), as well as a wide variety of stage works including the stage play \"Touken Ranbu\" Iden Oboro no Shishitachi (as Takeaki Enomoto), MANKAI STAGE \"A3!\" (as Sakyo Furuichi), and the musical \"Les Misérables\".",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "藤田玲",
+            "sourceActorUrl": "https://kira-hai.net/fujita-rei",
+            "role_name": "古市左京",
+            "cast_group": "秋組"
+          },
+          "sourceCreditKey": "b3883e79573ecf0e7fbd",
+          "sourceOrder": 8,
+          "rawSourceOrder": 8,
+          "billingOrder": 8,
+          "expectedNote": null,
+          "expectedStarring": false,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "929888ac-3f6a-40d0-a856-41dd028b2753",
+            "slug": "aramaki-yoshihiko",
+            "name": "荒牧 慶彦",
+            "kana": "あらまき よしひこ",
+            "profile": "東京都出身の俳優。株式会社Pastureの代表取締役社長も務める。ミュージカル『テニスの王子様』2ndシーズン（甲斐裕次郎役）や、舞台『刀剣乱舞』（山姥切国広役）、『MANKAI STAGE「A3!」』（月岡紬役）、『あんさんぶるスターズ！オン・ステージ』（朔間凛月役）等の舞台作品に出演。また、演劇興行のプロデュース業も手掛けている。",
+            "image_url": null,
+            "sns": {
+              "x": "https://twitter.com/ara_mackey",
+              "official": "https://aramaki-yoshihiko.com/",
+              "instagram": "https://www.instagram.com/aramaki.yoshi/"
+            },
+            "gender": "male",
+            "created_at": "2025-12-11T18:21:26.445003+00:00",
+            "updated_at": "2025-12-11T18:21:26.445003+00:00",
+            "tags": [
+              "王子様系",
+              "殺陣が得意"
+            ],
+            "featured_play_slugs": [],
+            "birthday": "1990-02-05",
+            "height_cm": 176,
+            "blood_type": "AB",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Tokyo. He also serves as the CEO of Pasture Co., Ltd. He has appeared in stage works such as the musical \"The Prince of Tennis\" 2nd season (as Yujiro Kai), the stage play \"Touken Ranbu\" (as Yamanbagiri Kunihiro), \"MANKAI STAGE 'A3!'\" (as Tsumugi Tsukioka), and \"Ensemble Stars! On Stage\" (as Ritsu Sakuma). He is also involved in producing stage performances.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "荒牧慶彦",
+            "sourceActorUrl": "https://kira-hai.net/aramaki-yoshihiko",
+            "role_name": "月岡紬",
+            "cast_group": "冬組"
+          },
+          "sourceCreditKey": "ee1eab10c593eb28422f",
+          "sourceOrder": 9,
+          "rawSourceOrder": 9,
+          "billingOrder": 9,
+          "expectedNote": null,
+          "expectedStarring": false,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "9dd007c7-a216-4d25-85fb-77fad853123e",
+            "slug": "ueda-kandai",
+            "name": "上田 堪大",
+            "kana": "うえだかんだい",
+            "profile": null,
+            "image_url": null,
+            "sns": null,
+            "gender": null,
+            "created_at": "2026-10-17T08:22:48.968908+00:00",
+            "updated_at": "2026-10-25T20:21:04.903274+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1988-10-21",
+            "height_cm": 179,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "上田堪大",
+            "sourceActorUrl": "https://kira-hai.net/ueda-kandai",
+            "role_name": "雪白東",
+            "cast_group": "冬組"
+          },
+          "sourceCreditKey": "ef6211e776adc06c9de9",
+          "sourceOrder": 10,
+          "rawSourceOrder": 10,
+          "billingOrder": 10,
+          "expectedNote": null,
+          "expectedStarring": false,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "1e605310-a002-4bce-8b04-30b3d13985e3",
+            "slug": "sasamori-hiroki",
+            "name": "笹森 裕貴",
+            "kana": "ささもり ひろき",
+            "profile": "東京都出身の俳優・モデル。第3回関東ハイスクールミスターコン2015グランプリ。オムニア所属。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/0621Hiro0621",
+              "youtube": "https://www.youtube.com/channel/UCfUgiSRWPwrAbNpRLKjtq0Q?view_as=subscriber",
+              "official": "https://sasamori-hiroki.net/",
+              "instagram": "https://www.instagram.com/hiro.0621.hiro"
+            },
+            "gender": "male",
+            "created_at": "2026-04-08T00:08:45.181734+00:00",
+            "updated_at": "2026-04-08T00:08:45.181734+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1997-06-21",
+            "height_cm": 178,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "笹森裕貴",
+            "sourceActorUrl": "https://kira-hai.net/sasamori-hiroki",
+            "role_name": "水野茅",
+            "cast_group": null
+          },
+          "sourceCreditKey": "814b247b19da48896623",
+          "sourceOrder": 11,
+          "rawSourceOrder": 11,
+          "billingOrder": 11,
+          "expectedNote": null,
+          "expectedStarring": false,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "73dd3751-ae6e-4922-b252-a9cdbae324e6",
+            "slug": "tauchi-tokihiro",
+            "name": "田内 季宇",
+            "kana": "たうち ときひろ",
+            "profile": "東京都出身の俳優。fennec所属。ミュージカル『新テニスの王子様』シリーズ（松平親彦役）をはじめ、MANKAI STAGE『A3!』シリーズ（迫田ケン役）、RICE on STAGE「ラブ米」シリーズ（黒太閤役）、ミュージカル『刀剣乱舞』〜幕末天狼傳〜等の舞台作品を中心に出演している。また、『MANKAI MOVIE「A3!」』等の映像作品への出演経歴も持つ。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/toki_hiro8",
+              "official": "https://tauchi-tokihiro.bitfan.id/",
+              "instagram": "https://www.instagram.com/tokitokihiro/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:13:20.008797+00:00",
+            "updated_at": "2026-03-21T15:13:20.008797+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1992-04-18",
+            "height_cm": 175,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Tokyo. Affiliated with fennec. He primarily appears in stage works such as the musical \"The New Prince of Tennis\" series (as Chikahiko Matsudaira), the MANKAI STAGE \"A3!\" series (as Ken Sakoda), the RICE on STAGE \"Love Kome\" series (as Kurotaiko), and the musical \"Touken Ranbu\" ~Bakumatsu Tenrouden~. He also has experience appearing in film and television works such as \"MANKAI MOVIE 'A3!'\".",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "田内季宇",
+            "sourceActorUrl": "https://kira-hai.net/tauchi-tokihiro",
+            "role_name": "迫田ケン",
+            "cast_group": null,
+            "sourceAnnotation": "ヤクザ"
+          },
+          "sourceCreditKey": "02d780776d84089ea47d",
+          "sourceOrder": 12,
+          "rawSourceOrder": 12,
+          "billingOrder": 12,
+          "expectedNote": "役柄補足：ヤクザ。",
+          "expectedStarring": false,
+          "existingCast": null
+        },
+        {
+          "actor": {
+            "id": "523f6dd4-9c56-4b48-a264-463ebb52f068",
+            "slug": "taguchi-ryo",
+            "name": "田口 涼",
+            "kana": "たぐち りょう",
+            "profile": "京都府出身の俳優。スワロウ準所属。MANKAI STAGE『A3!』で劇場支配人・松川伊助を演じる。舞台『クジラの子らは砂上に歌う』ではニビ役を務める。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/ryo_tagu0218",
+              "official": "https://swallow-p.com/actor/taguchi-ryo/"
+            },
+            "gender": null,
+            "created_at": "2026-10-26T23:46:20.580937+00:00",
+            "updated_at": "2026-10-26T23:46:20.580937+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1989-02-18",
+            "height_cm": 175,
+            "blood_type": "AB",
+            "birthday_label": null,
+            "name_en": "Ryo Taguchi",
+            "profile_en": "An actor from Kyoto Prefecture and an associate member of Swallow. He plays theater manager Isuke Matsukawa in MANKAI STAGE A3! and Nibi in the stage adaptation of Children of the Whales.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "田口涼",
+            "sourceActorUrl": "https://kira-hai.net/taguchi-ryo",
+            "role_name": "松川伊助",
+            "cast_group": null,
+            "sourceAnnotation": "劇場支配人"
+          },
+          "sourceCreditKey": "b427e92f1af5625981f3",
+          "sourceOrder": 13,
+          "rawSourceOrder": 13,
+          "billingOrder": 13,
+          "expectedNote": "役柄補足：劇場支配人。",
+          "expectedStarring": false,
+          "existingCast": null
+        }
+      ],
+      "officialOrder": [
+        {
+          "name": "横田龍儀",
+          "role": "佐久間咲也",
+          "group": "春組"
+        },
+        {
+          "name": "牧島 輝",
+          "role": "碓氷真澄",
+          "group": "春組"
+        },
+        {
+          "name": "前川優希",
+          "role": "皆木 綴",
+          "group": "春組"
+        },
+        {
+          "name": "立石俊樹",
+          "role": "茅ヶ崎 至",
+          "group": "春組"
+        },
+        {
+          "name": "古谷大和",
+          "role": "シトロン",
+          "group": "春組"
+        },
+        {
+          "name": "宮崎 湧",
+          "role": "瑠璃川 幸",
+          "group": "夏組"
+        },
+        {
+          "name": "水江建太",
+          "role": "摂津万里",
+          "group": "秋組"
+        },
+        {
+          "name": "藤田 玲",
+          "role": "古市左京",
+          "group": "秋組"
+        },
+        {
+          "name": "荒牧慶彦",
+          "role": "月岡 紬",
+          "group": "冬組"
+        },
+        {
+          "name": "上田堪大",
+          "role": "雪白 東",
+          "group": "冬組"
+        },
+        {
+          "name": "笹森裕貴",
+          "role": "水野 茅",
+          "group": null
+        },
+        {
+          "name": "田内季宇",
+          "role": "迫田ケン",
+          "group": null
+        },
+        {
+          "name": "田口 涼",
+          "role": "松川伊助",
+          "group": null
+        }
+      ],
+      "officialMoreProfileSets": [
+        {
+          "name": "宮崎 湧",
+          "role": "瑠璃川 幸",
+          "label": "[夏組]"
+        },
+        {
+          "name": "水江建太",
+          "role": "摂津万里",
+          "label": "[秋組]"
+        },
+        {
+          "name": "藤田 玲",
+          "role": "古市左京",
+          "label": "[秋組]"
+        },
+        {
+          "name": "荒牧慶彦",
+          "role": "月岡 紬",
+          "label": "[冬組]"
+        },
+        {
+          "name": "上田堪大",
+          "role": "雪白 東",
+          "label": "[冬組]"
+        },
+        {
+          "name": "笹森裕貴",
+          "role": "水野 茅",
+          "label": ""
+        },
+        {
+          "name": "田内季宇",
+          "role": "迫田ケン",
+          "label": "[ヤクザ]"
+        },
+        {
+          "name": "田口 涼",
+          "role": "松川伊助",
+          "label": "[劇場支配人]"
+        }
+      ],
+      "schedules": [
+        {
+          "city": "東京",
+          "date": "2019/04/25 19:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/04/26 19:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/04/27 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2019/04/27 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/04/28 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2019/04/28 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/04/30 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2019/04/30 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/05/01 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2019/05/01 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/05/02 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/05/03 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/05/04 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2019/05/04 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/05/05 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2019/05/05 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/05/06 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2019/05/06 18:00"
+        },
+        {
+          "city": "大阪",
+          "date": "2019/05/10 19:00"
+        },
+        {
+          "city": "大阪",
+          "date": "2019/05/11 12:30"
+        },
+        {
+          "city": "大阪",
+          "date": "2019/05/11 18:00"
+        },
+        {
+          "city": "大阪",
+          "date": "2019/05/12 12:30"
+        },
+        {
+          "city": "大阪",
+          "date": "2019/05/12 18:00"
+        },
+        {
+          "city": "大阪",
+          "date": "2019/05/13 19:00"
+        },
+        {
+          "city": "大阪",
+          "date": "2019/05/14 13:00"
+        },
+        {
+          "city": "新潟",
+          "date": "2019/05/18 12:30"
+        },
+        {
+          "city": "新潟",
+          "date": "2019/05/18 18:00"
+        },
+        {
+          "city": "新潟",
+          "date": "2019/05/19 12:30"
+        },
+        {
+          "city": "新潟",
+          "date": "2019/05/19 18:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/05/23 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/05/24 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/05/25 12:30"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/05/25 18:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/05/26 12:30"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/05/26 18:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/05/28 13:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/05/28 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/05/29 13:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/05/29 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/05/30 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/05/31 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/06/01 12:30"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/06/01 18:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/06/02 12:30"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/06/02 18:00"
+        }
+      ],
+      "altSchedules": [
+        {
+          "city": "東京",
+          "date": "2019/04/25 19:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/04/26 19:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/04/27 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2019/04/27 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/04/28 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2019/04/28 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/04/30 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2019/04/30 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/05/01 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2019/05/01 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/05/02 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/05/03 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/05/04 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2019/05/04 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/05/05 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2019/05/05 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/05/06 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2019/05/06 18:00"
+        },
+        {
+          "city": "大阪",
+          "date": "2019/05/10 19:00"
+        },
+        {
+          "city": "大阪",
+          "date": "2019/05/11 12:30"
+        },
+        {
+          "city": "大阪",
+          "date": "2019/05/11 18:00"
+        },
+        {
+          "city": "大阪",
+          "date": "2019/05/12 12:00"
+        },
+        {
+          "city": "大阪",
+          "date": "2019/05/12 18:00"
+        },
+        {
+          "city": "大阪",
+          "date": "2019/05/13 19:00"
+        },
+        {
+          "city": "大阪",
+          "date": "2019/05/14 13:00"
+        },
+        {
+          "city": "新潟",
+          "date": "2019/05/18 12:30"
+        },
+        {
+          "city": "新潟",
+          "date": "2019/05/18 18:00"
+        },
+        {
+          "city": "新潟",
+          "date": "2019/05/19 12:30"
+        },
+        {
+          "city": "新潟",
+          "date": "2019/05/19 18:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/05/23 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/05/24 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/04/25 12:30"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/04/25 18:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/06/26 12:30"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/06/26 18:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/05/28 13:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/05/28 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/05/29 13:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/05/29 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/05/30 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/05/31 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/06/01 12:30"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/06/01 18:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/06/02 12:30"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/06/02 18:00"
+        }
+      ],
+      "producerSchedules": [
+        {
+          "city": "東京",
+          "date": "2019/04/25 19:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/04/26 19:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/04/27 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2019/04/27 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/04/28 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2019/04/28 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/04/30 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2019/04/30 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/05/01 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2019/05/01 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/05/02 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/05/03 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/05/04 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2019/05/04 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/05/05 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2019/05/05 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/05/06 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2019/05/06 18:00"
+        },
+        {
+          "city": "大阪",
+          "date": "2019/05/10 19:00"
+        },
+        {
+          "city": "大阪",
+          "date": "2019/05/11 12:30"
+        },
+        {
+          "city": "大阪",
+          "date": "2019/05/11 18:00"
+        },
+        {
+          "city": "大阪",
+          "date": "2019/05/12 12:30"
+        },
+        {
+          "city": "大阪",
+          "date": "2019/05/12 18:00"
+        },
+        {
+          "city": "大阪",
+          "date": "2019/05/13 19:00"
+        },
+        {
+          "city": "大阪",
+          "date": "2019/05/14 13:00"
+        },
+        {
+          "city": "新潟",
+          "date": "2019/05/18 12:30"
+        },
+        {
+          "city": "新潟",
+          "date": "2019/05/18 18:00"
+        },
+        {
+          "city": "新潟",
+          "date": "2019/05/19 12:30"
+        },
+        {
+          "city": "新潟",
+          "date": "2019/05/19 18:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/05/23 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/05/24 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/05/25 12:30"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/05/25 18:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/05/26 12:30"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/05/26 18:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/05/28 13:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/05/28 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/05/29 13:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/05/29 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/05/30 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/05/31 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/06/01 12:30"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/06/01 18:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/06/02 12:30"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/06/02 18:00"
+        }
+      ],
+      "scheduleCorrections": [
+        {
+          "before": {
+            "city": "大阪",
+            "date": "2019/05/12 12:00"
+          },
+          "after": {
+            "city": "大阪",
+            "date": "2019/05/12 12:30"
+          }
+        },
+        {
+          "before": {
+            "city": "東京凱旋",
+            "date": "2019/04/25 12:30"
+          },
+          "after": {
+            "city": "東京凱旋",
+            "date": "2019/05/25 12:30"
+          }
+        },
+        {
+          "before": {
+            "city": "東京凱旋",
+            "date": "2019/04/25 18:00"
+          },
+          "after": {
+            "city": "東京凱旋",
+            "date": "2019/05/25 18:00"
+          }
+        },
+        {
+          "before": {
+            "city": "東京凱旋",
+            "date": "2019/06/26 12:30"
+          },
+          "after": {
+            "city": "東京凱旋",
+            "date": "2019/05/26 12:30"
+          }
+        },
+        {
+          "before": {
+            "city": "東京凱旋",
+            "date": "2019/06/26 18:00"
+          },
+          "after": {
+            "city": "東京凱旋",
+            "date": "2019/05/26 18:00"
+          }
+        }
+      ],
+      "staff": [
+        [
+          "原作",
+          [
+            "イケメン役者育成ゲーム『A3!（エースリー）』（リベル・エンタテインメント）"
+          ]
+        ],
+        [
+          "演出",
+          [
+            "松崎史也"
+          ]
+        ],
+        [
+          "脚本",
+          [
+            "亀田真二郎（東京パチプロデュース）"
+          ]
+        ],
+        [
+          "音楽",
+          [
+            "Yu（vague）"
+          ]
+        ],
+        [
+          "振付",
+          [
+            "梅棒"
+          ]
+        ],
+        [
+          "協力",
+          [
+            "一般社団法人 日本2.5次元ミュージカル協会"
+          ]
+        ],
+        [
+          "協賛",
+          [
+            "ファミリーマート"
+          ]
+        ],
+        [
+          "主催",
+          [
+            "MANKAI STAGE『A3!』製作委員会（ネルケプランニング、ポニーキャニオン、リベル・エンタテインメント）"
+          ]
+        ]
+      ],
+      "creditOnly": [],
+      "legacyCandidates": [],
+      "legacyUpgrades": [],
+      "legacyKept": [],
+      "transformations": [
+        {
+          "type": "group_bilingual_normalization",
+          "before": "SPRING TROUPE 春組",
+          "after": "春組",
+          "evidence": [
+            {
+              "url": "https://www.mankai-stage.jp/archive/spring2019/cast/index.html",
+              "checkedAt": "2026-10-27T01:03:18.353Z",
+              "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+            }
+          ]
+        },
+        {
+          "type": "group_carry_forward_correction",
+          "rows": [
+            {
+              "sourceActorName": "笹森裕貴",
+              "sourceActorUrl": "https://kira-hai.net/sasamori-hiroki",
+              "role_name": "水野茅",
+              "cast_group": "冬組"
+            },
+            {
+              "sourceActorName": "田内季宇",
+              "sourceActorUrl": "https://kira-hai.net/tauchi-tokihiro",
+              "role_name": "迫田ケン(ヤクザ)",
+              "cast_group": "冬組"
+            },
+            {
+              "sourceActorName": "田口涼",
+              "sourceActorUrl": "https://kira-hai.net/taguchi-ryo",
+              "role_name": "松川伊助(劇場支配人)",
+              "cast_group": "冬組"
+            }
+          ],
+          "evidence": [
+            {
+              "url": "https://www.mankai-stage.jp/archive/spring2019/cast/more.html",
+              "checkedAt": "2026-10-27T01:04:46.772Z",
+              "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+            },
+            {
+              "url": "https://www.mankai-stage.jp/archive/spring2019/",
+              "checkedAt": "2026-10-27T01:03:18.315Z",
+              "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+            }
+          ]
+        },
+        {
+          "type": "role_annotation_to_note",
+          "rows": [
+            {
+              "sourceActorName": "田内季宇",
+              "sourceActorUrl": "https://kira-hai.net/tauchi-tokihiro",
+              "role_name": "迫田ケン",
+              "cast_group": null,
+              "sourceAnnotation": "ヤクザ"
+            },
+            {
+              "sourceActorName": "田口涼",
+              "sourceActorUrl": "https://kira-hai.net/taguchi-ryo",
+              "role_name": "松川伊助",
+              "cast_group": null,
+              "sourceAnnotation": "劇場支配人"
+            }
+          ],
+          "evidence": [
+            {
+              "url": "https://www.mankai-stage.jp/archive/spring2019/cast/more.html",
+              "checkedAt": "2026-10-27T01:04:46.772Z",
+              "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+            },
+            {
+              "url": "https://kira-hai.net/a3_2019-2",
+              "checkedAt": "2026-10-27T01:03:18.420Z",
+              "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+            }
+          ]
+        },
+        {
+          "type": "schedule_alt_typo_correction",
+          "corrections": [
+            {
+              "before": {
+                "city": "大阪",
+                "date": "2019/05/12 12:00"
+              },
+              "after": {
+                "city": "大阪",
+                "date": "2019/05/12 12:30"
+              }
+            },
+            {
+              "before": {
+                "city": "東京凱旋",
+                "date": "2019/04/25 12:30"
+              },
+              "after": {
+                "city": "東京凱旋",
+                "date": "2019/05/25 12:30"
+              }
+            },
+            {
+              "before": {
+                "city": "東京凱旋",
+                "date": "2019/04/25 18:00"
+              },
+              "after": {
+                "city": "東京凱旋",
+                "date": "2019/05/25 18:00"
+              }
+            },
+            {
+              "before": {
+                "city": "東京凱旋",
+                "date": "2019/06/26 12:30"
+              },
+              "after": {
+                "city": "東京凱旋",
+                "date": "2019/05/26 12:30"
+              }
+            },
+            {
+              "before": {
+                "city": "東京凱旋",
+                "date": "2019/06/26 18:00"
+              },
+              "after": {
+                "city": "東京凱旋",
+                "date": "2019/05/26 18:00"
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "url": "https://www.mankai-stage.jp/archive/spring2019/ticket/index.html",
+              "checkedAt": "2026-10-27T01:03:18.336Z",
+              "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+            },
+            {
+              "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_02.png",
+              "checkedAt": "2026-10-27T01:04:47.036Z",
+              "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+            },
+            {
+              "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_04.png",
+              "checkedAt": "2026-10-27T01:04:47.170Z",
+              "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+            },
+            {
+              "url": "https://www.nelke.co.jp/stage/mankai-stage2019spring/index.html",
+              "checkedAt": "2026-10-27T01:05:25.735Z",
+              "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+            }
+          ]
+        }
+      ],
+      "exceptions": [
+        "主要13役すべて既存人物を再利用。姓名半角スペース・性別・プロフィール・英字・slug等を全項目保全。新規人物0。",
+        "春組5・夏組1・秋組2・冬組2と関係者3。水野茅は公式に組表示なし。迫田ケンと松川伊助のヤクザ・劇場支配人は所属組ではなく役柄補足としてnoteへ。",
+        "春組のSPRING TROUPE春組は春組へ統一。元表記・元役名・元区分は候補証跡と原資料へ保持する。前作全19役を今作へ持ち越さず当該公式13人のみ保存。",
+        "公式altの凱旋4/25・6/26を画像と主催者表の5/25・5/26へ訂正し、大阪5/12昼12:00も画像・表の12:30を採用。45回の総数だけで正しいと判断しない。",
+        "東京18大阪7新潟4凱旋16の45公演。4/29・5/27休演、初期東京の夜18/19時・大阪最終日13時・凱旋平日昼13時などの変則を原日時へ保持。",
+        "今作は予定150分・途中休憩あり。休憩分数は未確認。2019/6/2打ち上げ配信、映画館上映・後日のFilm Collectionは舞台公演に加えない。",
+        "公式intro・原作元発表を基に春組第2回と第3回公演の短い日英紹介。登場人物の未掲載のエピソードや結末は足さない。",
+        "公式スタッフにない前作主題歌クレジットを自動継承しない。協賛など当該8区分に日程・上演時間を加えた10区分。",
+        "既登録3作品36配役と人物・シリーズ・旧候補全項目を保全。現在配信は別工程でvod空欄。SUMMER 2019・シリーズ説明・人物属性総合監査・細かな英訳は後続。"
+      ]
+    }
+  ],
+  "keptPlays": [
+    {
+      "id": "3a9939c9-ee4c-42e5-a545-a0d0a9c1c46b",
+      "slug": "a3_2019-3",
+      "title": "MANKAI STAGE『A3!』～SUMMER 2019～",
+      "franchise_id": "03404164-26f0-476f-92e9-5b438984fe0d",
+      "summary": null,
+      "period": "2019年",
+      "venue": null,
+      "vod": {},
+      "genre": null,
+      "created_at": "2026-04-30T18:29:43.324193+00:00",
+      "updated_at": "2026-04-30T18:29:43.324193+00:00",
+      "tags": [],
+      "credits": null,
+      "related_franchise_ids": [],
+      "summary_en": null,
+      "title_en": null
+    },
+    {
+      "id": "3b5f34b5-40a1-45fe-bfcf-d70060695251",
+      "slug": "ace-stage-ss",
+      "title": "MANKAI STAGE『A3!』～SPRING & SUMMER 2018～",
+      "franchise_id": "03404164-26f0-476f-92e9-5b438984fe0d",
+      "summary": "イケメン役者育成ゲーム『A3!』の舞台化シリーズ第一弾。借金まみれの劇団「MANKAIカンパニー」を立て直すため、春組と夏組が奮闘する。",
+      "period": "2018年6月28日〜11月4日",
+      "venue": "東京・東京凱旋：天王洲 銀河劇場／京都：京都劇場",
+      "vod": {},
+      "genre": "comedy",
+      "created_at": "2025-12-13T05:12:12.983557+00:00",
+      "updated_at": "2026-10-26T23:46:20.580937+00:00",
+      "tags": [
+        "アイドル",
+        "コメディ",
+        "育成"
+      ],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "イケメン役者育成ゲーム『A3!（エースリー）』（リベル・エンタテインメント）"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "演出",
+          "names": [
+            "松崎史也"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "脚本",
+          "names": [
+            "亀田真二郎（東京パチプロデュース）"
+          ],
+          "is_core": true,
+          "sort_order": 3
+        },
+        {
+          "role": "音楽",
+          "names": [
+            "Yu（vague）"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "振付",
+          "names": [
+            "梅棒"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "メインテーマ制作",
+          "names": [
+            "大石昌良"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        },
+        {
+          "role": "協力",
+          "names": [
+            "一般社団法人 日本2.5次元ミュージカル協会"
+          ],
+          "is_core": false,
+          "sort_order": 7
+        },
+        {
+          "role": "主催",
+          "names": [
+            "MANKAI STAGE『A3!』製作委員会（ネルケプランニング、ポニーキャニオン、リベル・エンタテインメント）"
+          ],
+          "is_core": false,
+          "sort_order": 8
+        },
+        {
+          "role": "公演日程",
+          "names": [
+            "東京：2018年6月28日〜7月8日（天王洲 銀河劇場）・全16公演、7月2日休演",
+            "京都：2018年7月13日〜16日（京都劇場）・全7公演",
+            "東京凱旋：2018年10月26日〜11月4日（天王洲 銀河劇場）・全15公演、10月29日休演"
+          ],
+          "is_core": false,
+          "sort_order": 9
+        },
+        {
+          "role": "上演時間（予定）",
+          "names": [
+            "約2時間35分（途中休憩あり・休憩分数未確認）"
+          ],
+          "is_core": false,
+          "sort_order": 10
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "The first stage adaptation of the actor-training game A3!. The Spring and Summer Troupes work to rebuild the debt-ridden MANKAI Company.",
+      "title_en": "MANKAI STAGE A3! ~SPRING & SUMMER 2018~"
+    },
+    {
+      "id": "a1377573-d4aa-4ffe-b89e-7221614dbb7e",
+      "slug": "ace-stage-aw",
+      "title": "MANKAI STAGE『A3!』～AUTUMN & WINTER 2019～",
+      "franchise_id": "03404164-26f0-476f-92e9-5b438984fe0d",
+      "summary": "『A3!』舞台化シリーズ第二弾。秋組と冬組の物語を描く。",
+      "period": "2019年1月31日〜3月24日",
+      "venue": "東京：日本青年館ホール／山口：下関市民会館 大ホール／大阪：梅田芸術劇場 メインホール／東京凱旋：天王洲 銀河劇場",
+      "vod": {},
+      "genre": "comedy",
+      "created_at": "2025-12-13T05:12:12.983557+00:00",
+      "updated_at": "2026-10-27T00:12:14.694225+00:00",
+      "tags": [
+        "アイドル",
+        "コメディ",
+        "育成"
+      ],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "イケメン役者育成ゲーム『A3!（エースリー）』（リベル・エンタテインメント）"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "演出",
+          "names": [
+            "松崎史也"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "脚本",
+          "names": [
+            "亀田真二郎（東京パチプロデュース）"
+          ],
+          "is_core": true,
+          "sort_order": 3
+        },
+        {
+          "role": "音楽",
+          "names": [
+            "Yu（vague）"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "振付",
+          "names": [
+            "梅棒"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "メインテーマ「The Show Must Go On!」作詞・作曲・編曲",
+          "names": [
+            "大石昌良"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        },
+        {
+          "role": "協力",
+          "names": [
+            "一般社団法人 日本2.5次元ミュージカル協会"
+          ],
+          "is_core": false,
+          "sort_order": 7
+        },
+        {
+          "role": "協賛",
+          "names": [
+            "ファミリーマート"
+          ],
+          "is_core": false,
+          "sort_order": 8
+        },
+        {
+          "role": "主催",
+          "names": [
+            "MANKAI STAGE『A3!』製作委員会（ネルケプランニング、ポニーキャニオン、リベル・エンタテインメント）"
+          ],
+          "is_core": false,
+          "sort_order": 9
+        },
+        {
+          "role": "公演日程",
+          "names": [
+            "東京：2019年1月31日〜2月11日（日本青年館ホール）・全17公演、2月5日休演",
+            "山口：2019年2月23日〜24日（下関市民会館 大ホール）・全3公演",
+            "大阪：2019年2月27日〜3月3日（梅田芸術劇場 メインホール）・全8公演",
+            "東京凱旋：2019年3月15日〜24日（天王洲 銀河劇場）・全14公演、3月18日休演"
+          ],
+          "is_core": false,
+          "sort_order": 10
+        },
+        {
+          "role": "上演時間（予定）",
+          "names": [
+            "約3時間10分（途中休憩あり・休憩分数未確認）"
+          ],
+          "is_core": false,
+          "sort_order": 11
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "The second stage production based on A3!, following the stories of the Autumn and Winter Troupes.",
+      "title_en": "MANKAI STAGE A3! ~AUTUMN & WINTER 2019~"
+    }
+  ],
+  "evidence": {
+    "links": [
+      {
+        "url": "https://kira-hai.net/a3_2019-2",
+        "checkedAt": "2026-10-27T01:03:18.420Z",
+        "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+      },
+      {
+        "url": "https://www.mankai-stage.jp/archive/spring2019/",
+        "checkedAt": "2026-10-27T01:03:18.315Z",
+        "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+      },
+      {
+        "url": "https://www.mankai-stage.jp/archive/spring2019/cast/index.html",
+        "checkedAt": "2026-10-27T01:03:18.353Z",
+        "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+      },
+      {
+        "url": "https://www.mankai-stage.jp/archive/spring2019/cast/more.html",
+        "checkedAt": "2026-10-27T01:04:46.772Z",
+        "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+      },
+      {
+        "url": "https://www.mankai-stage.jp/archive/spring2019/ticket/index.html",
+        "checkedAt": "2026-10-27T01:03:18.336Z",
+        "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+      },
+      {
+        "url": "https://www.mankai-stage.jp/archive/spring2019/guide/index.html",
+        "checkedAt": "2026-10-27T01:03:18.371Z",
+        "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+      },
+      {
+        "url": "https://www.mankai-stage.jp/archive/spring2019/introduction/index.html",
+        "checkedAt": "2026-10-27T01:03:18.276Z",
+        "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+      },
+      {
+        "url": "https://www.mankai-stage.jp/archive/spring2019/news/index.html",
+        "checkedAt": "2026-10-27T01:03:18.396Z",
+        "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+      },
+      {
+        "url": "https://www.nelke.co.jp/stage/mankai-stage2019spring/index.html",
+        "checkedAt": "2026-10-27T01:05:25.735Z",
+        "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+      },
+      {
+        "url": "https://liberent.co.jp/news/2019/04/25/stage_spring/",
+        "checkedAt": "2026-10-27T01:05:26.002Z",
+        "note": "取得原文・SHA256を保存。当該13配役・組・役柄補足・2019年の日程・2つの劇中劇を照合。画像altの誤記を修正済みと誤認しない。"
+      },
+      {
+        "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_01.png",
+        "checkedAt": "2026-10-27T01:04:46.866Z",
+        "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+      },
+      {
+        "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_02.png",
+        "checkedAt": "2026-10-27T01:04:47.036Z",
+        "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+      },
+      {
+        "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_03.png",
+        "checkedAt": "2026-10-27T01:04:47.112Z",
+        "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+      },
+      {
+        "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_04.png",
+        "checkedAt": "2026-10-27T01:04:47.170Z",
+        "note": "公式日程画像を目視し主催者の日程表と照合。画像原本・SHA256を保存。"
+      }
+    ],
+    "sources": [
+      {
+        "label": "kira",
+        "url": "https://kira-hai.net/a3_2019-2",
+        "status": 200,
+        "checkedAt": "2026-10-27T01:03:18.420Z",
+        "sha256": "46d26fac393f07829e20b41a18fb7d9156aa69ec1a4e9d8223d2bb8c16a3166b",
+        "bytes": 55421
+      },
+      {
+        "label": "official",
+        "url": "https://www.mankai-stage.jp/archive/spring2019/",
+        "status": 200,
+        "checkedAt": "2026-10-27T01:03:18.315Z",
+        "sha256": "d0cbef8a130e38bd3227c3edc78747a401bb0796806d265800671bd50279d1f9",
+        "bytes": 15876
+      },
+      {
+        "label": "cast",
+        "url": "https://www.mankai-stage.jp/archive/spring2019/cast/index.html",
+        "status": 200,
+        "checkedAt": "2026-10-27T01:03:18.353Z",
+        "sha256": "be054493ed303d695890f0fd876f60334b6c71168c44796e5e54ab161241e700",
+        "bytes": 17166
+      },
+      {
+        "label": "ticket",
+        "url": "https://www.mankai-stage.jp/archive/spring2019/ticket/index.html",
+        "status": 200,
+        "checkedAt": "2026-10-27T01:03:18.336Z",
+        "sha256": "a9a302342f66aa5eff0462697a73b3aac24040f171fce87f15f9dee612553753",
+        "bytes": 21316
+      },
+      {
+        "label": "guide",
+        "url": "https://www.mankai-stage.jp/archive/spring2019/guide/index.html",
+        "status": 200,
+        "checkedAt": "2026-10-27T01:03:18.371Z",
+        "sha256": "113828a98c0181a54e0d425b4adb8f0718315acdd8d0f5af2431764a7c1a7ec2",
+        "bytes": 52442
+      },
+      {
+        "label": "intro",
+        "url": "https://www.mankai-stage.jp/archive/spring2019/introduction/index.html",
+        "status": 200,
+        "checkedAt": "2026-10-27T01:03:18.276Z",
+        "sha256": "06ce000bec588f558a3845d522756656de5195dd089a2ddac23a1b5710886af5",
+        "bytes": 7609
+      },
+      {
+        "label": "news",
+        "url": "https://www.mankai-stage.jp/archive/spring2019/news/index.html",
+        "status": 200,
+        "checkedAt": "2026-10-27T01:03:18.396Z",
+        "sha256": "044c6e10b0c02046fd20700735e1e8b8b1ea8b6bd7e3090417156e994fa58b98",
+        "bytes": 67729
+      },
+      {
+        "label": "changelog",
+        "url": "https://supabase.com/changelog.md",
+        "status": 200,
+        "checkedAt": "2026-10-27T01:03:18.436Z",
+        "sha256": "45528009025b8ad8487ccb73f7c769b66d4b0e7aa4560157047899dcb5b5a006",
+        "bytes": 102641
+      },
+      {
+        "label": "castMore",
+        "url": "https://www.mankai-stage.jp/archive/spring2019/cast/more.html",
+        "status": 200,
+        "checkedAt": "2026-10-27T01:04:46.772Z",
+        "sha256": "4e692435bb3542b4954742f52dad8ab8d4dc0082a4a615f5c4fc12be019d616f",
+        "bytes": 22515
+      },
+      {
+        "label": "scheduleImage01",
+        "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_01.png",
+        "status": 200,
+        "checkedAt": "2026-10-27T01:04:46.866Z",
+        "sha256": "b23300d9fabb2c1077cbc22bc618f34a41706cb16ec931e072d4676404fc7f6e",
+        "bytes": 27389
+      },
+      {
+        "label": "scheduleImage02",
+        "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_02.png",
+        "status": 200,
+        "checkedAt": "2026-10-27T01:04:47.036Z",
+        "sha256": "41928644ed222d05d2ef4f0c4e4857b3d75104aee0a46bfb649c971b328d8a9e",
+        "bytes": 7146
+      },
+      {
+        "label": "scheduleImage03",
+        "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_03.png",
+        "status": 200,
+        "checkedAt": "2026-10-27T01:04:47.112Z",
+        "sha256": "4cd79b3373b66f9ef62f2986953284af85c5d2aa9954c7cf956795adba7a205b",
+        "bytes": 4035
+      },
+      {
+        "label": "scheduleImage04",
+        "url": "https://www.mankai-stage.jp/archive/spring2019/assets/img/ticket/schedule_04.png",
+        "status": 200,
+        "checkedAt": "2026-10-27T01:04:47.170Z",
+        "sha256": "8fa98a3d15469f32b8d6c8766750481c1a2957f46df9694159938a7f0069dba9",
+        "bytes": 10621
+      },
+      {
+        "label": "producer",
+        "url": "https://www.nelke.co.jp/stage/mankai-stage2019spring/index.html",
+        "status": 200,
+        "checkedAt": "2026-10-27T01:05:25.735Z",
+        "sha256": "ef2c9e38cddc887a5b7fcbd9e6346c4a60fb38b875b029705629ebe422dcb2f0",
+        "bytes": 46685
+      },
+      {
+        "label": "original",
+        "url": "https://liberent.co.jp/news/2019/04/25/stage_spring/",
+        "status": 200,
+        "checkedAt": "2026-10-27T01:05:26.002Z",
+        "sha256": "06df04ee20f1e7375980fe534d785e4a1c623e153af93c960b7e3f7ce1bfa1f5",
+        "bytes": 19639
+      }
+    ],
+    "unresolved": [
+      "SUMMER 2019以降・シリーズ説明・現行配信・人物属性総合監査・細部英訳は後続。"
+    ],
+    "notes": [
+      "既存候補保存と採用RPCを利用。新規作品1・13配役、全13人物再利用。スキーマ・RLS・アプリ変更なし。",
+      "Supabase changelogは前回と同SHA256。当該DML/RPCへの新たな関連破壊的変更なし。"
+    ]
+  },
+  "requestKey": "09957315126c26f092e6d1b9e45d112920d0b9f9203b433aba9c10c473868e24",
+  "verification": {
+    "passed": true,
+    "requestKey": "09957315126c26f092e6d1b9e45d112920d0b9f9203b433aba9c10c473868e24",
+    "changes": {
+      "actors": {
+        "before": 1170,
+        "after": 1170,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "plays": {
+        "before": 420,
+        "after": 421,
+        "added": 1,
+        "modified": 0,
+        "deleted": 0
+      },
+      "franchises": {
+        "before": 198,
+        "after": 198,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "casts": {
+        "before": 4345,
+        "after": 4358,
+        "added": 13,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_actors": {
+        "before": 1701,
+        "after": 1701,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_cast_candidates": {
+        "before": 3697,
+        "after": 3710,
+        "added": 13,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_import_logs": {
+        "before": 6045,
+        "after": 6074,
+        "added": 29,
+        "modified": 0,
+        "deleted": 0
+      },
+      "actor_identity_sources": {
+        "before": 516,
+        "after": 516,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      }
+    },
+    "newActors": 0,
+    "reusedActors": 13,
+    "newPlays": 1,
+    "newCasts": 13,
+    "newCandidates": 13,
+    "noExistingUpdates": true,
+    "noDeletions": true,
+    "scheduleCount": 45,
+    "tokyoPerformances": 18,
+    "osakaPerformances": 7,
+    "niigataPerformances": 4,
+    "tokyoReturnPerformances": 16,
+    "correctedAltEntries": 5,
+    "scheduleImageAndProducerTableAgree": true,
+    "creditCategories": 10,
+    "seriesWorks": 4,
+    "seriesCastRows": 49,
+    "seriesActors": 26,
+    "totals": {
+      "actors": 1170,
+      "plays": 421,
+      "casts": 4358
+    }
+  },
+  "publicVerification": {
+    "passed": true,
+    "pages": 60,
+    "reviewedWorks": 3,
+    "reviewedCastRows": 46,
+    "targetCastRows": 13,
+    "newActors": 0,
+    "seriesWorks": 4,
+    "seriesCastRows": 49,
+    "scheduleCount": 45,
+    "results": [
+      {
+        "path": "/plays/ace-stage-ss",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/series/a3",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/a3_2019-2",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/ace-stage-aw",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/yokota-ryugi",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/maekawa-yuki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/tateishi-toshiki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/makishima-hikaru",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/furuya-yamato",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/miyazaki-yu",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/fujita-ray",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/aramaki-yoshihiko",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/mizue-kenta",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/ueda-kandai",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/tauchi-tokihiro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/taguchi-ryo",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/sasamori-hiroki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/noguchi-jun",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/jinnai-sho",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/honda-reo",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/akazawa-tomoru",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/nakamura-taro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/takiguchi-yukihiro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/akazawa-ryotaro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/inagaki-seiya",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/kitazono-ryo",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/ueda-keisuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/izaki-ryujiro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/tanaka-ryosei",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/kawai-ryunosuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/series/a3",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/a3_2019-2",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/yokota-ryugi",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/ace-stage-aw",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/ace-stage-ss",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/makishima-hikaru",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/maekawa-yuki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/tateishi-toshiki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/furuya-yamato",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/miyazaki-yu",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/mizue-kenta",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/fujita-ray",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/aramaki-yoshihiko",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/tauchi-tokihiro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/sasamori-hiroki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/ueda-kandai",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/jinnai-sho",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/taguchi-ryo",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/noguchi-jun",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/honda-reo",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/akazawa-tomoru",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/takiguchi-yukihiro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/inagaki-seiya",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/nakamura-taro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/akazawa-ryotaro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/kitazono-ryo",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/tanaka-ryosei",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/ueda-keisuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/izaki-ryujiro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/kawai-ryunosuke",
+        "passed": true,
+        "status": 200
+      }
+    ]
+  },
+  "searchVerification": {
+    "passed": true,
+    "checks": 52,
+    "spaceAndNoSpace": true,
+    "genderAttributesUnchanged": true,
+    "results": [
+      {
+        "path": "/actors?q=%E7%89%A7%E5%B3%B6%E8%BC%9D",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%89%A7%E5%B3%B6+%E8%BC%9D",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%A8%AA%E7%94%B0%E9%BE%8D%E5%84%80",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%A8%AA%E7%94%B0+%E9%BE%8D%E5%84%80",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%89%8D%E5%B7%9D+%E5%84%AA%E5%B8%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%89%8D%E5%B7%9D%E5%84%AA%E5%B8%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%AB%8B%E7%9F%B3%E4%BF%8A%E6%A8%B9",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%AB%8B%E7%9F%B3+%E4%BF%8A%E6%A8%B9",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%8F%A4%E8%B0%B7+%E5%A4%A7%E5%92%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%8F%A4%E8%B0%B7%E5%A4%A7%E5%92%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%AE%AE%E5%B4%8E+%E6%B9%A7",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%AE%AE%E5%B4%8E%E6%B9%A7",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%B0%B4%E6%B1%9F+%E5%BB%BA%E5%A4%AA",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%B0%B4%E6%B1%9F%E5%BB%BA%E5%A4%AA",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E8%97%A4%E7%94%B0+%E7%8E%B2",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E8%97%A4%E7%94%B0%E7%8E%B2",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E8%8D%92%E7%89%A7+%E6%85%B6%E5%BD%A6",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E4%B8%8A%E7%94%B0+%E5%A0%AA%E5%A4%A7",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E8%8D%92%E7%89%A7%E6%85%B6%E5%BD%A6",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E4%B8%8A%E7%94%B0%E5%A0%AA%E5%A4%A7",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%AC%B9%E6%A3%AE%E8%A3%95%E8%B2%B4",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%AC%B9%E6%A3%AE+%E8%A3%95%E8%B2%B4",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%94%B0%E5%86%85+%E5%AD%A3%E5%AE%87",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%94%B0%E5%86%85%E5%AD%A3%E5%AE%87",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%94%B0%E5%8F%A3%E6%B6%BC",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%94%B0%E5%8F%A3+%E6%B6%BC",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%A8%AA%E7%94%B0+%E9%BE%8D%E5%84%80",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%A8%AA%E7%94%B0%E9%BE%8D%E5%84%80",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%89%A7%E5%B3%B6+%E8%BC%9D",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%89%A7%E5%B3%B6%E8%BC%9D",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%89%8D%E5%B7%9D%E5%84%AA%E5%B8%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%89%8D%E5%B7%9D+%E5%84%AA%E5%B8%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%AB%8B%E7%9F%B3+%E4%BF%8A%E6%A8%B9",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%AB%8B%E7%9F%B3%E4%BF%8A%E6%A8%B9",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%8F%A4%E8%B0%B7+%E5%A4%A7%E5%92%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%8F%A4%E8%B0%B7%E5%A4%A7%E5%92%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%AE%AE%E5%B4%8E+%E6%B9%A7",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%AE%AE%E5%B4%8E%E6%B9%A7",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%B0%B4%E6%B1%9F+%E5%BB%BA%E5%A4%AA",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E8%97%A4%E7%94%B0+%E7%8E%B2",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%B0%B4%E6%B1%9F%E5%BB%BA%E5%A4%AA",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E8%97%A4%E7%94%B0%E7%8E%B2",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E8%8D%92%E7%89%A7+%E6%85%B6%E5%BD%A6",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E8%8D%92%E7%89%A7%E6%85%B6%E5%BD%A6",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E4%B8%8A%E7%94%B0+%E5%A0%AA%E5%A4%A7",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%AC%B9%E6%A3%AE+%E8%A3%95%E8%B2%B4",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E4%B8%8A%E7%94%B0%E5%A0%AA%E5%A4%A7",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%AC%B9%E6%A3%AE%E8%A3%95%E8%B2%B4",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%94%B0%E5%86%85+%E5%AD%A3%E5%AE%87",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%94%B0%E5%86%85%E5%AD%A3%E5%AE%87",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%94%B0%E5%8F%A3+%E6%B6%BC",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%94%B0%E5%8F%A3%E6%B6%BC",
+        "status": 200,
+        "passed": true
+      }
+    ]
+  },
+  "replayVerification": {
+    "passed": true,
+    "tables": {
+      "actors": {
+        "rows": 1170,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "plays": {
+        "rows": 421,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "franchises": {
+        "rows": 198,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "casts": {
+        "rows": 4358,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_actors": {
+        "rows": 1701,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_cast_candidates": {
+        "rows": 3710,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_import_logs": {
+        "rows": 6074,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "actor_identity_sources": {
+        "rows": 516,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      }
+    }
+  },
+  "sourceValidation": {
+    "officialThirteenRolesConfirmed": true,
+    "allActorsReused": true,
+    "springMembers": 5,
+    "summerMembers": 1,
+    "autumnMembers": 2,
+    "winterMembers": 2,
+    "otherCharacters": 3,
+    "springBilingualLabelNormalized": true,
+    "groupCarryForwardCorrected": true,
+    "mizunoChikayaHasNoTroupeLabelInOfficial": true,
+    "roleAnnotationsRetainedAsNotes": 2,
+    "scheduleImagesVisuallyChecked": true,
+    "officialImageAndProducerTablesAgree": true,
+    "correctedAltEntries": 5,
+    "scheduleCount": 45,
+    "tokyoScheduleCount": 18,
+    "osakaScheduleCount": 7,
+    "niigataScheduleCount": 4,
+    "tokyoReturnScheduleCount": 16,
+    "plannedRuntimeMinutes": 150,
+    "intermissionMinutes": null,
+    "twoInStoryProductionsConfirmed": true,
+    "oldRowsPreserved": true,
+    "noExistingUpdates": true,
+    "noDeletions": true
+  },
+  "nextWork": {
+    "title": "MANKAI STAGE『A3!』～SUMMER 2019～",
+    "slug": "a3_2019-3",
+    "sourceUrl": "https://kira-hai.net/a3_2019-3",
+    "year": 2019,
+    "status": "existing_incomplete",
+    "note": "既存作品1件3配役は今回未変更。次の作品単位で役名補足・配役・全5地域日程を当該公式から確認する。"
+  },
+  "verificationScope": "新規SPRING 2019を13配役で登録し全13人物を再利用。春組の日英併記を春組へ統一し、末尾水野茅・迫田ケン・松川伊助の冬組持ち越しを公式個別プロフィールで訂正。ヤクザ・劇場支配人の補足2件をnoteへ保存。東京18大阪7新潟4凱旋16の45回、公式altの5/25・26誤月と大阪5/12開演誤記の5日時を画像・主催者7表で訂正。予定150分・途中休憩あり、2つの劇中劇に基づく日英紹介・当該スタッフ10区分を保存。8テーブル既存全行が全項目一致、削除0・同一SQL再実行0変更。前作2本を含む3作品46配役の日英60ページ・姓名検索52件を確認。シリーズ現状4作品49配役26人物、SUMMER 2019の3配役・シリーズ説明・現在配信・人物属性総合監査・細かな英訳は後続。"
+}
