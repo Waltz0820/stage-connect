@@ -22,7 +22,7 @@
 .hero h1 > span { white-space: nowrap; }
 .heroIntro { position: relative; font-size: 13px; line-height: 1.9; color: var(--hub-muted) !important; }
 .heroTexture { position: absolute; z-index: -1; inset: 0; pointer-events: none; overflow: hidden; }
-.heroTexture > span { position: absolute; top: 61px; left: 22%; font: 800 130px/1 Arial, sans-serif; letter-spacing: -.055em; color: transparent; -webkit-text-stroke: 1px #cfe6f8; rotate: -16deg; }
+.heroTexture > span { position: absolute; top: 96px; left: 50%; translate: -50% 0; font: 800 clamp(66px,23vw,115px)/1 Arial, sans-serif; letter-spacing: -.055em; color: transparent; -webkit-text-stroke: 1px #cfe6f8; rotate: -16deg; }
 .archiveStamp { display: none; }
 .section { padding: 40px 0; }
 .firstChoice { padding-top: 26px; padding-bottom: 20px; }
@@ -94,7 +94,7 @@
   .hero :global(.breadcrumbs) { padding-block: 23px 32px; }
   .hero h1 { margin-block: 22px; font-size: clamp(54px,6vw,74px); line-height: 1.26; }
   .heroIntro { font-size: 14px; line-height: 1.9; }
-  .heroTexture > span { font-size: clamp(180px,23vw,330px); top: 95px; left: 58%; }
+  .heroTexture > span { font-size: clamp(180px,23vw,330px); top: 95px; left: 58%; translate: none; }
   .section { padding-block: 56px; }
   .firstChoice { padding-block: 32px 24px; }
   .sectionHeading { flex-wrap: nowrap; margin-bottom: 24px; }
