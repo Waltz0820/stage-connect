@@ -1,0 +1,3032 @@
+{
+  "version": 1,
+  "batchId": "a3-live-series-audit-20261027-01",
+  "checkedAt": "2026-10-27T14:27:22.120Z",
+  "franchise": {
+    "id": "d8d36e4f-9a0d-4a91-aac3-e6b8f24a8a5d",
+    "name": "MANKAI STAGE『A3!』LIVE（エーステライブ）",
+    "created_at": "2026-04-02T21:07:32.751768+00:00",
+    "updated_at": "2026-04-02T21:07:32.751768+00:00",
+    "slug": "a3-live",
+    "intro": null,
+    "description": "ストーリー本編の演劇公演とは独立した、楽曲パフォーマンスをメインとするライブイベントシリーズ。\n\n【主なライブの種類】\n・Troupe LIVE（トルライ）：各組の魅力を凝縮した組ごとの単独ライブ。\n・Four Seasons LIVE：春夏秋冬の全組が合同で開催する大型ライブ。\n\n本編の劇中劇で披露された楽曲や、お馴染みのテーマソング、ライブオリジナル楽曲などを中心に構成される、お祭り感の強いエンターテインメント公演。",
+    "origin_type": "ゲーム原作",
+    "origin_note": "原作：イケメン役者育成ゲーム『A3!』（リベル・エンタテインメント）",
+    "production_companies": [
+      "ネルケプランニング",
+      "MANKAI STAGE『A3!』製作委員会"
+    ],
+    "related_franchise_ids": [
+      "03404164-26f0-476f-92e9-5b438984fe0d",
+      "7eefe33e-9b9c-4cca-9c9f-5b67a37d701e",
+      "8d36fc91-4300-431f-a738-63696bd0f824"
+    ],
+    "format": "stage",
+    "description_en": "A live event series focused on musical performances, independent of the main theatrical productions.\n\n[Main Live Event Types]\n\nTroupe LIVE (Torurai): Dedicated solo live concerts that condense the unique charm of each individual troupe.\n\nFour Seasons LIVE: A large-scale joint concert featuring all four troupes (Spring, Summer, Autumn, and Winter) gathered together.\n\nStructured around songs featured in the in-story plays, familiar theme songs, and original live-exclusive tracks, these highly festive entertainment events offer a spectacular celebration of the franchise's music.",
+    "name_en": "MANKAI STAGE A3! LIVE (A-Ste LIVE)"
+  },
+  "protectedMainFranchise": {
+    "id": "03404164-26f0-476f-92e9-5b438984fe0d",
+    "name": "MANKAI STAGE『A3!』ACT1（エーステACT1）",
+    "created_at": "2025-12-13T04:58:27.220101+00:00",
+    "updated_at": "2026-10-27T09:31:14.629267+00:00",
+    "slug": "a3",
+    "intro": null,
+    "description": "俳優育成ゲーム『A3!』を原作とするMANKAI STAGE『A3!』の初期公演群。2018年の『SPRING & SUMMER』と2019年の『AUTUMN & WINTER』で各組の旗揚げ公演を描き、続く春・夏・秋・冬の単独公演では第二回・第三回公演へ進む劇団員たちを描く。2021年の冬組再演までを収録。楽曲を中心とするライブ公演は別シリーズにまとめている。",
+    "origin_type": "ゲーム原作",
+    "origin_note": "原作：イケメン役者育成ゲーム『A3!』（リベル・エンタテインメント）",
+    "production_companies": [
+      "ネルケプランニング",
+      "MANKAI STAGE『A3!』製作委員会"
+    ],
+    "related_franchise_ids": [
+      "d8d36e4f-9a0d-4a91-aac3-e6b8f24a8a5d",
+      "8d36fc91-4300-431f-a738-63696bd0f824",
+      "7eefe33e-9b9c-4cca-9c9f-5b67a37d701e"
+    ],
+    "format": "stage",
+    "description_en": "The early MANKAI STAGE A3! productions, based on the actor-training game A3!. SPRING & SUMMER 2018 and AUTUMN & WINTER 2019 follow the troupes through their inaugural productions. The subsequent solo Spring, Summer, Autumn and Winter shows follow their second and third productions. This series covers these stage productions through the Winter revival in 2021. Music-focused live concerts are listed separately.",
+    "name_en": "MANKAI STAGE A3! Act1 (A-Ste Act 1)"
+  },
+  "works": [
+    {
+      "batch": "four-seasons2020",
+      "id": "9017c929-c552-4d6b-bfb8-4145f8fccc4b",
+      "slug": "a3_2020-3",
+      "title": "MANKAI STAGE『A3!』～Four Seasons LIVE 2020～",
+      "titleEn": "MANKAI STAGE A3! ~Four Seasons LIVE 2020~",
+      "period": "2020年9月17日〜20日",
+      "venue": "東京ガーデンシアター",
+      "summary": "MANKAI STAGE『A3!』初のライブ公演。春夏秋冬の4組と関係者が集まり、これまでの公演を彩った楽曲を披露する。劇中劇は春組・秋組と夏組・冬組の2種類を回替わりで上演。劇中劇以外の場面には全キャストが出演する。2020年9月に東京ガーデンシアターで開催。",
+      "summaryEn": "The first live concert in MANKAI STAGE A3!, bringing together all four troupes and supporting characters to perform songs from earlier productions. In-story plays alternate between Spring/Autumn and Summer/Winter programs; all cast members appear in the other scenes. Held at Tokyo Garden Theater in September 2020.",
+      "castRows": 27,
+      "creditCategories": 12,
+      "creditOnly": [],
+      "staffCategories": 8,
+      "freshOfficialOrder": [
+        {
+          "name": "横田龍儀",
+          "role": "佐久間咲也"
+        },
+        {
+          "name": "牧島 輝",
+          "role": "碓氷真澄"
+        },
+        {
+          "name": "前川優希",
+          "role": "皆木 綴"
+        },
+        {
+          "name": "立石俊樹",
+          "role": "茅ヶ崎 至"
+        },
+        {
+          "name": "古谷大和",
+          "role": "シトロン"
+        },
+        {
+          "name": "陳内 将",
+          "role": "皇 天馬"
+        },
+        {
+          "name": "宮崎 湧",
+          "role": "瑠璃川 幸"
+        },
+        {
+          "name": "野口 準",
+          "role": "向坂 椋"
+        },
+        {
+          "name": "本田礼生",
+          "role": "斑鳩三角"
+        },
+        {
+          "name": "赤澤 燈",
+          "role": "三好一成"
+        },
+        {
+          "name": "水江建太",
+          "role": "摂津万里"
+        },
+        {
+          "name": "中村太郎",
+          "role": "兵頭十座"
+        },
+        {
+          "name": "赤澤遼太郎",
+          "role": "七尾太一"
+        },
+        {
+          "name": "稲垣成弥",
+          "role": "伏見 臣"
+        },
+        {
+          "name": "藤田 玲",
+          "role": "古市左京"
+        },
+        {
+          "name": "荒牧慶彦",
+          "role": "月岡 紬"
+        },
+        {
+          "name": "北園 涼",
+          "role": "高遠 丞"
+        },
+        {
+          "name": "植田圭輔",
+          "role": "御影 密"
+        },
+        {
+          "name": "田中涼星",
+          "role": "有栖川 誉"
+        },
+        {
+          "name": "上田堪大",
+          "role": "雪白 東"
+        },
+        {
+          "name": "田口 涼",
+          "role": "松川伊助"
+        },
+        {
+          "name": "田内季宇",
+          "role": "迫田ケン"
+        },
+        {
+          "name": "笹森裕貴",
+          "role": "水野 茅"
+        },
+        {
+          "name": "宇佐卓真",
+          "role": "斑鳩 円"
+        },
+        {
+          "name": "里中将道",
+          "role": "新庄リョウ"
+        },
+        {
+          "name": "伊崎龍次郎",
+          "role": "飛鳥晴翔"
+        },
+        {
+          "name": "河合龍之介",
+          "role": "神木坂レニ"
+        }
+      ],
+      "sourceRecord": {
+        "path": "next-app/research/a3-four-seasons2020-20261027.json",
+        "sha256": "c4bd92c5eb835834878235858e23798ca3a31ed82ca80dc98fdcfabe36937a2e",
+        "requestKey": "a508f1619349631846eff7792d73a1100cd99b15cc0bd23c6eb358a35b435990"
+      },
+      "scheduleCount": 6,
+      "schedules": [
+        {
+          "city": "東京",
+          "date": "2020/09/17 18:30",
+          "variant": "spring_autumn"
+        },
+        {
+          "city": "東京",
+          "date": "2020/09/18 18:30",
+          "variant": "summer_winter"
+        },
+        {
+          "city": "東京",
+          "date": "2020/09/19 13:00",
+          "variant": "spring_autumn"
+        },
+        {
+          "city": "東京",
+          "date": "2020/09/19 18:00",
+          "variant": "spring_autumn"
+        },
+        {
+          "city": "東京",
+          "date": "2020/09/20 12:00",
+          "variant": "summer_winter"
+        },
+        {
+          "city": "東京",
+          "date": "2020/09/20 17:00",
+          "variant": "summer_winter"
+        }
+      ],
+      "programs": {
+        "spring_autumn": [
+          "ロミオとジュリアス",
+          "天使を憐れむ歌。"
+        ],
+        "summer_winter": [
+          "Water me！〜我らが水を求めて〜",
+          "なんて素敵にピカレスク"
+        ]
+      },
+      "scheduleImageSource": {
+        "label": "four-seasons2020-scheduleImage01",
+        "url": "https://www.mankai-stage.jp/4seasonslive2020/assets/img/ticket/schedule_01.png",
+        "status": 200,
+        "checkedAt": "2026-10-27T14:20:22.110Z",
+        "sha256": "afa18684241cc5cab6219141fbcaf661435c01566e031de5c1d20e3533e92b1d",
+        "bytes": 53903,
+        "sameAsReviewedSource": "imageBytes"
+      },
+      "plannedRuntimeMinutes": 150,
+      "ventilationBreak": "documented_duration_unknown",
+      "casts": [
+        {
+          "id": "0c67f692-88e9-45b2-b3aa-90d5335f6747",
+          "actorId": "ed310757-4569-4539-896d-6a8a5c326ac2",
+          "name": "横田 龍儀",
+          "role": "佐久間咲也",
+          "group": "春組",
+          "note": null,
+          "order": 1,
+          "isStarring": false
+        },
+        {
+          "id": "8f9033d5-7ec2-49d6-a763-8aa826611fd2",
+          "actorId": "5533574d-232b-492a-bad8-2aadc44b2e63",
+          "name": "牧島 輝",
+          "role": "碓氷真澄",
+          "group": "春組",
+          "note": null,
+          "order": 2,
+          "isStarring": false
+        },
+        {
+          "id": "73d54117-1ab9-4719-9d3a-4fea2e6bcbb7",
+          "actorId": "6f56fa1e-493d-4f17-917a-2559ecf800f5",
+          "name": "前川 優希",
+          "role": "皆木綴",
+          "group": "春組",
+          "note": null,
+          "order": 3,
+          "isStarring": false
+        },
+        {
+          "id": "49ffa2ff-452a-4961-90ea-d2173e35a6f3",
+          "actorId": "6f47cce5-7122-45ea-adcb-ce1dd8a6beaf",
+          "name": "立石 俊樹",
+          "role": "茅ヶ崎至",
+          "group": "春組",
+          "note": null,
+          "order": 4,
+          "isStarring": false
+        },
+        {
+          "id": "6eeadd26-2ff4-4d66-9843-9a5b1bd05cb4",
+          "actorId": "73a7a70b-d661-445f-82de-5a7d81d95c55",
+          "name": "古谷 大和",
+          "role": "シトロン",
+          "group": "春組",
+          "note": null,
+          "order": 5,
+          "isStarring": false
+        },
+        {
+          "id": "bedc87ae-61a9-40e3-8764-94aa0177d4c2",
+          "actorId": "3ec32fb6-f2f3-4388-b8d1-8bede9472e44",
+          "name": "陳内 将",
+          "role": "皇天馬",
+          "group": "夏組",
+          "note": null,
+          "order": 6,
+          "isStarring": false
+        },
+        {
+          "id": "ab657f7a-44f9-47e3-a1c4-18f512b4e3b1",
+          "actorId": "fb1a7fa3-c90d-4c6c-86b8-af012fccf368",
+          "name": "宮崎 湧",
+          "role": "瑠璃川幸",
+          "group": "夏組",
+          "note": null,
+          "order": 7,
+          "isStarring": false
+        },
+        {
+          "id": "9cec6990-6de0-4242-ba5d-9f4e9919ebdd",
+          "actorId": "a39fa69c-ac9b-4ed3-ba69-394ca3a921ad",
+          "name": "野口 準",
+          "role": "向坂椋",
+          "group": "夏組",
+          "note": null,
+          "order": 8,
+          "isStarring": false
+        },
+        {
+          "id": "ebe0b3ca-da3b-46c3-bf69-521ea3ee2dd6",
+          "actorId": "8b7c86f6-a193-46a9-89b3-2662f03b7b2b",
+          "name": "本田 礼生",
+          "role": "斑鳩三角",
+          "group": "夏組",
+          "note": null,
+          "order": 9,
+          "isStarring": false
+        },
+        {
+          "id": "85142707-8fb0-4ce0-8e49-8c8a8da11dd7",
+          "actorId": "ac91e41a-2db0-4f49-8389-a7d9786a4201",
+          "name": "赤澤 燈",
+          "role": "三好一成",
+          "group": "夏組",
+          "note": null,
+          "order": 10,
+          "isStarring": false
+        },
+        {
+          "id": "50596575-4f17-4027-ba55-d9d60825694e",
+          "actorId": "33ecd678-4e78-4841-b41a-5d0102762ae2",
+          "name": "水江 建太",
+          "role": "摂津万里",
+          "group": "秋組",
+          "note": null,
+          "order": 11,
+          "isStarring": false
+        },
+        {
+          "id": "fd46b147-eedb-4c0a-afdb-c1e6a0450277",
+          "actorId": "57ead490-a42e-450f-9f27-5473b1b3468f",
+          "name": "中村 太郎",
+          "role": "兵頭十座",
+          "group": "秋組",
+          "note": null,
+          "order": 12,
+          "isStarring": false
+        },
+        {
+          "id": "47bab8d6-4d1a-4cfa-8e9a-d1810f4c1172",
+          "actorId": "5d7c1452-21f1-4835-859d-d2319a9db2c6",
+          "name": "赤澤 遼太郎",
+          "role": "七尾太一",
+          "group": "秋組",
+          "note": null,
+          "order": 13,
+          "isStarring": false
+        },
+        {
+          "id": "66b73ba1-2b04-400e-a2ad-f14699bec263",
+          "actorId": "920f49d7-bb1f-4a46-ab8d-5c91dbd7d3ae",
+          "name": "稲垣 成弥",
+          "role": "伏見臣",
+          "group": "秋組",
+          "note": null,
+          "order": 14,
+          "isStarring": false
+        },
+        {
+          "id": "60f69edc-ba92-4f0d-ab76-d9c610f1910c",
+          "actorId": "68212e7c-6d5e-4ce2-b1d7-c42583019a3f",
+          "name": "藤田 玲",
+          "role": "古市左京",
+          "group": "秋組",
+          "note": null,
+          "order": 15,
+          "isStarring": false
+        },
+        {
+          "id": "00cbc192-cd77-44eb-9d41-223c10453413",
+          "actorId": "929888ac-3f6a-40d0-a856-41dd028b2753",
+          "name": "荒牧 慶彦",
+          "role": "月岡紬",
+          "group": "冬組",
+          "note": null,
+          "order": 16,
+          "isStarring": false
+        },
+        {
+          "id": "fec87195-f679-4eee-9364-c3a0cfb1514f",
+          "actorId": "ede60fa4-4b78-4607-b133-3ad237373f9e",
+          "name": "北園 涼",
+          "role": "高遠丞",
+          "group": "冬組",
+          "note": null,
+          "order": 17,
+          "isStarring": false
+        },
+        {
+          "id": "6daf09dd-b3e6-42a3-be8a-48e3a2a98b0f",
+          "actorId": "efec4bde-6be0-4d8f-80e6-0d1c3accf066",
+          "name": "植田 圭輔",
+          "role": "御影密",
+          "group": "冬組",
+          "note": null,
+          "order": 18,
+          "isStarring": false
+        },
+        {
+          "id": "ae54c2a9-cd9e-40e9-a971-1397b4f51a69",
+          "actorId": "5a2e7a99-46c2-4369-a3ab-9ec8c4ac52aa",
+          "name": "田中 涼星",
+          "role": "有栖川誉",
+          "group": "冬組",
+          "note": null,
+          "order": 19,
+          "isStarring": false
+        },
+        {
+          "id": "6b0321e7-2df6-4997-ae92-e4448955b09b",
+          "actorId": "9dd007c7-a216-4d25-85fb-77fad853123e",
+          "name": "上田 堪大",
+          "role": "雪白東",
+          "group": "冬組",
+          "note": null,
+          "order": 20,
+          "isStarring": false
+        },
+        {
+          "id": "a00d8656-38ba-4a10-821c-06d594f94ff7",
+          "actorId": "523f6dd4-9c56-4b48-a264-463ebb52f068",
+          "name": "田口 涼",
+          "role": "松川伊助",
+          "group": null,
+          "note": null,
+          "order": 21,
+          "isStarring": false
+        },
+        {
+          "id": "6079d8aa-2c12-476e-85a3-5b5d749b37ca",
+          "actorId": "73dd3751-ae6e-4922-b252-a9cdbae324e6",
+          "name": "田内 季宇",
+          "role": "迫田ケン",
+          "group": null,
+          "note": null,
+          "order": 22,
+          "isStarring": false
+        },
+        {
+          "id": "da762c2f-510a-4610-b8a7-40bc0b0e1c22",
+          "actorId": "1e605310-a002-4bce-8b04-30b3d13985e3",
+          "name": "笹森 裕貴",
+          "role": "水野茅",
+          "group": null,
+          "note": null,
+          "order": 23,
+          "isStarring": false
+        },
+        {
+          "id": "513b5b44-2987-4153-9289-5c5f76c9f702",
+          "actorId": "1ea4b5de-f894-46c8-823c-0476087090fa",
+          "name": "宇佐 卓真",
+          "role": "斑鳩円",
+          "group": null,
+          "note": null,
+          "order": 24,
+          "isStarring": false
+        },
+        {
+          "id": "9329bf01-e8d1-4a99-a631-fbce16a72354",
+          "actorId": "80fe3447-4a2c-4e8d-8cdb-3b213548f713",
+          "name": "里中 将道",
+          "role": "新庄リョウ",
+          "group": null,
+          "note": null,
+          "order": 25,
+          "isStarring": false
+        },
+        {
+          "id": "9e014422-ff69-4918-a565-a5a04b292cf0",
+          "actorId": "50c00e50-2eff-418f-9569-8dbe6c122ddc",
+          "name": "伊崎 龍次郎",
+          "role": "飛鳥晴翔",
+          "group": null,
+          "note": null,
+          "order": 26,
+          "isStarring": false
+        },
+        {
+          "id": "1bc030be-5b6f-4623-8829-f51dbb636c8e",
+          "actorId": "ed59b1c0-4ca3-432d-a241-4e40ea6bb9bd",
+          "name": "河合 龍之介",
+          "role": "神木坂レニ",
+          "group": null,
+          "note": null,
+          "order": 27,
+          "isStarring": false
+        }
+      ],
+      "allRolesOrderGroupsNotesVerified": true,
+      "acceptedCandidateLinksVerified": true,
+      "summaryAndDateRangePreserved": true
+    },
+    {
+      "batch": "troupe-spring2021",
+      "id": "a5ef51ea-cce5-443c-bc3f-0c0c9fb6831a",
+      "slug": "a3_2021-2",
+      "title": "MANKAI STAGE『A3!』Troupe LIVE～SPRING 2021～",
+      "titleEn": "MANKAI STAGE A3! Troupe LIVE ~SPRING 2021~",
+      "period": "2021年8月18日〜22日",
+      "venue": "TACHIKAWA STAGE GARDEN（東京）",
+      "summary": "春組の単独ライブ。2018年の初演から『Four Seasons LIVE 2020』までの春組楽曲と、2021年6月発売の春組アルバムの新曲を披露する。劇中劇ライブ版と公演曲のショート版をA・B・Cの3パターンで回替わり上演。2021年8月、TACHIKAWA STAGE GARDENで開催された。",
+      "summaryEn": "A solo live concert for the Spring Troupe, combining songs performed from the 2018 debut through Four Seasons LIVE 2020 with new tracks from the troupe’s June 2021 album. Live versions of the in-story plays and short versions of their production songs rotate across three programs. Held at TACHIKAWA STAGE GARDEN in Tokyo in August 2021.",
+      "castRows": 6,
+      "creditCategories": 12,
+      "creditOnly": [
+        "坂田大夢",
+        "竹内 樹",
+        "茶谷優太",
+        "遠山晶司（梅棒）"
+      ],
+      "staffCategories": 6,
+      "freshOfficialOrder": [
+        {
+          "name": "横田龍儀",
+          "role": "佐久間咲也"
+        },
+        {
+          "name": "牧島 輝",
+          "role": "碓氷真澄"
+        },
+        {
+          "name": "前川優希",
+          "role": "皆木 綴"
+        },
+        {
+          "name": "立石俊樹",
+          "role": "茅ヶ崎 至"
+        },
+        {
+          "name": "古谷大和",
+          "role": "シトロン"
+        },
+        {
+          "name": "田口 涼",
+          "role": "松川伊助"
+        }
+      ],
+      "sourceRecord": {
+        "path": "next-app/research/a3-troupe-spring2021-20261027.json",
+        "sha256": "c58eaa86b6937937064ce48be75261f90a3a135cd5457da7169537a265958291",
+        "requestKey": "fcab34cdbed5db6b08ff35cfc40e86b8bc85ce64ab6c033c758604891e7a4789"
+      },
+      "scheduleCount": 7,
+      "schedules": [
+        {
+          "city": "東京",
+          "date": "2021/08/18 19:00",
+          "program": "A"
+        },
+        {
+          "city": "東京",
+          "date": "2021/08/19 19:00",
+          "program": "B"
+        },
+        {
+          "city": "東京",
+          "date": "2021/08/20 19:00",
+          "program": "C"
+        },
+        {
+          "city": "東京",
+          "date": "2021/08/21 12:00",
+          "program": "A"
+        },
+        {
+          "city": "東京",
+          "date": "2021/08/21 16:30",
+          "program": "B"
+        },
+        {
+          "city": "東京",
+          "date": "2021/08/22 12:00",
+          "program": "C"
+        },
+        {
+          "city": "東京",
+          "date": "2021/08/22 16:30",
+          "program": "A"
+        }
+      ],
+      "programs": [
+        {
+          "code": "A",
+          "play": "新生春組旗揚げ公演『ロミオとジュリアス』",
+          "song": "新生春組第三回公演曲『思い出のねじ巻き』",
+          "count": 3
+        },
+        {
+          "code": "B",
+          "play": "新生春組第二回公演『不思議の国の青年アリス』",
+          "song": "新生春組旗揚げ公演曲『僕らの絆』",
+          "count": 2
+        },
+        {
+          "code": "C",
+          "play": "新生春組第三回公演『ぜんまい仕掛けのココロ』",
+          "song": "新生春組第二回公演曲『ワンダーランド・ア・ゴーゴー！！』",
+          "count": 2
+        }
+      ],
+      "scheduleImageSource": {
+        "label": "troupe-spring2021-scheduleImage",
+        "url": "https://troupelive.mankai-stage.jp/spring/wp-content/themes/2021_spring/images/schedule_02.png",
+        "status": 200,
+        "checkedAt": "2026-10-27T14:20:22.334Z",
+        "sha256": "4d615a80b87b4ec69a60efdf647c8fef5d3b40404feb606bf40abbb771032840",
+        "bytes": 13848,
+        "sameAsReviewedSource": "imageBytes"
+      },
+      "plannedRuntimeMinutes": 120,
+      "ventilationBreak": "documented_duration_unknown",
+      "casts": [
+        {
+          "id": "a293a280-6d9e-481b-933c-a034fbaf8957",
+          "actorId": "ed310757-4569-4539-896d-6a8a5c326ac2",
+          "name": "横田 龍儀",
+          "role": "佐久間咲也",
+          "group": "春組",
+          "note": null,
+          "order": 1,
+          "isStarring": false
+        },
+        {
+          "id": "0d1e395c-ccff-4c4f-9a40-c823fb5d7cf3",
+          "actorId": "5533574d-232b-492a-bad8-2aadc44b2e63",
+          "name": "牧島 輝",
+          "role": "碓氷真澄",
+          "group": "春組",
+          "note": null,
+          "order": 2,
+          "isStarring": false
+        },
+        {
+          "id": "3c39f229-67ed-43ec-abb7-a344c6a3238d",
+          "actorId": "6f56fa1e-493d-4f17-917a-2559ecf800f5",
+          "name": "前川 優希",
+          "role": "皆木綴",
+          "group": "春組",
+          "note": null,
+          "order": 3,
+          "isStarring": false
+        },
+        {
+          "id": "67d9c168-d577-4e46-88bd-133d2fc4c3c3",
+          "actorId": "6f47cce5-7122-45ea-adcb-ce1dd8a6beaf",
+          "name": "立石 俊樹",
+          "role": "茅ヶ崎至",
+          "group": "春組",
+          "note": null,
+          "order": 4,
+          "isStarring": false
+        },
+        {
+          "id": "ce178f18-44f7-46d2-aa58-0af768bbfe53",
+          "actorId": "73a7a70b-d661-445f-82de-5a7d81d95c55",
+          "name": "古谷 大和",
+          "role": "シトロン",
+          "group": "春組",
+          "note": null,
+          "order": 5,
+          "isStarring": false
+        },
+        {
+          "id": "6cad7cb8-a4d3-41ea-9e22-f8d31037ec35",
+          "actorId": "523f6dd4-9c56-4b48-a264-463ebb52f068",
+          "name": "田口 涼",
+          "role": "松川伊助",
+          "group": null,
+          "note": null,
+          "order": 6,
+          "isStarring": false
+        }
+      ],
+      "allRolesOrderGroupsNotesVerified": true,
+      "acceptedCandidateLinksVerified": true,
+      "summaryAndDateRangePreserved": true
+    },
+    {
+      "batch": "troupe-summer2021",
+      "id": "782dc814-d4f6-4512-9ce8-df6da4b803f2",
+      "slug": "a3_2021-3",
+      "title": "MANKAI STAGE『A3!』Troupe LIVE～SUMMER 2021～",
+      "titleEn": "MANKAI STAGE A3! Troupe LIVE ~SUMMER 2021~",
+      "period": "2021年10月26日〜31日",
+      "venue": "KAAT神奈川芸術劇場〈ホール〉（神奈川）",
+      "summary": "夏組の単独ライブ。2018年の初演から『Four Seasons LIVE 2020』までの夏組楽曲と、2021年8月発売の夏組アルバムの新曲を披露する。劇中劇ライブ版と公演曲のショート版をA・B・Cの3パターンで回替わり上演。2021年10月、KAAT神奈川芸術劇場で開催された。",
+      "summaryEn": "A solo live concert for the Summer Troupe, combining songs performed from the 2018 debut through Four Seasons LIVE 2020 with new tracks from the troupe’s August 2021 album. Live versions of the in-story plays and short versions of their production songs rotate across three programs. Held at KAAT Kanagawa Arts Theatre in October 2021.",
+      "castRows": 6,
+      "creditCategories": 40,
+      "creditOnly": [
+        "坂田大夢",
+        "竹内 樹",
+        "茶谷優太",
+        "佐山太一"
+      ],
+      "staffCategories": 34,
+      "freshOfficialOrder": [
+        {
+          "name": "陳内 将",
+          "role": "皇 天馬"
+        },
+        {
+          "name": "宮崎 湧",
+          "role": "瑠璃川 幸"
+        },
+        {
+          "name": "野口 準",
+          "role": "向坂 椋"
+        },
+        {
+          "name": "本田礼生",
+          "role": "斑鳩三角"
+        },
+        {
+          "name": "赤澤 燈",
+          "role": "三好一成"
+        },
+        {
+          "name": "田口 涼",
+          "role": "松川伊助"
+        }
+      ],
+      "sourceRecord": {
+        "path": "next-app/research/a3-troupe-summer2021-20261027.json",
+        "sha256": "530b7e7933947ff9e20baffcdaa9d0260aa32b49b0a11cea43824bd1924b2788",
+        "requestKey": "3a9449a12fce2ee57ef326c45768d6f96cadca6e8f826dc11d8ab2313422db63"
+      },
+      "scheduleCount": 9,
+      "schedules": [
+        {
+          "city": "神奈川",
+          "date": "2021/10/26 19:00",
+          "program": "A"
+        },
+        {
+          "city": "神奈川",
+          "date": "2021/10/27 19:00",
+          "program": "B"
+        },
+        {
+          "city": "神奈川",
+          "date": "2021/10/28 14:00",
+          "program": "C"
+        },
+        {
+          "city": "神奈川",
+          "date": "2021/10/28 19:00",
+          "program": "A"
+        },
+        {
+          "city": "神奈川",
+          "date": "2021/10/29 19:00",
+          "program": "B"
+        },
+        {
+          "city": "神奈川",
+          "date": "2021/10/30 12:00",
+          "program": "C"
+        },
+        {
+          "city": "神奈川",
+          "date": "2021/10/30 16:30",
+          "program": "A"
+        },
+        {
+          "city": "神奈川",
+          "date": "2021/10/31 12:00",
+          "program": "B"
+        },
+        {
+          "city": "神奈川",
+          "date": "2021/10/31 16:30",
+          "program": "C"
+        }
+      ],
+      "programs": [
+        {
+          "code": "A",
+          "play": "新生夏組旗揚げ公演『Water me! 〜我らが水を求めて〜』",
+          "song": "新生夏組第二回公演曲『にゃんばれ！にゃにゃにゃにゃ☆にゃん生！』",
+          "count": 3
+        },
+        {
+          "code": "B",
+          "play": "新生夏組第二回公演『にぼしを巡る冒険』",
+          "song": "新生夏組第三回公演曲『進め!パイレーツ』",
+          "count": 3
+        },
+        {
+          "code": "C",
+          "play": "新生夏組第三回公演『抜錨！スカイ海賊団』",
+          "song": "新生夏組旗揚げ公演曲『楽園オアシス』",
+          "count": 3
+        }
+      ],
+      "scheduleImageSource": {
+        "label": "troupe-summer2021-scheduleImage",
+        "url": "https://troupelive.mankai-stage.jp/summer/wp-content/themes/2021_summer/images/schedule_02.png?",
+        "status": 200,
+        "checkedAt": "2026-10-27T14:20:22.501Z",
+        "sha256": "bd9ed535640553329b80754f021d76375a993e73f2ec75cc5aef8b4358bb9b47",
+        "bytes": 16671,
+        "sameAsReviewedSource": "imageBytes"
+      },
+      "plannedRuntimeMinutes": 120,
+      "ventilationBreak": "documented_duration_unknown",
+      "casts": [
+        {
+          "id": "2655ad1c-397b-45fe-a0d7-6a77275fe3bd",
+          "actorId": "3ec32fb6-f2f3-4388-b8d1-8bede9472e44",
+          "name": "陳内 将",
+          "role": "皇天馬",
+          "group": "夏組",
+          "note": null,
+          "order": 1,
+          "isStarring": false
+        },
+        {
+          "id": "447741c0-cc42-4695-94fb-cff3c96cb218",
+          "actorId": "fb1a7fa3-c90d-4c6c-86b8-af012fccf368",
+          "name": "宮崎 湧",
+          "role": "瑠璃川幸",
+          "group": "夏組",
+          "note": null,
+          "order": 2,
+          "isStarring": false
+        },
+        {
+          "id": "4be303eb-ffcc-4181-bb6f-069b59401a41",
+          "actorId": "a39fa69c-ac9b-4ed3-ba69-394ca3a921ad",
+          "name": "野口 準",
+          "role": "向坂椋",
+          "group": "夏組",
+          "note": null,
+          "order": 3,
+          "isStarring": false
+        },
+        {
+          "id": "0159fe50-cba6-4677-852e-86f2bf1854f6",
+          "actorId": "8b7c86f6-a193-46a9-89b3-2662f03b7b2b",
+          "name": "本田 礼生",
+          "role": "斑鳩三角",
+          "group": "夏組",
+          "note": null,
+          "order": 4,
+          "isStarring": false
+        },
+        {
+          "id": "494764d9-f89d-4f0a-9d72-bfc44948d928",
+          "actorId": "ac91e41a-2db0-4f49-8389-a7d9786a4201",
+          "name": "赤澤 燈",
+          "role": "三好一成",
+          "group": "夏組",
+          "note": null,
+          "order": 5,
+          "isStarring": false
+        },
+        {
+          "id": "4665f872-c6cd-4f54-8619-ff8cb9b4e0a3",
+          "actorId": "523f6dd4-9c56-4b48-a264-463ebb52f068",
+          "name": "田口 涼",
+          "role": "松川伊助",
+          "group": null,
+          "note": null,
+          "order": 6,
+          "isStarring": false
+        }
+      ],
+      "allRolesOrderGroupsNotesVerified": true,
+      "acceptedCandidateLinksVerified": true,
+      "summaryAndDateRangePreserved": true
+    },
+    {
+      "batch": "troupe-autumn2021",
+      "id": "7e26de07-368f-41bb-b175-9ee9f39afaa1",
+      "slug": "a3_2021-4",
+      "title": "MANKAI STAGE『A3!』Troupe LIVE～AUTUMN 2021～",
+      "titleEn": "MANKAI STAGE A3! Troupe LIVE ~AUTUMN 2021~",
+      "period": "2021年12月8日〜12日",
+      "venue": "東京国際フォーラム ホールC（東京）",
+      "summary": "秋組の単独ライブ。2019年の初演から『Four Seasons LIVE 2020』までの秋組楽曲と、2021年10月発売の秋組アルバムの新曲をバンド演奏を交えて披露する。劇中劇ライブ版と公演曲のショート版はA・B・Cの3パターンで回替わり上演。2021年12月、東京国際フォーラム ホールCで開催された。",
+      "summaryEn": "A solo live concert for the Autumn Troupe with a live band, combining songs performed from the 2019 debut through Four Seasons LIVE 2020 with new tracks from the troupe’s October 2021 album. Live versions of the in-story plays and short versions of their production songs rotate across three programs. Held at Tokyo International Forum Hall C in December 2021.",
+      "castRows": 6,
+      "creditCategories": 43,
+      "creditOnly": [
+        "坂田大夢",
+        "竹内 樹",
+        "茶谷優太",
+        "佐山太一",
+        "小黒直樹",
+        "大和田 亮",
+        "日高真夢",
+        "高橋遥平"
+      ],
+      "staffCategories": 34,
+      "freshOfficialOrder": [
+        {
+          "name": "水江建太",
+          "role": "摂津万里"
+        },
+        {
+          "name": "中村太郎",
+          "role": "兵頭十座"
+        },
+        {
+          "name": "赤澤遼太郎",
+          "role": "七尾太一"
+        },
+        {
+          "name": "稲垣成弥",
+          "role": "伏見 臣"
+        },
+        {
+          "name": "藤田 玲",
+          "role": "古市左京"
+        },
+        {
+          "name": "田内季宇",
+          "role": "迫田ケン"
+        }
+      ],
+      "sourceRecord": {
+        "path": "next-app/research/a3-troupe-autumn2021-20261027.json",
+        "sha256": "aea00f67890533a18680bfd1ac9f8c501eebc8f09cc555971838e9626bfd8f0a",
+        "requestKey": "5eafe851138cbfde14b0ca25480588d4001c5ed50d9cf0a74f07732b7be3041e"
+      },
+      "scheduleCount": 7,
+      "schedules": [
+        {
+          "city": "東京",
+          "date": "2021/12/08 19:00",
+          "program": "A"
+        },
+        {
+          "city": "東京",
+          "date": "2021/12/09 19:00",
+          "program": "B"
+        },
+        {
+          "city": "東京",
+          "date": "2021/12/10 19:00",
+          "program": "C"
+        },
+        {
+          "city": "東京",
+          "date": "2021/12/11 12:00",
+          "program": "A"
+        },
+        {
+          "city": "東京",
+          "date": "2021/12/11 16:30",
+          "program": "B"
+        },
+        {
+          "city": "東京",
+          "date": "2021/12/12 12:00",
+          "program": "C"
+        },
+        {
+          "city": "東京",
+          "date": "2021/12/12 16:30",
+          "program": "A"
+        }
+      ],
+      "programs": [
+        {
+          "code": "A",
+          "play": "新生秋組旗揚げ公演『なんて素敵にピカレスク』",
+          "song": "新生秋組第二回公演曲『Just For Myself』",
+          "count": 3
+        },
+        {
+          "code": "B",
+          "play": "新生秋組第二回公演『異邦人』",
+          "song": "新生秋組第三回公演曲『BUZAMA』",
+          "count": 2
+        },
+        {
+          "code": "C",
+          "play": "新生秋組第三回公演『任侠伝・流れ者銀二』",
+          "song": "新生秋組旗揚げ公演曲『一夜限りの相棒』",
+          "count": 2
+        }
+      ],
+      "scheduleImageSource": {
+        "label": "troupe-autumn2021-scheduleImage",
+        "url": "https://troupelive.mankai-stage.jp/autumn/wp-content/themes/2021_autumn_v2/images/schedule_02.png?",
+        "status": 200,
+        "checkedAt": "2026-10-27T14:20:22.574Z",
+        "sha256": "0dbce4a11b27f05e479f137e5a6a95f7a397f274286f5f70b0cc5b2f1ea6a05e",
+        "bytes": 12621,
+        "sameAsReviewedSource": "imageBytes"
+      },
+      "plannedRuntimeMinutes": 110,
+      "ventilationBreak": "documented_duration_unknown",
+      "casts": [
+        {
+          "id": "268cd762-d226-4b44-a590-5aa4121da8bf",
+          "actorId": "33ecd678-4e78-4841-b41a-5d0102762ae2",
+          "name": "水江 建太",
+          "role": "摂津万里",
+          "group": "秋組",
+          "note": null,
+          "order": 1,
+          "isStarring": false
+        },
+        {
+          "id": "d6526969-92f8-45a5-a94a-3bf9e06b30b3",
+          "actorId": "57ead490-a42e-450f-9f27-5473b1b3468f",
+          "name": "中村 太郎",
+          "role": "兵頭十座",
+          "group": "秋組",
+          "note": null,
+          "order": 2,
+          "isStarring": false
+        },
+        {
+          "id": "6490a6c5-d74d-4e0a-b79d-993051999c48",
+          "actorId": "5d7c1452-21f1-4835-859d-d2319a9db2c6",
+          "name": "赤澤 遼太郎",
+          "role": "七尾太一",
+          "group": "秋組",
+          "note": null,
+          "order": 3,
+          "isStarring": false
+        },
+        {
+          "id": "bac61cf0-077e-4196-92b0-ae7a2b799059",
+          "actorId": "920f49d7-bb1f-4a46-ab8d-5c91dbd7d3ae",
+          "name": "稲垣 成弥",
+          "role": "伏見臣",
+          "group": "秋組",
+          "note": null,
+          "order": 4,
+          "isStarring": false
+        },
+        {
+          "id": "ea40fc0e-2f0f-4e66-be3a-f9d678930754",
+          "actorId": "68212e7c-6d5e-4ce2-b1d7-c42583019a3f",
+          "name": "藤田 玲",
+          "role": "古市左京",
+          "group": "秋組",
+          "note": null,
+          "order": 5,
+          "isStarring": false
+        },
+        {
+          "id": "f7ceecde-39ba-4786-80ba-3fd7bd1423ea",
+          "actorId": "73dd3751-ae6e-4922-b252-a9cdbae324e6",
+          "name": "田内 季宇",
+          "role": "迫田ケン",
+          "group": null,
+          "note": null,
+          "order": 6,
+          "isStarring": false
+        }
+      ],
+      "allRolesOrderGroupsNotesVerified": true,
+      "acceptedCandidateLinksVerified": true,
+      "summaryAndDateRangePreserved": true
+    },
+    {
+      "batch": "troupe-winter2022",
+      "id": "bb11f257-c5a1-488e-a643-38c42b58a150",
+      "slug": "a3_2022",
+      "title": "MANKAI STAGE『A3!』Troupe LIVE～WINTER 2022～",
+      "titleEn": "MANKAI STAGE A3! Troupe LIVE ~WINTER 2022~",
+      "period": "2022年2月23日〜26日",
+      "venue": "TACHIKAWA STAGE GARDEN（東京）",
+      "summary": "冬組の単独ライブ。2019年の初演から『Four Seasons LIVE 2020』までの冬組楽曲と、2021年12月発売の冬組アルバムの新曲を披露する。劇中劇ライブ版と公演曲のショート版はA・B・Cの3パターンで回替わり上演。2022年2月、TACHIKAWA STAGE GARDENで開催された。",
+      "summaryEn": "A solo live concert for the Winter Troupe, combining songs performed from the 2019 debut through Four Seasons LIVE 2020 with new tracks from the troupe’s December 2021 album. Live versions of the in-story plays and short versions of their production songs rotate across three programs. Held at TACHIKAWA STAGE GARDEN in Tokyo in February 2022.",
+      "castRows": 6,
+      "creditCategories": 40,
+      "creditOnly": [
+        "坂田大夢",
+        "竹内 樹",
+        "佐山太一",
+        "飯島康平"
+      ],
+      "staffCategories": 34,
+      "freshOfficialOrder": [
+        {
+          "name": "荒牧慶彦",
+          "role": "月岡 紬"
+        },
+        {
+          "name": "北園 涼",
+          "role": "高遠 丞"
+        },
+        {
+          "name": "植田圭輔",
+          "role": "御影 密"
+        },
+        {
+          "name": "田中涼星",
+          "role": "有栖川 誉"
+        },
+        {
+          "name": "上田堪大",
+          "role": "雪白 東"
+        },
+        {
+          "name": "鯨井康介",
+          "role": "鹿島雄三"
+        }
+      ],
+      "sourceRecord": {
+        "path": "next-app/research/a3-troupe-winter2022-20261027.json",
+        "sha256": "74e9eb6e7b2896a1bad96723e9d713e55a69be603a3fcd3dd62ae40af05d967f",
+        "requestKey": "9504d18175ab4ec39019478902c11bc2475c7a06489f77239adb5589a13007cf"
+      },
+      "scheduleCount": 6,
+      "schedules": [
+        {
+          "city": "東京",
+          "date": "2022/02/23 19:00",
+          "program": "A"
+        },
+        {
+          "city": "東京",
+          "date": "2022/02/24 19:00",
+          "program": "B"
+        },
+        {
+          "city": "東京",
+          "date": "2022/02/25 12:00",
+          "program": "C"
+        },
+        {
+          "city": "東京",
+          "date": "2022/02/25 16:30",
+          "program": "A"
+        },
+        {
+          "city": "東京",
+          "date": "2022/02/26 12:00",
+          "program": "B"
+        },
+        {
+          "city": "東京",
+          "date": "2022/02/26 16:30",
+          "program": "C"
+        }
+      ],
+      "programs": [
+        {
+          "code": "A",
+          "play": "新生冬組旗揚げ公演『天使を憐れむ歌。』",
+          "song": "新生冬組第二回公演曲『esの憂鬱』",
+          "count": 2
+        },
+        {
+          "code": "B",
+          "play": "新生冬組第二回公演『主人はミステリにご執心』",
+          "song": "新生冬組第三回公演曲『正体』",
+          "count": 2
+        },
+        {
+          "code": "C",
+          "play": "新生冬組第三回公演『真夜中の住人』",
+          "song": "新生冬組旗揚げ公演曲『Don't cry...』",
+          "count": 2
+        }
+      ],
+      "scheduleImageSource": {
+        "label": "troupe-winter2022-scheduleImage",
+        "url": "https://troupelive.mankai-stage.jp/winter/wp-content/themes/2021_winter/images/schedule_02.png",
+        "status": 200,
+        "checkedAt": "2026-10-27T14:20:22.654Z",
+        "sha256": "38c542005a854e3ad562009b5b48edd17c205512c45268fcd217fb9635cfdbfe",
+        "bytes": 11355,
+        "sameAsReviewedSource": "imageBytes"
+      },
+      "plannedRuntimeMinutes": 110,
+      "ventilationBreak": "not_documented_not_asserted_absent",
+      "casts": [
+        {
+          "id": "8b7ef9cd-52ab-42eb-a347-a188fa4c7ea2",
+          "actorId": "929888ac-3f6a-40d0-a856-41dd028b2753",
+          "name": "荒牧 慶彦",
+          "role": "月岡紬",
+          "group": "冬組",
+          "note": null,
+          "order": 1,
+          "isStarring": false
+        },
+        {
+          "id": "f9799c4a-84f5-4e91-ade1-aa10201b3a2f",
+          "actorId": "ede60fa4-4b78-4607-b133-3ad237373f9e",
+          "name": "北園 涼",
+          "role": "高遠丞",
+          "group": "冬組",
+          "note": null,
+          "order": 2,
+          "isStarring": false
+        },
+        {
+          "id": "8d11763c-bd38-4675-a9fe-60d806fb5e51",
+          "actorId": "efec4bde-6be0-4d8f-80e6-0d1c3accf066",
+          "name": "植田 圭輔",
+          "role": "御影密",
+          "group": "冬組",
+          "note": null,
+          "order": 3,
+          "isStarring": false
+        },
+        {
+          "id": "8d759785-ea0d-49b6-a727-e67c8b170e48",
+          "actorId": "5a2e7a99-46c2-4369-a3ab-9ec8c4ac52aa",
+          "name": "田中 涼星",
+          "role": "有栖川誉",
+          "group": "冬組",
+          "note": null,
+          "order": 4,
+          "isStarring": false
+        },
+        {
+          "id": "b4c11a32-1b1f-494a-ad9e-e0d4d578937a",
+          "actorId": "9dd007c7-a216-4d25-85fb-77fad853123e",
+          "name": "上田 堪大",
+          "role": "雪白東",
+          "group": "冬組",
+          "note": null,
+          "order": 5,
+          "isStarring": false
+        },
+        {
+          "id": "8ee1acc2-f4a2-44d7-9801-6e174fe4314f",
+          "actorId": "a9cc972e-f9e5-4874-9194-40cfca0c0003",
+          "name": "鯨井 康介",
+          "role": "鹿島雄三",
+          "group": null,
+          "note": null,
+          "order": 6,
+          "isStarring": false
+        }
+      ],
+      "allRolesOrderGroupsNotesVerified": true,
+      "acceptedCandidateLinksVerified": true,
+      "summaryAndDateRangePreserved": true
+    }
+  ],
+  "actorIds": [
+    "ed310757-4569-4539-896d-6a8a5c326ac2",
+    "5533574d-232b-492a-bad8-2aadc44b2e63",
+    "6f56fa1e-493d-4f17-917a-2559ecf800f5",
+    "6f47cce5-7122-45ea-adcb-ce1dd8a6beaf",
+    "73a7a70b-d661-445f-82de-5a7d81d95c55",
+    "3ec32fb6-f2f3-4388-b8d1-8bede9472e44",
+    "fb1a7fa3-c90d-4c6c-86b8-af012fccf368",
+    "a39fa69c-ac9b-4ed3-ba69-394ca3a921ad",
+    "8b7c86f6-a193-46a9-89b3-2662f03b7b2b",
+    "ac91e41a-2db0-4f49-8389-a7d9786a4201",
+    "33ecd678-4e78-4841-b41a-5d0102762ae2",
+    "57ead490-a42e-450f-9f27-5473b1b3468f",
+    "5d7c1452-21f1-4835-859d-d2319a9db2c6",
+    "920f49d7-bb1f-4a46-ab8d-5c91dbd7d3ae",
+    "68212e7c-6d5e-4ce2-b1d7-c42583019a3f",
+    "929888ac-3f6a-40d0-a856-41dd028b2753",
+    "ede60fa4-4b78-4607-b133-3ad237373f9e",
+    "efec4bde-6be0-4d8f-80e6-0d1c3accf066",
+    "5a2e7a99-46c2-4369-a3ab-9ec8c4ac52aa",
+    "9dd007c7-a216-4d25-85fb-77fad853123e",
+    "523f6dd4-9c56-4b48-a264-463ebb52f068",
+    "73dd3751-ae6e-4922-b252-a9cdbae324e6",
+    "1e605310-a002-4bce-8b04-30b3d13985e3",
+    "1ea4b5de-f894-46c8-823c-0476087090fa",
+    "80fe3447-4a2c-4e8d-8cdb-3b213548f713",
+    "50c00e50-2eff-418f-9569-8dbe6c122ddc",
+    "ed59b1c0-4ca3-432d-a241-4e40ea6bb9bd",
+    "a9cc972e-f9e5-4874-9194-40cfca0c0003"
+  ],
+  "freshSources": [
+    {
+      "label": "four-seasons2020-official",
+      "url": "https://www.mankai-stage.jp/4seasonslive2020/",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:12:42.944Z",
+      "sha256": "9449192178d084dc3218da48191673d98d86d96cedb6e31e250df06d47694581",
+      "bytes": 15535
+    },
+    {
+      "label": "archive",
+      "url": "https://www.mankai-stage.jp/past_stage/",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:12:42.976Z",
+      "sha256": "0150435ebc0e5598e309535eee4dd9315c84e7f905956ca0291bfb2996880dbb",
+      "bytes": 27511
+    },
+    {
+      "label": "troupePortal",
+      "url": "https://troupelive.mankai-stage.jp/",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:12:42.992Z",
+      "sha256": "8a1c72b4e3eb81af423febed7331d40a4fff2b2e57a1543b41b0805beafb99d3",
+      "bytes": 15075
+    },
+    {
+      "label": "four-seasons2020-cast",
+      "url": "https://www.mankai-stage.jp/4seasonslive2020/cast/index.html",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:12:43.007Z",
+      "sha256": "82c5a303500aef92b45fd6b9a36992ff27858be929ac82c5e41a31f4d38f1682",
+      "bytes": 18665
+    },
+    {
+      "label": "four-seasons2020-ticket",
+      "url": "https://www.mankai-stage.jp/4seasonslive2020/ticket/index.html",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:12:43.024Z",
+      "sha256": "c8f5465ddbb484889a480936463f1f2191138e7d4689365ebc51abbba821d6b1",
+      "bytes": 14546
+    },
+    {
+      "label": "changelog",
+      "url": "https://supabase.com/changelog.md",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:12:43.048Z",
+      "sha256": "45528009025b8ad8487ccb73f7c769b66d4b0e7aa4560157047899dcb5b5a006",
+      "bytes": 102641
+    },
+    {
+      "label": "four-seasons2020-guide",
+      "url": "https://www.mankai-stage.jp/4seasonslive2020/guide/index.html",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:12:43.072Z",
+      "sha256": "e566304d7210f334c048dec4496995f0539bf8cb511a5c1d1954c59978e10d56",
+      "bytes": 26705
+    },
+    {
+      "label": "four-seasons2020-intro",
+      "url": "https://www.mankai-stage.jp/4seasonslive2020/introduction/index.html",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:12:43.090Z",
+      "sha256": "e791bbb446600d224097a2bbe95c3afec43d0781c28f4588bfc5befeb92e72f6",
+      "bytes": 8044
+    },
+    {
+      "label": "four-seasons2020-original",
+      "url": "https://liberent.co.jp/news/2020/09/17/a3_four_seasons_live/",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:12:43.225Z",
+      "sha256": "42f7e774638baa8f1ef2c2e3cd235e62f2034eeda5e2f8a9aac0fc574935fde9",
+      "bytes": 21030
+    },
+    {
+      "label": "troupe-spring2021-intro",
+      "url": "https://troupelive.mankai-stage.jp/spring/introduction",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:12:43.244Z",
+      "sha256": "0703f4cce43ecb51c936cad72df02c51c7631b35a32e6225f1f7a31f2ec103af",
+      "bytes": 10056
+    },
+    {
+      "label": "troupe-spring2021-ticket",
+      "url": "https://troupelive.mankai-stage.jp/spring/tickets",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:12:43.273Z",
+      "sha256": "ca181f51cd928c657686e9909ba2d79e5aa70b11d4cbb54fd578b4afd63924e4",
+      "bytes": 22917
+    },
+    {
+      "label": "four-seasons2020-producer",
+      "url": "https://www.nelke.co.jp/stage/4seasonslive2020/index.html",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:12:43.302Z",
+      "sha256": "9ac8a1f2b60928c133f0104f79c98ce62965c16abefad9e0805987bbbe80de03",
+      "bytes": 39284
+    },
+    {
+      "label": "troupe-spring2021-guide",
+      "url": "https://troupelive.mankai-stage.jp/spring/guide",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:12:43.340Z",
+      "sha256": "f252caa25a92cf4a6ccf642d72fcb6a637bad321e05cb4a2848a44b61cb2ee2f",
+      "bytes": 35827
+    },
+    {
+      "label": "troupe-spring2021-official",
+      "url": "https://troupelive.mankai-stage.jp/spring/",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:12:43.363Z",
+      "sha256": "c447c30b3d442bad3b75f7dcf2935b7188882c51889ce544aa5e30c7d2d55df0",
+      "bytes": 18539
+    },
+    {
+      "label": "troupe-spring2021-refund",
+      "url": "https://troupelive.mankai-stage.jp/spring/news/57/",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:12:43.369Z",
+      "sha256": "32e5342729dac1fca76cbe8b47f237ece39edc26fdffa2263dbd89a5253c3fee",
+      "bytes": 15500
+    },
+    {
+      "label": "troupe-spring2021-producer",
+      "url": "https://www.nelke.co.jp/stage/mankai-stage_troupelivespring2021/index.html",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:12:43.432Z",
+      "sha256": "e6735586d7b268437b45fd5d97c840c3fe194fcbb20fb99304908f3987eaefd9",
+      "bytes": 40580
+    },
+    {
+      "label": "troupe-spring2021-ticketChange",
+      "url": "https://troupelive.mankai-stage.jp/spring/news/39/",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:12:43.453Z",
+      "sha256": "02bc39d3b31445ce06221306a38ca28ac2b93bbbaac63f21a90c1ff4ba54ad07",
+      "bytes": 11633
+    },
+    {
+      "label": "troupe-spring2021-cast",
+      "url": "https://troupelive.mankai-stage.jp/spring/cast",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:12:43.544Z",
+      "sha256": "6efc92d8de01a365f547070d97a3c0d4c1f2209ffc7ba2c200c59826dd14b91c",
+      "bytes": 14587
+    },
+    {
+      "label": "troupe-summer2021-guide",
+      "url": "https://troupelive.mankai-stage.jp/summer/guide",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:12:43.565Z",
+      "sha256": "c6ad1b95433383541a9f69f7fc66be9e7477ae4d93ea61e00176a846539faf0e",
+      "bytes": 40096
+    },
+    {
+      "label": "troupe-summer2021-ticket",
+      "url": "https://troupelive.mankai-stage.jp/summer/tickets",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:12:43.629Z",
+      "sha256": "2d6512c5b71fa42d408b8e2e8cd4a4070844a6022f27104cd823767028220f2f",
+      "bytes": 25356
+    },
+    {
+      "label": "troupe-summer2021-cast",
+      "url": "https://troupelive.mankai-stage.jp/summer/cast",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:12:43.644Z",
+      "sha256": "60eb343e5d28d788bee64e4cd72abefd6e6f2402eab5d78b23986b21b6b0742e",
+      "bytes": 17012
+    },
+    {
+      "label": "troupe-summer2021-producer",
+      "url": "https://www.nelke.co.jp/stage/mankai-stage_troupelivesummer2021/index.html",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:12:43.692Z",
+      "sha256": "7b5cc917a31648330f157282d3501102750740c3e983c52dd09c2ffea6365f0c",
+      "bytes": 41390
+    },
+    {
+      "label": "troupe-summer2021-official",
+      "url": "https://troupelive.mankai-stage.jp/summer/",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:12:43.710Z",
+      "sha256": "a969401467b614d985fb1542156f9e7d391d8c8ef7a6c2bae16bd5e6daaa479b",
+      "bytes": 18592
+    },
+    {
+      "label": "troupe-summer2021-notice",
+      "url": "https://troupelive.mankai-stage.jp/summer/notice",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:12:43.729Z",
+      "sha256": "42e38d751b27bff2d0890a00db4b41b81af0e32f029313cfab9af6a053e782eb",
+      "bytes": 27949
+    },
+    {
+      "label": "troupe-summer2021-refund",
+      "url": "https://troupelive.mankai-stage.jp/summer/news/45/",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:12:43.739Z",
+      "sha256": "85bb699f726322d4cc97ff7819d77d77d577b59eb71f8ac589fa7a51418ac4cc",
+      "bytes": 14631
+    },
+    {
+      "label": "troupe-autumn2021-cast",
+      "url": "https://troupelive.mankai-stage.jp/autumn/cast",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:12:43.795Z",
+      "sha256": "c82a59458f4fb219df6d26f73746062783481725236a6abca3212254796d6bd5",
+      "bytes": 17381
+    },
+    {
+      "label": "troupe-autumn2021-ticket",
+      "url": "https://troupelive.mankai-stage.jp/autumn/tickets",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:12:43.821Z",
+      "sha256": "b90d57ff27bf694827274da91d1fb04c3fd0b14d05e01f60c4f2bd88305121a0",
+      "bytes": 23323
+    },
+    {
+      "label": "troupe-summer2021-intro",
+      "url": "https://troupelive.mankai-stage.jp/summer/introduction",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:12:43.856Z",
+      "sha256": "f2b68dd1c7c8ceda8729ae2cf174dbd40f050ee69a90c4e3c1e893366d3f4776",
+      "bytes": 9971
+    },
+    {
+      "label": "troupe-autumn2021-guide",
+      "url": "https://troupelive.mankai-stage.jp/autumn/guide",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:12:43.863Z",
+      "sha256": "e2be40dd4a8dafd6aa0cbdffd11f364d3d14af99532bfea08660312ad491e64f",
+      "bytes": 45829
+    },
+    {
+      "label": "troupe-autumn2021-official",
+      "url": "https://troupelive.mankai-stage.jp/autumn/",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:12:43.882Z",
+      "sha256": "d266dd06ebcd949bf795a2022e19de810f3c470e39210c76b6021b67f4facf6e",
+      "bytes": 18841
+    },
+    {
+      "label": "troupe-autumn2021-notice",
+      "url": "https://troupelive.mankai-stage.jp/autumn/notice",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:12:43.919Z",
+      "sha256": "b15ab44f9093d727af7564ed57a9d4913281d490e02c5c91e2c32ef595187956",
+      "bytes": 26643
+    },
+    {
+      "label": "troupe-autumn2021-refund",
+      "url": "https://troupelive.mankai-stage.jp/autumn/news/42/",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:12:43.954Z",
+      "sha256": "d0dae1d11a77d5d5db1d82e478a9ebebbc069c246ace2f310e9383de506a635d",
+      "bytes": 14824
+    },
+    {
+      "label": "troupe-autumn2021-producer",
+      "url": "https://www.nelke.co.jp/stage/mankai-stage_troupeliveAUTUMN2021/index.html",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:12:43.999Z",
+      "sha256": "d21d2263280ad34d410ec92eefd976c793d0dfd0e7cc0483f40d0d7a87025d28",
+      "bytes": 42749
+    },
+    {
+      "label": "troupe-winter2022-official",
+      "url": "https://troupelive.mankai-stage.jp/winter/",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:12:44.005Z",
+      "sha256": "ab1438e98e7820fe6deffb1ba1b6363cb4fa5334494e3cb15ea3f4bd34decbbf",
+      "bytes": 18789
+    },
+    {
+      "label": "troupe-winter2022-guide",
+      "url": "https://troupelive.mankai-stage.jp/winter/guide",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:12:44.041Z",
+      "sha256": "40dec7a9b26145212a05e42a38e473d9b40063ae1bd0bdbabf863371e01d72a6",
+      "bytes": 45388
+    },
+    {
+      "label": "troupe-winter2022-intro",
+      "url": "https://troupelive.mankai-stage.jp/winter/introduction",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:12:44.053Z",
+      "sha256": "f44df59537683f37db4e308b3ebc951bf29b79ef8981b6fa57ee0376aea63dc3",
+      "bytes": 10086
+    },
+    {
+      "label": "troupe-winter2022-cast",
+      "url": "https://troupelive.mankai-stage.jp/winter/cast",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:12:44.098Z",
+      "sha256": "ebf667cc16db7c142fd7cbdfbfaa09cf9cafa757c69b0b04332b691613e6a3df",
+      "bytes": 17133
+    },
+    {
+      "label": "troupe-winter2022-notice",
+      "url": "https://troupelive.mankai-stage.jp/winter/notice",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:12:44.106Z",
+      "sha256": "cfe9a9b513ea3c3cc277179461ab6eeacce24d42c1b29dd708fad42af73a059a",
+      "bytes": 23502
+    },
+    {
+      "label": "troupe-winter2022-ticket",
+      "url": "https://troupelive.mankai-stage.jp/winter/tickets",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:12:44.157Z",
+      "sha256": "0425d52d5ab7162a94d62f142fcf87dc2e3de48690218d2db74a8a2d44e400f7",
+      "bytes": 24183
+    },
+    {
+      "label": "troupe-winter2022-ticketRules",
+      "url": "https://troupelive.mankai-stage.jp/winter/news/33/",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:12:44.198Z",
+      "sha256": "f8920fbe92f998d60b4460a17a39bf84edc5b9ef9f50b0c5deed35194b6fe5fb",
+      "bytes": 9776
+    },
+    {
+      "label": "troupe-winter2022-original",
+      "url": "https://liberent.co.jp/news/2022/02/23/mankai_stage_troupelive_winter_start/",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:12:44.207Z",
+      "sha256": "be2581d9a3e089049f39bd41f24f4d0abbbde1397ec7187ccafab62130cde053",
+      "bytes": 18459
+    },
+    {
+      "label": "troupe-winter2022-producer",
+      "url": "https://www.nelke.co.jp/stage/mankai-stage_troupeliveWINTER2022/index.html",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:12:44.218Z",
+      "sha256": "6ddaf629cb0693cff6f7674783e1ba7200a32ed93a93959fc167d9ed91fa250b",
+      "bytes": 41949
+    },
+    {
+      "label": "troupe-autumn2021-intro",
+      "url": "https://troupelive.mankai-stage.jp/autumn/introduction",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:12:44.243Z",
+      "sha256": "9e8759347f3ab8e4cb55f42129de0be96b1a7398a1c580ff0d209341cd36fc4f",
+      "bytes": 10204
+    },
+    {
+      "label": "four-seasons2020-scheduleImage01",
+      "url": "https://www.mankai-stage.jp/4seasonslive2020/assets/img/ticket/schedule_01.png",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:20:22.110Z",
+      "sha256": "afa18684241cc5cab6219141fbcaf661435c01566e031de5c1d20e3533e92b1d",
+      "bytes": 53903,
+      "sameAsReviewedSource": "imageBytes"
+    },
+    {
+      "label": "troupe-spring2021-variants",
+      "url": "https://troupelive.mankai-stage.jp/spring/news/41/",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:20:22.258Z",
+      "sha256": "743d328da9c84e54f5603fc97b68891c77b25a878cce917098dcb92f0a5fb260",
+      "bytes": 9926,
+      "sameAsReviewedSource": "bodyTextAndImageAlt"
+    },
+    {
+      "label": "troupe-spring2021-scheduleImage",
+      "url": "https://troupelive.mankai-stage.jp/spring/wp-content/themes/2021_spring/images/schedule_02.png",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:20:22.334Z",
+      "sha256": "4d615a80b87b4ec69a60efdf647c8fef5d3b40404feb606bf40abbb771032840",
+      "bytes": 13848,
+      "sameAsReviewedSource": "imageBytes"
+    },
+    {
+      "label": "troupe-summer2021-scheduleImage",
+      "url": "https://troupelive.mankai-stage.jp/summer/wp-content/themes/2021_summer/images/schedule_02.png?",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:20:22.501Z",
+      "sha256": "bd9ed535640553329b80754f021d76375a993e73f2ec75cc5aef8b4358bb9b47",
+      "bytes": 16671,
+      "sameAsReviewedSource": "imageBytes"
+    },
+    {
+      "label": "troupe-autumn2021-scheduleImage",
+      "url": "https://troupelive.mankai-stage.jp/autumn/wp-content/themes/2021_autumn_v2/images/schedule_02.png?",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:20:22.574Z",
+      "sha256": "0dbce4a11b27f05e479f137e5a6a95f7a397f274286f5f70b0cc5b2f1ea6a05e",
+      "bytes": 12621,
+      "sameAsReviewedSource": "imageBytes"
+    },
+    {
+      "label": "troupe-winter2022-scheduleImage",
+      "url": "https://troupelive.mankai-stage.jp/winter/wp-content/themes/2021_winter/images/schedule_02.png",
+      "status": 200,
+      "checkedAt": "2026-10-27T14:20:22.654Z",
+      "sha256": "38c542005a854e3ad562009b5b48edd17c205512c45268fcd217fb9635cfdbfe",
+      "bytes": 11355,
+      "sameAsReviewedSource": "imageBytes"
+    }
+  ],
+  "sourceSemanticVerification": {
+    "passed": true,
+    "sources": [
+      {
+        "label": "four-seasons2020-official",
+        "htmlUnchanged": true,
+        "bodyTextAndImageAltUnchanged": true
+      },
+      {
+        "label": "four-seasons2020-cast",
+        "htmlUnchanged": true,
+        "bodyTextAndImageAltUnchanged": true
+      },
+      {
+        "label": "four-seasons2020-ticket",
+        "htmlUnchanged": true,
+        "bodyTextAndImageAltUnchanged": true
+      },
+      {
+        "label": "four-seasons2020-guide",
+        "htmlUnchanged": true,
+        "bodyTextAndImageAltUnchanged": true
+      },
+      {
+        "label": "four-seasons2020-intro",
+        "htmlUnchanged": true,
+        "bodyTextAndImageAltUnchanged": true
+      },
+      {
+        "label": "four-seasons2020-original",
+        "htmlUnchanged": true,
+        "bodyTextAndImageAltUnchanged": true
+      },
+      {
+        "label": "four-seasons2020-producer",
+        "htmlUnchanged": true,
+        "bodyTextAndImageAltUnchanged": true
+      },
+      {
+        "label": "troupe-spring2021-intro",
+        "htmlUnchanged": false,
+        "bodyTextAndImageAltUnchanged": true
+      },
+      {
+        "label": "troupe-spring2021-ticket",
+        "htmlUnchanged": false,
+        "bodyTextAndImageAltUnchanged": true
+      },
+      {
+        "label": "troupe-spring2021-guide",
+        "htmlUnchanged": false,
+        "bodyTextAndImageAltUnchanged": true
+      },
+      {
+        "label": "troupe-spring2021-official",
+        "htmlUnchanged": false,
+        "bodyTextAndImageAltUnchanged": true
+      },
+      {
+        "label": "troupe-spring2021-refund",
+        "htmlUnchanged": false,
+        "bodyTextAndImageAltUnchanged": true
+      },
+      {
+        "label": "troupe-spring2021-producer",
+        "htmlUnchanged": true,
+        "bodyTextAndImageAltUnchanged": true
+      },
+      {
+        "label": "troupe-spring2021-ticketChange",
+        "htmlUnchanged": false,
+        "bodyTextAndImageAltUnchanged": true
+      },
+      {
+        "label": "troupe-spring2021-cast",
+        "htmlUnchanged": false,
+        "bodyTextAndImageAltUnchanged": true
+      },
+      {
+        "label": "troupe-summer2021-guide",
+        "htmlUnchanged": true,
+        "bodyTextAndImageAltUnchanged": true
+      },
+      {
+        "label": "troupe-summer2021-ticket",
+        "htmlUnchanged": true,
+        "bodyTextAndImageAltUnchanged": true
+      },
+      {
+        "label": "troupe-summer2021-cast",
+        "htmlUnchanged": true,
+        "bodyTextAndImageAltUnchanged": true
+      },
+      {
+        "label": "troupe-summer2021-producer",
+        "htmlUnchanged": true,
+        "bodyTextAndImageAltUnchanged": true
+      },
+      {
+        "label": "troupe-summer2021-official",
+        "htmlUnchanged": true,
+        "bodyTextAndImageAltUnchanged": true
+      },
+      {
+        "label": "troupe-summer2021-notice",
+        "htmlUnchanged": true,
+        "bodyTextAndImageAltUnchanged": true
+      },
+      {
+        "label": "troupe-summer2021-refund",
+        "htmlUnchanged": true,
+        "bodyTextAndImageAltUnchanged": true
+      },
+      {
+        "label": "troupe-summer2021-intro",
+        "htmlUnchanged": true,
+        "bodyTextAndImageAltUnchanged": true
+      },
+      {
+        "label": "troupe-autumn2021-cast",
+        "htmlUnchanged": false,
+        "bodyTextAndImageAltUnchanged": true
+      },
+      {
+        "label": "troupe-autumn2021-ticket",
+        "htmlUnchanged": false,
+        "bodyTextAndImageAltUnchanged": true
+      },
+      {
+        "label": "troupe-autumn2021-guide",
+        "htmlUnchanged": false,
+        "bodyTextAndImageAltUnchanged": true
+      },
+      {
+        "label": "troupe-autumn2021-official",
+        "htmlUnchanged": false,
+        "bodyTextAndImageAltUnchanged": true
+      },
+      {
+        "label": "troupe-autumn2021-notice",
+        "htmlUnchanged": false,
+        "bodyTextAndImageAltUnchanged": true
+      },
+      {
+        "label": "troupe-autumn2021-refund",
+        "htmlUnchanged": false,
+        "bodyTextAndImageAltUnchanged": true
+      },
+      {
+        "label": "troupe-autumn2021-producer",
+        "htmlUnchanged": true,
+        "bodyTextAndImageAltUnchanged": true
+      },
+      {
+        "label": "troupe-autumn2021-intro",
+        "htmlUnchanged": false,
+        "bodyTextAndImageAltUnchanged": true
+      },
+      {
+        "label": "troupe-winter2022-official",
+        "htmlUnchanged": false,
+        "bodyTextAndImageAltUnchanged": true
+      },
+      {
+        "label": "troupe-winter2022-guide",
+        "htmlUnchanged": false,
+        "bodyTextAndImageAltUnchanged": true
+      },
+      {
+        "label": "troupe-winter2022-intro",
+        "htmlUnchanged": false,
+        "bodyTextAndImageAltUnchanged": true
+      },
+      {
+        "label": "troupe-winter2022-cast",
+        "htmlUnchanged": false,
+        "bodyTextAndImageAltUnchanged": true
+      },
+      {
+        "label": "troupe-winter2022-notice",
+        "htmlUnchanged": false,
+        "bodyTextAndImageAltUnchanged": true
+      },
+      {
+        "label": "troupe-winter2022-ticket",
+        "htmlUnchanged": false,
+        "bodyTextAndImageAltUnchanged": true
+      },
+      {
+        "label": "troupe-winter2022-ticketRules",
+        "htmlUnchanged": false,
+        "bodyTextAndImageAltUnchanged": true
+      },
+      {
+        "label": "troupe-winter2022-original",
+        "htmlUnchanged": true,
+        "bodyTextAndImageAltUnchanged": true
+      },
+      {
+        "label": "troupe-winter2022-producer",
+        "htmlUnchanged": true,
+        "bodyTextAndImageAltUnchanged": true
+      }
+    ]
+  },
+  "totalWorks": 5,
+  "totalCastRows": 51,
+  "uniqueActors": 28,
+  "recordedScheduleRows": 35,
+  "contentCorrectionsRequired": false,
+  "productionWrites": 0,
+  "initialFiveWorksVerificationPassed": true,
+  "completeA3LiveCoverage": false,
+  "scope": "初期ライブ5作品の公式配役・区分・クレジット・回替わり演目・既照合35日時・予定上演時間・日英紹介・年表・相互リンク。現在配信と人物属性の再調査、全回の個別実施証明は対象外。",
+  "remaining": [
+    "Four Seasons LIVE 2024ほか未収録後続ライブ",
+    "人物属性の総合監査・現行配信・クレジットや役名の細部英訳",
+    "サポート各人の個別出演日、未記載の換気時間を推測しない"
+  ],
+  "nextWork": {
+    "title": "MANKAI STAGE A3! Four Seasons LIVE 2024",
+    "status": "research_pending",
+    "note": "公式過去公演一覧掲載を確認。2020からキャスト・日程・演目を引き継がず当該公式資料で調査する。"
+  },
+  "requestKey": "2c39bcf1a803b7578d65ce1c917cd2c574aeee094605bed223931b54b0a314b6",
+  "verification": {
+    "passed": true,
+    "checkedAt": "2026-10-27T14:31:40.393Z",
+    "mode": "read_only_audit_no_mutations_no_sql_required",
+    "tables": {
+      "actors": {
+        "before": 1170,
+        "after": 1170,
+        "added": 0,
+        "updated": 0,
+        "deleted": 0,
+        "sha256": "75aa24d8ad005c05bb1ff72244d6865fbd6606748e7ea18d4cea599e74203070"
+      },
+      "plays": {
+        "before": 428,
+        "after": 428,
+        "added": 0,
+        "updated": 0,
+        "deleted": 0,
+        "sha256": "fddb9be584f9b1a837b2c987b6543200af914ecfeb52923344a3186068235f97"
+      },
+      "franchises": {
+        "before": 198,
+        "after": 198,
+        "added": 0,
+        "updated": 0,
+        "deleted": 0,
+        "sha256": "b9617637a26fe6c939a72b762d61342ff6a1eb44d74c59bb97a16c29e1706012"
+      },
+      "casts": {
+        "before": 4450,
+        "after": 4450,
+        "added": 0,
+        "updated": 0,
+        "deleted": 0,
+        "sha256": "c1ff90f63452dd3f5dba42831630ca30eda2b9435aee89db2812065d25e94458"
+      },
+      "external_actors": {
+        "before": 1701,
+        "after": 1701,
+        "added": 0,
+        "updated": 0,
+        "deleted": 0,
+        "sha256": "0ceace607d9bec604493a25c9004f9ffde6b152701b573d00dbe0e01d1bb03c6"
+      },
+      "external_cast_candidates": {
+        "before": 3797,
+        "after": 3797,
+        "added": 0,
+        "updated": 0,
+        "deleted": 0,
+        "sha256": "6ad6ff92cc645a58a64c21f77c1ccb07a0fba713aa97e3958af2e394f9a70569"
+      },
+      "external_import_logs": {
+        "before": 6309,
+        "after": 6309,
+        "added": 0,
+        "updated": 0,
+        "deleted": 0,
+        "sha256": "629f6ad9dcd2c280631db179eebae955718c0b38740b85e3ddc2cf36e65277cf"
+      },
+      "actor_identity_sources": {
+        "before": 516,
+        "after": 516,
+        "added": 0,
+        "updated": 0,
+        "deleted": 0,
+        "sha256": "4bb011fb165a48dd6af754fc812baea5103949adcfc0d8a96ac4ffa022467dbb"
+      }
+    },
+    "totalContentChanges": 0,
+    "productionWrites": 0,
+    "allExistingRowsPreserved": true,
+    "mainWorks": 7,
+    "mainCastRows": 93,
+    "liveWorks": 5,
+    "liveCastRows": 51
+  },
+  "publicVerification": {
+    "passed": true,
+    "pages": 88,
+    "mainWorks": 7,
+    "mainCastRows": 93,
+    "mainActors": 30,
+    "liveWorks": 5,
+    "liveCastRows": 51,
+    "combinedWorks": 12,
+    "combinedCastRows": 144,
+    "legacyMainCastBadgesAbsent": true,
+    "descendingTimelineVerified": true,
+    "results": [
+      {
+        "path": "/series/a3-live",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/series/a3",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/a3_2019-2",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/a3_2019-3",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/ace-stage-ss",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/a3_2020-2-2",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/a3_2021",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/a3_2021-3",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/a3_2021-4",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/a3_2020-3",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/ace-stage-aw",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/a3_2021-2",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/a3_2020",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/a3_2022",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/yokota-ryugi",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/makishima-hikaru",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/maekawa-yuki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/tateishi-toshiki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/furuya-yamato",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/miyazaki-yu",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/ueda-kandai",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/mizue-kenta",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/fujita-ray",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/aramaki-yoshihiko",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/sasamori-hiroki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/tauchi-tokihiro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/taguchi-ryo",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/jinnai-sho",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/noguchi-jun",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/honda-reo",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/akazawa-tomoru",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/nakamura-taro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/usa-takuma",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/izaki-ryujiro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/takiguchi-yukihiro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/kawai-ryunosuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/imamura-nezumi",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/kitazono-ryo",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/tanaka-ryosei",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/ueda-keisuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/kujirai-kosuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/inagaki-seiya",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/akazawa-ryotaro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/satonaka-masamichi",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/series/a3-live",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/series/a3",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/a3_2019-2",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/a3_2019-3",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/ace-stage-ss",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/a3_2021",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/a3_2021-3",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/a3_2020-2-2",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/a3_2020-3",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/a3_2021-4",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/a3_2021-2",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/ace-stage-aw",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/a3_2022",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/yokota-ryugi",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/makishima-hikaru",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/a3_2020",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/maekawa-yuki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/tateishi-toshiki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/miyazaki-yu",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/furuya-yamato",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/mizue-kenta",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/fujita-ray",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/aramaki-yoshihiko",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/ueda-kandai",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/sasamori-hiroki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/tauchi-tokihiro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/taguchi-ryo",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/jinnai-sho",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/noguchi-jun",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/honda-reo",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/akazawa-tomoru",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/nakamura-taro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/usa-takuma",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/takiguchi-yukihiro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/kawai-ryunosuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/izaki-ryujiro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/imamura-nezumi",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/kitazono-ryo",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/tanaka-ryosei",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/ueda-keisuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/inagaki-seiya",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/kujirai-kosuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/akazawa-ryotaro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/satonaka-masamichi",
+        "passed": true,
+        "status": 200
+      }
+    ]
+  },
+  "searchVerification": {
+    "passed": true,
+    "checks": 112,
+    "spaceAndNoSpace": true,
+    "genderAttributesUnchanged": true,
+    "results": [
+      {
+        "path": "/actors?q=%E6%A8%AA%E7%94%B0+%E9%BE%8D%E5%84%80",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%89%A7%E5%B3%B6+%E8%BC%9D",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%A8%AA%E7%94%B0%E9%BE%8D%E5%84%80",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%89%A7%E5%B3%B6%E8%BC%9D",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%89%8D%E5%B7%9D%E5%84%AA%E5%B8%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%89%8D%E5%B7%9D+%E5%84%AA%E5%B8%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%AB%8B%E7%9F%B3%E4%BF%8A%E6%A8%B9",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%AB%8B%E7%9F%B3+%E4%BF%8A%E6%A8%B9",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%8F%A4%E8%B0%B7+%E5%A4%A7%E5%92%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%8F%A4%E8%B0%B7%E5%A4%A7%E5%92%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E9%99%B3%E5%86%85+%E5%B0%86",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E9%99%B3%E5%86%85%E5%B0%86",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%AE%AE%E5%B4%8E+%E6%B9%A7",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%AE%AE%E5%B4%8E%E6%B9%A7",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E9%87%8E%E5%8F%A3+%E6%BA%96",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E9%87%8E%E5%8F%A3%E6%BA%96",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%9C%AC%E7%94%B0+%E7%A4%BC%E7%94%9F",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%9C%AC%E7%94%B0%E7%A4%BC%E7%94%9F",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E8%B5%A4%E6%BE%A4+%E7%87%88",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E8%B5%A4%E6%BE%A4%E7%87%88",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%B0%B4%E6%B1%9F+%E5%BB%BA%E5%A4%AA",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%B0%B4%E6%B1%9F%E5%BB%BA%E5%A4%AA",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E4%B8%AD%E6%9D%91%E5%A4%AA%E9%83%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E4%B8%AD%E6%9D%91+%E5%A4%AA%E9%83%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E8%B5%A4%E6%BE%A4%E9%81%BC%E5%A4%AA%E9%83%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%A8%B2%E5%9E%A3+%E6%88%90%E5%BC%A5",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%A8%B2%E5%9E%A3%E6%88%90%E5%BC%A5",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E8%97%A4%E7%94%B0+%E7%8E%B2",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E8%97%A4%E7%94%B0%E7%8E%B2",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E8%8D%92%E7%89%A7+%E6%85%B6%E5%BD%A6",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%8C%97%E5%9C%92+%E6%B6%BC",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%8C%97%E5%9C%92%E6%B6%BC",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E8%8D%92%E7%89%A7%E6%85%B6%E5%BD%A6",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E8%B5%A4%E6%BE%A4+%E9%81%BC%E5%A4%AA%E9%83%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%A4%8D%E7%94%B0+%E5%9C%AD%E8%BC%94",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%94%B0%E4%B8%AD+%E6%B6%BC%E6%98%9F",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%A4%8D%E7%94%B0%E5%9C%AD%E8%BC%94",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%94%B0%E4%B8%AD%E6%B6%BC%E6%98%9F",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E4%B8%8A%E7%94%B0+%E5%A0%AA%E5%A4%A7",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E4%B8%8A%E7%94%B0%E5%A0%AA%E5%A4%A7",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%94%B0%E5%8F%A3+%E6%B6%BC",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%94%B0%E5%8F%A3%E6%B6%BC",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%94%B0%E5%86%85+%E5%AD%A3%E5%AE%87",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%94%B0%E5%86%85%E5%AD%A3%E5%AE%87",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%AC%B9%E6%A3%AE+%E8%A3%95%E8%B2%B4",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E7%AC%B9%E6%A3%AE%E8%A3%95%E8%B2%B4",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%AE%87%E4%BD%90+%E5%8D%93%E7%9C%9F",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%AE%87%E4%BD%90%E5%8D%93%E7%9C%9F",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E9%87%8C%E4%B8%AD+%E5%B0%86%E9%81%93",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E9%87%8C%E4%B8%AD%E5%B0%86%E9%81%93",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E4%BC%8A%E5%B4%8E+%E9%BE%8D%E6%AC%A1%E9%83%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%B2%B3%E5%90%88%E9%BE%8D%E4%B9%8B%E4%BB%8B",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%B2%B3%E5%90%88+%E9%BE%8D%E4%B9%8B%E4%BB%8B",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E4%BC%8A%E5%B4%8E%E9%BE%8D%E6%AC%A1%E9%83%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E9%AF%A8%E4%BA%95+%E5%BA%B7%E4%BB%8B",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E9%AF%A8%E4%BA%95%E5%BA%B7%E4%BB%8B",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%A8%AA%E7%94%B0+%E9%BE%8D%E5%84%80",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%A8%AA%E7%94%B0%E9%BE%8D%E5%84%80",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%89%A7%E5%B3%B6+%E8%BC%9D",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%89%A7%E5%B3%B6%E8%BC%9D",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%89%8D%E5%B7%9D+%E5%84%AA%E5%B8%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%89%8D%E5%B7%9D%E5%84%AA%E5%B8%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%AB%8B%E7%9F%B3+%E4%BF%8A%E6%A8%B9",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%AB%8B%E7%9F%B3%E4%BF%8A%E6%A8%B9",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%8F%A4%E8%B0%B7+%E5%A4%A7%E5%92%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%8F%A4%E8%B0%B7%E5%A4%A7%E5%92%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E9%99%B3%E5%86%85+%E5%B0%86",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E9%99%B3%E5%86%85%E5%B0%86",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%AE%AE%E5%B4%8E+%E6%B9%A7",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%AE%AE%E5%B4%8E%E6%B9%A7",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E9%87%8E%E5%8F%A3+%E6%BA%96",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E9%87%8E%E5%8F%A3%E6%BA%96",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%9C%AC%E7%94%B0+%E7%A4%BC%E7%94%9F",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%9C%AC%E7%94%B0%E7%A4%BC%E7%94%9F",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E8%B5%A4%E6%BE%A4+%E7%87%88",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%B0%B4%E6%B1%9F+%E5%BB%BA%E5%A4%AA",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E8%B5%A4%E6%BE%A4%E7%87%88",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%B0%B4%E6%B1%9F%E5%BB%BA%E5%A4%AA",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E4%B8%AD%E6%9D%91+%E5%A4%AA%E9%83%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E4%B8%AD%E6%9D%91%E5%A4%AA%E9%83%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E8%B5%A4%E6%BE%A4+%E9%81%BC%E5%A4%AA%E9%83%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E8%B5%A4%E6%BE%A4%E9%81%BC%E5%A4%AA%E9%83%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%A8%B2%E5%9E%A3+%E6%88%90%E5%BC%A5",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%A8%B2%E5%9E%A3%E6%88%90%E5%BC%A5",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E8%97%A4%E7%94%B0+%E7%8E%B2",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E8%97%A4%E7%94%B0%E7%8E%B2",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E8%8D%92%E7%89%A7+%E6%85%B6%E5%BD%A6",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E8%8D%92%E7%89%A7%E6%85%B6%E5%BD%A6",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%8C%97%E5%9C%92+%E6%B6%BC",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%8C%97%E5%9C%92%E6%B6%BC",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%A4%8D%E7%94%B0+%E5%9C%AD%E8%BC%94",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%A4%8D%E7%94%B0%E5%9C%AD%E8%BC%94",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%94%B0%E4%B8%AD+%E6%B6%BC%E6%98%9F",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%94%B0%E4%B8%AD%E6%B6%BC%E6%98%9F",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E4%B8%8A%E7%94%B0+%E5%A0%AA%E5%A4%A7",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E4%B8%8A%E7%94%B0%E5%A0%AA%E5%A4%A7",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%94%B0%E5%8F%A3+%E6%B6%BC",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%94%B0%E5%8F%A3%E6%B6%BC",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%94%B0%E5%86%85%E5%AD%A3%E5%AE%87",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%94%B0%E5%86%85+%E5%AD%A3%E5%AE%87",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%AC%B9%E6%A3%AE+%E8%A3%95%E8%B2%B4",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E7%AC%B9%E6%A3%AE%E8%A3%95%E8%B2%B4",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E9%87%8C%E4%B8%AD+%E5%B0%86%E9%81%93",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%AE%87%E4%BD%90%E5%8D%93%E7%9C%9F",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%AE%87%E4%BD%90+%E5%8D%93%E7%9C%9F",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E9%87%8C%E4%B8%AD%E5%B0%86%E9%81%93",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E4%BC%8A%E5%B4%8E+%E9%BE%8D%E6%AC%A1%E9%83%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%B2%B3%E5%90%88+%E9%BE%8D%E4%B9%8B%E4%BB%8B",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E4%BC%8A%E5%B4%8E%E9%BE%8D%E6%AC%A1%E9%83%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%B2%B3%E5%90%88%E9%BE%8D%E4%B9%8B%E4%BB%8B",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E9%AF%A8%E4%BA%95+%E5%BA%B7%E4%BB%8B",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E9%AF%A8%E4%BA%95%E5%BA%B7%E4%BB%8B",
+        "status": 200,
+        "passed": true
+      }
+    ]
+  },
+  "sourceValidation": {
+    "passed": true,
+    "a3OfficialSources": 48,
+    "otherSources": 1,
+    "officialScheduleImages": 5,
+    "officialHtmlContentUnchanged": true,
+    "officialScheduleImageBytesUnchanged": true
+  },
+  "verificationScope": "初期5作品51配役28人物の横断点検。35日時は登録時の画像・主催者表照合記録と今回の内容不変確認による整合検証であり、各回の実施証明ではない。日英88ページはACT1も含む12作品144配役30人物。検索112件はライブ28人物。内容修正不要のため本番への書き込みは一切行わない。",
+  "snapshotStorage": "Git管理外 a3-live-audit-20261027/ に8テーブル変更前後全行・取得原文・画像・SHA256・検証スクリプトを保存。",
+  "totals": {
+    "actors": 1170,
+    "plays": 428,
+    "casts": 4450
+  }
+}
