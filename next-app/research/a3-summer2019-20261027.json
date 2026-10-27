@@ -1,0 +1,5449 @@
+{
+  "version": 1,
+  "batchId": "a3-summer2019-20261027-01",
+  "expectedFranchise": {
+    "id": "03404164-26f0-476f-92e9-5b438984fe0d",
+    "name": "MANKAI STAGE『A3!』ACT1（エーステACT1）",
+    "created_at": "2025-12-13T04:58:27.220101+00:00",
+    "updated_at": "2025-12-13T04:58:27.220101+00:00",
+    "slug": "a3",
+    "intro": null,
+    "description": "MANKAI STAGE『A3!』シリーズの記念すべき第1作目。原作ゲームのメインストーリー第1部（劇団再生から各組の旗揚げ公演まで）を描く。物語の始まりとなる2組合同公演「SPRING & SUMMER 2018」「AUTUMN & WINTER 2019」から始まり、その後の各組単独公演（SPRING、SUMMER、AUTUMN、WINTER）へと続く、エーステの基礎を築いたシリーズ。劇団員たちが借金まみれのボロ劇団を立て直す軌跡と、春夏秋冬の4組・計20人の劇団員が揃うまでの物語が集約されている。",
+    "origin_type": "ゲーム原作",
+    "origin_note": "原作：イケメン役者育成ゲーム『A3!』（リベル・エンタテインメント）",
+    "production_companies": [
+      "ネルケプランニング",
+      "MANKAI STAGE『A3!』製作委員会"
+    ],
+    "related_franchise_ids": [
+      "d8d36e4f-9a0d-4a91-aac3-e6b8f24a8a5d",
+      "8d36fc91-4300-431f-a738-63696bd0f824",
+      "7eefe33e-9b9c-4cca-9c9f-5b67a37d701e"
+    ],
+    "format": "stage",
+    "description_en": "The memorable inaugural series of the MANKAI STAGE A3! franchise, adapting the first act of the original game's main story. It covers the complete journey of the theater company's revival and the inaugural performances of each troupe. Starting with the joint productions SPRING & SUMMER 2018 and AUTUMN & WINTER 2019, and leading into the dedicated solo performances for the Spring, Summer, Autumn, and Winter troupes, this series laid the foundation for the \"A-Ste\" legacy. It encapsulates the moving story of rebuilding a debt-ridden, run-down theater, capturing the journey until all 20 members across the four troupes are finally brought together.",
+    "name_en": "MANKAI STAGE A3! Act1 (A-Ste Act 1)"
+  },
+  "franchisePatch": {},
+  "actors": [],
+  "externalActorLinks": [],
+  "works": [
+    {
+      "year": 2019,
+      "before": {
+        "id": "3a9939c9-ee4c-42e5-a545-a0d0a9c1c46b",
+        "slug": "a3_2019-3",
+        "title": "MANKAI STAGE『A3!』～SUMMER 2019～",
+        "franchise_id": "03404164-26f0-476f-92e9-5b438984fe0d",
+        "summary": null,
+        "period": "2019年",
+        "venue": null,
+        "vod": {},
+        "genre": null,
+        "created_at": "2026-04-30T18:29:43.324193+00:00",
+        "updated_at": "2026-04-30T18:29:43.324193+00:00",
+        "tags": [],
+        "credits": null,
+        "related_franchise_ids": [],
+        "summary_en": null,
+        "title_en": null
+      },
+      "patch": {
+        "title": "MANKAI STAGE『A3!』～SUMMER 2019～",
+        "period": "2019年8月8日〜9月29日",
+        "venue": "東京・東京凱旋：品川プリンスホテル ステラボール／兵庫：AiiA 2.5 Theater Kobe／愛知：名古屋市公会堂／新潟：長岡市立劇場 大ホール",
+        "summary": "俳優育成ゲーム『A3!』を原作とする夏組の単独公演。皇天馬たち夏組の第二回公演『にぼしを巡る冒険』と第三回公演『抜錨！スカイ海賊団』を軸に、劇団員たちの物語を描く。2019年に東京・兵庫・愛知・新潟を巡り、東京凱旋公演まで上演された。",
+        "summary_en": "A solo Summer Troupe production based on the actor-training game A3!. It follows Tenma Sumeragi and his troupe through their second and third productions. The 2019 tour visited Tokyo, Hyogo, Aichi and Niigata before returning to Tokyo.",
+        "title_en": "MANKAI STAGE A3! ~SUMMER 2019~",
+        "credits": [
+          {
+            "role": "原作",
+            "names": [
+              "イケメン役者育成ゲーム『A3!（エースリー）』（リベル・エンタテインメント）"
+            ],
+            "is_core": true,
+            "sort_order": 1
+          },
+          {
+            "role": "演出",
+            "names": [
+              "松崎史也"
+            ],
+            "is_core": true,
+            "sort_order": 2
+          },
+          {
+            "role": "脚本",
+            "names": [
+              "亀田真二郎（東京パチプロデュース）"
+            ],
+            "is_core": true,
+            "sort_order": 3
+          },
+          {
+            "role": "音楽",
+            "names": [
+              "Yu（vague）"
+            ],
+            "is_core": false,
+            "sort_order": 4
+          },
+          {
+            "role": "振付",
+            "names": [
+              "梅棒"
+            ],
+            "is_core": false,
+            "sort_order": 5
+          },
+          {
+            "role": "協力",
+            "names": [
+              "一般社団法人 日本2.5次元ミュージカル協会"
+            ],
+            "is_core": false,
+            "sort_order": 6
+          },
+          {
+            "role": "協賛",
+            "names": [
+              "ファミリーマート"
+            ],
+            "is_core": false,
+            "sort_order": 7
+          },
+          {
+            "role": "主催",
+            "names": [
+              "MANKAI STAGE『A3!』製作委員会（ネルケプランニング、ポニーキャニオン、リベル・エンタテインメント）"
+            ],
+            "is_core": false,
+            "sort_order": 8
+          },
+          {
+            "role": "公演日程",
+            "names": [
+              "東京：2019年8月8日〜18日（品川プリンスホテル ステラボール）・全16公演、8月12日休演",
+              "兵庫：2019年8月23日〜9月1日（AiiA 2.5 Theater Kobe）・全14公演、8月27日休演",
+              "愛知：2019年9月6日〜8日（名古屋市公会堂）・全6公演",
+              "新潟：2019年9月13日〜15日（長岡市立劇場 大ホール）・全4公演",
+              "東京凱旋：2019年9月19日〜29日（品川プリンスホテル ステラボール）・全16公演、9月23日休演"
+            ],
+            "is_core": false,
+            "sort_order": 9
+          },
+          {
+            "role": "上演時間（予定）",
+            "names": [
+              "約2時間30分（途中休憩あり・休憩分数未確認）"
+            ],
+            "is_core": false,
+            "sort_order": 10
+          }
+        ],
+        "vod": {}
+      },
+      "play": {
+        "id": "3a9939c9-ee4c-42e5-a545-a0d0a9c1c46b",
+        "slug": "a3_2019-3",
+        "title": "MANKAI STAGE『A3!』～SUMMER 2019～",
+        "franchise_id": "03404164-26f0-476f-92e9-5b438984fe0d",
+        "summary": "俳優育成ゲーム『A3!』を原作とする夏組の単独公演。皇天馬たち夏組の第二回公演『にぼしを巡る冒険』と第三回公演『抜錨！スカイ海賊団』を軸に、劇団員たちの物語を描く。2019年に東京・兵庫・愛知・新潟を巡り、東京凱旋公演まで上演された。",
+        "period": "2019年8月8日〜9月29日",
+        "venue": "東京・東京凱旋：品川プリンスホテル ステラボール／兵庫：AiiA 2.5 Theater Kobe／愛知：名古屋市公会堂／新潟：長岡市立劇場 大ホール",
+        "vod": {},
+        "genre": null,
+        "tags": [],
+        "credits": [
+          {
+            "role": "原作",
+            "names": [
+              "イケメン役者育成ゲーム『A3!（エースリー）』（リベル・エンタテインメント）"
+            ],
+            "is_core": true,
+            "sort_order": 1
+          },
+          {
+            "role": "演出",
+            "names": [
+              "松崎史也"
+            ],
+            "is_core": true,
+            "sort_order": 2
+          },
+          {
+            "role": "脚本",
+            "names": [
+              "亀田真二郎（東京パチプロデュース）"
+            ],
+            "is_core": true,
+            "sort_order": 3
+          },
+          {
+            "role": "音楽",
+            "names": [
+              "Yu（vague）"
+            ],
+            "is_core": false,
+            "sort_order": 4
+          },
+          {
+            "role": "振付",
+            "names": [
+              "梅棒"
+            ],
+            "is_core": false,
+            "sort_order": 5
+          },
+          {
+            "role": "協力",
+            "names": [
+              "一般社団法人 日本2.5次元ミュージカル協会"
+            ],
+            "is_core": false,
+            "sort_order": 6
+          },
+          {
+            "role": "協賛",
+            "names": [
+              "ファミリーマート"
+            ],
+            "is_core": false,
+            "sort_order": 7
+          },
+          {
+            "role": "主催",
+            "names": [
+              "MANKAI STAGE『A3!』製作委員会（ネルケプランニング、ポニーキャニオン、リベル・エンタテインメント）"
+            ],
+            "is_core": false,
+            "sort_order": 8
+          },
+          {
+            "role": "公演日程",
+            "names": [
+              "東京：2019年8月8日〜18日（品川プリンスホテル ステラボール）・全16公演、8月12日休演",
+              "兵庫：2019年8月23日〜9月1日（AiiA 2.5 Theater Kobe）・全14公演、8月27日休演",
+              "愛知：2019年9月6日〜8日（名古屋市公会堂）・全6公演",
+              "新潟：2019年9月13日〜15日（長岡市立劇場 大ホール）・全4公演",
+              "東京凱旋：2019年9月19日〜29日（品川プリンスホテル ステラボール）・全16公演、9月23日休演"
+            ],
+            "is_core": false,
+            "sort_order": 9
+          },
+          {
+            "role": "上演時間（予定）",
+            "names": [
+              "約2時間30分（途中休憩あり・休憩分数未確認）"
+            ],
+            "is_core": false,
+            "sort_order": 10
+          }
+        ],
+        "related_franchise_ids": [],
+        "summary_en": "A solo Summer Troupe production based on the actor-training game A3!. It follows Tenma Sumeragi and his troupe through their second and third productions. The 2019 tour visited Tokyo, Hyogo, Aichi and Niigata before returning to Tokyo.",
+        "title_en": "MANKAI STAGE A3! ~SUMMER 2019~"
+      },
+      "rawSource": {
+        "sourceUrl": "https://kira-hai.net/a3_2019-3",
+        "title": "MANKAI STAGE『A3!』~SUMMER 2019~",
+        "scheduleLines": [
+          "2019年8月8日-18日 品川プリンスホテル ステラボール",
+          "2019年8月23日-9月1日 AiiA 2.5 Theater Kobe",
+          "2019年9月6日-8日 名古屋市公会堂",
+          "2019年9月13日-15日 長岡市立劇場 大ホール",
+          "2019年9月19日-29日 品川プリンスホテル ステラボール"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "陳内将",
+            "sourceActorUrl": "https://kira-hai.net/jinnai-sho",
+            "role_name": "皇天馬",
+            "cast_group": "SUMMER TROUPE 夏組"
+          },
+          {
+            "sourceActorName": "宮崎湧",
+            "sourceActorUrl": "https://kira-hai.net/miyazaki-yu",
+            "role_name": "瑠璃川幸",
+            "cast_group": "SUMMER TROUPE 夏組"
+          },
+          {
+            "sourceActorName": "野口準",
+            "sourceActorUrl": "https://kira-hai.net/noguchi-jun",
+            "role_name": "向坂椋",
+            "cast_group": "SUMMER TROUPE 夏組"
+          },
+          {
+            "sourceActorName": "本田礼生",
+            "sourceActorUrl": "https://kira-hai.net/honda-reo",
+            "role_name": "斑鳩三角",
+            "cast_group": "SUMMER TROUPE 夏組"
+          },
+          {
+            "sourceActorName": "赤澤燈",
+            "sourceActorUrl": "https://kira-hai.net/akazawa-tomoru",
+            "role_name": "三好一成",
+            "cast_group": "SUMMER TROUPE 夏組"
+          },
+          {
+            "sourceActorName": "横田龍儀",
+            "sourceActorUrl": "https://kira-hai.net/yokota-ryugi",
+            "role_name": "佐久間咲也",
+            "cast_group": "春組"
+          },
+          {
+            "sourceActorName": "前川優希",
+            "sourceActorUrl": "https://kira-hai.net/maekawa-yuki",
+            "role_name": "皆木綴",
+            "cast_group": "春組"
+          },
+          {
+            "sourceActorName": "中村太郎",
+            "sourceActorUrl": "https://kira-hai.net/nakamura-taro",
+            "role_name": "兵頭十座",
+            "cast_group": "秋組"
+          },
+          {
+            "sourceActorName": "宇佐卓真",
+            "sourceActorUrl": "https://kira-hai.net/usa-takuma",
+            "role_name": "斑鳩円",
+            "cast_group": "秋組"
+          },
+          {
+            "sourceActorName": "滝口幸広",
+            "sourceActorUrl": "https://kira-hai.net/takiguchi-yukihiro",
+            "role_name": "鹿島雄三(初代春組OB)",
+            "cast_group": "秋組"
+          },
+          {
+            "sourceActorName": "伊崎龍次郎",
+            "sourceActorUrl": "https://kira-hai.net/izaki-ryujiro",
+            "role_name": "飛鳥晴翔(GOD座)",
+            "cast_group": "秋組"
+          },
+          {
+            "sourceActorName": "河合龍之介",
+            "sourceActorUrl": "https://kira-hai.net/kawai-ryunosuke",
+            "role_name": "神木坂レニ(GOD座主宰)",
+            "cast_group": "秋組"
+          }
+        ],
+        "unparsed": []
+      },
+      "source": {
+        "sourceUrl": "https://kira-hai.net/a3_2019-3",
+        "title": "MANKAI STAGE『A3!』~SUMMER 2019~",
+        "scheduleLines": [
+          "2019年8月8日-18日 品川プリンスホテル ステラボール",
+          "2019年8月23日-9月1日 AiiA 2.5 Theater Kobe",
+          "2019年9月6日-8日 名古屋市公会堂",
+          "2019年9月13日-15日 長岡市立劇場 大ホール",
+          "2019年9月19日-29日 品川プリンスホテル ステラボール"
+        ],
+        "cast": [
+          {
+            "sourceActorName": "陳内将",
+            "sourceActorUrl": "https://kira-hai.net/jinnai-sho",
+            "role_name": "皇天馬",
+            "cast_group": "夏組"
+          },
+          {
+            "sourceActorName": "宮崎湧",
+            "sourceActorUrl": "https://kira-hai.net/miyazaki-yu",
+            "role_name": "瑠璃川幸",
+            "cast_group": "夏組"
+          },
+          {
+            "sourceActorName": "野口準",
+            "sourceActorUrl": "https://kira-hai.net/noguchi-jun",
+            "role_name": "向坂椋",
+            "cast_group": "夏組"
+          },
+          {
+            "sourceActorName": "本田礼生",
+            "sourceActorUrl": "https://kira-hai.net/honda-reo",
+            "role_name": "斑鳩三角",
+            "cast_group": "夏組"
+          },
+          {
+            "sourceActorName": "赤澤燈",
+            "sourceActorUrl": "https://kira-hai.net/akazawa-tomoru",
+            "role_name": "三好一成",
+            "cast_group": "夏組"
+          },
+          {
+            "sourceActorName": "横田龍儀",
+            "sourceActorUrl": "https://kira-hai.net/yokota-ryugi",
+            "role_name": "佐久間咲也",
+            "cast_group": "春組"
+          },
+          {
+            "sourceActorName": "前川優希",
+            "sourceActorUrl": "https://kira-hai.net/maekawa-yuki",
+            "role_name": "皆木綴",
+            "cast_group": "春組"
+          },
+          {
+            "sourceActorName": "中村太郎",
+            "sourceActorUrl": "https://kira-hai.net/nakamura-taro",
+            "role_name": "兵頭十座",
+            "cast_group": "秋組"
+          },
+          {
+            "sourceActorName": "宇佐卓真",
+            "sourceActorUrl": "https://kira-hai.net/usa-takuma",
+            "role_name": "斑鳩円",
+            "cast_group": null
+          },
+          {
+            "sourceActorName": "滝口幸広",
+            "sourceActorUrl": "https://kira-hai.net/takiguchi-yukihiro",
+            "role_name": "鹿島雄三",
+            "cast_group": null,
+            "sourceAnnotation": "初代春組OB"
+          },
+          {
+            "sourceActorName": "伊崎龍次郎",
+            "sourceActorUrl": "https://kira-hai.net/izaki-ryujiro",
+            "role_name": "飛鳥晴翔",
+            "cast_group": null,
+            "sourceAnnotation": "GOD座"
+          },
+          {
+            "sourceActorName": "河合龍之介",
+            "sourceActorUrl": "https://kira-hai.net/kawai-ryunosuke",
+            "role_name": "神木坂レニ",
+            "cast_group": null,
+            "sourceAnnotation": "GOD座主宰"
+          }
+        ],
+        "unparsed": []
+      },
+      "sourceFingerprint": "dd79fdaa6ee2b05179c76600c974d41a3e9da49657c546f1950daf4b737e5336",
+      "stage": {
+        "workUrl": "https://kira-hai.net/a3_2019-3",
+        "key": "63050d0709bf2f68456cdd847ccd6f1efa4a2f8cc5a535d6dae4fe2113f57548",
+        "items": [
+          {
+            "source_actor_name": "陳内将",
+            "source_actor_url": "https://kira-hai.net/jinnai-sho",
+            "source_work_title": "MANKAI STAGE『A3!』~SUMMER 2019~",
+            "source_year": 2019,
+            "source_role_raw": "皇天馬",
+            "source_role_names": [
+              "皇天馬"
+            ],
+            "source_cast_group": "夏組",
+            "source_order": 1,
+            "source_credit_key": "3217459388615fda05ad",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/a3_2019-3",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/a3_2019-3",
+                  "checkedAt": "2026-10-27T01:27:50.789Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/",
+                  "checkedAt": "2026-10-27T01:27:50.684Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/cast/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.652Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/cast/more.html",
+                  "checkedAt": "2026-10-27T01:27:50.669Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/ticket/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.701Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/guide/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.725Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/introduction/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.608Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/news/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.763Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/mankai-stage2019summer/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.807Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_01.png",
+                  "checkedAt": "2026-10-27T01:33:16.006Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_02.png",
+                  "checkedAt": "2026-10-27T01:33:16.142Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_03.png",
+                  "checkedAt": "2026-10-27T01:33:16.212Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_04.png",
+                  "checkedAt": "2026-10-27T01:33:16.243Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_05.png",
+                  "checkedAt": "2026-10-27T01:33:16.302Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                }
+              ],
+              "source_fingerprint": "dd79fdaa6ee2b05179c76600c974d41a3e9da49657c546f1950daf4b737e5336",
+              "review_fingerprint": "d8bd6177e49dd3fee9e03779ae1c78d622e02931fb920d276d1a1be75019928d",
+              "snapshot_fingerprint": "223650926757ef8751277e2ef0c973d2ceab9eba440de3da5ba73b5ddea32db1",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 1,
+                "cast": {
+                  "sourceActorName": "陳内将",
+                  "sourceActorUrl": "https://kira-hai.net/jinnai-sho",
+                  "role_name": "皇天馬",
+                  "cast_group": "SUMMER TROUPE 夏組"
+                }
+              },
+              "normalization_review": {
+                "group": "夏組",
+                "role": "皇天馬",
+                "annotation": null,
+                "evidence": [
+                  {
+                    "url": "https://www.mankai-stage.jp/summer2019/",
+                    "checkedAt": "2026-10-27T01:27:50.684Z",
+                    "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                  },
+                  {
+                    "url": "https://www.mankai-stage.jp/summer2019/cast/more.html",
+                    "checkedAt": "2026-10-27T01:27:50.669Z",
+                    "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/a3_2019-3",
+                    "checkedAt": "2026-10-27T01:27:50.789Z",
+                    "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "3ec32fb6-f2f3-4388-b8d1-8bede9472e44",
+            "matched_play_id": "3a9939c9-ee4c-42e5-a545-a0d0a9c1c46b",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "宮崎湧",
+            "source_actor_url": "https://kira-hai.net/miyazaki-yu",
+            "source_work_title": "MANKAI STAGE『A3!』~SUMMER 2019~",
+            "source_year": 2019,
+            "source_role_raw": "瑠璃川幸",
+            "source_role_names": [
+              "瑠璃川幸"
+            ],
+            "source_cast_group": "夏組",
+            "source_order": 2,
+            "source_credit_key": "ea674c446244498995da",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/a3_2019-3",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/a3_2019-3",
+                  "checkedAt": "2026-10-27T01:27:50.789Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/",
+                  "checkedAt": "2026-10-27T01:27:50.684Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/cast/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.652Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/cast/more.html",
+                  "checkedAt": "2026-10-27T01:27:50.669Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/ticket/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.701Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/guide/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.725Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/introduction/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.608Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/news/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.763Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/mankai-stage2019summer/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.807Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_01.png",
+                  "checkedAt": "2026-10-27T01:33:16.006Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_02.png",
+                  "checkedAt": "2026-10-27T01:33:16.142Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_03.png",
+                  "checkedAt": "2026-10-27T01:33:16.212Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_04.png",
+                  "checkedAt": "2026-10-27T01:33:16.243Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_05.png",
+                  "checkedAt": "2026-10-27T01:33:16.302Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                }
+              ],
+              "source_fingerprint": "dd79fdaa6ee2b05179c76600c974d41a3e9da49657c546f1950daf4b737e5336",
+              "review_fingerprint": "d8bd6177e49dd3fee9e03779ae1c78d622e02931fb920d276d1a1be75019928d",
+              "snapshot_fingerprint": "223650926757ef8751277e2ef0c973d2ceab9eba440de3da5ba73b5ddea32db1",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 2,
+                "cast": {
+                  "sourceActorName": "宮崎湧",
+                  "sourceActorUrl": "https://kira-hai.net/miyazaki-yu",
+                  "role_name": "瑠璃川幸",
+                  "cast_group": "SUMMER TROUPE 夏組"
+                }
+              },
+              "normalization_review": {
+                "group": "夏組",
+                "role": "瑠璃川幸",
+                "annotation": null,
+                "evidence": [
+                  {
+                    "url": "https://www.mankai-stage.jp/summer2019/",
+                    "checkedAt": "2026-10-27T01:27:50.684Z",
+                    "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                  },
+                  {
+                    "url": "https://www.mankai-stage.jp/summer2019/cast/more.html",
+                    "checkedAt": "2026-10-27T01:27:50.669Z",
+                    "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/a3_2019-3",
+                    "checkedAt": "2026-10-27T01:27:50.789Z",
+                    "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "fb1a7fa3-c90d-4c6c-86b8-af012fccf368",
+            "matched_play_id": "3a9939c9-ee4c-42e5-a545-a0d0a9c1c46b",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "野口準",
+            "source_actor_url": "https://kira-hai.net/noguchi-jun",
+            "source_work_title": "MANKAI STAGE『A3!』~SUMMER 2019~",
+            "source_year": 2019,
+            "source_role_raw": "向坂椋",
+            "source_role_names": [
+              "向坂椋"
+            ],
+            "source_cast_group": "夏組",
+            "source_order": 3,
+            "source_credit_key": "ca58e405f21051a52411",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/a3_2019-3",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/a3_2019-3",
+                  "checkedAt": "2026-10-27T01:27:50.789Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/",
+                  "checkedAt": "2026-10-27T01:27:50.684Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/cast/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.652Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/cast/more.html",
+                  "checkedAt": "2026-10-27T01:27:50.669Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/ticket/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.701Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/guide/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.725Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/introduction/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.608Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/news/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.763Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/mankai-stage2019summer/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.807Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_01.png",
+                  "checkedAt": "2026-10-27T01:33:16.006Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_02.png",
+                  "checkedAt": "2026-10-27T01:33:16.142Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_03.png",
+                  "checkedAt": "2026-10-27T01:33:16.212Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_04.png",
+                  "checkedAt": "2026-10-27T01:33:16.243Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_05.png",
+                  "checkedAt": "2026-10-27T01:33:16.302Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                }
+              ],
+              "source_fingerprint": "dd79fdaa6ee2b05179c76600c974d41a3e9da49657c546f1950daf4b737e5336",
+              "review_fingerprint": "d8bd6177e49dd3fee9e03779ae1c78d622e02931fb920d276d1a1be75019928d",
+              "snapshot_fingerprint": "223650926757ef8751277e2ef0c973d2ceab9eba440de3da5ba73b5ddea32db1",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 3,
+                "cast": {
+                  "sourceActorName": "野口準",
+                  "sourceActorUrl": "https://kira-hai.net/noguchi-jun",
+                  "role_name": "向坂椋",
+                  "cast_group": "SUMMER TROUPE 夏組"
+                }
+              },
+              "normalization_review": {
+                "group": "夏組",
+                "role": "向坂椋",
+                "annotation": null,
+                "evidence": [
+                  {
+                    "url": "https://www.mankai-stage.jp/summer2019/",
+                    "checkedAt": "2026-10-27T01:27:50.684Z",
+                    "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                  },
+                  {
+                    "url": "https://www.mankai-stage.jp/summer2019/cast/more.html",
+                    "checkedAt": "2026-10-27T01:27:50.669Z",
+                    "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/a3_2019-3",
+                    "checkedAt": "2026-10-27T01:27:50.789Z",
+                    "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "a39fa69c-ac9b-4ed3-ba69-394ca3a921ad",
+            "matched_play_id": "3a9939c9-ee4c-42e5-a545-a0d0a9c1c46b",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "本田礼生",
+            "source_actor_url": "https://kira-hai.net/honda-reo",
+            "source_work_title": "MANKAI STAGE『A3!』~SUMMER 2019~",
+            "source_year": 2019,
+            "source_role_raw": "斑鳩三角",
+            "source_role_names": [
+              "斑鳩三角"
+            ],
+            "source_cast_group": "夏組",
+            "source_order": 4,
+            "source_credit_key": "9cd2bf2e8c48dff09310",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/a3_2019-3",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/a3_2019-3",
+                  "checkedAt": "2026-10-27T01:27:50.789Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/",
+                  "checkedAt": "2026-10-27T01:27:50.684Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/cast/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.652Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/cast/more.html",
+                  "checkedAt": "2026-10-27T01:27:50.669Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/ticket/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.701Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/guide/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.725Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/introduction/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.608Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/news/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.763Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/mankai-stage2019summer/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.807Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_01.png",
+                  "checkedAt": "2026-10-27T01:33:16.006Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_02.png",
+                  "checkedAt": "2026-10-27T01:33:16.142Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_03.png",
+                  "checkedAt": "2026-10-27T01:33:16.212Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_04.png",
+                  "checkedAt": "2026-10-27T01:33:16.243Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_05.png",
+                  "checkedAt": "2026-10-27T01:33:16.302Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                }
+              ],
+              "source_fingerprint": "dd79fdaa6ee2b05179c76600c974d41a3e9da49657c546f1950daf4b737e5336",
+              "review_fingerprint": "d8bd6177e49dd3fee9e03779ae1c78d622e02931fb920d276d1a1be75019928d",
+              "snapshot_fingerprint": "223650926757ef8751277e2ef0c973d2ceab9eba440de3da5ba73b5ddea32db1",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 4,
+                "cast": {
+                  "sourceActorName": "本田礼生",
+                  "sourceActorUrl": "https://kira-hai.net/honda-reo",
+                  "role_name": "斑鳩三角",
+                  "cast_group": "SUMMER TROUPE 夏組"
+                }
+              },
+              "normalization_review": {
+                "group": "夏組",
+                "role": "斑鳩三角",
+                "annotation": null,
+                "evidence": [
+                  {
+                    "url": "https://www.mankai-stage.jp/summer2019/",
+                    "checkedAt": "2026-10-27T01:27:50.684Z",
+                    "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                  },
+                  {
+                    "url": "https://www.mankai-stage.jp/summer2019/cast/more.html",
+                    "checkedAt": "2026-10-27T01:27:50.669Z",
+                    "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/a3_2019-3",
+                    "checkedAt": "2026-10-27T01:27:50.789Z",
+                    "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "8b7c86f6-a193-46a9-89b3-2662f03b7b2b",
+            "matched_play_id": "3a9939c9-ee4c-42e5-a545-a0d0a9c1c46b",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "赤澤燈",
+            "source_actor_url": "https://kira-hai.net/akazawa-tomoru",
+            "source_work_title": "MANKAI STAGE『A3!』~SUMMER 2019~",
+            "source_year": 2019,
+            "source_role_raw": "三好一成",
+            "source_role_names": [
+              "三好一成"
+            ],
+            "source_cast_group": "夏組",
+            "source_order": 5,
+            "source_credit_key": "7f19a1a572329682fd9c",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/a3_2019-3",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/a3_2019-3",
+                  "checkedAt": "2026-10-27T01:27:50.789Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/",
+                  "checkedAt": "2026-10-27T01:27:50.684Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/cast/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.652Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/cast/more.html",
+                  "checkedAt": "2026-10-27T01:27:50.669Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/ticket/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.701Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/guide/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.725Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/introduction/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.608Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/news/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.763Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/mankai-stage2019summer/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.807Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_01.png",
+                  "checkedAt": "2026-10-27T01:33:16.006Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_02.png",
+                  "checkedAt": "2026-10-27T01:33:16.142Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_03.png",
+                  "checkedAt": "2026-10-27T01:33:16.212Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_04.png",
+                  "checkedAt": "2026-10-27T01:33:16.243Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_05.png",
+                  "checkedAt": "2026-10-27T01:33:16.302Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                }
+              ],
+              "source_fingerprint": "dd79fdaa6ee2b05179c76600c974d41a3e9da49657c546f1950daf4b737e5336",
+              "review_fingerprint": "d8bd6177e49dd3fee9e03779ae1c78d622e02931fb920d276d1a1be75019928d",
+              "snapshot_fingerprint": "223650926757ef8751277e2ef0c973d2ceab9eba440de3da5ba73b5ddea32db1",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 5,
+                "cast": {
+                  "sourceActorName": "赤澤燈",
+                  "sourceActorUrl": "https://kira-hai.net/akazawa-tomoru",
+                  "role_name": "三好一成",
+                  "cast_group": "SUMMER TROUPE 夏組"
+                }
+              },
+              "normalization_review": {
+                "group": "夏組",
+                "role": "三好一成",
+                "annotation": null,
+                "evidence": [
+                  {
+                    "url": "https://www.mankai-stage.jp/summer2019/",
+                    "checkedAt": "2026-10-27T01:27:50.684Z",
+                    "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                  },
+                  {
+                    "url": "https://www.mankai-stage.jp/summer2019/cast/more.html",
+                    "checkedAt": "2026-10-27T01:27:50.669Z",
+                    "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/a3_2019-3",
+                    "checkedAt": "2026-10-27T01:27:50.789Z",
+                    "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "ac91e41a-2db0-4f49-8389-a7d9786a4201",
+            "matched_play_id": "3a9939c9-ee4c-42e5-a545-a0d0a9c1c46b",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "横田龍儀",
+            "source_actor_url": "https://kira-hai.net/yokota-ryugi",
+            "source_work_title": "MANKAI STAGE『A3!』~SUMMER 2019~",
+            "source_year": 2019,
+            "source_role_raw": "佐久間咲也",
+            "source_role_names": [
+              "佐久間咲也"
+            ],
+            "source_cast_group": "春組",
+            "source_order": 6,
+            "source_credit_key": "2e5f50e5da29dc743e1c",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/a3_2019-3",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/a3_2019-3",
+                  "checkedAt": "2026-10-27T01:27:50.789Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/",
+                  "checkedAt": "2026-10-27T01:27:50.684Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/cast/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.652Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/cast/more.html",
+                  "checkedAt": "2026-10-27T01:27:50.669Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/ticket/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.701Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/guide/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.725Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/introduction/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.608Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/news/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.763Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/mankai-stage2019summer/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.807Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_01.png",
+                  "checkedAt": "2026-10-27T01:33:16.006Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_02.png",
+                  "checkedAt": "2026-10-27T01:33:16.142Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_03.png",
+                  "checkedAt": "2026-10-27T01:33:16.212Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_04.png",
+                  "checkedAt": "2026-10-27T01:33:16.243Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_05.png",
+                  "checkedAt": "2026-10-27T01:33:16.302Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                }
+              ],
+              "source_fingerprint": "dd79fdaa6ee2b05179c76600c974d41a3e9da49657c546f1950daf4b737e5336",
+              "review_fingerprint": "d8bd6177e49dd3fee9e03779ae1c78d622e02931fb920d276d1a1be75019928d",
+              "snapshot_fingerprint": "223650926757ef8751277e2ef0c973d2ceab9eba440de3da5ba73b5ddea32db1",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 6,
+                "cast": {
+                  "sourceActorName": "横田龍儀",
+                  "sourceActorUrl": "https://kira-hai.net/yokota-ryugi",
+                  "role_name": "佐久間咲也",
+                  "cast_group": "春組"
+                }
+              },
+              "normalization_review": {
+                "group": "春組",
+                "role": "佐久間咲也",
+                "annotation": null,
+                "evidence": [
+                  {
+                    "url": "https://www.mankai-stage.jp/summer2019/",
+                    "checkedAt": "2026-10-27T01:27:50.684Z",
+                    "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                  },
+                  {
+                    "url": "https://www.mankai-stage.jp/summer2019/cast/more.html",
+                    "checkedAt": "2026-10-27T01:27:50.669Z",
+                    "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/a3_2019-3",
+                    "checkedAt": "2026-10-27T01:27:50.789Z",
+                    "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "ed310757-4569-4539-896d-6a8a5c326ac2",
+            "matched_play_id": "3a9939c9-ee4c-42e5-a545-a0d0a9c1c46b",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "前川優希",
+            "source_actor_url": "https://kira-hai.net/maekawa-yuki",
+            "source_work_title": "MANKAI STAGE『A3!』~SUMMER 2019~",
+            "source_year": 2019,
+            "source_role_raw": "皆木綴",
+            "source_role_names": [
+              "皆木綴"
+            ],
+            "source_cast_group": "春組",
+            "source_order": 7,
+            "source_credit_key": "a3f4beefff62b1e47515",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/a3_2019-3",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/a3_2019-3",
+                  "checkedAt": "2026-10-27T01:27:50.789Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/",
+                  "checkedAt": "2026-10-27T01:27:50.684Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/cast/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.652Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/cast/more.html",
+                  "checkedAt": "2026-10-27T01:27:50.669Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/ticket/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.701Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/guide/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.725Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/introduction/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.608Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/news/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.763Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/mankai-stage2019summer/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.807Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_01.png",
+                  "checkedAt": "2026-10-27T01:33:16.006Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_02.png",
+                  "checkedAt": "2026-10-27T01:33:16.142Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_03.png",
+                  "checkedAt": "2026-10-27T01:33:16.212Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_04.png",
+                  "checkedAt": "2026-10-27T01:33:16.243Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_05.png",
+                  "checkedAt": "2026-10-27T01:33:16.302Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                }
+              ],
+              "source_fingerprint": "dd79fdaa6ee2b05179c76600c974d41a3e9da49657c546f1950daf4b737e5336",
+              "review_fingerprint": "d8bd6177e49dd3fee9e03779ae1c78d622e02931fb920d276d1a1be75019928d",
+              "snapshot_fingerprint": "223650926757ef8751277e2ef0c973d2ceab9eba440de3da5ba73b5ddea32db1",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 7,
+                "cast": {
+                  "sourceActorName": "前川優希",
+                  "sourceActorUrl": "https://kira-hai.net/maekawa-yuki",
+                  "role_name": "皆木綴",
+                  "cast_group": "春組"
+                }
+              },
+              "normalization_review": {
+                "group": "春組",
+                "role": "皆木綴",
+                "annotation": null,
+                "evidence": [
+                  {
+                    "url": "https://www.mankai-stage.jp/summer2019/",
+                    "checkedAt": "2026-10-27T01:27:50.684Z",
+                    "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                  },
+                  {
+                    "url": "https://www.mankai-stage.jp/summer2019/cast/more.html",
+                    "checkedAt": "2026-10-27T01:27:50.669Z",
+                    "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/a3_2019-3",
+                    "checkedAt": "2026-10-27T01:27:50.789Z",
+                    "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "6f56fa1e-493d-4f17-917a-2559ecf800f5",
+            "matched_play_id": "3a9939c9-ee4c-42e5-a545-a0d0a9c1c46b",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "中村太郎",
+            "source_actor_url": "https://kira-hai.net/nakamura-taro",
+            "source_work_title": "MANKAI STAGE『A3!』~SUMMER 2019~",
+            "source_year": 2019,
+            "source_role_raw": "兵頭十座",
+            "source_role_names": [
+              "兵頭十座"
+            ],
+            "source_cast_group": "秋組",
+            "source_order": 8,
+            "source_credit_key": "39704523df88f955be8f",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/a3_2019-3",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/a3_2019-3",
+                  "checkedAt": "2026-10-27T01:27:50.789Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/",
+                  "checkedAt": "2026-10-27T01:27:50.684Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/cast/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.652Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/cast/more.html",
+                  "checkedAt": "2026-10-27T01:27:50.669Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/ticket/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.701Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/guide/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.725Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/introduction/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.608Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/news/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.763Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/mankai-stage2019summer/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.807Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_01.png",
+                  "checkedAt": "2026-10-27T01:33:16.006Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_02.png",
+                  "checkedAt": "2026-10-27T01:33:16.142Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_03.png",
+                  "checkedAt": "2026-10-27T01:33:16.212Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_04.png",
+                  "checkedAt": "2026-10-27T01:33:16.243Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_05.png",
+                  "checkedAt": "2026-10-27T01:33:16.302Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                }
+              ],
+              "source_fingerprint": "dd79fdaa6ee2b05179c76600c974d41a3e9da49657c546f1950daf4b737e5336",
+              "review_fingerprint": "d8bd6177e49dd3fee9e03779ae1c78d622e02931fb920d276d1a1be75019928d",
+              "snapshot_fingerprint": "223650926757ef8751277e2ef0c973d2ceab9eba440de3da5ba73b5ddea32db1",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 8,
+                "cast": {
+                  "sourceActorName": "中村太郎",
+                  "sourceActorUrl": "https://kira-hai.net/nakamura-taro",
+                  "role_name": "兵頭十座",
+                  "cast_group": "秋組"
+                }
+              },
+              "normalization_review": {
+                "group": "秋組",
+                "role": "兵頭十座",
+                "annotation": null,
+                "evidence": [
+                  {
+                    "url": "https://www.mankai-stage.jp/summer2019/",
+                    "checkedAt": "2026-10-27T01:27:50.684Z",
+                    "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                  },
+                  {
+                    "url": "https://www.mankai-stage.jp/summer2019/cast/more.html",
+                    "checkedAt": "2026-10-27T01:27:50.669Z",
+                    "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/a3_2019-3",
+                    "checkedAt": "2026-10-27T01:27:50.789Z",
+                    "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "57ead490-a42e-450f-9f27-5473b1b3468f",
+            "matched_play_id": "3a9939c9-ee4c-42e5-a545-a0d0a9c1c46b",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "宇佐卓真",
+            "source_actor_url": "https://kira-hai.net/usa-takuma",
+            "source_work_title": "MANKAI STAGE『A3!』~SUMMER 2019~",
+            "source_year": 2019,
+            "source_role_raw": "斑鳩円",
+            "source_role_names": [
+              "斑鳩円"
+            ],
+            "source_cast_group": null,
+            "source_order": 9,
+            "source_credit_key": "502269e1aaf1408cdb40",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/a3_2019-3",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/a3_2019-3",
+                  "checkedAt": "2026-10-27T01:27:50.789Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/",
+                  "checkedAt": "2026-10-27T01:27:50.684Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/cast/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.652Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/cast/more.html",
+                  "checkedAt": "2026-10-27T01:27:50.669Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/ticket/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.701Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/guide/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.725Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/introduction/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.608Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/news/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.763Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/mankai-stage2019summer/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.807Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_01.png",
+                  "checkedAt": "2026-10-27T01:33:16.006Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_02.png",
+                  "checkedAt": "2026-10-27T01:33:16.142Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_03.png",
+                  "checkedAt": "2026-10-27T01:33:16.212Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_04.png",
+                  "checkedAt": "2026-10-27T01:33:16.243Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_05.png",
+                  "checkedAt": "2026-10-27T01:33:16.302Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                }
+              ],
+              "source_fingerprint": "dd79fdaa6ee2b05179c76600c974d41a3e9da49657c546f1950daf4b737e5336",
+              "review_fingerprint": "d8bd6177e49dd3fee9e03779ae1c78d622e02931fb920d276d1a1be75019928d",
+              "snapshot_fingerprint": "223650926757ef8751277e2ef0c973d2ceab9eba440de3da5ba73b5ddea32db1",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 9,
+                "cast": {
+                  "sourceActorName": "宇佐卓真",
+                  "sourceActorUrl": "https://kira-hai.net/usa-takuma",
+                  "role_name": "斑鳩円",
+                  "cast_group": "秋組"
+                }
+              },
+              "normalization_review": {
+                "group": null,
+                "role": "斑鳩円",
+                "annotation": null,
+                "evidence": [
+                  {
+                    "url": "https://www.mankai-stage.jp/summer2019/",
+                    "checkedAt": "2026-10-27T01:27:50.684Z",
+                    "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                  },
+                  {
+                    "url": "https://www.mankai-stage.jp/summer2019/cast/more.html",
+                    "checkedAt": "2026-10-27T01:27:50.669Z",
+                    "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/a3_2019-3",
+                    "checkedAt": "2026-10-27T01:27:50.789Z",
+                    "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "1ea4b5de-f894-46c8-823c-0476087090fa",
+            "matched_play_id": "3a9939c9-ee4c-42e5-a545-a0d0a9c1c46b",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "滝口幸広",
+            "source_actor_url": "https://kira-hai.net/takiguchi-yukihiro",
+            "source_work_title": "MANKAI STAGE『A3!』~SUMMER 2019~",
+            "source_year": 2019,
+            "source_role_raw": "鹿島雄三",
+            "source_role_names": [
+              "鹿島雄三"
+            ],
+            "source_cast_group": null,
+            "source_order": 10,
+            "source_credit_key": "b732b0904afe2477faf1",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/a3_2019-3",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/a3_2019-3",
+                  "checkedAt": "2026-10-27T01:27:50.789Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/",
+                  "checkedAt": "2026-10-27T01:27:50.684Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/cast/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.652Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/cast/more.html",
+                  "checkedAt": "2026-10-27T01:27:50.669Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/ticket/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.701Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/guide/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.725Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/introduction/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.608Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/news/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.763Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/mankai-stage2019summer/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.807Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_01.png",
+                  "checkedAt": "2026-10-27T01:33:16.006Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_02.png",
+                  "checkedAt": "2026-10-27T01:33:16.142Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_03.png",
+                  "checkedAt": "2026-10-27T01:33:16.212Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_04.png",
+                  "checkedAt": "2026-10-27T01:33:16.243Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_05.png",
+                  "checkedAt": "2026-10-27T01:33:16.302Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                }
+              ],
+              "source_fingerprint": "dd79fdaa6ee2b05179c76600c974d41a3e9da49657c546f1950daf4b737e5336",
+              "review_fingerprint": "d8bd6177e49dd3fee9e03779ae1c78d622e02931fb920d276d1a1be75019928d",
+              "snapshot_fingerprint": "223650926757ef8751277e2ef0c973d2ceab9eba440de3da5ba73b5ddea32db1",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 10,
+                "cast": {
+                  "sourceActorName": "滝口幸広",
+                  "sourceActorUrl": "https://kira-hai.net/takiguchi-yukihiro",
+                  "role_name": "鹿島雄三(初代春組OB)",
+                  "cast_group": "秋組"
+                }
+              },
+              "normalization_review": {
+                "group": null,
+                "role": "鹿島雄三",
+                "annotation": "初代春組OB",
+                "evidence": [
+                  {
+                    "url": "https://www.mankai-stage.jp/summer2019/",
+                    "checkedAt": "2026-10-27T01:27:50.684Z",
+                    "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                  },
+                  {
+                    "url": "https://www.mankai-stage.jp/summer2019/cast/more.html",
+                    "checkedAt": "2026-10-27T01:27:50.669Z",
+                    "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/a3_2019-3",
+                    "checkedAt": "2026-10-27T01:27:50.789Z",
+                    "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "33f1f008-551f-4406-8a12-7c38705e7fc5",
+            "matched_play_id": "3a9939c9-ee4c-42e5-a545-a0d0a9c1c46b",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "伊崎龍次郎",
+            "source_actor_url": "https://kira-hai.net/izaki-ryujiro",
+            "source_work_title": "MANKAI STAGE『A3!』~SUMMER 2019~",
+            "source_year": 2019,
+            "source_role_raw": "飛鳥晴翔",
+            "source_role_names": [
+              "飛鳥晴翔"
+            ],
+            "source_cast_group": null,
+            "source_order": 11,
+            "source_credit_key": "1f53f6159c9f19be3003",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/a3_2019-3",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/a3_2019-3",
+                  "checkedAt": "2026-10-27T01:27:50.789Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/",
+                  "checkedAt": "2026-10-27T01:27:50.684Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/cast/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.652Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/cast/more.html",
+                  "checkedAt": "2026-10-27T01:27:50.669Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/ticket/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.701Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/guide/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.725Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/introduction/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.608Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/news/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.763Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/mankai-stage2019summer/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.807Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_01.png",
+                  "checkedAt": "2026-10-27T01:33:16.006Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_02.png",
+                  "checkedAt": "2026-10-27T01:33:16.142Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_03.png",
+                  "checkedAt": "2026-10-27T01:33:16.212Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_04.png",
+                  "checkedAt": "2026-10-27T01:33:16.243Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_05.png",
+                  "checkedAt": "2026-10-27T01:33:16.302Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                }
+              ],
+              "source_fingerprint": "dd79fdaa6ee2b05179c76600c974d41a3e9da49657c546f1950daf4b737e5336",
+              "review_fingerprint": "d8bd6177e49dd3fee9e03779ae1c78d622e02931fb920d276d1a1be75019928d",
+              "snapshot_fingerprint": "223650926757ef8751277e2ef0c973d2ceab9eba440de3da5ba73b5ddea32db1",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 11,
+                "cast": {
+                  "sourceActorName": "伊崎龍次郎",
+                  "sourceActorUrl": "https://kira-hai.net/izaki-ryujiro",
+                  "role_name": "飛鳥晴翔(GOD座)",
+                  "cast_group": "秋組"
+                }
+              },
+              "normalization_review": {
+                "group": null,
+                "role": "飛鳥晴翔",
+                "annotation": "GOD座",
+                "evidence": [
+                  {
+                    "url": "https://www.mankai-stage.jp/summer2019/",
+                    "checkedAt": "2026-10-27T01:27:50.684Z",
+                    "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                  },
+                  {
+                    "url": "https://www.mankai-stage.jp/summer2019/cast/more.html",
+                    "checkedAt": "2026-10-27T01:27:50.669Z",
+                    "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/a3_2019-3",
+                    "checkedAt": "2026-10-27T01:27:50.789Z",
+                    "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "50c00e50-2eff-418f-9569-8dbe6c122ddc",
+            "matched_play_id": "3a9939c9-ee4c-42e5-a545-a0d0a9c1c46b",
+            "status": "pending"
+          },
+          {
+            "source_actor_name": "河合龍之介",
+            "source_actor_url": "https://kira-hai.net/kawai-ryunosuke",
+            "source_work_title": "MANKAI STAGE『A3!』~SUMMER 2019~",
+            "source_year": 2019,
+            "source_role_raw": "神木坂レニ",
+            "source_role_names": [
+              "神木坂レニ"
+            ],
+            "source_cast_group": null,
+            "source_order": 12,
+            "source_credit_key": "029ddd3f8077c5bbeb4e",
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/a3_2019-3",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/a3_2019-3",
+                  "checkedAt": "2026-10-27T01:27:50.789Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/",
+                  "checkedAt": "2026-10-27T01:27:50.684Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/cast/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.652Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/cast/more.html",
+                  "checkedAt": "2026-10-27T01:27:50.669Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/ticket/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.701Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/guide/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.725Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/introduction/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.608Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/news/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.763Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/mankai-stage2019summer/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.807Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_01.png",
+                  "checkedAt": "2026-10-27T01:33:16.006Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_02.png",
+                  "checkedAt": "2026-10-27T01:33:16.142Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_03.png",
+                  "checkedAt": "2026-10-27T01:33:16.212Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_04.png",
+                  "checkedAt": "2026-10-27T01:33:16.243Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_05.png",
+                  "checkedAt": "2026-10-27T01:33:16.302Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                }
+              ],
+              "source_fingerprint": "dd79fdaa6ee2b05179c76600c974d41a3e9da49657c546f1950daf4b737e5336",
+              "review_fingerprint": "d8bd6177e49dd3fee9e03779ae1c78d622e02931fb920d276d1a1be75019928d",
+              "snapshot_fingerprint": "223650926757ef8751277e2ef0c973d2ceab9eba440de3da5ba73b5ddea32db1",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 12,
+                "cast": {
+                  "sourceActorName": "河合龍之介",
+                  "sourceActorUrl": "https://kira-hai.net/kawai-ryunosuke",
+                  "role_name": "神木坂レニ(GOD座主宰)",
+                  "cast_group": "秋組"
+                }
+              },
+              "normalization_review": {
+                "group": null,
+                "role": "神木坂レニ",
+                "annotation": "GOD座主宰",
+                "evidence": [
+                  {
+                    "url": "https://www.mankai-stage.jp/summer2019/",
+                    "checkedAt": "2026-10-27T01:27:50.684Z",
+                    "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                  },
+                  {
+                    "url": "https://www.mankai-stage.jp/summer2019/cast/more.html",
+                    "checkedAt": "2026-10-27T01:27:50.669Z",
+                    "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/a3_2019-3",
+                    "checkedAt": "2026-10-27T01:27:50.789Z",
+                    "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                  }
+                ]
+              }
+            },
+            "matched_actor_id": "ed59b1c0-4ca3-432d-a241-4e40ea6bb9bd",
+            "matched_play_id": "3a9939c9-ee4c-42e5-a545-a0d0a9c1c46b",
+            "status": "pending"
+          }
+        ]
+      },
+      "voiceItem": {
+        "id": "495362a0-f204-4506-ab7e-a7dee2536b80",
+        "source": "official",
+        "source_actor_name": "今村ねずみ",
+        "source_actor_url": null,
+        "source_work_title": "MANKAI STAGE『A3!』～SUMMER 2019～",
+        "source_work_url": "https://www.mankai-stage.jp/summer2019/news/index.html#date31",
+        "source_year": 2019,
+        "source_role_raw": "斑鳩八角",
+        "source_role_names": [
+          "斑鳩八角"
+        ],
+        "source_cast_group": "声の出演",
+        "source_order": 13,
+        "source_credit_key": "5e6ebed57a4300bce1b8",
+        "source_evidence": {
+          "reviewed": true,
+          "links": [
+            {
+              "url": "https://www.mankai-stage.jp/summer2019/news/index.html",
+              "checkedAt": "2026-10-27T01:27:50.763Z",
+              "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+            }
+          ],
+          "announcementDate": "2019-08-08",
+          "anchor": "date31",
+          "text": "本田礼生演じる斑鳩三角の祖父 斑鳩八角（いかるが はっかく）役の声を今村ねずみが担当いたしました。",
+          "reason": "キラハイ主要12人と公式キャスト一覧にはない別告知の記名声出演。既存今村ねずみへ接続。斑鳩九角とは別役。"
+        },
+        "matched_actor_id": "4b10e54e-2585-44a8-8695-8a950c576820",
+        "matched_play_id": "3a9939c9-ee4c-42e5-a545-a0d0a9c1c46b"
+      },
+      "records": [
+        {
+          "sourceKind": "kira-hai",
+          "sourceUrl": "https://kira-hai.net/a3_2019-3",
+          "actor": {
+            "id": "3ec32fb6-f2f3-4388-b8d1-8bede9472e44",
+            "slug": "jinnai-sho",
+            "name": "陳内 将",
+            "kana": "じんない しょう",
+            "profile": "熊本県出身の俳優。D-BOYSのメンバー。ミュージカル『テニスの王子様』2ndシーズン（柳沢慎也役）や『MANKAI STAGE「A3!」』（皇天馬役）等に出演。",
+            "image_url": null,
+            "sns": {
+              "x": "https://twitter.com/chanjin0116",
+              "official": "https://www.watanabepro.co.jp/mypage/10000036/",
+              "instagram": "https://www.instagram.com/chanjin0116/"
+            },
+            "gender": "male",
+            "created_at": "2025-12-13T04:41:02.052969+00:00",
+            "updated_at": "2025-12-13T04:41:02.052969+00:00",
+            "tags": [
+              "リーダー",
+              "コメディ"
+            ],
+            "featured_play_slugs": [],
+            "birthday": "1988-01-16",
+            "height_cm": 178,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Kumamoto Prefecture. A member of D-BOYS. He appeared in the musical \"The Prince of Tennis\" 2nd season (as Shinya Yanagisawa) and \"MANKAI STAGE 'A3!'\" (as Tenma Sumeragi).",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "陳内将",
+            "sourceActorUrl": "https://kira-hai.net/jinnai-sho",
+            "role_name": "皇天馬",
+            "cast_group": "夏組"
+          },
+          "sourceCreditKey": "3217459388615fda05ad",
+          "sourceOrder": 1,
+          "rawSourceOrder": 1,
+          "billingOrder": 1,
+          "expectedNote": null,
+          "expectedStarring": false,
+          "existingCast": null,
+          "wasAccepted": false
+        },
+        {
+          "sourceKind": "kira-hai",
+          "sourceUrl": "https://kira-hai.net/a3_2019-3",
+          "actor": {
+            "id": "fb1a7fa3-c90d-4c6c-86b8-af012fccf368",
+            "slug": "miyazaki-yu",
+            "name": "宮崎 湧",
+            "kana": "みやざきゆう",
+            "profile": null,
+            "image_url": null,
+            "sns": null,
+            "gender": null,
+            "created_at": "2026-10-17T13:27:59.664418+00:00",
+            "updated_at": "2026-10-25T20:21:04.903274+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1995-01-25",
+            "height_cm": 165,
+            "blood_type": "B",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "宮崎湧",
+            "sourceActorUrl": "https://kira-hai.net/miyazaki-yu",
+            "role_name": "瑠璃川幸",
+            "cast_group": "夏組"
+          },
+          "sourceCreditKey": "ea674c446244498995da",
+          "sourceOrder": 2,
+          "rawSourceOrder": 2,
+          "billingOrder": 2,
+          "expectedNote": null,
+          "expectedStarring": false,
+          "existingCast": null,
+          "wasAccepted": false
+        },
+        {
+          "sourceKind": "kira-hai",
+          "sourceUrl": "https://kira-hai.net/a3_2019-3",
+          "actor": {
+            "id": "a39fa69c-ac9b-4ed3-ba69-394ca3a921ad",
+            "slug": "noguchi-jun",
+            "name": "野口 準",
+            "kana": "のぐち じゅん",
+            "profile": "大阪府出身の俳優。サンミュージックブレーン所属。MANKAI STAGE『A3!』や「東京リベンジャーズ」などの舞台に出演し、舞台『鋼の錬金術師』ではケイン・フュリー役を務める。アクロバットやアコースティックギターを特技とする。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-21T13:10:03.368542+00:00",
+            "updated_at": "2026-10-25T20:21:04.903274+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "2000-02-06",
+            "height_cm": 168,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": "Jun Noguchi",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "野口準",
+            "sourceActorUrl": "https://kira-hai.net/noguchi-jun",
+            "role_name": "向坂椋",
+            "cast_group": "夏組"
+          },
+          "sourceCreditKey": "ca58e405f21051a52411",
+          "sourceOrder": 3,
+          "rawSourceOrder": 3,
+          "billingOrder": 3,
+          "expectedNote": null,
+          "expectedStarring": false,
+          "existingCast": null,
+          "wasAccepted": false
+        },
+        {
+          "sourceKind": "kira-hai",
+          "sourceUrl": "https://kira-hai.net/a3_2019-3",
+          "actor": {
+            "id": "8b7c86f6-a193-46a9-89b3-2662f03b7b2b",
+            "slug": "honda-reo",
+            "name": "本田 礼生",
+            "kana": "ほんだ れお",
+            "profile": "愛媛県出身の俳優。ヤザ・パパ所属。ミュージカル『テニスの王子様』3rdシーズン（菊丸英二役）や舞台『刀剣乱舞』（一期一振役）、『MANKAI STAGE「A3!」』シリーズ（斑鳩三角役）等の舞台作品に出演。特技のアクロバットやブレイクダンスを活かした高い身体能力に定評があり、エンターテインメント集団「THE CONVOY（ザ・コンボイ）」の若手メンバーとしても活動している。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/honda_reo",
+              "official": "https://honda-reo.com/",
+              "instagram": "https://www.instagram.com/honda_reo_staff/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:06:19.306372+00:00",
+            "updated_at": "2026-03-21T15:06:19.306372+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1992-10-28",
+            "height_cm": 175,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Ehime Prefecture. Affiliated with Yaza Papa. He has appeared in stage works such as the musical \"The Prince of Tennis\" 3rd season (as Eiji Kikumaru), the stage play \"Touken Ranbu\" (as Ichigo Hitofuri), and the \"MANKAI STAGE 'A3!'\" series (as Misumi Ikaruga). He is highly regarded for his physical abilities, utilizing his special skills in acrobatics and breakdancing, and is also active as a younger member of the entertainment group \"THE CONVOY\".",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "本田礼生",
+            "sourceActorUrl": "https://kira-hai.net/honda-reo",
+            "role_name": "斑鳩三角",
+            "cast_group": "夏組"
+          },
+          "sourceCreditKey": "9cd2bf2e8c48dff09310",
+          "sourceOrder": 4,
+          "rawSourceOrder": 4,
+          "billingOrder": 4,
+          "expectedNote": null,
+          "expectedStarring": false,
+          "existingCast": null,
+          "wasAccepted": false
+        },
+        {
+          "sourceKind": "kira-hai",
+          "sourceUrl": "https://kira-hai.net/a3_2019-3",
+          "actor": {
+            "id": "ac91e41a-2db0-4f49-8389-a7d9786a4201",
+            "slug": "akazawa-tomoru",
+            "name": "赤澤 燈",
+            "kana": "あかざわ ともる",
+            "profile": "東京都出身の俳優。ミュージカル『テニスの王子様』2ndシーズン（芥川慈郎役）や『MANKAI STAGE「A3!」』（三好一成役）等に出演。",
+            "image_url": null,
+            "sns": {
+              "x": "https://twitter.com/tmr_akzw",
+              "official": "https://tomoru-akazawa.net/",
+              "instagram": "https://www.instagram.com/akzw_tmr/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:03:44.295565+00:00",
+            "updated_at": "2026-03-21T15:03:44.295565+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1990-03-14",
+            "height_cm": 172,
+            "blood_type": "AB",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Tokyo. He appeared in the musical \"The Prince of Tennis\" 2nd season (as Jiro Akutagawa) and \"MANKAI STAGE 'A3!'\" (as Kazunari Miyoshi).",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "赤澤燈",
+            "sourceActorUrl": "https://kira-hai.net/akazawa-tomoru",
+            "role_name": "三好一成",
+            "cast_group": "夏組"
+          },
+          "sourceCreditKey": "7f19a1a572329682fd9c",
+          "sourceOrder": 5,
+          "rawSourceOrder": 5,
+          "billingOrder": 5,
+          "expectedNote": null,
+          "expectedStarring": false,
+          "existingCast": {
+            "id": "1f30f0e1-2073-4442-b633-8fc66644291d",
+            "play_id": "3a9939c9-ee4c-42e5-a545-a0d0a9c1c46b",
+            "actor_id": "ac91e41a-2db0-4f49-8389-a7d9786a4201",
+            "role_name": "三好一成",
+            "is_starring": false,
+            "created_at": "2026-05-05T20:47:04.506425+00:00",
+            "billing_order": null,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null,
+            "updated_at": "2026-05-05T20:47:04.506425+00:00"
+          },
+          "wasAccepted": true
+        },
+        {
+          "sourceKind": "kira-hai",
+          "sourceUrl": "https://kira-hai.net/a3_2019-3",
+          "actor": {
+            "id": "ed310757-4569-4539-896d-6a8a5c326ac2",
+            "slug": "yokota-ryugi",
+            "name": "横田 龍儀",
+            "kana": "よこた りゅうぎ",
+            "profile": "福島県川内村出身の俳優。現在はフリーで活動。",
+            "image_url": null,
+            "sns": {
+              "x": "https://twitter.com/0909Ryugi",
+              "official": "https://ameblo.jp/ryugiyokota/",
+              "instagram": "https://www.instagram.com/Ryugi0909/"
+            },
+            "gender": "male",
+            "created_at": "2025-12-13T04:41:02.052969+00:00",
+            "updated_at": "2025-12-13T04:41:02.052969+00:00",
+            "tags": [
+              "フレッシュ",
+              "ダンス"
+            ],
+            "featured_play_slugs": [],
+            "birthday": "1994-09-09",
+            "height_cm": 170,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "横田龍儀",
+            "sourceActorUrl": "https://kira-hai.net/yokota-ryugi",
+            "role_name": "佐久間咲也",
+            "cast_group": "春組"
+          },
+          "sourceCreditKey": "2e5f50e5da29dc743e1c",
+          "sourceOrder": 6,
+          "rawSourceOrder": 6,
+          "billingOrder": 6,
+          "expectedNote": null,
+          "expectedStarring": false,
+          "existingCast": null,
+          "wasAccepted": false
+        },
+        {
+          "sourceKind": "kira-hai",
+          "sourceUrl": "https://kira-hai.net/a3_2019-3",
+          "actor": {
+            "id": "6f56fa1e-493d-4f17-917a-2559ecf800f5",
+            "slug": "maekawa-yuki",
+            "name": "前川 優希",
+            "kana": "まえかわ ゆうき",
+            "profile": "東京都出身の俳優・歌手。舞台『K -Lost Small World-』の湊速人役、MANKAI STAGE『A3!』の皆木綴役などを務める。舞台のプロデュースや脚本も手がける。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-24T18:45:20.734732+00:00",
+            "updated_at": "2026-10-25T20:21:04.903274+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1997-12-17",
+            "height_cm": 179,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Maekawa Yuki",
+            "profile_en": "An actor and singer from Tokyo. Stage credits include Hayato Minato in K -Lost Small World- and Tsuzuru Minagi in MANKAI STAGE A3!. He also produces stage works and writes scripts.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "前川優希",
+            "sourceActorUrl": "https://kira-hai.net/maekawa-yuki",
+            "role_name": "皆木綴",
+            "cast_group": "春組"
+          },
+          "sourceCreditKey": "a3f4beefff62b1e47515",
+          "sourceOrder": 7,
+          "rawSourceOrder": 7,
+          "billingOrder": 7,
+          "expectedNote": null,
+          "expectedStarring": false,
+          "existingCast": null,
+          "wasAccepted": false
+        },
+        {
+          "sourceKind": "kira-hai",
+          "sourceUrl": "https://kira-hai.net/a3_2019-3",
+          "actor": {
+            "id": "57ead490-a42e-450f-9f27-5473b1b3468f",
+            "slug": "nakamura-taro",
+            "name": "中村 太郎",
+            "kana": "なかむら たろう",
+            "profile": "千葉県出身の俳優。ミュージカル『テニスの王子様』3rdシーズン（石田鉄役）や『MANKAI STAGE「A3!」』シリーズ（兵頭十座役）、舞台『魔法使いの約束』シリーズ（ブラッドリー役）等の舞台を中心に活躍。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/chuta_na",
+              "official": "https://taro-act-home.bitfan.id/",
+              "instagram": "https://www.instagram.com/chuta_nana"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:06:19.306372+00:00",
+            "updated_at": "2026-03-21T15:06:19.306372+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1996-10-05",
+            "height_cm": 186,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Chiba Prefecture. He primarily appears in stage works such as the musical \"The Prince of Tennis\" 3rd season (as Tetsu Ishida), the \"MANKAI STAGE 'A3!'\" series (as Juza Hyodo), and the stage play \"Promise of Wizard\" series (as Bradley).",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "中村太郎",
+            "sourceActorUrl": "https://kira-hai.net/nakamura-taro",
+            "role_name": "兵頭十座",
+            "cast_group": "秋組"
+          },
+          "sourceCreditKey": "39704523df88f955be8f",
+          "sourceOrder": 8,
+          "rawSourceOrder": 8,
+          "billingOrder": 8,
+          "expectedNote": null,
+          "expectedStarring": false,
+          "existingCast": {
+            "id": "69dc344c-b93a-40e7-9157-75360988a218",
+            "play_id": "3a9939c9-ee4c-42e5-a545-a0d0a9c1c46b",
+            "actor_id": "57ead490-a42e-450f-9f27-5473b1b3468f",
+            "role_name": "兵頭十座",
+            "is_starring": false,
+            "created_at": "2026-05-04T19:05:46.210547+00:00",
+            "billing_order": null,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null,
+            "updated_at": "2026-05-04T19:05:46.210547+00:00"
+          },
+          "wasAccepted": true
+        },
+        {
+          "sourceKind": "kira-hai",
+          "sourceUrl": "https://kira-hai.net/a3_2019-3",
+          "actor": {
+            "id": "1ea4b5de-f894-46c8-823c-0476087090fa",
+            "slug": "usa-takuma",
+            "name": "宇佐 卓真",
+            "kana": "うさ たくま",
+            "profile": "福岡県出身の俳優・モデル。アソビシステム所属。幼少期からダンスや殺陣、ピアノなどを学ぶ。Live Musical『SHOW BY ROCK!!』のリク役、MANKAI STAGE『A3!』の斑鳩円役などを務め、映画やドラマにも出演する。",
+            "image_url": null,
+            "sns": {},
+            "gender": "male",
+            "created_at": "2026-10-26T15:36:49.496992+00:00",
+            "updated_at": "2026-10-26T15:36:49.496992+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "2000-04-11",
+            "height_cm": 173,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Takuma Usa",
+            "profile_en": "An actor and model from Fukuoka, represented by ASOBISYSTEM. He studied dance, sword fighting and piano from childhood. His stage roles include Riku in Live Musical SHOW BY ROCK!! and Madoka Ikaruga in MANKAI STAGE A3!, alongside film and television work.",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "宇佐卓真",
+            "sourceActorUrl": "https://kira-hai.net/usa-takuma",
+            "role_name": "斑鳩円",
+            "cast_group": null
+          },
+          "sourceCreditKey": "502269e1aaf1408cdb40",
+          "sourceOrder": 9,
+          "rawSourceOrder": 9,
+          "billingOrder": 9,
+          "expectedNote": null,
+          "expectedStarring": false,
+          "existingCast": null,
+          "wasAccepted": false
+        },
+        {
+          "sourceKind": "kira-hai",
+          "sourceUrl": "https://kira-hai.net/a3_2019-3",
+          "actor": {
+            "id": "33f1f008-551f-4406-8a12-7c38705e7fc5",
+            "slug": "takiguchi-yukihiro",
+            "name": "滝口 幸広",
+            "kana": "たきぐち ゆきひろ",
+            "profile": "千葉県出身の元俳優・タレント。",
+            "image_url": null,
+            "sns": {
+              "official": "https://ameblo.jp/takiguchi-sd/",
+              "instagram": "https://www.instagram.com/yukihiro_takiguchi_official/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T14:53:11.103962+00:00",
+            "updated_at": "2026-03-21T14:53:11.103962+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1985-05-29",
+            "height_cm": 179,
+            "blood_type": "AB",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "滝口幸広",
+            "sourceActorUrl": "https://kira-hai.net/takiguchi-yukihiro",
+            "role_name": "鹿島雄三",
+            "cast_group": null,
+            "sourceAnnotation": "初代春組OB"
+          },
+          "sourceCreditKey": "b732b0904afe2477faf1",
+          "sourceOrder": 10,
+          "rawSourceOrder": 10,
+          "billingOrder": 10,
+          "expectedNote": "役柄補足：初代春組OB。",
+          "expectedStarring": false,
+          "existingCast": null,
+          "wasAccepted": false
+        },
+        {
+          "sourceKind": "kira-hai",
+          "sourceUrl": "https://kira-hai.net/a3_2019-3",
+          "actor": {
+            "id": "50c00e50-2eff-418f-9569-8dbe6c122ddc",
+            "slug": "izaki-ryujiro",
+            "name": "伊崎 龍次郎",
+            "kana": "いざき りゅうじろう",
+            "profile": "大阪府出身の俳優。キャストコーポレーション所属。ミュージカル『テニスの王子様』3rdシーズン（神尾アキラ役）や舞台『刀剣乱舞』シリーズ（獅子王役）、『MANKAI STAGE「A3!」』シリーズ（飛鳥晴翔役）、舞台『プリンス・オブ・ストライド THE LIVE STAGE』シリーズ（八神陸役）等の舞台作品に出演している。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/ryujiro_izaki",
+              "official": "https://cast-may.com/artist/ryujiro-izaki/",
+              "instagram": "https://www.instagram.com/ryujiro_izaki/"
+            },
+            "gender": "male",
+            "created_at": "2026-03-21T15:06:19.306372+00:00",
+            "updated_at": "2026-03-21T15:06:19.306372+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1994-01-17",
+            "height_cm": 167,
+            "blood_type": "A",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": "An actor from Osaka Prefecture. Affiliated with Cast Corporation. He has appeared in stage works such as the musical \"The Prince of Tennis\" 3rd season (as Akira Kamio), the stage play \"Touken Ranbu\" series (as Shishio), the \"MANKAI STAGE 'A3!'\" series (as Haruto Asuka), and the stage play \"Prince of Stride THE LIVE STAGE\" series (as Riku Yagami).",
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "伊崎龍次郎",
+            "sourceActorUrl": "https://kira-hai.net/izaki-ryujiro",
+            "role_name": "飛鳥晴翔",
+            "cast_group": null,
+            "sourceAnnotation": "GOD座"
+          },
+          "sourceCreditKey": "1f53f6159c9f19be3003",
+          "sourceOrder": 11,
+          "rawSourceOrder": 11,
+          "billingOrder": 11,
+          "expectedNote": "役柄補足：GOD座。",
+          "expectedStarring": false,
+          "existingCast": {
+            "id": "84948e46-5aa8-4638-9c03-9f87f77c6abe",
+            "play_id": "3a9939c9-ee4c-42e5-a545-a0d0a9c1c46b",
+            "actor_id": "50c00e50-2eff-418f-9569-8dbe6c122ddc",
+            "role_name": "飛鳥晴翔※GOD座",
+            "is_starring": false,
+            "created_at": "2026-04-30T18:29:44.932868+00:00",
+            "billing_order": null,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null,
+            "updated_at": "2026-04-30T18:29:44.932868+00:00"
+          },
+          "wasAccepted": true
+        },
+        {
+          "sourceKind": "kira-hai",
+          "sourceUrl": "https://kira-hai.net/a3_2019-3",
+          "actor": {
+            "id": "ed59b1c0-4ca3-432d-a241-4e40ea6bb9bd",
+            "slug": "kawai-ryunosuke",
+            "name": "河合 龍之介",
+            "kana": "かわい りゅうのすけ",
+            "profile": "東京都府中市出身の俳優。ティー・アーティストと業務提携。",
+            "image_url": null,
+            "sns": {
+              "x": "https://x.com/ryunosuke_kawai",
+              "official": "https://www.t-artist.net/kawai-ryunosuke.html"
+            },
+            "gender": "male",
+            "created_at": "2026-03-20T20:47:59.001948+00:00",
+            "updated_at": "2026-03-20T20:47:59.001948+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1983-05-23",
+            "height_cm": 178,
+            "blood_type": "O",
+            "birthday_label": null,
+            "name_en": null,
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "河合龍之介",
+            "sourceActorUrl": "https://kira-hai.net/kawai-ryunosuke",
+            "role_name": "神木坂レニ",
+            "cast_group": null,
+            "sourceAnnotation": "GOD座主宰"
+          },
+          "sourceCreditKey": "029ddd3f8077c5bbeb4e",
+          "sourceOrder": 12,
+          "rawSourceOrder": 12,
+          "billingOrder": 12,
+          "expectedNote": "役柄補足：GOD座主宰。",
+          "expectedStarring": false,
+          "existingCast": null,
+          "wasAccepted": false
+        },
+        {
+          "sourceKind": "official",
+          "sourceUrl": "https://www.mankai-stage.jp/summer2019/news/index.html#date31",
+          "actor": {
+            "id": "4b10e54e-2585-44a8-8695-8a950c576820",
+            "slug": "imamura-nezumi",
+            "name": "今村 ねずみ",
+            "kana": "いまむら ねずみ",
+            "profile": "北海道出身の俳優・演出家。「THE CONVOY SHOW」主宰。1986年に立ち上げ、作・構成・演出と出演を手掛ける。舞台『ACCA13区監察課』ではリーリウム役を演じる。",
+            "image_url": null,
+            "sns": {},
+            "gender": null,
+            "created_at": "2026-10-20T07:39:32.913826+00:00",
+            "updated_at": "2026-10-25T20:21:04.903274+00:00",
+            "tags": [],
+            "featured_play_slugs": [],
+            "birthday": "1958-06-11",
+            "height_cm": null,
+            "blood_type": null,
+            "birthday_label": null,
+            "name_en": "Nezumi Imamura",
+            "profile_en": null,
+            "death_date": null
+          },
+          "source": {
+            "sourceActorName": "今村ねずみ",
+            "sourceActorUrl": null,
+            "role_name": "斑鳩八角",
+            "cast_group": "声の出演"
+          },
+          "sourceCreditKey": "5e6ebed57a4300bce1b8",
+          "sourceOrder": 13,
+          "rawSourceOrder": null,
+          "billingOrder": 13,
+          "expectedNote": "声の出演。",
+          "expectedStarring": false,
+          "existingCast": null,
+          "wasAccepted": false
+        }
+      ],
+      "castPatches": [
+        {
+          "before": {
+            "id": "1f30f0e1-2073-4442-b633-8fc66644291d",
+            "play_id": "3a9939c9-ee4c-42e5-a545-a0d0a9c1c46b",
+            "actor_id": "ac91e41a-2db0-4f49-8389-a7d9786a4201",
+            "role_name": "三好一成",
+            "is_starring": false,
+            "created_at": "2026-05-05T20:47:04.506425+00:00",
+            "billing_order": null,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null,
+            "updated_at": "2026-05-05T20:47:04.506425+00:00"
+          },
+          "patch": {
+            "role_name": "三好一成",
+            "cast_group": "夏組",
+            "billing_order": 5,
+            "note": null
+          }
+        },
+        {
+          "before": {
+            "id": "69dc344c-b93a-40e7-9157-75360988a218",
+            "play_id": "3a9939c9-ee4c-42e5-a545-a0d0a9c1c46b",
+            "actor_id": "57ead490-a42e-450f-9f27-5473b1b3468f",
+            "role_name": "兵頭十座",
+            "is_starring": false,
+            "created_at": "2026-05-04T19:05:46.210547+00:00",
+            "billing_order": null,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null,
+            "updated_at": "2026-05-04T19:05:46.210547+00:00"
+          },
+          "patch": {
+            "role_name": "兵頭十座",
+            "cast_group": "秋組",
+            "billing_order": 8,
+            "note": null
+          }
+        },
+        {
+          "before": {
+            "id": "84948e46-5aa8-4638-9c03-9f87f77c6abe",
+            "play_id": "3a9939c9-ee4c-42e5-a545-a0d0a9c1c46b",
+            "actor_id": "50c00e50-2eff-418f-9569-8dbe6c122ddc",
+            "role_name": "飛鳥晴翔※GOD座",
+            "is_starring": false,
+            "created_at": "2026-04-30T18:29:44.932868+00:00",
+            "billing_order": null,
+            "cast_group": null,
+            "role_name_kana": null,
+            "role_type": null,
+            "note": null,
+            "updated_at": "2026-04-30T18:29:44.932868+00:00"
+          },
+          "patch": {
+            "role_name": "飛鳥晴翔",
+            "cast_group": null,
+            "billing_order": 11,
+            "note": "役柄補足：GOD座。"
+          }
+        }
+      ],
+      "officialOrder": [
+        {
+          "name": "陳内 将",
+          "role": "皇 天馬",
+          "group": "夏組"
+        },
+        {
+          "name": "宮崎 湧",
+          "role": "瑠璃川 幸",
+          "group": "夏組"
+        },
+        {
+          "name": "野口 準",
+          "role": "向坂 椋",
+          "group": "夏組"
+        },
+        {
+          "name": "本田礼生",
+          "role": "斑鳩三角",
+          "group": "夏組"
+        },
+        {
+          "name": "赤澤 燈",
+          "role": "三好一成",
+          "group": "夏組"
+        },
+        {
+          "name": "横田龍儀",
+          "role": "佐久間咲也",
+          "group": "春組"
+        },
+        {
+          "name": "前川優希",
+          "role": "皆木 綴",
+          "group": "春組"
+        },
+        {
+          "name": "中村太郎",
+          "role": "兵頭十座",
+          "group": "秋組"
+        },
+        {
+          "name": "宇佐卓真",
+          "role": "斑鳩 円",
+          "group": null
+        },
+        {
+          "name": "滝口幸広",
+          "role": "鹿島雄三",
+          "group": null
+        },
+        {
+          "name": "伊崎龍次郎",
+          "role": "飛鳥晴翔",
+          "group": null
+        },
+        {
+          "name": "河合龍之介",
+          "role": "神木坂レニ",
+          "group": null
+        }
+      ],
+      "schedules": [
+        {
+          "city": "東京",
+          "date": "2019/08/08 19:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/09 19:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/10 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/10 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/11 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/11 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/13 13:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/13 19:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/14 13:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/14 19:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/15 19:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/16 13:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/16 19:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/17 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/17 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/18 14:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/23 19:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/24 12:30"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/24 18:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/25 12:30"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/25 18:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/26 19:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/28 13:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/28 19:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/29 13:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/29 19:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/30 19:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/31 12:30"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/31 18:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/09/01 12:30"
+        },
+        {
+          "city": "愛知",
+          "date": "2019/09/06 12:30"
+        },
+        {
+          "city": "愛知",
+          "date": "2019/09/06 18:00"
+        },
+        {
+          "city": "愛知",
+          "date": "2019/09/07 12:30"
+        },
+        {
+          "city": "愛知",
+          "date": "2019/09/07 18:00"
+        },
+        {
+          "city": "愛知",
+          "date": "2019/09/08 12:30"
+        },
+        {
+          "city": "愛知",
+          "date": "2019/09/08 18:00"
+        },
+        {
+          "city": "新潟",
+          "date": "2019/09/13 19:00"
+        },
+        {
+          "city": "新潟",
+          "date": "2019/09/14 12:30"
+        },
+        {
+          "city": "新潟",
+          "date": "2019/09/14 18:00"
+        },
+        {
+          "city": "新潟",
+          "date": "2019/09/15 12:30"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/19 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/20 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/21 12:30"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/21 18:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/22 12:30"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/22 18:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/24 13:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/24 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/25 13:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/25 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/26 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/27 13:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/27 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/28 12:30"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/28 18:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/29 14:00"
+        }
+      ],
+      "altSchedules": [
+        {
+          "city": "東京",
+          "date": "2019/08/08 19:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/09 19:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/10 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/10 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/11 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/11 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/13 13:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/13 19:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/14 13:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/14 19:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/15 19:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/16 13:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/16 19:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/17 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/17 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/18 14:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/23 19:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/24 12:30"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/24 18:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/25 12:30"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/25 18:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/26 19:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/28 13:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/28 19:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/29 13:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/29 19:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/30 19:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/31 12:30"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/31 18:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/09/01 12:30"
+        },
+        {
+          "city": "愛知",
+          "date": "2019/09/06 12:30"
+        },
+        {
+          "city": "愛知",
+          "date": "2019/09/06 18:00"
+        },
+        {
+          "city": "愛知",
+          "date": "2019/09/07 12:30"
+        },
+        {
+          "city": "愛知",
+          "date": "2019/09/07 18:00"
+        },
+        {
+          "city": "愛知",
+          "date": "2019/09/08 12:30"
+        },
+        {
+          "city": "愛知",
+          "date": "2019/09/08 18:00"
+        },
+        {
+          "city": "新潟",
+          "date": "2019/09/13 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/13 19:00"
+        },
+        {
+          "city": "新潟",
+          "date": "2019/09/14 12:30"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/14 12:30"
+        },
+        {
+          "city": "新潟",
+          "date": "2019/09/14 18:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/14 18:00"
+        },
+        {
+          "city": "新潟",
+          "date": "2019/09/15 12:30"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/15 12:30"
+        }
+      ],
+      "producerSchedules": [
+        {
+          "city": "東京",
+          "date": "2019/08/08 19:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/09 19:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/10 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/10 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/11 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/11 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/13 13:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/13 19:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/14 13:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/14 19:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/15 19:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/16 13:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/16 19:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/17 12:30"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/17 18:00"
+        },
+        {
+          "city": "東京",
+          "date": "2019/08/18 14:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/23 19:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/24 12:30"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/24 18:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/25 12:30"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/25 18:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/26 19:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/28 13:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/28 19:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/29 13:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/29 19:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/30 19:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/31 12:30"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/08/31 18:00"
+        },
+        {
+          "city": "兵庫",
+          "date": "2019/09/01 12:30"
+        },
+        {
+          "city": "愛知",
+          "date": "2019/09/06 12:30"
+        },
+        {
+          "city": "愛知",
+          "date": "2019/09/06 18:00"
+        },
+        {
+          "city": "愛知",
+          "date": "2019/09/07 12:30"
+        },
+        {
+          "city": "愛知",
+          "date": "2019/09/07 18:00"
+        },
+        {
+          "city": "愛知",
+          "date": "2019/09/08 12:30"
+        },
+        {
+          "city": "愛知",
+          "date": "2019/09/08 18:00"
+        },
+        {
+          "city": "新潟",
+          "date": "2019/09/13 19:00"
+        },
+        {
+          "city": "新潟",
+          "date": "2019/09/14 12:30"
+        },
+        {
+          "city": "新潟",
+          "date": "2019/09/14 18:00"
+        },
+        {
+          "city": "新潟",
+          "date": "2019/09/15 12:30"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/19 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/20 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/21 12:30"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/21 18:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/22 12:30"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/22 18:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/24 13:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/24 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/25 13:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/25 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/26 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/27 13:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/27 19:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/28 12:30"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/28 18:00"
+        },
+        {
+          "city": "東京凱旋",
+          "date": "2019/09/29 14:00"
+        }
+      ],
+      "staff": [
+        [
+          "原作",
+          [
+            "イケメン役者育成ゲーム『A3!（エースリー）』（リベル・エンタテインメント）"
+          ]
+        ],
+        [
+          "演出",
+          [
+            "松崎史也"
+          ]
+        ],
+        [
+          "脚本",
+          [
+            "亀田真二郎（東京パチプロデュース）"
+          ]
+        ],
+        [
+          "音楽",
+          [
+            "Yu（vague）"
+          ]
+        ],
+        [
+          "振付",
+          [
+            "梅棒"
+          ]
+        ],
+        [
+          "協力",
+          [
+            "一般社団法人 日本2.5次元ミュージカル協会"
+          ]
+        ],
+        [
+          "協賛",
+          [
+            "ファミリーマート"
+          ]
+        ],
+        [
+          "主催",
+          [
+            "MANKAI STAGE『A3!』製作委員会（ネルケプランニング、ポニーキャニオン、リベル・エンタテインメント）"
+          ]
+        ]
+      ],
+      "creditOnly": [],
+      "legacyCandidates": [
+        {
+          "id": "4b84d306-a101-4037-96ad-fe9bd23fb549",
+          "source": "kira-hai",
+          "external_actor_id": "f5c64adc-9bfd-4db9-84aa-1faafe207cd5",
+          "external_play_id": "de0a0c3b-8eb7-46d6-8be6-41fb841ec414",
+          "source_actor_name": "伊崎龍次郎",
+          "source_actor_url": "https://kira-hai.net/izaki-ryujiro",
+          "source_work_title": "MANKAI STAGE『A3!』～SUMMER 2019～",
+          "source_work_url": "https://kira-hai.net/a3_2019-3",
+          "source_year": 2021,
+          "source_role_raw": "飛鳥晴翔(GOD座)",
+          "source_role_names": [
+            "飛鳥晴翔(GOD座)"
+          ],
+          "matched_actor_id": "50c00e50-2eff-418f-9569-8dbe6c122ddc",
+          "matched_play_id": "3a9939c9-ee4c-42e5-a545-a0d0a9c1c46b",
+          "accepted_cast_id": "84948e46-5aa8-4638-9c03-9f87f77c6abe",
+          "confidence": 60,
+          "status": "accepted",
+          "note": null,
+          "scraped_at": "2026-04-27T18:19:26.243+00:00",
+          "created_at": "2026-04-27T18:19:25.426599+00:00",
+          "updated_at": "2026-04-30T18:29:45.191+00:00",
+          "accepted_at": "2026-04-30T18:29:45.191+00:00",
+          "rejected_at": null,
+          "source_cast_group": null,
+          "source_order": null,
+          "source_credit_key": null,
+          "source_evidence": null
+        },
+        {
+          "id": "ad8850fb-25a1-45df-9a8f-fccd8e1f43f2",
+          "source": "kira-hai",
+          "external_actor_id": "5fca366e-e1af-482e-ab0e-e846b88f5779",
+          "external_play_id": "de0a0c3b-8eb7-46d6-8be6-41fb841ec414",
+          "source_actor_name": "赤澤燈",
+          "source_actor_url": "https://kira-hai.net/akazawa-tomoru",
+          "source_work_title": "MANKAI STAGE『A3!』～SUMMER 2019～",
+          "source_work_url": "https://kira-hai.net/a3_2019-3",
+          "source_year": 2021,
+          "source_role_raw": "三好一成",
+          "source_role_names": [
+            "三好一成"
+          ],
+          "matched_actor_id": "ac91e41a-2db0-4f49-8389-a7d9786a4201",
+          "matched_play_id": "3a9939c9-ee4c-42e5-a545-a0d0a9c1c46b",
+          "accepted_cast_id": "1f30f0e1-2073-4442-b633-8fc66644291d",
+          "confidence": 60,
+          "status": "accepted",
+          "note": null,
+          "scraped_at": "2026-04-25T07:33:45.64+00:00",
+          "created_at": "2026-04-25T07:33:45.931879+00:00",
+          "updated_at": "2026-05-05T20:47:07.726+00:00",
+          "accepted_at": "2026-05-05T20:47:07.726+00:00",
+          "rejected_at": null,
+          "source_cast_group": null,
+          "source_order": null,
+          "source_credit_key": null,
+          "source_evidence": null
+        },
+        {
+          "id": "eb399e39-7cea-4570-bfce-6ca445eff3f5",
+          "source": "kira-hai",
+          "external_actor_id": "3acff4dc-f1bb-4549-86c5-fe4e4666019c",
+          "external_play_id": "de0a0c3b-8eb7-46d6-8be6-41fb841ec414",
+          "source_actor_name": "中村太郎",
+          "source_actor_url": "https://kira-hai.net/nakamura-taro",
+          "source_work_title": "MANKAI STAGE『A3!』～SUMMER 2019～",
+          "source_work_url": "https://kira-hai.net/a3_2019-3",
+          "source_year": 2021,
+          "source_role_raw": "兵頭十座",
+          "source_role_names": [
+            "兵頭十座"
+          ],
+          "matched_actor_id": "57ead490-a42e-450f-9f27-5473b1b3468f",
+          "matched_play_id": "3a9939c9-ee4c-42e5-a545-a0d0a9c1c46b",
+          "accepted_cast_id": "69dc344c-b93a-40e7-9157-75360988a218",
+          "confidence": 60,
+          "status": "accepted",
+          "note": null,
+          "scraped_at": "2026-04-27T17:51:03.092+00:00",
+          "created_at": "2026-04-27T17:51:02.33422+00:00",
+          "updated_at": "2026-05-04T19:05:46.82+00:00",
+          "accepted_at": "2026-05-04T19:05:46.82+00:00",
+          "rejected_at": null,
+          "source_cast_group": null,
+          "source_order": null,
+          "source_credit_key": null,
+          "source_evidence": null
+        }
+      ],
+      "legacyUpgrades": [
+        {
+          "before": {
+            "id": "4b84d306-a101-4037-96ad-fe9bd23fb549",
+            "source": "kira-hai",
+            "external_actor_id": "f5c64adc-9bfd-4db9-84aa-1faafe207cd5",
+            "external_play_id": "de0a0c3b-8eb7-46d6-8be6-41fb841ec414",
+            "source_actor_name": "伊崎龍次郎",
+            "source_actor_url": "https://kira-hai.net/izaki-ryujiro",
+            "source_work_title": "MANKAI STAGE『A3!』～SUMMER 2019～",
+            "source_work_url": "https://kira-hai.net/a3_2019-3",
+            "source_year": 2021,
+            "source_role_raw": "飛鳥晴翔(GOD座)",
+            "source_role_names": [
+              "飛鳥晴翔(GOD座)"
+            ],
+            "matched_actor_id": "50c00e50-2eff-418f-9569-8dbe6c122ddc",
+            "matched_play_id": "3a9939c9-ee4c-42e5-a545-a0d0a9c1c46b",
+            "accepted_cast_id": "84948e46-5aa8-4638-9c03-9f87f77c6abe",
+            "confidence": 60,
+            "status": "accepted",
+            "note": null,
+            "scraped_at": "2026-04-27T18:19:26.243+00:00",
+            "created_at": "2026-04-27T18:19:25.426599+00:00",
+            "updated_at": "2026-04-30T18:29:45.191+00:00",
+            "accepted_at": "2026-04-30T18:29:45.191+00:00",
+            "rejected_at": null,
+            "source_cast_group": null,
+            "source_order": null,
+            "source_credit_key": null,
+            "source_evidence": null
+          },
+          "patch": {
+            "source_year": 2019,
+            "source_work_title": "MANKAI STAGE『A3!』~SUMMER 2019~",
+            "source_role_raw": "飛鳥晴翔",
+            "source_role_names": [
+              "飛鳥晴翔"
+            ],
+            "source_cast_group": null,
+            "source_credit_key": "1f53f6159c9f19be3003",
+            "source_order": 11,
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/a3_2019-3",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/a3_2019-3",
+                  "checkedAt": "2026-10-27T01:27:50.789Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/",
+                  "checkedAt": "2026-10-27T01:27:50.684Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/cast/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.652Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/cast/more.html",
+                  "checkedAt": "2026-10-27T01:27:50.669Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/ticket/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.701Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/guide/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.725Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/introduction/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.608Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/news/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.763Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/mankai-stage2019summer/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.807Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_01.png",
+                  "checkedAt": "2026-10-27T01:33:16.006Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_02.png",
+                  "checkedAt": "2026-10-27T01:33:16.142Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_03.png",
+                  "checkedAt": "2026-10-27T01:33:16.212Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_04.png",
+                  "checkedAt": "2026-10-27T01:33:16.243Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_05.png",
+                  "checkedAt": "2026-10-27T01:33:16.302Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                }
+              ],
+              "source_fingerprint": "dd79fdaa6ee2b05179c76600c974d41a3e9da49657c546f1950daf4b737e5336",
+              "review_fingerprint": "d8bd6177e49dd3fee9e03779ae1c78d622e02931fb920d276d1a1be75019928d",
+              "snapshot_fingerprint": "223650926757ef8751277e2ef0c973d2ceab9eba440de3da5ba73b5ddea32db1",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 11,
+                "cast": {
+                  "sourceActorName": "伊崎龍次郎",
+                  "sourceActorUrl": "https://kira-hai.net/izaki-ryujiro",
+                  "role_name": "飛鳥晴翔(GOD座)",
+                  "cast_group": "秋組"
+                }
+              },
+              "normalization_review": {
+                "group": null,
+                "role": "飛鳥晴翔",
+                "annotation": "GOD座",
+                "evidence": [
+                  {
+                    "url": "https://www.mankai-stage.jp/summer2019/",
+                    "checkedAt": "2026-10-27T01:27:50.684Z",
+                    "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                  },
+                  {
+                    "url": "https://www.mankai-stage.jp/summer2019/cast/more.html",
+                    "checkedAt": "2026-10-27T01:27:50.669Z",
+                    "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/a3_2019-3",
+                    "checkedAt": "2026-10-27T01:27:50.789Z",
+                    "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "before": {
+            "id": "ad8850fb-25a1-45df-9a8f-fccd8e1f43f2",
+            "source": "kira-hai",
+            "external_actor_id": "5fca366e-e1af-482e-ab0e-e846b88f5779",
+            "external_play_id": "de0a0c3b-8eb7-46d6-8be6-41fb841ec414",
+            "source_actor_name": "赤澤燈",
+            "source_actor_url": "https://kira-hai.net/akazawa-tomoru",
+            "source_work_title": "MANKAI STAGE『A3!』～SUMMER 2019～",
+            "source_work_url": "https://kira-hai.net/a3_2019-3",
+            "source_year": 2021,
+            "source_role_raw": "三好一成",
+            "source_role_names": [
+              "三好一成"
+            ],
+            "matched_actor_id": "ac91e41a-2db0-4f49-8389-a7d9786a4201",
+            "matched_play_id": "3a9939c9-ee4c-42e5-a545-a0d0a9c1c46b",
+            "accepted_cast_id": "1f30f0e1-2073-4442-b633-8fc66644291d",
+            "confidence": 60,
+            "status": "accepted",
+            "note": null,
+            "scraped_at": "2026-04-25T07:33:45.64+00:00",
+            "created_at": "2026-04-25T07:33:45.931879+00:00",
+            "updated_at": "2026-05-05T20:47:07.726+00:00",
+            "accepted_at": "2026-05-05T20:47:07.726+00:00",
+            "rejected_at": null,
+            "source_cast_group": null,
+            "source_order": null,
+            "source_credit_key": null,
+            "source_evidence": null
+          },
+          "patch": {
+            "source_year": 2019,
+            "source_work_title": "MANKAI STAGE『A3!』~SUMMER 2019~",
+            "source_role_raw": "三好一成",
+            "source_role_names": [
+              "三好一成"
+            ],
+            "source_cast_group": "夏組",
+            "source_credit_key": "7f19a1a572329682fd9c",
+            "source_order": 5,
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/a3_2019-3",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/a3_2019-3",
+                  "checkedAt": "2026-10-27T01:27:50.789Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/",
+                  "checkedAt": "2026-10-27T01:27:50.684Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/cast/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.652Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/cast/more.html",
+                  "checkedAt": "2026-10-27T01:27:50.669Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/ticket/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.701Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/guide/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.725Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/introduction/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.608Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/news/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.763Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/mankai-stage2019summer/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.807Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_01.png",
+                  "checkedAt": "2026-10-27T01:33:16.006Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_02.png",
+                  "checkedAt": "2026-10-27T01:33:16.142Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_03.png",
+                  "checkedAt": "2026-10-27T01:33:16.212Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_04.png",
+                  "checkedAt": "2026-10-27T01:33:16.243Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_05.png",
+                  "checkedAt": "2026-10-27T01:33:16.302Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                }
+              ],
+              "source_fingerprint": "dd79fdaa6ee2b05179c76600c974d41a3e9da49657c546f1950daf4b737e5336",
+              "review_fingerprint": "d8bd6177e49dd3fee9e03779ae1c78d622e02931fb920d276d1a1be75019928d",
+              "snapshot_fingerprint": "223650926757ef8751277e2ef0c973d2ceab9eba440de3da5ba73b5ddea32db1",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 5,
+                "cast": {
+                  "sourceActorName": "赤澤燈",
+                  "sourceActorUrl": "https://kira-hai.net/akazawa-tomoru",
+                  "role_name": "三好一成",
+                  "cast_group": "SUMMER TROUPE 夏組"
+                }
+              },
+              "normalization_review": {
+                "group": "夏組",
+                "role": "三好一成",
+                "annotation": null,
+                "evidence": [
+                  {
+                    "url": "https://www.mankai-stage.jp/summer2019/",
+                    "checkedAt": "2026-10-27T01:27:50.684Z",
+                    "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                  },
+                  {
+                    "url": "https://www.mankai-stage.jp/summer2019/cast/more.html",
+                    "checkedAt": "2026-10-27T01:27:50.669Z",
+                    "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/a3_2019-3",
+                    "checkedAt": "2026-10-27T01:27:50.789Z",
+                    "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "before": {
+            "id": "eb399e39-7cea-4570-bfce-6ca445eff3f5",
+            "source": "kira-hai",
+            "external_actor_id": "3acff4dc-f1bb-4549-86c5-fe4e4666019c",
+            "external_play_id": "de0a0c3b-8eb7-46d6-8be6-41fb841ec414",
+            "source_actor_name": "中村太郎",
+            "source_actor_url": "https://kira-hai.net/nakamura-taro",
+            "source_work_title": "MANKAI STAGE『A3!』～SUMMER 2019～",
+            "source_work_url": "https://kira-hai.net/a3_2019-3",
+            "source_year": 2021,
+            "source_role_raw": "兵頭十座",
+            "source_role_names": [
+              "兵頭十座"
+            ],
+            "matched_actor_id": "57ead490-a42e-450f-9f27-5473b1b3468f",
+            "matched_play_id": "3a9939c9-ee4c-42e5-a545-a0d0a9c1c46b",
+            "accepted_cast_id": "69dc344c-b93a-40e7-9157-75360988a218",
+            "confidence": 60,
+            "status": "accepted",
+            "note": null,
+            "scraped_at": "2026-04-27T17:51:03.092+00:00",
+            "created_at": "2026-04-27T17:51:02.33422+00:00",
+            "updated_at": "2026-05-04T19:05:46.82+00:00",
+            "accepted_at": "2026-05-04T19:05:46.82+00:00",
+            "rejected_at": null,
+            "source_cast_group": null,
+            "source_order": null,
+            "source_credit_key": null,
+            "source_evidence": null
+          },
+          "patch": {
+            "source_year": 2019,
+            "source_work_title": "MANKAI STAGE『A3!』~SUMMER 2019~",
+            "source_role_raw": "兵頭十座",
+            "source_role_names": [
+              "兵頭十座"
+            ],
+            "source_cast_group": "秋組",
+            "source_credit_key": "39704523df88f955be8f",
+            "source_order": 8,
+            "source_evidence": {
+              "links": [
+                {
+                  "url": "https://kira-hai.net/a3_2019-3",
+                  "note": "作品ページのキャスト欄"
+                },
+                {
+                  "url": "https://kira-hai.net/a3_2019-3",
+                  "checkedAt": "2026-10-27T01:27:50.789Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/",
+                  "checkedAt": "2026-10-27T01:27:50.684Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/cast/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.652Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/cast/more.html",
+                  "checkedAt": "2026-10-27T01:27:50.669Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/ticket/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.701Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/guide/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.725Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/introduction/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.608Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/news/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.763Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.nelke.co.jp/stage/mankai-stage2019summer/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.807Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_01.png",
+                  "checkedAt": "2026-10-27T01:33:16.006Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_02.png",
+                  "checkedAt": "2026-10-27T01:33:16.142Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_03.png",
+                  "checkedAt": "2026-10-27T01:33:16.212Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_04.png",
+                  "checkedAt": "2026-10-27T01:33:16.243Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                },
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_05.png",
+                  "checkedAt": "2026-10-27T01:33:16.302Z",
+                  "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+                }
+              ],
+              "source_fingerprint": "dd79fdaa6ee2b05179c76600c974d41a3e9da49657c546f1950daf4b737e5336",
+              "review_fingerprint": "d8bd6177e49dd3fee9e03779ae1c78d622e02931fb920d276d1a1be75019928d",
+              "snapshot_fingerprint": "223650926757ef8751277e2ef0c973d2ceab9eba440de3da5ba73b5ddea32db1",
+              "identity": "reviewed_link",
+              "original_source_row": {
+                "order": 8,
+                "cast": {
+                  "sourceActorName": "中村太郎",
+                  "sourceActorUrl": "https://kira-hai.net/nakamura-taro",
+                  "role_name": "兵頭十座",
+                  "cast_group": "秋組"
+                }
+              },
+              "normalization_review": {
+                "group": "秋組",
+                "role": "兵頭十座",
+                "annotation": null,
+                "evidence": [
+                  {
+                    "url": "https://www.mankai-stage.jp/summer2019/",
+                    "checkedAt": "2026-10-27T01:27:50.684Z",
+                    "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                  },
+                  {
+                    "url": "https://www.mankai-stage.jp/summer2019/cast/more.html",
+                    "checkedAt": "2026-10-27T01:27:50.669Z",
+                    "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                  },
+                  {
+                    "url": "https://kira-hai.net/a3_2019-3",
+                    "checkedAt": "2026-10-27T01:27:50.789Z",
+                    "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "legacyKept": [],
+      "transformations": [
+        {
+          "type": "group_carry_forward_correction",
+          "rows": [
+            {
+              "sourceActorName": "宇佐卓真",
+              "sourceActorUrl": "https://kira-hai.net/usa-takuma",
+              "role_name": "斑鳩円",
+              "cast_group": "秋組"
+            },
+            {
+              "sourceActorName": "滝口幸広",
+              "sourceActorUrl": "https://kira-hai.net/takiguchi-yukihiro",
+              "role_name": "鹿島雄三(初代春組OB)",
+              "cast_group": "秋組"
+            },
+            {
+              "sourceActorName": "伊崎龍次郎",
+              "sourceActorUrl": "https://kira-hai.net/izaki-ryujiro",
+              "role_name": "飛鳥晴翔(GOD座)",
+              "cast_group": "秋組"
+            },
+            {
+              "sourceActorName": "河合龍之介",
+              "sourceActorUrl": "https://kira-hai.net/kawai-ryunosuke",
+              "role_name": "神木坂レニ(GOD座主宰)",
+              "cast_group": "秋組"
+            }
+          ],
+          "evidence": [
+            {
+              "url": "https://www.mankai-stage.jp/summer2019/",
+              "checkedAt": "2026-10-27T01:27:50.684Z",
+              "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+            },
+            {
+              "url": "https://www.mankai-stage.jp/summer2019/cast/more.html",
+              "checkedAt": "2026-10-27T01:27:50.669Z",
+              "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+            },
+            {
+              "url": "https://kira-hai.net/a3_2019-3",
+              "checkedAt": "2026-10-27T01:27:50.789Z",
+              "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+            }
+          ]
+        },
+        {
+          "type": "role_annotation_to_note",
+          "rows": [
+            {
+              "sourceActorName": "滝口幸広",
+              "sourceActorUrl": "https://kira-hai.net/takiguchi-yukihiro",
+              "role_name": "鹿島雄三",
+              "cast_group": null,
+              "sourceAnnotation": "初代春組OB"
+            },
+            {
+              "sourceActorName": "伊崎龍次郎",
+              "sourceActorUrl": "https://kira-hai.net/izaki-ryujiro",
+              "role_name": "飛鳥晴翔",
+              "cast_group": null,
+              "sourceAnnotation": "GOD座"
+            },
+            {
+              "sourceActorName": "河合龍之介",
+              "sourceActorUrl": "https://kira-hai.net/kawai-ryunosuke",
+              "role_name": "神木坂レニ",
+              "cast_group": null,
+              "sourceAnnotation": "GOD座主宰"
+            }
+          ],
+          "evidence": [
+            {
+              "url": "https://kira-hai.net/a3_2019-3",
+              "checkedAt": "2026-10-27T01:27:50.789Z",
+              "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+            },
+            {
+              "url": "https://www.mankai-stage.jp/summer2019/cast/more.html",
+              "checkedAt": "2026-10-27T01:27:50.669Z",
+              "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+            }
+          ]
+        },
+        {
+          "type": "named_voice_supplement",
+          "item": {
+            "id": "495362a0-f204-4506-ab7e-a7dee2536b80",
+            "source": "official",
+            "source_actor_name": "今村ねずみ",
+            "source_actor_url": null,
+            "source_work_title": "MANKAI STAGE『A3!』～SUMMER 2019～",
+            "source_work_url": "https://www.mankai-stage.jp/summer2019/news/index.html#date31",
+            "source_year": 2019,
+            "source_role_raw": "斑鳩八角",
+            "source_role_names": [
+              "斑鳩八角"
+            ],
+            "source_cast_group": "声の出演",
+            "source_order": 13,
+            "source_credit_key": "5e6ebed57a4300bce1b8",
+            "source_evidence": {
+              "reviewed": true,
+              "links": [
+                {
+                  "url": "https://www.mankai-stage.jp/summer2019/news/index.html",
+                  "checkedAt": "2026-10-27T01:27:50.763Z",
+                  "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+                }
+              ],
+              "announcementDate": "2019-08-08",
+              "anchor": "date31",
+              "text": "本田礼生演じる斑鳩三角の祖父 斑鳩八角（いかるが はっかく）役の声を今村ねずみが担当いたしました。",
+              "reason": "キラハイ主要12人と公式キャスト一覧にはない別告知の記名声出演。既存今村ねずみへ接続。斑鳩九角とは別役。"
+            },
+            "matched_actor_id": "4b10e54e-2585-44a8-8695-8a950c576820",
+            "matched_play_id": "3a9939c9-ee4c-42e5-a545-a0d0a9c1c46b"
+          },
+          "evidence": [
+            {
+              "url": "https://www.mankai-stage.jp/summer2019/news/index.html",
+              "checkedAt": "2026-10-27T01:27:50.763Z",
+              "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+            }
+          ]
+        },
+        {
+          "type": "incorrect_return_schedule_alt",
+          "reason": "東京凱旋画像のaltが新潟9/13〜15の4日時を誤掲載。画像本体と主催者表で9/19〜29の16日時を採用。",
+          "evidence": [
+            {
+              "url": "https://www.mankai-stage.jp/summer2019/ticket/index.html",
+              "checkedAt": "2026-10-27T01:27:50.701Z",
+              "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+            },
+            {
+              "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_05.png",
+              "checkedAt": "2026-10-27T01:33:16.302Z",
+              "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+            },
+            {
+              "url": "https://www.nelke.co.jp/stage/mankai-stage2019summer/index.html",
+              "checkedAt": "2026-10-27T01:27:50.807Z",
+              "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+            }
+          ]
+        }
+      ],
+      "exceptions": [
+        "夏組5・春組2・秋組1・関係者4、別告知の記名声出演1で13人13配役。全員既存人物再利用。",
+        "末尾斑鳩円・鹿島雄三・飛鳥晴翔・神木坂レニへ秋組を持ち越さない。GOD座など役柄補足3件はnoteへ。",
+        "既存3配役ID・作成日時・主演フラグを保全。飛鳥晴翔※GOD座は役名とnoteへ分離。",
+        "採用済み旧候補3件の誤年2021を2019へ補正しキー・組・元行順を追加。同じ候補ID・採用日時・採用状態・配役IDを保持し旧原文は履歴へ。",
+        "公式2019/8/8告知で今村ねずみの斑鳩八角を確認。後年の斑鳩九角を混ぜない。声の出演区分とnoteを保存。",
+        "東京16兵庫14愛知6新潟4東京凱旋16で56公演。公式画像5枚を目視し主催者8表と照合。凱旋画像altの新潟日程転記を採用しない。",
+        "8/12・8/27・9/23休演、兵庫9/1は12:30のみ、大千秋楽9/29は14:00。映像上映・打ち上げ配信・ライブビューイング・追加席を新公演と数えない。",
+        "予定150分・途中休憩あり。休憩分数未確認。当該スタッフ8区分と日程・時間の計10区分。前作主題歌クレジットを自動継承しない。",
+        "2劇中劇に基づく短い日英紹介を追加。genre・tags・vod・URL・関連シリーズを保全。",
+        "既存全人物・他3作品46配役・シリーズ全項目を保全。現在配信・人物属性総合監査・主演フラグ根拠・シリーズ説明は後続。"
+      ]
+    }
+  ],
+  "keptPlays": [
+    {
+      "id": "05ef75aa-9f4b-4aae-bf02-c50294ceafd4",
+      "slug": "a3_2019-2",
+      "title": "MANKAI STAGE『A3!』～SPRING 2019～",
+      "franchise_id": "03404164-26f0-476f-92e9-5b438984fe0d",
+      "summary": "春組を中心に描く『A3!』の単独公演。旗揚げ公演を経た春組が、第2回公演『不思議の国の青年アリス』と第3回公演『ぜんまい仕掛けのココロ』に取り組む2つの物語を描く。",
+      "period": "2019年4月25日〜6月2日",
+      "venue": "東京・東京凱旋：天王洲 銀河劇場／大阪：大阪メルパルクホール／新潟：長岡市立劇場 大ホール",
+      "vod": {},
+      "genre": null,
+      "created_at": "2026-10-27T01:10:22.956682+00:00",
+      "updated_at": "2026-10-27T01:10:22.956682+00:00",
+      "tags": [],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "イケメン役者育成ゲーム『A3!（エースリー）』（リベル・エンタテインメント）"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "演出",
+          "names": [
+            "松崎史也"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "脚本",
+          "names": [
+            "亀田真二郎（東京パチプロデュース）"
+          ],
+          "is_core": true,
+          "sort_order": 3
+        },
+        {
+          "role": "音楽",
+          "names": [
+            "Yu（vague）"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "振付",
+          "names": [
+            "梅棒"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "協力",
+          "names": [
+            "一般社団法人 日本2.5次元ミュージカル協会"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        },
+        {
+          "role": "協賛",
+          "names": [
+            "ファミリーマート"
+          ],
+          "is_core": false,
+          "sort_order": 7
+        },
+        {
+          "role": "主催",
+          "names": [
+            "MANKAI STAGE『A3!』製作委員会（ネルケプランニング、ポニーキャニオン、リベル・エンタテインメント）"
+          ],
+          "is_core": false,
+          "sort_order": 8
+        },
+        {
+          "role": "公演日程",
+          "names": [
+            "東京：2019年4月25日〜5月6日（天王洲 銀河劇場）・全18公演、4月29日休演",
+            "大阪：2019年5月10日〜14日（大阪メルパルクホール）・全7公演",
+            "新潟：2019年5月18日〜19日（長岡市立劇場 大ホール）・全4公演",
+            "東京凱旋：2019年5月23日〜6月2日（天王洲 銀河劇場）・全16公演、5月27日休演"
+          ],
+          "is_core": false,
+          "sort_order": 9
+        },
+        {
+          "role": "上演時間（予定）",
+          "names": [
+            "約2時間30分（途中休憩あり・休憩分数未確認）"
+          ],
+          "is_core": false,
+          "sort_order": 10
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "The first standalone production focused on the Spring Troupe in MANKAI STAGE A3!. Following the troupe’s inaugural performance, it presents two stories about their second and third stage productions.",
+      "title_en": "MANKAI STAGE A3! ~SPRING 2019~"
+    },
+    {
+      "id": "3b5f34b5-40a1-45fe-bfcf-d70060695251",
+      "slug": "ace-stage-ss",
+      "title": "MANKAI STAGE『A3!』～SPRING & SUMMER 2018～",
+      "franchise_id": "03404164-26f0-476f-92e9-5b438984fe0d",
+      "summary": "イケメン役者育成ゲーム『A3!』の舞台化シリーズ第一弾。借金まみれの劇団「MANKAIカンパニー」を立て直すため、春組と夏組が奮闘する。",
+      "period": "2018年6月28日〜11月4日",
+      "venue": "東京・東京凱旋：天王洲 銀河劇場／京都：京都劇場",
+      "vod": {},
+      "genre": "comedy",
+      "created_at": "2025-12-13T05:12:12.983557+00:00",
+      "updated_at": "2026-10-26T23:46:20.580937+00:00",
+      "tags": [
+        "アイドル",
+        "コメディ",
+        "育成"
+      ],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "イケメン役者育成ゲーム『A3!（エースリー）』（リベル・エンタテインメント）"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "演出",
+          "names": [
+            "松崎史也"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "脚本",
+          "names": [
+            "亀田真二郎（東京パチプロデュース）"
+          ],
+          "is_core": true,
+          "sort_order": 3
+        },
+        {
+          "role": "音楽",
+          "names": [
+            "Yu（vague）"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "振付",
+          "names": [
+            "梅棒"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "メインテーマ制作",
+          "names": [
+            "大石昌良"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        },
+        {
+          "role": "協力",
+          "names": [
+            "一般社団法人 日本2.5次元ミュージカル協会"
+          ],
+          "is_core": false,
+          "sort_order": 7
+        },
+        {
+          "role": "主催",
+          "names": [
+            "MANKAI STAGE『A3!』製作委員会（ネルケプランニング、ポニーキャニオン、リベル・エンタテインメント）"
+          ],
+          "is_core": false,
+          "sort_order": 8
+        },
+        {
+          "role": "公演日程",
+          "names": [
+            "東京：2018年6月28日〜7月8日（天王洲 銀河劇場）・全16公演、7月2日休演",
+            "京都：2018年7月13日〜16日（京都劇場）・全7公演",
+            "東京凱旋：2018年10月26日〜11月4日（天王洲 銀河劇場）・全15公演、10月29日休演"
+          ],
+          "is_core": false,
+          "sort_order": 9
+        },
+        {
+          "role": "上演時間（予定）",
+          "names": [
+            "約2時間35分（途中休憩あり・休憩分数未確認）"
+          ],
+          "is_core": false,
+          "sort_order": 10
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "The first stage adaptation of the actor-training game A3!. The Spring and Summer Troupes work to rebuild the debt-ridden MANKAI Company.",
+      "title_en": "MANKAI STAGE A3! ~SPRING & SUMMER 2018~"
+    },
+    {
+      "id": "a1377573-d4aa-4ffe-b89e-7221614dbb7e",
+      "slug": "ace-stage-aw",
+      "title": "MANKAI STAGE『A3!』～AUTUMN & WINTER 2019～",
+      "franchise_id": "03404164-26f0-476f-92e9-5b438984fe0d",
+      "summary": "『A3!』舞台化シリーズ第二弾。秋組と冬組の物語を描く。",
+      "period": "2019年1月31日〜3月24日",
+      "venue": "東京：日本青年館ホール／山口：下関市民会館 大ホール／大阪：梅田芸術劇場 メインホール／東京凱旋：天王洲 銀河劇場",
+      "vod": {},
+      "genre": "comedy",
+      "created_at": "2025-12-13T05:12:12.983557+00:00",
+      "updated_at": "2026-10-27T00:12:14.694225+00:00",
+      "tags": [
+        "アイドル",
+        "コメディ",
+        "育成"
+      ],
+      "credits": [
+        {
+          "role": "原作",
+          "names": [
+            "イケメン役者育成ゲーム『A3!（エースリー）』（リベル・エンタテインメント）"
+          ],
+          "is_core": true,
+          "sort_order": 1
+        },
+        {
+          "role": "演出",
+          "names": [
+            "松崎史也"
+          ],
+          "is_core": true,
+          "sort_order": 2
+        },
+        {
+          "role": "脚本",
+          "names": [
+            "亀田真二郎（東京パチプロデュース）"
+          ],
+          "is_core": true,
+          "sort_order": 3
+        },
+        {
+          "role": "音楽",
+          "names": [
+            "Yu（vague）"
+          ],
+          "is_core": false,
+          "sort_order": 4
+        },
+        {
+          "role": "振付",
+          "names": [
+            "梅棒"
+          ],
+          "is_core": false,
+          "sort_order": 5
+        },
+        {
+          "role": "メインテーマ「The Show Must Go On!」作詞・作曲・編曲",
+          "names": [
+            "大石昌良"
+          ],
+          "is_core": false,
+          "sort_order": 6
+        },
+        {
+          "role": "協力",
+          "names": [
+            "一般社団法人 日本2.5次元ミュージカル協会"
+          ],
+          "is_core": false,
+          "sort_order": 7
+        },
+        {
+          "role": "協賛",
+          "names": [
+            "ファミリーマート"
+          ],
+          "is_core": false,
+          "sort_order": 8
+        },
+        {
+          "role": "主催",
+          "names": [
+            "MANKAI STAGE『A3!』製作委員会（ネルケプランニング、ポニーキャニオン、リベル・エンタテインメント）"
+          ],
+          "is_core": false,
+          "sort_order": 9
+        },
+        {
+          "role": "公演日程",
+          "names": [
+            "東京：2019年1月31日〜2月11日（日本青年館ホール）・全17公演、2月5日休演",
+            "山口：2019年2月23日〜24日（下関市民会館 大ホール）・全3公演",
+            "大阪：2019年2月27日〜3月3日（梅田芸術劇場 メインホール）・全8公演",
+            "東京凱旋：2019年3月15日〜24日（天王洲 銀河劇場）・全14公演、3月18日休演"
+          ],
+          "is_core": false,
+          "sort_order": 10
+        },
+        {
+          "role": "上演時間（予定）",
+          "names": [
+            "約3時間10分（途中休憩あり・休憩分数未確認）"
+          ],
+          "is_core": false,
+          "sort_order": 11
+        }
+      ],
+      "related_franchise_ids": [],
+      "summary_en": "The second stage production based on A3!, following the stories of the Autumn and Winter Troupes.",
+      "title_en": "MANKAI STAGE A3! ~AUTUMN & WINTER 2019~"
+    }
+  ],
+  "evidence": {
+    "links": [
+      {
+        "url": "https://kira-hai.net/a3_2019-3",
+        "checkedAt": "2026-10-27T01:27:50.789Z",
+        "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+      },
+      {
+        "url": "https://www.mankai-stage.jp/summer2019/",
+        "checkedAt": "2026-10-27T01:27:50.684Z",
+        "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+      },
+      {
+        "url": "https://www.mankai-stage.jp/summer2019/cast/index.html",
+        "checkedAt": "2026-10-27T01:27:50.652Z",
+        "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+      },
+      {
+        "url": "https://www.mankai-stage.jp/summer2019/cast/more.html",
+        "checkedAt": "2026-10-27T01:27:50.669Z",
+        "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+      },
+      {
+        "url": "https://www.mankai-stage.jp/summer2019/ticket/index.html",
+        "checkedAt": "2026-10-27T01:27:50.701Z",
+        "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+      },
+      {
+        "url": "https://www.mankai-stage.jp/summer2019/guide/index.html",
+        "checkedAt": "2026-10-27T01:27:50.725Z",
+        "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+      },
+      {
+        "url": "https://www.mankai-stage.jp/summer2019/introduction/index.html",
+        "checkedAt": "2026-10-27T01:27:50.608Z",
+        "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+      },
+      {
+        "url": "https://www.mankai-stage.jp/summer2019/news/index.html",
+        "checkedAt": "2026-10-27T01:27:50.763Z",
+        "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+      },
+      {
+        "url": "https://www.nelke.co.jp/stage/mankai-stage2019summer/index.html",
+        "checkedAt": "2026-10-27T01:27:50.807Z",
+        "note": "取得原文・SHA256を保存。2019年夏公演の氏名・役名・組・日程を個別照合。"
+      },
+      {
+        "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_01.png",
+        "checkedAt": "2026-10-27T01:33:16.006Z",
+        "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+      },
+      {
+        "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_02.png",
+        "checkedAt": "2026-10-27T01:33:16.142Z",
+        "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+      },
+      {
+        "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_03.png",
+        "checkedAt": "2026-10-27T01:33:16.212Z",
+        "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+      },
+      {
+        "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_04.png",
+        "checkedAt": "2026-10-27T01:33:16.243Z",
+        "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+      },
+      {
+        "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_05.png",
+        "checkedAt": "2026-10-27T01:33:16.302Z",
+        "note": "公式日程画像を目視し主催者表と照合。原本とSHA256を保存。"
+      }
+    ],
+    "sources": [
+      {
+        "label": "kira",
+        "url": "https://kira-hai.net/a3_2019-3",
+        "status": 200,
+        "checkedAt": "2026-10-27T01:27:50.789Z",
+        "sha256": "bba1c927e002c2af56557f3019fc92786969585daf16babf393f8f4ff57d7076",
+        "bytes": 54726
+      },
+      {
+        "label": "official",
+        "url": "https://www.mankai-stage.jp/summer2019/",
+        "status": 200,
+        "checkedAt": "2026-10-27T01:27:50.684Z",
+        "sha256": "d672bfa92c06bf7d7cf298a8e0a83bd71e75a18fab696797298b96692aebff1b",
+        "bytes": 22578
+      },
+      {
+        "label": "cast",
+        "url": "https://www.mankai-stage.jp/summer2019/cast/index.html",
+        "status": 200,
+        "checkedAt": "2026-10-27T01:27:50.652Z",
+        "sha256": "caa659bb873246e7dc245b227dd1aec8ccecd191f76633ab351a95e58f9bcf91",
+        "bytes": 16897
+      },
+      {
+        "label": "castMore",
+        "url": "https://www.mankai-stage.jp/summer2019/cast/more.html",
+        "status": 200,
+        "checkedAt": "2026-10-27T01:27:50.669Z",
+        "sha256": "dda6414a9081d57057b5f44abc350439c65c76ff1da02462505bd96f3a1e3182",
+        "bytes": 21360
+      },
+      {
+        "label": "ticket",
+        "url": "https://www.mankai-stage.jp/summer2019/ticket/index.html",
+        "status": 200,
+        "checkedAt": "2026-10-27T01:27:50.701Z",
+        "sha256": "877d2e31facd7be2f1dbf13155c0104b96f565bd8401457ed6496fcb6cc8a359",
+        "bytes": 24283
+      },
+      {
+        "label": "guide",
+        "url": "https://www.mankai-stage.jp/summer2019/guide/index.html",
+        "status": 200,
+        "checkedAt": "2026-10-27T01:27:50.725Z",
+        "sha256": "53ef215541d075c82fb0d929cd7d14c8a47164a0dcec9c8410a31127ead7ebfd",
+        "bytes": 83462
+      },
+      {
+        "label": "intro",
+        "url": "https://www.mankai-stage.jp/summer2019/introduction/index.html",
+        "status": 200,
+        "checkedAt": "2026-10-27T01:27:50.608Z",
+        "sha256": "dc7c8eafe7918fe6a395f230c5219177560fbea2b1a87599ee37b79b287a8a89",
+        "bytes": 7532
+      },
+      {
+        "label": "news",
+        "url": "https://www.mankai-stage.jp/summer2019/news/index.html",
+        "status": 200,
+        "checkedAt": "2026-10-27T01:27:50.763Z",
+        "sha256": "ee9cdb50436222f40eabefe01f8d7706db611edce3898cb41900edecbdd9e69d",
+        "bytes": 96008
+      },
+      {
+        "label": "producer",
+        "url": "https://www.nelke.co.jp/stage/mankai-stage2019summer/index.html",
+        "status": 200,
+        "checkedAt": "2026-10-27T01:27:50.807Z",
+        "sha256": "9c1a26a68741891016448160cc592491f8a24c43e99528d2d66afa5bddd4603c",
+        "bytes": 50901
+      },
+      {
+        "label": "changelog",
+        "url": "https://supabase.com/changelog.md",
+        "status": 200,
+        "checkedAt": "2026-10-27T01:27:50.823Z",
+        "sha256": "45528009025b8ad8487ccb73f7c769b66d4b0e7aa4560157047899dcb5b5a006",
+        "bytes": 102641
+      },
+      {
+        "label": "scheduleImage01",
+        "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_01.png",
+        "status": 200,
+        "checkedAt": "2026-10-27T01:33:16.006Z",
+        "sha256": "db8b24b6b2b124943191626594f0dbcb21a1f23006699e52870250d7f8ccef7b",
+        "bytes": 9602
+      },
+      {
+        "label": "scheduleImage02",
+        "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_02.png",
+        "status": 200,
+        "checkedAt": "2026-10-27T01:33:16.142Z",
+        "sha256": "7fc955f5ead1be3f7a2b6cb5eade73299e22048a443f4d9c6657847be5b66978",
+        "bytes": 9191
+      },
+      {
+        "label": "scheduleImage03",
+        "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_03.png",
+        "status": 200,
+        "checkedAt": "2026-10-27T01:33:16.212Z",
+        "sha256": "4c2f67b13b608ed916de22c950714d5c76ea3067609ad0243e9c265ea248c99b",
+        "bytes": 3542
+      },
+      {
+        "label": "scheduleImage04",
+        "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_04.png",
+        "status": 200,
+        "checkedAt": "2026-10-27T01:33:16.243Z",
+        "sha256": "b9c5e6182ca5c14ca36725b58d00d99279018baf982f373b92eb01339697d89e",
+        "bytes": 3689
+      },
+      {
+        "label": "scheduleImage05",
+        "url": "https://www.mankai-stage.jp/summer2019/assets/img/ticket/schedule_05.png",
+        "status": 200,
+        "checkedAt": "2026-10-27T01:33:16.302Z",
+        "sha256": "ebe1c8f1385593d23051dc044fbe2c587571b7a14719326a73048e17ccc72eb1",
+        "bytes": 9742
+      }
+    ],
+    "unresolved": [
+      "AUTUMN 2020以降、シリーズ説明・現行配信・人物属性総合監査は後続。"
+    ],
+    "notes": [
+      "既存作品・3配役IDを保った補完、10配役追加。人物追加なし。スキーマ・RLS・アプリ変更なし。",
+      "Supabase changelogは前回と同SHA256。当該DML/RPCへの新たな関連破壊的変更なし。"
+    ]
+  },
+  "requestKey": "9eb03c25b4312aad5dec511d9580505a6462acdc978d97e17e0ed3b0658b11c4",
+  "verification": {
+    "passed": true,
+    "requestKey": "9eb03c25b4312aad5dec511d9580505a6462acdc978d97e17e0ed3b0658b11c4",
+    "changes": {
+      "actors": {
+        "before": 1170,
+        "after": 1170,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "plays": {
+        "before": 421,
+        "after": 421,
+        "added": 0,
+        "modified": 1,
+        "deleted": 0
+      },
+      "franchises": {
+        "before": 198,
+        "after": 198,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "casts": {
+        "before": 4358,
+        "after": 4368,
+        "added": 10,
+        "modified": 3,
+        "deleted": 0
+      },
+      "external_actors": {
+        "before": 1701,
+        "after": 1701,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_cast_candidates": {
+        "before": 3710,
+        "after": 3720,
+        "added": 10,
+        "modified": 3,
+        "deleted": 0
+      },
+      "external_import_logs": {
+        "before": 6074,
+        "after": 6104,
+        "added": 30,
+        "modified": 0,
+        "deleted": 0
+      },
+      "actor_identity_sources": {
+        "before": 516,
+        "after": 516,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      }
+    },
+    "newActors": 0,
+    "reusedActors": 13,
+    "newPlays": 0,
+    "updatedPlays": 1,
+    "newCasts": 10,
+    "completedExistingCasts": 3,
+    "correctedAcceptedCandidates": 3,
+    "newCandidates": 10,
+    "noDeletions": true,
+    "scheduleCount": 56,
+    "scheduleCounts": {
+      "tokyo": 16,
+      "hyogo": 14,
+      "aichi": 6,
+      "niigata": 4,
+      "tokyoReturn": 16
+    },
+    "incorrectTokyoReturnAltDiscarded": true,
+    "scheduleImagesAndProducerTablesAgree": true,
+    "namedVoiceRole": "斑鳩八角",
+    "namedVoiceActor": "今村 ねずみ",
+    "creditCategories": 10,
+    "seriesWorks": 4,
+    "seriesCastRows": 59,
+    "seriesActors": 28,
+    "totals": {
+      "actors": 1170,
+      "plays": 421,
+      "casts": 4368
+    }
+  },
+  "publicVerification": {
+    "passed": true,
+    "pages": 66,
+    "reviewedWorks": 4,
+    "reviewedCastRows": 59,
+    "targetCastRows": 13,
+    "newActors": 0,
+    "seriesWorks": 4,
+    "seriesCastRows": 59,
+    "scheduleCount": 56,
+    "results": [
+      {
+        "path": "/series/a3",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/ace-stage-ss",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/a3_2019-3",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/a3_2019-2",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/jinnai-sho",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/plays/ace-stage-aw",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/miyazaki-yu",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/noguchi-jun",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/akazawa-tomoru",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/honda-reo",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/yokota-ryugi",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/maekawa-yuki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/usa-takuma",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/nakamura-taro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/takiguchi-yukihiro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/izaki-ryujiro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/makishima-hikaru",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/kawai-ryunosuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/imamura-nezumi",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/tateishi-toshiki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/mizue-kenta",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/fujita-ray",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/furuya-yamato",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/aramaki-yoshihiko",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/ueda-kandai",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/tauchi-tokihiro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/sasamori-hiroki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/taguchi-ryo",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/inagaki-seiya",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/akazawa-ryotaro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/kitazono-ryo",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/tanaka-ryosei",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/actors/ueda-keisuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/series/a3",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/a3_2019-2",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/a3_2019-3",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/ace-stage-ss",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/plays/ace-stage-aw",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/noguchi-jun",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/jinnai-sho",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/miyazaki-yu",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/yokota-ryugi",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/maekawa-yuki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/honda-reo",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/akazawa-tomoru",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/nakamura-taro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/usa-takuma",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/takiguchi-yukihiro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/izaki-ryujiro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/kawai-ryunosuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/imamura-nezumi",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/makishima-hikaru",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/tateishi-toshiki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/furuya-yamato",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/mizue-kenta",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/fujita-ray",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/sasamori-hiroki",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/aramaki-yoshihiko",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/tauchi-tokihiro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/ueda-kandai",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/taguchi-ryo",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/inagaki-seiya",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/akazawa-ryotaro",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/kitazono-ryo",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/ueda-keisuke",
+        "passed": true,
+        "status": 200
+      },
+      {
+        "path": "/en/actors/tanaka-ryosei",
+        "passed": true,
+        "status": 200
+      }
+    ]
+  },
+  "searchVerification": {
+    "passed": true,
+    "checks": 52,
+    "spaceAndNoSpace": true,
+    "genderAttributesUnchanged": true,
+    "results": [
+      {
+        "path": "/actors?q=%E5%AE%AE%E5%B4%8E+%E6%B9%A7",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%AE%AE%E5%B4%8E%E6%B9%A7",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E9%99%B3%E5%86%85%E5%B0%86",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E9%99%B3%E5%86%85+%E5%B0%86",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%9C%AC%E7%94%B0+%E7%A4%BC%E7%94%9F",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E9%87%8E%E5%8F%A3%E6%BA%96",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E9%87%8E%E5%8F%A3+%E6%BA%96",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%9C%AC%E7%94%B0%E7%A4%BC%E7%94%9F",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E8%B5%A4%E6%BE%A4+%E7%87%88",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%A8%AA%E7%94%B0+%E9%BE%8D%E5%84%80",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E8%B5%A4%E6%BE%A4%E7%87%88",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%A8%AA%E7%94%B0%E9%BE%8D%E5%84%80",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%89%8D%E5%B7%9D+%E5%84%AA%E5%B8%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%89%8D%E5%B7%9D%E5%84%AA%E5%B8%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E4%B8%AD%E6%9D%91+%E5%A4%AA%E9%83%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E4%B8%AD%E6%9D%91%E5%A4%AA%E9%83%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%AE%87%E4%BD%90+%E5%8D%93%E7%9C%9F",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E5%AE%87%E4%BD%90%E5%8D%93%E7%9C%9F",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%BB%9D%E5%8F%A3+%E5%B9%B8%E5%BA%83",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%BB%9D%E5%8F%A3%E5%B9%B8%E5%BA%83",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E4%BC%8A%E5%B4%8E+%E9%BE%8D%E6%AC%A1%E9%83%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%B2%B3%E5%90%88+%E9%BE%8D%E4%B9%8B%E4%BB%8B",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E4%BC%8A%E5%B4%8E%E9%BE%8D%E6%AC%A1%E9%83%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E6%B2%B3%E5%90%88%E9%BE%8D%E4%B9%8B%E4%BB%8B",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E4%BB%8A%E6%9D%91+%E3%81%AD%E3%81%9A%E3%81%BF",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/actors?q=%E4%BB%8A%E6%9D%91%E3%81%AD%E3%81%9A%E3%81%BF",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E9%99%B3%E5%86%85+%E5%B0%86",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E9%99%B3%E5%86%85%E5%B0%86",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%AE%AE%E5%B4%8E+%E6%B9%A7",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%AE%AE%E5%B4%8E%E6%B9%A7",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E9%87%8E%E5%8F%A3+%E6%BA%96",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E9%87%8E%E5%8F%A3%E6%BA%96",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%9C%AC%E7%94%B0+%E7%A4%BC%E7%94%9F",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%9C%AC%E7%94%B0%E7%A4%BC%E7%94%9F",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E8%B5%A4%E6%BE%A4+%E7%87%88",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E8%B5%A4%E6%BE%A4%E7%87%88",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%A8%AA%E7%94%B0+%E9%BE%8D%E5%84%80",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%A8%AA%E7%94%B0%E9%BE%8D%E5%84%80",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%89%8D%E5%B7%9D+%E5%84%AA%E5%B8%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%89%8D%E5%B7%9D%E5%84%AA%E5%B8%8C",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E4%B8%AD%E6%9D%91+%E5%A4%AA%E9%83%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%AE%87%E4%BD%90+%E5%8D%93%E7%9C%9F",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E4%B8%AD%E6%9D%91%E5%A4%AA%E9%83%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E5%AE%87%E4%BD%90%E5%8D%93%E7%9C%9F",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%BB%9D%E5%8F%A3+%E5%B9%B8%E5%BA%83",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%BB%9D%E5%8F%A3%E5%B9%B8%E5%BA%83",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E4%BC%8A%E5%B4%8E+%E9%BE%8D%E6%AC%A1%E9%83%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E4%BC%8A%E5%B4%8E%E9%BE%8D%E6%AC%A1%E9%83%8E",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%B2%B3%E5%90%88+%E9%BE%8D%E4%B9%8B%E4%BB%8B",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E6%B2%B3%E5%90%88%E9%BE%8D%E4%B9%8B%E4%BB%8B",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E4%BB%8A%E6%9D%91+%E3%81%AD%E3%81%9A%E3%81%BF",
+        "status": 200,
+        "passed": true
+      },
+      {
+        "path": "/en/actors?q=%E4%BB%8A%E6%9D%91%E3%81%AD%E3%81%9A%E3%81%BF",
+        "status": 200,
+        "passed": true
+      }
+    ]
+  },
+  "replayVerification": {
+    "passed": true,
+    "tables": {
+      "actors": {
+        "rows": 1170,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "plays": {
+        "rows": 421,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "franchises": {
+        "rows": 198,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "casts": {
+        "rows": 4368,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_actors": {
+        "rows": 1701,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_cast_candidates": {
+        "rows": 3720,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_import_logs": {
+        "rows": 6104,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "actor_identity_sources": {
+        "rows": 516,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      }
+    }
+  },
+  "sourceValidation": {
+    "officialMainRoles": 12,
+    "supplementalNamedVoiceRoles": 1,
+    "allActorsReused": true,
+    "summerMembers": 5,
+    "springMembers": 2,
+    "autumnMembers": 1,
+    "otherCharacters": 4,
+    "voicePerformers": 1,
+    "roleAnnotationsRetainedAsNotes": 3,
+    "voiceNoteRetained": true,
+    "scheduleImagesVisuallyChecked": true,
+    "scheduleImagesAndProducerTablesAgree": true,
+    "incorrectReturnAltDiscarded": true,
+    "scheduleCount": 56,
+    "scheduleCounts": {
+      "tokyo": 16,
+      "hyogo": 14,
+      "aichi": 6,
+      "niigata": 4,
+      "tokyoReturn": 16
+    },
+    "plannedRuntimeMinutes": 150,
+    "intermissionMinutes": null,
+    "noDeletions": true
+  },
+  "verificationScope": "既存SUMMER 2019を3→13配役へ補完。全13人物再利用、記名声出演の今村ねずみ／斑鳩八角を公式別告知から追加。末尾関係者4人への秋組持ち越しを訂正し、初代春組OB・GOD座・GOD座主宰をnoteへ保存。既存3配役ID・主演フラグ・作成日時と採用済み候補3件のID・採用日時を保全し誤年2021→2019を訂正。東京16兵庫14愛知6新潟4凱旋16の56日時は公式画像5枚と主催者8表で照合。凱旋画像altは新潟日程の誤転記のため画像本体を採用。予定150分・途中休憩あり、当該スタッフ10区分と短い日英紹介を保存。8テーブル対象外全行一致、削除0、同一SQL再実行後全行一致。A3! ACT1現状4作品59配役28人物の表示を日英66ページで検証。現在配信・人物属性総合監査・シリーズ説明・主演フラグ根拠・細部英訳・後続作品は未完了。",
+  "nextWork": {
+    "title": "MANKAI STAGE『A3!』～AUTUMN 2020～",
+    "year": 2020,
+    "status": "research_pending",
+    "note": "公演別公式で出演者・地域日程を確認して補完・新規登録を判断。既存4作品の紹介全体と後続公演は別途点検。"
+  }
+}
