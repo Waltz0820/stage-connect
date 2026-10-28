@@ -7010,5 +7010,59 @@
     "title": "MANKAI STAGE『A3!』ACT2! ～AUTUMN 2023～",
     "status": "research_pending",
     "note": "当該Kiraと公式で配役・日程・出演形態を照合する。ACT2全シリーズの完了ではない。"
+  },
+  "replayVerification": {
+    "passed": true,
+    "mode": "replay",
+    "tables": {
+      "actors": {
+        "rows": 1173,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "plays": {
+        "rows": 434,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "franchises": {
+        "rows": 198,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "casts": {
+        "rows": 4578,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_actors": {
+        "rows": 1701,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_cast_candidates": {
+        "rows": 3921,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "external_import_logs": {
+        "rows": 6598,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      },
+      "actor_identity_sources": {
+        "rows": 519,
+        "added": 0,
+        "modified": 0,
+        "deleted": 0
+      }
+    }
   }
 }
