@@ -40,6 +40,8 @@ export type ActorDetailData = {
     summary: string | null;
     vod: Record<string, string> | null;
     roleName: string | null;
+    credits: Array<{ id: string; roleName: string | null; castGroup: string | null; note: string | null; isStarring: boolean; billingOrder: number | null }>;
+    coStars: Array<{ slug: string; name: string; nameEn: string | null }>;
     franchiseName: string | null;
     franchiseNameEn: string | null;
     franchiseSlug: string | null;
@@ -588,6 +590,7 @@ export async function getActorDetailBySlug(slug: string): Promise<ActorDetailDat
     .select(
       `
       play_id,
+      id, cast_group, note, is_starring, billing_order,
       role_name,
       play:plays (
         slug,
@@ -618,6 +621,7 @@ export async function getActorDetailBySlug(slug: string): Promise<ActorDetailDat
       .select(
         `
       play_id,
+      id, cast_group, note, is_starring, billing_order,
       role_name,
       play:plays (
         slug,
@@ -674,19 +678,7 @@ export async function getActorDetailBySlug(slug: string): Promise<ActorDetailDat
 
   const byPlay = new Map<
     string,
-    {
-      id: string;
-      slug: string;
-      title: string;
-      titleEn: string | null;
-      period: string | null;
-      summary: string | null;
-      vod: Record<string, string> | null;
-      roleName: string | null;
-      franchiseName: string | null;
-      franchiseNameEn: string | null;
-      franchiseSlug: string | null;
-    }
+    ActorDetailData["plays"][number]
   >();
 
   for (const row of (actorCastRows ?? []) as any[]) {
@@ -696,6 +688,9 @@ export async function getActorDetailBySlug(slug: string): Promise<ActorDetailDat
     if (!playSlug || !title) continue;
 
     const roleName = normalizeDisplayRole(row?.role_name) || null;
+    const credit = { id: String(row.id), roleName, castGroup: String(row.cast_group ?? "").trim() || null,
+      note: String(row.note ?? "").trim() || null, isStarring: Boolean(row.is_starring),
+      billingOrder: typeof row.billing_order === "number" ? row.billing_order : null };
     const franchise = Array.isArray(play?.franchise) ? play.franchise[0] : play?.franchise;
 
     const existing = byPlay.get(playSlug);
@@ -709,6 +704,8 @@ export async function getActorDetailBySlug(slug: string): Promise<ActorDetailDat
         summary: play?.summary ?? null,
         vod: normalizeVod(play?.vod),
         roleName,
+        credits: [credit],
+        coStars: [],
         franchiseName: franchise?.name ?? null,
         franchiseNameEn: franchise?.name_en ?? null,
         franchiseSlug: franchise?.slug ?? null,
@@ -725,6 +722,7 @@ export async function getActorDetailBySlug(slug: string): Promise<ActorDetailDat
     byPlay.set(playSlug, {
       ...existing,
       roleName: mergedRoles.length > 0 ? mergedRoles.join(" / ") : null,
+      credits: [...existing.credits, credit].sort((a, b) => (a.billingOrder ?? Infinity) - (b.billingOrder ?? Infinity)),
     });
   }
 
@@ -759,7 +757,7 @@ export async function getActorDetailBySlug(slug: string): Promise<ActorDetailDat
         .from("casts")
         .select(
           `
-          play_id,
+          play_id, billing_order,
           actor:actors (
             slug,
             name,
@@ -779,7 +777,7 @@ export async function getActorDetailBySlug(slug: string): Promise<ActorDetailDat
         .from("casts")
         .select(
           `
-          play_id,
+          play_id, billing_order,
           actor:actors (
             slug,
             name,
@@ -802,6 +800,17 @@ export async function getActorDetailBySlug(slug: string): Promise<ActorDetailDat
     }
 
     if (coStarError) throw coStarError;
+
+    // Reuse the network query: no per-card requests, no change to network counts.
+    const byCoStarPlay = new Map<string, Map<string, ActorDetailData["plays"][number]["coStars"][number]>>();
+    for (const row of [...(coStarRows ?? [])].sort((a, b) => (a.billing_order ?? Infinity) - (b.billing_order ?? Infinity))) {
+      const person = Array.isArray(row.actor) ? row.actor[0] : row.actor;
+      if (!person?.slug || !person.name) continue;
+      const key = String(row.play_id), people = byCoStarPlay.get(key) ?? new Map();
+      if (!people.has(person.slug)) people.set(person.slug, { slug: person.slug, name: person.name, nameEn: person.name_en ?? null });
+      byCoStarPlay.set(key, people);
+    }
+    for (const play of plays) play.coStars = [...(byCoStarPlay.get(play.id)?.values() ?? [])].slice(0, 6);
 
     const bucket = new Map<
       string,

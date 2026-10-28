@@ -1,18 +1,9 @@
-import { AnchorTabs } from "../../../../components/AnchorTabs";
+import { ActorArchive } from "../../../../components/ActorArchive";
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ActorCoStarsClient } from "../../../../components/ActorCoStarsClient";
-import { ActorTopSeriesClient } from "../../../../components/ActorTopSeriesClient";
-import { Breadcrumbs } from "../../../../components/Breadcrumbs";
-import { FavoriteButtonClient } from "../../../../components/FavoriteButtonClient";
-import { ShareButtonClient } from "../../../../components/ShareButtonClient";
 import { StructuredData } from "../../../../components/StructuredData";
 import {
   getActorDetailBySlug,
-  getAgeFromBirthday,
-  getDisplayBirthday,
-  groupPlayTimelineByYear,
   toPlainText,
   truncate,
 } from "../../../../lib/stage-connect";
@@ -26,23 +17,6 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://stageconnect.jp";
 
 export const revalidate = 3600;
 export const dynamicParams = true;
-
-const getActorInitials = (actor: { slug: string; name: string }) => {
-  const slugParts = actor.slug
-    .split("-")
-    .map((part) => part.trim())
-    .filter(Boolean);
-
-  if (slugParts.length > 0) {
-    return slugParts
-      .slice(0, 2)
-      .map((part) => part.charAt(0))
-      .join("")
-      .toUpperCase();
-  }
-
-  return actor.name.trim().slice(0, 1) || "S";
-};
 
 const buildActorMetaDescriptionJa = (actor: NonNullable<Awaited<ReturnType<typeof getActorDetailBySlug>>>) => {
   const parts: string[] = [];
@@ -62,28 +36,6 @@ const buildActorMetaDescriptionJa = (actor: NonNullable<Awaited<ReturnType<typeo
 
   parts.push(`出演作品数は${actor.plays.length}作。出演年表と共演情報を掲載。`);
   return truncate(parts.join(" "), 150);
-};
-
-const formatTimelineLeadDate = (period?: string | null) => {
-  const value = String(period ?? "").trim();
-  if (!value) return null;
-
-  const fullDate = value.match(/(\d{4})\D{0,2}(\d{1,2})\D{0,2}(\d{1,2})/);
-  if (fullDate) {
-    const [, year, month, day] = fullDate;
-    return `${year}/${month.padStart(2, "0")}/${day.padStart(2, "0")}-`;
-  }
-
-  const yearMonth = value.match(/(\d{4})\D{0,2}(\d{1,2})/);
-  if (yearMonth) {
-    const [, year, month] = yearMonth;
-    return `${year}/${month.padStart(2, "0")}-`;
-  }
-
-  const yearOnly = value.match(/(\d{4})/);
-  if (yearOnly) return `${yearOnly[1]}-`;
-
-  return value;
 };
 
 export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
@@ -119,10 +71,6 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
 
   if (!actor) notFound();
 
-  const birthdayText = getDisplayBirthday(actor.birthday, actor.birthdayLabel);
-  const age = getAgeFromBirthday(actor.birthday, actor.deathDate);
-  const timeline = groupPlayTimelineByYear(actor.plays);
-  const hasSns = Boolean(actor.sns && Object.values(actor.sns).some(Boolean));
   const statusLine = toPlainText(actor.profile || "") || `${actor.name}のプロフィール情報はまだありません。`;
 
   const personJsonLd = {
@@ -173,160 +121,9 @@ export default async function ActorDetailPage({ params }: { params: Promise<Para
     { name: actor.name, path: `/actors/${actor.slug}` },
   ]);
 
-  return (
-    <main className="container works-index-page detail-stage-page editorial-detail actor-detail-stage-page">
-      <StructuredData data={breadcrumbJsonLd} />
-      <StructuredData data={personJsonLd} />
-      <StructuredData data={faqJsonLd} />
-
-      <div className="stack-lg">
-        <Breadcrumbs items={[{ label: "俳優一覧", href: "/actors" }, { label: actor.name }]} />
-
-        <section id="actor-overview" className="hero-card stack-md detail-stage-hero">
-          <div className="detail-hero-grid">
-            <div className="detail-monogram" aria-hidden="true">
-              {getActorInitials(actor)}
-            </div>
-
-            <div className="detail-hero-copy">
-              <h1 className="page-title">{actor.name}</h1>
-              {actor.kana ? <div className="muted">{actor.kana}</div> : null}
-              <p className="detail-status-line">{statusLine}</p>
-            </div>
-
-            <div className="detail-actions">
-              <FavoriteButtonClient slug={actor.slug} type="actor" size="lg" name={actor.name} kana={actor.kana} />
-              <ShareButtonClient title={actor.name} text={`${actor.name}の俳優プロフィール | Stage Connect`} />
-            </div>
-
-            <div className="pill-row">
-              {birthdayText ? (
-                <span className="pill">
-                  生年月日: {birthdayText}
-                  {age !== null ? ` (${age}歳)` : ""}
-                </span>
-              ) : null}
-              {actor.heightCm !== null ? <span className="pill">身長: {actor.heightCm}cm</span> : null}
-              {actor.bloodType ? <span className="pill">血液型: {actor.bloodType}</span> : null}
-              <span className="pill accent-pill">出演作品数: {actor.plays.length}</span>
-            </div>
-          </div>
-        </section>
-
-        <AnchorTabs label="俳優情報の目次" items={[
-          { id: "actor-overview", label: "プロフィール" },
-          { id: "appearances", label: "出演年表" },
-          ...(actor.topSeries.length ? [{ id: "major-series", label: "シリーズ" }] : []),
-          ...(actor.coStars.length ? [{ id: "co-stars", label: "共演者" }] : []),
-          { id: "official-links", label: "公式リンク" },
-        ]} />
-
-        {actor.topSeries.length > 0 ? <ActorTopSeriesClient items={actor.topSeries} /> : null}
-
-        <section id="appearances" className="section-card stack-md detail-stage-section actor-appearances-section">
-          <h2 className="section-title">出演作品タイムライン</h2>
-          <div className="timeline-shell">
-            {timeline.map((group) => (
-              <section key={group.year} className="timeline-year-block">
-                <div className="timeline-dot" />
-                <div className="timeline-year-heading">
-                  <span className="timeline-year">{group.year}</span>
-                  <span className="timeline-year-sub">{group.plays.length}作品</span>
-                </div>
-
-                <div className="actor-timeline-list">
-                  {group.plays.map((play) => (
-                    <article className="catalog-card actor-timeline-card" key={play.slug} data-streaming-placement="actor_timeline" data-play-id={play.id} data-play-slug={play.slug}>
-                      <Link className="catalog-card__body-link actor-timeline-card__link" href={`/plays/${play.slug}`}>
-                        <div className="actor-timeline-card__body">
-                          <div className="cast-name">{play.title}</div>
-                          {play.franchiseName ? <div className="actor-timeline-card__series">{play.franchiseName}</div> : null}
-                          <div className="actor-timeline-card__meta">
-                            {play.roleName ? <span className="actor-timeline-card__role">役柄: {play.roleName}</span> : null}
-                            {formatTimelineLeadDate(play.period) ? (
-                              <span className="actor-timeline-card__date">{formatTimelineLeadDate(play.period)}</span>
-                            ) : null}
-                          </div>
-                        </div>
-                      </Link>
-                      <div
-                        className={`catalog-card__footer catalog-card__footer--cta${play.vod?.dmm ? "" : " is-empty"}`}
-                      >
-                        {play.vod?.dmm ? (
-                          <a
-                            className="action-button action-button-primary action-button-inline"
-                            href={play.vod.dmm}
-                            target="_blank"
-                            rel="sponsored noopener noreferrer"
-                          >
-                            DMM TVで見る
-                          </a>
-                        ) : null}
-                      </div>
-                    </article>
-                  ))}
-                </div>
-              </section>
-            ))}
-          </div>
-        </section>
-
-        {actor.coStars.length > 0 ? <ActorCoStarsClient coStars={actor.coStars} /> : null}
-
-        <section id="official-links" className="section-card stack-md detail-stage-section">
-          <h2 className="section-title">公式リンク</h2>
-          {hasSns ? (
-            <div className="action-row">
-              {actor.sns?.x ? (
-                <a className="action-button" href={actor.sns.x} target="_blank" rel="noopener noreferrer">
-                  X
-                </a>
-              ) : null}
-              {actor.sns?.instagram ? (
-                <a className="action-button" href={actor.sns.instagram} target="_blank" rel="noopener noreferrer">
-                  Instagram
-                </a>
-              ) : null}
-              {actor.sns?.official ? (
-                <a className="action-button action-button-primary" href={actor.sns.official} target="_blank" rel="noopener noreferrer">
-                  公式サイト
-                </a>
-              ) : null}
-              {actor.sns?.youtube ? (
-                <a className="action-button" href={actor.sns.youtube} target="_blank" rel="noopener noreferrer">
-                  YouTube
-                </a>
-              ) : null}
-            </div>
-          ) : (
-            <p className="muted">リンク情報はまだありません。</p>
-          )}
-        </section>
-
-        <section className="section-card stack-md detail-stage-section">
-          <h2 className="section-title">よくある質問（FAQ）</h2>
-          <div className="faq-grid">
-            <article className="faq-card">
-              <h3 className="faq-question">Q. {actor.name}の出演作品はどこで見られますか？</h3>
-              <p className="faq-answer">
-                出演年表から各作品の詳細を確認できます。
-              </p>
-            </article>
-            <article className="faq-card">
-              <h3 className="faq-question">Q. 配信で見られる作品はありますか？</h3>
-              <p className="faq-answer">
-                各作品の配信情報欄でリンクと視聴条件をご確認ください。
-              </p>
-            </article>
-            <article className="faq-card">
-              <h3 className="faq-question">Q. 最新の出演情報はどこで確認できますか？</h3>
-              <p className="faq-answer">
-                最新情報は公式サイトやSNSでご確認ください。登録済みのリンクは「公式リンク」に掲載しています。
-              </p>
-            </article>
-          </div>
-        </section>
-      </div>
-    </main>
-  );
+  return <ActorArchive actor={actor} locale="ja">
+    <StructuredData data={breadcrumbJsonLd} />
+    <StructuredData data={personJsonLd} />
+    <StructuredData data={faqJsonLd} />
+  </ActorArchive>;
 }
