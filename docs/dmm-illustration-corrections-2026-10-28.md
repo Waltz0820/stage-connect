@@ -29,3 +29,13 @@ Use case: precise-object-edit. Edit target: the supplied portrait illustration, 
 ### ソファでスマホを見る女性（編集対象：watch-anywhere.webp）
 
 Use case: precise-object-edit. Edit target: the supplied landscape anime illustration of a dark-blue-haired adult woman with a smartphone in a bright living room. Fix the physically awkward relationship between her reclining body and the sofa. Keep her recognizable face, adult appearance, dark blue hair, white blouse and pale blue bottoms, the smartphone, warm sunlight, plants, window, cream sofa, pink cushion and pink knitted blanket, gentle pastel palette and detailed anime painting style. Keep a landscape 3:2 composition and similar subject scale, with her face near the center-left, phone in front of her. Change her from the awkward belly-down pose across an impossibly shallow seat into a comfortable semi-reclined SIDE-SEATED pose: her upper back and shoulder are visibly supported by the large pink cushion resting against the ACTUAL sofa backrest; her pelvis rests on the seat cushion; her bent legs remain on the SAME seat surface to her right. Arrange the sofa backrest behind her, not intersecting her waist, and show enough connected seat cushion to support her weight. Her elbows and forearms rest naturally on her lap or cushion while she looks at and holds the phone. A relaxed hand may support her cheek only if the elbow has a believable support. Natural spine, shoulder, hip, arm, hand and leg geometry. No hips on the backrest, no body through cushions, no unsupported floating torso, no extra limbs or fingers. Preserve the room, furnishings, lighting and calm expression; change only pose and sofa/cushion geometry necessary to make this physically believable. No text, no logo, no watermark. Produce one finished illustration asset, not a comparison or mockup.
+
+## 本番反映
+
+2026-10-28、コミット `36f18865de3177bdaba5423f5eca9b8947a9047a` を既存mainへ反映。`stage-connect` チームのNext.jsプロジェクト `stage-connect-ggdd` にて `dpl_AxedLz6fcNMbE5UDvbVpDLGVP9UM` が `production / READY`、本番ドメイン割当済み・aliasErrorなし。
+
+公開後も日英2ページ・3か所ずつの画像参照と2アセットのSHA256を確認し、本文・metadata・アフィリエイトURL等の保全検証に成功。本番ブラウザ390pxで新しいヒーロー・ソファ画像が実際に読み込まれること、ソファの自然な着座姿勢、横はみ出しなしを確認した。画像は別URLのため旧画像キャッシュと区別される。料金・CTA・計測・DBへの変更なし。
+
+本番：<https://stageconnect.jp/watch/dmm> / <https://stageconnect.jp/en/watch/dmm>。
+
+本番HTML・検証JSON・`production-sofa-390.jpg` はGit管理外の同作業フォルダに保存。生成PNGは組み込みツールの保存先に残し、サイトから参照するWebPは前記のリポジトリ内に保存済み。
