@@ -42,7 +42,7 @@ export default function DmmTvLanding({ locale }: { locale: SiteLocale }) {
 
     <section className="dmm-lp__hero" aria-labelledby="dmm-hero-title">
       <div className="dmm-lp__hero-scene">
-        <Image className="dmm-lp__hero-image" src="/images/dmm-tv/theatre-night.webp" alt="" fill sizes="(min-width: 900px) 65vw, 100vw" priority/>
+        <Image className="dmm-lp__hero-image" src="/images/dmm-tv/theatre-night-corrected.webp" alt="" fill sizes="(min-width: 900px) 65vw, 100vw" priority/>
         <div className="dmm-lp__hero-copy">
           <Breadcrumbs items={breadcrumbs.slice(1).map(crumb => ({ label: crumb.name, href: crumb.path }))}/>
           <h1 id="dmm-hero-title"><span className="dmm-lp__brand">DMM TV<small>{copy.withDmm}</small></span>{title(copy.hero)}</h1>
@@ -95,7 +95,7 @@ export default function DmmTvLanding({ locale }: { locale: SiteLocale }) {
 
     <section className="dmm-lp__devices dmm-lp__section" aria-labelledby="dmm-devices-title">
       <div className="dmm-lp__section-heading" data-dmm-reveal="heading"><h2 id="dmm-devices-title">{title(copy.devicesHeading)}</h2><p>{copy.devicesIntro}</p></div>
-      <div className="dmm-lp__devices-content"><Image className="dmm-lp__devices-image" src="/images/dmm-tv/watch-anywhere.webp" alt="" width={1400} height={934} sizes="(min-width: 900px) 50vw, 100vw"/>
+      <div className="dmm-lp__devices-content"><Image className="dmm-lp__devices-image" src="/images/dmm-tv/watch-anywhere-corrected.webp" alt="" width={1400} height={934} sizes="(min-width: 900px) 50vw, 100vw"/>
         <div><div className="dmm-lp__device-list">{copy.devices.map(device => <div key={device.icon}><DmmIcon name={device.icon}/><h3>{device.title}</h3><p>{device.text}</p>{device.detail ? <small>{device.detail}</small> : null}</div>)}</div><a className="dmm-lp__outline" href="https://support.dmm.com/dmm-tv/article/47590" target="_blank" rel="noopener noreferrer">{copy.deviceLink}<span aria-hidden="true">›</span></a></div>
       </div>
     </section>
@@ -107,7 +107,7 @@ export default function DmmTvLanding({ locale }: { locale: SiteLocale }) {
     </section>
 
     <section className="dmm-lp__closing" aria-labelledby="dmm-closing-title">
-      <Image src="/images/dmm-tv/theatre-night.webp" alt="" fill sizes="100vw"/>
+      <Image src="/images/dmm-tv/theatre-night-corrected.webp" alt="" fill sizes="100vw"/>
       <div className="dmm-lp__closing-copy"><h2 id="dmm-closing-title" data-dmm-reveal="heading">{title(copy.closing)}</h2><p className="dmm-lp__closing-intro">{title(copy.closingText)}</p>
         <div className="dmm-lp__closing-actions">{trial('watch_signup')}{price}<p className="dmm-lp__conditions">{copy.conditions}</p><small className="dmm-lp__ad">{copy.ad}</small></div>
         <Link className="dmm-lp__listing" href={productions()}>{copy.listing}<span aria-hidden="true">→</span></Link>
