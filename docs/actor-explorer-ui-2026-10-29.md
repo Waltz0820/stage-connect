@@ -1,8 +1,8 @@
 # 俳優詳細の探索UI V1
 
-ローカル実装・検証済み。本番デプロイなし。DBへの書き込み・スキーマ変更なし。
+実装・検証後、ユーザーの本番反映指示を受けて2026-10-29に公開済み。このUI変更によるDBへの書き込み・スキーマ変更なし。
 
-確認先：<http://127.0.0.1:8161/actors/aramaki-yoshihiko>（本番用ビルドのローカルプレビュー）。
+確認先：[荒牧慶彦の本番ページ](https://stageconnect.jp/actors/aramaki-yoshihiko) / [英語版](https://stageconnect.jp/en/actors/aramaki-yoshihiko)。
 
 ## 実装
 
@@ -56,4 +56,11 @@ DMM URLの正規化・アフィリエイトパラメータと `data-streaming-pl
 - 元データの翻訳不足や人物属性の精査は今回の対象外。
 - 将来の観劇ノートは `ExplorerWork.id`（DBのplay ID）をキーとして、作品カードや `ActorWorkDetail` の操作領域へ接続できる。今回はそのためのUI・ユーザー状態・DBを追加していない。
 
-添付の `CODEX_START_PROMPT.md` に従い、レビュー前の本番デプロイは行っていない。
+## 本番反映
+
+ユーザーの「UIも本番反映しといて大丈夫」という後続指示に従い、実装コミット `69d5fc044e1a0030d65825eac15f494fd76060a7` を `origin/main` へ反映。Vercelのproductionデプロイ `dpl_GEjKYBfq5kWnkm6WeruZnwtAPQsP` がREADYとなり、`stageconnect.jp` が当該デプロイへ切り替わったことを確認した。
+
+- 本番の日英12ページでHTTP200、全作品リンク、canonical/hreflang、Person属性、既存配信リンクを再確認。
+- 本番390pxで2017年の5作品を選択し、外伝のシート・本文スクロール固定・閉じた後のスクロール488px復元・選択カードへのフォーカス復帰を確認。横方向の文書はみ出しなし。
+- 本番1440pxで選択パネルを確認。確認タブのコンソールerrorは0件。確認時点の当該デプロイの直近30分のerror/fatalログは0件（将来のエラー不存在を保証するものではない）。
+- 同じ私有フォルダに `production-ssr-verification.json`、`production-mobile-sheet.jpg`、`production-desktop.jpg`、`production-release.json` を保存。
