@@ -160,3 +160,20 @@
   .directory-search-exits { grid-template-columns: repeat(3,minmax(0,1fr)); padding-inline: 40px; }
 }
 @media (prefers-reduced-motion: reduce) { .editorial-directory *, .directory-filter-dialog * { transition: none !important; scroll-behavior: auto; } }
+/* Directory navigation feedback; real content remains server rendered. */
+.directory-loading { background: #f8f8f5; color: #101319; min-height: 80vh; }
+.directory-loading__hero { padding: clamp(36px, 6vw, 80px) max(20px, calc((100vw - 1200px)/2)); background: #3155ff; }
+.directory-loading--plays .directory-loading__hero { background: #ff715b; }
+.directory-loading--series .directory-loading__hero { background: #dfff59; }
+.directory-loading__hero span { font-size: clamp(48px, 9vw, 112px); font-weight: 800; letter-spacing: -.055em; line-height: 1; }
+.directory-loading__body { max-width: 1200px; margin: auto; padding: 24px 20px 48px; }
+.directory-loading__search { height: 52px; max-width: 720px; border: 1px solid #d5d6d6; margin-bottom: 24px; }
+.directory-loading__row { display: flex; gap: 20px; padding: 20px 0; border-bottom: 1px solid #d5d6d6; }
+.directory-loading__row i { width: 56px; height: 56px; background: #e2e3e1; flex-shrink: 0; }
+.directory-loading__row div { width: 65%; }
+.directory-loading__row b { display: block; height: 14px; background: #e2e3e1; width: 80%; margin: 4px 0 12px; }
+.directory-loading__row b + b { width: 55%; }
+@media (prefers-reduced-motion: no-preference) {
+  .directory-loading__row, .directory-loading__search { animation: directory-loading-pulse 1.4s ease-in-out infinite alternate; }
+}
+@keyframes directory-loading-pulse { from { opacity: .5; } to { opacity: 1; } }

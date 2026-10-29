@@ -8,7 +8,7 @@ import Link from "next/link";
 import { Breadcrumbs } from "../../../components/Breadcrumbs";
 import { StructuredData } from "../../../components/StructuredData";
 import { buildBreadcrumbList, buildCollectionPageStructuredData } from "../../../lib/structured-data";
-import { getSeriesList } from "../../../lib/stage-connect";
+import { getDirectorySeries } from "../../../lib/directory-cache";
 
 type SearchParamValue = string | string[] | undefined;
 type SearchParams = Record<string, SearchParamValue>;
@@ -51,7 +51,7 @@ export default async function SeriesPage({
   searchParams?: Promise<SearchParams>;
 }) {
   const params = (await searchParams) ?? {};
-  const allSeries = await getSeriesList();
+  const allSeries = await getDirectorySeries();
   const breadcrumbJsonLd = buildBreadcrumbList([
     { name: "TOP", path: "/" },
     { name: "シリーズ一覧", path: "/series" },

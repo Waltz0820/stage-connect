@@ -1,4 +1,5 @@
 import { createClient } from "@supabase/supabase-js";
+import { createCatalogueFetch } from './directory-refresh.mjs';
 
 const supabaseUrl =
   process.env.NEXT_PUBLIC_SUPABASE_URL ||
@@ -10,4 +11,6 @@ const supabaseAnonKey =
   process.env.VITE_SUPABASE_ANON_KEY ||
   "";
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
+  global: { fetch: createCatalogueFetch(supabaseUrl) },
+});

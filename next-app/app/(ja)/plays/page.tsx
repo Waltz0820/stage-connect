@@ -10,7 +10,8 @@ import Link from "next/link";
 import { Breadcrumbs } from "../../../components/Breadcrumbs";
 import { StructuredData } from "../../../components/StructuredData";
 import { buildBreadcrumbList, buildCollectionPageStructuredData } from "../../../lib/structured-data";
-import { getPlayList, getPlayMainCastSummariesBySlug, periodSortKey } from "../../../lib/stage-connect";
+import { periodSortKey } from "../../../lib/stage-connect";
+import { getDirectoryPlays, getDirectoryCastSummaries } from "../../../lib/directory-cache";
 
 type SearchParamValue = string | string[] | undefined;
 type SearchParams = Record<string, SearchParamValue>;
@@ -144,7 +145,7 @@ export default async function PlaysPage({
   searchParams?: Promise<SearchParams>;
 }) {
   const params = (await searchParams) ?? {};
-  const allPlays = await getPlayList();
+  const allPlays = await getDirectoryPlays();
   const breadcrumbJsonLd = buildBreadcrumbList([
     { name: "TOP", path: "/" },
     { name: "作品一覧", path: "/plays" },
@@ -206,7 +207,7 @@ export default async function PlaysPage({
   const safePage = Math.min(page, totalPages);
   const startIndex = (safePage - 1) * ITEMS_PER_PAGE;
   const visiblePlays = sortedPlays.slice(startIndex, startIndex + ITEMS_PER_PAGE);
-  const visibleCastSummaries = await getPlayMainCastSummariesBySlug(visiblePlays.map((play) => play.slug));
+  const visibleCastSummaries = await getDirectoryCastSummaries(visiblePlays.map((play) => play.slug));
 
   return (
     <main className="container works-index-page editorial-directory directory--plays">

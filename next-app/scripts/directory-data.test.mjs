@@ -12,7 +12,7 @@ const pagingSource = await compile('../lib/directory-pages.ts');
 const paging = { exports: {} };
 vm.runInNewContext(pagingSource, { module: paging, exports: paging.exports });
 
-function catalogue(tables, { legacy = false } = {}) {
+function catalogue(tables, { legacy = false, beforeQuery = async () => {} } = {}) {
   const queries = [];
   const client = { from(table) {
     const state = { table, columns: '', filters: [], orders: [], from: 0, to: 999 };
@@ -24,8 +24,9 @@ function catalogue(tables, { legacy = false } = {}) {
       },
       order(column, options) { state.orders.push([column, options]); return query; },
       range(from, to) { state.from = from; state.to = to; return query; },
-      then(resolve, reject) {
+      async then(resolve, reject) {
         queries.push({ ...state });
+        await beforeQuery(state);
         if (legacy && /name_en/.test(state.columns)) return Promise.resolve({ data: null, error: { message: 'column name_en does not exist' } }).then(resolve, reject);
         let data = [...tables[table]];
         for (const [column, values] of state.filters) data = data.filter(r => values.includes(r[column]));
@@ -97,4 +98,61 @@ test('long work-slug lookups and legacy cast projections retain every requested 
   assert.equal(Object.keys(result).length, 60);
   assert.equal(result[tables.plays[1].slug].ja, '俳優 1');
   assert.equal(result[tables.plays[59].slug].en, '俳優 59');
+});
+
+test('directory projection omits profiles while retaining names, dates and female actors beyond row 1000', async () => {
+  const tables = { actors: Array.from({ length: 1101 }, (_, id) => ({ id, slug: `actor-${id}`, name: `${id}`, name_en: `Actor ${id}`, kana: 'あ', birthday: '1990-01-01', gender: 'female', profile: 'long biography' })) };
+  const api = catalogue(tables);
+  const lean = await api.getActorList({ includeProfiles: false });
+  assert.equal(lean.length, 1101);
+  assert.ok(api.queries.every(q => !/profile/.test(q.columns)));
+  const full = await catalogue(tables).getActorList();
+  const omitProfiles = rows => rows.map(({ profile, profileEn, ...rest }) => rest);
+  assert.deepEqual(omitProfiles(lean), omitProfiles(full));
+  const legacy = catalogue(tables, { legacy: true });
+  assert.equal((await legacy.getActorList({ includeProfiles: false })).length, 1101);
+  assert.ok(legacy.queries.every(q => !/profile/.test(q.columns)));
+});
+
+test('work directory reads casts only for visible works and preserves the original summaries', async () => {
+  const tables = productions(402);
+  tables.casts.push({ id: 'lead-duplicate', play_id: 'play-1', billing_order: null, is_starring: true, actor: { slug: 'performer-1', name: '俳優 1', name_en: 'Performer 1' } });
+  const original = await catalogue(tables).getPlayList();
+  const api = catalogue(tables);
+  const lean = await api.getPlayList({ includeCast: false });
+  assert.equal(api.queries.filter(q => q.table === 'casts').length, 0);
+  assert.equal(lean.length, original.length);
+  const omitSummaries = rows => rows.map(({ mainCastSummary, mainCastSummaryEn, ...rest }) => rest);
+  assert.deepEqual(omitSummaries(lean), omitSummaries(original));
+  const visible = tables.plays.slice(0, 10).map(p => p.slug);
+  const summaries = await api.getPlayMainCastSummariesBySlug(visible);
+  for (const slug of visible) {
+    const full = original.find(p => p.slug === slug);
+    assert.equal(summaries[slug].ja, full.mainCastSummary);
+    assert.equal(summaries[slug].en, full.mainCastSummaryEn);
+  }
+  assert.ok(api.queries.filter(q => q.table === 'casts').every(q => q.filters[0][1].length === 10));
+});
+
+test('series reads overlap and retain counts and bilingual metadata, including legacy fallback', async () => {
+  let release;
+  const started = new Set();
+  const barrier = new Promise(resolve => { release = resolve; });
+  const tables = { plays: [{ id: 'p', franchise_id: 'f', created_at: '2026-01-01' }], franchises: [{ id: 'f', slug: 'series', name: 'シリーズ', name_en: 'Series', description: '概要', format: 'musical' }] };
+  const api = catalogue(tables, { beforeQuery: async ({ table }) => {
+    started.add(table);
+    if (started.size === 2) release();
+    await barrier;
+  } });
+  let timedOut = false;
+  const timeout = setTimeout(() => { timedOut = true; release(); }, 500);
+  const result = await api.getSeriesList();
+  clearTimeout(timeout);
+  assert.equal(timedOut, false, 'independent reads must start before either finishes');
+  assert.equal(started.size, 2);
+  assert.equal(result[0].playCount, 1);
+  assert.equal(result[0].nameEn, 'Series');
+  const legacy = await catalogue(tables, { legacy: true }).getSeriesList();
+  assert.equal(legacy[0].playCount, 1);
+  assert.equal(legacy[0].nameEn, null);
 });

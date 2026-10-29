@@ -1,6 +1,7 @@
 import { DirectoryEmpty } from "../../../components/DirectoryEmpty";
 import { DirectorySearchForm } from "../../../components/DirectorySearchForm";
 import { DirectoryHero } from "../../../components/DirectoryHero";
+import { getDirectoryActors } from "../../../lib/directory-cache";
 import { matchesSearch, normalizeSearchQuery } from '../../../lib/search-query';
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -9,7 +10,6 @@ import { StructuredData } from "../../../components/StructuredData";
 import { buildBreadcrumbList, buildCollectionPageStructuredData } from "../../../lib/structured-data";
 import {
   getDisplayBirthday,
-  getActorList,
   getAgeFromBirthday,
 } from "../../../lib/stage-connect";
 
@@ -71,7 +71,7 @@ export default async function ActorsPage({
   searchParams?: Promise<SearchParams>;
 }) {
   const params = (await searchParams) ?? {};
-  const allActors = await getActorList();
+  const allActors = await getDirectoryActors();
   const breadcrumbJsonLd = buildBreadcrumbList([
     { name: "TOP", path: "/" },
     { name: "俳優一覧", path: "/actors" },

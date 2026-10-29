@@ -1319,7 +1319,7 @@ async function readCastSummaryRows(
   return rows.flat();
 }
 
-export async function getPlayList(): Promise<PlayListItem[]> {
+export async function getPlayList({ includeCast = true }: { includeCast?: boolean } = {}): Promise<PlayListItem[]> {
   if (!hasSupabaseEnv) return [];
   const supabase = createSupabaseServerClient();
   let data: any[] | null = null;
@@ -1429,7 +1429,7 @@ export async function getPlayList(): Promise<PlayListItem[]> {
   const playIds = playRows.map((row) => String(row?.id ?? "").trim()).filter(Boolean);
   const castSummaryByPlayId = new Map<string, { ja: string | null; en: string | null }>();
 
-  if (playIds.length > 0) {
+  if (includeCast && playIds.length > 0) {
     let castRows: any[] | null = null;
     let castError: any = null;
 
@@ -1747,7 +1747,7 @@ export async function getPlayMainCastSummariesBySlug(
   return result;
 }
 
-export async function getActorList(): Promise<ActorListItem[]> {
+export async function getActorList({ includeProfiles = true }: { includeProfiles?: boolean } = {}): Promise<ActorListItem[]> {
   if (!hasSupabaseEnv) return [];
   const supabase = createSupabaseServerClient();
   let data: any[];
@@ -1759,11 +1759,11 @@ export async function getActorList(): Promise<ActorListItem[]> {
     .range(from, to));
 
   try {
-    data = await readActors("slug, name, name_en, kana, birthday, birthday_label, death_date, profile, profile_en, gender");
+    data = await readActors(`slug, name, name_en, kana, birthday, birthday_label, death_date, ${includeProfiles ? "profile, profile_en, " : ""}gender`);
   } catch (error) {
     const message = error && typeof error === "object" && "message" in error ? String(error.message) : "";
     if (!/(name_en|profile_en|birthday_label|death_date)/i.test(message)) throw error;
-    data = (await readActors("slug, name, kana, birthday, profile, gender")).map((row) => ({
+    data = (await readActors(`slug, name, kana, birthday, ${includeProfiles ? "profile, " : ""}gender`)).map((row) => ({
         ...row,
         name_en: null,
         birthday_label: null,
@@ -1792,21 +1792,15 @@ export async function getSeriesList(): Promise<SeriesListItem[]> {
   if (!hasSupabaseEnv) return [];
   const supabase = createSupabaseServerClient();
 
-  const [{ data: plays, error: playError }] = await Promise.all([
+  const [{ data: plays, error: playError }, franchiseRes] = await Promise.all([
     supabase.from("plays").select("id, franchise_id, created_at"),
+    supabase.from("franchises")
+      .select("id, slug, name, name_en, description, description_en, format, origin_type")
+      .order("name", { ascending: true }),
   ]);
 
-  let franchises: any[] | null = null;
-  let franchiseError: any = null;
-
-  {
-    const res = await supabase
-      .from("franchises")
-      .select("id, slug, name, name_en, description, description_en, format, origin_type")
-      .order("name", { ascending: true });
-    franchises = res.data as any[] | null;
-    franchiseError = res.error;
-  }
+  let franchises = franchiseRes.data as any[] | null;
+  let franchiseError: any = franchiseRes.error;
 
   if (franchiseError && /(description_en|name_en)/i.test(String(franchiseError.message ?? ""))) {
     const message = String(franchiseError.message ?? "");

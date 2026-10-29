@@ -17,7 +17,8 @@ import {
   getEnglishSeriesName,
 } from "../../../lib/en-copy";
 import { buildBreadcrumbList, buildCollectionPageStructuredData } from "../../../lib/structured-data";
-import { getPlayList, getPlayMainCastSummariesBySlug, periodSortKey } from "../../../lib/stage-connect";
+import { periodSortKey } from "../../../lib/stage-connect";
+import { getDirectoryPlays, getDirectoryCastSummaries } from "../../../lib/directory-cache";
 
 type SearchParamValue = string | string[] | undefined;
 type SearchParams = Record<string, SearchParamValue>;
@@ -121,7 +122,7 @@ export default async function EnglishPlaysPage({
   searchParams?: Promise<SearchParams>;
 }) {
   const params = (await searchParams) ?? {};
-  const allPlays = await getPlayList();
+  const allPlays = await getDirectoryPlays();
   const breadcrumbJsonLd = buildBreadcrumbList([
     { name: "HOME", path: "/en" },
     { name: "Plays", path: "/en/plays" },
@@ -183,7 +184,7 @@ export default async function EnglishPlaysPage({
   const safePage = Math.min(page, totalPages);
   const startIndex = (safePage - 1) * ITEMS_PER_PAGE;
   const visible = sorted.slice(startIndex, startIndex + ITEMS_PER_PAGE);
-  const visibleCastSummaries = await getPlayMainCastSummariesBySlug(visible.map((play) => play.slug));
+  const visibleCastSummaries = await getDirectoryCastSummaries(visible.map((play) => play.slug));
 
   return (
     <main className="container works-index-page editorial-directory directory--plays">

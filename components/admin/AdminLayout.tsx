@@ -1,10 +1,24 @@
 // @ts-nocheck
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "../../next-app/lib/admin-router-shim";
 import { supabase } from "../../next-app/lib/admin-supabase";
+import { refreshDirectory } from '../../next-app/lib/directory-refresh.mjs';
 
 const AdminLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const loc = useLocation();
+  const [refreshing, setRefreshing] = useState(false);
+  const [refreshMessage, setRefreshMessage] = useState('');
+  const refresh = async () => {
+    setRefreshing(true);
+    setRefreshMessage('');
+    try {
+      const { data } = await supabase.auth.getSession();
+      await refreshDirectory(data.session?.access_token);
+      setRefreshMessage('公開一覧を更新しました');
+    } catch (error) {
+      setRefreshMessage(error instanceof Error ? error.message : '一覧の更新に失敗しました');
+    } finally { setRefreshing(false); }
+  };
 
   const item = (to: string, label: string) => {
     const active = loc.pathname === to || loc.pathname.startsWith(to + "/");
@@ -25,6 +39,10 @@ const AdminLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
       <div className="sticky top-0 z-50 border-b border-white/10 bg-black/50 backdrop-blur-md">
         <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-6">
           <div className="flex items-center gap-3">
+            <button type="button" disabled={refreshing} onClick={refresh}
+              className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs hover:bg-white/10 disabled:opacity-50">
+              {refreshing ? '更新中…' : '公開一覧を更新'}
+            </button>
             <span className="font-extrabold tracking-tight text-white">Stage Connect</span>
             <span className="text-xs text-slate-400">ADMIN</span>
           </div>
@@ -41,6 +59,8 @@ const AdminLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           </div>
         </div>
       </div>
+
+      <div role="status" className="mx-auto max-w-7xl px-6 text-sm text-slate-300">{refreshMessage}</div>
 
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 px-6 py-8 lg:grid-cols-12">
         <aside className="lg:col-span-3">

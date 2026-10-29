@@ -6,7 +6,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "../../../components/Breadcrumbs";
 import { StructuredData } from "../../../components/StructuredData";
-import { getActorList, getAgeFromBirthday } from "../../../lib/stage-connect";
+import { getAgeFromBirthday } from "../../../lib/stage-connect";
+import { getDirectoryActors } from "../../../lib/directory-cache";
 import { formatAgeEn, formatBirthdayEn, formatBirthdayLabelEn, getEnglishActorName } from "../../../lib/en-copy";
 import { buildBreadcrumbList, buildCollectionPageStructuredData } from "../../../lib/structured-data";
 
@@ -83,7 +84,7 @@ export default async function EnglishActorsPage({
   searchParams?: Promise<SearchParams>;
 }) {
   const params = (await searchParams) ?? {};
-  const allActors = await getActorList();
+  const allActors = await getDirectoryActors();
   const breadcrumbJsonLd = buildBreadcrumbList([
     { name: "HOME", path: "/en" },
     { name: "Actors", path: "/en/actors" },
