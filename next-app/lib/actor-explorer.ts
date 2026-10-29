@@ -2,7 +2,10 @@ import type { ActorDetailData } from "./stage-connect";
 import { getPerformanceStart, performanceStartSortKey } from "./performance-period";
 import { getEnglishActorName, getEnglishPlayTitle, getEnglishSeriesName, normalizePeriodDisplayEn, translateAnnotatedDisplayTextEn } from "./en-copy";
 
-export const compactActorSeriesName = (name: string) => name.match(/[（(]([^（）()]+)[）)]$/u)?.[1] || name;
+export const compactActorSeriesName = (name: string) => {
+  const alias = name.match(/[（(]([^（）()]+)[）)]$/u)?.[1];
+  return alias && !/^(?:stage|musical|live|concert|舞台|ミュージカル)$/iu.test(alias) ? alias : name;
+};
 
 export type ExplorerWork = {
   id: string; slug: string; title: string; date: string | null; period: string | null;

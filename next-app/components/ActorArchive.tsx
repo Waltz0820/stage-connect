@@ -19,6 +19,7 @@ export function ActorArchive({ actor, locale, children }: { actor: ActorDetailDa
   const birthday = en ? actor.birthdayLabel ? formatBirthdayLabelEn(actor.birthdayLabel) : formatBirthdayEn(actor.birthday) : getDisplayBirthday(actor.birthday, actor.birthdayLabel);
   const age = getAgeFromBirthday(actor.birthday, actor.deathDate), ageText = en ? formatAgeEn(age) : age === null ? null : `${age}歳`;
   const seriesName = (s: ActorDetailData["topSeries"][number]) => en ? getEnglishSeriesName(s) : s.name;
+  const seriesLink = (s: ActorDetailData["topSeries"][number]) => <Link href={`${prefix}/series/${s.slug}`} title={seriesName(s)} aria-label={`${seriesName(s)} · ${s.count}${en ? ' credited works' : '作品に出演'}`} key={s.slug}><span>{compactActorSeriesName(seriesName(s))}</span><small>({s.count}{en ? s.count === 1 ? " work" : " works" : "作品"})</small></Link>;
   const coName = (a: ActorDetailData["coStars"][number]) => en ? getEnglishActorName(a) : a.name;
   const links = Object.entries(actor.sns || {}).filter(([, value]) => Boolean(value));
   const linkLabels: Record<string, string> = { x: "X", instagram: "Instagram", official: en ? "Official site" : "公式サイト", youtube: "YouTube" };
@@ -38,21 +39,16 @@ export function ActorArchive({ actor, locale, children }: { actor: ActorDetailDa
       </div>
       <div className={styles.profileAside}>
         <div className={styles.count}><strong>{count}</strong><span>{en ? "listed works" : "登録作品"}</span></div>
-        {actor.topSeries.length ? <div className={styles.profileSeries}><h2>{en ? "Major series" : "主なシリーズ"}</h2><div className={styles.chips}>{actor.topSeries.slice(0, 4).map(s => <Link href={`${prefix}/series/${s.slug}`} title={seriesName(s)} aria-label={`${seriesName(s)} · ${s.count}${en ? ' credited works' : '作品に出演'}`} key={s.slug}>{compactActorSeriesName(seriesName(s))}<b>{s.count}</b></Link>)}</div></div> : null}
+        {actor.topSeries.length ? <div id="major-series" className={styles.profileSeries}><h2>{en ? "Major series" : "主なシリーズ"}</h2><div className={styles.chips}>{actor.topSeries.slice(0, 4).map(seriesLink)}</div>{actor.topSeries.length > 4 ? <details className={styles.moreSeries}><summary>{en ? `More series (${actor.topSeries.length - 4})` : `ほか${actor.topSeries.length - 4}シリーズ`}<span aria-hidden="true">＋</span></summary><div className={styles.chips}>{actor.topSeries.slice(4).map(seriesLink)}</div></details> : null}</div> : null}
         <div className={styles.profileActions}><FavoriteButtonClient slug={actor.slug} type="actor" name={displayName} kana={actor.kana} /><ShareButtonClient title={displayName} text={`${displayName} | Stage Connect`} /></div>
       </div>
     </section>
 
     <section id="appearances" className={styles.appearances} aria-labelledby="appearances-title"><h2 id="appearances-title">{en ? "Appearance timeline" : "出演作品タイムライン"}</h2><ActorAppearanceExplorer key={actor.id} years={years} locale={locale} /></section>
 
-    <div className={styles.connections}>
       <section id="co-stars" className={styles.connectionPanel} aria-labelledby="co-stars-title"><h2 id="co-stars-title">{en ? "Co-star network" : "共演ネットワーク"}</h2>
         {actor.coStars.length ? <><div className={styles.coList}>{actor.coStars.slice(0, 5).map(coStarLink)}</div>{actor.coStars.length > 5 ? <details className={styles.more}><summary>{en ? "More co-stars" : "共演者をもっと見る"}<span aria-hidden="true">＋</span></summary><div className={styles.coList}>{actor.coStars.slice(5).map(coStarLink)}</div></details> : null}</> : <p className={styles.empty}>{en ? "No co-star credits listed yet." : "共演情報はまだ登録されていません。"}</p>}
       </section>
-      <section id="major-series" className={styles.connectionPanel} aria-labelledby="major-series-title"><h2 id="major-series-title">{en ? "Series appearances" : "出演シリーズ"}</h2>
-        {actor.topSeries.length ? <div className={styles.seriesList}>{actor.topSeries.map(s => <Link href={`${prefix}/series/${s.slug}`} key={s.slug}><span>{seriesName(s)}</span><span className={styles.bar} aria-hidden="true"><span style={{ width: `${s.count / actor.topSeries[0].count * 100}%` }} /></span><b>{s.count}</b></Link>)}</div> : <p className={styles.empty}>{en ? "No series linked yet." : "シリーズ情報はまだ登録されていません。"}</p>}
-      </section>
-    </div>
 
     <details id="all-works" className={styles.allWorks}><summary>{en ? "View all credited productions" : "すべての出演作品を一覧で見る"}<span>{count}<span aria-hidden="true"> ＋</span></span></summary>
       <ul>{years.flatMap(y => y.works.map(work => <li key={work.id} data-play-id={work.id} data-play-slug={work.slug} data-streaming-placement="actor_timeline"><span className={styles.allYear}>{y.year === "unknown" ? en ? "Undated" : "年不明" : y.year}</span><div><Link href={`${prefix}/plays/${work.slug}`}>{work.title}</Link>{work.role ? <p>{work.role}</p> : null}{work.credits.filter(c => c.note).map(c => <p key={c.id}>{c.role ? `${c.role}：` : ""}{c.note}</p>)}</div>{work.dmm ? <a className={styles.allDmm} href={work.dmm} target="_blank" rel="sponsored noopener noreferrer">DMM TV ↗</a> : null}</li>))}</ul>

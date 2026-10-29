@@ -29,6 +29,14 @@
 .chips a { display: inline-flex; align-items: center; gap: 7px; padding: 7px 10px; border: 1px solid var(--explorer-border,#cddaf3); border-radius: 30px; color: #2543a7; background: white; font-size: 11px; font-weight: 650; line-height: 1.5; overflow-wrap: anywhere; transition: background 160ms ease,transform 160ms ease; }
 .chips a:hover { background: #e1eaff; transform: translateY(-2px); }
 .chips b { font-size: 10px; }
+.profileSeries { scroll-margin-top: 85px; }
+.profileSeries .chips a { gap: 5px; }
+.profileSeries .chips small { white-space: nowrap; font-size: 10px; font-weight: 500; }
+.moreSeries { margin-top: 7px; }
+.moreSeries summary { display: flex; align-items: center; gap: 9px; width: fit-content; min-height: 36px; color: #2449cd; font-size: 11px; font-weight: 650; cursor: pointer; list-style: none; }
+.moreSeries summary::-webkit-details-marker { display: none; }
+.moreSeries[open] summary > span { rotate: 45deg; }
+.moreSeries .chips { margin-top: 3px; }
 .profileActions { grid-column: 1 / -1; display: flex; gap: 10px; }
 .page .profileActions :global(.favorite-button),.page .profileActions :global(.share-button) { min-height: 34px; padding: 6px 12px; font-size: 11px; border-radius: 20px; }
 .appearances { padding-top: 28px; scroll-margin-top: 85px; }
@@ -36,15 +44,14 @@
 .explorer { border: 1px solid var(--explorer-border); border-radius: 12px; background: white; overflow: hidden; }
 .yearStrip { display: flex; gap: 7px; overflow-x: auto; padding: 16px 13px; background: var(--explorer-soft); border-bottom: 1px solid var(--explorer-border); scrollbar-width: thin; scroll-padding: 13px; }
 .yearStrip button { flex: 0 0 auto; min-width: 73px; min-height: 42px; padding: 8px 13px; border: 1px solid var(--explorer-border); border-radius: 24px; color: #3f5777; background: transparent; font: 750 12px var(--ed-font); cursor: pointer; transition: background 170ms ease,color 170ms ease,transform 170ms ease; }
-.yearStrip small { margin-left: 5px; font-size: 10px; font-weight: 500; }
+.yearStrip small { font-size: 10px; font-weight: 500; white-space: nowrap; }
 .yearStrip button[aria-pressed="true"] { background: var(--ed-ink); border-color: var(--ed-ink); color: white; }
 .yearStrip button:active { transform: scale(.95); }
 .explorerBody { min-width: 0; }
 .workArea { padding: 20px 13px 18px; min-width: 0; }
-.workHeading { display: flex; justify-content: space-between; gap: 12px; align-items: center; padding: 0 1px 17px; }
-.workHeading h3 { display: flex; gap: 8px; align-items: baseline; font-size: 26px; line-height: 1; letter-spacing: -.05em; font-weight: 900; }
-.workHeading h3 small { font-size: 11px; font-weight: 500; color: var(--ed-muted); letter-spacing: 0; }
-.workHeading > a { display: inline-flex; align-items: center; gap: 8px; padding: 6px 0; color: #2449cd; font-size: 11px; font-weight: 700; border-bottom: 1px solid var(--explorer-border); }
+.srOnly { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+.allWorksLink { display: flex; justify-content: flex-end; margin-top: 7px; }
+.allWorksLink > a { display: inline-flex; align-items: center; gap: 8px; min-height: 34px; padding: 6px 0; color: #2449cd; font-size: 11px; font-weight: 700; border-bottom: 1px solid var(--explorer-border); }
 .workCards { display: flex; gap: 11px; overflow-x: auto; padding: 3px 3px 13px; scroll-snap-type: x proximity; scroll-padding: 3px; scrollbar-width: thin; overscroll-behavior-x: contain; }
 .workCard { display: flex; flex-direction: column; flex: 0 0 83%; gap: 10px; min-width: 0; min-height: 198px; max-width: 390px; padding: 14px; text-align: left; border: 1px solid var(--explorer-border); border-radius: 8px; background: white; color: var(--ed-ink); scroll-snap-align: start; cursor: pointer; position: relative; transition: border-color 180ms ease,box-shadow 180ms ease,transform 180ms ease; }
 .singleWork .workCard { flex-basis: 100%; max-width: none; }
@@ -83,8 +90,7 @@
 .sheetInner { position: relative; padding: 28px 20px max(28px,env(safe-area-inset-bottom)); }
 .sheetInner .workDetail h3 { padding-right: 28px; }
 .close { position: absolute; top: 12px; right: 12px; display: grid; place-items: center; width: 38px; height: 38px; padding: 0; background: #dce7ff; color: #131720; border: 0; border-radius: 50%; font-size: 25px; line-height: 1; cursor: pointer; z-index: 1; }
-.connections { display: grid; gap: 14px; margin-top: 18px; }
-.connectionPanel { min-width: 0; padding: 22px 17px; border: 1px solid var(--explorer-border); border-radius: 10px; background: white; scroll-margin-top: 85px; }
+.connectionPanel { min-width: 0; margin-top: 18px; padding: 22px 17px; border: 1px solid var(--explorer-border); border-radius: 10px; background: white; scroll-margin-top: 85px; }
 .page .connectionPanel h2 { font-size: 19px; margin-bottom: 16px; }
 .coList { display: grid; gap: 0; }
 .coList a { display: flex; align-items: center; gap: 10px; min-height: 46px; padding: 7px 0; border-bottom: 1px solid #e6ebf4; font-size: 12px; font-weight: 700; transition: color 160ms ease,translate 160ms ease; }
@@ -92,12 +98,6 @@
 .coInitial { display: grid; place-items: center; flex: 0 0 29px; height: 29px; background: var(--explorer-soft); color: #2449cd; border-radius: 50%; font-size: 10px; font-weight: 850; }
 .coList b { margin-left: auto; white-space: nowrap; color: #2449cd; font-variant-numeric: tabular-nums; }
 .coList b small { font-size: 9px; font-weight: 400; margin-left: 3px; }
-.seriesList { display: grid; gap: 17px; }
-.seriesList a { display: grid; grid-template-columns: minmax(0,1fr) 65px 20px; gap: 12px; align-items: center; font-size: 11px; font-weight: 650; }
-.seriesList a:hover { color: var(--ed-blue); }
-.bar { display: block; height: 5px; background: #e1e7f0; border-radius: 3px; overflow: hidden; }
-.bar > span { display: block; height: 100%; background: var(--ed-blue); }
-.seriesList b { text-align: right; color: #2449cd; }
 .more { margin-top: 12px; }
 .more summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; cursor: pointer; font-size: 11px; color: #2449cd; min-height: 35px; }
 .allWorks { margin-top: 18px; scroll-margin-top: 85px; border: 1px solid var(--explorer-border); border-radius: 8px; overflow: hidden; }
@@ -141,9 +141,11 @@
   .workCard { min-height: 182px; max-width: none; padding: 15px; }
   .singleWork { grid-template-columns: minmax(0,1fr); }
   .desktopDetail { display: block; padding: 25px; background: var(--explorer-soft); border-left: 1px solid var(--explorer-border); max-height: 550px; overflow-y: auto; }
-  .connections { grid-template-columns: 1fr 1fr; gap: 18px; }
+  .coList { grid-template-columns: repeat(2,minmax(0,1fr)); column-gap: 24px; }
+  .coList a > span:nth-child(2) { min-width: 0; overflow-wrap: anywhere; }
   .connectionPanel { padding: 24px; }
   .workDetail h3 { font-size: 20px; }
 }
+@media (min-width:1024px) { .coList { grid-template-columns: repeat(3,minmax(0,1fr)); } }
 @media (max-width:359px) { .profile { padding: 18px 13px; } .identity h1 { font-size: 26px; } .profileAside { gap: 12px; } .chips a { font-size: 10px; } .allWorks li { gap: 8px; } .allDmm { white-space: normal; } }
 @media (prefers-reduced-motion:reduce) { .page *,.sheet * { animation: none !important; transition: none !important; scroll-behavior: auto !important; transform: none !important; translate: none !important; } }

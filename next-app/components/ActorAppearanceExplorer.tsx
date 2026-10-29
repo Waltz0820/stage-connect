@@ -55,11 +55,11 @@ export function ActorAppearanceExplorer({ years, locale }: { years: ExplorerYear
     <div ref={strip} className={styles.yearStrip} role="group" aria-label={en ? "Select an appearance year" : "出演年を選択"}>
       {years.map(y => <button type="button" key={y.year} aria-label={`${y.year === "unknown" ? en ? "Undated" : "年不明" : en ? y.year : `${y.year}年`}${en ? `, ${y.works.length} ${y.works.length === 1 ? "work" : "works"}` : `・${y.works.length}作品`}`} aria-pressed={year.year === y.year} aria-controls="actor-year-works" onClick={() => {
         setYearKey(y.year); setSelectedId(y.works[0].id); cards.current?.scrollTo({ left: 0, top: 0, behavior: "instant" });
-      }}>{y.year === "unknown" ? en ? "Undated" : "年不明" : y.year}<small>{y.works.length}</small></button>)}
+      }}>{y.year === "unknown" ? en ? "Undated" : "年不明" : y.year}{" "}<small>({y.works.length}{en ? y.works.length === 1 ? " work" : " works" : "作品"})</small></button>)}
     </div>
     <div className={styles.explorerBody}>
       <div className={styles.workArea}>
-        <div className={styles.workHeading}><h3 aria-live="polite">{year.year === "unknown" ? en ? "Undated" : "年不明" : year.year}<small>{year.works.length}{en ? year.works.length === 1 ? " work" : " works" : "作品"}</small></h3><a href="#all-works" onClick={showAll}>{en ? "All works" : "すべて見る"}<span aria-hidden="true">↗</span></a></div>
+        <h3 className={styles.srOnly} aria-live="polite">{year.year === "unknown" ? en ? "Undated" : "年不明" : year.year} ({year.works.length}{en ? year.works.length === 1 ? " work" : " works" : "作品"})</h3>
         <div ref={cards} id="actor-year-works" className={`${styles.workCards}${year.works.length === 1 ? ` ${styles.singleWork}` : ""}`} role="group" aria-label={en ? `${year.year} productions` : `${year.year === "unknown" ? "年不明" : year.year + "年"}の出演作品`}>
           {year.works.map((work, index) => <button type="button" className={styles.workCard} key={work.id} data-play-id={work.id} aria-pressed={selected.id === work.id} aria-haspopup={mobile ? "dialog" : undefined} aria-controls={mobile ? undefined : "actor-selected-work"} onClick={() => { setSelectedId(work.id); if (window.matchMedia("(max-width: 767px)").matches) setSheetOpen(true); }}>
             <span className={styles.cardTop}><span>{work.series?.name}</span><small>{String(index + 1).padStart(2, "0")} / {String(year.works.length).padStart(2, "0")}</small></span>
@@ -68,6 +68,7 @@ export function ActorAppearanceExplorer({ years, locale }: { years: ExplorerYear
             <span className={styles.cardBottom}><span>{work.date || (en ? "Date not listed" : "公演時期未登録")}</span><span aria-hidden="true">↗</span></span>
           </button>)}
         </div>
+        <div className={styles.allWorksLink}><a href="#all-works" onClick={showAll}>{en ? "All works" : "すべて見る"}<span aria-hidden="true">↗</span></a></div>
       </div>
       <aside id="actor-selected-work" className={styles.desktopDetail} aria-label={en ? "Selected production" : "選択した作品の詳細"} aria-live="polite" aria-atomic="true"><ActorWorkDetail work={selected} locale={locale} /></aside>
     </div>
