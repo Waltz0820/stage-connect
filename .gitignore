@@ -13,6 +13,7 @@ dist-ssr
 *.local
 next-app/.next
 next-app/node_modules
+*.tsbuildinfo
 
 # Editor directories and files
 .vscode/*
